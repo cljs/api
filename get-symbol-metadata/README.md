@@ -3,7 +3,7 @@
 This subproject generates symbol metadata from the clojure & clojurescript repositories.
 (work in progress)
 
-## Submodules
+## Setup
 
 We use git submodules to associate our project's commits to commits in the
 clojure & clojurescript repositories.  Run the following to populate the
@@ -14,3 +14,10 @@ git submodule init
 git submodule update
 ```
 
+## Run
+
+To run the project:
+
+```
+lein run
+```
