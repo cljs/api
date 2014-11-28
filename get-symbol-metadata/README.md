@@ -8,6 +8,7 @@ for each API symbol containing the following information:
 - namespace
 - type (function or macro)
 - docstring
+- signatures
 - source
 - github link
 
