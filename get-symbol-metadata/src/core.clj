@@ -81,6 +81,36 @@
   (get-forms-from-file (get-repo-path ns- repo file)))
 
 ;;------------------------------------------------------------
+;; Docstring Indentation Fix
+;;------------------------------------------------------------
+
+(defn get-docstring-indent
+  [docstring]
+  (let [lines (split-lines docstring)]
+    (if (> (count lines) 1)
+      (let [[first-line & indented-lines] lines
+            get-indent-length #(count (re-find #"^ *" %))
+            has-content? #(pos? (count (trim %)))]
+        (->> indented-lines
+             (filter has-content?)
+             (map get-indent-length)
+             (apply min 3)))
+      0)))
+
+(defn fix-docstring
+  [docstring]
+  (let [indent-length (get-docstring-indent docstring)]
+    (if (zero? indent-length)
+      docstring
+      (let [[first-line & indented-lines] (split-lines docstring)
+            indent (re-pattern (str "^ {" indent-length "}"))
+            remove-indent #(replace % indent "")]
+        (->> indented-lines
+             (map remove-indent)
+             (cons first-line)
+             (join "\n"))))))
+
+;;------------------------------------------------------------
 ;; Form Parsing
 ;;------------------------------------------------------------
 
@@ -89,7 +119,8 @@
   (let [fn-or-macro ({'defn "function" 'defmacro "macro"} (first form))
         docstring (when fn-or-macro
                     (let [ds (nth form 2)]
-                      (when (string? ds) ds)))
+                      (when (string? ds)
+                        (fix-docstring ds))))
         m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
