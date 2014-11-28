@@ -1,12 +1,16 @@
 (ns core
+  (:refer-clojure :exclude [replace])
   (:require
     [clojure.java.io :as io]
     [clojure.tools.reader :as reader]
     [clojure.tools.reader.reader-types :as readers]
-    [clojure.string :refer [split-lines join]]
+    [clojure.string :refer [split-lines join replace]]
     [cljs.env :as env]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [cljs.analyzer :refer [forms-seq analyze-file]]))
+
+(def special-forms
+  '[if do let quote var fn loop recur throw try . new set!])
 
 ;;------------------------------------------------------------
 ;; Form Retrieving
@@ -44,6 +48,17 @@
 ;; Form Formatting
 ;;------------------------------------------------------------
 
+(defn symbol->filename
+  [s]
+  (-> (name s)
+      (replace ">" "GT")
+      (replace "<" "LT")
+      (replace "!" "BANG")
+      (replace "?" "QMARK")
+      (replace "*" "STAR")
+      (replace "+" "PLUS")
+      (replace "/" "SLASH")))
+
 (defn get-def-name
   [form]
   (let [[a b c] form
@@ -80,26 +95,21 @@
    "clojure.set"    {:cljs {"set.cljs"    "clojurescript/src/cljs/clojure/set.cljs"}}
    "clojure.string" {:cljs {"string.cljs" "clojurescript/src/cljs/clojure/string.cljs"}}})
 
-(def repo-path "code-to-parse")
-
 (defn get-repo-path
   [& args]
-  (str repo-path "/" (get-in paths args)))
+  (str  "code-to-parse/" (get-in paths args)))
 
 (defmulti get-symbols (fn [ns-] ns-))
 
 (defmethod get-symbols "cljs.core" [ns-]
   (let [clj-forms      (get-forms-from-file (get-repo-path "cljs.core" :clj "core.clj"))
         clj-cljs-forms (get-forms-from-file (get-repo-path "cljs.core" :cljs "core.clj"))
+        imported-macros (nth (first (filter #(= 'import-macros (first %)) clj-cljs-forms)) 2)
         cljs-forms     (get-forms-from-file (get-repo-path "cljs.core" :cljs "core.cljs"))
-        ;; TODO: get import-macros vector from cljs.core clj
         ;; TODO: read in clojure.core forms listed in import-macros vector
         ]
-    (println
-      "cljs.core forms:"
-      (count clj-forms)
-      (count clj-cljs-forms)
-      (count cljs-forms))))
+    (println imported-macros)
+    ))
 
 (defmethod get-symbols "clojure.set" [ns-]
   (let [forms (get-forms-from-file (get-repo-path "clojure.set" :cljs "set.cljs"))]
@@ -119,7 +129,5 @@
 
 (defn -main
   []
-  (get-symbols "cljs.core")
-  (get-symbols "clojure.set")
-  (get-symbols "clojure.string"))
+  (get-symbols "cljs.core"))
 
