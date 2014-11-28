@@ -114,34 +114,93 @@
 ;; Form Parsing
 ;;------------------------------------------------------------
 
-(defn parse-fn-or-macro
+(defn parse-defn-or-macro
+  [form]
+  (let [name- (second form)
+        docstring (let [ds (nth form 2)]
+                    (when (string? ds)
+                      (fix-docstring ds)))
+        attr-map (let [m (nth form (if docstring 3 2))]
+                   (when (map? m) m))
+        rest-forms (drop (cond-> 2 docstring inc attr-map inc) form)
+        signatures (if (vector? (first rest-forms))
+                     (take 1 rest-forms)
+                     (map first rest-forms))]
+    {:name name-
+     :docstring docstring
+     :signatures signatures}))
+
+(defn parse-def-fn
+  [form]
+  (let [name- (second form)
+        m (meta name-)
+        docstring (let [ds (:doc m)]
+                    (when (string? ds)
+                      (fix-docstring ds)))
+        signatures (when-let [arglists (:arglists m)]
+                     (when (= 'quote (first arglists))
+                       (second arglists)))]
+    {:name name-
+     :docstring docstring
+     :signatures signatures}))
+
+(defmulti parse-form*
+  (fn [form]
+    (cond
+      (= 'defn (first form))
+      "defn"
+
+      (= 'defmacro (first form))
+      "defmacro"
+
+      (and (= 'def (first form))
+           (list? (nth form 2 nil))
+           (= 'fn (first (nth form 2 nil)))
+           (not (:private (meta (second form)))))
+      "def fn"
+
+      :else nil)))
+
+(defmethod parse-form* "def fn"
+  [form]
+  (assoc (parse-def-fn form) :fn-or-macro "function"))
+
+(defmethod parse-form* "defn"
+  [form]
+  (assoc (parse-defn-or-macro form) :fn-or-macro "function"))
+
+(defmethod parse-form* "defmacro"
+  [form]
+  (assoc (parse-defn-or-macro form) :fn-or-macro "macro"))
+
+(defmethod parse-form* nil
+  [form]
+  nil)
+
+(defn parse-common
   [form ns- repo]
-  (let [fn-or-macro ({'defn "function" 'defmacro "macro"} (first form))
-        docstring (when fn-or-macro
-                    (let [ds (nth form 2)]
-                      (when (string? ds)
-                        (fix-docstring ds))))
-        m (meta form)
+  (let [m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
         source (join "\n" (take-last num-lines (split-lines (:source m))))
         filename (subs (:file m) (inc (count repo-dir)))
         github-link (get-github-file-link repo filename lines)]
-    (when fn-or-macro
-      {:ns ns-
-       :fn-or-macro fn-or-macro
-       :name (nth form 1)
-       :docstring docstring
-       :source source
-       :filename filename
-       :lines lines
-       :github-link github-link
-       })))
+    {:ns ns-
+     :source source
+     :filename filename
+     :lines lines
+     :github-link github-link}))
+
+(defn parse-form
+  [form ns- repo]
+  (when-let [specific (parse-form* form)]
+    (let [common (parse-common form ns- repo)]
+      (merge specific common))))
 
 (defn parse-api
   "Parse the functions and macros from the given repo file"
   [ns- repo file]
-  (keep #(parse-fn-or-macro % ns- repo) (get-forms ns- repo file)))
+  (keep #(parse-form % ns- repo) (get-forms ns- repo file)))
 
 (defn get-imported-macro-api
   [ns- repo file macro-api]
@@ -183,6 +242,7 @@
     [(cljsdoc-section "Name" (:name item))
      (cljsdoc-section "Type" (:fn-or-macro item))
      (cljsdoc-section "Docstring" (:docstring item))
+     (cljsdoc-section "Signatures" (join "\n" (:signatures item)))
      (cljsdoc-section "Filename" (:filename item))
      (cljsdoc-section "Source" (:source item))
      (cljsdoc-section "Github Link" (:github-link item))]))
