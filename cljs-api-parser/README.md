@@ -1,8 +1,8 @@
-# Get Symbol Metadata
+# ClojureScript API Parser
 
-This project generates symbol metadata from the clojure & clojurescript
+This creates ClojureScript API docs by parsing the ClojureScript and Clojure
 repositories.  It outputs `docs-generated/*.cljsdoc` files (at project root)
-for each found API symbol.  For example:
+for each API symbol found.  For example:
 
 ```
 ===== Name
@@ -36,27 +36,22 @@ clojurescript/src/cljs/cljs/core.cljs
 https://github.com/clojure/clojurescript/blob/bf2d2413dcb46b2cec9a00e37af407006634c804/src/cljs/cljs/core.cljs#L3957-L3964
 ```
 
+These docs are intended to be merged with manually-written docs found in
+`docs/*.cljsdoc` at project root. The merging is done in `Gruntfile.js`.
+
 ## Setup
 
-We use git submodules to associate our project's commits to commits in the
-clojure & clojurescript repositories.  Run the following to populate the
-submodule directories appropriately after cloning our project.
+The clojure and clojurescript repos are git submodules that we retrieve with
+the following:
 
 ```
 git submodule init
 git submodule update
 ```
 
-If clojure or clojurescript comes out with a new version that we want
-to support with our docs, we go to `code-to-parse/<repo>`, where we
-can run `git pull` and `git checkout` to bring it to a desired version.
-
-After making this update, we have to back out of the submodule directories
-by going to the directory of this readme.  From here, we have to `git add`
-our update submodules, and `git commit` to save our changes.
-
-__NOTE__: This allows us to easily update version and generate permanent github
-links for each symbol.
+To update the repos, go to `repos/<repo>`, run `git pull` and `git checkout` to
+bring it to a desired version.  Then we have back out to the directory of this readme,
+and commit the change.
 
 ## Run
 
