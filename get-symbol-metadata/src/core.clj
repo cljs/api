@@ -10,7 +10,7 @@
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [cljs.analyzer :refer [forms-seq analyze-file]]
     [me.raynes.fs :refer [mkdir]]
-    ))
+    [clojure.data.json :as json]))
 
 ;;------------------------------------------------------------
 ;; Form Retrieving
@@ -116,8 +116,7 @@
 
 (defn parse-defn-or-macro
   [form]
-  (let [name- (second form)
-        docstring (let [ds (nth form 2)]
+  (let [docstring (let [ds (nth form 2)]
                     (when (string? ds)
                       (fix-docstring ds)))
         attr-map (let [m (nth form (if docstring 3 2))]
@@ -126,8 +125,7 @@
         signatures (if (vector? (first rest-forms))
                      (take 1 rest-forms)
                      (map first rest-forms))]
-    {:name name-
-     :docstring docstring
+    {:docstring docstring
      :signatures signatures}))
 
 (defn parse-def-fn
@@ -140,8 +138,7 @@
         signatures (when-let [arglists (:arglists m)]
                      (when (= 'quote (first arglists))
                        (second arglists)))]
-    {:name name-
-     :docstring docstring
+    {:docstring docstring
      :signatures signatures}))
 
 (defmulti parse-form*
@@ -179,13 +176,16 @@
 
 (defn parse-common
   [form ns- repo]
-  (let [m (meta form)
+  (let [name- (second form)
+        m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
         source (join "\n" (take-last num-lines (split-lines (:source m))))
         filename (subs (:file m) (inc (count repo-dir)))
         github-link (get-github-file-link repo filename lines)]
     {:ns ns-
+     :name name-
+     :full-name (str ns- "/" name-)
      :source source
      :filename filename
      :lines lines
@@ -228,9 +228,9 @@
       (replace "+" "PLUS")
       (replace "/" "SLASH")))
 
-(defn cljsdoc-filename
+(defn item-filename
   [item]
-  (str cljsdoc-dir "/" (:ns item) "_" (symbol->filename (:name item)) ".cljsdoc"))
+  (str cljsdoc-dir "/" (:ns item) "_" (symbol->filename (:name item))))
 
 (defn cljsdoc-section
   [title content]
@@ -239,20 +239,33 @@
 (defn make-cljsdoc
   [item]
   (join "\n"
-    [(cljsdoc-section "Name" (:name item))
+    [(cljsdoc-section "Name" (:full-name item))
      (cljsdoc-section "Type" (:fn-or-macro item))
      (cljsdoc-section "Docstring" (:docstring item))
-     (cljsdoc-section "Signatures" (join "\n" (:signatures item)))
+     (cljsdoc-section "Signature" (join "\n" (:signatures item)))
      (cljsdoc-section "Filename" (:filename item))
      (cljsdoc-section "Source" (:source item))
      (cljsdoc-section "Github Link" (:github-link item))]))
 
-(defn write-cljsdoc
+(defn make-json
   [item]
-  (let [filename (cljsdoc-filename item)
-        content (make-cljsdoc item)]
+  (json/write-str
+    {:name (:full-name item)
+     :type (:fn-or-macro item)
+     :docstring (:docstring item)
+     :signature (:signature item)
+     :filename (:filename item)
+     :source (:source item)
+     :github (:github-link item)}))
+
+(defn write-item
+  [item]
+  (let [filename (item-filename item)
+        cljsdoc-content (make-cljsdoc item)
+        json-content (make-json item)]
     (println "Writing" filename "...")
-    (spit filename content)))
+    (spit (str filename ".cljsdoc") cljsdoc-content)
+    (spit (str filename ".json") json-content)))
 
 ;;------------------------------------------------------------
 ;; Symbol Retrieval
@@ -269,17 +282,17 @@
     (doseq [item (concat import-macro-api
                          clj-cljs-api
                          cljs-cljs-api)]
-      (write-cljsdoc item))))
+      (write-item item))))
 
 (defmethod get-symbols "clojure.set" [ns-]
   (let [api (parse-api ns- "clojurescript" "set.cljs")]
     (doseq [item api]
-      (write-cljsdoc item))))
+      (write-item item))))
 
 (defmethod get-symbols "clojure.string" [ns-]
   (let [api (parse-api ns- "clojurescript" "string.cljs")]
     (doseq [item api]
-      (write-cljsdoc item))))
+      (write-item item))))
 
 ;;------------------------------------------------------------
 ;; Program Entry
