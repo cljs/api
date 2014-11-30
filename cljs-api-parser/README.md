@@ -60,3 +60,16 @@ This creates the `docs-generated/*.cljsdoc` files at project root:
 ```
 lein run
 ```
+
+## Implementation
+
+To gather docs, we are doing self-analysis of literal forms created from
+`tools.reader` rather than using `tools.analyzer` because I had trouble setting
+up the analyzer.  We may use the helpful wrapper [codox] if this becomes
+insufficient.
+
+It's worth nothing that parsing the full `cljs.core` namespace requires reading
+symbols from a specific `import-macros` expression, then finding their
+implementations in `clojure.core`.
+
+[codox]:https://github.com/weavejester/codox
