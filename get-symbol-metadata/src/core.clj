@@ -245,27 +245,14 @@
      (cljsdoc-section "Signature" (join "\n" (:signatures item)))
      (cljsdoc-section "Filename" (:filename item))
      (cljsdoc-section "Source" (:source item))
-     (cljsdoc-section "Github Link" (:github-link item))]))
-
-(defn make-json
-  [item]
-  (json/write-str
-    {:name (:full-name item)
-     :type (:fn-or-macro item)
-     :docstring (:docstring item)
-     :signature (map pr-str (:signatures item))
-     :filename (:filename item)
-     :source (:source item)
-     :github (:github-link item)}))
+     (cljsdoc-section "Github" (:github-link item))]))
 
 (defn write-item
   [item]
   (let [filename (item-filename item)
-        cljsdoc-content (make-cljsdoc item)
-        json-content (make-json item)]
+        cljsdoc-content (make-cljsdoc item)]
     (println "Writing" filename "...")
-    (spit (str filename ".cljsdoc") cljsdoc-content)
-    (spit (str filename ".json") json-content)))
+    (spit (str filename ".cljsdoc") cljsdoc-content)))
 
 ;;------------------------------------------------------------
 ;; Symbol Retrieval
