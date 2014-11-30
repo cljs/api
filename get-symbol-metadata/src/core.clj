@@ -13,7 +13,7 @@
 (def cljsdoc-dir "../../docs-generated")
 
 ;; location of the clojure & clojurescript repos to parse
-(def repo-dir "code-to-parse")
+(def repo-dir "repos")
 
 ;; SHA1 hashes of the checked out commits of the language repos
 (def repo-sha1
