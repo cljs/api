@@ -253,7 +253,7 @@
     {:name (:full-name item)
      :type (:fn-or-macro item)
      :docstring (:docstring item)
-     :signature (:signature item)
+     :signature (map pr-str (:signatures item))
      :filename (:filename item)
      :source (:source item)
      :github (:github-link item)}))
