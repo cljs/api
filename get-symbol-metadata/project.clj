@@ -2,6 +2,5 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2371"]
                  [org.clojure/tools.reader "0.8.12"]
-                 [me.raynes/fs "1.4.6"]
-                 [org.clojure/data.json "0.2.5"]]
+                 [me.raynes/fs "1.4.6"]]
   :main core)
