@@ -1,16 +1,40 @@
 # Get Symbol Metadata
 
-This subproject generates symbol metadata from the clojure & clojurescript
+This project generates symbol metadata from the clojure & clojurescript
 repositories.  It outputs `docs-generated/*.cljsdoc` files (at project root)
-for each API symbol containing the following information:
+for each found API symbol.  For example:
 
-- name
-- namespace
-- type (function or macro)
-- docstring
-- signatures
-- source
-- github link
+```
+===== Name
+cljs.core/assoc-in
+
+===== Type
+function
+
+===== Docstring
+Associates a value in a nested associative structure, where ks is a
+sequence of keys and v is the new value and returns a new nested structure.
+If any levels do not exist, hash-maps will be created.
+
+===== Signature
+[m [k & ks] v]
+
+===== Filename
+clojurescript/src/cljs/cljs/core.cljs
+
+===== Source
+(defn assoc-in
+  "Associates a value in a nested associative structure, where ks is a
+  sequence of keys and v is the new value and returns a new nested structure.
+  If any levels do not exist, hash-maps will be created."
+  [m [k & ks] v]
+  (if ks
+    (assoc m k (assoc-in (get m k) ks v))
+    (assoc m k v)))
+
+===== Github
+https://github.com/clojure/clojurescript/blob/bf2d2413dcb46b2cec9a00e37af407006634c804/src/cljs/cljs/core.cljs#L3957-L3964
+```
 
 ## Setup
 
