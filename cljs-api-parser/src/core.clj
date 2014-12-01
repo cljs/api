@@ -37,21 +37,30 @@
    "cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async/macros.clj"}}})
 
 ;;------------------------------------------------------------
-;; Form Retrieving
+;; Form Reading
 ;;------------------------------------------------------------
 
-(defn get-forms-from-file
+(defn read-forms
+  [r]
+  (loop [forms (transient [])]
+    (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*]
+                      (reader/read r))
+                    (catch Exception e
+                      (when-not (= (.getMessage e) "EOF") (throw e))))]
+      (recur (conj! forms f))
+      (persistent! forms))))
+
+(defn read-forms-from-file
   [path]
   (let [is (io/input-stream path)
         r1 (readers/input-stream-push-back-reader is)
         r  (readers/source-logging-push-back-reader r1 1 path)]
-    (loop [forms (transient [])]
-      (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*]
-                        (reader/read r))
-                      (catch Exception e
-                        (when-not (= (.getMessage e) "EOF") (throw e))))]
-        (recur (conj! forms f))
-        (persistent! forms)))))
+    (read-forms r)))
+
+(defn read-forms-from-str
+  [s]
+  (let [r (readers/string-push-back-reader s)]
+    (read-forms r)))
 
 ;;------------------------------------------------------------
 ;; Repos
@@ -81,10 +90,10 @@
 (defn get-forms
   "Get forms from the given repo file"
   [ns- repo file]
-  (get-forms-from-file (get-repo-path ns- repo file)))
+  (read-forms-from-file (get-repo-path ns- repo file)))
 
 ;;------------------------------------------------------------
-;; Docstring Indentation Fix
+;; Docstring Helpers
 ;;------------------------------------------------------------
 
 (defn get-docstring-indent
@@ -101,17 +110,55 @@
       0)))
 
 (defn fix-docstring
+  "Remove indentation from docstring."
   [docstring]
-  (let [indent-length (get-docstring-indent docstring)]
-    (if (zero? indent-length)
-      docstring
-      (let [[first-line & indented-lines] (split-lines docstring)
-            indent (re-pattern (str "^ {" indent-length "}"))
-            remove-indent #(replace % indent "")]
-        (->> indented-lines
-             (map remove-indent)
-             (cons first-line)
-             (join "\n"))))))
+  (when (string? docstring)
+    (let [indent-length (get-docstring-indent docstring)]
+      (if (zero? indent-length)
+        docstring
+        (let [[first-line & indented-lines] (split-lines docstring)
+              indent (re-pattern (str "^ {" indent-length "}"))
+              remove-indent #(replace % indent "")]
+          (->> indented-lines
+               (map remove-indent)
+               (cons first-line)
+               (join "\n")))))))
+
+(defn try-remove-docs
+  "Try to remove docstring/attr-map from source if they are on their expected lines."
+  [source {:keys [start-line end-line forms] :as expected-docs}]
+  (if (nil? expected-docs)
+    source
+    (let [i-lines (map-indexed vector (split-lines source))
+          to-str #(join "\n" (map second %))
+          doc-line? #(<= start-line (first %) end-line)
+          doc-str (to-str (filter doc-line? i-lines))
+          actual-forms (read-forms-from-str doc-str)]
+      (if (= actual-forms forms)
+        (to-str (remove doc-line? i-lines))
+        (do
+          (binding [*out* *err*]
+            (println "=====================================")
+            (println "Warning: couldn't remove docstring:")
+            (println "expected:" (pr-str forms))
+            (println "actual:" (pr-str actual-forms))
+            (println "source:" (pr-str source))
+            (println "====================================="))
+          source)))))
+
+(defn try-locate-docs
+  "Try to guess which lines the given docs are on (for defn/defmacro)."
+  [{:keys [whole head doc sig-body] :as forms}]
+  (when (seq doc)
+    (let [get-line #(:line (meta %))
+          first-line (get-line whole)
+          before-line (or (get-line (second head))
+                          (get-line (first head)))
+          after-line (get-line (first sig-body))]
+      (when (< before-line after-line)
+        {:start-line (-> before-line inc (- first-line))
+         :end-line (-> after-line dec (- first-line))
+         :forms doc}))))
 
 ;;------------------------------------------------------------
 ;; Form Parsing
@@ -121,23 +168,30 @@
   [form]
   (let [docstring (let [ds (nth form 2)]
                     (when (string? ds)
-                      (fix-docstring ds)))
+                      ds))
         attr-map (let [m (nth form (if docstring 3 2))]
                    (when (map? m) m))
-        rest-forms (drop (cond-> 2 docstring inc attr-map inc) form)
-        signatures (if (vector? (first rest-forms))
-                     (take 1 rest-forms)
-                     (map first rest-forms))]
-    {:docstring docstring
+        doc-forms (cond-> []
+                    docstring (conj docstring)
+                    attr-map (conj attr-map))
+        sig-body-forms (drop (+ 2 (count doc-forms)) form)
+        signatures (if (vector? (first sig-body-forms))
+                     (take 1 sig-body-forms)
+                     (map first sig-body-forms))
+        expected-docs (try-locate-docs
+                        {:whole form
+                         :head (take 2 form)
+                         :doc doc-forms
+                         :sig-body sig-body-forms})]
+    {:expected-docs expected-docs
+     :docstring (fix-docstring docstring)
      :signatures signatures}))
 
 (defn parse-def-fn
   [form]
   (let [name- (second form)
         m (meta name-)
-        docstring (let [ds (:doc m)]
-                    (when (string? ds)
-                      (fix-docstring ds)))
+        docstring (fix-docstring (:doc m))
         signatures (when-let [arglists (:arglists m)]
                      (when (= 'quote (first arglists))
                        (second arglists)))]
@@ -197,8 +251,10 @@
 (defn parse-form
   [form ns- repo]
   (when-let [specific (parse-form* form)]
-    (let [common (parse-common form ns- repo)]
-      (merge specific common))))
+    (let [common (parse-common form ns- repo)
+          merged (merge specific common)
+          final (update-in merged [:source] try-remove-docs (:expected-docs specific))]
+      final)))
 
 (defn parse-api
   "Parse the functions and macros from the given repo file"
@@ -271,24 +327,25 @@
 
 (defn cljsdoc-section
   [title content]
-  (str "===== " title "\n" content "\n"))
+  (when content
+    (str "===== " title "\n" content "\n")))
 
 (defn make-cljsdoc
   [item]
   (join "\n"
-    [(cljsdoc-section "Name" (:full-name item))
-     (cljsdoc-section "Type" (:fn-or-macro item))
-     (cljsdoc-section "Docstring" (:docstring item))
-     (cljsdoc-section "Signature" (join "\n" (:signatures item)))
-     (cljsdoc-section "Filename" (:filename item))
-     (cljsdoc-section "Source" (:source item))
-     (cljsdoc-section "Github" (:github-link item))]))
+    (keep identity
+      [(cljsdoc-section "Name" (:full-name item))
+       (cljsdoc-section "Type" (:fn-or-macro item))
+       (cljsdoc-section "Docstring" (:docstring item))
+       (cljsdoc-section "Signature" (join "\n" (:signatures item)))
+       (cljsdoc-section "Filename" (:filename item))
+       (cljsdoc-section "Source" (:source item))
+       (cljsdoc-section "Github" (:github-link item))])))
 
 (defn dump-doc-file!
   [item]
   (let [filename (item-filename item)
         cljsdoc-content (make-cljsdoc item)]
-    (println "Writing" filename "...")
     (spit (str filename ".cljsdoc") cljsdoc-content)))
 
 (defn dump-api-docs!
@@ -302,23 +359,28 @@
 
 (defn -main
   []
+  (try
+    ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
+    (doseq [repo (keys @repo-sha1)]
+      (swap! repo-sha1 assoc repo (get-repo-sha1 repo)))
 
-  ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
-  (doseq [repo (keys @repo-sha1)]
-    (swap! repo-sha1 assoc repo (get-repo-sha1 repo)))
+    ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
+    ;; which is used by cljs.core. (the ana namespace has to exist)
+    (create-ns 'ana)
 
-  ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
-  ;; which is used by cljs.core. (the ana namespace has to exist)
-  (create-ns 'ana)
+    ;; create the output directory for the docs
+    (mkdir cljsdoc-dir)
 
-  ;; create the output directory for the docs
-  (mkdir cljsdoc-dir)
+    (println "\nWriting docs to" cljsdoc-dir)
 
-  ;; Build the docs.
-  (doseq [ns- (keys cljs-ns-paths)]
-    (dump-api-docs! (parse-ns-api ns-)))
+    ;; Build the docs.
+    (doseq [ns- (keys cljs-ns-paths)]
+      (println "   " ns-)
+      (dump-api-docs! (parse-ns-api ns-)))
 
-  ;; have to do this because `sh` leaves futures hanging,
-  ;; preventing exit, so we must do it manually.
-  (System/exit 0))
+    (println "\nDone.")
+
+    ;; have to do this because `sh` leaves futures hanging,
+    ;; preventing exit, so we must do it manually.
+    (finally (System/exit 0))))
 
