@@ -17,20 +17,24 @@
 
 ;; SHA1 hashes of the checked out commits of the language repos
 (def repo-sha1
-  (atom {"clojure" nil "clojurescript" nil}))
+  (atom {"clojure" nil
+         "clojurescript" nil
+         "core.async" nil}))
 
 ;; Table of namespaces that we will parse
 (def cljs-ns-paths
-  ; NS                REPO             FILE               FULL PATH
-  {"cljs.core"      {"clojurescript" {"core.cljs"        "src/cljs/cljs/core.cljs"
-                                      "core.clj"         "src/clj/cljs/core.clj"}
-                     "clojure"       {"core.clj"         "src/clj/clojure/core.clj"
-                                      "core_deftype.clj" "src/clj/clojure/core_deftype.clj"}}
-   "clojure.set"    {"clojurescript" {"set.cljs"         "src/cljs/clojure/set.cljs"}}
-   "clojure.string" {"clojurescript" {"string.cljs"      "src/cljs/clojure/string.cljs"}}
-   "clojure.walk"   {"clojurescript" {"walk.cljs"        "src/cljs/clojure/walk.cljs"}}
-   "clojure.zip"    {"clojurescript" {"zip.cljs"         "src/cljs/clojure/zip.cljs"}}
-   "clojure.data"   {"clojurescript" {"data.cljs"        "src/cljs/clojure/data.cljs"}}})
+  ; NS                        REPO             FILE               FULL PATH
+  {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs/core.cljs"
+                                              "core.clj"         "src/clj/cljs/core.clj"}
+                             "clojure"       {"core.clj"         "src/clj/clojure/core.clj"
+                                              "core_deftype.clj" "src/clj/clojure/core_deftype.clj"}}
+   "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure/set.cljs"}}
+   "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure/string.cljs"}}
+   "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure/walk.cljs"}}
+   "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure/zip.cljs"}}
+   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure/data.cljs"}}
+   "cljs.core.async"        {"core.async"    {"async.cljs"       "src/main/clojure/cljs/core/async.cljs"}}
+   "cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async/macros.clj"}}})
 
 ;;------------------------------------------------------------
 ;; Form Retrieving
@@ -239,6 +243,12 @@
 (defmethod parse-ns-api "clojure.data" [ns-]
   (parse-api ns- "clojurescript" "data.cljs"))
 
+(defmethod parse-ns-api "cljs.core.async" [ns-]
+  (parse-api ns- "core.async" "async.cljs"))
+
+(defmethod parse-ns-api "cljs.core.async.macros" [ns-]
+  (parse-api ns- "core.async" "macros.clj"))
+
 ;;------------------------------------------------------------
 ;; Doc file writing
 ;;------------------------------------------------------------
@@ -294,8 +304,8 @@
   []
 
   ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
-  (swap! repo-sha1 assoc "clojure" (get-repo-sha1 "clojure"))
-  (swap! repo-sha1 assoc "clojurescript" (get-repo-sha1 "clojurescript"))
+  (doseq [repo (keys @repo-sha1)]
+    (swap! repo-sha1 assoc repo (get-repo-sha1 repo)))
 
   ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
   ;; which is used by cljs.core. (the ana namespace has to exist)
