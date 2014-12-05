@@ -28,6 +28,7 @@
                                               "core.clj"         "src/clj/cljs/core.clj"}
                              "clojure"       {"core.clj"         "src/clj/clojure/core.clj"
                                               "core_deftype.clj" "src/clj/clojure/core_deftype.clj"}}
+   "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs/reader.cljs"}}
    "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure/set.cljs"}}
    "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure/string.cljs"}}
    "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure/walk.cljs"}}
@@ -283,6 +284,9 @@
     (concat import-macro-api
             clj-cljs-api
             cljs-cljs-api)))
+
+(defmethod parse-ns-api "cljs.reader" [ns-]
+  (parse-api ns- "clojurescript" "reader.cljs"))
 
 (defmethod parse-ns-api "clojure.set" [ns-]
   (parse-api ns- "clojurescript" "set.cljs"))
