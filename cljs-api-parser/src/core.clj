@@ -17,7 +17,7 @@
 (def repo-dir "repos")
 
 ;; SHA1 hashes of the checked out commits of the language repos
-(def repo-sha1
+(def repo-version
   (atom {"clojure" nil
          "clojurescript" nil
          "core.async" nil}))
@@ -73,15 +73,15 @@
 ;; Repos
 ;;------------------------------------------------------------
 
-(defn get-repo-sha1
+(defn get-repo-version
   [repo]
-  (trim (:out (sh "git" "rev-parse" "HEAD" :dir (str repo-dir "/" repo)))))
+  (trim (:out (sh "git" "describe" "--tags" :dir (str repo-dir "/" repo)))))
 
 (defn get-github-file-link
   [repo path [start-line end-line]]
-  (let [sha1 (get @repo-sha1 repo)
+  (let [version (get @repo-version repo)
         strip-path (subs path (inc (count repo)))]
-    (str "https://github.com/clojure/" repo "/blob/" sha1 "/" strip-path
+    (str "https://github.com/clojure/" repo "/blob/" version "/" strip-path
          "#L" start-line "-L" end-line)))
 
 ;;------------------------------------------------------------
@@ -420,9 +420,13 @@
 (defn -main
   []
   (try
+
     ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
-    (doseq [repo (keys @repo-sha1)]
-      (swap! repo-sha1 assoc repo (get-repo-sha1 repo)))
+    (println "\nUsing repo versions:")
+    (doseq [repo (keys @repo-version)]
+      (let [v (get-repo-version repo)]
+        (swap! repo-version assoc repo v)
+        (println " " repo ":" v)))
 
     ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
     ;; which is used by cljs.core. (the ana namespace has to exist)
