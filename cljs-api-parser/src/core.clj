@@ -202,10 +202,12 @@
 (defmulti parse-form*
   (fn [form]
     (cond
-      (= 'defn (first form))
+      (and (= 'defn (first form))
+           (not (:private (meta (second form)))))
       "defn"
 
-      (= 'defmacro (first form))
+      (and (= 'defmacro (first form))
+           (not (:private (meta (second form)))))
       "defmacro"
 
       (and (= 'def (first form))
