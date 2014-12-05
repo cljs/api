@@ -237,6 +237,7 @@
 (defn parse-common
   [form ns- repo]
   (let [name- (second form)
+        return-type (-> name- meta :tag)
         m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
@@ -245,6 +246,7 @@
         github-link (get-github-file-link repo filename lines)]
     {:ns ns-
      :name name-
+     :return-type return-type
      :full-name (str ns- "/" name-)
      :source source
      :filename filename
@@ -342,6 +344,7 @@
     (keep identity
       [(cljsdoc-section "Name" (:full-name item))
        (cljsdoc-section "Type" (:fn-or-macro item))
+       (cljsdoc-section "Return" (:return-type item))
        (cljsdoc-section "Docstring" (:docstring item))
        (cljsdoc-section "Signature" (join "\n" (:signatures item)))
        (cljsdoc-section "Filename" (:filename item))
