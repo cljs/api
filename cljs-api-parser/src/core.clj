@@ -6,6 +6,7 @@
     [clojure.tools.reader :as reader]
     [clojure.tools.reader.reader-types :as readers]
     [clojure.string :refer [split-lines join replace trim]]
+    [clojure.core.match :refer [match]]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [mkdir]]))
 
@@ -20,6 +21,9 @@
   (atom {"clojure" nil
          "clojurescript" nil
          "core.async" nil}))
+
+;; functions marked as macros
+(def ^:dynamic *fn-macros* [])
 
 ;; Table of namespaces that we will parse
 (def cljs-ns-paths
@@ -165,6 +169,19 @@
 ;; Form Parsing
 ;;------------------------------------------------------------
 
+(defn get-fn-macro
+  "looks for a call of the form:
+  (. (var %) (setMacro))"
+  [form]
+  (let [to-vec #(if (seq? %) (vec %) %)]
+    (match (to-vec (map to-vec form))
+      ['. ['var name-] ['setMacro]] name-
+      :else nil)))
+
+(defn get-fn-macros
+  [forms]
+  (set (keep get-fn-macro forms)))
+
 (defn parse-defn-or-macro
   [form]
   (let [docstring (let [ds (nth form 2)]
@@ -196,6 +213,8 @@
         signatures (when-let [arglists (:arglists m)]
                      (when (= 'quote (first arglists))
                        (second arglists)))]
+    (when (= 'let name-)
+      (println "let"))
     {:docstring docstring
      :signatures signatures}))
 
@@ -237,21 +256,28 @@
 (defn parse-common
   [form ns- repo]
   (let [name- (second form)
-        return-type (-> name- meta :tag)
+        name-meta (meta name-)
+        return-type (:tag name-meta)
         m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
         source (join "\n" (take-last num-lines (split-lines (:source m))))
         filename (subs (:file m) (inc (count repo-dir)))
-        github-link (get-github-file-link repo filename lines)]
-    {:ns ns-
-     :name name-
-     :return-type return-type
-     :full-name (str ns- "/" name-)
-     :source source
-     :filename filename
-     :lines lines
-     :github-link github-link}))
+        github-link (get-github-file-link repo filename lines)
+        manual-macro? (or (*fn-macros* name-)
+                          (:macro name-meta))]
+    (merge
+      {:ns ns-
+       :name name-
+       :return-type return-type
+       :full-name (str ns- "/" name-)
+       :source source
+       :filename filename
+       :lines lines
+       :github-link github-link}
+
+      (when manual-macro?
+        {:fn-or-macro "macro"}))))
 
 (defn parse-form
   [form ns- repo]
@@ -264,7 +290,9 @@
 (defn parse-api
   "Parse the functions and macros from the given repo file"
   [ns- repo file]
-  (keep #(parse-form % ns- repo) (get-forms ns- repo file)))
+  (let [forms (get-forms ns- repo file)]
+    (binding [*fn-macros* (get-fn-macros forms)]
+      (doall (keep #(parse-form % ns- repo) forms)))))
 
 (defn get-imported-macro-api
   [ns- repo file macro-api]
