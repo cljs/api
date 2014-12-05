@@ -31,7 +31,9 @@
   {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs/core.cljs"
                                               "core.clj"         "src/clj/cljs/core.clj"}
                              "clojure"       {"core.clj"         "src/clj/clojure/core.clj"
-                                              "core_deftype.clj" "src/clj/clojure/core_deftype.clj"}}
+                                              "core_deftype.clj" "src/clj/clojure/core_deftype.clj"
+                                              "core_print.clj"   "src/clj/clojure/core_print.clj"
+                                              "core_proxy.clj"   "src/clj/clojure/core_proxy.clj"}}
    "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs/reader.cljs"}}
    "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure/set.cljs"}}
    "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure/string.cljs"}}
@@ -184,26 +186,32 @@
 
 (defn parse-defn-or-macro
   [form]
-  (let [docstring (let [ds (nth form 2)]
+  (let [fn-or-macro ({'defn "function" 'defmacro "macro"} (first form))
+        args (drop 2 form)
+        docstring (let [ds (first args)]
                     (when (string? ds)
                       ds))
-        attr-map (let [m (nth form (if docstring 3 2))]
+        args (if docstring (rest args) args)
+        attr-map (let [m (first args)]
                    (when (map? m) m))
+        args (if attr-map (rest args) args)
+        private? (:private attr-map)
         doc-forms (cond-> []
                     docstring (conj docstring)
                     attr-map (conj attr-map))
-        sig-body-forms (drop (+ 2 (count doc-forms)) form)
-        signatures (if (vector? (first sig-body-forms))
-                     (take 1 sig-body-forms)
-                     (map first sig-body-forms))
+        signatures (if (vector? (first args))
+                     (take 1 args)
+                     (map first args))
         expected-docs (try-locate-docs
                         {:whole form
                          :head (take 2 form)
                          :doc doc-forms
-                         :sig-body sig-body-forms})]
-    {:expected-docs expected-docs
-     :docstring (fix-docstring docstring)
-     :signatures signatures}))
+                         :sig-body args})]
+    (when-not private?
+      {:expected-docs expected-docs
+       :docstring (fix-docstring docstring)
+       :signatures signatures
+       :fn-or-macro fn-or-macro})))
 
 (defn parse-def-fn
   [form]
@@ -213,10 +221,9 @@
         signatures (when-let [arglists (:arglists m)]
                      (when (= 'quote (first arglists))
                        (second arglists)))]
-    (when (= 'let name-)
-      (println "let"))
     {:docstring docstring
-     :signatures signatures}))
+     :signatures signatures
+     :fn-or-macro "function"}))
 
 (defmulti parse-form*
   (fn [form]
@@ -239,15 +246,15 @@
 
 (defmethod parse-form* "def fn"
   [form]
-  (assoc (parse-def-fn form) :fn-or-macro "function"))
+  (parse-def-fn form))
 
 (defmethod parse-form* "defn"
   [form]
-  (assoc (parse-defn-or-macro form) :fn-or-macro "function"))
+  (parse-defn-or-macro form))
 
 (defmethod parse-form* "defmacro"
   [form]
-  (assoc (parse-defn-or-macro form) :fn-or-macro "macro"))
+  (parse-defn-or-macro form))
 
 (defmethod parse-form* nil
   [form]
@@ -295,11 +302,17 @@
       (doall (keep #(parse-form % ns- repo) forms)))))
 
 (defn get-imported-macro-api
-  [ns- repo file macro-api]
-  (let [forms (get-forms ns- repo file)
-        macro-names (-> (filter #(= 'import-macros (first %)) forms)
-                        first (nth 2) set)]
+  [forms macro-api]
+  (let [get-imports #(match % (['import-macros 'clojure.core x] :seq) x :else nil)
+        macro-names (->> forms (keep get-imports) first set)]
     (filter #(macro-names (:name %)) macro-api)))
+
+(defn get-non-excluded-macro-api
+  [forms macro-api]
+  (let [ns-form (first (filter #(= 'ns (first %)) forms))
+        get-excludes #(match % ([:refer-clojure :exclude x] :seq) x :else nil)
+        macro-names (->> ns-form (drop 2) (keep get-excludes) first set)]
+    (remove #(macro-names (:name %)) macro-api)))
 
 ;;------------------------------------------------------------
 ;; Namespace API parsing
@@ -307,15 +320,25 @@
 
 (defmulti parse-ns-api (fn [ns-] ns-))
 
+(defn parse-extra-macros-from-clj
+  []
+  (let [clj-api (concat (parse-api "cljs.core" "clojure" "core.clj")
+                        (parse-api "cljs.core" "clojure" "core_deftype.clj")
+                        (parse-api "cljs.core" "clojure" "core_print.clj")
+                        (parse-api "cljs.core" "clojure" "core_proxy.clj"))
+        clj-api (filter #(= "macro" (:fn-or-macro %)) clj-api)
+        cljs-forms   (get-forms "cljs.core" "clojurescript" "core.clj")
+        imports      (get-imported-macro-api     cljs-forms clj-api)
+        non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
+    (println "   " (count imports) "imported clojure.core macros")
+    (println "   " (count non-excludes) "non-excluded clojure.core macros")
+    (concat imports non-excludes)))
+
 (defmethod parse-ns-api "cljs.core" [ns-]
-  (let [clj-api       (parse-api ns- "clojure"       "core.clj")
-        clj-type-api  (parse-api ns- "clojure"       "core_deftype.clj")
-        clj-cljs-api  (parse-api ns- "clojurescript" "core.clj")
-        cljs-cljs-api (parse-api ns- "clojurescript" "core.cljs")
-        import-macro-api (get-imported-macro-api ns- "clojurescript" "core.clj" (concat clj-api clj-type-api))]
-    (concat import-macro-api
-            clj-cljs-api
-            cljs-cljs-api)))
+  (let [clj-api  (parse-api ns- "clojurescript" "core.clj")
+        cljs-api (parse-api ns- "clojurescript" "core.cljs")
+        extra-macro-api (parse-extra-macros-from-clj)]
+    (concat extra-macro-api clj-api cljs-api)))
 
 (defmethod parse-ns-api "cljs.reader" [ns-]
   (parse-api ns- "clojurescript" "reader.cljs"))
@@ -412,7 +435,7 @@
 
     ;; Build the docs.
     (doseq [ns- (keys cljs-ns-paths)]
-      (println "   " ns-)
+      (println " " ns-)
       (dump-api-docs! (parse-ns-api ns-)))
 
     (println "\nDone.")
