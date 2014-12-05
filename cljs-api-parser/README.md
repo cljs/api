@@ -30,7 +30,7 @@ clojurescript/src/cljs/cljs/core.cljs
     (assoc m k v)))
 
 ===== Github
-https://github.com/clojure/clojurescript/blob/bf2d2413dcb46b2cec9a00e37af407006634c804/src/cljs/cljs/core.cljs#L3957-L3964
+https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3881-L3888
 ```
 
 These docs are intended to be merged with manually-written docs found in
