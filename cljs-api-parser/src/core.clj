@@ -395,7 +395,7 @@
     (keep identity
       [(cljsdoc-section "Name" (:full-name item))
        (cljsdoc-section "Type" (:fn-or-macro item))
-       (cljsdoc-section "Return" (:return-type item))
+       (cljsdoc-section "Return Type" (:return-type item))
        (cljsdoc-section "Docstring" (:docstring item))
        (cljsdoc-section "Signature" (join "\n" (:signatures item)))
        (cljsdoc-section "Filename" (:filename item))
