@@ -29,7 +29,8 @@
 (def cljs-ns-paths
   ; NS                        REPO             FILE               PATH IN REPO
   {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs"
-                                              "core.clj"         "src/clj/cljs"}
+                                              "core.clj"         "src/clj/cljs"
+                                              "analyzer.clj"     "src/clj/cljs"}
                              "clojure"       {"core.clj"         "src/clj/clojure"
                                               "core_deftype.clj" "src/clj/clojure"
                                               "core_print.clj"   "src/clj/clojure"
@@ -298,6 +299,26 @@
           final (update-in merged [:source] try-remove-docs (:expected-docs specific))]
       final)))
 
+(defn parse-special*
+  "Parse cljs special forms of the form:
+  (defmethod parse 'symbol ...)"
+  [form]
+  (when (and (list? form)
+             (= 'defmethod (first form))
+             (= 'parse (second form)))
+    (let [quoted-name (nth form 2)
+          name- (second quoted-name)]
+      {:name name-})))
+
+(defn parse-special
+  [form ns- repo]
+  (when-let [special (parse-special* form)]
+    (let [location (parse-location form ns- repo)
+          extras {:full-name (str ns- "/" (:name special))
+                  :type "special form"}
+          final (merge special location extras)]
+      final)))
+
 (defn parse-api
   "Parse the functions and macros from the given repo file"
   [ns- repo file]
@@ -325,6 +346,7 @@
 (defmulti parse-ns-api (fn [ns-] ns-))
 
 (defn parse-extra-macros-from-clj
+  "cljs.core uses some macros from clojure.core, so find those here"
   []
   (let [clj-api (concat (parse-api "cljs.core" "clojure" "core.clj")
                         (parse-api "cljs.core" "clojure" "core_deftype.clj")
@@ -334,15 +356,26 @@
         cljs-forms   (get-forms "cljs.core" "clojurescript" "core.clj")
         imports      (get-imported-macro-api     cljs-forms clj-api)
         non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
-    (println "   " (count imports) "imported clojure.core macros")
-    (println "   " (count non-excludes) "non-excluded clojure.core macros")
+    (println "   " (count imports) "macros imported from clojure.core")
+    (println "   " (count non-excludes) "macros non-excluded clojure.core")
     (concat imports non-excludes)))
+
+(defn parse-cljs-special-forms
+  "cljs.core has some special forms defined in analyzer.clj, so find those here"
+  []
+  (let [ns- "cljs.core"
+        repo "clojurescript"
+        forms (get-forms ns- repo "analyzer.clj")
+        specials (keep #(parse-special % ns- repo) forms)]
+    (println "   " (count specials) "special forms in cljs.analyzer")
+    specials))
 
 (defmethod parse-ns-api "cljs.core" [ns-]
   (let [clj-api  (parse-api ns- "clojurescript" "core.clj")
         cljs-api (parse-api ns- "clojurescript" "core.cljs")
-        extra-macro-api (parse-extra-macros-from-clj)]
-    (concat extra-macro-api clj-api cljs-api)))
+        extra-macro-api (parse-extra-macros-from-clj)
+        special-forms (parse-cljs-special-forms)]
+    (concat extra-macro-api clj-api cljs-api special-forms)))
 
 (defmethod parse-ns-api "cljs.reader" [ns-]
   (parse-api ns- "clojurescript" "reader.cljs"))
