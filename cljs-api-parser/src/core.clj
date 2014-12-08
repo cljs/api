@@ -27,21 +27,21 @@
 
 ;; Table of namespaces that we will parse
 (def cljs-ns-paths
-  ; NS                        REPO             FILE               FULL PATH
-  {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs/core.cljs"
-                                              "core.clj"         "src/clj/cljs/core.clj"}
-                             "clojure"       {"core.clj"         "src/clj/clojure/core.clj"
-                                              "core_deftype.clj" "src/clj/clojure/core_deftype.clj"
-                                              "core_print.clj"   "src/clj/clojure/core_print.clj"
-                                              "core_proxy.clj"   "src/clj/clojure/core_proxy.clj"}}
-   "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs/reader.cljs"}}
-   "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure/set.cljs"}}
-   "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure/string.cljs"}}
-   "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure/walk.cljs"}}
-   "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure/zip.cljs"}}
-   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure/data.cljs"}}
-   "cljs.core.async"        {"core.async"    {"async.cljs"       "src/main/clojure/cljs/core/async.cljs"}}
-   "cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async/macros.clj"}}})
+  ; NS                        REPO             FILE               PATH IN REPO
+  {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs"
+                                              "core.clj"         "src/clj/cljs"}
+                             "clojure"       {"core.clj"         "src/clj/clojure"
+                                              "core_deftype.clj" "src/clj/clojure"
+                                              "core_print.clj"   "src/clj/clojure"
+                                              "core_proxy.clj"   "src/clj/clojure"}}
+   "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs"}}
+   "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure"}}
+   "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
+   "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure"}}
+   "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure"}}
+   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure"}}
+   "cljs.core.async"        {"core.async"    {"async.cljs"       "src/main/clojure/cljs/core"}}
+   "cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async"}}})
 
 ;;------------------------------------------------------------
 ;; Form Reading
@@ -92,7 +92,7 @@
   "Get path to the given repo file"
   [ns- repo file]
   (let [path (get-in cljs-ns-paths [ns- repo file])]
-    (str repo-dir "/" repo "/" path)))
+    (str repo-dir "/" repo "/" path "/" file)))
 
 (defn get-forms
   "Get forms from the given repo file"
