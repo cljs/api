@@ -186,7 +186,7 @@
 
 (defn parse-defn-or-macro
   [form]
-  (let [fn-or-macro ({'defn "function" 'defmacro "macro"} (first form))
+  (let [type- ({'defn "function" 'defmacro "macro"} (first form))
         args (drop 2 form)
         docstring (let [ds (first args)]
                     (when (string? ds)
@@ -211,7 +211,7 @@
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
        :signatures signatures
-       :fn-or-macro fn-or-macro})))
+       :type type-})))
 
 (defn parse-def-fn
   [form]
@@ -223,7 +223,7 @@
                        (second arglists)))]
     {:docstring docstring
      :signatures signatures
-     :fn-or-macro "function"}))
+     :type "function"}))
 
 (defmulti parse-form*
   (fn [form]
@@ -260,37 +260,41 @@
   [form]
   nil)
 
-(defn parse-common
+(defn parse-location
   [form ns- repo]
-  (let [name- (second form)
-        name-meta (meta name-)
-        return-type (:tag name-meta)
-        m (meta form)
+  (let [m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
         source (join "\n" (take-last num-lines (split-lines (:source m))))
         filename (subs (:file m) (inc (count repo-dir)))
-        github-link (get-github-file-link repo filename lines)
+        github-link (get-github-file-link repo filename lines)]
+    {:ns ns-
+     :source source
+     :filename filename
+     :lines lines
+     :github-link github-link}))
+
+(defn parse-common-def
+  [form ns- repo]
+  (let [name- (second form)
+        name-meta (meta name-)
+        return-type (:tag name-meta)
         manual-macro? (or (*fn-macros* name-)
                           (:macro name-meta))]
     (merge
-      {:ns ns-
-       :name name-
-       :return-type return-type
+      {:name name-
        :full-name (str ns- "/" name-)
-       :source source
-       :filename filename
-       :lines lines
-       :github-link github-link}
+       :return-type return-type}
 
       (when manual-macro?
-        {:fn-or-macro "macro"}))))
+        {:type "macro"}))))
 
 (defn parse-form
   [form ns- repo]
   (when-let [specific (parse-form* form)]
-    (let [common (parse-common form ns- repo)
-          merged (merge specific common)
+    (let [common (parse-common-def form ns- repo)
+          location (parse-location form ns- repo)
+          merged (merge specific location common)
           final (update-in merged [:source] try-remove-docs (:expected-docs specific))]
       final)))
 
@@ -326,7 +330,7 @@
                         (parse-api "cljs.core" "clojure" "core_deftype.clj")
                         (parse-api "cljs.core" "clojure" "core_print.clj")
                         (parse-api "cljs.core" "clojure" "core_proxy.clj"))
-        clj-api (filter #(= "macro" (:fn-or-macro %)) clj-api)
+        clj-api (filter #(= "macro" (:type %)) clj-api)
         cljs-forms   (get-forms "cljs.core" "clojurescript" "core.clj")
         imports      (get-imported-macro-api     cljs-forms clj-api)
         non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
@@ -394,7 +398,7 @@
   (join "\n"
     (keep identity
       [(cljsdoc-section "Name" (:full-name item))
-       (cljsdoc-section "Type" (:fn-or-macro item))
+       (cljsdoc-section "Type" (:type item))
        (cljsdoc-section "Return Type" (:return-type item))
        (cljsdoc-section "Docstring" (:docstring item))
        (cljsdoc-section "Signature" (join "\n" (:signatures item)))
