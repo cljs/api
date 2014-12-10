@@ -30,7 +30,7 @@ clojurescript/src/cljs/cljs/core.cljs
     (assoc m k v)))
 
 ===== Github
-https://github.com/clojure/clojurescript/blob/bf2d2413dcb46b2cec9a00e37af407006634c804/src/cljs/cljs/core.cljs#L3957-L3964
+https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3881-L3888
 ```
 
 These docs are intended to be merged with manually-written docs found in
@@ -61,9 +61,8 @@ lein run
 ## Implementation
 
 To gather docs, we are doing self-analysis of literal forms created from
-`tools.reader` rather than using `tools.analyzer` because I had trouble setting
-up the analyzer.  We may use the helpful wrapper [codox] if this becomes
-insufficient.
+`tools.reader` rather than using `tools.analyzer`. We may use the helpful
+wrapper [codox] if this becomes insufficient.
 
 It's worth nothing that parsing the full `cljs.core` namespace requires reading
 symbols from a specific `import-macros` expression, then finding their
