@@ -35,6 +35,8 @@
                                               "core_deftype.clj" "src/clj/clojure"
                                               "core_print.clj"   "src/clj/clojure"
                                               "core_proxy.clj"   "src/clj/clojure"}}
+   "cljs.test"              {"clojurescript" {"test.cljs"        "src/cljs/cljs"
+                                              "test.clj"         "src/clj/cljs"}}
    "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs"}}
    "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure"}}
    "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
@@ -376,6 +378,10 @@
         extra-macro-api (parse-extra-macros-from-clj)
         special-forms (parse-cljs-special-forms)]
     (concat extra-macro-api clj-api cljs-api special-forms)))
+
+(defmethod parse-ns-api "cljs.test" [ns-]
+  (concat (parse-api ns- "clojurescript" "test.cljs")
+          (parse-api ns- "clojurescript" "test.clj")))
 
 (defmethod parse-ns-api "cljs.reader" [ns-]
   (parse-api ns- "clojurescript" "reader.cljs"))
