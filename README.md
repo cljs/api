@@ -1,8 +1,11 @@
 # ClojureScript API Parser
 
+__NOTE: currently no submodules created for clojure,clojurescript,core.async in repos/__
+(exploring other solutions)
+
 This creates ClojureScript API docs by parsing the ClojureScript and Clojure
-repositories.  It outputs `docs-generated/*.cljsdoc` files (at project root)
-for each API symbol found.  For example:
+repositories.  It outputs `docs/*.cljsdoc` files for each API symbol found.
+For example:
 
 ```
 ===== Name
@@ -52,7 +55,7 @@ and commit the change.
 
 ## Run
 
-This creates the `docs-generated/*.cljsdoc` files at project root:
+This creates the `docs/*.cljsdoc` files at project root:
 
 ```
 lein run
