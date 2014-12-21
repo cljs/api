@@ -1,6 +1,7 @@
 # ClojureScript API Parser
 
-This creates ClojureScript API docs by parsing the ClojureScript and Clojure
+This is built for the ClojureScript documentation project at [cljs.info]. It
+creates ClojureScript API docs by parsing the ClojureScript and Clojure
 repositories.  It outputs `docs/*.cljsdoc` files for each API symbol found.
 For example:
 
@@ -38,13 +39,12 @@ These docs are intended to be merged with manually-written docs found in
 
 ## Setup
 
-Run this to clone clj/cljs repos to the "repos" directory:
+Run this to clone clj/cljs repos to the "repos" directory.  This tool will parse
+whatever api versions you choose to checkout.
 
 ```
 ./get-repos.sh
 ```
-
-From there, manually checkout the repo versions you wish to run the tool on.
 
 ## Run
 
@@ -65,3 +65,4 @@ symbols from a specific `import-macros` expression, then finding their
 implementations in `clojure.core`.
 
 [codox]:https://github.com/weavejester/codox
+[cljs.info]: https://github.com/oakmac/cljs.info
