@@ -5,14 +5,19 @@ if [ ! -d "repos" ]; then
 fi
 cd repos
 
-if [ ! -d "clojure" ]; then
-  git clone https://github.com/clojure/clojure
-fi
+clone_or_fetch() {
+  url=$1
+  name=`basename $url`
+  if [ ! -d "$name" ]; then
+    git clone $url
+  else
+    echo "Checking for \"$name\" updates..."
+    cd $name
+    git fetch
+    cd ..
+  fi
+}
 
-if [ ! -d "clojurescript" ]; then
-  git clone https://github.com/clojure/clojurescript
-fi
-
-if [ ! -d "core.async" ]; then
-  git clone https://github.com/clojure/core.async
-fi
+clone_or_fetch https://github.com/clojure/clojure
+clone_or_fetch https://github.com/clojure/clojurescript
+clone_or_fetch https://github.com/clojure/core.async
