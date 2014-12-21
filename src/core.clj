@@ -466,32 +466,31 @@
 
 (defn -main
   []
-  (try
 
-    ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
-    (println "\nUsing repo versions:")
-    (doseq [repo (keys @repo-version)]
-      (let [v (get-repo-version repo)]
-        (swap! repo-version assoc repo v)
-        (println " " repo ":" v)))
+  ;; Retrieve the SHA1 hashes for the checked out repos (for github links)
+  (println "\nUsing repo versions:")
+  (doseq [repo (keys @repo-version)]
+    (let [v (get-repo-version repo)]
+      (swap! repo-version assoc repo v)
+      (println " " repo ":" v)))
 
-    ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
-    ;; which is used by cljs.core. (the ana namespace has to exist)
-    (create-ns 'ana)
+  ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
+  ;; which is used by cljs.core. (the ana namespace has to exist)
+  (create-ns 'ana)
 
-    ;; create the output directory for the docs
-    (mkdir cljsdoc-dir)
+  ;; create the output directory for the docs
+  (mkdir cljsdoc-dir)
 
-    (println "\nWriting docs to" cljsdoc-dir)
+  (println "\nWriting docs to" cljsdoc-dir)
 
-    ;; Build the docs.
-    (doseq [ns- (keys cljs-ns-paths)]
-      (println " " ns-)
-      (dump-api-docs! (parse-ns-api ns-)))
+  ;; Build the docs.
+  (doseq [ns- (keys cljs-ns-paths)]
+    (println " " ns-)
+    (dump-api-docs! (parse-ns-api ns-)))
 
-    (println "\nDone.")
+  (println "\nDone.")
 
-    ;; have to do this because `sh` leaves futures hanging,
-    ;; preventing exit, so we must do it manually.
-    (finally (System/exit 0))))
+  ;; have to do this because `sh` leaves futures hanging,
+  ;; preventing exit, so we must do it manually.
+  (System/exit 0))
 
