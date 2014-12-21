@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 if [ ! -d "repos" ]; then
   mkdir repos
 fi
@@ -11,10 +13,11 @@ clone_or_fetch() {
   if [ ! -d "$name" ]; then
     git clone $url
   else
+    echo ""
     echo "Checking for \"$name\" updates..."
-    cd $name
+    pushd $name > /dev/null
     git fetch
-    cd ..
+    popd > /dev/null
   fi
 }
 

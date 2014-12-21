@@ -17,13 +17,23 @@ if [ -z "$CLJS_VERSION" ]; then
   exit 1
 fi
 
-echo "Checking out ClojureScript $CLJS_VERSION..."
-pushd repos/clojurescript
-git checkout -- .
-git checkout $CLJS_VERSION
-git clean -xdf
+cd repos
 
-cd script
+checkout() {
+  name=$1
+  version=$2
+  echo ""
+  echo "Checking out $name $version"
+  pushd $name > /dev/null
+  git checkout -- .
+  git checkout $version
+  git clean -xdf
+  popd > /dev/null
+}
+
+checkout "clojurescript" $CLJS_VERSION
+
+pushd clojurescript/script > /dev/null
 CLJ_VERSION=`sed -n -e 's/^CLOJURE_RELEASE="\(.*\)"/\1/p' bootstrap`
 if [ -z "$CLJ_VERSION" ]; then
   CLJ_VERSION=`sed -n -e 's/^unzip .*clojure-\(.*\)\.zip/\1/p' bootstrap`
@@ -32,10 +42,6 @@ if [ -z "$CLJ_VERSION" ]; then
   echo "Could not find clojure version to checkout"
   exit 1
 fi
+popd > /dev/null
 
-echo "Checking out Clojure $CLJ_VERSION..."
-popd
-cd repos/clojure
-git checkout -- .
-git checkout "clojure-$CLJ_VERSION"
-git clean -xdf
+checkout "clojure" "clojure-$CLJ_VERSION"
