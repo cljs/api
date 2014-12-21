@@ -43,9 +43,9 @@
    "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
    "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure"}}
    "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure"}}
-   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure"}}
-   "cljs.core.async"        {"core.async"    {"async.cljs"       "src/main/clojure/cljs/core"}}
-   "cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async"}}})
+   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure"}}})
+   ;;"cljs.core.async"        {"core.async"    {"async.cljs"       "src/main/clojure/cljs/core"}}
+   ;;"cljs.core.async.macros" {"core.async"    {"macros.clj"       "src/main/clojure/cljs/core/async"}}})
 
 ;;------------------------------------------------------------
 ;; Form Reading
