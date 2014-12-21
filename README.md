@@ -1,8 +1,5 @@
 # ClojureScript API Parser
 
-__NOTE: currently no submodules created for clojure,clojurescript,core.async in repos/__
-(exploring other solutions)
-
 This creates ClojureScript API docs by parsing the ClojureScript and Clojure
 repositories.  It outputs `docs/*.cljsdoc` files for each API symbol found.
 For example:
@@ -41,17 +38,13 @@ These docs are intended to be merged with manually-written docs found in
 
 ## Setup
 
-The clojure and clojurescript repos are git submodules that we retrieve with
-the following:
+Run this to clone clj/cljs repos to the "repos" directory:
 
 ```
-git submodule init
-git submodule update
+./get-repos.sh
 ```
 
-To update the repos, go to `repos/<repo>`, run `git pull` and `git checkout` to
-bring it to a desired version.  Then we have back out to the directory of this readme,
-and commit the change.
+From there, manually checkout the repo versions you wish to run the tool on.
 
 ## Run
 
