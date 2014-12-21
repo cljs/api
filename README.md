@@ -39,11 +39,19 @@ These docs are intended to be merged with manually-written docs found in
 
 ## Setup
 
-Run this to clone clj/cljs repos to the "repos" directory.  After it runs, you may checkout
-the repos to whatever version you wish the api parser to run on.
+Run this to clone clj/cljs repos to the "repos" directory.  You can run again
+to pull latest changes.
 
 ```
 ./get-repos.sh
+```
+
+After it runs, you may checkout the repos to the given cljs version.  It will
+automatically checkout the respective clojure version as well.
+
+```
+# run without args to see available versions
+./checkout.sh <version>
 ```
 
 ## Run
