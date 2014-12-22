@@ -31,7 +31,10 @@ clojurescript/src/cljs/cljs/core.cljs
     (assoc m k v)))
 
 ===== Github
-https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3881-L3888
+https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025
+
+===== History
+Added in r927
 ```
 
 ## Run
