@@ -1,7 +1,7 @@
 
 /target
 /repos
-/docs
+/output
 *.swp
 .lein-repl-history
 symbol-history

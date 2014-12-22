@@ -2,8 +2,8 @@
 
 This is built for the ClojureScript documentation project at [cljs.info]. It
 creates ClojureScript API docs by parsing the ClojureScript and Clojure
-repositories.  It outputs `docs/*.cljsdoc` files for each API symbol found.
-For example:
+repositories.  It creates `*.cljsdoc` files for each API symbol found.  For
+example:
 
 ```
 ===== Name
