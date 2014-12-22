@@ -77,6 +77,10 @@
 ;; Repos
 ;;------------------------------------------------------------
 
+(defn clone-or-fetch-repos
+  []
+  (sh "./get-repos.sh"))
+
 (defn get-repo-version
   [repo]
   (trim (:out (sh "git" "describe" "--tags" :dir (str repo-dir "/" repo)))))
@@ -569,6 +573,11 @@
   ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
   ;; which is used by cljs.core. (the ana namespace has to exist)
   (create-ns 'ana)
+
+  (println "\nCloning or updating repos...")
+  (clone-or-fetch-repos)
+
+  (mkdir "docs")
 
   (let [[latest history] (get-symbol-history)
         versions (get-versions-since latest)]

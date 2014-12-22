@@ -34,33 +34,22 @@ clojurescript/src/cljs/cljs/core.cljs
 https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3881-L3888
 ```
 
-These docs are intended to be merged with manually-written docs found in
-`docs/*.cljsdoc` at project root. The merging is done in `Gruntfile.js`.
-
-## Setup
-
-Run this to clone clj/cljs repos to the "repos" directory.  You can run again
-to pull latest changes.
-
-```
-./get-repos.sh
-```
-
-After it runs, you may checkout the repos to the given cljs version.  It will
-automatically checkout the respective clojure version as well.
-
-```
-# run without args to see available versions
-./checkout.sh <version>
-```
-
 ## Run
 
-This creates the `docs/*.cljsdoc` files at project root:
+Run this to build docs for every clojurescript version.  It builds a
+`symbol-history` file as it progresses through the versions in order to track
+when symbols were added/removed.
 
 ```
 lein run
 ```
+
+When running again, the program will skip the versions already parsed by
+`symbol-history`.
+
+## Doc Archives
+
+There will be a docs branch with tags for each version archive.
 
 ## Implementation
 
