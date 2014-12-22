@@ -549,17 +549,14 @@
        (cljsdoc-section "Filename" (:filename item))
        (cljsdoc-section "Source" (:source item))
        (cljsdoc-section "Github" (:github-link item))
-       (cljsdoc-section "History" (join "\n" (map make-history-text (:history item))))])))
+       (cljsdoc-section "History" (join "\n" (map make-history-text (:history item))))
+       ""])))
 
 (defn dump-doc-file!
   [item]
-  (let [add-ext #(str % ".cljsdoc")
-        filename (loop [f (item-filename item)]
-                   (if (exists? (add-ext f))
-                     (recur (str f "."))
-                     (add-ext f)))
+  (let [filename (str (item-filename item) ".cljsdoc")
         cljsdoc-content (make-cljsdoc item)]
-    (spit filename cljsdoc-content)))
+    (spit filename cljsdoc-content :append true)))
 
 (defn dump-api-docs!
   [api]
