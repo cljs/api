@@ -4,3 +4,4 @@
 /docs
 *.swp
 .lein-repl-history
+symbol-history
