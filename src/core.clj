@@ -79,7 +79,7 @@
 
 (defn clone-or-fetch-repos
   []
-  (sh "./get-repos.sh"))
+  (sh "script/get-repos.sh"))
 
 (defn get-repo-version
   [repo]
@@ -87,7 +87,7 @@
 
 (defn get-repo-versions
   []
-  (let [sh-return (sh "./versions.sh")
+  (let [sh-return (sh "script/versions.sh")
         versions (split-lines (:out sh-return))]
     versions))
 
@@ -102,7 +102,7 @@
 
 (defn checkout-version!
   [v]
-  (sh "./checkout.sh" v))
+  (sh "script/checkout.sh" v))
 
 (defn get-github-file-link
   [repo path [start-line end-line]]
