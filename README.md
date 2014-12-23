@@ -34,7 +34,7 @@ clojurescript/src/cljs/cljs/core.cljs
 https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025
 
 ===== History
-Added in r927
+Added in 0.0-927
 ```
 
 ## Run
