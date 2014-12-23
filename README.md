@@ -66,9 +66,13 @@ To gather docs, we are doing self-analysis of literal forms created from
 `tools.reader` rather than using `tools.analyzer`. We may use the helpful
 wrapper [codox] if this becomes insufficient.
 
-It's worth nothing that parsing the full `cljs.core` namespace requires reading
-symbols from a specific `import-macros` expression, then finding their
-implementations in `clojure.core`.
+It's worth nothing that parsing the full `cljs.core` namespace requires:
+
+- reading macros from `clojure.core` (specific clojure version found in `clojurescript/script/bootstrap`)
+- excluding macros listed in `(ns cljs.core (:refer-clojure :exclude` form
+- including macros listed in `(import-macros clojure.core` in `cljs.core`
+- finding special forms of the form `(defmethod parse` in `cljs.analyzer` or (`cljs.compiler` for older versions)
+  - (currently missing signatures and docstrings for special forms)
 
 ----
 
