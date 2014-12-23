@@ -176,11 +176,11 @@
   (System/exit 1))
 
 (defn verify-docs-repo-sync!
-  [past-versions versions]
+  [past-versions versions-left]
   (doseq [version past-versions]
     (when-not (docs-repo-has-version? version)
       (docs-repo-out-of-sync! (str version " has no tag"))))
-  (doseq [version versions]
+  (doseq [version versions-left]
     (when (docs-repo-has-version? version)
       (docs-repo-out-of-sync! (str version " already has tag")))))
 
@@ -664,7 +664,7 @@
 ;;------------------------------------------------------------
 
 (defn -main
-  []
+  [& args]
 
   ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
   ;; which is used by cljs.core. (the ana namespace has to exist)
@@ -676,10 +676,13 @@
   (prepare-docs-repo!)
 
   (let [[latest history] (get-symbol-history)
-        [past-versions versions] (get-versions-to-parse latest)]
+        [past-versions versions-left] (get-versions-to-parse latest)
+        versions (if-let [number (first args)]
+                   (take (Integer/parseInt number) versions-left)
+                   versions-left)]
 
     (println "\nVerifying docs-repo is in sync with symbol-history...")
-    (verify-docs-repo-sync! past-versions versions)
+    (verify-docs-repo-sync! past-versions versions-left)
 
     (doseq [version versions]
 
