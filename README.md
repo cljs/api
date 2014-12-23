@@ -1,7 +1,7 @@
 # ClojureScript API Parser
 
-This tool generates ClojureScript API docs
-[here](https://github.com/shaunlebron/cljs-api-docs) by parsing the
+This tool generates the __[ClojureScript API
+docs](https://github.com/shaunlebron/cljs-api-docs)__ by parsing the
 ClojureScript and Clojure repositories.  It creates `*.cljsdoc` files for each
 API symbol found.  For example:
 
