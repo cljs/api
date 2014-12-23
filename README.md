@@ -46,12 +46,19 @@ lein run
 ```
 
 It creates a `cljs-api-docs` repository, and dumps the doc files into a "docs"
-branch containing release version tagged commits.  It is done this way for the
-purpose of downloadable releases at
-[cljs-api-docs](https://github.com/shaunlebron/cljs-api-docs).
+branch containing release version tagged commits.  A `symbol-history` table
+file is written to track symbol history and the most recently parsed release.
+The tool will skip the releases already listed in `symbol-history`.
 
-When running again, the program will skip the versions already listed in
-`symbol-history`.
+I publish the docs to [cljs-api-docs] with:
+
+```
+# for incremental updates
+script/build-push.sh
+
+# when doc format changes
+script/rebuild-push.sh
+```
 
 ## Implementation
 
@@ -65,3 +72,4 @@ implementations in `clojure.core`.
 
 [codox]:https://github.com/weavejester/codox
 [cljs.info]: https://github.com/oakmac/cljs.info
+[cljs-api-docs]:https://github.com/shaunlebron/cljs-api-docs
