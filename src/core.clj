@@ -589,6 +589,7 @@
       (replace "?" "QMARK")
       (replace "*" "STAR")
       (replace "+" "PLUS")
+      (replace "=" "EQ")
       (replace "/" "SLASH")))
 
 (defn item-filename
