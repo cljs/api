@@ -70,6 +70,10 @@ It's worth nothing that parsing the full `cljs.core` namespace requires reading
 symbols from a specific `import-macros` expression, then finding their
 implementations in `clojure.core`.
 
+----
+
+Built for the upcoming __[cljs.info]__ website.
+
 [codox]:https://github.com/weavejester/codox
 [cljs.info]: https://github.com/oakmac/cljs.info
 [cljs-api-docs]:https://github.com/shaunlebron/cljs-api-docs
