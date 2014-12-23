@@ -1,9 +1,9 @@
 # ClojureScript API Parser
 
-This is built for the ClojureScript documentation project at [cljs.info]. It
-creates ClojureScript API docs by parsing the ClojureScript and Clojure
-repositories.  It creates `*.cljsdoc` files for each API symbol found.  For
-example:
+This tool generates ClojureScript API docs
+[here](https://github.com/shaunlebron/cljs-api-docs) by parsing the
+ClojureScript and Clojure repositories.  It creates `*.cljsdoc` files for each
+API symbol found.  For example:
 
 ```
 ===== Name
@@ -39,20 +39,19 @@ Added in r927
 
 ## Run
 
-Run this to build docs for every clojurescript version.  It builds a
-`symbol-history` file as it progresses through the versions in order to track
-when symbols were added/removed.
+Run this to build docs for every ClojureScript version:
 
 ```
 lein run
 ```
 
-When running again, the program will skip the versions already parsed by
+It creates a `cljs-api-docs` repository, and dumps the doc files into a "docs"
+branch containing release version tagged commits.  It is done this way for the
+purpose of downloadable releases at
+[cljs-api-docs](https://github.com/shaunlebron/cljs-api-docs).
+
+When running again, the program will skip the versions already listed in
 `symbol-history`.
-
-## Doc Archives
-
-There will be a docs branch with tags for each version archive.
 
 ## Implementation
 
