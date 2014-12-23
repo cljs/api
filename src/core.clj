@@ -147,7 +147,7 @@
   (when-not (= docs-branch (docs-repo-branch))
     (if (docs-repo-branch-exists? docs-branch)
       (git-docs-repo! "checkout" docs-branch)
-      (git-docs-repo! "checkout" "-b" docs-branch))))
+      (git-docs-repo! "checkout" "--orphan" docs-branch))))
 
 (defn docs-repo-has-version?
   [v]
