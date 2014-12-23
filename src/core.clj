@@ -625,7 +625,8 @@
   [text]
   (let [plus-or-minus (first text)
         change (if (= \+ plus-or-minus) "Added" "Removed")
-        version (subs text 1)]
+        tag (subs text 1)
+        version (cljs-tag->version tag)]
     (str change " in " version)))
 
 (defn cljsdoc-section
