@@ -68,11 +68,11 @@ wrapper [codox] if this becomes insufficient.
 
 It's worth nothing that parsing the full `cljs.core` namespace requires:
 
-- reading macros from `clojure.core` (specific clojure version found in `clojurescript/script/bootstrap`)
-- excluding macros listed in `(ns cljs.core (:refer-clojure :exclude` form
-- including macros listed in `(import-macros clojure.core` in `cljs.core`
-- finding special forms of the form `(defmethod parse` in `cljs.analyzer` or (`cljs.compiler` for older versions)
-  - (currently missing signatures and docstrings for special forms)
+- finding __macros__ in `clojure.core` (specific clj version in `cljs/script/bootstrap`)
+    - excluding those in `(ns cljs.core (:refer-clojure :exclude` form
+    - including those in `(import-macros clojure.core` in `cljs.core`
+- finding __special-forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
+    - (currently can't parse signatures and docstrings)
 
 ----
 
