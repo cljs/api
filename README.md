@@ -60,6 +60,21 @@ script/build-push.sh
 script/rebuild-push.sh
 ```
 
+### Restoring
+
+If I lose my local repo and I want to restore from github:
+
+```
+$ git clone git@github.com:shaunlebron/cljs-api-docs.git
+$ script/restore-docs-from-github.sh
+```
+
+Then, incremental updates can be made again:
+
+```
+$ script/build-push.sh
+```
+
 ## Implementation
 
 To gather docs, we are doing self-analysis of literal forms created from
