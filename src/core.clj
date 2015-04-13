@@ -771,6 +771,7 @@
       (binding [*output-dir* docs-repo-dir
                 *repo-version* {"clojurescript" version
                                 "clojure" (get-repo-version "clojure")}]
+        (println "using Clojure version:" (get *repo-version* "clojure"))
 
         (println "\nParsing...")
         (let [parsed (parse-all)
@@ -797,7 +798,7 @@
 
   (if (= (first args) "examples")
     (scrape-examples!)
-    (gen-docs!))
+    (gen-docs! args))
 
   ;; have to do this because `sh` leaves futures hanging,
   ;; preventing exit, so we must do it manually.
