@@ -60,6 +60,16 @@ script/build-push.sh
 script/rebuild-push.sh
 ```
 
+### scraping clojuredocs examples
+
+To help build our initial set of clojurescript docs, we are scraping examples
+from clojuredocs.  Each symbol will have its own file with its scraped examples
+placed in the `examples` branch of the docs repo.
+
+```
+lein run examples
+```
+
 ### Restoring
 
 If I lose my local repo and I want to restore from github:
