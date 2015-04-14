@@ -726,7 +726,7 @@
   (let [[_latest history] (get-symbol-history)]
     (doseq [ns-and-s (sort (:symbols @history))]
       (let [[ns- s] (split-ns-symbol ns-and-s)
-            filename (str docs-repo-dir "/" ns- "_" (symbol->filename s))
+            filename (str docs-repo-dir "/" ns- "_" (symbol->filename s) ".cljsdoc")
             url (symbol->clojuredocs-url ns- s)
             example-content (try (clojuredocs-examples url) (catch Exception e nil))]
         (if example-content
