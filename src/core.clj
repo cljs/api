@@ -670,7 +670,8 @@
   [item]
   (let [filename (str (item-filename item) ".cljsdoc")
         cljsdoc-content (make-cljsdoc item)]
-    (spit filename cljsdoc-content :append true)))
+    (spit filename cljsdoc-content) ;; use `:append true` to see overwrites
+    ))
 
 (defn dump-api-docs!
   [api]
