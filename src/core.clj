@@ -1,6 +1,7 @@
 (ns core
   (:refer-clojure :exclude [replace])
   (:require
+    [clojure.string :refer [lower-case]]
     [clojure.java.io :as io]
     [clojure.java.shell :refer [sh]]
     [clojure.tools.reader :as reader]
@@ -421,10 +422,13 @@
 
 (defn internal-def-only?
   [form]
-  (let [c (:potential-comment form)
-        tokens (split c #"\s+")]
-    (and (#{";;" ";"} (first tokens))
-         (= "internal" (second tokens)))))
+  (let [[c0 c1] (split (:potential-comment form) #"\s+")
+        comment-flag? (and (#{";;" ";"} c0)
+                           c1
+                           (= "internal" (lower-case c1)))
+        [d0] (split (or (:docstring form) "") #"\s+")
+        docstring-flag? (and d0 (= "internal" (lower-case d0)))]
+    (or comment-flag? docstring-flag?)))
 
 (defn parse-form
   [form ns- repo]
