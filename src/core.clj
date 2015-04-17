@@ -389,11 +389,17 @@
   (let [m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
-        source (join "\n" (take-last num-lines (split-lines (:source m))))
+        source-lines (split-lines (:source m))
+
+        ;; the first line before the definition (potential comment)
+        potential-comment (first (take-last (inc num-lines) source-lines))
+
+        source (join "\n" (take-last num-lines source-lines))
         filename (subs (:file m) (inc (count repo-dir)))
         github-link (get-github-file-link repo filename lines)]
     {:ns ns-
      :source source
+     :potential-comment potential-comment
      :filename filename
      :lines lines
      :github-link github-link}))
@@ -413,14 +419,23 @@
       (when manual-macro?
         {:type "macro"}))))
 
+(defn internal-def-only?
+  [form]
+  (let [c (:potential-comment form)
+        tokens (split c #"\s+")]
+    (and (#{";;" ";"} (first tokens))
+         (= "internal" (second tokens)))))
+
 (defn parse-form
   [form ns- repo]
   (when-let [specific (parse-form* form)]
     (let [common (parse-common-def form ns- repo)
           location (parse-location form ns- repo)
           merged (merge specific location common)
-          final (update-in merged [:source] try-remove-docs (:expected-docs specific))]
-      final)))
+          final (update-in merged [:source] try-remove-docs (:expected-docs specific))
+          internal? (internal-def-only? final)]
+      (when-not internal?
+        final))))
 
 (defn parse-special*
   "Parse cljs special forms of the form:
