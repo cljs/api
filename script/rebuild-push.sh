@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd cljs-api-docs
+cd api-docs-generated
 git checkout master &> /dev/null
 
 echo "Deleting docs branch..."

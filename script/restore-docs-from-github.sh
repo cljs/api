@@ -2,11 +2,11 @@
 
 set -e
 
-if [ -d "cljs-api-docs" ]; then
-  echo "cljs-api-docs already exists.  If you really want to restore from github, please delete it first."
+if [ -d "api-docs-generated" ]; then
+  echo "api-docs-generated already exists.  If you really want to restore from github, please delete it first."
 else
-  git clone git@github.com:shaunlebron/cljs-api-docs.git
-  cd cljs-api-docs
+  git clone git@github.com:cljs-website/api-docs-generated.git
+  cd api-docs-generated
   git checkout docs
 
   # recreate the symbol-history file required for syncing state with docs repo

@@ -4,5 +4,5 @@ echo "Starting..."
 lein run
 
 echo "Pushing docs..."
-cd cljs-api-docs
+cd api-docs-generated
 git push --tags origin docs:docs

@@ -1,9 +1,8 @@
-# ClojureScript API Parser
+# CLJS API Docs Generator
 
-This tool generates the __[ClojureScript API
-docs](https://github.com/shaunlebron/cljs-api-docs)__ by parsing the
-ClojureScript and Clojure repositories.  It creates `*.cljsdoc` files for each
-API symbol found.  For example:
+This tool generates the __[api-docs-generated]__ by parsing the ClojureScript
+and Clojure repositories.  It creates `*.cljsdoc` files for each API symbol
+found.  For example:
 
 ```
 ===== Name
@@ -45,12 +44,12 @@ Run this to build docs for every ClojureScript version:
 lein run
 ```
 
-It creates a `cljs-api-docs` repository, and dumps the doc files into a "docs"
+It creates a `api-docs-generated` repository, and dumps the doc files into a "docs"
 branch containing release version tagged commits.  A `symbol-history` table
 file is written to track symbol history and the most recently parsed release.
 The tool will skip the releases already listed in `symbol-history`.
 
-I publish the docs to [cljs-api-docs] with:
+I publish the docs to [api-docs-generated] with:
 
 ```
 # for incremental updates
@@ -75,7 +74,6 @@ lein run examples
 If I lose my local repo and I want to restore from github:
 
 ```
-$ git clone git@github.com:shaunlebron/cljs-api-docs.git
 $ script/restore-docs-from-github.sh
 ```
 
@@ -99,10 +97,5 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - finding __special-forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
     - (currently can't parse signatures and docstrings)
 
-----
-
-Built for the upcoming __[cljs.info]__ website.
-
 [codox]:https://github.com/weavejester/codox
-[cljs.info]: https://github.com/oakmac/cljs.info
-[cljs-api-docs]:https://github.com/shaunlebron/cljs-api-docs
+[api-docs-generated]:https://github.com/cljs-website/api-docs-generated

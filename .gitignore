@@ -5,4 +5,4 @@
 *.swp
 .lein-repl-history
 symbol-history
-/cljs-api-docs
+/api-docs-generated
