@@ -5,7 +5,7 @@ set -e
 if [ -d "api-docs-generated" ]; then
   echo "api-docs-generated already exists.  If you really want to restore from github, please delete it first."
 else
-  git clone git@github.com:cljs-website/api-docs-generated.git
+  git clone git@github.com:cljsinfo/api-docs-generated.git
   cd api-docs-generated
   git checkout docs
 

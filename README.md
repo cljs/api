@@ -98,4 +98,4 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
     - (currently can't parse signatures and docstrings)
 
 [codox]:https://github.com/weavejester/codox
-[api-docs-generated]:https://github.com/cljs-website/api-docs-generated
+[api-docs-generated]:https://github.com/cljsinfo/api-docs-generated
