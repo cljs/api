@@ -510,7 +510,8 @@
         repo "clojurescript"
         forms (concat (get-forms ns- repo "analyzer.clj")
                       (get-forms ns- repo "compiler.clj"))
-        specials (keep #(parse-special % ns- repo) forms)]
+        special-ns "special" ;; doing this because special forms are not actually in any namespace
+        specials (keep #(parse-special % special-ns repo) forms)]
     (println "   " (count specials) "special forms in cljs.analyzer")
     specials))
 
