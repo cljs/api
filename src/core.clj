@@ -45,6 +45,8 @@
                                               "core_proxy.clj"   "src/clj/clojure"}}
    "cljs.test"              {"clojurescript" {"test.cljs"        "src/cljs/cljs"
                                               "test.clj"         "src/clj/cljs"}}
+   "cljs.repl"              {"clojurescript" {"repl.clj"         "src/clj/cljs"
+                                              "repl.cljs"        "src/cljs/cljs"}}
    "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs"}}
    "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure"}}
    "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
@@ -527,6 +529,10 @@
   (concat (parse-api ns- "clojurescript" "test.cljs")
           (parse-api ns- "clojurescript" "test.clj")))
 
+(defmethod parse-ns-api "cljs.repl" [ns-]
+  (concat (parse-api ns- "clojurescript" "repl.clj")
+          (parse-api ns- "clojurescript" "repl.cljs")))
+
 (defmethod parse-ns-api "cljs.reader" [ns-]
   (parse-api ns- "clojurescript" "reader.cljs"))
 
@@ -768,6 +774,10 @@
   ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
   ;; which is used by cljs.core. (the ana namespace has to exist)
   (create-ns 'ana)
+
+  ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::env/compiler`
+  ;; which is used by cljs.repl. (the env namespace has to exist)
+  (create-ns 'env)
 
   (println "\nCloning or updating repos...")
   (clone-or-fetch-repos)
