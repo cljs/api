@@ -600,6 +600,7 @@
 
 (def docs-dir "docs")
 (def history-filename "symbol-history")
+(def changes-filename "changes")
 
 (defn get-symbol-history
   []
@@ -647,6 +648,18 @@
   (let [v-change (str "-" version)]
     (swap! history update-in [:version-map s] conj v-change)))
 
+(defn write-changes!
+  [added removed version]
+  (let [current (if (exists? changes-filename) (slurp changes-filename) "")
+        changed-lines (->> (concat (map #(vector "+" %) added)
+                                   (map #(vector "-" %) removed))
+                           (sort-by second)
+                           (map (fn [[a b]] (str "  " a " " b))))
+        version-changes (join "\n" (cons version changed-lines))
+        content (str version-changes "\n\n" current)]
+    (spit changes-filename content)
+    (spit (str *output-dir* "/" changes-filename) content)))
+
 (defn update-history!
   [history version symbols]
   (let [[added removed _] (diff symbols (:symbols @history))]
@@ -655,6 +668,7 @@
     (doseq [s removed]
       (mark-symbol-removed! history version s))
     (swap! history assoc :symbols symbols)
+    (write-changes! added removed version)
     (write-history! (:version-map @history) version)))
 
 (defn attach-history
