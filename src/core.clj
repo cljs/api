@@ -117,11 +117,13 @@
   (sh "script/checkout.sh" v))
 
 (defn get-github-file-link
-  [repo path [start-line end-line]]
-  (let [version (get *repo-version* repo)
-        strip-path (subs path (inc (count repo)))]
-    (str "https://github.com/clojure/" repo "/blob/" version "/" strip-path
-         "#L" start-line "-L" end-line)))
+  ([repo path] (get-github-file-link repo path nil))
+  ([repo path [start-line end-line]]
+   (let [version (get *repo-version* repo)
+         strip-path (subs path (inc (count repo)))]
+     (cond-> (str "https://github.com/clojure/" repo "/blob/" version "/" strip-path)
+       start-line (str "#L" start-line)
+       (and start-line end-line) (str "-L" end-line)))))
 
 (defn clj-tag->version
   [v]
@@ -463,6 +465,38 @@
           final (merge special location extras)]
       final)))
 
+(defn parse-repl-specials*
+  "Parse cljs repl special forms of the form:
+  (def default-special-fns (let [...] { #_keys_are_special_form_names }))"
+  [form]
+  (if (and (#{"r927" "r971"} (*repo-version* "clojurescript"))
+           (list? form)
+           (= 'defn (first form))
+           (= 'repl (second form)))
+    ;; old version, just manually setting when detected
+    ['in-ns 'load-file 'load-namespace]
+
+    ;; everything >= r993
+    (when (and (list? form)
+               (= 'def (first form))
+               (= 'default-special-fns (second form)))
+      (let [[_let _bindings form-map] (nth form 2)]
+        (->> (keys form-map)
+             (map second) ;; (quote x) => x
+             (remove namespace)) ;; we'll ignore namespace-qualified special forms
+        ))))
+
+(defn parse-repl-specials
+  [form ns- repo]
+  (when-let [specials (parse-repl-specials* form)]
+    (let [location (parse-location form ns- repo)
+          make-map (fn [name-]
+                     (merge location
+                       {:name name-
+                        :full-name (str ns- "/" name-)
+                        :type "special form (repl)"}))]
+     (map make-map specials))))
+
 (defn parse-api
   "Parse the functions and macros from the given repo file"
   [ns- repo file]
@@ -530,8 +564,13 @@
           (parse-api ns- "clojurescript" "test.clj")))
 
 (defmethod parse-ns-api "cljs.repl" [ns-]
-  (concat (parse-api ns- "clojurescript" "repl.clj")
-          (parse-api ns- "clojurescript" "repl.cljs")))
+  (let [repo "clojurescript"
+        forms (get-forms ns- repo "repl.clj")
+        special-ns "specialrepl"
+        specials (first (keep #(parse-repl-specials % special-ns repo) forms))]
+    (concat (parse-api ns- "clojurescript" "repl.clj")
+            (parse-api ns- "clojurescript" "repl.cljs")
+            specials)))
 
 (defmethod parse-ns-api "cljs.reader" [ns-]
   (parse-api ns- "clojurescript" "reader.cljs"))
