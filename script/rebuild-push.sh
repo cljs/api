@@ -13,6 +13,7 @@ done
 
 echo "Deleting symbol history..."
 rm ../symbol-history
+rm ../changes
 
 echo "Starting..."
 lein run

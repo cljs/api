@@ -12,5 +12,6 @@ else
   # recreate the symbol-history file required for syncing state with docs repo
   echo `git describe --tags` | sed -e 's/0\.0-/r/' > ../symbol-history
   cat symbol-history >> ../symbol-history
+  cp changes ../changes
 fi
 
