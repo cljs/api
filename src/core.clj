@@ -8,6 +8,7 @@
     [clojure.tools.reader.reader-types :as readers]
     [clojure.string :refer [split split-lines join replace trim]]
     [clojure.data :refer [diff]]
+    [clojure.set :refer [rename-keys]]
     [clojure.core.match :refer [match]]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [net.cgrand.enlive-html :as html]
@@ -445,25 +446,69 @@
       (when-not internal?
         final))))
 
+(defn transform-special-doc
+  [doc-map]
+  (let [transform-form (fn [form sym]
+                         (vec (if (= (first form) sym) ;; e.g. (do exprs*) => [exprs*]
+                                (rest form)
+                                form)))
+        transform-forms (fn [forms sym]
+                          (map #(transform-form % sym) forms))
+        transform-val (fn [sym value]
+                        (-> value
+                            (rename-keys {:doc :docstring, :url :doc-url})
+                            (update-in [:docstring] fix-docstring)
+                            (update-in [:forms] transform-forms sym)
+                            (rename-keys {:forms :signatures})))
+        values (map transform-val (keys doc-map) (vals doc-map))]
+    (zipmap (keys doc-map) values)))
+
+(defn parse-special-docs
+  "Parse the special-doc-map."
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def special-doc-map)))
+    (let [[_quote doc-map] (nth form 2)]
+      (transform-special-doc doc-map))))
+
 (defn parse-special*
   "Parse cljs special forms of the form:
   (defmethod parse 'symbol ...)"
   [form]
   (when (and (list? form)
-             (= 'defmethod (first form))
-             (= 'parse (second form)))
+             (= (take 2 form) '(defmethod parse)))
     (let [quoted-name (nth form 2)
           name- (second quoted-name)]
       {:name name-})))
 
 (defn parse-special
-  [form ns- repo]
+  [form ns- repo doc-map]
   (when-let [special (parse-special* form)]
     (let [location (parse-location form ns- repo)
           extras {:full-name (str ns- "/" (:name special))
                   :type "special form"}
-          final (merge special location extras)]
+          docs (get doc-map (:name special))
+          final (merge special location extras docs)]
       final)))
+
+(defn transform-repl-special-doc
+  [doc-map]
+  (println "repl-special-doc-map")
+  (prn doc-map)
+  (let [transform-val (fn [value]
+                        (-> value
+                            (rename-keys {:doc :docstring, :arglists :signatures})
+                            (update-in [:docstring] fix-docstring)))
+        values (map transform-val (vals doc-map))]
+    (zipmap (keys doc-map) values)))
+
+(defn parse-repl-special-docs
+  "Parse the repl-special-doc-map."
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def repl-special-doc-map)))
+    (let [[_quote doc-map] (nth form 2)]
+      (transform-repl-special-doc doc-map))))
 
 (defn parse-repl-specials*
   "Parse cljs repl special forms of the form:
@@ -471,15 +516,13 @@
   [form]
   (if (and (#{"r927" "r971"} (*repo-version* "clojurescript"))
            (list? form)
-           (= 'defn (first form))
-           (= 'repl (second form)))
+           (= (take 2 form) '(defn repl)))
     ;; old version, just manually setting when detected
     ['in-ns 'load-file 'load-namespace]
 
     ;; everything >= r993
     (when (and (list? form)
-               (= 'def (first form))
-               (= 'default-special-fns (second form)))
+               (= (take 2 form) '(def default-special-fns)))
       (let [[_let _bindings form-map] (nth form 2)]
         (->> (keys form-map)
              (map second) ;; (quote x) => x
@@ -487,14 +530,15 @@
         ))))
 
 (defn parse-repl-specials
-  [form ns- repo]
+  [form ns- repo doc-map]
   (when-let [specials (parse-repl-specials* form)]
     (let [location (parse-location form ns- repo)
           make-map (fn [name-]
-                     (merge location
-                       {:name name-
-                        :full-name (str ns- "/" name-)
-                        :type "special form (repl)"}))]
+                     (let [attrs {:name name-
+                                  :full-name (str ns- "/" name-)
+                                  :type "special form (repl)"}
+                           docs (get doc-map name-)]
+                       (merge location attrs docs)))]
      (map make-map specials))))
 
 (defn parse-api
@@ -546,8 +590,10 @@
         repo "clojurescript"
         forms (concat (get-forms ns- repo "analyzer.clj")
                       (get-forms ns- repo "compiler.clj"))
+        repl-forms (get-forms "cljs.repl" "clojurescript" "repl.clj")
+        special-docs (first (keep #(parse-special-docs %) repl-forms))
         special-ns "special" ;; doing this because special forms are not actually in any namespace
-        specials (keep #(parse-special % special-ns repo) forms)]
+        specials (keep #(parse-special % special-ns repo special-docs) forms)]
     (println "   " (count specials) "special forms in cljs.analyzer")
     specials))
 
@@ -567,7 +613,8 @@
   (let [repo "clojurescript"
         forms (get-forms ns- repo "repl.clj")
         special-ns "specialrepl"
-        specials (first (keep #(parse-repl-specials % special-ns repo) forms))]
+        special-docs (first (keep #(parse-repl-special-docs %) forms))
+        specials (first (keep #(parse-repl-specials % special-ns repo special-docs) forms))]
     (concat (parse-api ns- "clojurescript" "repl.clj")
             (parse-api ns- "clojurescript" "repl.cljs")
             specials)))
@@ -839,8 +886,14 @@
 
   (let [[latest history] (get-symbol-history)
         [past-versions versions-left] (get-versions-to-parse latest)
-        versions (if-let [number (first args)]
-                   (take (Integer/parseInt number) versions-left)
+        arg1 (first args)
+        versions (if arg1
+                   (try
+                     (take (Integer/parseInt arg1) versions-left) ;; argument is number of versions to parse
+                     (catch Exception e
+                       (if (= (first arg1) \r) ;; argument is version number to check out
+                         [arg1]
+                         versions-left)))
                    versions-left)]
 
     (println "\nVerifying docs-repo is in sync with symbol-history...")
