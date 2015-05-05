@@ -803,6 +803,8 @@
                         (rename-keys $ {:filename    :source-filename
                                         :github-link :source-link
                                         :signatures  :signature})
+                        (update-in $ [:signature] #(map str %))
+                        (update-in $ [:name] str)
                         (assoc $ :filename (str (:ns $) "_" (symbol->filename (:name $)) ".cljsdoc"))
                         (filter (comp not nil? second) $)
                         (into {} $)))
