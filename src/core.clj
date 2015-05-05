@@ -17,7 +17,7 @@
 ;; location of the clojure & clojurescript repos to parse
 (def repo-dir "repos")
 
-(def docs-repo-dir "api-docs-generated")
+(def docs-repo-dir "output-repo")
 
 (def docs-branch "docs")
 (def examples-branch "examples")
