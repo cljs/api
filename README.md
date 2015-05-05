@@ -1,8 +1,29 @@
 # CLJS API Docs Generator
 
-This tool generates the __[api-docs-generated]__ by parsing the ClojureScript
-and Clojure repositories.  It creates `*.cljsdoc` files for each API symbol
-found.  For example:
+This is a tool that generates a versioned catalog of ClojureScript's core
+functions, macros, and special forms (and their metadata).
+
+- __[Browse latest docs](https://github.com/cljsinfo/api-docs-generator/tree/docs)__
+- __[Browse scraped examples from clojuredocs](https://github.com/cljsinfo/api-docs-generator/tree/examples)__
+- __[Downloads](https://github.com/cljsinfo/api-docs-generator/releases)__
+
+An `autodocs.edn` file is generated for each version.  It is a list of maps of
+the following structure:
+
+```
+{:full-name         "cljs.core/assoc-in"
+ :ns                "cljs.core"
+ :name              "assoc-in"
+ :type              "function"
+ :signatures        [[m [k & ks] v]]
+ :history           ["+r927"]
+ :return-type       nil
+ :source-filename   "clojurescript/src/cljs/cljs/core.cljs"
+ :source-link       "https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025"
+ :source            "...full source code..."}
+```
+
+Readable `*.cljsdoc` files are also produced:
 
 ```
 ===== Name
@@ -44,19 +65,19 @@ Run this to build docs for every ClojureScript version:
 lein run
 ```
 
-It creates a `api-docs-generated` repository, and dumps the doc files into a "docs"
-branch containing release version tagged commits.  A `symbol-history` table
-file is written to track symbol history and the most recently parsed release.
-The tool will skip the releases already listed in `symbol-history`.
+This creates an `output-repo/` directory.  It is a git repo with a tag for each cljs version.
 
-I publish the docs to [api-docs-generated] with:
+__Restarting__ the build process is not in a good state currently, sorry.
+Please run the following before running the build process again:
 
 ```
-# for incremental updates
-script/build-push.sh
+rm -rf output-repo changes symbol-history
+```
 
-# when doc format changes
-script/rebuild-push.sh
+To __build for just a single version__:
+
+```
+lein run r3211
 ```
 
 ### scraping clojuredocs examples
@@ -67,20 +88,6 @@ placed in the `examples` branch of the docs repo.
 
 ```
 lein run examples
-```
-
-### Restoring
-
-If I lose my local repo and I want to restore from github:
-
-```
-$ script/restore-docs-from-github.sh
-```
-
-Then, incremental updates can be made again:
-
-```
-$ script/build-push.sh
 ```
 
 ## Implementation
@@ -98,4 +105,3 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
     - (currently can't parse signatures and docstrings)
 
 [codox]:https://github.com/weavejester/codox
-[api-docs-generated]:https://github.com/cljsinfo/api-docs-generated
