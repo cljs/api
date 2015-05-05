@@ -15,7 +15,8 @@ the following structure:
  :ns                "cljs.core"
  :name              "assoc-in"
  :type              "function"
- :signatures        [[m [k & ks] v]]
+ :signature         [[m [k & ks] v]]
+ :docstring         "...full docstring..."
  :history           ["+r927"]
  :return-type       nil
  :source-filename   "clojurescript/src/cljs/cljs/core.cljs"

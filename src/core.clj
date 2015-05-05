@@ -788,19 +788,23 @@
   [api]
   (let [outfile (str *output-dir* "/" edn-output-file)
         transform (fn [x]
-                    (-> x
-                        (select-keys [:full-name
-                                      :ns
-                                      :name
-                                      :type
-                                      :signatures
-                                      :history
-                                      :return-type
-                                      :filename
-                                      :github-link
-                                      :source])
-                        (rename-keys {:filename    :source-filename
-                                      :github-link :source-link})))
+                    (as-> x $
+                        (select-keys $ [:full-name
+                                        :ns
+                                        :name
+                                        :docstring
+                                        :type
+                                        :signatures
+                                        :history
+                                        :return-type
+                                        :filename
+                                        :github-link
+                                        :source])
+                        (rename-keys $ {:filename    :source-filename
+                                        :github-link :source-link
+                                        :signatures  :signature})
+                        (filter (comp not nil? second) $)
+                        (into {} $)))
         outdata (map transform api)]
   (spit outfile (pr-str outdata))))
 
