@@ -1,6 +1,24 @@
 (ns cljs-api-gen.catalog
   (:require
-    [me.raynes.fs :refer [mkdir exists?]]
+    [me.raynes.fs :refer [mkdir]]
+    [cljs-api-gen.config :refer [docs-repo-dir
+                                 *output-dir*]]
+    [cljs-api-gen.parse :refer [*repo-version*
+                                parse-all]]
+    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos
+                                    get-versions-to-parse
+                                    verify-docs-repo-sync!
+                                    checkout-version!
+                                    get-repo-version
+                                    cljs-tag->version]]
+    [cljs-api-gen.repo-docs :refer [prepare-docs-repo!
+                                    clear-docs-repo!
+                                    commit-docs-repo!]]
+    [cljs-api-gen.history :refer [get-symbol-history
+                                  update-history!
+                                  attach-history-to-items]]
+    [cljs-api-gen.write :refer [dump-api-docs!]]
+
     ))
 
 (defn create-catalog!
