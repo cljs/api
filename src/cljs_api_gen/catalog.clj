@@ -1,8 +1,10 @@
 (ns cljs-api-gen.catalog
   (:require
+    [clansi.core :refer [style]]
     [me.raynes.fs :refer [mkdir]]
     [cljs-api-gen.config :refer [*output-dir*
                                  *repo-version*
+                                 *docs-repo-dir*
                                  history-filename
                                  docs-dir]]
     [cljs-api-gen.parse :refer [parse-all]]
@@ -35,6 +37,9 @@
   "
   [n-or-all]
 
+  (println "Creating or using catalog repo at"
+           (str "'" (style *docs-repo-dir* :cyan) "'"))
+
   (prepare-docs-repo!)
 
   (let [[latest history] (initial-symbol-history)
@@ -47,7 +52,7 @@
     (doseq [version versions]
 
       (println "\n=========================================================")
-      (println "\nChecking out" version "...")
+      (println "\nChecking out" (style version :yellow) "...")
       (checkout-version! version)
 
       (binding [*repo-version* {"clojurescript" version
@@ -64,7 +69,7 @@
           (mkdir *output-dir*)
           (update-history! history version symbols)
 
-          (println "\nWriting docs to" *output-dir*)
+          (println "\nWriting docs to" (style *output-dir* :cyan))
           (mkdir (str *output-dir* "/" docs-dir))
           (let [parsed (attach-history-to-items parsed (:version-map @history))]
             (dump-api-docs! parsed))
@@ -72,11 +77,18 @@
           (println "\nCommitting docs at tag" (cljs-tag->version version) "...")
           (commit-docs-repo!))
 
-        (println "\nDone.")))))
+        (println "\nDone.")))
+
+    (println (style "Success!" :green))))
 
 (defn create-single-version!
   [version]
-  (println "\n=========================================================")
+
+  (println "Creating docs for version"
+           (str "'" (style version :yellow) "'")
+           "at"
+           (str "'" (style *output-dir* :cyan) "'"))
+
   (println "\nChecking out" version "...")
   (checkout-version! version)
 
@@ -89,6 +101,8 @@
 
       (mkdir *output-dir*)
 
-      (println "\nWriting docs to" *output-dir*)
+      (println "\nWriting docs to" (style *output-dir* :cyan))
       (mkdir (str *output-dir* "/" docs-dir))
-      (dump-api-docs! parsed))))
+      (dump-api-docs! parsed))
+
+    (println (style "Success!" :green))))
