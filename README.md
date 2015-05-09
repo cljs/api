@@ -1,5 +1,5 @@
 # ClojureScript API Docs Generator
-<img align="right" width="140" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
+<img align="right" width="150" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
@@ -31,9 +31,7 @@ the following structure:
  :source            "...full source code..."}
 ```
 
-Readable `*.cljsdoc` files are also produced for a more readable reference.  See the
-[`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc)
-example.
+__Readable Docs__ are also produced for each symbol.  For example, see [`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
 
 ## Building the catalog
 
