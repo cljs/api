@@ -4,7 +4,8 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos]]
-    [cljs-api-gen.catalog :refer [create-catalog!]]
+    [cljs-api-gen.catalog :refer [create-catalog!
+                                  create-single-version!]]
     ))
 
 ;;--------------------------------------------------------------------------------
@@ -31,16 +32,16 @@
 
 (defn run-catalog!
   [n-or-all out-dir]
-
   (let [out-dir (or out-dir "catalog")]
     (binding [*docs-repo-dir* out-dir
               *output-dir* out-dir]
       (create-catalog! n-or-all))))
 
-(defn run-version!
+(defn run-single-version!
   [version out-dir]
-  (binding [*output-dir* out-dir]
-    (println "NOT IMPLEMENTED YET...")))
+  (let [out-dir (or out-dir (str "docs-" version))]
+    (binding [*output-dir* out-dir]
+      (create-single-version! version))))
 
 (defn main
   [{:keys [catalog version out-dir] :as options}]
@@ -50,7 +51,7 @@
 
   (cond
     catalog (run-catalog! catalog out-dir)
-    version (run-version! version out-dir)
+    version (run-single-version! version out-dir)
     :else   (show-usage-and-exit!))
 
   ;; have to do this because `sh` leaves futures hanging,

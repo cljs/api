@@ -73,3 +73,22 @@
           (commit-docs-repo!))
 
         (println "\nDone.")))))
+
+(defn create-single-version!
+  [version]
+  (println "\n=========================================================")
+  (println "\nChecking out" version "...")
+  (checkout-version! version)
+
+  (binding [*repo-version* {"clojurescript" version
+                            "clojure" (get-repo-version "clojure")}]
+    (println "using Clojure version:" (get *repo-version* "clojure"))
+
+    (println "\nParsing...")
+    (let [parsed (parse-all)]
+
+      (mkdir *output-dir*)
+
+      (println "\nWriting docs to" *output-dir*)
+      (mkdir (str *output-dir* "/" docs-dir))
+      (dump-api-docs! parsed))))
