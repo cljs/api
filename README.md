@@ -1,16 +1,23 @@
-# CLJS API Docs Generator
+# ClojureScript API Docs Generator
+<img align="right" width="140" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
 
-This is a tool that generates a versioned catalog of ClojureScript's core
-functions, macros, and special forms (and their metadata).
+Hello! We are building a ClojureScript website. A section of this website will
+be devoted to providing beautiful and informative documentation for the core
+library and syntax.
+
+This repo is dedicated to parsing all the possible documentation we can from
+every version of the ClojureScript compiler and core library.  Our tool feeds
+this crucial documentation data to the [larger sister
+project](https://github.com/cljsinfo/api-docs), which combines it with curated
+descriptions, examples, and cross-refs.
 
 - __[Browse latest docs](https://github.com/cljsinfo/api-docs-generator/tree/docs)__
-- __[Browse scraped examples from clojuredocs](https://github.com/cljsinfo/api-docs-generator/tree/examples)__
 - __[Downloads](https://github.com/cljsinfo/api-docs-generator/releases)__
 
 An `autodocs.edn` file is generated for each version.  It is a list of maps of
 the following structure:
 
-```
+```clj
 {:full-name         "cljs.core/assoc-in"
  :ns                "cljs.core"
  :name              "assoc-in"
@@ -24,73 +31,45 @@ the following structure:
  :source            "...full source code..."}
 ```
 
-Readable `*.cljsdoc` files are also produced:
+Readable `*.cljsdoc` files are also produced for a more readable reference.  See the
+[`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc)
+example.
 
-```
-===== Name
-cljs.core/assoc-in
+## Building the catalog
 
-===== Type
-function
+- __Full Catalog__: run the following to build a full catalog of docs. The
+  catalog is a git repo with commits tagged for each version of ClojureScript.
+  (It can be re-run to update your catalog with a newly released version)
 
-===== Docstring
-Associates a value in a nested associative structure, where ks is a
-sequence of keys and v is the new value and returns a new nested structure.
-If any levels do not exist, hash-maps will be created.
+    ```
+    lein run '{:catalog :all}'
+    ```
 
-===== Signature
-[m [k & ks] v]
+- __Partial Catalog__: for development purposes, you may wish to stop the
+  process after a certain number of versions to verify its output.  The
+  following will stop after 4 versions. (It can be re-run to process the next
+  _n_ versions)
 
-===== Filename
-clojurescript/src/cljs/cljs/core.cljs
+    ```
+    lein run '{:catalog 4}'
+    ```
 
-===== Source
-(defn assoc-in
-  [m [k & ks] v]
-  (if ks
-    (assoc m k (assoc-in (get m k) ks v))
-    (assoc m k v)))
+- __Single Version Docs__: To generate docs for a single version (without symbol history data),
+  pass it the tag value for the desired ClojureScript version.
 
-===== Github
-https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025
+    ```
+    lein run '{:version "r3211"}'
+    ```
 
-===== History
-Added in 0.0-927
-```
+- __Customize Output Directory__: The default output directory of a catalog is
+  `catalog/`, and single-version output is written to `docs-<version>`.  To
+  change this, use the `:out-dir` key:
 
-## Run
-
-The runner is currently being refactored for an easier development cycle.
-
-But you can run the following to build docs for every ClojureScript version.
-It creates a catalog repo at `output-repo/`, containing a tag for each cljs
-version.
-
-```
-lein run '{:catalog :all}'
-```
-
-__Restarting__ the build process is not in a good state currently, sorry.
-Please run the following before running the build process again:
-
-```
-rm -rf output-repo changes symbol-history
-```
-
-Other usages can be found with:
-
-```
-$ lein run
-
-Usage: lein run '{}'.  For example:
-
-|              :opts |                                                       :desc |
-|--------------------+-------------------------------------------------------------|
-|    {:catalog :all} | Start or resume building docs catalog for all cljs versions |
-|       {:catalog 3} |                    Start or resume the next 3 cljs versions |
-| {:version "r3211"} |       Process and output docs for single cljs version r3211 |
-| {:version :latest} |             Process and output docs for latest cljs version |
-```
+    ```
+    lein run '{:catalog :all, :out-dir "my-catalog"}'
+    or
+    lein run '{:version "r927", :out-dir "old-docs"}'
+    ```
 
 ## Implementation
 
