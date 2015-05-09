@@ -60,13 +60,15 @@ Added in 0.0-927
 
 ## Run
 
-Run this to build docs for every ClojureScript version:
+The runner is currently being refactored for an easier development cycle.
+
+But you can run the following to build docs for every ClojureScript version.
+It creates a catalog repo at `output-repo/`, containing a tag for each cljs
+version.
 
 ```
-lein run
+lein run '{:catalog :all}'
 ```
-
-This creates an `output-repo/` directory.  It is a git repo with a tag for each cljs version.
 
 __Restarting__ the build process is not in a good state currently, sorry.
 Please run the following before running the build process again:
@@ -75,10 +77,19 @@ Please run the following before running the build process again:
 rm -rf output-repo changes symbol-history
 ```
 
-To __build for just a single version__:
+Other usages can be found with:
 
 ```
-lein run r3211
+$ lein run
+
+Usage: lein run '{}'.  For example:
+
+|              :opts |                                                       :desc |
+|--------------------+-------------------------------------------------------------|
+|    {:catalog :all} | Start or resume building docs catalog for all cljs versions |
+|       {:catalog 3} |                    Start or resume the next 3 cljs versions |
+| {:version "r3211"} |       Process and output docs for single cljs version r3211 |
+| {:version :latest} |             Process and output docs for latest cljs version |
 ```
 
 ## Implementation
