@@ -1,8 +1,7 @@
 (ns cljs-api-gen.catalog
   (:require
     [me.raynes.fs :refer [mkdir]]
-    [cljs-api-gen.config :refer [docs-repo-dir
-                                 *output-dir*
+    [cljs-api-gen.config :refer [*output-dir*
                                  *repo-version*
                                  history-filename
                                  docs-dir]]
@@ -14,9 +13,8 @@
                                     cljs-tag->version]]
     [cljs-api-gen.repo-docs :refer [prepare-docs-repo!
                                     clear-docs-repo!
-                                    commit-docs-repo!
-                                    verify-docs-repo-sync!]]
-    [cljs-api-gen.history :refer [get-symbol-history
+                                    commit-docs-repo!]]
+    [cljs-api-gen.history :refer [initial-symbol-history
                                   update-history!
                                   attach-history-to-items]]
     [cljs-api-gen.write :refer [dump-api-docs!]]
@@ -39,15 +37,12 @@
 
   (prepare-docs-repo!)
 
-  (let [[latest history] (get-symbol-history)
+  (let [[latest history] (initial-symbol-history)
         [past-versions versions-left] (get-versions-to-parse latest)
         versions (if (= :all n-or-all)
                    versions-left
                    (try (take n-or-all versions-left)
                      (catch Exception e versions-left)))]
-
-    (println "\nVerifying docs-repo is in sync with symbol-history...")
-    (verify-docs-repo-sync! past-versions versions-left)
 
     (doseq [version versions]
 
@@ -55,8 +50,7 @@
       (println "\nChecking out" version "...")
       (checkout-version! version)
 
-      (binding [*output-dir* docs-repo-dir
-                *repo-version* {"clojurescript" version
+      (binding [*repo-version* {"clojurescript" version
                                 "clojure" (get-repo-version "clojure")}]
         (println "using Clojure version:" (get *repo-version* "clojure"))
 

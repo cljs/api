@@ -1,7 +1,8 @@
 (ns cljs-api-gen.core
   (:require
     [clojure.pprint :refer [print-table]]
-    [cljs-api-gen.config :refer [*output-dir*]]
+    [cljs-api-gen.config :refer [*output-dir*
+                                 *docs-repo-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
     ))
@@ -30,11 +31,16 @@
 
 (defn run-catalog!
   [n-or-all out-dir]
-  (create-catalog! n-or-all))
+
+  (let [out-dir (or out-dir "catalog")]
+    (binding [*docs-repo-dir* out-dir
+              *output-dir* out-dir]
+      (create-catalog! n-or-all))))
 
 (defn run-version!
   [version out-dir]
-  (println "NOT IMPLEMENTED YET..."))
+  (binding [*output-dir* out-dir]
+    (println "NOT IMPLEMENTED YET...")))
 
 (defn main
   [{:keys [catalog version out-dir] :as options}]
