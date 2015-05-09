@@ -31,7 +31,8 @@ the following structure:
  :source            "...full source code..."}
 ```
 
-__Readable Docs__ are also produced for each symbol.  For example, see [`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
+__Readable Docs__ are also produced for each symbol.  For example, see:<br>
+[`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
 
 ## Building the catalog
 
