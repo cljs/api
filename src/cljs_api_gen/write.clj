@@ -3,6 +3,10 @@
   (:require
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace]]
+    [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
+    [cljs-api-gen.config :refer [*output-dir*
+                                 docs-dir
+                                 edn-output-file]]
     ))
 
 (defn symbol->filename

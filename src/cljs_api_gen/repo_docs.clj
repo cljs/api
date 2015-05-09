@@ -1,6 +1,12 @@
 (ns cljs-api-gen.repo-docs
   (:require
     [clojure.java.shell :refer [sh]]
+    [cljs-api-gen.config :refer [*repo-version*
+                                 docs-repo-dir
+                                 docs-branch]]
+    [cljs-api-gen.repo-cljs :refer [cljs-tag->version
+                                    clj-tag->version]]
+    [me.raynes.fs :refer [mkdir exists?]]
     ))
 
 (defn git-docs-repo!

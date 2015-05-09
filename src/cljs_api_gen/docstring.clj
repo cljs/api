@@ -1,6 +1,8 @@
 (ns cljs-api-gen.docstring
+  (:refer-clojure :exclude [replace])
   (:require
     [clojure.string :refer [split-lines join replace trim]]
+    [cljs-api-gen.read :refer [read-forms-from-str]]
     ))
 
 (defn get-docstring-indent

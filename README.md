@@ -81,16 +81,6 @@ To __build for just a single version__:
 lein run r3211
 ```
 
-### scraping clojuredocs examples
-
-To help build our initial set of clojurescript docs, we are scraping examples
-from clojuredocs.  Each symbol will have its own file with its scraped examples
-placed in the `examples` branch of the docs repo.
-
-```
-lein run examples
-```
-
 ## Implementation
 
 To gather docs, we are doing self-analysis of literal forms created from

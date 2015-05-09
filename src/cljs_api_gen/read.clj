@@ -4,6 +4,7 @@
     [clojure.tools.reader :as reader]
     [clojure.tools.reader.reader-types :as readers]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
+    [me.raynes.fs :refer [exists?]]
     ))
 
 (defn read-forms

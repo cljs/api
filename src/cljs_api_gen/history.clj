@@ -3,11 +3,10 @@
     [me.raynes.fs :refer [mkdir exists?]]
     [clojure.data :refer [diff]]
     [clojure.string :refer [split split-lines join]]
+    [cljs-api-gen.config :refer [history-filename
+                                 *output-dir*
+                                 changes-filename]]
     ))
-
-(def docs-dir "docs")
-(def history-filename "symbol-history")
-(def changes-filename "changes")
 
 (defn get-symbol-history
   []

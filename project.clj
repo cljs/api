@@ -5,4 +5,4 @@
                  [org.clojure/core.match "0.2.2"]
                  [enlive "1.1.1"]
                  [me.raynes/fs "1.4.6"]]
-  :main core)
+  :main cljs-api-gen.core)

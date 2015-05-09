@@ -1,6 +1,9 @@
 (ns cljs-api-gen.repo-cljs
   (:require
     [clojure.java.shell :refer [sh]]
+    [clojure.string :refer [trim split-lines]]
+    [cljs-api-gen.config :refer [repo-dir
+                                 *repo-version*]]
     ))
 
 (defn clone-or-fetch-repos

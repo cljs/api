@@ -4,19 +4,13 @@
     [clojure.core.match :refer [match]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [lower-case split split-lines join replace]]
-
-    [cljs-api-gen.config :refer [cljs-ns-paths]]
-    [cljs-api-gen.state :refer [*fn-macros*
-                                *repo-version*]]
+    [cljs-api-gen.read :refer [read-forms-from-file]]
+    [cljs-api-gen.config :refer [repo-dir *repo-version*]]
+    [cljs-api-gen.docstring :refer [try-locate-docs
+                                    fix-docstring
+                                    try-remove-docs]]
+    [cljs-api-gen.repo-cljs :refer [get-github-file-link]]
     ))
-
-;; SHA1 hashes of the checked out commits of the language repos
-(def ^:dynamic *repo-version*
-  {"clojure" nil
-   "clojurescript" nil})
-
-;; functions marked as macros
-(def ^:dynamic *fn-macros* [])
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
 ;; which is used by cljs.core. (the ana namespace has to exist)
@@ -25,6 +19,32 @@
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::env/compiler`
 ;; which is used by cljs.repl. (the env namespace has to exist)
 (create-ns 'env)
+
+;;--------------------------------------------------------------------------------
+;; Repo Paths
+;;--------------------------------------------------------------------------------
+
+;; Table of namespaces that we will parse
+(def cljs-ns-paths
+  ; NS                        REPO             FILE               PATH IN REPO
+  {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs"
+                                              "core.clj"         "src/clj/cljs"
+                                              "analyzer.clj"     "src/clj/cljs"
+                                              "compiler.clj"     "src/clj/cljs"}
+                             "clojure"       {"core.clj"         "src/clj/clojure"
+                                              "core_deftype.clj" "src/clj/clojure"
+                                              "core_print.clj"   "src/clj/clojure"
+                                              "core_proxy.clj"   "src/clj/clojure"}}
+   "cljs.test"              {"clojurescript" {"test.cljs"        "src/cljs/cljs"
+                                              "test.clj"         "src/clj/cljs"}}
+   "cljs.repl"              {"clojurescript" {"repl.clj"         "src/clj/cljs"
+                                              "repl.cljs"        "src/cljs/cljs"}}
+   "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs"}}
+   "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure"}}
+   "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
+   "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure"}}
+   "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure"}}
+   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure"}}})
 
 (defn get-repo-path
   "Get path to the given repo file"
@@ -36,6 +56,12 @@
   "Get forms from the given repo file"
   [ns- repo file]
   (read-forms-from-file (get-repo-path ns- repo file)))
+
+;;--------------------------------------------------------------------------------
+;; Functions marked as macros
+;;--------------------------------------------------------------------------------
+
+(def ^:dynamic *fn-macros* [])
 
 (defn get-fn-macro
   "looks for a call of the form:
@@ -49,6 +75,11 @@
 (defn get-fn-macros
   [forms]
   (set (keep get-fn-macro forms)))
+
+;;--------------------------------------------------------------------------------
+;; Parse def functions/macros
+;; TODO: parse vars
+;;--------------------------------------------------------------------------------
 
 (defn parse-defn-or-macro
   [form]
@@ -126,6 +157,10 @@
   [form]
   nil)
 
+;;--------------------------------------------------------------------------------
+;; Parse common meta for defs
+;;--------------------------------------------------------------------------------
+
 (defn parse-location
   [form ns- repo]
   (let [m (meta form)
@@ -182,6 +217,10 @@
       (when-not internal?
         final))))
 
+;;--------------------------------------------------------------------------------
+;; Parse special forms
+;;--------------------------------------------------------------------------------
+
 (defn transform-special-doc
   [doc-map]
   (let [transform-form (fn [form sym]
@@ -226,6 +265,10 @@
           docs (get doc-map (:name special))
           final (merge special location extras docs)]
       final)))
+
+;;--------------------------------------------------------------------------------
+;; Parse REPL special forms
+;;--------------------------------------------------------------------------------
 
 (defn transform-repl-special-doc
   [doc-map]
@@ -275,13 +318,9 @@
                        (merge location attrs docs)))]
      (map make-map specials))))
 
-(defn parse-api
-  "Parse the functions and macros from the given repo file"
-  [ns- repo file]
-  (println " " ns- repo file)
-  (let [forms (get-forms ns- repo file)]
-    (binding [*fn-macros* (get-fn-macros forms)]
-      (doall (keep #(parse-form % ns- repo) forms)))))
+;;--------------------------------------------------------------------------------
+;; Clojure Macros to import or exclude
+;;--------------------------------------------------------------------------------
 
 (defn get-imported-macro-api
   [forms macro-api]
@@ -299,6 +338,16 @@
 ;;------------------------------------------------------------
 ;; Namespace API parsing
 ;;------------------------------------------------------------
+
+(defn parse-api
+  "Parse the functions and macros from the given repo file"
+  [ns- repo file]
+  (println " " ns- repo file)
+  (let [forms (get-forms ns- repo file)]
+    (binding [*fn-macros* (get-fn-macros forms)]
+      (doall (keep #(parse-form % ns- repo) forms)))))
+
+
 
 (defmulti parse-ns-api (fn [ns-] ns-))
 
