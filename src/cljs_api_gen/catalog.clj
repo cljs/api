@@ -44,7 +44,7 @@
         versions (if (= :all n-or-all)
                    versions-left
                    (try
-                     (take (Integer/parseInt n-or-all) versions-left)
+                     (take n-or-all versions-left)
                      (catch Exception e
                        versions-left)))]
 
