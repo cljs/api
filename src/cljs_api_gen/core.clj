@@ -1,24 +1,14 @@
 (ns cljs-api-gen.core
   (:require
     [clojure.pprint :refer [print-table]]
+    [cljs-api-gen.config :refer [*output-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
     ))
 
-(defn main
-  [{:keys [catalog version] :as options}]
-
-  (println "\nCloning or updating repos...")
-  (clone-or-fetch-repos)
-
-  (if catalog
-    (create-catalog! catalog)
-    (when version
-      (println "not yet implemented")))
-
-  ;; have to do this because `sh` leaves futures hanging,
-  ;; preventing exit, so we must do it manually.
-  (System/exit 0))
+;;--------------------------------------------------------------------------------
+;; Usage
+;;--------------------------------------------------------------------------------
 
 ;; TODO: add config for output directory
 (def usage-examples
@@ -27,12 +17,48 @@
    {:opts  {:version "r3211"} :desc "Process and output docs for single cljs version r3211"}
    {:opts  {:version :latest} :desc "Process and output docs for latest cljs version"}])
 
-(defn -main [& args]
+(defn show-usage-and-exit! []
+  (binding [*out* *err*]
+    (println)
+    (println "Usage: lein run '{}'.  For example:")
+    (print-table [:opts :desc] usage-examples)
+    (System/exit 1)))
+
+;;--------------------------------------------------------------------------------
+;; Runners
+;;--------------------------------------------------------------------------------
+
+(defn run-catalog!
+  [n-or-all out-dir]
+  (create-catalog! n-or-all))
+
+(defn run-version!
+  [version out-dir]
+  (println "NOT IMPLEMENTED YET..."))
+
+(defn main
+  [{:keys [catalog version out-dir] :as options}]
+
+  (println "\nCloning or updating repos...")
+  (clone-or-fetch-repos)
+
+  (cond
+    catalog (run-catalog! catalog out-dir)
+    version (run-version! version out-dir)
+    :else   (show-usage-and-exit!))
+
+  ;; have to do this because `sh` leaves futures hanging,
+  ;; preventing exit, so we must do it manually.
+  (System/exit 0))
+
+;;--------------------------------------------------------------------------------
+;; Entry
+;;--------------------------------------------------------------------------------
+
+(defn -main
+  [& args]
   (if (= 1 (count args))
-    (main (read-string (first args)))
-    (do
-      (binding [*out* *err*]
-        (println)
-        (println "Usage: lein run '{}'.  For example:")
-        (print-table [:opts :desc] usage-examples))
-      (System/exit 1))))
+    (let [option-map (read-string (first args))]
+      (main option-map))
+    (show-usage-and-exit!)))
+

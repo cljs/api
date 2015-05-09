@@ -43,10 +43,8 @@
         [past-versions versions-left] (get-versions-to-parse latest)
         versions (if (= :all n-or-all)
                    versions-left
-                   (try
-                     (take n-or-all versions-left)
-                     (catch Exception e
-                       versions-left)))]
+                   (try (take n-or-all versions-left)
+                     (catch Exception e versions-left)))]
 
     (println "\nVerifying docs-repo is in sync with symbol-history...")
     (verify-docs-repo-sync! past-versions versions-left)
