@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ev
+set -e
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
   cd output-repo
