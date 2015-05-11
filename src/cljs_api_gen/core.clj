@@ -12,7 +12,6 @@
 ;; Usage
 ;;--------------------------------------------------------------------------------
 
-;; TODO: add config for output directory
 (def usage-examples
   [{:opts  {:catalog :all}    :desc "Start or resume building docs catalog for all cljs versions"}
    {:opts  {:catalog 3}       :desc "Start or resume the next 3 cljs versions"}
