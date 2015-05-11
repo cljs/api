@@ -7,9 +7,15 @@
                                  *output-dir*
                                  *docs-repo-dir*
                                  changes-filename]]
-    [cljs-api-gen.repo-docs :refer [get-docs-repo-version
-                                    docs-version->cljs-version]]
+    [cljs-api-gen.repo-docs :as docs-repo]
     ))
+
+(def ^:dynamic *history*)
+
+(defmacro with-history
+  [history-atom & body]
+  `(binding [*history* ~history-atom]
+     ~@body))
 
 (defn initial-symbol-history
   "Build initial history from the readable output files."
@@ -28,7 +34,7 @@
 
     (if-not (exists? repo-history-filename)
       [nil history]
-      (let [latest (docs-version->cljs-version (get-docs-repo-version))
+      (let [latest (docs-repo/docs-tag->cljs (docs-repo/get-current-tag))
             lines (split-lines (slurp repo-history-filename))]
         (doseq [line lines]
           (let [[name- & versions] (split line #"\s+")]
@@ -56,48 +62,48 @@
     (spit (str *docs-repo-dir* "/" history-filename) table)))
 
 (defn mark-symbol-added!
-  [history version s]
-  (let [v-change (str "+" version)]
-    (if-not (contains? (:version-map @history) s)
-      (swap! history assoc-in [:version-map s] [v-change])
-      (when-not (first (filter #(= % v-change) (get-in @history [:version-map s])))
-        (swap! history update-in [:version-map s] conj v-change)))))
+  [s]
+  (let [v-change (str "+" *cljs-tag*)]
+    (if-not (contains? (:version-map @*history*) s)
+      (swap! *history* assoc-in [:version-map s] [v-change])
+      (when-not (first (filter #(= % v-change) (get-in @*history* [:version-map s])))
+        (swap! *history* update-in [:version-map s] conj v-change)))))
 
 (defn mark-symbol-removed!
-  [history version s]
-  (let [v-change (str "-" version)]
-    (swap! history update-in [:version-map s] conj v-change)))
+  [s]
+  (let [v-change (str "-" *cljs-tag*)]
+    (swap! *history* update-in [:version-map s] conj v-change)))
 
 (defn write-changes!
-  [history added removed version]
-  (let [current (:changes @history)
+  [added removed]
+  (let [current (:changes @*history*)
         changed-lines (->> (concat (map #(vector "+" %) added)
                                    (map #(vector "-" %) removed))
                            (sort-by second)
                            (map (fn [[a b]] (str "  " a " " b))))
-        version-changes (join "\n" (cons version changed-lines))
+        version-changes (join "\n" (cons *cljs-tag* changed-lines))
         content (str version-changes "\n\n" current)]
     (spit (str *output-dir* "/" changes-filename) content)
-    (swap! history assoc :changes content)))
+    (swap! *history* assoc :changes content)))
 
 (defn update-history!
-  [history version symbols]
-  (let [[added removed _] (diff symbols (:symbols @history))]
+  [symbols]
+  (let [[added removed _] (diff symbols (:symbols @*history*))]
     (doseq [s added]
-      (mark-symbol-added! history version s))
+      (mark-symbol-added! s))
     (doseq [s removed]
-      (mark-symbol-removed! history version s))
-    (swap! history assoc :symbols symbols)
-    (write-changes! history added removed version)
-    (write-history! (:version-map @history) version)))
+      (mark-symbol-removed! s))
+    (swap! *history* assoc :symbols symbols)
+    (write-changes! *history* added removed)
+    (write-history! (:version-map @*history*))))
 
 (defn attach-history
-  [item version-map]
+  [item]
   (let [name- (:full-name item)
-        history (get version-map name-)]
+        history (get-in @*history* [:version-map name-])]
     (assoc item :history history)))
 
 (defn attach-history-to-items
-  [items version-map]
-  (map #(attach-history % version-map) items))
+  [items]
+  (map #(attach-history %) items))
 

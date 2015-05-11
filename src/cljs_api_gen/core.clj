@@ -3,7 +3,7 @@
     [clojure.pprint :refer [print-table]]
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*]]
-    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos]]
+    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
     ))
@@ -46,7 +46,7 @@
   [{:keys [catalog version out-dir] :as options}]
 
   (println "\nCloning or updating repos...")
-  (clone-or-fetch-repos)
+  (clone-or-fetch-repos!)
 
   (cond
     catalog (run-catalog! catalog out-dir)

@@ -4,8 +4,9 @@
     [clojure.core.match :refer [match]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [lower-case split split-lines join replace]]
+    [me.raynes.fs :refer [base-name exists?]]
     [cljs-api-gen.read :refer [read-forms-from-file]]
-    [cljs-api-gen.config :refer [repo-dir *repo-version*]]
+    [cljs-api-gen.config :refer [repo-dir]]
     [cljs-api-gen.docstring :refer [try-locate-docs
                                     fix-docstring
                                     try-remove-docs]]
@@ -20,42 +21,13 @@
 ;; which is used by cljs.repl. (the env namespace has to exist)
 (create-ns 'env)
 
-;;--------------------------------------------------------------------------------
-;; Repo Paths
-;;--------------------------------------------------------------------------------
+;; current namespace and repo that we are parsing.
+(def ^:dynamic *cur-ns*)
+(def ^:dynamic *cur-repo*)
 
-;; Table of namespaces that we will parse
-(def cljs-ns-paths
-  ; NS                        REPO             FILE               PATH IN REPO
-  {"cljs.core"              {"clojurescript" {"core.cljs"        "src/cljs/cljs"
-                                              "core.clj"         "src/clj/cljs"
-                                              "analyzer.clj"     "src/clj/cljs"
-                                              "compiler.clj"     "src/clj/cljs"}
-                             "clojure"       {"core.clj"         "src/clj/clojure"
-                                              "core_deftype.clj" "src/clj/clojure"
-                                              "core_print.clj"   "src/clj/clojure"
-                                              "core_proxy.clj"   "src/clj/clojure"}}
-   "cljs.test"              {"clojurescript" {"test.cljs"        "src/cljs/cljs"
-                                              "test.clj"         "src/clj/cljs"}}
-   "cljs.repl"              {"clojurescript" {"repl.clj"         "src/clj/cljs"
-                                              "repl.cljs"        "src/cljs/cljs"}}
-   "cljs.reader"            {"clojurescript" {"reader.cljs"      "src/cljs/cljs"}}
-   "clojure.set"            {"clojurescript" {"set.cljs"         "src/cljs/clojure"}}
-   "clojure.string"         {"clojurescript" {"string.cljs"      "src/cljs/clojure"}}
-   "clojure.walk"           {"clojurescript" {"walk.cljs"        "src/cljs/clojure"}}
-   "clojure.zip"            {"clojurescript" {"zip.cljs"         "src/cljs/clojure"}}
-   "clojure.data"           {"clojurescript" {"data.cljs"        "src/cljs/clojure"}}})
-
-(defn get-repo-path
-  "Get path to the given repo file"
-  [ns- repo file]
-  (let [path (get-in cljs-ns-paths [ns- repo file])]
-    (str repo-dir "/" repo "/" path "/" file)))
-
-(defn get-forms
-  "Get forms from the given repo file"
-  [ns- repo file]
-  (read-forms-from-file (get-repo-path ns- repo file)))
+(def cljs-namespaces
+  #{"cljs.core" "cljs.analyzer" "cljs.compiler" "cljs.test" "cljs.repl" "cljs.reader"
+    "clojure.set" "clojure.string" "clojure.walk" "clojure.zip" "clojure.data"})
 
 ;;--------------------------------------------------------------------------------
 ;; Functions marked as macros
@@ -162,7 +134,7 @@
 ;;--------------------------------------------------------------------------------
 
 (defn parse-location
-  [form ns- repo]
+  [form]
   (let [m (meta form)
         lines [(:line m) (:end-line m)]
         num-lines (inc (- (:end-line m) (:line m)))
@@ -173,8 +145,8 @@
 
         source (join "\n" (take-last num-lines source-lines))
         filename (subs (:file m) (inc (count repo-dir)))
-        github-link (get-github-file-link repo filename lines)]
-    {:ns ns-
+        github-link (get-github-file-link *cur-repo* filename lines)]
+    {:ns *cur-ns*
      :source source
      :potential-comment potential-comment
      :filename filename
@@ -182,7 +154,7 @@
      :github-link github-link}))
 
 (defn parse-common-def
-  [form ns- repo]
+  [form]
   (let [name- (second form)
         name-meta (meta name-)
         return-type (:tag name-meta)
@@ -190,7 +162,7 @@
                           (:macro name-meta))]
     (merge
       {:name name-
-       :full-name (str ns- "/" name-)
+       :full-name (str *cur-ns* "/" name-)
        :return-type return-type}
 
       (when manual-macro?
@@ -207,10 +179,10 @@
     (or comment-flag? docstring-flag?)))
 
 (defn parse-form
-  [form ns- repo]
+  [form]
   (when-let [specific (parse-form* form)]
-    (let [common (parse-common-def form ns- repo)
-          location (parse-location form ns- repo)
+    (let [common (parse-common-def form)
+          location (parse-location form)
           merged (merge specific location common)
           final (update-in merged [:source] try-remove-docs (:expected-docs specific))
           internal? (internal-def-only? final)]
@@ -291,7 +263,7 @@
   "Parse cljs repl special forms of the form:
   (def default-special-fns (let [...] { #_keys_are_special_form_names }))"
   [form]
-  (if (and (#{"r927" "r971"} (*repo-version* "clojurescript"))
+  (if (and (#{"r927" "r971"} *cljs-tag*)
            (list? form)
            (= (take 2 form) '(defn repl)))
     ;; old version, just manually setting when detected
@@ -339,17 +311,23 @@
 ;; Namespace API parsing
 ;;------------------------------------------------------------
 
+(defn parse-ns
+  [ns- src-types]
+  (let [forms (if (ns-
+  )
+
 (defn parse-api
   "Parse the functions and macros from the given repo file"
   [ns- repo file]
   (println " " ns- repo file)
   (let [forms (get-forms ns- repo file)]
-    (binding [*fn-macros* (get-fn-macros forms)]
-      (doall (keep #(parse-form % ns- repo) forms)))))
+    (binding [*fn-macros* (get-fn-macros forms)
+              *cur-ns* ns-
+              *cur-repo* repo]
+      (doall (keep parse-form forms)))))
 
-
-
-(defmulti parse-ns-api (fn [ns-] ns-))
+(defmulti parse-ns-api
+  identity)
 
 (defn parse-extra-macros-from-clj
   "cljs.core uses some macros from clojure.core, so find those here"
@@ -381,44 +359,18 @@
     specials))
 
 (defmethod parse-ns-api "cljs.core" [ns-]
-  (let [clj-api  (parse-api ns- "clojurescript" "core.clj")
-        cljs-api (parse-api ns- "clojurescript" "core.cljs")
-        extra-macro-api (parse-extra-macros-from-clj)
-        special-forms (parse-cljs-special-forms)
-        forms (concat extra-macro-api clj-api cljs-api special-forms)]
-    forms))
+  (let [clj-api  (parse-cljs-api "cljs.core")
+        extra-macro-api (parse-extra-macros-from-clj)]
+    (concat extra-macro-api clj-api cljs-api)))
 
-(defmethod parse-ns-api "cljs.test" [ns-]
-  (concat (parse-api ns- "clojurescript" "test.cljs")
-          (parse-api ns- "clojurescript" "test.clj")))
+;; TODO: parse special forms separately
+;; (parse-cljs-special-forms)
 
-(defmethod parse-ns-api "cljs.repl" [ns-]
-  (let [repo "clojurescript"
-        forms (get-forms ns- repo "repl.clj")
-        special-ns "specialrepl"
-        special-docs (first (keep #(parse-repl-special-docs %) forms))
-        specials (first (keep #(parse-repl-specials % special-ns repo special-docs) forms))]
-    (concat (parse-api ns- "clojurescript" "repl.clj")
-            (parse-api ns- "clojurescript" "repl.cljs")
-            specials)))
-
-(defmethod parse-ns-api "cljs.reader" [ns-]
-  (parse-api ns- "clojurescript" "reader.cljs"))
-
-(defmethod parse-ns-api "clojure.set" [ns-]
-  (parse-api ns- "clojurescript" "set.cljs"))
-
-(defmethod parse-ns-api "clojure.string" [ns-]
-  (parse-api ns- "clojurescript" "string.cljs"))
-
-(defmethod parse-ns-api "clojure.walk" [ns-]
-  (parse-api ns- "clojurescript" "walk.cljs"))
-
-(defmethod parse-ns-api "clojure.zip" [ns-]
-  (parse-api ns- "clojurescript" "zip.cljs"))
-
-(defmethod parse-ns-api "clojure.data" [ns-]
-  (parse-api ns- "clojurescript" "data.cljs"))
+;; TODO: parse repl special forms separately
+;; forms (get-forms ns- repo "repl.clj")
+;; special-ns "specialrepl"
+;; special-docs (first (keep #(parse-repl-special-docs %) forms))
+;; specials (first (keep #(parse-repl-specials % special-ns repo special-docs) forms))
 
 (defn parse-all
   []

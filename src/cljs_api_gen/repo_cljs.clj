@@ -48,13 +48,22 @@
          (filter #(re-find #"^r" %))
          (sort-by cljs-tag->num))))
 
-(defn get-cljs-tags-to-parse
+(defn get-cljs-tags-to-parse*
   [latest]
   (let [tags (get-cljs-version-tags)]
     (if-not latest
       [nil tags]
       (let [latest-num (cljs-tag->num latest)]
         (split-with #(<= (cljs-tag->num %) latest-num) tags)))))
+
+(defn get-cljs-tags-to-parse
+  ([latest-tag] (get-cljs-tags-to-parse latest-tag :all))
+  ([latest-tag n-or-all]
+   (let [[_past-tags tags-left] (get-cljs-tags-to-parse* latest-tag)]
+         tags (if (= :all n-or-all)
+                tags-left
+                (try (take n-or-all tags-left)
+                     (catch Exception e tags-left))))))
 
 (defn cljs-tag->clj-tag
   [cljs-tag]
@@ -67,9 +76,12 @@
       (str "clojure-" version))))
 
 (defn checkout-cljs-tag!
-  [tag]
-  (sh "git" "checkout" tag :dir (str repo-dir "/clojurescript"))
-  (sh "git" "checkout" (cljs-tag->clj-tag tag) :dir (str repo-dir "/clojure")))
+  [cljs-tag]
+  (let [clj-tag (cljs-tag->clj-tag cljs-tag)]
+    (sh "git" "checkout" cljs-tag :dir (str repo-dir "/clojurescript"))
+    (sh "git" "checkout" clj-tag  :dir (str repo-dir "/clojure"))
+    {:clj-tag  (get-current-repo-tag "clojure")
+     :cljs-tag (get-current-repo-tag "clojurescript")}))
 
 (defn get-github-file-link
   ([repo path] (get-github-file-link repo path nil))
@@ -91,6 +103,12 @@
              ]
      ~@body))
 
+(defmacro with-checkout!
+  [cljs-tag & body]
+  `(let [{:keys [clj-tag# cljs-tag#]} (checkout-version! ~cljs-tag)]
+     (with-versions cljs-tag# clj-tag#
+       ~@body)))
+
 (comment
 
   ;; TESTS
@@ -109,11 +127,8 @@
   (cljs-tag->clj-tag "r3211")
 
   (checkout-cljs-tag! "r927")
-  (get-current-repo-tag "clojure")
-  (get-current-repo-tag "clojurescript")
-
   (checkout-cljs-tag! "r1885")
-  (get-current-repo-tag "clojure")
-  (get-current-repo-tag "clojurescript")
+  (checkout-cljs-tag! "r3211")
+
   )
 

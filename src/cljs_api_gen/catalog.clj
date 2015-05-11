@@ -3,19 +3,14 @@
     [clansi.core :refer [style]]
     [me.raynes.fs :refer [mkdir]]
     [cljs-api-gen.config :refer [*output-dir*
-                                 *repo-version*
                                  *docs-repo-dir*
                                  history-filename
                                  docs-dir]]
     [cljs-api-gen.parse :refer [parse-all]]
-    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos
-                                    get-versions-to-parse
-                                    checkout-version!
-                                    get-repo-version
+    [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
+                                    with-checkout!
                                     cljs-tag->version]]
-    [cljs-api-gen.repo-docs :refer [prepare-docs-repo!
-                                    clear-docs-repo!
-                                    commit-docs-repo!]]
+    [cljs-api-gen.repo-docs :as docs-repo]
     [cljs-api-gen.history :refer [initial-symbol-history
                                   update-history!
                                   attach-history-to-items]]
@@ -40,61 +35,48 @@
   (println "Creating or using catalog repo at"
            (str "'" (style *docs-repo-dir* :cyan) "'"))
 
-  (prepare-docs-repo!)
+  (docs-repo/init!)
 
-  (let [[latest history] (initial-symbol-history)
-        [past-versions versions-left] (get-versions-to-parse latest)
-        versions (if (= :all n-or-all)
-                   versions-left
-                   (try (take n-or-all versions-left)
-                     (catch Exception e versions-left)))]
+  (let [[latest-tag history] (initial-symbol-history)]
+    (with-history! history
+      (doseq [tag (get-cljs-tags-to-parse latest-tag n-or-all)]
+        (with-checkout! tag
 
-    (doseq [version versions]
+          (println "\n=========================================================")
+          (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
+          (println "with Clojure:" (style *clj-tag* :yellow))
 
-      (println "\n=========================================================")
-      (println "\nChecking out" (style version :yellow) "...")
-      (checkout-version! version)
+          (println "\nParsing...")
+          (let [parsed (parse-all)
+                symbols (set (map :full-name parsed))]
 
-      (binding [*repo-version* {"clojurescript" version
-                                "clojure" (get-repo-version "clojure")}]
-        (println "using Clojure version:" (get *repo-version* "clojure"))
+            (docs-repo/clear!)
 
-        (println "\nParsing...")
-        (let [parsed (parse-all)
-              symbols (set (map :full-name parsed))]
+            (println "\nWriting updated history to" history-filename "...")
+            (mkdir *output-dir*)
+            (update-history! symbols)
 
-          (clear-docs-repo!)
+            (println "\nWriting docs to" (style *output-dir* :cyan))
+            (mkdir (str *output-dir* "/" docs-dir))
+            (-> parsed
+                attach-history-to-items
+                dump-api-docs!)
 
-          (println "\nWriting updated history to" history-filename "...")
-          (mkdir *output-dir*)
-          (update-history! history version symbols)
+            (println "\nCommitting docs at tag" *cljs-version* "...")
+            (docs-repo/commit!))
 
-          (println "\nWriting docs to" (style *output-dir* :cyan))
-          (mkdir (str *output-dir* "/" docs-dir))
-          (let [parsed (attach-history-to-items parsed (:version-map @history))]
-            (dump-api-docs! parsed))
+          (println "\nDone.")))
 
-          (println "\nCommitting docs at tag" (cljs-tag->version version) "...")
-          (commit-docs-repo!))
-
-        (println "\nDone.")))
-
-    (println (style "Success!" :green))))
+      (println (style "Success!" :green))))
 
 (defn create-single-version!
-  [version]
+  [tag]
 
-  (println "Creating docs for version"
-           (str "'" (style version :yellow) "'")
-           "at"
-           (str "'" (style *output-dir* :cyan) "'"))
+  (with-checkout! tag
 
-  (println "\nChecking out" version "...")
-  (checkout-version! version)
-
-  (binding [*repo-version* {"clojurescript" version
-                            "clojure" (get-repo-version "clojure")}]
-    (println "using Clojure version:" (get *repo-version* "clojure"))
+    (println "\n=========================================================")
+    (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
+    (println "with Clojure:" (style *clj-tag* :yellow))
 
     (println "\nParsing...")
     (let [parsed (parse-all)]
