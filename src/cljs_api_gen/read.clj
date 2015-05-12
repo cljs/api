@@ -67,13 +67,14 @@
         (str repo-dir "/clojurescript/" src "/" ns-path "." ext)))))
 
 (defn read-ns-forms
-  [ns- src-types]
-  (->> (get-ns-files ns- src-types)
-       (mapcat read-forms-from-file)))
+  [ns- k-or-ks]
+  (let [src-types (if (sequential? k-or-ks) k-or-ks [k-or-ks])]
+    (->> (get-ns-files ns- src-types)
+         (map read-forms-from-file))))
 
 (defn read-clj-core-forms
   []
   (->> ["core" "core_proxy" "core_print" "core_deftype"]
        (map #(str repo-dir "/clojure/src/clj/clojure/" % ".clj"))
-       (mapcat read-forms-from-file)))
+       (map read-forms-from-file)))
 

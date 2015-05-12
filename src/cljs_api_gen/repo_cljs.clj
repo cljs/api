@@ -92,6 +92,12 @@
        start-line (str "#L" start-line)
        (and start-line end-line) (str "-L" end-line)))))
 
+(def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
+(def ^:dynamic *cljs-num*     "ClojureScript version number   (e.g. 3211)" nil)
+(def ^:dynamic *cljs-tag*     "ClojureScript version git tag  (e.g. \"r3211\")" nil)
+(def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
+(def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
+
 (defmacro with-versions
   [cljs-tag clj-tag & body]
   `(binding [*cljs-tag*     ~cljs-tag
