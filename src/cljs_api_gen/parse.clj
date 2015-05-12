@@ -207,7 +207,8 @@
   "Parse given forms from a given namespace and repo."
   [ns- repo forms]
   (binding [*cur-ns* ns-
-            *cur-repo* repo]
+            *cur-repo* repo
+            *fn-macros* (get-fn-macros forms)]
     (doall (keep parse-form forms))))
 
 (defn parse-ns*
