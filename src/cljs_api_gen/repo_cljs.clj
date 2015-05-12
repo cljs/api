@@ -111,7 +111,6 @@
 (defmacro with-checkout!
   [cljs-tag & body]
   `(let [[cljs-tag# clj-tag#] (checkout-cljs-tag! ~cljs-tag)]
-     (println cljs-tag# clj-tag#)
      (with-versions cljs-tag# clj-tag#
        ~@body)))
 
