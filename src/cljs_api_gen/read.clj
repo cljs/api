@@ -62,21 +62,33 @@
 
 (defn get-ns-files
   [ns- src-types]
-  (filter exists?
+  (doall (filter exists?
     (let [ns-path (replace ns- "." "/")]
       (for [src (map src-path src-types)
             ext  ["clj" "cljs" "cljc"]]
-        (str repo-dir "/clojurescript/" src "/" ns-path "." ext)))))
+        (str repo-dir "/clojurescript/" src "/" ns-path "." ext))))))
 
 (defn read-ns-forms
   [ns- k-or-ks]
   (let [src-types (if (sequential? k-or-ks) k-or-ks [k-or-ks])]
     (->> (get-ns-files ns- src-types)
-         (map read-forms-from-file))))
+         (map read-forms-from-file)
+         doall)))
 
 (defn read-clj-core-forms
   []
   (->> ["core" "core_proxy" "core_print" "core_deftype"]
        (map #(str repo-dir "/clojure/src/clj/clojure/" % ".clj"))
-       (map read-forms-from-file)))
+       (map read-forms-from-file)
+       doall))
 
+(comment
+
+  (require 'cljs-api-gen.read :reload)
+
+  (require '[cljs-api-gen.repo-cljs :refer [with-checkout!]])
+
+  (with-checkout! "r927"
+    (get-ns-files "cljs.core" [:library :compiler]))
+
+)

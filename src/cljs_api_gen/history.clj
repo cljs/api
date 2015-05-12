@@ -58,7 +58,7 @@
       (make-history-line name- versions pad))))
 
 (defn write-history!
-  [version-map latest]
+  [version-map]
   (let [table (join "\n" (make-history-lines version-map))]
     (spit (str *docs-repo-dir* "/" history-filename) table)))
 
@@ -95,7 +95,7 @@
     (doseq [s removed]
       (mark-symbol-removed! s))
     (swap! *history* assoc :symbols symbols)
-    (write-changes! *history* added removed)
+    (write-changes! added removed)
     (write-history! (:version-map @*history*))))
 
 (defn attach-history

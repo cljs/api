@@ -321,7 +321,7 @@
                                   :type "special form (repl)"}
                            docs (get doc-map name-)]
                        (merge location attrs docs)))]
-     (map make-map specials))))
+     (doall (map make-map specials)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
@@ -345,7 +345,7 @@
   []
   (let [clj-api (->> (parse-clj-core)
                      (filter #(= "macro" (:type %))))
-        cljs-forms   (read-ns-forms "cljs.core" :compiler)
+        cljs-forms   (apply concat (read-ns-forms "cljs.core" :compiler))
         imports      (get-imported-macro-api     cljs-forms clj-api)
         non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
     (println "   " (count imports) "macros imported from clojure.core")
@@ -378,6 +378,7 @@
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns "special" [ns-]
   (let [docs (->> (read-ns-forms "cljs.repl" :compiler)
+                  (apply concat)
                   (keep #(parse-special-docs %))
                   first)
         ns-with-specials (cond
@@ -387,17 +388,20 @@
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
                    (->> (read-ns-forms ns-with-specials :compiler)
-                        (keep #(parse-special % docs))))]
+                        (apply concat)
+                        (keep #(parse-special % docs))
+                        doall))]
     (println "   " (count specials) "special forms in" ns-with-specials)
     specials))
 
 ;; pseudo-namespace since repl special forms don't have a namespace
 (defmethod parse-ns "specialrepl" [ns-]
-  (let [forms (read-ns-forms "cljs.repl" :compiler)
+  (let [forms (apply concat (read-ns-forms "cljs.repl" :compiler))
         docs (first (keep parse-repl-special-docs forms))
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
                    (first (keep #(parse-repl-specials % docs) forms)))]
+    (println "   " (count specials) "repl special forms in cljs.repl")
     specials))
 
 (defmethod parse-ns "cljs.test" [ns-]
