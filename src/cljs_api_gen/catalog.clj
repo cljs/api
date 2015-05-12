@@ -9,9 +9,13 @@
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
                                     with-checkout!
-                                    cljs-tag->version]]
+                                    cljs-tag->version
+                                    *cljs-tag*
+                                    *clj-tag*
+                                    *cljs-version*]]
     [cljs-api-gen.repo-docs :as docs-repo]
     [cljs-api-gen.history :refer [initial-symbol-history
+                                  with-history
                                   update-history!
                                   attach-history-to-items]]
     [cljs-api-gen.write :refer [dump-api-docs!]]
@@ -38,7 +42,7 @@
   (docs-repo/init!)
 
   (let [[latest-tag history] (initial-symbol-history)]
-    (with-history! history
+    (with-history history
       (doseq [tag (get-cljs-tags-to-parse latest-tag n-or-all)]
         (with-checkout! tag
 
@@ -67,7 +71,7 @@
 
           (println "\nDone.")))
 
-      (println (style "Success!" :green))))
+      (println (style "Success!" :green)))))
 
 (defn create-single-version!
   [tag]

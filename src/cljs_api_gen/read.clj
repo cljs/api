@@ -1,12 +1,14 @@
 (ns cljs-api-gen.read
+  (:refer-clojure :exclude [replace])
   (:require
     [clojure.java.io :as io]
     [clojure.tools.reader :as reader]
     [clojure.tools.reader.reader-types :as readers]
+    [clojure.string :refer [replace]]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [exists?]]
-    [cljs-api-gen.config :refer [repo-dir
-                                 *cljs-num*]]
+    [cljs-api-gen.config :refer [repo-dir]]
+    [cljs-api-gen.repo-cljs :refer [*cljs-num*]]
     ))
 
 ;;--------------------------------------------------------------------------------
@@ -47,15 +49,15 @@
 (defmethod src-path :library
   [src-type]
   (cond
-    (=> *cljs-num* 3255) "src/main/cljs"
-    (=> *cljs-num* 0)    "src/cljs"
+    (>= *cljs-num* 3255) "src/main/cljs"
+    (>= *cljs-num* 0)    "src/cljs"
     :else nil))
 
 (defmethod src-path :compiler
   [src-type]
   (cond
-    (=> *cljs-num* 3255) "src/main/clojure"
-    (=> *cljs-num* 0)    "src/clj"
+    (>= *cljs-num* 3255) "src/main/clojure"
+    (>= *cljs-num* 0)    "src/clj"
     :else nil))
 
 (defn get-ns-files

@@ -4,6 +4,8 @@
     [cljs-api-gen.config :refer [*docs-repo-dir*
                                  docs-branch]]
     [me.raynes.fs :refer [mkdir exists?]]
+    [cljs-api-gen.repo-cljs :refer [*cljs-version*
+                                    *clj-version*]]
     ))
 
 (defn git
@@ -30,7 +32,7 @@
   (when-not (exists? *docs-repo-dir*)
     (mkdir *docs-repo-dir*)
     (git "init"))
-  (when-not (= docs-branch (docs-repo-branch))
+  (when-not (= docs-branch (get-current-branch))
     (if (branch-exists? docs-branch)
       (git "checkout" docs-branch)
       (git "checkout" "--orphan" docs-branch))))

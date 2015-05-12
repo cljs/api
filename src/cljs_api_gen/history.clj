@@ -8,6 +8,7 @@
                                  *docs-repo-dir*
                                  changes-filename]]
     [cljs-api-gen.repo-docs :as docs-repo]
+    [cljs-api-gen.repo-cljs :refer [*cljs-tag*]]
     ))
 
 (def ^:dynamic *history*)

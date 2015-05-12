@@ -6,6 +6,12 @@
     [cljs-api-gen.config :refer [repo-dir]]
     ))
 
+(def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
+(def ^:dynamic *cljs-num*     "ClojureScript version number   (e.g. 3211)" nil)
+(def ^:dynamic *cljs-tag*     "ClojureScript version git tag  (e.g. \"r3211\")" nil)
+(def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
+(def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
+
 (defn clone-or-fetch!
   [repo-url]
   (let [repo-name (base-name repo-url)
@@ -60,10 +66,10 @@
   ([latest-tag] (get-cljs-tags-to-parse latest-tag :all))
   ([latest-tag n-or-all]
    (let [[_past-tags tags-left] (get-cljs-tags-to-parse* latest-tag)]
-         tags (if (= :all n-or-all)
-                tags-left
-                (try (take n-or-all tags-left)
-                     (catch Exception e tags-left))))))
+     (if (= :all n-or-all)
+       tags-left
+       (try (take n-or-all tags-left)
+            (catch Exception e tags-left))))))
 
 (defn cljs-tag->clj-tag
   [cljs-tag]
@@ -80,23 +86,16 @@
   (let [clj-tag (cljs-tag->clj-tag cljs-tag)]
     (sh "git" "checkout" cljs-tag :dir (str repo-dir "/clojurescript"))
     (sh "git" "checkout" clj-tag  :dir (str repo-dir "/clojure"))
-    {:clj-tag  (get-current-repo-tag "clojure")
-     :cljs-tag (get-current-repo-tag "clojurescript")}))
+    [(get-current-repo-tag "clojurescript")
+     (get-current-repo-tag "clojure")]))
 
 (defn get-github-file-link
   ([repo path] (get-github-file-link repo path nil))
   ([repo path [start-line end-line]]
-   (let [version (get *repo-version* repo)
-         strip-path (subs path (inc (count repo)))]
-     (cond-> (str "https://github.com/clojure/" repo "/blob/" version "/" strip-path)
+   (let [strip-path (subs path (inc (count repo)))]
+     (cond-> (str "https://github.com/clojure/" repo "/blob/" *cljs-tag* "/" strip-path)
        start-line (str "#L" start-line)
        (and start-line end-line) (str "-L" end-line)))))
-
-(def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
-(def ^:dynamic *cljs-num*     "ClojureScript version number   (e.g. 3211)" nil)
-(def ^:dynamic *cljs-tag*     "ClojureScript version git tag  (e.g. \"r3211\")" nil)
-(def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
-(def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
 
 (defmacro with-versions
   [cljs-tag clj-tag & body]
@@ -111,7 +110,8 @@
 
 (defmacro with-checkout!
   [cljs-tag & body]
-  `(let [{:keys [clj-tag# cljs-tag#]} (checkout-version! ~cljs-tag)]
+  `(let [[cljs-tag# clj-tag#] (checkout-cljs-tag! ~cljs-tag)]
+     (println cljs-tag# clj-tag#)
      (with-versions cljs-tag# clj-tag#
        ~@body)))
 

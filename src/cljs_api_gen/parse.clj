@@ -2,7 +2,7 @@
   (:refer-clojure :exclude [replace])
   (:require
     [clojure.core.match :refer [match]]
-    [clojure.set :refer [rename-keys] :as cset]
+    [clojure.set :refer [rename-keys]]
     [clojure.string :refer [lower-case split split-lines join replace]]
     [me.raynes.fs :refer [base-name exists?]]
     [cljs-api-gen.read :refer [read-ns-forms
@@ -11,7 +11,9 @@
     [cljs-api-gen.docstring :refer [try-locate-docs
                                     fix-docstring
                                     try-remove-docs]]
-    [cljs-api-gen.repo-cljs :refer [get-github-file-link]]
+    [cljs-api-gen.repo-cljs :refer [get-github-file-link
+                                    *cljs-tag*
+                                    *cljs-num*]]
     ))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
@@ -35,7 +37,7 @@
     "special" "specialrepl"}) ;; <-- pseudo-namespaces for special forms
 
 (def cljs-namespaces
-  (cset/join normally-parsed-ns? custom-parsed-ns?))
+  (into normally-parsed-ns? custom-parsed-ns?))
 
 ;;--------------------------------------------------------------------------------
 ;; Functions marked as macros
@@ -212,7 +214,7 @@
   "Parse namespace of the given source types, :compiler or :library or both."
   [ns- repo src-types]
   (->> (read-ns-forms ns- src-types)
-       (mapcat #(parse-forms ns- repo))))
+       (mapcat #(parse-forms ns- repo %))))
 
 (defn parse-clj-core
   "Parse clojure.core forms."
@@ -371,7 +373,7 @@
   ;; And the imported macros from "clojure.core" should be overwritten
   ;; by cljs.core's macros.
   (concat (parse-extra-macros-from-clj)
-          (parse-ns ns- "clojurescript" [:compiler :library])))
+          (parse-ns* ns- "clojurescript" [:compiler :library])))
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns "special" [ns-]
@@ -380,7 +382,7 @@
                   first)
         ns-with-specials (cond
                            (>= *cljs-num* 1424) "cljs.analyzer"
-                           (>= *cljs-num 0)     "cljs.compiler"
+                           (>= *cljs-num* 0)    "cljs.compiler"
                            :else nil)
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
