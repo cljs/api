@@ -392,7 +392,6 @@
                         (apply concat)
                         (keep #(parse-special % docs))
                         doall))]
-    (println "   " (count specials) "special forms in" ns-with-specials)
     specials))
 
 ;; pseudo-namespace since repl special forms don't have a namespace
@@ -402,7 +401,6 @@
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
                    (first (keep #(parse-repl-specials % docs) forms)))]
-    (println "   " (count specials) "repl special forms in cljs.repl")
     specials))
 
 (defmethod parse-ns "cljs.test" [ns-]

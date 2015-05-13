@@ -22,6 +22,13 @@
 
     ))
 
+(defn print-summary
+  [parsed]
+  (let [ns-groups (group-by :ns parsed)
+        pairs (sort-by first ns-groups)]
+    (doseq [[ns- symbols] pairs]
+      (println "   " ns- ": parsed" (count symbols) "symbols"))))
+
 (defn create-catalog!
   "Create a docs catalog repo, or resume progress from its previous state.
 
@@ -54,6 +61,8 @@
           (let [parsed (parse-all)
                 symbols (set (map :full-name parsed))]
 
+            (print-summary parsed)
+
             (docs-repo/clear!)
 
             (println "\nWriting updated history to" history-filename "...")
@@ -84,6 +93,8 @@
 
     (println "\nParsing...")
     (let [parsed (parse-all)]
+
+      (print-summary parsed)
 
       (mkdir *output-dir*)
 
