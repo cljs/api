@@ -1,5 +1,6 @@
 (ns cljs-api-gen.clojure-api
   (:require
+    [clojure.set :refer [difference]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag*]]
     ))
 
@@ -18,7 +19,7 @@
     (let [data (read-string (slurp (version-api-url v)))
           symbols (->> (:vars data)
                        (map #(str (:namespace %) "/" (:name %)))
-                       (apply hash-set))]
+                       set)]
       (swap! api-symbols assoc v symbols))))
 
 (def cljs-ns->clj
@@ -29,12 +30,16 @@
    "specialrepl" "clojure.core"
    })
 
+(defn clj-lookup-name
+  [item]
+  (let [clj-ns (or (get cljs-ns->clj (:ns item)) (:ns item))]
+    (str clj-ns "/" (:name item))))
+
 (defn attach-clj-symbol
   [item]
   (let [version     (clj-tag->doc-version *clj-tag*)
         clj-symbol? (get @api-symbols version)
-        clj-ns      (or (get cljs-ns->clj (:ns item)) (:ns item))
-        lookup-name (str clj-ns "/" (:name item))]
+        lookup-name (clj-lookup-name item)]
     (if (clj-symbol? lookup-name)
       (assoc item :clj-symbol lookup-name)
       item)))
@@ -42,4 +47,11 @@
 (defn attach-clj-symbol-to-items
   [items]
   (map attach-clj-symbol items))
+
+(defn get-clojure-symbols-not-in-items
+  [items]
+  (let [version     (clj-tag->doc-version *clj-tag*)
+        clj-symbols (get @api-symbols version)
+        cljs-symbols (set (map clj-lookup-name items))]
+    (difference clj-symbols cljs-symbols)))
 

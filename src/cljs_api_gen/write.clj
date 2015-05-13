@@ -1,26 +1,13 @@
 (ns cljs-api-gen.write
-  (:refer-clojure :exclude [replace])
   (:require
     [clojure.set :refer [rename-keys]]
-    [clojure.string :refer [join replace]]
+    [clojure.string :refer [join]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
     [cljs-api-gen.config :refer [*output-dir*
                                  docs-dir
                                  edn-output-file]]
+    [cljs-api-gen.util :refer [symbol->filename mapmap]]
     ))
-
-(defn symbol->filename
-  [s]
-  (-> (name s)
-      (replace "." "DOT")
-      (replace ">" "GT")
-      (replace "<" "LT")
-      (replace "!" "BANG")
-      (replace "?" "QMARK")
-      (replace "*" "STAR")
-      (replace "+" "PLUS")
-      (replace "=" "EQ")
-      (replace "/" "SLASH")))
 
 (defn item-filename
   [item]
@@ -62,37 +49,26 @@
     (spit filename cljsdoc-content) ;; use `:append true` to see overwrites
     ))
 
-(defn dump-edn-file!
-  [api]
-  (let [outfile (str *output-dir* "/" edn-output-file)
-        transform (fn [x]
-                    (as-> x $
-                        (select-keys $ [:full-name
-                                        :ns
-                                        :name
-                                        :docstring
-                                        :type
-                                        :signatures
-                                        :history
-                                        :return-type
-                                        :filename
-                                        :github-link
-                                        :clj-symbol
-                                        :source])
-                        (rename-keys $ {:filename    :source-filename
-                                        :github-link :source-link
-                                        :signatures  :signature})
-                        (update-in $ [:signature] #(map str %))
-                        (update-in $ [:name] str)
-                        (assoc $ :filename (str (:ns $) "_" (symbol->filename (:name $)) ".cljsdoc"))
-                        (filter (comp not nil? second) $)
-                        (into {} $)))
-        outdata (map transform api)]
-  (spit outfile (pr-str outdata))))
+(defn dump-clj-not-cljs-file!
+  [clj-not-cljs]
+  (let [content (->> clj-not-cljs
+                     (group-by #(namespace (symbol %)))
+                     (mapmap #(join "\n" (sort %)))
+                     (sort-by first)
+                     (map second)
+                     (join "\n\n"))
+        outfile (str *output-dir* "/not-in-cljs")]
+    (spit outfile content)))
 
-(defn dump-api-docs!
-  [api]
-  (doseq [item api]
+(defn dump-edn-file!
+  [result]
+  (let [outfile (str *output-dir* "/" edn-output-file)]
+    (spit outfile (pr-str result))))
+
+(defn dump-result!
+  [result]
+  (doseq [item (vals (:symbols (:library-api result)))]
     (dump-doc-file! item))
-  (dump-edn-file! api))
+  (dump-clj-not-cljs-file! (:clj-not-cljs result))
+  (dump-edn-file! result))
 

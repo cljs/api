@@ -2,6 +2,7 @@
   (:require
     [clansi.core :refer [style]]
     [me.raynes.fs :refer [mkdir]]
+    [clojure.string :refer [join]]
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*
                                  history-filename
@@ -18,8 +19,10 @@
                                   with-history
                                   update-history!
                                   attach-history-to-items]]
-    [cljs-api-gen.write :refer [dump-api-docs!]]
-    [cljs-api-gen.clojure-api :refer [attach-clj-symbol-to-items]]
+    [cljs-api-gen.result :refer [get-result]]
+    [cljs-api-gen.write :refer [dump-result!]]
+    [cljs-api-gen.clojure-api :refer [attach-clj-symbol-to-items
+                                      get-clojure-symbols-not-in-items]]
     ))
 
 (defn print-summary
@@ -73,7 +76,9 @@
 
             (println "\nWriting docs to" (style *output-dir* :cyan))
             (mkdir (str *output-dir* "/" docs-dir))
-            (dump-api-docs! parsed)
+
+            (let [result (get-result parsed)]
+              (dump-result! result))
 
             (println "\nCommitting docs at tag" *cljs-version* "...")
             (docs-repo/commit!))
@@ -101,6 +106,8 @@
 
       (println "\nWriting docs to" (style *output-dir* :cyan))
       (mkdir (str *output-dir* "/" docs-dir))
-      (dump-api-docs! parsed))
+
+      (let [result (get-result parsed)]
+        (dump-result! result)))
 
     (println (style "Success!" :green))))

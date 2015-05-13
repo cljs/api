@@ -14,16 +14,42 @@ descriptions, examples, and cross-refs.
 - __[Browse latest docs](https://github.com/cljsinfo/api-docs-generator/tree/docs)__
 - __[Downloads](https://github.com/cljsinfo/api-docs-generator/releases)__
 
-An `autodocs.edn` file is generated for each version.  It is a list of maps of
-the following structure:
+An `autodocs.edn` file is generated for each version with the following structure:
+Some fields are pending work, marked `TODO`.
 
 ```clj
+;; TOP-LEVEL
+{:versions {:cljs ""      ;; clojurescript version
+            :clj ""       ;; clojure version
+            :closure ""}  ;; TODO: google closure version
+
+ :clj-not-cljs #{}        ;; clojure symbols unavailable in clojurescript
+
+ :library-api  {}         ;; API-DATA for core library
+ :compiler-api {}         ;; TODO: API-DATA for compiler
+ }
+```
+
+```clj
+;; API-DATA
+{:symbols {}              ;; api symbol => SYMBOL-DATA
+ :changes [               ;; TODO: sorted by most recent version
+           {:version ""   ;; TODO: version
+            :added    #{} ;; TODO: symbols added
+            :removed  #{} ;; TODO: symbols removed
+            }]}
+```
+
+```clj
+;; SYMBOL-DATA
 {:full-name         "cljs.core/assoc-in"
+ :clj-symbol        "clojure.core/assoc-in" ;; equivalent symbol in clojure
  :ns                "cljs.core"
  :name              "assoc-in"
  :type              "function"
  :signature         [[m [k & ks] v]]
  :docstring         "...full docstring..."
+ :removed-version   ""  ;; TODO: last available version if symbol was removed
  :history           ["+r927"]
  :return-type       nil
  :source-filename   "clojurescript/src/cljs/cljs/core.cljs"
