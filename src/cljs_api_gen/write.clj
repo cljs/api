@@ -35,10 +35,10 @@
        (cljsdoc-section "Return Type" (:return-type item))
        (cljsdoc-section "Clojure" (:clj-symbol item))
        (cljsdoc-section "Docstring" (:docstring item))
-       (cljsdoc-section "Signature" (join "\n" (:signatures item)))
-       (cljsdoc-section "Filename" (:filename item))
+       (cljsdoc-section "Signature" (join "\n" (:signature item)))
+       (cljsdoc-section "Filename" (:source-filename item))
        (cljsdoc-section "Source" (:source item))
-       (cljsdoc-section "Github" (:github-link item))
+       (cljsdoc-section "Github" (:source-link item))
        (cljsdoc-section "History" (join "\n" (map make-history-text (:history item))))
        ""])))
 
