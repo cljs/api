@@ -106,5 +106,5 @@
 
 (defn attach-history-to-items
   [items]
-  (map #(attach-history %) items))
+  (map attach-history items))
 

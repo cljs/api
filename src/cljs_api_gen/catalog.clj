@@ -19,7 +19,7 @@
                                   update-history!
                                   attach-history-to-items]]
     [cljs-api-gen.write :refer [dump-api-docs!]]
-
+    [cljs-api-gen.clojure-api :refer [attach-clj-symbol-to-items]]
     ))
 
 (defn print-summary
@@ -58,7 +58,9 @@
           (println "with Clojure:" (style *clj-tag* :yellow))
 
           (println "\nParsing...")
-          (let [parsed (parse-all)
+          (let [parsed (-> (parse-all)
+                           attach-history-to-items
+                           attach-clj-symbol-to-items)
                 symbols (set (map :full-name parsed))]
 
             (print-summary parsed)
@@ -71,9 +73,7 @@
 
             (println "\nWriting docs to" (style *output-dir* :cyan))
             (mkdir (str *output-dir* "/" docs-dir))
-            (-> parsed
-                attach-history-to-items
-                dump-api-docs!)
+            (dump-api-docs! parsed)
 
             (println "\nCommitting docs at tag" *cljs-version* "...")
             (docs-repo/commit!))
@@ -92,7 +92,8 @@
     (println "with Clojure:" (style *clj-tag* :yellow))
 
     (println "\nParsing...")
-    (let [parsed (parse-all)]
+    (let [parsed (-> (parse-all)
+                     attach-clj-symbol-to-items)]
 
       (print-summary parsed)
 

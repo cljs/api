@@ -6,7 +6,7 @@
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
-    ))
+    [cljs-api-gen.clojure-api :refer [get-version-apis!]]))
 
 ;;--------------------------------------------------------------------------------
 ;; Usage
@@ -47,6 +47,9 @@
 
   (println "\nCloning or updating repos...")
   (clone-or-fetch-repos!)
+
+  (println)
+  (get-version-apis!)
 
   (cond
     catalog (run-catalog! catalog out-dir)

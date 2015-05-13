@@ -46,6 +46,7 @@
       [(cljsdoc-section "Name" (:full-name item))
        (cljsdoc-section "Type" (:type item))
        (cljsdoc-section "Return Type" (:return-type item))
+       (cljsdoc-section "Clojure" (:clj-symbol item))
        (cljsdoc-section "Docstring" (:docstring item))
        (cljsdoc-section "Signature" (join "\n" (:signatures item)))
        (cljsdoc-section "Filename" (:filename item))
@@ -76,6 +77,7 @@
                                         :return-type
                                         :filename
                                         :github-link
+                                        :clj-symbol
                                         :source])
                         (rename-keys $ {:filename    :source-filename
                                         :github-link :source-link
