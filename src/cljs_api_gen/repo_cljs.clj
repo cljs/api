@@ -31,6 +31,10 @@
   [repo]
   (trim (:out (sh "git" "describe" "--tags" :dir (str repo-dir "/" repo)))))
 
+(defn get-latest-repo-tag
+  [repo]
+  (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" :dir (str repo-dir "/" repo)))))
+
 (defn clj-tag->version
   [tag]
   (when-let [[_ v] (re-find #"clojure-(.*)" tag)]

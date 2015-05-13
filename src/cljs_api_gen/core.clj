@@ -3,7 +3,8 @@
     [clojure.pprint :refer [print-table]]
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*]]
-    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!]]
+    [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
+                                    get-latest-repo-tag]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]))
@@ -37,10 +38,13 @@
       (create-catalog! n-or-all))))
 
 (defn run-single-version!
-  [version out-dir]
-  (let [out-dir (or out-dir (str "docs-" version))]
+  [tag out-dir]
+  (let [tag (if (= :latest tag)
+              (get-latest-repo-tag "clojurescript")
+              tag)
+        out-dir (or out-dir (str "docs-" tag))]
     (binding [*output-dir* out-dir]
-      (create-single-version! version))))
+      (create-single-version! tag))))
 
 (defn main
   [{:keys [catalog version out-dir] :as options}]
