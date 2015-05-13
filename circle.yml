@@ -1,0 +1,8 @@
+general:
+  branches:
+    only:
+      - master
+
+test:
+  override:
+    - script/ci-build-publish.sh

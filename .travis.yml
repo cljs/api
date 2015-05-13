@@ -1,6 +1,0 @@
-language: clojure
-lein: lein
-script: lein run '{:catalog :all}' && script/travis-publish.sh
-env:
-  global:
-  - secure: "VpRnY9xqrARuDIRNqrXAvt0AN/YBxV/6tHp1/NaR9/851rZbU8JCpc+5hcJwFlpARN9rCxia53FQtAGdBseYNklPNbi+MPOorCzlTmykIAOEEGCej6dxHftNOpjv7PAr5mxTWRCFEjBczjoa0a7bmSRa2JnSp8i5haGtMoOeslc="
