@@ -44,6 +44,7 @@
 
    ;; API-DATA for core library
    :library-api  {:symbols (->> parsed
+                                (map transform-item)
                                 (group-by :full-name)
                                 (mapmap last)) ;; remove possible duplicates (favoring the last symbol)
                   :changes []
