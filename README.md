@@ -62,8 +62,10 @@ This structure is __current unstable__ and should be expected to change frequent
  :source            "...full source code..."}
 ```
 
-__Readable Docs__ are also produced for each symbol.  For example, see:<br>
-[`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
+__Per-symbol docs__ are also produced for convenience.  For example, see:
+
+- [`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
+- [`cljs.core_assoc-in.edn`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.edn).
 
 ## Building the catalog
 
