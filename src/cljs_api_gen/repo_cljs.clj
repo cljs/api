@@ -12,20 +12,21 @@
 (def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
 (def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
 
-(defn clone-or-fetch!
+(defn clone-or-pull!
   [repo-url]
   (let [repo-name (base-name repo-url)
         repo-path (str repo-dir "/" repo-name)]
-    (if-not (exists? repo-path)
-      (sh "git" "clone" repo-url :dir repo-dir)
-      (sh "git" "fetch" :dir repo-path))))
+    (when-not (exists? repo-path)
+      (sh "git" "clone" repo-url :dir repo-dir))
+    (sh "git" "checkout" "master" :dir repo-dir)
+    (sh "git" "pull" :dir repo-path)))
 
 (defn clone-or-fetch-repos!
   []
   (when-not (exists? repo-dir)
     (mkdir repo-dir))
-  (clone-or-fetch! "https://github.com/clojure/clojurescript")
-  (clone-or-fetch! "https://github.com/clojure/clojure"))
+  (clone-or-pull! "https://github.com/clojure/clojurescript")
+  (clone-or-pull! "https://github.com/clojure/clojure"))
 
 (defn get-current-repo-tag
   [repo]
