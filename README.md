@@ -75,6 +75,10 @@ __Readable Docs__ are also produced for each symbol.  For example, see:<br>
     lein run '{:catalog :all}'
     ```
 
+  (This is how the [docs branch](https://github.com/cljsinfo/api-docs-generator/tree/docs)
+  is generated.)
+
+
 - __Partial Catalog__: for development purposes, you may wish to stop the
   process after a certain number of versions to verify its output.  The
   following will stop after 4 versions. (It can be re-run to process the next
