@@ -374,7 +374,9 @@
   ;; And the imported macros from "clojure.core" should be overwritten
   ;; by cljs.core's macros.
   (concat (parse-extra-macros-from-clj)
-          (parse-ns* ns- "clojurescript" [:compiler :library])))
+          (parse-ns* ns- "clojurescript" [:compiler     ;; <-- again, order is important!
+                                          :library])))  ;; :library should come after :compiler
+                                                        ;; so the library functions overwrite compiler macros
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns "special" [ns-]
