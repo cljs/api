@@ -415,7 +415,45 @@
 (defmethod parse-ns :default [ns-]
   (parse-ns* ns- "clojurescript" :library))
 
+;;------------------------------------------------------------
+;; Top-level namespace parsing
+;;------------------------------------------------------------
+
+(defn add-catch-finally
+  "`catch` and `finally` are handled inside the `try` special form.
+  We cannot parse them, so we add them manually."
+  [parsed]
+  (let [try-name (cond
+                   (>= *cljs-num* 1933) "special/try"
+                   (>= *cljs-num* 0)    "cljs.core/try"
+                   :else nil)
+        try-form (first (filter #(= (:full-name %) try-name) parsed))
+        get-sig (fn [name-]
+                  ;; parse docstring for signature of `catch` and `finally`:
+                  ;;
+                  ;;    catch-clause => (catch classname name expr*)
+                  ;;    finally-clause => (finally expr*)
+                  ;;
+                  (as-> (:docstring try-form) $
+                       (re-find (re-pattern (str "\\(" name- " (.*)\\)")) $)
+                       (second $)
+                       (split $ #"\s+")
+                       (mapv symbol $)))
+        make (fn [name-]
+               (assoc
+                 (select-keys try-form
+                              [:ns :type :docstring
+                               :filename :lines :github-link])
+                 :full-name (str (:ns try-form) "/" name-)
+                 :name name-
+                 :signatures [(get-sig name-)]))
+        extras (map make ["catch" "finally"])]
+    (concat parsed extras)))
+
 (defn parse-all
   []
-  (doall (mapcat parse-ns cljs-namespaces)))
+  (let [parsed (doall (mapcat parse-ns cljs-namespaces))
+        result (-> parsed
+                   add-catch-finally)]
+    result))
 
