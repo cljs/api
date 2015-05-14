@@ -14,8 +14,13 @@ descriptions, examples, and cross-refs.
 - __[Browse latest docs](https://github.com/cljsinfo/api-docs-generator/tree/docs)__
 - __[Downloads](https://github.com/cljsinfo/api-docs-generator/releases)__
 
-An `autodocs.edn` file is generated for each version with the following structure:
-Some fields are pending work, marked `TODO`.
+## Data Fields
+
+An [`autodocs.edn`](https://github.com/cljsinfo/api-docs-generator/blob/docs/autodocs.edn)
+file is generated for each version with the following structure: Some fields
+are pending work, marked `TODO`.
+
+This structure is __current unstable__ and should be expected to change frequently.
 
 ```clj
 ;; TOP-LEVEL
@@ -80,10 +85,13 @@ __Readable Docs__ are also produced for each symbol.  For example, see:<br>
     ```
 
 - __Single Version Docs__: To generate docs for a single version (without symbol history data),
-  pass it the tag value for the desired ClojureScript version.
+  pass it the tag value for the desired ClojureScript version, or `:latest` for the most recent
+  version.
 
     ```
     lein run '{:version "r3211"}'
+    or
+    lein run '{:version :latest}'
     ```
 
 - __Customize Output Directory__: The default output directory of a catalog is
@@ -107,7 +115,23 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - finding __macros__ in `clojure.core` (specific clj version in `cljs/script/bootstrap`)
     - excluding those in `(:refer-clojure :exclude` in `cljs.core`
     - including those in `(import-macros clojure.core` in `cljs.core`
-- finding __special-forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
-    - (currently can't parse signatures and docstrings)
+- finding __special forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
+- finding __repl special forms__ in `cljs.repl`
+
+### Files
+
+- `core.clj` - main entry
+- `catalog.clj` - builds a catalog or single version output
+- `clojure_api.clj` - retrieves original clojure api info to correlate with cljs
+- `config.clj` - filename constants and dynamic vars for output directories
+- `docstring.clj` - helpers for extracting/formatting/removing docstrings
+- `history.clj` - track version history of symbols
+- `parse.clj` - parse namespaces for function/macro/special forms
+- `read.clj` - read forms from namespaces
+- `repo_cljs.clj` - helpers for traversing official Clojure and ClojureScript repos
+- `repo_docs.clj` - helpers for creating the docs repo (catalog output)
+- `result.clj` - transforms parsed data into a final result structure
+- `write.clj` - writes all output files for the data created by `result.clj`
+- `util.clj` - miscellaneous functions
 
 [codox]:https://github.com/weavejester/codox
