@@ -33,7 +33,7 @@
 
 (defn get-latest-repo-tag
   [repo]
-  (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" :dir (str repo-dir "/" repo)))))
+  (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" "master" :dir (str repo-dir "/" repo)))))
 
 (defn clj-tag->version
   [tag]
