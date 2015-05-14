@@ -445,7 +445,7 @@
                (assoc
                  (select-keys try-form
                               [:docstring :filename :lines :github-link])
-                 :full-name (str (:ns try-form) "/" name-)
+                 :full-name (str "special/" name-)
                  :ns "special"
                  :type "special form"
                  :name name-
