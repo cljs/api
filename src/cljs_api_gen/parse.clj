@@ -444,9 +444,10 @@
         make (fn [name-]
                (assoc
                  (select-keys try-form
-                              [:ns :type :docstring
-                               :filename :lines :github-link])
+                              [:docstring :filename :lines :github-link])
                  :full-name (str (:ns try-form) "/" name-)
+                 :ns "special"
+                 :type "special form"
                  :name name-
                  :signatures (get-sigs name-)))
         extras (map make ["catch" "finally"])]
