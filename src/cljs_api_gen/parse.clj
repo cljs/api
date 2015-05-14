@@ -428,17 +428,19 @@
                    (>= *cljs-num* 0)    "cljs.core/try"
                    :else nil)
         try-form (first (filter #(= (:full-name %) try-name) parsed))
-        get-sig (fn [name-]
-                  ;; parse docstring for signature of `catch` and `finally`:
-                  ;;
-                  ;;    catch-clause => (catch classname name expr*)
-                  ;;    finally-clause => (finally expr*)
-                  ;;
-                  (as-> (:docstring try-form) $
+        get-sigs (fn [name-]
+                   ;; parse docstring for signature of `catch` and `finally`:
+                   ;;
+                   ;;    catch-clause => (catch classname name expr*)
+                   ;;    finally-clause => (finally expr*)
+                   ;;
+                   (when-let [docstring (:docstring try-form)]
+                     (as-> (:docstring try-form) $
                        (re-find (re-pattern (str "\\(" name- " (.*)\\)")) $)
                        (second $)
                        (split $ #"\s+")
-                       (mapv symbol $)))
+                       (mapv symbol $)
+                       (vector $))))
         make (fn [name-]
                (assoc
                  (select-keys try-form
@@ -446,7 +448,7 @@
                                :filename :lines :github-link])
                  :full-name (str (:ns try-form) "/" name-)
                  :name name-
-                 :signatures [(get-sig name-)]))
+                 :signatures (get-sigs name-)))
         extras (map make ["catch" "finally"])]
     (concat parsed extras)))
 

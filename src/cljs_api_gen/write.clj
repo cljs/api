@@ -2,6 +2,7 @@
   (:require
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join]]
+    [fipp.edn :refer [pprint]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
     [cljs-api-gen.config :refer [*output-dir*
                                  docs-dir
@@ -44,10 +45,9 @@
 
 (defn dump-doc-file!
   [item]
-  (let [filename (str (item-filename item) ".cljsdoc")
-        cljsdoc-content (make-cljsdoc item)]
-    (spit filename cljsdoc-content) ;; use `:append true` to see overwrites
-    ))
+  (let [filename (item-filename item)]
+    (spit (str filename ".edn") (with-out-str (pprint item)))
+    (spit (str filename ".cljsdoc") (make-cljsdoc item))))
 
 (defn dump-clj-not-cljs-file!
   [clj-not-cljs]
