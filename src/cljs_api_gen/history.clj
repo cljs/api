@@ -45,23 +45,6 @@
                 (swap! history update-in [:symbols] conj name-)))))
         [latest history]))))
 
-(defn make-history-line
-  [name- versions pad]
-  (let [name- (format (str "%-" pad "s") name-)]
-    (join " " (concat [name-] versions))))
-
-(defn make-history-lines
-  [version-map]
-  (let [names (keys version-map)
-        pad (->> names (map count) (apply max) (+ 2))]
-    (for [[name- versions] (sort-by first version-map)]
-      (make-history-line name- versions pad))))
-
-(defn write-history!
-  [version-map]
-  (let [table (join "\n" (make-history-lines version-map))]
-    (spit (str *docs-repo-dir* "/" history-filename) table)))
-
 (defn mark-symbol-added!
   [s]
   (let [v-change (str "+" *cljs-tag*)]
@@ -75,18 +58,6 @@
   (let [v-change (str "-" *cljs-tag*)]
     (swap! *history* update-in [:version-map s] conj v-change)))
 
-(defn write-changes!
-  [added removed]
-  (let [current (:changes @*history*)
-        changed-lines (->> (concat (map #(vector "+" %) added)
-                                   (map #(vector "-" %) removed))
-                           (sort-by second)
-                           (map (fn [[a b]] (str "  " a " " b))))
-        version-changes (join "\n" (cons *cljs-tag* changed-lines))
-        content (str version-changes "\n\n" current)]
-    (spit (str *output-dir* "/" changes-filename) content)
-    (swap! *history* assoc :changes content)))
-
 (defn update-history!
   [symbols]
   (let [[added removed _] (diff symbols (:symbols @*history*))]
@@ -95,8 +66,7 @@
     (doseq [s removed]
       (mark-symbol-removed! s))
     (swap! *history* assoc :symbols symbols)
-    (write-changes! added removed)
-    (write-history! (:version-map @*history*))))
+    (write-changes! added removed)))
 
 (defn attach-history
   [item]
