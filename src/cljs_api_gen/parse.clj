@@ -33,7 +33,7 @@
     "clojure.set" "clojure.string" "clojure.walk" "clojure.zip" "clojure.data"})
 
 (def custom-parsed-ns?
-  #{"cljs.core" "cljs.test"
+  #{"cljs.core" "cljs.test" "cljs.repl"
     "special" "specialrepl"}) ;; <-- pseudo-namespaces for special forms
 
 (def cljs-namespaces
@@ -411,6 +411,15 @@
       (>  *cljs-num* 3269) [:library]
       (>= *cljs-num* 0)    [:library :compiler]
       :else nil)))
+
+(defmethod parse-ns "cljs.repl" [ns-]
+  ;; the library file "repl.cljs" has (:require-macros cljs.repl)
+  ;; so we must pull those in from the compiler and add in the
+  ;; library functions.
+  (let [macros (->> (parse-ns* ns- "clojurescript" [:compiler])
+                    (filter #(= "macro" (:type %))))
+        fns (parse-ns* ns- "clojurescript" [:library])]
+    (concat macros fns)))
 
 (defmethod parse-ns :default [ns-]
   (parse-ns* ns- "clojurescript" :library))

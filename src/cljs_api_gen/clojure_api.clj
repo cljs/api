@@ -26,6 +26,7 @@
   {"cljs.core"   "clojure.core"
    "cljs.pprint" "clojure.pprint"
    "cljs.test"   "clojure.test"
+   "cljs.repl"   "clojure.repl"
    "special"     "clojure.core"
    "specialrepl" "clojure.core"
    })
