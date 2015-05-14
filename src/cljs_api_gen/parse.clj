@@ -416,7 +416,7 @@
   (parse-ns* ns- "clojurescript" :library))
 
 ;;------------------------------------------------------------
-;; Top-level namespace parsing
+;; Main
 ;;------------------------------------------------------------
 
 (defn add-catch-finally
