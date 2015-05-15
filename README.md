@@ -38,28 +38,29 @@ This structure is __current unstable__ and should be expected to change frequent
 ```clj
 ;; API-DATA
 {:symbols {}              ;; api symbol => SYMBOL-DATA
- :changes [               ;; TODO: sorted by most recent version
-           {:version ""   ;; TODO: version
-            :added    #{} ;; TODO: symbols added
-            :removed  #{} ;; TODO: symbols removed
+ :changes [{:version ""
+            :added    #{}
+            :removed  #{}
             }]}
 ```
 
 ```clj
 ;; SYMBOL-DATA
-{:full-name         "cljs.core/assoc-in"
- :clj-symbol        "clojure.core/assoc-in" ;; equivalent symbol in clojure
- :ns                "cljs.core"
- :name              "assoc-in"
- :type              "function"
- :signature         [[m [k & ks] v]]
- :docstring         "...full docstring..."
- :removed-version   ""  ;; TODO: last available version if symbol was removed
- :history           ["+r927"]
- :return-type       nil
- :source-filename   "clojurescript/src/cljs/cljs/core.cljs"
- :source-link       "https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025"
- :source            "...full source code..."}
+{:full-name           "cljs.core/assoc-in"
+ :clj-symbol          "clojure.core/assoc-in" ;; equivalent symbol in clojure
+ :ns                  "cljs.core"
+ :name                "assoc-in"
+ :type                "function"
+ :signature           ["[m [k & ks] v]"]
+ :docstring           "...full docstring..."
+ :removed {:in        "...version removed in..."
+           :last-seen "...version last seen..."}
+ :history             ["+ <added in version>"
+                       "- <removed in version>"]
+ :return-type         nil ;; present if detected
+ :source-filename     "clojurescript/src/cljs/cljs/core.cljs"
+ :source-link         "https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025"
+ :source              "...full source code..."}
 ```
 
 __Per-symbol docs__ are also produced for convenience.  For example, see:
