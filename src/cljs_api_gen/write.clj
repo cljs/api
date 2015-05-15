@@ -1,7 +1,7 @@
 (ns cljs-api-gen.write
   (:require
     [clojure.set :refer [rename-keys]]
-    [clojure.string :refer [join]]
+    [clojure.string :refer [join split]]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -19,8 +19,7 @@
   [text]
   (let [plus-or-minus (first text)
         change (if (= \+ plus-or-minus) "Added" "Removed")
-        tag (subs text 1)
-        version (cljs-tag->version tag)]
+        [_ version] (split text #"\s+")]
     (str change " in " version)))
 
 (defn cljsdoc-section

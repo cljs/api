@@ -52,22 +52,30 @@
        (mapmap last) ;; remove duplicates by preferring the last
        ))
 
-(defn present?
-  [item]
-  (when-let [h (last (:history item))]
-    (= (.startsWith h "+"))))
+(defn mark-removed
+  [prev-item prev-hist prev-version]
+  (-> (update-in prev-item [:history] conj (str "- " *cljs-version*))
+      (assoc :removed {:in *cljs-version*
+                       :last-seen prev-version})))
+
+(defn mark-added
+  [curr-item prev-hist prev-version]
+  (let [prev-hist (or prev-hist [])]
+    (-> (assoc curr-item :history (conj prev-hist (str "+ " *cljs-version*)))
+        (dissoc :removed))))
 
 (defn make-api-result
-  [items prev-api]
-  (let [prev-items (:symbols prev-api)
+  [items items-key prev-result]
+  (let [prev-api (get prev-result items-key)
+        prev-items (:symbols prev-api)
         prev-changes (or (:changes prev-api) [])
+        prev-version (get-in prev-result [:versions :cljs])
 
         ;; get symbol names
-        prev-names (->> (filter present? prev-items)
+        prev-names (->> (remove :removed prev-items)
                         keys set)
         curr-names (-> items keys set)
         all-names (set (into prev-names curr-names))
-
         [removed? added? stayed?] (diff prev-names curr-names)
 
         make-item
@@ -76,8 +84,8 @@
                 prev-hist (:history prev)
                 curr (get items name-)]
             (cond
-              (contains? removed? name-) (update-in prev [:history] conj (str "-" *cljs-tag*))
-              (contains? added? name-)   (assoc curr :history (conj prev-hist (str "+" *cljs-tag*)))
+              (contains? removed? name-) (mark-removed prev prev-hist prev-version)
+              (contains? added? name-)   (mark-added curr prev-hist prev-version)
               (contains? stayed? name-)  (assoc curr :history prev-hist)
               :else nil)))
 
@@ -94,7 +102,7 @@
   ([lib-parsed prev-result]
    (let [lib-items (transform-items lib-parsed)
          _ (spit "test" (keys lib-items))
-         library-api (make-api-result lib-items (:library-api prev-result))]
+         library-api (make-api-result lib-items :library-api prev-result)]
 
      {:versions {:cljs *cljs-version*  ;; clojurescript version
                  :clj *clj-version*    ;; clojure version
