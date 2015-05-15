@@ -76,12 +76,14 @@
         prev-version (get-in prev-result [:versions :cljs])
 
         ;; get symbol names
+        all-prev-names (->> (vals prev-items)
+                            (map :full-name))
         prev-names (->> (vals prev-items)
                         (remove :removed)
                         (map :full-name)
                         set)
         curr-names (-> items keys set)
-        all-names (set (into prev-names curr-names))
+        all-names (set (into all-prev-names curr-names))
         [removed? added? stayed?] (diff prev-names curr-names)
 
         make-item
@@ -90,10 +92,10 @@
                 prev-hist (:history prev)
                 curr (get items name-)]
             (cond
-              (contains? removed? name-) (mark-removed prev prev-hist prev-version)
-              (contains? added? name-)   (mark-added curr prev-hist prev-version)
-              (contains? stayed? name-)  (assoc curr :history prev-hist)
-              :else nil)))
+              (contains? removed? name-) (mark-removed prev prev-hist prev-version) ;; newly removed
+              (contains? added? name-)   (mark-added curr prev-hist prev-version)   ;; newly added
+              (contains? stayed? name-)  (assoc curr :history prev-hist)            ;; still here
+              :else                      prev)))                                    ;; still removed
 
         new-items (map make-item all-names)
         new-symbols (zipmap (map :full-name new-items) new-items)
