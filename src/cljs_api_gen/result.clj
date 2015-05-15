@@ -7,8 +7,12 @@
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       attach-clj-symbol]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
-                                    *clj-version*]]
+                                    *clj-version*
+                                    *cljs-tag*]]
     ))
+
+(defn removable? [v]
+  (or (nil? v) (= "" v) (and (coll? v) (empty? v))))
 
 (defn transform-item
   [x]
@@ -25,18 +29,33 @@
                     :github-link
                     :clj-symbol
                     :source])
+
+    ;; FIXME: don't make this confusing, just rename them at their source instead of here
     (rename-keys $ {:filename    :source-filename
                     :github-link :source-link
                     :signatures  :signature})
+
     (update-in $ [:signature] #(map str %))
     (update-in $ [:name] str)
     (assoc $ :filename (str (:ns $) "_" (symbol->filename (:name $)) ".cljsdoc"))
-    (filter (comp not nil? second) $)
-    (into {} $)))
+    (remove (comp removable? second) $)
+    (into {} $)
+    (attach-clj-symbol $)
+    ;; NOTE: don't forget to add a $ for any following expressions
+    ))
+
+(defn transform-items
+  [items]
+  (->> items
+       (map transform-item)
+       (group-by :full-name)
+       (mapmap last) ;; remove duplicates by preferring the last
+       ))
 
 (defn present?
   [item]
-  (= (.startsWith (last (:history item)) "+")))
+  (when-let [h (last (:history item))]
+    (= (.startsWith h "+"))))
 
 (defn make-api-result
   [items prev-api]
@@ -45,9 +64,9 @@
 
         ;; get symbol names
         prev-names (->> (filter present? prev-items)
-                       (map (comp set keys)))
-        curr-names (map (comp set keys) items)
-        all-names (set (into prev-syms curr-syms))
+                        keys set)
+        curr-names (-> items keys set)
+        all-names (set (into prev-names curr-names))
 
         [removed? added? stayed?] (diff prev-names curr-names)
 
@@ -57,16 +76,9 @@
                 prev-hist (:history prev)
                 curr (get items name-)]
             (cond
-              (removed? name-)
-              (-> (update-in prev [:history] conj (str "-" *cljs-tag*))
-                  (select-keys [:ns :name :full-name :history]))
-
-              (added? name-)
-              (assoc curr :history (conj prev-hist (str "+" *cljs-tag*)))
-
-              (stayed? name-)
-              (assoc curr :history prev-hist)
-
+              (contains? removed? name-) (update-in prev [:history] conj (str "-" *cljs-tag*))
+              (contains? added? name-)   (assoc curr :history (conj prev-hist (str "+" *cljs-tag*)))
+              (contains? stayed? name-)  (assoc curr :history prev-hist)
               :else nil)))
 
         new-items (map make-item all-names)
@@ -80,11 +92,8 @@
 (defn get-result
   ([lib-parsed] (get-result lib-parsed nil))
   ([lib-parsed prev-result]
-   (let [lib-items (->> lib-parsed
-                        (map attach-clj-symbol)
-                        (map transform-item)
-                        (group-by :full-name)
-                        (mapmap last))
+   (let [lib-items (transform-items lib-parsed)
+         _ (spit "test" (keys lib-items))
          library-api (make-api-result lib-items (:library-api prev-result))]
 
      {:versions {:cljs *cljs-version*  ;; clojurescript version

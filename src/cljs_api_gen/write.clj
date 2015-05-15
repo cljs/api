@@ -6,8 +6,9 @@
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
     [cljs-api-gen.config :refer [*output-dir*
                                  docs-dir
-                                 edn-output-file]]
+                                 edn-result-file]]
     [cljs-api-gen.util :refer [symbol->filename mapmap]]
+    [me.raynes.fs :refer [exists? mkdir]]
     ))
 
 (defn item-filename
@@ -60,13 +61,21 @@
         outfile (str *output-dir* "/not-in-cljs")]
     (spit outfile content)))
 
-(defn dump-edn-file!
-  [result]
-  (let [outfile (str *output-dir* "/" edn-output-file)]
-    (spit outfile (pr-str result))))
+(defn get-edn-path []
+  (str *output-dir* "/" edn-result-file))
 
-(defn dump-result!
-  [result]
+(defn get-last-written-result []
+  (let [path (get-edn-path)]
+    (when (exists? path)
+      (slurp path))))
+
+(defn dump-edn-file! [result]
+  (spit (get-edn-path) (with-out-str (pprint result))))
+
+(defn dump-result! [result]
+  (mkdir *output-dir*)
+  (mkdir (str *output-dir* "/" docs-dir))
+
   (doseq [item (vals (:symbols (:library-api result)))]
     (dump-doc-file! item))
   (dump-clj-not-cljs-file! (:clj-not-cljs result))

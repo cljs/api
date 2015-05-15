@@ -1,11 +1,9 @@
 (ns cljs-api-gen.catalog
   (:require
     [clansi.core :refer [style]]
-    [me.raynes.fs :refer [mkdir]]
     [clojure.string :refer [join]]
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*
-                                 history-filename
                                  docs-dir]]
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
@@ -15,14 +13,9 @@
                                     *clj-tag*
                                     *cljs-version*]]
     [cljs-api-gen.repo-docs :as docs-repo]
-    [cljs-api-gen.history :refer [initial-symbol-history
-                                  with-history
-                                  update-history!
-                                  attach-history-to-items]]
     [cljs-api-gen.result :refer [get-result]]
-    [cljs-api-gen.write :refer [dump-result!]]
-    [cljs-api-gen.clojure-api :refer [attach-clj-symbol-to-items
-                                      get-clojure-symbols-not-in-items]]
+    [cljs-api-gen.write :refer [dump-result!
+                                get-last-written-result]]
     ))
 
 (defn print-summary
@@ -51,10 +44,12 @@
 
   (docs-repo/init!)
 
-  (let [prev-result (atom nil) ;; TODO: set prev-result from autodocs.edn if exists
-        latest-tag nil ;; TODO: set latest-tag to current catalog repo tag if exists
-        ]
-    (doseq [tag (get-cljs-tags-to-parse latest-tag n-or-all)]
+  (let [prev-result (get-last-written-result)
+        latest-tag (when prev-result
+                     (docs-repo/docs-tag->cljs (docs-repo/get-current-tag)))
+        tags (get-cljs-tags-to-parse latest-tag n-or-all)]
+
+    (doseq [tag tags]
       (with-checkout! tag
 
         (println "\n=========================================================")
@@ -62,17 +57,12 @@
         (println "with Clojure:" (style *clj-tag* :yellow))
 
         (println "\nParsing...")
-        (let [parsed (parse-all)
-              symbols (set (map :full-name parsed))]
-
+        (let [parsed (parse-all)]
           (print-summary parsed)
 
           (docs-repo/clear!)
 
           (println "\nWriting docs to" (style *output-dir* :cyan))
-          (mkdir *output-dir*)
-          (mkdir (str *output-dir* "/" docs-dir))
-
           (let [result (get-result parsed @prev-result)]
             (dump-result! result)
             (reset! prev-result result))
@@ -99,9 +89,6 @@
       (print-summary parsed)
 
       (println "\nWriting docs to" (style *output-dir* :cyan))
-      (mkdir *output-dir*)
-      (mkdir (str *output-dir* "/" docs-dir))
-
       (let [result (get-result parsed)]
         (dump-result! result)))
 
