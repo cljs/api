@@ -76,8 +76,10 @@
         prev-version (get-in prev-result [:versions :cljs])
 
         ;; get symbol names
-        prev-names (->> (remove :removed prev-items)
-                        keys set)
+        prev-names (->> (vals prev-items)
+                        (remove :removed)
+                        (map :full-name)
+                        set)
         curr-names (-> items keys set)
         all-names (set (into prev-names curr-names))
         [removed? added? stayed?] (diff prev-names curr-names)
