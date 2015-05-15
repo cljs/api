@@ -7,7 +7,7 @@
     [clojure.string :refer [replace]]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [exists?]]
-    [cljs-api-gen.config :refer [repo-dir]]
+    [cljs-api-gen.config :refer [repos-dir]]
     [cljs-api-gen.repo-cljs :refer [*cljs-num*]]
     ))
 
@@ -66,7 +66,7 @@
     (let [ns-path (replace ns- "." "/")]
       (for [src (map src-path src-types)
             ext  ["clj" "cljs" "cljc"]]
-        (str repo-dir "/clojurescript/" src "/" ns-path "." ext))))))
+        (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
 
 (defn read-ns-forms
   [ns- k-or-ks]
@@ -78,7 +78,7 @@
 (defn read-clj-core-forms
   []
   (->> ["core" "core_proxy" "core_print" "core_deftype"]
-       (map #(str repo-dir "/clojure/src/clj/clojure/" % ".clj"))
+       (map #(str repos-dir "/clojure/src/clj/clojure/" % ".clj"))
        (map read-forms-from-file)
        doall))
 

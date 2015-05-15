@@ -3,7 +3,7 @@
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split-lines]]
-    [cljs-api-gen.config :refer [repo-dir]]
+    [cljs-api-gen.config :refer [repos-dir]]
     ))
 
 (def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
@@ -15,26 +15,26 @@
 (defn clone-or-pull!
   [repo-url]
   (let [repo-name (base-name repo-url)
-        repo-path (str repo-dir "/" repo-name)]
-    (when-not (exists? repo-path)
-      (sh "git" "clone" repo-url :dir repo-dir))
+        repo-dir (str repos-dir "/" repo-name)]
+    (when-not (exists? repo-dir)
+      (sh "git" "clone" repo-url :dir repos-dir))
     (sh "git" "checkout" "master" :dir repo-dir)
-    (sh "git" "pull" :dir repo-path)))
+    (sh "git" "pull" :dir repo-dir)))
 
 (defn clone-or-fetch-repos!
   []
-  (when-not (exists? repo-dir)
-    (mkdir repo-dir))
+  (when-not (exists? repos-dir)
+    (mkdir repos-dir))
   (clone-or-pull! "https://github.com/clojure/clojurescript")
   (clone-or-pull! "https://github.com/clojure/clojure"))
 
 (defn get-current-repo-tag
   [repo]
-  (trim (:out (sh "git" "describe" "--tags" :dir (str repo-dir "/" repo)))))
+  (trim (:out (sh "git" "describe" "--tags" :dir (str repos-dir "/" repo)))))
 
 (defn get-latest-repo-tag
   [repo]
-  (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" "master" :dir (str repo-dir "/" repo)))))
+  (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" "master" :dir (str repos-dir "/" repo)))))
 
 (defn clj-tag->version
   [tag]
@@ -53,7 +53,7 @@
 
 (defn get-cljs-version-tags
   []
-  (let [sh-return (sh "git" "tag" :dir (str repo-dir "/clojurescript"))
+  (let [sh-return (sh "git" "tag" :dir (str repos-dir "/clojurescript"))
         tags (split-lines (:out sh-return))]
     (->> tags
          (filter #(re-find #"^r" %))
@@ -79,7 +79,7 @@
 (defn cljs-tag->clj-tag
   [cljs-tag]
   (let [bootstrap (:out (sh "git" "show" (str cljs-tag ":script/bootstrap")
-                            :dir (str repo-dir "/clojurescript")))
+                            :dir (str repos-dir "/clojurescript")))
         [_ m1] (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap)
         [_ m2] (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap)
         version (or m1 m2)]
@@ -89,8 +89,8 @@
 (defn checkout-cljs-tag!
   [cljs-tag]
   (let [clj-tag (cljs-tag->clj-tag cljs-tag)]
-    (sh "git" "checkout" cljs-tag :dir (str repo-dir "/clojurescript"))
-    (sh "git" "checkout" clj-tag  :dir (str repo-dir "/clojure"))
+    (sh "git" "checkout" cljs-tag :dir (str repos-dir "/clojurescript"))
+    (sh "git" "checkout" clj-tag  :dir (str repos-dir "/clojure"))
     [(get-current-repo-tag "clojurescript")
      (get-current-repo-tag "clojure")]))
 
@@ -123,7 +123,7 @@
 
   ;; TESTS
 
-  (def repo-dir "repos")
+  (def repos-dir "repos")
   (require '[clojure.java.shell :refer [sh]])
   (require '[me.raynes.fs :refer [exists? mkdir base-name]])
   (require '[clojure.string :refer [trim split-lines]])

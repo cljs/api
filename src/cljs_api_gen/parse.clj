@@ -7,7 +7,7 @@
     [me.raynes.fs :refer [base-name exists?]]
     [cljs-api-gen.read :refer [read-ns-forms
                                read-clj-core-forms]]
-    [cljs-api-gen.config :refer [repo-dir]]
+    [cljs-api-gen.config :refer [repos-dir]]
     [cljs-api-gen.docstring :refer [try-locate-docs
                                     fix-docstring
                                     try-remove-docs]]
@@ -154,7 +154,7 @@
         potential-comment (first (take-last (inc num-lines) source-lines))
 
         source (join "\n" (take-last num-lines source-lines))
-        filename (subs (:file m) (inc (count repo-dir)))
+        filename (subs (:file m) (inc (count repos-dir)))
         github-link (get-github-file-link *cur-repo* filename lines)]
     {:ns *cur-ns*
      :source source

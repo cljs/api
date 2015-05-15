@@ -1,7 +1,7 @@
 (ns cljs-api-gen.config)
 
 ;; location of the clojure & clojurescript repos to parse
-(def repo-dir "repos")
+(def repos-dir "repos")
 
 (def ^:dynamic *docs-repo-dir*)
 
