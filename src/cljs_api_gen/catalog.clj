@@ -51,41 +51,38 @@
 
   (docs-repo/init!)
 
-  (let [[latest-tag history] (initial-symbol-history)]
-    (with-history history
-      (doseq [tag (get-cljs-tags-to-parse latest-tag n-or-all)]
-        (with-checkout! tag
+  (let [prev-result (atom nil) ;; TODO: set prev-result from autodocs.edn if exists
+        latest-tag nil ;; TODO: set latest-tag to current catalog repo tag if exists
+        ]
+    (doseq [tag (get-cljs-tags-to-parse latest-tag n-or-all)]
+      (with-checkout! tag
 
-          (println "\n=========================================================")
-          (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
-          (println "with Clojure:" (style *clj-tag* :yellow))
+        (println "\n=========================================================")
+        (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
+        (println "with Clojure:" (style *clj-tag* :yellow))
 
-          (println "\nParsing...")
-          (let [parsed (-> (parse-all)
-                           attach-history-to-items
-                           attach-clj-symbol-to-items)
-                symbols (set (map :full-name parsed))]
+        (println "\nParsing...")
+        (let [parsed (parse-all)
+              symbols (set (map :full-name parsed))]
 
-            (print-summary parsed)
+          (print-summary parsed)
 
-            (docs-repo/clear!)
+          (docs-repo/clear!)
 
-            (println "\nWriting updated history to" history-filename "...")
-            (mkdir *output-dir*)
-            (update-history! symbols)
+          (println "\nWriting docs to" (style *output-dir* :cyan))
+          (mkdir *output-dir*)
+          (mkdir (str *output-dir* "/" docs-dir))
 
-            (println "\nWriting docs to" (style *output-dir* :cyan))
-            (mkdir (str *output-dir* "/" docs-dir))
+          (let [result (get-result parsed @prev-result)]
+            (dump-result! result)
+            (reset! prev-result result))
 
-            (let [result (get-result parsed)]
-              (dump-result! result))
+          (println "\nCommitting docs at tag" *cljs-version* "...")
+          (docs-repo/commit!))
 
-            (println "\nCommitting docs at tag" *cljs-version* "...")
-            (docs-repo/commit!))
+        (println "\nDone.")))
 
-          (println "\nDone.")))
-
-      (println (style "Success!" :green)))))
+    (println (style "Success!" :green))))
 
 (defn create-single-version!
   [tag]
@@ -97,14 +94,12 @@
     (println "with Clojure:" (style *clj-tag* :yellow))
 
     (println "\nParsing...")
-    (let [parsed (-> (parse-all)
-                     attach-clj-symbol-to-items)]
+    (let [parsed (parse-all)]
 
       (print-summary parsed)
 
-      (mkdir *output-dir*)
-
       (println "\nWriting docs to" (style *output-dir* :cyan))
+      (mkdir *output-dir*)
       (mkdir (str *output-dir* "/" docs-dir))
 
       (let [result (get-result parsed)]

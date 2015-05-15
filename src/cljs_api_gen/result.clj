@@ -1,15 +1,14 @@
 (ns cljs-api-gen.result
   (:require
     [clojure.set :refer [rename-keys]]
+    [clojure.data :refer [diff]]
     [cljs-api-gen.util :refer [symbol->filename
                                mapmap]]
-    [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items]]
+    [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
+                                      attach-clj-symbol]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
                                     *clj-version*]]
     ))
-
-(def previous-result
-  (atom nil))
 
 (defn transform-item
   [x]
@@ -35,58 +34,70 @@
     (filter (comp not nil? second) $)
     (into {} $)))
 
-(defn attach-history-addition
+(defn present?
   [item]
-  (let [new-hist-tag (str "+" *cljs-tag*)]
-    (if-let [prev-hist (get-in @previous [:library-api :symbols (:full-name item) :history])]
-      (if (= (.startsWith (last prev-hist) "-"))
-        (assoc item :history (conj prev-hist new-hist-tag)) ;; <-- make sure history is always a vector so it is appended to the end
-        (assoc item :history prev-hist))
-      (assoc item :history [new-hist-tag]))))
+  (= (.startsWith (last (:history item)) "+")))
 
-(defn attach-history-removal
-  [items]
-  )
+(defn make-api-result
+  [items prev-api]
+  (let [prev-items (:symbols prev-api)
+        prev-changes (or (:changes prev-api) [])
 
-(defn attach-history-and-get-changes
-  [items]
-  ;; get symbols present from previous result
-  ;; get parsed symbols (present)
-  ;; add new symbols to added
-  ;; add removed symbols to removed
+        ;; get symbol names
+        prev-names (->> (filter present? prev-items)
+                       (map (comp set keys)))
+        curr-names (map (comp set keys) items)
+        all-names (set (into prev-syms curr-syms))
 
-  ;; update CHANGED map
+        [removed? added? stayed?] (diff prev-names curr-names)
 
-  ;; update SYMBOLS map
-  ;; remove attributes from except for those wanted for remove (e.g. history with "-r*" appended)
-  ;; add attributes for present symbols if needed (with attach-history-addition)
+        make-item
+        (fn [name-]
+          (let [prev (get prev-items name-)
+                prev-hist (:history prev)
+                curr (get items name-)]
+            (cond
+              (removed? name-)
+              (-> (update-in prev [:history] conj (str "-" *cljs-tag*))
+                  (select-keys [:ns :name :full-name :history]))
 
-  ;; return changes and symbols
-  ;; (get-result should prepend(?) CHANGES and assoc SYMBOLS to the previous
-  ;; result to get the new result.
-  )
+              (added? name-)
+              (assoc curr :history (conj prev-hist (str "+" *cljs-tag*)))
+
+              (stayed? name-)
+              (assoc curr :history prev-hist)
+
+              :else nil)))
+
+        new-items (map make-item all-names)
+        new-symbols (zipmap (map :full-name new-items) new-items)
+        new-changes (conj prev-changes {:version *cljs-version*
+                                        :added added?
+                                        :removed removed?})]
+    {:symbols new-symbols
+     :changes new-changes}))
 
 (defn get-result
-  [parsed]
-  {:versions {:cljs *cljs-version*  ;; clojurescript version
-              :clj *clj-version*    ;; clojure version
-              ;; :closure nil       ;; TODO: google closure version
-              }
+  ([lib-parsed] (get-result lib-parsed nil))
+  ([lib-parsed prev-result]
+   (let [lib-items (->> lib-parsed
+                        (map attach-clj-symbol)
+                        (map transform-item)
+                        (group-by :full-name)
+                        (mapmap last))
+         library-api (make-api-result lib-items (:library-api prev-result))]
 
-   ;; clojure symbols unavailable in clojurescript
-   :clj-not-cljs (get-clojure-symbols-not-in-items parsed)
+     {:versions {:cljs *cljs-version*  ;; clojurescript version
+                 :clj *clj-version*    ;; clojure version
+                 ;; :closure nil       ;; TODO: google closure version
+                 }
 
-   ;; API-DATA for core library
-   :library-api  {:symbols (->> parsed
-                                (map transform-item)
-                                (group-by :full-name)
-                                (mapmap last)) ;; remove possible duplicates (favoring the last symbol)
-                  :changes []
-                  }
+      ;; clojure symbols unavailable in clojurescript
+      :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
 
-   ;; API-DATA for compiler
-   :compiler-api {:symbols {}
-                  :changes []}
-   })
+      :library-api library-api
+
+      :compiler-api {:symbols {}
+                     :changes []}})))
 
 

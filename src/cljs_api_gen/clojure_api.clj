@@ -45,10 +45,6 @@
       (assoc item :clj-symbol lookup-name)
       item)))
 
-(defn attach-clj-symbol-to-items
-  [items]
-  (map attach-clj-symbol items))
-
 (defn get-clojure-symbols-not-in-items
   [items]
   (let [version     (clj-tag->doc-version *clj-tag*)
