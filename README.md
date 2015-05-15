@@ -132,7 +132,6 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - `clojure_api.clj` - retrieves original clojure api info to correlate with cljs
 - `config.clj` - filename constants and dynamic vars for output directories
 - `docstring.clj` - helpers for extracting/formatting/removing docstrings
-- `history.clj` - track version history of symbols
 - `parse.clj` - parse namespaces for function/macro/special forms
 - `read.clj` - read forms from namespaces
 - `repo_cljs.clj` - helpers for traversing official Clojure and ClojureScript repos
