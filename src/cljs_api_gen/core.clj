@@ -1,6 +1,7 @@
 (ns cljs-api-gen.core
   (:require
     [clojure.pprint :refer [print-table]]
+    [clojure.edn :as edn]
     [cljs-api-gen.config :refer [*output-dir*
                                  *docs-repo-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
@@ -71,7 +72,7 @@
 (defn -main
   [& args]
   (if (= 1 (count args))
-    (let [option-map (read-string (first args))]
+    (let [option-map (edn/read-string (first args))]
       (main option-map))
     (show-usage-and-exit!)))
 

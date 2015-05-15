@@ -1,5 +1,6 @@
 (ns cljs-api-gen.write
   (:require
+    [clojure.edn :as edn]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join split]]
     [fipp.edn :refer [pprint]]
@@ -66,7 +67,7 @@
 (defn get-last-written-result []
   (let [path (get-edn-path)]
     (when (exists? path)
-      (read-string (slurp path)))))
+      (edn/read-string (slurp path)))))
 
 (defn dump-edn-file! [result]
   (spit (get-edn-path) (with-out-str (pprint result))))
