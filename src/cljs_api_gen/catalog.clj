@@ -44,8 +44,8 @@
 
   (docs-repo/init!)
 
-  (let [prev-result (get-last-written-result)
-        latest-tag (when prev-result
+  (let [prev-result (atom (get-last-written-result))
+        latest-tag (when @prev-result
                      (docs-repo/docs-tag->cljs (docs-repo/get-current-tag)))
         tags (get-cljs-tags-to-parse latest-tag n-or-all)]
 

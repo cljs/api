@@ -14,6 +14,11 @@
 (defn removable? [v]
   (or (nil? v) (= "" v) (and (coll? v) (empty? v))))
 
+(defn prune-map [m]
+  (->> m
+       (remove (comp removable? second))
+       (into {})))
+
 (defn transform-item
   [x]
   (as-> x $
@@ -38,8 +43,7 @@
     (update-in $ [:signature] #(map str %))
     (update-in $ [:name] str)
     (assoc $ :filename (str (:ns $) "_" (symbol->filename (:name $)) ".cljsdoc"))
-    (remove (comp removable? second) $)
-    (into {} $)
+    (prune-map $)
     (attach-clj-symbol $)
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
@@ -91,9 +95,10 @@
 
         new-items (map make-item all-names)
         new-symbols (zipmap (map :full-name new-items) new-items)
-        new-changes (conj prev-changes {:version *cljs-version*
-                                        :added added?
-                                        :removed removed?})]
+        change (prune-map {:version *cljs-version*
+                           :added added?
+                           :removed removed?})
+        new-changes (conj prev-changes change)]
     {:symbols new-symbols
      :changes new-changes}))
 

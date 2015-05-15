@@ -66,7 +66,7 @@
 (defn get-last-written-result []
   (let [path (get-edn-path)]
     (when (exists? path)
-      (slurp path))))
+      (read-string (slurp path)))))
 
 (defn dump-edn-file! [result]
   (spit (get-edn-path) (with-out-str (pprint result))))
