@@ -1,74 +1,18 @@
-# ClojureScript API Docs Generator
+# ClojureScript API Reference Generator
 <img align="right" width="150" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
 library and syntax.
 
-This repo is dedicated to parsing all the possible documentation we can from
-every version of the ClojureScript compiler and core library.  Our tool feeds
-this crucial documentation data to the [larger sister
-project](https://github.com/cljsinfo/api-docs), which combines it with curated
-descriptions, examples, and cross-refs.
+This repo provides a tool to build the API reference for each version of
+ClojureScript. The reference output is fed into the full [api docs
+project](https://github.com/cljsinfo/api-docs) for combining with detailed
+descriptions, example usages, and cross-refs.
 
-- __[Browse latest docs](https://github.com/cljsinfo/api-docs-generator/tree/docs)__
-- __[Downloads](https://github.com/cljsinfo/api-docs-generator/releases)__
+__[latest API reference](https://github.com/cljsinfo/api-ref-gen/tree/docs)__
 
-## Data Fields
-
-An [`autodocs.edn`](https://github.com/cljsinfo/api-docs-generator/blob/docs/autodocs.edn)
-file is generated for each version with the following structure: Some fields
-are pending work, marked `TODO`.
-
-This structure is __current unstable__ and should be expected to change frequently.
-
-```clj
-;; TOP-LEVEL
-{:versions {:cljs ""      ;; clojurescript version
-            :clj ""       ;; clojure version
-            :closure ""}  ;; TODO: google closure version
-
- :clj-not-cljs #{}        ;; clojure symbols unavailable in clojurescript
-
- :library-api  {}         ;; API-DATA for core library
- :compiler-api {}         ;; TODO: API-DATA for compiler
- }
-```
-
-```clj
-;; API-DATA
-{:symbols {}              ;; api symbol => SYMBOL-DATA
- :changes [{:version ""
-            :added    #{}
-            :removed  #{}
-            }]}
-```
-
-```clj
-;; SYMBOL-DATA
-{:full-name           "cljs.core/assoc-in"
- :clj-symbol          "clojure.core/assoc-in" ;; equivalent symbol in clojure
- :ns                  "cljs.core"
- :name                "assoc-in"
- :type                "function"
- :signature           ["[m [k & ks] v]"]
- :docstring           "...full docstring..."
- :removed {:in        "...version removed in..."
-           :last-seen "...version last seen..."}
- :history             ["+ <added in version>"
-                       "- <removed in version>"]
- :return-type         nil ;; present if detected
- :source-filename     "clojurescript/src/cljs/cljs/core.cljs"
- :source-link         "https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L4018-L4025"
- :source              "...full source code..."}
-```
-
-__Per-symbol docs__ are also produced for convenience.  For example, see:
-
-- [`cljs.core_assoc-in.cljsdoc`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.cljsdoc).
-- [`cljs.core_assoc-in.edn`](https://github.com/cljsinfo/api-docs-generator/blob/docs/docs/cljs.core_assoc-in.edn).
-
-## Building the catalog
+## Running
 
 - __Full Catalog__: run the following to build a full catalog of docs. The
   catalog is a git repo with commits tagged for each version of ClojureScript.
@@ -78,7 +22,7 @@ __Per-symbol docs__ are also produced for convenience.  For example, see:
     lein run '{:catalog :all}'
     ```
 
-  NOTE: This is how the [docs branch](https://github.com/cljsinfo/api-docs-generator/tree/docs)
+  NOTE: This is how the [docs branch](https://github.com/cljsinfo/api-ref-gen/tree/docs)
   is [generated](script/build-publish.sh).
 
 
@@ -125,7 +69,7 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - finding __special forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
 - finding __repl special forms__ in `cljs.repl`
 
-### Files
+### Source Files
 
 - `core.clj` - main entry
 - `catalog.clj` - builds a catalog or single version output
