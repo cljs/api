@@ -3,8 +3,7 @@
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [cljs-api-gen.config :refer [*output-dir*
-                                 *docs-repo-dir*
-                                 docs-dir]]
+                                 *docs-repo-dir*]]
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
                                     with-checkout!
