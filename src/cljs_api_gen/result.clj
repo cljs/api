@@ -27,22 +27,17 @@
                     :name
                     :docstring
                     :type
-                    :signatures
+                    :signature
                     :history
                     :return-type
-                    :filename
-                    :github-link
+                    :source-filename
+                    :source-link
+                    :source-lines
                     :clj-symbol
                     :source])
-
-    ;; FIXME: don't make this confusing, just rename them at their source instead of here
-    (rename-keys $ {:filename    :source-filename
-                    :github-link :source-link
-                    :signatures  :signature})
-
-    (update-in $ [:signature] #(map str %))
+    (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
-    (assoc $ :filename (str (:ns $) "_" (symbol->filename (:name $)) ".cljsdoc"))
+    (assoc $ :full-name-encode (str (:ns $) "_" (symbol->filename (:name $))))
     (prune-map $)
     (attach-clj-symbol $)
     ;; NOTE: don't forget to add a $ for any following expressions

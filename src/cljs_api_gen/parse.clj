@@ -89,7 +89,7 @@
     (when-not private?
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
-       :signatures signatures
+       :signature signatures
        :type type-})))
 
 (defn parse-def-fn
@@ -101,7 +101,7 @@
                      (when (= 'quote (first arglists))
                        (second arglists)))]
     {:docstring docstring
-     :signatures signatures
+     :signature signatures
      :type "function"}))
 
 (defmulti parse-form*
@@ -158,10 +158,10 @@
         github-link (get-github-file-link *cur-repo* filename lines)]
     {:ns *cur-ns*
      :source source
-     :potential-comment potential-comment
-     :filename filename
-     :lines lines
-     :github-link github-link}))
+     :source-filename filename
+     :source-lines lines
+     :source-link github-link
+     :potential-comment potential-comment}))
 
 (defn parse-common-def
   [form]
@@ -240,7 +240,7 @@
                             (rename-keys {:doc :docstring, :url :doc-url})
                             (update-in [:docstring] fix-docstring)
                             (update-in [:forms] transform-forms sym)
-                            (rename-keys {:forms :signatures})))
+                            (rename-keys {:forms :signature})))
         values (map transform-val (keys doc-map) (vals doc-map))]
     (zipmap (keys doc-map) values)))
 
@@ -280,7 +280,7 @@
   [doc-map]
   (let [transform-val (fn [value]
                         (-> value
-                            (rename-keys {:doc :docstring, :arglists :signatures})
+                            (rename-keys {:doc :docstring, :arglists :signature})
                             (update-in [:docstring] fix-docstring)))
         values (map transform-val (vals doc-map))]
     (zipmap (keys doc-map) values)))
@@ -453,12 +453,12 @@
         make (fn [name-]
                (assoc
                  (select-keys try-form
-                              [:docstring :filename :lines :github-link])
+                              [:docstring :source-filename :source-lines :source-link])
                  :full-name (str "special/" name-)
                  :ns "special"
                  :type "special form"
                  :name name-
-                 :signatures (get-sigs name-)))
+                 :signature (get-sigs name-)))
         extras (map make ["catch" "finally"])]
     (concat parsed extras)))
 
