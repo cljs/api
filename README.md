@@ -1,4 +1,4 @@
-# ClojureScript API Reference Generator
+# ClojureScript API Reference
 <img align="right" width="150" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
 
 Hello! We are building a ClojureScript website. A section of this website will
@@ -10,7 +10,7 @@ ClojureScript. The reference output is fed into the full [api docs
 project](https://github.com/cljsinfo/api-docs) for combining with detailed
 descriptions, example usages, and cross-refs.
 
-__[latest API reference](https://github.com/cljsinfo/api-ref-gen/tree/docs)__
+__[Latest API reference](https://github.com/cljsinfo/api-refs/tree/docs)__
 
 ## Running
 
@@ -22,7 +22,7 @@ __[latest API reference](https://github.com/cljsinfo/api-ref-gen/tree/docs)__
     lein run '{:catalog :all}'
     ```
 
-  NOTE: This is how the [docs branch](https://github.com/cljsinfo/api-ref-gen/tree/docs)
+  NOTE: This is how the [docs branch](https://github.com/cljsinfo/api-refs/tree/docs)
   is [generated](script/build-publish.sh).
 
 
@@ -57,8 +57,8 @@ __[latest API reference](https://github.com/cljsinfo/api-ref-gen/tree/docs)__
 
 ## Implementation
 
-To gather docs, we are doing self-analysis of literal forms created from
-`tools.reader` rather than using `tools.analyzer`. We may use the helpful
+To build the API reference, we are doing self-analysis of literal forms created
+from `tools.reader` rather than using `tools.analyzer`. We may use the helpful
 wrapper [codox] if this becomes insufficient.
 
 It's worth nothing that parsing the full `cljs.core` namespace requires:
