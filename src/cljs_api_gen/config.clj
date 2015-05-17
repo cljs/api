@@ -3,10 +3,6 @@
 ;; location of the clojure & clojurescript repos to parse
 (def repos-dir "repos")
 
-(def ^:dynamic *docs-repo-dir*)
-
-(def docs-branch "docs")
-
 (def edn-result-file "autodocs.edn")
 (def refs-dir "refs")
 
