@@ -79,7 +79,6 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - `parse.clj` - parse namespaces for function/macro/special forms
 - `read.clj` - read forms from namespaces
 - `repo_cljs.clj` - helpers for traversing official Clojure and ClojureScript repos
-- `repo_docs.clj` - helpers for creating the docs repo (catalog output)
 - `result.clj` - transforms parsed data into a final result structure
 - `write.clj` - writes all output files for the data created by `result.clj`
 - `util.clj` - miscellaneous functions
