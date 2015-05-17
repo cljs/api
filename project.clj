@@ -5,5 +5,6 @@
                  [org.clojure/core.match "0.2.2"]
                  [me.raynes/fs "1.4.6"]
                  [narkisr/clansi "1.2.0"]
-                 [fipp "0.6.1"]]
+                 [fipp "0.6.1"]
+                 [stencil "0.3.5"]]
   :main cljs-api-gen.core)

@@ -10,6 +10,7 @@
                                  edn-result-file]]
     [cljs-api-gen.util :refer [symbol->filename mapmap]]
     [me.raynes.fs :refer [exists? mkdir]]
+    [stencil.core :as stencil]
     ))
 
 (defn item-filename
@@ -70,6 +71,13 @@
     (when (exists? path)
       (edn/read-string (slurp path)))))
 
+(defn dump-readme! [result]
+  (spit (str *output-dir* "/README.md")
+        (stencil/render-string (slurp "readme-template.md")
+          {:cljs-version (-> result :release :cljs)
+           :clj-version  (-> result :release :clj)
+           :cljs-date  (-> result :release :cljs-date)})))
+
 (defn dump-edn-file! [result]
   (spit (get-edn-path) (with-out-str (pprint result))))
 
@@ -79,6 +87,8 @@
 
   (doseq [item (vals (:symbols (:library-api result)))]
     (dump-ref-file! item))
+
+  (dump-readme! result)
   (dump-clj-not-cljs-file! (:clj-not-cljs result))
   (dump-edn-file! result))
 
