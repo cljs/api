@@ -10,7 +10,7 @@ ClojureScript. The reference output is fed into the full [api docs
 project](https://github.com/cljsinfo/api-docs) for combining with detailed
 descriptions, example usages, and cross-refs.
 
-__[Latest API reference](https://github.com/cljsinfo/api-refs/tree/docs)__
+__[Latest API reference](https://github.com/cljsinfo/api-refs/tree/catalog)__
 
 ## Running
 

@@ -13,7 +13,7 @@ This is an auto-generated reference for the ClojureScript API.
 Clojure | Name | Type | Docs
 --------|------|------|-----
 {{#changes}}
-{{clojure}} | {{name}} | {{type}} | {{cljsdoc}}, {{edn}}
+{{clojure}} | {{name}} | {{type}}
 {{/changes}}
 
 - all listed, sorted by [ns, name]
