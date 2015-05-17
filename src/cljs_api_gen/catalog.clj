@@ -10,6 +10,7 @@
                                     with-checkout!
                                     cljs-tag->version
                                     *cljs-tag*
+                                    *cljs-date*
                                     *clj-tag*
                                     *cljs-version*
                                     *clj-version*]]

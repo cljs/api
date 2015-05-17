@@ -2,13 +2,14 @@
   (:require
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :refer [exists? mkdir base-name]]
-    [clojure.string :refer [trim split-lines]]
+    [clojure.string :refer [trim split split-lines]]
     [cljs-api-gen.config :refer [repos-dir]]
     ))
 
 (def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
 (def ^:dynamic *cljs-num*     "ClojureScript version number   (e.g. 3211)" nil)
 (def ^:dynamic *cljs-tag*     "ClojureScript version git tag  (e.g. \"r3211\")" nil)
+(def ^:dynamic *cljs-date*    "ClojureScript version date     (e.g. \"2015-03-09\")" nil)
 (def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
 (def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
 
@@ -50,6 +51,14 @@
   [tag]
   (when-let [[_ number] (re-find #"r(.*)" tag)]
     (Integer/parseInt number)))
+
+(defn repo-tag-date
+  [repo tag]
+  (-> (sh "git" "log" "-1" "--format=%ai" tag :dir (str repos-dir "/" repo))
+      :out
+      trim
+      (split #"\s+")
+      first))
 
 (defn get-cljs-version-tags
   []
@@ -107,6 +116,7 @@
   `(binding [*cljs-tag*     ~cljs-tag
              *clj-tag*      ~clj-tag
 
+             *cljs-date*    (repo-tag-date "clojurescript" ~cljs-tag)
              *cljs-version* (cljs-tag->version ~cljs-tag)
              *cljs-num*     (cljs-tag->num     ~cljs-tag)
              *clj-version*  (clj-tag->version  ~clj-tag)
