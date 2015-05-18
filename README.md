@@ -1,16 +1,27 @@
+
 # ClojureScript API Reference
-<img align="right" width="150" src="https://raw.githubusercontent.com/cljsinfo/cljs.info/master/00-scrap/cljs_logo_v10-01.png">
+
+ <table>
+<tr>
+<td>
+  <img width="48" valign="middle" src="http://i.imgur.com/Hi20huC.png">
+</td>
+<td>
+  __[Latest API Release](https://github.com/cljsinfo/api-refs/tree/catalog)__
+</td>
+</tr>
+</table>
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
 library and syntax.
 
-This repo provides a tool to build the API reference for each version of
-ClojureScript. The reference output is fed into the full [api docs
-project](https://github.com/cljsinfo/api-docs) for combining with detailed
-descriptions, example usages, and cross-refs.
+To this end, this repo provides a tool to build the API reference for each
+version of ClojureScript. The result is hosted on the
+[`catalog`](https://github.com/cljsinfo/api-refs/tree/catalog) branch.
 
-__[Latest API reference](https://github.com/cljsinfo/api-refs/tree/catalog)__
+The [api docs project](https://github.com/cljsinfo/api-docs) also combines this
+output with detailed descriptions, example usages, and cross-refs.
 
 ## Running
 

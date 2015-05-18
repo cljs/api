@@ -1,4 +1,4 @@
-## <img width="48p" valign="middle" src="http://i.imgur.com/634HcUy.png"> {{&full-name}}
+## <img width="48p" valign="middle" src="http://i.imgur.com/Hi20huC.png"> {{&full-name}}
 
  <table border="1">
 <tr>
