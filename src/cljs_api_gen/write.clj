@@ -17,51 +17,63 @@
   [item]
   (str *output-dir* "/" refs-dir "/" (:ns item) "_" (symbol->filename (:name item))))
 
-(defn make-history-text
+(defn history-change
   [text]
   (let [plus-or-minus (first text)
         change (if (= \+ plus-or-minus) "Added" "Removed")
         [_ version] (split text #"\s+")]
-    (str change " in " version)))
+    {:change change
+     :version version}))
 
-(defn cljsref-section
-  [title content]
-  (when (and (not (nil? content))
-             (not= "" content))
-    (str "===== " title "\n" content "\n")))
+(defn sig-args
+  [text]
+  (let [[_ args] (re-find #"^\[(.*)\]$" text)]
+    args))
 
-(defn make-cljsref
+(defn source-link
+  [filename item]
+  (str "<ins>[" filename ":" (join "-" (:source-lines item)) "](" (:source-link item) ")</ins>"))
+
+(defn source-path
   [item]
-  (join "\n"
-    (keep identity
-      [(cljsref-section "Name" (:full-name item))
-       (cljsref-section "Type" (:type item))
-       (cljsref-section "Return Type" (:return-type item))
-       (cljsref-section "Clojure" (:clj-symbol item))
-       (cljsref-section "Docstring" (:docstring item))
-       (cljsref-section "Signature" (join "\n" (:signature item)))
-       (cljsref-section "Filename" (:source-filename item))
-       (cljsref-section "Source" (:source item))
-       (cljsref-section "Github" (:source-link item))
-       (cljsref-section "History" (join "\n" (map make-history-text (:history item))))
-       (cljsref-section "EDN" (with-out-str (pprint item)))
-       ""])))
+  ;; clojurescript/
+  ;; └── src/
+  ;;     └── cljs/
+  ;;         └── cljs/
+  ;;             └── <ins>[core.cljs:2109-2114](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2109-L2114)</ins>
+  (let [crumbs (split (:source-filename item) #"/")
+        last-i (dec (count crumbs))
+        branch "└── "
+        space  "    "]
+    (join "\n"
+      (map-indexed
+        (fn [i crumb]
+          (if (zero? i)
+            crumb
+            (str (join (repeat (dec i) space))
+                 branch
+                 (if (= i last-i)
+                   (source-link crumb item)
+                   crumb))))
+        crumbs))))
+
+(defn ref-file-data
+  [item]
+  (assoc item
+    :data (with-out-str (pprint item))
+    :history (map history-change (:history item))
+    :signature (map #(hash-map :name (:name item)
+                               :args (sig-args %))
+                    (:signature item))
+    :source-path (source-path item)))
 
 (defn dump-ref-file!
   [item]
   (let [filename (item-filename item)]
-    (spit (str filename ".cljsref") (make-cljsref item))))
-
-(defn dump-clj-not-cljs-file!
-  [clj-not-cljs]
-  (let [content (->> clj-not-cljs
-                     (group-by #(namespace (symbol %)))
-                     (mapmap #(join "\n" (sort %)))
-                     (sort-by first)
-                     (map second)
-                     (join "\n\n"))
-        outfile (str *output-dir* "/not-in-cljs")]
-    (spit outfile content)))
+    (spit (str filename ".md")
+      (stencil/render-string
+        (slurp "templates/ref.md")
+        (ref-file-data item)))))
 
 (defn get-edn-path []
   (str *output-dir* "/" edn-result-file))
@@ -73,7 +85,7 @@
 
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
-        (stencil/render-string (slurp "readme-template.md")
+        (stencil/render-string (slurp "templates/readme.md")
           {:cljs-version (-> result :release :cljs)
            :clj-version  (-> result :release :clj)
            :cljs-date  (-> result :release :cljs-date)})))
@@ -89,6 +101,5 @@
     (dump-ref-file! item))
 
   (dump-readme! result)
-  (dump-clj-not-cljs-file! (:clj-not-cljs result))
   (dump-edn-file! result))
 
