@@ -4,9 +4,6 @@
  <table>
 <tr>
 <td>
-  <img width="48" valign="middle" src="http://i.imgur.com/Hi20huC.png">
-</td>
-<td>
   __[Latest API Release](https://github.com/cljsinfo/api-refs/tree/catalog)__
 </td>
 </tr>
