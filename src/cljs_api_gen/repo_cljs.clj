@@ -106,8 +106,12 @@
 (defn get-github-file-link
   ([repo path] (get-github-file-link repo path nil))
   ([repo path [start-line end-line]]
-   (let [strip-path (subs path (inc (count repo)))]
-     (cond-> (str "https://github.com/clojure/" repo "/blob/" *cljs-tag* "/" strip-path)
+   (let [strip-path (subs path (inc (count repo)))
+         tag (case repo
+               "clojure" *clj-tag*
+               "clojurescript" *cljs-tag*
+               nil)]
+     (cond-> (str "https://github.com/clojure/" repo "/blob/" tag "/" strip-path)
        start-line (str "#L" start-line)
        (and start-line end-line) (str "-L" end-line)))))
 
