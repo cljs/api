@@ -2,6 +2,10 @@
 
 set -e
 
+if [ "$1" == "rebuild" ]; then
+  rm -rf catalog
+fi
+
 lein run '{:catalog :all}'
 
 cd catalog
