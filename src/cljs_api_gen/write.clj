@@ -1,8 +1,9 @@
 (ns cljs-api-gen.write
+  (:refer-clojure :exclude [replace])
   (:require
     [clojure.edn :as edn]
     [clojure.set :refer [rename-keys]]
-    [clojure.string :refer [join split]]
+    [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -18,10 +19,8 @@
   (str *output-dir* "/" refs-dir "/" (:ns item) "_" (symbol->filename (:name item))))
 
 (defn history-change
-  [text]
-  (let [plus-or-minus (first text)
-        change (if (= \+ plus-or-minus) "Added" "Removed")
-        [_ version] (split text #"\s+")]
+  [[change version]]
+  (let [change ({"+" "Added", "-" "Removed"} change)]
     {:change change
      :version version}))
 
@@ -57,15 +56,26 @@
                    crumb))))
         crumbs))))
 
+(defn md-escape
+  [sym]
+  (-> sym
+      (replace "*" "\\*")))
+
 (defn ref-file-data
   [item]
-  (assoc item
-    :data (with-out-str (pprint item))
-    :history (map history-change (:history item))
-    :signature (map #(hash-map :name (:name item)
-                               :args (sig-args %))
-                    (:signature item))
-    :source-path (source-path item)))
+  (-> item
+      (assoc
+        :display-name (md-escape (:full-name item))
+        :data (with-out-str (pprint item))
+        :history (map history-change (:history item))
+        :signature (map #(hash-map :name (:name item)
+                                   :args (sig-args %))
+                        (:signature item))
+        :source-path (source-path item))
+      (update-in [:docstring]
+        #(if (or (nil? %) (= "" (trim %)))
+           "(no docstring)"
+           %))))
 
 (defn dump-ref-file!
   [item]
@@ -83,12 +93,47 @@
     (when (exists? path)
       (edn/read-string (slurp path)))))
 
+(defn readme-library-changes
+  [result]
+  ;; name-link tuples
+  (let [api (:library-api result)
+        changes (last (:changes api))
+        symbols (:symbols api)
+        make (fn [full-name change]
+               (let [item (get symbols full-name)
+                     text (md-escape full-name)]
+                 {:text (if (= change :added)
+                          text
+                          (str "~~" text "~~"))
+                  :change ({:added "new" :removed ""} change)
+                  :name (:name item)
+                  :ns (:ns item)
+                  :link (str refs-dir "/" (:full-name-encode item) ".md")
+                  }))
+        added (map #(make % :added) (:added changes))
+        removed (map #(make % :removed) (:removed changes))
+        sort-key (fn [item] [(:ns item) (:name item)])
+        all (sort-by sort-key (concat added removed))]
+    all))
+
+(defn readme-library-symbols
+  [result]
+  ;; clj-name-type-history tuples
+  )
+
+(defn readme-file-data
+  [result]
+  {:changes (readme-library-changes result)
+   :cljs-version (-> result :release :cljs)
+   :clj-version  (-> result :release :clj)
+   :cljs-date  (-> result :release :cljs-date)})
+
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
-        (stencil/render-string (slurp "templates/readme.md")
-          {:cljs-version (-> result :release :cljs)
-           :clj-version  (-> result :release :clj)
-           :cljs-date  (-> result :release :cljs-date)})))
+        (stencil/render-string
+          (slurp "templates/readme.md")
+          (readme-file-data result)
+          )))
 
 (defn dump-edn-file! [result]
   (spit (get-edn-path) (with-out-str (pprint result))))

@@ -54,14 +54,14 @@
 
 (defn mark-removed
   [prev-item prev-hist prev-version]
-  (-> (update-in prev-item [:history] conj (str "- " *cljs-version*))
+  (-> (update-in prev-item [:history] conj ["-" *cljs-version*])
       (assoc :removed {:in *cljs-version*
                        :last-seen prev-version})))
 
 (defn mark-added
   [curr-item prev-hist prev-version]
   (let [prev-hist (or prev-hist [])]
-    (-> (assoc curr-item :history (conj prev-hist (str "+ " *cljs-version*)))
+    (-> (assoc curr-item :history (conj prev-hist ["+" *cljs-version*]))
         (dissoc :removed))))
 
 (defn make-api-result
