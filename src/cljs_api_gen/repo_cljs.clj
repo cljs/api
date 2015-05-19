@@ -85,19 +85,30 @@
        (try (take n-or-all tags-left)
             (catch Exception e tags-left))))))
 
-(defn cljs-tag->clj-tag
+(defn cljs-tag->dep-releases
   [cljs-tag]
-  (let [bootstrap (:out (sh "git" "show" (str cljs-tag ":script/bootstrap")
+  (let [cljs-num (cljs-tag->num cljs-tag)
+        bootstrap (:out (sh "git" "show" (str cljs-tag ":script/bootstrap")
                             :dir (str repos-dir "/clojurescript")))
-        [_ m1] (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap)
-        [_ m2] (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap)
-        version (or m1 m2)]
-    (when version
-      (str "clojure-" version))))
+        clojure
+        (cond
+          (>= cljs-num 1847) (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
+          (>= cljs-num 0)    (second (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap)))
+
+        gclosure-lib
+        (cond
+          (>= cljs-num 1847) (second (re-find #"(?m)^GCLOSURE_LIB_RELEASE=\"(.*)\"" bootstrap))
+          (>= cljs-num 1798) (second (re-find #"google-closure-library-(.*)\.jar" bootstrap))
+          (>= cljs-num 0)    (second (re-find #"closure-library-(.*)\.zip" bootstrap)))
+        ]
+    {:clojure clojure
+     :clojure-tag (str "clojure-" clojure)
+     :gclosure-lib gclosure-lib}))
 
 (defn checkout-cljs-tag!
   [cljs-tag]
-  (let [clj-tag (cljs-tag->clj-tag cljs-tag)]
+  (let [dep-releases (cljs-tag->dep-releases cljs-tag)
+        clj-tag (:clojure-tag dep-releases)]
     (sh "git" "checkout" cljs-tag :dir (str repos-dir "/clojurescript"))
     (sh "git" "checkout" clj-tag  :dir (str repos-dir "/clojure"))
     [(get-current-repo-tag "clojurescript")
@@ -146,9 +157,12 @@
 
   (get-cljs-version-tags)
 
-  (cljs-tag->clj-tag "r927")
-  (cljs-tag->clj-tag "r1885")
-  (cljs-tag->clj-tag "r3211")
+  (cljs-tag->dep-releases "r927")
+  (cljs-tag->dep-releases "r1885")
+  (cljs-tag->dep-releases "r3211")
+
+  (doseq [tag (get-cljs-version-tags)]
+    (println tag (:gclosure-lib (cljs-tag->dep-releases tag))))
 
   (checkout-cljs-tag! "r927")
   (checkout-cljs-tag! "r1885")
