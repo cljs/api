@@ -38,7 +38,7 @@
   (when-let [full-name (:clj-symbol item)]
     {:full-name full-name
      :link (let [ns- (-> full-name symbol namespace)]
-             (str "http://clojure.github.io/clojure/" ns- "-api.html#" full-name))}))
+             (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" full-name))}))
 
 (defn item-filename
   [item]
