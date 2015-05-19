@@ -366,17 +366,17 @@
       :else nil)))
 
 (defmethod parse-ns "cljs.core" [ns-]
-  ;; NOTE: Concatenation order is important here for allowing
-  ;; write/dump-doc-file! to overwrite previously defined
-  ;; macros/functions with subsequent ones.
+  ;; NOTE: Concatenation order is important here
+  ;; so previously defined macros/functions are overwritten
+  ;; by subsequent ones.
   ;; Many compiler macros share same names as library functions.
   ;; The library functions are intended to be used over the macros.
   ;; And the imported macros from "clojure.core" should be overwritten
   ;; by cljs.core's macros.
   (concat (parse-extra-macros-from-clj)
-          (parse-ns* ns- "clojurescript" [:compiler     ;; <-- again, order is important!
-                                          :library])))  ;; :library should come after :compiler
-                                                        ;; so the library functions overwrite compiler macros
+          (->> (parse-ns* ns- "clojurescript" [:compiler])
+               (filter #(= "macro" (:type %))))
+          (parse-ns* ns- "clojurescript" [:library])))
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns "special" [ns-]
