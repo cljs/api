@@ -56,8 +56,8 @@
         change ({"+" "+", "-" "×"} change)]
     (str 
       "<a href=\"https://github.com/cljsinfo/api-refs/tree/" version "\">"
-      "<img valign=\"middle\" src=\"https://img.shields.io/badge/"
-        change "-" (shield-escape version) "-" color ".svg\">"
+      "<img valign=\"middle\" alt=\"[" change "] " version "\""
+        " src=\"https://img.shields.io/badge/" change "-" (shield-escape version) "-" color ".svg\">"
       "</a>")))
 
 (defn sig-args
