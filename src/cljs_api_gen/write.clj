@@ -9,10 +9,31 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  refs-dir
                                  edn-result-file]]
-    [cljs-api-gen.util :refer [symbol->filename mapmap]]
+    [cljs-api-gen.util :refer [symbol->filename mapmap split-ns-and-name]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
+
+(defn md-escape
+  [sym]
+  (-> sym
+      (replace "*" "\\*")))
+
+(defn md-strikethru
+  [s]
+  (str "~~" s "~~"))
+
+(defn shield-escape
+  [s]
+  (-> s
+      (replace "-" "--")))
+
+(defn make-clj-ref
+  [item]
+  (when-let [full-name (:clj-symbol item)]
+    {:full-name full-name
+     :link (let [ns- (-> full-name symbol namespace)]
+             (str "http://clojure.github.io/clojure/" ns- "-api.html#" full-name))}))
 
 (defn item-filename
   [item]
@@ -23,6 +44,16 @@
   (let [change ({"+" "Added", "-" "Removed"} change)]
     {:change change
      :version version}))
+
+(defn history-change-shield
+  [[change version]]
+  (let [color ({"+" "lightgrey" "-" "red"} change)
+        change ({"+" "+", "-" "×"} change)]
+    (str 
+      "<a href=\"https://github.com/cljsinfo/api-refs/tree/" version "\">"
+      "<img valign=\"middle\" src=\"https://img.shields.io/badge/"
+        change "-" (shield-escape version) "-" color ".svg\">"
+      "</a>")))
 
 (defn sig-args
   [text]
@@ -56,22 +87,19 @@
                    crumb))))
         crumbs))))
 
-(defn md-escape
-  [sym]
-  (-> sym
-      (replace "*" "\\*")))
-
 (defn ref-file-data
   [item]
   (-> item
       (assoc
-        :display-name (md-escape (:full-name item))
+        :display-name (cond-> (md-escape (:full-name item))
+                        (:removed item) md-strikethru)
         :data (with-out-str (pprint item))
-        :history (map history-change (:history item))
+        :history (map history-change-shield (:history item))
         :signature (map #(hash-map :name (:name item)
                                    :args (sig-args %))
                         (:signature item))
-        :source-path (source-path item))
+        :source-path (source-path item)
+        :clj-symbol (make-clj-ref item))
       (update-in [:docstring]
         #(if (or (nil? %) (= "" (trim %)))
            "(no docstring)"
@@ -100,12 +128,11 @@
         changes (last (:changes api))
         symbols (:symbols api)
         make (fn [full-name change]
-               (let [item (get symbols full-name)
-                     text (md-escape full-name)]
-                 {:text (if (= change :added)
-                          text
-                          (str "~~" text "~~"))
-                  :change ({:added "new" :removed ""} change)
+               (let [item (get symbols full-name)]
+                 {:text (cond-> (md-escape full-name)
+                          (= change :removed) md-strikethru)
+                  :change ({:added "+" :removed "-"} change)
+                  :type (:type item)
                   :name (:name item)
                   :ns (:ns item)
                   :link (str refs-dir "/" (:full-name-encode item) ".md")
@@ -119,14 +146,33 @@
 (defn readme-library-symbols
   [result]
   ;; clj-name-type-history tuples
-  )
+  (let [all (-> result :library-api :symbols)
+        make-item (fn [item]
+                    {:display-name (cond-> (md-escape (:name item))
+                                     (:removed item) md-strikethru)
+                     :link (str refs-dir "/" (:full-name-encode item) ".md")
+                     :clj-symbol (make-clj-ref item)
+                     :name (:name item)
+                     :type (:type item)
+                     :history (map history-change-shield (:history item))})
+        transform-syms #(sort-by :name (map make-item %))
+        ns-symbols (->> (vals all)
+                        (group-by :ns)
+                        (mapmap transform-syms)
+                        (map (fn [[k v]] {:ns k :symbols v}))
+                        (sort-by :ns))]
+    ns-symbols))
 
 (defn readme-file-data
   [result]
-  {:changes (readme-library-changes result)
-   :cljs-version (-> result :release :cljs)
-   :clj-version  (-> result :release :clj)
-   :cljs-date  (-> result :release :cljs-date)})
+  (let [changes (readme-library-changes result)
+        no-changes (if (zero? (count changes)) true nil)]
+    {:changes changes
+     :no-changes no-changes
+     :ns-symbols (readme-library-symbols result)
+     :cljs-version (-> result :release :cljs)
+     :clj-version  (-> result :release :clj)
+     :cljs-date  (-> result :release :cljs-date)}))
 
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")

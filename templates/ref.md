@@ -3,11 +3,11 @@
  <table border="1">
 <tr>
 <td>{{&type}}</td>
-{{#history}}
-<td>{{&change}} in **<kbd>{{&version}}</kbd>**</td>
-{{/history}}
+<td>{{#history}}{{&.}} {{/history}}</td>
 {{#clj-symbol}}
-<td>from <img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&.}}</samp></td>
+<td>
+from [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&full-name}}</samp>]({{&link}})
+</td>
 {{/clj-symbol}}
 </tr>
 </table>

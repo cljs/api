@@ -2,46 +2,54 @@
 
  <table>
 <tr>
-<td>
-ClojureScript <kbd>{{cljs-version}}</kbd>
-</td>
-<td>
-released {{cljs-date}}
-</td>
-<td>
-using Clojure <kbd>{{clj-version}}</kbd>
-</td>
+<td>{{cljs-date}}</td>
+<td>ClojureScript <kbd>{{cljs-version}}</kbd></td>
+<td>Clojure <kbd>{{clj-version}}</kbd></td>
 </tr>
 </table>
 
-## changes in {{cljs-version}}
+## Changes in {{cljs-version}}
 
  <table>
+
+{{#no-changes}}
+<tr><td>(no changes)</td></tr>
+{{/no-changes}}
+
 {{#changes}}
 <tr>
-<td>
-{{&change}}
-</td>
-<td>
-<samp>[{{&text}}]({{&link}})</samp>
-</td>
+<td><samp>{{&change}}</samp></td>
+<td><samp>{{&type}}</samp></td>
+<td><samp>[{{&text}}]({{&link}})</samp></td>
 </tr>
 {{/changes}}
+
 </table>
 
-## Namespaces
+## All Symbols
 
-{{#ns}}
-- [{{&name}}](#{{&name}})
-{{/ns}}
+{{#ns-symbols}}
+- [{{&ns}}](#{{&ns}})
+{{/ns-symbols}}
 
-{{#ns}}
-### {{name}}
+{{#ns-symbols}}
+### {{ns}}
 
-|  | Symbol | Type | History |
-|----------------|--------|------|---------|
+ <table>
+<thead><tr>
+<th></th>
+<th>Type</th>
+<th>Name</th>
+<th>History</th>
+</tr></thead>
 {{#symbols}}
-| {{clj}}        | <samp>[{{&name}}]({{&link}})</samp> | {{type}} | {{history}} |
+<tr>
+<td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{/clj-symbol}}
+<td><samp>{{type}}</samp></td>
+<td><samp>[{{&display-name}}]({{&link}})</samp></td>
+<td>{{#history}}{{&.}} {{/history}}</td>
+</tr>
 {{/symbols}}
+</table>
 
-{{/ns}}
+{{/ns-symbols}}

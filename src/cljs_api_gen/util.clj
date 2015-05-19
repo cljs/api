@@ -23,3 +23,7 @@
   (let [[ks vs] ((juxt keys vals) datamap)
         result (zipmap ks (map mapf vs))]
     result))
+
+(defn split-ns-and-name
+  [s]
+  ((juxt namespace name) s))
