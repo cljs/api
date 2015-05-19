@@ -29,7 +29,7 @@
 ## All Symbols
 
 {{#ns-symbols}}
-- [{{&ns}}](#{{&ns}})
+- [{{&ns}}](#{{&ns-link}})
 {{/ns-symbols}}
 
 {{#ns-symbols}}

@@ -9,7 +9,7 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  refs-dir
                                  edn-result-file]]
-    [cljs-api-gen.util :refer [symbol->filename mapmap split-ns-and-name]]
+    [cljs-api-gen.util :refer [symbol->filename mapmap]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -22,6 +22,11 @@
 (defn md-strikethru
   [s]
   (str "~~" s "~~"))
+
+(defn md-header-link
+  [s]
+  (-> s
+      (replace "." "")))
 
 (defn shield-escape
   [s]
@@ -159,7 +164,7 @@
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
-                        (map (fn [[k v]] {:ns k :symbols v}))
+                        (map (fn [[k v]] {:ns k :ns-link (md-header-link k) :symbols v}))
                         (sort-by :ns))]
     ns-symbols))
 
