@@ -106,7 +106,6 @@
   ([lib-parsed] (get-result lib-parsed nil))
   ([lib-parsed prev-result]
    (let [lib-items (transform-items lib-parsed)
-         _ (spit "test" (keys lib-items))
          library-api (make-api-result lib-items :library-api prev-result)]
 
      {:release {:cljs *cljs-version*  ;; clojurescript version
