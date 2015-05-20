@@ -1,15 +1,14 @@
-# ClojureScript API Reference
+# <img valign="middle" width="64px" src="http://i.imgur.com/Hi20huC.png"> ClojureScript API Reference
 
 {{#release}}
 
  <table border="1">
 <tr>
-<td><img valign="middle" width="24px" src="http://i.imgur.com/Hi20huC.png"></td>
 <td>__{{cljs-version}}__ on {{cljs-date}}</td>
-<td><img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png"></td>
-<td><kbd>Clojure {{clj-version}}</kbd></td>
-<td><img valign="middle" width="24px" src="http://i.imgur.com/yGyeE7k.png"></td>
-<td><kbd>Closure Lib {{gclosure-lib}}</kbd></td>
+<td><img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
+<kbd>Clojure {{clj-version}}</kbd></td>
+<td><img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
+<kbd>Closure Lib {{gclosure-lib}}</kbd></td>
 </tr>
 </table>
 
