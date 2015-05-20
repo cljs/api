@@ -42,7 +42,7 @@
 
  <table>
 <thead><tr>
-<th></th>
+<th>=</th>
 <th>Type</th>
 <th>Name</th>
 <th>History</th>
