@@ -12,13 +12,29 @@
 </tr>
 </table>
 
+Hello!  This is a generated API reference for the ClojureScript standard library.
+ClojureScript shares a compilation environment with Clojure and a runtime
+environment with Google Closure.  Thus, the standard available symbols
+span the following sources:
+
+|           | clojure | cljs compiler | cljs library | closure\* |
+|-----------|:-------:|:-------------:|:------------:|:---------:|
+| macros    | ☑       | ☑             | ☑            |           |
+| functions |         |               | ☑            | ☑         |
+| vars      |         |               | ☑            | ☑         |
+| specials  |         | ☑             |              |           |
+
+_\* Google Closure Library symbols are omitted in this API reference, but they can be
+found [here](http://google.github.io/closure-library/api/)._
+
+
 ## Changes in {{cljs-version}}
 {{/release}}
 
  <table>
 
 {{#no-changes}}
-<tr><td>(no changes)</td></tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 {{/no-changes}}
 
 {{#changes}}
@@ -31,7 +47,7 @@
 
 </table>
 
-## All Symbols
+## Namespaces
 
 {{#ns-symbols}}
 - [{{&ns}}](#{{&ns-link}})
