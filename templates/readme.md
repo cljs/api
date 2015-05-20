@@ -5,10 +5,10 @@
  <table border="1">
 <tr>
 <td>__{{cljs-version}}__ on {{cljs-date}}</td>
-<td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/index.html)
-<kbd>Clojure {{clj-version}}</kbd></td>
-<td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">](http://google.github.io/closure-library/api/)
-<kbd>Closure Lib {{gclosure-lib}}</kbd></td>
+<td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
+<kbd>Clojure {{clj-version}}</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
+<td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
+<kbd>Closure Lib {{gclosure-lib}}</kbd>](http://google.github.io/closure-library/api/)</td>
 </tr>
 </table>
 
