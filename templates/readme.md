@@ -1,13 +1,13 @@
-# <img valign="middle" width="64px" src="http://i.imgur.com/Hi20huC.png"> ClojureScript API Reference
+# <img valign="middle" width="48px" src="http://i.imgur.com/Hi20huC.png"> ClojureScript API Reference
 
 {{#release}}
 
  <table border="1">
 <tr>
 <td>__{{cljs-version}}__ on {{cljs-date}}</td>
-<td><img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
+<td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/index.html)
 <kbd>Clojure {{clj-version}}</kbd></td>
-<td><img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
+<td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">](http://google.github.io/closure-library/api/)
 <kbd>Closure Lib {{gclosure-lib}}</kbd></td>
 </tr>
 </table>
