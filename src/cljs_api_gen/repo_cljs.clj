@@ -12,6 +12,7 @@
 (def ^:dynamic *cljs-date*    "ClojureScript version date     (e.g. \"2015-03-09\")" nil)
 (def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
 (def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
+(def ^:dynamic *gclosure-lib* "Google Closure release         (e.g. \"0.0-20150505-021ed5b3\"" nil)
 
 (defn clone-or-pull!
   [repo-url]
@@ -85,6 +86,18 @@
        (try (take n-or-all tags-left)
             (catch Exception e tags-left))))))
 
+(defn get-github-file-link
+  ([repo path] (get-github-file-link repo path nil))
+  ([repo path [start-line end-line]]
+   (let [strip-path (subs path (inc (count repo)))
+         tag (case repo
+               "clojure" *clj-tag*
+               "clojurescript" *cljs-tag*
+               nil)]
+     (cond-> (str "https://github.com/clojure/" repo "/blob/" tag "/" strip-path)
+       start-line (str "#L" start-line)
+       (and start-line end-line) (str "-L" end-line)))))
+
 (defn cljs-tag->dep-releases
   [cljs-tag]
   (let [cljs-num (cljs-tag->num cljs-tag)
@@ -101,47 +114,30 @@
           (>= cljs-num 1798) (second (re-find #"google-closure-library-(.*)\.jar" bootstrap))
           (>= cljs-num 0)    (second (re-find #"closure-library-(.*)\.zip" bootstrap)))
         ]
-    {:clojure clojure
-     :clojure-tag (str "clojure-" clojure)
+    {:clj-version clojure
+     :clj-tag (str "clojure-" clojure)
      :gclosure-lib gclosure-lib}))
 
-(defn checkout-cljs-tag!
-  [cljs-tag]
-  (let [dep-releases (cljs-tag->dep-releases cljs-tag)
-        clj-tag (:clojure-tag dep-releases)]
-    (sh "git" "checkout" cljs-tag :dir (str repos-dir "/clojurescript"))
-    (sh "git" "checkout" clj-tag  :dir (str repos-dir "/clojure"))
-    [(get-current-repo-tag "clojurescript")
-     (get-current-repo-tag "clojure")]))
-
-(defn get-github-file-link
-  ([repo path] (get-github-file-link repo path nil))
-  ([repo path [start-line end-line]]
-   (let [strip-path (subs path (inc (count repo)))
-         tag (case repo
-               "clojure" *clj-tag*
-               "clojurescript" *cljs-tag*
-               nil)]
-     (cond-> (str "https://github.com/clojure/" repo "/blob/" tag "/" strip-path)
-       start-line (str "#L" start-line)
-       (and start-line end-line) (str "-L" end-line)))))
-
-(defmacro with-versions
-  [cljs-tag clj-tag & body]
-  `(binding [*cljs-tag*     ~cljs-tag
-             *clj-tag*      ~clj-tag
-
-             *cljs-date*    (repo-tag-date "clojurescript" ~cljs-tag)
-             *cljs-version* (cljs-tag->version ~cljs-tag)
-             *cljs-num*     (cljs-tag->num     ~cljs-tag)
-             *clj-version*  (clj-tag->version  ~clj-tag)
-             ]
-     ~@body))
+(defn checkout-repo!
+  [repo tag]
+  (sh "git" "checkout" tag :dir (str repos-dir "/" repo)))
 
 (defmacro with-checkout!
   [cljs-tag & body]
-  `(let [[cljs-tag# clj-tag#] (checkout-cljs-tag! ~cljs-tag)]
-     (with-versions cljs-tag# clj-tag#
+  `(let [{clj-tag# :clj-tag
+          clj-version# :clj-version
+          gclosure-lib# :gclosure-lib} (cljs-tag->dep-releases ~cljs-tag)]
+     (checkout-repo! "clojurescript" ~cljs-tag)
+     (checkout-repo! "clojure" clj-tag#)
+     (binding [*cljs-tag*     ~cljs-tag
+               *cljs-date*    (repo-tag-date "clojurescript" ~cljs-tag)
+               *cljs-version* (cljs-tag->version ~cljs-tag)
+               *cljs-num*     (cljs-tag->num     ~cljs-tag)
+
+               *clj-tag*      clj-tag#
+               *clj-version*  clj-version#
+
+               *gclosure-lib* gclosure-lib#]
        ~@body)))
 
 (comment

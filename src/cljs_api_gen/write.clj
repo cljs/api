@@ -175,9 +175,7 @@
     {:changes changes
      :no-changes no-changes
      :ns-symbols (readme-library-symbols result)
-     :cljs-version (-> result :release :cljs)
-     :clj-version  (-> result :release :clj)
-     :cljs-date  (-> result :release :cljs-date)}))
+     :release (:release result)}))
 
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")

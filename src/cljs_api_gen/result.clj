@@ -7,9 +7,11 @@
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       attach-clj-symbol]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
-                                    *clj-version*
                                     *cljs-tag*
-                                    *cljs-date*]]
+                                    *cljs-date*
+                                    *clj-version*
+                                    *clj-tag*
+                                    *gclosure-lib*]]
     ))
 
 (defn removable? [v]
@@ -108,10 +110,14 @@
    (let [lib-items (transform-items lib-parsed)
          library-api (make-api-result lib-items :library-api prev-result)]
 
-     {:release {:cljs *cljs-version*  ;; clojurescript version
-                :clj *clj-version*    ;; clojure version
-                ;; :closure nil       ;; TODO: google closure version
+     {:release {:cljs-version *cljs-version*
+                :cljs-tag *cljs-tag*
                 :cljs-date *cljs-date*
+
+                :clj-version *clj-version*
+                :clj-tag *clj-tag*
+
+                :gclosure-lib *gclosure-lib*
                 }
 
       ;; clojure symbols unavailable in clojurescript
