@@ -84,7 +84,7 @@
       (map-indexed
         (fn [i crumb]
           (if (zero? i)
-            (str crumb "@" (second (re-find #"blob/([^/]*)" (:source-link item))))
+            (str crumb " @ " (second (re-find #"blob/([^/]*)" (:source-link item))))
             (str (join (repeat (dec i) space))
                  branch
                  (if (= i last-i)
