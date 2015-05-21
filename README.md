@@ -30,7 +30,7 @@ output with detailed descriptions, example usages, and cross-refs.
     lein run '{:catalog :all}'
     ```
 
-  NOTE: This is how the [docs branch](https://github.com/cljsinfo/api-refs/tree/docs)
+  NOTE: This is how the [catalog branch](https://github.com/cljsinfo/api-refs/tree/catalog)
   is [generated](script/build-publish.sh).
 
 
