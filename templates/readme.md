@@ -51,6 +51,8 @@ included in and accessible from every ClojureScript application:_
 
 ### Changes in {{#release}}{{cljs-version}}{{/release}}
 
+__[See Full History](history.md)__
+
  <table>
 {{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
 {{#changes}}
