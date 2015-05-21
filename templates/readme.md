@@ -3,7 +3,8 @@
 {{#release}}
  <table border="1">
 <tr>
-<td>__{{cljs-version}}__ on {{cljs-date}}</td>
+<td>__{{cljs-version}}__ [all](HISTORY.md)</td>
+<td>{{cljs-date}}</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure {{clj-version}}</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -43,15 +44,12 @@ sources:
 | vars      |         |               | ☑            | ☑         | ☑    |
 | specials  |         | ☑             |              |           |      |
 
-_\* Please see the dedicated API references for the following, which are
-included in and accessible from every ClojureScript application:_
+_\* included in and accessible from every ClojureScript application:_
 
 - [Google Closure Library](http://google.github.io/closure-library/api/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
 
 ### Changes in {{#release}}{{cljs-version}}{{/release}}
-
-__[See Full History](history.md)__
 
  <table>
 {{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
@@ -64,6 +62,8 @@ __[See Full History](history.md)__
 </tr>
 {{/changes}}
 </table>
+
+__[See Full History](HISTORY.md)__
 
 ## Namespaces
 

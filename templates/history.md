@@ -1,16 +1,19 @@
 # ClojureScript API History
 
  <table>
+<thead>
+<th>Version</th>
+<th>Date</th>
+<th>Clojure</th>
+<th>Closure Lib</th>
+<th>Library API</th>
+</thead>
 {{#versions}}
 <tr>
-<td>__[{{cljs-version}}](#{{changes-link}})__</td>
+<td>__[{{cljs-version}}](https://github.com/cljsinfo/api-refs/tree/{{cljs-version}})__</td>
 <td>{{cljs-date}}</td>
-<td>
-  <kbd>Clojure {{clj-version}}</kbd>
-</td>
-<td>
-  <kbd>Closure Lib {{gclosure-lib}}</kbd>
-</td>
+<td><kbd>{{clj-version}}</kbd></td>
+<td><kbd>{{gclosure-lib}}</kbd></td>
 <td>
 <a href="#{{changes-link}}">
 {{#add-count}}<img valign="middle" src="https://img.shields.io/badge/+-{{.}}-brightgreen.svg">{{/add-count}} {{#remove-count}}<img valign="middle" src="https://img.shields.io/badge/×-{{.}}-red.svg">{{/remove-count}}

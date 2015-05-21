@@ -188,7 +188,7 @@
     {:versions all}))
 
 (defn dump-history! [result]
-  (spit (str *output-dir* "/history.md")
+  (spit (str *output-dir* "/HISTORY.md")
         (stencil/render-string
           (slurp "templates/history.md")
           (history-file-data result)
