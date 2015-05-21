@@ -32,7 +32,28 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 
 ## Library API
 
-### Summary
+1. [Changes](#changes)
+1. [Sources](#sources)
+1. [Clojure vs. ClojureScript](#clojure-vs-clojurescript)
+1. [Reference](#reference)
+
+### Changes
+
+Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HISTORY.md)):
+
+ <table>
+{{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
+{{#changes}}
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+</td>
+<td><samp>[{{&text}}]({{&link}})</samp></td>
+</tr>
+{{/changes}}
+</table>
+
+### Sources
 
 Symbols from ClojureScript's core language features and libraries span multiple
 sources:
@@ -49,30 +70,34 @@ _\* included in and accessible from every ClojureScript application:_
 - [Google Closure Library](http://google.github.io/closure-library/api/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
 
-### Changes in {{#release}}{{cljs-version}}{{/release}}
+### Clojure vs. ClojureScript
+
+To show the significant overlap between Clojure and ClojureScript, we mark the symbols
+in the following reference section as follows:
 
  <table>
-{{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
-{{#changes}}
 <tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+ported from Clojure (re-implemented)
 </td>
-<td><samp>[{{&text}}]({{&link}})</samp></td>
 </tr>
-{{/changes}}
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>→</samp></td>
+<td>
+imported directly from Clojure
+</td>
+</tr>
 </table>
 
-__[See Full History](HISTORY.md)__
-
-## Namespaces
+### Reference
 
 {{#ns-symbols}}
 - [{{&ns}}](#{{&ns-link}})
 {{/ns-symbols}}
 
 {{#ns-symbols}}
-### {{ns}}
+#### {{ns}}
 
  <table>
 <thead><tr>
@@ -83,7 +108,7 @@ __[See Full History](HISTORY.md)__
 </tr></thead>
 {{#symbols}}
 <tr>
-<td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{/clj-symbol}}
+<td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
 <td><samp>{{type}}</samp></td>
 <td><samp>[{{&display-name}}]({{&link}})</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>
