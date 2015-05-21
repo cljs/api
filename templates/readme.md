@@ -58,12 +58,12 @@ Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HI
 Symbols from ClojureScript's core language features and libraries span multiple
 sources:
 
-|           | clojure | cljs compiler | cljs library | closure\* | js\* |
-|-----------|:-------:|:-------------:|:------------:|:---------:|:----:|
-| macros    | ☑       | ☑             | ☑            |           |      |
-| functions |         |               | ☑            | ☑         | ☑    |
-| vars      |         |               | ☑            | ☑         | ☑    |
-| specials  |         | ☑             |              |           |      |
+|             | clojure            | cljs compiler      | cljs library       | closure\*          | js\*               |
+|-------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+| macros      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
+| functions   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| vars        |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| specials    |                    | :heavy_check_mark: |                    |                    |                    |
 
 _\* included in and accessible from every ClojureScript application:_
 
