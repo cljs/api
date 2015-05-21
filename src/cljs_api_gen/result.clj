@@ -71,7 +71,7 @@
   (let [prev-api (get prev-result items-key)
         prev-items (:symbols prev-api)
         prev-changes (or (:changes prev-api) [])
-        prev-version (get-in prev-result [:release :cljs])
+        prev-version (get-in prev-result [:release :cljs-version])
 
         ;; get symbol names
         all-prev-names (->> (vals prev-items)
