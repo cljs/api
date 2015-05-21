@@ -9,7 +9,8 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  refs-dir
                                  edn-result-file]]
-    [cljs-api-gen.util :refer [symbol->filename mapmap]]
+    [cljs-api-gen.util :refer [symbol->filename mapmap
+                               split-ns-and-name]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -196,6 +197,36 @@
           )))
 
 ;;--------------------------------------------------------------------------------
+;; unported file
+;;--------------------------------------------------------------------------------
+
+(defn unported-file-data
+  [result]
+  ;; ns-symbols [ {:ns :header-link :symbols [ { :text :link } ] } ]
+  (let [syms (:clj-not-cljs result)
+        make (fn [full-name]
+               (let [[ns- name-] (split-ns-and-name (symbol full-name))]
+                 {:ns ns-
+                  :name name-
+                  :full-name full-name
+                  :text (md-escape full-name)
+                  :link (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" full-name)}))
+        ns-symbols (->> syms
+                        (map make)
+                        (group-by :ns)
+                        (map (fn [[ns- syms]] {:ns ns-
+                                               :header-link (md-header-link ns-)
+                                               :symbols (sort-by :name syms)}))
+                        (sort-by :ns))]
+    {:ns-symbols ns-symbols}))
+
+(defn dump-unported! [result]
+  (spit (str *output-dir* "/UNPORTED.md")
+        (stencil/render-string
+          (slurp "templates/unported.md")
+          (unported-file-data result))))
+
+;;--------------------------------------------------------------------------------
 ;; readme file
 ;;--------------------------------------------------------------------------------
 
@@ -256,5 +287,6 @@
 
   (dump-readme! result)
   (dump-history! result)
+  (dump-unported! result)
   (dump-edn-file! result))
 
