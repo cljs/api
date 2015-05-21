@@ -14,6 +14,25 @@
     [stencil.core :as stencil]
     ))
 
+;;--------------------------------------------------------------------------------
+;; Result dump
+;;--------------------------------------------------------------------------------
+
+(defn get-edn-path []
+  (str *output-dir* "/" edn-result-file))
+
+(defn get-last-written-result []
+  (let [path (get-edn-path)]
+    (when (exists? path)
+      (edn/read-string (slurp path)))))
+
+(defn dump-edn-file! [result]
+  (spit (get-edn-path) (with-out-str (pprint result))))
+
+;;--------------------------------------------------------------------------------
+;; Encoding helpers
+;;--------------------------------------------------------------------------------
+
 (defn md-escape
   [sym]
   (-> sym
@@ -31,7 +50,12 @@
 (defn shield-escape
   [s]
   (-> s
-      (replace "-" "--")))
+      (replace "-" "--")
+      ))
+
+;;--------------------------------------------------------------------------------
+;; Common
+;;--------------------------------------------------------------------------------
 
 (defn make-clj-ref
   [item]
@@ -59,6 +83,27 @@
       "<img valign=\"middle\" alt=\"[" change "] " version "\""
         " src=\"https://img.shields.io/badge/" change "-" (shield-escape version) "-" color ".svg\">"
       "</a>")))
+
+(defn version-changes
+  [symbols changes]
+  (let [make (fn [full-name change]
+               (let [item (get symbols full-name)]
+                 (assoc item
+                   :text (cond-> (md-escape full-name)
+                           (= change :removed) md-strikethru)
+                   :shield-text (shield-escape (:type item))
+                   :change ({:added "+" :removed "×"} change)
+                   :shield-color ({:added "brightgreen" :removed "red"} change)
+                   :link (str refs-dir "/" (:full-name-encode item) ".md"))))
+        added (map #(make % :added) (:added changes))
+        removed (map #(make % :removed) (:removed changes))
+        sort-key (fn [item] [(:ns item) (:name item)])
+        all (sort-by sort-key (concat added removed))]
+    all))
+
+;;--------------------------------------------------------------------------------
+;; ref file
+;;--------------------------------------------------------------------------------
 
 (defn sig-args
   [text]
@@ -118,34 +163,47 @@
         (slurp "templates/ref.md")
         (ref-file-data item)))))
 
-(defn get-edn-path []
-  (str *output-dir* "/" edn-result-file))
+;;--------------------------------------------------------------------------------
+;; history file
+;;--------------------------------------------------------------------------------
 
-(defn get-last-written-result []
-  (let [path (get-edn-path)]
-    (when (exists? path)
-      (edn/read-string (slurp path)))))
+(defn history-file-data
+  [result]
+  (let [api (:library-api result)
+        symbols (:symbols api)
+        modify-version #(let [changes (version-changes symbols %)
+                              no-changes (if (zero? (count changes)) true nil)
+                              add-count (count (:added %))
+                              remove-count (count (:removed %))
+                              when-pos (fn [x] (when (pos? x) x))]
+                          (assoc %
+                            :changes-link (md-header-link (:cljs-version %))
+                            :changes changes
+                            :no-changes no-changes
+                            :add-count (when-pos add-count)
+                            :remove-count (when-pos remove-count)))
+        all (->> (:changes api)
+                 (map modify-version)
+                 reverse)]
+    {:versions all}))
+
+(defn dump-history! [result]
+  (spit (str *output-dir* "/history.md")
+        (stencil/render-string
+          (slurp "templates/history.md")
+          (history-file-data result)
+          )))
+
+;;--------------------------------------------------------------------------------
+;; readme file
+;;--------------------------------------------------------------------------------
 
 (defn readme-library-changes
   [result]
   ;; name-link tuples
   (let [api (:library-api result)
         changes (last (:changes api))
-        symbols (:symbols api)
-        make (fn [full-name change]
-               (let [item (get symbols full-name)]
-                 {:text (cond-> (md-escape full-name)
-                          (= change :removed) md-strikethru)
-                  :change ({:added "+" :removed "-"} change)
-                  :type (:type item)
-                  :name (:name item)
-                  :ns (:ns item)
-                  :link (str refs-dir "/" (:full-name-encode item) ".md")
-                  }))
-        added (map #(make % :added) (:added changes))
-        removed (map #(make % :removed) (:removed changes))
-        sort-key (fn [item] [(:ns item) (:name item)])
-        all (sort-by sort-key (concat added removed))]
+        all (version-changes (:symbols api) changes)]
     all))
 
 (defn readme-library-symbols
@@ -184,8 +242,9 @@
           (readme-file-data result)
           )))
 
-(defn dump-edn-file! [result]
-  (spit (get-edn-path) (with-out-str (pprint result))))
+;;--------------------------------------------------------------------------------
+;; Main
+;;--------------------------------------------------------------------------------
 
 (defn dump-result! [result]
   (mkdir *output-dir*)
@@ -195,5 +254,6 @@
     (dump-ref-file! item))
 
   (dump-readme! result)
+  (dump-history! result)
   (dump-edn-file! result))
 

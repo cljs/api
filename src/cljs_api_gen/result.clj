@@ -97,7 +97,10 @@
 
         new-items (map make-item all-names)
         new-symbols (zipmap (map :full-name new-items) new-items)
-        change (prune-map {:version *cljs-version*
+        change (prune-map {:cljs-version *cljs-version*
+                           :cljs-date *cljs-date*
+                           :clj-version *clj-version*
+                           :gclosure-lib *gclosure-lib*
                            :added added?
                            :removed removed?})
         new-changes (conj prev-changes change)]

@@ -43,8 +43,8 @@ sources:
 | vars      |         |               | ☑            | ☑         | ☑    |
 | specials  |         | ☑             |              |           |      |
 
-_\* Please see the dedicated API references for the following, which are both
-included and accessible from every ClojureScript application:_
+_\* Please see the dedicated API references for the following, which are
+included in and accessible from every ClojureScript application:_
 
 - [Google Closure Library](http://google.github.io/closure-library/api/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
@@ -55,8 +55,9 @@ included and accessible from every ClojureScript application:_
 {{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
 {{#changes}}
 <tr>
-<td><samp>{{&change}}</samp></td>
-<td><samp>{{&type}}</samp></td>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+</td>
 <td><samp>[{{&text}}]({{&link}})</samp></td>
 </tr>
 {{/changes}}
