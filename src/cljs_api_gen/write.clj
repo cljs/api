@@ -316,6 +316,7 @@
                         (mapmap transform-syms)
                         (map (fn [[k v]] {:toc-text (make-toc-text k)
                                           :ns k
+                                          :ns-description (ns-descriptions k)
                                           :ns-link (md-header-link k)
                                           :symbols v}))
                         (sort-by :ns compare-ns))]

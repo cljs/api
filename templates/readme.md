@@ -98,10 +98,10 @@ Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
 ### API Reference
 
-| Namespace |
-|-----------|
+| Namespace | Description |
+|-----------|-------------|
 {{#ns-symbols}}
-| <samp>[{{&toc-text}}](#{{&ns-link}})</samp> |
+| <samp>[{{&toc-text}}](#{{&ns-link}})</samp> | {{&ns-description}} |
 {{/ns-symbols}}
 
 _* these are pseudo-namespaces since special forms have no namespace_
