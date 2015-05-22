@@ -6,7 +6,7 @@
 <td>{{#history}}{{&.}} {{/history}}</td>
 {{#clj-symbol}}
 <td>
-{{#import}}imported {{/import}}[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&full-name}}</samp>]({{&link}})
+{{#import}}imported {{/import}}[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&display-name}}</samp>]({{&link}})
 </td>
 {{/clj-symbol}}
 </tr>

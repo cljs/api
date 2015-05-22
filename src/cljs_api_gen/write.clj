@@ -76,6 +76,7 @@
   [item]
   (when-let [full-name (:clj-symbol item)]
     {:full-name full-name
+     :display-name (md-escape full-name)
      :import (= "clojure" (second (re-find #"/clojure/([^/]+)/" (:source-link item))))
      :link (let [ns- (-> full-name symbol namespace)]
              (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" full-name))}))
