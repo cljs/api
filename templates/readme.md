@@ -8,7 +8,7 @@
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure {{clj-version}}</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
-<kbd>Closure Lib {{gclosure-lib}}</kbd>](http://google.github.io/closure-library/api/)</td>
+<kbd>Closure Lib {{gclosure-lib}}</kbd>](http://www.closurecheatsheet.com/)</td>
 </tr>
 </table>
 {{/release}}
@@ -71,7 +71,7 @@ sources:
 
 _\* included in and accessible from every ClojureScript application:_
 
-- [Google Closure Library](http://google.github.io/closure-library/api/)
+- [Google Closure Library](http://www.closurecheatsheet.com/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
 
 ### Clojure vs. ClojureScript
