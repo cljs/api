@@ -253,6 +253,21 @@
         all (version-changes (:symbols api) changes)]
     all))
 
+(def ns-order
+  {"special" 1
+   "specialrepl" 2
+   "cljs.core" 3})
+
+(defn compare-ns
+  [a b]
+  (let [ai (get ns-order a)
+        bi (get ns-order b)]
+    (cond
+      (and (nil? ai) (nil? bi)) (compare a b)
+      (nil? ai) 1
+      (nil? bi) -1
+      :else (compare ai bi))))
+
 (defn readme-library-symbols
   [result]
   ;; clj-name-type-history tuples
@@ -276,7 +291,7 @@
                                           :ns k
                                           :ns-link (md-header-link k)
                                           :symbols v}))
-                        (sort-by :ns))]
+                        (sort-by :ns compare-ns))]
     ns-symbols))
 
 (defn readme-file-data
