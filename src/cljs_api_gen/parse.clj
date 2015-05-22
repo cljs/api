@@ -104,6 +104,15 @@
      :signature signatures
      :type "function"}))
 
+(defn parse-var
+  [form]
+  (let [name- (second form)
+        m (meta name-)
+        docstring (fix-docstring (:doc m))
+        dynamic? (:dynamic m)]
+    {:docstring docstring
+     :type (if dynamic? "dynamic var" "var")}))
+
 (defmulti parse-form*
   (fn [form]
     (cond
@@ -115,13 +124,22 @@
            (not (:private (meta (second form)))))
       "defmacro"
 
-      (and (= 'def (first form))
+      (and (#{'def 'defonce} (first form))
            (list? (nth form 2 nil))
            (= 'fn (first (nth form 2 nil)))
-           (not (:private (meta (second form)))))
+           (not (:private (meta (second form))))
+           (not (:dynamic (meta (second form)))))
       "def fn"
 
+      (and (#{'def 'defonce} (first form))
+           (not (:private (meta (second form)))))
+      "var"
+
       :else nil)))
+
+(defmethod parse-form* "var"
+  [form]
+  (parse-var form))
 
 (defmethod parse-form* "def fn"
   [form]
