@@ -99,8 +99,10 @@ imported directly from Clojure
 ### Reference
 
 {{#ns-symbols}}
-- [{{&ns}}](#{{&ns-link}})
+- [{{&toc-text}}](#{{&ns-link}})
 {{/ns-symbols}}
+
+_* these are pseudo-namespaces since special forms have no namespace_
 
 {{#ns-symbols}}
 #### {{ns}}

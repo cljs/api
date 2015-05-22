@@ -251,10 +251,16 @@
                      :type (:type item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-by :name (map make-item %))
+        make-toc-text #(if (#{"special" "specialrepl"} %)
+                         (str % "*") ;; pseudo-namespaces need an asterisk footnote
+                         %)
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
-                        (map (fn [[k v]] {:ns k :ns-link (md-header-link k) :symbols v}))
+                        (map (fn [[k v]] {:toc-text (make-toc-text k)
+                                          :ns k
+                                          :ns-link (md-header-link k)
+                                          :symbols v}))
                         (sort-by :ns))]
     ns-symbols))
 
