@@ -29,12 +29,32 @@
 (def ^:dynamic *cur-repo*)
 
 (def normally-parsed-ns?
-  #{"cljs.pprint" "cljs.reader"
-    "clojure.set" "clojure.string" "clojure.walk" "clojure.zip" "clojure.data"})
+  #{"cljs.pprint"
+    "cljs.reader"
+    "clojure.set"
+    "clojure.string"
+    "clojure.walk"
+    "clojure.zip"
+    "clojure.data"
+    "clojure.browser.dom"
+    "clojure.browser.event"
+    "clojure.browser.net"
+    "clojure.browser.repl"
+    "clojure.core.reducers"
+    "clojure.reflect"
+    "cljs.nodejs"
+    "cljs.nodejscli"
+    "cljs.source-map"
+    "cljs.source-map.base64"
+    "cljs.source-map.base64-vlq"
+    })
 
 (def custom-parsed-ns?
-  #{"cljs.core" "cljs.test" "cljs.repl"
-    "special" "specialrepl"}) ;; <-- pseudo-namespaces for special forms
+  #{"cljs.core"
+    "cljs.test"
+    "cljs.repl"
+    "special"
+    "specialrepl"}) ;; <-- pseudo-namespaces for special forms
 
 (def cljs-namespaces
   (into normally-parsed-ns? custom-parsed-ns?))

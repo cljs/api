@@ -94,12 +94,14 @@ imported directly from Clojure
 </tr>
 </table>
 
-:no_entry_sign: Also, see the [Clojure symbols not yet ported](UNPORTED.md).
+Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
 ### API Reference
 
+| Namespace |
+|-----------|
 {{#ns-symbols}}
-- [{{&toc-text}}](#{{&ns-link}})
+| <samp>[{{&toc-text}}](#{{&ns-link}})</samp> |
 {{/ns-symbols}}
 
 _* these are pseudo-namespaces since special forms have no namespace_
