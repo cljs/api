@@ -54,6 +54,20 @@
       (replace "-" "--")
       ))
 
+(def emoji-url
+  "emoji table here: http://apps.timwhitlock.info/emoji/tables/unicode"
+  {":heavy_check_mark:" "http://i.imgur.com/JfULGnn.png"
+   ":no_entry_sign:"    "http://i.imgur.com/sWBgjc6.png"})
+
+(defn fix-emoji
+  "github currently disables emoji-rendering for large readmes, so just process them here."
+  [s]
+  (reduce
+    (fn [s emoji]
+      (replace s emoji
+        (str "<img width=\"20px\" height=\"20px\" valign=\"middle\" src=\"" (emoji-url emoji) "\">")))
+    s (keys emoji-url)))
+
 ;;--------------------------------------------------------------------------------
 ;; Common
 ;;--------------------------------------------------------------------------------
@@ -191,10 +205,10 @@
 
 (defn dump-history! [result]
   (spit (str *output-dir* "/HISTORY.md")
-        (stencil/render-string
+        (fix-emoji (stencil/render-string
           (slurp "templates/history.md")
           (history-file-data result)
-          )))
+          ))))
 
 ;;--------------------------------------------------------------------------------
 ;; unported file
@@ -222,9 +236,9 @@
 
 (defn dump-unported! [result]
   (spit (str *output-dir* "/UNPORTED.md")
-        (stencil/render-string
+        (fix-emoji (stencil/render-string
           (slurp "templates/unported.md")
-          (unported-file-data result))))
+          (unported-file-data result)))))
 
 ;;--------------------------------------------------------------------------------
 ;; readme file
@@ -275,10 +289,10 @@
 
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
-        (stencil/render-string
+        (fix-emoji (stencil/render-string
           (slurp "templates/readme.md")
           (readme-file-data result)
-          )))
+          ))))
 
 ;;--------------------------------------------------------------------------------
 ;; Main
