@@ -13,9 +13,10 @@
 </table>
 {{/release}}
 
-This is an auto-generated API reference for ClojureScript.  All information
-here is rendered from [autodocs.edn](autodocs.edn), a data structure of the API
-information which you can download and use yourself.
+This is an [auto-generated](https://github.com/cljsinfo/api-refs) API reference
+for ClojureScript.  All information here is rendered from
+[autodocs.edn](autodocs.edn), a data structure of the API information which you
+can download and use yourself.
 
 ClojureScript has two APIs:  one for interacting with the compiler, and one for
 its standard library.
