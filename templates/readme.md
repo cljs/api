@@ -39,7 +39,7 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 1. [Changes](#changes)
 1. [Sources](#sources)
 1. [Clojure vs. ClojureScript](#clojure-vs-clojurescript)
-1. [Reference](#reference)
+1. [API Reference](#api-reference)
 
 ### Changes
 
@@ -96,7 +96,7 @@ imported directly from Clojure
 
 :no_entry_sign: Also, see the [Clojure symbols not yet ported](UNPORTED.md).
 
-### Reference
+### API Reference
 
 {{#ns-symbols}}
 - [{{&toc-text}}](#{{&ns-link}})
