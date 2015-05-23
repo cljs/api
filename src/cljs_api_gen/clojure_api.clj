@@ -37,6 +37,11 @@
    "cljs.reader/read"                   "clojure.core/read"
    "cljs.analyzer.api/all-ns"           "clojure.core/all-ns"
    "cljs.analyzer.api/find-ns"          "clojure.core/find-ns"
+   "cljs.analyzer.api/ns-interns"       "clojure.core/ns-interns"
+   "cljs.analyzer.api/ns-publics"       "clojure.core/ns-publics"
+   "cljs.analyzer.api/ns-resolve"       "clojure.core/ns-resolve"
+   "cljs.analyzer.api/remove-ns"        "clojure.core/remove-ns"
+   "cljs.analyzer.api/resolve"          "clojure.core/resolve"
    })
 
 (defn clj-lookup-name
