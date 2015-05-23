@@ -76,8 +76,7 @@
   (set (keep get-fn-macro forms)))
 
 ;;--------------------------------------------------------------------------------
-;; Parse def functions/macros
-;; TODO: parse vars
+;; Parse defs
 ;;--------------------------------------------------------------------------------
 
 (defn parse-defn-or-macro
