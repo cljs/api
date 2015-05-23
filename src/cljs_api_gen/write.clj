@@ -63,6 +63,10 @@
   (-> sym
       (replace "*" "\\*")))
 
+(defn md-link-escape
+  [s]
+  (replace s ">" "%3E"))
+
 (defn md-strikethru
   [s]
   (str "~~" s "~~"))
@@ -110,7 +114,7 @@
                   (if-let [page-ns (clj-ns->page-ns ns-)]
                     page-ns
                     ns-)
-                  "-api.html#" full-name))}))
+                  "-api.html#" (md-link-escape full-name)))}))
 
 (defn item-filename
   [item]
