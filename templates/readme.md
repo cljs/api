@@ -101,7 +101,7 @@ Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| <samp>[{{&toc-text}}](#{{&ns-link}})</samp> | {{&ns-description}} |
+| [{{&toc-text}}](#{{&ns-link}}) | {{&ns-description}} |
 {{/ns-symbols}}
 
 _* these are pseudo-namespaces since special forms have no namespace_
