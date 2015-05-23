@@ -1,4 +1,3 @@
-
 # ClojureScript API Reference
 
  <table>
@@ -11,14 +10,48 @@
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
-library and syntax.
+library and syntax.  To this end, this repo provides a tool to build the API reference for each
+version of ClojureScript.
 
-To this end, this repo provides a tool to build the API reference for each
-version of ClojureScript. The result is hosted on the
-[`catalog`](https://github.com/cljsinfo/api-refs/tree/catalog) branch.
+#### Branches
 
-The [api docs project](https://github.com/cljsinfo/api-docs) also combines this
-output with detailed descriptions, example usages, and cross-refs.
+There are two main branches in this repo:
+
+| Branch  | Description |
+|---------|-------------|
+| master  | API reference generator |
+| [catalog](https://github.com/cljsinfo/api-refs/tree/catalog) | API reference release |
+
+#### Version Tags
+
+The catalog branch contains version tags for locating the API reference for
+specific versions of ClojureScript.  You can use the [history
+table](https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md) to navigate
+the version tags.
+
+#### Catalog Files
+
+The catalog branch has each of the generated files for exploring/using the API reference:
+
+| Catalog File | Description |
+|-----:|-------------|
+| <samp>[autodocs.edn]</samp> | a data structure containing all API information |
+| <samp>[README.md]</samp>    | an overview of the API with reference tables |
+| <samp>[refs/\*.md]</samp>   | dedicated view for a specific API symbol |
+| <samp>[HISTORY.md]</samp>   | table of all versions and their changes |
+| <samp>[UNPORTED.md]</samp>  | list of symbols that are not ported from Clojure |
+
+[autodocs.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/autodocs.edn
+[README.md]:https://github.com/cljsinfo/api-refs/blob/catalog/README.md
+[refs/\*.md]:https://github.com/cljsinfo/api-refs/blob/catalog/refs/cljs.core_assoc-in.md
+[HISTORY.md]:https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md
+[UNPORTED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNPORTED.md
+
+#### Better Docs
+
+The [api docs project](https://github.com/cljsinfo/api-docs) is an effort to
+combine this repo's generated API reference with detailed descriptions, example
+usages, and cross-refs.
 
 ## Running
 
