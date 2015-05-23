@@ -31,10 +31,19 @@
    "specialrepl" "clojure.core"
    })
 
+(def cljs-full-name->clj
+  {"cljs.core/*clojurescript-version*"  "clojure.core/*clojure-version*"
+   "cljs.reader/read-string"            "clojure.core/read-string"
+   "cljs.reader/read"                   "clojure.core/read"
+   })
+
 (defn clj-lookup-name
   [item]
-  (let [clj-ns (or (get cljs-ns->clj (:ns item)) (:ns item))]
-    (str clj-ns "/" (:name item))))
+  (if-let [clj-full-name (cljs-full-name->clj (:full-name item))]
+    clj-full-name
+    (if-let [clj-ns (cljs-ns->clj (:ns item))]
+      (str clj-ns "/" (:name item))
+      (:full-name item))))
 
 (defn attach-clj-symbol
   [item]
