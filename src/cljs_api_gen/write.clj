@@ -103,18 +103,22 @@
 (def clj-ns->page-ns
   {"clojure.core.reducers" "clojure.core"})
 
+(defn get-clj-link
+  [full-name]
+  (let [ns- (-> full-name symbol namespace)]
+    (str "http://clojure.github.io/clojure/branch-master/"
+         (if-let [page-ns (clj-ns->page-ns ns-)]
+           page-ns
+           ns-)
+         "-api.html#" (md-link-escape full-name))))
+
 (defn make-clj-ref
   [item]
   (when-let [full-name (:clj-symbol item)]
     {:full-name full-name
      :display-name (md-escape full-name)
      :import (= "clojure" (second (re-find #"/clojure/([^/]+)/" (:source-link item))))
-     :link (let [ns- (-> full-name symbol namespace)]
-             (str "http://clojure.github.io/clojure/branch-master/"
-                  (if-let [page-ns (clj-ns->page-ns ns-)]
-                    page-ns
-                    ns-)
-                  "-api.html#" (md-link-escape full-name)))}))
+     :link (get-clj-link full-name)}))
 
 (defn item-filename
   [item]
@@ -260,7 +264,7 @@
                   :name name-
                   :full-name full-name
                   :text (md-escape full-name)
-                  :link (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" full-name)}))
+                  :link (get-clj-link full-name)}))
         ns-symbols (->> syms
                         (map make)
                         (group-by :ns)
