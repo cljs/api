@@ -34,17 +34,13 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 </dd>
 </dl>
 
-## Library API
-
-1. [Changes](#changes)
-1. [Sources](#sources)
-1. [Clojure vs. ClojureScript](#clojure-vs-clojurescript)
-1. [API Reference](#api-reference)
-
-### Changes
+## Latest Changes
 
 Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HISTORY.md)):
 
+__Library API Changes__
+
+{{#library-api}}
  <table>
 {{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
 {{#changes}}
@@ -56,6 +52,29 @@ Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HI
 </tr>
 {{/changes}}
 </table>
+{{/library-api}}
+
+__Compiler API Changes__
+
+{{#compiler-api}}
+ <table>
+{{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
+{{#changes}}
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+</td>
+<td><samp>[{{&text}}]({{&link}})</samp></td>
+</tr>
+{{/changes}}
+</table>
+{{/compiler-api}}
+
+## Library API
+
+1. [Sources](#sources)
+1. [Clojure vs. ClojureScript](#clojure-vs-clojurescript)
+1. [API Reference](#library-api-reference)
 
 ### Sources
 
@@ -96,8 +115,9 @@ imported directly from Clojure
 
 Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
-### API Reference
+### Library API Reference
 
+{{#library-api}}
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
@@ -123,5 +143,40 @@ Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 </tr>
 {{/symbols}}
 </table>
-
 {{/ns-symbols}}
+
+{{/library-api}}
+
+## Compiler API
+
+### Compiler API Reference
+
+{{#compiler-api}}
+| Namespace | Description |
+|-----------|-------------|
+{{#ns-symbols}}
+| [{{&ns}}](#{{&ns-link}}) | {{&ns-description}} |
+{{/ns-symbols}}
+
+{{#ns-symbols}}
+#### {{ns}}
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Type</th>
+<th>Name</th>
+<th>History</th>
+</tr></thead>
+{{#symbols}}
+<tr>
+<td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
+<td><samp>{{type}}</samp></td>
+<td><samp>[{{&display-name}}]({{&link}})</samp></td>
+<td>{{#history}}{{&.}} {{/history}}</td>
+</tr>
+{{/symbols}}
+</table>
+{{/ns-symbols}}
+
+{{/compiler-api}}

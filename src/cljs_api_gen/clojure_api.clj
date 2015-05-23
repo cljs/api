@@ -35,6 +35,8 @@
   {"cljs.core/*clojurescript-version*"  "clojure.core/*clojure-version*"
    "cljs.reader/read-string"            "clojure.core/read-string"
    "cljs.reader/read"                   "clojure.core/read"
+   "cljs.analyzer.api/all-ns"           "clojure.core/all-ns"
+   "cljs.analyzer.api/find-ns"          "clojure.core/find-ns"
    })
 
 (defn clj-lookup-name

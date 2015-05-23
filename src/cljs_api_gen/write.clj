@@ -37,6 +37,10 @@
    "cljs.nodejs"                  "nodejs support functions"
    "cljs.test"                    "a unit-testing framework"
    "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
+
+   "cljs.build.api"               ""
+   "cljs.compiler.api"            ""
+   "cljs.analyzer.api"            ""
    })
 
 ;;--------------------------------------------------------------------------------
@@ -225,22 +229,35 @@
 
 (defn history-file-data
   [result]
-  (let [api (:library-api result)
-        symbols (:symbols api)
-        modify-version #(let [changes (version-changes symbols %)
-                              no-changes (if (zero? (count changes)) true nil)
-                              add-count (count (:added %))
-                              remove-count (count (:removed %))
-                              when-pos (fn [x] (when (pos? x) x))]
-                          (assoc %
-                            :changes-link (md-header-link (:cljs-version %))
-                            :changes changes
-                            :no-changes no-changes
-                            :add-count (when-pos add-count)
-                            :remove-count (when-pos remove-count)))
-        all (->> (:changes api)
-                 (map modify-version)
-                 reverse)]
+  (let [add-change-info
+        (fn [change symbols api-type]
+          (let [changes (version-changes symbols change)
+                no-changes (if (zero? (count changes)) true nil)
+                add-count (count (:added change))
+                remove-count (count (:removed change))
+                when-pos (fn [x] (when (pos? x) x))]
+            (-> change
+                (assoc
+                   api-type
+                   {:changes-link (md-header-link (str (:cljs-version change) "-" (name api-type)))
+                    :changes changes
+                    :no-changes no-changes
+                    :added (:added change)
+                    :removed (:removed change)
+                    :add-count (when-pos add-count)
+                    :remove-count (when-pos remove-count)})
+                (dissoc
+                  :added :removed))))
+
+        get-api-changes
+        (fn [api-type]
+          (let [{:keys [symbols changes]} (get result api-type)]
+            (->> changes
+                 (map #(add-change-info % symbols api-type)))))
+
+        com-changes (get-api-changes :compiler-api)
+        lib-changes (get-api-changes :library-api)
+        all (reverse (map #(merge %1 %2) com-changes lib-changes))]
     {:versions all}))
 
 (defn dump-history! [result]
@@ -284,10 +301,10 @@
 ;; readme file
 ;;--------------------------------------------------------------------------------
 
-(defn readme-library-changes
-  [result]
+(defn readme-api-changes
+  [result api-type]
   ;; name-link tuples
-  (let [api (:library-api result)
+  (let [api (get result api-type)
         changes (last (:changes api))
         all (version-changes (:symbols api) changes)]
     all))
@@ -307,10 +324,10 @@
       (nil? bi) -1
       :else (compare ai bi))))
 
-(defn readme-library-symbols
-  [result]
+(defn readme-api-symbols
+  [result api-type]
   ;; clj-name-type-history tuples
-  (let [all (-> result :library-api :symbols)
+  (let [all (-> result api-type :symbols)
         make-item (fn [item]
                     {:display-name (cond-> (md-escape (:name item))
                                      (:removed item) md-strikethru)
@@ -332,11 +349,15 @@
 
 (defn readme-file-data
   [result]
-  (let [changes (readme-library-changes result)
-        no-changes (if (zero? (count changes)) true nil)]
-    {:changes changes
-     :no-changes no-changes
-     :ns-symbols (readme-library-symbols result)
+  (let [make (fn [api-type]
+               (let [changes (readme-api-changes result api-type)
+                     no-changes (if (zero? (count changes)) true nil)
+                     ns-symbols (readme-api-symbols result api-type)]
+                 {:changes changes
+                  :no-changes no-changes
+                  :ns-symbols ns-symbols}))]
+    {:library-api (make :library-api)
+     :compiler-api (make :compiler-api)
      :release (:release result)}))
 
 (defn dump-readme! [result]
@@ -355,6 +376,9 @@
   (mkdir (str *output-dir* "/" refs-dir))
 
   (doseq [item (vals (:symbols (:library-api result)))]
+    (dump-ref-file! item))
+
+  (doseq [item (vals (:symbols (:compiler-api result)))]
     (dump-ref-file! item))
 
   (dump-readme! result)
