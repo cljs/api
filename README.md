@@ -20,7 +20,7 @@ There are two main branches in this repo:
 | Branch  | Description |
 |---------|-------------|
 | master  | API reference generator |
-| [catalog](https://github.com/cljsinfo/api-refs/tree/catalog) | API reference release |
+| [catalog](https://github.com/cljsinfo/api-refs/tree/catalog) | API reference release (force-pushed) |
 
 #### Version Tags
 
