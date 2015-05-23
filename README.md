@@ -142,3 +142,9 @@ These are the source files concerned with the API reference generator:
 [util.clj]:src/cljs_api_gen/util.clj
 
 [codox]:https://github.com/weavejester/codox
+
+## License
+
+The API reference generator is released under the MIT license, Copyright © 2014-2015 Shaun LeBron
+
+The source code contained in the API reference files are EPL licensed, Copyright Rich Hickey.
