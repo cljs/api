@@ -14,7 +14,7 @@
 
  <samp>
 {{#signature}}
-(__{{&name}}__ {{&args}})<br>
+(__{{&name}}__{{#args}} {{&.}}{{/args}})<br>
 {{/signature}}
 </samp>
 

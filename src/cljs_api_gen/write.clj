@@ -168,7 +168,9 @@
 (defn sig-args
   [text]
   (let [[_ args] (re-find #"^\[(.*)\]$" text)]
-    args))
+    (if (not= "" (trim args))
+      args
+      nil)))
 
 (defn source-link
   [filename item]
