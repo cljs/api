@@ -130,6 +130,15 @@
     {:docstring docstring
      :type (if dynamic? "dynamic var" "var")}))
 
+(defn parse-defcurried
+  [form]
+  (let [[_ name- docstring attr-map args] form
+        cargs (vec (butlast args))
+        signatures [cargs args]]
+    {:docstring docstring
+     :signature signatures
+     :type "function"}))
+
 (defmulti parse-form*
   (fn [form]
     (cond
@@ -152,6 +161,10 @@
            (not (:private (meta (second form)))))
       "var"
 
+      (and (= 'defcurried (first form))
+           (not (:private (nth form 3 nil))))
+      "defcurried"
+
       :else nil)))
 
 (defmethod parse-form* "var"
@@ -169,6 +182,10 @@
 (defmethod parse-form* "defmacro"
   [form]
   (parse-defn-or-macro form))
+
+(defmethod parse-form* "defcurried"
+  [form]
+  (parse-defcurried form))
 
 (defmethod parse-form* nil
   [form]
