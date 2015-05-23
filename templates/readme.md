@@ -34,6 +34,33 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 </dd>
 </dl>
 
+ <table>
+<tr><td>
+__Clojure vs. ClojureScript__
+
+To show the significant overlap between Clojure and ClojureScript, we mark the symbols
+in the following reference sections as follows:
+
+ <table>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
+<td>
+ported from Clojure (re-implemented)
+</td>
+</tr>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>→</samp></td>
+<td>
+imported directly from Clojure
+</td>
+</tr>
+</table>
+
+Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
+
+</tr></td></table>
+
+
 ## Latest Changes
 
 Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HISTORY.md)):
@@ -92,28 +119,6 @@ _\* included in and accessible from every ClojureScript application:_
 
 - [Google Closure Library](http://www.closurecheatsheet.com/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
-
-### Clojure vs. ClojureScript
-
-To show the significant overlap between Clojure and ClojureScript, we mark the symbols
-in the following reference section as follows:
-
- <table>
-<tr>
-<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
-<td>
-ported from Clojure (re-implemented)
-</td>
-</tr>
-<tr>
-<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>→</samp></td>
-<td>
-imported directly from Clojure
-</td>
-</tr>
-</table>
-
-Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
 ### Library API Reference
 
