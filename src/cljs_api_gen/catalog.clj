@@ -61,12 +61,19 @@
 ;; Catalog Creation
 ;;----------------------------------------------------------------------
 
-(defn print-summary
+(defn print-summary*
   [parsed]
   (let [ns-groups (group-by :ns parsed)
         pairs (sort-by first ns-groups)]
     (doseq [[ns- symbols] pairs]
       (println "   " ns- ": parsed" (count symbols) "symbols"))))
+
+(defn print-summary
+  [parsed]
+  (println " Library API:")
+  (print-summary* (:library parsed))
+  (println " Compiler API:")
+  (print-summary* (:compiler parsed)))
 
 (defn create-catalog!
   "Create a docs catalog repo, or resume progress from its previous state.

@@ -53,8 +53,14 @@
     "special"
     "specialrepl"}) ;; <-- pseudo-namespaces for special forms
 
-(def cljs-namespaces
+(def cljs-lib-namespaces
   (into normally-parsed-ns? custom-parsed-ns?))
+
+(def cljs-compiler-namespaces
+  #{"cljs.analyzer.api"
+    "cljs.build.api"
+    "cljs.compiler.api"
+    })
 
 ;;--------------------------------------------------------------------------------
 ;; Functions marked as macros
@@ -413,7 +419,8 @@
   (fn [ns-]
     (cond
       (custom-parsed-ns?   ns-) ns-
-      (normally-parsed-ns? ns-) :default
+      (normally-parsed-ns? ns-) :default-lib
+      (cljs-compiler-namespaces ns-) :default-compiler
       :else nil)))
 
 (defmethod parse-ns "cljs.core" [ns-]
@@ -472,8 +479,11 @@
         fns (parse-ns* ns- "clojurescript" [:library])]
     (concat macros fns)))
 
-(defmethod parse-ns :default [ns-]
+(defmethod parse-ns :default-lib [ns-]
   (parse-ns* ns- "clojurescript" :library))
+
+(defmethod parse-ns :default-compiler [ns-]
+  (parse-ns* ns- "clojurescript" :compiler))
 
 ;;------------------------------------------------------------
 ;; Main
@@ -515,8 +525,13 @@
 
 (defn parse-all
   []
-  (let [parsed (doall (mapcat parse-ns cljs-namespaces))
-        result (-> parsed
-                   add-catch-finally)]
-    result))
+  (let [lib-parsed (->> cljs-lib-namespaces
+                        (mapcat parse-ns)
+                        doall
+                        add-catch-finally)
+        compiler-parsed (->> cljs-compiler-namespaces
+                             (mapcat parse-ns)
+                             doall)]
+    {:library lib-parsed
+     :compiler compiler-parsed}))
 

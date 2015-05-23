@@ -108,10 +108,12 @@
      :changes new-changes}))
 
 (defn get-result
-  ([lib-parsed] (get-result lib-parsed nil))
-  ([lib-parsed prev-result]
-   (let [lib-items (transform-items lib-parsed)
-         library-api (make-api-result lib-items :library-api prev-result)]
+  ([parsed] (get-result parsed nil))
+  ([parsed prev-result]
+   (let [lib-items (transform-items (:library parsed))
+         library-api (make-api-result lib-items :library-api prev-result)
+         compiler-items (transform-items (:compiler parsed))
+         compiler-api (make-api-result compiler-items :compiler-api prev-result)]
 
      {:release {:cljs-version *cljs-version*
                 :cljs-tag *cljs-tag*
@@ -127,8 +129,6 @@
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
 
       :library-api library-api
-
-      :compiler-api {:symbols {}
-                     :changes []}})))
+      :compiler-api compiler-api})))
 
 
