@@ -19,25 +19,22 @@
   "FIXME: put this in the official docstrings if missing (patch request)"
 
   {"cljs.core"                    "fundamental library of the ClojureScript language"
-   "special"                      "special forms (a pseudo-namespace since they are not namespaced)"
-   "specialrepl"                  "REPL special forms (a pseudo-namespace since they are not namespaced)"
+   "special"                      "special forms (not namespaced)"
+   "specialrepl"                  "REPL special forms (not namespaced)"
    "cljs.pprint"                  "a pretty-printer for printing data structures"
    "cljs.reader"                  "a reader to parse text and produce data structures"
    "clojure.set"                  "set operations such as union/intersection"
    "clojure.string"               "string operations"
    "clojure.walk"                 "a generic tree walker for Clojure data structures"
-   "clojure.zip"                  "functional hierarchical zipper, with navigation, editing, and enumeration (see Huet)"
+   "clojure.zip"                  "functional hierarchical zipper, w/ navigation/editing/enumeration"
    "clojure.data"                 "non-core data functions"
    "clojure.browser.dom"          "browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)"
    "clojure.browser.event"        "browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)"
    "clojure.browser.net"          "network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)"
-   "clojure.browser.repl"         "functions for evaluating compiled cljs in a browser and sending result back to server"
+   "clojure.browser.repl"         "evalute compiled cljs in a browser. send results back to server"
    "clojure.core.reducers"        "a library for reduction and parallel folding (parallelism not supported)"
    "clojure.reflect"              "DEPRECATED. Do not use, superceded by REPL enhancements."
    "cljs.nodejs"                  "nodejs support functions"
-   "cljs.source-map"              ""
-   "cljs.source-map.base64"       ""
-   "cljs.source-map.base64-vlq"   ""
    "cljs.test"                    "a unit-testing framework"
    "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
    })
@@ -308,14 +305,10 @@
                      :type (:type item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-by :name (map make-item %))
-        make-toc-text #(if (#{"special" "specialrepl"} %)
-                         (str % "*") ;; pseudo-namespaces need an asterisk footnote
-                         %)
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
-                        (map (fn [[k v]] {:toc-text (make-toc-text k)
-                                          :ns k
+                        (map (fn [[k v]] {:ns k
                                           :ns-description (ns-descriptions k)
                                           :ns-link (md-header-link k)
                                           :symbols v}))

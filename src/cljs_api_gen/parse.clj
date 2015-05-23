@@ -44,9 +44,6 @@
     "clojure.reflect"
     "cljs.nodejs"
     "cljs.nodejscli"
-    "cljs.source-map"
-    "cljs.source-map.base64"
-    "cljs.source-map.base64-vlq"
     })
 
 (def custom-parsed-ns?
