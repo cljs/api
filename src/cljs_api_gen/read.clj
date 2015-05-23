@@ -63,7 +63,7 @@
 (defn get-ns-files
   [ns- src-types]
   (doall (filter exists?
-    (let [ns-path (replace ns- "." "/")]
+    (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))]
       (for [src (map src-path src-types)
             ext  ["clj" "cljs" "cljc"]]
         (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
