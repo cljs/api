@@ -185,3 +185,7 @@ _\* included in and accessible from every ClojureScript application:_
 {{/ns-symbols}}
 
 {{/compiler-api}}
+
+----
+
+_made by [@shaunlebron](http://twitter.com/shaunlebron)_
