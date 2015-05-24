@@ -144,6 +144,14 @@
      :signature signatures
      :type "function"}))
 
+(defn parse-defprotocol
+  [form]
+  )
+
+(defn parse-deftype
+  [form]
+  )
+
 (defmulti parse-form*
   (fn [form]
     (cond
@@ -170,6 +178,14 @@
            (not (:private (nth form 3 nil))))
       "defcurried"
 
+      (and (= 'defprotocol (first form))
+           (not (:private (meta (second form)))))
+      "defprotocol"
+
+      (and (= 'deftype (first form))
+           (not (:private (meta (second form)))))
+      "deftype"
+
       :else nil)))
 
 (defmethod parse-form* "var"
@@ -191,6 +207,14 @@
 (defmethod parse-form* "defcurried"
   [form]
   (parse-defcurried form))
+
+(defmethod parse-form* "defprotocol"
+  [form]
+  (parse-defprotocol form))
+
+(defmethod parse-form* "deftype"
+  [form]
+  (parse-deftype form))
 
 (defmethod parse-form* nil
   [form]
