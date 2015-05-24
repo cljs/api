@@ -172,12 +172,13 @@
 
 (defn parse-deftype
   [form]
-  (let [name- (second form)
-        form (drop 2 form)
-        signature (first form)]
-  {:docstring nil
-   :signature [signature]
-   :type "type"}))
+  (when (not= *cur-ns* "cljs.pprint") ;; ignore custom deftypes here
+    (let [name- (second form)
+          form (drop 2 form)
+          signature (first form)]
+      {:signature (when signature
+                    [signature])
+       :type "type"})))
 
 (defmulti parse-form*
   (fn [form]
