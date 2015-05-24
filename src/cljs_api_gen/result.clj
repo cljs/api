@@ -31,6 +31,7 @@
                     :docstring
                     :type
                     :signature
+                    :methods
                     :history
                     :return-type
                     :source-filename

@@ -144,13 +144,37 @@
      :signature signatures
      :type "function"}))
 
+(defn parse-protocol-method
+  [form]
+  (let [name- (first form)
+        form (drop 1 form)
+        docstring (let [d (last form)]
+                    (when (string? d) d))
+        form (if docstring (butlast form) form)
+        signatures (mapv str form)]
+    {:name (str name-)
+     :signature signatures
+     :docstring docstring}))
+
 (defn parse-defprotocol
   [form]
-  )
+  (let [name- (second form)
+        form (drop 2 form)
+        docstring (let [d (first form)]
+                    (when (string? d) d))
+        form (if docstring (drop 1 form) form)
+        method-lists form
+        pmethods (mapv parse-protocol-method method-lists)]
+    {:docstring docstring
+     :signature nil
+     :methods pmethods
+     :type "protocol"}))
 
 (defn parse-deftype
   [form]
-  )
+  #_{:docstring docstring
+     :signature [signature]
+     :type "type"})
 
 (defmulti parse-form*
   (fn [form]
