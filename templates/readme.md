@@ -111,6 +111,8 @@ sources:
 | functions   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | vars        |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | specials    |                    | :heavy_check_mark: |                    |                    |                    |
+| protocols   |                    |                    | :heavy_check_mark: |                    |                    |
+| types       |                    |                    | :heavy_check_mark: |                    |                    |
 
 _\* included in and accessible from every ClojureScript application:_
 
