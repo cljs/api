@@ -172,9 +172,12 @@
 
 (defn parse-deftype
   [form]
-  #_{:docstring docstring
-     :signature [signature]
-     :type "type"})
+  (let [name- (second form)
+        form (drop 2 form)
+        signature (first form)]
+  {:docstring nil
+   :signature [signature]
+   :type "type"}))
 
 (defmulti parse-form*
   (fn [form]
