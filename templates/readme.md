@@ -18,9 +18,6 @@ for ClojureScript.  All information here is rendered from
 [autodocs.edn](autodocs.edn), a data structure of the API information which you
 can download and use yourself.
 
-ClojureScript has two APIs:  one for interacting with the compiler, and one for
-its standard library.
-
  <dl>
 <dt>[Library API](#library-api)</dt>
 <dd>
@@ -33,6 +30,8 @@ language features and standard libraries.
 to perform analysis or compilation of ClojureScript code from a Clojure application.
 </dd>
 </dl>
+
+---
 
  <table>
 <tr><td>
@@ -59,6 +58,8 @@ imported directly from Clojure
 Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
 </tr></td></table>
+
+---
 
 
 ## Latest Changes
@@ -98,10 +99,6 @@ __Compiler API Changes__
 {{/compiler-api}}
 
 ## Library API
-
-1. [Sources](#sources)
-1. [Clojure vs. ClojureScript](#clojure-vs-clojurescript)
-1. [API Reference](#library-api-reference)
 
 ### Sources
 
