@@ -134,15 +134,15 @@ _\* included in and accessible from every ClojureScript application:_
  <table>
 <thead><tr>
 <th>=</th>
-<th>Type</th>
 <th>Name</th>
+<th>Type</th>
 <th>History</th>
 </tr></thead>
 {{#symbols}}
 <tr>
 <td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
-<td><samp>{{type}}</samp></td>
 <td><samp>[{{&display-name}}]({{&link}})</samp></td>
+<td><samp>{{type}}</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>
 </tr>
 {{/symbols}}
