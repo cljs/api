@@ -121,7 +121,7 @@
   (when-let [full-name (:clj-symbol item)]
     {:full-name full-name
      :display-name (md-escape full-name)
-     :import (= "clojure" (second (re-find #"/clojure/([^/]+)/" (:source-link item))))
+     :import (= "clojure" (second (re-find #"/clojure/([^/]+)/" (-> item :source :link))))
      :link (get-clj-link full-name)}))
 
 (defn item-filename
@@ -173,17 +173,17 @@
       nil)))
 
 (defn source-link
-  [filename item]
-  (str "<ins>[" filename ":" (join "-" (:source-lines item)) "](" (:source-link item) ")</ins>"))
+  [filename {:keys [lines link] :as source}]
+  (str "<ins>[" filename ":" (join "-" lines) "](" link ")</ins>"))
 
 (defn source-path
-  [item]
+  [{:keys [filename link] :as source}]
   ;; clojurescript/
   ;; └── src/
   ;;     └── cljs/
   ;;         └── cljs/
   ;;             └── <ins>[core.cljs:2109-2114](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2109-L2114)</ins>
-  (let [crumbs (split (:source-filename item) #"/")
+  (let [crumbs (split filename #"/")
         last-i (dec (count crumbs))
         branch "└── "
         space  "    "]
@@ -191,13 +191,20 @@
       (map-indexed
         (fn [i crumb]
           (if (zero? i)
-            (str crumb " @ " (second (re-find #"blob/([^/]*)" (:source-link item))))
+            (str crumb " @ " (second (re-find #"blob/([^/]*)" link)))
             (str (join (repeat (dec i) space))
                  branch
                  (if (= i last-i)
-                   (source-link crumb item)
+                   (source-link crumb source)
                    crumb))))
         crumbs))))
+
+(defn add-source-trees
+  [item]
+  (let [add-tree #(assoc % :path-tree (source-path %))]
+    (-> item
+        (update-in [:source] add-tree)
+        (update-in [:shadowed-sources] #(map add-tree %)))))
 
 (defn ref-file-data
   [item]
@@ -212,8 +219,8 @@
                                            (:name item))
                                    :args (sig-args %))
                         (:signature item))
-        :source-path (source-path item)
         :clj-symbol (make-clj-ref item))
+      (add-source-trees)
       (update-in [:docstring]
         #(if (or (nil? %) (= "" (trim %)))
            "(no docstring)"

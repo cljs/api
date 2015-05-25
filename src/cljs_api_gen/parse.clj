@@ -266,10 +266,10 @@
         filename (subs (:file m) (inc (count repos-dir)))
         github-link (get-github-file-link *cur-repo* filename lines)]
     {:ns *cur-ns*
-     :source source
-     :source-filename filename
-     :source-lines lines
-     :source-link github-link
+     :source {:code source
+              :filename filename
+              :lines lines
+              :link github-link}
      :potential-comment potential-comment}))
 
 (defn parse-common-def
@@ -303,7 +303,7 @@
     (let [common (parse-common-def form)
           location (parse-location form)
           merged (merge specific location common)
-          final (update-in merged [:source] try-remove-docs (:expected-docs specific))
+          final (update-in merged [:source :code] try-remove-docs (:expected-docs specific))
           internal? (internal-def-only? final)]
       (when-not internal?
         final))))
@@ -566,7 +566,7 @@
         make (fn [name-]
                (assoc
                  (select-keys try-form
-                              [:docstring :source-filename :source-lines :source-link])
+                              [:docstring :source])
                  :full-name (str "special/" name-)
                  :ns "special"
                  :type "special form"

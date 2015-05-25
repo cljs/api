@@ -24,13 +24,28 @@
 
 ---
 
+{{#source}}
  <pre>
-{{&source-path}}
+{{&path-tree}}
 </pre>
 
 ```clj
-{{&source}}
+{{&code}}
 ```
+{{/source}}
+
+{{#shadowed-sources}}
+
+---
+
+ <pre>
+{{&path-tree}}
+</pre>
+
+```clj
+{{&code}}
+```
+{{/shadowed-sources}}
 
 ---
 

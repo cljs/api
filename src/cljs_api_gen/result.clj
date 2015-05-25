@@ -34,9 +34,6 @@
                     :methods
                     :history
                     :return-type
-                    :source-filename
-                    :source-link
-                    :source-lines
                     :clj-symbol
                     :source])
     (update-in $ [:signature] #(mapv str %))
@@ -47,13 +44,20 @@
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
 
+(defn resolve-duplicates
+  [items]
+  (let [item (last items)
+        shadowed (drop 1 (reverse items))]
+    (if-not (empty? shadowed)
+      (assoc item :shadowed-sources (map :source shadowed))
+      item)))
+
 (defn transform-items
   [items]
   (->> items
        (map transform-item)
        (group-by :full-name)
-       (mapmap last) ;; remove duplicates by preferring the last
-       ))
+       (mapmap resolve-duplicates)))
 
 (defn mark-removed
   [prev-item prev-hist prev-version]
