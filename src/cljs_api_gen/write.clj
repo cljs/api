@@ -386,14 +386,21 @@
   (mkdir *output-dir*)
   (mkdir (str *output-dir* "/" refs-dir))
 
+  (println "writing ref files...")
   (doseq [item (vals (:symbols (:library-api result)))]
     (dump-ref-file! item))
-
   (doseq [item (vals (:symbols (:compiler-api result)))]
     (dump-ref-file! item))
 
+  (println "writing readme...")
   (dump-readme! result)
+
+  (println "writing history...")
   (dump-history! result)
+
+  (println "writing unported...")
   (dump-unported! result)
+
+  (println "writing edn...")
   (dump-edn-file! result))
 
