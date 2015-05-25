@@ -31,7 +31,7 @@
    "clojure.browser.dom"          "browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)"
    "clojure.browser.event"        "browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)"
    "clojure.browser.net"          "network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)"
-   "clojure.browser.repl"         "evalute compiled cljs in a browser. send results back to server"
+   "clojure.browser.repl"         "evaluate compiled cljs in a browser. send results back to server"
    "clojure.core.reducers"        "a library for reduction and parallel folding (parallelism not supported)"
    "clojure.reflect"              "DEPRECATED. Do not use, superceded by REPL enhancements."
    "cljs.nodejs"                  "nodejs support functions"
