@@ -169,7 +169,7 @@
   [text]
   (let [[_ args] (re-find #"^\[(.*)\]$" text)]
     (if (not= "" (trim args))
-      args
+      (md-escape args)
       nil)))
 
 (defn source-link
@@ -214,9 +214,8 @@
                         (:removed item) md-strikethru)
         :data (with-out-str (pprint item))
         :history (map history-change-shield (:history item))
-        :signature (map #(hash-map :name (if (= "type" (:type item))
-                                           (str (:name item) ".")
-                                           (:name item))
+        :signature (map #(hash-map :name (cond-> (md-escape (:name item))
+                                           (= "type" (:type item)) (str "."))
                                    :args (sig-args %))
                         (:signature item))
         :clj-symbol (make-clj-ref item))
