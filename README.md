@@ -96,6 +96,27 @@ usages, and cross-refs.
     lein run '{:version "r927", :out-dir "old-docs"}'
     ```
 
+---
+
+ <table>
+<tr><td>
+:warning: __Markdown File generation requires a case-sensitive file system__
+
+If you're just trying to generate the autodocs.edn file, you can ignore this.
+Otherwise, the per-symbol markdown ref files will overwrite one another if
+they have the same name when case is ignored by the file system. For example,
+`cljs.core_cons.md` and `cljs.core_Cons.md` will clobber one another on Windows
+and Mac since they consider them the same name, whereas Clojure recognizes them
+as separate symbols.
+
+See [Issue #48](https://github.com/cljsinfo/api-refs/issues/48) for how I solved
+this on Mac.
+</td></tr>
+</table>
+
+---
+
+
 ## Implementation
 
 To build the API reference, we are doing self-analysis of literal forms created
