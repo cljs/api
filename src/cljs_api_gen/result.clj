@@ -2,8 +2,8 @@
   (:require
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
-    [cljs-api-gen.util :refer [symbol->filename
-                               mapmap]]
+    [cljs-api-gen.encode :refer [encode-fullname]]
+    [cljs-api-gen.util :refer [mapmap]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       attach-clj-symbol]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
@@ -38,7 +38,7 @@
                     :source])
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
-    (assoc $ :full-name-encode (str (:ns $) "_" (symbol->filename (:name $))))
+    (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)
     ;; NOTE: don't forget to add a $ for any following expressions

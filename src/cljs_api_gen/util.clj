@@ -4,18 +4,9 @@
     [clojure.string :refer [replace]]
     ))
 
-(defn symbol->filename
+(defn split-ns-and-name
   [s]
-  (-> (name s)
-      (replace "." "DOT")
-      (replace ">" "GT")
-      (replace "<" "LT")
-      (replace "!" "BANG")
-      (replace "?" "QMARK")
-      (replace "*" "STAR")
-      (replace "+" "PLUS")
-      (replace "=" "EQ")
-      (replace "/" "SLASH")))
+  ((juxt namespace name) (symbol s)))
 
 (defn mapmap
   "Apply a map function over the values of a map, returning a map."
@@ -23,7 +14,3 @@
   (let [[ks vs] ((juxt keys vals) datamap)
         result (zipmap ks (map mapf vs))]
     result))
-
-(defn split-ns-and-name
-  [s]
-  ((juxt namespace name) s))

@@ -9,7 +9,8 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  refs-dir
                                  edn-result-file]]
-    [cljs-api-gen.util :refer [symbol->filename mapmap
+    [cljs-api-gen.encode :as encode]
+    [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
@@ -126,7 +127,7 @@
 
 (defn item-filename
   [item]
-  (str *output-dir* "/" refs-dir "/" (:ns item) "_" (symbol->filename (:name item))))
+  (str *output-dir* "/" refs-dir "/" (encode/encode-fullname (:full-name item))))
 
 (defn history-change
   [[change version]]
@@ -227,6 +228,7 @@
 
 (defn dump-ref-file!
   [item]
+  (encode/assert-lossless (:full-name item))
   (let [filename (item-filename item)]
     (spit (str filename ".md")
       (stencil/render-string
