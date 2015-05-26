@@ -123,6 +123,8 @@ To build the API reference, we are doing self-analysis of literal forms created
 from `tools.reader` rather than using `tools.analyzer`. We may use the helpful
 wrapper [codox] if this becomes insufficient.
 
+[codox]:https://github.com/weavejester/codox
+
 It's worth nothing that parsing the full `cljs.core` namespace requires:
 
 - finding __macros__ in `clojure.core` (specific clj version in `cljs/script/bootstrap`)
@@ -162,7 +164,26 @@ These are the source files concerned with the API reference generator:
 [write.clj]:src/cljs_api_gen/write.clj
 [util.clj]:src/cljs_api_gen/util.clj
 
-[codox]:https://github.com/weavejester/codox
+### Template Files
+
+These are the mustache templates that we use to render the catalog files.
+
+| Template File | Description |
+|--------------:|-------------|
+| <samp>[readme.md]</samp>   | API overview page |
+| <samp>[ref.md]</samp>      | per-symbol details page |
+| <samp>[history.md]</samp>  | version history and changes |
+| <samp>[unported.md]</samp> | table of symbols not ported from clojure |
+
+[readme.md]:templates/readme.md
+[ref.md]:templates/ref.md
+[history.md]:templates/history.md
+[unported.md]:templates/unported.md
+
+:+1: I use __[Grip]__ to preview the rendered github-flavored markdown.
+
+[Grip]:https://github.com/joeyespo/grip
+
 
 ## License
 
