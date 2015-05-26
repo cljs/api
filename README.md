@@ -158,6 +158,7 @@ These are the source files concerned with the API reference generator:
 [clojure_api.clj]:src/cljs_api_gen/clojure_api.clj
 [config.clj]:src/cljs_api_gen/config.clj
 [docstring.clj]:src/cljs_api_gen/docstring.clj
+[encode.clj]:src/cljs_api_gen/encode.clj
 [parse.clj]:src/cljs_api_gen/parse.clj
 [read.clj]:src/cljs_api_gen/read.clj
 [repo_cljs.clj]:src/cljs_api_gen/repo_cljs.clj
