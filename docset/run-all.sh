@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./docset.sh && ./clean.js
+./download.sh && ./clean.js
