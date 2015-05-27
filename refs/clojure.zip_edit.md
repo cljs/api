@@ -21,11 +21,11 @@ Replaces the node at this loc with the value of (f node args)
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L189-L192)</ins>
+            └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/zip.cljs#L189-L192)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1424
  :source {:code "(defn edit\n  [loc f & args]\n    (replace loc (apply f (node loc) args)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [189 192],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L189-L192"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/zip.cljs#L189-L192"},
  :full-name "clojure.zip/edit",
  :clj-symbol "clojure.zip/edit",
  :docstring "Replaces the node at this loc with the value of (f node args)"}

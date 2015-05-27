@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1888-1889](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1888-L1889)</ins>
+            └── <ins>[core.cljs:1902-1903](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1902-L1903)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1424
  :signature ["[s]"],
  :source {:code "(defn chunk-first [s]\n  (-chunked-first s))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1888 1889],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1888-L1889"},
+          :lines [1902 1903],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1902-L1903"},
  :full-name-encode "cljs.core_chunk-first",
  :history [["+" "0.0-1424"]]}
 

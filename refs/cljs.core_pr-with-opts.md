@@ -19,22 +19,22 @@ the options given in opts
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6130-6139](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6130-L6139)</ins>
+            └── <ins>[core.cljs:6171-6180](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180)</ins>
 </pre>
 
 ```clj
 (defn pr-with-opts
   [objs opts]
-  (let [first-obj (first objs)]
-    (doseq [obj objs]
-      (when-not (identical? obj first-obj)
-        (string-print " "))
-      (doseq [string (pr-seq obj opts)]
-        (string-print string)))))
+  (doseq [string (pr-seq (first objs) opts)]
+    (string-print string))
+  (doseq [obj (next objs)]
+    (string-print " ")
+    (doseq [string (pr-seq obj opts)]
+      (string-print string))))
 ```
 
 
@@ -47,10 +47,10 @@ clojurescript @ r1424
  :docstring "Prints a sequence of objects using string-print, observing all\nthe options given in opts",
  :type "function",
  :signature ["[objs opts]"],
- :source {:code "(defn pr-with-opts\n  [objs opts]\n  (let [first-obj (first objs)]\n    (doseq [obj objs]\n      (when-not (identical? obj first-obj)\n        (string-print \" \"))\n      (doseq [string (pr-seq obj opts)]\n        (string-print string)))))",
+ :source {:code "(defn pr-with-opts\n  [objs opts]\n  (doseq [string (pr-seq (first objs) opts)]\n    (string-print string))\n  (doseq [obj (next objs)]\n    (string-print \" \")\n    (doseq [string (pr-seq obj opts)]\n      (string-print string))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6130 6139],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6130-L6139"},
+          :lines [6171 6180],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180"},
  :full-name-encode "cljs.core_pr-with-opts",
  :history [["+" "0.0-927"]]}
 

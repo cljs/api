@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:223-226](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L223-L226)</ins>
+                └── <ins>[reducers.cljs:223-226](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L223-L226)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1424
  :source {:code "(defn append!\n  [acc x]\n  (doto acc (.add x)))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [223 226],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L223-L226"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L223-L226"},
  :full-name-encode "clojure.core.reducers_append_BANG_",
  :history [["+" "0.0-1236"]]}
 

@@ -19,12 +19,12 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
+                └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1424
  :source {:code "(defn element\n  ([tag-or-text]\n     (log \"(element \" tag-or-text \")\")\n     (-element tag-or-text))\n  ([tag & children]\n     (log \"(element \" tag \" \" children \")\")\n     (let [attrs (first children)]\n       (if (map? attrs)\n         (-element tag attrs (rest children))\n         (-element tag nil children)))))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [81 90],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/dom.cljs#L81-L90"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/dom.cljs#L81-L90"},
  :full-name-encode "clojure.browser.dom_element",
  :history [["+" "0.0-927"]]}
 

@@ -19,12 +19,12 @@ Applies f to every value in the reduction of coll. Foldable.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:85-93](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L85-L93)</ins>
+                └── <ins>[reducers.cljs:85-93](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L85-L93)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1424
  :source {:code "(defcurried map\n  \"Applies f to every value in the reduction of coll. Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (f1 ret (f k v)))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [85 93],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L85-L93"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L85-L93"},
  :full-name-encode "clojure.core.reducers_map",
  :history [["+" "0.0-1236"]]}
 

@@ -24,11 +24,11 @@ that does not contain a mapping for key(s).
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:781-791](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L781-L791)</ins>
+            └── <ins>[core.cljs:789-799](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L789-L799)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_dissoc",
  :source {:code "(defn dissoc\n  ([coll] coll)\n  ([coll k]\n     (-dissoc coll k))\n  ([coll k & ks]\n     (let [ret (dissoc coll k)]\n       (if ks\n         (recur ret (first ks) (next ks))\n         ret))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [781 791],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L781-L791"},
+          :lines [789 799],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L789-L799"},
  :full-name "cljs.core/dissoc",
  :clj-symbol "clojure.core/dissoc",
  :docstring "dissoc[iate]. Returns a new map of the same (hashed/sorted) type,\nthat does not contain a mapping for key(s)."}

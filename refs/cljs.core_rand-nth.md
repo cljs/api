@@ -23,11 +23,11 @@ collection.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6600-6605](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6600-L6605)</ins>
+            └── <ins>[core.cljs:6646-6651](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6646-L6651)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_rand-nth",
  :source {:code "(defn rand-nth\n  [coll]\n  (nth coll (rand-int (count coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6600 6605],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6600-L6605"},
+          :lines [6646 6651],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6646-L6651"},
  :full-name "cljs.core/rand-nth",
  :clj-symbol "clojure.core/rand-nth",
  :docstring "Return a random element of the (sequential) collection. Will have\nthe same performance characteristics as nth for the given\ncollection."}

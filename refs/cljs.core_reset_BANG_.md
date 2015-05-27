@@ -22,11 +22,11 @@ current value. Returns newval.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6389-6398](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6389-L6398)</ins>
+            └── <ins>[core.cljs:6435-6444](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6435-L6444)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_reset_BANG_",
  :source {:code "(defn reset!\n  [a new-value]\n  (when-let [validate (.-validator a)]\n    (assert (validate new-value) \"Validator rejected reference state\"))\n  (let [old-value (.-state a)]\n    (set! (.-state a) new-value)\n    (-notify-watches a old-value new-value))\n  new-value)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6389 6398],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6389-L6398"},
+          :lines [6435 6444],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6435-L6444"},
  :full-name "cljs.core/reset!",
  :clj-symbol "clojure.core/reset!",
  :docstring "Sets the value of atom to newval without regard for the\ncurrent value. Returns newval."}

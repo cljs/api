@@ -22,11 +22,11 @@ from-coll conjoined.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2592-2598](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2592-L2598)</ins>
+            └── <ins>[core.cljs:2606-2612](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2606-L2612)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_into",
  :source {:code "(defn into\n  [to from]\n  (if (satisfies? IEditableCollection to)\n    (persistent! (reduce -conj! (transient to) from))\n    (reduce -conj to from)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2592 2598],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2592-L2598"},
+          :lines [2606 2612],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2606-L2612"},
  :full-name "cljs.core/into",
  :clj-symbol "clojure.core/into",
  :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined."}

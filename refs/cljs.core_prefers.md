@@ -21,11 +21,11 @@ Given a multimethod, returns a map of preferred value -> set of other values
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6880-6882](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6880-L6882)</ins>
+            └── <ins>[core.cljs:6926-6928](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6926-L6928)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_prefers",
  :source {:code "(defn prefers\n  [multifn] (-prefers multifn))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6880 6882],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6880-L6882"},
+          :lines [6926 6928],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6926-L6928"},
  :full-name "cljs.core/prefers",
  :clj-symbol "clojure.core/prefers",
  :docstring "Given a multimethod, returns a map of preferred value -> set of other values"}

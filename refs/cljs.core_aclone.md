@@ -21,11 +21,11 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-74](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L71-L74)</ins>
+            └── <ins>[core.cljs:73-76](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L73-L76)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1424
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:892-893](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L892-L893)</ins>
+            └── <ins>[core.clj:990-991](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L990-L991)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1424
  :signature ["[array-like]"],
  :shadowed-sources ({:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [892 893],
-                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L892-L893"}),
+                     :lines [990 991],
+                     :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L990-L991"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aclone",
  :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [71 74],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L71-L74"},
+          :lines [73 76],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L73-L76"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:15-15](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L15-L15)</ins>
+            └── <ins>[core.cljs:16-16](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L16-L16)</ins>
 </pre>
 
 ```clj
@@ -38,8 +38,8 @@ clojurescript @ r1424
  :type "var",
  :source {:code "(def *unchecked-if* false)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [15 15],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L15-L15"},
+          :lines [16 16],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L16-L16"},
  :full-name-encode "cljs.core__STAR_unchecked-if_STAR_",
  :history [["+" "0.0-1211"]]}
 

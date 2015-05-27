@@ -21,11 +21,11 @@ println to a string, returning it
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6193-6196](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6193-L6196)</ins>
+            └── <ins>[core.cljs:6234-6237](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6234-L6237)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_println-str",
  :source {:code "(defn println-str\n  [& objs]\n  (prn-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6193 6196],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6193-L6196"},
+          :lines [6234 6237],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6234-L6237"},
  :full-name "cljs.core/println-str",
  :clj-symbol "clojure.core/println-str",
  :docstring "println to a string, returning it"}

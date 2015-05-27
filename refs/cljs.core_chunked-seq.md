@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3095-3099](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3095-L3099)</ins>
+            └── <ins>[core.cljs:3109-3113](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3109-L3113)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1424
  :signature ["[vec i off]" "[vec node i off]" "[vec node i off meta]"],
  :source {:code "(defn chunked-seq\n  ([vec i off] (chunked-seq vec (array-for vec i) i off nil))\n  ([vec node i off] (chunked-seq vec node i off nil))\n  ([vec node i off meta]\n     (ChunkedSeq. vec node i off meta)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3095 3099],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3095-L3099"},
+          :lines [3109 3113],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3109-L3113"},
  :full-name-encode "cljs.core_chunked-seq",
  :history [["+" "0.0-1424"]]}
 

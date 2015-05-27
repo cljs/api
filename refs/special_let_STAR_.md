@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:487-489](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L487-L489)</ins>
+            └── <ins>[analyzer.clj:487-489](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L487-L489)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1424
  :source {:code "(defmethod parse 'let*\n  [op encl-env form _]\n  (analyze-let encl-env form false))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
           :lines [487 489],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L487-L489"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L487-L489"},
  :full-name-encode "special_let_STAR_",
  :history [["+" "0.0-927"]]}
 

@@ -19,11 +19,11 @@ argv as arguments
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:58-62](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L58-L62)</ins>
+            └── <ins>[core.cljs:60-64](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L60-L64)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1424
  :type "var",
  :source {:code "(def\n  ^{:doc \"When compiled for a command-line target, whatever\n  function *main-fn* is set to will be called with the command-line\n  argv as arguments\"}\n  *main-cli-fn* nil)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [58 62],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L58-L62"},
+          :lines [60 64],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L60-L64"},
  :full-name-encode "cljs.core__STAR_main-cli-fn_STAR_",
  :history [["+" "0.0-927"]]}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:54-56](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L54-L56)</ins>
+            └── <ins>[core.cljs:56-58](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L56-L58)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1424
  :signature ["[x]"],
  :source {:code "(defn is_proto_\n  [x]\n  (identical? (.-prototype (.-constructor x)) x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [54 56],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L54-L56"},
+          :lines [56 58],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L56-L58"},
  :full-name-encode "cljs.core_is_proto_",
  :history [["+" "0.0-927"]]}
 

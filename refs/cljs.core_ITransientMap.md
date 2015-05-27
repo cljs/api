@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:257-258](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L257-L258)</ins>
+            └── <ins>[core.cljs:259-260](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L259-L260)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_ITransientMap",
  :source {:code "(defprotocol ITransientMap\n  (-dissoc! [tcoll key]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [257 258],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L257-L258"},
+          :lines [259 260],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L259-L260"},
  :methods [{:name "-dissoc!",
             :signature ["[tcoll key]"],
             :docstring nil}],

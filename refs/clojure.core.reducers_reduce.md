@@ -21,12 +21,12 @@ Like core/reduce except:
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:20-28](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L20-L28)</ins>
+                └── <ins>[reducers.cljs:20-28](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L20-L28)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1424
  :source {:code "(defn reduce\n  ([f coll] (reduce f (f) coll))\n  ([f init coll]\n     (if (map? coll)\n       (-kv-reduce coll f init)\n       (-reduce coll f init))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [20 28],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L20-L28"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L20-L28"},
  :full-name-encode "clojure.core.reducers_reduce",
  :history [["+" "0.0-1236"]]}
 

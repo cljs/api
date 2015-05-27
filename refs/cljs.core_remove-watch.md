@@ -23,11 +23,11 @@ Removes a watch (set by add-watch) from a reference
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6485-6490](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6485-L6490)</ins>
+            └── <ins>[core.cljs:6531-6536](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6531-L6536)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_remove-watch",
  :source {:code "(defn remove-watch\n  [iref key]\n  (-remove-watch iref key))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6485 6490],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6485-L6490"},
+          :lines [6531 6536],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6531-L6536"},
  :full-name "cljs.core/remove-watch",
  :clj-symbol "clojure.core/remove-watch",
  :docstring "Alpha - subject to change.\n\nRemoves a watch (set by add-watch) from a reference"}

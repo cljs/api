@@ -22,11 +22,11 @@ argument. If coll is nil, returns nil.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:616-625](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L616-L625)</ins>
+            └── <ins>[core.cljs:624-633](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L624-L633)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_first",
  :source {:code "(defn first\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? ISeq coll)\n      (-first coll)\n      (let [s (seq coll)]\n        (when-not (nil? s)\n          (-first s))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [616 625],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L616-L625"},
+          :lines [624 633],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L624-L633"},
  :full-name "cljs.core/first",
  :clj-symbol "clojure.core/first",
  :docstring "Returns the first item in the collection. Calls seq on its\nargument. If coll is nil, returns nil."}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:236-237](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L236-L237)</ins>
+            └── <ins>[core.cljs:238-239](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L238-L239)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_IPrintable",
  :source {:code "(defprotocol IPrintable\n  (-pr-seq [o opts]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [236 237],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L236-L237"},
+          :lines [238 239],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L238-L239"},
  :methods [{:name "-pr-seq", :signature ["[o opts]"], :docstring nil}],
  :full-name "cljs.core/IPrintable",
  :history [["+" "0.0-927"]]}

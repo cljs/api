@@ -22,11 +22,11 @@ Returns a Symbol with the given namespace and name.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1443-1448](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1443-L1448)</ins>
+            └── <ins>[core.cljs:1453-1458](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1453-L1458)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_symbol",
  :source {:code "(defn symbol\n  ([name] (cond (symbol? name) name\n                (keyword? name) (str* \"\\uFDD1\" \"'\" (subs name 2)))\n     :else (str* \"\\uFDD1\" \"'\" name))\n  ([ns name] (symbol (str* ns \"/\" name))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1443 1448],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1443-L1448"},
+          :lines [1453 1458],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1453-L1458"},
  :full-name "cljs.core/symbol",
  :clj-symbol "clojure.core/symbol",
  :docstring "Returns a Symbol with the given namespace and name."}

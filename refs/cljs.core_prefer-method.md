@@ -22,11 +22,11 @@ when there is a conflict
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6865-6869](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6865-L6869)</ins>
+            └── <ins>[core.cljs:6911-6915](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6911-L6915)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_prefer-method",
  :source {:code "(defn prefer-method\n  [multifn dispatch-val-x dispatch-val-y]\n  (-prefer-method multifn dispatch-val-x dispatch-val-y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6865 6869],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6865-L6869"},
+          :lines [6911 6915],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6911-L6915"},
  :full-name "cljs.core/prefer-method",
  :clj-symbol "clojure.core/prefer-method",
  :docstring "Causes the multimethod to prefer matches of dispatch-val-x over dispatch-val-y\nwhen there is a conflict"}

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1614-1615](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1614-L1615)</ins>
+            └── <ins>[core.cljs:1624-1625](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1624-L1625)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1424
  :signature ["[coll]"],
  :source {:code "(defn rseq [coll]\n  (-rseq coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1614 1615],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1614-L1615"},
+          :lines [1624 1625],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1624-L1625"},
  :full-name-encode "cljs.core_rseq",
  :clj-symbol "clojure.core/rseq",
  :history [["+" "0.0-1211"]]}

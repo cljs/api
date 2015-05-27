@@ -20,12 +20,12 @@ Applies f to every value in the reduction of coll, concatenating the result
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:95-104](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L95-L104)</ins>
+                └── <ins>[reducers.cljs:95-104](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L95-L104)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1424
  :source {:code "(defcurried mapcat\n  \"Applies f to every value in the reduction of coll, concatenating the result\n  colls of (f val). Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (reduce f1 ret (f k v)))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [95 104],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L95-L104"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L95-L104"},
  :full-name-encode "clojure.core.reducers_mapcat",
  :history [["+" "0.0-1236"]]}
 

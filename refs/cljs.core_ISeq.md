@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:158-160](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L158-L160)</ins>
+            └── <ins>[core.cljs:160-162](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L160-L162)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_ISeq",
  :source {:code "(defprotocol ISeq\n  (-first [coll])\n  (-rest [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [158 160],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L158-L160"},
+          :lines [160 162],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L160-L162"},
  :methods [{:name "-first", :signature ["[coll]"], :docstring nil}
            {:name "-rest", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/ISeq",

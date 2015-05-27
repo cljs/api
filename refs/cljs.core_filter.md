@@ -22,11 +22,11 @@ Returns a lazy sequence of the items in coll for which
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2544-2561](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2544-L2561)</ins>
+            └── <ins>[core.cljs:2558-2575](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2558-L2575)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_filter",
  :source {:code "(defn filter\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2544 2561],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2544-L2561"},
+          :lines [2558 2575],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2558-L2575"},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}

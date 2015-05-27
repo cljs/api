@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:992-993](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L992-L993)</ins>
+            └── <ins>[core.cljs:997-998](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L997-L998)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_ifn_QMARK_",
  :source {:code "(defn ^boolean ifn? [f]\n  (or (fn? f) (satisfies? IFn f)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [992 993],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L992-L993"},
+          :lines [997 998],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L997-L998"},
  :full-name "cljs.core/ifn?",
  :clj-symbol "clojure.core/ifn?"}
 

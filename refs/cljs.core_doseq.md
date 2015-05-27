@@ -23,11 +23,11 @@ the head of the sequence. Returns nil.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:834-869](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L834-L869)</ins>
+            └── <ins>[core.clj:932-967](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L932-L967)</ins>
 </pre>
 
 ```clj
@@ -78,8 +78,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_doseq",
  :source {:code "(defmacro doseq\n  [seq-exprs & body]\n  (assert-args doseq\n     (vector? seq-exprs) \"a vector for its binding\"\n     (even? (count seq-exprs)) \"an even number of forms in binding vector\")\n  (let [step (fn step [recform exprs]\n               (if-not exprs\n                 [true `(do ~@body)]\n                 (let [k (first exprs)\n                       v (second exprs)\n                       \n                       seqsym (when-not (keyword? k) (gensym))\n                       recform (if (keyword? k) recform `(recur (first ~seqsym) ~seqsym))\n                       steppair (step recform (nnext exprs))\n                       needrec (steppair 0)\n                       subform (steppair 1)]\n                   (cond\n                     (= k :let) [needrec `(let ~v ~subform)]\n                     (= k :while) [false `(when ~v\n                                            ~subform\n                                            ~@(when needrec [recform]))]\n                     (= k :when) [false `(if ~v\n                                           (do\n                                             ~subform\n                                             ~@(when needrec [recform]))\n                                           ~recform)]\n                     :else [true `(let [~seqsym (seq ~v)]\n                                    (when ~seqsym\n                                      (loop [~k (first ~seqsym) ~seqsym ~seqsym]\n                                       ~subform\n                                       (when-let [~seqsym (next ~seqsym)]\n                                        ~@(when needrec [recform])))))]))))]\n    (nth (step nil (seq seq-exprs)) 1)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [834 869],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L834-L869"},
+          :lines [932 967],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L932-L967"},
  :full-name "cljs.core/doseq",
  :clj-symbol "clojure.core/doseq",
  :docstring "Repeatedly executes body (presumably for side-effects) with\nbindings and filtering as provided by \"for\".  Does not retain\nthe head of the sequence. Returns nil."}

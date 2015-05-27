@@ -21,11 +21,11 @@ Returns true if coll implements count in constant time
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:883-885](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L883-L885)</ins>
+            └── <ins>[core.cljs:891-893](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L891-L893)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_counted_QMARK_",
  :source {:code "(defn ^boolean counted?\n  [x] (satisfies? ICounted x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [883 885],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L883-L885"},
+          :lines [891 893],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L891-L893"},
  :full-name "cljs.core/counted?",
  :clj-symbol "clojure.core/counted?",
  :docstring "Returns true if coll implements count in constant time"}

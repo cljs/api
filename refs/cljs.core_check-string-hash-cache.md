@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:840-847](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L840-L847)</ins>
+            └── <ins>[core.cljs:848-855](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L848-L855)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1424
  :signature ["[k]"],
  :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if-not (nil? h)\n      h\n      (add-to-string-hash-cache k))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [840 847],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L840-L847"},
+          :lines [848 855],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L848-L855"},
  :full-name-encode "cljs.core_check-string-hash-cache",
  :history [["+" "0.0-1424"]]}
 

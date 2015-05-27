@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:709-731](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L709-L731)</ins>
+            └── <ins>[core.clj:815-837](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L815-L837)</ins>
 </pre>
 
 ```clj
@@ -65,8 +65,8 @@ clojurescript @ r1424
  :signature ["[e & clauses]"],
  :source {:code "(defmacro case [e & clauses]\n  (let [default (if (odd? (count clauses))\n                  (last clauses)\n                  `(throw (js/Error. (core/str \"No matching clause: \" ~e))))\n        assoc-test (fn assoc-test [m test expr]\n                         (if (contains? m test)\n                           (throw (clojure.core/IllegalArgumentException.\n                                   (core/str \"Duplicate case test constant '\"\n                                             test \"'\"\n                                             (when (:line &env)\n                                               (core/str \" on line \" (:line &env) \" \"\n                                                         cljs.analyzer/*cljs-file*)))))\n                           (assoc m test expr)))\n        pairs (reduce (fn [m [test expr]]\n                        (if (seq? test)\n                          (reduce #(assoc-test %1 %2 expr) m test)\n                          (assoc-test m test expr)))\n                      {} (partition 2 clauses))\n        esym (gensym)]\n   `(let [~esym ~e]\n      (cond\n        ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n        :else ~default))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [709 731],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L709-L731"},
+          :lines [815 837],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L815-L837"},
  :full-name-encode "cljs.core_case",
  :clj-symbol "clojure.core/case",
  :history [["+" "0.0-1211"]]}

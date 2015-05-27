@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1943-1962](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1943-L1962)</ins>
+            └── <ins>[core.cljs:1957-1976](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1957-L1976)</ins>
 </pre>
 
 ```clj
@@ -63,8 +63,8 @@ clojurescript @ r1424
  :signature ["[size-or-seq]" "[size init-val-or-seq]"],
  :source {:code "(defn double-array\n  ([size-or-seq]\n     (cond\n      (number? size-or-seq) (double-array size-or-seq nil)\n      (seq? size-or-seq) (into-array size-or-seq)\n      :else (throw (js/Error. \"double-array called with something other than size or ISeq\"))))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1943 1962],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1943-L1962"},
+          :lines [1957 1976],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1957-L1976"},
  :full-name-encode "cljs.core_double-array",
  :clj-symbol "clojure.core/double-array",
  :history [["+" "0.0-1211"]]}

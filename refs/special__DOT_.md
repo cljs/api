@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:742-760](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L742-L760)</ins>
+            └── <ins>[analyzer.clj:742-760](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L742-L760)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r1424
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)]\n     (case dot-action\n           ::access {:env env :op :dot :form form\n                     :target targetexpr\n                     :field field\n                     :children [targetexpr]\n                     :tag (-> form meta :tag)}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :form form\n                       :target targetexpr\n                       :method method\n                       :args argexprs\n                       :children (into [targetexpr] argexprs)\n                       :tag (-> form meta :tag)})))))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
           :lines [742 760],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L742-L760"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L742-L760"},
  :full-name-encode "special__DOT_",
  :clj-symbol "clojure.core/.",
  :history [["+" "0.0-927"]]}

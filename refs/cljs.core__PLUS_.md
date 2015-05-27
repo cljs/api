@@ -24,11 +24,11 @@ Returns the sum of nums. (+) returns 0.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1177-1182](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1177-L1182)</ins>
+            └── <ins>[core.cljs:1182-1187](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1182-L1187)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1424
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:116-120](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L116-L120)</ins>
+            └── <ins>[core.clj:221-225](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L221-L225)</ins>
 </pre>
 
 ```clj
@@ -66,15 +66,15 @@ clojurescript @ r1424
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro +\n  ([] 0)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} + ~{})\" x y))\n  ([x y & more] `(+ (+ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [116 120],
-                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L116-L120"}),
+                     :lines [221 225],
+                     :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L221-L225"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__PLUS_",
  :source {:code "(defn +\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/+ x y))\n  ([x y & more] (reduce + (cljs.core/+ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1177 1182],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1177-L1182"},
+          :lines [1182 1187],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1182-L1187"},
  :full-name "cljs.core/+",
  :clj-symbol "clojure.core/+",
  :docstring "Returns the sum of nums. (+) returns 0."}

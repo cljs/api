@@ -21,11 +21,11 @@ Returns the length of the array. Works on arrays of all types.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:102-105](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L102-L105)</ins>
+            └── <ins>[core.cljs:104-107](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L104-L107)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1424
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:889-890](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L889-L890)</ins>
+            └── <ins>[core.clj:987-988](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L987-L988)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1424
  :signature ["[array]"],
  :shadowed-sources ({:code "(defmacro alength [a]\n  (list 'js* \"~{}.length\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [889 890],
-                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L889-L890"}),
+                     :lines [987 988],
+                     :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L987-L988"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_alength",
  :source {:code "(defn alength\n  [array]\n  (.-length array))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [102 105],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L102-L105"},
+          :lines [104 107],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L104-L107"},
  :full-name "cljs.core/alength",
  :clj-symbol "clojure.core/alength",
  :docstring "Returns the length of the array. Works on arrays of all types."}

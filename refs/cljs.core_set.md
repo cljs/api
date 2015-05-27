@@ -21,21 +21,17 @@ Returns a set of the distinct elements of coll.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5684-5691](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5684-L5691)</ins>
+            └── <ins>[core.cljs:5729-5732](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5729-L5732)</ins>
 </pre>
 
 ```clj
 (defn set
   [coll]
-  (loop [in (seq coll)
-         out (transient cljs.core.PersistentHashSet/EMPTY)]
-    (if (seq in)
-      (recur (next in) (conj! out (first in)))
-      (persistent! out))))
+  (apply hash-set coll))
 ```
 
 
@@ -48,10 +44,10 @@ clojurescript @ r1424
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_set",
- :source {:code "(defn set\n  [coll]\n  (loop [in (seq coll)\n         out (transient cljs.core.PersistentHashSet/EMPTY)]\n    (if (seq in)\n      (recur (next in) (conj! out (first in)))\n      (persistent! out))))",
+ :source {:code "(defn set\n  [coll]\n  (apply hash-set coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5684 5691],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5684-L5691"},
+          :lines [5729 5732],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5729-L5732"},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

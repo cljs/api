@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:197-198](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L197-L198)</ins>
+            └── <ins>[core.cljs:199-200](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L199-L200)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_IMeta",
  :source {:code "(defprotocol IMeta\n  (-meta [o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [197 198],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L197-L198"},
+          :lines [199 200],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L199-L200"},
  :methods [{:name "-meta", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IMeta",
  :history [["+" "0.0-927"]]}

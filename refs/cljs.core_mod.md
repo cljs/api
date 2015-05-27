@@ -21,11 +21,11 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1286-1289](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289)</ins>
+            └── <ins>[core.cljs:1291-1294](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1291-L1294)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1424
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:188-189](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189)</ins>
+            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L293-L294)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1424
  :signature ["[n d]"],
  :shadowed-sources ({:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [188 189],
-                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189"}),
+                     :lines [293 294],
+                     :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L293-L294"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_mod",
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1286 1289],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289"},
+          :lines [1291 1294],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1291-L1294"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}

@@ -21,11 +21,11 @@ Returns a set of the elements for which pred is true
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:61-65](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/set.cljs#L61-L65)</ins>
+            └── <ins>[set.cljs:61-65](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/set.cljs#L61-L65)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1424
  :source {:code "(defn select\n  [pred xset]\n    (reduce (fn [s k] (if (pred k) s (disj s k)))\n            xset xset))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [61 65],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/set.cljs#L61-L65"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/set.cljs#L61-L65"},
  :full-name "clojure.set/select",
  :clj-symbol "clojure.set/select",
  :docstring "Returns a set of the elements for which pred is true"}

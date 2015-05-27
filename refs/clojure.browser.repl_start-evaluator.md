@@ -18,12 +18,12 @@ Start the REPL server connection.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:60-88](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/repl.cljs#L60-L88)</ins>
+                └── <ins>[repl.cljs:60-88](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/repl.cljs#L60-L88)</ins>
 </pre>
 
 ```clj
@@ -70,7 +70,7 @@ clojurescript @ r1424
  :source {:code "(defn start-evaluator\n  [url]\n  (if-let [repl-connection (net/xpc-connection)]\n    (let [connection (net/xhr-connection)]\n      (event/listen connection\n                    :success\n                    (fn [e]\n                      (net/transmit\n                       repl-connection\n                       :evaluate-javascript\n                       (.getResponseText e/currentTarget\n                                         ()))))\n\n      (net/register-service repl-connection\n                            :send-result\n                            (fn [data]\n                              (send-result connection url (wrap-message :result data))))\n\n      (net/register-service repl-connection\n                            :print\n                            (fn [data]\n                              (send-print url (wrap-message :print data))))\n      \n      (net/connect repl-connection\n                   (constantly nil))\n\n      (js/setTimeout #(send-result connection url (wrap-message :ready \"ready\")) 50))\n    (js/alert \"No 'xpc' param provided to child iframe.\")))",
           :filename "clojurescript/src/cljs/clojure/browser/repl.cljs",
           :lines [60 88],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/repl.cljs#L60-L88"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/repl.cljs#L60-L88"},
  :full-name-encode "clojure.browser.repl_start-evaluator",
  :history [["+" "0.0-927"]]}
 

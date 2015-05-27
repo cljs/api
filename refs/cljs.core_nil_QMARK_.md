@@ -21,11 +21,11 @@ Returns true if x is nil, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:302-305](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L302-L305)</ins>
+            └── <ins>[core.cljs:304-307](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L304-L307)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1424
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:79-80](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L79-L80)</ins>
+            └── <ins>[core.clj:184-185](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L184-L185)</ins>
 </pre>
 
 ```clj
@@ -59,15 +59,15 @@ clojurescript @ r1424
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro nil? [x]\n  `(coercive-= ~x nil))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [79 80],
-                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L79-L80"}),
+                     :lines [184 185],
+                     :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L184-L185"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_nil_QMARK_",
  :source {:code "(defn ^boolean nil?\n  [x]\n  (coercive-= x nil))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [302 305],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L302-L305"},
+          :lines [304 307],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L304-L307"},
  :full-name "cljs.core/nil?",
  :clj-symbol "clojure.core/nil?",
  :docstring "Returns true if x is nil, false otherwise."}

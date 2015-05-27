@@ -21,11 +21,11 @@ Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in k
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:83-86](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/set.cljs#L83-L86)</ins>
+            └── <ins>[set.cljs:83-86](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/set.cljs#L83-L86)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1424
  :source {:code "(defn rename\n  [xrel kmap]\n    (set (map #(rename-keys % kmap) xrel)))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [83 86],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/set.cljs#L83-L86"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/set.cljs#L83-L86"},
  :full-name "clojure.set/rename",
  :clj-symbol "clojure.set/rename",
  :docstring "Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in kmap"}

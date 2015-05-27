@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3964-3967](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3964-L3967)</ins>
+            └── <ins>[core.cljs:3978-3981](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3978-L3981)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1424
  :return-type boolean,
  :source {:code "(defn ^boolean key-test [key other]\n  (if ^boolean (goog/isString key)\n    (identical? key other)\n    (= key other)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3964 3967],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3964-L3967"},
+          :lines [3978 3981],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3978-L3981"},
  :full-name-encode "cljs.core_key-test",
  :history [["+" "0.0-1424"]]}
 

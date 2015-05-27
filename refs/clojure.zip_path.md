@@ -21,11 +21,11 @@ Returns a seq of nodes leading to this loc
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:82-85](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L82-L85)</ins>
+            └── <ins>[zip.cljs:82-85](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/zip.cljs#L82-L85)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1424
  :source {:code "(defn path\n  [loc]\n    (:pnodes (loc 1)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [82 85],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L82-L85"},
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/zip.cljs#L82-L85"},
  :full-name "clojure.zip/path",
  :clj-symbol "clojure.zip/path",
  :docstring "Returns a seq of nodes leading to this loc"}

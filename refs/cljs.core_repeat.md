@@ -22,11 +22,11 @@ Returns a lazy (infinite!, or length n if supplied) sequence of xs.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2483-2486](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2483-L2486)</ins>
+            └── <ins>[core.cljs:2497-2500](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2497-L2500)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_repeat",
  :source {:code "(defn repeat\n  ([x] (lazy-seq (cons x (repeat x))))\n  ([n x] (take n (repeat x))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2483 2486],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2483-L2486"},
+          :lines [2497 2500],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2497-L2500"},
  :full-name "cljs.core/repeat",
  :clj-symbol "clojure.core/repeat",
  :docstring "Returns a lazy (infinite!, or length n if supplied) sequence of xs."}

@@ -21,11 +21,11 @@ Returns the nth next of coll, (seq coll) when n is 0.
 ---
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1397-1403](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1397-L1403)</ins>
+            └── <ins>[core.cljs:1402-1408](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1402-L1408)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1424
  :full-name-encode "cljs.core_nthnext",
  :source {:code "(defn nthnext\n  [coll n]\n  (loop [n n xs (seq coll)]\n    (if (and xs (pos? n))\n      (recur (dec n) (next xs))\n      xs)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1397 1403],
-          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1397-L1403"},
+          :lines [1402 1408],
+          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1402-L1408"},
  :full-name "cljs.core/nthnext",
  :clj-symbol "clojure.core/nthnext",
  :docstring "Returns the nth next of coll, (seq coll) when n is 0."}
