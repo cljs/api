@@ -21,11 +21,11 @@ Returns a number one greater than num.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:486-488](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L486-L488)</ins>
+            └── <ins>[core.cljs:486-488](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L486-L488)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1576
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:271-272](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L271-L272)</ins>
+            └── <ins>[core.clj:271-272](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L271-L272)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r1576
  :shadowed-sources ({:code "(defmacro inc [x]\n  `(+ ~x 1))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [271 272],
-                     :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L271-L272"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L271-L272"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_inc",
  :source {:code "(defn inc\n  [x] (cljs.core/+ x 1))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [486 488],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L486-L488"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L486-L488"},
  :full-name "cljs.core/inc",
  :clj-symbol "clojure.core/inc",
  :docstring "Returns a number one greater than num."}

@@ -20,12 +20,12 @@ must return an identity value for it.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:233-240](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/core/reducers.cljs#L233-L240)</ins>
+                └── <ins>[reducers.cljs:233-240](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L233-L240)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1576
  :source {:code "(defn monoid\n  [op ctor]\n  (fn m\n    ([] (ctor))\n    ([a b] (op a b))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [233 240],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/core/reducers.cljs#L233-L240"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L233-L240"},
  :full-name-encode "clojure.core.reducers_monoid",
  :history [["+" "0.0-1236"]]}
 

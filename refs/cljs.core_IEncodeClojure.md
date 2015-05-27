@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6936-6937](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6936-L6937)</ins>
+            └── <ins>[core.cljs:6935-6936](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6935-L6936)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1576
  :full-name-encode "cljs.core_IEncodeClojure",
  :source {:code "(defprotocol IEncodeClojure\n  (-js->clj [x] [x options] \"Transforms JavaScript values to Clojure\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6936 6937],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6936-L6937"},
+          :lines [6935 6936],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6935-L6936"},
  :methods [{:name "-js->clj",
             :signature ["[x]" "[x options]"],
             :docstring "Transforms JavaScript values to Clojure"}],

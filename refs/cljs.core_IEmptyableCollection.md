@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:161-162](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L161-L162)</ins>
+            └── <ins>[core.cljs:161-162](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L161-L162)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1576
  :source {:code "(defprotocol IEmptyableCollection\n  (-empty [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [161 162],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L161-L162"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L161-L162"},
  :methods [{:name "-empty", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IEmptyableCollection",
  :history [["+" "0.0-927"]]}

@@ -22,11 +22,11 @@ Returns a lazy seq of the first item in each coll, then the second etc.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2584-2596](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2584-L2596)</ins>
+            └── <ins>[core.cljs:2584-2596](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2584-L2596)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r1576
  :source {:code "(defn interleave\n  ([c1 c2]\n     (lazy-seq\n      (let [s1 (seq c1) s2 (seq c2)]\n        (when (and s1 s2)\n          (cons (first s1) (cons (first s2)\n                                 (interleave (rest s1) (rest s2))))))))\n  ([c1 c2 & colls]\n     (lazy-seq\n      (let [ss (map seq (conj colls c2 c1))]\n        (when (every? identity ss)\n          (concat (map first ss) (apply interleave (map rest ss))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2584 2596],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2584-L2596"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2584-L2596"},
  :full-name "cljs.core/interleave",
  :clj-symbol "clojure.core/interleave",
  :docstring "Returns a lazy seq of the first item in each coll, then the second etc."}

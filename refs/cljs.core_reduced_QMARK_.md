@@ -18,11 +18,11 @@ Returns true if x is the result of a call to reduced
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:501-504](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L501-L504)</ins>
+            └── <ins>[core.cljs:501-504](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L501-L504)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1576
  :source {:code "(defn ^boolean reduced?\n  [r]\n  (instance? Reduced r))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [501 504],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L501-L504"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L501-L504"},
  :full-name "cljs.core/reduced?",
  :docstring "Returns true if x is the result of a call to reduced"}
 

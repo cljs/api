@@ -21,11 +21,11 @@ Returns true if x satisfies the protocol
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:730-746](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L730-L746)</ins>
+            └── <ins>[core.clj:730-746](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L730-L746)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r1576
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)\n        xsym (bool-expr (gensym))\n        [part bit] (fast-path-protocols p)\n        msym (symbol (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if ~xsym\n         (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n           true\n           (if (coercive-not (. ~xsym ~msym))\n             (cljs.core/type_satisfies_ ~psym ~xsym)\n             false))\n         (cljs.core/type_satisfies_ ~psym ~xsym)))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [730 746],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L730-L746"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L730-L746"},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

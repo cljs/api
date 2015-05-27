@@ -23,11 +23,11 @@ corresponding val in smap
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5843-5855](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5843-L5855)</ins>
+            └── <ins>[core.cljs:5842-5854](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5842-L5854)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1576
  :full-name-encode "cljs.core_replace",
  :source {:code "(defn replace\n  [smap coll]\n  (if (vector? coll)\n    (let [n (count coll)]\n      (reduce (fn [v i]\n                (if-let [e (find smap (nth v i))]\n                  (assoc v i (second e))\n                  v))\n              coll (take n (iterate inc 0))))\n    (map #(if-let [e (find smap %)] (second e) %) coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5843 5855],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5843-L5855"},
+          :lines [5842 5854],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5842-L5854"},
  :full-name "cljs.core/replace",
  :clj-symbol "clojure.core/replace",
  :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap"}

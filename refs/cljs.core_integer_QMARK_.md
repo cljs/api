@@ -21,11 +21,11 @@ Returns true if n is an integer.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1055-1061](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1055-L1061)</ins>
+            └── <ins>[core.cljs:1055-1061](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1055-L1061)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1576
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (not ^boolean (js/isNaN n))\n       (not (identical? n js/Infinity))\n       (== (js/parseFloat n) (js/parseInt n 10))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1055 1061],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1055-L1061"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1055-L1061"},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer."}

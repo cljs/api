@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:217-218](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L217-L218)</ins>
+            └── <ins>[core.cljs:217-218](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L217-L218)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1576
  :source {:code "(defprotocol IWithMeta\n  (-with-meta [o meta]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [217 218],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L217-L218"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L217-L218"},
  :methods [{:name "-with-meta",
             :signature ["[o meta]"],
             :docstring nil}],

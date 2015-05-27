@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:530-531](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/reader.cljs#L530-L531)</ins>
+            └── <ins>[reader.cljs:530-531](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/reader.cljs#L530-L531)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1576
  :source {:code "(def *default-data-reader-fn*\n  (atom nil))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [530 531],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/reader.cljs#L530-L531"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/reader.cljs#L530-L531"},
  :full-name-encode "cljs.reader__STAR_default-data-reader-fn_STAR_",
  :history [["+" "0.0-1576"]]}
 

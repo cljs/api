@@ -28,11 +28,11 @@ args (left-to-right).
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6105-6139](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6105-L6139)</ins>
+            └── <ins>[core.cljs:6104-6138](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6104-L6138)</ins>
 </pre>
 
 ```clj
@@ -80,8 +80,8 @@ clojurescript @ r1576
  :full-name-encode "cljs.core_juxt",
  :source {:code "(defn juxt\n  ([f]\n     (fn\n       ([] (vector (f)))\n       ([x] (vector (f x)))\n       ([x y] (vector (f x y)))\n       ([x y z] (vector (f x y z)))\n       ([x y z & args] (vector (apply f x y z args)))))\n  ([f g]\n     (fn\n       ([] (vector (f) (g)))\n       ([x] (vector (f x) (g x)))\n       ([x y] (vector (f x y) (g x y)))\n       ([x y z] (vector (f x y z) (g x y z)))\n       ([x y z & args] (vector (apply f x y z args) (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (vector (f) (g) (h)))\n       ([x] (vector (f x) (g x) (h x)))\n       ([x y] (vector (f x y) (g x y) (h x y)))\n       ([x y z] (vector (f x y z) (g x y z) (h x y z)))\n       ([x y z & args] (vector (apply f x y z args) (apply g x y z args) (apply h x y z args)))))\n  ([f g h & fs]\n     (let [fs (list* f g h fs)]\n       (fn\n         ([] (reduce #(conj %1 (%2)) [] fs))\n         ([x] (reduce #(conj %1 (%2 x)) [] fs))\n         ([x y] (reduce #(conj %1 (%2 x y)) [] fs))\n         ([x y z] (reduce #(conj %1 (%2 x y z)) [] fs))\n         ([x y z & args] (reduce #(conj %1 (apply %2 x y z args)) [] fs))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6105 6139],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6105-L6139"},
+          :lines [6104 6138],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6104-L6138"},
  :full-name "cljs.core/juxt",
  :clj-symbol "clojure.core/juxt",
  :docstring "Takes a set of functions and returns a fn that is the juxtaposition\nof those fns.  The returned fn takes a variable number of args, and\nreturns a vector containing the result of applying each fn to the\nargs (left-to-right).\n((juxt a b c) x) => [(a x) (b x) (c x)]"}

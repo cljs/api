@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6233-6235](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6233-L6235)</ins>
+            └── <ins>[core.cljs:6232-6234](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6232-L6234)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1576
  :signature ["[x]"],
  :source {:code "(defn string-print [x]\n  (*print-fn* x)\n  nil)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6233 6235],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6233-L6235"},
+          :lines [6232 6234],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6232-L6234"},
  :full-name-encode "cljs.core_string-print",
  :history [["+" "0.0-927"]]}
 

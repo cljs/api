@@ -24,11 +24,11 @@ which (test (.. sc comparator (compare ek key)) 0) is true
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5949-5962](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5949-L5962)</ins>
+            └── <ins>[core.cljs:5948-5961](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5948-L5961)</ins>
 </pre>
 
 ```clj
@@ -58,8 +58,8 @@ clojurescript @ r1576
  :full-name-encode "cljs.core_subseq",
  :source {:code "(defn subseq\n  ([sc test key]\n     (let [include (mk-bound-fn sc test key)]\n       (if (#{> >=} test)\n         (when-let [[e :as s] (-sorted-seq-from sc key true)]\n           (if (include e) s (next s)))\n         (take-while include (-sorted-seq sc true)))))\n  ([sc start-test start-key end-test end-key]\n     (when-let [[e :as s] (-sorted-seq-from sc start-key true)]\n       (take-while (mk-bound-fn sc end-test end-key)\n                   (if ((mk-bound-fn sc start-test start-key) e) s (next s))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5949 5962],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5949-L5962"},
+          :lines [5948 5961],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5948-L5961"},
  :full-name "cljs.core/subseq",
  :clj-symbol "clojure.core/subseq",
  :docstring "sc must be a sorted collection, test(s) one of <, <=, > or\n>=. Returns a seq of those entries with keys ek for\nwhich (test (.. sc comparator (compare ek key)) 0) is true"}

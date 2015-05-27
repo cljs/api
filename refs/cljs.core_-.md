@@ -24,11 +24,11 @@ the ys from x and returns the result.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1233-1238](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1233-L1238)</ins>
+            └── <ins>[core.cljs:1233-1238](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1233-L1238)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1576
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:227-230](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L227-L230)</ins>
+            └── <ins>[core.clj:227-230](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L227-L230)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1576
  :shadowed-sources ({:code "(defmacro -\n  ([x] (list 'js* \"(- ~{})\" x))\n  ([x y] (list 'js* \"(~{} - ~{})\" x y))\n  ([x y & more] `(- (- ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [227 230],
-                     :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L227-L230"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L227-L230"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_-",
  :source {:code "(defn -\n  ([x] (cljs.core/- x))\n  ([x y] (cljs.core/- x y))\n  ([x y & more] (reduce - (cljs.core/- x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1233 1238],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1233-L1238"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1233-L1238"},
  :full-name "cljs.core/-",
  :clj-symbol "clojure.core/-",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}

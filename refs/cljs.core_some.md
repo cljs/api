@@ -24,11 +24,11 @@ this will return :fred if :fred is in the sequence, otherwise nil:
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2225-2232](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2225-L2232)</ins>
+            └── <ins>[core.cljs:2225-2232](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2225-L2232)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1576
  :source {:code "(defn some\n  [pred coll]\n    (when (seq coll)\n      (or (pred (first coll)) (recur pred (next coll)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2225 2232],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2225-L2232"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2225-L2232"},
  :full-name "cljs.core/some",
  :clj-symbol "clojure.core/some",
  :docstring "Returns the first logical true value of (pred x) for any x in coll,\nelse nil.  One common idiom is to use a set as pred, for example\nthis will return :fred if :fred is in the sequence, otherwise nil:\n(some #{:fred} coll)"}

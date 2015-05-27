@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1972-1975](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1972-L1975)</ins>
+            └── <ins>[core.cljs:1972-1975](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1972-L1975)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1576
  :source {:code "(defn chunk-next [s]\n  (if (satisfies? IChunkedNext s)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1972 1975],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1972-L1975"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1972-L1975"},
  :full-name-encode "cljs.core_chunk-next",
  :history [["+" "0.0-1424"]]}
 

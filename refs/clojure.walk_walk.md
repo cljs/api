@@ -24,11 +24,11 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:37-48](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/walk.cljs#L37-L48)</ins>
+            └── <ins>[walk.cljs:37-48](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/walk.cljs#L37-L48)</ins>
 </pre>
 
 ```clj
@@ -53,7 +53,7 @@ clojurescript @ r1576
  :source {:code "(defn walk\n  [inner outer form]\n  (cond\n   (seq? form) (outer (doall (map inner form)))\n   (coll? form) (outer (into (empty form) (map inner form)))\n   :else (outer form)))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [37 48],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/walk.cljs#L37-L48"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/walk.cljs#L37-L48"},
  :full-name "clojure.walk/walk",
  :clj-symbol "clojure.walk/walk",
  :docstring "Traverses form, an arbitrary data structure.  inner and outer are\nfunctions.  Applies inner to each element of form, building up a\ndata structure of the same type, then applies outer to the result.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}

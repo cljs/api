@@ -21,11 +21,11 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1340-1343](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1340-L1343)</ins>
+            └── <ins>[core.cljs:1340-1343](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1340-L1343)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1576
  :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1340 1343],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1340-L1343"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1340-L1343"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}

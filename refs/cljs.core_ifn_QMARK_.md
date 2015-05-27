@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1052-1053](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1052-L1053)</ins>
+            └── <ins>[core.cljs:1052-1053](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1052-L1053)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1576
  :source {:code "(defn ^boolean ifn? [f]\n  (or (fn? f) (satisfies? IFn f)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1052 1053],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1052-L1053"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1052-L1053"},
  :full-name "cljs.core/ifn?",
  :clj-symbol "clojure.core/ifn?"}
 

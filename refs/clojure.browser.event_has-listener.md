@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:94-94](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/event.cljs#L94-L94)</ins>
+                └── <ins>[event.cljs:94-94](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/event.cljs#L94-L94)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1576
  :source {:code "(defn has-listener [obj opt_type opt_capture])",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [94 94],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/event.cljs#L94-L94"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/event.cljs#L94-L94"},
  :full-name-encode "clojure.browser.event_has-listener",
  :history [["+" "0.0-927"]]}
 

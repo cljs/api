@@ -22,11 +22,11 @@ item for which (pred item) returns nil.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2541-2550](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2541-L2550)</ins>
+            └── <ins>[core.cljs:2541-2550](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2541-L2550)</ins>
 </pre>
 
 ```clj
@@ -53,7 +53,7 @@ clojurescript @ r1576
  :source {:code "(defn drop-while\n  [pred coll]\n  (let [step (fn [pred coll]\n               (let [s (seq coll)]\n                 (if (and s (pred (first s)))\n                   (recur pred (rest s))\n                   s)))]\n    (lazy-seq (step pred coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2541 2550],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2541-L2550"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2541-L2550"},
  :full-name "cljs.core/drop-while",
  :clj-symbol "clojure.core/drop-while",
  :docstring "Returns a lazy sequence of the items in coll starting from the first\nitem for which (pred item) returns nil."}

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6237-6238](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6237-L6238)</ins>
+            └── <ins>[core.cljs:6236-6237](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6236-L6237)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1576
  :signature ["[]"],
  :source {:code "(defn flush [] ;stub\n  nil)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6237 6238],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6237-L6238"},
+          :lines [6236 6237],
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6236-L6237"},
  :full-name-encode "cljs.core_flush",
  :clj-symbol "clojure.core/flush",
  :history [["+" "0.0-927"]]}

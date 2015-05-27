@@ -21,11 +21,11 @@ Creates and installs a new method of multimethod associated with dispatch-value.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1102-1105](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L1102-L1105)</ins>
+            └── <ins>[core.clj:1102-1105](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L1102-L1105)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1576
  :source {:code "(defmacro defmethod\n  [multifn dispatch-val & fn-tail]\n  `(-add-method ~(with-meta multifn {:tag 'cljs.core/MultiFn}) ~dispatch-val (fn ~@fn-tail)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [1102 1105],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L1102-L1105"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L1102-L1105"},
  :full-name "cljs.core/defmethod",
  :clj-symbol "clojure.core/defmethod",
  :docstring "Creates and installs a new method of multimethod associated with dispatch-value. "}

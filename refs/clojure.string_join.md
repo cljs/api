@@ -23,11 +23,11 @@ separated by an optional separator.
 ---
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:45-51](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/string.cljs#L45-L51)</ins>
+            └── <ins>[string.cljs:45-51](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/string.cljs#L45-L51)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1576
  :source {:code "(defn join\n  ([coll]\n     (apply str coll))\n  ([separator coll]\n     (apply str (interpose separator coll))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [45 51],
-          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/string.cljs#L45-L51"},
+          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/string.cljs#L45-L51"},
  :full-name "clojure.string/join",
  :clj-symbol "clojure.string/join",
  :docstring "Returns a string of all elements in coll, as returned by (seq coll),\nseparated by an optional separator."}
