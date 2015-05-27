@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:99-100](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L99-L100)</ins>
+                └── <ins>[dom.cljs:99-100](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L99-L100)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r927
  :source {:code "(defn html->dom [s]\n  (gdom/htmlToDocumentFragment s))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [99 100],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L99-L100"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L99-L100"},
  :full-name-encode "clojure.browser.dom_html-_GT_dom",
  :history [["+" "0.0-927"]]}
 

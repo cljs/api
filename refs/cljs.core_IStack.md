@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:127-129](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L127-L129)</ins>
+            └── <ins>[core.cljs:152-154](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L152-L154)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_IStack",
  :source {:code "(defprotocol IStack\n  (-peek [coll])\n  (-pop [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [127 129],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L127-L129"},
+          :lines [152 154],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L152-L154"},
  :methods [{:name "-peek", :signature ["[coll]"], :docstring nil}
            {:name "-pop", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IStack",

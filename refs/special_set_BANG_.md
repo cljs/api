@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:781-796](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L781-L796)</ins>
+            └── <ins>[compiler.clj:785-803](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L785-L803)</ins>
 </pre>
 
 ```clj
@@ -34,8 +34,11 @@ clojurescript @ r927
    (let [enve (assoc env :context :expr)
          targetexpr (if (symbol? target)
                       (do
-                        (assert (nil? (-> env :locals target))
-                                "Can't set! local var")
+                        (let [local (-> env :locals target)]
+                          (assert (or (nil? local)
+                                      (and (:field local)
+                                           (:mutable local)))
+                                  "Can't set! local var or non-mutable field"))
                         (analyze-symbol enve target))
                       (when (seq? target)
                         (let [targetexpr (analyze-seq enve target nil)]
@@ -54,10 +57,10 @@ clojurescript @ r927
  :ns "special",
  :name "set!",
  :type "special form",
- :source {:code "(defmethod parse 'set!\n  [_ env [_ target val] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         targetexpr (if (symbol? target)\n                      (do\n                        (assert (nil? (-> env :locals target))\n                                \"Can't set! local var\")\n                        (analyze-symbol enve target))\n                      (when (seq? target)\n                        (let [targetexpr (analyze-seq enve target nil)]\n                          (when (:field targetexpr)\n                            targetexpr))))\n         valexpr (analyze enve val)]\n     (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n     {:env env :op :set! :target targetexpr :val valexpr :children [targetexpr valexpr]})))",
+ :source {:code "(defmethod parse 'set!\n  [_ env [_ target val] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         targetexpr (if (symbol? target)\n                      (do\n                        (let [local (-> env :locals target)]\n                          (assert (or (nil? local)\n                                      (and (:field local)\n                                           (:mutable local)))\n                                  \"Can't set! local var or non-mutable field\"))\n                        (analyze-symbol enve target))\n                      (when (seq? target)\n                        (let [targetexpr (analyze-seq enve target nil)]\n                          (when (:field targetexpr)\n                            targetexpr))))\n         valexpr (analyze enve val)]\n     (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n     {:env env :op :set! :target targetexpr :val valexpr :children [targetexpr valexpr]})))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [781 796],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L781-L796"},
+          :lines [785 803],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L785-L803"},
  :full-name-encode "special_set_BANG_",
  :clj-symbol "clojure.core/set!",
  :history [["+" "0.0-927"]]}

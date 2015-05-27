@@ -21,11 +21,11 @@ Returns the metadata of obj, returns nil if there is no metadata.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:512-516](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L512-L516)</ins>
+            └── <ins>[core.cljs:552-556](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L552-L556)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_meta",
  :source {:code "(defn meta\n  [o]\n  (when (satisfies? IMeta o)\n    (-meta o)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [512 516],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L512-L516"},
+          :lines [552 556],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L552-L556"},
  :full-name "cljs.core/meta",
  :clj-symbol "clojure.core/meta",
  :docstring "Returns the metadata of obj, returns nil if there is no metadata."}

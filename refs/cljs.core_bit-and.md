@@ -21,27 +21,27 @@ Bitwise and
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:902-904](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L902-L904)</ins>
+            └── <ins>[core.cljs:942-944](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L942-L944)</ins>
 </pre>
 
 ```clj
 (defn bit-and
-  [x y] (js* "(~{x} & ~{y})"))
+  [x y] (cljs.core/bit-and x y))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:134-136](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L134-L136)</ins>
+            └── <ins>[core.clj:143-145](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L143-L145)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r927
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-and\n  ([x y] (list 'js* \"(~{} & ~{})\" x y))\n  ([x y & more] `(bit-and (bit-and ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [134 136],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L134-L136"}),
+                     :lines [143 145],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L143-L145"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-and",
- :source {:code "(defn bit-and\n  [x y] (js* \"(~{x} & ~{y})\"))",
+ :source {:code "(defn bit-and\n  [x y] (cljs.core/bit-and x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [902 904],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L902-L904"},
+          :lines [942 944],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L942-L944"},
  :full-name "cljs.core/bit-and",
  :clj-symbol "clojure.core/bit-and",
  :docstring "Bitwise and"}

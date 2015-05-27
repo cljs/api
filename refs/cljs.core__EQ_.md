@@ -15,21 +15,25 @@
 </samp>
 
 ```
-(no docstring)
+Equality. Returns true if x equals y, false if not. Compares
+numbers and collections in a type-independent manner.  Clojure's immutable data
+structures define -equiv (and thus =) as a value, not an identity,
+comparison.
 ```
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:180-181](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L180-L181)</ins>
+            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L206-L212)</ins>
 </pre>
 
 ```clj
-(defn = [x y]
+(defn =
+  [x y]
   (-equiv x y))
 ```
 
@@ -37,17 +41,18 @@ clojurescript @ r927
 ---
 
 ```clj
-{:full-name "cljs.core/=",
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "=",
- :type "function",
  :signature ["[x y]"],
- :source {:code "(defn = [x y]\n  (-equiv x y))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [180 181],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L180-L181"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core__EQ_",
+ :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [206 212],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L206-L212"},
+ :full-name "cljs.core/=",
  :clj-symbol "clojure.core/=",
- :history [["+" "0.0-927"]]}
+ :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}
 
 ```

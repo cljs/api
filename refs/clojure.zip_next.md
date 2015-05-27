@@ -23,11 +23,11 @@ at the end, stays there.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:206-219](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L206-L219)</ins>
+            └── <ins>[zip.cljs:206-219](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L206-L219)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r927
  :source {:code "(defn next\n  [loc]\n    (if (= :end (loc 1))\n      loc\n      (or \n       (and (branch? loc) (down loc))\n       (right loc)\n       (loop [p loc]\n         (if (up p)\n           (or (right (up p)) (recur (up p)))\n           [(node p) :end])))))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [206 219],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L206-L219"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L206-L219"},
  :full-name "clojure.zip/next",
  :clj-symbol "clojure.zip/next",
  :docstring "Moves to the next loc in the hierarchy, depth-first. When reaching\nthe end, returns a distinguished loc detectable via end?. If already\nat the end, stays there."}

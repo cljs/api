@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1981-1982](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1981-L1982)</ins>
+            └── <ins>[core.cljs:2022-2023](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2022-L2023)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r927
  :signature ["[coll]"],
  :source {:code "(defn vec [coll]\n  (reduce conj cljs.core.Vector/EMPTY coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1981 1982],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1981-L1982"},
+          :lines [2022 2023],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2022-L2023"},
  :full-name-encode "cljs.core_vec",
  :clj-symbol "clojure.core/vec",
  :history [["+" "0.0-927"]]}

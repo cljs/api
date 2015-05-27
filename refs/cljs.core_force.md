@@ -21,11 +21,11 @@ If x is a Delay, returns the (possibly cached) value of its expression, else ret
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3159-3164](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3159-L3164)</ins>
+            └── <ins>[core.cljs:3204-3209](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3204-L3209)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_force",
  :source {:code "(defn force\n  [x]\n  (if (delay? x)\n    (deref x)\n    x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3159 3164],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3159-L3164"},
+          :lines [3204 3209],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3204-L3209"},
  :full-name "cljs.core/force",
  :clj-symbol "clojure.core/force",
  :docstring "If x is a Delay, returns the (possibly cached) value of its expression, else returns x"}

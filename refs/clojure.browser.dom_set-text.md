@@ -20,12 +20,12 @@ that id will be used and returned.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:122-127](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L122-L127)</ins>
+                └── <ins>[dom.cljs:122-127](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L122-L127)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r927
  :source {:code "(defn set-text\n  [e s]\n  (gdom/setTextContent (ensure-element e) s))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [122 127],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L122-L127"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L122-L127"},
  :full-name-encode "clojure.browser.dom_set-text",
  :history [["+" "0.0-927"]]}
 

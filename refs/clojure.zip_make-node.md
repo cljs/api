@@ -22,11 +22,11 @@ children. The loc is only used to supply the constructor.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L76-L80)</ins>
+            └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L76-L80)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r927
  :source {:code "(defn make-node\n  [loc node children]\n    ((:zip/make-node (meta loc)) node children))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [76 80],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L76-L80"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L76-L80"},
  :full-name "clojure.zip/make-node",
  :clj-symbol "clojure.zip/make-node",
  :docstring "Returns a new branch node, given an existing node and new\nchildren. The loc is only used to supply the constructor."}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:855-866](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L855-L866)</ins>
+            └── <ins>[compiler.clj:862-873](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L862-L873)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r927
  :type "special form",
  :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :defrecord* :t t :fields fields}))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [855 866],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L855-L866"},
+          :lines [862 873],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L862-L873"},
  :full-name-encode "special_defrecord_STAR_",
  :history [["+" "0.0-927"]]}
 

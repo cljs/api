@@ -24,11 +24,11 @@ capturing groups.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2773-2783](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2773-L2783)</ins>
+            └── <ins>[core.cljs:2818-2828](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2818-L2828)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_re-find",
  :source {:code "(defn re-find\n  [re s]\n  (let [matches (.exec re s)]\n    (when-not (nil? matches)\n      (if (= (count matches) 1)\n        (first matches)\n        (vec matches)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2773 2783],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2773-L2783"},
+          :lines [2818 2828],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2818-L2828"},
  :full-name "cljs.core/re-find",
  :clj-symbol "clojure.core/re-find",
  :docstring "Returns the first regex match, if any, of s to re, using\nre.exec(s). Returns a vector, containing first the matching\nsubstring, then any capturing groups if the regular expression contains\ncapturing groups."}

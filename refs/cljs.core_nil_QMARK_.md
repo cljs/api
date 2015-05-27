@@ -15,22 +15,22 @@
 </samp>
 
 ```
-(no docstring)
+Returns true if x is nil, false otherwise.
 ```
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:183-185](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L183-L185)</ins>
+            └── <ins>[core.cljs:214-217](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L214-L217)</ins>
 </pre>
 
 ```clj
-(defn nil? [x]
-  "Returns true if x is nil, false otherwise."
+(defn nil?
+  [x]
   (identical? x nil))
 ```
 
@@ -38,17 +38,18 @@ clojurescript @ r927
 ---
 
 ```clj
-{:full-name "cljs.core/nil?",
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "nil?",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn nil? [x]\n  \"Returns true if x is nil, false otherwise.\"\n  (identical? x nil))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [183 185],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L183-L185"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_nil_QMARK_",
+ :source {:code "(defn nil?\n  [x]\n  (identical? x nil))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [214 217],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L214-L217"},
+ :full-name "cljs.core/nil?",
  :clj-symbol "clojure.core/nil?",
- :history [["+" "0.0-927"]]}
+ :docstring "Returns true if x is nil, false otherwise."}
 
 ```

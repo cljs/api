@@ -21,11 +21,11 @@ Returns the map entry for key, or nil if key not present.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:664-670](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L664-L670)</ins>
+            └── <ins>[core.cljs:704-710](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L704-L710)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_find",
  :source {:code "(defn find\n  [coll k]\n  (when (and coll\n             (associative? coll)\n             (contains? coll k))\n    [k (-lookup coll k)]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [664 670],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L664-L670"},
+          :lines [704 710],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L704-L710"},
  :full-name "cljs.core/find",
  :clj-symbol "clojure.core/find",
  :docstring "Returns the map entry for key, or nil if key not present."}

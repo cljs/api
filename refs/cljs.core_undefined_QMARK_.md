@@ -18,18 +18,33 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:612-613](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L612-L613)</ins>
+            └── <ins>[core.cljs:652-653](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653)</ins>
 </pre>
 
 ```clj
 (defn undefined? [x]
-  (js* "(void 0 === ~{x})"))
+  (cljs.core/undefined? x))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r971
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52)</ins>
+</pre>
+
+```clj
+(defmacro undefined? [x]
+  (list 'js* "(void 0 === ~{})" x))
+```
 
 ---
 
@@ -39,11 +54,15 @@ clojurescript @ r927
  :name "undefined?",
  :type "function",
  :signature ["[x]"],
- :source {:code "(defn undefined? [x]\n  (js* \"(void 0 === ~{x})\"))",
+ :source {:code "(defn undefined? [x]\n  (cljs.core/undefined? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [612 613],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L612-L613"},
+          :lines [652 653],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653"},
  :full-name-encode "cljs.core_undefined_QMARK_",
+ :shadowed-sources ({:code "(defmacro undefined? [x]\n  (list 'js* \"(void 0 === ~{})\" x))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [51 52],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52"}),
  :history [["+" "0.0-927"]]}
 
 ```

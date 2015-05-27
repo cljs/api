@@ -21,11 +21,11 @@ Returns true if x satisfies ISet
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:558-563](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L558-L563)</ins>
+            └── <ins>[core.cljs:598-603](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L598-L603)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_set_QMARK_",
  :source {:code "(defn set?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ISet x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [558 563],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L558-L563"},
+          :lines [598 603],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L598-L603"},
  :full-name "cljs.core/set?",
  :clj-symbol "clojure.core/set?",
  :docstring "Returns true if x satisfies ISet"}

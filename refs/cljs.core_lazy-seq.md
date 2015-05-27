@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:400-401](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L400-L401)</ins>
+            └── <ins>[core.clj:431-432](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L431-L432)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r927
  :signature ["[& body]"],
  :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core.LazySeq nil false (fn [] ~@body)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [400 401],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L400-L401"},
+          :lines [431 432],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L431-L432"},
  :full-name-encode "cljs.core_lazy-seq",
  :clj-symbol "clojure.core/lazy-seq",
  :history [["+" "0.0-927"]]}

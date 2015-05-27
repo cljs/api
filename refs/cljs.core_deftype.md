@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:236-257](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L236-L257)</ins>
+            └── <ins>[core.clj:259-286](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L259-L286)</ins>
 </pre>
 
 ```clj
@@ -45,12 +45,18 @@ clojurescript @ r927
                                          []
                                          (group-by first (take-while seq? (next s))))))
                             (drop-while seq? (next s)))
-                     ret)))]
+                     ret)))
+        r (:name (cljs.compiler/resolve-var (dissoc &env :locals) t))]
     (if (seq impls)
       `(do
          (deftype* ~t ~fields)
-         (extend-type ~t ~@(dt->et impls)))
-      `(deftype* ~t ~fields))))
+         (set! (.-cljs$core$IPrintable$_pr_seq ~t) (fn [this#] (list ~(str r))))
+         (extend-type ~t ~@(dt->et impls))
+         ~t)
+      `(do
+         (deftype* ~t ~fields)
+         (set! (.-cljs$core$IPrintable$_pr_seq ~t) (fn [this#] (list ~(str r))))
+         ~t))))
 ```
 
 
@@ -62,10 +68,10 @@ clojurescript @ r927
  :name "deftype",
  :type "macro",
  :signature ["[t fields & impls]"],
- :source {:code "(defmacro deftype [t fields & impls]\n  (let [adorn-params (fn [sig]\n                       (cons (vary-meta (second sig) assoc :cljs.compiler/fields fields)\n                             (nnext sig)))\n        ;;reshape for extend-type\n        dt->et (fn [specs]\n                 (loop [ret [] s specs]\n                   (if (seq s)\n                     (recur (-> ret\n                                (conj (first s))\n                                (into\n                                 (reduce (fn [v [f sigs]]\n                                           (conj v (cons f (map adorn-params sigs))))\n                                         []\n                                         (group-by first (take-while seq? (next s))))))\n                            (drop-while seq? (next s)))\n                     ret)))]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields)\n         (extend-type ~t ~@(dt->et impls)))\n      `(deftype* ~t ~fields))))",
+ :source {:code "(defmacro deftype [t fields & impls]\n  (let [adorn-params (fn [sig]\n                       (cons (vary-meta (second sig) assoc :cljs.compiler/fields fields)\n                             (nnext sig)))\n        ;;reshape for extend-type\n        dt->et (fn [specs]\n                 (loop [ret [] s specs]\n                   (if (seq s)\n                     (recur (-> ret\n                                (conj (first s))\n                                (into\n                                 (reduce (fn [v [f sigs]]\n                                           (conj v (cons f (map adorn-params sigs))))\n                                         []\n                                         (group-by first (take-while seq? (next s))))))\n                            (drop-while seq? (next s)))\n                     ret)))\n        r (:name (cljs.compiler/resolve-var (dissoc &env :locals) t))]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields)\n         (set! (.-cljs$core$IPrintable$_pr_seq ~t) (fn [this#] (list ~(str r))))\n         (extend-type ~t ~@(dt->et impls))\n         ~t)\n      `(do\n         (deftype* ~t ~fields)\n         (set! (.-cljs$core$IPrintable$_pr_seq ~t) (fn [this#] (list ~(str r))))\n         ~t))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [236 257],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L236-L257"},
+          :lines [259 286],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L259-L286"},
  :full-name-encode "cljs.core_deftype",
  :clj-symbol "clojure.core/deftype",
  :history [["+" "0.0-927"]]}

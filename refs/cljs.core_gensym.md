@@ -24,11 +24,11 @@ prefix is not supplied, the prefix is 'G__'.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3118-3126](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3118-L3126)</ins>
+            └── <ins>[core.cljs:3163-3171](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3163-L3171)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_gensym",
  :source {:code "(defn gensym\n  ([] (gensym \"G__\"))\n  ([prefix-string]\n     (when (nil? gensym_counter)\n       (set! gensym_counter (atom 0)))\n     (symbol (str prefix-string (swap! gensym_counter inc)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3118 3126],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3118-L3126"},
+          :lines [3163 3171],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3163-L3171"},
  :full-name "cljs.core/gensym",
  :clj-symbol "clojure.core/gensym",
  :docstring "Returns a new symbol with a unique name. If a prefix string is\nsupplied, the name is prefix# where # is some unique number. If\nprefix is not supplied, the prefix is 'G__'."}

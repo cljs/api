@@ -21,11 +21,11 @@ Removes all of the methods of multimethod.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3478-3481](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3478-L3481)</ins>
+            └── <ins>[core.cljs:3526-3529](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3526-L3529)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_remove-all-methods",
  :source {:code "(defn remove-all-methods\n [multifn]\n (-reset multifn))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3478 3481],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3478-L3481"},
+          :lines [3526 3529],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3526-L3529"},
  :full-name "cljs.core/remove-all-methods",
  :clj-symbol "clojure.core/remove-all-methods",
  :docstring "Removes all of the methods of multimethod."}

@@ -21,27 +21,27 @@ Bitwise complement
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:924-926](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L924-L926)</ins>
+            └── <ins>[core.cljs:964-966](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L964-L966)</ins>
 </pre>
 
 ```clj
 (defn bit-not
-  [x] (js* "(~~{x})"))
+  [x] (cljs.core/bit-not x))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:131-132](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L131-L132)</ins>
+            └── <ins>[core.clj:140-141](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L140-L141)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r927
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro bit-not [x]\n  (list 'js* \"(~ ~{})\" x))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [131 132],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L131-L132"}),
+                     :lines [140 141],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L140-L141"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-not",
- :source {:code "(defn bit-not\n  [x] (js* \"(~~{x})\"))",
+ :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [924 926],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L924-L926"},
+          :lines [964 966],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L964-L966"},
  :full-name "cljs.core/bit-not",
  :clj-symbol "clojure.core/bit-not",
  :docstring "Bitwise complement"}

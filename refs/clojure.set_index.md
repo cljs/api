@@ -22,11 +22,11 @@ set of the maps in xrel with the corresponding values of ks.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:88-96](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/set.cljs#L88-L96)</ins>
+            └── <ins>[set.cljs:88-96](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/set.cljs#L88-L96)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r927
  :source {:code "(defn index\n  [xrel ks]\n    (reduce\n     (fn [m x]\n       (let [ik (select-keys x ks)]\n         (assoc m ik (conj (get m ik #{}) x))))\n     {} xrel))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [88 96],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/set.cljs#L88-L96"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/set.cljs#L88-L96"},
  :full-name "clojure.set/index",
  :clj-symbol "clojure.set/index",
  :docstring "Returns a map of the distinct values of ks in the xrel mapped to a\nset of the maps in xrel with the corresponding values of ks."}

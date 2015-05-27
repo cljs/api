@@ -21,28 +21,28 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:872-875](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L872-L875)</ins>
+            └── <ins>[core.cljs:912-915](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L912-L915)</ins>
 </pre>
 
 ```clj
 (defn mod
   [n d]
-  (js* "(~{n} % ~{d})"))
+  (cljs.core/mod n d))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:128-129](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L128-L129)</ins>
+            └── <ins>[core.clj:137-138](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L137-L138)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r927
  :signature ["[n d]"],
  :shadowed-sources ({:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [128 129],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L128-L129"}),
+                     :lines [137 138],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L137-L138"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_mod",
- :source {:code "(defn mod\n  [n d]\n  (js* \"(~{n} % ~{d})\"))",
+ :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [872 875],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L872-L875"},
+          :lines [912 915],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L912-L915"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}

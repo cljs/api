@@ -21,27 +21,27 @@ Bitwise shift left
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:939-941](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L939-L941)</ins>
+            └── <ins>[core.cljs:978-980](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L978-L980)</ins>
 </pre>
 
 ```clj
 (defn bit-shift-left
-  [x n] (js* "(~{x} << ~{n})"))
+  [x n] (cljs.core/bit-shift-left x n))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:159-160](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L159-L160)</ins>
+            └── <ins>[core.clj:168-169](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L168-L169)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r927
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-shift-left [x n]\n  (list 'js* \"(~{} << ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [159 160],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L159-L160"}),
+                     :lines [168 169],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L168-L169"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-left",
- :source {:code "(defn bit-shift-left\n  [x n] (js* \"(~{x} << ~{n})\"))",
+ :source {:code "(defn bit-shift-left\n  [x n] (cljs.core/bit-shift-left x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [939 941],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L939-L941"},
+          :lines [978 980],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L978-L980"},
  :full-name "cljs.core/bit-shift-left",
  :clj-symbol "clojure.core/bit-shift-left",
  :docstring "Bitwise shift left"}

@@ -15,34 +15,34 @@
 </samp>
 
 ```
-(no docstring)
+Tests if 2 arguments are the same object
 ```
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:176-178](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L176-L178)</ins>
+            └── <ins>[core.cljs:201-204](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L201-L204)</ins>
 </pre>
 
 ```clj
-(defn identical? [x y]
-  "Tests if 2 arguments are the same object"
-  (js* "(~{x} === ~{y})"))
+(defn identical?
+  [x y]
+  (cljs.core/identical? x y))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:45-46](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L45-L46)</ins>
+            └── <ins>[core.clj:54-55](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L54-L55)</ins>
 </pre>
 
 ```clj
@@ -58,16 +58,17 @@ clojurescript @ r927
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro identical? [a b]\n  (list 'js* \"(~{} === ~{})\" a b))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [45 46],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L45-L46"}),
+                     :lines [54 55],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L54-L55"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_identical_QMARK_",
- :source {:code "(defn identical? [x y]\n  \"Tests if 2 arguments are the same object\"\n  (js* \"(~{x} === ~{y})\"))",
+ :source {:code "(defn identical?\n  [x y]\n  (cljs.core/identical? x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [176 178],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L176-L178"},
+          :lines [201 204],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L201-L204"},
  :full-name "cljs.core/identical?",
- :clj-symbol "clojure.core/identical?"}
+ :clj-symbol "clojure.core/identical?",
+ :docstring "Tests if 2 arguments are the same object"}
 
 ```

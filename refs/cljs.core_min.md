@@ -23,30 +23,30 @@ Returns the least of the nums.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:860-865](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L860-L865)</ins>
+            └── <ins>[core.cljs:900-905](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L900-L905)</ins>
 </pre>
 
 ```clj
 (defn min
   ([x] x)
-  ([x y] (js* "((~{x} < ~{y}) ? x : y)"))
+  ([x y] (cljs.core/min x y))
   ([x y & more]
-   (reduce min (min x y) more)))
+   (reduce min (cljs.core/min x y) more)))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:123-126](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L123-L126)</ins>
+            └── <ins>[core.clj:132-135](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L132-L135)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r927
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro min\n  ([x] x)\n  ([x y] (list 'js* \"((~{} < ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(min (min ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [123 126],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L123-L126"}),
+                     :lines [132 135],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L132-L135"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_min",
- :source {:code "(defn min\n  ([x] x)\n  ([x y] (js* \"((~{x} < ~{y}) ? x : y)\"))\n  ([x y & more]\n   (reduce min (min x y) more)))",
+ :source {:code "(defn min\n  ([x] x)\n  ([x y] (cljs.core/min x y))\n  ([x y & more]\n   (reduce min (cljs.core/min x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [860 865],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L860-L865"},
+          :lines [900 905],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L900-L905"},
  :full-name "cljs.core/min",
  :clj-symbol "clojure.core/min",
  :docstring "Returns the least of the nums."}

@@ -23,11 +23,11 @@ n (default 1) (exclusive).
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3220-3224](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3220-L3224)</ins>
+            └── <ins>[core.cljs:3265-3269](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3265-L3269)</ins>
 </pre>
 
 ```clj
@@ -40,11 +40,11 @@ clojurescript @ r927
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:889-892](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L889-L892)</ins>
+            └── <ins>[core.cljs:929-932](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L929-L932)</ins>
 </pre>
 
 ```clj
@@ -61,15 +61,15 @@ clojurescript @ r927
  :signature ["[]" "[n]"],
  :shadowed-sources ({:code "(defn rand\n  ([]  (Math/random))\n  ([n] (* n (rand))))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [889 892],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L889-L892"}),
+                     :lines [929 932],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L929-L932"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand",
  :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (js* \"Math.random() * ~{n}\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3220 3224],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3220-L3224"},
+          :lines [3265 3269],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3265-L3269"},
  :full-name "cljs.core/rand",
  :clj-symbol "clojure.core/rand",
  :docstring "Returns a random floating point number between 0 (inclusive) and\nn (default 1) (exclusive)."}

@@ -21,11 +21,11 @@ Returns a map containing only those entries in map whose key is in keys
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2410-2422](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2410-L2422)</ins>
+            └── <ins>[core.cljs:2454-2466](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2454-L2466)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_select-keys",
  :source {:code "(defn select-keys\n  [map keyseq]\n    (loop [ret {} keys (seq keyseq)]\n      (if keys\n        (let [key   (first keys)\n              entry (get map key ::not-found)]\n          (recur\n           (if (not= entry ::not-found)\n             (assoc ret key entry)\n             ret)\n           (next keys)))\n        ret)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2410 2422],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2410-L2422"},
+          :lines [2454 2466],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2454-L2466"},
  :full-name "cljs.core/select-keys",
  :clj-symbol "clojure.core/select-keys",
  :docstring "Returns a map containing only those entries in map whose key is in keys"}

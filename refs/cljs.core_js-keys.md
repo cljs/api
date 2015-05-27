@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:592-595](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L592-L595)</ins>
+            └── <ins>[core.cljs:632-635](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L632-L635)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r927
  :signature ["[obj]"],
  :source {:code "(defn js-keys [obj]\n  (let [keys (array)]\n    (goog.object/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [592 595],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L592-L595"},
+          :lines [632 635],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L632-L635"},
  :full-name-encode "cljs.core_js-keys",
  :history [["+" "0.0-927"]]}
 

@@ -23,11 +23,11 @@ to f and colls.  Thus function f should return a collection.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1777-1783](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1777-L1783)</ins>
+            └── <ins>[core.cljs:1817-1823](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1817-L1823)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_mapcat",
  :source {:code "(defn mapcat\n  ([f coll]\n    (flatten1 (map f coll)))\n  ([f coll & colls]\n    (flatten1 (apply map f coll colls))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1777 1783],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1777-L1783"},
+          :lines [1817 1823],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1817-L1823"},
  :full-name "cljs.core/mapcat",
  :clj-symbol "clojure.core/mapcat",
  :docstring "Returns the result of applying concat to the result of applying map\nto f and colls.  Thus function f should return a collection."}

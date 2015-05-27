@@ -21,11 +21,11 @@ Returns a lazy seq of every nth item in coll.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2652-2657](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2652-L2657)</ins>
+            └── <ins>[core.cljs:2697-2702](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2697-L2702)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_take-nth",
  :source {:code "(defn take-nth\n  [n coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (cons (first s) (take-nth n (drop n s))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2652 2657],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2652-L2657"},
+          :lines [2697 2702],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2697-L2702"},
  :full-name "cljs.core/take-nth",
  :clj-symbol "clojure.core/take-nth",
  :docstring "Returns a lazy seq of every nth item in coll."}

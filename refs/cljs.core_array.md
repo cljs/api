@@ -19,11 +19,11 @@ Creates a new javascript array.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-75](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L71-L75)</ins>
+            └── <ins>[core.cljs:71-75](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L71-L75)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r927
  :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (js* \"Array.prototype.slice.call(arguments)\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [71 75],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L71-L75"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L71-L75"},
  :full-name-encode "cljs.core_array",
  :history [["+" "0.0-927"]]}
 

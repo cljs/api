@@ -21,28 +21,28 @@ Returns the value at the index.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L77-L80)</ins>
+            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80)</ins>
 </pre>
 
 ```clj
 (defn aget
   [array i]
-  (js* "~{array}[~{i}]"))
+  (cljs.core/aget array i))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:48-49](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L48-L49)</ins>
+            └── <ins>[core.clj:57-58](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r927
  :signature ["[array i]"],
  :shadowed-sources ({:code "(defmacro aget [a i]\n  (list 'js* \"(~{}[~{}])\" a i))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [48 49],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L48-L49"}),
+                     :lines [57 58],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aget",
- :source {:code "(defn aget\n  [array i]\n  (js* \"~{array}[~{i}]\"))",
+ :source {:code "(defn aget\n  [array i]\n  (cljs.core/aget array i))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [77 80],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L77-L80"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80"},
  :full-name "cljs.core/aget",
  :clj-symbol "clojure.core/aget",
  :docstring "Returns the value at the index."}

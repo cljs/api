@@ -21,19 +21,34 @@ Set bit at index n
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:928-931](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L928-L931)</ins>
+            └── <ins>[core.cljs:968-971](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L968-L971)</ins>
 </pre>
 
 ```clj
 (defn bit-set
   [x n]
-  (js* "(~{x} | (1 << ~{n}))"))
+  (cljs.core/bit-set x n))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r971
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:174-175](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L174-L175)</ins>
+</pre>
+
+```clj
+(defmacro bit-set [x n]
+  (list 'js* "(~{} | (1 << ~{}))" x n))
+```
 
 ---
 
@@ -41,13 +56,17 @@ clojurescript @ r927
 {:ns "cljs.core",
  :name "bit-set",
  :signature ["[x n]"],
+ :shadowed-sources ({:code "(defmacro bit-set [x n]\n  (list 'js* \"(~{} | (1 << ~{}))\" x n))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [174 175],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L174-L175"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-set",
- :source {:code "(defn bit-set\n  [x n]\n  (js* \"(~{x} | (1 << ~{n}))\"))",
+ :source {:code "(defn bit-set\n  [x n]\n  (cljs.core/bit-set x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [928 931],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L928-L931"},
+          :lines [968 971],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L968-L971"},
  :full-name "cljs.core/bit-set",
  :clj-symbol "clojure.core/bit-set",
  :docstring "Set bit at index n"}

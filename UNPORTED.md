@@ -942,10 +942,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/type](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/type)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/unchecked-add](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-add)</samp></td>
 </tr>
 <tr>

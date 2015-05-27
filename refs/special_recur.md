@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:758-767](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L758-L767)</ins>
+            └── <ins>[compiler.clj:762-771](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L762-L771)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r927
  :type "special form",
  :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs] _]\n  (let [context (:context env)\n        frame (first *recur-frames*)]\n    (assert frame \"Can't recur here\")\n    (assert (= (count exprs) (count (:names frame))) \"recur argument count mismatch\")\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur}\n      :frame frame\n      :exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs))))))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [758 767],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L758-L767"},
+          :lines [762 771],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L762-L771"},
  :full-name-encode "special_recur",
  :clj-symbol "clojure.core/recur",
  :history [["+" "0.0-927"]]}

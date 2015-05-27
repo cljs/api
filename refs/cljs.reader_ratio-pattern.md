@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:96-96](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L96-L96)</ins>
+            └── <ins>[reader.cljs:96-96](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L96-L96)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r927
  :source {:code "(def ratio-pattern (re-pattern \"([-+]?[0-9]+)/([0-9]+)\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [96 96],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L96-L96"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L96-L96"},
  :full-name-encode "cljs.reader_ratio-pattern",
  :history [["+" "0.0-927"]]}
 

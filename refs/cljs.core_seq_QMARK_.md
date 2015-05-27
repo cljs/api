@@ -21,11 +21,11 @@ Return true if s satisfies ISeq
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:618-623](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L618-L623)</ins>
+            └── <ins>[core.cljs:658-663](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L658-L663)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_seq_QMARK_",
  :source {:code "(defn seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [618 623],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L618-L623"},
+          :lines [658 663],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L658-L663"},
  :full-name "cljs.core/seq?",
  :clj-symbol "clojure.core/seq?",
  :docstring "Return true if s satisfies ISeq"}

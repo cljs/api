@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:750-752](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L750-L752)</ins>
+            └── <ins>[compiler.clj:754-756](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L754-L756)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r927
  :type "special form",
  :source {:code "(defmethod parse 'let*\n  [op encl-env form _]\n  (analyze-let encl-env form false))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [750 752],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L750-L752"},
+          :lines [754 756],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L754-L756"},
  :full-name-encode "special_let_STAR_",
  :history [["+" "0.0-927"]]}
 

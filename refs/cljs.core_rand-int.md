@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3226-3228](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3226-L3228)</ins>
+            └── <ins>[core.cljs:3271-3273](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3271-L3273)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r927
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:894-896](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L894-L896)</ins>
+            └── <ins>[core.cljs:934-936](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L934-L936)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r927
  :signature ["[n]"],
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [894 896],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L894-L896"}),
+                     :lines [934 936],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L934-L936"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (js* \"Math.floor(Math.random() * ~{n})\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3226 3228],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3226-L3228"},
+          :lines [3271 3273],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3271-L3273"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

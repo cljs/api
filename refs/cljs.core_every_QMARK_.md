@@ -22,11 +22,11 @@ false.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1403-1410](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1403-L1410)</ins>
+            └── <ins>[core.cljs:1443-1450](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1443-L1450)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_every_QMARK_",
  :source {:code "(defn every?\n  [pred coll]\n  (cond\n   (nil? (seq coll)) true\n   (pred (first coll)) (recur pred (next coll))\n   :else false))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1403 1410],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1403-L1410"},
+          :lines [1443 1450],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1443-L1450"},
  :full-name "cljs.core/every?",
  :clj-symbol "clojure.core/every?",
  :docstring "Returns true if (pred x) is logical true for every x in coll, else\nfalse."}

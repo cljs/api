@@ -21,27 +21,27 @@ Bitwise or
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:906-908](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L906-L908)</ins>
+            └── <ins>[core.cljs:946-948](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L946-L948)</ins>
 </pre>
 
 ```clj
 (defn bit-or
-  [x y] (js* "(~{x} | ~{y})"))
+  [x y] (cljs.core/bit-or x y))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:138-140](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L138-L140)</ins>
+            └── <ins>[core.clj:147-149](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L147-L149)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r927
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-or\n  ([x y] (list 'js* \"(~{} | ~{})\" x y))\n  ([x y & more] `(bit-or (bit-or ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [138 140],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L138-L140"}),
+                     :lines [147 149],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L147-L149"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-or",
- :source {:code "(defn bit-or\n  [x y] (js* \"(~{x} | ~{y})\"))",
+ :source {:code "(defn bit-or\n  [x y] (cljs.core/bit-or x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [906 908],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L906-L908"},
+          :lines [946 948],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L946-L948"},
  :full-name "cljs.core/bit-or",
  :clj-symbol "clojure.core/bit-or",
  :docstring "Bitwise or"}

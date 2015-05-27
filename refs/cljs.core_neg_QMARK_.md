@@ -21,27 +21,27 @@ Returns true if num is less than zero, else false
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:966-968](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L966-L968)</ins>
+            └── <ins>[core.cljs:1005-1007](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1005-L1007)</ins>
 </pre>
 
 ```clj
 (defn neg?
-  [x] (js* "(~{x} < 0)"))
+  [x] (cljs.core/neg? x))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:115-116](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L115-L116)</ins>
+            └── <ins>[core.clj:124-125](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L124-L125)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r927
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro neg? [x]\n  `(< ~x 0))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [115 116],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L115-L116"}),
+                     :lines [124 125],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L124-L125"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_neg_QMARK_",
- :source {:code "(defn neg?\n  [x] (js* \"(~{x} < 0)\"))",
+ :source {:code "(defn neg?\n  [x] (cljs.core/neg? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [966 968],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L966-L968"},
+          :lines [1005 1007],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1005-L1007"},
  :full-name "cljs.core/neg?",
  :clj-symbol "clojure.core/neg?",
  :docstring "Returns true if num is less than zero, else false"}

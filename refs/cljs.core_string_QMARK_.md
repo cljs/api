@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:628-631](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L628-L631)</ins>
+            └── <ins>[core.cljs:668-671](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L668-L671)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r927
  :signature ["[x]"],
  :source {:code "(defn string? [x]\n  (and (goog/isString x)\n       (not (or (= (.charAt x 0) \\uFDD0)\n                (= (.charAt x 0) \\uFDD1)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [628 631],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L628-L631"},
+          :lines [668 671],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L668-L671"},
  :full-name-encode "cljs.core_string_QMARK_",
  :clj-symbol "clojure.core/string?",
  :history [["+" "0.0-927"]]}

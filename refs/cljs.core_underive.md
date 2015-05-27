@@ -24,11 +24,11 @@ supplied defaults to, and modifies, the global hierarchy.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3335-3354](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3335-L3354)</ins>
+            └── <ins>[core.cljs:3380-3399](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3380-L3399)</ins>
 </pre>
 
 ```clj
@@ -63,8 +63,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_underive",
  :source {:code "(defn underive\n  ([tag parent]\n     ;; (alter-var-root #'global-hierarchy underive tag parent)\n     (swap! global-hierarchy underive tag parent) nil)\n  ([h tag parent]\n    (let [parentMap (:parents h)\n          childsParents (if (parentMap tag)\n                          (disj (parentMap tag) parent) #{})\n          newParents (if (not-empty childsParents)\n                      (assoc parentMap tag childsParents)\n                      (dissoc parentMap tag))\n          deriv-seq (flatten (map #(cons (first %) (interpose (first %) (second %)))\n                                  (seq newParents)))]\n      (if (contains? (parentMap tag) parent)\n        (reduce #(apply derive %1 %2) (make-hierarchy)\n                (partition 2 deriv-seq))\n        h))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3335 3354],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3335-L3354"},
+          :lines [3380 3399],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3380-L3399"},
  :full-name "cljs.core/underive",
  :clj-symbol "clojure.core/underive",
  :docstring "Removes a parent/child relationship between parent and\ntag. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy."}

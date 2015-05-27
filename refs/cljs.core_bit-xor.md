@@ -21,27 +21,27 @@ Bitwise exclusive or
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:898-900](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L898-L900)</ins>
+            └── <ins>[core.cljs:938-940](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L938-L940)</ins>
 </pre>
 
 ```clj
 (defn bit-xor
-  [x y] (js* "(~{x} ^ ~{y})"))
+  [x y] (cljs.core/bit-xor x y))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:142-144](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L142-L144)</ins>
+            └── <ins>[core.clj:151-153](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L151-L153)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r927
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-xor\n  ([x y] (list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [142 144],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L142-L144"}),
+                     :lines [151 153],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L151-L153"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-xor",
- :source {:code "(defn bit-xor\n  [x y] (js* \"(~{x} ^ ~{y})\"))",
+ :source {:code "(defn bit-xor\n  [x y] (cljs.core/bit-xor x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [898 900],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L898-L900"},
+          :lines [938 940],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L938-L940"},
  :full-name "cljs.core/bit-xor",
  :clj-symbol "clojure.core/bit-xor",
  :docstring "Bitwise exclusive or"}

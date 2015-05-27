@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:633-635](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L633-L635)</ins>
+            └── <ins>[core.cljs:673-675](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L673-L675)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r927
  :signature ["[x]"],
  :source {:code "(defn keyword? [x]\n  (and (goog/isString x)\n       (= (.charAt x 0) \\uFDD0)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [633 635],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L633-L635"},
+          :lines [673 675],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L673-L675"},
  :full-name-encode "cljs.core_keyword_QMARK_",
  :clj-symbol "clojure.core/keyword?",
  :history [["+" "0.0-927"]]}

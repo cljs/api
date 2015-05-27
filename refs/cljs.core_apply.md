@@ -26,11 +26,11 @@ First cut.  Not lazy.  Needs to use emitted toApply.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1338-1384](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1338-L1384)</ins>
+            └── <ins>[core.cljs:1378-1424](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1378-L1424)</ins>
 </pre>
 
 ```clj
@@ -97,8 +97,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_apply",
  :source {:code "(defn apply\n  ([f args]\n     (let [fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count args (inc fixed-arity))\n                 fixed-arity)\n           (.apply f f (to-array args))\n           (.cljs$lang$applyTo f args))\n         (.apply f f (to-array args)))))\n  ([f x args]\n     (let [arglist (list* x args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f x y args]\n     (let [arglist (list* x y args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f x y z args]\n     (let [arglist (list* x y z args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f a b c d & args]\n     (let [arglist (cons a (cons b (cons c (cons d (spread args)))))\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1338 1384],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1338-L1384"},
+          :lines [1378 1424],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1378-L1424"},
  :full-name "cljs.core/apply",
  :clj-symbol "clojure.core/apply",
  :docstring "Applies fn f to the argument list formed by prepending intervening arguments to args.\nFirst cut.  Not lazy.  Needs to use emitted toApply."}

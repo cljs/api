@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1986-2050](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1986-L2050)</ins>
+            └── <ins>[core.cljs:2027-2097](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2027-L2097)</ins>
 </pre>
 
 ```clj
@@ -90,7 +90,13 @@ clojurescript @ r927
   (-reduce [coll f]
     (ci-reduce coll f))
   (-reduce [coll f start]
-    (ci-reduce coll f start)))
+    (ci-reduce coll f start))
+
+  IFn
+  (-invoke [coll k]
+    (-lookup coll k))
+  (-invoke [coll k not-found]
+    (-lookup coll k not-found)))
 ```
 
 
@@ -102,10 +108,10 @@ clojurescript @ r927
  :name "Subvec",
  :type "type",
  :signature ["[meta v start end]"],
- :source {:code "(deftype Subvec [meta v start end]\n  IWithMeta\n  (-with-meta [coll meta] (Subvec. meta v start end))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (-nth v (dec end)))\n  (-pop [coll]\n    (if (= start end)\n      (throw (js/Error. \"Can't pop empty vector\"))\n      (Subvec. meta v start (dec end))))\n\n  ICollection\n  (-conj [coll o]\n    (Subvec. meta (-assoc-n v end o) start (inc end)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Vector/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (let [subvec-seq (fn subvec-seq [i]\n                       (when-not (= i end)\n                         (cons (-nth v i)\n                               (lazy-seq\n                                (subvec-seq (inc i))))))]\n      (subvec-seq start)))\n\n  ICounted\n  (-count [coll] (- end start))\n\n  IIndexed\n  (-nth [coll n]\n    (-nth v (+ start n)))\n  (-nth [coll n not-found]\n    (-nth v (+ start n) not-found))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IAssociative\n  (-assoc [coll key val]\n    (let [v-pos (+ start key)]\n      (Subvec. meta (-assoc v v-pos val)\n               start (max end (inc v-pos)))))\n\n  IVector\n  (-assoc-n [coll n val] (-assoc coll n val))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce coll f))\n  (-reduce [coll f start]\n    (ci-reduce coll f start)))",
+ :source {:code "(deftype Subvec [meta v start end]\n  IWithMeta\n  (-with-meta [coll meta] (Subvec. meta v start end))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (-nth v (dec end)))\n  (-pop [coll]\n    (if (= start end)\n      (throw (js/Error. \"Can't pop empty vector\"))\n      (Subvec. meta v start (dec end))))\n\n  ICollection\n  (-conj [coll o]\n    (Subvec. meta (-assoc-n v end o) start (inc end)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Vector/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (let [subvec-seq (fn subvec-seq [i]\n                       (when-not (= i end)\n                         (cons (-nth v i)\n                               (lazy-seq\n                                (subvec-seq (inc i))))))]\n      (subvec-seq start)))\n\n  ICounted\n  (-count [coll] (- end start))\n\n  IIndexed\n  (-nth [coll n]\n    (-nth v (+ start n)))\n  (-nth [coll n not-found]\n    (-nth v (+ start n) not-found))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IAssociative\n  (-assoc [coll key val]\n    (let [v-pos (+ start key)]\n      (Subvec. meta (-assoc v v-pos val)\n               start (max end (inc v-pos)))))\n\n  IVector\n  (-assoc-n [coll n val] (-assoc coll n val))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce coll f))\n  (-reduce [coll f start]\n    (ci-reduce coll f start))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1986 2050],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1986-L2050"},
+          :lines [2027 2097],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2027-L2097"},
  :full-name-encode "cljs.core_Subvec",
  :history [["+" "0.0-927"]]}
 

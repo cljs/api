@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:269-275](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L269-L275)</ins>
+            └── <ins>[reader.cljs:269-275](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L269-L275)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r927
  :source {:code "(defn desugar-meta\n  [f]\n  (cond\n   (symbol? f) {:tag f}\n   (string? f) {:tag f}\n   (keyword? f) {f true}\n   :else f))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [269 275],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L269-L275"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L269-L275"},
  :full-name-encode "cljs.reader_desugar-meta",
  :history [["+" "0.0-927"]]}
 

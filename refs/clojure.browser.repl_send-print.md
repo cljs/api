@@ -20,12 +20,12 @@ up to 10 times.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:41-53](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/repl.cljs#L41-L53)</ins>
+                └── <ins>[repl.cljs:41-53](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/repl.cljs#L41-L53)</ins>
 </pre>
 
 ```clj
@@ -55,7 +55,7 @@ clojurescript @ r927
  :source {:code "(defn send-print\n  ([url data]\n     (send-print url data 0))\n  ([url data n]\n     (let [conn (net/xhr-connection)]\n       (event/listen conn :error\n                     (fn [_]\n                       (if (< n 10)\n                         (send-print url data (inc n))\n                         (.log js/console (str \"Could not send \" data \" after \" n \" attempts.\")))))\n       (net/transmit conn url \"POST\" data nil 0))))",
           :filename "clojurescript/src/cljs/clojure/browser/repl.cljs",
           :lines [41 53],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/repl.cljs#L41-L53"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/repl.cljs#L41-L53"},
  :full-name-encode "clojure.browser.repl_send-print",
  :history [["+" "0.0-927"]]}
 

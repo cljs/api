@@ -25,11 +25,11 @@ one arg, returns the concatenation of the str values of the args.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1010-1021](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1010-L1021)</ins>
+            └── <ins>[core.cljs:1049-1060](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1049-L1060)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_str",
  :source {:code "(defn str\n  ([] \"\")\n  ([x] (cond\n        (symbol? x) (. x (substring 2 (.-length x)))\n        (keyword? x) (str* \":\" (. x (substring 2 (.-length x))))\n        (nil? x) \"\"\n        :else (. x (toString))))\n  ([x & ys]\n     (apply str* x ys)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1010 1021],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1010-L1021"},
+          :lines [1049 1060],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1049-L1060"},
  :full-name "cljs.core/str",
  :clj-symbol "clojure.core/str",
  :docstring "With no args, returns the empty string. With one arg x, returns\nx.toString().  (str nil) returns the empty string. With more than\none arg, returns the concatenation of the str values of the args."}

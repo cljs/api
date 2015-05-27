@@ -24,11 +24,11 @@ calls.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3147-3153](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3147-L3153)</ins>
+            └── <ins>[core.cljs:3192-3198](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3192-L3198)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_delay",
  :source {:code "(defn delay\n  [& body]\n  (Delay. (fn [] (apply identity body)) (atom nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3147 3153],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3147-L3153"},
+          :lines [3192 3198],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3192-L3198"},
  :full-name "cljs.core/delay",
  :clj-symbol "clojure.core/delay",
  :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}

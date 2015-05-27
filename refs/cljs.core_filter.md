@@ -22,11 +22,11 @@ Returns a lazy sequence of the items in coll for which
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1785-1794](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1785-L1794)</ins>
+            └── <ins>[core.cljs:1825-1834](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1825-L1834)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_filter",
  :source {:code "(defn filter\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (let [f (first s) r (rest s)]\n        (if (pred f)\n          (cons f (filter pred r))\n          (filter pred r)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1785 1794],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1785-L1794"},
+          :lines [1825 1834],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1825-L1834"},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}

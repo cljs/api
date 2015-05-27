@@ -23,11 +23,11 @@ side-effects.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1535-1545](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1535-L1545)</ins>
+            └── <ins>[core.cljs:1575-1585](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1575-L1585)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_keep",
  :source {:code "(defn keep\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (let [x (f (first s))]\n        (if (nil? x)\n          (keep f (rest s))\n          (cons x (keep f (rest s)))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1535 1545],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1535-L1545"},
+          :lines [1575 1585],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1575-L1585"},
  :full-name "cljs.core/keep",
  :clj-symbol "clojure.core/keep",
  :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}

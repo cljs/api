@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2426-2467](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2426-L2467)</ins>
+            └── <ins>[core.cljs:2470-2517](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2470-L2517)</ins>
 </pre>
 
 ```clj
@@ -67,7 +67,13 @@ clojurescript @ r927
 
   ISet
   (-disjoin [coll v]
-    (Set. meta (dissoc hash-map v))))
+    (Set. meta (dissoc hash-map v)))
+
+  IFn
+  (-invoke [coll k]
+    (-lookup coll k))
+  (-invoke [coll k not-found]
+    (-lookup coll k not-found)))
 ```
 
 
@@ -79,10 +85,10 @@ clojurescript @ r927
  :name "Set",
  :type "type",
  :signature ["[meta hash-map]"],
- :source {:code "(deftype Set [meta hash-map]\n  IWithMeta\n  (-with-meta [coll meta] (Set. meta hash-map))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll o]\n    (Set. meta (assoc hash-map o nil)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Set/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other]\n    (and\n     (set? other)\n     (= (count coll) (count other))\n     (every? #(contains? coll %)\n             other)))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] (keys hash-map))\n\n  ICounted\n  (-count [coll] (count (seq coll)))\n\n  ILookup\n  (-lookup [coll v]\n    (-lookup coll v nil))\n  (-lookup [coll v not-found]\n    (if (-contains-key? hash-map v)\n      v\n      not-found))\n\n  ISet\n  (-disjoin [coll v]\n    (Set. meta (dissoc hash-map v))))",
+ :source {:code "(deftype Set [meta hash-map]\n  IWithMeta\n  (-with-meta [coll meta] (Set. meta hash-map))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll o]\n    (Set. meta (assoc hash-map o nil)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Set/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other]\n    (and\n     (set? other)\n     (= (count coll) (count other))\n     (every? #(contains? coll %)\n             other)))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] (keys hash-map))\n\n  ICounted\n  (-count [coll] (count (seq coll)))\n\n  ILookup\n  (-lookup [coll v]\n    (-lookup coll v nil))\n  (-lookup [coll v not-found]\n    (if (-contains-key? hash-map v)\n      v\n      not-found))\n\n  ISet\n  (-disjoin [coll v]\n    (Set. meta (dissoc hash-map v)))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2426 2467],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2426-L2467"},
+          :lines [2470 2517],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2470-L2517"},
  :full-name-encode "cljs.core_Set",
  :history [["+" "0.0-927"]]}
 

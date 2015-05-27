@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:644-645](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L644-L645)</ins>
+            └── <ins>[core.cljs:684-685](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L684-L685)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r927
  :signature ["[f]"],
  :source {:code "(defn fn? [f]\n  (goog/isFunction f))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [644 645],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L644-L645"},
+          :lines [684 685],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L684-L685"},
  :full-name-encode "cljs.core_fn_QMARK_",
  :clj-symbol "clojure.core/fn?",
  :history [["+" "0.0-927"]]}

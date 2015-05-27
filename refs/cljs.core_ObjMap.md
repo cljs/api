@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2193-2254](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2193-L2254)</ins>
+            └── <ins>[core.cljs:2235-2302](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2235-L2302)</ins>
 </pre>
 
 ```clj
@@ -87,7 +87,13 @@ clojurescript @ r927
         (.splice new-keys (scan-array 1 k new-keys) 1)
         (js-delete new-strobj k)
         (ObjMap. meta new-keys new-strobj))
-      coll)))
+      coll)) ; key not found, return coll unchanged
+
+  IFn
+  (-invoke [coll k]
+    (-lookup coll k))
+  (-invoke [coll k not-found]
+    (-lookup coll k not-found)))
 ```
 
 
@@ -99,10 +105,10 @@ clojurescript @ r927
  :name "ObjMap",
  :type "type",
  :signature ["[meta keys strobj]"],
- :source {:code "(deftype ObjMap [meta keys strobj]\n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (.-length keys))\n      (map #(vector % (aget strobj %)) keys)))\n\n  ICounted\n  (-count [coll] (.-length keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (obj-map-contains-key? k strobj (aget strobj k) not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if (goog/isString k)\n      (let [new-strobj (goog.object/clone strobj)\n            overwrite? (.hasOwnProperty new-strobj k)]\n        (aset new-strobj k v)\n        (if overwrite?\n          (ObjMap. meta keys new-strobj)     ; overwrite\n          (let [new-keys (aclone keys)] ; append\n            (.push new-keys k)\n            (ObjMap. meta new-keys new-strobj))))\n      ; non-string key. game over.\n      (with-meta (into (hash-map k v) (seq coll)) meta)))\n  (-contains-key? [coll k]\n    (obj-map-contains-key? k strobj))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and (goog/isString k) (.hasOwnProperty strobj k))\n      (let [new-keys (aclone keys)\n            new-strobj (goog.object/clone strobj)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj))\n      coll)))",
+ :source {:code "(deftype ObjMap [meta keys strobj]\n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (.-length keys))\n      (map #(vector % (aget strobj %)) keys)))\n\n  ICounted\n  (-count [coll] (.-length keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (obj-map-contains-key? k strobj (aget strobj k) not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if (goog/isString k)\n      (let [new-strobj (goog.object/clone strobj)\n            overwrite? (.hasOwnProperty new-strobj k)]\n        (aset new-strobj k v)\n        (if overwrite?\n          (ObjMap. meta keys new-strobj)     ; overwrite\n          (let [new-keys (aclone keys)] ; append\n            (.push new-keys k)\n            (ObjMap. meta new-keys new-strobj))))\n      ; non-string key. game over.\n      (with-meta (into (hash-map k v) (seq coll)) meta)))\n  (-contains-key? [coll k]\n    (obj-map-contains-key? k strobj))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and (goog/isString k) (.hasOwnProperty strobj k))\n      (let [new-keys (aclone keys)\n            new-strobj (goog.object/clone strobj)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj))\n      coll)) ; key not found, return coll unchanged\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2193 2254],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L2193-L2254"},
+          :lines [2235 2302],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2235-L2302"},
  :full-name-encode "cljs.core_ObjMap",
  :history [["+" "0.0-927"]]}
 

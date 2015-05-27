@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:131-132](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L131-L132)</ins>
+            └── <ins>[core.cljs:156-157](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L156-L157)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r927
  :full-name-encode "cljs.core_IVector",
  :source {:code "(defprotocol IVector\n  (-assoc-n [coll n val]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [131 132],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L131-L132"},
+          :lines [156 157],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L156-L157"},
  :methods [{:name "-assoc-n",
             :signature ["[coll n val]"],
             :docstring nil}],

@@ -18,12 +18,12 @@ Set properties on an element
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:134-138](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L134-L138)</ins>
+                └── <ins>[dom.cljs:134-138](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L134-L138)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r927
  :source {:code "(defn set-properties\n  [e m]\n  (gdom/setProperties (ensure-element e)\n                      (.-strobj m)))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [134 138],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L134-L138"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L134-L138"},
  :full-name-encode "clojure.browser.dom_set-properties",
  :history [["+" "0.0-927"]]}
 

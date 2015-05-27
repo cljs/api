@@ -24,11 +24,11 @@ value (type-independent), otherwise false
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:947-957](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L947-L957)</ins>
+            └── <ins>[core.cljs:986-996](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L986-L996)</ins>
 </pre>
 
 ```clj
@@ -47,11 +47,11 @@ clojurescript @ r927
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:98-101](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L98-L101)</ins>
+            └── <ins>[core.clj:107-110](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L107-L110)</ins>
 </pre>
 
 ```clj
@@ -69,15 +69,15 @@ clojurescript @ r927
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro ==\n  ([x] true)\n  ([x y] (list 'js* \"(~{} === ~{})\" x y))\n  ([x y & more] `(and (== ~x ~y) (== ~y ~@more))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [98 101],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L98-L101"}),
+                     :lines [107 110],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L107-L110"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__EQ__EQ_",
  :source {:code "(defn ==\n  ([x] true)\n  ([x y] (-equiv x y))\n  ([x y & more]\n   (if (== x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (== y (first more)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [947 957],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L947-L957"},
+          :lines [986 996],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L986-L996"},
  :full-name "cljs.core/==",
  :clj-symbol "clojure.core/==",
  :docstring "Returns non-nil if nums all have the equivalent\nvalue (type-independent), otherwise false"}

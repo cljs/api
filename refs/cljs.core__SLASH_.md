@@ -24,17 +24,17 @@ else returns numerator divided by all of the denominators.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:794-799](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L794-L799)</ins>
+            └── <ins>[core.cljs:834-839](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L834-L839)</ins>
 </pre>
 
 ```clj
 (defn /
-  ([x] (js* "(1 / ~{x})"))
-  ([x y] (js* "(~{x} / ~{y})"))
+  ([x] (/ 1 x))
+  ([x y] (/ x y))
   ([x y & more] (reduce / (/ x y) more)))
 ```
 
@@ -42,11 +42,11 @@ clojurescript @ r927
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:72-76](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L72-L76)</ins>
+            └── <ins>[core.clj:81-85](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L81-L85)</ins>
 </pre>
 
 ```clj
@@ -65,15 +65,15 @@ clojurescript @ r927
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro /\n  ([] 1)\n  ([x] `(/ 1 x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [72 76],
-                     :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L72-L76"}),
+                     :lines [81 85],
+                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L81-L85"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__SLASH_",
- :source {:code "(defn /\n  ([x] (js* \"(1 / ~{x})\"))\n  ([x y] (js* \"(~{x} / ~{y})\"))\n  ([x y & more] (reduce / (/ x y) more)))",
+ :source {:code "(defn /\n  ([x] (/ 1 x))\n  ([x y] (/ x y))\n  ([x y & more] (reduce / (/ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [794 799],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L794-L799"},
+          :lines [834 839],
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L834-L839"},
  :full-name "cljs.core//",
  :clj-symbol "clojure.core//",
  :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}

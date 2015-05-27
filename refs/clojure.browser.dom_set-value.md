@@ -18,12 +18,12 @@ Set the value property for an element.
 ---
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:140-143](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L140-L143)</ins>
+                └── <ins>[dom.cljs:140-143](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L140-L143)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r927
  :source {:code "(defn set-value\n  [e v]\n  (set-properties e {\"value\" v}))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [140 143],
-          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/dom.cljs#L140-L143"},
+          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L140-L143"},
  :full-name-encode "clojure.browser.dom_set-value",
  :history [["+" "0.0-927"]]}
 
