@@ -186,6 +186,34 @@ These are the mustache templates that we use to render the catalog files.
 
 [Grip]:https://github.com/joeyespo/grip
 
+### Dash Docset
+
+We generate a docset for [Dash](https://kapeli.com/dash) for use offline:
+
+![dash-screenshot](http://i.imgur.com/ENMsXHc.png)
+
+This is currently a hack job to provide something valuable while we
+work on the more complete docs with usage examples, cross-refs, etc.
+
+The process for creating this is documented in the commands below
+
+```sh
+# Go to docset working directory.
+$ cd docset
+
+# Download latest catalog HTML files from github.
+# (Requires httrack.)
+$ ./download-pages.sh
+
+# Format pages to isolate the markdown views,
+# and correct a few other things.
+# (Requires phantomjs.)
+$ ./format-pages.js
+
+# Build cljs.docset for Dash,
+# assuming the local 'catalog' directory is populated.
+$ lein run '{:docset true}'
+```
 
 ## License
 
