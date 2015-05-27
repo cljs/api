@@ -22,17 +22,17 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:81-85](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L81-L85)</ins>
+            └── <ins>[core.cljs:82-86](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L82-L86)</ins>
 </pre>
 
 ```clj
 (defn make-array
   ([size]
-     (js* "new Array(~{size})"))
+     (js/Array. size))
   ([type size]
      (make-array size)))
 ```
@@ -46,10 +46,10 @@ clojurescript @ r1236
  :name "make-array",
  :type "function",
  :signature ["[size]" "[type size]"],
- :source {:code "(defn make-array\n  ([size]\n     (js* \"new Array(~{size})\"))\n  ([type size]\n     (make-array size)))",
+ :source {:code "(defn make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [81 85],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L81-L85"},
+          :lines [82 86],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L82-L86"},
  :full-name-encode "cljs.core_make-array",
  :clj-symbol "clojure.core/make-array",
  :history [["+" "0.0-1211"]]}

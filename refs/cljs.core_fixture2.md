@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6032-6032](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6032-L6032)</ins>
+            └── <ins>[core.cljs:6509-6509](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6509-L6509)</ins>
 </pre>
 
 ```clj
@@ -38,8 +38,8 @@ clojurescript @ r1236
  :type "var",
  :source {:code "(def fixture2 2)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6032 6032],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6032-L6032"},
+          :lines [6509 6509],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6509-L6509"},
  :full-name-encode "cljs.core_fixture2",
  :history [["+" "0.0-927"]]}
 

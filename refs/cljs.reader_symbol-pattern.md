@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:101-101](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L101-L101)</ins>
+            └── <ins>[reader.cljs:102-102](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L102-L102)</ins>
 </pre>
 
 ```clj
@@ -38,8 +38,8 @@ clojurescript @ r1236
  :type "var",
  :source {:code "(def symbol-pattern (re-pattern \"[:]?([^0-9/].*/)?([^0-9/][^/]*)\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [101 101],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L101-L101"},
+          :lines [102 102],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L102-L102"},
  :full-name-encode "cljs.reader_symbol-pattern",
  :history [["+" "0.0-927"]]}
 

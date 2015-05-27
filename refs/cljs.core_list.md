@@ -11,7 +11,11 @@
 </table>
 
  <samp>
-(__list__ & items)<br>
+(__list__)<br>
+(__list__ x)<br>
+(__list__ x y)<br>
+(__list__ x y z)<br>
+(__list__ x y z & items)<br>
 </samp>
 
 ```
@@ -21,16 +25,22 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1459-1460](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460)</ins>
+            └── <ins>[core.cljs:1624-1631](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1624-L1631)</ins>
 </pre>
 
 ```clj
-(defn list [& items]
-  (reduce conj () (reverse items)))
+(defn list
+  ([] ())
+  ([x] (conj () x))
+  ([x y] (conj (list y) x))
+  ([x y z] (conj (list y z) x))
+  ([x y z & items]
+     (conj (conj (conj (reduce conj () (reverse items))
+                       z) y) x)))
 ```
 
 
@@ -41,11 +51,11 @@ clojurescript @ r1236
  :ns "cljs.core",
  :name "list",
  :type "function",
- :signature ["[& items]"],
- :source {:code "(defn list [& items]\n  (reduce conj () (reverse items)))",
+ :signature ["[]" "[x]" "[x y]" "[x y z]" "[x y z & items]"],
+ :source {:code "(defn list\n  ([] ())\n  ([x] (conj () x))\n  ([x y] (conj (list y) x))\n  ([x y z] (conj (list y z) x))\n  ([x y z & items]\n     (conj (conj (conj (reduce conj () (reverse items))\n                       z) y) x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1459 1460],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460"},
+          :lines [1624 1631],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1624-L1631"},
  :full-name-encode "cljs.core_list",
  :clj-symbol "clojure.core/list",
  :history [["+" "0.0-927"]]}

@@ -21,19 +21,20 @@ Return the last item in coll, in linear time
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:576-581](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L576-L581)</ins>
+            └── <ins>[core.cljs:674-680](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680)</ins>
 </pre>
 
 ```clj
 (defn last
   [s]
-  (if (next s)
-    (recur (next s))
-    (first s)))
+  (let [sn (next s)]
+    (if-not (nil? sn)
+      (recur sn)
+      (first s))))
 ```
 
 
@@ -46,10 +47,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_last",
- :source {:code "(defn last\n  [s]\n  (if (next s)\n    (recur (next s))\n    (first s)))",
+ :source {:code "(defn last\n  [s]\n  (let [sn (next s)]\n    (if-not (nil? sn)\n      (recur sn)\n      (first s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [576 581],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L576-L581"},
+          :lines [674 680],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680"},
  :full-name "cljs.core/last",
  :clj-symbol "clojure.core/last",
  :docstring "Return the last item in coll, in linear time"}

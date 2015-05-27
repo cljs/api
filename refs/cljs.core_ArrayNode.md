@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3806-3900](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3806-L3900)</ins>
+            └── <ins>[core.cljs:4233-4327](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L4233-L4327)</ins>
 </pre>
 
 ```clj
@@ -31,7 +31,7 @@ clojurescript @ r1236
   (inode-assoc [inode shift hash key val added-leaf?]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-= nil node)
+      (if (nil? node)
         (ArrayNode. nil (inc cnt) (clone-and-set arr idx (.inode-assoc cljs.core.BitmapIndexedNode/EMPTY (+ shift 5) hash key val added-leaf?)))
         (let [n (.inode-assoc node (+ shift 5) hash key val added-leaf?)]
           (if (identical? n node)
@@ -41,7 +41,7 @@ clojurescript @ r1236
   (inode-without [inode shift hash key]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-not= nil node)
+      (if-not (nil? node)
         (let [n (.inode-without node (+ shift 5) hash key)]
           (cond
             (identical? n node)
@@ -56,17 +56,17 @@ clojurescript @ r1236
             (ArrayNode. nil cnt (clone-and-set arr idx n))))
         inode)))
 
-  (inode-find [inode shift hash key]
+  (inode-lookup [inode shift hash key not-found]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-not= nil node)
-        (.inode-find node (+ shift 5) hash key)
-        nil)))
+      (if-not (nil? node)
+        (.inode-lookup node (+ shift 5) hash key not-found)
+        not-found)))
 
   (inode-find [inode shift hash key not-found]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-not= nil node)
+      (if-not (nil? node)
         (.inode-find node (+ shift 5) hash key not-found)
         not-found)))
 
@@ -81,7 +81,7 @@ clojurescript @ r1236
   (inode-assoc! [inode edit shift hash key val added-leaf?]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-= nil node)
+      (if (nil? node)
         (let [editable (edit-and-set inode edit idx (.inode-assoc! cljs.core.BitmapIndexedNode/EMPTY edit (+ shift 5) hash key val added-leaf?))]
           (set! (.-cnt editable) (inc (.-cnt editable)))
           editable)
@@ -93,14 +93,14 @@ clojurescript @ r1236
   (inode-without! [inode edit shift hash key removed-leaf?]
     (let [idx  (mask hash shift)
           node (aget arr idx)]
-      (if (coercive-= nil node)
+      (if (nil? node)
         inode
         (let [n (.inode-without! node edit (+ shift 5) hash key removed-leaf?)]
           (cond
             (identical? n node)
             inode
 
-            (coercive-= nil n)
+            (nil? n)
             (if (<= cnt 8)
               (pack-array-node inode edit idx)
               (let [editable (edit-and-set inode edit idx n)]
@@ -115,7 +115,7 @@ clojurescript @ r1236
       (loop [i 0 init init]
         (if (< i len)
           (let [node (aget arr i)]
-            (if (coercive-not= node nil)
+            (if-not (nil? node)
               (let [init (.kv-reduce node f init)]
                 (if (reduced? init)
                   @init
@@ -132,10 +132,10 @@ clojurescript @ r1236
  :name "ArrayNode",
  :type "type",
  :signature ["[edit cnt arr]"],
- :source {:code "(deftype ArrayNode [edit ^:mutable cnt ^:mutable arr]\n  Object\n  (inode-assoc [inode shift hash key val added-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-= nil node)\n        (ArrayNode. nil (inc cnt) (clone-and-set arr idx (.inode-assoc cljs.core.BitmapIndexedNode/EMPTY (+ shift 5) hash key val added-leaf?)))\n        (let [n (.inode-assoc node (+ shift 5) hash key val added-leaf?)]\n          (if (identical? n node)\n            inode\n            (ArrayNode. nil cnt (clone-and-set arr idx n)))))))\n\n  (inode-without [inode shift hash key]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-not= nil node)\n        (let [n (.inode-without node (+ shift 5) hash key)]\n          (cond\n            (identical? n node)\n            inode\n\n            (nil? n)\n            (if (<= cnt 8)\n              (pack-array-node inode nil idx)\n              (ArrayNode. nil (dec cnt) (clone-and-set arr idx n)))\n\n            :else\n            (ArrayNode. nil cnt (clone-and-set arr idx n))))\n        inode)))\n\n  (inode-find [inode shift hash key]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-not= nil node)\n        (.inode-find node (+ shift 5) hash key)\n        nil)))\n\n  (inode-find [inode shift hash key not-found]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-not= nil node)\n        (.inode-find node (+ shift 5) hash key not-found)\n        not-found)))\n\n  (inode-seq [inode]\n    (create-array-node-seq arr))\n\n  (ensure-editable [inode e]\n    (if (identical? e edit)\n      inode\n      (ArrayNode. e cnt (aclone arr))))\n\n  (inode-assoc! [inode edit shift hash key val added-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-= nil node)\n        (let [editable (edit-and-set inode edit idx (.inode-assoc! cljs.core.BitmapIndexedNode/EMPTY edit (+ shift 5) hash key val added-leaf?))]\n          (set! (.-cnt editable) (inc (.-cnt editable)))\n          editable)\n        (let [n (.inode-assoc! node edit (+ shift 5) hash key val added-leaf?)]\n          (if (identical? n node)\n            inode\n            (edit-and-set inode edit idx n))))))\n\n  (inode-without! [inode edit shift hash key removed-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (coercive-= nil node)\n        inode\n        (let [n (.inode-without! node edit (+ shift 5) hash key removed-leaf?)]\n          (cond\n            (identical? n node)\n            inode\n\n            (coercive-= nil n)\n            (if (<= cnt 8)\n              (pack-array-node inode edit idx)\n              (let [editable (edit-and-set inode edit idx n)]\n                (set! (.-cnt editable) (dec (.-cnt editable)))\n                editable))\n\n            :else\n            (edit-and-set inode edit idx n))))))\n\n  (kv-reduce [inode f init]\n    (let [len (.-length arr)]           ; actually 32\n      (loop [i 0 init init]\n        (if (< i len)\n          (let [node (aget arr i)]\n            (if (coercive-not= node nil)\n              (let [init (.kv-reduce node f init)]\n                (if (reduced? init)\n                  @init\n                  (recur (inc i) init)))))\n          init)))))",
+ :source {:code "(deftype ArrayNode [edit ^:mutable cnt ^:mutable arr]\n  Object\n  (inode-assoc [inode shift hash key val added-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (nil? node)\n        (ArrayNode. nil (inc cnt) (clone-and-set arr idx (.inode-assoc cljs.core.BitmapIndexedNode/EMPTY (+ shift 5) hash key val added-leaf?)))\n        (let [n (.inode-assoc node (+ shift 5) hash key val added-leaf?)]\n          (if (identical? n node)\n            inode\n            (ArrayNode. nil cnt (clone-and-set arr idx n)))))))\n\n  (inode-without [inode shift hash key]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if-not (nil? node)\n        (let [n (.inode-without node (+ shift 5) hash key)]\n          (cond\n            (identical? n node)\n            inode\n\n            (nil? n)\n            (if (<= cnt 8)\n              (pack-array-node inode nil idx)\n              (ArrayNode. nil (dec cnt) (clone-and-set arr idx n)))\n\n            :else\n            (ArrayNode. nil cnt (clone-and-set arr idx n))))\n        inode)))\n\n  (inode-lookup [inode shift hash key not-found]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if-not (nil? node)\n        (.inode-lookup node (+ shift 5) hash key not-found)\n        not-found)))\n\n  (inode-find [inode shift hash key not-found]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if-not (nil? node)\n        (.inode-find node (+ shift 5) hash key not-found)\n        not-found)))\n\n  (inode-seq [inode]\n    (create-array-node-seq arr))\n\n  (ensure-editable [inode e]\n    (if (identical? e edit)\n      inode\n      (ArrayNode. e cnt (aclone arr))))\n\n  (inode-assoc! [inode edit shift hash key val added-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (nil? node)\n        (let [editable (edit-and-set inode edit idx (.inode-assoc! cljs.core.BitmapIndexedNode/EMPTY edit (+ shift 5) hash key val added-leaf?))]\n          (set! (.-cnt editable) (inc (.-cnt editable)))\n          editable)\n        (let [n (.inode-assoc! node edit (+ shift 5) hash key val added-leaf?)]\n          (if (identical? n node)\n            inode\n            (edit-and-set inode edit idx n))))))\n\n  (inode-without! [inode edit shift hash key removed-leaf?]\n    (let [idx  (mask hash shift)\n          node (aget arr idx)]\n      (if (nil? node)\n        inode\n        (let [n (.inode-without! node edit (+ shift 5) hash key removed-leaf?)]\n          (cond\n            (identical? n node)\n            inode\n\n            (nil? n)\n            (if (<= cnt 8)\n              (pack-array-node inode edit idx)\n              (let [editable (edit-and-set inode edit idx n)]\n                (set! (.-cnt editable) (dec (.-cnt editable)))\n                editable))\n\n            :else\n            (edit-and-set inode edit idx n))))))\n\n  (kv-reduce [inode f init]\n    (let [len (.-length arr)]           ; actually 32\n      (loop [i 0 init init]\n        (if (< i len)\n          (let [node (aget arr i)]\n            (if-not (nil? node)\n              (let [init (.kv-reduce node f init)]\n                (if (reduced? init)\n                  @init\n                  (recur (inc i) init)))))\n          init)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3806 3900],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3806-L3900"},
+          :lines [4233 4327],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L4233-L4327"},
  :full-name-encode "cljs.core_ArrayNode",
  :history [["+" "0.0-1211"]]}
 

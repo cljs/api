@@ -23,11 +23,11 @@ Returns the least of the nums.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1112-1117](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1112-L1117)</ins>
+            └── <ins>[core.cljs:1264-1269](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1264-L1269)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1236
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:183-186](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L183-L186)</ins>
+            └── <ins>[core.clj:183-186](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L183-L186)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1236
  :shadowed-sources ({:code "(defmacro min\n  ([x] x)\n  ([x y] (list 'js* \"((~{} < ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(min (min ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [183 186],
-                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L183-L186"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L183-L186"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_min",
  :source {:code "(defn min\n  ([x] x)\n  ([x y] (cljs.core/min x y))\n  ([x y & more]\n   (reduce min (cljs.core/min x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1112 1117],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1112-L1117"},
+          :lines [1264 1269],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1264-L1269"},
  :full-name "cljs.core/min",
  :clj-symbol "clojure.core/min",
  :docstring "Returns the least of the nums."}

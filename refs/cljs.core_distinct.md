@@ -21,11 +21,11 @@ Returns a lazy sequence of the elements of coll with duplicates removed
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5290-5301](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5290-L5301)</ins>
+            └── <ins>[core.cljs:5719-5730](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5719-L5730)</ins>
 </pre>
 
 ```clj
@@ -54,8 +54,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_distinct",
  :source {:code "(defn distinct\n  [coll]\n  (let [step (fn step [xs seen]\n               (lazy-seq\n                ((fn [[f :as xs] seen]\n                   (when-let [s (seq xs)]\n                     (if (contains? seen f)\n                       (recur (rest s) seen)\n                       (cons f (step (rest s) (conj seen f))))))\n                 xs seen)))]\n    (step coll #{})))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5290 5301],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5290-L5301"},
+          :lines [5719 5730],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5719-L5730"},
  :full-name "cljs.core/distinct",
  :clj-symbol "clojure.core/distinct",
  :docstring "Returns a lazy sequence of the elements of coll with duplicates removed"}

@@ -8,7 +8,7 @@
 </table>
 
  <samp>
-(__bit-count__ n)<br>
+(__bit-count__ v)<br>
 </samp>
 
 ```
@@ -18,20 +18,19 @@ Counts the number of bits set in n
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1212-1218](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1212-L1218)</ins>
+            └── <ins>[core.cljs:1364-1369](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1364-L1369)</ins>
 </pre>
 
 ```clj
 (defn bit-count
-  [n]
-  (loop [c 0 n n]
-    (if (zero? n)
-      c
-      (recur (inc c) (bit-and n (dec n))))))
+  [v]
+  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))
+        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]
+    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))
 ```
 
 
@@ -43,11 +42,11 @@ clojurescript @ r1236
  :name "bit-count",
  :docstring "Counts the number of bits set in n",
  :type "function",
- :signature ["[n]"],
- :source {:code "(defn bit-count\n  [n]\n  (loop [c 0 n n]\n    (if (zero? n)\n      c\n      (recur (inc c) (bit-and n (dec n))))))",
+ :signature ["[v]"],
+ :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1212 1218],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1212-L1218"},
+          :lines [1364 1369],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1364-L1369"},
  :full-name-encode "cljs.core_bit-count",
  :history [["+" "0.0-1211"]]}
 

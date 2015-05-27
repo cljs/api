@@ -21,11 +21,11 @@ Same as (first (first x))
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:556-559](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L556-L559)</ins>
+            └── <ins>[core.cljs:654-657](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L654-L657)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_ffirst",
  :source {:code "(defn ffirst\n  [coll]\n  (first (first coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [556 559],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L556-L559"},
+          :lines [654 657],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L654-L657"},
  :full-name "cljs.core/ffirst",
  :clj-symbol "clojure.core/ffirst",
  :docstring "Same as (first (first x))"}

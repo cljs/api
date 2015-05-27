@@ -22,11 +22,11 @@ string.  Similar to Perl's chomp.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:121-131](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/string.cljs#L121-L131)</ins>
+            └── <ins>[string.cljs:121-131](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/string.cljs#L121-L131)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1236
  :source {:code "(defn trim-newline\n  [s]\n  (loop [index (.-length s)]\n    (if (zero? index)\n      \"\"\n      (let [ch (get s (dec index))]\n        (if (or (= ch \\newline) (= ch \\return))\n          (recur (dec index))\n          (.substring s 0 index))))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [121 131],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/string.cljs#L121-L131"},
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/string.cljs#L121-L131"},
  :full-name "clojure.string/trim-newline",
  :clj-symbol "clojure.string/trim-newline",
  :docstring "Removes all trailing newline \\n or return \\r characters from\nstring.  Similar to Perl's chomp."}

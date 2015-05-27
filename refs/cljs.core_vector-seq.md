@@ -1,9 +1,9 @@
-## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/vector-seq
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> ~~cljs.core/vector-seq~~
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/api-refs/tree/0.0-1424"><img valign="middle" alt="[×] 0.0-1424" src="https://img.shields.io/badge/×-0.0--1424-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -61,6 +61,7 @@ clojurescript @ r1236
           :lines [2522 2540],
           :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2522-L2540"},
  :full-name-encode "cljs.core_vector-seq",
- :history [["+" "0.0-1211"]]}
+ :history [["+" "0.0-1211"] ["-" "0.0-1424"]],
+ :removed {:in "0.0-1424", :last-seen "0.0-1236"}}
 
 ```

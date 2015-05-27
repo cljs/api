@@ -21,11 +21,11 @@ Returns the key of the map entry.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5033-5036](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5033-L5036)</ins>
+            └── <ins>[core.cljs:5462-5465](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5462-L5465)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_key",
  :source {:code "(defn key\n  [map-entry]\n  (-key map-entry))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5033 5036],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5033-L5036"},
+          :lines [5462 5465],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5462-L5465"},
  :full-name "cljs.core/key",
  :clj-symbol "clojure.core/key",
  :docstring "Returns the key of the map entry."}

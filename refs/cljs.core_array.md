@@ -19,28 +19,28 @@ Creates a new javascript array.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:75-79](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L75-L79)</ins>
+            └── <ins>[core.cljs:76-80](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L76-L80)</ins>
 </pre>
 
 ```clj
 (defn array
   [var-args]            ;; [& items]
-  (js* "Array.prototype.slice.call(arguments)"))
+  (.call (.-slice (.-prototype js/Array)) (js* "arguments")))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:833-840](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L833-L840)</ins>
+            └── <ins>[core.clj:871-878](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L871-L878)</ins>
 </pre>
 
 ```clj
@@ -62,15 +62,15 @@ clojurescript @ r1236
  :signature ["[var-args]"],
  :shadowed-sources ({:code "(defmacro array [& rest]\n  (let [xs-str (->> (repeat \"~{}\")\n                    (take (count rest))\n                    (interpose \",\")\n                    (apply core/str))]\n   (concat\n    (list 'js* (core/str \"[\" xs-str \"]\"))\n    rest)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [833 840],
-                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L833-L840"}),
+                     :lines [871 878],
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L871-L878"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_array",
- :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (js* \"Array.prototype.slice.call(arguments)\"))",
+ :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (.call (.-slice (.-prototype js/Array)) (js* \"arguments\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [75 79],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L75-L79"},
+          :lines [76 80],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L76-L80"},
  :full-name "cljs.core/array",
  :docstring "Creates a new javascript array.\n@param {...*} var_args"}
 

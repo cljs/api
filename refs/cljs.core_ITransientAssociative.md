@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:250-251](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L250-L251)</ins>
+            └── <ins>[core.cljs:254-255](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L254-L255)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_ITransientAssociative",
  :source {:code "(defprotocol ITransientAssociative\n  (-assoc! [tcoll key val]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [250 251],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L250-L251"},
+          :lines [254 255],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L254-L255"},
  :methods [{:name "-assoc!",
             :signature ["[tcoll key val]"],
             :docstring nil}],

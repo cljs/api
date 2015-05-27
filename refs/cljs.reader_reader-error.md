@@ -18,17 +18,17 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:69-71](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L69-L71)</ins>
+            └── <ins>[reader.cljs:70-72](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L70-L72)</ins>
 </pre>
 
 ```clj
 (defn reader-error
   [rdr & msg]
-  (throw (apply str msg)))
+  (throw (js/Error. (apply str msg))))
 ```
 
 
@@ -40,10 +40,10 @@ clojurescript @ r1236
  :name "reader-error",
  :type "function",
  :signature ["[rdr & msg]"],
- :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (apply str msg)))",
+ :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (js/Error. (apply str msg))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [69 71],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L69-L71"},
+          :lines [70 72],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L70-L72"},
  :full-name-encode "cljs.reader_reader-error",
  :history [["+" "0.0-927"]]}
 

@@ -22,11 +22,11 @@ else true.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1848-1851](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1848-L1851)</ins>
+            └── <ins>[core.cljs:2154-2157](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2154-L2157)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_not-any_QMARK_",
  :source {:code "(defn ^boolean not-any?\n  [pred coll] (not (some pred coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1848 1851],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1848-L1851"},
+          :lines [2154 2157],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2154-L2157"},
  :full-name "cljs.core/not-any?",
  :clj-symbol "clojure.core/not-any?",
  :docstring "Returns false if (pred x) is logical true for any x in coll,\nelse true."}

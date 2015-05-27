@@ -24,21 +24,27 @@ accept 2 arguments, index and item.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1944-1955](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1944-L1955)</ins>
+            └── <ins>[core.cljs:2250-2267](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2250-L2267)</ins>
 </pre>
 
 ```clj
 (defn map-indexed
   [f coll]
-  (let [mapi (fn mpi [idx coll]
-               (lazy-seq
-                (when-let [s (seq coll)]
-                  (cons (f idx (first s))
-                        (mpi (inc idx) (rest s))))))]
+  (letfn [(mapi [idx coll]
+            (lazy-seq
+             (when-let [s (seq coll)]
+               (if (chunked-seq? s)
+                 (let [c (chunk-first s)
+                       size (count c)
+                       b (chunk-buffer size)]
+                   (dotimes [i size]
+                     (chunk-append b (f (+ idx i) (-nth c i))))
+                   (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))
+                 (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]
     (mapi 0 coll)))
 ```
 
@@ -52,10 +58,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_map-indexed",
- :source {:code "(defn map-indexed\n  [f coll]\n  (let [mapi (fn mpi [idx coll]\n               (lazy-seq\n                (when-let [s (seq coll)]\n                  (cons (f idx (first s))\n                        (mpi (inc idx) (rest s))))))]\n    (mapi 0 coll)))",
+ :source {:code "(defn map-indexed\n  [f coll]\n  (letfn [(mapi [idx coll]\n            (lazy-seq\n             (when-let [s (seq coll)]\n               (if (chunked-seq? s)\n                 (let [c (chunk-first s)\n                       size (count c)\n                       b (chunk-buffer size)]\n                   (dotimes [i size]\n                     (chunk-append b (f (+ idx i) (-nth c i))))\n                   (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                 (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n    (mapi 0 coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1944 1955],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1944-L1955"},
+          :lines [2250 2267],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2250-L2267"},
  :full-name "cljs.core/map-indexed",
  :clj-symbol "clojure.core/map-indexed",
  :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item."}

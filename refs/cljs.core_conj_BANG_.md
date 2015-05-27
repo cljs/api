@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1739-1740](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1739-L1740)</ins>
+            └── <ins>[core.cljs:2045-2046](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2045-L2046)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1236
  :signature ["[tcoll val]"],
  :source {:code "(defn conj! [tcoll val]\n  (-conj! tcoll val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1739 1740],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1739-L1740"},
+          :lines [2045 2046],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2045-L2046"},
  :full-name-encode "cljs.core_conj_BANG_",
  :clj-symbol "clojure.core/conj!",
  :history [["+" "0.0-1211"]]}

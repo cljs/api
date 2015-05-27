@@ -21,11 +21,11 @@ Bitwise exclusive or
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1160-1162](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1160-L1162)</ins>
+            └── <ins>[core.cljs:1312-1314](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1312-L1314)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1236
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:207-209](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L207-L209)</ins>
+            └── <ins>[core.clj:207-209](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L207-L209)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1236
  :shadowed-sources ({:code "(defmacro bit-xor\n  ([x y] (list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [207 209],
-                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L207-L209"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L207-L209"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-xor",
  :source {:code "(defn bit-xor\n  [x y] (cljs.core/bit-xor x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1160 1162],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1160-L1162"},
+          :lines [1312 1314],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1312-L1314"},
  :full-name "cljs.core/bit-xor",
  :clj-symbol "clojure.core/bit-xor",
  :docstring "Bitwise exclusive or"}

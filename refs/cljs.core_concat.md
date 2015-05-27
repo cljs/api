@@ -24,11 +24,11 @@ Returns a lazy seq representing the concatenation of the elements in the supplie
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1700-1718](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1700-L1718)</ins>
+            └── <ins>[core.cljs:2001-2024](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2001-L2024)</ins>
 </pre>
 
 ```clj
@@ -39,14 +39,19 @@ clojurescript @ r1236
     (lazy-seq
       (let [s (seq x)]
         (if s
-          (cons (first s) (concat (rest s) y))
+          (if (chunked-seq? s)
+            (chunk-cons (chunk-first s) (concat (chunk-rest s) y))
+            (cons (first s) (concat (rest s) y)))
           y))))
   ([x y & zs]
      (let [cat (fn cat [xys zs]
                  (lazy-seq
                    (let [xys (seq xys)]
                      (if xys
-                       (cons (first xys) (cat (rest xys) zs))
+                       (if (chunked-seq? xys)
+                         (chunk-cons (chunk-first xys)
+                                     (cat (chunk-rest xys) zs))
+                         (cons (first xys) (cat (rest xys) zs)))
                        (when zs
                          (cat (first zs) (next zs)))))))]
        (cat (concat x y) zs))))
@@ -62,10 +67,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_concat",
- :source {:code "(defn concat\n  ([] (lazy-seq nil))\n  ([x] (lazy-seq x))\n  ([x y]\n    (lazy-seq\n      (let [s (seq x)]\n        (if s\n          (cons (first s) (concat (rest s) y))\n          y))))\n  ([x y & zs]\n     (let [cat (fn cat [xys zs]\n                 (lazy-seq\n                   (let [xys (seq xys)]\n                     (if xys\n                       (cons (first xys) (cat (rest xys) zs))\n                       (when zs\n                         (cat (first zs) (next zs)))))))]\n       (cat (concat x y) zs))))",
+ :source {:code "(defn concat\n  ([] (lazy-seq nil))\n  ([x] (lazy-seq x))\n  ([x y]\n    (lazy-seq\n      (let [s (seq x)]\n        (if s\n          (if (chunked-seq? s)\n            (chunk-cons (chunk-first s) (concat (chunk-rest s) y))\n            (cons (first s) (concat (rest s) y)))\n          y))))\n  ([x y & zs]\n     (let [cat (fn cat [xys zs]\n                 (lazy-seq\n                   (let [xys (seq xys)]\n                     (if xys\n                       (if (chunked-seq? xys)\n                         (chunk-cons (chunk-first xys)\n                                     (cat (chunk-rest xys) zs))\n                         (cons (first xys) (cat (rest xys) zs)))\n                       (when zs\n                         (cat (first zs) (next zs)))))))]\n       (cat (concat x y) zs))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1700 1718],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1700-L1718"},
+          :lines [2001 2024],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2001-L2024"},
  :full-name "cljs.core/concat",
  :clj-symbol "clojure.core/concat",
  :docstring "Returns a lazy seq representing the concatenation of the elements in the supplied colls."}

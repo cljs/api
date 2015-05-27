@@ -21,17 +21,19 @@ Returns a seq of the items in coll in reverse order. Not lazy.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1454-1457](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1454-L1457)</ins>
+            └── <ins>[core.cljs:1617-1622](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1617-L1622)</ins>
 </pre>
 
 ```clj
 (defn reverse
   [coll]
-  (reduce conj () coll))
+  (if (reversible? coll)
+    (rseq coll)
+    (reduce conj () coll)))
 ```
 
 
@@ -44,10 +46,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_reverse",
- :source {:code "(defn reverse\n  [coll]\n  (reduce conj () coll))",
+ :source {:code "(defn reverse\n  [coll]\n  (if (reversible? coll)\n    (rseq coll)\n    (reduce conj () coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1454 1457],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1454-L1457"},
+          :lines [1617 1622],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1617-L1622"},
  :full-name "cljs.core/reverse",
  :clj-symbol "clojure.core/reverse",
  :docstring "Returns a seq of the items in coll in reverse order. Not lazy."}

@@ -135,10 +135,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/ArrayChunk](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ArrayChunk)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/Vec](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/Vec)</samp></td>
 </tr>
 <tr>
@@ -800,10 +796,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/shorts](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shorts)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/shuffle](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shuffle)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

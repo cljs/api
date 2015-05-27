@@ -21,11 +21,11 @@ Naive impl of to-array as a start.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1600-1608](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1600-L1608)</ins>
+            └── <ins>[core.cljs:1901-1909](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1901-L1909)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_to-array",
  :source {:code "(defn to-array\n  [s]\n  (let [ary (array)]\n    (loop [s s]\n      (if (seq s)\n        (do (. ary push (first s))\n            (recur (next s)))\n        ary))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1600 1608],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1600-L1608"},
+          :lines [1901 1909],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1901-L1909"},
  :full-name "cljs.core/to-array",
  :clj-symbol "clojure.core/to-array",
  :docstring "Naive impl of to-array as a start."}

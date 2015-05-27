@@ -26,11 +26,11 @@ comparison.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:271-283](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L271-L283)</ins>
+            └── <ins>[core.cljs:288-300](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L288-L300)</ins>
 </pre>
 
 ```clj
@@ -58,8 +58,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core__EQ_",
  :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y) (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [271 283],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L271-L283"},
+          :lines [288 300],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L288-L300"},
  :full-name "cljs.core/=",
  :clj-symbol "clojure.core/=",
  :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}

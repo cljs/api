@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:260-261](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L260-L261)</ins>
+            └── <ins>[core.cljs:264-265](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L264-L265)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_ITransientSet",
  :source {:code "(defprotocol ITransientSet\n  (-disjoin! [tcoll v]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [260 261],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L260-L261"},
+          :lines [264 265],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L264-L265"},
  :methods [{:name "-disjoin!",
             :signature ["[tcoll v]"],
             :docstring nil}],

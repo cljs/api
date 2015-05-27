@@ -26,11 +26,11 @@ hierarchy
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6149-6167](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6149-L6167)</ins>
+            └── <ins>[core.cljs:6626-6644](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6626-L6644)</ins>
 </pre>
 
 ```clj
@@ -63,8 +63,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_isa_QMARK_",
  :source {:code "(defn ^boolean isa?\n  ([child parent] (isa? @global-hierarchy child parent))\n  ([h child parent]\n     (or (= child parent)\n         ;; (and (class? parent) (class? child)\n         ;;    (. ^Class parent isAssignableFrom child))\n         (contains? ((:ancestors h) child) parent)\n         ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))\n         (and (vector? parent) (vector? child)\n              (== (count parent) (count child))\n              (loop [ret true i 0]\n                (if (or (not ret) (== i (count parent)))\n                  ret\n                  (recur (isa? h (child i) (parent i)) (inc i))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6149 6167],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6149-L6167"},
+          :lines [6626 6644],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6626-L6644"},
  :full-name "cljs.core/isa?",
  :clj-symbol "clojure.core/isa?",
  :docstring "Returns true if (= child parent), or child is directly or indirectly derived from\nparent, either via a JavaScript type inheritance relationship or a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy"}

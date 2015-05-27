@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:177-178](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L177-L178)</ins>
+            └── <ins>[core.cljs:181-182](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L181-L182)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_ISet",
  :source {:code "(defprotocol ISet\n  (-disjoin [coll v]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [177 178],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L177-L178"},
+          :lines [181 182],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L181-L182"},
  :methods [{:name "-disjoin", :signature ["[coll v]"], :docstring nil}],
  :full-name "cljs.core/ISet",
  :history [["+" "0.0-927"]]}

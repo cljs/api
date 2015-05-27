@@ -21,17 +21,17 @@ Returns a new seq where x is the first element and seq is the rest.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1496-1502](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1496-L1502)</ins>
+            └── <ins>[core.cljs:1670-1676](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1670-L1676)</ins>
 </pre>
 
 ```clj
 (defn cons
   [x coll]
-  (if (or (coercive-= coll nil)
+  (if (or (nil? coll)
           (satisfies? ISeq coll))
     (Cons. nil x coll nil)
     (Cons. nil x (seq coll) nil)))
@@ -47,10 +47,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_cons",
- :source {:code "(defn cons\n  [x coll]\n  (if (or (coercive-= coll nil)\n          (satisfies? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
+ :source {:code "(defn cons\n  [x coll]\n  (if (or (nil? coll)\n          (satisfies? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1496 1502],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1496-L1502"},
+          :lines [1670 1676],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1670-L1676"},
  :full-name "cljs.core/cons",
  :clj-symbol "clojure.core/cons",
  :docstring "Returns a new seq where x is the first element and seq is the rest."}

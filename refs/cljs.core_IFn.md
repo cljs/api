@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:116-138](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L116-L138)</ins>
+            └── <ins>[core.cljs:117-139](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L117-L139)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_IFn",
  :source {:code "(defprotocol IFn\n  (-invoke\n    [this]\n    [this a]\n    [this a b]\n    [this a b c]\n    [this a b c d]\n    [this a b c d e]\n    [this a b c d e f]\n    [this a b c d e f g]\n    [this a b c d e f g h]\n    [this a b c d e f g h i]\n    [this a b c d e f g h i j]\n    [this a b c d e f g h i j k]\n    [this a b c d e f g h i j k l]\n    [this a b c d e f g h i j k l m]\n    [this a b c d e f g h i j k l m n]\n    [this a b c d e f g h i j k l m n o]\n    [this a b c d e f g h i j k l m n o p]\n    [this a b c d e f g h i j k l m n o p q]\n    [this a b c d e f g h i j k l m n o p q s]\n    [this a b c d e f g h i j k l m n o p q s t]\n    [this a b c d e f g h i j k l m n o p q s t rest]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [116 138],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L116-L138"},
+          :lines [117 139],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L117-L139"},
  :methods [{:name "-invoke",
             :signature ["[this]"
                         "[this a]"

@@ -21,16 +21,19 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2683-2684](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2683-L2684)</ins>
+            └── <ins>[core.cljs:3025-3029](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3025-L3029)</ins>
 </pre>
 
 ```clj
 (defn vec [coll]
-  (reduce conj cljs.core.PersistentVector/EMPTY coll))
+  (-persistent!
+   (reduce -conj!
+           (-as-transient cljs.core.PersistentVector/EMPTY)
+           coll)))
 ```
 
 
@@ -42,10 +45,10 @@ clojurescript @ r1236
  :name "vec",
  :type "function",
  :signature ["[coll]"],
- :source {:code "(defn vec [coll]\n  (reduce conj cljs.core.PersistentVector/EMPTY coll))",
+ :source {:code "(defn vec [coll]\n  (-persistent!\n   (reduce -conj!\n           (-as-transient cljs.core.PersistentVector/EMPTY)\n           coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2683 2684],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2683-L2684"},
+          :lines [3025 3029],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3025-L3029"},
  :full-name-encode "cljs.core_vec",
  :clj-symbol "clojure.core/vec",
  :history [["+" "0.0-927"]]}

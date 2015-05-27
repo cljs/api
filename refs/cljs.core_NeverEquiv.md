@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3049-3051](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3049-L3051)</ins>
+            └── <ins>[core.cljs:3461-3463](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3461-L3463)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1236
  :signature ["[]"],
  :source {:code "(deftype NeverEquiv []\n  IEquiv\n  (-equiv [o other] false))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3049 3051],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3049-L3051"},
+          :lines [3461 3463],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3461-L3463"},
  :full-name-encode "cljs.core_NeverEquiv",
  :history [["+" "0.0-927"]]}
 

@@ -21,16 +21,16 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:595-596](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L595-L596)</ins>
+            └── <ins>[core.clj:631-632](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L631-L632)</ins>
 </pre>
 
 ```clj
 (defmacro lazy-seq [& body]
-  `(new cljs.core.LazySeq nil false (fn [] ~@body)))
+  `(new cljs.core/LazySeq nil false (fn [] ~@body) nil))
 ```
 
 
@@ -42,10 +42,10 @@ clojurescript @ r1236
  :name "lazy-seq",
  :type "macro",
  :signature ["[& body]"],
- :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core.LazySeq nil false (fn [] ~@body)))",
+ :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core/LazySeq nil false (fn [] ~@body) nil))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [595 596],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L595-L596"},
+          :lines [631 632],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L631-L632"},
  :full-name-encode "cljs.core_lazy-seq",
  :clj-symbol "clojure.core/lazy-seq",
  :history [["+" "0.0-927"]]}

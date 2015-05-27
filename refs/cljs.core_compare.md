@@ -16,29 +16,32 @@
 
 ```
 Comparator. Returns a negative number, zero, or a positive number
-when x is logically 'less than', 'equal to', or 'greater than'
-y. Uses google.array.defaultCompare for objects of the same type
-and special-cases nil to be less than any other object.
+ when x is logically 'less than', 'equal to', or 'greater than'
+ y. Uses IComparable if available and google.array.defaultCompare for objects
+of the same type and special-cases nil to be less than any other object.
 ```
 
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:913-923](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L913-L923)</ins>
+            └── <ins>[core.cljs:1038-1051](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1038-L1051)</ins>
 </pre>
 
 ```clj
 (defn compare
   [x y]
   (cond
-    (identical? (type x) (type y)) (garray/defaultCompare x y)
-    (nil? x) -1
-    (nil? y) 1
-    :else (throw (js/Error. "compare on non-nil objects of different types"))))
+   (identical? x y) 0
+   (nil? x) -1
+   (nil? y) 1
+   (identical? (type x) (type y)) (if (satisfies? IComparable x)
+                                    (-compare x y)
+                                    (garray/defaultCompare x y))
+   :else (throw (js/Error. "compare on non-nil objects of different types"))))
 ```
 
 
@@ -51,12 +54,12 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_compare",
- :source {:code "(defn compare\n  [x y]\n  (cond\n    (identical? (type x) (type y)) (garray/defaultCompare x y)\n    (nil? x) -1\n    (nil? y) 1\n    :else (throw (js/Error. \"compare on non-nil objects of different types\"))))",
+ :source {:code "(defn compare\n  [x y]\n  (cond\n   (identical? x y) 0\n   (nil? x) -1\n   (nil? y) 1\n   (identical? (type x) (type y)) (if (satisfies? IComparable x)\n                                    (-compare x y)\n                                    (garray/defaultCompare x y))\n   :else (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [913 923],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L913-L923"},
+          :lines [1038 1051],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1038-L1051"},
  :full-name "cljs.core/compare",
  :clj-symbol "clojure.core/compare",
- :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare for objects of the same type\nand special-cases nil to be less than any other object."}
+ :docstring "Comparator. Returns a negative number, zero, or a positive number\n when x is logically 'less than', 'equal to', or 'greater than'\n y. Uses IComparable if available and google.array.defaultCompare for objects\nof the same type and special-cases nil to be less than any other object."}
 
 ```

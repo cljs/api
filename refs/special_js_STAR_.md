@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:1319-1342](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L1319-L1342)</ins>
+            └── <ins>[analyzer.clj:762-785](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L762-L785)</ins>
 </pre>
 
 ```clj
@@ -60,9 +60,9 @@ clojurescript @ r1236
  :name "js*",
  :type "special form",
  :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (assert (string? jsform))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (-> form meta :tag) :form form :children argexprs}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (-> form meta :tag)})))",
-          :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [1319 1342],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L1319-L1342"},
+          :filename "clojurescript/src/clj/cljs/analyzer.clj",
+          :lines [762 785],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L762-L785"},
  :full-name-encode "special_js_STAR_",
  :history [["+" "0.0-927"]]}
 

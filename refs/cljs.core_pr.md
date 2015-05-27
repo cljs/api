@@ -24,11 +24,11 @@ read by the reader
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5723-5729](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5723-L5729)</ins>
+            └── <ins>[core.cljs:6167-6173](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6167-L6173)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_pr",
  :source {:code "(defn pr\n  [& objs]\n  (pr-with-opts objs (pr-opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5723 5729],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5723-L5729"},
+          :lines [6167 6173],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6167-L6173"},
  :full-name "cljs.core/pr",
  :clj-symbol "clojure.core/pr",
  :docstring "Prints the object(s) using string-print.  Prints the\nobject(s), separated by spaces if there is more than one.\nBy default, pr and prn print in a way that objects can be\nread by the reader"}

@@ -21,11 +21,11 @@ Coerce to int by stripping decimal places.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1124-1127](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1124-L1127)</ins>
+            └── <ins>[core.cljs:1276-1279](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1276-L1279)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_int",
  :source {:code "(defn int\n  [x]\n  (fix x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1124 1127],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1124-L1127"},
+          :lines [1276 1279],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1276-L1279"},
  :full-name "cljs.core/int",
  :clj-symbol "clojure.core/int",
  :docstring "Coerce to int by stripping decimal places."}

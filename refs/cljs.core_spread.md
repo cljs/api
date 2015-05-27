@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1692-1698](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1692-L1698)</ins>
+            └── <ins>[core.cljs:1993-1999](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1993-L1999)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1236
  :signature ["[arglist]"],
  :source {:code "(defn spread\n  [arglist]\n  (cond\n   (nil? arglist) nil\n   (nil? (next arglist)) (seq (first arglist))\n   :else (cons (first arglist)\n               (spread (next arglist)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1692 1698],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1692-L1698"},
+          :lines [1993 1999],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1993-L1999"},
  :full-name-encode "cljs.core_spread",
  :history [["+" "0.0-927"]]}
 

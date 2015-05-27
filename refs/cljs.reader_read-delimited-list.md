@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:194-207](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L194-L207)</ins>
+            └── <ins>[reader.cljs:233-246](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L233-L246)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r1236
  :signature ["[delim rdr recursive?]"],
  :source {:code "(defn read-delimited-list\n  [delim rdr recursive?]\n  (loop [a (transient [])]\n    (let [ch (read-past whitespace? rdr)]\n      (when-not ch (reader-error rdr \"EOF\"))\n      (if (identical? delim ch)\n        (persistent! a)\n        (if-let [macrofn (macros ch)]\n          (let [mret (macrofn rdr ch)]\n            (recur (if (identical? mret rdr) a (conj! a mret))))\n          (do\n            (unread rdr ch)\n            (let [o (read rdr true nil recursive?)]\n              (recur (if (identical? o rdr) a (conj! a o))))))))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [194 207],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L194-L207"},
+          :lines [233 246],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L233-L246"},
  :full-name-encode "cljs.reader_read-delimited-list",
  :history [["+" "0.0-927"]]}
 

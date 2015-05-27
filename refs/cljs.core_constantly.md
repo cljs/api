@@ -21,11 +21,11 @@ Returns a function that takes any number of arguments and returns x.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1875-1877](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1875-L1877)</ins>
+            └── <ins>[core.cljs:2181-2183](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2181-L2183)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_constantly",
  :source {:code "(defn constantly\n  [x] (fn [& args] x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1875 1877],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1875-L1877"},
+          :lines [2181 2183],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2181-L2183"},
  :full-name "cljs.core/constantly",
  :clj-symbol "clojure.core/constantly",
  :docstring "Returns a function that takes any number of arguments and returns x."}

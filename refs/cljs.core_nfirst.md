@@ -21,11 +21,11 @@ Same as (next (first x))
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:561-564](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L561-L564)</ins>
+            └── <ins>[core.cljs:659-662](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L659-L662)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_nfirst",
  :source {:code "(defn nfirst\n  [coll]\n  (next (first coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [561 564],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L561-L564"},
+          :lines [659 662],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L659-L662"},
  :full-name "cljs.core/nfirst",
  :clj-symbol "clojure.core/nfirst",
  :docstring "Same as (next (first x))"}

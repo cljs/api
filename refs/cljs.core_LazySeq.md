@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1567-1596](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1567-L1596)</ins>
+            └── <ins>[core.cljs:1750-1782](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1750-L1782)</ins>
 </pre>
 
 ```clj
@@ -40,6 +40,9 @@ clojurescript @ r1236
   ISeq
   (-first [coll] (first (lazy-seq-value coll)))
   (-rest [coll] (rest (lazy-seq-value coll)))
+
+  INext
+  (-next [coll] (-seq (-rest coll)))
 
   ICollection
   (-conj [coll o] (cons o coll))
@@ -67,10 +70,10 @@ clojurescript @ r1236
  :name "LazySeq",
  :type "type",
  :signature ["[meta realized x __hash]"],
- :source {:code "(deftype LazySeq [meta realized x ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta realized x __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first (lazy-seq-value coll)))\n  (-rest [coll] (rest (lazy-seq-value coll)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] (seq (lazy-seq-value coll))))",
+ :source {:code "(deftype LazySeq [meta realized x ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta realized x __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first (lazy-seq-value coll)))\n  (-rest [coll] (rest (lazy-seq-value coll)))\n\n  INext\n  (-next [coll] (-seq (-rest coll)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] (seq (lazy-seq-value coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1567 1596],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1567-L1596"},
+          :lines [1750 1782],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1750-L1782"},
  :full-name-encode "cljs.core_LazySeq",
  :history [["+" "0.0-927"]]}
 

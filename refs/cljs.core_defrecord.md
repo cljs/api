@@ -21,16 +21,16 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:537-545](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L537-L545)</ins>
+            └── <ins>[core.clj:571-579](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L571-L579)</ins>
 </pre>
 
 ```clj
 (defmacro defrecord [rsym fields & impls]
-  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]
+  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) rsym))]
     `(let []
        ~(emit-defrecord &env rsym r fields impls)
        (set! (.-cljs$lang$type ~r) true)
@@ -49,10 +49,10 @@ clojurescript @ r1236
  :name "defrecord",
  :type "macro",
  :signature ["[rsym fields & impls]"],
- :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
+ :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [537 545],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L537-L545"},
+          :lines [571 579],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L571-L579"},
  :full-name-encode "cljs.core_defrecord",
  :clj-symbol "clojure.core/defrecord",
  :history [["+" "0.0-927"]]}

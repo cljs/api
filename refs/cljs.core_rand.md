@@ -23,28 +23,28 @@ n (default 1) (exclusive).
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6113-6117](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6113-L6117)</ins>
+            └── <ins>[core.cljs:6590-6594](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6590-L6594)</ins>
 </pre>
 
 ```clj
 (defn rand
   ([] (rand 1))
-  ([n] (js* "Math.random() * ~{n}")))
+  ([n] (* (Math/random) n)))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1151-1154](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1151-L1154)</ins>
+            └── <ins>[core.cljs:1303-1306](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1303-L1306)</ins>
 </pre>
 
 ```clj
@@ -61,15 +61,15 @@ clojurescript @ r1236
  :signature ["[]" "[n]"],
  :shadowed-sources ({:code "(defn rand\n  ([]  (Math/random))\n  ([n] (* n (rand))))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [1151 1154],
-                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1151-L1154"}),
+                     :lines [1303 1306],
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1303-L1306"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand",
- :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (js* \"Math.random() * ~{n}\")))",
+ :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (* (Math/random) n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6113 6117],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6113-L6117"},
+          :lines [6590 6594],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6590-L6594"},
  :full-name "cljs.core/rand",
  :clj-symbol "clojure.core/rand",
  :docstring "Returns a random floating point number between 0 (inclusive) and\nn (default 1) (exclusive)."}

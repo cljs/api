@@ -2,12 +2,13 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>function</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 </table>
 
  <samp>
+(__special-symbols__ t not-found)<br>
 </samp>
 
 ```
@@ -17,18 +18,20 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:273-276](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L273-L276)</ins>
+            └── <ins>[reader.cljs:312-317](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L312-L317)</ins>
 </pre>
 
 ```clj
-(def special-symbols
-  {"nil" nil
-   "true" true
-   "false" false})
+(defn special-symbols [t not-found]
+  (cond
+   (identical? t "nil") nil
+   (identical? t "true") true
+   (identical? t "false") false
+   :else not-found))
 ```
 
 
@@ -38,11 +41,12 @@ clojurescript @ r1236
 {:full-name "cljs.reader/special-symbols",
  :ns "cljs.reader",
  :name "special-symbols",
- :type "var",
- :source {:code "(def special-symbols\n  {\"nil\" nil\n   \"true\" true\n   \"false\" false})",
+ :type "function",
+ :signature ["[t not-found]"],
+ :source {:code "(defn special-symbols [t not-found]\n  (cond\n   (identical? t \"nil\") nil\n   (identical? t \"true\") true\n   (identical? t \"false\") false\n   :else not-found))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [273 276],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L273-L276"},
+          :lines [312 317],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L312-L317"},
  :full-name-encode "cljs.reader_special-symbols",
  :history [["+" "0.0-927"]]}
 

@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:98-98](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L98-L98)</ins>
+                └── <ins>[event.cljs:98-98](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/event.cljs#L98-L98)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1236
  :source {:code "(defn remove-all [opt_obj opt_type opt_capt])",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [98 98],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L98-L98"},
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/event.cljs#L98-L98"},
  :full-name-encode "clojure.browser.event_remove-all",
  :history [["+" "0.0-927"]]}
 

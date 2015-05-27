@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:237-237](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L237-L237)</ins>
+            └── <ins>[reader.cljs:276-276](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L276-L276)</ins>
 </pre>
 
 ```clj
@@ -38,8 +38,8 @@ clojurescript @ r1236
  :type "var",
  :source {:code "(def read-comment skip-line)",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [237 237],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L237-L237"},
+          :lines [276 276],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L276-L276"},
  :full-name-encode "cljs.reader_read-comment",
  :history [["+" "0.0-927"]]}
 

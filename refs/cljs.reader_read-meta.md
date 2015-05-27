@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:320-328](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L320-L328)</ins>
+            └── <ins>[reader.cljs:361-369](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L361-L369)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1236
  :signature ["[rdr _]"],
  :source {:code "(defn read-meta\n  [rdr _]\n  (let [m (desugar-meta (read rdr true nil true))]\n    (when-not (map? m)\n      (reader-error rdr \"Metadata must be Symbol,Keyword,String or Map\"))\n    (let [o (read rdr true nil true)]\n      (if (satisfies? IWithMeta o)\n        (with-meta o (merge (meta o) m))\n        (reader-error rdr \"Metadata can only be applied to IWithMetas\")))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [320 328],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L320-L328"},
+          :lines [361 369],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L361-L369"},
  :full-name-encode "cljs.reader_read-meta",
  :history [["+" "0.0-927"]]}
 

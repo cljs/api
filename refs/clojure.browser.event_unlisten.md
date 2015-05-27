@@ -19,12 +19,12 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:62-69](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L62-L69)</ins>
+                └── <ins>[event.cljs:62-69](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/event.cljs#L62-L69)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1236
  :source {:code "(defn unlisten\n  ([src type fn]\n     (unlisten src type fn false))\n  ([src type fn capture?]\n     (goog.events/unlisten src\n                           (get (event-types src) type type)\n                           fn\n                           capture?)))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [62 69],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L62-L69"},
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/browser/event.cljs#L62-L69"},
  :full-name-encode "clojure.browser.event_unlisten",
  :history [["+" "0.0-927"]]}
 

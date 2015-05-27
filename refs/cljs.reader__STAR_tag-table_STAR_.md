@@ -17,16 +17,16 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:413-415](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L413-L415)</ins>
+            └── <ins>[reader.cljs:526-528](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L526-L528)</ins>
 </pre>
 
 ```clj
-(def *tag-table* (atom {"inst"  identity
-                        "uuid"  identity
+(def *tag-table* (atom {"inst"  read-date
+                        "uuid"  read-uuid
                         "queue" read-queue}))
 ```
 
@@ -38,10 +38,10 @@ clojurescript @ r1236
  :ns "cljs.reader",
  :name "*tag-table*",
  :type "var",
- :source {:code "(def *tag-table* (atom {\"inst\"  identity\n                        \"uuid\"  identity\n                        \"queue\" read-queue}))",
+ :source {:code "(def *tag-table* (atom {\"inst\"  read-date\n                        \"uuid\"  read-uuid\n                        \"queue\" read-queue}))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [413 415],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L413-L415"},
+          :lines [526 528],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L526-L528"},
  :full-name-encode "cljs.reader__STAR_tag-table_STAR_",
  :history [["+" "0.0-1236"]]}
 

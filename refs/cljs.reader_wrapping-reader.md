@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:310-313](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L310-L313)</ins>
+            └── <ins>[reader.cljs:351-354](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L351-L354)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1236
  :signature ["[sym]"],
  :source {:code "(defn wrapping-reader\n  [sym]\n  (fn [rdr _]\n    (list sym (read rdr true nil true))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [310 313],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L310-L313"},
+          :lines [351 354],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L351-L354"},
  :full-name-encode "cljs.reader_wrapping-reader",
  :history [["+" "0.0-927"]]}
 

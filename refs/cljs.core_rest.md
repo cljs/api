@@ -22,21 +22,21 @@ argument.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:525-536](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L525-L536)</ins>
+            └── <ins>[core.cljs:627-638](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L627-L638)</ins>
 </pre>
 
 ```clj
-(defn rest
+(defn ^seq rest
   [coll]
-  (if (coercive-not= coll nil)
+  (if-not (nil? coll)
     (if (satisfies? ISeq coll)
       (-rest coll)
       (let [s (seq coll)]
-        (if (coercive-not= s nil)
+        (if-not (nil? s)
           (-rest s)
           ())))
     ()))
@@ -46,16 +46,17 @@ clojurescript @ r1236
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type seq,
+ :ns "cljs.core",
  :name "rest",
  :signature ["[coll]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rest",
- :source {:code "(defn rest\n  [coll]\n  (if (coercive-not= coll nil)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if (coercive-not= s nil)\n          (-rest s)\n          ())))\n    ()))",
+ :source {:code "(defn ^seq rest\n  [coll]\n  (if-not (nil? coll)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if-not (nil? s)\n          (-rest s)\n          ())))\n    ()))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [525 536],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L525-L536"},
+          :lines [627 638],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L627-L638"},
  :full-name "cljs.core/rest",
  :clj-symbol "clojure.core/rest",
  :docstring "Returns a possibly empty seq of the items after the first. Calls seq on its\nargument."}

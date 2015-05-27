@@ -22,23 +22,19 @@ argument.  If there are no more items, returns nil
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:538-549](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L538-L549)</ins>
+            └── <ins>[core.cljs:640-647](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L640-L647)</ins>
 </pre>
 
 ```clj
-(defn next
+(defn ^seq next
   [coll]
-  (if (coercive-not= coll nil)
-    (if (satisfies? ISeq coll)
-      (let [coll (-rest coll)]
-        (if (coercive-not= coll nil)
-          (if (satisfies? ASeq coll)
-            coll
-            (-seq coll))))
+  (when-not (nil? coll)
+    (if (satisfies? INext coll)
+      (-next coll)
       (seq (rest coll)))))
 ```
 
@@ -46,16 +42,17 @@ clojurescript @ r1236
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type seq,
+ :ns "cljs.core",
  :name "next",
  :signature ["[coll]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_next",
- :source {:code "(defn next\n  [coll]\n  (if (coercive-not= coll nil)\n    (if (satisfies? ISeq coll)\n      (let [coll (-rest coll)]\n        (if (coercive-not= coll nil)\n          (if (satisfies? ASeq coll)\n            coll\n            (-seq coll))))\n      (seq (rest coll)))))",
+ :source {:code "(defn ^seq next\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? INext coll)\n      (-next coll)\n      (seq (rest coll)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [538 549],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L538-L549"},
+          :lines [640 647],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L640-L647"},
  :full-name "cljs.core/next",
  :clj-symbol "clojure.core/next",
  :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil"}

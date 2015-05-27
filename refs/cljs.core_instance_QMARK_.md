@@ -21,16 +21,16 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:830-831](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L830-L831)</ins>
+            └── <ins>[core.cljs:955-956](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L955-L956)</ins>
 </pre>
 
 ```clj
 (defn ^boolean instance? [t o]
-  (js* "(~{o} != null && (~{o} instanceof ~{t} || ~{o}.constructor === ~{t} || ~{t} === Object))"))
+  (js* "(~{o} instanceof ~{t})"))
 ```
 
 
@@ -44,10 +44,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_instance_QMARK_",
- :source {:code "(defn ^boolean instance? [t o]\n  (js* \"(~{o} != null && (~{o} instanceof ~{t} || ~{o}.constructor === ~{t} || ~{t} === Object))\"))",
+ :source {:code "(defn ^boolean instance? [t o]\n  (js* \"(~{o} instanceof ~{t})\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [830 831],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L830-L831"},
+          :lines [955 956],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L955-L956"},
  :full-name "cljs.core/instance?",
  :clj-symbol "clojure.core/instance?"}
 

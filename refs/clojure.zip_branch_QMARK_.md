@@ -21,11 +21,11 @@ Returns true if the node at loc is a branch
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/zip.cljs#L64-L67)</ins>
+            └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L64-L67)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1236
  :source {:code "(defn branch?\n  [loc]\n    ((:zip/branch? (meta loc)) (node loc)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [64 67],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/zip.cljs#L64-L67"},
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L64-L67"},
  :full-name "clojure.zip/branch?",
  :clj-symbol "clojure.zip/branch?",
  :docstring "Returns true if the node at loc is a branch"}

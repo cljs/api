@@ -25,11 +25,11 @@ it will not perform a linear search for a value.  See also 'some'.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:876-885](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L876-L885)</ins>
+            └── <ins>[core.cljs:1001-1010](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1001-L1010)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_contains_QMARK_",
  :source {:code "(defn ^boolean contains?\n  [coll v]\n  (if (identical? (-lookup coll v lookup-sentinel) lookup-sentinel)\n    false\n    true))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [876 885],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L876-L885"},
+          :lines [1001 1010],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1001-L1010"},
  :full-name "cljs.core/contains?",
  :clj-symbol "clojure.core/contains?",
  :docstring "Returns true if key is present in the given collection, otherwise\nreturns false.  Note that for numerically indexed collections like\nvectors and arrays, this tests if the numeric key is within the\nrange of indexes. 'contains?' operates constant or logarithmic time;\nit will not perform a linear search for a value.  See also 'some'."}

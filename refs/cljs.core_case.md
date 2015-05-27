@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:673-693](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L673-L693)</ins>
+            └── <ins>[core.clj:709-731](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L709-L731)</ins>
 </pre>
 
 ```clj
@@ -40,16 +40,18 @@ clojurescript @ r1236
                                              test "'"
                                              (when (:line &env)
                                                (core/str " on line " (:line &env) " "
-                                                         cljs.compiler/*cljs-file*)))))
+                                                         cljs.analyzer/*cljs-file*)))))
                            (assoc m test expr)))
         pairs (reduce (fn [m [test expr]]
                         (if (seq? test)
                           (reduce #(assoc-test %1 %2 expr) m test)
                           (assoc-test m test expr)))
-                      {} (partition 2 clauses))]
-   `(cond
-     ~@(mapcat (fn [[m c]] `((identical? ~m ~e) ~c)) pairs)
-     :else ~default)))
+                      {} (partition 2 clauses))
+        esym (gensym)]
+   `(let [~esym ~e]
+      (cond
+        ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)
+        :else ~default))))
 ```
 
 
@@ -61,10 +63,10 @@ clojurescript @ r1236
  :name "case",
  :type "macro",
  :signature ["[e & clauses]"],
- :source {:code "(defmacro case [e & clauses]\n  (let [default (if (odd? (count clauses))\n                  (last clauses)\n                  `(throw (js/Error. (core/str \"No matching clause: \" ~e))))\n        assoc-test (fn assoc-test [m test expr]\n                         (if (contains? m test)\n                           (throw (clojure.core/IllegalArgumentException.\n                                   (core/str \"Duplicate case test constant '\"\n                                             test \"'\"\n                                             (when (:line &env)\n                                               (core/str \" on line \" (:line &env) \" \"\n                                                         cljs.compiler/*cljs-file*)))))\n                           (assoc m test expr)))\n        pairs (reduce (fn [m [test expr]]\n                        (if (seq? test)\n                          (reduce #(assoc-test %1 %2 expr) m test)\n                          (assoc-test m test expr)))\n                      {} (partition 2 clauses))]\n   `(cond\n     ~@(mapcat (fn [[m c]] `((identical? ~m ~e) ~c)) pairs)\n     :else ~default)))",
+ :source {:code "(defmacro case [e & clauses]\n  (let [default (if (odd? (count clauses))\n                  (last clauses)\n                  `(throw (js/Error. (core/str \"No matching clause: \" ~e))))\n        assoc-test (fn assoc-test [m test expr]\n                         (if (contains? m test)\n                           (throw (clojure.core/IllegalArgumentException.\n                                   (core/str \"Duplicate case test constant '\"\n                                             test \"'\"\n                                             (when (:line &env)\n                                               (core/str \" on line \" (:line &env) \" \"\n                                                         cljs.analyzer/*cljs-file*)))))\n                           (assoc m test expr)))\n        pairs (reduce (fn [m [test expr]]\n                        (if (seq? test)\n                          (reduce #(assoc-test %1 %2 expr) m test)\n                          (assoc-test m test expr)))\n                      {} (partition 2 clauses))\n        esym (gensym)]\n   `(let [~esym ~e]\n      (cond\n        ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n        :else ~default))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [673 693],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L673-L693"},
+          :lines [709 731],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L709-L731"},
  :full-name-encode "cljs.core_case",
  :clj-symbol "clojure.core/case",
  :history [["+" "0.0-1211"]]}

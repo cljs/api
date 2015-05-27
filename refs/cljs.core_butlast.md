@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5304-5308](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5304-L5308)</ins>
+            └── <ins>[core.cljs:5733-5737](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5733-L5737)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1236
  :signature ["[s]"],
  :source {:code "(defn butlast [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5304 5308],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5304-L5308"},
+          :lines [5733 5737],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5733-L5737"},
  :full-name-encode "cljs.core_butlast",
  :clj-symbol "clojure.core/butlast",
  :history [["+" "0.0-927"]]}

@@ -18,22 +18,22 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:365-372](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L365-L372)</ins>
+            └── <ins>[reader.cljs:406-413](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L406-L413)</ins>
 </pre>
 
 ```clj
 (defn dispatch-macros [s]
-  (case s
-    "{" read-set
-    "<" (throwing-reader "Unreadable form")
-    "\"" read-regex
-    "!" read-comment
-    "_" read-discard
-    nil))
+  (cond
+   (identical? s "{") read-set
+   (identical? s "<") (throwing-reader "Unreadable form")
+   (identical? s "\"") read-regex
+   (identical? s"!") read-comment
+   (identical? s "_") read-discard
+   :else nil))
 ```
 
 
@@ -45,10 +45,10 @@ clojurescript @ r1236
  :name "dispatch-macros",
  :type "function",
  :signature ["[s]"],
- :source {:code "(defn dispatch-macros [s]\n  (case s\n    \"{\" read-set\n    \"<\" (throwing-reader \"Unreadable form\")\n    \"\\\"\" read-regex\n    \"!\" read-comment\n    \"_\" read-discard\n    nil))",
+ :source {:code "(defn dispatch-macros [s]\n  (cond\n   (identical? s \"{\") read-set\n   (identical? s \"<\") (throwing-reader \"Unreadable form\")\n   (identical? s \"\\\"\") read-regex\n   (identical? s\"!\") read-comment\n   (identical? s \"_\") read-discard\n   :else nil))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [365 372],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L365-L372"},
+          :lines [406 413],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L406-L413"},
  :full-name-encode "cljs.reader_dispatch-macros",
  :history [["+" "0.0-927"]]}
 

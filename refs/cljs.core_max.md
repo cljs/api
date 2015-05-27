@@ -23,11 +23,11 @@ Returns the greatest of the nums.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1105-1110](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1105-L1110)</ins>
+            └── <ins>[core.cljs:1257-1262](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1257-L1262)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1236
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:178-181](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L178-L181)</ins>
+            └── <ins>[core.clj:178-181](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L178-L181)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1236
  :shadowed-sources ({:code "(defmacro max\n  ([x] x)\n  ([x y] (list 'js* \"((~{} > ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(max (max ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [178 181],
-                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L178-L181"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L178-L181"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_max",
  :source {:code "(defn max\n  ([x] x)\n  ([x y] (cljs.core/max x y))\n  ([x y & more]\n   (reduce max (cljs.core/max x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1105 1110],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1105-L1110"},
+          :lines [1257 1262],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1257-L1262"},
  :full-name "cljs.core/max",
  :clj-symbol "clojure.core/max",
  :docstring "Returns the greatest of the nums."}

@@ -22,11 +22,11 @@ Returns a lazy sequence of successive items from coll while
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5367-5374](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5367-L5374)</ins>
+            └── <ins>[core.cljs:5796-5803](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5796-L5803)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1236
  :full-name-encode "cljs.core_take-while",
  :source {:code "(defn take-while\n  [pred coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (when (pred (first s))\n       (cons (first s) (take-while pred (rest s)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5367 5374],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5367-L5374"},
+          :lines [5796 5803],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5796-L5803"},
  :full-name "cljs.core/take-while",
  :clj-symbol "clojure.core/take-while",
  :docstring "Returns a lazy sequence of successive items from coll while\n(pred item) returns true. pred must be free of side-effects."}

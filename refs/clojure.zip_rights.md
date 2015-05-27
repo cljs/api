@@ -21,11 +21,11 @@ Returns a seq of the right siblings of this loc
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:92-95](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/zip.cljs#L92-L95)</ins>
+            └── <ins>[zip.cljs:92-95](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L92-L95)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1236
  :source {:code "(defn rights\n  [loc]\n    (:r (loc 1)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [92 95],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/zip.cljs#L92-L95"},
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/zip.cljs#L92-L95"},
  :full-name "clojure.zip/rights",
  :clj-symbol "clojure.zip/rights",
  :docstring "Returns a seq of the right siblings of this loc"}

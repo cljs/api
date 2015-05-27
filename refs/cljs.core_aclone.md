@@ -21,20 +21,34 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:69-73](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L69-L73)</ins>
+            └── <ins>[core.cljs:71-74](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L71-L74)</ins>
 </pre>
 
 ```clj
 (defn aclone
   [array-like]
-  #_(goog.array.clone array-like)
-  (js* "Array.prototype.slice.call(~{array-like})"))
+  (.slice array-like))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r1424
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:892-893](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L892-L893)</ins>
+</pre>
+
+```clj
+(defmacro aclone [a]
+  (list 'js* "~{}.slice()" a))
+```
 
 ---
 
@@ -42,13 +56,17 @@ clojurescript @ r1236
 {:ns "cljs.core",
  :name "aclone",
  :signature ["[array-like]"],
+ :shadowed-sources ({:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [892 893],
+                     :link "https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L892-L893"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aclone",
- :source {:code "(defn aclone\n  [array-like]\n  #_(goog.array.clone array-like)\n  (js* \"Array.prototype.slice.call(~{array-like})\"))",
+ :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [69 73],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L69-L73"},
+          :lines [71 74],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L71-L74"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

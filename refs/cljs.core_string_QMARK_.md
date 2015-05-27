@@ -21,16 +21,16 @@
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:848-851](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L848-L851)</ins>
+            └── <ins>[core.cljs:973-976](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L973-L976)</ins>
 </pre>
 
 ```clj
 (defn ^boolean string? [x]
-  (and (goog/isString x)
+  (and ^boolean (goog/isString x)
        (not (or (identical? (.charAt x 0) \uFDD0)
                 (identical? (.charAt x 0) \uFDD1)))))
 ```
@@ -46,10 +46,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_string_QMARK_",
- :source {:code "(defn ^boolean string? [x]\n  (and (goog/isString x)\n       (not (or (identical? (.charAt x 0) \\uFDD0)\n                (identical? (.charAt x 0) \\uFDD1)))))",
+ :source {:code "(defn ^boolean string? [x]\n  (and ^boolean (goog/isString x)\n       (not (or (identical? (.charAt x 0) \\uFDD0)\n                (identical? (.charAt x 0) \\uFDD1)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [848 851],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L848-L851"},
+          :lines [973 976],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L973-L976"},
  :full-name "cljs.core/string?",
  :clj-symbol "clojure.core/string?"}
 

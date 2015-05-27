@@ -23,23 +23,32 @@ side-effects.
 ---
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1969-1981](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1969-L1981)</ins>
+            └── <ins>[core.cljs:2290-2311](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2290-L2311)</ins>
 </pre>
 
 ```clj
 (defn keep-indexed
   ([f coll]
-     (let [keepi (fn kpi [idx coll]
-                   (lazy-seq
-                    (when-let [s (seq coll)]
-                      (let [x (f idx (first s))]
-                        (if (nil? x)
-                          (kpi (inc idx) (rest s))
-                          (cons x (kpi (inc idx) (rest s))))))))]
+     (letfn [(keepi [idx coll]
+               (lazy-seq
+                (when-let [s (seq coll)]
+                  (if (chunked-seq? s)
+                    (let [c (chunk-first s)
+                          size (count c)
+                          b (chunk-buffer size)]
+                      (dotimes [i size]
+                        (let [x (f (+ idx i) (-nth c i))]
+                          (when-not (nil? x)
+                            (chunk-append b x))))
+                      (chunk-cons (chunk b) (keepi (+ idx size) (chunk-rest s))))
+                    (let [x (f idx (first s))]
+                      (if (nil? x)
+                        (keepi (inc idx) (rest s))
+                        (cons x (keepi (inc idx) (rest s)))))))))]
        (keepi 0 coll))))
 ```
 
@@ -53,10 +62,10 @@ clojurescript @ r1236
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_keep-indexed",
- :source {:code "(defn keep-indexed\n  ([f coll]\n     (let [keepi (fn kpi [idx coll]\n                   (lazy-seq\n                    (when-let [s (seq coll)]\n                      (let [x (f idx (first s))]\n                        (if (nil? x)\n                          (kpi (inc idx) (rest s))\n                          (cons x (kpi (inc idx) (rest s))))))))]\n       (keepi 0 coll))))",
+ :source {:code "(defn keep-indexed\n  ([f coll]\n     (letfn [(keepi [idx coll]\n               (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (let [x (f (+ idx i) (-nth c i))]\n                          (when-not (nil? x)\n                            (chunk-append b x))))\n                      (chunk-cons (chunk b) (keepi (+ idx size) (chunk-rest s))))\n                    (let [x (f idx (first s))]\n                      (if (nil? x)\n                        (keepi (inc idx) (rest s))\n                        (cons x (keepi (inc idx) (rest s)))))))))]\n       (keepi 0 coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1969 1981],
-          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1969-L1981"},
+          :lines [2290 2311],
+          :link "https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2290-L2311"},
  :full-name "cljs.core/keep-indexed",
  :clj-symbol "clojure.core/keep-indexed",
  :docstring "Returns a lazy sequence of the non-nil results of (f index item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}
