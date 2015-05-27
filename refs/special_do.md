@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:472-475](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L472-L475)</ins>
+            └── <ins>[analyzer.clj:459-462](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L459-L462)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1503
  :type "special form",
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [block (analyze-block env exprs)]\n    (merge {:env env :op :do :form form :children (block-children block)} block)))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [472 475],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L472-L475"},
+          :lines [459 462],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L459-L462"},
  :full-name-encode "special_do",
  :clj-symbol "clojure.core/do",
  :history [["+" "0.0-927"]]}

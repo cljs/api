@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2836-2836](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2836-L2836)</ins>
+            └── <ins>[core.cljs:2837-2837](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2837-L2837)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1503
  :signature ["[edit arr]"],
  :source {:code "(deftype VectorNode [edit arr])",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2836 2836],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2836-L2836"},
+          :lines [2837 2837],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2837-L2837"},
  :full-name-encode "cljs.core_VectorNode",
  :history [["+" "0.0-1211"]]}
 

@@ -22,11 +22,11 @@ Returns a vector of the items in coll for which
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2669-2676](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2669-L2676)</ins>
+            └── <ins>[core.cljs:2670-2677](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2670-L2677)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1503
  :full-name-encode "cljs.core_filterv",
  :source {:code "(defn filterv\n  [pred coll]\n  (-> (reduce (fn [v o] (if (pred o) (conj! v o) v))\n              (transient [])\n              coll)\n      persistent!))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2669 2676],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2669-L2676"},
+          :lines [2670 2677],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2670-L2677"},
  :full-name "cljs.core/filterv",
  :clj-symbol "clojure.core/filterv",
  :docstring "Returns a vector of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}

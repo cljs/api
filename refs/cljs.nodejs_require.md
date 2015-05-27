@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:7-7](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/nodejs.cljs#L7-L7)</ins>
+            └── <ins>[nodejs.cljs:7-7](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/nodejs.cljs#L7-L7)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r1503
  :source {:code "(def require (js* \"require\"))",
           :filename "clojurescript/src/cljs/cljs/nodejs.cljs",
           :lines [7 7],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/nodejs.cljs#L7-L7"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/nodejs.cljs#L7-L7"},
  :full-name-encode "cljs.nodejs_require",
  :history [["+" "0.0-927"]]}
 

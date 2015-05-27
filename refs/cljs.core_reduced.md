@@ -18,11 +18,11 @@ Wraps x in a way such that a reduce will terminate with the value x
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:475-478](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L475-L478)</ins>
+            └── <ins>[core.cljs:475-478](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L475-L478)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1503
  :source {:code "(defn reduced\n  [x]\n  (Reduced. x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [475 478],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L475-L478"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L475-L478"},
  :full-name-encode "cljs.core_reduced",
  :history [["+" "0.0-1211"]]}
 

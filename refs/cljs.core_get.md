@@ -22,11 +22,11 @@ Returns the value mapped to key, not-found or nil if key not present.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:810-815](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L810-L815)</ins>
+            └── <ins>[core.cljs:810-815](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L810-L815)</ins>
 </pre>
 
 ```clj
@@ -41,11 +41,11 @@ clojurescript @ r1503
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:358-362](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L358-L362)</ins>
+            └── <ins>[core.clj:358-362](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L358-L362)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1503
  :shadowed-sources ({:code "(defmacro get\n  ([coll k]\n     `(-lookup ~coll ~k nil))\n  ([coll k not-found]\n     `(-lookup ~coll ~k ~not-found)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [358 362],
-                     :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L358-L362"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L358-L362"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_get",
  :source {:code "(defn get\n  ([o k]\n     (-lookup o k))\n  ([o k not-found]\n     (-lookup o k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [810 815],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L810-L815"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L810-L815"},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

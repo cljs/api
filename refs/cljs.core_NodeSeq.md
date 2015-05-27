@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4507-4549](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L4507-L4549)</ins>
+            └── <ins>[core.cljs:4508-4550](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L4508-L4550)</ins>
 </pre>
 
 ```clj
@@ -82,8 +82,8 @@ clojurescript @ r1503
  :signature ["[meta nodes i s __hash]"],
  :source {:code "(deftype NodeSeq [meta nodes i s ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IWithMeta\n  (-with-meta [coll meta] (NodeSeq. meta nodes i s __hash))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  ISeq\n  (-first [coll]\n    (if (nil? s)\n      [(aget nodes i) (aget nodes (inc i))]\n      (first s)))\n\n  (-rest [coll]\n    (if (nil? s)\n      (create-inode-seq nodes (+ i 2) nil)\n      (create-inode-seq nodes i (next s))))\n\n  ISeqable\n  (-seq [this] this)\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [4507 4549],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L4507-L4549"},
+          :lines [4508 4550],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L4508-L4550"},
  :full-name-encode "cljs.core_NodeSeq",
  :history [["+" "0.0-1211"]]}
 

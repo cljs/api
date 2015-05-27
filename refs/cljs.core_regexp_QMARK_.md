@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6115-6116](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6115-L6116)</ins>
+            └── <ins>[core.cljs:6117-6118](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6117-L6118)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1503
  :signature ["[o]"],
  :source {:code "(defn regexp? [o]\n  (js* \"~{o} instanceof RegExp\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6115 6116],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6115-L6116"},
+          :lines [6117 6118],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6117-L6118"},
  :full-name-encode "cljs.core_regexp_QMARK_",
  :history [["+" "0.0-1424"]]}
 

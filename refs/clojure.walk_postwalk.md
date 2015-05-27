@@ -23,11 +23,11 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/walk.cljs#L50-L56)</ins>
+            └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/walk.cljs#L50-L56)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1503
  :source {:code "(defn postwalk\n  [f form]\n  (walk (partial postwalk f) f form))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [50 56],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/walk.cljs#L50-L56"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/walk.cljs#L50-L56"},
  :full-name "clojure.walk/postwalk",
  :clj-symbol "clojure.walk/postwalk",
  :docstring "Performs a depth-first, post-order traversal of form.  Calls f on\neach sub-form, uses f's return value in place of the original.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}

@@ -22,16 +22,17 @@ Please use the idiom (seq x) rather than (not (empty? x))
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:905-908](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L905-L908)</ins>
+            └── <ins>[core.cljs:905-909](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L905-L909)</ins>
 </pre>
 
 ```clj
 (defn ^boolean empty?
-  [coll] (not (seq coll)))
+  [coll] (or (nil? coll)
+             (not (seq coll))))
 ```
 
 
@@ -45,10 +46,10 @@ clojurescript @ r1503
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_empty_QMARK_",
- :source {:code "(defn ^boolean empty?\n  [coll] (not (seq coll)))",
+ :source {:code "(defn ^boolean empty?\n  [coll] (or (nil? coll)\n             (not (seq coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [905 908],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L905-L908"},
+          :lines [905 909],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L905-L909"},
  :full-name "cljs.core/empty?",
  :clj-symbol "clojure.core/empty?",
  :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))"}

@@ -24,11 +24,11 @@ bound to integers from 0 through n-1.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1042-1054](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1042-L1054)</ins>
+            └── <ins>[core.clj:1035-1047](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1035-L1047)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1503
  :full-name-encode "cljs.core_dotimes",
  :source {:code "(defmacro dotimes\n  [bindings & body]\n  (let [i (first bindings)\n        n (second bindings)]\n    `(let [n# ~n]\n       (loop [~i 0]\n         (when (< ~i n#)\n           ~@body\n           (recur (inc ~i)))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [1042 1054],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1042-L1054"},
+          :lines [1035 1047],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1035-L1047"},
  :full-name "cljs.core/dotimes",
  :clj-symbol "clojure.core/dotimes",
  :docstring "bindings => name n\n\nRepeatedly executes body (presumably for side-effects) with name\nbound to integers from 0 through n-1."}

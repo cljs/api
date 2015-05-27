@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:693-702](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L693-L702)</ins>
+            └── <ins>[core.clj:686-695](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L686-L695)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1503
  :signature ["[rsym fields & impls]"],
  :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))\n       (set! (.-cljs$lang$ctorPrWriter ~r) (fn [this# writer#] (-write writer# ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [693 702],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L693-L702"},
+          :lines [686 695],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L686-L695"},
  :full-name-encode "cljs.core_defrecord",
  :clj-symbol "clojure.core/defrecord",
  :history [["+" "0.0-927"]]}

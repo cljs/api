@@ -23,11 +23,11 @@ Returns true if no two of the arguments are =
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1060-1074](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1060-L1074)</ins>
+            └── <ins>[core.cljs:1061-1075](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1061-L1075)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1503
  :full-name-encode "cljs.core_distinct_QMARK_",
  :source {:code "(defn ^boolean distinct?\n  ([x] true)\n  ([x y] (not (= x y)))\n  ([x y & more]\n     (if (not (= x y))\n     (loop [s #{x y} xs more]\n       (let [x (first xs)\n             etc (next xs)]\n         (if xs\n           (if (contains? s x)\n             false\n             (recur (conj s x) etc))\n           true)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1060 1074],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1060-L1074"},
+          :lines [1061 1075],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1061-L1075"},
  :full-name "cljs.core/distinct?",
  :clj-symbol "clojure.core/distinct?",
  :docstring "Returns true if no two of the arguments are ="}

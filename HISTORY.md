@@ -10,6 +10,23 @@
 <th>Compiler API</th>
 </thead>
 <tr>
+<td>__[0.0-1513](https://github.com/cljsinfo/api-refs/tree/0.0-1513)__</td>
+<td>2012-10-18</td>
+<td><kbd>1.4.0</kbd></td>
+<td><kbd>20111110-r1376</kbd></td>
+<td>
+<a href="#user-content-00-1513-library-api">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-00-1513-compiler-api">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1503](https://github.com/cljsinfo/api-refs/tree/0.0-1503)__</td>
 <td>2012-10-11</td>
 <td><kbd>1.4.0</kbd></td>
@@ -213,6 +230,18 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1513
+
+<a name="00-1513-library-api"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="00-1513-compiler-api"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1503

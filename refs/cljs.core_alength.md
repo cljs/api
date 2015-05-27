@@ -21,11 +21,11 @@ Returns the length of the array. Works on arrays of all types.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:116-119](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L116-L119)</ins>
+            └── <ins>[core.cljs:116-119](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L116-L119)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1503
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1010-1011](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1010-L1011)</ins>
+            └── <ins>[core.clj:1003-1004](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1003-L1004)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1503
  :signature ["[array]"],
  :shadowed-sources ({:code "(defmacro alength [a]\n  (list 'js* \"~{}.length\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1010 1011],
-                     :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1010-L1011"}),
+                     :lines [1003 1004],
+                     :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1003-L1004"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_alength",
  :source {:code "(defn alength\n  [array]\n  (cljs.core/alength array))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [116 119],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L116-L119"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L116-L119"},
  :full-name "cljs.core/alength",
  :clj-symbol "clojure.core/alength",
  :docstring "Returns the length of the array. Works on arrays of all types."}

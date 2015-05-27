@@ -23,11 +23,11 @@ logical true.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:893-905](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L893-L905)</ins>
+            └── <ins>[core.clj:886-898](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L886-L898)</ins>
 </pre>
 
 ```clj
@@ -82,8 +82,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_assert",
  :source {:code "(defmacro assert\n  ([x]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" (cljs.core/pr-str '~x)))))))\n  ([x message]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" ~message \"\\n\" (cljs.core/pr-str '~x))))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [893 905],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L893-L905"},
+          :lines [886 898],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L886-L898"},
  :full-name "cljs.core/assert",
  :clj-symbol "clojure.core/assert",
  :docstring "Evaluates expr and throws an exception if it does not evaluate to\nlogical true."}

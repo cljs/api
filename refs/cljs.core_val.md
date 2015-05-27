@@ -21,11 +21,11 @@ Returns the value in the map entry.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5541-5544](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5541-L5544)</ins>
+            └── <ins>[core.cljs:5542-5545](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5542-L5545)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1503
  :full-name-encode "cljs.core_val",
  :source {:code "(defn val\n  [map-entry]\n  (-val map-entry))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5541 5544],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5541-L5544"},
+          :lines [5542 5545],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5542-L5545"},
  :full-name "cljs.core/val",
  :clj-symbol "clojure.core/val",
  :docstring "Returns the value in the map entry."}

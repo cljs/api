@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1933-1934](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1933-L1934)</ins>
+            └── <ins>[core.cljs:1934-1935](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1934-L1935)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1503
  :signature ["[b x]"],
  :source {:code "(defn chunk-append [b x]\n  (.add b x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1933 1934],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1933-L1934"},
+          :lines [1934 1935],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1934-L1935"},
  :full-name-encode "cljs.core_chunk-append",
  :history [["+" "0.0-1424"]]}
 

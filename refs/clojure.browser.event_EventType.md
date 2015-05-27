@@ -17,12 +17,12 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:17-18](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/browser/event.cljs#L17-L18)</ins>
+                └── <ins>[event.cljs:17-18](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/browser/event.cljs#L17-L18)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1503
  :source {:code "(defprotocol EventType\n  (event-types [this]))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [17 18],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/browser/event.cljs#L17-L18"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/browser/event.cljs#L17-L18"},
  :methods [{:name "event-types",
             :signature ["[this]"],
             :docstring nil}],

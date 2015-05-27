@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5888-5892](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5888-L5892)</ins>
+            └── <ins>[core.cljs:5890-5894](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5890-L5894)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1503
  :signature ["[sc test key]"],
  :source {:code "(defn mk-bound-fn\n  [sc test key]\n  (fn [e]\n    (let [comp (-comparator sc)]\n      (test (comp (-entry-key sc e) key) 0))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5888 5892],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5888-L5892"},
+          :lines [5890 5894],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5890-L5894"},
  :full-name-encode "cljs.core_mk-bound-fn",
  :history [["+" "0.0-1211"]]}
 

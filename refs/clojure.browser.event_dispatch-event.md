@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/browser/event.cljs#L75-L77)</ins>
+                └── <ins>[event.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/browser/event.cljs#L75-L77)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1503
  :source {:code "(defn dispatch-event\n  [src event]\n  (goog.events/dispatchEvent src event))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [75 77],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/browser/event.cljs#L75-L77"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/browser/event.cljs#L75-L77"},
  :full-name-encode "clojure.browser.event_dispatch-event",
  :history [["+" "0.0-927"]]}
 

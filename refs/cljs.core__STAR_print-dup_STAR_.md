@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6291-6291](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6291-L6291)</ins>
+            └── <ins>[core.cljs:6293-6293](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6293-L6293)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1503
  :type "var",
  :source {:code "(def *print-dup* false)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6291 6291],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6291-L6291"},
+          :lines [6293 6293],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6293-L6293"},
  :full-name-encode "cljs.core__STAR_print-dup_STAR_",
  :clj-symbol "clojure.core/*print-dup*",
  :history [["+" "0.0-927"]]}

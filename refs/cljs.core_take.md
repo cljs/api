@@ -22,11 +22,11 @@ there are fewer than n.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2481-2488](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2481-L2488)</ins>
+            └── <ins>[core.cljs:2482-2489](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2482-L2489)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1503
  :full-name-encode "cljs.core_take",
  :source {:code "(defn take\n  [n coll]\n  (lazy-seq\n   (when (pos? n)\n     (when-let [s (seq coll)]\n      (cons (first s) (take (dec n) (rest s)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2481 2488],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2481-L2488"},
+          :lines [2482 2489],
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2482-L2489"},
  :full-name "cljs.core/take",
  :clj-symbol "clojure.core/take",
  :docstring "Returns a lazy sequence of the first n items in coll, or all items if\nthere are fewer than n."}

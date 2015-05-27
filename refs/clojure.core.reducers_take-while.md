@@ -19,12 +19,12 @@ Ends the reduction of coll when (pred val) returns logical false.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:141-151](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L141-L151)</ins>
+                └── <ins>[reducers.cljs:141-151](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L141-L151)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1503
  :source {:code "(defcurried take-while\n  \"Ends the reduction of coll when (pred val) returns logical false.\"\n  {}\n  [pred coll]\n  (reducer coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               (reduced ret)))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [141 151],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L141-L151"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L141-L151"},
  :full-name-encode "clojure.core.reducers_take-while",
  :history [["+" "0.0-1236"]]}
 

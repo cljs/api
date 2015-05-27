@@ -22,11 +22,11 @@ it in a depth-first walk.
 ---
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:237-251](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/zip.cljs#L237-L251)</ins>
+            └── <ins>[zip.cljs:237-251](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/zip.cljs#L237-L251)</ins>
 </pre>
 
 ```clj
@@ -58,7 +58,7 @@ clojurescript @ r1503
  :source {:code "(defn remove\n  [loc]\n    (let [[node {l :l, ppath :ppath, pnodes :pnodes, rs :r, :as path}] loc]\n      (if (nil? path)\n        (throw \"Remove at top\")\n        (if (pos? (count l))\n          (loop [loc (with-meta [(peek l) (assoc path :l (pop l) :changed? true)] (meta loc))]\n            (if-let [child (and (branch? loc) (down loc))]\n              (recur (rightmost child))\n              loc))\n          (with-meta [(make-node loc (peek pnodes) rs) \n                      (and ppath (assoc ppath :changed? true))]\n                     (meta loc))))))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [237 251],
-          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/zip.cljs#L237-L251"},
+          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/zip.cljs#L237-L251"},
  :full-name "clojure.zip/remove",
  :clj-symbol "clojure.zip/remove",
  :docstring "Removes the node at loc, returning the loc that would have preceded\nit in a depth-first walk."}
