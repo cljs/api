@@ -22,11 +22,11 @@ strings to keywords.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6747-6777](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6747-L6777)</ins>
+            └── <ins>[core.cljs:6756-6786](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6756-L6786)</ins>
 </pre>
 
 ```clj
@@ -71,8 +71,8 @@ clojurescript @ r1798
  :signature ["[x]" "[x & opts]"],
  :source {:code "(defn js->clj\n  ([x] (js->clj x {:keywordize-keys false}))\n  ([x & opts]\n    (cond\n      (satisfies? x IEncodeClojure)\n      (-js->clj x (apply array-map opts))\n\n      (seq opts)\n      (let [{:keys [keywordize-keys]} opts\n            keyfn (if keywordize-keys keyword str)\n            f (fn thisfn [x]\n                (cond\n                  (seq? x)\n                  (doall (map thisfn x))\n\n                  (coll? x)\n                  (into (empty x) (map thisfn x))\n\n                  (array? x)\n                  (vec (map thisfn x))\n                   \n                  (identical? (type x) js/Object)\n                  (into {} (for [k (js-keys x)]\n                             [(keyfn k) (thisfn (aget x k))]))\n\n                  :else x))]\n        (f x)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6747 6777],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6747-L6777"},
+          :lines [6756 6786],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6756-L6786"},
  :full-name-encode "cljs.core_js-_GT_clj",
  :history [["+" "0.0-927"]]}
 

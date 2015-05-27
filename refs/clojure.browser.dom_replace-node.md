@@ -20,12 +20,12 @@ element or an html string.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:114-122](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/dom.cljs#L114-L122)</ins>
+                └── <ins>[dom.cljs:114-122](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/dom.cljs#L114-L122)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1798
  :source {:code "(defn replace-node\n  [old-node new-node]\n  (let [old-node (ensure-element old-node)\n        new-node (ensure-element new-node)]\n    (gdom/replaceNode new-node old-node)\n    new-node))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [114 122],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/dom.cljs#L114-L122"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/dom.cljs#L114-L122"},
  :full-name-encode "clojure.browser.dom_replace-node",
  :history [["+" "0.0-927"]]}
 

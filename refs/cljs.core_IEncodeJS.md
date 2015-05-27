@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6709-6712](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6709-L6712)</ins>
+            └── <ins>[core.cljs:6718-6721](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6718-L6721)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1798
  :full-name-encode "cljs.core_IEncodeJS",
  :source {:code "(defprotocol IEncodeJS\n  (-clj->js [x] \"Recursively transforms clj values to JavaScript\")\n  (-key->js [x] \"Transforms map keys to valid JavaScript keys. Arbitrary keys are\n  encoded to their string representation via (pr-str x)\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6709 6712],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6709-L6712"},
+          :lines [6718 6721],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6718-L6721"},
  :methods [{:name "-clj->js",
             :signature ["[x]"],
             :docstring "Recursively transforms clj values to JavaScript"}

@@ -26,11 +26,11 @@ called, the returned function calls f with args + additional args.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2471-2482](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2471-L2482)</ins>
+            └── <ins>[core.cljs:2480-2491](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2480-L2491)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1798
  :full-name-encode "cljs.core_partial",
  :source {:code "(defn partial\n  ([f arg1]\n   (fn [& args] (apply f arg1 args)))\n  ([f arg1 arg2]\n   (fn [& args] (apply f arg1 arg2 args)))\n  ([f arg1 arg2 arg3]\n   (fn [& args] (apply f arg1 arg2 arg3 args)))\n  ([f arg1 arg2 arg3 & more]\n   (fn [& args] (apply f arg1 arg2 arg3 (concat more args)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2471 2482],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2471-L2482"},
+          :lines [2480 2491],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2480-L2491"},
  :full-name "cljs.core/partial",
  :clj-symbol "clojure.core/partial",
  :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args."}

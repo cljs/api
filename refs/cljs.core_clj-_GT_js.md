@@ -20,11 +20,11 @@ Maps become Objects. Arbitrary keys are encoded to by key->js.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6726-6742](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6726-L6742)</ins>
+            └── <ins>[core.cljs:6735-6751](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6735-L6751)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r1798
  :signature ["[x]"],
  :source {:code "(defn clj->js\n   [x]\n   (when-not (nil? x)\n     (if (satisfies? IEncodeJS x)\n       (-clj->js x)\n       (cond\n         (keyword? x) (name x)\n         (symbol? x) (str x)\n         (map? x) (let [m (js-obj)]\n                    (doseq [[k v] x]\n                      (aset m (key->js k) (clj->js v)))\n                    m)\n         (coll? x) (apply array (map clj->js x))\n         :else x))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6726 6742],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6726-L6742"},
+          :lines [6735 6751],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6735-L6751"},
  :full-name-encode "cljs.core_clj-_GT_js",
  :history [["+" "0.0-1552"]]}
 

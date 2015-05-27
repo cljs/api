@@ -21,11 +21,11 @@ the ys from x and returns the result.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1494-1499](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1494-L1499)</ins>
+            └── <ins>[core.cljs:1503-1508](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1503-L1508)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1798
  :signature ["[x]" "[x y]" "[x y & more]"],
  :source {:code "(defn unchecked-substract-int\n  ([x] (cljs.core/unchecked-subtract-int x))\n  ([x y] (cljs.core/unchecked-subtract-int x y))\n  ([x y & more] (reduce unchecked-substract-int (cljs.core/unchecked-subtract-int x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1494 1499],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1494-L1499"},
+          :lines [1503 1508],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1503-L1508"},
  :full-name-encode "cljs.core_unchecked-substract-int",
  :history [["+" "0.0-1798"]]}
 

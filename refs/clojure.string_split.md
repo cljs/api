@@ -23,11 +23,11 @@ the maximum number of splits. Not lazy. Returns vector of the splits.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:81-99](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/string.cljs#L81-L99)</ins>
+            └── <ins>[string.cljs:81-99](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/string.cljs#L81-L99)</ins>
 </pre>
 
 ```clj
@@ -63,7 +63,7 @@ clojurescript @ r1798
  :source {:code "(defn split\n  ([s re]\n     (vec (.split (str s) re)))\n  ([s re limit]\n     (if (< limit 1)\n       (vec (.split (str s) re))\n       (loop [s s\n              limit limit\n              parts []]\n         (if (= limit 1)\n           (conj parts s)\n           (if-let [m (re-find re s)]\n             (let [index (.indexOf s m)]\n               (recur (.substring s (+ index (count m)))\n                      (dec limit)\n                      (conj parts (.substring s 0 index))))\n             (conj parts s)))))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [81 99],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/string.cljs#L81-L99"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/string.cljs#L81-L99"},
  :full-name "clojure.string/split",
  :clj-symbol "clojure.string/split",
  :docstring "Splits string on a regular expression. Optional argument limit is\nthe maximum number of splits. Not lazy. Returns vector of the splits."}

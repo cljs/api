@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1889-1920](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1889-L1920)</ins>
+            └── <ins>[core.cljs:1898-1929](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1898-L1929)</ins>
 </pre>
 
 ```clj
@@ -71,8 +71,8 @@ clojurescript @ r1798
  :signature ["[meta first rest __hash]"],
  :source {:code "(deftype Cons [meta first rest ^:mutable __hash]\n  IList\n\n  IWithMeta\n  (-with-meta [coll meta] (Cons. meta first rest __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] (if (nil? rest) () rest))\n\n  INext\n  (-next [coll] (if (nil? rest) nil (-seq rest)))\n\n  ICollection\n  (-conj [coll o] (Cons. nil o coll __hash))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1889 1920],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1889-L1920"},
+          :lines [1898 1929],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1898-L1929"},
  :full-name-encode "cljs.core_Cons",
  :history [["+" "0.0-927"]]}
 

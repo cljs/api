@@ -24,11 +24,11 @@ the ys from x and returns the result.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1322-1327](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1322-L1327)</ins>
+            └── <ins>[core.cljs:1331-1336](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1331-L1336)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1798
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:323-326](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L323-L326)</ins>
+            └── <ins>[core.clj:323-326](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L323-L326)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1798
  :shadowed-sources ({:code "(defmacro -\n  ([x] (list 'js* \"(- ~{})\" x))\n  ([x y] (list 'js* \"(~{} - ~{})\" x y))\n  ([x y & more] `(- (- ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [323 326],
-                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L323-L326"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L323-L326"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_-",
  :source {:code "(defn -\n  ([x] (cljs.core/- x))\n  ([x y] (cljs.core/- x y))\n  ([x y & more] (reduce - (cljs.core/- x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1322 1327],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1322-L1327"},
+          :lines [1331 1336],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1331-L1336"},
  :full-name "cljs.core/-",
  :clj-symbol "clojure.core/-",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}

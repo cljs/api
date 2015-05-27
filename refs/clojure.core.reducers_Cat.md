@@ -21,12 +21,12 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:184-204](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L184-L204)</ins>
+                └── <ins>[reducers.cljs:184-204](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L184-L204)</ins>
 </pre>
 
 ```clj
@@ -65,7 +65,7 @@ clojurescript @ r1798
  :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n  \n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  #_\n  CollFold\n  #_\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [184 204],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L184-L204"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L184-L204"},
  :full-name-encode "clojure.core.reducers_Cat",
  :clj-symbol "clojure.core.reducers/Cat",
  :history [["+" "0.0-1236"]]}

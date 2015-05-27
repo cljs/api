@@ -21,11 +21,11 @@ Is set1 a subset of set2?
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:132-136](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/set.cljs#L132-L136)</ins>
+            └── <ins>[set.cljs:132-136](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/set.cljs#L132-L136)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1798
  :source {:code "(defn subset? \n  [set1 set2]\n  (and (<= (count set1) (count set2))\n       (every? #(contains? set2 %) set1)))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [132 136],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/set.cljs#L132-L136"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/set.cljs#L132-L136"},
  :full-name "clojure.set/subset?",
  :clj-symbol "clojure.set/subset?",
  :docstring "Is set1 a subset of set2?"}

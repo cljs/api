@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:201-222](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L201-L222)</ins>
+            └── <ins>[reader.cljs:201-222](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L201-L222)</ins>
 </pre>
 
 ```clj
@@ -62,7 +62,7 @@ clojurescript @ r1798
  :source {:code "(defn escape-char\n  [buffer reader]\n  (let [ch (read-char reader)\n        mapresult (escape-char-map ch)]\n    (if mapresult\n      mapresult\n      (cond\n        (identical? ch \\x)\n        (->> (read-2-chars reader)\n          (validate-unicode-escape unicode-2-pattern reader ch)\n          (make-unicode-char))\n\n        (identical? ch \\u)\n        (->> (read-4-chars reader)\n          (validate-unicode-escape unicode-4-pattern reader ch)\n          (make-unicode-char))\n\n        (numeric? ch)\n        (.fromCharCode js/String ch)\n\n        :else\n        (reader-error reader \"Unexpected unicode escape \\\\\" ch )))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [201 222],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L201-L222"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L201-L222"},
  :full-name-encode "cljs.reader_escape-char",
  :history [["+" "0.0-927"]]}
 

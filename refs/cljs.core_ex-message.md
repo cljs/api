@@ -20,11 +20,11 @@ For non-Errors returns nil.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7149-7155](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7149-L7155)</ins>
+            └── <ins>[core.cljs:7158-7164](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7158-L7164)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1798
  :signature ["[ex]"],
  :source {:code "(defn ex-message\n  [ex]\n  (when (instance? js/Error ex)\n    (.-message ex)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7149 7155],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7149-L7155"},
+          :lines [7158 7164],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7158-L7164"},
  :full-name-encode "cljs.core_ex-message",
  :history [["+" "0.0-1576"]]}
 

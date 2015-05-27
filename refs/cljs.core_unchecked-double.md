@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1427-1427](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1427-L1427)</ins>
+            └── <ins>[core.cljs:1436-1436](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1436-L1436)</ins>
 </pre>
 
 ```clj
@@ -36,11 +36,11 @@ clojurescript @ r1798
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:279-279](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L279-L279)</ins>
+            └── <ins>[core.clj:279-279](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L279-L279)</ins>
 </pre>
 
 ```clj
@@ -56,14 +56,14 @@ clojurescript @ r1798
  :shadowed-sources ({:code "(defmacro unchecked-double [x] x)",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [279 279],
-                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L279-L279"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L279-L279"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-double",
  :source {:code "(defn unchecked-double [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1427 1427],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1427-L1427"},
+          :lines [1436 1436],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1436-L1436"},
  :full-name "cljs.core/unchecked-double",
  :clj-symbol "clojure.core/unchecked-double"}
 

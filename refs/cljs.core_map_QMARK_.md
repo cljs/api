@@ -21,11 +21,11 @@ Return true if x satisfies IMap
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1024-1029](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1024-L1029)</ins>
+            └── <ins>[core.cljs:1036-1041](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1036-L1041)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1798
  :full-name-encode "cljs.core_map_QMARK_",
  :source {:code "(defn ^boolean map?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? IMap x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1024 1029],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1024-L1029"},
+          :lines [1036 1041],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1036-L1041"},
  :full-name "cljs.core/map?",
  :clj-symbol "clojure.core/map?",
  :docstring "Return true if x satisfies IMap"}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6241-6244](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6241-L6244)</ins>
+            └── <ins>[core.cljs:6250-6253](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6250-L6253)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1798
  :signature ["[sb]"],
  :source {:code "(deftype StringBufferWriter [sb]\n  IWriter\n  (-write [_ s] (.append sb s))\n  (-flush [_] nil))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6241 6244],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6241-L6244"},
+          :lines [6250 6253],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6250-L6253"},
  :full-name-encode "cljs.core_StringBufferWriter",
  :history [["+" "0.0-1503"]]}
 

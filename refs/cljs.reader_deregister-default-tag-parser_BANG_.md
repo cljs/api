@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:565-569](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L565-L569)</ins>
+            └── <ins>[reader.cljs:565-569](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L565-L569)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1798
  :source {:code "(defn deregister-default-tag-parser!\n  []\n  (let [old-parser @*default-data-reader-fn*]\n    (swap! *default-data-reader-fn* (fn [_] nil))\n    old-parser))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [565 569],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L565-L569"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L565-L569"},
  :full-name-encode "cljs.reader_deregister-default-tag-parser_BANG_",
  :history [["+" "0.0-1576"]]}
 

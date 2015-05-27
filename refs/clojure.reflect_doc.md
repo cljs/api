@@ -19,11 +19,11 @@ documentation information at the repl.
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:44-48](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/reflect.cljs#L44-L48)</ins>
+            └── <ins>[reflect.cljs:44-48](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/reflect.cljs#L44-L48)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1798
  :source {:code "(defn doc\n  [sym]\n  (meta sym print-doc))",
           :filename "clojurescript/src/cljs/clojure/reflect.cljs",
           :lines [44 48],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/reflect.cljs#L44-L48"},
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/reflect.cljs#L44-L48"},
  :full-name-encode "clojure.reflect_doc",
  :history [["+" "0.0-1503"]]}
 

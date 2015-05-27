@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:985-990](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L985-L990)</ins>
+            └── <ins>[core.cljs:997-1002](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L997-L1002)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1798
  :signature ["[o]" "[o check-cache]"],
  :source {:code "(defn hash\n  ([o] (hash o true))\n  ([o ^boolean check-cache]\n     (if (and ^boolean (goog/isString o) check-cache)\n       (check-string-hash-cache o)\n       (-hash o))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [985 990],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L985-L990"},
+          :lines [997 1002],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L997-L1002"},
  :full-name-encode "cljs.core_hash",
  :clj-symbol "clojure.core/hash",
  :history [["+" "0.0-927"]]}

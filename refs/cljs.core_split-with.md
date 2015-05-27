@@ -21,11 +21,11 @@ Returns a vector of [(take-while pred coll) (drop-while pred coll)]
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6059-6062](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6059-L6062)</ins>
+            └── <ins>[core.cljs:6068-6071](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6068-L6071)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1798
  :full-name-encode "cljs.core_split-with",
  :source {:code "(defn split-with\n  [pred coll]\n  [(take-while pred coll) (drop-while pred coll)])",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6059 6062],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6059-L6062"},
+          :lines [6068 6071],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6068-L6071"},
  :full-name "cljs.core/split-with",
  :clj-symbol "clojure.core/split-with",
  :docstring "Returns a vector of [(take-while pred coll) (drop-while pred coll)]"}

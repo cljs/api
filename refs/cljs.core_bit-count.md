@@ -18,11 +18,11 @@ Counts the number of bits set in n
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1618-1623](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1618-L1623)</ins>
+            └── <ins>[core.cljs:1627-1632](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1627-L1632)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1798
  :signature ["[v]"],
  :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1618 1623],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1618-L1623"},
+          :lines [1627 1632],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1627-L1632"},
  :full-name-encode "cljs.core_bit-count",
  :history [["+" "0.0-1211"]]}
 

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1532-1532](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1532-L1532)</ins>
+            └── <ins>[core.cljs:1541-1541](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1541-L1541)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1798
  :signature ["[x]"],
  :source {:code "(defn doubles [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1532 1532],
-          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1532-L1532"},
+          :lines [1541 1541],
+          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1541-L1541"},
  :full-name-encode "cljs.core_doubles",
  :clj-symbol "clojure.core/doubles",
  :history [["+" "0.0-1798"]]}
