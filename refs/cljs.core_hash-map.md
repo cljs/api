@@ -22,20 +22,20 @@ Returns a new hash map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2600-2607](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2600-L2607)</ins>
+            └── <ins>[core.cljs:4982-4989](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4982-L4989)</ins>
 </pre>
 
 ```clj
 (defn hash-map
   [& keyvals]
-  (loop [in (seq keyvals), out cljs.core.HashMap/EMPTY]
+  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]
     (if in
-      (recur (nnext in) (assoc out (first in) (second in)))
-      out)))
+      (recur (nnext in) (assoc! out (first in) (second in)))
+      (persistent! out))))
 ```
 
 
@@ -48,10 +48,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_hash-map",
- :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out cljs.core.HashMap/EMPTY]\n    (if in\n      (recur (nnext in) (assoc out (first in) (second in)))\n      out)))",
+ :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2600 2607],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2600-L2607"},
+          :lines [4982 4989],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4982-L4989"},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

@@ -21,11 +21,11 @@ pr to a string, returning it. Fundamental entrypoint to IPrintable.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3111-3114](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3111-L3114)</ins>
+            └── <ins>[core.cljs:5701-5704](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5701-L5704)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_pr-str",
  :source {:code "(defn pr-str\n  [& objs]\n  (pr-str-with-opts objs (pr-opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3111 3114],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3111-L3114"},
+          :lines [5701 5704],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5701-L5704"},
  :full-name "cljs.core/pr-str",
  :clj-symbol "clojure.core/pr-str",
  :docstring "pr to a string, returning it. Fundamental entrypoint to IPrintable."}

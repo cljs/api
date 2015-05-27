@@ -21,16 +21,18 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:219-220](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L219-L220)</ins>
+            └── <ins>[core.cljs:290-293](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L290-L293)</ins>
 </pre>
 
 ```clj
 (defn type [x]
-  (js* "(~{x}).constructor"))
+  (if (or (nil? x) (undefined? x))
+    nil
+    (js* "(~{x}).constructor")))
 ```
 
 
@@ -42,10 +44,10 @@ clojurescript @ r1011
  :name "type",
  :type "function",
  :signature ["[x]"],
- :source {:code "(defn type [x]\n  (js* \"(~{x}).constructor\"))",
+ :source {:code "(defn type [x]\n  (if (or (nil? x) (undefined? x))\n    nil\n    (js* \"(~{x}).constructor\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [219 220],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L219-L220"},
+          :lines [290 293],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L290-L293"},
  :full-name-encode "cljs.core_type",
  :clj-symbol "clojure.core/type",
  :history [["+" "0.0-971"]]}

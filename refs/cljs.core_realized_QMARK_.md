@@ -21,15 +21,15 @@ Returns true if a value has been produced for a promise, delay, future or lazy s
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3424-3427](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427)</ins>
+            └── <ins>[core.cljs:6047-6050](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6047-L6050)</ins>
 </pre>
 
 ```clj
-(defn realized?
+(defn ^boolean realized?
   [d]
   (-realized? d))
 ```
@@ -38,16 +38,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "realized?",
  :signature ["[d]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_realized_QMARK_",
- :source {:code "(defn realized?\n  [d]\n  (-realized? d))",
+ :source {:code "(defn ^boolean realized?\n  [d]\n  (-realized? d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3424 3427],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427"},
+          :lines [6047 6050],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6047-L6050"},
  :full-name "cljs.core/realized?",
  :clj-symbol "clojure.core/realized?",
  :docstring "Returns true if a value has been produced for a promise, delay, future or lazy sequence."}

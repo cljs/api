@@ -21,11 +21,11 @@ Bitwise exclusive or
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:935-937](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L935-L937)</ins>
+            └── <ins>[core.cljs:1148-1150](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1148-L1150)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:152-154](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L152-L154)</ins>
+            └── <ins>[core.clj:206-208](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L206-L208)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1011
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-xor\n  ([x y] (list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [152 154],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L152-L154"}),
+                     :lines [206 208],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L206-L208"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-xor",
  :source {:code "(defn bit-xor\n  [x y] (cljs.core/bit-xor x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [935 937],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L935-L937"},
+          :lines [1148 1150],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1148-L1150"},
  :full-name "cljs.core/bit-xor",
  :clj-symbol "clojure.core/bit-xor",
  :docstring "Bitwise exclusive or"}

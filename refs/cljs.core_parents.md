@@ -16,7 +16,7 @@
 </samp>
 
 ```
-Returns the immediate parents of tag, either via a Java type
+Returns the immediate parents of tag, either via a JavaScript type
 inheritance relationship or a relationship established via derive. h
 must be a hierarchy obtained from make-hierarchy, if not supplied
 defaults to the global hierarchy
@@ -25,11 +25,11 @@ defaults to the global hierarchy
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3534-3540](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540)</ins>
+            └── <ins>[core.cljs:6157-6163](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6157-L6163)</ins>
 </pre>
 
 ```clj
@@ -50,10 +50,10 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_parents",
  :source {:code "(defn parents\n  ([tag] (parents @global-hierarchy tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3534 3540],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540"},
+          :lines [6157 6163],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6157-L6163"},
  :full-name "cljs.core/parents",
  :clj-symbol "clojure.core/parents",
- :docstring "Returns the immediate parents of tag, either via a Java type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
+ :docstring "Returns the immediate parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
 
 ```

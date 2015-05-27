@@ -22,21 +22,20 @@ they appear.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2908-2916](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2908-L2916)</ins>
+            └── <ins>[core.cljs:5493-5500](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5493-L5500)</ins>
 </pre>
 
 ```clj
 (defn frequencies
   [coll]
-  (reduce
-   (fn [counts x]
-     (assoc counts x (inc (get counts x 0))))
-   {}
-   coll))
+  (persistent!
+   (reduce (fn [counts x]
+             (assoc! counts x (inc (get counts x 0))))
+           (transient {}) coll)))
 ```
 
 
@@ -49,10 +48,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_frequencies",
- :source {:code "(defn frequencies\n  [coll]\n  (reduce\n   (fn [counts x]\n     (assoc counts x (inc (get counts x 0))))\n   {}\n   coll))",
+ :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2908 2916],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2908-L2916"},
+          :lines [5493 5500],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5493-L5500"},
  :full-name "cljs.core/frequencies",
  :clj-symbol "clojure.core/frequencies",
  :docstring "Returns a map from distinct items in coll to the number of times\nthey appear."}

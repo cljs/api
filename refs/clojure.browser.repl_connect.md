@@ -20,12 +20,12 @@ the document that called this function.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:90-109](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/repl.cljs#L90-L109)</ins>
+                └── <ins>[repl.cljs:90-109](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/repl.cljs#L90-L109)</ins>
 </pre>
 
 ```clj
@@ -61,7 +61,7 @@ clojurescript @ r1011
  :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection (net/xpc-connection\n                         {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n                          :evaluate-javascript\n                          (fn [js]\n                            (net/transmit\n                             repl-connection\n                             :send-result\n                             (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n                 (constantly nil)\n                 (fn [iframe]\n                   (set! iframe.style.display\n                         \"none\")))))",
           :filename "clojurescript/src/cljs/clojure/browser/repl.cljs",
           :lines [90 109],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/repl.cljs#L90-L109"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/repl.cljs#L90-L109"},
  :full-name-encode "clojure.browser.repl_connect",
  :history [["+" "0.0-927"]]}
 

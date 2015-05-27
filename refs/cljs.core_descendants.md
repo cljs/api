@@ -19,18 +19,18 @@
 Returns the immediate and indirect children of tag, through a
 relationship established via derive. h must be a hierarchy obtained
 from make-hierarchy, if not supplied defaults to the global
-hierarchy. Note: does not work on Java type inheritance
+hierarchy. Note: does not work on JavaScript type inheritance
 relationships.
 ```
 
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3550-3557](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3550-L3557)</ins>
+            └── <ins>[core.cljs:6173-6180](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6173-L6180)</ins>
 </pre>
 
 ```clj
@@ -51,10 +51,10 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_descendants",
  :source {:code "(defn descendants\n  ([tag] (descendants @global-hierarchy tag))\n  ([h tag] (not-empty (get (:descendants h) tag))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3550 3557],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3550-L3557"},
+          :lines [6173 6180],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6173-L6180"},
  :full-name "cljs.core/descendants",
  :clj-symbol "clojure.core/descendants",
- :docstring "Returns the immediate and indirect children of tag, through a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy. Note: does not work on Java type inheritance\nrelationships."}
+ :docstring "Returns the immediate and indirect children of tag, through a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy. Note: does not work on JavaScript type inheritance\nrelationships."}
 
 ```

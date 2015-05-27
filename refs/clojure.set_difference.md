@@ -23,11 +23,11 @@ Return a set that is the first set without elements of the remaining sets
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:46-58](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L46-L58)</ins>
+            └── <ins>[set.cljs:46-58](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/set.cljs#L46-L58)</ins>
 </pre>
 
 ```clj
@@ -58,7 +58,7 @@ clojurescript @ r1011
  :source {:code "(defn difference\n  ([s1] s1)\n  ([s1 s2] \n     (if (< (count s1) (count s2))\n       (reduce (fn [result item] \n                   (if (contains? s2 item) \n                     (disj result item) \n                     result))\n               s1 s1)\n       (reduce disj s1 s2)))\n  ([s1 s2 & sets] \n     (reduce difference s1 (conj sets s2))))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [46 58],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L46-L58"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/set.cljs#L46-L58"},
  :full-name "clojure.set/difference",
  :clj-symbol "clojure.set/difference",
  :docstring "Return a set that is the first set without elements of the remaining sets"}

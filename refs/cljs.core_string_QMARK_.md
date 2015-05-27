@@ -21,35 +21,36 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:665-668](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L665-L668)</ins>
+            └── <ins>[core.cljs:836-839](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L836-L839)</ins>
 </pre>
 
 ```clj
-(defn string? [x]
+(defn ^boolean string? [x]
   (and (goog/isString x)
-       (not (or (= (.charAt x 0) \uFDD0)
-                (= (.charAt x 0) \uFDD1)))))
+       (not (or (identical? (.charAt x 0) \uFDD0)
+                (identical? (.charAt x 0) \uFDD1)))))
 ```
 
 
 ---
 
 ```clj
-{:full-name "cljs.core/string?",
+{:return-type boolean,
  :ns "cljs.core",
  :name "string?",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn string? [x]\n  (and (goog/isString x)\n       (not (or (= (.charAt x 0) \\uFDD0)\n                (= (.charAt x 0) \\uFDD1)))))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [665 668],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L665-L668"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_string_QMARK_",
- :clj-symbol "clojure.core/string?",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn ^boolean string? [x]\n  (and (goog/isString x)\n       (not (or (identical? (.charAt x 0) \\uFDD0)\n                (identical? (.charAt x 0) \\uFDD1)))))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [836 839],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L836-L839"},
+ :full-name "cljs.core/string?",
+ :clj-symbol "clojure.core/string?"}
 
 ```

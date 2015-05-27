@@ -26,11 +26,11 @@ Defines a function
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3985-4023](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3985-L4023)</ins>
+            └── <ins>[core.clj:3989-4027](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3989-L4027)</ins>
 </pre>
 
 ```clj
@@ -71,11 +71,11 @@ clojure @ clojure-1.3.0
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:42-47](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L42-L47)</ins>
+            └── <ins>[core.clj:42-47](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L42-L47)</ins>
 </pre>
 
 ```clj
@@ -96,14 +96,14 @@ clojure @ clojure-1.3.0
  :shadowed-sources ({:code "(def\n ^{:macro true\n   :added \"1.0\"}\n fn (fn* fn [&form &env & decl] \n         (.withMeta ^clojure.lang.IObj (cons 'fn* decl) \n                    (.meta ^clojure.lang.IMeta &form))))",
                      :filename "clojure/src/clj/clojure/core.clj",
                      :lines [42 47],
-                     :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L42-L47"}),
+                     :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L42-L47"}),
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_fn",
  :source {:code "(defmacro fn\n  [& sigs]\n    (let [name (if (symbol? (first sigs)) (first sigs) nil)\n          sigs (if name (next sigs) sigs)\n          sigs (if (vector? (first sigs)) (list sigs) sigs)\n          psig (fn* [sig]\n                 (let [[params & body] sig\n                       conds (when (and (next body) (map? (first body))) \n                                           (first body))\n                       body (if conds (next body) body)\n                       conds (or conds (meta params))\n                       pre (:pre conds)\n                       post (:post conds)                       \n                       body (if post\n                              `((let [~'% ~(if (< 1 (count body)) \n                                            `(do ~@body) \n                                            (first body))]\n                                 ~@(map (fn* [c] `(assert ~c)) post)\n                                 ~'%))\n                              body)\n                       body (if pre\n                              (concat (map (fn* [c] `(assert ~c)) pre) \n                                      body)\n                              body)]\n                   (maybe-destructured params body)))\n          new-sigs (map psig sigs)]\n      (with-meta\n        (if name\n          (list* 'fn* name new-sigs)\n          (cons 'fn* new-sigs))\n        (meta &form))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [3985 4023],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3985-L4023"},
+          :lines [3989 4027],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3989-L4027"},
  :full-name "cljs.core/fn",
  :clj-symbol "clojure.core/fn",
  :docstring "params => positional-params* , or positional-params* & next-param\npositional-param => binding-form\nnext-param => binding-form\nname => symbol\n\nDefines a function"}

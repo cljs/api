@@ -23,18 +23,20 @@ Strings.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:404-410](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L404-L410)</ins>
+            └── <ins>[core.cljs:498-506](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L498-L506)</ins>
 </pre>
 
 ```clj
 (defn seq
   [coll]
-  (when coll
-    (-seq coll)))
+  (if (coercive-not= coll nil)
+    (if (satisfies? ASeq coll)
+      coll
+      (-seq coll))))
 ```
 
 
@@ -47,10 +49,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_seq",
- :source {:code "(defn seq\n  [coll]\n  (when coll\n    (-seq coll)))",
+ :source {:code "(defn seq\n  [coll]\n  (if (coercive-not= coll nil)\n    (if (satisfies? ASeq coll)\n      coll\n      (-seq coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [404 410],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L404-L410"},
+          :lines [498 506],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L498-L506"},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

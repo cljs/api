@@ -21,15 +21,15 @@ Return true if s satisfies ISeq
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:655-660](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L655-L660)</ins>
+            └── <ins>[core.cljs:821-826](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L821-L826)</ins>
 </pre>
 
 ```clj
-(defn seq?
+(defn ^boolean seq?
   [s]
   (if (nil? s)
     false
@@ -40,16 +40,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "seq?",
  :signature ["[s]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_seq_QMARK_",
- :source {:code "(defn seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
+ :source {:code "(defn ^boolean seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [655 660],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L655-L660"},
+          :lines [821 826],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L821-L826"},
  :full-name "cljs.core/seq?",
  :clj-symbol "clojure.core/seq?",
  :docstring "Return true if s satisfies ISeq"}

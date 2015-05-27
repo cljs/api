@@ -25,19 +25,23 @@ in O(n) time, for sequences.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:501-509](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L501-L509)</ins>
+            └── <ins>[core.cljs:636-648](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L636-L648)</ins>
 </pre>
 
 ```clj
 (defn nth
   ([coll n]
-     (-nth coll (.floor js/Math n)))
+     (if (satisfies? IIndexed coll)
+       (-nth coll (.floor js/Math n))
+       (linear-traversal-nth coll (.floor js/Math n))))
   ([coll n not-found]
-     (-nth coll (.floor js/Math n) not-found)))
+     (if (satisfies? IIndexed coll)
+       (-nth coll (.floor js/Math n) not-found)
+       (linear-traversal-nth coll (.floor js/Math n) not-found))))
 ```
 
 
@@ -50,10 +54,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_nth",
- :source {:code "(defn nth\n  ([coll n]\n     (-nth coll (.floor js/Math n)))\n  ([coll n not-found]\n     (-nth coll (.floor js/Math n) not-found)))",
+ :source {:code "(defn nth\n  ([coll n]\n     (if (satisfies? IIndexed coll)\n       (-nth coll (.floor js/Math n))\n       (linear-traversal-nth coll (.floor js/Math n))))\n  ([coll n not-found]\n     (if (satisfies? IIndexed coll)\n       (-nth coll (.floor js/Math n) not-found)\n       (linear-traversal-nth coll (.floor js/Math n) not-found))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [501 509],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L501-L509"},
+          :lines [636 648],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L636-L648"},
  :full-name "cljs.core/nth",
  :clj-symbol "clojure.core/nth",
  :docstring "Returns the value at the index. get returns nil if index out of\nbounds, nth throws an exception unless not-found is supplied.  nth\nalso works for strings, arrays, regex Matchers and Lists, and,\nin O(n) time, for sequences."}

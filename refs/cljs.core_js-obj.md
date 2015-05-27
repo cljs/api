@@ -9,6 +9,7 @@
 
  <samp>
 (__js-obj__)<br>
+(__js-obj__ & keyvals)<br>
 </samp>
 
 ```
@@ -18,18 +19,42 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:626-627](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L626-L627)</ins>
+            └── <ins>[core.cljs:773-777](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L773-L777)</ins>
 </pre>
 
 ```clj
-(defn js-obj []
-  (js* "{}"))
+(defn js-obj
+  ([]
+     (js* "{}"))
+  ([& keyvals]
+     (apply gobject/create keyvals)))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r1211
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:795-802](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L795-L802)</ins>
+</pre>
+
+```clj
+(defmacro js-obj [& rest]
+  (let [kvs-str (->> (repeat "~{}:~{}")
+                     (take (quot (count rest) 2))
+                     (interpose ",")
+                     (apply core/str))]
+    (concat
+     (list 'js* (core/str "{" kvs-str "}"))
+     rest)))
+```
 
 ---
 
@@ -38,12 +63,16 @@ clojurescript @ r1011
  :ns "cljs.core",
  :name "js-obj",
  :type "function",
- :signature ["[]"],
- :source {:code "(defn js-obj []\n  (js* \"{}\"))",
+ :signature ["[]" "[& keyvals]"],
+ :source {:code "(defn js-obj\n  ([]\n     (js* \"{}\"))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [626 627],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L626-L627"},
+          :lines [773 777],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L773-L777"},
  :full-name-encode "cljs.core_js-obj",
+ :shadowed-sources ({:code "(defmacro js-obj [& rest]\n  (let [kvs-str (->> (repeat \"~{}:~{}\")\n                     (take (quot (count rest) 2))\n                     (interpose \",\")\n                     (apply core/str))]\n    (concat\n     (list 'js* (core/str \"{\" kvs-str \"}\"))\n     rest)))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [795 802],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L795-L802"}),
  :history [["+" "0.0-927"]]}
 
 ```

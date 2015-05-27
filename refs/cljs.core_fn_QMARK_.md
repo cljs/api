@@ -21,15 +21,15 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:681-682](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L681-L682)</ins>
+            └── <ins>[core.cljs:852-853](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L852-L853)</ins>
 </pre>
 
 ```clj
-(defn fn? [f]
+(defn ^boolean fn? [f]
   (goog/isFunction f))
 ```
 
@@ -37,17 +37,18 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:full-name "cljs.core/fn?",
+{:return-type boolean,
  :ns "cljs.core",
  :name "fn?",
- :type "function",
  :signature ["[f]"],
- :source {:code "(defn fn? [f]\n  (goog/isFunction f))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [681 682],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L681-L682"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_fn_QMARK_",
- :clj-symbol "clojure.core/fn?",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn ^boolean fn? [f]\n  (goog/isFunction f))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [852 853],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L852-L853"},
+ :full-name "cljs.core/fn?",
+ :clj-symbol "clojure.core/fn?"}
 
 ```

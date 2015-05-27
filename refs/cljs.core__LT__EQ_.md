@@ -24,15 +24,15 @@ otherwise false.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:850-860](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L850-L860)</ins>
+            └── <ins>[core.cljs:1053-1063](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1053-L1063)</ins>
 </pre>
 
 ```clj
-(defn <=
+(defn ^boolean <=
   ([x] true)
   ([x y] (cljs.core/<= x y))
   ([x y & more]
@@ -47,37 +47,38 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:93-96](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L93-L96)</ins>
+            └── <ins>[core.clj:142-145](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L142-L145)</ins>
 </pre>
 
 ```clj
 (defmacro <=
   ([x] true)
-  ([x y] (list 'js* "(~{} <= ~{})" x y))
+  ([x y] (bool-expr (list 'js* "(~{} <= ~{})" x y)))
   ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))
 ```
 
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "<=",
  :signature ["[x]" "[x y]" "[x y & more]"],
- :shadowed-sources ({:code "(defmacro <=\n  ([x] true)\n  ([x y] (list 'js* \"(~{} <= ~{})\" x y))\n  ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))",
+ :shadowed-sources ({:code "(defmacro <=\n  ([x] true)\n  ([x y] (bool-expr (list 'js* \"(~{} <= ~{})\" x y)))\n  ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [93 96],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L93-L96"}),
+                     :lines [142 145],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L142-L145"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__LT__EQ_",
- :source {:code "(defn <=\n  ([x] true)\n  ([x y] (cljs.core/<= x y))\n  ([x y & more]\n   (if (cljs.core/<= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/<= y (first more)))\n     false)))",
+ :source {:code "(defn ^boolean <=\n  ([x] true)\n  ([x y] (cljs.core/<= x y))\n  ([x y & more]\n   (if (cljs.core/<= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/<= y (first more)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [850 860],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L850-L860"},
+          :lines [1053 1063],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1053-L1063"},
  :full-name "cljs.core/<=",
  :clj-symbol "clojure.core/<=",
  :docstring "Returns non-nil if nums are in monotonically non-decreasing order,\notherwise false."}

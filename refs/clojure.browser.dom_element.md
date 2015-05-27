@@ -19,12 +19,12 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:79-88](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L79-L88)</ins>
+                └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1011
  :signature ["[tag-or-text]" "[tag & children]"],
  :source {:code "(defn element\n  ([tag-or-text]\n     (log \"(element \" tag-or-text \")\")\n     (-element tag-or-text))\n  ([tag & children]\n     (log \"(element \" tag \" \" children \")\")\n     (let [attrs (first children)]\n       (if (map? attrs)\n         (-element tag attrs (rest children))\n         (-element tag nil children)))))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
-          :lines [79 88],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L79-L88"},
+          :lines [81 90],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L81-L90"},
  :full-name-encode "clojure.browser.dom_element",
  :history [["+" "0.0-927"]]}
 

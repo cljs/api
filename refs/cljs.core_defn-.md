@@ -21,11 +21,11 @@ same as defn, yielding non-public def
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4331-4335](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L4331-L4335)</ins>
+            └── <ins>[core.clj:4355-4359](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4355-L4359)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojure @ clojure-1.3.0
  :full-name-encode "cljs.core_defn-",
  :source {:code "(defmacro defn-\n  [name & decls]\n    (list* `defn (with-meta name (assoc (meta name) :private true)) decls))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [4331 4335],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L4331-L4335"},
+          :lines [4355 4359],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4355-L4359"},
  :full-name "cljs.core/defn-",
  :clj-symbol "clojure.core/defn-",
  :docstring "same as defn, yielding non-public def"}

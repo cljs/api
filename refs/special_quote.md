@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:812-814](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L812-L814)</ins>
+            └── <ins>[compiler.clj:1051-1053](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1051-L1053)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1011
  :type "special form",
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _]\n  {:op :constant :env env :form x})",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [812 814],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L812-L814"},
+          :lines [1051 1053],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1051-L1053"},
  :full-name-encode "special_quote",
  :clj-symbol "clojure.core/quote",
  :history [["+" "0.0-927"]]}

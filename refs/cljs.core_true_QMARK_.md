@@ -21,15 +21,15 @@ Returns true if x is the value true, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:645-647](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L645-L647)</ins>
+            └── <ins>[core.cljs:811-813](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L811-L813)</ins>
 </pre>
 
 ```clj
-(defn true?
+(defn ^boolean true?
   [x] (cljs.core/true? x))
 ```
 
@@ -37,35 +37,36 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:48-49](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L48-L49)</ins>
+            └── <ins>[core.clj:93-94](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L93-L94)</ins>
 </pre>
 
 ```clj
 (defmacro true? [x]
-  (list 'js* "~{} === true" x))
+  (bool-expr (list 'js* "~{} === true" x)))
 ```
 
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "true?",
  :signature ["[x]"],
- :shadowed-sources ({:code "(defmacro true? [x]\n  (list 'js* \"~{} === true\" x))",
+ :shadowed-sources ({:code "(defmacro true? [x]\n  (bool-expr (list 'js* \"~{} === true\" x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [48 49],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L48-L49"}),
+                     :lines [93 94],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L93-L94"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_true_QMARK_",
- :source {:code "(defn true?\n  [x] (cljs.core/true? x))",
+ :source {:code "(defn ^boolean true?\n  [x] (cljs.core/true? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [645 647],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L645-L647"},
+          :lines [811 813],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L811-L813"},
  :full-name "cljs.core/true?",
  :clj-symbol "clojure.core/true?",
  :docstring "Returns true if x is the value true, false otherwise."}

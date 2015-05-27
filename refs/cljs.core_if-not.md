@@ -23,11 +23,11 @@ otherwise else expr, if supplied, else nil.
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:702-708](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L702-L708)</ins>
+            └── <ins>[core.clj:703-709](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L703-L709)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojure @ clojure-1.3.0
  :full-name-encode "cljs.core_if-not",
  :source {:code "(defmacro if-not\n  ([test then] `(if-not ~test ~then nil))\n  ([test then else]\n   `(if (not ~test) ~then ~else)))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [702 708],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L702-L708"},
+          :lines [703 709],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L703-L709"},
  :full-name "cljs.core/if-not",
  :clj-symbol "clojure.core/if-not",
  :docstring "Evaluates test. If logical false, evaluates and returns then expr, \notherwise else expr, if supplied, else nil."}

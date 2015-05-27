@@ -27,12 +27,12 @@ per the CrossPageChannel API.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
+                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
 </pre>
 
 ```clj
@@ -44,12 +44,12 @@ clojurescript @ r1011
        (goog.net.xpc.CrossPageChannel. (gjson/parse config))))
   ([config]
      (goog.net.xpc.CrossPageChannel.
-      (.-strobj (reduce (fn [sum [k v]]
-                          (if-let [field (get xpc-config-fields k)]
-                            (assoc sum field v)
-                            sum))
-                       {}
-                       config)))))
+      (reduce (fn [sum [k v]]
+                (if-let [field (get xpc-config-fields k)]
+                  (doto sum (aset field v))
+                  sum))
+              (js-obj)
+              config))))
 ```
 
 
@@ -62,10 +62,10 @@ clojurescript @ r1011
  :docstring "When passed with a config hash-map, returns a parent\nCrossPageChannel object. Keys in the config hash map are downcased\nversions of the goog.net.xpc.CfgFields enum keys,\ne.g. goog.net.xpc.CfgFields.PEER_URI becomes :peer_uri in the config\nhash.\n\nWhen passed with no args, creates a child CrossPageChannel object,\nand the config is automatically taken from the URL param 'xpc', as\nper the CrossPageChannel API.",
  :type "function",
  :signature ["[]" "[config]"],
- :source {:code "(defn xpc-connection\n  ([]\n     (when-let [config (.getParameterValue\n                        (goog.Uri. (.-href (.-location js/window)))\n                        \"xpc\")]\n       (goog.net.xpc.CrossPageChannel. (gjson/parse config))))\n  ([config]\n     (goog.net.xpc.CrossPageChannel.\n      (.-strobj (reduce (fn [sum [k v]]\n                          (if-let [field (get xpc-config-fields k)]\n                            (assoc sum field v)\n                            sum))\n                       {}\n                       config)))))",
+ :source {:code "(defn xpc-connection\n  ([]\n     (when-let [config (.getParameterValue\n                        (goog.Uri. (.-href (.-location js/window)))\n                        \"xpc\")]\n       (goog.net.xpc.CrossPageChannel. (gjson/parse config))))\n  ([config]\n     (goog.net.xpc.CrossPageChannel.\n      (reduce (fn [sum [k v]]\n                (if-let [field (get xpc-config-fields k)]\n                  (doto sum (aset field v))\n                  sum))\n              (js-obj)\n              config))))",
           :filename "clojurescript/src/cljs/clojure/browser/net.cljs",
           :lines [118 140],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/net.cljs#L118-L140"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/net.cljs#L118-L140"},
  :full-name-encode "clojure.browser.net_xpc-connection",
  :history [["+" "0.0-927"]]}
 

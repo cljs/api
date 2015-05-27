@@ -1,9 +1,9 @@
-## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/Set
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> ~~cljs.core/Set~~
 
  <table border="1">
 <tr>
 <td>type</td>
-<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/api-refs/tree/0.0-1211"><img valign="middle" alt="[×] 0.0-1211" src="https://img.shields.io/badge/×-0.0--1211-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -90,6 +90,7 @@ clojurescript @ r1011
           :lines [2659 2706],
           :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2659-L2706"},
  :full-name-encode "cljs.core_Set",
- :history [["+" "0.0-927"]]}
+ :history [["+" "0.0-927"] ["-" "0.0-1211"]],
+ :removed {:in "0.0-1211", :last-seen "0.0-1011"}}
 
 ```

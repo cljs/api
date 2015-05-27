@@ -21,15 +21,15 @@ Returns true if num is greater than zero, else false
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:995-997](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L995-L997)</ins>
+            └── <ins>[core.cljs:1221-1223](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1221-L1223)</ins>
 </pre>
 
 ```clj
-(defn pos?
+(defn ^boolean pos?
   [n] (cljs.core/pos? n))
 ```
 
@@ -37,11 +37,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:122-123](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L122-L123)</ins>
+            └── <ins>[core.clj:171-172](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L171-L172)</ins>
 </pre>
 
 ```clj
@@ -52,20 +52,21 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "pos?",
  :signature ["[n]"],
  :shadowed-sources ({:code "(defmacro pos? [x]\n  `(> ~x 0))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [122 123],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L122-L123"}),
+                     :lines [171 172],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L171-L172"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_pos_QMARK_",
- :source {:code "(defn pos?\n  [n] (cljs.core/pos? n))",
+ :source {:code "(defn ^boolean pos?\n  [n] (cljs.core/pos? n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [995 997],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L995-L997"},
+          :lines [1221 1223],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1221-L1223"},
  :full-name "cljs.core/pos?",
  :clj-symbol "clojure.core/pos?",
  :docstring "Returns true if num is greater than zero, else false"}

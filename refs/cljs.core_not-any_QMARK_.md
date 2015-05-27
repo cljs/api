@@ -22,15 +22,15 @@ else true.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1469-1472](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1469-L1472)</ins>
+            └── <ins>[core.cljs:1836-1839](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1836-L1839)</ins>
 </pre>
 
 ```clj
-(defn not-any?
+(defn ^boolean not-any?
   [pred coll] (not (some pred coll)))
 ```
 
@@ -38,16 +38,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "not-any?",
  :signature ["[pred coll]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_not-any_QMARK_",
- :source {:code "(defn not-any?\n  [pred coll] (not (some pred coll)))",
+ :source {:code "(defn ^boolean not-any?\n  [pred coll] (not (some pred coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1469 1472],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1469-L1472"},
+          :lines [1836 1839],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1836-L1839"},
  :full-name "cljs.core/not-any?",
  :clj-symbol "clojure.core/not-any?",
  :docstring "Returns false if (pred x) is logical true for any x in coll,\nelse true."}

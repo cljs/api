@@ -23,15 +23,15 @@ Returns true if no two of the arguments are =
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:709-723](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L709-L723)</ins>
+            └── <ins>[core.cljs:883-897](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L883-L897)</ins>
 </pre>
 
 ```clj
-(defn distinct?
+(defn ^boolean distinct?
   ([x] true)
   ([x y] (not (= x y)))
   ([x y & more]
@@ -51,16 +51,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "distinct?",
  :signature ["[x]" "[x y]" "[x y & more]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_distinct_QMARK_",
- :source {:code "(defn distinct?\n  ([x] true)\n  ([x y] (not (= x y)))\n  ([x y & more]\n     (if (not (= x y))\n     (loop [s #{x y} xs more]\n       (let [x (first xs)\n             etc (next xs)]\n         (if xs\n           (if (contains? s x)\n             false\n             (recur (conj s x) etc))\n           true)))\n     false)))",
+ :source {:code "(defn ^boolean distinct?\n  ([x] true)\n  ([x y] (not (= x y)))\n  ([x y & more]\n     (if (not (= x y))\n     (loop [s #{x y} xs more]\n       (let [x (first xs)\n             etc (next xs)]\n         (if xs\n           (if (contains? s x)\n             false\n             (recur (conj s x) etc))\n           true)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [709 723],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L709-L723"},
+          :lines [883 897],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L883-L897"},
  :full-name "cljs.core/distinct?",
  :clj-symbol "clojure.core/distinct?",
  :docstring "Returns true if no two of the arguments are ="}

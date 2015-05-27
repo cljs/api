@@ -22,11 +22,11 @@ Returns the value mapped to key, not-found or nil if key not present.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:511-516](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L511-L516)</ins>
+            └── <ins>[core.cljs:650-655](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L650-L655)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_get",
  :source {:code "(defn get\n  ([o k]\n     (-lookup o k))\n  ([o k not-found]\n     (-lookup o k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [511 516],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L511-L516"},
+          :lines [650 655],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L650-L655"},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

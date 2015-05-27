@@ -21,15 +21,15 @@ Returns true if n is an integer.  Warning: returns true on underflow condition.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:684-688](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L684-L688)</ins>
+            └── <ins>[core.cljs:858-862](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L858-L862)</ins>
 </pre>
 
 ```clj
-(defn integer?
+(defn ^boolean integer?
   [n]
   (and (number? n)
        (js* "(~{n} == ~{n}.toFixed())")))
@@ -39,16 +39,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "integer?",
  :signature ["[n]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_integer_QMARK_",
- :source {:code "(defn integer?\n  [n]\n  (and (number? n)\n       (js* \"(~{n} == ~{n}.toFixed())\")))",
+ :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (js* \"(~{n} == ~{n}.toFixed())\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [684 688],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L684-L688"},
+          :lines [858 862],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L858-L862"},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer.  Warning: returns true on underflow condition."}

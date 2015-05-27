@@ -21,15 +21,15 @@ Returns true if x satisfies ICollection
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:588-593](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L588-L593)</ins>
+            └── <ins>[core.cljs:727-732](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L727-L732)</ins>
 </pre>
 
 ```clj
-(defn coll?
+(defn ^boolean coll?
   [x]
   (if (nil? x)
     false
@@ -40,16 +40,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "coll?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_coll_QMARK_",
- :source {:code "(defn coll?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ICollection x)))",
+ :source {:code "(defn ^boolean coll?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ICollection x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [588 593],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L588-L593"},
+          :lines [727 732],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L727-L732"},
  :full-name "cljs.core/coll?",
  :clj-symbol "clojure.core/coll?",
  :docstring "Returns true if x satisfies ICollection"}

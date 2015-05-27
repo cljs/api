@@ -20,21 +20,22 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:816-822](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L816-L822)</ins>
+            └── <ins>[compiler.clj:1055-1062](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1055-L1062)</ins>
 </pre>
 
 ```clj
 (defmethod parse 'new
-  [_ env [_ ctor & args] _]
+  [_ env [_ ctor & args :as form] _]
   (disallowing-recur
    (let [enve (assoc env :context :expr)
          ctorexpr (analyze enve ctor)
          argexprs (vec (map #(analyze enve %) args))]
-     {:env env :op :new :ctor ctorexpr :args argexprs :children (conj argexprs ctorexpr)})))
+     {:env env :op :new :form form :ctor ctorexpr :args argexprs
+      :children (into [ctorexpr] argexprs)})))
 ```
 
 
@@ -45,10 +46,10 @@ clojurescript @ r1011
  :ns "special",
  :name "new",
  :type "special form",
- :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))]\n     {:env env :op :new :ctor ctorexpr :args argexprs :children (conj argexprs ctorexpr)})))",
+ :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))]\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)})))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [816 822],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L816-L822"},
+          :lines [1055 1062],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1055-L1062"},
  :full-name-encode "special_new",
  :clj-symbol "clojure.core/new",
  :history [["+" "0.0-927"]]}

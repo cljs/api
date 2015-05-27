@@ -21,15 +21,15 @@ Return true if x satisfies IVector
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:621-623](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L621-L623)</ins>
+            └── <ins>[core.cljs:768-770](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L768-L770)</ins>
 </pre>
 
 ```clj
-(defn vector?
+(defn ^boolean vector?
   [x] (satisfies? IVector x))
 ```
 
@@ -37,16 +37,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "vector?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_vector_QMARK_",
- :source {:code "(defn vector?\n  [x] (satisfies? IVector x))",
+ :source {:code "(defn ^boolean vector?\n  [x] (satisfies? IVector x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [621 623],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L621-L623"},
+          :lines [768 770],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L768-L770"},
  :full-name "cljs.core/vector?",
  :clj-symbol "clojure.core/vector?",
  :docstring "Return true if x satisfies IVector"}

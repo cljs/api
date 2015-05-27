@@ -26,11 +26,11 @@ value of the last expression. (or) returns nil.
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:789-799](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L789-L799)</ins>
+            └── <ins>[core.clj:790-800](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L790-L800)</ins>
 </pre>
 
 ```clj
@@ -54,8 +54,8 @@ clojure @ clojure-1.3.0
  :full-name-encode "cljs.core_or",
  :source {:code "(defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n      `(let [or# ~x]\n         (if or# or# (or ~@next)))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [789 799],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L789-L799"},
+          :lines [790 800],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L790-L800"},
  :full-name "cljs.core/or",
  :clj-symbol "clojure.core/or",
  :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns a logical true value, or returns that value and doesn't\nevaluate any of the other expressions, otherwise it returns the\nvalue of the last expression. (or) returns nil."}

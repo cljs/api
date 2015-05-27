@@ -25,11 +25,11 @@ in all of the definitions of the functions, as well as the body.
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:5751-5762](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L5751-L5762)</ins>
+            └── <ins>[core.clj:5789-5800](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L5789-L5800)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojure @ clojure-1.3.0
  :full-name-encode "cljs.core_letfn",
  :source {:code "(defmacro letfn \n  [fnspecs & body] \n  `(letfn* ~(vec (interleave (map first fnspecs) \n                             (map #(cons `fn %) fnspecs)))\n           ~@body))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [5751 5762],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L5751-L5762"},
+          :lines [5789 5800],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L5789-L5800"},
  :full-name "cljs.core/letfn",
  :clj-symbol "clojure.core/letfn",
  :docstring "fnspec ==> (fname [params*] exprs) or (fname ([params*] exprs)+)\n\nTakes a vector of function specs and a body, and generates a set of\nbindings of functions to their names. All of the names are available\nin all of the definitions of the functions, as well as the body."}

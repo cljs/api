@@ -21,15 +21,15 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:662-663](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L662-L663)</ins>
+            └── <ins>[core.cljs:833-834](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L833-L834)</ins>
 </pre>
 
 ```clj
-(defn boolean [x]
+(defn ^boolean boolean [x]
   (if x true false))
 ```
 
@@ -37,17 +37,18 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:full-name "cljs.core/boolean",
+{:return-type boolean,
  :ns "cljs.core",
  :name "boolean",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn boolean [x]\n  (if x true false))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [662 663],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L662-L663"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_boolean",
- :clj-symbol "clojure.core/boolean",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn ^boolean boolean [x]\n  (if x true false))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [833 834],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L833-L834"},
+ :full-name "cljs.core/boolean",
+ :clj-symbol "clojure.core/boolean"}
 
 ```

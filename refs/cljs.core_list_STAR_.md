@@ -26,11 +26,11 @@ last of which will be treated as a sequence.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1369-1377](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1369-L1377)</ins>
+            └── <ins>[core.cljs:1708-1716](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1708-L1716)</ins>
 </pre>
 
 ```clj
@@ -59,8 +59,8 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_list_STAR_",
  :source {:code "(defn list*\n  ([args] (seq args))\n  ([a args] (cons a args))\n  ([a b args] (cons a (cons b args)))\n  ([a b c args] (cons a (cons b (cons c args))))\n  ([a b c d & more]\n     (cons a (cons b (cons c (cons d (spread more)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1369 1377],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1369-L1377"},
+          :lines [1708 1716],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1708-L1716"},
  :full-name "cljs.core/list*",
  :clj-symbol "clojure.core/list*",
  :docstring "Creates a new list containing the items prepended to the rest, the\nlast of which will be treated as a sequence."}

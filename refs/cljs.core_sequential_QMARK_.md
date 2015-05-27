@@ -21,15 +21,15 @@ Returns true if coll satisfies ISequential
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:606-608](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L606-L608)</ins>
+            └── <ins>[core.cljs:745-747](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L745-L747)</ins>
 </pre>
 
 ```clj
-(defn sequential?
+(defn ^boolean sequential?
   [x] (satisfies? ISequential x))
 ```
 
@@ -37,16 +37,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "sequential?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_sequential_QMARK_",
- :source {:code "(defn sequential?\n  [x] (satisfies? ISequential x))",
+ :source {:code "(defn ^boolean sequential?\n  [x] (satisfies? ISequential x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [606 608],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L606-L608"},
+          :lines [745 747],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L745-L747"},
  :full-name "cljs.core/sequential?",
  :clj-symbol "clojure.core/sequential?",
  :docstring "Returns true if coll satisfies ISequential"}

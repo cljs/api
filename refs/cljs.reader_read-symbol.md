@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:248-254](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L248-L254)</ins>
+            └── <ins>[reader.cljs:248-254](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L248-L254)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1011
  :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (gstring/contains token \"/\")\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\")) (.-length token)))\n      (get special-symbols token (symbol token)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [248 254],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L248-L254"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L248-L254"},
  :full-name-encode "cljs.reader_read-symbol",
  :history [["+" "0.0-927"]]}
 

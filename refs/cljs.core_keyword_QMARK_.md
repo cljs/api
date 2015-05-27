@@ -21,34 +21,35 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:670-672](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L670-L672)</ins>
+            └── <ins>[core.cljs:841-843](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L841-L843)</ins>
 </pre>
 
 ```clj
-(defn keyword? [x]
+(defn ^boolean keyword? [x]
   (and (goog/isString x)
-       (= (.charAt x 0) \uFDD0)))
+       (identical? (.charAt x 0) \uFDD0)))
 ```
 
 
 ---
 
 ```clj
-{:full-name "cljs.core/keyword?",
+{:return-type boolean,
  :ns "cljs.core",
  :name "keyword?",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn keyword? [x]\n  (and (goog/isString x)\n       (= (.charAt x 0) \\uFDD0)))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [670 672],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L670-L672"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_keyword_QMARK_",
- :clj-symbol "clojure.core/keyword?",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn ^boolean keyword? [x]\n  (and (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [841 843],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L841-L843"},
+ :full-name "cljs.core/keyword?",
+ :clj-symbol "clojure.core/keyword?"}
 
 ```

@@ -18,15 +18,15 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:649-650](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L649-L650)</ins>
+            └── <ins>[core.cljs:815-816](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L815-L816)</ins>
 </pre>
 
 ```clj
-(defn undefined? [x]
+(defn ^boolean undefined? [x]
   (cljs.core/undefined? x))
 ```
 
@@ -34,35 +34,36 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:54-55](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L54-L55)</ins>
+            └── <ins>[core.clj:99-100](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L99-L100)</ins>
 </pre>
 
 ```clj
 (defmacro undefined? [x]
-  (list 'js* "(void 0 === ~{})" x))
+  (bool-expr (list 'js* "(void 0 === ~{})" x)))
 ```
 
 ---
 
 ```clj
-{:full-name "cljs.core/undefined?",
+{:return-type boolean,
  :ns "cljs.core",
  :name "undefined?",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn undefined? [x]\n  (cljs.core/undefined? x))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [649 650],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L649-L650"},
- :full-name-encode "cljs.core_undefined_QMARK_",
- :shadowed-sources ({:code "(defmacro undefined? [x]\n  (list 'js* \"(void 0 === ~{})\" x))",
+ :shadowed-sources ({:code "(defmacro undefined? [x]\n  (bool-expr (list 'js* \"(void 0 === ~{})\" x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [54 55],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L54-L55"}),
- :history [["+" "0.0-927"]]}
+                     :lines [99 100],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L99-L100"}),
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.core_undefined_QMARK_",
+ :source {:code "(defn ^boolean undefined? [x]\n  (cljs.core/undefined? x))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [815 816],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L815-L816"},
+ :full-name "cljs.core/undefined?"}
 
 ```

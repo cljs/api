@@ -11,7 +11,9 @@
 </table>
 
  <samp>
+(__=__ x)<br>
 (__=__ x y)<br>
+(__=__ x y & more)<br>
 </samp>
 
 ```
@@ -24,33 +26,40 @@ comparison.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212)</ins>
+            └── <ins>[core.cljs:271-283](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L271-L283)</ins>
 </pre>
 
 ```clj
-(defn =
-  [x y]
-  (-equiv x y))
+(defn ^boolean =
+  ([x] true)
+  ([x y] (or (identical? x y) (-equiv x y)))
+  ([x y & more]
+     (if (= x y)
+       (if (next more)
+         (recur y (first more) (next more))
+         (= y (first more)))
+       false)))
 ```
 
 
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "=",
- :signature ["[x y]"],
+ :signature ["[x]" "[x y]" "[x y & more]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__EQ_",
- :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
+ :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y) (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [206 212],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212"},
+          :lines [271 283],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L271-L283"},
  :full-name "cljs.core/=",
  :clj-symbol "clojure.core/=",
  :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}

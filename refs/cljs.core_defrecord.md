@@ -21,19 +21,20 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:389-396](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L389-L396)</ins>
+            └── <ins>[core.clj:503-511](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L503-L511)</ins>
 </pre>
 
 ```clj
 (defmacro defrecord [rsym fields & impls]
   (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]
     `(let []
-       ~(emit-defrecord rsym r fields impls)
-       (set! (.-cljs$core$IPrintable$_pr_seq ~r) (fn [this#] (list ~(str r))))
+       ~(emit-defrecord &env rsym r fields impls)
+       (set! (.-cljs$lang$type ~r) true)
+       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))
        ~(build-positional-factory rsym r fields)
        ~(build-map-factory rsym r fields)
        ~r)))
@@ -48,10 +49,10 @@ clojurescript @ r1011
  :name "defrecord",
  :type "macro",
  :signature ["[rsym fields & impls]"],
- :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord rsym r fields impls)\n       (set! (.-cljs$core$IPrintable$_pr_seq ~r) (fn [this#] (list ~(str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
+ :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [389 396],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L389-L396"},
+          :lines [503 511],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L503-L511"},
  :full-name-encode "cljs.core_defrecord",
  :clj-symbol "clojure.core/defrecord",
  :history [["+" "0.0-927"]]}

@@ -17,16 +17,16 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:888-899](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L888-L899)</ins>
+            └── <ins>[compiler.clj:1162-1173](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1162-L1173)</ins>
 </pre>
 
 ```clj
 (defmethod parse 'deftype*
-  [_ env [_ tsym fields] _]
+  [_ env [_ tsym fields pmasks :as form] _]
   (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]
     (swap! namespaces update-in [(-> env :ns :name) :defs tsym]
            (fn [m]
@@ -36,7 +36,7 @@ clojurescript @ r1011
                      (assoc :file *cljs-file*)
                      (assoc :line line))
                  m))))
-    {:env env :op :deftype* :t t :fields fields}))
+    {:env env :op :deftype* :as form :t t :fields fields :pmasks pmasks}))
 ```
 
 
@@ -47,10 +47,10 @@ clojurescript @ r1011
  :ns "special",
  :name "deftype*",
  :type "special form",
- :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :deftype* :t t :fields fields}))",
+ :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :deftype* :as form :t t :fields fields :pmasks pmasks}))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [888 899],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L888-L899"},
+          :lines [1162 1173],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1162-L1173"},
  :full-name-encode "special_deftype_STAR_",
  :history [["+" "0.0-927"]]}
 

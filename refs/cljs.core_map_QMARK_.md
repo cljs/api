@@ -21,15 +21,15 @@ Return true if x satisfies IMap
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:614-619](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L614-L619)</ins>
+            └── <ins>[core.cljs:761-766](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L761-L766)</ins>
 </pre>
 
 ```clj
-(defn map?
+(defn ^boolean map?
   [x]
   (if (nil? x)
     false
@@ -40,16 +40,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "map?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_map_QMARK_",
- :source {:code "(defn map?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? IMap x)))",
+ :source {:code "(defn ^boolean map?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? IMap x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [614 619],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L614-L619"},
+          :lines [761 766],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L761-L766"},
  :full-name "cljs.core/map?",
  :clj-symbol "clojure.core/map?",
  :docstring "Return true if x satisfies IMap"}

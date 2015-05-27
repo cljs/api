@@ -26,11 +26,11 @@ and end to infinity.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2876-2883](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2876-L2883)</ins>
+            └── <ins>[core.cljs:5461-5468](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5461-L5468)</ins>
 </pre>
 
 ```clj
@@ -38,7 +38,7 @@ clojurescript @ r1011
   ([] (range 0 js/Number.MAX_VALUE 1))
   ([end] (range 0 end 1))
   ([start end] (range start end 1))
-  ([start end step] (Range. nil start end step)))
+  ([start end step] (Range. nil start end step nil)))
 ```
 
 
@@ -51,10 +51,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_range",
- :source {:code "(defn range\n  ([] (range 0 js/Number.MAX_VALUE 1))\n  ([end] (range 0 end 1))\n  ([start end] (range start end 1))\n  ([start end step] (Range. nil start end step)))",
+ :source {:code "(defn range\n  ([] (range 0 js/Number.MAX_VALUE 1))\n  ([end] (range 0 end 1))\n  ([start end] (range start end 1))\n  ([start end step] (Range. nil start end step nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2876 2883],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2876-L2883"},
+          :lines [5461 5468],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5461-L5468"},
  :full-name "cljs.core/range",
  :clj-symbol "clojure.core/range",
  :docstring "Returns a lazy seq of nums from start (inclusive) to end\n(exclusive), by step, where start defaults to 0, step to 1,\nand end to infinity."}

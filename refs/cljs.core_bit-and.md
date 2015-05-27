@@ -21,11 +21,11 @@ Bitwise and
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:939-941](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L939-L941)</ins>
+            └── <ins>[core.cljs:1152-1154](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1152-L1154)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:144-146](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L144-L146)</ins>
+            └── <ins>[core.clj:193-195](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L193-L195)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1011
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-and\n  ([x y] (list 'js* \"(~{} & ~{})\" x y))\n  ([x y & more] `(bit-and (bit-and ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [144 146],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L144-L146"}),
+                     :lines [193 195],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L193-L195"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-and",
  :source {:code "(defn bit-and\n  [x y] (cljs.core/bit-and x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [939 941],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L939-L941"},
+          :lines [1152 1154],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1152-L1154"},
  :full-name "cljs.core/bit-and",
  :clj-symbol "clojure.core/bit-and",
  :docstring "Bitwise and"}

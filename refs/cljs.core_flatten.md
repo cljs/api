@@ -23,11 +23,11 @@ etc.) and returns their contents as a single, flat sequence.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1860-1866](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1860-L1866)</ins>
+            └── <ins>[core.cljs:2227-2233](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2227-L2233)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_flatten",
  :source {:code "(defn flatten\n  [x]\n  (filter #(not (sequential? %))\n          (rest (tree-seq sequential? seq x))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1860 1866],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1860-L1866"},
+          :lines [2227 2233],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2227-L2233"},
  :full-name "cljs.core/flatten",
  :clj-symbol "clojure.core/flatten",
  :docstring "Takes any nested combination of sequential things (lists, vectors,\netc.) and returns their contents as a single, flat sequence.\n(flatten nil) returns nil."}

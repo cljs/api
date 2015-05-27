@@ -20,30 +20,33 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:977-992](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L977-L992)</ins>
+            └── <ins>[compiler.clj:1256-1274](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1256-L1274)</ins>
 </pre>
 
 ```clj
 (defmethod parse '.
-  [_ env [_ target & [field & member+]] _]
+  [_ env [_ target & [field & member+] :as form] _]
   (disallowing-recur
    (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])
          enve        (assoc env :context :expr)
-         targetexpr  (analyze enve target)
-         children    [enve]]
+         targetexpr  (analyze enve target)]
      (case dot-action
-           ::access {:env env :op :dot :children children
+           ::access {:env env :op :dot :form form
                      :target targetexpr
-                     :field field}
+                     :field field
+                     :children [targetexpr]
+                     :tag (-> form meta :tag)}
            ::call   (let [argexprs (map #(analyze enve %) args)]
-                      {:env env :op :dot :children (into children argexprs)
+                      {:env env :op :dot :form form
                        :target targetexpr
                        :method method
-                       :args argexprs})))))
+                       :args argexprs
+                       :children (into [targetexpr] argexprs)
+                       :tag (-> form meta :tag)})))))
 ```
 
 
@@ -54,10 +57,10 @@ clojurescript @ r1011
  :ns "special",
  :name ".",
  :type "special form",
- :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+]] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)\n         children    [enve]]\n     (case dot-action\n           ::access {:env env :op :dot :children children\n                     :target targetexpr\n                     :field field}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :children (into children argexprs)\n                       :target targetexpr\n                       :method method\n                       :args argexprs})))))",
+ :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)]\n     (case dot-action\n           ::access {:env env :op :dot :form form\n                     :target targetexpr\n                     :field field\n                     :children [targetexpr]\n                     :tag (-> form meta :tag)}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :form form\n                       :target targetexpr\n                       :method method\n                       :args argexprs\n                       :children (into [targetexpr] argexprs)\n                       :tag (-> form meta :tag)})))))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [977 992],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L977-L992"},
+          :lines [1256 1274],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1256-L1274"},
  :full-name-encode "special__DOT_",
  :clj-symbol "clojure.core/.",
  :history [["+" "0.0-927"]]}

@@ -25,17 +25,17 @@ therein.
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3953-3964](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3953-L3964)</ins>
+            └── <ins>[core.clj:3957-3968](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3957-L3968)</ins>
 </pre>
 
 ```clj
 (defmacro let
   [bindings & body]
-  (assert-args let
+  (assert-args
      (vector? bindings) "a vector for its binding"
      (even? (count bindings)) "an even number of forms in binding vector")
   `(let* ~(destructure bindings) ~@body))
@@ -45,11 +45,11 @@ clojure @ clojure-1.3.0
 ---
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:32-35](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L32-L35)</ins>
+            └── <ins>[core.clj:32-35](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L32-L35)</ins>
 </pre>
 
 ```clj
@@ -68,14 +68,14 @@ clojure @ clojure-1.3.0
  :shadowed-sources ({:code "(def\n  ^{:macro true\n    :added \"1.0\"}\n  let (fn* let [&form &env & decl] (cons 'let* decl)))",
                      :filename "clojure/src/clj/clojure/core.clj",
                      :lines [32 35],
-                     :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L32-L35"}),
+                     :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L32-L35"}),
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_let",
- :source {:code "(defmacro let\n  [bindings & body]\n  (assert-args let\n     (vector? bindings) \"a vector for its binding\"\n     (even? (count bindings)) \"an even number of forms in binding vector\")\n  `(let* ~(destructure bindings) ~@body))",
+ :source {:code "(defmacro let\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (even? (count bindings)) \"an even number of forms in binding vector\")\n  `(let* ~(destructure bindings) ~@body))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [3953 3964],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3953-L3964"},
+          :lines [3957 3968],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3957-L3968"},
  :full-name "cljs.core/let",
  :clj-symbol "clojure.core/let",
  :docstring "binding => binding-form init-expr\n\nEvaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein."}

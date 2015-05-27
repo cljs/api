@@ -24,11 +24,11 @@ keys.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:102-130](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L102-L130)</ins>
+            └── <ins>[set.cljs:102-130](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/set.cljs#L102-L130)</ins>
 </pre>
 
 ```clj
@@ -73,7 +73,7 @@ clojurescript @ r1011
  :source {:code "(defn join\n  ([xrel yrel] ;natural join\n   (if (and (seq xrel) (seq yrel))\n     (let [ks (intersection (set (keys (first xrel))) (set (keys (first yrel))))\n           [r s] (if (<= (count xrel) (count yrel))\n                   [xrel yrel]\n                   [yrel xrel])\n           idx (index r ks)]\n       (reduce (fn [ret x]\n                 (let [found (idx (select-keys x ks))]\n                   (if found\n                     (reduce #(conj %1 (merge %2 x)) ret found)\n                     ret)))\n               #{} s))\n     #{}))\n  ([xrel yrel km] ;arbitrary key mapping\n   (let [[r s k] (if (<= (count xrel) (count yrel))\n                   [xrel yrel (map-invert km)]\n                   [yrel xrel km])\n         idx (index r (vals k))]\n     (reduce (fn [ret x]\n               (let [found (idx (rename-keys (select-keys x (keys k)) k))]\n                 (if found\n                   (reduce #(conj %1 (merge %2 x)) ret found)\n                   ret)))\n             #{} s))))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [102 130],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L102-L130"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/set.cljs#L102-L130"},
  :full-name "clojure.set/join",
  :clj-symbol "clojure.set/join",
  :docstring "When passed 2 rels, returns the rel corresponding to the natural\njoin. When passed an additional keymap, joins on the corresponding\nkeys."}

@@ -17,22 +17,28 @@
 ```
 Comparator. Returns a negative number, zero, or a positive number
 when x is logically 'less than', 'equal to', or 'greater than'
-y. Uses google.array.defaultCompare.
+y. Uses google.array.defaultCompare for objects of the same type
+and special-cases nil to be less than any other object.
 ```
 
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:727-731](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731)</ins>
+            └── <ins>[core.cljs:901-911](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L901-L911)</ins>
 </pre>
 
 ```clj
 (defn compare
-  [x y] (garray/defaultCompare x y))
+  [x y]
+  (cond
+    (identical? (type x) (type y)) (garray/defaultCompare x y)
+    (nil? x) -1
+    (nil? y) 1
+    :else (throw (js/Error. "compare on non-nil objects of different types"))))
 ```
 
 
@@ -45,12 +51,12 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_compare",
- :source {:code "(defn compare\n  [x y] (garray/defaultCompare x y))",
+ :source {:code "(defn compare\n  [x y]\n  (cond\n    (identical? (type x) (type y)) (garray/defaultCompare x y)\n    (nil? x) -1\n    (nil? y) 1\n    :else (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [727 731],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731"},
+          :lines [901 911],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L901-L911"},
  :full-name "cljs.core/compare",
  :clj-symbol "clojure.core/compare",
- :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare."}
+ :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare for objects of the same type\nand special-cases nil to be less than any other object."}
 
 ```

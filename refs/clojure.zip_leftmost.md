@@ -21,11 +21,11 @@ Returns the loc of the leftmost sibling of the node at this loc, or self
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:157-163](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/zip.cljs#L157-L163)</ins>
+            └── <ins>[zip.cljs:157-163](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/zip.cljs#L157-L163)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1011
  :source {:code "(defn leftmost\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (if (and path (seq l))\n        (with-meta [(first l) (assoc path :l [] :r (concat (rest l) [node] r))] (meta loc))\n        loc)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [157 163],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/zip.cljs#L157-L163"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/zip.cljs#L157-L163"},
  :full-name "clojure.zip/leftmost",
  :clj-symbol "clojure.zip/leftmost",
  :docstring "Returns the loc of the leftmost sibling of the node at this loc, or self"}

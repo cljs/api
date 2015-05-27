@@ -18,19 +18,19 @@ Set properties on an element
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:134-138](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L134-L138)</ins>
+                └── <ins>[dom.cljs:136-140](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L136-L140)</ins>
 </pre>
 
 ```clj
 (defn set-properties
   [e m]
   (gdom/setProperties (ensure-element e)
-                      (.-strobj m)))
+                      (apply gobject/create (interleave (keys m) (vals m)))))
 ```
 
 
@@ -43,10 +43,10 @@ clojurescript @ r1011
  :docstring "Set properties on an element",
  :type "function",
  :signature ["[e m]"],
- :source {:code "(defn set-properties\n  [e m]\n  (gdom/setProperties (ensure-element e)\n                      (.-strobj m)))",
+ :source {:code "(defn set-properties\n  [e m]\n  (gdom/setProperties (ensure-element e)\n                      (apply gobject/create (interleave (keys m) (vals m)))))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
-          :lines [134 138],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L134-L138"},
+          :lines [136 140],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L136-L140"},
  :full-name-encode "clojure.browser.dom_set-properties",
  :history [["+" "0.0-927"]]}
 

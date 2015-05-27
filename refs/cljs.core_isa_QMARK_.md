@@ -17,7 +17,7 @@
 
 ```
 Returns true if (= child parent), or child is directly or indirectly derived from
-parent, either via a Java type inheritance relationship or a
+parent, either via a JavaScript type inheritance relationship or a
 relationship established via derive. h must be a hierarchy obtained
 from make-hierarchy, if not supplied defaults to the global
 hierarchy
@@ -26,15 +26,15 @@ hierarchy
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3514-3532](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3514-L3532)</ins>
+            └── <ins>[core.cljs:6137-6155](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6137-L6155)</ins>
 </pre>
 
 ```clj
-(defn isa?
+(defn ^boolean isa?
   ([child parent] (isa? @global-hierarchy child parent))
   ([h child parent]
      (or (= child parent)
@@ -43,9 +43,9 @@ clojurescript @ r1011
          (contains? ((:ancestors h) child) parent)
          ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))
          (and (vector? parent) (vector? child)
-              (= (count parent) (count child))
+              (== (count parent) (count child))
               (loop [ret true i 0]
-                (if (or (not ret) (= i (count parent)))
+                (if (or (not ret) (== i (count parent)))
                   ret
                   (recur (isa? h (child i) (parent i)) (inc i))))))))
 ```
@@ -54,18 +54,19 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "isa?",
  :signature ["[child parent]" "[h child parent]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_isa_QMARK_",
- :source {:code "(defn isa?\n  ([child parent] (isa? @global-hierarchy child parent))\n  ([h child parent]\n     (or (= child parent)\n         ;; (and (class? parent) (class? child)\n         ;;    (. ^Class parent isAssignableFrom child))\n         (contains? ((:ancestors h) child) parent)\n         ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))\n         (and (vector? parent) (vector? child)\n              (= (count parent) (count child))\n              (loop [ret true i 0]\n                (if (or (not ret) (= i (count parent)))\n                  ret\n                  (recur (isa? h (child i) (parent i)) (inc i))))))))",
+ :source {:code "(defn ^boolean isa?\n  ([child parent] (isa? @global-hierarchy child parent))\n  ([h child parent]\n     (or (= child parent)\n         ;; (and (class? parent) (class? child)\n         ;;    (. ^Class parent isAssignableFrom child))\n         (contains? ((:ancestors h) child) parent)\n         ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))\n         (and (vector? parent) (vector? child)\n              (== (count parent) (count child))\n              (loop [ret true i 0]\n                (if (or (not ret) (== i (count parent)))\n                  ret\n                  (recur (isa? h (child i) (parent i)) (inc i))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3514 3532],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3514-L3532"},
+          :lines [6137 6155],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6137-L6155"},
  :full-name "cljs.core/isa?",
  :clj-symbol "clojure.core/isa?",
- :docstring "Returns true if (= child parent), or child is directly or indirectly derived from\nparent, either via a Java type inheritance relationship or a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy"}
+ :docstring "Returns true if (= child parent), or child is directly or indirectly derived from\nparent, either via a JavaScript type inheritance relationship or a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy"}
 
 ```

@@ -24,11 +24,11 @@ Returns the product of nums. (*) returns 1.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:824-829](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L824-L829)</ins>
+            └── <ins>[core.cljs:1027-1032](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1027-L1032)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:77-81](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L77-L81)</ins>
+            └── <ins>[core.clj:126-130](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L126-L130)</ins>
 </pre>
 
 ```clj
@@ -66,15 +66,15 @@ clojurescript @ r1011
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro *\n  ([] 1)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} * ~{})\" x y))\n  ([x y & more] `(* (* ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [77 81],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L77-L81"}),
+                     :lines [126 130],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L126-L130"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__STAR_",
  :source {:code "(defn *\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/* x y))\n  ([x y & more] (reduce * (cljs.core/* x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [824 829],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L824-L829"},
+          :lines [1027 1032],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1027-L1032"},
  :full-name "cljs.core/*",
  :clj-symbol "clojure.core/*",
  :docstring "Returns the product of nums. (*) returns 1."}

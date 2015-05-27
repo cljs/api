@@ -21,15 +21,15 @@
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679)</ins>
+            └── <ins>[core.cljs:849-850](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L849-L850)</ins>
 </pre>
 
 ```clj
-(defn number? [n]
+(defn ^boolean number? [n]
   (goog/isNumber n))
 ```
 
@@ -37,17 +37,18 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:full-name "cljs.core/number?",
+{:return-type boolean,
  :ns "cljs.core",
  :name "number?",
- :type "function",
  :signature ["[n]"],
- :source {:code "(defn number? [n]\n  (goog/isNumber n))",
-          :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [678 679],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679"},
+ :history [["+" "0.0-927"]],
+ :type "function",
  :full-name-encode "cljs.core_number_QMARK_",
- :clj-symbol "clojure.core/number?",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [849 850],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L849-L850"},
+ :full-name "cljs.core/number?",
+ :clj-symbol "clojure.core/number?"}
 
 ```

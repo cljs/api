@@ -21,15 +21,15 @@ Returns true if coll implements Associative
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:602-604](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L602-L604)</ins>
+            └── <ins>[core.cljs:741-743](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743)</ins>
 </pre>
 
 ```clj
-(defn associative?
+(defn ^boolean associative?
   [x] (satisfies? IAssociative x))
 ```
 
@@ -37,16 +37,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "associative?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_associative_QMARK_",
- :source {:code "(defn associative?\n  [x] (satisfies? IAssociative x))",
+ :source {:code "(defn ^boolean associative?\n  [x] (satisfies? IAssociative x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [602 604],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L602-L604"},
+          :lines [741 743],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743"},
  :full-name "cljs.core/associative?",
  :clj-symbol "clojure.core/associative?",
  :docstring "Returns true if coll implements Associative"}

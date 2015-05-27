@@ -21,15 +21,15 @@ returns true if x is a Delay created with delay
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3413-3415](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3413-L3415)</ins>
+            └── <ins>[core.cljs:6036-6038](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6036-L6038)</ins>
 </pre>
 
 ```clj
-(defn delay?
+(defn ^boolean delay?
   [x] (instance? cljs.core.Delay x))
 ```
 
@@ -37,16 +37,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "delay?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_delay_QMARK_",
- :source {:code "(defn delay?\n  [x] (instance? cljs.core.Delay x))",
+ :source {:code "(defn ^boolean delay?\n  [x] (instance? cljs.core.Delay x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3413 3415],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3413-L3415"},
+          :lines [6036 6038],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6036-L6038"},
  :full-name "cljs.core/delay?",
  :clj-symbol "clojure.core/delay?",
  :docstring "returns true if x is a Delay created with delay"}

@@ -21,15 +21,15 @@ Returns true if x is logical false, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:475-477](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L475-L477)</ins>
+            └── <ins>[core.cljs:581-583](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L581-L583)</ins>
 </pre>
 
 ```clj
-(defn not
+(defn ^boolean not
   [x] (if x false true))
 ```
 
@@ -37,16 +37,17 @@ clojurescript @ r1011
 ---
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "not",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_not",
- :source {:code "(defn not\n  [x] (if x false true))",
+ :source {:code "(defn ^boolean not\n  [x] (if x false true))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [475 477],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L475-L477"},
+          :lines [581 583],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L581-L583"},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",
  :docstring "Returns true if x is logical false, false otherwise."}

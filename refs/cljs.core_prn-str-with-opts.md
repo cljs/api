@@ -18,11 +18,11 @@ Same as pr-str-with-opts followed by (newline)
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3077-3082](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3077-L3082)</ins>
+            └── <ins>[core.cljs:5667-5672](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5667-L5672)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1011
  :signature ["[objs opts]"],
  :source {:code "(defn prn-str-with-opts\n  [objs opts]\n  (let [sb (pr-sb objs opts)]\n    (.append sb \\newline)\n    (str sb)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3077 3082],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3077-L3082"},
+          :lines [5667 5672],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5667-L5672"},
  :full-name-encode "cljs.core_prn-str-with-opts",
  :history [["+" "0.0-1011"]]}
 

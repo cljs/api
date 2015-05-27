@@ -21,11 +21,11 @@ Returns a number one less than num.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:886-888](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L886-L888)</ins>
+            └── <ins>[core.cljs:1089-1091](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1089-L1091)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:113-114](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L113-L114)</ins>
+            └── <ins>[core.clj:162-163](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L162-L163)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1011
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro dec [x]\n  `(- ~x 1))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [113 114],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L113-L114"}),
+                     :lines [162 163],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L162-L163"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_dec",
  :source {:code "(defn dec\n  [x] (- x 1))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [886 888],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L886-L888"},
+          :lines [1089 1091],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1089-L1091"},
  :full-name "cljs.core/dec",
  :clj-symbol "clojure.core/dec",
  :docstring "Returns a number one less than num."}

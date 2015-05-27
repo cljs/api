@@ -21,11 +21,11 @@ Returns a sequence of the map's keys.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2609-2612](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2609-L2612)</ins>
+            └── <ins>[core.cljs:5016-5019](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5016-L5019)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1011
  :full-name-encode "cljs.core_keys",
  :source {:code "(defn keys\n  [hash-map]\n  (seq (map first hash-map)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2609 2612],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2609-L2612"},
+          :lines [5016 5019],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5016-L5019"},
  :full-name "cljs.core/keys",
  :clj-symbol "clojure.core/keys",
  :docstring "Returns a sequence of the map's keys."}

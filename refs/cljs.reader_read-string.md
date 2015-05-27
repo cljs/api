@@ -21,11 +21,11 @@ Reads one object from the string s
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:356-360](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L356-L360)</ins>
+            └── <ins>[reader.cljs:356-360](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L356-L360)</ins>
 </pre>
 
 ```clj
@@ -39,11 +39,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:232-241](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L232-L241)</ins>
+            └── <ins>[reader.cljs:232-241](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L232-L241)</ins>
 </pre>
 
 ```clj
@@ -53,9 +53,9 @@ clojurescript @ r1011
          ch (read-char reader)]
     (cond
      (nil? ch) (reader-error reader "EOF while reading string")
-     (= "\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)
+     (identical? "\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)
                         (read-char reader))
-     (= \" ch) (. buffer (toString))
+     (identical? \" ch) (. buffer (toString))
      :default (recur (do (.append buffer ch) buffer) (read-char reader)))))
 ```
 
@@ -65,17 +65,17 @@ clojurescript @ r1011
 {:ns "cljs.reader",
  :name "read-string",
  :signature ["[s]"],
- :shadowed-sources ({:code "(defn read-string\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading string\")\n     (= \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (= \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
+ :shadowed-sources ({:code "(defn read-string\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading string\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
                      :filename "clojurescript/src/cljs/cljs/reader.cljs",
                      :lines [232 241],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L232-L241"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L232-L241"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader_read-string",
  :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r true nil false)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [356 360],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L356-L360"},
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L356-L360"},
  :full-name "cljs.reader/read-string",
  :clj-symbol "clojure.core/read-string",
  :docstring "Reads one object from the string s"}

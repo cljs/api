@@ -21,24 +21,30 @@ Returns true if x satisfies the protocol
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:422-432](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L422-L432)</ins>
+            └── <ins>[core.clj:543-559](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L543-L559)</ins>
 </pre>
 
 ```clj
 (defmacro satisfies?
   [psym x]
   (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))
-        prefix (protocol-prefix p)]
-    `(let [x# ~x]
-       (if (and x#
-                (. x# ~(symbol (str "-" prefix)))        ;; Need prop lookup here
-                (not (. x# (~'hasOwnProperty ~prefix))))
-	 true
-	 (cljs.core/type_satisfies_ ~psym x#)))))
+        prefix (protocol-prefix p)
+        xsym (gensym)
+        [part bit] (fast-path-protocols p)
+        msym (symbol (core/str "-cljs$lang$protocol_mask$partition" part "$"))]
+    `(let [~xsym ~x]
+       (if (coercive-not= ~xsym nil)
+         (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))
+                 ~(bool-expr `(. ~xsym ~(symbol (core/str "-" prefix)))))
+           true
+           (if (coercive-not (. ~xsym ~msym))
+             (cljs.core/type_satisfies_ ~psym ~xsym)
+             false))
+         (cljs.core/type_satisfies_ ~psym ~xsym)))))
 ```
 
 
@@ -51,10 +57,10 @@ clojurescript @ r1011
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_satisfies_QMARK_",
- :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)]\n    `(let [x# ~x]\n       (if (and x#\n                (. x# ~(symbol (str \"-\" prefix)))        ;; Need prop lookup here\n                (not (. x# (~'hasOwnProperty ~prefix))))\n\t true\n\t (cljs.core/type_satisfies_ ~psym x#)))))",
+ :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)\n        xsym (gensym)\n        [part bit] (fast-path-protocols p)\n        msym (symbol (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if (coercive-not= ~xsym nil)\n         (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n           true\n           (if (coercive-not (. ~xsym ~msym))\n             (cljs.core/type_satisfies_ ~psym ~xsym)\n             false))\n         (cljs.core/type_satisfies_ ~psym ~xsym)))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [422 432],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L422-L432"},
+          :lines [543 559],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L543-L559"},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

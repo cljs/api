@@ -21,11 +21,11 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:909-912](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L909-L912)</ins>
+            └── <ins>[core.cljs:1122-1125](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1122-L1125)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1011
 ---
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:138-139](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L138-L139)</ins>
+            └── <ins>[core.clj:187-188](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L187-L188)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1011
  :signature ["[n d]"],
  :shadowed-sources ({:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [138 139],
-                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L138-L139"}),
+                     :lines [187 188],
+                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L187-L188"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_mod",
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [909 912],
-          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L909-L912"},
+          :lines [1122 1125],
+          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1122-L1125"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}
