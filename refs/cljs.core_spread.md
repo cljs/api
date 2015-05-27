@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2007-2013](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2007-L2013)</ins>
+            └── <ins>[core.cljs:2007-2013](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2007-L2013)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1443
  :source {:code "(defn spread\n  [arglist]\n  (cond\n   (nil? arglist) nil\n   (nil? (next arglist)) (seq (first arglist))\n   :else (cons (first arglist)\n               (spread (next arglist)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2007 2013],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2007-L2013"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2007-L2013"},
  :full-name-encode "cljs.core_spread",
  :history [["+" "0.0-927"]]}
 

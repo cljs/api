@@ -21,11 +21,11 @@ Creates a hierarchy object for use with derive, isa? etc.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6664-6666](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6664-L6666)</ins>
+            └── <ins>[core.cljs:6664-6666](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6664-L6666)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1443
  :source {:code "(defn make-hierarchy\n  [] {:parents {} :descendants {} :ancestors {}})",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6664 6666],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6664-L6666"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6664-L6666"},
  :full-name "cljs.core/make-hierarchy",
  :clj-symbol "clojure.core/make-hierarchy",
  :docstring "Creates a hierarchy object for use with derive, isa? etc."}

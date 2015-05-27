@@ -18,11 +18,11 @@ Returns true if coll implements nth in constant time
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:895-897](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L895-L897)</ins>
+            └── <ins>[core.cljs:895-897](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L895-L897)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1443
  :source {:code "(defn ^boolean indexed?\n  [x] (satisfies? IIndexed x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [895 897],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L895-L897"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L895-L897"},
  :full-name "cljs.core/indexed?",
  :docstring "Returns true if coll implements nth in constant time"}
 

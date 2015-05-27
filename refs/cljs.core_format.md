@@ -21,11 +21,11 @@ Formats a string using goog.string.format.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1448-1451](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1448-L1451)</ins>
+            └── <ins>[core.cljs:1448-1451](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1448-L1451)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1443
  :source {:code "(defn format\n  [fmt & args]\n  (apply gstring/format fmt args))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1448 1451],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1448-L1451"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1448-L1451"},
  :full-name "cljs.core/format",
  :clj-symbol "clojure.core/format",
  :docstring "Formats a string using goog.string.format."}

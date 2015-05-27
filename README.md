@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1443__ [all](HISTORY.md)</td>
-<td>2012-06-21</td>
+<td>__0.0-1449__ [all](HISTORY.md)</td>
+<td>2012-07-16</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.4.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -62,42 +62,12 @@ Also, see the <img width="20px" height="20px" valign="middle" src="http://i.imgu
 
 ## Latest Changes
 
-Changes from __0.0-1443__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1449__ ([See Full History](HISTORY.md)):
 
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/format](refs/cljs.core_format.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/hash-set](refs/cljs.core_hash-set.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/memfn](refs/cljs.core_memfn.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/obj-map](refs/cljs.core_obj-map.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/printf](refs/cljs.core_printf.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__

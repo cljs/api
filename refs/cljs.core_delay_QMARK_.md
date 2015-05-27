@@ -21,11 +21,11 @@ returns true if x is a Delay created with delay
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6571-6573](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6571-L6573)</ins>
+            └── <ins>[core.cljs:6571-6573](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6571-L6573)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1443
  :source {:code "(defn ^boolean delay?\n  [x] (instance? cljs.core.Delay x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6571 6573],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6571-L6573"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6571-L6573"},
  :full-name "cljs.core/delay?",
  :clj-symbol "clojure.core/delay?",
  :docstring "returns true if x is a Delay created with delay"}

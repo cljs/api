@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1817-1839](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1817-L1839)</ins>
+            └── <ins>[core.cljs:1817-1839](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1817-L1839)</ins>
 </pre>
 
 ```clj
@@ -66,7 +66,7 @@ clojurescript @ r1443
  :source {:code "(deftype ArrayChunk [arr off end]\n  ICounted\n  (-count [_] (- end off))\n  \n  IIndexed\n  (-nth [coll i]\n    (aget arr (+ off i)))\n  (-nth [coll i not-found]\n    (if (and (>= i 0) (< i (- end off)))\n      (aget arr (+ off i))\n      not-found))\n\n  IChunk\n  (-drop-first [coll]\n    (if (== off end)\n      (throw (js/Error. \"-drop-first of empty chunk\"))\n      (ArrayChunk. arr (inc off) end)))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce coll f (aget arr off) (inc off)))\n  (-reduce [coll f start]\n    (ci-reduce coll f start off)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1817 1839],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1817-L1839"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1817-L1839"},
  :full-name-encode "cljs.core_ArrayChunk",
  :clj-symbol "clojure.core/ArrayChunk",
  :history [["+" "0.0-1424"]]}

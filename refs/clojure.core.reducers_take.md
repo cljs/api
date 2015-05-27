@@ -19,12 +19,12 @@ Ends the reduction of coll after consuming n values.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:153-165](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L153-L165)</ins>
+                └── <ins>[reducers.cljs:153-165](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/core/reducers.cljs#L153-L165)</ins>
 </pre>
 
 ```clj
@@ -56,7 +56,7 @@ clojurescript @ r1443
  :source {:code "(defcurried take\n  \"Ends the reduction of coll after consuming n values.\"\n  {}\n  [n coll]\n  (reducer coll\n   (fn [f1]\n     (let [cnt (atom n)]\n       (rfn [f1 k]\n         ([ret k v]\n            (swap! cnt dec)\n            (if (neg? @cnt)\n              (reduced ret)\n              (f1 ret k v))))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [153 165],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/core/reducers.cljs#L153-L165"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/core/reducers.cljs#L153-L165"},
  :full-name-encode "clojure.core.reducers_take",
  :history [["+" "0.0-1236"]]}
 

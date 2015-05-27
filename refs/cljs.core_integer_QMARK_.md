@@ -21,11 +21,11 @@ Returns true if n is an integer.  Warning: returns true on underflow condition.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1000-1004](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1000-L1004)</ins>
+            └── <ins>[core.cljs:1000-1004](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1000-L1004)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1443
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (coercive-= n (.toFixed n))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1000 1004],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1000-L1004"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1000-L1004"},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer.  Warning: returns true on underflow condition."}

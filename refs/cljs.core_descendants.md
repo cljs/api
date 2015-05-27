@@ -26,11 +26,11 @@ relationships.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6708-6715](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6708-L6715)</ins>
+            └── <ins>[core.cljs:6708-6715](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6708-L6715)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1443
  :source {:code "(defn descendants\n  ([tag] (descendants @global-hierarchy tag))\n  ([h tag] (not-empty (get (:descendants h) tag))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6708 6715],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6708-L6715"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6708-L6715"},
  :full-name "cljs.core/descendants",
  :clj-symbol "clojure.core/descendants",
  :docstring "Returns the immediate and indirect children of tag, through a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy. Note: does not work on JavaScript type inheritance\nrelationships."}

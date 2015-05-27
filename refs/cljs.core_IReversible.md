@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:229-230](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L229-L230)</ins>
+            └── <ins>[core.cljs:229-230](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L229-L230)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1443
  :source {:code "(defprotocol IReversible\n  (-rseq [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [229 230],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L229-L230"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L229-L230"},
  :methods [{:name "-rseq", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IReversible",
  :history [["+" "0.0-1211"]]}

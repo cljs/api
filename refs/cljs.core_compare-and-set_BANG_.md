@@ -23,11 +23,11 @@ set happened, else false.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6462-6469](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6462-L6469)</ins>
+            └── <ins>[core.cljs:6462-6469](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6462-L6469)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1443
  :source {:code "(defn compare-and-set!\n  [a oldval newval]\n  (if (= (.-state a) oldval)\n    (do (reset! a newval) true)\n    false))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6462 6469],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6462-L6469"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6462-L6469"},
  :full-name "cljs.core/compare-and-set!",
  :clj-symbol "clojure.core/compare-and-set!",
  :docstring "Atomically sets the value of atom to newval if and only if the\ncurrent value of the atom is identical to oldval. Returns true if\nset happened, else false."}

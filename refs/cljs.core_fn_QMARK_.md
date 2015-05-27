@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:994-995](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L994-L995)</ins>
+            └── <ins>[core.cljs:994-995](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L994-L995)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1443
  :source {:code "(defn ^boolean fn? [f]\n  (goog/isFunction f))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [994 995],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L994-L995"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L994-L995"},
  :full-name "cljs.core/fn?",
  :clj-symbol "clojure.core/fn?"}
 

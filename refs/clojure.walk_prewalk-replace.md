@@ -23,11 +23,11 @@ replacement at the root of the tree first.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:80-86](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/walk.cljs#L80-L86)</ins>
+            └── <ins>[walk.cljs:80-86](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/walk.cljs#L80-L86)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1443
  :source {:code "(defn prewalk-replace\n  [smap form]\n  (prewalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [80 86],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/walk.cljs#L80-L86"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/walk.cljs#L80-L86"},
  :full-name "clojure.walk/prewalk-replace",
  :clj-symbol "clojure.walk/prewalk-replace",
  :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the root of the tree first."}

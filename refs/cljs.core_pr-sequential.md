@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6114-6118](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6114-L6118)</ins>
+            └── <ins>[core.cljs:6114-6118](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6114-L6118)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1443
  :source {:code "(defn pr-sequential [print-one begin sep end opts coll]\n  (concat [begin]\n          (flatten1\n            (interpose [sep] (map #(print-one % opts) coll)))\n          [end]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6114 6118],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6114-L6118"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6114-L6118"},
  :full-name-encode "cljs.core_pr-sequential",
  :history [["+" "0.0-927"]]}
 

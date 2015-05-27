@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:495-506](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L495-L506)</ins>
+            └── <ins>[analyzer.clj:508-519](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/analyzer.clj#L508-L519)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1443
  :type "special form",
  :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (assert frame \"Can't recur here\")\n    (assert (= (count exprs) (count (:names frame))) \"recur argument count mismatch\")\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [495 506],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L495-L506"},
+          :lines [508 519],
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/analyzer.clj#L508-L519"},
  :full-name-encode "special_recur",
  :clj-symbol "clojure.core/recur",
  :history [["+" "0.0-927"]]}

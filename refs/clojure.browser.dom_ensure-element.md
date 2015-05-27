@@ -18,12 +18,12 @@ Coerce the argument to a dom element if possible.
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:107-112](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/dom.cljs#L107-L112)</ins>
+                └── <ins>[dom.cljs:107-112](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/browser/dom.cljs#L107-L112)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1443
  :source {:code "(defn ensure-element\n  [e]\n  (cond (keyword? e) (get-element e)\n        (string? e) (html->dom e)\n        :else e))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [107 112],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/clojure/browser/dom.cljs#L107-L112"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/browser/dom.cljs#L107-L112"},
  :full-name-encode "clojure.browser.dom_ensure-element",
  :history [["+" "0.0-927"]]}
 

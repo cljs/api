@@ -18,11 +18,11 @@ Returns true if coll satisfies IReduce
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:899-901](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L899-L901)</ins>
+            └── <ins>[core.cljs:899-901](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L899-L901)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1443
  :source {:code "(defn ^boolean reduceable?\n  [x] (satisfies? IReduce x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [899 901],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L899-L901"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L899-L901"},
  :full-name "cljs.core/reduceable?",
  :docstring "Returns true if coll satisfies IReduce"}
 

@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6188-6188](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6188-L6188)</ins>
+            └── <ins>[core.cljs:6188-6188](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6188-L6188)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1443
  :source {:code "(def *print-readably* true)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6188 6188],
-          :link "https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6188-L6188"},
+          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6188-L6188"},
  :full-name-encode "cljs.core__STAR_print-readably_STAR_",
  :clj-symbol "clojure.core/*print-readably*",
  :history [["+" "0.0-927"]]}
