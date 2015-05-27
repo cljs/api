@@ -21,18 +21,18 @@ Returns the namespace String of a symbol or keyword, or nil if not present.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5836-5843](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5836-L5843)</ins>
+            └── <ins>[core.cljs:5887-5894](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5887-L5894)</ins>
 </pre>
 
 ```clj
 (defn namespace
   [x]
   (if (or (keyword? x) (symbol? x))
-    (let [i (.lastIndexOf x "/")]
+    (let [i (.lastIndexOf x "/" (- (alength x) 2))]
       (when (> i -1)
         (subs x 2 i)))
     (throw (js/Error. (str "Doesn't support namespace: " x)))))
@@ -48,10 +48,10 @@ clojurescript @ r1535
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_namespace",
- :source {:code "(defn namespace\n  [x]\n  (if (or (keyword? x) (symbol? x))\n    (let [i (.lastIndexOf x \"/\")]\n      (when (> i -1)\n        (subs x 2 i)))\n    (throw (js/Error. (str \"Doesn't support namespace: \" x)))))",
+ :source {:code "(defn namespace\n  [x]\n  (if (or (keyword? x) (symbol? x))\n    (let [i (.lastIndexOf x \"/\" (- (alength x) 2))]\n      (when (> i -1)\n        (subs x 2 i)))\n    (throw (js/Error. (str \"Doesn't support namespace: \" x)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5836 5843],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5836-L5843"},
+          :lines [5887 5894],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5887-L5894"},
  :full-name "cljs.core/namespace",
  :clj-symbol "clojure.core/namespace",
  :docstring "Returns the namespace String of a symbol or keyword, or nil if not present."}

@@ -24,11 +24,11 @@ does not contain key(s).
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:867-877](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L867-L877)</ins>
+            └── <ins>[core.cljs:888-898](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L888-L898)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_disj",
  :source {:code "(defn disj\n  ([coll] coll)\n  ([coll k]\n     (-disjoin coll k))\n  ([coll k & ks]\n     (let [ret (disj coll k)]\n       (if ks\n         (recur ret (first ks) (next ks))\n         ret))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [867 877],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L867-L877"},
+          :lines [888 898],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L888-L898"},
  :full-name "cljs.core/disj",
  :clj-symbol "clojure.core/disj",
  :docstring "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}

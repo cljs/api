@@ -19,11 +19,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:952-956](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L952-L956)</ins>
+            └── <ins>[core.cljs:973-977](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L973-L977)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1535
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:994-1001](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L994-L1001)</ins>
+            └── <ins>[core.clj:994-1001](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L994-L1001)</ins>
 </pre>
 
 ```clj
@@ -66,13 +66,13 @@ clojurescript @ r1535
  :signature ["[]" "[& keyvals]"],
  :source {:code "(defn js-obj\n  ([]\n     (js* \"{}\"))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [952 956],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L952-L956"},
+          :lines [973 977],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L973-L977"},
  :full-name-encode "cljs.core_js-obj",
  :shadowed-sources ({:code "(defmacro js-obj [& rest]\n  (let [kvs-str (->> (repeat \"~{}:~{}\")\n                     (take (quot (count rest) 2))\n                     (interpose \",\")\n                     (apply core/str))]\n    (concat\n     (list 'js* (core/str \"{\" kvs-str \"}\"))\n     rest)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [994 1001],
-                     :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L994-L1001"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L994-L1001"}),
  :history [["+" "0.0-927"]]}
 
 ```

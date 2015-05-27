@@ -18,12 +18,12 @@ Equivalent to (fold cat append! coll)
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:228-231](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/core/reducers.cljs#L228-L231)</ins>
+                └── <ins>[reducers.cljs:228-231](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L228-L231)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1535
  :source {:code "(defn foldcat\n  [coll]\n  (fold cat append! coll))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [228 231],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/core/reducers.cljs#L228-L231"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L228-L231"},
  :full-name-encode "clojure.core.reducers_foldcat",
  :history [["+" "0.0-1236"]]}
 

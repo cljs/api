@@ -24,11 +24,11 @@ accept 2 arguments, index and item.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2304-2321](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2304-L2321)</ins>
+            └── <ins>[core.cljs:2330-2347](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2330-L2347)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_map-indexed",
  :source {:code "(defn map-indexed\n  [f coll]\n  (letfn [(mapi [idx coll]\n            (lazy-seq\n             (when-let [s (seq coll)]\n               (if (chunked-seq? s)\n                 (let [c (chunk-first s)\n                       size (count c)\n                       b (chunk-buffer size)]\n                   (dotimes [i size]\n                     (chunk-append b (f (+ idx i) (-nth c i))))\n                   (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                 (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n    (mapi 0 coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2304 2321],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2304-L2321"},
+          :lines [2330 2347],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2330-L2347"},
  :full-name "cljs.core/map-indexed",
  :clj-symbol "clojure.core/map-indexed",
  :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item."}

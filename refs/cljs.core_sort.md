@@ -24,11 +24,11 @@ Comp defaults to compare.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1125-1137](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1125-L1137)</ins>
+            └── <ins>[core.cljs:1146-1158](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1146-L1158)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_sort",
  :source {:code "(defn sort\n  ([coll]\n   (sort compare coll))\n  ([comp coll]\n   (if (seq coll)\n     (let [a (to-array coll)]\n       ;; matching Clojure's stable sort, though docs don't promise it\n       (garray/stableSort a (fn->comparator comp))\n       (seq a))\n     ())))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1125 1137],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1125-L1137"},
+          :lines [1146 1158],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1146-L1158"},
  :full-name "cljs.core/sort",
  :clj-symbol "clojure.core/sort",
  :docstring "Returns a sorted sequence of the items in coll. Comp can be\nboolean-valued comparison funcion, or a -/0/+ valued comparator.\nComp defaults to compare."}

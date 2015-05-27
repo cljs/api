@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1025-1026](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1025-L1026)</ins>
+            └── <ins>[core.cljs:1046-1047](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1046-L1047)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_number_QMARK_",
  :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1025 1026],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1025-L1026"},
+          :lines [1046 1047],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1046-L1047"},
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

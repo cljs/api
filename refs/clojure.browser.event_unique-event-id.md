@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:92-92](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/event.cljs#L92-L92)</ins>
+                └── <ins>[event.cljs:92-92](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/event.cljs#L92-L92)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1535
  :source {:code "(defn unique-event-id [event-type])",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [92 92],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/event.cljs#L92-L92"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/event.cljs#L92-L92"},
  :full-name-encode "clojure.browser.event_unique-event-id",
  :history [["+" "0.0-927"]]}
 

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:205-206](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L205-L206)</ins>
+            └── <ins>[core.cljs:208-209](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L208-L209)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_IDeref",
  :source {:code "(defprotocol IDeref\n (-deref [o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [205 206],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L205-L206"},
+          :lines [208 209],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L208-L209"},
  :methods [{:name "-deref", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IDeref",
  :history [["+" "0.0-927"]]}

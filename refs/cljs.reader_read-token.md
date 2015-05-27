@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:80-88](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/reader.cljs#L80-L88)</ins>
+            └── <ins>[reader.cljs:80-88](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L80-L88)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1535
  :source {:code "(defn read-token\n  [rdr initch]\n  (loop [sb (gstring/StringBuffer. initch)\n         ch (read-char rdr)]\n    (if (or (nil? ch)\n            (whitespace? ch)\n            (macro-terminating? ch))\n      (do (unread rdr ch) (. sb (toString)))\n      (recur (do (.append sb ch) sb) (read-char rdr)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [80 88],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/reader.cljs#L80-L88"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L80-L88"},
  :full-name-encode "cljs.reader_read-token",
  :history [["+" "0.0-927"]]}
 

@@ -17,12 +17,12 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:17-18](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/dom.cljs#L17-L18)</ins>
+                └── <ins>[dom.cljs:17-18](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/dom.cljs#L17-L18)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1535
  :source {:code "(defprotocol DOMBuilder\n  (-element [this] [this attrs-or-children] [this attrs children]))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [17 18],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/dom.cljs#L17-L18"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/dom.cljs#L17-L18"},
  :methods [{:name "-element",
             :signature ["[this]"
                         "[this attrs-or-children]"

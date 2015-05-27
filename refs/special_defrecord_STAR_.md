@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:705-716](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L705-L716)</ins>
+            └── <ins>[analyzer.clj:700-709](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L700-L709)</ins>
 </pre>
 
 ```clj
@@ -33,9 +33,7 @@ clojurescript @ r1535
              (let [m (assoc (or m {}) :name t :type true)]
                (merge m
                  {:protocols (-> tsym meta :protocols)}
-                 (when-let [line (:line env)]
-                   {:file *cljs-file*
-                    :line line})))))
+                 (source-info env)))))
     {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))
 ```
 
@@ -47,10 +45,10 @@ clojurescript @ r1535
  :ns "special",
  :name "defrecord*",
  :type "special form",
- :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t :type true)]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (when-let [line (:line env)]\n                   {:file *cljs-file*\n                    :line line})))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
+ :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t :type true)]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info env)))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [705 716],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L705-L716"},
+          :lines [700 709],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L700-L709"},
  :full-name-encode "special_defrecord_STAR_",
  :history [["+" "0.0-927"]]}
 

@@ -21,11 +21,11 @@ Returns the map with the keys in kmap renamed to the vals in kmap
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:72-81](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/set.cljs#L72-L81)</ins>
+            └── <ins>[set.cljs:72-81](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L72-L81)</ins>
 </pre>
 
 ```clj
@@ -53,7 +53,7 @@ clojurescript @ r1535
  :source {:code "(defn rename-keys\n  [map kmap]\n    (reduce \n     (fn [m [old new]]\n       (if (and (not= old new)\n                (contains? m old))\n         (-> m (assoc new (get m old)) (dissoc old))\n         m)) \n     map kmap))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [72 81],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/set.cljs#L72-L81"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L72-L81"},
  :full-name "clojure.set/rename-keys",
  :clj-symbol "clojure.set/rename-keys",
  :docstring "Returns the map with the keys in kmap renamed to the vals in kmap"}

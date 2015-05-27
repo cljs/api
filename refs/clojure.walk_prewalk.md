@@ -21,11 +21,11 @@ Like postwalk, but does pre-order traversal.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:58-62](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/walk.cljs#L58-L62)</ins>
+            └── <ins>[walk.cljs:58-62](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/walk.cljs#L58-L62)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1535
  :source {:code "(defn prewalk\n  [f form]\n  (walk (partial prewalk f) identity (f form)))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [58 62],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/walk.cljs#L58-L62"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/walk.cljs#L58-L62"},
  :full-name "clojure.walk/prewalk",
  :clj-symbol "clojure.walk/prewalk",
  :docstring "Like postwalk, but does pre-order traversal."}

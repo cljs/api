@@ -22,11 +22,11 @@ of coll may be no better than linear time.  For vectors, see also subvec.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2506-2513](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2506-L2513)</ins>
+            └── <ins>[core.cljs:2532-2539](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2532-L2539)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_take-last",
  :source {:code "(defn take-last\n  [n coll]\n  (loop [s (seq coll), lead (seq (drop n coll))]\n    (if lead\n      (recur (next s) (next lead))\n      s)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2506 2513],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2506-L2513"},
+          :lines [2532 2539],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2532-L2539"},
  :full-name "cljs.core/take-last",
  :clj-symbol "clojure.core/take-last",
  :docstring "Returns a seq of the last n items in coll.  Depending on the type\nof coll may be no better than linear time.  For vectors, see also subvec."}

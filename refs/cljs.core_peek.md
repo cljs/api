@@ -22,11 +22,11 @@ more efficient than, last. If the collection is empty, returns nil.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:854-858](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L854-L858)</ins>
+            └── <ins>[core.cljs:875-879](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L875-L879)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_peek",
  :source {:code "(defn peek\n  [coll]\n  (-peek coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [854 858],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L854-L858"},
+          :lines [875 879],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L875-L879"},
  :full-name "cljs.core/peek",
  :clj-symbol "clojure.core/peek",
  :docstring "For a list or queue, same as first, for a vector, same as, but much\nmore efficient than, last. If the collection is empty, returns nil."}

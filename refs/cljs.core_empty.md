@@ -21,11 +21,11 @@ Returns an empty collection of the same category as coll, or nil
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:754-757](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L754-L757)</ins>
+            └── <ins>[core.cljs:775-778](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L775-L778)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_empty",
  :source {:code "(defn empty\n  [coll]\n  (-empty coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [754 757],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L754-L757"},
+          :lines [775 778],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L775-L778"},
  :full-name "cljs.core/empty",
  :clj-symbol "clojure.core/empty",
  :docstring "Returns an empty collection of the same category as coll, or nil"}

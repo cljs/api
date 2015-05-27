@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:71-73](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/event.cljs#L71-L73)</ins>
+                └── <ins>[event.cljs:71-73](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/event.cljs#L71-L73)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1535
  :source {:code "(defn unlisten-by-key\n  [key]\n  (goog.events/unlistenByKey key))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [71 73],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/event.cljs#L71-L73"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/event.cljs#L71-L73"},
  :full-name-encode "clojure.browser.event_unlisten-by-key",
  :history [["+" "0.0-927"]]}
 

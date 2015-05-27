@@ -21,11 +21,11 @@ Returns true if x satisfies ICollection
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:911-916](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L911-L916)</ins>
+            └── <ins>[core.cljs:932-937](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L932-L937)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_coll_QMARK_",
  :source {:code "(defn ^boolean coll?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ICollection x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [911 916],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L911-L916"},
+          :lines [932 937],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L932-L937"},
  :full-name "cljs.core/coll?",
  :clj-symbol "clojure.core/coll?",
  :docstring "Returns true if x satisfies ICollection"}

@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6290-6290](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6290-L6290)</ins>
+            └── <ins>[core.cljs:6341-6341](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6341-L6341)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1535
  :type "var",
  :source {:code "(def *flush-on-newline* true)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6290 6290],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6290-L6290"},
+          :lines [6341 6341],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6341-L6341"},
  :full-name-encode "cljs.core__STAR_flush-on-newline_STAR_",
  :clj-symbol "clojure.core/*flush-on-newline*",
  :history [["+" "0.0-927"]]}

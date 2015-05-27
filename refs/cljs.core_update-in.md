@@ -25,11 +25,11 @@ created.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2729-2738](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2729-L2738)</ins>
+            └── <ins>[core.cljs:2755-2764](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2755-L2764)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_update-in",
  :source {:code "(defn update-in\n  ([m [k & ks] f & args]\n   (if ks\n     (assoc m k (apply update-in (get m k) ks f args))\n     (assoc m k (apply f (get m k) args)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2729 2738],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2729-L2738"},
+          :lines [2755 2764],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2755-L2764"},
  :full-name "cljs.core/update-in",
  :clj-symbol "clojure.core/update-in",
  :docstring "'Updates' a value in a nested associative structure, where ks is a\nsequence of keys and f is a function that will take the old value\nand any supplied args and return the new value, and returns a new\nnested structure.  If any levels do not exist, hash-maps will be\ncreated."}

@@ -24,11 +24,11 @@ Returns the product of nums. (*) returns 1.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1219-1224](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1219-L1224)</ins>
+            └── <ins>[core.cljs:1240-1245](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1240-L1245)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1535
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:232-236](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L232-L236)</ins>
+            └── <ins>[core.clj:232-236](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L232-L236)</ins>
 </pre>
 
 ```clj
@@ -67,14 +67,14 @@ clojurescript @ r1535
  :shadowed-sources ({:code "(defmacro *\n  ([] 1)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} * ~{})\" x y))\n  ([x y & more] `(* (* ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [232 236],
-                     :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L232-L236"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L232-L236"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__STAR_",
  :source {:code "(defn *\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/* x y))\n  ([x y & more] (reduce * (cljs.core/* x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1219 1224],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1219-L1224"},
+          :lines [1240 1245],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1240-L1245"},
  :full-name "cljs.core/*",
  :clj-symbol "clojure.core/*",
  :docstring "Returns the product of nums. (*) returns 1."}

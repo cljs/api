@@ -19,11 +19,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:630-634](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L630-L634)</ins>
+            └── <ins>[core.cljs:651-655](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L651-L655)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1535
  :signature ["[array]" "[array i]"],
  :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [630 634],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L630-L634"},
+          :lines [651 655],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L651-L655"},
  :full-name-encode "cljs.core_array-seq",
  :history [["+" "0.0-927"]]}
 

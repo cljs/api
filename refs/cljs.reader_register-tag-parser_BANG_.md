@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:539-544](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/reader.cljs#L539-L544)</ins>
+            └── <ins>[reader.cljs:539-544](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L539-L544)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1535
  :source {:code "(defn register-tag-parser!\n  [tag f]\n  (let [tag (name tag)\n        old-parser (get @*tag-table* tag)]\n    (swap! *tag-table* assoc tag f)\n    old-parser))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [539 544],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/reader.cljs#L539-L544"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L539-L544"},
  :full-name-encode "cljs.reader_register-tag-parser_BANG_",
  :history [["+" "0.0-1236"]]}
 

@@ -25,11 +25,11 @@ f must be free of side-effects
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6753-6760](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6753-L6760)</ins>
+            └── <ins>[core.cljs:6804-6811](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6804-L6811)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_alter-meta_BANG_",
  :source {:code "(defn alter-meta!\n  [iref f & args]\n  (set! (.-meta iref) (apply f (.-meta iref) args)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6753 6760],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6753-L6760"},
+          :lines [6804 6811],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6804-L6811"},
  :full-name "cljs.core/alter-meta!",
  :clj-symbol "clojure.core/alter-meta!",
  :docstring "Atomically sets the metadata for a namespace/var/ref/agent/atom to be:\n\n(apply f its-current-meta args)\n\nf must be free of side-effects"}

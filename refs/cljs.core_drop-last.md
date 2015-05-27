@@ -22,11 +22,11 @@ Return a lazy sequence of all but the last n (default 1) items in coll
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2501-2504](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2501-L2504)</ins>
+            └── <ins>[core.cljs:2527-2530](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2527-L2530)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_drop-last",
  :source {:code "(defn drop-last\n  ([s] (drop-last 1 s))\n  ([n s] (map (fn [x _] x) s (drop n s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2501 2504],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2501-L2504"},
+          :lines [2527 2530],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2527-L2530"},
  :full-name "cljs.core/drop-last",
  :clj-symbol "clojure.core/drop-last",
  :docstring "Return a lazy sequence of all but the last n (default 1) items in coll"}

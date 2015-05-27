@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:220-221](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L220-L221)</ins>
+            └── <ins>[core.cljs:223-224](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L223-L224)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_IKVReduce",
  :source {:code "(defprotocol IKVReduce\n  (-kv-reduce [coll f init]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [220 221],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L220-L221"},
+          :lines [223 224],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L223-L224"},
  :methods [{:name "-kv-reduce",
             :signature ["[coll f init]"],
             :docstring nil}],

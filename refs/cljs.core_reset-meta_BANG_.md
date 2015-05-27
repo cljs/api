@@ -21,11 +21,11 @@ Atomically resets the metadata for an atom
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6762-6765](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6762-L6765)</ins>
+            └── <ins>[core.cljs:6813-6816](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6813-L6816)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_reset-meta_BANG_",
  :source {:code "(defn reset-meta!\n  [iref m]\n  (set! (.-meta iref) m))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6762 6765],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6762-L6765"},
+          :lines [6813 6816],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6813-L6816"},
  :full-name "cljs.core/reset-meta!",
  :clj-symbol "clojure.core/reset-meta!",
  :docstring "Atomically resets the metadata for an atom"}

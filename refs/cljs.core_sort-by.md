@@ -25,11 +25,11 @@ Comp defaults to compare.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1139-1147](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1139-L1147)</ins>
+            └── <ins>[core.cljs:1160-1168](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1160-L1168)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_sort-by",
  :source {:code "(defn sort-by\n  ([keyfn coll]\n   (sort-by keyfn compare coll))\n  ([keyfn comp coll]\n     (sort (fn [x y] ((fn->comparator comp) (keyfn x) (keyfn y))) coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1139 1147],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1139-L1147"},
+          :lines [1160 1168],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1160-L1168"},
  :full-name "cljs.core/sort-by",
  :clj-symbol "clojure.core/sort-by",
  :docstring "Returns a sorted sequence of the items in coll, where the sort\norder is determined by comparing (keyfn item).  Comp can be\nboolean-valued comparison funcion, or a -/0/+ valued comparator.\nComp defaults to compare."}

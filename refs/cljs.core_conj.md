@@ -24,11 +24,11 @@ happen at different 'places' depending on the concrete type.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:743-752](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L743-L752)</ins>
+            └── <ins>[core.cljs:764-773](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L764-L773)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_conj",
  :source {:code "(defn conj\n  ([coll x]\n     (-conj coll x))\n  ([coll x & xs]\n     (if xs\n       (recur (conj coll x) (first xs) (next xs))\n       (conj coll x))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [743 752],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L743-L752"},
+          :lines [764 773],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L764-L773"},
  :full-name "cljs.core/conj",
  :clj-symbol "clojure.core/conj",
  :docstring "conj[oin]. Returns a new collection with the xs\n'added'. (conj nil item) returns (item).  The 'addition' may\nhappen at different 'places' depending on the concrete type."}

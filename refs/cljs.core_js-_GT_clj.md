@@ -8,7 +8,7 @@
 </table>
 
  <samp>
-(__js->clj__ x & options)<br>
+(__js->clj__ x & opts)<br>
 </samp>
 
 ```
@@ -21,28 +21,17 @@ strings to keywords.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6847-6864](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6847-L6864)</ins>
+            └── <ins>[core.cljs:6955-6961](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961)</ins>
 </pre>
 
 ```clj
 (defn js->clj
-  [x & options]
-  (let [{:keys [keywordize-keys]} options
-        keyfn (if keywordize-keys keyword str)
-        f (fn thisfn [x]
-            (cond
-             (seq? x) (doall (map thisfn x))
-             (coll? x) (into (empty x) (map thisfn x))
-             (goog.isArray x) (vec (map thisfn x))
-             (identical? (type x) js/Object) (into {} (for [k (js-keys x)]
-                                                        [(keyfn k)
-                                                         (thisfn (aget x k))]))
-             :else x))]
-    (f x)))
+  [x & opts]
+  (-js->clj x (apply array-map opts)))
 ```
 
 
@@ -54,11 +43,11 @@ clojurescript @ r1535
  :name "js->clj",
  :docstring "Recursively transforms JavaScript arrays into ClojureScript\nvectors, and JavaScript objects into ClojureScript maps.  With\noption ':keywordize-keys true' will convert object fields from\nstrings to keywords.",
  :type "function",
- :signature ["[x & options]"],
- :source {:code "(defn js->clj\n  [x & options]\n  (let [{:keys [keywordize-keys]} options\n        keyfn (if keywordize-keys keyword str)\n        f (fn thisfn [x]\n            (cond\n             (seq? x) (doall (map thisfn x))\n             (coll? x) (into (empty x) (map thisfn x))\n             (goog.isArray x) (vec (map thisfn x))\n             (identical? (type x) js/Object) (into {} (for [k (js-keys x)]\n                                                        [(keyfn k)\n                                                         (thisfn (aget x k))]))\n             :else x))]\n    (f x)))",
+ :signature ["[x & opts]"],
+ :source {:code "(defn js->clj\n  [x & opts]\n  (-js->clj x (apply array-map opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6847 6864],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6847-L6864"},
+          :lines [6955 6961],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961"},
  :full-name-encode "cljs.core_js-_GT_clj",
  :history [["+" "0.0-927"]]}
 

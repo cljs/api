@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:382-431](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L382-L431)</ins>
+            └── <ins>[analyzer.clj:379-428](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L379-L428)</ins>
 </pre>
 
 ```clj
@@ -87,8 +87,8 @@ clojurescript @ r1535
  :type "special form",
  :source {:code "(defmethod parse 'fn*\n  [op env [_ & args :as form] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        locals (:locals env)\n        locals (if name (assoc locals name {:name name :shadow (locals name)}) locals)\n        type (-> form meta ::type)\n        fields (-> form meta ::fields)\n        protocol-impl (-> form meta :protocol-impl)\n        protocol-inline (-> form meta :protocol-inline)\n        locals (reduce (fn [m fld]\n                         (assoc m fld\n                                {:name fld\n                                 :field true\n                                 :mutable (-> fld meta :mutable)\n                                 :tag (-> fld meta :tag)\n                                 :shadow (m fld)}))\n                       locals fields)\n\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        menv (merge menv\n               {:protocol-impl protocol-impl\n                :protocol-inline protocol-inline})\n        methods (map #(analyze-fn-method menv locals % type) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))\n        locals (if name\n                 (update-in locals [name] assoc\n                            :fn-var true\n                            :variadic variadic\n                            :max-fixed-arity max-fixed-arity\n                            :method-params (map :params methods))\n                 locals)\n        methods (if name\n                  ;; a second pass with knowledge of our function-ness/arity\n                  ;; lets us optimize self calls\n                  (map #(analyze-fn-method menv locals % type) meths)\n                  methods)]\n    ;;todo - validate unique arities, at most one variadic, variadic takes max required args\n    {:env env :op :fn :form form :name name :methods methods :variadic variadic\n     :recur-frames *recur-frames* :loop-lets *loop-lets*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity\n     :protocol-impl protocol-impl\n     :protocol-inline protocol-inline\n     :children (vec (mapcat block-children\n                            methods))}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [382 431],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L382-L431"},
+          :lines [379 428],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L379-L428"},
  :full-name-encode "special_fn_STAR_",
  :history [["+" "0.0-927"]]}
 

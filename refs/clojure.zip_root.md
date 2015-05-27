@@ -22,11 +22,11 @@ changes.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:124-133](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/zip.cljs#L124-L133)</ins>
+            └── <ins>[zip.cljs:124-133](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/zip.cljs#L124-L133)</ins>
 </pre>
 
 ```clj
@@ -53,7 +53,7 @@ clojurescript @ r1535
  :source {:code "(defn root\n  [loc]\n    (if (= :end (loc 1))\n      (node loc)\n      (let [p (up loc)]\n        (if p\n          (recur p)\n          (node loc)))))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [124 133],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/zip.cljs#L124-L133"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/zip.cljs#L124-L133"},
  :full-name "clojure.zip/root",
  :clj-symbol "clojure.zip/root",
  :docstring "zips all the way up and returns the root node, reflecting any\nchanges."}

@@ -21,11 +21,11 @@ Returns a new sorted set with supplied keys, using the supplied comparator.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5783-5788](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5783-L5788)</ins>
+            └── <ins>[core.cljs:5834-5839](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5834-L5839)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1535
  :full-name-encode "cljs.core_sorted-set-by",
  :source {:code "(defn sorted-set-by\n  ([comparator & keys]\n   (reduce -conj\n           (cljs.core.PersistentTreeSet. nil (sorted-map-by comparator) 0)\n           keys)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5783 5788],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5783-L5788"},
+          :lines [5834 5839],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5834-L5839"},
  :full-name "cljs.core/sorted-set-by",
  :clj-symbol "clojure.core/sorted-set-by",
  :docstring "Returns a new sorted set with supplied keys, using the supplied comparator."}

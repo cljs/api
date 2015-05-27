@@ -21,17 +21,17 @@ quot[ient] of dividing numerator by denominator.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1319-1323](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1319-L1323)</ins>
+            └── <ins>[core.cljs:1345-1349](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1345-L1349)</ins>
 </pre>
 
 ```clj
 (defn quot
   [n d]
-  (let [rem (mod n d)]
+  (let [rem (js-mod n d)]
     (fix (/ (- n rem) d))))
 ```
 
@@ -45,10 +45,10 @@ clojurescript @ r1535
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_quot",
- :source {:code "(defn quot\n  [n d]\n  (let [rem (mod n d)]\n    (fix (/ (- n rem) d))))",
+ :source {:code "(defn quot\n  [n d]\n  (let [rem (js-mod n d)]\n    (fix (/ (- n rem) d))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1319 1323],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1319-L1323"},
+          :lines [1345 1349],
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1345-L1349"},
  :full-name "cljs.core/quot",
  :clj-symbol "clojure.core/quot",
  :docstring "quot[ient] of dividing numerator by denominator."}

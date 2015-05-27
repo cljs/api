@@ -24,11 +24,11 @@ array ret.
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1009-1022](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L1009-L1022)</ins>
+            └── <ins>[core.clj:1009-1022](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L1009-L1022)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r1535
  :source {:code "(defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [1009 1022],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L1009-L1022"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L1009-L1022"},
  :full-name "cljs.core/amap",
  :clj-symbol "clojure.core/amap",
  :docstring "Maps an expression across an array a, using an index named idx, and\nreturn value named ret, initialized to a clone of a, then setting\neach element of ret to the evaluation of expr, returning the new\narray ret."}

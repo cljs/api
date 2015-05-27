@@ -31,11 +31,11 @@ Comparison rules:
 ---
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
-            └── <ins>[data.cljs:144-161](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/data.cljs#L144-L161)</ins>
+            └── <ins>[data.cljs:144-161](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/data.cljs#L144-L161)</ins>
 </pre>
 
 ```clj
@@ -61,7 +61,7 @@ clojurescript @ r1535
  :source {:code "(defn diff\n  [a b]\n  (if (= a b)\n    [nil nil a]\n    (if (= (equality-partition a) (equality-partition b))\n      (diff-similar a b)\n      (atom-diff a b))))",
           :filename "clojurescript/src/cljs/clojure/data.cljs",
           :lines [144 161],
-          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/data.cljs#L144-L161"},
+          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/data.cljs#L144-L161"},
  :full-name "clojure.data/diff",
  :clj-symbol "clojure.data/diff",
  :docstring "Recursively compares a and b, returning a tuple of\n[things-only-in-a things-only-in-b things-in-both].\nComparison rules:\n\n* For equal a and b, return [nil nil a].\n* Maps are subdiffed where keys match and values differ.\n* Sets are never subdiffed.\n* All sequential things are treated as associative collections\n  by their indexes, with results returned as vectors.\n* Everything else (including strings!) is treated as\n  an atom and compared for equality."}
