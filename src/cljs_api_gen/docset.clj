@@ -5,7 +5,7 @@
     [cljs-api-gen.write :refer [get-last-written-result]]
     [cljs-api-gen.encode :refer [decode-fullname]]
     [clojure.java.jdbc :as j]
-    [me.raynes.fs :refer [copy copy-dir list-dir base-name mkdirs]]
+    [me.raynes.fs :refer [delete-dir copy copy-dir list-dir base-name mkdirs]]
     ))
 
 ;; NOTE: you have to run docset/run-all.sh first to download/process the
@@ -45,6 +45,8 @@
                     (-> result :compiler-api :symbols))
         namespaces (set (map :ns (vals syms)))]
 
+    (delete-dir docset-path)
+
     (mkdirs docset-docs-path)
 
     ;; copy over offline pages
@@ -60,10 +62,16 @@
        "CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT)"
        "CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path)")
 
-    ;; insert sections
     (j/insert! sqlite-db :searchIndex
-       {:name "Library API"  :type "Section" :path (resolve-path "README.html#library-api-reference")}
-       {:name "Compiler API" :type "Section" :path (resolve-path "README.html#compiler-api-reference")})
+       ;; insert categories
+       {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api-reference")}
+       {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api-reference")}
+
+       ;; insert sections
+       {:name "Overview"                :type "Section" :path (resolve-path "README.html")}
+       {:name "History"                 :type "Section" :path (resolve-path "HISTORY.html")}
+       {:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")}
+       )
 
     ;; insert namespaces
     (apply j/insert! sqlite-db :searchIndex
@@ -74,7 +82,10 @@
     (let [refs-path (str docset-docs-path "/" (resolve-path "refs"))]
       (apply j/insert! sqlite-db :searchIndex
         (for [ref-file (list-dir refs-path)]
-          (let [encoded-name (base-name ref-file true)
+          (let [encoded-name
+                (second
+                  (re-find #"github\.com/cljsinfo/api-refs/blob/catalog/refs/(.*)\.md "
+                           (slurp ref-file)))
                 full-name (decode-fullname encoded-name)
                 item (get syms full-name)]
             {:name full-name
