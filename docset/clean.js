@@ -11,14 +11,10 @@ page.onConsoleMessage = function (msg) { console.log(msg); };
 // code executed inside page
 function fixPage() {
 
-  function trim(s) {
-    return s.replace(/^\s+|\s+$/g, '');
-  }
-
   // set title to first header text
   // (replace any redundant mentions of ClojureScript)
   var header = document.querySelector('h1') || document.querySelector('h2');
-  document.title = trim(header.innerText.replace('ClojureScript',''));
+  document.title = header.innerText.replace('ClojureScript','').trim();
 
   // replace everything with .file box (markdown view)
   var file = document.querySelector('.file');
