@@ -23,11 +23,11 @@ at end (defaults to length of string), exclusive.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1442-1446](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1442-L1446)</ins>
+            └── <ins>[core.cljs:1464-1468](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1464-L1468)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_subs",
  :source {:code "(defn subs\n  ([s start] (.substring s start))\n  ([s start end] (.substring s start end)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1442 1446],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1442-L1446"},
+          :lines [1464 1468],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1464-L1468"},
  :full-name "cljs.core/subs",
  :clj-symbol "clojure.core/subs",
  :docstring "Returns the substring of s beginning at start inclusive, and ending\nat end (defaults to length of string), exclusive."}

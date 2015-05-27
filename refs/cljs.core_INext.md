@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:164-165](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L164-L165)</ins>
+            └── <ins>[core.cljs:176-177](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L176-L177)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_INext",
  :source {:code "(defprotocol INext\n  (-next [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [164 165],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L164-L165"},
+          :lines [176 177],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L176-L177"},
  :methods [{:name "-next", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/INext",
  :history [["+" "0.0-1424"]]}

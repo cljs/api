@@ -1,9 +1,9 @@
-## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/pr-with-opts
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> ~~cljs.core/pr-with-opts~~
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -41,17 +41,18 @@ clojurescript @ r1450
 ---
 
 ```clj
-{:full-name "cljs.core/pr-with-opts",
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "pr-with-opts",
- :docstring "Prints a sequence of objects using string-print, observing all\nthe options given in opts",
- :type "function",
  :signature ["[objs opts]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.core_pr-with-opts",
  :source {:code "(defn pr-with-opts\n  [objs opts]\n  (doseq [string (pr-seq (first objs) opts)]\n    (string-print string))\n  (doseq [obj (next objs)]\n    (string-print \" \")\n    (doseq [string (pr-seq obj opts)]\n      (string-print string))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6171 6180],
           :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6171-L6180"},
- :full-name-encode "cljs.core_pr-with-opts",
- :history [["+" "0.0-927"]]}
+ :full-name "cljs.core/pr-with-opts",
+ :docstring "Prints a sequence of objects using string-print, observing all\nthe options given in opts",
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```

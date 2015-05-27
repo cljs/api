@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1723-1734](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1723-L1734)</ins>
+            └── <ins>[core.cljs:1754-1765](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1754-L1765)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1450
  :signature ["[k]"],
  :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (let [strobj (.-strobj coll)]\n        (if (nil? strobj)\n          (-lookup coll k nil)\n          (aget strobj k)))))\n  (invoke [_ coll not-found]\n    (if (nil? coll)\n      not-found\n      (-lookup coll k not-found))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1723 1734],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1723-L1734"},
+          :lines [1754 1765],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1754-L1765"},
  :full-name-encode "cljs.core_Keyword",
  :history [["+" "0.0-1424"]]}
 

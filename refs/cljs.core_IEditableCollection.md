@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:249-250](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L249-L250)</ins>
+            └── <ins>[core.cljs:276-277](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L276-L277)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_IEditableCollection",
  :source {:code "(defprotocol IEditableCollection\n  (-as-transient [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [249 250],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L249-L250"},
+          :lines [276 277],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L276-L277"},
  :methods [{:name "-as-transient",
             :signature ["[coll]"],
             :docstring nil}],

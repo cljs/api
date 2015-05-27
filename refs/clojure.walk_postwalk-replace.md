@@ -23,11 +23,11 @@ replacement at the leaves of the tree first.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:88-94](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/walk.cljs#L88-L94)</ins>
+            └── <ins>[walk.cljs:88-94](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/walk.cljs#L88-L94)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1450
  :source {:code "(defn postwalk-replace\n  [smap form]\n  (postwalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [88 94],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/walk.cljs#L88-L94"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/walk.cljs#L88-L94"},
  :full-name "clojure.walk/postwalk-replace",
  :clj-symbol "clojure.walk/postwalk-replace",
  :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the leaves of the tree first."}

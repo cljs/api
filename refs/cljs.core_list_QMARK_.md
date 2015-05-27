@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1688-1689](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1688-L1689)</ins>
+            └── <ins>[core.cljs:1719-1720](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1719-L1720)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_list_QMARK_",
  :source {:code "(defn ^boolean list? [x]\n  (satisfies? IList x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1688 1689],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1688-L1689"},
+          :lines [1719 1720],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1719-L1720"},
  :full-name "cljs.core/list?",
  :clj-symbol "clojure.core/list?"}
 

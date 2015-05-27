@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:275-277](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L275-L277)</ins>
+            └── <ins>[core.cljs:302-304](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L302-L304)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_IChunkedSeq",
  :source {:code "(defprotocol IChunkedSeq\n  (-chunked-first [coll])\n  (-chunked-rest [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [275 277],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L275-L277"},
+          :lines [302 304],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L302-L304"},
  :methods [{:name "-chunked-first",
             :signature ["[coll]"],
             :docstring nil}

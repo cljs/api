@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:526-528](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L526-L528)</ins>
+            └── <ins>[reader.cljs:526-528](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L526-L528)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1450
  :source {:code "(def *tag-table* (atom {\"inst\"  read-date\n                        \"uuid\"  read-uuid\n                        \"queue\" read-queue}))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [526 528],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L526-L528"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L526-L528"},
  :full-name-encode "cljs.reader__STAR_tag-table_STAR_",
  :history [["+" "0.0-1236"]]}
 

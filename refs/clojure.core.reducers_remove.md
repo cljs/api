@@ -20,12 +20,12 @@ Removes values in the reduction of coll for which (pred val)
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:134-139](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/core/reducers.cljs#L134-L139)</ins>
+                └── <ins>[reducers.cljs:134-139](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L134-L139)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1450
  :source {:code "(defcurried remove\n  \"Removes values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (filter (complement pred) coll))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [134 139],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/core/reducers.cljs#L134-L139"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L134-L139"},
  :full-name-encode "clojure.core.reducers_remove",
  :history [["+" "0.0-1236"]]}
 

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6474-6476](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6474-L6476)</ins>
+            └── <ins>[core.cljs:6717-6719](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6717-L6719)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1450
  :signature ["[o]"],
  :source {:code "(defn deref\n  [o]\n  (-deref o))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6474 6476],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6474-L6476"},
+          :lines [6717 6719],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6717-L6719"},
  :full-name-encode "cljs.core_deref",
  :clj-symbol "clojure.core/deref",
  :history [["+" "0.0-927"]]}

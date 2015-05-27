@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3109-3113](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L3109-L3113)</ins>
+            └── <ins>[core.cljs:3148-3152](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L3148-L3152)</ins>
 </pre>
 
 ```clj
@@ -32,7 +32,7 @@ clojurescript @ r1450
   ([vec i off] (chunked-seq vec (array-for vec i) i off nil))
   ([vec node i off] (chunked-seq vec node i off nil))
   ([vec node i off meta]
-     (ChunkedSeq. vec node i off meta)))
+     (ChunkedSeq. vec node i off meta nil)))
 ```
 
 
@@ -44,10 +44,10 @@ clojurescript @ r1450
  :name "chunked-seq",
  :type "function",
  :signature ["[vec i off]" "[vec node i off]" "[vec node i off meta]"],
- :source {:code "(defn chunked-seq\n  ([vec i off] (chunked-seq vec (array-for vec i) i off nil))\n  ([vec node i off] (chunked-seq vec node i off nil))\n  ([vec node i off meta]\n     (ChunkedSeq. vec node i off meta)))",
+ :source {:code "(defn chunked-seq\n  ([vec i off] (chunked-seq vec (array-for vec i) i off nil))\n  ([vec node i off] (chunked-seq vec node i off nil))\n  ([vec node i off meta]\n     (ChunkedSeq. vec node i off meta nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3109 3113],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L3109-L3113"},
+          :lines [3148 3152],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L3148-L3152"},
  :full-name-encode "cljs.core_chunked-seq",
  :history [["+" "0.0-1424"]]}
 

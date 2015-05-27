@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6182-6185](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6182-L6185)</ins>
+            └── <ins>[core.cljs:6283-6286](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6283-L6286)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1450
  :signature ["[opts]"],
  :source {:code "(defn newline [opts]\n  (string-print \"\\n\")\n  (when (get opts :flush-on-newline)\n    (flush)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6182 6185],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6182-L6185"},
+          :lines [6283 6286],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6283-L6286"},
  :full-name-encode "cljs.core_newline",
  :clj-symbol "clojure.core/newline",
  :history [["+" "0.0-927"]]}

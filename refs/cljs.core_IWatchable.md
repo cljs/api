@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:244-247](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L244-L247)</ins>
+            └── <ins>[core.cljs:271-274](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L271-L274)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_IWatchable",
  :source {:code "(defprotocol IWatchable\n  (-notify-watches [this oldval newval])\n  (-add-watch [this key f])\n  (-remove-watch [this key]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [244 247],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L244-L247"},
+          :lines [271 274],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L271-L274"},
  :methods [{:name "-notify-watches",
             :signature ["[this oldval newval]"],
             :docstring nil}

@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6642-6644](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6642-L6644)</ins>
+            └── <ins>[core.cljs:6885-6887](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6885-L6887)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1450
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1313-1315](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1313-L1315)</ins>
+            └── <ins>[core.cljs:1335-1337](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1335-L1337)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1450
  :signature ["[n]"],
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [1313 1315],
-                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1313-L1315"}),
+                     :lines [1335 1337],
+                     :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1335-L1337"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (Math/floor (* (Math/random) n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6642 6644],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6642-L6644"},
+          :lines [6885 6887],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6885-L6887"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

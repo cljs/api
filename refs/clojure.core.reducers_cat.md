@@ -25,12 +25,12 @@ with (zero? (count x)). See also foldcat.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:204-221](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/core/reducers.cljs#L204-L221)</ins>
+                └── <ins>[reducers.cljs:204-221](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L204-L221)</ins>
 </pre>
 
 ```clj
@@ -61,7 +61,7 @@ clojurescript @ r1450
  :source {:code "(defn cat\n  ([] (array))\n  ([ctor]\n     (fn\n       ([] (ctor))\n       ([left right] (cat left right))))\n  ([left right]\n     (cond\n       (zero? (count left)) right\n       (zero? (count right)) left\n       :else\n       (Cat. (+ (count left) (count right)) left right))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [204 221],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/core/reducers.cljs#L204-L221"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L204-L221"},
  :full-name-encode "clojure.core.reducers_cat",
  :history [["+" "0.0-1236"]]}
 

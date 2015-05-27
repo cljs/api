@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:987-989](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L987-L989)</ins>
+            └── <ins>[core.cljs:1020-1022](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1020-L1022)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_symbol_QMARK_",
  :source {:code "(defn ^boolean symbol? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD1)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [987 989],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L987-L989"},
+          :lines [1020 1022],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1020-L1022"},
  :full-name "cljs.core/symbol?",
  :clj-symbol "clojure.core/symbol?"}
 

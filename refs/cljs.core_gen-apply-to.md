@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1134-1142](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L1134-L1142)</ins>
+            └── <ins>[core.clj:1157-1165](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1157-L1165)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1450
  :signature ["[]"],
  :source {:code "(defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [1134 1142],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L1134-L1142"},
+          :lines [1157 1165],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1157-L1165"},
  :full-name-encode "cljs.core_gen-apply-to",
  :history [["+" "0.0-1211"]]}
 

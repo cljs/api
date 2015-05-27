@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:262-264](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L262-L264)</ins>
+            └── <ins>[core.cljs:289-291](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L289-L291)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_ITransientVector",
  :source {:code "(defprotocol ITransientVector\n  (-assoc-n! [tcoll n val])\n  (-pop! [tcoll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [262 264],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L262-L264"},
+          :lines [289 291],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L289-L291"},
  :methods [{:name "-assoc-n!",
             :signature ["[tcoll n val]"],
             :docstring nil}

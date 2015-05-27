@@ -18,19 +18,21 @@ Same as pr-str-with-opts followed by (newline)
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6164-6169](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6164-L6169)</ins>
+            └── <ins>[core.cljs:6268-6275](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6268-L6275)</ins>
 </pre>
 
 ```clj
 (defn prn-str-with-opts
   [objs opts]
-  (let [sb (pr-sb objs opts)]
-    (.append sb \newline)
-    (str sb)))
+  (if (empty? objs)
+    "\n"
+    (let [sb (pr-sb-with-opts objs opts)]
+      (.append sb \newline)
+      (str sb))))
 ```
 
 
@@ -43,10 +45,10 @@ clojurescript @ r1450
  :docstring "Same as pr-str-with-opts followed by (newline)",
  :type "function",
  :signature ["[objs opts]"],
- :source {:code "(defn prn-str-with-opts\n  [objs opts]\n  (let [sb (pr-sb objs opts)]\n    (.append sb \\newline)\n    (str sb)))",
+ :source {:code "(defn prn-str-with-opts\n  [objs opts]\n  (if (empty? objs)\n    \"\\n\"\n    (let [sb (pr-sb-with-opts objs opts)]\n      (.append sb \\newline)\n      (str sb))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6164 6169],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6164-L6169"},
+          :lines [6268 6275],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6268-L6275"},
  :full-name-encode "cljs.core_prn-str-with-opts",
  :history [["+" "0.0-1011"]]}
 

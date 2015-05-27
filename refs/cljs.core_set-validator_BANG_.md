@@ -26,11 +26,11 @@ validator will not be changed.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6478-6486](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6478-L6486)</ins>
+            └── <ins>[core.cljs:6721-6729](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6721-L6729)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_set-validator_BANG_",
  :source {:code "(defn set-validator!\n  [iref val]\n  (set! (.-validator iref) val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6478 6486],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6478-L6486"},
+          :lines [6721 6729],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6721-L6729"},
  :full-name "cljs.core/set-validator!",
  :clj-symbol "clojure.core/set-validator!",
  :docstring "Sets the validator-fn for an atom. validator-fn must be nil or a\nside-effect-free fn of one argument, which will be passed the intended\nnew state on any state change. If the new state is unacceptable, the\nvalidator-fn should return false or throw an Error. If the current state\nis not acceptable to the new validator, an Error will be thrown and the\nvalidator will not be changed."}

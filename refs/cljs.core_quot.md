@@ -21,11 +21,11 @@ quot[ient] of dividing numerator by denominator.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1296-1300](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1296-L1300)</ins>
+            └── <ins>[core.cljs:1318-1322](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1318-L1322)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_quot",
  :source {:code "(defn quot\n  [n d]\n  (let [rem (mod n d)]\n    (fix (/ (- n rem) d))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1296 1300],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1296-L1300"},
+          :lines [1318 1322],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1318-L1322"},
  :full-name "cljs.core/quot",
  :clj-symbol "clojure.core/quot",
  :docstring "quot[ient] of dividing numerator by denominator."}

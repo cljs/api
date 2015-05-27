@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:375-377](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L375-L377)</ins>
+            └── <ins>[reader.cljs:375-377](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L375-L377)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1450
  :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string* rdr ch) re-pattern))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [375 377],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L375-L377"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L375-L377"},
  :full-name-encode "cljs.reader_read-regex",
  :history [["+" "0.0-927"]]}
 

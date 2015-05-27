@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2183-2183](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2183-L2183)</ins>
+            └── <ins>[core.cljs:2222-2222](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2222-L2222)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1450
  :signature ["[x]"],
  :source {:code "(defn identity [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2183 2183],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2183-L2183"},
+          :lines [2222 2222],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2222-L2222"},
  :full-name-encode "cljs.core_identity",
  :clj-symbol "clojure.core/identity",
  :history [["+" "0.0-927"]]}

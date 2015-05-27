@@ -21,17 +21,17 @@ Returns the map entry for key, or nil if key not present.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1017-1023](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1017-L1023)</ins>
+            └── <ins>[core.cljs:1052-1058](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1052-L1058)</ins>
 </pre>
 
 ```clj
 (defn find
   [coll k]
-  (when (and coll
+  (when (and (not (nil? coll))
              (associative? coll)
              (contains? coll k))
     [k (-lookup coll k)]))
@@ -47,10 +47,10 @@ clojurescript @ r1450
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_find",
- :source {:code "(defn find\n  [coll k]\n  (when (and coll\n             (associative? coll)\n             (contains? coll k))\n    [k (-lookup coll k)]))",
+ :source {:code "(defn find\n  [coll k]\n  (when (and (not (nil? coll))\n             (associative? coll)\n             (contains? coll k))\n    [k (-lookup coll k)]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1017 1023],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1017-L1023"},
+          :lines [1052 1058],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1052-L1058"},
  :full-name "cljs.core/find",
  :clj-symbol "clojure.core/find",
  :docstring "Returns the map entry for key, or nil if key not present."}

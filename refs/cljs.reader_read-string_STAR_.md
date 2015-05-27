@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:301-310](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L301-L310)</ins>
+            └── <ins>[reader.cljs:301-310](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L301-L310)</ins>
 </pre>
 
 ```clj
@@ -31,7 +31,7 @@ clojurescript @ r1450
   (loop [buffer (gstring/StringBuffer.)
          ch (read-char reader)]
     (cond
-     (nil? ch) (reader-error reader "EOF while reading string")
+     (nil? ch) (reader-error reader "EOF while reading")
      (identical? "\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)
                         (read-char reader))
      (identical? \" ch) (. buffer (toString))
@@ -47,10 +47,10 @@ clojurescript @ r1450
  :name "read-string*",
  :type "function",
  :signature ["[reader _]"],
- :source {:code "(defn read-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading string\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
+ :source {:code "(defn read-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [301 310],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/reader.cljs#L301-L310"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/reader.cljs#L301-L310"},
  :full-name-encode "cljs.reader_read-string_STAR_",
  :history [["+" "0.0-1236"]]}
 

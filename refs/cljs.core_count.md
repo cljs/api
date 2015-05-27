@@ -22,11 +22,11 @@ Returns the number of items in the collection. (count nil) returns
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:722-728](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L722-L728)</ins>
+            └── <ins>[core.cljs:765-771](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L765-L771)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_count",
  :source {:code "(defn count\n  [coll]\n  (if (counted? coll)\n    (-count coll)\n    (accumulating-seq-count coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [722 728],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L722-L728"},
+          :lines [765 771],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L765-L771"},
  :full-name "cljs.core/count",
  :clj-symbol "clojure.core/count",
  :docstring "Returns the number of items in the collection. (count nil) returns\n0.  Also works on strings, arrays, and Maps"}

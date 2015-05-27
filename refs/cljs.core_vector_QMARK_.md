@@ -21,11 +21,11 @@ Return true if x satisfies IVector
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:910-912](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L910-L912)</ins>
+            └── <ins>[core.cljs:943-945](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L943-L945)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_vector_QMARK_",
  :source {:code "(defn ^boolean vector?\n  [x] (satisfies? IVector x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [910 912],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L910-L912"},
+          :lines [943 945],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L943-L945"},
  :full-name "cljs.core/vector?",
  :clj-symbol "clojure.core/vector?",
  :docstring "Return true if x satisfies IVector"}

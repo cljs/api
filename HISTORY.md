@@ -10,6 +10,23 @@
 <th>Compiler API</th>
 </thead>
 <tr>
+<td>__[0.0-1503](https://github.com/cljsinfo/api-refs/tree/0.0-1503)__</td>
+<td>2012-10-11</td>
+<td><kbd>1.4.0</kbd></td>
+<td><kbd>20111110-r1376</kbd></td>
+<td>
+<a href="#user-content-00-1503-library-api">
+<img valign="middle" src="https://img.shields.io/badge/+-13-brightgreen.svg"> <img valign="middle" src="https://img.shields.io/badge/×-1-red.svg">
+</a>
+</td>
+<td>
+<a href="#user-content-00-1503-compiler-api">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1450](https://github.com/cljsinfo/api-refs/tree/0.0-1450)__</td>
 <td>2012-07-24</td>
 <td><kbd>1.4.0</kbd></td>
@@ -196,6 +213,102 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1503
+
+<a name="00-1503-library-api"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IPrintWithWriter](refs/cljs.core_IPrintWithWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IWriter](refs/cljs.core_IWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/StringBufferWriter](refs/cljs.core_StringBufferWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/pr-seq-writer](refs/cljs.core_pr-seq-writer.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/pr-sequential-writer](refs/cljs.core_pr-sequential-writer.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.core/pr-with-opts~~](refs/cljs.core_pr-with-opts.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/write-all](refs/cljs.core_write-all.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/Diff](refs/clojure.data_Diff.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/EqualityPartition](refs/clojure.data_EqualityPartition.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/diff](refs/clojure.data_diff.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/doc](refs/clojure.reflect_doc.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/macroexpand](refs/clojure.reflect_macroexpand.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/meta](refs/clojure.reflect_meta.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/print-doc](refs/clojure.reflect_print-doc.md)</samp></td>
+</tr>
+</table>
+
+<a name="00-1503-compiler-api"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1450

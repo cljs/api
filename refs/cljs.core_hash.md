@@ -22,18 +22,18 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:857-862](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L857-L862)</ins>
+            └── <ins>[core.cljs:898-903](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L898-L903)</ins>
 </pre>
 
 ```clj
 (defn hash
   ([o] (hash o true))
   ([o ^boolean check-cache]
-     (if (and ^boolean (goog/isString o) check-cache) 
+     (if (and ^boolean (goog/isString o) check-cache)
        (check-string-hash-cache o)
        (-hash o))))
 ```
@@ -47,10 +47,10 @@ clojurescript @ r1450
  :name "hash",
  :type "function",
  :signature ["[o]" "[o check-cache]"],
- :source {:code "(defn hash\n  ([o] (hash o true))\n  ([o ^boolean check-cache]\n     (if (and ^boolean (goog/isString o) check-cache) \n       (check-string-hash-cache o)\n       (-hash o))))",
+ :source {:code "(defn hash\n  ([o] (hash o true))\n  ([o ^boolean check-cache]\n     (if (and ^boolean (goog/isString o) check-cache)\n       (check-string-hash-cache o)\n       (-hash o))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [857 862],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L857-L862"},
+          :lines [898 903],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L898-L903"},
  :full-name-encode "cljs.core_hash",
  :clj-symbol "clojure.core/hash",
  :history [["+" "0.0-927"]]}

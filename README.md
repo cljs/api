@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1450__ [all](HISTORY.md)</td>
-<td>2012-07-24</td>
+<td>__0.0-1503__ [all](HISTORY.md)</td>
+<td>2012-10-11</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.4.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -62,12 +62,96 @@ Also, see the <img width="20px" height="20px" valign="middle" src="http://i.imgu
 
 ## Latest Changes
 
-Changes from __0.0-1450__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1503__ ([See Full History](HISTORY.md)):
 
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IPrintWithWriter](refs/cljs.core_IPrintWithWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IWriter](refs/cljs.core_IWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/StringBufferWriter](refs/cljs.core_StringBufferWriter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/pr-seq-writer](refs/cljs.core_pr-seq-writer.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/pr-sequential-writer](refs/cljs.core_pr-sequential-writer.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.core/pr-with-opts~~](refs/cljs.core_pr-with-opts.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/write-all](refs/cljs.core_write-all.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/Diff](refs/clojure.data_Diff.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/EqualityPartition](refs/clojure.data_EqualityPartition.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.data/diff](refs/clojure.data_diff.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/doc](refs/clojure.reflect_doc.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/macroexpand](refs/clojure.reflect_macroexpand.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/meta](refs/clojure.reflect_meta.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.reflect/print-doc](refs/clojure.reflect_print-doc.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__
@@ -111,6 +195,8 @@ _\* included in and accessible from every ClojureScript application:_
 | [clojure.browser.net](#clojurebrowsernet) | network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net) |
 | [clojure.browser.repl](#clojurebrowserrepl) | evaluate compiled cljs in a browser. send results back to server |
 | [clojure.core.reducers](#clojurecorereducers) | a library for reduction and parallel folding (parallelism not supported) |
+| [clojure.data](#clojuredata) | non-core data functions |
+| [clojure.reflect](#clojurereflect) | DEPRECATED. Do not use, superceded by REPL enhancements. |
 | [clojure.set](#clojureset) | set operations such as union/intersection |
 | [clojure.string](#clojurestring) | string operations |
 | [clojure.walk](#clojurewalk) | a generic tree walker for Clojure data structures |
@@ -663,6 +749,12 @@ _\* included in and accessible from every ClojureScript application:_
 </tr>
 <tr>
 <td></td>
+<td><samp>[IPrintWithWriter](refs/cljs.core_IPrintWithWriter.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[IPrintable](refs/cljs.core_IPrintable.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -768,6 +860,12 @@ _\* included in and accessible from every ClojureScript application:_
 <td><samp>[IWithMeta](refs/cljs.core_IWithMeta.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[IWriter](refs/cljs.core_IWriter.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -900,6 +998,12 @@ _\* included in and accessible from every ClojureScript application:_
 <td><samp>[~~Set~~](refs/cljs.core_Set.md)</samp></td>
 <td><samp>type</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/api-refs/tree/0.0-1211"><img valign="middle" alt="[×] 0.0-1211" src="https://img.shields.io/badge/×-0.0--1211-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[StringBufferWriter](refs/cljs.core_StringBufferWriter.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -2289,9 +2393,21 @@ _\* included in and accessible from every ClojureScript application:_
 </tr>
 <tr>
 <td></td>
+<td><samp>[pr-seq-writer](refs/cljs.core_pr-seq-writer.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[pr-sequential](refs/cljs.core_pr-sequential.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[pr-sequential-writer](refs/cljs.core_pr-sequential-writer.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pr-str)</td>
@@ -2307,9 +2423,9 @@ _\* included in and accessible from every ClojureScript application:_
 </tr>
 <tr>
 <td></td>
-<td><samp>[pr-with-opts](refs/cljs.core_pr-with-opts.md)</samp></td>
+<td><samp>[~~pr-with-opts~~](refs/cljs.core_pr-with-opts.md)</samp></td>
 <td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/prefer-method)</td>
@@ -2964,6 +3080,12 @@ _\* included in and accessible from every ClojureScript application:_
 <td><samp>[with-meta](refs/cljs.core_with-meta.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[write-all](refs/cljs.core_write-all.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/zero?)</td>
@@ -3736,6 +3858,68 @@ _\* included in and accessible from every ClojureScript application:_
 <td><samp>[take-while](refs/clojure.core.reducers_take-while.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+</tr>
+</table>
+#### clojure.data
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/Diff)</td>
+<td><samp>[Diff](refs/clojure.data_Diff.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/EqualityPartition)</td>
+<td><samp>[EqualityPartition](refs/clojure.data_EqualityPartition.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/diff)</td>
+<td><samp>[diff](refs/clojure.data_diff.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+</table>
+#### clojure.reflect
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+<tr>
+<td></td>
+<td><samp>[doc](refs/clojure.reflect_doc.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[macroexpand](refs/clojure.reflect_macroexpand.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[meta](refs/clojure.reflect_meta.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[print-doc](refs/clojure.reflect_print-doc.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 </table>
 #### clojure.set

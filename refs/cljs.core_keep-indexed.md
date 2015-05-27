@@ -23,11 +23,11 @@ side-effects.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2304-2325](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2304-L2325)</ins>
+            └── <ins>[core.cljs:2343-2364](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2343-L2364)</ins>
 </pre>
 
 ```clj
@@ -64,8 +64,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_keep-indexed",
  :source {:code "(defn keep-indexed\n  ([f coll]\n     (letfn [(keepi [idx coll]\n               (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (let [x (f (+ idx i) (-nth c i))]\n                          (when-not (nil? x)\n                            (chunk-append b x))))\n                      (chunk-cons (chunk b) (keepi (+ idx size) (chunk-rest s))))\n                    (let [x (f idx (first s))]\n                      (if (nil? x)\n                        (keepi (inc idx) (rest s))\n                        (cons x (keepi (inc idx) (rest s)))))))))]\n       (keepi 0 coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2304 2325],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2304-L2325"},
+          :lines [2343 2364],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2343-L2364"},
  :full-name "cljs.core/keep-indexed",
  :clj-symbol "clojure.core/keep-indexed",
  :docstring "Returns a lazy sequence of the non-nil results of (f index item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}

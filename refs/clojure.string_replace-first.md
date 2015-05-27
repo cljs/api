@@ -25,11 +25,11 @@ pattern / (string or function of match).
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:36-43](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/string.cljs#L36-L43)</ins>
+            └── <ins>[string.cljs:36-43](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/string.cljs#L36-L43)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1450
  :source {:code "(defn replace-first\n  [s match replacement]\n  (.replace s match replacement))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [36 43],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/string.cljs#L36-L43"},
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/string.cljs#L36-L43"},
  :full-name "clojure.string/replace-first",
  :clj-symbol "clojure.string/replace-first",
  :docstring "Replaces the first instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match)."}

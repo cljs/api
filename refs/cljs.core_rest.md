@@ -22,11 +22,11 @@ argument.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:635-646](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L635-L646)</ins>
+            └── <ins>[core.cljs:332-343](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L332-L343)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_rest",
  :source {:code "(defn ^seq rest\n  [coll]\n  (if-not (nil? coll)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if-not (nil? s)\n          (-rest s)\n          ())))\n    ()))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [635 646],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L635-L646"},
+          :lines [332 343],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L332-L343"},
  :full-name "cljs.core/rest",
  :clj-symbol "clojure.core/rest",
  :docstring "Returns a possibly empty seq of the items after the first. Calls seq on its\nargument."}

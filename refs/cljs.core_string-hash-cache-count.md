@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:840-840](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L840-L840)</ins>
+            └── <ins>[core.cljs:881-881](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L881-L881)</ins>
 </pre>
 
 ```clj
@@ -38,8 +38,8 @@ clojurescript @ r1450
  :type "var",
  :source {:code "(def string-hash-cache-count 0)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [840 840],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L840-L840"},
+          :lines [881 881],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L881-L881"},
  :full-name-encode "cljs.core_string-hash-cache-count",
  :history [["+" "0.0-1424"]]}
 

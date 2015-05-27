@@ -22,11 +22,11 @@ containing the contents of coll.
 ---
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1925-1934](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1925-L1934)</ins>
+            └── <ins>[core.cljs:1962-1971](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1962-L1971)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1450
  :full-name-encode "cljs.core_to-array-2d",
  :source {:code "(defn to-array-2d\n  [coll]\n    (let [ret (make-array (count coll))]\n      (loop [i 0 xs (seq coll)]\n        (when xs\n          (aset ret i (to-array (first xs)))\n          (recur (inc i) (next xs))))\n      ret))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1925 1934],
-          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1925-L1934"},
+          :lines [1962 1971],
+          :link "https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1962-L1971"},
  :full-name "cljs.core/to-array-2d",
  :clj-symbol "clojure.core/to-array-2d",
  :docstring "Returns a (potentially-ragged) 2-dimensional array\ncontaining the contents of coll."}
