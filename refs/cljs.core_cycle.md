@@ -21,11 +21,11 @@ Returns a lazy (infinite!) sequence of repetitions of the items in coll.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2806-2810](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2806-L2810)</ins>
+            └── <ins>[core.cljs:2803-2807](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2803-L2807)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_cycle",
  :source {:code "(defn cycle\n  [coll] (lazy-seq\n          (when-let [s (seq coll)]\n            (concat s (cycle s)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2806 2810],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2806-L2810"},
+          :lines [2803 2807],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2803-L2807"},
  :full-name "cljs.core/cycle",
  :clj-symbol "clojure.core/cycle",
  :docstring "Returns a lazy (infinite!) sequence of repetitions of the items in coll."}

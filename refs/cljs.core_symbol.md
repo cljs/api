@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:404-413](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L404-L413)</ins>
+            └── <ins>[core.cljs:404-413](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L404-L413)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1820
  :source {:code "(defn symbol\n  ([name]\n     (if (symbol? name)\n       name\n       (symbol nil name)))\n  ([ns name]\n     (let [sym-str (if-not (nil? ns)\n                     (str ns \"/\" name)\n                     name)]\n       (Symbol. ns name sym-str -1 nil))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [404 413],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L404-L413"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L404-L413"},
  :full-name-encode "cljs.core_symbol",
  :clj-symbol "clojure.core/symbol",
  :history [["+" "0.0-927"]]}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4033-4035](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L4033-L4035)</ins>
+            └── <ins>[core.cljs:4030-4032](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L4030-L4032)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1820
  :signature ["[arr i _meta]"],
  :source {:code "(defn persistent-array-map-seq [arr i _meta]\n  (when (<= i (- (alength arr) 2))\n    (PersistentArrayMapSeq. arr i _meta)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [4033 4035],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L4033-L4035"},
+          :lines [4030 4032],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L4030-L4032"},
  :full-name-encode "cljs.core_persistent-array-map-seq",
  :history [["+" "0.0-1820"]]}
 

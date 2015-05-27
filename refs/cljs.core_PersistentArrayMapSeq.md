@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3986-4031](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L3986-L4031)</ins>
+            └── <ins>[core.cljs:3983-4028](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L3983-L4028)</ins>
 </pre>
 
 ```clj
@@ -85,8 +85,8 @@ clojurescript @ r1820
  :signature ["[arr i _meta]"],
  :source {:code "(deftype PersistentArrayMapSeq [arr i _meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  \n  IMeta\n  (-meta [coll] _meta)\n\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (PersistentArrayMapSeq. arr i new-meta))\n\n  ICounted\n  (-count [coll]\n    (/ (- (alength arr) i) 2))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY _meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n  \n  ISeq\n  (-first [coll]\n    [(aget arr i) (aget arr (inc i))])\n\n  (-rest [coll]\n    (if (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta)\n      ()))\n\n  INext\n  (-next [coll]\n    (when (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3986 4031],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L3986-L4031"},
+          :lines [3983 4028],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L3983-L4028"},
  :full-name-encode "cljs.core_PersistentArrayMapSeq",
  :history [["+" "0.0-1820"]]}
 

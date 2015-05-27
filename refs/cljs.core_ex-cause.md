@@ -21,11 +21,11 @@ Otherwise returns nil.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7440-7447](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7440-L7447)</ins>
+            └── <ins>[core.cljs:7437-7444](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7437-L7444)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :signature ["[ex]"],
  :source {:code "(defn ex-cause\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-cause ex)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7440 7447],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7440-L7447"},
+          :lines [7437 7444],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7437-L7444"},
  :full-name-encode "cljs.core_ex-cause",
  :history [["+" "0.0-1576"]]}
 

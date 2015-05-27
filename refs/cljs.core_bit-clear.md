@@ -21,11 +21,11 @@ Clear bit at index n
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1635-1638](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1635-L1638)</ins>
+            └── <ins>[core.cljs:1639-1642](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1639-L1642)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:429-430](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L429-L430)</ins>
+            └── <ins>[core.clj:429-430](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L429-L430)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro bit-clear [x n]\n  (list 'js* \"(~{} & ~(1 << ~{}))\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [429 430],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L429-L430"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L429-L430"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-clear",
  :source {:code "(defn bit-clear\n  [x n]\n  (cljs.core/bit-clear x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1635 1638],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1635-L1638"},
+          :lines [1639 1642],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1639-L1642"},
  :full-name "cljs.core/bit-clear",
  :clj-symbol "clojure.core/bit-clear",
  :docstring "Clear bit at index n"}

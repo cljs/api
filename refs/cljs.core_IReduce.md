@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:257-258](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L257-L258)</ins>
+            └── <ins>[core.cljs:257-258](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L257-L258)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IReduce\n  (-reduce [coll f] [coll f start]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [257 258],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L257-L258"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L257-L258"},
  :methods [{:name "-reduce",
             :signature ["[coll f]" "[coll f start]"],
             :docstring nil}],

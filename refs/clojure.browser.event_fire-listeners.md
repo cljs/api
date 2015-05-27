@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:82-83](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/browser/event.cljs#L82-L83)</ins>
+                └── <ins>[event.cljs:82-83](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/browser/event.cljs#L82-L83)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1820
  :source {:code "(defn fire-listeners\n  [obj type capture event])",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [82 83],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/browser/event.cljs#L82-L83"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/browser/event.cljs#L82-L83"},
  :full-name-encode "clojure.browser.event_fire-listeners",
  :history [["+" "0.0-927"]]}
 

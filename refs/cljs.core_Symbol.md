@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:374-402](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L374-L402)</ins>
+            └── <ins>[core.cljs:374-402](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L374-L402)</ins>
 </pre>
 
 ```clj
@@ -69,7 +69,7 @@ clojurescript @ r1820
  :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n  IFn\n  (-invoke [sym coll]\n    (-lookup coll sym nil))\n  (-invoke [sym coll not-found]\n    (-lookup coll sym not-found))\n  IMeta\n  (-meta [_] _meta)\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n  IHash\n  (-hash [_]\n    (if (== _hash -1)\n      (do\n        (set! _hash (hash-combine (hash ns) (hash name)))\n        _hash)\n      _hash))\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [374 402],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L374-L402"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L374-L402"},
  :full-name-encode "cljs.core_Symbol",
  :history [["+" "0.0-1798"]]}
 

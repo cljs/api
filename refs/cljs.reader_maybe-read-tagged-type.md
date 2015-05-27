@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:533-543](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L533-L543)</ins>
+            └── <ins>[reader.cljs:533-543](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L533-L543)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1820
  :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag (read-symbol rdr initch)\n        pfn (get @*tag-table* (str tag))\n        dfn @*default-data-reader-fn*]\n    (cond\n     pfn (pfn (read rdr true nil false))\n     dfn (dfn tag (read rdr true nil false))\n     :else (reader-error rdr\n                         \"Could not find tag parser for \" (str tag)\n                         \" in \" (pr-str (keys @*tag-table*))))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [533 543],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L533-L543"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L533-L543"},
  :full-name-encode "cljs.reader_maybe-read-tagged-type",
  :history [["+" "0.0-1236"]]}
 

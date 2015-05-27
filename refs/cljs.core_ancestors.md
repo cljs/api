@@ -25,11 +25,11 @@ defaults to the global hierarchy
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7162-7168](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7162-L7168)</ins>
+            └── <ins>[core.cljs:7159-7165](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7159-L7165)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_ancestors",
  :source {:code "(defn ancestors\n  ([tag] (ancestors @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:ancestors h) tag))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7162 7168],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7162-L7168"},
+          :lines [7159 7165],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7159-L7165"},
  :full-name "cljs.core/ancestors",
  :clj-symbol "clojure.core/ancestors",
  :docstring "Returns the immediate and indirect parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}

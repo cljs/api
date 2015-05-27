@@ -22,11 +22,11 @@ they appear.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6362-6369](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6362-L6369)</ins>
+            └── <ins>[core.cljs:6359-6366](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6359-L6366)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_frequencies",
  :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6362 6369],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6362-L6369"},
+          :lines [6359 6366],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6359-L6366"},
  :full-name "cljs.core/frequencies",
  :clj-symbol "clojure.core/frequencies",
  :docstring "Returns a map from distinct items in coll to the number of times\nthey appear."}

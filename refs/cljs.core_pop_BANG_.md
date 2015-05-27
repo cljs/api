@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2386-2387](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2386-L2387)</ins>
+            └── <ins>[core.cljs:2383-2384](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2383-L2384)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1820
  :signature ["[tcoll]"],
  :source {:code "(defn pop! [tcoll]\n  (-pop! tcoll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2386 2387],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2386-L2387"},
+          :lines [2383 2384],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2383-L2384"},
  :full-name-encode "cljs.core_pop_BANG_",
  :clj-symbol "clojure.core/pop!",
  :history [["+" "0.0-1211"]]}

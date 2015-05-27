@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7394-7405](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7394-L7405)</ins>
+            └── <ins>[core.cljs:7391-7402](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7391-L7402)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1820
  :signature ["[uuid]"],
  :source {:code "(deftype UUID [uuid]\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7394 7405],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7394-L7405"},
+          :lines [7391 7402],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7391-L7402"},
  :full-name-encode "cljs.core_UUID",
  :history [["+" "0.0-1424"]]}
 

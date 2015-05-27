@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:245-246](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L245-L246)</ins>
+            └── <ins>[core.cljs:245-246](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L245-L246)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IDeref\n (-deref [o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [245 246],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L245-L246"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L245-L246"},
  :methods [{:name "-deref", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IDeref",
  :history [["+" "0.0-927"]]}

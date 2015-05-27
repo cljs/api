@@ -18,11 +18,11 @@ Return true if s satisfies ISeqable
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1151-1154](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1151-L1154)</ins>
+            └── <ins>[core.cljs:1155-1158](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1155-L1158)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_seqable_QMARK_",
  :source {:code "(defn ^boolean seqable?\n  [s]\n  (satisfies? ISeqable s))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1151 1154],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1151-L1154"},
+          :lines [1155 1158],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1155-L1158"},
  :full-name "cljs.core/seqable?",
  :docstring "Return true if s satisfies ISeqable"}
 

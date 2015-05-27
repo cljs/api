@@ -21,11 +21,11 @@ Same as (next (next x))
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:795-798](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L795-L798)</ins>
+            └── <ins>[core.cljs:799-802](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L799-L802)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_nnext",
  :source {:code "(defn nnext\n  [coll]\n  (next (next coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [795 798],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L795-L798"},
+          :lines [799 802],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L799-L802"},
  :full-name "cljs.core/nnext",
  :clj-symbol "clojure.core/nnext",
  :docstring "Same as (next (next x))"}

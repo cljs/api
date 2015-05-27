@@ -23,11 +23,11 @@ Note - not the same as next/butlast.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1003-1008](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1003-L1008)</ins>
+            └── <ins>[core.cljs:1007-1012](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1007-L1012)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_pop",
  :source {:code "(defn pop\n  [coll]\n  (-pop coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1003 1008],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1003-L1008"},
+          :lines [1007 1012],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1007-L1012"},
  :full-name "cljs.core/pop",
  :clj-symbol "clojure.core/pop",
  :docstring "For a list or queue, returns a new list/queue without the first\nitem, for a vector, returns a new vector without the last item.\nNote - not the same as next/butlast."}

@@ -24,11 +24,11 @@ Returns the sum of nums. (+) returns 0.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1367-1373](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1367-L1373)</ins>
+            └── <ins>[core.cljs:1371-1377](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1371-L1377)</ins>
 </pre>
 
 ```clj
@@ -44,11 +44,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:269-273](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L269-L273)</ins>
+            └── <ins>[core.clj:269-273](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L269-L273)</ins>
 </pre>
 
 ```clj
@@ -68,14 +68,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro +\n  ([] 0)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} + ~{})\" x y))\n  ([x y & more] `(+ (+ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [269 273],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L269-L273"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L269-L273"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__PLUS_",
  :source {:code "(defn +\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/+ x y))\n  ([x y & more]\n    (reduce + (cljs.core/+ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1367 1373],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1367-L1373"},
+          :lines [1371 1377],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1371-L1377"},
  :full-name "cljs.core/+",
  :clj-symbol "clojure.core/+",
  :docstring "Returns the sum of nums. (+) returns 0."}

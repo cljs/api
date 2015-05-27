@@ -20,11 +20,11 @@ meta information.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:24-30](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/reflect.cljs#L24-L30)</ins>
+            └── <ins>[reflect.cljs:24-30](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/reflect.cljs#L24-L30)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1820
  :source {:code "(defn meta\n  [sym cb]\n  (query-reflection (str \"var=\" (js/encodeURIComponent (str sym)))\n                    #(cb (evaluate-javascript %))))",
           :filename "clojurescript/src/cljs/clojure/reflect.cljs",
           :lines [24 30],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/reflect.cljs#L24-L30"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/reflect.cljs#L24-L30"},
  :full-name-encode "clojure.reflect_meta",
  :history [["+" "0.0-1503"]]}
 

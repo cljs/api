@@ -17,11 +17,11 @@ Marker interface indicating a record object
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:278-279](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L278-L279)</ins>
+            └── <ins>[core.cljs:278-279](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L278-L279)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IRecord\n  \"Marker interface indicating a record object\")",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [278 279],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L278-L279"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L278-L279"},
  :full-name "cljs.core/IRecord",
  :docstring "Marker interface indicating a record object",
  :history [["+" "0.0-927"]]}

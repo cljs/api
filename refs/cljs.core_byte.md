@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1462-1462](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1462-L1462)</ins>
+            └── <ins>[core.cljs:1466-1466](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1466-L1466)</ins>
 </pre>
 
 ```clj
@@ -36,11 +36,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:275-275](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L275-L275)</ins>
+            └── <ins>[core.clj:275-275](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L275-L275)</ins>
 </pre>
 
 ```clj
@@ -56,14 +56,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro byte [x] x)",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [275 275],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L275-L275"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L275-L275"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_byte",
  :source {:code "(defn byte [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1462 1462],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1462-L1462"},
+          :lines [1466 1466],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1466-L1466"},
  :full-name "cljs.core/byte",
  :clj-symbol "clojure.core/byte"}
 

@@ -22,11 +22,11 @@ a new value.  Returns a lazy seq of partitions.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6351-6360](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6351-L6360)</ins>
+            └── <ins>[core.cljs:6348-6357](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6348-L6357)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_partition-by",
  :source {:code "(defn partition-by\n  [f coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (let [fst (first s)\n           fv (f fst)\n           run (cons fst (take-while #(= fv (f %)) (next s)))]\n       (cons run (partition-by f (seq (drop (count run) s))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6351 6360],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6351-L6360"},
+          :lines [6348 6357],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6348-L6357"},
  :full-name "cljs.core/partition-by",
  :clj-symbol "clojure.core/partition-by",
  :docstring "Applies f to each value in coll, splitting it each time f returns\na new value.  Returns a lazy seq of partitions."}

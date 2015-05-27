@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:74-78](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L74-L78)</ins>
+            └── <ins>[reader.cljs:74-78](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L74-L78)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1820
  :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (not (identical? ch \"#\"))\n       (not (identical? ch \\'))\n       (not (identical? ch \":\"))\n       (macros ch)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [74 78],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L74-L78"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L74-L78"},
  :full-name-encode "cljs.reader_macro-terminating_QMARK_",
  :history [["+" "0.0-927"]]}
 

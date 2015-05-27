@@ -23,11 +23,11 @@ n (default 1) (exclusive).
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7092-7096](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7092-L7096)</ins>
+            └── <ins>[core.cljs:7089-7093](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7089-L7093)</ins>
 </pre>
 
 ```clj
@@ -40,11 +40,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1610-1613](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1610-L1613)</ins>
+            └── <ins>[core.cljs:1614-1617](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1614-L1617)</ins>
 </pre>
 
 ```clj
@@ -61,15 +61,15 @@ clojurescript @ r1820
  :signature ["[]" "[n]"],
  :shadowed-sources ({:code "(defn rand\n  ([]  (Math/random))\n  ([n] (* n (rand))))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [1610 1613],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1610-L1613"}),
+                     :lines [1614 1617],
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1614-L1617"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand",
  :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (* (Math/random) n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7092 7096],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7092-L7096"},
+          :lines [7089 7093],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7089-L7093"},
  :full-name "cljs.core/rand",
  :clj-symbol "clojure.core/rand",
  :docstring "Returns a random floating point number between 0 (inclusive) and\nn (default 1) (exclusive)."}

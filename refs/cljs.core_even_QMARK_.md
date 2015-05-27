@@ -21,11 +21,11 @@ Returns true if n is even, throws an exception if n is not an integer
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2493-2497](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2493-L2497)</ins>
+            └── <ins>[core.cljs:2490-2494](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2490-L2494)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_even_QMARK_",
  :source {:code "(defn ^boolean even?\n   [n] (if (integer? n)\n        (zero? (bit-and n 1))\n        (throw (js/Error. (str \"Argument must be an integer: \" n)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2493 2497],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2493-L2497"},
+          :lines [2490 2494],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2490-L2494"},
  :full-name "cljs.core/even?",
  :clj-symbol "clojure.core/even?",
  :docstring "Returns true if n is even, throws an exception if n is not an integer"}

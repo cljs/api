@@ -27,11 +27,11 @@ arguments, not just the one(s) being nil-patched.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2561-2582](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2561-L2582)</ins>
+            └── <ins>[core.cljs:2558-2579](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2558-L2579)</ins>
 </pre>
 
 ```clj
@@ -66,8 +66,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_fnil",
  :source {:code "(defn fnil\n  ([f x]\n   (fn\n     ([a] (f (if (nil? a) x a)))\n     ([a b] (f (if (nil? a) x a) b))\n     ([a b c] (f (if (nil? a) x a) b c))\n     ([a b c & ds] (apply f (if (nil? a) x a) b c ds))))\n  ([f x y]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) c))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) c ds))))\n  ([f x y z]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c)))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c) ds)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2561 2582],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2561-L2582"},
+          :lines [2558 2579],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2558-L2579"},
  :full-name "cljs.core/fnil",
  :clj-symbol "clojure.core/fnil",
  :docstring "Takes a function f, and returns a function that calls f, replacing\na nil first argument to f with the supplied value x. Higher arity\nversions can replace arguments in the second and third\npositions (y, z). Note that the function f can take any number of\narguments, not just the one(s) being nil-patched."}

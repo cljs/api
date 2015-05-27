@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1159-1161](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1159-L1161)</ins>
+            └── <ins>[core.cljs:1163-1165](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1163-L1165)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_keyword_QMARK_",
  :source {:code "(defn ^boolean keyword? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1159 1161],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1159-L1161"},
+          :lines [1163 1165],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1163-L1165"},
  :full-name "cljs.core/keyword?",
  :clj-symbol "clojure.core/keyword?"}
 

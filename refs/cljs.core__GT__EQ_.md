@@ -24,11 +24,11 @@ otherwise false.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1432-1442](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1432-L1442)</ins>
+            └── <ins>[core.cljs:1436-1446](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1436-L1446)</ins>
 </pre>
 
 ```clj
@@ -47,11 +47,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:364-367](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L364-L367)</ins>
+            └── <ins>[core.clj:364-367](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L364-L367)</ins>
 </pre>
 
 ```clj
@@ -71,14 +71,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro >=\n  ([x] true)\n  ([x y] (bool-expr (list 'js* \"(~{} >= ~{})\" x y)))\n  ([x y & more] `(and (>= ~x ~y) (>= ~y ~@more))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [364 367],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L364-L367"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L364-L367"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__GT__EQ_",
  :source {:code "(defn ^boolean >=\n  ([x] true)\n  ([x y] (cljs.core/>= x y))\n  ([x y & more]\n   (if (cljs.core/>= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/>= y (first more)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1432 1442],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1432-L1442"},
+          :lines [1436 1446],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1436-L1446"},
  :full-name "cljs.core/>=",
  :clj-symbol "clojure.core/>=",
  :docstring "Returns non-nil if nums are in monotonically non-increasing order,\notherwise false."}

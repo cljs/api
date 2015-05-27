@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1479-1479](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1479-L1479)</ins>
+            └── <ins>[core.cljs:1483-1483](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1483-L1483)</ins>
 </pre>
 
 ```clj
@@ -36,11 +36,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:283-283](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L283-L283)</ins>
+            └── <ins>[core.clj:283-283](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L283-L283)</ins>
 </pre>
 
 ```clj
@@ -56,14 +56,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro unchecked-float [x] x)",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [283 283],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L283-L283"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L283-L283"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-float",
  :source {:code "(defn unchecked-float [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1479 1479],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1479-L1479"},
+          :lines [1483 1483],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1483-L1483"},
  :full-name "cljs.core/unchecked-float",
  :clj-symbol "clojure.core/unchecked-float"}
 

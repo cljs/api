@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:290-292](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L290-L292)</ins>
+            └── <ins>[core.cljs:290-292](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L290-L292)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IWriter\n  (-write [writer s])\n  (-flush [writer]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [290 292],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L290-L292"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L290-L292"},
  :methods [{:name "-write", :signature ["[writer s]"], :docstring nil}
            {:name "-flush", :signature ["[writer]"], :docstring nil}],
  :full-name "cljs.core/IWriter",

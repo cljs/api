@@ -30,11 +30,11 @@ items, returns val and f is not called.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1311-1352](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1311-L1352)</ins>
+            └── <ins>[core.cljs:1315-1356](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1315-L1356)</ins>
 </pre>
 
 ```clj
@@ -85,8 +85,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_reduce",
  :source {:code "(defn reduce\n  ([f coll]\n     (cond\n       (satisfies? IReduce coll false)\n       (-reduce ^not-native coll f)\n\n       (array? coll)\n       (array-reduce coll f)\n\n       (string? coll)\n       (array-reduce coll f)\n       \n       (type_satisfies_ IReduce coll)\n       (-reduce coll f)\n\n       :else\n       (seq-reduce f coll)))\n  ([f val coll]\n     (cond\n       (satisfies? IReduce coll false)\n       (-reduce ^not-native coll f val)\n\n       (array? coll)\n       (array-reduce coll f val)\n      \n       (string? coll)\n       (array-reduce coll f val)\n       \n       (type_satisfies_ IReduce coll)\n       (-reduce coll f val)\n\n       :else\n       (seq-reduce f val coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1311 1352],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1311-L1352"},
+          :lines [1315 1356],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1315-L1356"},
  :full-name "cljs.core/reduce",
  :clj-symbol "clojure.core/reduce",
  :docstring "f should be a function of 2 arguments. If val is not supplied,\nreturns the result of applying f to the first 2 items in coll, then\napplying f to that result and the 3rd item, etc. If coll contains no\nitems, f must accept no arguments as well, and reduce returns the\nresult of calling f with no arguments.  If coll has only 1 item, it\nis returned and f is not called.  If val is supplied, returns the\nresult of applying f to val and the first item in coll, then\napplying f to that result and the 2nd item, etc. If coll contains no\nitems, returns val and f is not called."}

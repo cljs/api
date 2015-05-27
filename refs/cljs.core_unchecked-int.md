@@ -21,11 +21,11 @@ Coerce to int by stripping decimal places.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1564-1567](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1564-L1567)</ins>
+            └── <ins>[core.cljs:1568-1571](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1568-L1571)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_unchecked-int",
  :source {:code "(defn unchecked-int\n  [x]\n  (fix x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1564 1567],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1564-L1567"},
+          :lines [1568 1571],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1568-L1571"},
  :full-name "cljs.core/unchecked-int",
  :clj-symbol "clojure.core/unchecked-int",
  :docstring "Coerce to int by stripping decimal places."}

@@ -23,11 +23,11 @@ side-effects.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2603-2622](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2603-L2622)</ins>
+            └── <ins>[core.cljs:2600-2619](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2600-L2619)</ins>
 </pre>
 
 ```clj
@@ -62,8 +62,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_keep",
  :source {:code "(defn keep\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n            (let [x (f (-nth c i))]\n              (when-not (nil? x)\n                (chunk-append b x))))\n          (chunk-cons (chunk b) (keep f (chunk-rest s))))\n        (let [x (f (first s))]\n          (if (nil? x)\n            (keep f (rest s))\n            (cons x (keep f (rest s))))))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2603 2622],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2603-L2622"},
+          :lines [2600 2619],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2600-L2619"},
  :full-name "cljs.core/keep",
  :clj-symbol "clojure.core/keep",
  :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}

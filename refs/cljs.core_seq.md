@@ -23,11 +23,11 @@ Strings.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:419-440](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L419-L440)</ins>
+            └── <ins>[core.cljs:419-440](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L419-L440)</ins>
 </pre>
 
 ```clj
@@ -66,7 +66,7 @@ clojurescript @ r1820
  :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (satisfies? ISeqable coll false)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (string? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (type_satisfies_ ILookup coll)\n      (-seq coll)\n\n      :else (throw (js/Error. (str coll \"is not ISeqable\"))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [419 440],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L419-L440"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L419-L440"},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

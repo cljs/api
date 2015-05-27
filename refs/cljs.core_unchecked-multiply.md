@@ -24,11 +24,11 @@ Returns the product of nums. (*) returns 1.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1515-1520](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1515-L1520)</ins>
+            └── <ins>[core.cljs:1519-1524](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1519-L1524)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:307-308](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L307-L308)</ins>
+            └── <ins>[core.clj:307-308](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L307-L308)</ins>
 </pre>
 
 ```clj
@@ -64,14 +64,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro unchecked-multiply\n  ([& xs] `(* ~@xs)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [307 308],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L307-L308"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L307-L308"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-multiply",
  :source {:code "(defn unchecked-multiply\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-multiply x y))\n  ([x y & more] (reduce unchecked-multiply (cljs.core/unchecked-multiply x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1515 1520],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1515-L1520"},
+          :lines [1519 1524],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1519-L1524"},
  :full-name "cljs.core/unchecked-multiply",
  :clj-symbol "clojure.core/unchecked-multiply",
  :docstring "Returns the product of nums. (*) returns 1."}

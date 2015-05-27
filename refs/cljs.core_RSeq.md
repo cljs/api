@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:736-773](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L736-L773)</ins>
+            └── <ins>[core.cljs:740-777](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L740-L777)</ins>
 </pre>
 
 ```clj
@@ -77,8 +77,8 @@ clojurescript @ r1820
  :signature ["[ci i meta]"],
  :source {:code "(deftype RSeq [ci i meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IMeta\n  (-meta [coll] meta)\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (RSeq. ci i new-meta))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ISeq\n  (-first [coll]\n    (-nth ci i))\n  (-rest [coll]\n    (if (pos? i)\n      (RSeq. ci (dec i) nil)\n      ()))\n\n  ICounted\n  (-count [coll] (inc i))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [736 773],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L736-L773"},
+          :lines [740 777],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L740-L777"},
  :full-name-encode "cljs.core_RSeq",
  :history [["+" "0.0-1424"]]}
 

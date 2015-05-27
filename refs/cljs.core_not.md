@@ -21,11 +21,11 @@ Returns true if x is logical false, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:76-78](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L76-L78)</ins>
+            └── <ins>[core.cljs:76-78](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L76-L78)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1820
  :source {:code "(defn ^boolean not\n  [x] (if x false true))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [76 78],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L76-L78"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L76-L78"},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",
  :docstring "Returns true if x is logical false, false otherwise."}

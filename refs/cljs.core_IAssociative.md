@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:222-225](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L222-L225)</ins>
+            └── <ins>[core.cljs:222-225](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L222-L225)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IAssociative\n  (-contains-key? [coll k])\n  #_(-entry-at [coll k])\n  (-assoc [coll k v]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [222 225],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L222-L225"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L222-L225"},
  :methods [{:name "-contains-key?",
             :signature ["[coll k]"],
             :docstring nil}

@@ -23,17 +23,17 @@ in the keyword strings, it will be added automatically.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1761-1767](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1761-L1767)</ins>
+            └── <ins>[core.cljs:1765-1771](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1765-L1771)</ins>
 </pre>
 
 ```clj
 (defn keyword
   ([name] (cond (keyword? name) name
-                (symbol? name) (str* "\uFDD0" ":" (subs name 2))
+                (symbol? name) (str* "\uFDD0" ":" (cljs.core/name name))
                 :else (str* "\uFDD0" ":" name)))
   ([ns name] (keyword (str* ns "/" name))))
 ```
@@ -48,10 +48,10 @@ clojurescript @ r1820
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_keyword",
- :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \":\" (subs name 2))\n                :else (str* \"\\uFDD0\" \":\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
+ :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \":\" (cljs.core/name name))\n                :else (str* \"\\uFDD0\" \":\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1761 1767],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1761-L1767"},
+          :lines [1765 1771],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1765-L1771"},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

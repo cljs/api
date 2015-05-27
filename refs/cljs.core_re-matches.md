@@ -21,11 +21,11 @@ Returns the result of (re-find re s) if re fully matches s.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6453-6460](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6453-L6460)</ins>
+            └── <ins>[core.cljs:6450-6457](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6450-L6457)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_re-matches",
  :source {:code "(defn re-matches\n  [re s]\n  (let [matches (.exec re s)]\n    (when (= (first matches) s)\n      (if (== (count matches) 1)\n        (first matches)\n        (vec matches)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6453 6460],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6453-L6460"},
+          :lines [6450 6457],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6450-L6457"},
  :full-name "cljs.core/re-matches",
  :clj-symbol "clojure.core/re-matches",
  :docstring "Returns the result of (re-find re s) if re fully matches s."}

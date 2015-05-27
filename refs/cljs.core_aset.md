@@ -22,11 +22,11 @@ Sets the value at the index.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:146-151](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L146-L151)</ins>
+            └── <ins>[core.cljs:146-151](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L146-L151)</ins>
 </pre>
 
 ```clj
@@ -41,11 +41,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:261-267](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L261-L267)</ins>
+            └── <ins>[core.clj:261-267](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L261-L267)</ins>
 </pre>
 
 ```clj
@@ -67,14 +67,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro aset\n  ([a i v]\n    (list 'js* \"(~{}[~{}] = ~{})\" a i v))\n  ([a idx idx2 & idxv]\n    (let [n    (core/dec (count idxv))\n          astr (apply core/str (repeat n \"[~{}]\"))]\n      `(~'js* ~(core/str \"(~{}[~{}][~{}]\" astr \" = ~{})\") ~a ~idx ~idx2 ~@idxv))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [261 267],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L261-L267"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L261-L267"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aset",
  :source {:code "(defn aset\n  ([array i val]\n    (cljs.core/aset array i val))\n  ([array idx idx2 & idxv]\n    (apply aset (aget array idx) idx2 idxv)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [146 151],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L146-L151"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L146-L151"},
  :full-name "cljs.core/aset",
  :clj-symbol "clojure.core/aset",
  :docstring "Sets the value at the index."}

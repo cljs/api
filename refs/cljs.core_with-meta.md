@@ -22,11 +22,11 @@ map m as its metadata.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:977-989](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L977-L989)</ins>
+            └── <ins>[core.cljs:981-993](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L981-L993)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_with-meta",
  :source {:code "(defn with-meta\n  [o meta]\n  (if (and (fn? o) (not (satisfies? IWithMeta o)))\n    (with-meta\n      (reify\n        Fn\n        IFn\n        (-invoke [_ & args]\n          (apply o args)))\n      meta)\n    (-with-meta o meta)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [977 989],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L977-L989"},
+          :lines [981 993],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L981-L993"},
  :full-name "cljs.core/with-meta",
  :clj-symbol "clojure.core/with-meta",
  :docstring "Returns an object of the same type and value as obj, with\nmap m as its metadata."}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:343-345](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L343-L345)</ins>
+            └── <ins>[core.cljs:343-345](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L343-L345)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol INamed\n  (-name [x])\n  (-namespace [x]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [343 345],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L343-L345"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L343-L345"},
  :methods [{:name "-name", :signature ["[x]"], :docstring nil}
            {:name "-namespace", :signature ["[x]"], :docstring nil}],
  :full-name "cljs.core/INamed",

@@ -22,11 +22,11 @@ Returns an object of the same type and value as obj, with
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2448-2452](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2448-L2452)</ins>
+            └── <ins>[core.cljs:2445-2449](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2445-L2449)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_vary-meta",
  :source {:code "(defn vary-meta\n [obj f & args]\n (with-meta obj (apply f (meta obj) args)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2448 2452],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2448-L2452"},
+          :lines [2445 2449],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2445-L2449"},
  :full-name "cljs.core/vary-meta",
  :clj-symbol "clojure.core/vary-meta",
  :docstring "Returns an object of the same type and value as obj, with\n(apply f (meta obj) args) as its metadata."}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6500-6502](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6500-L6502)</ins>
+            └── <ins>[core.cljs:6497-6499](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6497-L6499)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1820
  :signature ["[writer & ss]"],
  :source {:code "(defn write-all [writer & ss]\n  (doseq [s ss]\n    (-write writer s)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6500 6502],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6500-L6502"},
+          :lines [6497 6499],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6497-L6499"},
  :full-name-encode "cljs.core_write-all",
  :history [["+" "0.0-1503"]]}
 

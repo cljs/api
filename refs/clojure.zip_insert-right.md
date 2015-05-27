@@ -22,11 +22,11 @@ without moving
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:174-181](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/zip.cljs#L174-L181)</ins>
+            └── <ins>[zip.cljs:174-181](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/zip.cljs#L174-L181)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1820
  :source {:code "(defn insert-right\n  [loc item]\n    (let [[node {r :r :as path}] loc]\n      (if (nil? path)\n        (throw \"Insert at top\")\n        (with-meta [node (assoc path :r (cons item r) :changed? true)] (meta loc)))))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [174 181],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/zip.cljs#L174-L181"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/zip.cljs#L174-L181"},
  :full-name "clojure.zip/insert-right",
  :clj-symbol "clojure.zip/insert-right",
  :docstring "Inserts the item as the right sibling of the node at this loc,\nwithout moving"}

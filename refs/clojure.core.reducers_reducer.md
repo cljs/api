@@ -24,12 +24,12 @@ reducing fn.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:55-66](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/core/reducers.cljs#L55-L66)</ins>
+                └── <ins>[reducers.cljs:55-66](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/core/reducers.cljs#L55-L66)</ins>
 </pre>
 
 ```clj
@@ -56,7 +56,7 @@ clojurescript @ r1820
  :source {:code "(defn reducer\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [this f1]\n         (-reduce this f1 (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init)))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [55 66],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/core/reducers.cljs#L55-L66"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/core/reducers.cljs#L55-L66"},
  :full-name "clojure.core.reducers/reducer",
  :clj-symbol "clojure.core.reducers/reducer",
  :docstring "Given a reducible collection, and a transformation function xf,\nreturns a reducible collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn."}

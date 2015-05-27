@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:266-267](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L266-L267)</ins>
+            └── <ins>[core.cljs:266-267](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L266-L267)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol IHash\n  (-hash [o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [266 267],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L266-L267"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L266-L267"},
  :methods [{:name "-hash", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IHash",
  :history [["+" "0.0-927"]]}

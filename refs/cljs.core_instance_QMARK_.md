@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:368-369](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L368-L369)</ins>
+            └── <ins>[core.cljs:368-369](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L368-L369)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:245-246](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L245-L246)</ins>
+            └── <ins>[core.clj:245-246](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L245-L246)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro instance? [t o]\n  (bool-expr (list 'js* \"(~{} instanceof ~{})\" o t)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [245 246],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L245-L246"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L245-L246"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_instance_QMARK_",
  :source {:code "(defn ^boolean instance? [t o]\n  (cljs.core/instance? t o))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [368 369],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L368-L369"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L368-L369"},
  :full-name "cljs.core/instance?",
  :clj-symbol "clojure.core/instance?"}
 

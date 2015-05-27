@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:201-202](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L201-L202)</ins>
+            └── <ins>[core.cljs:201-202](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L201-L202)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol ICollection\n  (-conj [coll o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [201 202],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L201-L202"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L201-L202"},
  :methods [{:name "-conj", :signature ["[coll o]"], :docstring nil}],
  :full-name "cljs.core/ICollection",
  :history [["+" "0.0-927"]]}

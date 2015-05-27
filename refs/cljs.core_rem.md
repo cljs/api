@@ -21,11 +21,11 @@ remainder of dividing numerator by denominator.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1604-1608](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1604-L1608)</ins>
+            └── <ins>[core.cljs:1608-1612](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1608-L1612)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_rem",
  :source {:code "(defn rem\n  [n d]\n  (let [q (quot n d)]\n    (- n (* d q))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1604 1608],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1604-L1608"},
+          :lines [1608 1612],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1608-L1612"},
  :full-name "cljs.core/rem",
  :clj-symbol "clojure.core/rem",
  :docstring "remainder of dividing numerator by denominator."}

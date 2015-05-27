@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3295-3295](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L3295-L3295)</ins>
+            └── <ins>[core.cljs:3292-3292](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L3292-L3292)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1820
  :signature ["[& args]"],
  :source {:code "(defn vector [& args] (vec args))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3295 3295],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L3295-L3295"},
+          :lines [3292 3292],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L3292-L3292"},
  :full-name-encode "cljs.core_vector",
  :clj-symbol "clojure.core/vector",
  :history [["+" "0.0-927"]]}

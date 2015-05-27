@@ -18,11 +18,11 @@ Bitwise shift right with zero fill
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1667-1669](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1667-L1669)</ins>
+            └── <ins>[core.cljs:1671-1673](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1671-L1673)</ins>
 </pre>
 
 ```clj
@@ -34,11 +34,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:444-445](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L444-L445)</ins>
+            └── <ins>[core.clj:444-445](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L444-L445)</ins>
 </pre>
 
 ```clj
@@ -55,14 +55,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro bit-shift-right-zero-fill [x n]\n  (list 'js* \"(~{} >>> ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [444 445],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L444-L445"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L444-L445"}),
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-right-zero-fill",
  :source {:code "(defn bit-shift-right-zero-fill\n  [x n] (cljs.core/bit-shift-right-zero-fill x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1667 1669],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1667-L1669"},
+          :lines [1671 1673],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1671-L1673"},
  :full-name "cljs.core/bit-shift-right-zero-fill",
  :docstring "Bitwise shift right with zero fill"}
 

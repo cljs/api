@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2371-2372](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2371-L2372)</ins>
+            └── <ins>[core.cljs:2368-2369](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2368-L2369)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1820
  :signature ["[coll]"],
  :source {:code "(defn transient [coll]\n  (-as-transient coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2371 2372],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2371-L2372"},
+          :lines [2368 2369],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2368-L2369"},
  :full-name-encode "cljs.core_transient",
  :clj-symbol "clojure.core/transient",
  :history [["+" "0.0-1211"]]}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6491-6498](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6491-L6498)</ins>
+            └── <ins>[core.cljs:6488-6495](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6488-L6495)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :signature ["[writer print-one begin sep end opts coll]"],
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (-write writer begin)\n  (when (seq coll)\n    (print-one (first coll) writer opts))\n  (doseq [o (next coll)]\n    (-write writer sep)\n    (print-one o writer opts))\n  (-write writer end))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6491 6498],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6491-L6498"},
+          :lines [6488 6495],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6488-L6495"},
  :full-name-encode "cljs.core_pr-sequential-writer",
  :history [["+" "0.0-1503"]]}
 

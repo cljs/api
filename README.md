@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1820__ [all](HISTORY.md)</td>
-<td>2013-06-07</td>
+<td>__0.0-1834__ [all](HISTORY.md)</td>
+<td>2013-06-21</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.5.1</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -62,36 +62,12 @@ Also, see the <img width="20px" height="20px" valign="middle" src="http://i.imgu
 
 ## Latest Changes
 
-Changes from __0.0-1820__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1834__ ([See Full History](HISTORY.md)):
 
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/KeySeq](refs/cljs.core_KeySeq.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/PersistentArrayMapSeq](refs/cljs.core_PersistentArrayMapSeq.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/ValSeq](refs/cljs.core_ValSeq.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/persistent-array-map-seq](refs/cljs.core_persistent-array-map-seq.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__

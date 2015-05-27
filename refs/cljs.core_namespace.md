@@ -21,11 +21,11 @@ Returns the namespace String of a symbol or keyword, or nil if not present.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6167-6176](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6167-L6176)</ins>
+            └── <ins>[core.cljs:6164-6173](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6164-L6173)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_namespace",
  :source {:code "(defn namespace\n  [x]\n  (if (satisfies? INamed x false)\n    (-namespace ^not-native x)\n    (if (keyword? x)\n      (let [i (.lastIndexOf x \"/\" (- (alength x) 2))]\n        (when (> i -1)\n          (subs x 2 i)))\n      (throw (js/Error. (str \"Doesn't support namespace: \" x))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6167 6176],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6167-L6176"},
+          :lines [6164 6173],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6164-L6173"},
  :full-name "cljs.core/namespace",
  :clj-symbol "clojure.core/namespace",
  :docstring "Returns the namespace String of a symbol or keyword, or nil if not present."}

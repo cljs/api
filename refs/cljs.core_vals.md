@@ -21,11 +21,11 @@ Returns a sequence of the map's values.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5846-5850](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5846-L5850)</ins>
+            └── <ins>[core.cljs:5843-5847](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L5843-L5847)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_vals",
  :source {:code "(defn vals\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (ValSeq. mseq nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5846 5850],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5846-L5850"},
+          :lines [5843 5847],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L5843-L5847"},
  :full-name "cljs.core/vals",
  :clj-symbol "clojure.core/vals",
  :docstring "Returns a sequence of the map's values."}

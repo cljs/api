@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:725-737](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L725-L737)</ins>
+            └── <ins>[analyzer.clj:713-725](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/analyzer.clj#L713-L725)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1820
  :type "special form",
  :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {})\n                       :name t\n                       :type true\n                       :num-fields (count fields))]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info tsym env)))))\n    {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [725 737],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L725-L737"},
+          :lines [713 725],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/analyzer.clj#L713-L725"},
  :full-name-encode "special_deftype_STAR_",
  :history [["+" "0.0-927"]]}
 

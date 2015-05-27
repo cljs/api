@@ -23,11 +23,11 @@ Otherwise returns nil.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7424-7430](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7424-L7430)</ins>
+            └── <ins>[core.cljs:7421-7427](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7421-L7427)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_ex-data",
  :source {:code "(defn ex-data\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-data ex)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7424 7430],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7424-L7430"},
+          :lines [7421 7427],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7421-L7427"},
  :full-name "cljs.core/ex-data",
  :clj-symbol "clojure.core/ex-data",
  :docstring "Alpha - subject to change.\nReturns exception data (a map) if ex is an ExceptionInfo.\nOtherwise returns nil."}

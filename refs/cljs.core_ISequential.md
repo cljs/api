@@ -17,11 +17,11 @@ Marker interface indicating a persistent collection of sequential items
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:272-273](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L272-L273)</ins>
+            └── <ins>[core.cljs:272-273](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L272-L273)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol ISequential\n  \"Marker interface indicating a persistent collection of sequential items\")",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [272 273],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L272-L273"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L272-L273"},
  :full-name "cljs.core/ISequential",
  :docstring "Marker interface indicating a persistent collection of sequential items",
  :history [["+" "0.0-927"]]}

@@ -18,11 +18,11 @@ Set *print-fn* to f.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:26-28](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L26-L28)</ins>
+            └── <ins>[core.cljs:26-28](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L26-L28)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1820
  :source {:code "(defn ^:export set-print-fn!\n  [f] (set! *print-fn* f))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [26 28],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L26-L28"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L26-L28"},
  :full-name-encode "cljs.core_set-print-fn_BANG_",
  :history [["+" "0.0-1798"]]}
 

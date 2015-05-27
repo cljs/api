@@ -23,11 +23,11 @@ partitions with fewer than n items at the end.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6204-6212](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6204-L6212)</ins>
+            └── <ins>[core.cljs:6201-6209](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6201-L6209)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_partition-all",
  :source {:code "(defn partition-all\n  ([n coll]\n     (partition-all n n coll))\n  ([n step coll]\n     (lazy-seq\n      (when-let [s (seq coll)]\n        (cons (take n s) (partition-all n step (drop step s)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6204 6212],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6204-L6212"},
+          :lines [6201 6209],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6201-L6209"},
  :full-name "cljs.core/partition-all",
  :clj-symbol "clojure.core/partition-all",
  :docstring "Returns a lazy sequence of lists like partition, but may include\npartitions with fewer than n items at the end."}

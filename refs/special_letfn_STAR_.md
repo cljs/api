@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:444-468](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L444-L468)</ins>
+            └── <ins>[analyzer.clj:432-456](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/analyzer.clj#L432-L456)</ins>
 </pre>
 
 ```clj
@@ -62,8 +62,8 @@ clojurescript @ r1820
  :type "special form",
  :source {:code "(defmethod parse 'letfn*\n  [op env [_ bindings & exprs :as form] name]\n  (assert (and (vector? bindings) (even? (count bindings))) \"bindings must be vector of even number of elements\")\n  (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))\n        names    (keys n->fexpr)\n        context  (:context env)\n        [meth-env bes]\n        (reduce (fn [[{:keys [locals] :as env} bes] n]\n                  (let [be {:name   n\n                            :line (get-line n env)\n                            :column (get-col n env)\n                            :tag    (-> n meta :tag)\n                            :local  true\n                            :shadow (locals n)}]\n                    [(assoc-in env [:locals n] be)\n                     (conj bes be)]))\n                [env []] names)\n        meth-env (assoc meth-env :context :expr)\n        bes (vec (map (fn [{:keys [name shadow] :as be}]\n                        (let [env (assoc-in meth-env [:locals name] shadow)]\n                          (assoc be :init (analyze env (n->fexpr name)))))\n                      bes))\n        expr (analyze (assoc meth-env :context (if (= :expr context) :return context)) `(do ~@exprs))]\n    {:env env :op :letfn :bindings bes :expr expr :form form\n     :children (conj (vec (map :init bes)) expr)}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [444 468],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L444-L468"},
+          :lines [432 456],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/analyzer.clj#L432-L456"},
  :full-name-encode "special_letfn_STAR_",
  :history [["+" "0.0-1236"]]}
 

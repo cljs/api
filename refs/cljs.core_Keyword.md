@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2009-2020](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2009-L2020)</ins>
+            └── <ins>[core.cljs:2011-2021](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2011-L2021)</ins>
 </pre>
 
 ```clj
@@ -30,14 +30,13 @@ clojurescript @ r1820
   IFn
   (invoke [_ coll]
     (when-not (nil? coll)
-      (let [strobj (.-strobj coll)]
-        (if (nil? strobj)
-          (-lookup coll k nil)
-          (aget strobj k)))))
+      (when (satisfies? ILookup coll)
+        (-lookup coll k nil))))
   (invoke [_ coll not-found]
     (if (nil? coll)
       not-found
-      (-lookup coll k not-found))))
+      (when (satisfies? ILookup coll)
+        (-lookup coll k not-found)))))
 ```
 
 
@@ -49,10 +48,10 @@ clojurescript @ r1820
  :name "Keyword",
  :type "type",
  :signature ["[k]"],
- :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (let [strobj (.-strobj coll)]\n        (if (nil? strobj)\n          (-lookup coll k nil)\n          (aget strobj k)))))\n  (invoke [_ coll not-found]\n    (if (nil? coll)\n      not-found\n      (-lookup coll k not-found))))",
+ :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (when (satisfies? ILookup coll)\n        (-lookup coll k nil))))\n  (invoke [_ coll not-found]\n    (if (nil? coll)\n      not-found\n      (when (satisfies? ILookup coll)\n        (-lookup coll k not-found)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2009 2020],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2009-L2020"},
+          :lines [2011 2021],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L2011-L2021"},
  :full-name-encode "cljs.core_Keyword",
  :history [["+" "0.0-1424"]]}
 

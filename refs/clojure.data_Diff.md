@@ -20,11 +20,11 @@ Implementation detail. Subject to change.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── clojure
-            └── <ins>[data.cljs:79-81](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/data.cljs#L79-L81)</ins>
+            └── <ins>[data.cljs:79-81](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/data.cljs#L79-L81)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1820
  :source {:code "(defprotocol Diff\n  \"Implementation detail. Subject to change.\"\n  (diff-similar [a b] \"Implementation detail. Subject to change.\"))",
           :filename "clojurescript/src/cljs/clojure/data.cljs",
           :lines [79 81],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/data.cljs#L79-L81"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/clojure/data.cljs#L79-L81"},
  :methods [{:name "diff-similar",
             :signature ["[a b]"],
             :docstring "Implementation detail. Subject to change."}],

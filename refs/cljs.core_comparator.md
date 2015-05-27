@@ -21,11 +21,11 @@ Returns an JavaScript compatible comparator based upon pred.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7449-7453](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7449-L7453)</ins>
+            └── <ins>[core.cljs:7446-7450](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7446-L7450)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_comparator",
  :source {:code "(defn comparator\n  [pred]\n  (fn [x y]\n    (cond (pred x y) -1 (pred y x) 1 :else 0)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7449 7453],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7449-L7453"},
+          :lines [7446 7450],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L7446-L7450"},
  :full-name "cljs.core/comparator",
  :clj-symbol "clojure.core/comparator",
  :docstring "Returns an JavaScript compatible comparator based upon pred."}

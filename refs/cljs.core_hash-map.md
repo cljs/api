@@ -22,11 +22,11 @@ Returns a new hash map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5690-5697](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5690-L5697)</ins>
+            └── <ins>[core.cljs:5687-5694](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L5687-L5694)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_hash-map",
  :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5690 5697],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5690-L5697"},
+          :lines [5687 5694],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L5687-L5694"},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

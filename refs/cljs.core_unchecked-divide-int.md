@@ -24,11 +24,11 @@ else returns numerator divided by all of the denominators.
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1502-1507](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1502-L1507)</ins>
+            └── <ins>[core.cljs:1506-1511](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1506-L1511)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1820
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:298-299](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L298-L299)</ins>
+            └── <ins>[core.clj:298-299](https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L298-L299)</ins>
 </pre>
 
 ```clj
@@ -63,14 +63,14 @@ clojurescript @ r1820
  :shadowed-sources ({:code "(defmacro unchecked-divide-int\n  ([& xs] `(/ ~@xs)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [298 299],
-                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L298-L299"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1834/src/clj/cljs/core.clj#L298-L299"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-divide-int",
  :source {:code "(defn unchecked-divide-int\n  ([x] (unchecked-divide-int 1 x))\n  ([x y] (cljs.core/divide x y)) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce unchecked-divide-int (unchecked-divide-int x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1502 1507],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1502-L1507"},
+          :lines [1506 1511],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L1506-L1511"},
  :full-name "cljs.core/unchecked-divide-int",
  :clj-symbol "clojure.core/unchecked-divide-int",
  :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}

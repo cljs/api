@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:189-189](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L189-L189)</ins>
+            └── <ins>[reader.cljs:189-189](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L189-L189)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r1820
  :source {:code "(def unicode-2-pattern (re-pattern \"[0-9A-Fa-f]{2}\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [189 189],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L189-L189"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L189-L189"},
  :full-name-encode "cljs.reader_unicode-2-pattern",
  :history [["+" "0.0-1424"]]}
 

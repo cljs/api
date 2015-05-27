@@ -21,11 +21,11 @@ print to a string, returning it
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6670-6673](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6670-L6673)</ins>
+            └── <ins>[core.cljs:6667-6670](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6667-L6670)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1820
  :full-name-encode "cljs.core_print-str",
  :source {:code "(defn print-str\n  [& objs]\n  (pr-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6670 6673],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6670-L6673"},
+          :lines [6667 6670],
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/core.cljs#L6667-L6670"},
  :full-name "cljs.core/print-str",
  :clj-symbol "clojure.core/print-str",
  :docstring "print to a string, returning it"}

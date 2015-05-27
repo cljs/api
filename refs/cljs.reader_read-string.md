@@ -21,11 +21,11 @@ Reads one object from the string s
 ---
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1834
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:434-438](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L434-L438)</ins>
+            └── <ins>[reader.cljs:434-438](https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L434-L438)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1820
  :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r true nil false)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [434 438],
-          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L434-L438"},
+          :link "https://github.com/clojure/clojurescript/blob/r1834/src/cljs/cljs/reader.cljs#L434-L438"},
  :full-name "cljs.reader/read-string",
  :clj-symbol "clojure.core/read-string",
  :docstring "Reads one object from the string s"}
