@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:73-74](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L73-L74)</ins>
+            └── <ins>[reader.cljs:73-74](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L73-L74)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r993
  :source {:code "(defn macro-terminating? [ch]\n  (and (not= ch \"#\") (not= ch \\') (not= ch \":\") (contains? macros ch)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [73 74],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L73-L74"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L73-L74"},
  :full-name-encode "cljs.reader_macro-terminating_QMARK_",
  :history [["+" "0.0-927"]]}
 

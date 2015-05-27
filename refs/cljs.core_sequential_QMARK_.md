@@ -21,11 +21,11 @@ Returns true if coll satisfies ISequential
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:606-608](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L606-L608)</ins>
+            └── <ins>[core.cljs:606-608](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L606-L608)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r993
  :source {:code "(defn sequential?\n  [x] (satisfies? ISequential x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [606 608],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L606-L608"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L606-L608"},
  :full-name "cljs.core/sequential?",
  :clj-symbol "clojure.core/sequential?",
  :docstring "Returns true if coll satisfies ISequential"}

@@ -18,12 +18,12 @@ Returns an XhrIo connection
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:83-86](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/net.cljs#L83-L86)</ins>
+                └── <ins>[net.cljs:83-86](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/net.cljs#L83-L86)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r993
  :source {:code "(defn xhr-connection\n  []\n  (goog.net.XhrIo.))",
           :filename "clojurescript/src/cljs/clojure/browser/net.cljs",
           :lines [83 86],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/net.cljs#L83-L86"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/net.cljs#L83-L86"},
  :full-name-encode "clojure.browser.net_xhr-connection",
  :history [["+" "0.0-927"]]}
 

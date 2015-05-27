@@ -21,11 +21,11 @@ Given a multimethod, returns a map of dispatch values -> dispatch fns
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3554-3556](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3554-L3556)</ins>
+            └── <ins>[core.cljs:3738-3740](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3738-L3740)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r993
  :full-name-encode "cljs.core_methods",
  :source {:code "(defn methods\n  [multifn] (-methods multifn))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3554 3556],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3554-L3556"},
+          :lines [3738 3740],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3738-L3740"},
  :full-name "cljs.core/methods",
  :clj-symbol "clojure.core/methods",
  :docstring "Given a multimethod, returns a map of dispatch values -> dispatch fns"}

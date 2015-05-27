@@ -21,11 +21,11 @@ Returns the name String of a string, symbol or keyword.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2571-2581](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2571-L2581)</ins>
+            └── <ins>[core.cljs:2753-2763](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2753-L2763)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r993
  :full-name-encode "cljs.core_name",
  :source {:code "(defn name\n  [x]\n  (cond\n    (string? x) x\n    (or (keyword? x) (symbol? x))\n      (let [i (.lastIndexOf x \"/\")]\n        (if (< i 0)\n          (subs x 2)\n          (subs x (inc i))))\n    :else (throw (js/Error. (str \"Doesn't support name: \" x)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2571 2581],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2571-L2581"},
+          :lines [2753 2763],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2753-L2763"},
  :full-name "cljs.core/name",
  :clj-symbol "clojure.core/name",
  :docstring "Returns the name String of a string, symbol or keyword."}

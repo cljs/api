@@ -28,26 +28,26 @@ fn (right-to-left) to the result, etc.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1496-1523](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1496-L1523)</ins>
+            └── <ins>[core.cljs:1500-1527](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1500-L1527)</ins>
 </pre>
 
 ```clj
 (defn comp
   ([] identity)
   ([f] f)
-  ([f g] 
-     (fn 
+  ([f g]
+     (fn
        ([] (f (g)))
        ([x] (f (g x)))
        ([x y] (f (g x y)))
        ([x y z] (f (g x y z)))
        ([x y z & args] (f (apply g x y z args)))))
-  ([f g h] 
-     (fn 
+  ([f g h]
+     (fn
        ([] (f (g (h))))
        ([x] (f (g (h x))))
        ([x y] (f (g (h x y))))
@@ -72,10 +72,10 @@ clojurescript @ r993
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_comp",
- :source {:code "(defn comp\n  ([] identity)\n  ([f] f)\n  ([f g] \n     (fn \n       ([] (f (g)))\n       ([x] (f (g x)))\n       ([x y] (f (g x y)))\n       ([x y z] (f (g x y z)))\n       ([x y z & args] (f (apply g x y z args)))))\n  ([f g h] \n     (fn \n       ([] (f (g (h))))\n       ([x] (f (g (h x))))\n       ([x y] (f (g (h x y))))\n       ([x y z] (f (g (h x y z))))\n       ([x y z & args] (f (g (apply h x y z args))))))\n  ([f1 f2 f3 & fs]\n    (let [fs (reverse (list* f1 f2 f3 fs))]\n      (fn [& args]\n        (loop [ret (apply (first fs) args) fs (next fs)]\n          (if fs\n            (recur ((first fs) ret) (next fs))\n            ret))))))",
+ :source {:code "(defn comp\n  ([] identity)\n  ([f] f)\n  ([f g]\n     (fn\n       ([] (f (g)))\n       ([x] (f (g x)))\n       ([x y] (f (g x y)))\n       ([x y z] (f (g x y z)))\n       ([x y z & args] (f (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (f (g (h))))\n       ([x] (f (g (h x))))\n       ([x y] (f (g (h x y))))\n       ([x y z] (f (g (h x y z))))\n       ([x y z & args] (f (g (apply h x y z args))))))\n  ([f1 f2 f3 & fs]\n    (let [fs (reverse (list* f1 f2 f3 fs))]\n      (fn [& args]\n        (loop [ret (apply (first fs) args) fs (next fs)]\n          (if fs\n            (recur ((first fs) ret) (next fs))\n            ret))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1496 1523],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1496-L1523"},
+          :lines [1500 1527],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1500-L1527"},
  :full-name "cljs.core/comp",
  :clj-symbol "clojure.core/comp",
  :docstring "Takes a set of functions and returns a fn that is the composition\nof those fns.  The returned fn takes a variable number of args,\napplies the rightmost of fns to the args, the next\nfn (right-to-left) to the result, etc."}

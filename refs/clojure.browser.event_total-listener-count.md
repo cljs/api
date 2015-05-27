@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:85-86](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/event.cljs#L85-L86)</ins>
+                └── <ins>[event.cljs:85-86](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/event.cljs#L85-L86)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r993
  :source {:code "(defn total-listener-count []\n  (goog.events/getTotalListenerCount))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [85 86],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/event.cljs#L85-L86"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/event.cljs#L85-L86"},
  :full-name-encode "clojure.browser.event_total-listener-count",
  :history [["+" "0.0-927"]]}
 

@@ -21,17 +21,17 @@ Returns a lazy (infinite!) sequence of repetitions of the items in coll.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1752-1756](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1752-L1756)</ins>
+            └── <ins>[core.cljs:1756-1760](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1756-L1760)</ins>
 </pre>
 
 ```clj
 (defn cycle
-  [coll] (lazy-seq 
-          (when-let [s (seq coll)] 
+  [coll] (lazy-seq
+          (when-let [s (seq coll)]
             (concat s (cycle s)))))
 ```
 
@@ -45,10 +45,10 @@ clojurescript @ r993
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_cycle",
- :source {:code "(defn cycle\n  [coll] (lazy-seq \n          (when-let [s (seq coll)] \n            (concat s (cycle s)))))",
+ :source {:code "(defn cycle\n  [coll] (lazy-seq\n          (when-let [s (seq coll)]\n            (concat s (cycle s)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1752 1756],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1752-L1756"},
+          :lines [1756 1760],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1756-L1760"},
  :full-name "cljs.core/cycle",
  :clj-symbol "clojure.core/cycle",
  :docstring "Returns a lazy (infinite!) sequence of repetitions of the items in coll."}

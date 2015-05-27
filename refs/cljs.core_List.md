@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1119-1151](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1119-L1151)</ins>
+            └── <ins>[core.cljs:1123-1155](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1123-L1155)</ins>
 </pre>
 
 ```clj
@@ -72,8 +72,8 @@ clojurescript @ r993
  :signature ["[meta first rest count]"],
  :source {:code "(deftype List [meta first rest count]\n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] rest)\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count)))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1119 1151],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1119-L1151"},
+          :lines [1123 1155],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1123-L1155"},
  :full-name-encode "cljs.core_List",
  :history [["+" "0.0-927"]]}
 

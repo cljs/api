@@ -21,11 +21,11 @@ Converts string to all lower-case.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:58-61](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/string.cljs#L58-L61)</ins>
+            └── <ins>[string.cljs:58-61](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/string.cljs#L58-L61)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r993
  :source {:code "(defn lower-case\n  [s]\n  (. s (toLowerCase)))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [58 61],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/string.cljs#L58-L61"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/string.cljs#L58-L61"},
  :full-name "clojure.string/lower-case",
  :clj-symbol "clojure.string/lower-case",
  :docstring "Converts string to all lower-case."}

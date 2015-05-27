@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:174-175](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L174-L175)</ins>
+            └── <ins>[core.cljs:174-175](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L174-L175)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r993
  :source {:code "(defprotocol IEquiv\n  (-equiv [o other]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [174 175],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L174-L175"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L174-L175"},
  :methods [{:name "-equiv", :signature ["[o other]"], :docstring nil}],
  :full-name "cljs.core/IEquiv",
  :history [["+" "0.0-927"]]}

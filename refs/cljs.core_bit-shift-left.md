@@ -21,11 +21,11 @@ Bitwise shift left
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:975-977](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L975-L977)</ins>
+            └── <ins>[core.cljs:975-977](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L975-L977)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r993
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:169-170](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L169-L170)</ins>
+            └── <ins>[core.clj:169-170](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L169-L170)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r993
  :shadowed-sources ({:code "(defmacro bit-shift-left [x n]\n  (list 'js* \"(~{} << ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [169 170],
-                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L169-L170"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L169-L170"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-left",
  :source {:code "(defn bit-shift-left\n  [x n] (cljs.core/bit-shift-left x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [975 977],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L975-L977"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L975-L977"},
  :full-name "cljs.core/bit-shift-left",
  :clj-symbol "clojure.core/bit-shift-left",
  :docstring "Bitwise shift left"}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:243-246](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L243-L246)</ins>
+            └── <ins>[reader.cljs:243-246](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L243-L246)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r993
  :source {:code "(def special-symbols\n  {\"nil\" nil\n   \"true\" true\n   \"false\" false})",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [243 246],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L243-L246"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L243-L246"},
  :full-name-encode "cljs.reader_special-symbols",
  :history [["+" "0.0-927"]]}
 

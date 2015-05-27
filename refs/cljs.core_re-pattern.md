@@ -21,11 +21,11 @@ Returns an instance of RegExp which has compiled the provided string.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2846-2850](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2846-L2850)</ins>
+            └── <ins>[core.cljs:3027-3031](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3027-L3031)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r993
  :full-name-encode "cljs.core_re-pattern",
  :source {:code "(defn re-pattern\n  [s]\n  (let [[_ flags pattern] (re-find #\"^(?:\\(\\?([idmsux]*)\\))?(.*)\" s)]\n    (js/RegExp. pattern flags)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2846 2850],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2846-L2850"},
+          :lines [3027 3031],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3027-L3031"},
  :full-name "cljs.core/re-pattern",
  :clj-symbol "clojure.core/re-pattern",
  :docstring "Returns an instance of RegExp which has compiled the provided string."}

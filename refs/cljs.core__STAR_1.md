@@ -20,11 +20,11 @@ bound in a repl thread to the most recent value printed
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:23-25](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L23-L25)</ins>
+            └── <ins>[core.cljs:23-25](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L23-L25)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r993
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent value printed\"}\n  *1)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [23 25],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L23-L25"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L23-L25"},
  :full-name-encode "cljs.core__STAR_1",
  :clj-symbol "clojure.core/*1",
  :history [["+" "0.0-927"]]}

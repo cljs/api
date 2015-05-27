@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:220-230](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L220-L230)</ins>
+            └── <ins>[reader.cljs:220-230](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L220-L230)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r993
  :source {:code "(defn read-number\n  [reader initch]\n  (loop [buffer (gstring/StringBuffer. initch)\n         ch (read-char reader)]\n    (if (or (nil? ch) (whitespace? ch) (contains? macros ch))\n      (do\n        (unread reader ch)\n        (let [s (. buffer (toString))]\n          (or (match-number s)\n              (reader-error reader \"Invalid number format [\" s \"]\"))))\n      (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [220 230],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L220-L230"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L220-L230"},
  :full-name-encode "cljs.reader_read-number",
  :history [["+" "0.0-927"]]}
 

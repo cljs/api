@@ -21,11 +21,11 @@ Returns true if x is logical false, false otherwise.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:475-477](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L475-L477)</ins>
+            └── <ins>[core.cljs:475-477](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L475-L477)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r993
  :source {:code "(defn not\n  [x] (if x false true))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [475 477],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L475-L477"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L475-L477"},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",
  :docstring "Returns true if x is logical false, false otherwise."}

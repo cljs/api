@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:845-887](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L845-L887)</ins>
+            └── <ins>[compiler.clj:845-887](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L845-L887)</ins>
 </pre>
 
 ```clj
@@ -84,7 +84,7 @@ clojurescript @ r993
  :source {:code "(defmethod parse 'ns\n  [_ env [_ name & args] _]\n  (let [excludes\n        (reduce (fn [s [k exclude xs]]\n                  (if (= k :refer-clojure)\n                    (do\n                      (assert (= exclude :exclude) \"Only [:refer-clojure :exclude [names]] form supported\")\n                      (into s xs))\n                    s))\n                #{} args)\n        {uses :use requires :require uses-macros :use-macros requires-macros :require-macros :as params}\n        (reduce (fn [m [k & libs]]\n                  (assert (#{:use :use-macros :require :require-macros} k)\n                          \"Only :refer-clojure, :require, :require-macros, :use and :use-macros libspecs supported\")\n                  (assoc m k (into {}\n                                   (mapcat (fn [[lib kw expr]]\n                                             (case k\n                                               (:require :require-macros)\n                                               (do (assert (and expr (= :as kw))\n                                                           \"Only (:require [lib.ns :as alias]*) form of :require / :require-macros is supported\")\n                                                   [[expr lib]])\n                                               (:use :use-macros)\n                                               (do (assert (and expr (= :only kw))\n                                                           \"Only (:use [lib.ns :only [names]]*) form of :use / :use-macros is supported\")\n                                                   (map vector expr (repeat lib)))))\n                                           libs))))\n                {} (remove (fn [[r]] (= r :refer-clojure)) args))]\n    (set! *cljs-ns* name)\n    (require 'cljs.core)\n    (doseq [nsym (concat (vals requires-macros) (vals uses-macros))]\n      (clojure.core/require nsym))\n    (swap! namespaces #(-> %\n                           (assoc-in [name :name] name)\n                           (assoc-in [name :excludes] excludes)\n                           (assoc-in [name :uses] uses)\n                           (assoc-in [name :requires] requires)\n                           (assoc-in [name :uses-macros] uses-macros)\n                           (assoc-in [name :requires-macros]\n                                     (into {} (map (fn [[alias nsym]]\n                                                     [alias (find-ns nsym)])\n                                                   requires-macros)))))\n    {:env env :op :ns :name name :uses uses :requires requires\n     :uses-macros uses-macros :requires-macros requires-macros :excludes excludes}))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
           :lines [845 887],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L845-L887"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L845-L887"},
  :full-name-encode "special_ns",
  :clj-symbol "clojure.core/ns",
  :history [["+" "0.0-927"]]}

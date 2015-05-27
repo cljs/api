@@ -28,11 +28,11 @@ Catches and handles JavaScript exceptions.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:504-532](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L504-L532)</ins>
+            └── <ins>[core.clj:504-532](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L504-L532)</ins>
 </pre>
 
 ```clj
@@ -72,7 +72,7 @@ clojurescript @ r993
  :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (list? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [504 532],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L504-L532"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L504-L532"},
  :full-name "special/catch",
  :clj-symbol "clojure.core/catch",
  :docstring "(try expr* catch-clause* finally-clause?)\n\n Special Form\n\n catch-clause => (catch protoname name expr*)\n finally-clause => (finally expr*)\n\nCatches and handles JavaScript exceptions."}

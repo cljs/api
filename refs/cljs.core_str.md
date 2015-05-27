@@ -25,11 +25,11 @@ one arg, returns the concatenation of the str values of the args.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1048-1059](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1048-L1059)</ins>
+            └── <ins>[core.cljs:1048-1063](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1048-L1063)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,11 @@ clojurescript @ r993
         (nil? x) ""
         :else (. x (toString))))
   ([x & ys]
-     (apply str* x ys)))
+     ((fn [sb more]
+        (if more
+          (recur (. sb  (append (str (first more)))) (next more))
+          (str* sb)))
+      (gstring/StringBuffer. (str x)) ys)))
 ```
 
 
@@ -54,10 +58,10 @@ clojurescript @ r993
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_str",
- :source {:code "(defn str\n  ([] \"\")\n  ([x] (cond\n        (symbol? x) (. x (substring 2 (.-length x)))\n        (keyword? x) (str* \":\" (. x (substring 2 (.-length x))))\n        (nil? x) \"\"\n        :else (. x (toString))))\n  ([x & ys]\n     (apply str* x ys)))",
+ :source {:code "(defn str\n  ([] \"\")\n  ([x] (cond\n        (symbol? x) (. x (substring 2 (.-length x)))\n        (keyword? x) (str* \":\" (. x (substring 2 (.-length x))))\n        (nil? x) \"\"\n        :else (. x (toString))))\n  ([x & ys]\n     ((fn [sb more]\n        (if more\n          (recur (. sb  (append (str (first more)))) (next more))\n          (str* sb)))\n      (gstring/StringBuffer. (str x)) ys)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1048 1059],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1048-L1059"},
+          :lines [1048 1063],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1048-L1063"},
  :full-name "cljs.core/str",
  :clj-symbol "clojure.core/str",
  :docstring "With no args, returns the empty string. With one arg x, returns\nx.toString().  (str nil) returns the empty string. With more than\none arg, returns the concatenation of the str values of the args."}

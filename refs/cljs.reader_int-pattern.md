@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:95-95](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L95-L95)</ins>
+            └── <ins>[reader.cljs:95-95](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L95-L95)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r993
  :source {:code "(def int-pattern (re-pattern \"([-+]?)(?:(0)|([1-9][0-9]*)|0[xX]([0-9A-Fa-f]+)|0([0-7]+)|([1-9][0-9]?)[rR]([0-9A-Za-z]+)|0[0-9]+)(N)?\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [95 95],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L95-L95"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L95-L95"},
  :full-name-encode "cljs.reader_int-pattern",
  :history [["+" "0.0-927"]]}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:149-157](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L149-L157)</ins>
+            └── <ins>[reader.cljs:149-157](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L149-L157)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r993
  :source {:code "(defn escape-char\n  [buffer reader]\n  (let [ch (read-char reader)\n        mapresult (get escape-char-map ch)]\n    (if mapresult\n      mapresult\n      (if (or (= \\u ch) (numeric? ch))\n        (read-unicode-char reader ch)\n        (reader-error reader \"Unsupported escape charater: \\\\\" ch)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [149 157],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L149-L157"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L149-L157"},
  :full-name-encode "cljs.reader_escape-char",
  :history [["+" "0.0-927"]]}
 

@@ -19,11 +19,11 @@ char.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:159-166](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L159-L166)</ins>
+            └── <ins>[reader.cljs:159-166](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L159-L166)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r993
  :source {:code "(defn read-past\n  [pred rdr]\n  (loop [ch (read-char rdr)]\n    (if (pred ch)\n      (recur (read-char rdr))\n      ch)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [159 166],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L159-L166"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L159-L166"},
  :full-name-encode "cljs.reader_read-past",
  :history [["+" "0.0-927"]]}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:256-267](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L256-L267)</ins>
+            └── <ins>[reader.cljs:256-267](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L256-L267)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r993
  :source {:code "(defn read-keyword\n  [reader initch]\n  (let [token (read-token reader (read-char reader))\n        [token ns name] (re-matches symbol-pattern token)]\n    (if (or (and (not (undefined? ns))\n                 (identical? (. ns (substring (- (.-length ns) 2) (.-length ns))) \":/\"))\n            (identical? (aget name (dec (.-length name))) \":\")\n            (not (== (.indexOf token \"::\" 1) -1)))\n      (reader-error reader \"Invalid token: \" token)\n      (if ns?\n        (keyword (.substring ns 0 (.indexOf ns \"/\")) name)\n        (keyword token)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [256 267],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L256-L267"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L256-L267"},
  :full-name-encode "cljs.reader_read-keyword",
  :history [["+" "0.0-927"]]}
 

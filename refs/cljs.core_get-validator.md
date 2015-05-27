@@ -21,11 +21,11 @@ Gets the validator-fn for a var/ref/agent/atom.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3121-3124](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3121-L3124)</ins>
+            └── <ins>[core.cljs:3305-3308](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3305-L3308)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r993
  :full-name-encode "cljs.core_get-validator",
  :source {:code "(defn get-validator\n  [iref]\n  (.-validator iref))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3121 3124],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3121-L3124"},
+          :lines [3305 3308],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3305-L3308"},
  :full-name "cljs.core/get-validator",
  :clj-symbol "clojure.core/get-validator",
  :docstring "Gets the validator-fn for a var/ref/agent/atom."}

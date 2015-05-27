@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L678-L679)</ins>
+            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L678-L679)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r993
  :source {:code "(defn number? [n]\n  (goog/isNumber n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [678 679],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L678-L679"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L678-L679"},
  :full-name-encode "cljs.core_number_QMARK_",
  :clj-symbol "clojure.core/number?",
  :history [["+" "0.0-927"]]}

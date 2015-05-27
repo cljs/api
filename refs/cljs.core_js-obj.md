@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:626-627](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L626-L627)</ins>
+            └── <ins>[core.cljs:626-627](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L626-L627)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r993
  :source {:code "(defn js-obj []\n  (js* \"{}\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [626 627],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L626-L627"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L626-L627"},
  :full-name-encode "cljs.core_js-obj",
  :history [["+" "0.0-927"]]}
 

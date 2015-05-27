@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:310-328](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L310-L328)</ins>
+            └── <ins>[reader.cljs:310-328](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L310-L328)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r993
  :source {:code "(def macros\n     { \\\" read-string\n       \\: read-keyword\n       \\; not-implemented ;; never hit this\n       \\' (wrapping-reader 'quote)\n       \\@ (wrapping-reader 'deref)\n       \\^ read-meta\n       \\` not-implemented\n       \\~ not-implemented\n       \\( read-list\n       \\) read-unmatched-delimiter\n       \\[ read-vector\n       \\] read-unmatched-delimiter\n       \\{ read-map\n       \\} read-unmatched-delimiter\n       \\\\ read-char\n       \\% not-implemented\n       \\# read-dispatch\n       })",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [310 328],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L310-L328"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L310-L328"},
  :full-name-encode "cljs.reader_macros",
  :history [["+" "0.0-927"]]}
 

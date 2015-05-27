@@ -21,11 +21,11 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:909-912](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L909-L912)</ins>
+            └── <ins>[core.cljs:909-912](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L909-L912)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r993
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:138-139](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L138-L139)</ins>
+            └── <ins>[core.clj:138-139](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L138-L139)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r993
  :shadowed-sources ({:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [138 139],
-                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L138-L139"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L138-L139"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_mod",
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [909 912],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L909-L912"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L909-L912"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}

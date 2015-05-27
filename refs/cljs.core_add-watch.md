@@ -29,7 +29,7 @@ but are otherwise considered opaque by the watch mechanism.  Bear in
 mind that regardless of the result or action of the watch fns the
 atom's value will change.  Example:
 
-    (def a (atom 0)) 
+    (def a (atom 0))
     (add-watch a :inc (fn [k r o n] (assert (== 0 n))))
     (swap! a inc)
     ;; Assertion Error
@@ -40,11 +40,11 @@ atom's value will change.  Example:
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3140-3162](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3140-L3162)</ins>
+            └── <ins>[core.cljs:3324-3346](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3324-L3346)</ins>
 </pre>
 
 ```clj
@@ -65,10 +65,10 @@ clojurescript @ r993
  :full-name-encode "cljs.core_add-watch",
  :source {:code "(defn add-watch\n  [iref key f]\n  (-add-watch iref key f))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3140 3162],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3140-L3162"},
+          :lines [3324 3346],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3324-L3346"},
  :full-name "cljs.core/add-watch",
  :clj-symbol "clojure.core/add-watch",
- :docstring "Alpha - subject to change.\n\nAdds a watch function to an atom reference. The watch fn must be a\nfn of 4 args: a key, the reference, its old-state, its\nnew-state. Whenever the reference's state might have been changed,\nany registered watches will have their functions called. The watch\nfn will be called synchronously. Note that an atom's state\nmay have changed again prior to the fn call, so use old/new-state\nrather than derefing the reference. Keys must be unique per\nreference, and can be used to remove the watch with remove-watch,\nbut are otherwise considered opaque by the watch mechanism.  Bear in\nmind that regardless of the result or action of the watch fns the\natom's value will change.  Example:\n\n    (def a (atom 0)) \n    (add-watch a :inc (fn [k r o n] (assert (== 0 n))))\n    (swap! a inc)\n    ;; Assertion Error\n    (deref a)\n    ;=> 1"}
+ :docstring "Alpha - subject to change.\n\nAdds a watch function to an atom reference. The watch fn must be a\nfn of 4 args: a key, the reference, its old-state, its\nnew-state. Whenever the reference's state might have been changed,\nany registered watches will have their functions called. The watch\nfn will be called synchronously. Note that an atom's state\nmay have changed again prior to the fn call, so use old/new-state\nrather than derefing the reference. Keys must be unique per\nreference, and can be used to remove the watch with remove-watch,\nbut are otherwise considered opaque by the watch mechanism.  Bear in\nmind that regardless of the result or action of the watch fns the\natom's value will change.  Example:\n\n    (def a (atom 0))\n    (add-watch a :inc (fn [k r o n] (assert (== 0 n))))\n    (swap! a inc)\n    ;; Assertion Error\n    (deref a)\n    ;=> 1"}
 
 ```

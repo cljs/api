@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:825-843](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L825-L843)</ins>
+            └── <ins>[compiler.clj:825-843](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L825-L843)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r993
  :source {:code "(defmethod parse 'set!\n  [_ env [_ target val] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         targetexpr (if (symbol? target)\n                      (do\n                        (let [local (-> env :locals target)]\n                          (assert (or (nil? local)\n                                      (and (:field local)\n                                           (:mutable local)))\n                                  \"Can't set! local var or non-mutable field\"))\n                        (analyze-symbol enve target))\n                      (when (seq? target)\n                        (let [targetexpr (analyze-seq enve target nil)]\n                          (when (:field targetexpr)\n                            targetexpr))))\n         valexpr (analyze enve val)]\n     (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n     {:env env :op :set! :target targetexpr :val valexpr :children [targetexpr valexpr]})))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
           :lines [825 843],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L825-L843"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L825-L843"},
  :full-name-encode "special_set_BANG_",
  :clj-symbol "clojure.core/set!",
  :history [["+" "0.0-927"]]}

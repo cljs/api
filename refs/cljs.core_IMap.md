@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:145-147](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L145-L147)</ins>
+            └── <ins>[core.cljs:145-147](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L145-L147)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r993
  :source {:code "(defprotocol IMap\n  #_(-assoc-ex [coll k v])\n  (-dissoc [coll k]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [145 147],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L145-L147"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L145-L147"},
  :methods [{:name "-dissoc", :signature ["[coll k]"], :docstring nil}],
  :full-name "cljs.core/IMap",
  :history [["+" "0.0-927"]]}

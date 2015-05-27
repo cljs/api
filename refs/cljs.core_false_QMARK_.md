@@ -21,11 +21,11 @@ Returns true if x is the value false, false otherwise.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:641-643](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L641-L643)</ins>
+            └── <ins>[core.cljs:641-643](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L641-L643)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r993
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L51-L52)</ins>
+            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L51-L52)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r993
  :shadowed-sources ({:code "(defmacro false? [x]\n  (list 'js* \"~{} === false\" x))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [51 52],
-                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L51-L52"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L51-L52"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_false_QMARK_",
  :source {:code "(defn false?\n  [x] (cljs.core/false? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [641 643],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L641-L643"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L641-L643"},
  :full-name "cljs.core/false?",
  :clj-symbol "clojure.core/false?",
  :docstring "Returns true if x is the value false, false otherwise."}

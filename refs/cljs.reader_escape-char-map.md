@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:137-143](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L137-L143)</ins>
+            └── <ins>[reader.cljs:137-143](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L137-L143)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r993
  :source {:code "(def escape-char-map {\\t \"\\t\"\n                      \\r \"\\r\"\n                      \\n \"\\n\"\n                      \\\\ \\\\\n                      \\\" \\\"\n                      \\b \"\\b\"\n                      \\f \"\\f\"})",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [137 143],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L137-L143"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L137-L143"},
  :full-name-encode "cljs.reader_escape-char-map",
  :history [["+" "0.0-927"]]}
 

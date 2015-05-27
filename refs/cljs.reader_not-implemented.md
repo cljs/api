@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:187-189](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L187-L189)</ins>
+            └── <ins>[reader.cljs:187-189](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L187-L189)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r993
  :source {:code "(defn not-implemented\n  [rdr ch]\n  (reader-error rdr \"Reader for \" ch \" not implemented yet\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [187 189],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L187-L189"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L187-L189"},
  :full-name-encode "cljs.reader_not-implemented",
  :history [["+" "0.0-927"]]}
 

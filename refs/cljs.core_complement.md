@@ -22,17 +22,17 @@ has the same effects, if any, and returns the opposite truth value.
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1482-1490](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1482-L1490)</ins>
+            └── <ins>[core.cljs:1486-1494](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494)</ins>
 </pre>
 
 ```clj
 (defn complement
-  [f] 
-  (fn 
+  [f]
+  (fn
     ([] (not (f)))
     ([x] (not (f x)))
     ([x y] (not (f x y)))
@@ -49,10 +49,10 @@ clojurescript @ r993
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_complement",
- :source {:code "(defn complement\n  [f] \n  (fn \n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
+ :source {:code "(defn complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1482 1490],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1482-L1490"},
+          :lines [1486 1494],
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494"},
  :full-name "cljs.core/complement",
  :clj-symbol "clojure.core/complement",
  :docstring "Takes a fn f and returns a fn that takes the same arguments as f,\nhas the same effects, if any, and returns the opposite truth value."}

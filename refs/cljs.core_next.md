@@ -22,11 +22,11 @@ argument.  If there are no more items, returns nil
 ---
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:425-430](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L425-L430)</ins>
+            └── <ins>[core.cljs:425-430](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L425-L430)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r993
  :source {:code "(defn next\n  [coll]\n  (when coll\n    (seq (rest coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [425 430],
-          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L425-L430"},
+          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L425-L430"},
  :full-name "cljs.core/next",
  :clj-symbol "clojure.core/next",
  :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil"}
