@@ -21,11 +21,11 @@ strings to keywords.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6955-6961](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961)</ins>
+            └── <ins>[core.cljs:6957-6963](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6957-L6963)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1552
  :signature ["[x & opts]"],
  :source {:code "(defn js->clj\n  [x & opts]\n  (-js->clj x (apply array-map opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6955 6961],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961"},
+          :lines [6957 6963],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6957-L6963"},
  :full-name-encode "cljs.core_js-_GT_clj",
  :history [["+" "0.0-927"]]}
 

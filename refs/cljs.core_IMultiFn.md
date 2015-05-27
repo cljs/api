@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7181-7189](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L7181-L7189)</ins>
+            └── <ins>[core.cljs:7183-7191](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L7183-L7191)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1552
  :full-name-encode "cljs.core_IMultiFn",
  :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf])\n  (-dispatch [mf args]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7181 7189],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L7181-L7189"},
+          :lines [7183 7191],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L7183-L7191"},
  :methods [{:name "-reset", :signature ["[mf]"], :docstring nil}
            {:name "-add-method",
             :signature ["[mf dispatch-val method]"],

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:271-272](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L271-L272)</ins>
+            └── <ins>[core.cljs:271-272](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L271-L272)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1552
  :source {:code "(defprotocol IPending\n  (-realized? [d]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [271 272],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L271-L272"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L271-L272"},
  :methods [{:name "-realized?", :signature ["[d]"], :docstring nil}],
  :full-name "cljs.core/IPending",
  :history [["+" "0.0-927"]]}

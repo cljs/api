@@ -22,11 +22,11 @@ at the root, returns nil.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:221-230](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/zip.cljs#L221-L230)</ins>
+            └── <ins>[zip.cljs:221-230](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/zip.cljs#L221-L230)</ins>
 </pre>
 
 ```clj
@@ -53,7 +53,7 @@ clojurescript @ r1552
  :source {:code "(defn prev\n  [loc]\n    (if-let [lloc (left loc)]\n      (loop [loc lloc]\n        (if-let [child (and (branch? loc) (down loc))]\n          (recur (rightmost child))\n          loc))\n      (up loc)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [221 230],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/zip.cljs#L221-L230"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/zip.cljs#L221-L230"},
  :full-name "clojure.zip/prev",
  :clj-symbol "clojure.zip/prev",
  :docstring "Moves to the previous loc in the hierarchy, depth-first. If already\nat the root, returns nil."}

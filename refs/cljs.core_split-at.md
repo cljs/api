@@ -21,11 +21,11 @@ Returns a vector of [(take n coll) (drop n coll)]
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2558-2561](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2558-L2561)</ins>
+            └── <ins>[core.cljs:2558-2561](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2558-L2561)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1552
  :source {:code "(defn split-at\n  [n coll]\n  [(take n coll) (drop n coll)])",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2558 2561],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2558-L2561"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2558-L2561"},
  :full-name "cljs.core/split-at",
  :clj-symbol "clojure.core/split-at",
  :docstring "Returns a vector of [(take n coll) (drop n coll)]"}

@@ -17,11 +17,11 @@ Marker protocol
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:131-132](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L131-L132)</ins>
+            └── <ins>[core.cljs:131-132](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L131-L132)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1552
  :source {:code "(defprotocol Fn\n  \"Marker protocol\")",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [131 132],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L131-L132"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L131-L132"},
  :full-name "cljs.core/Fn",
  :docstring "Marker protocol",
  :history [["+" "0.0-1552"]]}

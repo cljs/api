@@ -407,14 +407,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/ex-data](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ex-data)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/ex-info](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ex-info)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/extend](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/extend)</samp></td>
 </tr>
 <tr>

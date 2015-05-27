@@ -20,16 +20,17 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:236-244](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L236-L244)</ins>
+            └── <ins>[analyzer.clj:237-246](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L237-L246)</ins>
 </pre>
 
 ```clj
 (defmethod parse 'if
   [op env [_ test then else :as form] name]
+  (assert (>= (count form) 3) "Too few arguments to if")
   (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))
         then-expr (analyze env then)
         else-expr (analyze env else)]
@@ -47,10 +48,10 @@ clojurescript @ r1552
  :ns "special",
  :name "if",
  :type "special form",
- :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
+ :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (assert (>= (count form) 3) \"Too few arguments to if\")\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [236 244],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L236-L244"},
+          :lines [237 246],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L237-L246"},
  :full-name-encode "special_if",
  :clj-symbol "clojure.core/if",
  :history [["+" "0.0-927"]]}

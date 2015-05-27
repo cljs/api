@@ -25,11 +25,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1692-1699](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1692-L1699)</ins>
+            └── <ins>[core.cljs:1692-1699](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1692-L1699)</ins>
 </pre>
 
 ```clj
@@ -55,7 +55,7 @@ clojurescript @ r1552
  :source {:code "(defn list\n  ([] ())\n  ([x] (conj () x))\n  ([x y] (conj (list y) x))\n  ([x y z] (conj (list y z) x))\n  ([x y z & items]\n     (conj (conj (conj (reduce conj () (reverse items))\n                       z) y) x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1692 1699],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1692-L1699"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1692-L1699"},
  :full-name-encode "cljs.core_list",
  :clj-symbol "clojure.core/list",
  :history [["+" "0.0-927"]]}

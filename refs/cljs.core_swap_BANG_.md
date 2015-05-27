@@ -28,11 +28,11 @@ the value that was swapped in.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6757-6771](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6757-L6771)</ins>
+            └── <ins>[core.cljs:6759-6773](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6759-L6773)</ins>
 </pre>
 
 ```clj
@@ -65,8 +65,8 @@ clojurescript @ r1552
  :full-name-encode "cljs.core_swap_BANG_",
  :source {:code "(defn swap!\n  ([a f]\n     (reset! a (f (.-state a))))\n  ([a f x]\n     (reset! a (f (.-state a) x)))\n  ([a f x y]\n     (reset! a (f (.-state a) x y)))\n  ([a f x y z]\n     (reset! a (f (.-state a) x y z)))\n  ([a f x y z & more]\n     (reset! a (apply f (.-state a) x y z more))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6757 6771],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6757-L6771"},
+          :lines [6759 6773],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6759-L6773"},
  :full-name "cljs.core/swap!",
  :clj-symbol "clojure.core/swap!",
  :docstring "Atomically swaps the value of atom to be:\n(apply f current-value-of-atom args). Note that f may be called\nmultiple times, and thus should be free of side effects.  Returns\nthe value that was swapped in."}

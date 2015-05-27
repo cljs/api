@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:170-171](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L170-L171)</ins>
+            └── <ins>[core.cljs:170-171](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L170-L171)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1552
  :source {:code "(defprotocol IIndexed\n  (-nth [coll n] [coll n not-found]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [170 171],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L170-L171"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L170-L171"},
  :methods [{:name "-nth",
             :signature ["[coll n]" "[coll n not-found]"],
             :docstring nil}],

@@ -20,11 +20,11 @@ Maps become Objects. Arbitrary keys are encoded to by key->js.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6927-6932](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6927-L6932)</ins>
+            └── <ins>[core.cljs:6929-6934](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6929-L6934)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1552
  :signature ["[x]"],
  :source {:code "(defn clj->js\n   [x]\n   (-clj->js x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6927 6932],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6927-L6932"},
+          :lines [6929 6934],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6929-L6934"},
  :full-name-encode "cljs.core_clj-_GT_js",
  :history [["+" "0.0-1552"]]}
 

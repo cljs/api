@@ -21,11 +21,11 @@ Returns the map with the vals mapped to the keys.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:98-100](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L98-L100)</ins>
+            └── <ins>[set.cljs:98-100](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/set.cljs#L98-L100)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1552
  :source {:code "(defn map-invert\n  [m] (reduce (fn [m [k v]] (assoc m v k)) {} m))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [98 100],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L98-L100"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/set.cljs#L98-L100"},
  :full-name "clojure.set/map-invert",
  :clj-symbol "clojure.set/map-invert",
  :docstring "Returns the map with the vals mapped to the keys."}

@@ -10,6 +10,23 @@
 <th>Compiler API</th>
 </thead>
 <tr>
+<td>__[0.0-1576](https://github.com/cljsinfo/api-refs/tree/0.0-1576)__</td>
+<td>2013-01-26</td>
+<td><kbd>1.4.0</kbd></td>
+<td><kbd>20120710-r2029</kbd></td>
+<td>
+<a href="#user-content-00-1576-library-api">
+<img valign="middle" src="https://img.shields.io/badge/+-8-brightgreen.svg"> 
+</a>
+</td>
+<td>
+<a href="#user-content-00-1576-compiler-api">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1552](https://github.com/cljsinfo/api-refs/tree/0.0-1552)__</td>
 <td>2012-11-03</td>
 <td><kbd>1.4.0</kbd></td>
@@ -264,6 +281,66 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1576
+
+<a name="00-1576-library-api"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ExceptionInfo](refs/cljs.core_ExceptionInfo.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-cause](refs/cljs.core_ex-cause.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-data](refs/cljs.core_ex-data.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-info](refs/cljs.core_ex-info.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-message](refs/cljs.core_ex-message.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/\*default-data-reader-fn\*](refs/cljs.reader__STAR_default-data-reader-fn_STAR_.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/deregister-default-tag-parser!](refs/cljs.reader_deregister-default-tag-parser_BANG_.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/register-default-tag-parser!](refs/cljs.reader_register-default-tag-parser_BANG_.md)</samp></td>
+</tr>
+</table>
+
+<a name="00-1576-compiler-api"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1552

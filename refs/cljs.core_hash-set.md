@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5815-5822](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5815-L5822)</ins>
+            └── <ins>[core.cljs:5817-5824](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5817-L5824)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1552
  :signature ["[]" "[& keys]"],
  :source {:code "(defn hash-set\n  ([] cljs.core.PersistentHashSet/EMPTY)\n  ([& keys]\n    (loop [in (seq keys)\n           out (transient cljs.core.PersistentHashSet/EMPTY)]\n      (if (seq in)\n        (recur (next in) (conj! out (first in)))\n        (persistent! out)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5815 5822],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5815-L5822"},
+          :lines [5817 5824],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5817-L5824"},
  :full-name-encode "cljs.core_hash-set",
  :clj-symbol "clojure.core/hash-set",
  :history [["+" "0.0-1443"]]}

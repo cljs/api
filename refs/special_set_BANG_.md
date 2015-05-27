@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:545-579](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L545-L579)</ins>
+            └── <ins>[analyzer.clj:542-576](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L542-L576)</ins>
 </pre>
 
 ```clj
@@ -75,8 +75,8 @@ clojurescript @ r1552
  :type "special form",
  :source {:code "(defmethod parse 'set!\n  [_ env [_ target val alt :as form] _]\n  (let [[target val] (if alt\n                       ;; (set! o -prop val)\n                       [`(. ~target ~val) alt]\n                       [target val])]\n    (disallowing-recur\n     (let [enve (assoc env :context :expr)\n           targetexpr (cond\n                       ;; TODO: proper resolve\n                       (= target '*unchecked-if*)\n                       (do\n                         (reset! *unchecked-if* val)\n                         ::set-unchecked-if)\n\n                       (symbol? target)\n                       (do\n                         (let [local (-> env :locals target)]\n                           (assert (or (nil? local)\n                                       (and (:field local)\n                                            (:mutable local)))\n                                   \"Can't set! local var or non-mutable field\"))\n                         (analyze-symbol enve target))\n\n                       :else\n                       (when (seq? target)\n                         (let [targetexpr (analyze-seq enve target nil)]\n                           (when (:field targetexpr)\n                             targetexpr))))\n           valexpr (analyze enve val)]\n       (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n       (cond\n        (= targetexpr ::set-unchecked-if) {:env env :op :no-op}\n        :else {:env env :op :set! :form form :target targetexpr :val valexpr\n               :children [targetexpr valexpr]})))))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [545 579],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L545-L579"},
+          :lines [542 576],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L542-L576"},
  :full-name-encode "special_set_BANG_",
  :clj-symbol "clojure.core/set!",
  :history [["+" "0.0-927"]]}

@@ -19,11 +19,11 @@ old IPrintable protocol.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6209-6216](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6209-L6216)</ins>
+            └── <ins>[core.cljs:6211-6218](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6211-L6218)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1552
  :signature ["[print-one begin sep end opts coll]"],
  :source {:code "(defn ^:deprecated pr-sequential\n  [print-one begin sep end opts coll]\n  (concat [begin]\n          (flatten1\n            (interpose [sep] (map #(print-one % opts) coll)))\n          [end]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6209 6216],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6209-L6216"},
+          :lines [6211 6218],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6211-L6218"},
  :full-name-encode "cljs.core_pr-sequential",
  :history [["+" "0.0-927"]]}
 

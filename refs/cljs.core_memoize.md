@@ -24,11 +24,11 @@ higher performance at the expense of higher memory use.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6963-6975](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6963-L6975)</ins>
+            └── <ins>[core.cljs:6965-6977](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6965-L6977)</ins>
 </pre>
 
 ```clj
@@ -55,8 +55,8 @@ clojurescript @ r1552
  :full-name-encode "cljs.core_memoize",
  :source {:code "(defn memoize\n  [f]\n  (let [mem (atom {})]\n    (fn [& args]\n      (if-let [v (get @mem args)]\n        v\n        (let [ret (apply f args)]\n          (swap! mem assoc args ret)\n          ret)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6963 6975],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6963-L6975"},
+          :lines [6965 6977],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6965-L6977"},
  :full-name "cljs.core/memoize",
  :clj-symbol "clojure.core/memoize",
  :docstring "Returns a memoized version of a referentially transparent function. The\nmemoized version of the function keeps a cache of the mapping from arguments\nto results and, when calls with the same arguments are repeated often, has\nhigher performance at the expense of higher memory use."}

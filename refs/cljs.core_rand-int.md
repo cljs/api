@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6999-7001](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6999-L7001)</ins>
+            └── <ins>[core.cljs:7001-7003](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L7001-L7003)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1552
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1362-1364](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1362-L1364)</ins>
+            └── <ins>[core.cljs:1362-1364](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1362-L1364)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r1552
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
                      :lines [1362 1364],
-                     :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1362-L1364"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1362-L1364"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (Math/floor (* (Math/random) n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6999 7001],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6999-L7001"},
+          :lines [7001 7003],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L7001-L7003"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

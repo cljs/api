@@ -22,11 +22,11 @@ Returns a new array map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5540-5544](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5540-L5544)</ins>
+            └── <ins>[core.cljs:5542-5546](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5542-L5546)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1552
  :full-name-encode "cljs.core_array-map",
  :source {:code "(defn array-map\n  [& keyvals]\n  (PersistentArrayMap. nil (quot (count keyvals) 2) (apply array keyvals) nil))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5540 5544],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5540-L5544"},
+          :lines [5542 5546],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5542-L5546"},
  :full-name "cljs.core/array-map",
  :clj-symbol "clojure.core/array-map",
  :docstring "keyval => key val\nReturns a new array map with supplied mappings."}

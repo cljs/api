@@ -20,18 +20,24 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:456-459](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L456-L459)</ins>
+            └── <ins>[analyzer.clj:447-456](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L447-L456)</ins>
 </pre>
 
 ```clj
 (defmethod parse 'do
   [op env [_ & exprs :as form] _]
-  (let [block (analyze-block env exprs)]
-    (merge {:env env :op :do :form form :children (block-children block)} block)))
+  (let [statements (disallowing-recur
+                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))
+        ret (if (<= (count exprs) 1)
+              (analyze env (first exprs))
+              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]
+    {:env env :op :do :form form
+     :statements statements :ret ret
+     :children (conj (vec statements) ret)}))
 ```
 
 
@@ -42,10 +48,10 @@ clojurescript @ r1552
  :ns "special",
  :name "do",
  :type "special form",
- :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [block (analyze-block env exprs)]\n    (merge {:env env :op :do :form form :children (block-children block)} block)))",
+ :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [456 459],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L456-L459"},
+          :lines [447 456],
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L447-L456"},
  :full-name-encode "special_do",
  :clj-symbol "clojure.core/do",
  :history [["+" "0.0-927"]]}

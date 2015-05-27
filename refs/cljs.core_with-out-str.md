@@ -23,11 +23,11 @@ printing calls.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1160-1168](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L1160-L1168)</ins>
+            └── <ins>[core.clj:1160-1168](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L1160-L1168)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1552
  :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string/StringBuffer.)]\n     (binding [cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [1160 1168],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L1160-L1168"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L1160-L1168"},
  :full-name "cljs.core/with-out-str",
  :clj-symbol "clojure.core/with-out-str",
  :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}

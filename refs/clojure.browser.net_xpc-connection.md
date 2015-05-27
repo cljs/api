@@ -27,12 +27,12 @@ per the CrossPageChannel API.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
+                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
 </pre>
 
 ```clj
@@ -65,7 +65,7 @@ clojurescript @ r1552
  :source {:code "(defn xpc-connection\n  ([]\n     (when-let [config (.getParameterValue\n                        (goog.Uri. (.-href (.-location js/window)))\n                        \"xpc\")]\n       (goog.net.xpc.CrossPageChannel. (gjson/parse config))))\n  ([config]\n     (goog.net.xpc.CrossPageChannel.\n      (reduce (fn [sum [k v]]\n                (if-let [field (get xpc-config-fields k)]\n                  (doto sum (aset field v))\n                  sum))\n              (js-obj)\n              config))))",
           :filename "clojurescript/src/cljs/clojure/browser/net.cljs",
           :lines [118 140],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/net.cljs#L118-L140"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/net.cljs#L118-L140"},
  :full-name-encode "clojure.browser.net_xpc-connection",
  :history [["+" "0.0-927"]]}
 

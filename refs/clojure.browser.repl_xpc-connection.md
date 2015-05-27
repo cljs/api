@@ -17,12 +17,12 @@
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:21-21](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/repl.cljs#L21-L21)</ins>
+                └── <ins>[repl.cljs:21-21](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/repl.cljs#L21-L21)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1552
  :source {:code "(def xpc-connection (atom nil))",
           :filename "clojurescript/src/cljs/clojure/browser/repl.cljs",
           :lines [21 21],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/repl.cljs#L21-L21"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/browser/repl.cljs#L21-L21"},
  :full-name-encode "clojure.browser.repl_xpc-connection",
  :history [["+" "0.0-927"]]}
 

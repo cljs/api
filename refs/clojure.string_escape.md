@@ -25,11 +25,11 @@ If (cmap ch) is non-nil, append (str (cmap ch)) instead.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:138-154](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/string.cljs#L138-L154)</ins>
+            └── <ins>[string.cljs:138-154](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/string.cljs#L138-L154)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r1552
  :source {:code "(defn escape\n  [s cmap]\n  (let [buffer (gstring/StringBuffer.)\n        length (.-length s)]\n    (loop [index 0]\n      (if (= length index)\n        (. buffer (toString))\n        (let [ch (.charAt s index)]\n          (if-let [replacement (get cmap ch)]\n            (.append buffer (str replacement))\n            (.append buffer ch))\n          (recur (inc index)))))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [138 154],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/string.cljs#L138-L154"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/string.cljs#L138-L154"},
  :full-name "clojure.string/escape",
  :clj-symbol "clojure.string/escape",
  :docstring "Return a new string, using cmap to escape each character ch\nfrom s as follows:\n\nIf (cmap ch) is nil, append ch to the new string.\nIf (cmap ch) is non-nil, append (str (cmap ch)) instead."}

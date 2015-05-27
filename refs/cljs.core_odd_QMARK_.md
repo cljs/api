@@ -21,11 +21,11 @@ Returns true if n is odd, throws an exception if n is not an integer
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2245-2247](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2245-L2247)</ins>
+            └── <ins>[core.cljs:2245-2247](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2245-L2247)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1552
  :source {:code "(defn ^boolean odd?\n  [n] (not (even? n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2245 2247],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2245-L2247"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2245-L2247"},
  :full-name "cljs.core/odd?",
  :clj-symbol "clojure.core/odd?",
  :docstring "Returns true if n is odd, throws an exception if n is not an integer"}

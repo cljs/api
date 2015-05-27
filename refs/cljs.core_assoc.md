@@ -25,11 +25,11 @@ contains val at index.
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:838-849](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L838-L849)</ins>
+            └── <ins>[core.cljs:838-849](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L838-L849)</ins>
 </pre>
 
 ```clj
@@ -56,7 +56,7 @@ clojurescript @ r1552
  :source {:code "(defn assoc\n  ([coll k v]\n     (-assoc coll k v))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [838 849],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L838-L849"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L838-L849"},
  :full-name "cljs.core/assoc",
  :clj-symbol "clojure.core/assoc",
  :docstring "assoc[iate]. When applied to a map, returns a new map of the\nsame (hashed/sorted) type, that contains the mapping of key(s) to\nval(s). When applied to a vector, returns a new vector that\ncontains val at index."}

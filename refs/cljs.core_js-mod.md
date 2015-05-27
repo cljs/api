@@ -18,11 +18,11 @@ Modulus of num and div with original javascript behavior. i.e. bug for negative 
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1335-1338](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1335-L1338)</ins>
+            └── <ins>[core.cljs:1335-1338](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1335-L1338)</ins>
 </pre>
 
 ```clj
@@ -35,11 +35,11 @@ clojurescript @ r1552
 ---
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L293-L294)</ins>
+            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L293-L294)</ins>
 </pre>
 
 ```clj
@@ -56,14 +56,14 @@ clojurescript @ r1552
  :shadowed-sources ({:code "(defmacro js-mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [293 294],
-                     :link "https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L293-L294"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L293-L294"}),
  :history [["+" "0.0-1552"]],
  :type "function",
  :full-name-encode "cljs.core_js-mod",
  :source {:code "(defn js-mod\n  [n d]\n  (cljs.core/js-mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1335 1338],
-          :link "https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1335-L1338"},
+          :link "https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1335-L1338"},
  :full-name "cljs.core/js-mod",
  :docstring "Modulus of num and div with original javascript behavior. i.e. bug for negative numbers"}
 
