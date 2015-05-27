@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./download.sh && ./clean.js
+./download-pages.sh && ./format-pages.js

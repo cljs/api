@@ -25,7 +25,7 @@ function fixPage() {
   document.title = header.innerText.replace('ClojureScript','').trim();
 
   // set width to tame formatting
-  document.body.style.width = "900px";
+  document.body.style.minWidth = "830px";
 
   // make anchor links work
   var links = document.querySelectorAll('a');
