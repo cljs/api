@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:279-280](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L279-L280)</ins>
+            └── <ins>[core.cljs:279-280](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L279-L280)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1449
  :source {:code "(defprotocol IChunkedNext\n  (-chunked-next [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [279 280],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L279-L280"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L279-L280"},
  :methods [{:name "-chunked-next",
             :signature ["[coll]"],
             :docstring nil}],

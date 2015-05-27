@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6642-6644](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6642-L6644)</ins>
+            └── <ins>[core.cljs:6642-6644](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6642-L6644)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1449
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1313-1315](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1313-L1315)</ins>
+            └── <ins>[core.cljs:1313-1315](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1313-L1315)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r1449
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
                      :lines [1313 1315],
-                     :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1313-L1315"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1313-L1315"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (Math/floor (* (Math/random) n)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6642 6644],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6642-L6644"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6642-L6644"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

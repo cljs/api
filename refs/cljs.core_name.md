@@ -21,11 +21,11 @@ Returns the name String of a string, symbol or keyword.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5780-5790](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L5780-L5790)</ins>
+            └── <ins>[core.cljs:5780-5790](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L5780-L5790)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1449
  :source {:code "(defn name\n  [x]\n  (cond\n    (string? x) x\n    (or (keyword? x) (symbol? x))\n      (let [i (.lastIndexOf x \"/\")]\n        (if (< i 0)\n          (subs x 2)\n          (subs x (inc i))))\n    :else (throw (js/Error. (str \"Doesn't support name: \" x)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [5780 5790],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L5780-L5790"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L5780-L5790"},
  :full-name "cljs.core/name",
  :clj-symbol "clojure.core/name",
  :docstring "Returns the name String of a string, symbol or keyword."}

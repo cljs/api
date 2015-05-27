@@ -24,11 +24,11 @@ or the not-found value if supplied.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2661-2678](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2661-L2678)</ins>
+            └── <ins>[core.cljs:2661-2678](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2661-L2678)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r1449
  :source {:code "(defn get-in\n  ([m ks]\n     (reduce get m ks))\n  ([m ks not-found]\n     (loop [sentinel lookup-sentinel\n            m m\n            ks (seq ks)]\n       (if ks\n         (let [m (get m (first ks) sentinel)]\n           (if (identical? sentinel m)\n             not-found\n             (recur sentinel m (next ks))))\n         m))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2661 2678],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2661-L2678"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2661-L2678"},
  :full-name "cljs.core/get-in",
  :clj-symbol "clojure.core/get-in",
  :docstring "Returns the value in a nested associative structure,\nwhere ks is a sequence of keys. Returns nil if the key is not present,\nor the not-found value if supplied."}

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:141-150](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/repl.clj#L141-L150)</ins>
+            └── <ins>[repl.clj:141-150](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl.clj#L141-L150)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1449
  :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (ana/set-namespace ns-name {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :filename "clojurescript/src/clj/cljs/repl.clj",
           :lines [141 150],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/repl.clj#L141-L150"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl.clj#L141-L150"},
  :full-name-encode "specialrepl_load-namespace",
  :history [["+" "0.0-927"]]}
 

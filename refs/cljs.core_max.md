@@ -23,11 +23,11 @@ Returns the greatest of the nums.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1262-1267](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1262-L1267)</ins>
+            └── <ins>[core.cljs:1262-1267](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1262-L1267)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1449
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:283-286](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L283-L286)</ins>
+            └── <ins>[core.clj:283-286](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L283-L286)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1449
  :shadowed-sources ({:code "(defmacro max\n  ([x] x)\n  ([x y] (list 'js* \"((~{} > ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(max (max ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [283 286],
-                     :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L283-L286"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L283-L286"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_max",
  :source {:code "(defn max\n  ([x] x)\n  ([x y] (cljs.core/max x y))\n  ([x y & more]\n   (reduce max (cljs.core/max x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1262 1267],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1262-L1267"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1262-L1267"},
  :full-name "cljs.core/max",
  :clj-symbol "clojure.core/max",
  :docstring "Returns the greatest of the nums."}

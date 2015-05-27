@@ -26,11 +26,11 @@ tree.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2583-2596](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2583-L2596)</ins>
+            └── <ins>[core.cljs:2583-2596](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2583-L2596)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r1449
  :source {:code "(defn tree-seq\n   [branch? children root]\n   (let [walk (fn walk [node]\n                (lazy-seq\n                 (cons node\n                  (when (branch? node)\n                    (mapcat walk (children node))))))]\n     (walk root)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2583 2596],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L2583-L2596"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2583-L2596"},
  :full-name "cljs.core/tree-seq",
  :clj-symbol "clojure.core/tree-seq",
  :docstring "Returns a lazy sequence of the nodes in a tree, via a depth-first walk.\n branch? must be a fn of one arg that returns true if passed a node\n that can have children (but may not).  children must be a fn of one\n arg that returns a sequence of the children. Will only be called on\n nodes for which branch? returns true. Root is the root node of the\ntree."}

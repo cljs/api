@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:983-985](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L983-L985)</ins>
+            └── <ins>[core.cljs:983-985](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L983-L985)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1449
  :source {:code "(defn ^boolean keyword? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [983 985],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L983-L985"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L983-L985"},
  :full-name "cljs.core/keyword?",
  :clj-symbol "clojure.core/keyword?"}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4529-4564](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L4529-L4564)</ins>
+            └── <ins>[core.cljs:4529-4564](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L4529-L4564)</ins>
 </pre>
 
 ```clj
@@ -76,7 +76,7 @@ clojurescript @ r1449
  :source {:code "(deftype ArrayNodeSeq [meta nodes i s ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IWithMeta\n  (-with-meta [coll meta] (ArrayNodeSeq. meta nodes i s __hash))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  ISeq\n  (-first [coll] (first s))\n  (-rest  [coll] (create-array-node-seq nil nodes i (next s)))\n\n  ISeqable\n  (-seq [this] this)\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [4529 4564],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L4529-L4564"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L4529-L4564"},
  :full-name-encode "cljs.core_ArrayNodeSeq",
  :history [["+" "0.0-1211"]]}
 

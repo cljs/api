@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:158-158](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L158-L158)</ins>
+            └── <ins>[core.cljs:158-158](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L158-L158)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r1449
  :source {:code "(defprotocol ASeq)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [158 158],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L158-L158"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L158-L158"},
  :full-name "cljs.core/ASeq",
  :history [["+" "0.0-1211"]]}
 

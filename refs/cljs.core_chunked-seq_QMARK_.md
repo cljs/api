@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:914-915](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L914-L915)</ins>
+            └── <ins>[core.cljs:914-915](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L914-L915)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1449
  :source {:code "(defn ^boolean chunked-seq?\n  [x] (satisfies? IChunkedSeq x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [914 915],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L914-L915"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L914-L915"},
  :full-name-encode "cljs.core_chunked-seq_QMARK_",
  :history [["+" "0.0-1424"]]}
 

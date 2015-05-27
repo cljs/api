@@ -23,11 +23,11 @@ per reduce) of coll by f, starting with init.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5994-6006](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L5994-L6006)</ins>
+            └── <ins>[core.cljs:5994-6006](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L5994-L6006)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r1449
  :source {:code "(defn reductions\n  ([f coll]\n     (lazy-seq\n      (if-let [s (seq coll)]\n        (reductions f (first s) (rest s))\n        (list (f)))))\n  ([f init coll]\n     (cons init\n           (lazy-seq\n            (when-let [s (seq coll)]\n              (reductions f (f init (first s)) (rest s)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [5994 6006],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L5994-L6006"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L5994-L6006"},
  :full-name "cljs.core/reductions",
  :clj-symbol "clojure.core/reductions",
  :docstring "Returns a lazy seq of the intermediate values of the reduction (as\nper reduce) of coll by f, starting with init."}

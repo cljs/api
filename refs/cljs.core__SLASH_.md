@@ -24,11 +24,11 @@ else returns numerator divided by all of the denominators.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1203-1208](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1203-L1208)</ins>
+            └── <ins>[core.cljs:1203-1208](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1203-L1208)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1449
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:238-241](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L238-L241)</ins>
+            └── <ins>[core.clj:238-241](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L238-L241)</ins>
 </pre>
 
 ```clj
@@ -65,14 +65,14 @@ clojurescript @ r1449
  :shadowed-sources ({:code "(defmacro /\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [238 241],
-                     :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L238-L241"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L238-L241"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__SLASH_",
  :source {:code "(defn /\n  ([x] (/ 1 x))\n  ([x y] (js* \"(~{x} / ~{y})\")) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce / (/ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1203 1208],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1203-L1208"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1203-L1208"},
  :full-name "cljs.core//",
  :clj-symbol "clojure.core//",
  :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}

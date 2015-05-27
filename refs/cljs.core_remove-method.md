@@ -21,11 +21,11 @@ Removes the method of multimethod associated with dispatch-value.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6906-6909](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6906-L6909)</ins>
+            └── <ins>[core.cljs:6906-6909](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6906-L6909)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1449
  :source {:code "(defn remove-method\n [multifn dispatch-val]\n (-remove-method multifn dispatch-val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6906 6909],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6906-L6909"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6906-L6909"},
  :full-name "cljs.core/remove-method",
  :clj-symbol "clojure.core/remove-method",
  :docstring "Removes the method of multimethod associated with dispatch-value."}

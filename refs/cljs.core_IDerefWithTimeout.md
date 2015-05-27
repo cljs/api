@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:196-197](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L196-L197)</ins>
+            └── <ins>[core.cljs:196-197](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L196-L197)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1449
  :source {:code "(defprotocol IDerefWithTimeout\n  (-deref-with-timeout [o msec timeout-val]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [196 197],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L196-L197"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L196-L197"},
  :methods [{:name "-deref-with-timeout",
             :signature ["[o msec timeout-val]"],
             :docstring nil}],

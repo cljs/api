@@ -21,11 +21,11 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:73-76](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L73-L76)</ins>
+            └── <ins>[core.cljs:73-76](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L73-L76)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1449
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:990-991](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L990-L991)</ins>
+            └── <ins>[core.clj:990-991](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L990-L991)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1449
  :shadowed-sources ({:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [990 991],
-                     :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L990-L991"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L990-L991"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aclone",
  :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [73 76],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L73-L76"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L73-L76"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

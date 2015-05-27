@@ -21,11 +21,11 @@ Prints formatted output, as per format
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6245-6248](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6245-L6248)</ins>
+            └── <ins>[core.cljs:6245-6248](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6245-L6248)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1449
  :source {:code "(defn printf\n  [fmt & args]\n  (print (apply format fmt args)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [6245 6248],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6245-L6248"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6245-L6248"},
  :full-name "cljs.core/printf",
  :clj-symbol "clojure.core/printf",
  :docstring "Prints formatted output, as per format"}

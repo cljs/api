@@ -19,11 +19,11 @@ Creates a new javascript array.
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:78-82](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L78-L82)</ins>
+            └── <ins>[core.cljs:78-82](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L78-L82)</ins>
 </pre>
 
 ```clj
@@ -36,11 +36,11 @@ clojurescript @ r1449
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:969-976](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L969-L976)</ins>
+            └── <ins>[core.clj:969-976](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L969-L976)</ins>
 </pre>
 
 ```clj
@@ -63,14 +63,14 @@ clojurescript @ r1449
  :shadowed-sources ({:code "(defmacro array [& rest]\n  (let [xs-str (->> (repeat \"~{}\")\n                    (take (count rest))\n                    (interpose \",\")\n                    (apply core/str))]\n   (concat\n    (list 'js* (core/str \"[\" xs-str \"]\"))\n    rest)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [969 976],
-                     :link "https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/core.clj#L969-L976"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/core.clj#L969-L976"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_array",
  :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (.call (.-slice (.-prototype js/Array)) (js* \"arguments\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [78 82],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L78-L82"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L78-L82"},
  :full-name "cljs.core/array",
  :docstring "Creates a new javascript array.\n@param {...*} var_args"}
 

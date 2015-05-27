@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:842-846](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L842-L846)</ins>
+            └── <ins>[core.cljs:842-846](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L842-L846)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1449
  :source {:code "(defn add-to-string-hash-cache [k]\n  (let [h (goog.string/hashCode k)]\n    (aset string-hash-cache k h)\n    (set! string-hash-cache-count (inc string-hash-cache-count))\n    h))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [842 846],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L842-L846"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L842-L846"},
  :full-name-encode "cljs.core_add-to-string-hash-cache",
  :history [["+" "0.0-1424"]]}
 

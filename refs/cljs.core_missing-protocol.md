@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:66-69](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L66-L69)</ins>
+            └── <ins>[core.cljs:66-69](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L66-L69)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1449
  :source {:code "(defn missing-protocol [proto obj]\n  (js/Error\n   (.join (array \"No protocol method \" proto\n                 \" defined for type \" (goog/typeOf obj) \": \" obj) \"\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [66 69],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L66-L69"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L66-L69"},
  :full-name-encode "cljs.core_missing-protocol",
  :history [["+" "0.0-927"]]}
 

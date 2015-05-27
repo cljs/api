@@ -21,11 +21,11 @@ Return the last item in coll, in linear time
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:682-688](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L682-L688)</ins>
+            └── <ins>[core.cljs:682-688](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L682-L688)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1449
  :source {:code "(defn last\n  [s]\n  (let [sn (next s)]\n    (if-not (nil? sn)\n      (recur sn)\n      (first s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [682 688],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L682-L688"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L682-L688"},
  :full-name "cljs.core/last",
  :clj-symbol "clojure.core/last",
  :docstring "Return the last item in coll, in linear time"}

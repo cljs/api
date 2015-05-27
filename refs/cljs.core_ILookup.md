@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:167-168](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L167-L168)</ins>
+            └── <ins>[core.cljs:167-168](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L167-L168)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1449
  :source {:code "(defprotocol ILookup\n  (-lookup [o k] [o k not-found]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [167 168],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L167-L168"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L167-L168"},
  :methods [{:name "-lookup",
             :signature ["[o k]" "[o k not-found]"],
             :docstring nil}],

@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1978-1997](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1978-L1997)</ins>
+            └── <ins>[core.cljs:1978-1997](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1978-L1997)</ins>
 </pre>
 
 ```clj
@@ -64,7 +64,7 @@ clojurescript @ r1449
  :source {:code "(defn object-array\n  ([size-or-seq]\n     (cond\n      (number? size-or-seq) (object-array size-or-seq nil)\n      (seq? size-or-seq) (into-array size-or-seq)\n      :else (throw (js/Error. \"object-array called with something other than size or ISeq\"))))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1978 1997],
-          :link "https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L1978-L1997"},
+          :link "https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L1978-L1997"},
  :full-name-encode "cljs.core_object-array",
  :clj-symbol "clojure.core/object-array",
  :history [["+" "0.0-1211"]]}
