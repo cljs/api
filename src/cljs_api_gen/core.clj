@@ -7,7 +7,8 @@
                                     get-latest-repo-tag]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
-    [cljs-api-gen.clojure-api :refer [get-version-apis!]]))
+    [cljs-api-gen.clojure-api :refer [get-version-apis!]]
+    [cljs-api-gen.docset :as docset]))
 
 ;;--------------------------------------------------------------------------------
 ;; Usage
@@ -30,14 +31,24 @@
 ;; Runners
 ;;--------------------------------------------------------------------------------
 
+(defn prep!
+  []
+  (println "\nCloning or updating repos...")
+  (clone-or-fetch-repos!)
+
+  (println)
+  (get-version-apis!))
+
 (defn run-catalog!
   [n-or-all out-dir]
+  (prep!)
   (let [out-dir (or out-dir "catalog")]
     (binding [*output-dir* out-dir]
       (create-catalog! n-or-all))))
 
 (defn run-single-version!
   [tag out-dir]
+  (prep!)
   (let [tag (if (= :latest tag)
               (get-latest-repo-tag "clojurescript")
               tag)
@@ -45,18 +56,18 @@
     (binding [*output-dir* out-dir]
       (create-single-version! tag))))
 
+(defn run-docset!
+  [out-dir]
+  (binding [*output-dir* (or out-dir "catalog")]
+    (docset/create!)))
+
 (defn main
-  [{:keys [catalog version out-dir] :as options}]
-
-  (println "\nCloning or updating repos...")
-  (clone-or-fetch-repos!)
-
-  (println)
-  (get-version-apis!)
+  [{:keys [catalog version docset out-dir] :as options}]
 
   (cond
     catalog (run-catalog! catalog out-dir)
     version (run-single-version! version out-dir)
+    docset  (run-docset! out-dir)
     :else   (show-usage-and-exit!))
 
   ;; have to do this because `sh` leaves futures hanging,

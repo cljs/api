@@ -6,5 +6,7 @@
                  [me.raynes/fs "1.4.6"]
                  [narkisr/clansi "1.2.0"]
                  [fipp "0.6.1"]
-                 [stencil "0.3.5"]]
+                 [stencil "0.3.5"]
+                 [org.clojure/java.jdbc "0.3.7"]
+                 [org.xerial/sqlite-jdbc "3.8.10.1"]]
   :main cljs-api-gen.core)

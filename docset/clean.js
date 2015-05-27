@@ -36,6 +36,8 @@ function fixPage() {
       link.id = link.id.replace("user-content-", "");
     }
   };
+
+  // TODO: add table of contents for history, unported, readme
 }
 
 function handlePage(file) {
