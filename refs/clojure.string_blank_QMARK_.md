@@ -21,11 +21,11 @@ True is s is nil, empty, or contains only whitespace.
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:133-136](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/string.cljs#L133-L136)</ins>
+            └── <ins>[string.cljs:133-136](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/string.cljs#L133-L136)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1513
  :source {:code "(defn blank?\n  [s]\n  (gstring/isEmptySafe s))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [133 136],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/string.cljs#L133-L136"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/string.cljs#L133-L136"},
  :full-name "clojure.string/blank?",
  :clj-symbol "clojure.string/blank?",
  :docstring "True is s is nil, empty, or contains only whitespace."}

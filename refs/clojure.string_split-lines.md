@@ -23,11 +23,11 @@ Splits s on
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:101-104](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/string.cljs#L101-L104)</ins>
+            └── <ins>[string.cljs:101-104](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/string.cljs#L101-L104)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1513
  :source {:code "(defn split-lines\n  [s]\n  (split s #\"\\n|\\r\\n\"))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [101 104],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/string.cljs#L101-L104"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/string.cljs#L101-L104"},
  :full-name "clojure.string/split-lines",
  :clj-symbol "clojure.string/split-lines",
  :docstring "Splits s on \n or \r\n."}

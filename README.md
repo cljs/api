@@ -2,12 +2,12 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1513__ [all](HISTORY.md)</td>
-<td>2012-10-18</td>
+<td>__0.0-1535__ [all](HISTORY.md)</td>
+<td>2012-11-07</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.4.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
-<kbd>Closure Lib 20111110-r1376</kbd>](http://www.closurecheatsheet.com/)</td>
+<kbd>Closure Lib 20120710-r2029</kbd>](http://www.closurecheatsheet.com/)</td>
 </tr>
 </table>
 
@@ -62,12 +62,18 @@ Also, see the <img width="20px" height="20px" valign="middle" src="http://i.imgu
 
 ## Latest Changes
 
-Changes from __0.0-1513__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1535__ ([See Full History](HISTORY.md)):
 
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/with-out-str](refs/cljs.core_with-out-str.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__
@@ -330,7 +336,7 @@ _\* included in and accessible from every ClojureScript application:_
 <tr>
 <td></td>
 <td><samp>[\*print-fn\*](refs/cljs.core__STAR_print-fn_STAR_.md)</samp></td>
-<td><samp>function</samp></td>
+<td><samp>dynamic var</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
@@ -2996,6 +3002,12 @@ _\* included in and accessible from every ClojureScript application:_
 <td><samp>[with-meta](refs/cljs.core_with-meta.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/with-out-str)</td>
+<td><samp>[with-out-str](refs/cljs.core_with-out-str.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1535"><img valign="middle" alt="[+] 0.0-1535" src="https://img.shields.io/badge/+-0.0--1535-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

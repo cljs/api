@@ -19,11 +19,11 @@ callback function with the macroexpanded form, as a string.
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:32-36](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/reflect.cljs#L32-L36)</ins>
+            └── <ins>[reflect.cljs:32-36](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/reflect.cljs#L32-L36)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1513
  :source {:code "(defn macroexpand\n  [form]\n  (query-reflection (str \"macroform=\" (js/encodeURIComponent (str form))) println))",
           :filename "clojurescript/src/cljs/clojure/reflect.cljs",
           :lines [32 36],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/reflect.cljs#L32-L36"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/reflect.cljs#L32-L36"},
  :full-name-encode "clojure.reflect_macroexpand",
  :history [["+" "0.0-1503"]]}
 

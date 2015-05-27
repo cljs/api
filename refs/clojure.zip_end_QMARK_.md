@@ -21,11 +21,11 @@ Returns true if loc represents the end of a depth-first walk
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:232-235](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/zip.cljs#L232-L235)</ins>
+            └── <ins>[zip.cljs:232-235](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/zip.cljs#L232-L235)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1513
  :source {:code "(defn end?\n  [loc]\n    (= :end (loc 1)))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [232 235],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/zip.cljs#L232-L235"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/zip.cljs#L232-L235"},
  :full-name "clojure.zip/end?",
  :clj-symbol "clojure.zip/end?",
  :docstring "Returns true if loc represents the end of a depth-first walk"}

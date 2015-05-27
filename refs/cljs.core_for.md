@@ -29,11 +29,11 @@ List comprehension. Takes a vector of one or more
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:900-947](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L900-L947)</ins>
+            └── <ins>[core.clj:900-947](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L900-L947)</ins>
 </pre>
 
 ```clj
@@ -184,7 +184,7 @@ clojure @ clojure-1.4.0
  :source {:code "(defmacro for\n  [seq-exprs body-expr]\n  (assert-args for\n     (vector? seq-exprs) \"a vector for its binding\"\n     (even? (count seq-exprs)) \"an even number of forms in binding vector\")\n  (let [to-groups (fn [seq-exprs]\n                    (reduce (fn [groups [k v]]\n                              (if (keyword? k)\n                                (conj (pop groups) (conj (peek groups) [k v]))\n                                (conj groups [k v])))\n                            [] (partition 2 seq-exprs)))\n        err (fn [& msg] (throw (apply core/str msg)))\n        emit-bind (fn emit-bind [[[bind expr & mod-pairs]\n                                  & [[_ next-expr] :as next-groups]]]\n                    (let [giter (gensym \"iter__\")\n                          gxs (gensym \"s__\")\n                          do-mod (fn do-mod [[[k v :as pair] & etc]]\n                                   (cond\n                                     (= k :let) `(let ~v ~(do-mod etc))\n                                     (= k :while) `(when ~v ~(do-mod etc))\n                                     (= k :when) `(if ~v\n                                                    ~(do-mod etc)\n                                                    (recur (rest ~gxs)))\n                                     (keyword? k) (err \"Invalid 'for' keyword \" k)\n                                     next-groups\n                                      `(let [iterys# ~(emit-bind next-groups)\n                                             fs# (seq (iterys# ~next-expr))]\n                                         (if fs#\n                                           (concat fs# (~giter (rest ~gxs)))\n                                           (recur (rest ~gxs))))\n                                     :else `(cons ~body-expr\n                                                  (~giter (rest ~gxs)))))]\n                      `(fn ~giter [~gxs]\n                         (lazy-seq\n                           (loop [~gxs ~gxs]\n                             (when-first [~bind ~gxs]\n                               ~(do-mod mod-pairs)))))))]\n    `(let [iter# ~(emit-bind (to-groups seq-exprs))]\n       (iter# ~(second seq-exprs)))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [900 947],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L900-L947"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L900-L947"},
  :full-name "cljs.core/for",
  :clj-symbol "clojure.core/for",
  :docstring "List comprehension. Takes a vector of one or more\n binding-form/collection-expr pairs, each followed by zero or more\n modifiers, and yields a lazy sequence of evaluations of expr.\n Collections are iterated in a nested fashion, rightmost fastest,\n and nested coll-exprs can refer to bindings created in prior\n binding-forms.  Supported modifiers are: :let [binding-form expr ...],\n :while test, :when test.\n\n(take 100 (for [x (range 100000000) y (range 1000000) :while (< y x)]  [x y]))"}

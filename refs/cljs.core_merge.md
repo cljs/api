@@ -23,11 +23,11 @@ the latter (left-to-right) will be the mapping in the result.
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5547-5553](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5547-L5553)</ins>
+            └── <ins>[core.cljs:5547-5553](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5547-L5553)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1513
  :source {:code "(defn merge\n  [& maps]\n  (when (some identity maps)\n    (reduce #(conj (or %1 {}) %2) maps)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [5547 5553],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5547-L5553"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L5547-L5553"},
  :full-name "cljs.core/merge",
  :clj-symbol "clojure.core/merge",
  :docstring "Returns a map that consists of the rest of the maps conj-ed onto\nthe first.  If a key occurs in more than one map, the mapping from\nthe latter (left-to-right) will be the mapping in the result."}

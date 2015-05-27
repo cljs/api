@@ -20,11 +20,11 @@ Implementation detail. Subject to change.
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── clojure
-            └── <ins>[data.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/data.cljs#L75-L77)</ins>
+            └── <ins>[data.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/data.cljs#L75-L77)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1513
  :source {:code "(defprotocol EqualityPartition\n  \"Implementation detail. Subject to change.\"\n  (equality-partition [x] \"Implementation detail. Subject to change.\"))",
           :filename "clojurescript/src/cljs/clojure/data.cljs",
           :lines [75 77],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/data.cljs#L75-L77"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/data.cljs#L75-L77"},
  :methods [{:name "equality-partition",
             :signature ["[x]"],
             :docstring "Implementation detail. Subject to change."}],

@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:528-530](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L528-L530)</ins>
+            └── <ins>[analyzer.clj:528-530](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L528-L530)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1513
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _]\n  {:op :constant :env env :form x})",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
           :lines [528 530],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L528-L530"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L528-L530"},
  :full-name-encode "special_quote",
  :clj-symbol "clojure.core/quote",
  :history [["+" "0.0-927"]]}

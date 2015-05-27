@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:238-246](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L238-L246)</ins>
+            └── <ins>[analyzer.clj:238-246](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L238-L246)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1513
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
           :lines [238 246],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L238-L246"},
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L238-L246"},
  :full-name-encode "special_if",
  :clj-symbol "clojure.core/if",
  :history [["+" "0.0-927"]]}

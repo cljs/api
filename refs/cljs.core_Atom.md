@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6631-6661](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6631-L6661)</ins>
+            └── <ins>[core.cljs:6646-6676](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6646-L6676)</ins>
 </pre>
 
 ```clj
@@ -70,8 +70,8 @@ clojurescript @ r1513
  :signature ["[state meta validator watches]"],
  :source {:code "(deftype Atom [state meta validator watches]\n  IEquiv\n  (-equiv [o other] (identical? o other))\n\n  IDeref\n  (-deref [_] state)\n\n  IMeta\n  (-meta [_] meta)\n\n  ^:deprecation-nowarn IPrintable\n  (-pr-seq [a opts]\n    (concat  [\"#<Atom: \"] (-pr-seq state opts) \">\"))\n\n  IPrintWithWriter\n  (-pr-writer [a writer opts]\n    (-write writer \"#<Atom: \")\n    (-pr-writer state writer opts)\n    (-write writer \">\"))\n\n  IWatchable\n  (-notify-watches [this oldval newval]\n    (doseq [[key f] watches]\n      (f key this oldval newval)))\n  (-add-watch [this key f]\n    (set! (.-watches this) (assoc watches key f)))\n  (-remove-watch [this key]\n    (set! (.-watches this) (dissoc watches key)))\n\n  IHash\n  (-hash [this] (goog.getUid this)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6631 6661],
-          :link "https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6631-L6661"},
+          :lines [6646 6676],
+          :link "https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L6646-L6676"},
  :full-name-encode "cljs.core_Atom",
  :history [["+" "0.0-927"]]}
 
