@@ -11,11 +11,6 @@ page.onConsoleMessage = function (msg) { console.log(msg); };
 // code executed inside page
 function fixPage() {
 
-  // set title to first header text
-  // (replace any redundant mentions of ClojureScript)
-  var header = document.querySelector('h1') || document.querySelector('h2');
-  document.title = header.innerText.replace('ClojureScript','').trim();
-
   // replace everything with .file box (markdown view)
   var file = document.querySelector('.file');
   file.style.marginTop = "0";
@@ -23,6 +18,11 @@ function fixPage() {
 
   // remove the file header
   document.querySelector('.file-header').innerHTML = "";
+
+  // set title to first header text
+  // (replace any redundant mentions of ClojureScript)
+  var header = document.querySelector('h1') || document.querySelector('h2');
+  document.title = header.innerText.replace('ClojureScript','').trim();
 
   // set width to tame formatting
   document.body.style.width = "900px";
