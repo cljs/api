@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:372-373](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L372-L373)</ins>
+            └── <ins>[core.cljs:372-373](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L372-L373)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1006
  :source {:code "(defn array-seq [array i]\n  (prim-seq array i))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [372 373],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L372-L373"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L372-L373"},
  :full-name-encode "cljs.core_array-seq",
  :history [["+" "0.0-927"]]}
 

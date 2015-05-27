@@ -25,11 +25,11 @@ defaults to the global hierarchy
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3517-3523](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3517-L3523)</ins>
+            └── <ins>[core.cljs:3534-3540](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1006
  :full-name-encode "cljs.core_parents",
  :source {:code "(defn parents\n  ([tag] (parents @global-hierarchy tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3517 3523],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3517-L3523"},
+          :lines [3534 3540],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540"},
  :full-name "cljs.core/parents",
  :clj-symbol "clojure.core/parents",
  :docstring "Returns the immediate parents of tag, either via a Java type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}

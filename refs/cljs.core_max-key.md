@@ -23,11 +23,11 @@ Returns the x for which (k x), a number, is greatest.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2786-2791](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2786-L2791)</ins>
+            └── <ins>[core.cljs:2786-2791](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2786-L2791)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1006
  :source {:code "(defn max-key\n  ([k x] x)\n  ([k x y] (if (> (k x) (k y)) x y))\n  ([k x y & more]\n   (reduce #(max-key k %1 %2) (max-key k x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [2786 2791],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2786-L2791"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2786-L2791"},
  :full-name "cljs.core/max-key",
  :clj-symbol "clojure.core/max-key",
  :docstring "Returns the x for which (k x), a number, is greatest."}

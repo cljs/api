@@ -21,11 +21,11 @@ Returns true if x satisfies the protocol
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:422-432](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L422-L432)</ins>
+            └── <ins>[core.clj:422-432](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L422-L432)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1006
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)]\n    `(let [x# ~x]\n       (if (and x#\n                (. x# ~(symbol (str \"-\" prefix)))        ;; Need prop lookup here\n                (not (. x# (~'hasOwnProperty ~prefix))))\n\t true\n\t (cljs.core/type_satisfies_ ~psym x#)))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [422 432],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L422-L432"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L422-L432"},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

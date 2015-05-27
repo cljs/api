@@ -30,11 +30,11 @@ items, returns val and f is not called.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:772-785](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L772-L785)</ins>
+            └── <ins>[core.cljs:772-785](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L772-L785)</ins>
 </pre>
 
 ```clj
@@ -58,7 +58,7 @@ clojurescript @ r1006
  :source {:code "(defn reduce\n  ([f coll]\n     (-reduce coll f))\n  ([f val coll]\n     (-reduce coll f val)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [772 785],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L772-L785"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L772-L785"},
  :full-name "cljs.core/reduce",
  :clj-symbol "clojure.core/reduce",
  :docstring "f should be a function of 2 arguments. If val is not supplied,\nreturns the result of applying f to the first 2 items in coll, then\napplying f to that result and the 3rd item, etc. If coll contains no\nitems, f must accept no arguments as well, and reduce returns the\nresult of calling f with no arguments.  If coll has only 1 item, it\nis returned and f is not called.  If val is supplied, returns the\nresult of applying f to val and the first item in coll, then\napplying f to that result and the 2nd item, etc. If coll contains no\nitems, returns val and f is not called."}

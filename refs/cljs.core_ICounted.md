@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:118-119](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L118-L119)</ins>
+            └── <ins>[core.cljs:118-119](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L118-L119)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1006
  :source {:code "(defprotocol ICounted\n  (-count [coll] \"constant time count\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [118 119],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L118-L119"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L118-L119"},
  :methods [{:name "-count",
             :signature ["[coll]"],
             :docstring "constant time count"}],

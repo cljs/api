@@ -24,11 +24,11 @@ Return a set that is the union of the input sets
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:19-29](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/set.cljs#L19-L29)</ins>
+            └── <ins>[set.cljs:19-29](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L19-L29)</ins>
 </pre>
 
 ```clj
@@ -57,7 +57,7 @@ clojurescript @ r1006
  :source {:code "(defn union\n  ([] #{})\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s1) (count s2))\n       (reduce conj s2 s1)\n       (reduce conj s1 s2)))\n  ([s1 s2 & sets]\n     (let [bubbled-sets (bubble-max-key count (conj sets s2 s1))]\n       (reduce into (first bubbled-sets) (rest bubbled-sets)))))",
           :filename "clojurescript/src/cljs/clojure/set.cljs",
           :lines [19 29],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/set.cljs#L19-L29"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/set.cljs#L19-L29"},
  :full-name "clojure.set/union",
  :clj-symbol "clojure.set/union",
  :docstring "Return a set that is the union of the input sets"}

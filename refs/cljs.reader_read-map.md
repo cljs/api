@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:213-218](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L213-L218)</ins>
+            └── <ins>[reader.cljs:213-218](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L213-L218)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1006
  :source {:code "(defn read-map\n  [rdr _]\n  (let [l (read-delimited-list \"}\" rdr true)]\n    (when (odd? (count l))\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (apply hash-map l)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [213 218],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L213-L218"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L213-L218"},
  :full-name-encode "cljs.reader_read-map",
  :history [["+" "0.0-927"]]}
 

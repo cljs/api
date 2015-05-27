@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2205-2206](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2205-L2206)</ins>
+            └── <ins>[core.cljs:2203-2204](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2203-L2204)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1006
  :signature ["[coll]"],
  :source {:code "(defn vec [coll]\n  (reduce conj cljs.core.PersistentVector/EMPTY coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2205 2206],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2205-L2206"},
+          :lines [2203 2204],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2203-L2204"},
  :full-name-encode "cljs.core_vec",
  :clj-symbol "clojure.core/vec",
  :history [["+" "0.0-927"]]}

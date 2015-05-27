@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:674-676](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L674-L676)</ins>
+            └── <ins>[core.cljs:674-676](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L674-L676)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1006
  :source {:code "(defn symbol? [x]\n  (and (goog/isString x)\n       (= (.charAt x 0) \\uFDD1)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [674 676],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L674-L676"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L674-L676"},
  :full-name-encode "cljs.core_symbol_QMARK_",
  :clj-symbol "clojure.core/symbol?",
  :history [["+" "0.0-927"]]}

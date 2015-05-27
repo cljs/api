@@ -22,11 +22,11 @@ has the same effects, if any, and returns the opposite truth value.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1486-1494](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494)</ins>
+            └── <ins>[core.cljs:1486-1494](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1486-L1494)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1006
  :source {:code "(defn complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1486 1494],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1486-L1494"},
  :full-name "cljs.core/complement",
  :clj-symbol "clojure.core/complement",
  :docstring "Takes a fn f and returns a fn that takes the same arguments as f,\nhas the same effects, if any, and returns the opposite truth value."}

@@ -23,11 +23,11 @@ y. Uses google.array.defaultCompare.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:727-731](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L727-L731)</ins>
+            └── <ins>[core.cljs:727-731](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1006
  :source {:code "(defn compare\n  [x y] (garray/defaultCompare x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [727 731],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L727-L731"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731"},
  :full-name "cljs.core/compare",
  :clj-symbol "clojure.core/compare",
  :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare."}

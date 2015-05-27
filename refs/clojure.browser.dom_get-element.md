@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:96-97](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L96-L97)</ins>
+                └── <ins>[dom.cljs:96-97](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L96-L97)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1006
  :source {:code "(defn get-element [id]\n  (gdom/getElement (name id)))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [96 97],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L96-L97"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L96-L97"},
  :full-name-encode "clojure.browser.dom_get-element",
  :history [["+" "0.0-927"]]}
 

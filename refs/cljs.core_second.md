@@ -21,11 +21,11 @@ Same as (first (next x))
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:432-435](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L432-L435)</ins>
+            └── <ins>[core.cljs:432-435](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L432-L435)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1006
  :source {:code "(defn second\n  [coll]\n  (first (next coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [432 435],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L432-L435"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L432-L435"},
  :full-name "cljs.core/second",
  :clj-symbol "clojure.core/second",
  :docstring "Same as (first (next x))"}

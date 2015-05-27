@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:191-203](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L191-L203)</ins>
+            └── <ins>[core.clj:191-203](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L191-L203)</ins>
 </pre>
 
 ```clj
@@ -56,7 +56,7 @@ clojurescript @ r1006
  :source {:code "(defmacro reify [& impls]\n  (let [t (gensym \"t\")\n        locals (keys (:locals &env))]\n    `(do\n       (when (undefined? ~t)\n         (deftype ~t [~@locals __meta#]\n           cljs.core.IWithMeta\n           (~'-with-meta [_# __meta#]\n             (new ~t ~@locals __meta#))\n           cljs.core.IMeta\n           (~'-meta [_#] __meta#)\n           ~@impls))\n       (new ~t ~@locals nil))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [191 203],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L191-L203"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L191-L203"},
  :full-name-encode "cljs.core_reify",
  :clj-symbol "clojure.core/reify",
  :history [["+" "0.0-927"]]}

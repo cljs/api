@@ -27,11 +27,11 @@ before the vars are bound to their new values.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:437-460](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L437-L460)</ins>
+            └── <ins>[core.clj:444-467](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L444-L467)</ins>
 </pre>
 
 ```clj
@@ -66,8 +66,8 @@ clojurescript @ r1006
  :full-name-encode "cljs.core_binding",
  :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)\n        vals (take-nth 2 (drop 1 bindings))\n        tempnames (map (comp gensym name) names)\n        binds (map vector names vals)\n        resets (reverse (map vector names tempnames))]\n    `(let [~@(interleave tempnames names)]\n       (try\n        ~@(map\n           (fn [[k v]] (list 'set! k v))\n           binds)\n        ~@body\n        (finally\n         ~@(map\n            (fn [[k v]] (list 'set! k v))\n            resets))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [437 460],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L437-L460"},
+          :lines [444 467],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L444-L467"},
  :full-name "cljs.core/binding",
  :clj-symbol "clojure.core/binding",
  :docstring "binding => var-symbol init-expr\n\nCreates new bindings for the (already-existing) vars, with the\nsupplied initial values, executes the exprs in an implicit do, then\nre-establishes the bindings that existed before.  The new bindings\nare made in parallel (unlike let); all init-exprs are evaluated\nbefore the vars are bound to their new values."}

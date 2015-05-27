@@ -8,7 +8,7 @@
 </table>
 
  <samp>
-(__Delay.__ f state)<br>
+(__Delay.__ state f)<br>
 </samp>
 
 ```
@@ -18,25 +18,25 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3376-3386](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3376-L3386)</ins>
+            └── <ins>[core.cljs:3401-3411](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3401-L3411)</ins>
 </pre>
 
 ```clj
-(deftype Delay [f state]
-
+(deftype Delay [state f]
   IDeref
   (-deref [_]
-    (when-not @state
-      (swap! state f))
-    @state)
+    (:value (swap! state (fn [{:keys [done] :as curr-state}]
+                           (if done
+                             curr-state,
+                             {:done true :value (f)})))))
 
   IPending
   (-realized? [d]
-    (not (nil? @state))))
+    (:done @state)))
 ```
 
 
@@ -47,11 +47,11 @@ clojurescript @ r1006
  :ns "cljs.core",
  :name "Delay",
  :type "type",
- :signature ["[f state]"],
- :source {:code "(deftype Delay [f state]\n\n  IDeref\n  (-deref [_]\n    (when-not @state\n      (swap! state f))\n    @state)\n\n  IPending\n  (-realized? [d]\n    (not (nil? @state))))",
+ :signature ["[state f]"],
+ :source {:code "(deftype Delay [state f]\n  IDeref\n  (-deref [_]\n    (:value (swap! state (fn [{:keys [done] :as curr-state}]\n                           (if done\n                             curr-state,\n                             {:done true :value (f)})))))\n\n  IPending\n  (-realized? [d]\n    (:done @state)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3376 3386],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3376-L3386"},
+          :lines [3401 3411],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3401-L3411"},
  :full-name-encode "cljs.core_Delay",
  :history [["+" "0.0-927"]]}
 

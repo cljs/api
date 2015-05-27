@@ -21,11 +21,11 @@ print and println produce output for human consumption.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3114-3119](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3114-L3119)</ins>
+            └── <ins>[core.cljs:3129-3134](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3129-L3134)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1006
  :type "function",
  :source {:code "(def ^{:doc\n  \"Prints the object(s) using string-print.\n  print and println produce output for human consumption.\"}\n  print\n  (fn cljs-core-print [& objs]\n    (pr-with-opts objs (assoc (pr-opts) :readably false))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3114 3119],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3114-L3119"},
+          :lines [3129 3134],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3129-L3134"},
  :full-name-encode "cljs.core_print",
  :clj-symbol "clojure.core/print",
  :history [["+" "0.0-927"]]}

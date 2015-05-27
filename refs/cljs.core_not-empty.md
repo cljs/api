@@ -21,11 +21,11 @@ If coll is empty, returns nil, else coll
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1442-1444](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1442-L1444)</ins>
+            └── <ins>[core.cljs:1442-1444](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1442-L1444)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1006
  :source {:code "(defn not-empty\n  [coll] (when (seq coll) coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1442 1444],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1442-L1444"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1442-L1444"},
  :full-name "cljs.core/not-empty",
  :clj-symbol "clojure.core/not-empty",
  :docstring "If coll is empty, returns nil, else coll"}

@@ -10,6 +10,23 @@
 <th>Compiler API</th>
 </thead>
 <tr>
+<td>__[0.0-1011](https://github.com/cljsinfo/api-refs/tree/0.0-1011)__</td>
+<td>2012-03-31</td>
+<td><kbd>1.3.0</kbd></td>
+<td><kbd>20110323-r790</kbd></td>
+<td>
+<a href="#user-content-00-1011-library-api">
+<img valign="middle" src="https://img.shields.io/badge/+-4-brightgreen.svg"> 
+</a>
+</td>
+<td>
+<a href="#user-content-00-1011-compiler-api">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1006](https://github.com/cljsinfo/api-refs/tree/0.0-1006)__</td>
 <td>2012-03-30</td>
 <td><kbd>1.3.0</kbd></td>
@@ -77,6 +94,42 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1011
+
+<a name="00-1011-library-api"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/print-str](refs/cljs.core_print-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/println-str](refs/cljs.core_println-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/prn-str](refs/cljs.core_prn-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/prn-str-with-opts](refs/cljs.core_prn-str-with-opts.md)</samp></td>
+</tr>
+</table>
+
+<a name="00-1011-compiler-api"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1006
@@ -872,7 +925,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/delay](refs/cljs.core_delay.md)</samp></td>
 </tr>

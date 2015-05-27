@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3467-3469](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3467-L3469)</ins>
+            └── <ins>[core.cljs:3484-3486](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3484-L3486)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1006
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:931-933](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L931-L933)</ins>
+            └── <ins>[core.cljs:931-933](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L931-L933)</ins>
 </pre>
 
 ```clj
@@ -58,14 +58,14 @@ clojurescript @ r1006
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
                      :lines [931 933],
-                     :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L931-L933"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L931-L933"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (js* \"Math.floor(Math.random() * ~{n})\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3467 3469],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3467-L3469"},
+          :lines [3484 3486],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3484-L3486"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

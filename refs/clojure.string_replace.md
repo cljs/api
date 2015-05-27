@@ -25,11 +25,11 @@ pattern / (string or function of match).
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:23-34](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/string.cljs#L23-L34)</ins>
+            └── <ins>[string.cljs:23-34](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/string.cljs#L23-L34)</ins>
 </pre>
 
 ```clj
@@ -55,7 +55,7 @@ clojurescript @ r1006
  :source {:code "(defn replace\n  [s match replacement]\n  (cond (string? match)\n        (.replace s (js/RegExp. (gstring/regExpEscape match) \"g\") replacement)\n        (.hasOwnProperty match \"source\")\n        (.replace s (js/RegExp. (.-source match) \"g\") replacement)\n        :else (throw (str \"Invalid match arg: \" match))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [23 34],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/string.cljs#L23-L34"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/string.cljs#L23-L34"},
  :full-name "clojure.string/replace",
  :clj-symbol "clojure.string/replace",
  :docstring "Replaces all instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match)."}

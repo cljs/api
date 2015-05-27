@@ -24,11 +24,11 @@ to it
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1776-1781](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1776-L1781)</ins>
+            └── <ins>[core.cljs:1776-1781](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1776-L1781)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1006
  :source {:code "(defn repeatedly\n  ([f] (lazy-seq (cons (f) (repeatedly f))))\n  ([n f] (take n (repeatedly f))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1776 1781],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1776-L1781"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1776-L1781"},
  :full-name "cljs.core/repeatedly",
  :clj-symbol "clojure.core/repeatedly",
  :docstring "Takes a function of no args, presumably with side effects, and\nreturns an infinite (or length n if supplied) lazy sequence of calls\nto it"}

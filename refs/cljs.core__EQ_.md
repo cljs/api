@@ -24,11 +24,11 @@ comparison.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L206-L212)</ins>
+            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212)</ins>
 </pre>
 
 ```clj
@@ -50,7 +50,7 @@ clojurescript @ r1006
  :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [206 212],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L206-L212"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212"},
  :full-name "cljs.core/=",
  :clj-symbol "clojure.core/=",
  :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}

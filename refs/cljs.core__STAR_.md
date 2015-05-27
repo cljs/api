@@ -24,11 +24,11 @@ Returns the product of nums. (*) returns 1.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:824-829](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L824-L829)</ins>
+            └── <ins>[core.cljs:824-829](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L824-L829)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1006
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:77-81](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L77-L81)</ins>
+            └── <ins>[core.clj:77-81](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L77-L81)</ins>
 </pre>
 
 ```clj
@@ -67,14 +67,14 @@ clojurescript @ r1006
  :shadowed-sources ({:code "(defmacro *\n  ([] 1)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} * ~{})\" x y))\n  ([x y & more] `(* (* ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [77 81],
-                     :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L77-L81"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L77-L81"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__STAR_",
  :source {:code "(defn *\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/* x y))\n  ([x y & more] (reduce * (cljs.core/* x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [824 829],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L824-L829"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L824-L829"},
  :full-name "cljs.core/*",
  :clj-symbol "clojure.core/*",
  :docstring "Returns the product of nums. (*) returns 1."}

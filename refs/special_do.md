@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:762-764](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L762-L764)</ins>
+            └── <ins>[compiler.clj:761-763](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L761-L763)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1006
  :type "special form",
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs] _]\n  (merge {:env env :op :do} (analyze-block env exprs)))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [762 764],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L762-L764"},
+          :lines [761 763],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L761-L763"},
  :full-name-encode "special_do",
  :clj-symbol "clojure.core/do",
  :history [["+" "0.0-927"]]}

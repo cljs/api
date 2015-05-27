@@ -21,11 +21,11 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:755-761](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L755-L761)</ins>
+            └── <ins>[core.clj:762-768](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L762-L768)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1006
  :full-name-encode "cljs.core_time",
  :source {:code "(defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.) ())\n         ret# ~expr]\n     (prn (str \"Elapsed time: \" (- (.getTime (js/Date.) ()) start#) \" msecs\"))\n     ret#))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [755 761],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L755-L761"},
+          :lines [762 768],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L762-L768"},
  :full-name "cljs.core/time",
  :clj-symbol "clojure.core/time",
  :docstring "Evaluates expr and prints the time it took. Returns the value of expr."}

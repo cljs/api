@@ -21,11 +21,11 @@ Returns true if a value has been produced for a promise, delay, future or lazy s
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3407-3410](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3407-L3410)</ins>
+            └── <ins>[core.cljs:3424-3427](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1006
  :full-name-encode "cljs.core_realized_QMARK_",
  :source {:code "(defn realized?\n  [d]\n  (-realized? d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3407 3410],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3407-L3410"},
+          :lines [3424 3427],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427"},
  :full-name "cljs.core/realized?",
  :clj-symbol "clojure.core/realized?",
  :docstring "Returns true if a value has been produced for a promise, delay, future or lazy sequence."}

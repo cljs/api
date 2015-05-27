@@ -23,11 +23,11 @@ in the keyword strings, it will be added automatically.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1078-1084](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1078-L1084)</ins>
+            └── <ins>[core.cljs:1078-1084](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1078-L1084)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1006
  :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \"'\" (subs name 2))\n                :else (str* \"\\uFDD0\" \"'\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [1078 1084],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1078-L1084"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1078-L1084"},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

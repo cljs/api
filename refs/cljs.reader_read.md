@@ -22,11 +22,11 @@ If EOF, throws if eof-is-error is true. Otherwise returns sentinel.
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:338-354](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L338-L354)</ins>
+            └── <ins>[reader.cljs:338-354](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L338-L354)</ins>
 </pre>
 
 ```clj
@@ -60,7 +60,7 @@ clojurescript @ r1006
  :source {:code "(defn read\n  [reader eof-is-error sentinel is-recursive]\n  (let [ch (read-char reader)]\n    (cond\n     (nil? ch) (if eof-is-error (reader-error reader \"EOF\") sentinel)\n     (whitespace? ch) (recur reader eof-is-error sentinel is-recursive)\n     (comment-prefix? ch) (recur (read-comment reader ch) eof-is-error sentinel is-recursive)\n     :else (let [res\n                 (cond\n                  (macros ch) ((macros ch) reader ch)\n                  (number-literal? reader ch) (read-number reader ch)\n                  :else (read-symbol reader ch))]\n     (if (= res reader)\n       (recur reader eof-is-error sentinel is-recursive)\n       res)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [338 354],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L338-L354"},
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L338-L354"},
  :full-name "cljs.reader/read",
  :clj-symbol "clojure.core/read",
  :docstring "Reads the first object from a PushbackReader. Returns the object read.\nIf EOF, throws if eof-is-error is true. Otherwise returns sentinel."}

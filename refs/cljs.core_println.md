@@ -21,11 +21,11 @@ Same as print followed by (newline)
 ---
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3121-3125](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3121-L3125)</ins>
+            └── <ins>[core.cljs:3141-3145](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3141-L3145)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1006
  :full-name-encode "cljs.core_println",
  :source {:code "(defn println\n  [& objs]\n  (pr-with-opts objs (assoc (pr-opts) :readably false))\n  (newline (pr-opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3121 3125],
-          :link "https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3121-L3125"},
+          :lines [3141 3145],
+          :link "https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3141-L3145"},
  :full-name "cljs.core/println",
  :clj-symbol "clojure.core/println",
  :docstring "Same as print followed by (newline)"}
