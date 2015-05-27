@@ -21,11 +21,11 @@ Returns true if x is the value false, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:807-809](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L807-L809)</ins>
+            └── <ins>[core.cljs:819-821](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L819-L821)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:96-97](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L96-L97)</ins>
+            └── <ins>[core.clj:97-98](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L97-L98)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1211
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro false? [x]\n  (bool-expr (list 'js* \"~{} === false\" x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [96 97],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L96-L97"}),
+                     :lines [97 98],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L97-L98"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_false_QMARK_",
  :source {:code "(defn ^boolean false?\n  [x] (cljs.core/false? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [807 809],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L807-L809"},
+          :lines [819 821],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L819-L821"},
  :full-name "cljs.core/false?",
  :clj-symbol "clojure.core/false?",
  :docstring "Returns true if x is the value false, false otherwise."}

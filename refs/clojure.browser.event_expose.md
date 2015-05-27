@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:79-80](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/event.cljs#L79-L80)</ins>
+                └── <ins>[event.cljs:79-80](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L79-L80)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1211
  :source {:code "(defn expose [e]\n  (goog.events/expose e))",
           :filename "clojurescript/src/cljs/clojure/browser/event.cljs",
           :lines [79 80],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/event.cljs#L79-L80"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/event.cljs#L79-L80"},
  :full-name-encode "clojure.browser.event_expose",
  :history [["+" "0.0-927"]]}
 

@@ -18,21 +18,23 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:191-197](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L191-L197)</ins>
+            └── <ins>[reader.cljs:219-227](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L219-L227)</ins>
 </pre>
 
 ```clj
 (defn read-dispatch
   [rdr _]
   (let [ch (read-char rdr)
-        dm (get dispatch-macros ch)]
+        dm (dispatch-macros ch)]
     (if dm
       (dm rdr _)
-      (reader-error rdr "No dispatch macro for " ch))))
+      (if-let [obj (maybe-read-tagged-type rdr ch)]
+        obj
+        (reader-error rdr "No dispatch macro for " ch)))))
 ```
 
 
@@ -44,10 +46,10 @@ clojurescript @ r1211
  :name "read-dispatch",
  :type "function",
  :signature ["[rdr _]"],
- :source {:code "(defn read-dispatch\n  [rdr _]\n  (let [ch (read-char rdr)\n        dm (get dispatch-macros ch)]\n    (if dm\n      (dm rdr _)\n      (reader-error rdr \"No dispatch macro for \" ch))))",
+ :source {:code "(defn read-dispatch\n  [rdr _]\n  (let [ch (read-char rdr)\n        dm (dispatch-macros ch)]\n    (if dm\n      (dm rdr _)\n      (if-let [obj (maybe-read-tagged-type rdr ch)]\n        obj\n        (reader-error rdr \"No dispatch macro for \" ch)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [191 197],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L191-L197"},
+          :lines [219 227],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L219-L227"},
  :full-name-encode "cljs.reader_read-dispatch",
  :history [["+" "0.0-927"]]}
 

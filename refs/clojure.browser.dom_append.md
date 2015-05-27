@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:13-15](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L13-L15)</ins>
+                └── <ins>[dom.cljs:13-15](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/dom.cljs#L13-L15)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1211
  :source {:code "(defn append [parent & children]\n  (apply gdom/append parent children)\n  parent)",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [13 15],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L13-L15"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/dom.cljs#L13-L15"},
  :full-name-encode "clojure.browser.dom_append",
  :history [["+" "0.0-927"]]}
 

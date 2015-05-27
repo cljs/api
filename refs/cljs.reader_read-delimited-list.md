@@ -18,28 +18,28 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:168-181](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L168-L181)</ins>
+            └── <ins>[reader.cljs:194-207](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L194-L207)</ins>
 </pre>
 
 ```clj
 (defn read-delimited-list
   [delim rdr recursive?]
-  (loop [a []]
+  (loop [a (transient [])]
     (let [ch (read-past whitespace? rdr)]
       (when-not ch (reader-error rdr "EOF"))
       (if (identical? delim ch)
-        a
-        (if-let [macrofn (get macros ch)]
+        (persistent! a)
+        (if-let [macrofn (macros ch)]
           (let [mret (macrofn rdr ch)]
-            (recur (if (= mret rdr) a (conj a mret))))
+            (recur (if (identical? mret rdr) a (conj! a mret))))
           (do
             (unread rdr ch)
             (let [o (read rdr true nil recursive?)]
-              (recur (if (= o rdr) a (conj a o))))))))))
+              (recur (if (identical? o rdr) a (conj! a o))))))))))
 ```
 
 
@@ -51,10 +51,10 @@ clojurescript @ r1211
  :name "read-delimited-list",
  :type "function",
  :signature ["[delim rdr recursive?]"],
- :source {:code "(defn read-delimited-list\n  [delim rdr recursive?]\n  (loop [a []]\n    (let [ch (read-past whitespace? rdr)]\n      (when-not ch (reader-error rdr \"EOF\"))\n      (if (identical? delim ch)\n        a\n        (if-let [macrofn (get macros ch)]\n          (let [mret (macrofn rdr ch)]\n            (recur (if (= mret rdr) a (conj a mret))))\n          (do\n            (unread rdr ch)\n            (let [o (read rdr true nil recursive?)]\n              (recur (if (= o rdr) a (conj a o))))))))))",
+ :source {:code "(defn read-delimited-list\n  [delim rdr recursive?]\n  (loop [a (transient [])]\n    (let [ch (read-past whitespace? rdr)]\n      (when-not ch (reader-error rdr \"EOF\"))\n      (if (identical? delim ch)\n        (persistent! a)\n        (if-let [macrofn (macros ch)]\n          (let [mret (macrofn rdr ch)]\n            (recur (if (identical? mret rdr) a (conj! a mret))))\n          (do\n            (unread rdr ch)\n            (let [o (read rdr true nil recursive?)]\n              (recur (if (identical? o rdr) a (conj! a o))))))))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [168 181],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L168-L181"},
+          :lines [194 207],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L194-L207"},
  :full-name-encode "cljs.reader_read-delimited-list",
  :history [["+" "0.0-927"]]}
 

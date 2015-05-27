@@ -8,6 +8,7 @@
 </table>
 
  <samp>
+(__array-seq__ array)<br>
 (__array-seq__ array i)<br>
 </samp>
 
@@ -18,16 +19,19 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:466-467](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L466-L467)</ins>
+            └── <ins>[core.cljs:469-473](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L469-L473)</ins>
 </pre>
 
 ```clj
-(defn array-seq [array i]
-  (prim-seq array i))
+(defn array-seq
+  ([array]
+     (prim-seq array 0))
+  ([array i]
+     (prim-seq array i)))
 ```
 
 
@@ -38,11 +42,11 @@ clojurescript @ r1211
  :ns "cljs.core",
  :name "array-seq",
  :type "function",
- :signature ["[array i]"],
- :source {:code "(defn array-seq [array i]\n  (prim-seq array i))",
+ :signature ["[array]" "[array i]"],
+ :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [466 467],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L466-L467"},
+          :lines [469 473],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L469-L473"},
  :full-name-encode "cljs.core_array-seq",
  :history [["+" "0.0-927"]]}
 

@@ -23,11 +23,11 @@ corresponding elements, in the order they appeared in coll.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6118-6127](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6118-L6127)</ins>
+            └── <ins>[core.cljs:6130-6139](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6130-L6139)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_group-by",
  :source {:code "(defn group-by\n  [f coll]\n  (reduce\n   (fn [ret x]\n     (let [k (f x)]\n       (assoc ret k (conj (get ret k []) x))))\n   {} coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6118 6127],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6118-L6127"},
+          :lines [6130 6139],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6130-L6139"},
  :full-name "cljs.core/group-by",
  :clj-symbol "clojure.core/group-by",
  :docstring "Returns a map of the elements of coll keyed by the result of\nf on each element. The value at each key will be a vector of the\ncorresponding elements, in the order they appeared in coll."}

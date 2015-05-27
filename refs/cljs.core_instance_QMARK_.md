@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:818-819](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L818-L819)</ins>
+            └── <ins>[core.cljs:830-831](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L830-L831)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_instance_QMARK_",
  :source {:code "(defn ^boolean instance? [t o]\n  (js* \"(~{o} != null && (~{o} instanceof ~{t} || ~{o}.constructor === ~{t} || ~{t} === Object))\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [818 819],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L818-L819"},
+          :lines [830 831],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L830-L831"},
  :full-name "cljs.core/instance?",
  :clj-symbol "clojure.core/instance?"}
 

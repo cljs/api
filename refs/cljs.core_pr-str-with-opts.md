@@ -19,11 +19,11 @@ options given in opts
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5661-5665](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5661-L5665)</ins>
+            └── <ins>[core.cljs:5673-5677](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5673-L5677)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1211
  :signature ["[objs opts]"],
  :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (str (pr-sb objs opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5661 5665],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5661-L5665"},
+          :lines [5673 5677],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5673-L5677"},
  :full-name-encode "cljs.core_pr-str-with-opts",
  :history [["+" "0.0-927"]]}
 

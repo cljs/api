@@ -21,11 +21,11 @@ Returns a new seq where x is the first element and seq is the rest.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1484-1490](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1484-L1490)</ins>
+            └── <ins>[core.cljs:1496-1502](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1496-L1502)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_cons",
  :source {:code "(defn cons\n  [x coll]\n  (if (or (coercive-= coll nil)\n          (satisfies? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1484 1490],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1484-L1490"},
+          :lines [1496 1502],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1496-L1502"},
  :full-name "cljs.core/cons",
  :clj-symbol "clojure.core/cons",
  :docstring "Returns a new seq where x is the first element and seq is the rest."}

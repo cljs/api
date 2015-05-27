@@ -21,11 +21,11 @@ Bitwise or
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1156-1158](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1156-L1158)</ins>
+            └── <ins>[core.cljs:1168-1170](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1168-L1170)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:202-204](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L202-L204)</ins>
+            └── <ins>[core.clj:203-205](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L203-L205)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1211
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-or\n  ([x y] (list 'js* \"(~{} | ~{})\" x y))\n  ([x y & more] `(bit-or (bit-or ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [202 204],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L202-L204"}),
+                     :lines [203 205],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L203-L205"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-or",
  :source {:code "(defn bit-or\n  [x y] (cljs.core/bit-or x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1156 1158],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1156-L1158"},
+          :lines [1168 1170],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1168-L1170"},
  :full-name "cljs.core/bit-or",
  :clj-symbol "clojure.core/bit-or",
  :docstring "Bitwise or"}

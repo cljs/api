@@ -22,11 +22,11 @@ Returns the number of items in the collection. (count nil) returns
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:608-614](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L608-L614)</ins>
+            └── <ins>[core.cljs:615-621](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L615-L621)</ins>
 </pre>
 
 ```clj
@@ -34,7 +34,7 @@ clojurescript @ r1211
   [coll]
   (if (counted? coll)
     (-count coll)
-    (accumulating-seq-count coll 0)))
+    (accumulating-seq-count coll)))
 ```
 
 
@@ -47,10 +47,10 @@ clojurescript @ r1211
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_count",
- :source {:code "(defn count\n  [coll]\n  (if (counted? coll)\n    (-count coll)\n    (accumulating-seq-count coll 0)))",
+ :source {:code "(defn count\n  [coll]\n  (if (counted? coll)\n    (-count coll)\n    (accumulating-seq-count coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [608 614],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L608-L614"},
+          :lines [615 621],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L615-L621"},
  :full-name "cljs.core/count",
  :clj-symbol "clojure.core/count",
  :docstring "Returns the number of items in the collection. (count nil) returns\n0.  Also works on strings, arrays, and Maps"}

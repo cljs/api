@@ -18,17 +18,17 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:301-303](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L301-L303)</ins>
+            └── <ins>[reader.cljs:334-336](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L334-L336)</ins>
 </pre>
 
 ```clj
 (defn read-regex
   [rdr ch]
-  (-> (read-string rdr ch) re-pattern))
+  (-> (read-string* rdr ch) re-pattern))
 ```
 
 
@@ -40,10 +40,10 @@ clojurescript @ r1211
  :name "read-regex",
  :type "function",
  :signature ["[rdr ch]"],
- :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string rdr ch) re-pattern))",
+ :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string* rdr ch) re-pattern))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [301 303],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L301-L303"},
+          :lines [334 336],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L334-L336"},
  :full-name-encode "cljs.reader_read-regex",
  :history [["+" "0.0-927"]]}
 

@@ -21,11 +21,11 @@ Bitwise and
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1160-1162](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1160-L1162)</ins>
+            └── <ins>[core.cljs:1172-1174](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1172-L1174)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:210-212](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L210-L212)</ins>
+            └── <ins>[core.clj:211-213](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L211-L213)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1211
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-and-not\n  ([x y] (list 'js* \"(~{} & ~~{})\" x y))\n  ([x y & more] `(bit-and-not (bit-and-not ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [210 212],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L210-L212"}),
+                     :lines [211 213],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L211-L213"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-and-not",
  :source {:code "(defn bit-and-not\n  [x y] (cljs.core/bit-and-not x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1160 1162],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1160-L1162"},
+          :lines [1172 1174],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1172-L1174"},
  :full-name "cljs.core/bit-and-not",
  :clj-symbol "clojure.core/bit-and-not",
  :docstring "Bitwise and"}

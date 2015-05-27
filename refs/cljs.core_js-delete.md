@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:784-785](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L784-L785)</ins>
+            └── <ins>[core.cljs:796-797](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L796-L797)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1211
  :signature ["[obj key]"],
  :source {:code "(defn js-delete [obj key]\n  (js* \"delete ~{obj}[~{key}]\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [784 785],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L784-L785"},
+          :lines [796 797],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L796-L797"},
  :full-name-encode "cljs.core_js-delete",
  :history [["+" "0.0-927"]]}
 

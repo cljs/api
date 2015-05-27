@@ -21,11 +21,11 @@ Returns a lazy seq of n xs.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2139-2141](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2139-L2141)</ins>
+            └── <ins>[core.cljs:2151-2153](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2151-L2153)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_replicate",
  :source {:code "(defn replicate\n  [n x] (take n (repeat x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2139 2141],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2139-L2141"},
+          :lines [2151 2153],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2151-L2153"},
  :full-name "cljs.core/replicate",
  :clj-symbol "clojure.core/replicate",
  :docstring "Returns a lazy seq of n xs."}

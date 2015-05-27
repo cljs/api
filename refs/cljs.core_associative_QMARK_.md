@@ -21,11 +21,11 @@ Returns true if coll implements Associative
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:741-743](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743)</ins>
+            └── <ins>[core.cljs:753-755](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L753-L755)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_associative_QMARK_",
  :source {:code "(defn ^boolean associative?\n  [x] (satisfies? IAssociative x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [741 743],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743"},
+          :lines [753 755],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L753-L755"},
  :full-name "cljs.core/associative?",
  :clj-symbol "clojure.core/associative?",
  :docstring "Returns true if coll implements Associative"}

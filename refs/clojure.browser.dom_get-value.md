@@ -18,12 +18,12 @@ Get the value of an element.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:131-134](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L131-L134)</ins>
+                └── <ins>[dom.cljs:131-134](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/dom.cljs#L131-L134)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1211
  :source {:code "(defn get-value\n  [e]\n  (.-value (ensure-element e)))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [131 134],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L131-L134"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/browser/dom.cljs#L131-L134"},
  :full-name-encode "clojure.browser.dom_get-value",
  :history [["+" "0.0-927"]]}
 

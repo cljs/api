@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:145-147](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L145-L147)</ins>
+            └── <ins>[reader.cljs:171-173](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L171-L173)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1211
  :signature ["[reader initch]"],
  :source {:code "(defn read-unicode-char\n  [reader initch]\n  (reader-error reader \"Unicode characters not supported by reader (yet)\"))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [145 147],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L145-L147"},
+          :lines [171 173],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L171-L173"},
  :full-name-encode "cljs.reader_read-unicode-char",
  :history [["+" "0.0-927"]]}
 

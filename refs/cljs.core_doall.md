@@ -27,11 +27,11 @@ seq to reside in memory at one time.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5565-5577](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5565-L5577)</ins>
+            └── <ins>[core.cljs:5577-5589](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5577-L5589)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_doall",
  :source {:code "(defn doall\n  ([coll]\n   (dorun coll)\n   coll)\n  ([n coll]\n   (dorun n coll)\n   coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5565 5577],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5565-L5577"},
+          :lines [5577 5589],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5577-L5589"},
  :full-name "cljs.core/doall",
  :clj-symbol "clojure.core/doall",
  :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. doall can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, retains the head and returns it, thus causing the entire\nseq to reside in memory at one time."}

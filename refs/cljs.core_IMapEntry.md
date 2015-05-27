@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:173-175](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L173-L175)</ins>
+            └── <ins>[core.cljs:173-175](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L173-L175)</ins>
 </pre>
 
 ```clj
@@ -41,7 +41,7 @@ clojurescript @ r1211
  :source {:code "(defprotocol IMapEntry\n  (-key [coll])\n  (-val [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [173 175],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L173-L175"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L173-L175"},
  :methods [{:name "-key", :signature ["[coll]"], :docstring nil}
            {:name "-val", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IMapEntry",

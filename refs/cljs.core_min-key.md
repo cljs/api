@@ -23,11 +23,11 @@ Returns the x for which (k x), a number, is least.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5338-5343](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5338-L5343)</ins>
+            └── <ins>[core.cljs:5350-5355](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5350-L5355)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_min-key",
  :source {:code "(defn min-key\n  ([k x] x)\n  ([k x y] (if (< (k x) (k y)) x y))\n  ([k x y & more]\n     (reduce #(min-key k %1 %2) (min-key k x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5338 5343],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5338-L5343"},
+          :lines [5350 5355],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5350-L5355"},
  :full-name "cljs.core/min-key",
  :clj-symbol "clojure.core/min-key",
  :docstring "Returns the x for which (k x), a number, is least."}

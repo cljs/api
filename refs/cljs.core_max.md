@@ -23,11 +23,11 @@ Returns the greatest of the nums.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1093-1098](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1093-L1098)</ins>
+            └── <ins>[core.cljs:1105-1110](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1105-L1110)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:177-180](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L177-L180)</ins>
+            └── <ins>[core.clj:178-181](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L178-L181)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r1211
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro max\n  ([x] x)\n  ([x y] (list 'js* \"((~{} > ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(max (max ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [177 180],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L177-L180"}),
+                     :lines [178 181],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L178-L181"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_max",
  :source {:code "(defn max\n  ([x] x)\n  ([x y] (cljs.core/max x y))\n  ([x y & more]\n   (reduce max (cljs.core/max x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1093 1098],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1093-L1098"},
+          :lines [1105 1110],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1105-L1110"},
  :full-name "cljs.core/max",
  :clj-symbol "clojure.core/max",
  :docstring "Returns the greatest of the nums."}

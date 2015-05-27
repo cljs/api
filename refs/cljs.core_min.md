@@ -23,11 +23,11 @@ Returns the least of the nums.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1100-1105](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1100-L1105)</ins>
+            └── <ins>[core.cljs:1112-1117](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1112-L1117)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:182-185](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L182-L185)</ins>
+            └── <ins>[core.clj:183-186](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L183-L186)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r1211
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro min\n  ([x] x)\n  ([x y] (list 'js* \"((~{} < ~{}) ? ~{} : ~{})\" x y x y))\n  ([x y & more] `(min (min ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [182 185],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L182-L185"}),
+                     :lines [183 186],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L183-L186"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_min",
  :source {:code "(defn min\n  ([x] x)\n  ([x y] (cljs.core/min x y))\n  ([x y & more]\n   (reduce min (cljs.core/min x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1100 1105],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1100-L1105"},
+          :lines [1112 1117],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1112-L1117"},
  :full-name "cljs.core/min",
  :clj-symbol "clojure.core/min",
  :docstring "Returns the least of the nums."}

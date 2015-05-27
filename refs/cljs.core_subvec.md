@@ -26,11 +26,11 @@ trimming is done.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2753-2762](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2753-L2762)</ins>
+            └── <ins>[core.cljs:2765-2774](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2765-L2774)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_subvec",
  :source {:code "(defn subvec\n  ([v start]\n     (subvec v start (count v)))\n  ([v start end]\n     (Subvec. nil v start end nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2753 2762],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2753-L2762"},
+          :lines [2765 2774],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2765-L2774"},
  :full-name "cljs.core/subvec",
  :clj-symbol "clojure.core/subvec",
  :docstring "Returns a persistent vector of the items in vector from\nstart (inclusive) to end (exclusive).  If end is not supplied,\ndefaults to (count vector). This operation is O(1) and very fast, as\nthe resulting vector shares structure with the original and no\ntrimming is done."}

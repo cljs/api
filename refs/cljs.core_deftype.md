@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:369-399](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L369-L399)</ins>
+            └── <ins>[core.clj:403-433](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L403-L433)</ins>
 </pre>
 
 ```clj
@@ -73,8 +73,8 @@ clojurescript @ r1211
  :signature ["[t fields & impls]"],
  :source {:code "(defmacro deftype [t fields & impls]\n  (let [adorn-params (fn [sig]\n                       (cons (vary-meta (second sig) assoc :cljs.compiler/fields fields)\n                             (nnext sig)))\n        ;;reshape for extend-type\n        dt->et (fn [specs]\n                 (loop [ret [] s specs]\n                   (if (seq s)\n                     (recur (-> ret\n                                (conj (first s))\n                                (into\n                                 (reduce (fn [v [f sigs]]\n                                           (conj v (cons f (map adorn-params sigs))))\n                                         []\n                                         (group-by first (take-while seq? (next s))))))\n                            (drop-while seq? (next s)))\n                     ret)))\n        r (:name (cljs.compiler/resolve-var (dissoc &env :locals) t))\n        pmasks (prepare-protocol-masks &env t impls)]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorPrSeq ~t) (fn [this#] (list ~(core/str r))))\n         (extend-type ~t ~@(dt->et impls))\n         ~t)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorPrSeq ~t) (fn [this#] (list ~(core/str r))))\n         ~t))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [369 399],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L369-L399"},
+          :lines [403 433],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L403-L433"},
  :full-name-encode "cljs.core_deftype",
  :clj-symbol "clojure.core/deftype",
  :history [["+" "0.0-927"]]}

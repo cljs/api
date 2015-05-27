@@ -21,11 +21,11 @@ Bitwise shift right
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1192-1194](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1192-L1194)</ins>
+            └── <ins>[core.cljs:1204-1206](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1204-L1206)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:226-227](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L226-L227)</ins>
+            └── <ins>[core.clj:227-228](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L227-L228)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1211
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-shift-right [x n]\n  (list 'js* \"(~{} >> ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [226 227],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L226-L227"}),
+                     :lines [227 228],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L227-L228"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-right",
  :source {:code "(defn bit-shift-right\n  [x n] (cljs.core/bit-shift-right x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1192 1194],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1192-L1194"},
+          :lines [1204 1206],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1204-L1206"},
  :full-name "cljs.core/bit-shift-right",
  :clj-symbol "clojure.core/bit-shift-right",
  :docstring "Bitwise shift right"}

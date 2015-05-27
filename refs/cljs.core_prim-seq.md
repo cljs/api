@@ -8,6 +8,7 @@
 </table>
 
  <samp>
+(__prim-seq__ prim)<br>
 (__prim-seq__ prim i)<br>
 </samp>
 
@@ -18,17 +19,20 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:462-464](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L462-L464)</ins>
+            └── <ins>[core.cljs:462-467](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L462-L467)</ins>
 </pre>
 
 ```clj
-(defn prim-seq [prim i]
-  (when-not (zero? (.-length prim))
-    (IndexedSeq. prim i)))
+(defn prim-seq
+  ([prim]
+     (prim-seq prim 0))
+  ([prim i]
+     (when-not (zero? (.-length prim))
+       (IndexedSeq. prim i))))
 ```
 
 
@@ -39,11 +43,11 @@ clojurescript @ r1211
  :ns "cljs.core",
  :name "prim-seq",
  :type "function",
- :signature ["[prim i]"],
- :source {:code "(defn prim-seq [prim i]\n  (when-not (zero? (.-length prim))\n    (IndexedSeq. prim i)))",
+ :signature ["[prim]" "[prim i]"],
+ :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when-not (zero? (.-length prim))\n       (IndexedSeq. prim i))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [462 464],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L462-L464"},
+          :lines [462 467],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L462-L467"},
  :full-name-encode "cljs.core_prim-seq",
  :history [["+" "0.0-927"]]}
 

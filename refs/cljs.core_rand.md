@@ -23,11 +23,11 @@ n (default 1) (exclusive).
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6101-6105](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6101-L6105)</ins>
+            └── <ins>[core.cljs:6113-6117](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6113-L6117)</ins>
 </pre>
 
 ```clj
@@ -40,11 +40,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1139-1142](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1139-L1142)</ins>
+            └── <ins>[core.cljs:1151-1154](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1151-L1154)</ins>
 </pre>
 
 ```clj
@@ -61,15 +61,15 @@ clojurescript @ r1211
  :signature ["[]" "[n]"],
  :shadowed-sources ({:code "(defn rand\n  ([]  (Math/random))\n  ([n] (* n (rand))))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [1139 1142],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1139-L1142"}),
+                     :lines [1151 1154],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1151-L1154"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand",
  :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (js* \"Math.random() * ~{n}\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6101 6105],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6101-L6105"},
+          :lines [6113 6117],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6113-L6117"},
  :full-name "cljs.core/rand",
  :clj-symbol "clojure.core/rand",
  :docstring "Returns a random floating point number between 0 (inclusive) and\nn (default 1) (exclusive)."}

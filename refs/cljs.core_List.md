@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1353-1392](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1353-L1392)</ins>
+            └── <ins>[core.cljs:1365-1404](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1365-L1404)</ins>
 </pre>
 
 ```clj
@@ -79,8 +79,8 @@ clojurescript @ r1211
  :signature ["[meta first rest count __hash]"],
  :source {:code "(deftype List [meta first rest count ^:mutable __hash]\n  IList\n  \n  Object\n  (toString [this]\n    (pr-str this))\n  \n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] rest)\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count) nil))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1353 1392],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1353-L1392"},
+          :lines [1365 1404],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1365-L1404"},
  :full-name-encode "cljs.core_List",
  :history [["+" "0.0-927"]]}
 

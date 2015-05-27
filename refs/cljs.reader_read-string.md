@@ -21,11 +21,11 @@ Reads one object from the string s
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:356-360](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L356-L360)</ins>
+            └── <ins>[reader.cljs:393-397](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L393-L397)</ins>
 </pre>
 
 ```clj
@@ -38,44 +38,17 @@ clojurescript @ r1211
 
 ---
 
- <pre>
-clojurescript @ r1211
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[reader.cljs:232-241](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L232-L241)</ins>
-</pre>
-
-```clj
-(defn read-string
-  [reader _]
-  (loop [buffer (gstring/StringBuffer.)
-         ch (read-char reader)]
-    (cond
-     (nil? ch) (reader-error reader "EOF while reading string")
-     (identical? "\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)
-                        (read-char reader))
-     (identical? \" ch) (. buffer (toString))
-     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))
-```
-
----
-
 ```clj
 {:ns "cljs.reader",
  :name "read-string",
  :signature ["[s]"],
- :shadowed-sources ({:code "(defn read-string\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading string\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
-                     :filename "clojurescript/src/cljs/cljs/reader.cljs",
-                     :lines [232 241],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L232-L241"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader_read-string",
  :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r true nil false)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [356 360],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L356-L360"},
+          :lines [393 397],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L393-L397"},
  :full-name "cljs.reader/read-string",
  :clj-symbol "clojure.core/read-string",
  :docstring "Reads one object from the string s"}

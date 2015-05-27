@@ -22,11 +22,11 @@ coll, else true.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1822-1825](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1822-L1825)</ins>
+            └── <ins>[core.cljs:1834-1837](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1834-L1837)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_not-every_QMARK_",
  :source {:code "(defn ^boolean not-every?\n  [pred coll] (not (every? pred coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1822 1825],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1822-L1825"},
+          :lines [1834 1837],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1834-L1837"},
  :full-name "cljs.core/not-every?",
  :clj-symbol "clojure.core/not-every?",
  :docstring "Returns false if (pred x) is logical true for every x in\ncoll, else true."}

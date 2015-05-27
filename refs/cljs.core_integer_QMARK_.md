@@ -21,11 +21,11 @@ Returns true if n is an integer.  Warning: returns true on underflow condition.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:858-862](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L858-L862)</ins>
+            └── <ins>[core.cljs:870-874](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L870-L874)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_integer_QMARK_",
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (js* \"(~{n} == ~{n}.toFixed())\")))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [858 862],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L858-L862"},
+          :lines [870 874],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L870-L874"},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer.  Warning: returns true on underflow condition."}

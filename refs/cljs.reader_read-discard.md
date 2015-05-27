@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:305-308](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L305-L308)</ins>
+            └── <ins>[reader.cljs:338-341](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L338-L341)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1211
  :signature ["[rdr _]"],
  :source {:code "(defn read-discard\n  [rdr _]\n  (read rdr true nil true)\n  rdr)",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [305 308],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L305-L308"},
+          :lines [338 341],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L338-L341"},
  :full-name-encode "cljs.reader_read-discard",
  :history [["+" "0.0-927"]]}
 

@@ -24,11 +24,11 @@ the ys from x and returns the result.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1020-1025](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1020-L1025)</ins>
+            └── <ins>[core.cljs:1032-1037](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1032-L1037)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:121-124](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L121-L124)</ins>
+            └── <ins>[core.clj:122-125](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L122-L125)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r1211
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro -\n  ([x] (list 'js* \"(- ~{})\" x))\n  ([x y] (list 'js* \"(~{} - ~{})\" x y))\n  ([x y & more] `(- (- ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [121 124],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L121-L124"}),
+                     :lines [122 125],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L122-L125"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_-",
  :source {:code "(defn -\n  ([x] (cljs.core/- x))\n  ([x y] (cljs.core/- x y))\n  ([x y & more] (reduce - (cljs.core/- x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1020 1025],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1020-L1025"},
+          :lines [1032 1037],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1032-L1037"},
  :full-name "cljs.core/-",
  :clj-symbol "clojure.core/-",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}

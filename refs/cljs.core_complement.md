@@ -22,11 +22,11 @@ has the same effects, if any, and returns the opposite truth value.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1853-1861](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1853-L1861)</ins>
+            └── <ins>[core.cljs:1865-1873](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1865-L1873)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_complement",
  :source {:code "(defn ^boolean complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1853 1861],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1853-L1861"},
+          :lines [1865 1873],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1865-L1873"},
  :full-name "cljs.core/complement",
  :clj-symbol "clojure.core/complement",
  :docstring "Takes a fn f and returns a fn that takes the same arguments as f,\nhas the same effects, if any, and returns the opposite truth value."}

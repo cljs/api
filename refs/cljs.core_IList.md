@@ -17,11 +17,11 @@ Marker interface indicating a persistent list
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:217-218](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L217-L218)</ins>
+            └── <ins>[core.cljs:217-218](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L217-L218)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r1211
  :source {:code "(defprotocol IList\n  \"Marker interface indicating a persistent list\")",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [217 218],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L217-L218"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L217-L218"},
  :full-name "cljs.core/IList",
  :docstring "Marker interface indicating a persistent list",
  :history [["+" "0.0-1211"]]}

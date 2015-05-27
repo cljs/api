@@ -21,11 +21,11 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:69-73](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L69-L73)</ins>
+            └── <ins>[core.cljs:69-73](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L69-L73)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1211
  :source {:code "(defn aclone\n  [array-like]\n  #_(goog.array.clone array-like)\n  (js* \"Array.prototype.slice.call(~{array-like})\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [69 73],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L69-L73"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L69-L73"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

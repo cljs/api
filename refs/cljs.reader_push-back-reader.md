@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L30-L32)</ins>
+            └── <ins>[reader.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L30-L32)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1211
  :source {:code "(defn push-back-reader [s]\n  \"Creates a StringPushbackReader from a given string\"\n  (StringPushbackReader. s (atom 0) (atom nil)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [30 32],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L30-L32"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L30-L32"},
  :full-name-encode "cljs.reader_push-back-reader",
  :history [["+" "0.0-927"]]}
 

@@ -18,16 +18,19 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:73-74](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L73-L74)</ins>
+            └── <ins>[reader.cljs:73-77](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L73-L77)</ins>
 </pre>
 
 ```clj
-(defn macro-terminating? [ch]
-  (and (not= ch "#") (not= ch \') (not= ch ":") (contains? macros ch)))
+(defn ^boolean macro-terminating? [ch]
+  (and (coercive-not= ch "#")
+       (coercive-not= ch \')
+       (coercive-not= ch ":")
+       (macros ch)))
 ```
 
 
@@ -39,10 +42,11 @@ clojurescript @ r1211
  :name "macro-terminating?",
  :type "function",
  :signature ["[ch]"],
- :source {:code "(defn macro-terminating? [ch]\n  (and (not= ch \"#\") (not= ch \\') (not= ch \":\") (contains? macros ch)))",
+ :return-type boolean,
+ :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (coercive-not= ch \"#\")\n       (coercive-not= ch \\')\n       (coercive-not= ch \":\")\n       (macros ch)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [73 74],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L73-L74"},
+          :lines [73 77],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L73-L77"},
  :full-name-encode "cljs.reader_macro-terminating_QMARK_",
  :history [["+" "0.0-927"]]}
 

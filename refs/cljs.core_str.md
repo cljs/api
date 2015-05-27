@@ -25,11 +25,11 @@ one arg, returns the concatenation of the str values of the args.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1257-1272](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1257-L1272)</ins>
+            └── <ins>[core.cljs:1269-1284](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1269-L1284)</ins>
 </pre>
 
 ```clj
@@ -52,11 +52,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:69-73](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L69-L73)</ins>
+            └── <ins>[core.clj:70-74](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L70-L74)</ins>
 </pre>
 
 ```clj
@@ -75,15 +75,15 @@ clojurescript @ r1211
  :signature ["[]" "[x]" "[x & ys]"],
  :shadowed-sources ({:code "(defmacro str [& xs]\n  (let [strs (->> (repeat (count xs) \"cljs.core.str(~{})\")\n                  (interpose \",\")\n                  (apply core/str))]\n   (concat (list 'js* (core/str \"[\" strs \"].join('')\")) xs)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [69 73],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L69-L73"}),
+                     :lines [70 74],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L70-L74"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_str",
  :source {:code "(defn str\n  ([] \"\")\n  ([x] (cond\n        (symbol? x) (. x (substring 2 (.-length x)))\n        (keyword? x) (str* \":\" (. x (substring 2 (.-length x))))\n        (nil? x) \"\"\n        :else (. x (toString))))\n  ([x & ys]\n     ((fn [sb more]\n        (if more\n          (recur (. sb  (append (str (first more)))) (next more))\n          (str* sb)))\n      (gstring/StringBuffer. (str x)) ys)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1257 1272],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1257-L1272"},
+          :lines [1269 1284],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1269-L1284"},
  :full-name "cljs.core/str",
  :clj-symbol "clojure.core/str",
  :docstring "With no args, returns the empty string. With one arg x, returns\nx.toString().  (str nil) returns the empty string. With more than\none arg, returns the concatenation of the str values of the args."}

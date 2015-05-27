@@ -24,11 +24,11 @@ else returns numerator divided by all of the denominators.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1034-1039](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1034-L1039)</ins>
+            └── <ins>[core.cljs:1046-1051](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1046-L1051)</ins>
 </pre>
 
 ```clj
@@ -42,11 +42,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:132-135](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L132-L135)</ins>
+            └── <ins>[core.clj:133-136](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L133-L136)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r1211
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro /\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [132 135],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L132-L135"}),
+                     :lines [133 136],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L133-L136"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__SLASH_",
  :source {:code "(defn /\n  ([x] (/ 1 x))\n  ([x y] (js* \"(~{x} / ~{y})\")) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce / (/ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1034 1039],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1034-L1039"},
+          :lines [1046 1051],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1046-L1051"},
  :full-name "cljs.core//",
  :clj-symbol "clojure.core//",
  :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}

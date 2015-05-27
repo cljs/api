@@ -21,11 +21,11 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6107-6109](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6107-L6109)</ins>
+            └── <ins>[core.cljs:6119-6121](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6119-L6121)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1144-1146](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1144-L1146)</ins>
+            └── <ins>[core.cljs:1156-1158](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1156-L1158)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1211
  :signature ["[n]"],
  :shadowed-sources ({:code "(defn rand-int\n  [n] (fix (rand n)))",
                      :filename "clojurescript/src/cljs/cljs/core.cljs",
-                     :lines [1144 1146],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1144-L1146"}),
+                     :lines [1156 1158],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1156-L1158"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_rand-int",
  :source {:code "(defn rand-int\n  [n] (js* \"Math.floor(Math.random() * ~{n})\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6107 6109],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6107-L6109"},
+          :lines [6119 6121],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L6119-L6121"},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

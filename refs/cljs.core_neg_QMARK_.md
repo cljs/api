@@ -21,11 +21,11 @@ Returns true if num is less than zero, else false
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1228-1230](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1228-L1230)</ins>
+            └── <ins>[core.cljs:1240-1242](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1240-L1242)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:174-175](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L174-L175)</ins>
+            └── <ins>[core.clj:175-176](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L175-L176)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1211
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro neg? [x]\n  `(< ~x 0))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [174 175],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L174-L175"}),
+                     :lines [175 176],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L175-L176"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_neg_QMARK_",
  :source {:code "(defn ^boolean neg?\n  [x] (cljs.core/neg? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1228 1230],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1228-L1230"},
+          :lines [1240 1242],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1240-L1242"},
  :full-name "cljs.core/neg?",
  :clj-symbol "clojure.core/neg?",
  :docstring "Returns true if num is less than zero, else false"}

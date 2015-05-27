@@ -24,11 +24,11 @@ accept 2 arguments, index and item.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1932-1943](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1932-L1943)</ins>
+            └── <ins>[core.cljs:1944-1955](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1944-L1955)</ins>
 </pre>
 
 ```clj
@@ -54,8 +54,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_map-indexed",
  :source {:code "(defn map-indexed\n  [f coll]\n  (let [mapi (fn mpi [idx coll]\n               (lazy-seq\n                (when-let [s (seq coll)]\n                  (cons (f idx (first s))\n                        (mpi (inc idx) (rest s))))))]\n    (mapi 0 coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1932 1943],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1932-L1943"},
+          :lines [1944 1955],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1944-L1955"},
  :full-name "cljs.core/map-indexed",
  :clj-symbol "clojure.core/map-indexed",
  :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item."}

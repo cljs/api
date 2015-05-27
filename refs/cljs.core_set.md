@@ -21,11 +21,11 @@ Returns a set of the distinct elements of coll.
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5243-5250](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5243-L5250)</ins>
+            └── <ins>[core.cljs:5255-5262](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5255-L5262)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1211
  :full-name-encode "cljs.core_set",
  :source {:code "(defn set\n  [coll]\n  (loop [in (seq coll)\n         out (transient cljs.core.PersistentHashSet/EMPTY)]\n    (if (seq in)\n      (recur (next in) (conj! out (first in)))\n      (persistent! out))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5243 5250],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5243-L5250"},
+          :lines [5255 5262],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5255-L5262"},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:297-299](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L297-L299)</ins>
+            └── <ins>[reader.cljs:330-332](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L330-L332)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1211
  :signature ["[rdr _]"],
  :source {:code "(defn read-set\n  [rdr _]\n  (set (read-delimited-list \"}\" rdr true)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [297 299],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L297-L299"},
+          :lines [330 332],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L330-L332"},
  :full-name-encode "cljs.reader_read-set",
  :history [["+" "0.0-927"]]}
 

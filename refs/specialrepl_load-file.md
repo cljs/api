@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:138-147](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl.clj#L138-L147)</ins>
+            └── <ins>[repl.clj:138-147](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L138-L147)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1211
  :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (@comp/namespaces ns-name)\n                  (swap! comp/namespaces assoc ns-name {:name ns-name}))\n                (set! comp/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :filename "clojurescript/src/clj/cljs/repl.clj",
           :lines [138 147],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl.clj#L138-L147"},
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L138-L147"},
  :full-name-encode "specialrepl_load-file",
  :clj-symbol "clojure.core/load-file",
  :history [["+" "0.0-927"]]}

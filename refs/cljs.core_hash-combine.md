@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1309-1313](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1309-L1313)</ins>
+            └── <ins>[core.cljs:1321-1325](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1321-L1325)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1211
  :signature ["[seed hash]"],
  :source {:code "(defn hash-combine [seed hash]\n  ; a la boost\n  (bit-xor seed (+ hash 0x9e3779b9\n                   (bit-shift-left seed 6)\n                   (bit-shift-right seed 2))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1309 1313],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1309-L1313"},
+          :lines [1321 1325],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1321-L1325"},
  :full-name-encode "cljs.core_hash-combine",
  :history [["+" "0.0-927"]]}
 

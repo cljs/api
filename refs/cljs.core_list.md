@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1447-1448](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1447-L1448)</ins>
+            └── <ins>[core.cljs:1459-1460](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1211
  :signature ["[& items]"],
  :source {:code "(defn list [& items]\n  (reduce conj () (reverse items)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1447 1448],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1447-L1448"},
+          :lines [1459 1460],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460"},
  :full-name-encode "cljs.core_list",
  :clj-symbol "clojure.core/list",
  :history [["+" "0.0-927"]]}

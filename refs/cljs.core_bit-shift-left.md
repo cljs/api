@@ -21,11 +21,11 @@ Bitwise shift left
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1188-1190](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1188-L1190)</ins>
+            └── <ins>[core.cljs:1200-1202](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1200-L1202)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1211
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:223-224](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L223-L224)</ins>
+            └── <ins>[core.clj:224-225](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L224-L225)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1211
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-shift-left [x n]\n  (list 'js* \"(~{} << ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [223 224],
-                     :link "https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L223-L224"}),
+                     :lines [224 225],
+                     :link "https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L224-L225"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-left",
  :source {:code "(defn bit-shift-left\n  [x n] (cljs.core/bit-shift-left x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1188 1190],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1188-L1190"},
+          :lines [1200 1202],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1200-L1202"},
  :full-name "cljs.core/bit-shift-left",
  :clj-symbol "clojure.core/bit-shift-left",
  :docstring "Bitwise shift left"}

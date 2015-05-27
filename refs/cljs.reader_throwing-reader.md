@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:282-285](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L282-L285)</ins>
+            └── <ins>[reader.cljs:315-318](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L315-L318)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1211
  :signature ["[msg]"],
  :source {:code "(defn throwing-reader\n  [msg]\n  (fn [rdr _]\n    (reader-error rdr msg)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
-          :lines [282 285],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L282-L285"},
+          :lines [315 318],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L315-L318"},
  :full-name-encode "cljs.reader_throwing-reader",
  :history [["+" "0.0-927"]]}
 

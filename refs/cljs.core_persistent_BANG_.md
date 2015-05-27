@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1724-1725](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1724-L1725)</ins>
+            └── <ins>[core.cljs:1736-1737](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1736-L1737)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1211
  :signature ["[tcoll]"],
  :source {:code "(defn persistent! [tcoll]\n  (-persistent! tcoll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1724 1725],
-          :link "https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1724-L1725"},
+          :lines [1736 1737],
+          :link "https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1736-L1737"},
  :full-name-encode "cljs.core_persistent_BANG_",
  :clj-symbol "clojure.core/persistent!",
  :history [["+" "0.0-1211"]]}
