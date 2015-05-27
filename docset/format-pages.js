@@ -17,7 +17,7 @@ function fixPage() {
   document.body.innerHTML = file.outerHTML;
 
   // remove the file header
-  document.querySelector('.file-header').innerHTML = "";
+  document.querySelector('.file-header').outerHTML = "";
 
   // set title to first header text
   // (replace any redundant mentions of ClojureScript)
