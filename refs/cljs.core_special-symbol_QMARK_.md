@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7181-7185](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7181-L7185)</ins>
+            └── <ins>[core.cljs:7283-7287](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7283-L7287)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_special-symbol_QMARK_",
  :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try*\n       recur new set! ns deftype* defrecord* . js* & quote}\n    x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7181 7185],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7181-L7185"},
+          :lines [7283 7287],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7283-L7287"},
  :full-name "cljs.core/special-symbol?",
  :clj-symbol "clojure.core/special-symbol?"}
 

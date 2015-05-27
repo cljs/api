@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:147-149](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/dom.cljs#L147-L149)</ins>
+                └── <ins>[dom.cljs:147-149](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/dom.cljs#L147-L149)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1803
  :source {:code "(defn click-element\n  [e]\n  (.click (ensure-element e) ()))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [147 149],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/dom.cljs#L147-L149"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/dom.cljs#L147-L149"},
  :full-name-encode "clojure.browser.dom_click-element",
  :history [["+" "0.0-927"]]}
 

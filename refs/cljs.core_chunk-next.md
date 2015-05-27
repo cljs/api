@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2137-2140](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2137-L2140)</ins>
+            └── <ins>[core.cljs:2195-2198](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2195-L2198)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1803
  :signature ["[s]"],
  :source {:code "(defn chunk-next [s]\n  (if (satisfies? IChunkedNext s false)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2137 2140],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2137-L2140"},
+          :lines [2195 2198],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2195-L2198"},
  :full-name-encode "cljs.core_chunk-next",
  :history [["+" "0.0-1424"]]}
 

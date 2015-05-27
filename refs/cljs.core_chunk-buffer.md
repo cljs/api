@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2037-2038](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2037-L2038)</ins>
+            └── <ins>[core.cljs:2091-2092](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2091-L2092)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1803
  :signature ["[capacity]"],
  :source {:code "(defn chunk-buffer [capacity]\n  (ChunkBuffer. (make-array capacity) 0))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2037 2038],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2037-L2038"},
+          :lines [2091 2092],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2091-L2092"},
  :full-name-encode "cljs.core_chunk-buffer",
  :history [["+" "0.0-1424"]]}
 

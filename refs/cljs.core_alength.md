@@ -21,11 +21,11 @@ Returns the length of the array. Works on arrays of all types.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:140-143](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L140-L143)</ins>
+            └── <ins>[core.cljs:151-154](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L151-L154)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1803
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1172-1173](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1172-L1173)</ins>
+            └── <ins>[core.clj:1181-1182](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1181-L1182)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1803
  :signature ["[array]"],
  :shadowed-sources ({:code "(defmacro alength [a]\n  (list 'js* \"~{}.length\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1172 1173],
-                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1172-L1173"}),
+                     :lines [1181 1182],
+                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1181-L1182"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_alength",
  :source {:code "(defn alength\n  [array]\n  (cljs.core/alength array))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [140 143],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L140-L143"},
+          :lines [151 154],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L151-L154"},
  :full-name "cljs.core/alength",
  :clj-symbol "clojure.core/alength",
  :docstring "Returns the length of the array. Works on arrays of all types."}

@@ -10,6 +10,23 @@
 <th>Compiler API</th>
 </thead>
 <tr>
+<td>__[0.0-1806](https://github.com/cljsinfo/api-refs/tree/0.0-1806)__</td>
+<td>2013-04-30</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.0-2029-2</kbd></td>
+<td>
+<a href="#user-content-00-1806-library-api">
+<img valign="middle" src="https://img.shields.io/badge/+-2-brightgreen.svg"> 
+</a>
+</td>
+<td>
+<a href="#user-content-00-1806-compiler-api">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1803](https://github.com/cljsinfo/api-refs/tree/0.0-1803)__</td>
 <td>2013-05-04</td>
 <td><kbd>1.5.1</kbd></td>
@@ -332,6 +349,30 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1806
+
+<a name="00-1806-library-api"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/pr-str\*](refs/cljs.core_pr-str_STAR_.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/with-redefs](refs/cljs.core_with-redefs.md)</samp></td>
+</tr>
+</table>
+
+<a name="00-1806-compiler-api"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1803
@@ -1991,7 +2032,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/\*flush-on-newline\*](refs/cljs.core__STAR_flush-on-newline_STAR_.md)</samp></td>
 </tr>
@@ -2003,7 +2044,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/\*print-dup\*](refs/cljs.core__STAR_print-dup_STAR_.md)</samp></td>
 </tr>
@@ -2015,13 +2056,13 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/\*print-meta\*](refs/cljs.core__STAR_print-meta_STAR_.md)</samp></td>
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/\*print-readably\*](refs/cljs.core__STAR_print-readably_STAR_.md)</samp></td>
 </tr>

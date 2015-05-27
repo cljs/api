@@ -19,11 +19,11 @@ Returns a new object map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5539-5550](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5539-L5550)</ins>
+            └── <ins>[core.cljs:5645-5656](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5645-L5656)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1803
  :signature ["[& keyvals]"],
  :source {:code "(defn obj-map\n  [& keyvals]\n  (let [ks  (array)\n        obj (js-obj)]\n    (loop [kvs (seq keyvals)]\n      (if kvs\n        (do (.push ks (first kvs))\n            (aset obj (first kvs) (second kvs))\n            (recur (nnext kvs)))\n        (cljs.core.ObjMap/fromObject ks obj)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5539 5550],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5539-L5550"},
+          :lines [5645 5656],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5645-L5656"},
  :full-name-encode "cljs.core_obj-map",
  :history [["+" "0.0-1443"]]}
 

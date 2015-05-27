@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:320-321](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L320-L321)</ins>
+            └── <ins>[core.clj:320-321](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L320-L321)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1803
  :source {:code "(defmacro unchecked-subtract-int\n  ([& xs] `(- ~@xs)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [320 321],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L320-L321"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L320-L321"},
  :full-name-encode "cljs.core_unchecked-subtract-int",
  :clj-symbol "clojure.core/unchecked-subtract-int",
  :history [["+" "0.0-1798"]]}

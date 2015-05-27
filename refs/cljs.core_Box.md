@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4088-4088](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L4088-L4088)</ins>
+            └── <ins>[core.cljs:4174-4174](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L4174-L4174)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1803
  :signature ["[val]"],
  :source {:code "(deftype Box [^:mutable val])",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [4088 4088],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L4088-L4088"},
+          :lines [4174 4174],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L4174-L4174"},
  :full-name-encode "cljs.core_Box",
  :history [["+" "0.0-1424"]]}
 

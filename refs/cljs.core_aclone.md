@@ -21,11 +21,11 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:109-112](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L109-L112)</ins>
+            └── <ins>[core.cljs:120-123](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L120-L123)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1803
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1175-1176](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1175-L1176)</ins>
+            └── <ins>[core.clj:1184-1185](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1184-L1185)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1803
  :signature ["[array-like]"],
  :shadowed-sources ({:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1175 1176],
-                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1175-L1176"}),
+                     :lines [1184 1185],
+                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1184-L1185"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aclone",
  :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [109 112],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L109-L112"},
+          :lines [120 123],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L120-L123"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

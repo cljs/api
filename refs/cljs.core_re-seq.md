@@ -21,11 +21,11 @@ Returns a lazy sequence of successive matches of re in s.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6196-6203](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6196-L6203)</ins>
+            └── <ins>[core.cljs:6314-6321](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6314-L6321)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_re-seq",
  :source {:code "(defn re-seq\n  [re s]\n  (let [match-data (re-find re s)\n        match-idx (.search s re)\n        match-str (if (coll? match-data) (first match-data) match-data)\n        post-match (subs s (+ match-idx (count match-str)))]\n    (when match-data (lazy-seq (cons match-data (re-seq re post-match))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6196 6203],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6196-L6203"},
+          :lines [6314 6321],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6314-L6321"},
  :full-name "cljs.core/re-seq",
  :clj-symbol "clojure.core/re-seq",
  :docstring "Returns a lazy sequence of successive matches of re in s."}

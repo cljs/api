@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2312-2313](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2312-L2313)</ins>
+            └── <ins>[core.cljs:2370-2371](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2370-L2371)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1803
  :signature ["[tcoll key val]"],
  :source {:code "(defn assoc! [tcoll key val]\n  (-assoc! tcoll key val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2312 2313],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2312-L2313"},
+          :lines [2370 2371],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2370-L2371"},
  :full-name-encode "cljs.core_assoc_BANG_",
  :clj-symbol "clojure.core/assoc!",
  :history [["+" "0.0-1211"]]}

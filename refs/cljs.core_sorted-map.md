@@ -22,11 +22,11 @@ Returns a new sorted map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5552-5559](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5552-L5559)</ins>
+            └── <ins>[core.cljs:5658-5665](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5658-L5665)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_sorted-map",
  :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap/EMPTY]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5552 5559],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5552-L5559"},
+          :lines [5658 5665],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5658-L5665"},
  :full-name "cljs.core/sorted-map",
  :clj-symbol "clojure.core/sorted-map",
  :docstring "keyval => key val\nReturns a new sorted map with supplied mappings."}

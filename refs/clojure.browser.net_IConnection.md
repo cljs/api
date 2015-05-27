@@ -17,12 +17,12 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:32-44](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/net.cljs#L32-L44)</ins>
+                └── <ins>[net.cljs:32-44](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/net.cljs#L32-L44)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1803
  :source {:code "(defprotocol IConnection\n  (connect\n    [this]\n    [this opt1]\n    [this opt1 opt2]\n    [this opt1 opt2 opt3])\n  (transmit\n    [this opt]\n    [this opt opt2]\n    [this opt opt2 opt3]\n    [this opt opt2 opt3 opt4]\n    [this opt opt2 opt3 opt4 opt5])\n  (close [this]))",
           :filename "clojurescript/src/cljs/clojure/browser/net.cljs",
           :lines [32 44],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/net.cljs#L32-L44"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/net.cljs#L32-L44"},
  :methods [{:name "connect",
             :signature ["[this]"
                         "[this opt1]"

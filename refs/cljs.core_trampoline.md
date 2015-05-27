@@ -28,11 +28,11 @@ after trampoline returns.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6802-6816](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6802-L6816)</ins>
+            └── <ins>[core.cljs:6904-6918](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6904-L6918)</ins>
 </pre>
 
 ```clj
@@ -58,8 +58,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_trampoline",
  :source {:code "(defn trampoline\n  ([f]\n     (let [ret (f)]\n       (if (fn? ret)\n         (recur ret)\n         ret)))\n  ([f & args]\n     (trampoline #(apply f args))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6802 6816],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6802-L6816"},
+          :lines [6904 6918],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6904-L6918"},
  :full-name "cljs.core/trampoline",
  :clj-symbol "clojure.core/trampoline",
  :docstring "trampoline can be used to convert algorithms requiring mutual\nrecursion without stack consumption. Calls f with supplied args, if\nany. If f returns a fn, calls that fn with no arguments, and\ncontinues to repeat, until the return value is not a fn, then\nreturns that non-fn value. Note that if you want to return a fn as a\nfinal value, you must wrap it in some data structure and unpack it\nafter trampoline returns."}

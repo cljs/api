@@ -23,11 +23,11 @@ printing calls.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1329-1337](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1329-L1337)</ins>
+            └── <ins>[core.clj:1338-1346](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1338-L1346)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_with-out-str",
  :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string/StringBuffer.)]\n     (binding [cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [1329 1337],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1329-L1337"},
+          :lines [1338 1346],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1338-L1346"},
  :full-name "cljs.core/with-out-str",
  :clj-symbol "clojure.core/with-out-str",
  :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}

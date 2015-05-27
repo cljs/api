@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1542-1542](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1542-L1542)</ins>
+            └── <ins>[core.cljs:1580-1580](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1580-L1580)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1803
  :signature ["[x]"],
  :source {:code "(defn longs [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1542 1542],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1542-L1542"},
+          :lines [1580 1580],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1580-L1580"},
  :full-name-encode "cljs.core_longs",
  :clj-symbol "clojure.core/longs",
  :history [["+" "0.0-1798"]]}

@@ -22,11 +22,11 @@ that would apply to that value, or nil if none apply and no default
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7109-7112](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7109-L7112)</ins>
+            └── <ins>[core.cljs:7211-7214](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7211-L7214)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_get-method",
  :source {:code "(defn get-method\n  [multifn dispatch-val] (-get-method multifn dispatch-val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7109 7112],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7109-L7112"},
+          :lines [7211 7214],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7211-L7214"},
  :full-name "cljs.core/get-method",
  :clj-symbol "clojure.core/get-method",
  :docstring "Given a multimethod and a dispatch value, returns the dispatch fn\nthat would apply to that value, or nil if none apply and no default"}

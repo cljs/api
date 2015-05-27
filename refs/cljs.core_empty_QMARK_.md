@@ -22,11 +22,11 @@ Please use the idiom (seq x) rather than (not (empty? x))
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1004-1008](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1004-L1008)</ins>
+            └── <ins>[core.cljs:1042-1046](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1042-L1046)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_empty_QMARK_",
  :source {:code "(defn ^boolean empty?\n  [coll] (or (nil? coll)\n             (not (seq coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1004 1008],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1004-L1008"},
+          :lines [1042 1046],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1042-L1046"},
  :full-name "cljs.core/empty?",
  :clj-symbol "clojure.core/empty?",
  :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))"}

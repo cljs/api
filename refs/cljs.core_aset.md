@@ -21,11 +21,11 @@ Sets the value at the index.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:135-138](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L135-L138)</ins>
+            └── <ins>[core.cljs:146-149](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L146-L149)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1803
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:261-262](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L261-L262)</ins>
+            └── <ins>[core.clj:261-262](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L261-L262)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1803
  :shadowed-sources ({:code "(defmacro aset [a i v]\n  (list 'js* \"(~{}[~{}] = ~{})\" a i v))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [261 262],
-                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L261-L262"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L261-L262"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aset",
  :source {:code "(defn aset\n  [array i val]\n  (cljs.core/aset array i val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [135 138],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L135-L138"},
+          :lines [146 149],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L146-L149"},
  :full-name "cljs.core/aset",
  :clj-symbol "clojure.core/aset",
  :docstring "Sets the value at the index."}

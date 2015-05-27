@@ -23,12 +23,12 @@ must return an identity value for it.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:235-242](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L235-L242)</ins>
+                └── <ins>[reducers.cljs:235-242](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L235-L242)</ins>
 </pre>
 
 ```clj
@@ -52,7 +52,7 @@ clojurescript @ r1803
  :source {:code "(defn monoid\n  [op ctor]\n  (fn m\n    ([] (ctor))\n    ([a b] (op a b))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [235 242],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L235-L242"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L235-L242"},
  :full-name "clojure.core.reducers/monoid",
  :clj-symbol "clojure.core.reducers/monoid",
  :docstring "Builds a combining fn out of the supplied operator and identity\nconstructor. op must be associative and ctor called with no args\nmust return an identity value for it."}

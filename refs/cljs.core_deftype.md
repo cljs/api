@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:670-690](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L670-L690)</ins>
+            └── <ins>[core.clj:670-690](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L670-L690)</ins>
 </pre>
 
 ```clj
@@ -64,7 +64,7 @@ clojurescript @ r1803
  :source {:code "(defmacro deftype [t fields & impls]\n  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks &env t impls)\n        protocols (collect-protocols impls &env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n         (extend-type ~t ~@(dt->et t impls fields true))\n         ~t)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opts#] (-write writer# ~(core/str r))))\n         ~t))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [670 690],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L670-L690"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L670-L690"},
  :full-name-encode "cljs.core_deftype",
  :clj-symbol "clojure.core/deftype",
  :history [["+" "0.0-927"]]}

@@ -19,11 +19,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1055-1059](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1055-L1059)</ins>
+            └── <ins>[core.cljs:1093-1097](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1093-L1097)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1803
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1163-1170](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1163-L1170)</ins>
+            └── <ins>[core.clj:1172-1179](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1172-L1179)</ins>
 </pre>
 
 ```clj
@@ -66,13 +66,13 @@ clojurescript @ r1803
  :signature ["[]" "[& keyvals]"],
  :source {:code "(defn js-obj\n  ([]\n     (cljs.core/js-obj))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1055 1059],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1055-L1059"},
+          :lines [1093 1097],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1093-L1097"},
  :full-name-encode "cljs.core_js-obj",
  :shadowed-sources ({:code "(defmacro js-obj [& rest]\n  (let [kvs-str (->> (repeat \"~{}:~{}\")\n                     (take (quot (count rest) 2))\n                     (interpose \",\")\n                     (apply core/str))]\n    (concat\n     (list 'js* (core/str \"{\" kvs-str \"}\"))\n     rest)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1163 1170],
-                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1163-L1170"}),
+                     :lines [1172 1179],
+                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1172-L1179"}),
  :history [["+" "0.0-927"]]}
 
 ```

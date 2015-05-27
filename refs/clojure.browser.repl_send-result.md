@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:38-39](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/repl.cljs#L38-L39)</ins>
+                └── <ins>[repl.cljs:38-39](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/repl.cljs#L38-L39)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1803
  :source {:code "(defn send-result [connection url data]\n  (net/transmit connection url \"POST\" data nil 0))",
           :filename "clojurescript/src/cljs/clojure/browser/repl.cljs",
           :lines [38 39],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/browser/repl.cljs#L38-L39"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/repl.cljs#L38-L39"},
  :full-name-encode "clojure.browser.repl_send-result",
  :history [["+" "0.0-927"]]}
 

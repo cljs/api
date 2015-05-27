@@ -2,7 +2,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/\*print-meta\*</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-meta*)
@@ -20,15 +20,15 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6371-6371](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6371-L6371)</ins>
+            └── <ins>[core.cljs:32-32](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L32-L32)</ins>
 </pre>
 
 ```clj
-(def *print-meta* false)
+(def ^:dynamic *print-meta* false)
 ```
 
 
@@ -38,11 +38,11 @@ clojurescript @ r1803
 {:full-name "cljs.core/*print-meta*",
  :ns "cljs.core",
  :name "*print-meta*",
- :type "var",
- :source {:code "(def *print-meta* false)",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic *print-meta* false)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6371 6371],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6371-L6371"},
+          :lines [32 32],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L32-L32"},
  :full-name-encode "cljs.core__STAR_print-meta_STAR_",
  :clj-symbol "clojure.core/*print-meta*",
  :history [["+" "0.0-927"]]}

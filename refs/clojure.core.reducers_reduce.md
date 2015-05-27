@@ -24,12 +24,12 @@ Like core/reduce except:
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:20-30](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L20-L30)</ins>
+                └── <ins>[reducers.cljs:20-30](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L20-L30)</ins>
 </pre>
 
 ```clj
@@ -56,7 +56,7 @@ clojurescript @ r1803
  :source {:code "(defn reduce\n  ([f coll] (reduce f (f) coll))\n  ([f init coll]\n     (if (map? coll)\n       (-kv-reduce coll f init)\n       (if-not (nil? coll)\n         (-reduce coll f init)\n         init))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [20 30],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L20-L30"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L20-L30"},
  :full-name "clojure.core.reducers/reduce",
  :clj-symbol "clojure.core.reducers/reduce",
  :docstring "Like core/reduce except:\n  When init is not provided, (f) is used.\n  Maps are reduced with reduce-kv"}

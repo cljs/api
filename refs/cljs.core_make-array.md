@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:120-124](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L120-L124)</ins>
+            └── <ins>[core.cljs:131-135](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L131-L135)</ins>
 </pre>
 
 ```clj
@@ -41,11 +41,11 @@ clojurescript @ r1803
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1159-1161](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1159-L1161)</ins>
+            └── <ins>[core.clj:1168-1170](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1168-L1170)</ins>
 </pre>
 
 ```clj
@@ -62,15 +62,15 @@ clojurescript @ r1803
  :signature ["[size]" "[type size]"],
  :shadowed-sources ({:code "(defmacro make-array\n  [size]\n  `(js/Array. ~size))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1159 1161],
-                     :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1159-L1161"}),
+                     :lines [1168 1170],
+                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1168-L1170"}),
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core_make-array",
  :source {:code "(defn make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [120 124],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L120-L124"},
+          :lines [131 135],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L131-L135"},
  :full-name "cljs.core/make-array",
  :clj-symbol "clojure.core/make-array"}
 

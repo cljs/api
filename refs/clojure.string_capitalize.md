@@ -22,11 +22,11 @@ characters to lower-case.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:63-70](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/string.cljs#L63-L70)</ins>
+            └── <ins>[string.cljs:63-70](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/string.cljs#L63-L70)</ins>
 </pre>
 
 ```clj
@@ -51,7 +51,7 @@ clojurescript @ r1803
  :source {:code "(defn capitalize\n  [s]\n  (if (< (count s) 2)\n    (upper-case s)\n    (str (upper-case (subs s 0 1))\n         (lower-case (subs s 1)))))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [63 70],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/string.cljs#L63-L70"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/string.cljs#L63-L70"},
  :full-name "clojure.string/capitalize",
  :clj-symbol "clojure.string/capitalize",
  :docstring "Converts first character of the string to upper-case, all other\ncharacters to lower-case."}

@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2064-2070](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2064-L2070)</ins>
+            └── <ins>[core.cljs:2118-2124](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2118-L2124)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1803
  :signature ["[arr]" "[arr off]" "[arr off end]"],
  :source {:code "(defn array-chunk\n  ([arr]\n     (ArrayChunk. arr 0 (alength arr)))\n  ([arr off]\n     (ArrayChunk. arr off (alength arr)))\n  ([arr off end]\n     (ArrayChunk. arr off end)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2064 2070],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2064-L2070"},
+          :lines [2118 2124],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2118-L2124"},
  :full-name-encode "cljs.core_array-chunk",
  :history [["+" "0.0-1424"]]}
 

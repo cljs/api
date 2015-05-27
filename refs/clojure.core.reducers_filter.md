@@ -23,12 +23,12 @@ Retains values in the reduction of coll for which (pred val)
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:108-119](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L108-L119)</ins>
+                └── <ins>[reducers.cljs:108-119](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L108-L119)</ins>
 </pre>
 
 ```clj
@@ -59,7 +59,7 @@ clojurescript @ r1803
  :source {:code "(defcurried filter\n  \"Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               ret))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [108 119],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/core/reducers.cljs#L108-L119"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L108-L119"},
  :full-name "clojure.core.reducers/filter",
  :clj-symbol "clojure.core.reducers/filter",
  :docstring "Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable."}

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:94-96](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L94-L96)</ins>
+            └── <ins>[core.cljs:105-107](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L105-L107)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1803
  :signature ["[x]"],
  :source {:code "(defn type [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [94 96],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L94-L96"},
+          :lines [105 107],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L105-L107"},
  :full-name-encode "cljs.core_type",
  :clj-symbol "clojure.core/type",
  :history [["+" "0.0-971"]]}

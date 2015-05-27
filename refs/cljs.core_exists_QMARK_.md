@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:236-237](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L236-L237)</ins>
+            └── <ins>[core.clj:236-237](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L236-L237)</ins>
 </pre>
 
 ```clj
@@ -42,7 +42,7 @@ clojurescript @ r1803
  :source {:code "(defmacro exists? [x]\n  (bool-expr (list 'js* \"typeof ~{} !== 'undefined'\" x)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [236 237],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L236-L237"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L236-L237"},
  :full-name-encode "cljs.core_exists_QMARK_",
  :history [["+" "0.0-1798"]]}
 

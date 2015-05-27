@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:241-242](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L241-L242)</ins>
+            └── <ins>[core.cljs:252-253](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L252-L253)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1803
  :full-name-encode "cljs.core_IWithMeta",
  :source {:code "(defprotocol IWithMeta\n  (-with-meta [o meta]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [241 242],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L241-L242"},
+          :lines [252 253],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L252-L253"},
  :methods [{:name "-with-meta",
             :signature ["[o meta]"],
             :docstring nil}],

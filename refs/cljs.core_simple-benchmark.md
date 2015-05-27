@@ -23,11 +23,11 @@ using pr-str in any case.
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1284-1300](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1284-L1300)</ins>
+            └── <ins>[core.clj:1293-1309](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1293-L1309)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r1803
  :signature ["[bindings expr iterations & {:keys [print-fn], :or {print-fn (quote println)}}]"],
  :source {:code "(defmacro simple-benchmark\n  [bindings expr iterations & {:keys [print-fn] :or {print-fn 'println}}]\n  (let [bs-str   (pr-str bindings)\n        expr-str (pr-str expr)]\n    `(let ~bindings\n       (let [start#   (.getTime (js/Date.))\n             ret#     (dotimes [_# ~iterations] ~expr)\n             end#     (.getTime (js/Date.))\n             elapsed# (- end# start#)]\n         (~print-fn (str ~bs-str \", \" ~expr-str \", \"\n                         ~iterations \" runs, \" elapsed# \" msecs\"))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [1284 1300],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L1284-L1300"},
+          :lines [1293 1309],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L1293-L1309"},
  :full-name-encode "cljs.core_simple-benchmark",
  :history [["+" "0.0-1236"]]}
 

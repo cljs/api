@@ -22,11 +22,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:147-151](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L147-L151)</ins>
+            └── <ins>[core.cljs:158-162](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L158-L162)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1803
  :signature ["[aseq]" "[type aseq]"],
  :source {:code "(defn into-array\n  ([aseq]\n     (into-array nil aseq))\n  ([type aseq]\n     (reduce (fn [a x] (.push a x) a) (array) aseq)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [147 151],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L147-L151"},
+          :lines [158 162],
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L158-L162"},
  :full-name-encode "cljs.core_into-array",
  :clj-symbol "clojure.core/into-array",
  :history [["+" "0.0-1211"]]}

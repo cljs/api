@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:39-46](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L39-L46)</ins>
+            └── <ins>[core.clj:39-46](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L39-L46)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1803
  :source {:code "(defmacro import-macros [ns [& vars]]\n  (core/let [ns (find-ns ns)\n             vars (map #(ns-resolve ns %) vars)\n             syms (map (core/fn [^clojure.lang.Var v] (core/-> v .sym (with-meta {:macro true}))) vars)\n             defs (map (core/fn [sym var]\n                                `(def ~sym (deref ~var))) syms vars)]\n            `(do ~@defs\n                 :imported)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [39 46],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L39-L46"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L39-L46"},
  :full-name-encode "cljs.core_import-macros",
  :history [["+" "0.0-927"]]}
 

@@ -21,11 +21,11 @@ Returns a seq of the left siblings of this loc
 ---
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:87-90](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/zip.cljs#L87-L90)</ins>
+            └── <ins>[zip.cljs:87-90](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/zip.cljs#L87-L90)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1803
  :source {:code "(defn lefts\n  [loc]\n    (seq (:l (loc 1))))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [87 90],
-          :link "https://github.com/clojure/clojurescript/blob/r1803/src/cljs/clojure/zip.cljs#L87-L90"},
+          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/zip.cljs#L87-L90"},
  :full-name "clojure.zip/lefts",
  :clj-symbol "clojure.zip/lefts",
  :docstring "Returns a seq of the left siblings of this loc"}
