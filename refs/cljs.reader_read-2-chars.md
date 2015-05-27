@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:175-179](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L175-L179)</ins>
+            └── <ins>[reader.cljs:175-179](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L175-L179)</ins>
 </pre>
 
 ```clj
@@ -45,7 +45,7 @@ clojurescript @ r1806
  :source {:code "(defn read-2-chars [reader]\n  (.toString\n    (gstring/StringBuffer.\n      (read-char reader)\n      (read-char reader))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [175 179],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L175-L179"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L175-L179"},
  :full-name-encode "cljs.reader_read-2-chars",
  :history [["+" "0.0-1424"]]}
 

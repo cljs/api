@@ -21,11 +21,11 @@ Bitwise exclusive or
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1613-1615](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1613-L1615)</ins>
+            └── <ins>[core.cljs:1619-1621](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1619-L1621)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:416-418](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L416-L418)</ins>
+            └── <ins>[core.clj:421-423](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L421-L423)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1806
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-xor\n  ([x y] (list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [416 418],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L416-L418"}),
+                     :lines [421 423],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L421-L423"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-xor",
  :source {:code "(defn bit-xor\n  [x y] (cljs.core/bit-xor x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1613 1615],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1613-L1615"},
+          :lines [1619 1621],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1619-L1621"},
  :full-name "cljs.core/bit-xor",
  :clj-symbol "clojure.core/bit-xor",
  :docstring "Bitwise exclusive or"}

@@ -22,11 +22,11 @@ Returns true if x satisfies the protocol
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:829-853](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L829-L853)</ins>
+            └── <ins>[core.clj:836-860](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L836-L860)</ins>
 </pre>
 
 ```clj
@@ -68,8 +68,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_satisfies_QMARK_",
  :source {:code "(defmacro satisfies?\n  ([psym x] `(satisfies? ~psym ~x true))\n  ([psym x check-native]\n    (let [p          (:name\n                       (cljs.analyzer/resolve-var\n                         (dissoc &env :locals) psym))\n          prefix     (protocol-prefix p)\n          xsym       (bool-expr (gensym))\n          [part bit] (fast-path-protocols p)\n          msym       (symbol\n                       (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n      `(let [~xsym ~x]\n         (if ~xsym\n           (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             ~(if check-native\n                `(if (coercive-not (. ~xsym ~msym))\n                   (cljs.core/type_satisfies_ ~psym ~xsym)\n                   false)\n                false))\n           ~(if check-native\n              `(cljs.core/type_satisfies_ ~psym ~xsym)\n              false))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [829 853],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L829-L853"},
+          :lines [836 860],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L836-L860"},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

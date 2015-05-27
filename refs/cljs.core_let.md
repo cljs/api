@@ -25,11 +25,11 @@ therein.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:127-137](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L127-L137)</ins>
+            └── <ins>[core.clj:127-137](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L127-L137)</ins>
 </pre>
 
 ```clj
@@ -54,7 +54,7 @@ clojurescript @ r1806
  :source {:code "(defmacro let\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (even? (count bindings)) \"an even number of forms in binding vector\")\n  `(let* ~(destructure bindings) ~@body))",
           :filename "clojurescript/src/clj/cljs/core.clj",
           :lines [127 137],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L127-L137"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L127-L137"},
  :full-name "cljs.core/let",
  :clj-symbol "clojure.core/let",
  :docstring "binding => binding-form init-expr\n\nEvaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein."}

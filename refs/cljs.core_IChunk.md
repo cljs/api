@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:331-332](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L331-L332)</ins>
+            └── <ins>[core.cljs:333-334](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L333-L334)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_IChunk",
  :source {:code "(defprotocol IChunk\n  (-drop-first [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [331 332],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L331-L332"},
+          :lines [333 334],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L333-L334"},
  :methods [{:name "-drop-first",
             :signature ["[coll]"],
             :docstring nil}],

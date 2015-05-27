@@ -21,17 +21,18 @@ Returns a sequence of the map's keys.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5677-5680](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5677-L5680)</ins>
+            └── <ins>[core.cljs:5786-5790](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5786-L5790)</ins>
 </pre>
 
 ```clj
 (defn keys
   [hash-map]
-  (seq (map first hash-map)))
+  (when-let [mseq (seq hash-map)]
+    (KeySeq. mseq nil)))
 ```
 
 
@@ -44,10 +45,10 @@ clojurescript @ r1806
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_keys",
- :source {:code "(defn keys\n  [hash-map]\n  (seq (map first hash-map)))",
+ :source {:code "(defn keys\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (KeySeq. mseq nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5677 5680],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5677-L5680"},
+          :lines [5786 5790],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5786-L5790"},
  :full-name "cljs.core/keys",
  :clj-symbol "clojure.core/keys",
  :docstring "Returns a sequence of the map's keys."}

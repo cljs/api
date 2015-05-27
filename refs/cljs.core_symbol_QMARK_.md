@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:369-370](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L369-L370)</ins>
+            └── <ins>[core.cljs:371-372](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L371-L372)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:251-252](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L251-L252)</ins>
+            └── <ins>[core.clj:251-252](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L251-L252)</ins>
 </pre>
 
 ```clj
@@ -59,14 +59,14 @@ clojurescript @ r1806
  :shadowed-sources ({:code "(defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
                      :lines [251 252],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L251-L252"}),
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L251-L252"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_symbol_QMARK_",
  :source {:code "(defn ^boolean symbol? [x]\n  (instance? Symbol x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [369 370],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L369-L370"},
+          :lines [371 372],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L371-L372"},
  :full-name "cljs.core/symbol?",
  :clj-symbol "clojure.core/symbol?"}
 

@@ -23,11 +23,11 @@ Same as (not (= obj1 obj2))
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2444-2449](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2444-L2449)</ins>
+            └── <ins>[core.cljs:2454-2459](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2454-L2459)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_not_EQ_",
  :source {:code "(defn ^boolean not=\n  ([x] false)\n  ([x y] (not (= x y)))\n  ([x y & more]\n   (not (apply = x y more))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2444 2449],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2444-L2449"},
+          :lines [2454 2459],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2454-L2459"},
  :full-name "cljs.core/not=",
  :clj-symbol "clojure.core/not=",
  :docstring "Same as (not (= obj1 obj2))"}

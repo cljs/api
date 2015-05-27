@@ -24,11 +24,11 @@ Returns the sum of nums. (+) returns 0.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1476-1481](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1476-L1481)</ins>
+            └── <ins>[core.cljs:1482-1487](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1482-L1487)</ins>
 </pre>
 
 ```clj
@@ -43,11 +43,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:281-282](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L281-L282)</ins>
+            └── <ins>[core.clj:286-287](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L286-L287)</ins>
 </pre>
 
 ```clj
@@ -63,15 +63,15 @@ clojurescript @ r1806
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro unchecked-add\n  ([& xs] `(+ ~@xs)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [281 282],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L281-L282"}),
+                     :lines [286 287],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L286-L287"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-add",
  :source {:code "(defn unchecked-add\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-add x y))\n  ([x y & more] (reduce unchecked-add (cljs.core/unchecked-add x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1476 1481],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1476-L1481"},
+          :lines [1482 1487],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1482-L1487"},
  :full-name "cljs.core/unchecked-add",
  :clj-symbol "clojure.core/unchecked-add",
  :docstring "Returns the sum of nums. (+) returns 0."}

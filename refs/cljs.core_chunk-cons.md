@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2178-2181](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2178-L2181)</ins>
+            └── <ins>[core.cljs:2188-2191](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2188-L2191)</ins>
 </pre>
 
 ```clj
@@ -43,8 +43,8 @@ clojurescript @ r1806
  :signature ["[chunk rest]"],
  :source {:code "(defn chunk-cons [chunk rest]\n  (if (zero? (-count chunk))\n    rest\n    (ChunkedCons. chunk rest nil nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2178 2181],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2178-L2181"},
+          :lines [2188 2191],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2188-L2191"},
  :full-name-encode "cljs.core_chunk-cons",
  :history [["+" "0.0-1424"]]}
 

@@ -24,11 +24,11 @@ map of additional data.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7243-7250](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7243-L7250)</ins>
+            └── <ins>[core.cljs:7415-7422](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7415-L7422)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_ex-info",
  :source {:code "(defn ex-info\n  ([msg map]\n     (ExceptionInfo. msg map nil))\n  ([msg map cause]\n     (ExceptionInfo. msg map cause)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7243 7250],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L7243-L7250"},
+          :lines [7415 7422],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L7415-L7422"},
  :full-name "cljs.core/ex-info",
  :clj-symbol "clojure.core/ex-info",
  :docstring "Alpha - subject to change.\nCreate an instance of ExceptionInfo, an Error type that carries a\nmap of additional data."}

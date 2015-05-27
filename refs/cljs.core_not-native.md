@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:58-58](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L58-L58)</ins>
+            └── <ins>[core.cljs:58-58](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L58-L58)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r1806
  :source {:code "(def not-native nil)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [58 58],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L58-L58"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L58-L58"},
  :full-name-encode "cljs.core_not-native",
  :history [["+" "0.0-1798"]]}
 

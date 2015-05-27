@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:311-313](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L311-L313)</ins>
+            └── <ins>[core.cljs:313-315](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L313-L315)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_ITransientCollection",
  :source {:code "(defprotocol ITransientCollection\n  (-conj! [tcoll val])\n  (-persistent! [tcoll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [311 313],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L311-L313"},
+          :lines [313 315],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L313-L315"},
  :methods [{:name "-conj!",
             :signature ["[tcoll val]"],
             :docstring nil}

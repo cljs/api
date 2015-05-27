@@ -17,12 +17,12 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:23-30](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/net.cljs#L23-L30)</ins>
+                └── <ins>[net.cljs:23-30](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/browser/net.cljs#L23-L30)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1806
  :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (. k (toLowerCase)))\n            v])\n         (merge\n          (js->clj goog.net.EventType)))))",
           :filename "clojurescript/src/cljs/clojure/browser/net.cljs",
           :lines [23 30],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/browser/net.cljs#L23-L30"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/browser/net.cljs#L23-L30"},
  :full-name-encode "clojure.browser.net_event-types",
  :history [["+" "0.0-927"]]}
 

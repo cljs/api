@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1531-1532](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1531-L1532)</ins>
+            └── <ins>[core.cljs:1537-1538](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1537-L1538)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:314-315](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L314-L315)</ins>
+            └── <ins>[core.clj:319-320](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L319-L320)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1806
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro unchecked-remainder-int\n  ([x n] `(mod ~x ~n)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [314 315],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L314-L315"}),
+                     :lines [319 320],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L319-L320"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-remainder-int",
  :source {:code "(defn unchecked-remainder-int [x n]\n  (cljs.core/unchecked-remainder-int x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1531 1532],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1531-L1532"},
+          :lines [1537 1538],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1537-L1538"},
  :full-name "cljs.core/unchecked-remainder-int",
  :clj-symbol "clojure.core/unchecked-remainder-int"}
 

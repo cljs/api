@@ -23,11 +23,11 @@ per reduce) of coll by f, starting with init.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6211-6223](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6211-L6223)</ins>
+            └── <ins>[core.cljs:6371-6383](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6371-L6383)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_reductions",
  :source {:code "(defn reductions\n  ([f coll]\n     (lazy-seq\n      (if-let [s (seq coll)]\n        (reductions f (first s) (rest s))\n        (list (f)))))\n  ([f init coll]\n     (cons init\n           (lazy-seq\n            (when-let [s (seq coll)]\n              (reductions f (f init (first s)) (rest s)))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6211 6223],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6211-L6223"},
+          :lines [6371 6383],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6371-L6383"},
  :full-name "cljs.core/reductions",
  :clj-symbol "clojure.core/reductions",
  :docstring "Returns a lazy seq of the intermediate values of the reduction (as\nper reduce) of coll by f, starting with init."}

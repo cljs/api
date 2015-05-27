@@ -21,11 +21,11 @@ Removes whitespace from the left side of string.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:111-114](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/string.cljs#L111-L114)</ins>
+            └── <ins>[string.cljs:111-114](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/string.cljs#L111-L114)</ins>
 </pre>
 
 ```clj
@@ -47,7 +47,7 @@ clojurescript @ r1806
  :source {:code "(defn triml\n    [s]\n    (gstring/trimLeft s))",
           :filename "clojurescript/src/cljs/clojure/string.cljs",
           :lines [111 114],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/string.cljs#L111-L114"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/string.cljs#L111-L114"},
  :full-name "clojure.string/triml",
  :clj-symbol "clojure.string/triml",
  :docstring "Removes whitespace from the left side of string."}

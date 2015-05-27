@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:651-709](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L651-L709)</ins>
+            └── <ins>[core.cljs:653-711](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L653-L711)</ins>
 </pre>
 
 ```clj
@@ -98,8 +98,8 @@ clojurescript @ r1806
  :signature ["[arr i]"],
  :source {:code "(deftype IndexedSeq [arr i]\n  Object\n  (toString [coll]\n   (pr-str* coll))\n\n  ISeqable\n  (-seq [this] this)\n\n  ASeq\n  ISeq\n  (-first [_] (aget arr i))\n  (-rest [_] (if (< (inc i) (alength arr))\n               (IndexedSeq. arr (inc i))\n               (list)))\n\n  INext\n  (-next [_] (if (< (inc i) (alength arr))\n               (IndexedSeq. arr (inc i))\n               nil))\n\n  ICounted\n  (-count [_] (- (alength arr) i))\n\n  IIndexed\n  (-nth [coll n]\n    (let [i (+ n i)]\n      (when (< i (alength arr))\n        (aget arr i))))\n  (-nth [coll n not-found]\n    (let [i (+ n i)]\n      (if (< i (alength arr))\n        (aget arr i)\n        not-found)))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  IReduce\n  (-reduce [coll f]\n    (array-reduce arr f (aget arr i) (inc i)))\n  (-reduce [coll f start]\n    (array-reduce arr f start i))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  IReversible\n  (-rseq [coll]\n    (let [c (-count coll)]\n      (if (pos? c)\n        (RSeq. coll (dec c) nil)\n        ()))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [651 709],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L651-L709"},
+          :lines [653 711],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L653-L711"},
  :full-name-encode "cljs.core_IndexedSeq",
  :history [["+" "0.0-927"]]}
 

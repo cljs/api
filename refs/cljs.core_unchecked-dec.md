@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1490-1491](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1490-L1491)</ins>
+            └── <ins>[core.cljs:1496-1497](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1496-L1497)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:287-288](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L287-L288)</ins>
+            └── <ins>[core.clj:292-293](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L292-L293)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1806
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro unchecked-dec\n  ([x] `(dec ~x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [287 288],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L287-L288"}),
+                     :lines [292 293],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L292-L293"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_unchecked-dec",
  :source {:code "(defn unchecked-dec [x]\n  (cljs.core/unchecked-dec x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1490 1491],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1490-L1491"},
+          :lines [1496 1497],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1496-L1497"},
  :full-name "cljs.core/unchecked-dec",
  :clj-symbol "clojure.core/unchecked-dec"}
 

@@ -21,17 +21,18 @@ Returns a sequence of the map's values.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5687-5690](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5687-L5690)</ins>
+            └── <ins>[core.cljs:5846-5850](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5846-L5850)</ins>
 </pre>
 
 ```clj
 (defn vals
   [hash-map]
-  (seq (map second hash-map)))
+  (when-let [mseq (seq hash-map)]
+    (ValSeq. mseq nil)))
 ```
 
 
@@ -44,10 +45,10 @@ clojurescript @ r1806
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_vals",
- :source {:code "(defn vals\n  [hash-map]\n  (seq (map second hash-map)))",
+ :source {:code "(defn vals\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (ValSeq. mseq nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5687 5690],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5687-L5690"},
+          :lines [5846 5850],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L5846-L5850"},
  :full-name "cljs.core/vals",
  :clj-symbol "clojure.core/vals",
  :docstring "Returns a sequence of the map's values."}

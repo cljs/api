@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:8-8](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/nodejs.cljs#L8-L8)</ins>
+            └── <ins>[nodejs.cljs:8-8](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/nodejs.cljs#L8-L8)</ins>
 </pre>
 
 ```clj
@@ -39,7 +39,7 @@ clojurescript @ r1806
  :source {:code "(def process (js* \"process\"))",
           :filename "clojurescript/src/cljs/cljs/nodejs.cljs",
           :lines [8 8],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/nodejs.cljs#L8-L8"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/nodejs.cljs#L8-L8"},
  :full-name-encode "cljs.nodejs_process",
  :history [["+" "0.0-927"]]}
 

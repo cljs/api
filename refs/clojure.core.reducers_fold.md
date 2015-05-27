@@ -20,12 +20,12 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:53-53](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L53-L53)</ins>
+                └── <ins>[reducers.cljs:53-53](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/core/reducers.cljs#L53-L53)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1806
  :source {:code "(def fold reduce)",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
           :lines [53 53],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/clojure/core/reducers.cljs#L53-L53"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/core/reducers.cljs#L53-L53"},
  :full-name-encode "clojure.core.reducers_fold",
  :clj-symbol "clojure.core.reducers/fold",
  :history [["+" "0.0-1236"]]}

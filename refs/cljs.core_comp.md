@@ -28,11 +28,11 @@ fn (right-to-left) to the result, etc.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2509-2536](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2509-L2536)</ins>
+            └── <ins>[core.cljs:2519-2546](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2519-L2546)</ins>
 </pre>
 
 ```clj
@@ -74,8 +74,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_comp",
  :source {:code "(defn comp\n  ([] identity)\n  ([f] f)\n  ([f g]\n     (fn\n       ([] (f (g)))\n       ([x] (f (g x)))\n       ([x y] (f (g x y)))\n       ([x y z] (f (g x y z)))\n       ([x y z & args] (f (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (f (g (h))))\n       ([x] (f (g (h x))))\n       ([x y] (f (g (h x y))))\n       ([x y z] (f (g (h x y z))))\n       ([x y z & args] (f (g (apply h x y z args))))))\n  ([f1 f2 f3 & fs]\n    (let [fs (reverse (list* f1 f2 f3 fs))]\n      (fn [& args]\n        (loop [ret (apply (first fs) args) fs (next fs)]\n          (if fs\n            (recur ((first fs) ret) (next fs))\n            ret))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2509 2536],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2509-L2536"},
+          :lines [2519 2546],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2519-L2546"},
  :full-name "cljs.core/comp",
  :clj-symbol "clojure.core/comp",
  :docstring "Takes a set of functions and returns a fn that is the composition\nof those fns.  The returned fn takes a variable number of args,\napplies the rightmost of fns to the args, the next\nfn (right-to-left) to the result, etc."}

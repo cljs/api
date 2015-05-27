@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6792-6802](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6792-L6802)</ins>
+            └── <ins>[core.cljs:6964-6974](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6964-L6974)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1806
  :signature ["[state f]"],
  :source {:code "(deftype Delay [state f]\n  IDeref\n  (-deref [_]\n    (:value (swap! state (fn [{:keys [done] :as curr-state}]\n                           (if done\n                             curr-state,\n                             {:done true :value (f)})))))\n\n  IPending\n  (-realized? [d]\n    (:done @state)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6792 6802],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6792-L6802"},
+          :lines [6964 6974],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6964-L6974"},
  :full-name-encode "cljs.core_Delay",
  :history [["+" "0.0-927"]]}
 

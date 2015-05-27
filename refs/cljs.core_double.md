@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1468-1468](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1468-L1468)</ins>
+            └── <ins>[core.cljs:1474-1474](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1474-L1474)</ins>
 </pre>
 
 ```clj
@@ -36,11 +36,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:273-273](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L273-L273)</ins>
+            └── <ins>[core.clj:278-278](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L278-L278)</ins>
 </pre>
 
 ```clj
@@ -55,15 +55,15 @@ clojurescript @ r1806
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro double [x] x)",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [273 273],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L273-L273"}),
+                     :lines [278 278],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L278-L278"}),
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core_double",
  :source {:code "(defn double [x] x)",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1468 1468],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1468-L1468"},
+          :lines [1474 1474],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1474-L1474"},
  :full-name "cljs.core/double",
  :clj-symbol "clojure.core/double"}
 

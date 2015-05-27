@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:339-342](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L339-L342)</ins>
+            └── <ins>[core.clj:344-347](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L344-L347)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1806
  :signature ["[x]" "[x y]" "[x y & more]"],
  :source {:code "(defmacro divide\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [339 342],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L339-L342"},
+          :lines [344 347],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L344-L347"},
  :full-name-encode "cljs.core_divide",
  :history [["+" "0.0-1798"]]}
 

@@ -24,11 +24,11 @@ of the same type and special-cases nil to be less than any other object.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1205-1224](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1205-L1224)</ins>
+            └── <ins>[core.cljs:1211-1230](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1211-L1230)</ins>
 </pre>
 
 ```clj
@@ -62,8 +62,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_compare",
  :source {:code "(defn compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (identical? (type x) (type y))\n   (if (satisfies? IComparable x false)\n     (-compare ^not-native x y)\n     (garray/defaultCompare x y))\n\n   :else\n   (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1205 1224],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1205-L1224"},
+          :lines [1211 1230],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1211-L1230"},
  :full-name "cljs.core/compare",
  :clj-symbol "clojure.core/compare",
  :docstring "Comparator. Returns a negative number, zero, or a positive number\n when x is logically 'less than', 'equal to', or 'greater than'\n y. Uses IComparable if available and google.array.defaultCompare for objects\nof the same type and special-cases nil to be less than any other object."}

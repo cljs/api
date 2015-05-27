@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6441-6445](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6441-L6445)</ins>
+            └── <ins>[core.cljs:6604-6608](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6604-L6608)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1806
  :signature ["[objs writer opts]"],
  :source {:code "(defn pr-seq-writer [objs writer opts]\n  (pr-writer (first objs) writer opts)\n  (doseq [obj (next objs)]\n    (-write writer \" \")\n    (pr-writer obj writer opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6441 6445],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6441-L6445"},
+          :lines [6604 6608],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6604-L6608"},
  :full-name-encode "cljs.core_pr-seq-writer",
  :history [["+" "0.0-1503"]]}
 

@@ -21,11 +21,11 @@ Test bit at index n
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1648-1651](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1648-L1651)</ins>
+            └── <ins>[core.cljs:1654-1657](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1654-L1657)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:430-431](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L430-L431)</ins>
+            └── <ins>[core.clj:435-436](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L435-L436)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1806
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-test [x n]\n  (list 'js* \"((~{} & (1 << ~{})) != 0)\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [430 431],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L430-L431"}),
+                     :lines [435 436],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L435-L436"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-test",
  :source {:code "(defn bit-test\n  [x n]\n  (cljs.core/bit-test x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1648 1651],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1648-L1651"},
+          :lines [1654 1657],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1654-L1657"},
  :full-name "cljs.core/bit-test",
  :clj-symbol "clojure.core/bit-test",
  :docstring "Test bit at index n"}

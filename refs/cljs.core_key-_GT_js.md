@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6827-6835](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6827-L6835)</ins>
+            └── <ins>[core.cljs:6999-7007](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6999-L7007)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1806
  :signature ["[k]"],
  :source {:code "(defn key->js [k]\n  (if (satisfies? IEncodeJS k)\n    (-clj->js k)\n    (if (or (string? k)\n            (number? k)\n            (keyword? k)\n            (symbol? k))\n      (clj->js k)\n      (pr-str k))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6827 6835],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6827-L6835"},
+          :lines [6999 7007],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6999-L7007"},
  :full-name-encode "cljs.core_key-_GT_js",
  :history [["+" "0.0-1798"]]}
 

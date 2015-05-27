@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:278-280](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L278-L280)</ins>
+            └── <ins>[reader.cljs:278-280](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L278-L280)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1806
  :source {:code "(defn read-vector\n  [rdr _]\n  (read-delimited-list \"]\" rdr true))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [278 280],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L278-L280"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L278-L280"},
  :full-name-encode "cljs.reader_read-vector",
  :history [["+" "0.0-927"]]}
 

@@ -25,11 +25,11 @@ undefined.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1672-1683](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1672-L1683)</ins>
+            └── <ins>[core.cljs:1678-1689](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1678-L1689)</ins>
 </pre>
 
 ```clj
@@ -48,11 +48,11 @@ clojurescript @ r1806
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:364-367](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L364-L367)</ins>
+            └── <ins>[core.clj:369-372](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L369-L372)</ins>
 </pre>
 
 ```clj
@@ -71,15 +71,15 @@ clojurescript @ r1806
  :signature ["[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro ==\n  ([x] true)\n  ([x y] (bool-expr (list 'js* \"(~{} === ~{})\" x y)))\n  ([x y & more] `(and (== ~x ~y) (== ~y ~@more))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [364 367],
-                     :link "https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L364-L367"}),
+                     :lines [369 372],
+                     :link "https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/core.clj#L369-L372"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__EQ__EQ_",
  :source {:code "(defn ^boolean ==\n  ([x] true)\n  ([x y] (-equiv x y))\n  ([x y & more]\n   (if (== x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (== y (first more)))\n     false)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1672 1683],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1672-L1683"},
+          :lines [1678 1689],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L1678-L1689"},
  :full-name "cljs.core/==",
  :clj-symbol "clojure.core/==",
  :docstring "Returns non-nil if nums all have the equivalent\nvalue, otherwise false. Behavior on non nums is\nundefined."}

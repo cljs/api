@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:192-195](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L192-L195)</ins>
+            └── <ins>[reader.cljs:192-195](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L192-L195)</ins>
 </pre>
 
 ```clj
@@ -44,7 +44,7 @@ clojurescript @ r1806
  :source {:code "(defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]\n  (if (re-matches unicode-pattern unicode-str)\n    unicode-str\n    (reader-error reader \"Unexpected unicode escape \\\\\" escape-char unicode-str)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [192 195],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L192-L195"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L192-L195"},
  :full-name-encode "cljs.reader_validate-unicode-escape",
  :history [["+" "0.0-1424"]]}
 

@@ -21,11 +21,11 @@ pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter.
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6482-6485](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6482-L6485)</ins>
+            └── <ins>[core.cljs:6645-6648](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6645-L6648)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1806
  :full-name-encode "cljs.core_pr-str",
  :source {:code "(defn pr-str\n  [& objs]\n  (pr-str-with-opts objs (pr-opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6482 6485],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6482-L6485"},
+          :lines [6645 6648],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L6645-L6648"},
  :full-name "cljs.core/pr-str",
  :clj-symbol "clojure.core/pr-str",
  :docstring "pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter."}

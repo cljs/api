@@ -18,11 +18,11 @@ Advances the reader to the end of a line. Returns the reader
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:90-97](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L90-L97)</ins>
+            └── <ins>[reader.cljs:90-97](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L90-L97)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r1806
  :source {:code "(defn skip-line\n  [reader _]\n  (loop []\n    (let [ch (read-char reader)]\n      (if (or (identical? ch \\n) (identical? ch \\r) (nil? ch))\n        reader\n        (recur)))))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [90 97],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/reader.cljs#L90-L97"},
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L90-L97"},
  :full-name-encode "cljs.reader_skip-line",
  :history [["+" "0.0-927"]]}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2077-2089](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2077-L2089)</ins>
+            └── <ins>[core.cljs:2087-2099](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2087-L2099)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r1806
  :signature ["[buf end]"],
  :source {:code "(deftype ChunkBuffer [^:mutable buf ^:mutable end]\n  Object\n  (add [_ o]\n    (aset buf end o)\n    (set! end (inc end)))\n\n  (chunk [_ o]\n    (let [ret (ArrayChunk. buf 0 end)]\n      (set! buf nil)\n      ret))\n\n  ICounted\n  (-count [_] end))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2077 2089],
-          :link "https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2077-L2089"},
+          :lines [2087 2099],
+          :link "https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2087-L2099"},
  :full-name-encode "cljs.core_ChunkBuffer",
  :history [["+" "0.0-1424"]]}
 
