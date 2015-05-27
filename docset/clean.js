@@ -8,16 +8,30 @@ var fs = require('fs');
 
 page.onConsoleMessage = function (msg) { console.log(msg); };
 
+// code executed inside page
 function fixPage() {
-  // executed inside page
 
+  function trim(s) {
+    return s.replace(/^\s+|\s+$/g, '');
+  }
+
+  // set title to first header text
+  // (replace any redundant mentions of ClojureScript)
+  var header = document.querySelector('h1') || document.querySelector('h2');
+  document.title = trim(header.innerText.replace('ClojureScript',''));
+
+  // replace everything with .file box (markdown view)
   var file = document.querySelector('.file');
   file.style.marginTop = "0";
   document.body.innerHTML = file.outerHTML;
+
+  // remove the file header
   document.querySelector('.file-header').innerHTML = "";
 
+  // set width to tame formatting
   document.body.style.width = "900px";
 
+  // make anchor links work
   var links = document.querySelectorAll('a');
   var i, link;
   for (i=0, len=links.length; i<len; i++) {
