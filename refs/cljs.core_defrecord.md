@@ -1,0 +1,57 @@
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/defrecord
+
+ <table border="1">
+<tr>
+<td>macro</td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/defrecord</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defrecord)
+</td>
+</tr>
+</table>
+
+ <samp>
+(__defrecord__ rsym fields & impls)<br>
+</samp>
+
+```
+(no docstring)
+```
+
+---
+
+ <pre>
+clojurescript @ r927
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:357-362](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L357-L362)</ins>
+</pre>
+
+```clj
+(defmacro defrecord [rsym fields & impls]
+  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]
+    `(let []
+       ~(emit-defrecord rsym r fields impls)
+       ~(build-positional-factory rsym r fields)
+       ~(build-map-factory rsym r fields))))
+```
+
+
+---
+
+```clj
+{:full-name "cljs.core/defrecord",
+ :ns "cljs.core",
+ :name "defrecord",
+ :type "macro",
+ :signature ["[rsym fields & impls]"],
+ :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord rsym r fields impls)\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields))))",
+          :filename "clojurescript/src/clj/cljs/core.clj",
+          :lines [357 362],
+          :link "https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L357-L362"},
+ :full-name-encode "cljs.core_defrecord",
+ :clj-symbol "clojure.core/defrecord",
+ :history [["+" "0.0-927"]]}
+
+```

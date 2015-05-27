@@ -1,0 +1,55 @@
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/realized?
+
+ <table border="1">
+<tr>
+<td>function</td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/realized?</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/realized?)
+</td>
+</tr>
+</table>
+
+ <samp>
+(__realized?__ d)<br>
+</samp>
+
+```
+Returns true if a value has been produced for a promise, delay, future or lazy sequence.
+```
+
+---
+
+ <pre>
+clojurescript @ r927
+└── src
+    └── cljs
+        └── cljs
+            └── <ins>[core.cljs:3166-3169](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3166-L3169)</ins>
+</pre>
+
+```clj
+(defn realized?
+  [d]
+  (-realized? d))
+```
+
+
+---
+
+```clj
+{:ns "cljs.core",
+ :name "realized?",
+ :signature ["[d]"],
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.core_realized_QMARK_",
+ :source {:code "(defn realized?\n  [d]\n  (-realized? d))",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [3166 3169],
+          :link "https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3166-L3169"},
+ :full-name "cljs.core/realized?",
+ :clj-symbol "clojure.core/realized?",
+ :docstring "Returns true if a value has been produced for a promise, delay, future or lazy sequence."}
+
+```
