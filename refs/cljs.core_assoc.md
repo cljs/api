@@ -25,17 +25,19 @@ contains val at index.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:838-849](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L838-L849)</ins>
+            └── <ins>[core.cljs:890-903](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L890-L903)</ins>
 </pre>
 
 ```clj
 (defn assoc
   ([coll k v]
-     (-assoc coll k v))
+    (if-not (nil? coll)
+      (-assoc coll k v)
+      (hash-map k v)))
   ([coll k v & kvs]
      (let [ret (assoc coll k v)]
        (if kvs
@@ -53,10 +55,10 @@ clojurescript @ r1586
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_assoc",
- :source {:code "(defn assoc\n  ([coll k v]\n     (-assoc coll k v))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
+ :source {:code "(defn assoc\n  ([coll k v]\n    (if-not (nil? coll)\n      (-assoc coll k v)\n      (hash-map k v)))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [838 849],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L838-L849"},
+          :lines [890 903],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L890-L903"},
  :full-name "cljs.core/assoc",
  :clj-symbol "clojure.core/assoc",
  :docstring "assoc[iate]. When applied to a map, returns a new map of the\nsame (hashed/sorted) type, that contains the mapping of key(s) to\nval(s). When applied to a vector, returns a new vector that\ncontains val at index."}

@@ -26,11 +26,11 @@ where the keys will be the ordinals.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1213-1221](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1213-L1221)</ins>
+            └── <ins>[core.cljs:1301-1309](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1301-L1309)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_reduce-kv",
  :source {:code "(defn reduce-kv\n  ([f init coll]\n     (-kv-reduce coll f init)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1213 1221],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1213-L1221"},
+          :lines [1301 1309],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1301-L1309"},
  :full-name "cljs.core/reduce-kv",
  :clj-symbol "clojure.core/reduce-kv",
  :docstring "Reduces an associative collection. f should be a function of 3\narguments. Returns the result of applying f to init, the first key\nand the first value in coll, then applying f to that result and the\n2nd key and value, etc. If coll contains no entries, returns init\nand f is not called. Note that reduce-kv is supported on vectors,\nwhere the keys will be the ordinals."}

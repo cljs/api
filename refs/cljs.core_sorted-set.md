@@ -21,11 +21,11 @@ Returns a new sorted set with supplied keys.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5830-5833](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5830-L5833)</ins>
+            └── <ins>[core.cljs:5824-5827](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5824-L5827)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_sorted-set",
  :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj cljs.core.PersistentTreeSet/EMPTY keys)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5830 5833],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5830-L5833"},
+          :lines [5824 5827],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5824-L5827"},
  :full-name "cljs.core/sorted-set",
  :clj-symbol "clojure.core/sorted-set",
  :docstring "Returns a new sorted set with supplied keys."}

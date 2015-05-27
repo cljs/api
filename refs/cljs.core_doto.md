@@ -25,11 +25,11 @@ are evaluated in order.  Returns x.
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3397-3412](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3397-L3412)</ins>
+            └── <ins>[core.clj:3463-3478](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L3463-L3478)</ins>
 </pre>
 
 ```clj
@@ -57,8 +57,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_doto",
  :source {:code "(defmacro doto\n  [x & forms]\n    (let [gx (gensym)]\n      `(let [~gx ~x]\n         ~@(map (fn [f]\n                  (if (seq? f)\n                    `(~(first f) ~gx ~@(next f))\n                    `(~f ~gx)))\n                forms)\n         ~gx)))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [3397 3412],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3397-L3412"},
+          :lines [3463 3478],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L3463-L3478"},
  :full-name "cljs.core/doto",
  :clj-symbol "clojure.core/doto",
  :docstring "Evaluates x then calls all of the methods and functions with the\nvalue of x supplied at the front of the given arguments.  The forms\nare evaluated in order.  Returns x.\n\n(doto (new java.util.HashMap) (.put \"a\" 1) (.put \"b\" 2))"}

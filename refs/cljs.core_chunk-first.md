@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1966-1967](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1966-L1967)</ins>
+            └── <ins>[core.cljs:2122-2123](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2122-L2123)</ins>
 </pre>
 
 ```clj
@@ -41,8 +41,8 @@ clojurescript @ r1586
  :signature ["[s]"],
  :source {:code "(defn chunk-first [s]\n  (-chunked-first s))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1966 1967],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1966-L1967"},
+          :lines [2122 2123],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2122-L2123"},
  :full-name-encode "cljs.core_chunk-first",
  :history [["+" "0.0-1424"]]}
 

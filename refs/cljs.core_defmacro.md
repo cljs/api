@@ -24,11 +24,11 @@ called.
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:406-450](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L406-L450)</ins>
+            └── <ins>[core.clj:422-466](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L422-L466)</ins>
 </pre>
 
 ```clj
@@ -92,8 +92,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_defmacro",
  :source {:code "(def\n\n ^{:doc \"Like defn, but the resulting function name is declared as a\n  macro and will be used as a macro by the compiler when it is\n  called.\"\n   :arglists '([name doc-string? attr-map? [params*] body]\n                 [name doc-string? attr-map? ([params*] body)+ attr-map?])\n   :added \"1.0\"}\n defmacro (fn [&form &env \n                name & args]\n             (let [prefix (loop [p (list name) args args]\n                            (let [f (first args)]\n                              (if (string? f)\n                                (recur (cons f p) (next args))\n                                (if (map? f)\n                                  (recur (cons f p) (next args))\n                                  p))))\n                   fdecl (loop [fd args]\n                           (if (string? (first fd))\n                             (recur (next fd))\n                             (if (map? (first fd))\n                               (recur (next fd))\n                               fd)))\n                   fdecl (if (vector? (first fdecl))\n                           (list fdecl)\n                           fdecl)\n                   add-implicit-args (fn [fd]\n                             (let [args (first fd)]\n                               (cons (vec (cons '&form (cons '&env args))) (next fd))))\n                   add-args (fn [acc ds]\n                              (if (nil? ds)\n                                acc\n                                (let [d (first ds)]\n                                  (if (map? d)\n                                    (conj acc d)\n                                    (recur (conj acc (add-implicit-args d)) (next ds))))))\n                   fdecl (seq (add-args [] fdecl))\n                   decl (loop [p prefix d fdecl]\n                          (if p\n                            (recur (next p) (cons (first p) d))\n                            d))]\n               (list 'do\n                     (cons `defn decl)\n                     (list '. (list 'var name) '(setMacro))\n                     (list 'var name)))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [406 450],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L406-L450"},
+          :lines [422 466],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L422-L466"},
  :full-name "cljs.core/defmacro",
  :clj-symbol "clojure.core/defmacro",
  :docstring "Like defn, but the resulting function name is declared as a\nmacro and will be used as a macro by the compiler when it is\ncalled."}

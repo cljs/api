@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:259-261](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L259-L261)</ins>
+            └── <ins>[core.cljs:272-274](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L272-L274)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_IWriter",
  :source {:code "(defprotocol IWriter\n  (-write [writer s])\n  (-flush [writer]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [259 261],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L259-L261"},
+          :lines [272 274],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L272-L274"},
  :methods [{:name "-write", :signature ["[writer s]"], :docstring nil}
            {:name "-flush", :signature ["[writer]"], :docstring nil}],
  :full-name "cljs.core/IWriter",

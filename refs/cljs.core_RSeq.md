@@ -18,19 +18,15 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:688-725](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L688-L725)</ins>
+            └── <ins>[core.cljs:689-722](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L689-L722)</ins>
 </pre>
 
 ```clj
 (deftype RSeq [ci i meta]
-  Object
-  (toString [this]
-    (pr-str this))
-
   IMeta
   (-meta [coll] meta)
   IWithMeta
@@ -75,10 +71,10 @@ clojurescript @ r1586
  :name "RSeq",
  :type "type",
  :signature ["[ci i meta]"],
- :source {:code "(deftype RSeq [ci i meta]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IMeta\n  (-meta [coll] meta)\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (RSeq. ci i new-meta))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ISeq\n  (-first [coll]\n    (-nth ci i))\n  (-rest [coll]\n    (if (pos? i)\n      (RSeq. ci (dec i) nil)\n      ()))\n\n  ICounted\n  (-count [coll] (inc i))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
+ :source {:code "(deftype RSeq [ci i meta]\n  IMeta\n  (-meta [coll] meta)\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (RSeq. ci i new-meta))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ISeq\n  (-first [coll]\n    (-nth ci i))\n  (-rest [coll]\n    (if (pos? i)\n      (RSeq. ci (dec i) nil)\n      ()))\n\n  ICounted\n  (-count [coll] (inc i))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [688 725],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L688-L725"},
+          :lines [689 722],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L689-L722"},
  :full-name-encode "cljs.core_RSeq",
  :history [["+" "0.0-1424"]]}
 

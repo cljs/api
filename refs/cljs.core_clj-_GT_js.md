@@ -20,17 +20,28 @@ Maps become Objects. Arbitrary keys are encoded to by key->js.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6928-6933](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6928-L6933)</ins>
+            └── <ins>[core.cljs:6726-6742](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6726-L6742)</ins>
 </pre>
 
 ```clj
 (defn clj->js
    [x]
-   (-clj->js x))
+   (when-not (nil? x)
+     (if (satisfies? IEncodeJS x)
+       (-clj->js x)
+       (cond
+         (keyword? x) (name x)
+         (symbol? x) (str x)
+         (map? x) (let [m (js-obj)]
+                    (doseq [[k v] x]
+                      (aset m (key->js k) (clj->js v)))
+                    m)
+         (coll? x) (apply array (map clj->js x))
+         :else x))))
 ```
 
 
@@ -43,10 +54,10 @@ clojurescript @ r1586
  :docstring "Recursively transforms ClojureScript values to JavaScript.\nsets/vectors/lists become Arrays, Keywords and Symbol become Strings,\nMaps become Objects. Arbitrary keys are encoded to by key->js.",
  :type "function",
  :signature ["[x]"],
- :source {:code "(defn clj->js\n   [x]\n   (-clj->js x))",
+ :source {:code "(defn clj->js\n   [x]\n   (when-not (nil? x)\n     (if (satisfies? IEncodeJS x)\n       (-clj->js x)\n       (cond\n         (keyword? x) (name x)\n         (symbol? x) (str x)\n         (map? x) (let [m (js-obj)]\n                    (doseq [[k v] x]\n                      (aset m (key->js k) (clj->js v)))\n                    m)\n         (coll? x) (apply array (map clj->js x))\n         :else x))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6928 6933],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6928-L6933"},
+          :lines [6726 6742],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6726-L6742"},
  :full-name-encode "cljs.core_clj-_GT_js",
  :history [["+" "0.0-1552"]]}
 

@@ -23,11 +23,11 @@ If any levels do not exist, hash-maps will be created.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2748-2755](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2748-L2755)</ins>
+            └── <ins>[core.cljs:2927-2934](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2927-L2934)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_assoc-in",
  :source {:code "(defn assoc-in\n  [m [k & ks] v]\n  (if ks\n    (assoc m k (assoc-in (get m k) ks v))\n    (assoc m k v)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2748 2755],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2748-L2755"},
+          :lines [2927 2934],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2927-L2934"},
  :full-name "cljs.core/assoc-in",
  :clj-symbol "clojure.core/assoc-in",
  :docstring "Associates a value in a nested associative structure, where ks is a\nsequence of keys and v is the new value and returns a new nested structure.\nIf any levels do not exist, hash-maps will be created."}

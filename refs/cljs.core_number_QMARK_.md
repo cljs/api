@@ -21,18 +21,33 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1046-1047](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1046-L1047)</ins>
+            └── <ins>[core.cljs:1110-1111](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1110-L1111)</ins>
 </pre>
 
 ```clj
 (defn ^boolean number? [n]
-  (goog/isNumber n))
+  (cljs.core/number? n))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:248-249](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L248-L249)</ins>
+</pre>
+
+```clj
+(defmacro number? [x]
+  (bool-expr (list 'js* "typeof ~{} === 'number'" x)))
+```
 
 ---
 
@@ -41,13 +56,17 @@ clojurescript @ r1586
  :ns "cljs.core",
  :name "number?",
  :signature ["[n]"],
+ :shadowed-sources ({:code "(defmacro number? [x]\n  (bool-expr (list 'js* \"typeof ~{} === 'number'\" x)))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [248 249],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L248-L249"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_number_QMARK_",
- :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
+ :source {:code "(defn ^boolean number? [n]\n  (cljs.core/number? n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1046 1047],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1046-L1047"},
+          :lines [1110 1111],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1110-L1111"},
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

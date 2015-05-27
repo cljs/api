@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:299-300](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L299-L300)</ins>
+            └── <ins>[core.cljs:312-313](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L312-L313)</ins>
 </pre>
 
 ```clj
@@ -39,8 +39,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_IComparable",
  :source {:code "(defprotocol IComparable\n  (-compare [x y]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [299 300],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L299-L300"},
+          :lines [312 313],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L312-L313"},
  :methods [{:name "-compare", :signature ["[x y]"], :docstring nil}],
  :full-name "cljs.core/IComparable",
  :history [["+" "0.0-1424"]]}

@@ -21,11 +21,11 @@ Returns the node at loc
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:60-62](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/zip.cljs#L60-L62)</ins>
+            └── <ins>[zip.cljs:60-62](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/zip.cljs#L60-L62)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r1586
  :source {:code "(defn node\n  [loc] (loc 0))",
           :filename "clojurescript/src/cljs/clojure/zip.cljs",
           :lines [60 62],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/zip.cljs#L60-L62"},
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/zip.cljs#L60-L62"},
  :full-name "clojure.zip/node",
  :clj-symbol "clojure.zip/node",
  :docstring "Returns the node at loc"}

@@ -19,17 +19,17 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:973-977](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L973-L977)</ins>
+            └── <ins>[core.cljs:1043-1047](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1043-L1047)</ins>
 </pre>
 
 ```clj
 (defn js-obj
   ([]
-     (js* "{}"))
+     (cljs.core/js-obj))
   ([& keyvals]
      (apply gobject/create keyvals)))
 ```
@@ -38,11 +38,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:994-1001](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L994-L1001)</ins>
+            └── <ins>[core.clj:1163-1170](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L1163-L1170)</ins>
 </pre>
 
 ```clj
@@ -64,15 +64,15 @@ clojurescript @ r1586
  :name "js-obj",
  :type "function",
  :signature ["[]" "[& keyvals]"],
- :source {:code "(defn js-obj\n  ([]\n     (js* \"{}\"))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
+ :source {:code "(defn js-obj\n  ([]\n     (cljs.core/js-obj))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [973 977],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L973-L977"},
+          :lines [1043 1047],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1043-L1047"},
  :full-name-encode "cljs.core_js-obj",
  :shadowed-sources ({:code "(defmacro js-obj [& rest]\n  (let [kvs-str (->> (repeat \"~{}:~{}\")\n                     (take (quot (count rest) 2))\n                     (interpose \",\")\n                     (apply core/str))]\n    (concat\n     (list 'js* (core/str \"{\" kvs-str \"}\"))\n     rest)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [994 1001],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L994-L1001"}),
+                     :lines [1163 1170],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L1163-L1170"}),
  :history [["+" "0.0-927"]]}
 
 ```

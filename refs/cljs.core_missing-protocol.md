@@ -18,18 +18,22 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:78-81](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L78-L81)</ins>
+            └── <ins>[core.cljs:93-100](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L93-L100)</ins>
 </pre>
 
 ```clj
 (defn missing-protocol [proto obj]
-  (js/Error
-   (.join (array "No protocol method " proto
-                 " defined for type " (goog/typeOf obj) ": " obj) "")))
+  (let [ty (type obj)
+        ty (if (and ty (.-cljs$lang$type ty))
+             (.-cljs$lang$ctorStr ty)
+             (goog/typeOf obj))]
+   (js/Error.
+     (.join (array "No protocol method " proto
+                   " defined for type " ty ": " obj) ""))))
 ```
 
 
@@ -41,10 +45,10 @@ clojurescript @ r1586
  :name "missing-protocol",
  :type "function",
  :signature ["[proto obj]"],
- :source {:code "(defn missing-protocol [proto obj]\n  (js/Error\n   (.join (array \"No protocol method \" proto\n                 \" defined for type \" (goog/typeOf obj) \": \" obj) \"\")))",
+ :source {:code "(defn missing-protocol [proto obj]\n  (let [ty (type obj)\n        ty (if (and ty (.-cljs$lang$type ty))\n             (.-cljs$lang$ctorStr ty)\n             (goog/typeOf obj))]\n   (js/Error.\n     (.join (array \"No protocol method \" proto\n                   \" defined for type \" ty \": \" obj) \"\"))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [78 81],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L78-L81"},
+          :lines [93 100],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L93-L100"},
  :full-name-encode "cljs.core_missing-protocol",
  :history [["+" "0.0-927"]]}
 

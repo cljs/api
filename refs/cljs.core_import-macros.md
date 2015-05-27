@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:28-35](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L28-L35)</ins>
+            └── <ins>[core.clj:39-46](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L39-L46)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1586
  :signature ["[ns [& vars]]"],
  :source {:code "(defmacro import-macros [ns [& vars]]\n  (core/let [ns (find-ns ns)\n             vars (map #(ns-resolve ns %) vars)\n             syms (map (core/fn [^clojure.lang.Var v] (core/-> v .sym (with-meta {:macro true}))) vars)\n             defs (map (core/fn [sym var]\n                                `(def ~sym (deref ~var))) syms vars)]\n            `(do ~@defs\n                 :imported)))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [28 35],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L28-L35"},
+          :lines [39 46],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L39-L46"},
  :full-name-encode "cljs.core_import-macros",
  :history [["+" "0.0-927"]]}
 

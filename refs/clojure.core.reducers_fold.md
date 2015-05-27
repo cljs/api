@@ -4,6 +4,9 @@
 <tr>
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/fold</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/fold)
+</td>
 </tr>
 </table>
 
@@ -17,12 +20,12 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:51-51](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L51-L51)</ins>
+                └── <ins>[reducers.cljs:53-53](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L53-L53)</ins>
 </pre>
 
 ```clj
@@ -39,9 +42,10 @@ clojurescript @ r1586
  :type "var",
  :source {:code "(def fold reduce)",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
-          :lines [51 51],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L51-L51"},
+          :lines [53 53],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L53-L53"},
  :full-name-encode "clojure.core.reducers_fold",
+ :clj-symbol "clojure.core.reducers/fold",
  :history [["+" "0.0-1236"]]}
 
 ```

@@ -22,11 +22,11 @@ Returns the value at the index.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:104-109](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L104-L109)</ins>
+            └── <ins>[core.cljs:123-128](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L123-L128)</ins>
 </pre>
 
 ```clj
@@ -41,11 +41,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:211-216](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L211-L216)</ins>
+            └── <ins>[core.clj:254-259](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L254-L259)</ins>
 </pre>
 
 ```clj
@@ -65,15 +65,15 @@ clojurescript @ r1586
  :signature ["[array i]" "[array i & idxs]"],
  :shadowed-sources ({:code "(defmacro aget\n  ([a i]\n     (list 'js* \"(~{}[~{}])\" a i))\n  ([a i & idxs]\n     (let [astr (apply core/str (repeat (count idxs) \"[~{}]\"))]\n      `(~'js* ~(core/str \"(~{}[~{}]\" astr \")\") ~a ~i ~@idxs))))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [211 216],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L211-L216"}),
+                     :lines [254 259],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L254-L259"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aget",
  :source {:code "(defn aget\n  ([array i]\n     (cljs.core/aget array i))\n  ([array i & idxs]\n     (apply aget (aget array i) idxs)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [104 109],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L104-L109"},
+          :lines [123 128],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L123-L128"},
  :full-name "cljs.core/aget",
  :clj-symbol "clojure.core/aget",
  :docstring "Returns the value at the index."}

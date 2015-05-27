@@ -18,11 +18,11 @@ Bitwise shift right with zero fill
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1414-1416](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1414-L1416)</ins>
+            └── <ins>[core.cljs:1614-1616](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1614-L1616)</ins>
 </pre>
 
 ```clj
@@ -34,11 +34,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:335-336](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L335-L336)</ins>
+            └── <ins>[core.clj:439-440](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L439-L440)</ins>
 </pre>
 
 ```clj
@@ -54,15 +54,15 @@ clojurescript @ r1586
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-shift-right-zero-fill [x n]\n  (list 'js* \"(~{} >>> ~{})\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [335 336],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L335-L336"}),
+                     :lines [439 440],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L439-L440"}),
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core_bit-shift-right-zero-fill",
  :source {:code "(defn bit-shift-right-zero-fill\n  [x n] (cljs.core/bit-shift-right-zero-fill x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1414 1416],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1414-L1416"},
+          :lines [1614 1616],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1614-L1616"},
  :full-name "cljs.core/bit-shift-right-zero-fill",
  :docstring "Bitwise shift right with zero fill"}
 

@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:247-251](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L247-L251)</ins>
+            └── <ins>[core.cljs:266-270](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L266-L270)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_ISorted",
  :source {:code "(defprotocol ISorted\n  (-sorted-seq [coll ascending?])\n  (-sorted-seq-from [coll k ascending?])\n  (-entry-key [coll entry])\n  (-comparator [coll]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [247 251],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L247-L251"},
+          :lines [266 270],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L266-L270"},
  :methods [{:name "-sorted-seq",
             :signature ["[coll ascending?]"],
             :docstring nil}

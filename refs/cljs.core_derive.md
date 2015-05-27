@@ -26,11 +26,11 @@ supplied defaults to, and modifies, the global hierarchy.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7075-7107](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7075-L7107)</ins>
+            └── <ins>[core.cljs:6896-6928](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6896-L6928)</ins>
 </pre>
 
 ```clj
@@ -38,7 +38,7 @@ clojurescript @ r1586
   ([tag parent]
    (assert (namespace parent))
    ;; (assert (or (class? tag) (and (instance? cljs.core.Named tag) (namespace tag))))
-   (swap! global-hierarchy derive tag parent) nil)
+   (swap-global-hierarchy! derive tag parent) nil)
   ([h tag parent]
    (assert (not= tag parent))
    ;; (assert (or (class? tag) (instance? clojure.lang.Named tag)))
@@ -74,10 +74,10 @@ clojurescript @ r1586
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_derive",
- :source {:code "(defn derive\n  ([tag parent]\n   (assert (namespace parent))\n   ;; (assert (or (class? tag) (and (instance? cljs.core.Named tag) (namespace tag))))\n   (swap! global-hierarchy derive tag parent) nil)\n  ([h tag parent]\n   (assert (not= tag parent))\n   ;; (assert (or (class? tag) (instance? clojure.lang.Named tag)))\n   ;; (assert (instance? clojure.lang.INamed tag))\n   ;; (assert (instance? clojure.lang.INamed parent))\n   (let [tp (:parents h)\n         td (:descendants h)\n         ta (:ancestors h)\n         tf (fn [m source sources target targets]\n              (reduce (fn [ret k]\n                        (assoc ret k\n                               (reduce conj (get targets k #{}) (cons target (targets target)))))\n                      m (cons source (sources source))))]\n     (or\n      (when-not (contains? (tp tag) parent)\n        (when (contains? (ta tag) parent)\n          (throw (js/Error. (str tag \"already has\" parent \"as ancestor\"))))\n        (when (contains? (ta parent) tag)\n          (throw (js/Error. (str \"Cyclic derivation:\" parent \"has\" tag \"as ancestor\"))))\n        {:parents (assoc (:parents h) tag (conj (get tp tag #{}) parent))\n         :ancestors (tf (:ancestors h) tag td parent ta)\n         :descendants (tf (:descendants h) parent ta tag td)})\n      h))))",
+ :source {:code "(defn derive\n  ([tag parent]\n   (assert (namespace parent))\n   ;; (assert (or (class? tag) (and (instance? cljs.core.Named tag) (namespace tag))))\n   (swap-global-hierarchy! derive tag parent) nil)\n  ([h tag parent]\n   (assert (not= tag parent))\n   ;; (assert (or (class? tag) (instance? clojure.lang.Named tag)))\n   ;; (assert (instance? clojure.lang.INamed tag))\n   ;; (assert (instance? clojure.lang.INamed parent))\n   (let [tp (:parents h)\n         td (:descendants h)\n         ta (:ancestors h)\n         tf (fn [m source sources target targets]\n              (reduce (fn [ret k]\n                        (assoc ret k\n                               (reduce conj (get targets k #{}) (cons target (targets target)))))\n                      m (cons source (sources source))))]\n     (or\n      (when-not (contains? (tp tag) parent)\n        (when (contains? (ta tag) parent)\n          (throw (js/Error. (str tag \"already has\" parent \"as ancestor\"))))\n        (when (contains? (ta parent) tag)\n          (throw (js/Error. (str \"Cyclic derivation:\" parent \"has\" tag \"as ancestor\"))))\n        {:parents (assoc (:parents h) tag (conj (get tp tag #{}) parent))\n         :ancestors (tf (:ancestors h) tag td parent ta)\n         :descendants (tf (:descendants h) parent ta tag td)})\n      h))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7075 7107],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7075-L7107"},
+          :lines [6896 6928],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6896-L6928"},
  :full-name "cljs.core/derive",
  :clj-symbol "clojure.core/derive",
  :docstring "Establishes a parent/child relationship between parent and\ntag. Parent must be a namespace-qualified symbol or keyword and\nchild can be either a namespace-qualified symbol or keyword or a\nclass. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy."}

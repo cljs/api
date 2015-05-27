@@ -18,26 +18,18 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7290-7309](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7290-L7309)</ins>
+            └── <ins>[core.cljs:7111-7122](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7111-L7122)</ins>
 </pre>
 
 ```clj
 (deftype UUID [uuid]
-  Object
-  (toString [this]
-    (pr-str this))
-
   IEquiv
   (-equiv [_ other]
     (and (instance? UUID other) (identical? uuid (.-uuid other))))
-
-  ^:deprecation-nowarn IPrintable
-  (-pr-seq [_ _]
-    (list (str "#uuid \"" uuid "\"")))
 
   IPrintWithWriter
   (-pr-writer [_ writer _]
@@ -57,10 +49,10 @@ clojurescript @ r1586
  :name "UUID",
  :type "type",
  :signature ["[uuid]"],
- :source {:code "(deftype UUID [uuid]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  ^:deprecation-nowarn IPrintable\n  (-pr-seq [_ _]\n    (list (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
+ :source {:code "(deftype UUID [uuid]\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7290 7309],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7290-L7309"},
+          :lines [7111 7122],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7111-L7122"},
  :full-name-encode "cljs.core_UUID",
  :history [["+" "0.0-1424"]]}
 

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:492-494](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L492-L494)</ins>
+            └── <ins>[core.cljs:526-528](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L526-L528)</ins>
 </pre>
 
 ```clj
@@ -42,8 +42,8 @@ clojurescript @ r1586
  :signature ["[val]"],
  :source {:code "(deftype Reduced [val]\n  IDeref\n  (-deref [o] val))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [492 494],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L492-L494"},
+          :lines [526 528],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L526-L528"},
  :full-name-encode "cljs.core_Reduced",
  :history [["+" "0.0-1211"]]}
 

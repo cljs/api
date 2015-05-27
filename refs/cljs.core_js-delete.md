@@ -18,18 +18,33 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:984-985](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L984-L985)</ins>
+            └── <ins>[core.cljs:1054-1055](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1054-L1055)</ins>
 </pre>
 
 ```clj
 (defn js-delete [obj key]
-  (js* "delete ~{obj}[~{key}]"))
+  (cljs.core/js-delete obj key))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:224-225](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L224-L225)</ins>
+</pre>
+
+```clj
+(defmacro js-delete [obj key]
+  (list 'js* "delete ~{}[~{}]" obj key))
+```
 
 ---
 
@@ -39,11 +54,15 @@ clojurescript @ r1586
  :name "js-delete",
  :type "function",
  :signature ["[obj key]"],
- :source {:code "(defn js-delete [obj key]\n  (js* \"delete ~{obj}[~{key}]\"))",
+ :source {:code "(defn js-delete [obj key]\n  (cljs.core/js-delete obj key))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [984 985],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L984-L985"},
+          :lines [1054 1055],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1054-L1055"},
  :full-name-encode "cljs.core_js-delete",
+ :shadowed-sources ({:code "(defmacro js-delete [obj key]\n  (list 'js* \"delete ~{}[~{}]\" obj key))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [224 225],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L224-L225"}),
  :history [["+" "0.0-927"]]}
 
 ```

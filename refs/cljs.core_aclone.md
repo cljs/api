@@ -21,11 +21,11 @@ Returns a javascript array, cloned from the passed in array
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L85-L88)</ins>
+            └── <ins>[core.cljs:104-107](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L104-L107)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1006-1007](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L1006-L1007)</ins>
+            └── <ins>[core.clj:1175-1176](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L1175-L1176)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1586
  :signature ["[array-like]"],
  :shadowed-sources ({:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [1006 1007],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L1006-L1007"}),
+                     :lines [1175 1176],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L1175-L1176"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aclone",
  :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [85 88],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L85-L88"},
+          :lines [104 107],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L104-L107"},
  :full-name "cljs.core/aclone",
  :clj-symbol "clojure.core/aclone",
  :docstring "Returns a javascript array, cloned from the passed in array"}

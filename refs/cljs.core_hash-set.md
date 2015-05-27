@@ -22,22 +22,35 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5816-5823](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5816-L5823)</ins>
+            └── <ins>[core.cljs:5797-5817](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5797-L5817)</ins>
 </pre>
 
 ```clj
 (defn hash-set
   ([] cljs.core.PersistentHashSet/EMPTY)
-  ([& keys]
-    (loop [in (seq keys)
-           out (transient cljs.core.PersistentHashSet/EMPTY)]
-      (if (seq in)
-        (recur (next in) (conj! out (first in)))
-        (persistent! out)))))
+  ([& ^not-native keys]
+     (if (and (instance? IndexedSeq keys)
+              (< (alength (.-arr keys)) cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD))
+       (let [karr (.-arr keys)
+             klen (alength karr)
+             alen (* 2 klen)
+             arr  (make-array alen)]
+         (loop [ki 0]
+           (if (< ki klen)
+             (let [ai (* 2 ki)]
+               (aset arr ai (aget karr ki))
+               (aset arr (inc ai) nil)
+               (recur (inc ki)))
+             (cljs.core.PersistentHashSet/fromArray arr true))))
+       (loop [in keys
+              ^not-native out (-as-transient cljs.core.PersistentHashSet/EMPTY)]
+         (if-not (nil? in)
+           (recur (-next in) (-conj! out (-first in)))
+           (-persistent! out))))))
 ```
 
 
@@ -49,10 +62,10 @@ clojurescript @ r1586
  :name "hash-set",
  :type "function",
  :signature ["[]" "[& keys]"],
- :source {:code "(defn hash-set\n  ([] cljs.core.PersistentHashSet/EMPTY)\n  ([& keys]\n    (loop [in (seq keys)\n           out (transient cljs.core.PersistentHashSet/EMPTY)]\n      (if (seq in)\n        (recur (next in) (conj! out (first in)))\n        (persistent! out)))))",
+ :source {:code "(defn hash-set\n  ([] cljs.core.PersistentHashSet/EMPTY)\n  ([& ^not-native keys]\n     (if (and (instance? IndexedSeq keys)\n              (< (alength (.-arr keys)) cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD))\n       (let [karr (.-arr keys)\n             klen (alength karr)\n             alen (* 2 klen)\n             arr  (make-array alen)]\n         (loop [ki 0]\n           (if (< ki klen)\n             (let [ai (* 2 ki)]\n               (aset arr ai (aget karr ki))\n               (aset arr (inc ai) nil)\n               (recur (inc ki)))\n             (cljs.core.PersistentHashSet/fromArray arr true))))\n       (loop [in keys\n              ^not-native out (-as-transient cljs.core.PersistentHashSet/EMPTY)]\n         (if-not (nil? in)\n           (recur (-next in) (-conj! out (-first in)))\n           (-persistent! out))))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5816 5823],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5816-L5823"},
+          :lines [5797 5817],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5797-L5817"},
  :full-name-encode "cljs.core_hash-set",
  :clj-symbol "clojure.core/hash-set",
  :history [["+" "0.0-1443"]]}

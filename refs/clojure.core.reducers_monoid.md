@@ -4,6 +4,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/monoid</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/monoid)
+</td>
 </tr>
 </table>
 
@@ -20,12 +23,12 @@ must return an identity value for it.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:233-240](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L233-L240)</ins>
+                └── <ins>[reducers.cljs:235-242](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L235-L242)</ins>
 </pre>
 
 ```clj
@@ -40,17 +43,18 @@ clojurescript @ r1586
 ---
 
 ```clj
-{:full-name "clojure.core.reducers/monoid",
- :ns "clojure.core.reducers",
+{:ns "clojure.core.reducers",
  :name "monoid",
- :docstring "Builds a combining fn out of the supplied operator and identity\nconstructor. op must be associative and ctor called with no args\nmust return an identity value for it.",
- :type "function",
  :signature ["[op ctor]"],
+ :history [["+" "0.0-1236"]],
+ :type "function",
+ :full-name-encode "clojure.core.reducers_monoid",
  :source {:code "(defn monoid\n  [op ctor]\n  (fn m\n    ([] (ctor))\n    ([a b] (op a b))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
-          :lines [233 240],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L233-L240"},
- :full-name-encode "clojure.core.reducers_monoid",
- :history [["+" "0.0-1236"]]}
+          :lines [235 242],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L235-L242"},
+ :full-name "clojure.core.reducers/monoid",
+ :clj-symbol "clojure.core.reducers/monoid",
+ :docstring "Builds a combining fn out of the supplied operator and identity\nconstructor. op must be associative and ctor called with no args\nmust return an identity value for it."}
 
 ```

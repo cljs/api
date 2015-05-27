@@ -23,11 +23,11 @@ logical true.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:886-898](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L886-L898)</ins>
+            └── <ins>[core.clj:993-1005](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L993-L1005)</ins>
 </pre>
 
 ```clj
@@ -48,11 +48,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4246-4257](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4246-L4257)</ins>
+            └── <ins>[core.clj:4346-4357](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L4346-L4357)</ins>
 </pre>
 
 ```clj
@@ -75,15 +75,15 @@ clojure @ clojure-1.4.0
  :signature ["[x]" "[x message]"],
  :shadowed-sources ({:code "(defmacro assert\n  ([x]\n     (when *assert*\n       `(when-not ~x\n          (throw (new AssertionError (str \"Assert failed: \" (pr-str '~x)))))))\n  ([x message]\n     (when *assert*\n       `(when-not ~x\n          (throw (new AssertionError (str \"Assert failed: \" ~message \"\\n\" (pr-str '~x))))))))",
                      :filename "clojure/src/clj/clojure/core.clj",
-                     :lines [4246 4257],
-                     :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4246-L4257"}),
+                     :lines [4346 4357],
+                     :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L4346-L4357"}),
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_assert",
  :source {:code "(defmacro assert\n  ([x]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" (cljs.core/pr-str '~x)))))))\n  ([x message]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" ~message \"\\n\" (cljs.core/pr-str '~x))))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [886 898],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L886-L898"},
+          :lines [993 1005],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L993-L1005"},
  :full-name "cljs.core/assert",
  :clj-symbol "clojure.core/assert",
  :docstring "Evaluates expr and throws an exception if it does not evaluate to\nlogical true."}

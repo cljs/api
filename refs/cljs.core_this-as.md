@@ -18,11 +18,11 @@ Defines a scope where JavaScript's implicit "this" is bound to the name provided
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:429-433](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L429-L433)</ins>
+            └── <ins>[core.clj:527-531](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L527-L531)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r1586
  :signature ["[name & body]"],
  :source {:code "(defmacro this-as\n  [name & body]\n  `(let [~name (~'js* \"this\")]\n     ~@body))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [429 433],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L429-L433"},
+          :lines [527 531],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L527-L531"},
  :full-name-encode "cljs.core_this-as",
  :history [["+" "0.0-927"]]}
 

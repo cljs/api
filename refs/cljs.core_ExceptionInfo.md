@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7313-7313](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7313-L7313)</ins>
+            └── <ins>[core.cljs:7126-7126](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7126-L7126)</ins>
 </pre>
 
 ```clj
@@ -40,8 +40,8 @@ clojurescript @ r1586
  :signature ["[message data cause]"],
  :source {:code "(deftype ExceptionInfo [message data cause])",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [7313 7313],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L7313-L7313"},
+          :lines [7126 7126],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7126-L7126"},
  :full-name-encode "cljs.core_ExceptionInfo",
  :history [["+" "0.0-1576"]]}
 

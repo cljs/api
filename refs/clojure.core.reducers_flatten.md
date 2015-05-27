@@ -4,6 +4,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/flatten</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/flatten)
+</td>
 </tr>
 </table>
 
@@ -21,12 +24,12 @@ Takes any nested combination of sequential things (lists, vectors,
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:119-132](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L119-L132)</ins>
+                └── <ins>[reducers.cljs:121-134](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L121-L134)</ins>
 </pre>
 
 ```clj
@@ -50,17 +53,18 @@ clojurescript @ r1586
 ---
 
 ```clj
-{:full-name "clojure.core.reducers/flatten",
- :ns "clojure.core.reducers",
+{:ns "clojure.core.reducers",
  :name "flatten",
- :docstring "Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection.",
- :type "function",
  :signature ["[]" "[coll]"],
+ :history [["+" "0.0-1236"]],
+ :type "function",
+ :full-name-encode "clojure.core.reducers_flatten",
  :source {:code "(defcurried flatten\n  \"Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection.\"\n  {}\n  [coll]\n  (folder coll\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([ret v]\n          (if (sequential? v)\n            (-reduce (flatten v) f1 ret)\n            (f1 ret v)))))))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
-          :lines [119 132],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L119-L132"},
- :full-name-encode "clojure.core.reducers_flatten",
- :history [["+" "0.0-1236"]]}
+          :lines [121 134],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L121-L134"},
+ :full-name "clojure.core.reducers/flatten",
+ :clj-symbol "clojure.core.reducers/flatten",
+ :docstring "Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection."}
 
 ```

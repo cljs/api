@@ -21,11 +21,11 @@ Flip bit at index n
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1387-1390](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1387-L1390)</ins>
+            └── <ins>[core.cljs:1587-1590](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1587-L1590)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:323-324](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L323-L324)</ins>
+            └── <ins>[core.clj:427-428](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L427-L428)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1586
  :signature ["[x n]"],
  :shadowed-sources ({:code "(defmacro bit-flip [x n]\n  (list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [323 324],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L323-L324"}),
+                     :lines [427 428],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L427-L428"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-flip",
  :source {:code "(defn bit-flip\n  [x n]\n  (cljs.core/bit-flip x n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1387 1390],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1387-L1390"},
+          :lines [1587 1590],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1587-L1590"},
  :full-name "cljs.core/bit-flip",
  :clj-symbol "clojure.core/bit-flip",
  :docstring "Flip bit at index n"}

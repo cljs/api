@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1679-1680](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1679-L1680)</ins>
+            └── <ins>[core.cljs:1861-1862](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1861-L1862)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_reversible_QMARK_",
  :source {:code "(defn ^boolean reversible? [coll]\n  (satisfies? IReversible coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1679 1680],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1679-L1680"},
+          :lines [1861 1862],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1861-L1862"},
  :full-name "cljs.core/reversible?",
  :clj-symbol "clojure.core/reversible?"}
 

@@ -21,19 +21,34 @@ Coerce to int by stripping decimal places.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1325-1328](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328)</ins>
+            └── <ins>[core.cljs:1506-1509](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1506-L1509)</ins>
 </pre>
 
 ```clj
 (defn int
   [x]
-  (fix x))
+  (bit-or x 0))
 ```
 
+
+---
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:413-414](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L413-L414)</ins>
+</pre>
+
+```clj
+(defmacro int [x]
+  `(bit-or ~x 0))
+```
 
 ---
 
@@ -41,13 +56,17 @@ clojurescript @ r1586
 {:ns "cljs.core",
  :name "int",
  :signature ["[x]"],
+ :shadowed-sources ({:code "(defmacro int [x]\n  `(bit-or ~x 0))",
+                     :filename "clojurescript/src/clj/cljs/core.clj",
+                     :lines [413 414],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L413-L414"}),
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core_int",
- :source {:code "(defn int\n  [x]\n  (fix x))",
+ :source {:code "(defn int\n  [x]\n  (bit-or x 0))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1325 1328],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328"},
+          :lines [1506 1509],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1506-L1509"},
  :full-name "cljs.core/int",
  :clj-symbol "clojure.core/int",
  :docstring "Coerce to int by stripping decimal places."}

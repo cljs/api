@@ -19,11 +19,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:644-649](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L644-L649)</ins>
+            └── <ins>[core.cljs:670-675](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L670-L675)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1586
  :signature ["[prim]" "[prim i]"],
  :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when (< i (alength prim))\n       (IndexedSeq. prim i))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [644 649],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L644-L649"},
+          :lines [670 675],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L670-L675"},
  :full-name-encode "cljs.core_prim-seq",
  :history [["+" "0.0-927"]]}
 

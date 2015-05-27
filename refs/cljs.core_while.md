@@ -22,11 +22,11 @@ some side-effect will cause test to become false/nil. Returns nil
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:5598-5606](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L5598-L5606)</ins>
+            └── <ins>[core.clj:5713-5721](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L5713-L5721)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_while",
  :source {:code "(defmacro while\n  [test & body]\n  `(loop []\n     (when ~test\n       ~@body\n       (recur))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [5598 5606],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L5598-L5606"},
+          :lines [5713 5721],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L5713-L5721"},
  :full-name "cljs.core/while",
  :clj-symbol "clojure.core/while",
  :docstring "Repeatedly executes body while test expression is true. Presumes\nsome side-effect will cause test to become false/nil. Returns nil"}

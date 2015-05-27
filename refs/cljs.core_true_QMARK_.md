@@ -21,11 +21,11 @@ Returns true if x is the value true, false otherwise.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1011-1013](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1011-L1013)</ins>
+            └── <ins>[core.cljs:1081-1083](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1081-L1083)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:199-200](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L199-L200)</ins>
+            └── <ins>[core.clj:227-228](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L227-L228)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1586
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro true? [x]\n  (bool-expr (list 'js* \"~{} === true\" x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [199 200],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L199-L200"}),
+                     :lines [227 228],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L227-L228"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_true_QMARK_",
  :source {:code "(defn ^boolean true?\n  [x] (cljs.core/true? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1011 1013],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1011-L1013"},
+          :lines [1081 1083],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1081-L1083"},
  :full-name "cljs.core/true?",
  :clj-symbol "clojure.core/true?",
  :docstring "Returns true if x is the value true, false otherwise."}

@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:232-241](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/analyzer.clj#L232-L241)</ins>
+            └── <ins>[analyzer.clj:244-253](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/analyzer.clj#L244-L253)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r1586
  :type "special form",
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (assert (>= (count form) 3) \"Too few arguments to if\")\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [232 241],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/analyzer.clj#L232-L241"},
+          :lines [244 253],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/analyzer.clj#L244-L253"},
  :full-name-encode "special_if",
  :clj-symbol "clojure.core/if",
  :history [["+" "0.0-927"]]}

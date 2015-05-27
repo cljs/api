@@ -25,11 +25,11 @@ last item in second form, etc.
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1541-1550](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1541-L1550)</ins>
+            └── <ins>[core.clj:1557-1566](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1557-L1566)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_-_GT__GT_",
  :source {:code "(defmacro ->>\n  ([x form] (if (seq? form)\n              (with-meta `(~(first form) ~@(next form)  ~x) (meta form))\n              (list form x)))\n  ([x form & more] `(->> (->> ~x ~form) ~@more)))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [1541 1550],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1541-L1550"},
+          :lines [1557 1566],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1557-L1566"},
  :full-name "cljs.core/->>",
  :clj-symbol "clojure.core/->>",
  :docstring "Threads the expr through the forms. Inserts x as the\nlast item in the first form, making a list of it if it is not a\nlist already. If there are more forms, inserts the first form as the\nlast item in second form, etc."}

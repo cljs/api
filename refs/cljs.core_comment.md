@@ -21,11 +21,11 @@ Ignores body, yields nil
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4165-4168](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4165-L4168)</ins>
+            └── <ins>[core.clj:4265-4268](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L4265-L4268)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_comment",
  :source {:code "(defmacro comment\n  [& body])",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [4165 4168],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4165-L4168"},
+          :lines [4265 4268],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L4265-L4268"},
  :full-name "cljs.core/comment",
  :clj-symbol "clojure.core/comment",
  :docstring "Ignores body, yields nil"}

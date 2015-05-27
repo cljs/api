@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:243-248](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/analyzer.clj#L243-L248)</ins>
+            └── <ins>[analyzer.clj:255-260](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/analyzer.clj#L255-L260)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1586
  :type "special form",
  :source {:code "(defmethod parse 'throw\n  [op env [_ throw :as form] name]\n  (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]\n    {:env env :op :throw :form form\n     :throw throw-expr\n     :children [throw-expr]}))",
           :filename "clojurescript/src/clj/cljs/analyzer.clj",
-          :lines [243 248],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/analyzer.clj#L243-L248"},
+          :lines [255 260],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/analyzer.clj#L255-L260"},
  :full-name-encode "special_throw",
  :clj-symbol "clojure.core/throw",
  :history [["+" "0.0-927"]]}

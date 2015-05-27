@@ -11,11 +11,7 @@
 </table>
 
  <samp>
-(__list__)<br>
-(__list__ x)<br>
-(__list__ x y)<br>
-(__list__ x y z)<br>
-(__list__ x y z & items)<br>
+(__list__ & xs)<br>
 </samp>
 
 ```
@@ -25,22 +21,28 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1692-1699](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1692-L1699)</ins>
+            └── <ins>[core.cljs:1874-1887](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1874-L1887)</ins>
 </pre>
 
 ```clj
-(defn list
-  ([] ())
-  ([x] (conj () x))
-  ([x y] (conj (list y) x))
-  ([x y z] (conj (list y z) x))
-  ([x y z & items]
-     (conj (conj (conj (reduce conj () (reverse items))
-                       z) y) x)))
+(defn list [& xs]
+  (let [arr (if (instance? IndexedSeq xs)
+              (.-arr xs)
+              (let [arr (array)]
+                (loop [^not-native xs xs]
+                  (if-not (nil? xs)
+                    (do
+                      (.push arr (-first xs))
+                      (recur (-next xs)))
+                    arr))))]
+    (loop [i (alength arr) ^not-native r ()]
+      (if (> i 0)
+        (recur (dec i) (-conj r (aget arr (dec i))))
+        r))))
 ```
 
 
@@ -51,11 +53,11 @@ clojurescript @ r1586
  :ns "cljs.core",
  :name "list",
  :type "function",
- :signature ["[]" "[x]" "[x y]" "[x y z]" "[x y z & items]"],
- :source {:code "(defn list\n  ([] ())\n  ([x] (conj () x))\n  ([x y] (conj (list y) x))\n  ([x y z] (conj (list y z) x))\n  ([x y z & items]\n     (conj (conj (conj (reduce conj () (reverse items))\n                       z) y) x)))",
+ :signature ["[& xs]"],
+ :source {:code "(defn list [& xs]\n  (let [arr (if (instance? IndexedSeq xs)\n              (.-arr xs)\n              (let [arr (array)]\n                (loop [^not-native xs xs]\n                  (if-not (nil? xs)\n                    (do\n                      (.push arr (-first xs))\n                      (recur (-next xs)))\n                    arr))))]\n    (loop [i (alength arr) ^not-native r ()]\n      (if (> i 0)\n        (recur (dec i) (-conj r (aget arr (dec i))))\n        r))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1692 1699],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1692-L1699"},
+          :lines [1874 1887],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1874-L1887"},
  :full-name-encode "cljs.core_list",
  :clj-symbol "clojure.core/list",
  :history [["+" "0.0-927"]]}

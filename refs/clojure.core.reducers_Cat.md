@@ -4,6 +4,9 @@
 <tr>
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/Cat</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/Cat)
+</td>
 </tr>
 </table>
 
@@ -18,12 +21,12 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:182-202](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L182-L202)</ins>
+                └── <ins>[reducers.cljs:184-204](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L184-L204)</ins>
 </pre>
 
 ```clj
@@ -61,9 +64,10 @@ clojurescript @ r1586
  :signature ["[cnt left right]"],
  :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n  \n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  #_\n  CollFold\n  #_\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
           :filename "clojurescript/src/cljs/clojure/core/reducers.cljs",
-          :lines [182 202],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L182-L202"},
+          :lines [184 204],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L184-L204"},
  :full-name-encode "clojure.core.reducers_Cat",
+ :clj-symbol "clojure.core.reducers/Cat",
  :history [["+" "0.0-1236"]]}
 
 ```

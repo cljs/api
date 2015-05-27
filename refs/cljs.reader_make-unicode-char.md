@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:197-199](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/reader.cljs#L197-L199)</ins>
+            └── <ins>[reader.cljs:197-199](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L197-L199)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1586
  :source {:code "(defn make-unicode-char [code-str]\n    (let [code (js/parseInt code-str 16)]\n      (.fromCharCode js/String code)))",
           :filename "clojurescript/src/cljs/cljs/reader.cljs",
           :lines [197 199],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/reader.cljs#L197-L199"},
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L197-L199"},
  :full-name-encode "cljs.reader_make-unicode-char",
  :history [["+" "0.0-1424"]]}
 

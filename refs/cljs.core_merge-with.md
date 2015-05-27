@@ -24,11 +24,11 @@ the result by calling (f val-in-result val-in-latter).
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5607-5621](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5607-L5621)</ins>
+            └── <ins>[core.cljs:5590-5604](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5590-L5604)</ins>
 </pre>
 
 ```clj
@@ -57,8 +57,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_merge-with",
  :source {:code "(defn merge-with\n  [f & maps]\n  (when (some identity maps)\n    (let [merge-entry (fn [m e]\n                        (let [k (first e) v (second e)]\n                          (if (contains? m k)\n                            (assoc m k (f (get m k) v))\n                            (assoc m k v))))\n          merge2 (fn [m1 m2]\n                   (reduce merge-entry (or m1 {}) (seq m2)))]\n      (reduce merge2 maps))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [5607 5621],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5607-L5621"},
+          :lines [5590 5604],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5590-L5604"},
  :full-name "cljs.core/merge-with",
  :clj-symbol "clojure.core/merge-with",
  :docstring "Returns a map that consists of the rest of the maps conj-ed onto\nthe first.  If a key occurs in more than one map, the mapping(s)\nfrom the latter (left-to-right) will be combined with the mapping in\nthe result by calling (f val-in-result val-in-latter)."}

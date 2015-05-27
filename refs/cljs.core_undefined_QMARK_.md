@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1015-1016](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1015-L1016)</ins>
+            └── <ins>[core.cljs:1085-1086](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1085-L1086)</ins>
 </pre>
 
 ```clj
@@ -34,11 +34,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:205-206](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L205-L206)</ins>
+            └── <ins>[core.clj:239-240](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L239-L240)</ins>
 </pre>
 
 ```clj
@@ -55,15 +55,15 @@ clojurescript @ r1586
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro undefined? [x]\n  (bool-expr (list 'js* \"(void 0 === ~{})\" x)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [205 206],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L205-L206"}),
+                     :lines [239 240],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L239-L240"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_undefined_QMARK_",
  :source {:code "(defn ^boolean undefined? [x]\n  (cljs.core/undefined? x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1015 1016],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1015-L1016"},
+          :lines [1085 1086],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1085-L1086"},
  :full-name "cljs.core/undefined?"}
 
 ```

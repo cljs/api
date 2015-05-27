@@ -21,11 +21,11 @@ Return a random permutation of coll
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1187-1192](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1187-L1192)</ins>
+            └── <ins>[core.cljs:1257-1262](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1257-L1262)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_shuffle",
  :source {:code "(defn shuffle\n  [coll]\n  (let [a (to-array coll)]\n    (garray/shuffle a)\n    (vec a)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1187 1192],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1187-L1192"},
+          :lines [1257 1262],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1257-L1262"},
  :full-name "cljs.core/shuffle",
  :clj-symbol "clojure.core/shuffle",
  :docstring "Return a random permutation of coll"}

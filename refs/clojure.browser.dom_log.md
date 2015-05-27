@@ -18,12 +18,12 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:20-21](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/dom.cljs#L20-L21)</ins>
+                └── <ins>[dom.cljs:20-21](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/dom.cljs#L20-L21)</ins>
 </pre>
 
 ```clj
@@ -43,7 +43,7 @@ clojurescript @ r1586
  :source {:code "(defn log [& args]\n  (.log js/console (apply pr-str args)))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [20 21],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/dom.cljs#L20-L21"},
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/dom.cljs#L20-L21"},
  :full-name-encode "clojure.browser.dom_log",
  :history [["+" "0.0-927"]]}
 

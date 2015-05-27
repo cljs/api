@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:910-917](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L910-L917)</ins>
+            └── <ins>[core.cljs:976-983](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L976-L983)</ins>
 </pre>
 
 ```clj
@@ -31,7 +31,7 @@ clojurescript @ r1586
     (set! string-hash-cache (js-obj))
     (set! string-hash-cache-count 0))
   (let [h (aget string-hash-cache k)]
-    (if-not (nil? h)
+    (if (number? h)
       h
       (add-to-string-hash-cache k))))
 ```
@@ -45,10 +45,10 @@ clojurescript @ r1586
  :name "check-string-hash-cache",
  :type "function",
  :signature ["[k]"],
- :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if-not (nil? h)\n      h\n      (add-to-string-hash-cache k))))",
+ :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [910 917],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L910-L917"},
+          :lines [976 983],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L976-L983"},
  :full-name-encode "cljs.core_check-string-hash-cache",
  :history [["+" "0.0-1424"]]}
 

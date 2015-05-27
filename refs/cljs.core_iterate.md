@@ -21,11 +21,11 @@ Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effec
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2579-2582](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2579-L2582)</ins>
+            └── <ins>[core.cljs:2756-2759](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2756-L2759)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_iterate",
  :source {:code "(defn iterate\n  [f x] (cons x (lazy-seq (iterate f (f x)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2579 2582],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2579-L2582"},
+          :lines [2756 2759],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2756-L2759"},
  :full-name "cljs.core/iterate",
  :clj-symbol "clojure.core/iterate",
  :docstring "Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effects"}

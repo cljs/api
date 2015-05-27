@@ -21,11 +21,11 @@ Bitwise complement
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1392-1394](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1392-L1394)</ins>
+            └── <ins>[core.cljs:1592-1594](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1592-L1594)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:296-297](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L296-L297)</ins>
+            └── <ins>[core.clj:397-398](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L397-L398)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r1586
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro bit-not [x]\n  (list 'js* \"(~ ~{})\" x))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [296 297],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L296-L297"}),
+                     :lines [397 398],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L397-L398"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-not",
  :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1392 1394],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1392-L1394"},
+          :lines [1592 1594],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1592-L1594"},
  :full-name "cljs.core/bit-not",
  :clj-symbol "clojure.core/bit-not",
  :docstring "Bitwise complement"}

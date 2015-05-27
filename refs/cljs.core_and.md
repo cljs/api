@@ -26,11 +26,11 @@ the value of the last expr. (and) returns true.
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:778-788](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L778-L788)</ins>
+            └── <ins>[core.clj:794-804](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L794-L804)</ins>
 </pre>
 
 ```clj
@@ -54,8 +54,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_and",
  :source {:code "(defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n   `(let [and# ~x]\n      (if and# (and ~@next) and#))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [778 788],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L778-L788"},
+          :lines [794 804],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L794-L804"},
  :full-name "cljs.core/and",
  :clj-symbol "clojure.core/and",
  :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns logical false (nil or false), and returns that value and\ndoesn't evaluate any of the other expressions, otherwise it returns\nthe value of the last expr. (and) returns true."}

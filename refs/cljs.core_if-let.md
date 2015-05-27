@@ -25,11 +25,11 @@ test, if not, yields else
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1668-1685](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1668-L1685)</ins>
+            └── <ins>[core.clj:1684-1702](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1684-L1702)</ins>
 </pre>
 
 ```clj
@@ -38,7 +38,8 @@ clojure @ clojure-1.4.0
    `(if-let ~bindings ~then nil))
   ([bindings then else & oldform]
    (assert-args
-     (and (vector? bindings) (nil? oldform)) "a vector for its binding"
+     (vector? bindings) "a vector for its binding"
+     (nil? oldform) "1 or 2 forms after binding vector"
      (= 2 (count bindings)) "exactly 2 forms in binding vector")
    (let [form (bindings 0) tst (bindings 1)]
      `(let [temp# ~tst]
@@ -58,10 +59,10 @@ clojure @ clojure-1.4.0
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_if-let",
- :source {:code "(defmacro if-let\n  ([bindings then]\n   `(if-let ~bindings ~then nil))\n  ([bindings then else & oldform]\n   (assert-args\n     (and (vector? bindings) (nil? oldform)) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n     `(let [temp# ~tst]\n        (if temp#\n          (let [~form temp#]\n            ~then)\n          ~else)))))",
+ :source {:code "(defmacro if-let\n  ([bindings then]\n   `(if-let ~bindings ~then nil))\n  ([bindings then else & oldform]\n   (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (nil? oldform) \"1 or 2 forms after binding vector\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n     `(let [temp# ~tst]\n        (if temp#\n          (let [~form temp#]\n            ~then)\n          ~else)))))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [1668 1685],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1668-L1685"},
+          :lines [1684 1702],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1684-L1702"},
  :full-name "cljs.core/if-let",
  :clj-symbol "clojure.core/if-let",
  :docstring "bindings => binding-form test\n\nIf test is true, evaluates then with binding-form bound to the value of \ntest, if not, yields else"}

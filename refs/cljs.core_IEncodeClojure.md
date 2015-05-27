@@ -17,16 +17,16 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6935-6936](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6935-L6936)</ins>
+            └── <ins>[core.cljs:6744-6745](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6744-L6745)</ins>
 </pre>
 
 ```clj
 (defprotocol IEncodeClojure
-  (-js->clj [x] [x options] "Transforms JavaScript values to Clojure"))
+  (-js->clj [x options] "Transforms JavaScript values to Clojure"))
 ```
 
 
@@ -37,12 +37,12 @@ clojurescript @ r1586
  :name "IEncodeClojure",
  :type "protocol",
  :full-name-encode "cljs.core_IEncodeClojure",
- :source {:code "(defprotocol IEncodeClojure\n  (-js->clj [x] [x options] \"Transforms JavaScript values to Clojure\"))",
+ :source {:code "(defprotocol IEncodeClojure\n  (-js->clj [x options] \"Transforms JavaScript values to Clojure\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6935 6936],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6935-L6936"},
+          :lines [6744 6745],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6744-L6745"},
  :methods [{:name "-js->clj",
-            :signature ["[x]" "[x options]"],
+            :signature ["[x options]"],
             :docstring "Transforms JavaScript values to Clojure"}],
  :full-name "cljs.core/IEncodeClojure",
  :history [["+" "0.0-1552"]]}

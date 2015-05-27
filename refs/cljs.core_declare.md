@@ -21,11 +21,11 @@ defs the supplied var names with no bindings, useful for making forward declarat
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:2667-2670](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L2667-L2670)</ins>
+            └── <ins>[core.clj:2720-2723](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L2720-L2723)</ins>
 </pre>
 
 ```clj
@@ -45,8 +45,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_declare",
  :source {:code "(defmacro declare\n  [& names] `(do ~@(map #(list 'def (vary-meta % assoc :declared true)) names)))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [2667 2670],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L2667-L2670"},
+          :lines [2720 2723],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L2720-L2723"},
  :full-name "cljs.core/declare",
  :clj-symbol "clojure.core/declare",
  :docstring "defs the supplied var names with no bindings, useful for making forward declarations."}

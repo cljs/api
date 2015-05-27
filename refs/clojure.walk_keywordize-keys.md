@@ -21,11 +21,11 @@ Recursively transforms all map keys from strings to keywords.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:64-70](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/walk.cljs#L64-L70)</ins>
+            └── <ins>[walk.cljs:64-70](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/walk.cljs#L64-L70)</ins>
 </pre>
 
 ```clj
@@ -49,7 +49,7 @@ clojurescript @ r1586
  :source {:code "(defn keywordize-keys\n  [m]\n  (let [f (fn [[k v]] (if (string? k) [(keyword k) v] [k v]))]\n    ;; only apply to maps\n    (postwalk (fn [x] (if (map? x) (into {} (map f x)) x)) m)))",
           :filename "clojurescript/src/cljs/clojure/walk.cljs",
           :lines [64 70],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/walk.cljs#L64-L70"},
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/walk.cljs#L64-L70"},
  :full-name "clojure.walk/keywordize-keys",
  :clj-symbol "clojure.walk/keywordize-keys",
  :docstring "Recursively transforms all map keys from strings to keywords."}

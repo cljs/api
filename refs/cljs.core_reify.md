@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:410-427](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L410-L427)</ins>
+            └── <ins>[core.clj:508-525](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L508-L525)</ins>
 </pre>
 
 ```clj
@@ -60,8 +60,8 @@ clojurescript @ r1586
  :signature ["[& impls]"],
  :source {:code "(defmacro reify [& impls]\n  (let [t      (gensym \"t\")\n        meta-sym (gensym \"meta\")\n        this-sym (gensym \"_\")\n        locals (keys (:locals &env))\n        ns     (-> &env :ns :name)\n        munge  cljs.compiler/munge\n        ns-t   (list 'js* (core/str (munge ns) \".\" (munge t)))]\n    `(do\n       (when (undefined? ~ns-t)\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals nil))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [410 427],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L410-L427"},
+          :lines [508 525],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L508-L525"},
  :full-name-encode "cljs.core_reify",
  :clj-symbol "clojure.core/reify",
  :history [["+" "0.0-927"]]}

@@ -18,20 +18,16 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1584-1632](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1584-L1632)</ins>
+            └── <ins>[core.cljs:1774-1818](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1774-L1818)</ins>
 </pre>
 
 ```clj
 (deftype List [meta first rest count ^:mutable __hash]
   IList
-
-  Object
-  (toString [this]
-    (pr-str this))
 
   IWithMeta
   (-with-meta [coll meta] (List. meta first rest count __hash))
@@ -86,10 +82,10 @@ clojurescript @ r1586
  :name "List",
  :type "type",
  :signature ["[meta first rest count __hash]"],
- :source {:code "(deftype List [meta first rest count ^:mutable __hash]\n  IList\n\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll]\n    (if (== count 1)\n      ()\n      rest))\n\n  INext\n  (-next [coll]\n    (if (== count 1)\n      nil\n      rest))\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count) nil))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
+ :source {:code "(deftype List [meta first rest count ^:mutable __hash]\n  IList\n\n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll]\n    (if (== count 1)\n      ()\n      rest))\n\n  INext\n  (-next [coll]\n    (if (== count 1)\n      nil\n      rest))\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count) nil))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1584 1632],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1584-L1632"},
+          :lines [1774 1818],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1774-L1818"},
  :full-name-encode "cljs.core_List",
  :history [["+" "0.0-927"]]}
 

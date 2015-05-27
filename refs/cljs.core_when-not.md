@@ -21,11 +21,11 @@ Evaluates test. If logical false, evaluates body in an implicit do.
 ---
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:461-465](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L461-L465)</ins>
+            └── <ins>[core.clj:477-481](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L477-L481)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojure @ clojure-1.4.0
  :full-name-encode "cljs.core_when-not",
  :source {:code "(defmacro when-not\n  [test & body]\n    (list 'if test nil (cons 'do body)))",
           :filename "clojure/src/clj/clojure/core.clj",
-          :lines [461 465],
-          :link "https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L461-L465"},
+          :lines [477 481],
+          :link "https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L477-L481"},
  :full-name "cljs.core/when-not",
  :clj-symbol "clojure.core/when-not",
  :docstring "Evaluates test. If logical false, evaluates body in an implicit do."}

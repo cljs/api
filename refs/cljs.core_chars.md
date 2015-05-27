@@ -1,0 +1,52 @@
+## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> cljs.core/chars
+
+ <table border="1">
+<tr>
+<td>function</td>
+<td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/chars</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/chars)
+</td>
+</tr>
+</table>
+
+ <samp>
+(__chars__ x)<br>
+</samp>
+
+```
+(no docstring)
+```
+
+---
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── cljs
+        └── cljs
+            └── <ins>[core.cljs:1528-1528](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1528-L1528)</ins>
+</pre>
+
+```clj
+(defn chars [x] x)
+```
+
+
+---
+
+```clj
+{:full-name "cljs.core/chars",
+ :ns "cljs.core",
+ :name "chars",
+ :type "function",
+ :signature ["[x]"],
+ :source {:code "(defn chars [x] x)",
+          :filename "clojurescript/src/cljs/cljs/core.cljs",
+          :lines [1528 1528],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1528-L1528"},
+ :full-name-encode "cljs.core_chars",
+ :clj-symbol "clojure.core/chars",
+ :history [["+" "0.0-1798"]]}
+
+```

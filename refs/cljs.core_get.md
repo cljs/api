@@ -22,39 +22,50 @@ Returns the value mapped to key, not-found or nil if key not present.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:831-836](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L831-L836)</ins>
+            └── <ins>[core.cljs:854-888](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L854-L888)</ins>
 </pre>
 
 ```clj
 (defn get
   ([o k]
-     (-lookup o k))
+    (when-not (nil? o)
+      (cond
+        (satisfies? ILookup o false)
+        (-lookup ^not-native o k)
+
+        (array? o)
+        (when (< k (.-length o))
+          (aget o k))
+        
+        (string? o)
+        (when (< k (.-length o))
+          (aget o k))
+        
+        :else nil)))
   ([o k not-found]
-     (-lookup o k not-found)))
+    (if-not (nil? o)
+      (cond
+        (satisfies? ILookup o false)
+        (-lookup ^not-native o k not-found)
+
+        (array? o)
+        (if (< k (.-length o))
+          (aget o k)
+          not-found)
+        
+        (string? o)
+        (if (< k (.-length o))
+          (aget o k)
+          not-found)
+
+        :else not-found)
+      not-found)))
 ```
 
-
----
-
- <pre>
-clojurescript @ r1586
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:358-362](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L358-L362)</ins>
-</pre>
-
-```clj
-(defmacro get
-  ([coll k]
-     `(-lookup ~coll ~k nil))
-  ([coll k not-found]
-     `(-lookup ~coll ~k ~not-found)))
-```
 
 ---
 
@@ -62,17 +73,13 @@ clojurescript @ r1586
 {:ns "cljs.core",
  :name "get",
  :signature ["[o k]" "[o k not-found]"],
- :shadowed-sources ({:code "(defmacro get\n  ([coll k]\n     `(-lookup ~coll ~k nil))\n  ([coll k not-found]\n     `(-lookup ~coll ~k ~not-found)))",
-                     :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [358 362],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L358-L362"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_get",
- :source {:code "(defn get\n  ([o k]\n     (-lookup o k))\n  ([o k not-found]\n     (-lookup o k not-found)))",
+ :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o k))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o k))\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        :else not-found)\n      not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [831 836],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L831-L836"},
+          :lines [854 888],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L854-L888"},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

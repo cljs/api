@@ -22,19 +22,19 @@ argument.  If there are no more items, returns nil
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:348-355](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L348-L355)</ins>
+            └── <ins>[core.cljs:424-431](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L424-L431)</ins>
 </pre>
 
 ```clj
 (defn ^seq next
   [coll]
   (when-not (nil? coll)
-    (if (satisfies? INext coll)
-      (-next coll)
+    (if (satisfies? INext coll false)
+      (-next ^not-native coll)
       (seq (rest coll)))))
 ```
 
@@ -49,10 +49,10 @@ clojurescript @ r1586
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_next",
- :source {:code "(defn ^seq next\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? INext coll)\n      (-next coll)\n      (seq (rest coll)))))",
+ :source {:code "(defn ^seq next\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? INext coll false)\n      (-next ^not-native coll)\n      (seq (rest coll)))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [348 355],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L348-L355"},
+          :lines [424 431],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L424-L431"},
  :full-name "cljs.core/next",
  :clj-symbol "clojure.core/next",
  :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil"}

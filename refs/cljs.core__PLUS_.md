@@ -24,11 +24,11 @@ Returns the sum of nums. (+) returns 0.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1226-1231](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1226-L1231)</ins>
+            └── <ins>[core.cljs:1314-1320](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1314-L1320)</ins>
 </pre>
 
 ```clj
@@ -36,18 +36,19 @@ clojurescript @ r1586
   ([] 0)
   ([x] x)
   ([x y] (cljs.core/+ x y))
-  ([x y & more] (reduce + (cljs.core/+ x y) more)))
+  ([x y & more]
+    (reduce + (cljs.core/+ x y) more)))
 ```
 
 
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:221-225](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L221-L225)</ins>
+            └── <ins>[core.clj:264-268](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L264-L268)</ins>
 </pre>
 
 ```clj
@@ -66,15 +67,15 @@ clojurescript @ r1586
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
  :shadowed-sources ({:code "(defmacro +\n  ([] 0)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} + ~{})\" x y))\n  ([x y & more] `(+ (+ ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [221 225],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L221-L225"}),
+                     :lines [264 268],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L264-L268"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core__PLUS_",
- :source {:code "(defn +\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/+ x y))\n  ([x y & more] (reduce + (cljs.core/+ x y) more)))",
+ :source {:code "(defn +\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/+ x y))\n  ([x y & more]\n    (reduce + (cljs.core/+ x y) more)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1226 1231],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1226-L1231"},
+          :lines [1314 1320],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1314-L1320"},
  :full-name "cljs.core/+",
  :clj-symbol "clojure.core/+",
  :docstring "Returns the sum of nums. (+) returns 0."}

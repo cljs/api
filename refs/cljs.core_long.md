@@ -21,11 +21,11 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1330-1333](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1330-L1333)</ins>
+            └── <ins>[core.cljs:1516-1519](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1516-L1519)</ins>
 </pre>
 
 ```clj
@@ -46,8 +46,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_long",
  :source {:code "(defn long\n  [x]\n  (fix x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1330 1333],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1330-L1333"},
+          :lines [1516 1519],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1516-L1519"},
  :full-name "cljs.core/long",
  :clj-symbol "clojure.core/long",
  :docstring "Coerce to long by stripping decimal places. Identical to `int'."}

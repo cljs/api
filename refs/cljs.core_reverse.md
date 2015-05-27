@@ -21,11 +21,11 @@ Returns a seq of the items in coll in reverse order. Not lazy.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1685-1690](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1685-L1690)</ins>
+            └── <ins>[core.cljs:1867-1872](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1867-L1872)</ins>
 </pre>
 
 ```clj
@@ -48,8 +48,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_reverse",
  :source {:code "(defn reverse\n  [coll]\n  (if (reversible? coll)\n    (rseq coll)\n    (reduce conj () coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1685 1690],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1685-L1690"},
+          :lines [1867 1872],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1867-L1872"},
  :full-name "cljs.core/reverse",
  :clj-symbol "clojure.core/reverse",
  :docstring "Returns a seq of the items in coll in reverse order. Not lazy."}

@@ -21,11 +21,11 @@ Same as pr followed by (newline).
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6394-6398](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6394-L6398)</ins>
+            └── <ins>[core.cljs:6412-6416](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6412-L6416)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r1586
  :full-name-encode "cljs.core_prn",
  :source {:code "(defn prn\n  [& objs]\n  (pr-with-opts objs (pr-opts))\n  (newline (pr-opts)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [6394 6398],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6394-L6398"},
+          :lines [6412 6416],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6412-L6416"},
  :full-name "cljs.core/prn",
  :clj-symbol "clojure.core/prn",
  :docstring "Same as pr followed by (newline)."}

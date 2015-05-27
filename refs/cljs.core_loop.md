@@ -23,11 +23,11 @@ therein. Acts as a recur target.
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:127-149](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L127-L149)</ins>
+            └── <ins>[core.clj:139-161](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L139-L161)</ins>
 </pre>
 
 ```clj
@@ -41,9 +41,9 @@ clojurescript @ r1586
         `(loop* ~bindings ~@body)
         (let [vs (take-nth 2 (drop 1 bindings))
               bs (take-nth 2 bindings)
-              gs (map (fn [b] (if (symbol? b) b (gensym))) bs)
+              gs (map (fn [b] (if (core/symbol? b) b (gensym))) bs)
               bfs (reduce (fn [ret [b v g]]
-                            (if (symbol? b)
+                            (if (core/symbol? b)
                               (conj ret g v)
                               (conj ret g v b g)))
                           [] (map vector bs vs gs))]
@@ -63,10 +63,10 @@ clojurescript @ r1586
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core_loop",
- :source {:code "(defmacro loop\n  [bindings & body]\n    (assert-args\n      (vector? bindings) \"a vector for its binding\"\n      (even? (count bindings)) \"an even number of forms in binding vector\")\n    (let [db (destructure bindings)]\n      (if (= db bindings)\n        `(loop* ~bindings ~@body)\n        (let [vs (take-nth 2 (drop 1 bindings))\n              bs (take-nth 2 bindings)\n              gs (map (fn [b] (if (symbol? b) b (gensym))) bs)\n              bfs (reduce (fn [ret [b v g]]\n                            (if (symbol? b)\n                              (conj ret g v)\n                              (conj ret g v b g)))\n                          [] (map vector bs vs gs))]\n          `(let ~bfs\n             (loop* ~(vec (interleave gs gs))\n               (let ~(vec (interleave bs gs))\n                 ~@body)))))))",
+ :source {:code "(defmacro loop\n  [bindings & body]\n    (assert-args\n      (vector? bindings) \"a vector for its binding\"\n      (even? (count bindings)) \"an even number of forms in binding vector\")\n    (let [db (destructure bindings)]\n      (if (= db bindings)\n        `(loop* ~bindings ~@body)\n        (let [vs (take-nth 2 (drop 1 bindings))\n              bs (take-nth 2 bindings)\n              gs (map (fn [b] (if (core/symbol? b) b (gensym))) bs)\n              bfs (reduce (fn [ret [b v g]]\n                            (if (core/symbol? b)\n                              (conj ret g v)\n                              (conj ret g v b g)))\n                          [] (map vector bs vs gs))]\n          `(let ~bfs\n             (loop* ~(vec (interleave gs gs))\n               (let ~(vec (interleave bs gs))\n                 ~@body)))))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [127 149],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L127-L149"},
+          :lines [139 161],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L139-L161"},
  :full-name "cljs.core/loop",
  :clj-symbol "clojure.core/loop",
  :docstring "Evaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein. Acts as a recur target."}

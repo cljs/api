@@ -21,11 +21,11 @@ Bitwise and
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1370-1372](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1370-L1372)</ins>
+            └── <ins>[core.cljs:1570-1572](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1570-L1572)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r1586
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:299-301](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L299-L301)</ins>
+            └── <ins>[core.clj:400-402](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L400-L402)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r1586
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-and\n  ([x y] (list 'js* \"(~{} & ~{})\" x y))\n  ([x y & more] `(bit-and (bit-and ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [299 301],
-                     :link "https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/core.clj#L299-L301"}),
+                     :lines [400 402],
+                     :link "https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L400-L402"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-and",
  :source {:code "(defn bit-and\n  [x y] (cljs.core/bit-and x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1370 1372],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1370-L1372"},
+          :lines [1570 1572],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1570-L1572"},
  :full-name "cljs.core/bit-and",
  :clj-symbol "clojure.core/bit-and",
  :docstring "Bitwise and"}

@@ -18,16 +18,16 @@
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1972-1975](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1972-L1975)</ins>
+            └── <ins>[core.cljs:2128-2131](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2128-L2131)</ins>
 </pre>
 
 ```clj
 (defn chunk-next [s]
-  (if (satisfies? IChunkedNext s)
+  (if (satisfies? IChunkedNext s false)
     (-chunked-next s)
     (seq (-chunked-rest s))))
 ```
@@ -41,10 +41,10 @@ clojurescript @ r1586
  :name "chunk-next",
  :type "function",
  :signature ["[s]"],
- :source {:code "(defn chunk-next [s]\n  (if (satisfies? IChunkedNext s)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
+ :source {:code "(defn chunk-next [s]\n  (if (satisfies? IChunkedNext s false)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1972 1975],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1972-L1975"},
+          :lines [2128 2131],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2128-L2131"},
  :full-name-encode "cljs.core_chunk-next",
  :history [["+" "0.0-1424"]]}
 

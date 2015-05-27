@@ -4,6 +4,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/api-refs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/reduced</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reduced)
+</td>
 </tr>
 </table>
 
@@ -18,11 +21,11 @@ Wraps x in a way such that a reduce will terminate with the value x
 ---
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:496-499](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L496-L499)</ins>
+            └── <ins>[core.cljs:530-533](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L530-L533)</ins>
 </pre>
 
 ```clj
@@ -35,17 +38,18 @@ clojurescript @ r1586
 ---
 
 ```clj
-{:full-name "cljs.core/reduced",
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "reduced",
- :docstring "Wraps x in a way such that a reduce will terminate with the value x",
- :type "function",
  :signature ["[x]"],
+ :history [["+" "0.0-1211"]],
+ :type "function",
+ :full-name-encode "cljs.core_reduced",
  :source {:code "(defn reduced\n  [x]\n  (Reduced. x))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [496 499],
-          :link "https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L496-L499"},
- :full-name-encode "cljs.core_reduced",
- :history [["+" "0.0-1211"]]}
+          :lines [530 533],
+          :link "https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L530-L533"},
+ :full-name "cljs.core/reduced",
+ :clj-symbol "clojure.core/reduced",
+ :docstring "Wraps x in a way such that a reduce will terminate with the value x"}
 
 ```
