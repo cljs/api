@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:583-584](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L583-L584)</ins>
+            └── <ins>[core.cljs:580-581](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L580-L581)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r971
  :signature ["[o]"],
  :source {:code "(defn hash [o]\n  (-hash o))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [583 584],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L583-L584"},
+          :lines [580 581],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L580-L581"},
  :full-name-encode "cljs.core_hash",
  :clj-symbol "clojure.core/hash",
  :history [["+" "0.0-927"]]}

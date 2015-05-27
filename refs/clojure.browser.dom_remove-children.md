@@ -18,12 +18,12 @@ Remove all children from the element with the passed id.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:90-94](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L90-L94)</ins>
+                └── <ins>[dom.cljs:90-94](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L90-L94)</ins>
 </pre>
 
 ```clj
@@ -46,7 +46,7 @@ clojurescript @ r971
  :source {:code "(defn remove-children\n  [id]\n  (let [parent (gdom/getElement (name id))]\n    (do (gdom/removeChildren parent))))",
           :filename "clojurescript/src/cljs/clojure/browser/dom.cljs",
           :lines [90 94],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L90-L94"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L90-L94"},
  :full-name-encode "clojure.browser.dom_remove-children",
  :history [["+" "0.0-927"]]}
 

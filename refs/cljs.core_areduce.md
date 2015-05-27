@@ -23,11 +23,11 @@ evaluation of expr at each step, returning ret.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:657-666](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L657-L666)</ins>
+            └── <ins>[core.clj:660-669](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L660-L669)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_areduce",
  :source {:code "(defmacro areduce\n  [a idx ret init expr]\n  `(let [a# ~a]\n     (loop  [~idx 0 ~ret ~init]\n       (if (< ~idx  (alength a#))\n         (recur (inc ~idx) ~expr)\n         ~ret))))",
           :filename "clojurescript/src/clj/cljs/core.clj",
-          :lines [657 666],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L657-L666"},
+          :lines [660 669],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L660-L669"},
  :full-name "cljs.core/areduce",
  :clj-symbol "clojure.core/areduce",
  :docstring "Reduces an expression across an array a, using an index named idx,\nand return value named ret, initialized to init, setting ret to the \nevaluation of expr at each step, returning ret."}

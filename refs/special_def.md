@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:654-679](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L654-L679)</ins>
+            └── <ins>[compiler.clj:690-715](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L690-L715)</ins>
 </pre>
 
 ```clj
@@ -66,8 +66,8 @@ clojurescript @ r971
  :type "special form",
  :source {:code "(defmethod parse 'def\n  [op env form name]\n  (let [pfn (fn ([_ sym] {:sym sym})\n              ([_ sym init] {:sym sym :init init})\n              ([_ sym doc init] {:sym sym :doc doc :init init}))\n        args (apply pfn form)\n        sym (:sym args)]\n    (assert (not (namespace sym)) \"Can't def ns-qualified name\")\n    (let [name (munge (:name (resolve-var (dissoc env :locals) sym)))\n          init-expr (when (contains? args :init) (disallowing-recur\n                                                  (analyze (assoc env :context :expr) (:init args) sym)))\n          export-as (when-let [export-val (-> sym meta :export)]\n                      (if (= true export-val) name export-val))\n          doc (or (:doc args) (-> sym meta :doc))]\n      (swap! namespaces update-in [(-> env :ns :name) :defs sym]\n             (fn [m]\n               (let [m (assoc (or m {}) :name name)]\n                 (if-let [line (:line env)]\n                   (-> m\n                       (assoc :file *cljs-file*)\n                       (assoc :line line))\n                   m))))\n      (merge {:env env :op :def :form form\n              :name name :doc doc :init init-expr}\n             (when init-expr {:children [init-expr]})\n             (when export-as {:export export-as})))))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [654 679],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L654-L679"},
+          :lines [690 715],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L690-L715"},
  :full-name-encode "special_def",
  :clj-symbol "clojure.core/def",
  :history [["+" "0.0-927"]]}

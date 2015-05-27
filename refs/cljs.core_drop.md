@@ -21,11 +21,11 @@ Returns a lazy sequence of all but the first n items in coll.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1718-1726](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1718-L1726)</ins>
+            └── <ins>[core.cljs:1717-1725](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1717-L1725)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_drop",
  :source {:code "(defn drop\n  [n coll]\n  (let [step (fn [n coll]\n               (let [s (seq coll)]\n                 (if (and (pos? n) s)\n                   (recur (dec n) (rest s))\n                   s)))]\n    (lazy-seq (step n coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1718 1726],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1718-L1726"},
+          :lines [1717 1725],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1717-L1725"},
  :full-name "cljs.core/drop",
  :clj-symbol "clojure.core/drop",
  :docstring "Returns a lazy sequence of all but the first n items in coll."}

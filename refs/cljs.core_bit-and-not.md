@@ -21,11 +21,11 @@ Bitwise and
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:950-952](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L950-L952)</ins>
+            └── <ins>[core.cljs:947-949](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L947-L949)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:155-157](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L155-L157)</ins>
+            └── <ins>[core.clj:156-158](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L156-L158)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r971
  :signature ["[x y]"],
  :shadowed-sources ({:code "(defmacro bit-and-not\n  ([x y] (list 'js* \"(~{} & ~~{})\" x y))\n  ([x y & more] `(bit-and-not (bit-and-not ~x ~y) ~@more)))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [155 157],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L155-L157"}),
+                     :lines [156 158],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L156-L158"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_bit-and-not",
  :source {:code "(defn bit-and-not\n  [x y] (cljs.core/bit-and-not x y))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [950 952],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L950-L952"},
+          :lines [947 949],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L947-L949"},
  :full-name "cljs.core/bit-and-not",
  :clj-symbol "clojure.core/bit-and-not",
  :docstring "Bitwise and"}

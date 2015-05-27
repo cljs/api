@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:94-116](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L94-L116)</ins>
+            └── <ins>[core.cljs:94-116](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L94-L116)</ins>
 </pre>
 
 ```clj
@@ -61,7 +61,7 @@ clojurescript @ r971
  :source {:code "(defprotocol IFn\n  (-invoke\n    [this]\n    [this a]\n    [this a b]\n    [this a b c]\n    [this a b c d]\n    [this a b c d e]\n    [this a b c d e f]\n    [this a b c d e f g]\n    [this a b c d e f g h]\n    [this a b c d e f g h i]\n    [this a b c d e f g h i j]\n    [this a b c d e f g h i j k]\n    [this a b c d e f g h i j k l]\n    [this a b c d e f g h i j k l m]\n    [this a b c d e f g h i j k l m n]\n    [this a b c d e f g h i j k l m n o]\n    [this a b c d e f g h i j k l m n o p]\n    [this a b c d e f g h i j k l m n o p q]\n    [this a b c d e f g h i j k l m n o p q s]\n    [this a b c d e f g h i j k l m n o p q s t]\n    [this a b c d e f g h i j k l m n o p q s t rest]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [94 116],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L94-L116"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L94-L116"},
  :methods [{:name "-invoke",
             :signature ["[this]"
                         "[this a]"

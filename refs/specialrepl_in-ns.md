@@ -20,44 +20,20 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:133-162](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162)</ins>
+            └── <ins>[repl.clj:134-139](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl.clj#L134-L139)</ins>
 </pre>
 
 ```clj
-(defn repl
-  "Note - repl will reload core.cljs every time, even if supplied old repl-env"
-  [repl-env & {:keys [verbose warn-on-undeclared]}]
-  (prn "Type: " :cljs/quit " to quit")
-  (binding [comp/*cljs-ns* 'cljs.user
-            *cljs-verbose* verbose
-            comp/*cljs-warn-on-undeclared* warn-on-undeclared]
-    (let [env {:context :statement :locals {}}]
-      (-setup repl-env)
-      (loop []
-        (print (str "ClojureScript:" comp/*cljs-ns* "> "))
-        (flush)
-        (let [{:keys [status form]} (read-next-form)]
-          (cond
-           (= form :cljs/quit) :quit
-           
-           (= status :error) (recur)
-           
-           (and (seq? form) (= (first form) 'in-ns))
-           (do (set! comp/*cljs-ns* (second (second form))) (newline) (recur))
-           
-           (and (seq? form) ('#{load-file clojure.core/load-file} (first form)))
-           (do (load-file repl-env (second form)) (newline) (recur))
-           
-           (and (seq? form) ('#{load-namespace} (first form)))
-           (do (load-namespace repl-env (second form)) (newline) (recur))
-           
-           :else
-           (do (eval-and-print repl-env env form) (recur)))))
-      (-tear-down repl-env))))
+(def default-special-fns
+  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]
+    {'in-ns (fn [_ quoted-ns] (set! comp/*cljs-ns* (second quoted-ns)))
+     'load-file load-file-fn
+     'clojure.core/load-file load-file-fn
+     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))
 ```
 
 
@@ -68,10 +44,10 @@ clojurescript @ r971
  :ns "specialrepl",
  :name "in-ns",
  :type "special form (repl)",
- :source {:code "(defn repl\n  \"Note - repl will reload core.cljs every time, even if supplied old repl-env\"\n  [repl-env & {:keys [verbose warn-on-undeclared]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [comp/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            comp/*cljs-warn-on-undeclared* warn-on-undeclared]\n    (let [env {:context :statement :locals {}}]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" comp/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n           \n           (= status :error) (recur)\n           \n           (and (seq? form) (= (first form) 'in-ns))\n           (do (set! comp/*cljs-ns* (second (second form))) (newline) (recur))\n           \n           (and (seq? form) ('#{load-file clojure.core/load-file} (first form)))\n           (do (load-file repl-env (second form)) (newline) (recur))\n           \n           (and (seq? form) ('#{load-namespace} (first form)))\n           (do (load-namespace repl-env (second form)) (newline) (recur))\n           \n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
+ :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns] (set! comp/*cljs-ns* (second quoted-ns)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :filename "clojurescript/src/clj/cljs/repl.clj",
-          :lines [133 162],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162"},
+          :lines [134 139],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl.clj#L134-L139"},
  :full-name-encode "specialrepl_in-ns",
  :clj-symbol "clojure.core/in-ns",
  :history [["+" "0.0-927"]]}

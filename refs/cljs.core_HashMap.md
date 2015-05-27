@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2313-2400](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2313-L2400)</ins>
+            └── <ins>[core.cljs:2320-2407](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2320-L2407)</ins>
 </pre>
 
 ```clj
@@ -127,8 +127,8 @@ clojurescript @ r971
  :signature ["[meta count hashobj]"],
  :source {:code "(deftype HashMap [meta count hashobj]\n  IWithMeta\n  (-with-meta [coll meta] (HashMap. meta count hashobj))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.HashMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? count)\n      (let [hashes (.sort (js-keys hashobj))]\n        (mapcat #(map vec (partition 2 (aget hashobj %)))\n                hashes))))\n\n  ICounted\n  (-count [coll] count)\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (let [bucket (aget hashobj (hash k))\n          i (when bucket (scan-array 2 k bucket))]\n      (if i\n        (aget bucket (inc i))\n        not-found)))\n\n  IAssociative\n  (-assoc [coll k v]\n    (let [h (hash k)\n          bucket (aget hashobj h)]\n      (if bucket\n        (let [new-bucket (aclone bucket)\n              new-hashobj (goog.object/clone hashobj)]\n          (aset new-hashobj h new-bucket)\n          (if-let [i (scan-array 2 k new-bucket)]\n            (do                         ; found key, replace\n              (aset new-bucket (inc i) v)\n              (HashMap. meta count new-hashobj))\n            (do                         ; did not find key, append\n              (.push new-bucket k v)\n              (HashMap. meta (inc count) new-hashobj))))\n        (let [new-hashobj (goog.object/clone hashobj)] ; did not find bucket\n          (aset new-hashobj h (array k v))\n          (HashMap. meta (inc count) new-hashobj)))))\n  (-contains-key? [coll k]\n    (let [bucket (aget hashobj (hash k))\n          i (when bucket (scan-array 2 k bucket))]\n      (if i\n        true\n        false)))\n\n  IMap\n  (-dissoc [coll k]\n    (let [h (hash k)\n          bucket (aget hashobj h)\n          i (when bucket (scan-array 2 k bucket))]\n      (if (not i)\n        coll ; key not found, return coll unchanged\n        (let [new-hashobj (goog.object/clone hashobj)]\n          (if (> 3 (.-length bucket))\n            (js-delete new-hashobj h)\n            (let [new-bucket (aclone bucket)]\n              (.splice new-bucket i 2)\n              (aset new-hashobj h new-bucket)))\n          (HashMap. meta (dec count) new-hashobj)))))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2313 2400],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2313-L2400"},
+          :lines [2320 2407],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2320-L2407"},
  :full-name-encode "cljs.core_HashMap",
  :history [["+" "0.0-927"]]}
 

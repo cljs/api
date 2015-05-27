@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1002-1003](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1002-L1003)</ins>
+            └── <ins>[core.cljs:999-1000](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L999-L1000)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:118-119](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L118-L119)</ins>
+            └── <ins>[core.clj:119-120](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L119-L120)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r971
  :signature ["[n]"],
  :shadowed-sources ({:code "(defmacro zero? [x]\n  `(== ~x 0))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [118 119],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L118-L119"}),
+                     :lines [119 120],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L119-L120"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_zero_QMARK_",
  :source {:code "(defn zero? [n]\n  (cljs.core/zero? n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1002 1003],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1002-L1003"},
+          :lines [999 1000],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L999-L1000"},
  :full-name "cljs.core/zero?",
  :clj-symbol "clojure.core/zero?"}
 

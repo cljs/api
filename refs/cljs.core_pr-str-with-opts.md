@@ -19,11 +19,11 @@ options given in opts
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2872-2883](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2872-L2883)</ins>
+            └── <ins>[core.cljs:2880-2891](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2880-L2891)</ins>
 </pre>
 
 ```clj
@@ -51,8 +51,8 @@ clojurescript @ r971
  :signature ["[objs opts]"],
  :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (let [first-obj (first objs)\n        sb (gstring/StringBuffer.)]\n    (doseq [obj objs]\n      (when-not (identical? obj first-obj)\n        (.append sb \" \"))\n      (doseq [string (pr-seq obj opts)]\n        (.append sb string)))\n    (str sb)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2872 2883],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2872-L2883"},
+          :lines [2880 2891],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2880-L2891"},
  :full-name-encode "cljs.core_pr-str-with-opts",
  :history [["+" "0.0-927"]]}
 

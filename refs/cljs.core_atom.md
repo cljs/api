@@ -34,11 +34,11 @@ occur, then the value of the atom will not change.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3039-3054](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3039-L3054)</ins>
+            └── <ins>[core.cljs:3051-3066](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3051-L3066)</ins>
 </pre>
 
 ```clj
@@ -59,8 +59,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_atom",
  :source {:code "(defn atom\n  ([x] (Atom. x nil nil nil))\n  ([x & {:keys [meta validator]}] (Atom. x meta validator nil)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [3039 3054],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3039-L3054"},
+          :lines [3051 3066],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3051-L3066"},
  :full-name "cljs.core/atom",
  :clj-symbol "clojure.core/atom",
  :docstring "Creates and returns an Atom with an initial value of x and zero or\nmore options (in any order):\n\n:meta metadata-map\n\n:validator validate-fn\n\nIf metadata-map is supplied, it will be come the metadata on the\natom. validate-fn must be nil or a side-effect-free fn of one\nargument, which will be passed the intended new state on any state\nchange. If the new state is unacceptable, the validate-fn should\nreturn false or throw an Error.  If either of these error conditions\noccur, then the value of the atom will not change."}

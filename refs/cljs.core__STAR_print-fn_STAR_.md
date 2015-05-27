@@ -19,11 +19,11 @@ Strings which should be printed.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:15-21](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L15-L21)</ins>
+            └── <ins>[core.cljs:15-21](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L15-L21)</ins>
 </pre>
 
 ```clj
@@ -48,7 +48,7 @@ clojurescript @ r971
  :source {:code "(def\n  ^{:doc \"Each runtime environment provides a diffenent way to print output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\"}\n  *print-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-fn* fn set for evaluation environment\"))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [15 21],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L15-L21"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L15-L21"},
  :full-name-encode "cljs.core__STAR_print-fn_STAR_",
  :history [["+" "0.0-927"]]}
 

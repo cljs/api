@@ -25,11 +25,11 @@ in O(n) time, for sequences.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:504-512](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L504-L512)</ins>
+            └── <ins>[core.cljs:501-509](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L501-L509)</ins>
 </pre>
 
 ```clj
@@ -52,8 +52,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_nth",
  :source {:code "(defn nth\n  ([coll n]\n     (-nth coll (.floor js/Math n)))\n  ([coll n not-found]\n     (-nth coll (.floor js/Math n) not-found)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [504 512],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L504-L512"},
+          :lines [501 509],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L501-L509"},
  :full-name "cljs.core/nth",
  :clj-symbol "clojure.core/nth",
  :docstring "Returns the value at the index. get returns nil if index out of\nbounds, nth throws an exception unless not-found is supplied.  nth\nalso works for strings, arrays, regex Matchers and Lists, and,\nin O(n) time, for sequences."}

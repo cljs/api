@@ -21,11 +21,11 @@ Returns the length of the Java array. Works on arrays of all types.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:87-90](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L87-L90)</ins>
+            └── <ins>[core.cljs:87-90](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L87-L90)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:639-640](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L639-L640)</ins>
+            └── <ins>[core.clj:642-643](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L642-L643)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r971
  :signature ["[array]"],
  :shadowed-sources ({:code "(defmacro alength [a]\n  (list 'js* \"~{}.length\" a))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [639 640],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L639-L640"}),
+                     :lines [642 643],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L642-L643"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_alength",
  :source {:code "(defn alength\n  [array]\n  (.-length array))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [87 90],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L87-L90"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L87-L90"},
  :full-name "cljs.core/alength",
  :clj-symbol "clojure.core/alength",
  :docstring "Returns the length of the Java array. Works on arrays of all types."}

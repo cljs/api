@@ -23,11 +23,11 @@ Strings.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:407-413](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L407-L413)</ins>
+            └── <ins>[core.cljs:404-410](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L404-L410)</ins>
 </pre>
 
 ```clj
@@ -49,8 +49,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_seq",
  :source {:code "(defn seq\n  [coll]\n  (when coll\n    (-seq coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [407 413],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L407-L413"},
+          :lines [404 410],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L404-L410"},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

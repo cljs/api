@@ -21,11 +21,11 @@ Returns a number one greater than num.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:307-309](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L307-L309)</ins>
+            └── <ins>[core.cljs:302-304](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L302-L304)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:115-116](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L115-L116)</ins>
+            └── <ins>[core.clj:116-117](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L116-L117)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r971
  :signature ["[x]"],
  :shadowed-sources ({:code "(defmacro inc [x]\n  `(+ ~x 1))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [115 116],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L115-L116"}),
+                     :lines [116 117],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L116-L117"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_inc",
  :source {:code "(defn inc\n  [x] (cljs.core/+ x 1))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [307 309],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L307-L309"},
+          :lines [302 304],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L302-L304"},
  :full-name "cljs.core/inc",
  :clj-symbol "clojure.core/inc",
  :docstring "Returns a number one greater than num."}

@@ -21,11 +21,11 @@ Modulus of num and div. Truncates toward negative infinity.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:912-915](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L912-L915)</ins>
+            └── <ins>[core.cljs:909-912](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L909-L912)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:137-138](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L137-L138)</ins>
+            └── <ins>[core.clj:138-139](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L138-L139)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r971
  :signature ["[n d]"],
  :shadowed-sources ({:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [137 138],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L137-L138"}),
+                     :lines [138 139],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L138-L139"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_mod",
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [912 915],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L912-L915"},
+          :lines [909 912],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L909-L912"},
  :full-name "cljs.core/mod",
  :clj-symbol "clojure.core/mod",
  :docstring "Modulus of num and div. Truncates toward negative infinity."}

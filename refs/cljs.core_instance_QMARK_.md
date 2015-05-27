@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:655-656](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L655-L656)</ins>
+            └── <ins>[core.cljs:652-653](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L652-L653)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r971
  :signature ["[t o]"],
  :source {:code "(defn instance? [t o]\n  (js* \"(~{o} != null && (~{o} instanceof ~{t} || ~{o}.constructor === ~{t} || ~{t} === Object))\"))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [655 656],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L655-L656"},
+          :lines [652 653],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L652-L653"},
  :full-name-encode "cljs.core_instance_QMARK_",
  :clj-symbol "clojure.core/instance?",
  :history [["+" "0.0-927"]]}

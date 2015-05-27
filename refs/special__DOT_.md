@@ -20,11 +20,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:941-956](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L941-L956)</ins>
+            └── <ins>[compiler.clj:981-996](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L981-L996)</ins>
 </pre>
 
 ```clj
@@ -56,8 +56,8 @@ clojurescript @ r971
  :type "special form",
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+]] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)\n         children    [enve]]\n     (case dot-action\n           ::access {:env env :op :dot :children children\n                     :target targetexpr\n                     :field field}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :children (into children argexprs)\n                       :target targetexpr\n                       :method method\n                       :args argexprs})))))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [941 956],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L941-L956"},
+          :lines [981 996],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L981-L996"},
  :full-name-encode "special__DOT_",
  :clj-symbol "clojure.core/.",
  :history [["+" "0.0-927"]]}

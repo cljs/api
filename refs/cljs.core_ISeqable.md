@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:180-181](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L180-L181)</ins>
+            └── <ins>[core.cljs:180-181](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L180-L181)</ins>
 </pre>
 
 ```clj
@@ -40,7 +40,7 @@ clojurescript @ r971
  :source {:code "(defprotocol ISeqable\n  (-seq [o]))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [180 181],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L180-L181"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L180-L181"},
  :methods [{:name "-seq", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/ISeqable",
  :history [["+" "0.0-927"]]}

@@ -23,11 +23,11 @@ in the keyword strings, it will be added automatically.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1075-1081](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1075-L1081)</ins>
+            └── <ins>[core.cljs:1074-1080](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1074-L1080)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_keyword",
  :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \"'\" (subs name 2))\n                :else (str* \"\\uFDD0\" \"'\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1075 1081],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1075-L1081"},
+          :lines [1074 1080],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1074-L1080"},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

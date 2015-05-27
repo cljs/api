@@ -21,17 +21,18 @@ Returns an instance of RegExp which has compiled the provided string.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2839-2842](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2839-L2842)</ins>
+            └── <ins>[core.cljs:2846-2850](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2846-L2850)</ins>
 </pre>
 
 ```clj
 (defn re-pattern
   [s]
-  (js/RegExp. s))
+  (let [[_ flags pattern] (re-find #"^(?:\(\?([idmsux]*)\))?(.*)" s)]
+    (js/RegExp. pattern flags)))
 ```
 
 
@@ -44,10 +45,10 @@ clojurescript @ r971
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_re-pattern",
- :source {:code "(defn re-pattern\n  [s]\n  (js/RegExp. s))",
+ :source {:code "(defn re-pattern\n  [s]\n  (let [[_ flags pattern] (re-find #\"^(?:\\(\\?([idmsux]*)\\))?(.*)\" s)]\n    (js/RegExp. pattern flags)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2839 2842],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2839-L2842"},
+          :lines [2846 2850],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2846-L2850"},
  :full-name "cljs.core/re-pattern",
  :clj-symbol "clojure.core/re-pattern",
  :docstring "Returns an instance of RegExp which has compiled the provided string."}

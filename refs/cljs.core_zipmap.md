@@ -21,11 +21,11 @@ Returns a map with the keys mapped to the corresponding vals.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2585-2595](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2585-L2595)</ins>
+            └── <ins>[core.cljs:2592-2602](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2592-L2602)</ins>
 </pre>
 
 ```clj
@@ -53,8 +53,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_zipmap",
  :source {:code "(defn zipmap\n  [keys vals]\n    (loop [map {}\n           ks (seq keys)\n           vs (seq vals)]\n      (if (and ks vs)\n        (recur (assoc map (first ks) (first vs))\n               (next ks)\n               (next vs))\n        map)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2585 2595],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2585-L2595"},
+          :lines [2592 2602],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2592-L2602"},
  :full-name "cljs.core/zipmap",
  :clj-symbol "clojure.core/zipmap",
  :docstring "Returns a map with the keys mapped to the corresponding vals."}

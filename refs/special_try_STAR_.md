@@ -17,11 +17,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:619-652](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L619-L652)</ins>
+            └── <ins>[compiler.clj:655-688](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L655-L688)</ins>
 </pre>
 
 ```clj
@@ -71,8 +71,8 @@ clojurescript @ r971
  :type "special form",
  :source {:code "(defmethod parse 'try*\n  [op env [_ & body :as form] name]\n  (let [body (vec body)\n        catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        tail (peek body)\n        fblock (when (and (seq? tail) (= 'finally (first tail)))\n                  (rest tail))\n        finally (when fblock\n                  (analyze-block\n                   (assoc env :context :statement)\n                   fblock))\n        body (if finally (pop body) body)\n        tail (peek body)\n        cblock (when (and (seq? tail)\n                          (= 'catch (first tail)))\n                 (rest tail))\n        name (first cblock)\n        locals (:locals catchenv)\n        mname (when name (munge name))\n        locals (if name\n                 (assoc locals name {:name mname})\n                 locals)\n        catch (when cblock\n                (analyze-block (assoc catchenv :locals locals) (rest cblock)))\n        body (if name (pop body) body)\n        try (when body\n              (analyze-block (if (or name finally) catchenv env) body))]\n    (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n    {:env env :op :try* :form form\n     :try try\n     :finally finally\n     :name mname\n     :catch catch\n     :children [try {:name mname} catch finally]}))",
           :filename "clojurescript/src/clj/cljs/compiler.clj",
-          :lines [619 652],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L619-L652"},
+          :lines [655 688],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L655-L688"},
  :full-name-encode "special_try_STAR_",
  :history [["+" "0.0-927"]]}
 

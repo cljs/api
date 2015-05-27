@@ -21,11 +21,11 @@ Returns true if num is greater than zero, else false
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:998-1000](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L998-L1000)</ins>
+            └── <ins>[core.cljs:995-997](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L995-L997)</ins>
 </pre>
 
 ```clj
@@ -37,11 +37,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:121-122](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L121-L122)</ins>
+            └── <ins>[core.clj:122-123](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L122-L123)</ins>
 </pre>
 
 ```clj
@@ -57,15 +57,15 @@ clojurescript @ r971
  :signature ["[n]"],
  :shadowed-sources ({:code "(defmacro pos? [x]\n  `(> ~x 0))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [121 122],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L121-L122"}),
+                     :lines [122 123],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L122-L123"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_pos_QMARK_",
  :source {:code "(defn pos?\n  [n] (cljs.core/pos? n))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [998 1000],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L998-L1000"},
+          :lines [995 997],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L995-L997"},
  :full-name "cljs.core/pos?",
  :clj-symbol "clojure.core/pos?",
  :docstring "Returns true if num is greater than zero, else false"}

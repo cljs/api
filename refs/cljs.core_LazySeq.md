@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1290-1315](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1290-L1315)</ins>
+            └── <ins>[core.cljs:1289-1314](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1289-L1314)</ins>
 </pre>
 
 ```clj
@@ -65,8 +65,8 @@ clojurescript @ r971
  :signature ["[meta realized x]"],
  :source {:code "(deftype LazySeq [meta realized x]\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta realized x))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first (lazy-seq-value coll)))\n  (-rest [coll] (rest (lazy-seq-value coll)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] (seq (lazy-seq-value coll))))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1290 1315],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1290-L1315"},
+          :lines [1289 1314],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1289-L1314"},
  :full-name-encode "cljs.core_LazySeq",
  :history [["+" "0.0-927"]]}
 

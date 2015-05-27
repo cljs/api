@@ -21,11 +21,11 @@ Returns the value at the index.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80)</ins>
+            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L77-L80)</ins>
 </pre>
 
 ```clj
@@ -38,11 +38,11 @@ clojurescript @ r971
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:57-58](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58)</ins>
+            └── <ins>[core.clj:60-61](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L60-L61)</ins>
 </pre>
 
 ```clj
@@ -58,15 +58,15 @@ clojurescript @ r971
  :signature ["[array i]"],
  :shadowed-sources ({:code "(defmacro aget [a i]\n  (list 'js* \"(~{}[~{}])\" a i))",
                      :filename "clojurescript/src/clj/cljs/core.clj",
-                     :lines [57 58],
-                     :link "https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58"}),
+                     :lines [60 61],
+                     :link "https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L60-L61"}),
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core_aget",
  :source {:code "(defn aget\n  [array i]\n  (cljs.core/aget array i))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
           :lines [77 80],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80"},
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L77-L80"},
  :full-name "cljs.core/aget",
  :clj-symbol "clojure.core/aget",
  :docstring "Returns the value at the index."}

@@ -18,11 +18,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:332-369](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L332-L369)</ins>
+            └── <ins>[core.cljs:329-366](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L329-L366)</ins>
 </pre>
 
 ```clj
@@ -77,8 +77,8 @@ clojurescript @ r971
  :signature ["[a i]"],
  :source {:code "(deftype IndexedSeq [a i]\n  ISeqable\n  (-seq [this] this)\n  ISeq\n  (-first [_] (aget a i))\n  (-rest [_] (if (< (inc i) (.-length a))\n               (IndexedSeq. a (inc i))\n               (list)))\n\n  ICounted\n  (-count [_] (- (.-length a) i))\n\n  IIndexed\n  (-nth [coll n]\n    (let [i (+ n i)]\n      (when (< i (.-length a))\n        (aget a i))))\n  (-nth [coll n not-found]\n    (let [i (+ n i)]\n      (if (< i (.-length a))\n        (aget a i)\n        not-found)))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IReduce\n  (-reduce [_ f]\n    (ci-reduce a f (aget a i) (inc i)))\n  (-reduce [_ f start]\n    (ci-reduce a f start i))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [332 369],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L332-L369"},
+          :lines [329 366],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L329-L366"},
  :full-name-encode "cljs.core_IndexedSeq",
  :history [["+" "0.0-927"]]}
 

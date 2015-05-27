@@ -22,11 +22,11 @@ Returns a lazy sequence of the items in coll for which
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1836-1840](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1836-L1840)</ins>
+            └── <ins>[core.cljs:1835-1839](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1835-L1839)</ins>
 </pre>
 
 ```clj
@@ -47,8 +47,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_remove",
  :source {:code "(defn remove\n  [pred coll]\n  (filter (complement pred) coll))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [1836 1840],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1836-L1840"},
+          :lines [1835 1839],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1835-L1839"},
  :full-name "cljs.core/remove",
  :clj-symbol "clojure.core/remove",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects."}

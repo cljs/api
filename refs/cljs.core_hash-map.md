@@ -22,11 +22,11 @@ Returns a new hash map with supplied mappings.
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2411-2418](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2411-L2418)</ins>
+            └── <ins>[core.cljs:2418-2425](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2418-L2425)</ins>
 </pre>
 
 ```clj
@@ -50,8 +50,8 @@ clojurescript @ r971
  :full-name-encode "cljs.core_hash-map",
  :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out cljs.core.HashMap/EMPTY]\n    (if in\n      (recur (nnext in) (assoc out (first in) (second in)))\n      out)))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [2411 2418],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2411-L2418"},
+          :lines [2418 2425],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2418-L2425"},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

@@ -21,11 +21,11 @@
 ---
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:665-666](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L665-L666)</ins>
+            └── <ins>[core.cljs:662-663](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L662-L663)</ins>
 </pre>
 
 ```clj
@@ -44,8 +44,8 @@ clojurescript @ r971
  :signature ["[x]"],
  :source {:code "(defn boolean [x]\n  (if x true false))",
           :filename "clojurescript/src/cljs/cljs/core.cljs",
-          :lines [665 666],
-          :link "https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L665-L666"},
+          :lines [662 663],
+          :link "https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L662-L663"},
  :full-name-encode "cljs.core_boolean",
  :clj-symbol "clojure.core/boolean",
  :history [["+" "0.0-927"]]}
