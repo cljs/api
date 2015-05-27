@@ -1,4 +1,4 @@
-# Not Ported to ClojureScript
+# Not Ported from Clojure
 
 These are Clojure <img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">
 symbols that are not yet ported to ClojureScript:
