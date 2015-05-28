@@ -190,7 +190,9 @@ These are the mustache templates that we use to render the catalog files.
 
 We generate a docset for [Dash](https://kapeli.com/dash) for use offline:
 
-![dash-screenshot](http://i.imgur.com/ENMsXHc.png)
+__[>> Download cljs.docset](https://github.com/cljsinfo/api-refs/releases/download/0.0-3297/cljs.docset.zip)__
+
+![dash-screenshot](http://i.imgur.com/HzptzzC.png)
 
 This is currently a hack job to provide something valuable while we
 work on the more complete docs with usage examples, cross-refs, etc.
