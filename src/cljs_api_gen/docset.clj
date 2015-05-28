@@ -90,6 +90,6 @@
                 item (get syms full-name)]
             {:name (:name item)
              :type (type->dash (:type item))
-             :path (resolve-path "refs/" encoded-name ".html")}
+             :path (resolve-path "refs/" (base-name ref-file))}
             ))))
     ))
