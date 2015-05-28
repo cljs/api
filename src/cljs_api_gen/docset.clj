@@ -88,7 +88,7 @@
                            (slurp ref-file)))
                 full-name (decode-fullname encoded-name)
                 item (get syms full-name)]
-            {:name full-name
+            {:name (:name item)
              :type (type->dash (:type item))
              :path (resolve-path "refs/" encoded-name ".html")}
             ))))
