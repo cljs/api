@@ -81,7 +81,10 @@
 (defn -main
   [& args]
   (if (= 1 (count args))
-    (let [option-map (edn/read-string (first args))]
+    (let [opt (edn/read-string (first args))
+          option-map (if (map? opt)
+                       opt
+                       {opt true})]
       (main option-map))
     (show-usage-and-exit!)))
 
