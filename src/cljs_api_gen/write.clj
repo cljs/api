@@ -336,6 +336,20 @@
       (nil? bi) -1
       :else (compare ai bi))))
 
+(def type-order
+  {"type" 1
+   "protocol" 2})
+
+(defn compare-item
+  [a b]
+  (let [ai (get type-order (:type a))
+        bi (get type-order (:type b))]
+    (cond
+      (and (nil? ai) (nil? bi)) (compare (:name a) (:name b))
+      (nil? ai) -1
+      (nil? bi) 1
+      :else (compare [ai (:name a)] [bi (:name b)]))))
+
 (defn readme-api-symbols
   [result api-type]
   ;; clj-name-type-history tuples
@@ -348,7 +362,7 @@
                      :name (:name item)
                      :type (:type item)
                      :history (map history-change-shield (:history item))})
-        transform-syms #(sort-by :name (map make-item %))
+        transform-syms #(sort-by identity compare-item (map make-item %))
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
