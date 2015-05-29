@@ -143,6 +143,7 @@ These are the source files concerned with the API reference generator:
 | <samp>[catalog.clj]</samp>     | builds a catalog or single version output                       |
 | <samp>[clojure_api.clj]</samp> | retrieves original clojure api info to correlate with cljs      |
 | <samp>[config.clj]</samp>      | filename constants and dynamic vars for output directories      |
+| <samp>[docset.clj]</samp>      | generates the offline docset for Dash                           |
 | <samp>[docstring.clj]</samp>   | helpers for extracting/formatting/removing docstrings           |
 | <samp>[encode.clj]</samp>      | encoding scheme to create filenames for symbols                 |
 | <samp>[parse.clj]</samp>       | parse namespaces for their symbols                              |
@@ -157,6 +158,7 @@ These are the source files concerned with the API reference generator:
 [catalog.clj]:src/cljs_api_gen/catalog.clj
 [clojure_api.clj]:src/cljs_api_gen/clojure_api.clj
 [config.clj]:src/cljs_api_gen/config.clj
+[docset.clj]:src/cljs_api_gen/docset.clj
 [docstring.clj]:src/cljs_api_gen/docstring.clj
 [encode.clj]:src/cljs_api_gen/encode.clj
 [parse.clj]:src/cljs_api_gen/parse.clj
@@ -186,14 +188,20 @@ These are the mustache templates that we use to render the catalog files.
 
 [Grip]:https://github.com/joeyespo/grip
 
-### Dash Docset
+### Offline docset for Dash
 
 We generate a docset for [Dash](https://kapeli.com/dash) for use offline:
 
 ![dash-screenshot](http://i.imgur.com/ENMsXHc.png)
 
-This is currently a hack job to provide something valuable while we
-work on the more complete docs with usage examples, cross-refs, etc.
+It can be found in Dash's download window by searching "ClojureScript" (__pending__).
+It will auto-update when changes are available.
+
+#### Generating
+
+This is currently a strange setup for making offline versions of GitHub's
+rendered markdown pages for our API catalog.  This is expected to be temporary
+while we work on better designed docs with usage examples, cross-refs, etc.
 
 The process for creating this is documented in the commands below
 
@@ -209,10 +217,12 @@ $ ./download-pages.sh
 # and correct a few other things.
 # (Requires phantomjs.)
 $ ./format-pages.js
+```
 
-# Build cljs.docset for Dash,
-# assuming the local 'catalog' directory is populated.
-$ lein run '{:docset true}'
+```sh
+# Build docset for Dash.
+# (errors will tell if you something isn't setup correctly)
+$ lein run :docset
 ```
 
 ## License
