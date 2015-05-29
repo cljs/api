@@ -1,5 +1,8 @@
 (ns cljs-api-gen.repo-cljs
   (:require
+    [clansi.core :refer [style]]
+    [clojure.data :refer [diff]]
+    [clojure.data.json :as json]
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split split-lines]]
@@ -53,6 +56,11 @@
   (when-let [[_ number] (re-find #"r(.*)" tag)]
     (Integer/parseInt number)))
 
+(defn cljs-version->tag
+  [version]
+  (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
+    (str "r" n)))
+
 (defn repo-tag-date
   [repo tag]
   (-> (sh "git" "log" "-1" "--format=%ai" tag :dir (str repos-dir "/" repo))
@@ -60,6 +68,15 @@
       trim
       (split #"\s+")
       first))
+
+(def maven-cljs-url
+  "http://search.maven.org/solrsearch/select?q=g:%22org.clojure%22+AND+a:%22clojurescript%22&core=gav&rows=1000&wt=json")
+
+(defn get-published-versions
+  []
+  (let [data (json/read-str (slurp maven-cljs-url) :key-fn keyword)
+        versions (map :v (-> data :response :docs))]
+    versions))
 
 (defn get-cljs-version-tags
   []
@@ -69,9 +86,33 @@
          (filter #(re-find #"^r" %))
          (sort-by cljs-tag->num))))
 
+(def published-tags
+  (atom nil))
+
+(defn assert-published-versions-have-local-tags!
+  []
+  (let [pub-versions (get-published-versions)
+        pub-tags (set (map cljs-version->tag pub-versions))
+        local-tags (set (get-cljs-version-tags))
+        [not-local not-published valid-tags] (diff pub-tags local-tags)]
+
+    (when not-local
+      (println (style "Error:" :red) "Found no local tags for the following published versions:")
+      (doseq [tag not-local]
+        (println "  " tag))
+      (System/exit 1))
+
+    (when not-published
+      (println (style "Warning:" :yellow) "Found no published versions for the following local tags:")
+      (doseq [tag not-published]
+        (println "  " tag)))
+
+    (reset! published-tags (sort-by cljs-tag->num valid-tags))
+    ))
+
 (defn get-cljs-tags-to-parse*
   [latest]
-  (let [tags (get-cljs-version-tags)]
+  (let [tags @published-tags]
     (if-not latest
       [nil tags]
       (let [latest-num (cljs-tag->num latest)]

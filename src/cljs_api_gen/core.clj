@@ -4,7 +4,8 @@
     [clojure.edn :as edn]
     [cljs-api-gen.config :refer [*output-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
-                                    get-latest-repo-tag]]
+                                    get-latest-repo-tag
+                                    assert-published-versions-have-local-tags!]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
@@ -35,6 +36,9 @@
   []
   (println "\nCloning or updating repos...")
   (clone-or-fetch-repos!)
+
+  (println)
+  (assert-published-versions-have-local-tags!)
 
   (println)
   (get-version-apis!))

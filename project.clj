@@ -3,6 +3,7 @@
                  [org.clojure/clojurescript "0.0-2371"]
                  [org.clojure/tools.reader "0.8.12"]
                  [org.clojure/core.match "0.2.2"]
+                 [org.clojure/data.json "0.2.6"]
                  [me.raynes/fs "1.4.6"]
                  [narkisr/clansi "1.2.0"]
                  [fipp "0.6.1"]
