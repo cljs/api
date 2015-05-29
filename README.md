@@ -35,7 +35,7 @@ The catalog branch has each of the generated files for exploring/using the API r
 
 | Catalog File | Description |
 |-----:|-------------|
-| <samp>[autodocs.edn]</samp> | a data structure containing all API information |
+| <samp>[autodocs.edn]</samp> | a data structure containing all API information ([see format details]) |
 | <samp>[README.md]</samp>    | an overview of the API with reference tables |
 | <samp>[refs/\*.md]</samp>   | dedicated view for a specific API symbol |
 | <samp>[HISTORY.md]</samp>   | table of all versions and their changes |
@@ -46,6 +46,61 @@ The catalog branch has each of the generated files for exploring/using the API r
 [refs/\*.md]:https://github.com/cljsinfo/api-refs/blob/catalog/refs/cljs.core_assoc-in.md
 [HISTORY.md]:https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md
 [UNPORTED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNPORTED.md
+
+[see format details]:#autodocs-edn-format
+
+##### Autodocs EDN format
+
+```clj
+{;; release data
+ :release {:cljs-version  "0.0-3297",
+           :cljs-tag      "r3297",
+           :cljs-date     "2015-05-23",
+           :clj-version   "1.7.0-beta2",
+           :clj-tag       "clojure-1.7.0-beta2",
+           :gclosure-lib  "0.0-20150505-021ed5b3"},
+
+ ;; symbols not ported from clojure
+ :clj-not-cljs #{"clojure.core/the-ns"
+                 "clojure.core/create-struct"
+                 ;; ...
+                 }
+
+ ;; library api symbols and changes
+ :library-api {:symbols
+               {"cljs.core/keys"
+                {:ns                "cljs.core",
+                 :name              "keys",
+                 :full-name         "cljs.core/keys",
+                 :full-name-encode  "cljs.core_keys",
+                 :clj-symbol        "clojure.core/keys",
+                 :type              "function",
+                 :docstring         "Returns a sequence of the map's keys."},
+                 :signature         ["[hash-map]"],
+                 :history           [["+" "0.0-927"]],
+                 :source {:code     "... full source code ...",
+                          :filename "clojurescript/src/main/cljs/cljs/core.cljs",
+                          :lines    [7559 7563],
+                          :link     "https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L7559-L7563"},
+                ;; ...
+                }
+
+               :changes
+               [{:cljs-version  "0.0-3115",
+                 :cljs-date     "2015-03-15",
+                 :clj-version   "1.6.0",
+                 :gclosure-lib  "0.0-20140718-946a7d39",
+                 :added         #{"clojure.browser.repl/bootstrap"
+                                  "clojure.browser.repl/load-queue"},
+                 :removed       #{"cljs.core/load-file*"}}
+                ;; ...
+                ]}
+
+ ;; compiler api symbols and changes
+ :compiler-api {:symbols {} ;; same as :library-api :symbols
+                :changes [] ;; same as :library-api :changes
+                }}
+```
 
 #### Better Docs
 
