@@ -190,14 +190,15 @@ These are the mustache templates that we use to render the catalog files.
 
 ### Offline docset for Dash
 
-We generate a docset for [Dash](https://kapeli.com/dash) for use offline:
+We generate a docset for [Dash](https://kapeli.com/dash) for use offline.
 
-__[>> Download cljs.docset](https://github.com/cljsinfo/api-refs/releases/download/0.0-3297/cljs.docset.zip)__
-
-![dash-screenshot](http://i.imgur.com/HzptzzC.png)
-
-It can be found in Dash's download window by searching "ClojureScript" (__pending__).
+Under "User-Contributed" docsets, search "ClojureScript", then download:
 It will auto-update when changes are available.
+
+![how-to-download](http://i.imgur.com/6z2gpCL.png)
+
+![docs-preview](http://i.imgur.com/HzptzzC.png)
+
 
 #### Generating
 
