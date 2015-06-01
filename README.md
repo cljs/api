@@ -247,10 +247,17 @@ These are the mustache templates that we use to render the catalog files.
 
 We generate a docset for [Dash](https://kapeli.com/dash) for use offline.
 
-Under "User-Contributed" docsets, search "ClojureScript", then download:
-It will auto-update when changes are available.
+See [Releases] section for downloads, or get the __auto-updating feed__ from Dash:
+
+[Releases]:https://github.com/cljsinfo/api-refs/releases/
+
+```
+Go to Downloads > User-Contributed > Search "ClojureScript" > Download
+```
 
 ![how-to-download](http://i.imgur.com/6z2gpCL.png)
+
+And this is what it looks like:
 
 ![docs-preview](http://i.imgur.com/HzptzzC.png)
 
