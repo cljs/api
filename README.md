@@ -245,21 +245,17 @@ These are the mustache templates that we use to render the catalog files.
 
 ### Offline docset for Dash
 
-We generate a docset for [Dash](https://kapeli.com/dash) for use offline.
+__[>> Download ClojureScript.docset](https://github.com/cljsinfo/api-refs/releases)__
 
-See [Releases] section for downloads, or get the __auto-updating feed__ from Dash:
+_Or search "ClojureScript" in the User-Contributed docsets in Dash.  Updates will be automatically downloaded_
 
-[Releases]:https://github.com/cljsinfo/api-refs/releases/
+This is a ClojureScript API docset that can be read by the following apps:
 
-```
-Go to Downloads > User-Contributed > Search "ClojureScript" > Download
-```
+- [Dash for Mac](https://kapeli.com/dash)
+- [Zeal for Linux/Windows](http://zealdocs.org/)
+- [Velocity for Windows](https://velocity.silverlakesoftware.com/)
 
-![how-to-download](http://i.imgur.com/6z2gpCL.png)
-
-And this is what it looks like:
-
-![docs-preview](http://i.imgur.com/HzptzzC.png)
+![screenshot](http://i.imgur.com/ENMsXHc.png)
 
 
 #### Generating
