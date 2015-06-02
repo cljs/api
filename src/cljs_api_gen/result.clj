@@ -30,6 +30,7 @@
                     :name
                     :docstring
                     :type
+                    :parent-type
                     :signature
                     :methods
                     :history

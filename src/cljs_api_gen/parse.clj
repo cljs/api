@@ -463,6 +463,38 @@
     (concat imports non-excludes)))
 
 ;;------------------------------------------------------------
+;; Type member parsing
+;;------------------------------------------------------------
+
+(defn parse-core-type-member
+  [form type-names]
+  (when (and (list? form)
+             (>= (count form) 3)
+             (= 'set! (first form))
+             (list? (second form))
+             (= ".-" (subs (name (first (second form))) 0 2))
+             (type-names (second (second form))))
+    (let [[_set! [attr parent-type :as attr-form] value] form
+          name- (str parent-type "." (subs (name attr) 2))
+          type- (if (and (list? value) (= 'fn (first value)))
+                  "function" "var")]
+      (merge
+        (binding [*cur-repo* "clojurescript"
+                  *cur-ns* "cljs.core"]
+          (parse-location form))
+        (when (= type- "function")
+          {:signature [(second value)]})
+        {:name name-
+         :full-name (str "cljs.core/" name-)
+         :parent-type (name parent-type)
+         :type type-}))))
+
+(defn get-core-type-members
+  [type-names]
+  (->> (apply concat (read-ns-forms "cljs.core" :library))
+       (keep #(parse-core-type-member % type-names))))
+
+;;------------------------------------------------------------
 ;; Top-level namespace parsing
 ;; (with custom corrections)
 ;;------------------------------------------------------------
@@ -483,10 +515,17 @@
   ;; The library functions are intended to be used over the macros.
   ;; And the imported macros from "clojure.core" should be overwritten
   ;; by cljs.core's macros.
-  (concat (parse-extra-macros-from-clj)
-          (->> (parse-ns* ns- "clojurescript" [:compiler])
-               (filter #(= "macro" (:type %))))
-          (parse-ns* ns- "clojurescript" [:library])))
+  (let [com-parsed (->> (parse-ns* ns- "clojurescript" [:compiler])
+                        (filter #(= "macro" (:type %))))
+        lib-parsed (parse-ns* ns- "clojurescript" [:library])
+        type-names (->> lib-parsed
+                        (filter #(= "type" (:type %)))
+                        (map :name)
+                        set)]
+    (concat (parse-extra-macros-from-clj)
+            com-parsed
+            lib-parsed
+            (get-core-type-members type-names))))
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns "special" [ns-]
