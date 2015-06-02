@@ -18,7 +18,7 @@
 
    ";"  "_SEMICOLON_" ;; syntax - comment
    "\\" "_BSLASH_"    ;; syntax - character
-   "#"  "_HASH_"      ;; syntax - tagged literal
+   "#"  "_HASH_"      ;; syntax - tagged literal, regex, set, fn, cond
    "["  "_LSQUARE_"   ;; syntax - vector
    "]"  "_RSQUARE_"
    "{"  "_LCURLY_"    ;; syntax - map
