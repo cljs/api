@@ -12,6 +12,7 @@
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
+    [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -113,12 +114,10 @@
   (let [ns- (-> full-name symbol namespace)
         name- (-> full-name symbol name)]
     (if (= "clojure.lang" ns-)
-      (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")
-      (str "http://clojure.github.io/clojure/branch-master/"
-        (if-let [page-ns (clj-ns->page-ns ns-)]
-          page-ns
-          ns-)
-        "-api.html#" (md-link-escape full-name)))))
+      (let [name- (or (lang-symbols->parent name-) name-)]
+        (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java"))
+      (let [ns- (or (clj-ns->page-ns ns-) ns-)]
+        (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" (md-link-escape full-name))))))
 
 (defn make-clj-ref
   [item]
