@@ -1,10 +1,11 @@
 (ns cljs-api-gen.clojure-api
   (:require
     [clojure.set :refer [difference]]
-    [cljs-api-gen.repo-cljs :refer [*clj-tag*]]
+    [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files]]
+    [me.raynes.fs :refer [base-name]]
     ))
 
-(defn clj-tag->doc-version [tag]
+(defn clj-tag->api-key [tag]
   (second (re-find #"clojure-(\d\.\d)" tag)))
 
 (def versions ["1.3" "1.4" "1.5" "1.6" "1.7"])
@@ -21,6 +22,18 @@
                        (map #(str (:namespace %) "/" (:name %)))
                        set)]
       (swap! api-symbols assoc v symbols))))
+
+(def lang-symbols (atom {}))
+(def lang-path "src/jvm/clojure/lang/")
+(defn get-lang-symbols! [tag]
+  (if-let [symbols (@lang-symbols tag)]
+    symbols
+    (let [symbols (->> (ls-files "clojure" tag lang-path)
+                       (filter #(.endsWith % ".java"))
+                       (map #(str "clojure.lang/" (base-name % true)))
+                       set)]
+      (swap! lang-symbols assoc tag symbols)
+      symbols)))
 
 (def cljs-ns->clj
   {"cljs.core"   "clojure.core"
@@ -46,25 +59,27 @@
 
 (defn clj-lookup-name
   [item]
-  (if-let [clj-full-name (cljs-full-name->clj (:full-name item))]
-    clj-full-name
-    (if-let [clj-ns (cljs-ns->clj (:ns item))]
-      (str clj-ns "/" (:name item))
-      (:full-name item))))
+  (if (and (= "cljs.core" (:ns item))
+           (#{"type" "protocol"} (:type item)))
+    (str "clojure.lang/" (:name item))
+    (if-let [clj-full-name (cljs-full-name->clj (:full-name item))]
+      clj-full-name
+      (if-let [clj-ns (cljs-ns->clj (:ns item))]
+        (str clj-ns "/" (:name item))
+        (:full-name item)))))
 
 (defn attach-clj-symbol
   [item]
-  (let [version     (clj-tag->doc-version *clj-tag*)
-        clj-symbol? (get @api-symbols version)
+  (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
+        lang-symbol? (get-lang-symbols! *clj-tag*)
         lookup-name (clj-lookup-name item)]
-    (if (clj-symbol? lookup-name)
+    (if (or (lang-symbol? lookup-name) (clj-symbol? lookup-name))
       (assoc item :clj-symbol lookup-name)
       item)))
 
 (defn get-clojure-symbols-not-in-items
   [items]
-  (let [version     (clj-tag->doc-version *clj-tag*)
-        clj-symbols (get @api-symbols version)
+  (let [clj-symbols (get @api-symbols (clj-tag->api-key *clj-tag*))
         cljs-symbols (set (map clj-lookup-name items))]
     (difference clj-symbols cljs-symbols)))
 

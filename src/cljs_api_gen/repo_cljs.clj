@@ -61,6 +61,12 @@
   (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
     (str "r" n)))
 
+(defn ls-files
+  [repo tag dir]
+  (-> (sh "git" "ls-tree" "-r" "--name-only" tag dir :dir (str repos-dir "/" repo))
+      :out
+      split-lines))
+
 (defn repo-tag-date
   [repo tag]
   (-> (sh "git" "log" "-1" "--format=%ai" tag :dir (str repos-dir "/" repo))

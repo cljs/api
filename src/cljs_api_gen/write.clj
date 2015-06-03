@@ -5,7 +5,7 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
-    [cljs-api-gen.repo-cljs :refer [cljs-tag->version]]
+    [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.config :refer [*output-dir*
                                  refs-dir
                                  edn-result-file]]
@@ -110,12 +110,15 @@
 
 (defn get-clj-link
   [full-name]
-  (let [ns- (-> full-name symbol namespace)]
-    (str "http://clojure.github.io/clojure/branch-master/"
-         (if-let [page-ns (clj-ns->page-ns ns-)]
-           page-ns
-           ns-)
-         "-api.html#" (md-link-escape full-name))))
+  (let [ns- (-> full-name symbol namespace)
+        name- (-> full-name symbol name)]
+    (if (= "clojure.lang" ns-)
+      (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")
+      (str "http://clojure.github.io/clojure/branch-master/"
+        (if-let [page-ns (clj-ns->page-ns ns-)]
+          page-ns
+          ns-)
+        "-api.html#" (md-link-escape full-name)))))
 
 (defn make-clj-ref
   [item]
