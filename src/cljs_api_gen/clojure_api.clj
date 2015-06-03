@@ -138,7 +138,8 @@
 
 (defn get-clojure-symbols-not-in-items
   [items]
-  (let [clj-symbols (get @api-symbols (clj-tag->api-key *clj-tag*))
+  (let [clj-symbols (into (get @api-symbols (clj-tag->api-key *clj-tag*))
+                          (get @lang-symbols *clj-tag*))
         cljs-symbols (set (map clj-lookup-name items))]
     (difference clj-symbols cljs-symbols)))
 
