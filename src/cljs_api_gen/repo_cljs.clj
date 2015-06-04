@@ -9,13 +9,16 @@
     [cljs-api-gen.config :refer [repos-dir]]
     ))
 
-(def ^:dynamic *cljs-version* "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
-(def ^:dynamic *cljs-num*     "ClojureScript version number   (e.g. 3211)" nil)
-(def ^:dynamic *cljs-tag*     "ClojureScript version git tag  (e.g. \"r3211\")" nil)
-(def ^:dynamic *cljs-date*    "ClojureScript version date     (e.g. \"2015-03-09\")" nil)
-(def ^:dynamic *clj-version*  "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
-(def ^:dynamic *clj-tag*      "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
-(def ^:dynamic *gclosure-lib* "Google Closure release         (e.g. \"0.0-20150505-021ed5b3\"" nil)
+(def ^:dynamic *cljs-version*    "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
+(def ^:dynamic *cljs-num*        "ClojureScript version number   (e.g. 3211)" nil)
+(def ^:dynamic *cljs-tag*        "ClojureScript version git tag  (e.g. \"r3211\")" nil)
+(def ^:dynamic *cljs-date*       "ClojureScript version date     (e.g. \"2015-03-09\")" nil)
+(def ^:dynamic *clj-version*     "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
+(def ^:dynamic *clj-tag*         "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
+(def ^:dynamic *gclosure-lib*    "Google Closure release         (e.g. \"0.0-20150505-021ed5b3\"" nil)
+
+(def ^:dynamic *treader-version* "tools.reader version string    (e.g. \"0.9.2\"" nil)
+(def ^:dynamic *treader-tag*     "tools.reader git tag           (e.g. \"tools.reader-0.9.2\"" nil)
 
 (defn clone-or-pull!
   [repo-url]
@@ -31,7 +34,8 @@
   (when-not (exists? repos-dir)
     (mkdir repos-dir))
   (clone-or-pull! "https://github.com/clojure/clojurescript")
-  (clone-or-pull! "https://github.com/clojure/clojure"))
+  (clone-or-pull! "https://github.com/clojure/clojure")
+  (clone-or-pull! "https://github.com/clojure/tools.reader"))
 
 (defn get-current-repo-tag
   [repo]
@@ -60,6 +64,16 @@
   [version]
   (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
     (str "r" n)))
+
+(defn treader-tag->version
+  [tag]
+  (when-let [[_ v] (re-find #"tools\.reader-(.*)")]
+    v))
+
+(defn treader-version->tag
+  [version]
+  (when version
+    (str "tools.reader-" version)))
 
 (defn ls-files
   [repo tag dir]
@@ -160,9 +174,18 @@
           (>= cljs-num 1847) (second (re-find #"(?m)^GCLOSURE_LIB_RELEASE=\"(.*)\"" bootstrap))
           (>= cljs-num 1798) (second (re-find #"google-closure-library-(.*)\.jar" bootstrap))
           (>= cljs-num 0)    (second (re-find #"closure-library-(.*)\.zip" bootstrap)))
+
+        treader
+        (cond
+          (>= cljs-num 1859) (second (re-find #"(?m)^TREADER_RELEASE=\"(.*)\"" bootstrap))
+          (>= cljs-num 1853) (second (re-find #"tools\.reader-(.*).jar" bootstrap))
+          (>= cljs-num 0)    nil ;; `clojure.lang/LispReader` used instead of tools.reader
+          )
         ]
     {:clj-version clojure
      :clj-tag (str "clojure-" clojure)
+     :treader-version treader
+     :treader-tag (treader-version->tag treader)
      :gclosure-lib gclosure-lib}))
 
 (defn checkout-repo!
@@ -171,11 +194,17 @@
 
 (defmacro with-checkout!
   [cljs-tag & body]
-  `(let [{clj-tag# :clj-tag
-          clj-version# :clj-version
-          gclosure-lib# :gclosure-lib} (cljs-tag->dep-releases ~cljs-tag)]
+  `(let [{clj-tag#          :clj-tag
+          clj-version#      :clj-version
+          treader-tag#      :treader-tag
+          treader-version#  :treader-version
+          gclosure-lib#     :gclosure-lib}    (cljs-tag->dep-releases ~cljs-tag)]
+
      (checkout-repo! "clojurescript" ~cljs-tag)
      (checkout-repo! "clojure" clj-tag#)
+     (when treader-tag#
+       (checkout-repo! "tools.reader" treader-tag#))
+
      (binding [*cljs-tag*     ~cljs-tag
                *cljs-date*    (repo-tag-date "clojurescript" ~cljs-tag)
                *cljs-version* (cljs-tag->version ~cljs-tag)
@@ -183,6 +212,9 @@
 
                *clj-tag*      clj-tag#
                *clj-version*  clj-version#
+
+               *treader-tag*     treader-tag#
+               *treader-version* treader-version#
 
                *gclosure-lib* gclosure-lib#]
        ~@body)))
