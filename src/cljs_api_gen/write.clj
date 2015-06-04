@@ -22,9 +22,9 @@
   "FIXME: put this in the official docstrings if missing (patch request)"
 
   {"cljs.core"                    "fundamental library of the ClojureScript language"
-   "special"                      "special forms (not namespaced)"
-   "specialrepl"                  "REPL special forms (not namespaced)"
-   "syntax"                       "syntax forms"
+   "special"                      "_pseudo-namespace_ for special forms"
+   "specialrepl"                  "_pseudo-namespace_ for REPL special forms"
+   "syntax"                       "_pseudo-namespace_ for syntax forms"
    "cljs.pprint"                  "a pretty-printer for printing data structures"
    "cljs.reader"                  "a reader to parse text and produce data structures"
    "clojure.set"                  "set operations such as union/intersection"
