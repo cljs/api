@@ -34,7 +34,7 @@
 ```
 {{/source}}
 
-{{#shadowed-sources}}
+{{#extra-sources}}
 
 ---
 
@@ -45,7 +45,7 @@
 ```clj
 {{&code}}
 ```
-{{/shadowed-sources}}
+{{/extra-sources}}
 
 ---
 

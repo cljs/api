@@ -23,6 +23,7 @@
   {"cljs.core"                    "fundamental library of the ClojureScript language"
    "special"                      "special forms (not namespaced)"
    "specialrepl"                  "REPL special forms (not namespaced)"
+   "syntax"                       "syntax forms"
    "cljs.pprint"                  "a pretty-printer for printing data structures"
    "cljs.reader"                  "a reader to parse text and produce data structures"
    "clojure.set"                  "set operations such as union/intersection"
@@ -207,7 +208,7 @@
   (let [add-tree #(assoc % :path-tree (source-path %))]
     (-> item
         (update-in [:source] add-tree)
-        (update-in [:shadowed-sources] #(map add-tree %)))))
+        (update-in [:extra-sources] #(map add-tree %)))))
 
 (defn ref-file-data
   [item]
@@ -326,7 +327,8 @@
 (def ns-order
   {"special" 1
    "specialrepl" 2
-   "cljs.core" 3})
+   "syntax" 3
+   "cljs.core" 4})
 
 (defn compare-ns
   [a b]

@@ -50,8 +50,10 @@
   #{"cljs.core"
     "cljs.test"
     "cljs.repl"
-    "special"
-    "specialrepl"}) ;; <-- pseudo-namespaces for special forms
+    "special"     ;; <-- pseudo-namespace for special forms
+    "specialrepl" ;; <-- pseudo-namespace for REPL special forms
+    "syntax"      ;; <-- pseudo-namespace for syntax forms
+    })
 
 (def cljs-lib-namespaces
   (into normally-parsed-ns? custom-parsed-ns?))
@@ -434,6 +436,30 @@
      (doall (map make-map specials)))))
 
 ;;--------------------------------------------------------------------------------
+;; Parse tagged literals
+;;--------------------------------------------------------------------------------
+
+(defn parse-tagged-literal-map
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def *cljs-data-readers*)))
+    (->> (nth form 2)
+         (map (fn [[k v]] [(second k) v])) ;; (quote x) -> x for keys
+         (into {}))))
+
+(defn parse-tagged-literals
+  [map- parsed-defs]
+  (let [defs (zipmap (map :name parsed-defs) parsed-defs)
+        map-form (get defs '*cljs-data-readers*)]
+    (for [[name- func-name] map-]
+      {:ns "syntax"
+       :name (str "#" name-)
+       :full-name (str "syntax/#" name-)
+       :type "tagged literal"
+       :source (:source map-form)
+       :extra-sources [(:source (get defs func-name))]})))
+
+;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
 ;;--------------------------------------------------------------------------------
 
@@ -553,6 +579,13 @@
                            *cur-repo* "clojurescript"]
                    (first (keep #(parse-repl-specials % docs) forms)))]
     specials))
+
+(defmethod parse-ns "syntax" [ns-]
+  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
+        reader-map (first (keep parse-tagged-literal-map forms))
+        parsed-defs (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
+        tagged-literals (parse-tagged-literals reader-map parsed-defs)]
+    tagged-literals))
 
 (defmethod parse-ns "cljs.test" [ns-]
   (parse-ns* ns- "clojurescript"

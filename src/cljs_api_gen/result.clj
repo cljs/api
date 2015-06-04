@@ -36,7 +36,8 @@
                     :history
                     :return-type
                     :clj-symbol
-                    :source])
+                    :source
+                    :extra-sources])
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
@@ -50,7 +51,7 @@
   (let [item (last items)
         shadowed (drop 1 (reverse items))]
     (if-not (empty? shadowed)
-      (assoc item :shadowed-sources (map :source shadowed))
+      (assoc item :extra-sources (map :source shadowed))
       item)))
 
 (defn transform-items
