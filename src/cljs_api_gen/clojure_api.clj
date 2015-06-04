@@ -93,6 +93,38 @@
 
   #{"#uuid" "#inst"})
 
+(def clj-syntax
+  {"\"" "StringReader"
+   ";"  "CommentReader"
+   "'"  "WrappingReader(QUOTE)"
+   "@"  "WrappingReader(DEREF)"
+   "^"  "MetaReader"
+   "`"  "SyntaxQuoteReader"
+   "~"  "UnquoteReader"
+   "("  "ListReader"
+   "["  "VectorReader"
+   "{"  "MapReader"
+   "\\" "CharacterReader"
+   "%"  "ArgReader"
+   "#"  "DispatchReader"
+
+   "#^"  "MetaReader"
+   "#'"  "VarReader"
+   "#\"" "RegexReader"
+   "#("  "FnReader"
+   "#{"  "SetReader"
+   "#="  "EvalReader"
+   "#!"  "CommentReader"
+   "#<"  "UnreadableReader"
+   "#_"  "DiscardReader"
+   "#?"  "ConditionalReader" ;; added 1.7 (which release?)
+
+   ":"        "matchSymbol" ;; (keywords matched w/ symbols)
+   "<symbol>" "matchSymbol"
+   "<number>" "matchNumber"
+   }
+  )
+
 ;;--------------------------------------------------------------------------------
 ;; ClojureScript -> Clojure name mapping
 ;;--------------------------------------------------------------------------------
