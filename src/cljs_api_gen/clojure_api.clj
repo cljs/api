@@ -5,6 +5,10 @@
     [me.raynes.fs :refer [base-name]]
     ))
 
+;;--------------------------------------------------------------------------------
+;; Official Clojure API
+;;--------------------------------------------------------------------------------
+
 (defn clj-tag->api-key [tag]
   (second (re-find #"clojure-(\d\.\d)" tag)))
 
@@ -22,6 +26,14 @@
                        (map #(str (:namespace %) "/" (:name %)))
                        set)]
       (swap! api-symbols assoc v symbols))))
+
+;;--------------------------------------------------------------------------------
+;; Clojure's Types and Protocols
+;;
+;;  - `clojure.lang` namespace (non-public)
+;;  - `clojure.lang.PersistentQueue/EMPTY` has to be used to create queues,
+;;    so might as well bring all the types in and relate them to the cljs
+;;--------------------------------------------------------------------------------
 
 (def lang-symbols->parent
   "These clojure.lang symbols don't have their own file.
@@ -68,6 +80,23 @@
       (swap! lang-symbols assoc tag symbols)
       symbols)))
 
+;;--------------------------------------------------------------------------------
+;; Clojure's Syntax
+;;
+;;   - tagged literals (from `clojure.core/default-data-readers` >= 1.4)
+;;   - syntax (from `clojure.lang/LispReader`)
+;;--------------------------------------------------------------------------------
+
+(def clj-tagged-literals
+  "Hard-coded until clojure adds more tagged literals:
+  https://github.com/clojure/clojure/blob/028af0e0b271aa558ea44780e5d951f4932c7842/src/clj/clojure/core.clj#L6947"
+
+  #{"#uuid" "#inst"})
+
+;;--------------------------------------------------------------------------------
+;; ClojureScript -> Clojure name mapping
+;;--------------------------------------------------------------------------------
+
 (def cljs-ns->clj
   {"cljs.core"   "clojure.core"
    "cljs.pprint" "clojure.pprint"
@@ -76,9 +105,6 @@
    "special"     "clojure.core"
    "specialrepl" "clojure.core"
    })
-
-(def clj-tagged-literals
-  #{"#uuid" "#inst"})
 
 (def cljs-full-name->clj
   "cljs symbols that map to different clj names."
