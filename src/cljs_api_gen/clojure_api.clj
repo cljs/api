@@ -77,6 +77,9 @@
    "specialrepl" "clojure.core"
    })
 
+(def clj-tagged-literals
+  #{"#uuid" "#inst"})
+
 (def cljs-full-name->clj
   "cljs symbols that map to different clj names."
 
@@ -114,6 +117,10 @@
 
    ;; member attributes
    "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"
+
+   ;; tagged literals
+   "syntax/#uuid" "#uuid"
+   "syntax/#inst" "#inst"
    })
 
 (defn clj-lookup-name
@@ -132,7 +139,9 @@
   (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
         lang-symbol? (get-lang-symbols! *clj-tag*)
         lookup-name (clj-lookup-name item)]
-    (if (or (lang-symbol? lookup-name) (clj-symbol? lookup-name))
+    (if (or (lang-symbol? lookup-name)
+            (clj-symbol? lookup-name)
+            (clj-tagged-literals lookup-name))
       (assoc item :clj-symbol lookup-name)
       item)))
 
