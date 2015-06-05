@@ -11,6 +11,8 @@
                                     *cljs-date*
                                     *clj-version*
                                     *clj-tag*
+                                    *treader-version*
+                                    *treader-tag*
                                     *gclosure-lib*]]
     ))
 
@@ -108,6 +110,7 @@
                            :cljs-date *cljs-date*
                            :clj-version *clj-version*
                            :gclosure-lib *gclosure-lib*
+                           :treader-version *treader-version*
                            :added added?
                            :removed removed?})
         new-changes (conj prev-changes change)]
@@ -128,6 +131,9 @@
 
                 :clj-version *clj-version*
                 :clj-tag *clj-tag*
+
+                :treader-version *treader-version*
+                :treader-tag *treader-tag*
 
                 :gclosure-lib *gclosure-lib*
                 }
