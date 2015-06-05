@@ -53,12 +53,21 @@ The catalog branch has each of the generated files for exploring/using the API r
 
 ```clj
 {;; release data
- :release {:cljs-version  "0.0-3297",
-           :cljs-tag      "r3297",
-           :cljs-date     "2015-05-23",
-           :clj-version   "1.7.0-beta2",
-           :clj-tag       "clojure-1.7.0-beta2",
-           :gclosure-lib  "0.0-20150505-021ed5b3"},
+ :release {;; clojurescript
+           :cljs-version     "0.0-3297",
+           :cljs-tag         "r3297",
+           :cljs-date        "2015-05-23",
+
+           ;; clojure
+           :clj-version      "1.7.0-beta2",
+           :clj-tag          "clojure-1.7.0-beta2",
+
+           ;; tools.reader
+           :treader-version  "0.9.2",
+           :treader-tag      "tools.reader-0.9.2",
+
+           ;; google closure library
+           :gclosure-lib     "0.0-20150505-021ed5b3"},
 
  ;; symbols not ported from clojure
  :clj-not-cljs #{"clojure.core/the-ns"
@@ -79,20 +88,22 @@ The catalog branch has each of the generated files for exploring/using the API r
                  :signature         ["[hash-map]"],
                  :history           [["+" "0.0-927"]],
                  :source {:code     "... full source code ...",
-                          :filename "clojurescript/src/main/cljs/cljs/core.cljs",
-                          :lines    [7559 7563],
-                          :link     "https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L7559-L7563"},
+                          :repo     "clojurescript"
+                          :tag      "r3297"
+                          :filename "src/main/cljs/cljs/core.cljs",
+                          :lines    [7559 7563]},
                 ;; ...
                 }
 
                :changes
-               [{:cljs-version  "0.0-3115",
-                 :cljs-date     "2015-03-15",
-                 :clj-version   "1.6.0",
-                 :gclosure-lib  "0.0-20140718-946a7d39",
-                 :added         #{"clojure.browser.repl/bootstrap"
-                                  "clojure.browser.repl/load-queue"},
-                 :removed       #{"cljs.core/load-file*"}}
+               [{:cljs-version     "0.0-3115",
+                 :cljs-date        "2015-03-15",
+                 :clj-version      "1.6.0",
+                 :treader-version  "0.9.2",
+                 :gclosure-lib     "0.0-20140718-946a7d39",
+                 :added            #{"clojure.browser.repl/bootstrap"
+                                     "clojure.browser.repl/load-queue"},
+                 :removed          #{"cljs.core/load-file*"}}
                 ;; ...
                 ]}
 
