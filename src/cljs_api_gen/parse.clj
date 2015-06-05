@@ -13,10 +13,11 @@
     [cljs-api-gen.docstring :refer [try-locate-docs
                                     fix-docstring
                                     try-remove-docs]]
-    [cljs-api-gen.repo-cljs :refer [get-github-file-link
-                                    *cljs-tag*
+    [cljs-api-gen.repo-cljs :refer [*cljs-tag*
                                     *cljs-num*
+                                    *clj-tag*
                                     *treader-version*
+                                    *treader-tag*
                                     ]]
     ))
 
@@ -31,6 +32,14 @@
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
+
+(defn cur-repo-tag
+  []
+  (case *cur-repo*
+    "clojure" *clj-tag*
+    "clojurescript" *cljs-tag*
+    "tools.reader" *treader-tag*
+    nil))
 
 (def normally-parsed-ns?
   #{"cljs.pprint"
@@ -253,13 +262,13 @@
         potential-comment (first (take-last (inc num-lines) source-lines))
 
         source (join "\n" (take-last num-lines source-lines))
-        filename (subs (:file m) (inc (count repos-dir)))
-        github-link (get-github-file-link *cur-repo* filename lines)]
+        filename (subs (:file m) (inc (count (str repos-dir "/" *cur-repo*))))]
     {:ns *cur-ns*
      :source {:code source
+              :repo *cur-repo*
+              :tag (cur-repo-tag)
               :filename filename
-              :lines lines
-              :link github-link}
+              :lines lines}
      :potential-comment potential-comment}))
 
 (defn parse-common-def

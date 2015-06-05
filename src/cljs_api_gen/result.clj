@@ -42,6 +42,7 @@
                     :extra-sources])
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
+    (update-in $ [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)

@@ -128,7 +128,7 @@
   (when-let [full-name (:clj-symbol item)]
     {:full-name full-name
      :display-name (md-escape full-name)
-     :import (= "clojure" (second (re-find #"/clojure/([^/]+)/" (-> item :source :link))))
+     :import (= "clojure" (-> item :source :repo))
      :link (get-clj-link full-name)}))
 
 (defn item-filename
@@ -180,11 +180,14 @@
       nil)))
 
 (defn source-link
-  [filename {:keys [lines link] :as source}]
-  (str "<ins>[" filename ":" (join "-" lines) "](" link ")</ins>"))
+  [basename {:keys [lines repo tag filename] :as source}]
+  (let [label (str basename ":" (join "-" lines))
+        link (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
+                  "#" (join "-" (map #(str "L" %) lines)))]
+    (str "<ins>[" label "](" link ")</ins>")))
 
 (defn source-path
-  [{:keys [filename link] :as source}]
+  [{:keys [filename repo tag] :as source}]
   ;; clojurescript/
   ;; └── src/
   ;;     └── cljs/
@@ -195,16 +198,16 @@
         branch "└── "
         space  "    "]
     (join "\n"
-      (map-indexed
-        (fn [i crumb]
-          (if (zero? i)
-            (str crumb " @ " (second (re-find #"blob/([^/]*)" link)))
-            (str (join (repeat (dec i) space))
+      (cons
+        (str repo " @ " tag)
+        (map-indexed
+          (fn [i crumb]
+            (str (join (repeat i space))
                  branch
                  (if (= i last-i)
                    (source-link crumb source)
-                   crumb))))
-        crumbs))))
+                   crumb)))
+          crumbs)))))
 
 (defn add-source-trees
   [item]
