@@ -502,7 +502,7 @@
         type- "syntax"
         base-item (fn [{:keys [desc form] :as info}]
                     {:name desc
-                     :docstring (str "syntax for " desc " = " form)
+                     :docstring (str "syntax for " desc " " form)
                      :ns ns-
                      :type type-
                      :full-name (str ns- "/" desc)})]
