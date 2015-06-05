@@ -105,35 +105,29 @@
   "hard-coded base set of syntax readers in Clojure. from:
   https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L87-L118"
 
-  {"\"" "StringReader"
-   ";"  "CommentReader"
-   "'"  "WrappingReader(QUOTE)"
-   "@"  "WrappingReader(DEREF)"
-   "^"  "MetaReader"
-   "`"  "SyntaxQuoteReader"
-   "~"  "UnquoteReader"
-   "("  "ListReader"
-   "["  "VectorReader"
-   "{"  "MapReader"
-   "\\" "CharacterReader"
-   "%"  "ArgReader"
-   "#"  "DispatchReader"
-
-   "#^"  "MetaReader"
-   "#'"  "VarReader"
-   "#\"" "RegexReader"
-   "#("  "FnReader"
-   "#{"  "SetReader"
-   "#="  "EvalReader"
-   "#!"  "CommentReader"
-   "#<"  "UnreadableReader"
-   "#_"  "DiscardReader"
-
-   ":"        "matchSymbol" ;; (keywords matched w/ symbols)
-   "<symbol>" "matchSymbol"
-   "<number>" "matchNumber"
-   }
-  )
+  [{:form "\"" :desc "string"}
+   {:form ":" :desc "keyword"}
+   {:form ";" :desc "comment"}
+   {:form "'" :desc "quote"}
+   {:form "@" :desc "deref"}
+   {:form "^" :desc "meta"}
+   {:form "`" :desc "syntax-quote"}
+   {:form "~" :desc "unquote"}
+   {:form "()" :desc "list"}
+   {:form "[]" :desc "vector"}
+   {:form "{}" :desc "map"}
+   {:form "\\" :desc "character"}
+   {:form "%" :desc "arg"}
+   {:form "#'" :desc "var"}
+   {:form "#()" :desc "function"}
+   {:form "#=" :desc "eval"}
+   {:form "#{}" :desc "set"}
+   {:form "#\"\"" :desc "regex"}
+   {:form "#!" :desc "hashbang"}
+   {:form "#_" :desc "ignore"}
+   {:desc "number"}
+   {:desc "symbol"}
+   ])
 
 (defn clj-syntax
   ;; NOTE: When new syntax is added in future versions of Clojure,
@@ -142,7 +136,7 @@
   []
   (case (clj-tag->api-key *clj-tag*)
     ("1.3" "1.4" "1.5" "1.6") clj-base-syntax
-    (assoc "#?"  "ConditionalReader") ;; add conditional reader, available >= 1.7
+    (conj clj-base-syntax {:form "#?" :desc "cond"}) ;; add conditional reader, available >= 1.7
     ))
 
 ;;--------------------------------------------------------------------------------

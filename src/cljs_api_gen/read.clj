@@ -84,7 +84,7 @@
 
 (defn read-treader-forms
   []
-  (-> (str repos-dir "/tools.reader/src/main/clojure/clojure/tools/reader/reader.clj")
+  (-> (str repos-dir "/tools.reader/src/main/clojure/clojure/tools/reader.clj")
       (read-forms-from-file)
       doall))
 

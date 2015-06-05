@@ -208,7 +208,7 @@
 
 (defn add-source-trees
   [item]
-  (let [add-tree #(assoc % :path-tree (source-path %))]
+  (let [add-tree #(when % (assoc % :path-tree (source-path %)))]
     (-> item
         (update-in [:source] add-tree)
         (update-in [:extra-sources] #(map add-tree %)))))
@@ -330,8 +330,7 @@
 (def ns-order
   {"special" 1
    "specialrepl" 2
-   "syntax" 3
-   "cljs.core" 4})
+   "cljs.core" 3})
 
 (defn compare-ns
   [a b]
@@ -414,6 +413,9 @@
   (mkdir *output-dir*)
   (mkdir (str *output-dir* "/" refs-dir))
 
+  (println "writing edn...")
+  (dump-edn-file! result)
+
   (println "writing ref files...")
   (doseq [item (vals (:symbols (:library-api result)))]
     (dump-ref-file! item))
@@ -429,6 +431,5 @@
   (println "writing unported...")
   (dump-unported! result)
 
-  (println "writing edn...")
-  (dump-edn-file! result))
+  )
 

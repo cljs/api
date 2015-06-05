@@ -5,6 +5,7 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [lower-case split split-lines join replace]]
     [me.raynes.fs :refer [base-name exists?]]
+    [cljs-api-gen.clojure-api :refer [clj-syntax]]
     [cljs-api-gen.read :refer [read-ns-forms
                                read-clj-core-forms
                                read-treader-forms]]
@@ -295,7 +296,7 @@
           final (update-in merged [:source :code] try-remove-docs (:expected-docs specific))
           internal? (internal-def-only? final)]
       (when-not internal?
-        final))))
+        (with-meta final {:form form})))))
 
 ;;--------------------------------------------------------------------------------
 ;; High-level namespace parsing functions
@@ -324,7 +325,8 @@
 (defn parse-treader-forms
   "Parse tools.reader forms."
   []
-  (parse-forms "clojure.tools.reader" "tools.reader" (read-treader-forms)))
+  (binding [*parse-private-defs?* true]
+    (parse-forms "clojure.tools.reader" "tools.reader" (read-treader-forms))))
 
 ;;--------------------------------------------------------------------------------
 ;; Parse special forms
@@ -455,49 +457,77 @@
 ;; Parse syntax readers
 ;;--------------------------------------------------------------------------------
 
-(def macro->name
-  {\" "\"\""
-   \: ":"
-   \; ";"
-   \' "'"
-   \@ "@"
-   \^ "^"
-   \` "`"
-   \~ "~"
-   \( "()"
-   \[ "[]"
-   \{ "{}"
-   \\ "\\"
-   \% "%"
-   ;; \# "#"
+(def macro->info
+  {\" {:form "\"" :desc "string"}
+   \: {:form ":" :desc "keyword"}
+   \; {:form ";" :desc "comment"}
+   \' {:form "'" :desc "quote"}
+   \@ {:form "@" :desc "deref"}
+   \^ {:form "^" :desc "meta"}
+   \` {:form "`" :desc "syntax-quote"}
+   \~ {:form "~" :desc "unquote"}
+   \( {:form "()" :desc "list"}
+   \[ {:form "[]" :desc "vector"}
+   \{ {:form "{}" :desc "map"}
+   \\ {:form "\\" :desc "character"}
+   \% {:form "%" :desc "arg"}
    })
 
-(def dispatch-macro->name
-  {\^ "#^"
-   \' "#'"
-   \( "#()"
-   \= "#="
-   \{ "#{}"
-   \" "#\"\""
-   \! "#!"
-   \_ "#_"
-   \? "#?"})
+(def dispatch-macro->info
+  {;; \^ "" ; deprecated
+   \' {:form "#'" :desc "var"}
+   \( {:form "#()" :desc "function"}
+   \= {:form "#=" :desc "eval"}
+   \{ {:form "#{}" :desc "set"}
+   \" {:form "#\"\"" :desc "regex"}
+   \! {:form "#!" :desc "hashbang"}
+   \_ {:form "#_" :desc "ignore"}
+   \? {:form "#?" :desc "cond"}})
 
 ;; get all read functions in `macros` and `dispatch-macros` case expressions
 ;; get `read-symbol` and `read-number`, name "<symbol>" and "<number>"
 
 (defn parse-syntax-forms
   []
-  (if *treader-version*
-    (let [parsed (parse-treader-forms)
-          {:syms [macros
-                  dispatch-macros
-                  read-symbol
-                  read-number]
-           :as items} (zipmap (map :name parsed) parsed)
-          ])
-    nil)
-  )
+  (let [ns- "syntax"
+        type- "syntax"
+        base-item (fn [{:keys [desc form] :as info}]
+                    {:name desc
+                     :docstring (str "syntax for " desc " = " form)
+                     :ns ns-
+                     :type type-
+                     :full-name (str ns- "/" desc)})]
+    (if *treader-version*
+      (let [parsed (parse-treader-forms)
+            {:syms [macros
+                    dispatch-macros
+                    read-symbol
+                    read-number]
+             :as items} (zipmap (map :name parsed) parsed)
+
+            make-items
+            (fn [map-def info-lookup]
+              (let [[_defn- _macros _args [_case _ch & args]] (:form (meta map-def))
+                    {:as reader-map} (drop-last args)]
+                (for [[ch func] reader-map]
+                  (when-let [info (info-lookup ch)]
+                    (assoc (base-item info)
+                       :source (:source map-def)
+                       :extra-sources (when-let [f (get items func)]
+                                        [(:source f)]))))))
+            make-single
+            (fn [info func]
+              (assoc (base-item info)
+                :source (:source func)))]
+
+        (keep identity
+              (concat
+                (make-items macros macro->info)
+                (make-items dispatch-macros dispatch-macro->info)
+                [(make-single {:desc "symbol"} read-symbol)
+                 (make-single {:desc "number"} read-number)])))
+      (for [info (clj-syntax)]
+        (base-item info)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
@@ -624,8 +654,11 @@
   (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
         reader-map (first (keep parse-tagged-literal-map forms))
         parsed-defs (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
-        tagged-literals (parse-tagged-literals reader-map parsed-defs)]
-    tagged-literals))
+        tagged-literals (parse-tagged-literals reader-map parsed-defs)
+        syntax-items (parse-syntax-forms)]
+    (concat
+      tagged-literals
+      syntax-items)))
 
 (defmethod parse-ns "cljs.test" [ns-]
   (parse-ns* ns- "clojurescript"
