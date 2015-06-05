@@ -536,7 +536,10 @@
                 [(make-single {:desc "symbol"} read-symbol)
                  (make-single {:desc "number"} read-number)])))
       (for [info (clj-syntax)]
-        (base-item info)))))
+        (assoc (base-item info)
+          :source {:repo "clojure"
+                   :tag *clj-tag*
+                   :filename "src/jvm/clojure/lang/LispReader.java"})))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
