@@ -6,14 +6,17 @@
     [clojure.string :refer [lower-case split split-lines join replace]]
     [me.raynes.fs :refer [base-name exists?]]
     [cljs-api-gen.read :refer [read-ns-forms
-                               read-clj-core-forms]]
+                               read-clj-core-forms
+                               read-treader-forms]]
     [cljs-api-gen.config :refer [repos-dir]]
     [cljs-api-gen.docstring :refer [try-locate-docs
                                     fix-docstring
                                     try-remove-docs]]
     [cljs-api-gen.repo-cljs :refer [get-github-file-link
                                     *cljs-tag*
-                                    *cljs-num*]]
+                                    *cljs-num*
+                                    *treader-version*
+                                    ]]
     ))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
@@ -318,6 +321,11 @@
   (->> (read-clj-core-forms)
        (mapcat #(parse-forms "cljs.core" "clojure" %))))
 
+(defn parse-treader-forms
+  "Parse tools.reader forms."
+  []
+  (parse-forms "clojure.tools.reader" "tools.reader" (read-treader-forms)))
+
 ;;--------------------------------------------------------------------------------
 ;; Parse special forms
 ;;--------------------------------------------------------------------------------
@@ -442,6 +450,54 @@
        :type "tagged literal"
        :source (:source map-form)
        :extra-sources [(:source (get defs func-name))]})))
+
+;;--------------------------------------------------------------------------------
+;; Parse syntax readers
+;;--------------------------------------------------------------------------------
+
+(def macro->name
+  {\" "\"\""
+   \: ":"
+   \; ";"
+   \' "'"
+   \@ "@"
+   \^ "^"
+   \` "`"
+   \~ "~"
+   \( "()"
+   \[ "[]"
+   \{ "{}"
+   \\ "\\"
+   \% "%"
+   ;; \# "#"
+   })
+
+(def dispatch-macro->name
+  {\^ "#^"
+   \' "#'"
+   \( "#()"
+   \= "#="
+   \{ "#{}"
+   \" "#\"\""
+   \! "#!"
+   \_ "#_"
+   \? "#?"})
+
+;; get all read functions in `macros` and `dispatch-macros` case expressions
+;; get `read-symbol` and `read-number`, name "<symbol>" and "<number>"
+
+(defn parse-syntax-forms
+  []
+  (if *treader-version*
+    (let [parsed (parse-treader-forms)
+          {:syms [macros
+                  dispatch-macros
+                  read-symbol
+                  read-number]
+           :as items} (zipmap (map :name parsed) parsed)
+          ])
+    nil)
+  )
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
