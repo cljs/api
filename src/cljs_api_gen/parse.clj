@@ -87,9 +87,17 @@
 ;; Parse defs
 ;;--------------------------------------------------------------------------------
 
+(def ^:dynamic *parse-private-defs?*
+  "Determines if private defs should be parsed."
+  false)
+
 (defn parse-defn-or-macro
   [form]
-  (let [type- ({'defn "function" 'defmacro "macro"} (first form))
+  (let [type- ({'defn "function"
+                'defn- "function"
+                'defmacro "macro"} (first form))
+        name- (second form)
+        meta- (meta name-)
         args (drop 2 form)
         docstring (let [ds (first args)]
                     (when (string? ds)
@@ -98,7 +106,9 @@
         attr-map (let [m (first args)]
                    (when (map? m) m))
         args (if attr-map (rest args) args)
-        private? (:private attr-map)
+        private? (or (= 'defn- (first form))
+                     (:private meta-)
+                     (:private attr-map))
         doc-forms (cond-> []
                     docstring (conj docstring)
                     attr-map (conj attr-map))
@@ -110,7 +120,8 @@
                          :head (take 2 form)
                          :doc doc-forms
                          :sig-body args})]
-    (when-not private?
+    (when (or *parse-private-defs?*
+              (not private?))
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
        :signature signatures
@@ -120,31 +131,40 @@
   [form]
   (let [name- (second form)
         m (meta name-)
+        private? (:private m)
         docstring (fix-docstring (:doc m))
         signatures (when-let [arglists (:arglists m)]
                      (when (= 'quote (first arglists))
                        (second arglists)))]
-    {:docstring docstring
-     :signature signatures
-     :type "function"}))
+    (when (or *parse-private-defs?*
+              (not private?))
+      {:docstring docstring
+       :signature signatures
+       :type "function"})))
 
 (defn parse-var
   [form]
   (let [name- (second form)
         m (meta name-)
+        private? (:private m)
         docstring (fix-docstring (:doc m))
         dynamic? (:dynamic m)]
-    {:docstring docstring
-     :type (if dynamic? "dynamic var" "var")}))
+    (when (or *parse-private-defs?*
+              (not private?))
+      {:docstring docstring
+       :type (if dynamic? "dynamic var" "var")})))
 
 (defn parse-defcurried
   [form]
   (let [[_ name- docstring attr-map args] form
+        private? (:private attr-map)
         cargs (vec (butlast args))
         signatures [cargs args]]
-    {:docstring docstring
-     :signature signatures
-     :type "function"}))
+    (when (or *parse-private-defs?*
+              (not private?))
+      {:docstring docstring
+       :signature signatures
+       :type "function"})))
 
 (defn parse-protocol-method
   [form]
@@ -161,94 +181,58 @@
 (defn parse-defprotocol
   [form]
   (let [name- (second form)
+        meta- (meta name-)
+        private? (:private meta-)
         form (drop 2 form)
         docstring (let [d (first form)]
                     (when (string? d) d))
         form (if docstring (drop 1 form) form)
         method-lists form
         pmethods (mapv parse-protocol-method method-lists)]
-    {:docstring docstring
-     :signature nil
-     :methods pmethods
-     :type "protocol"}))
+    (when (or *parse-private-defs?*
+              (not private?))
+      {:docstring docstring
+       :signature nil
+       :methods pmethods
+       :type "protocol"})))
 
 (defn parse-deftype
   [form]
   (when (not= *cur-ns* "cljs.pprint") ;; ignore custom deftypes here
     (let [name- (second form)
+          meta- (meta name-)
+          private? (:private meta-)
           form (drop 2 form)
           signature (first form)]
-      {:signature (when signature
-                    [signature])
-       :type "type"})))
+      (when (or *parse-private-defs?*
+                (not private?))
+        {:signature (when signature [signature])
+         :type "type"}))))
 
 (defmulti parse-form*
   (fn [form]
-    (cond
-      (and (= 'defn (first form))
-           (not (:private (meta (second form)))))
-      "defn"
+    (case (first form)
+      defn          "defn"
+      defn-         "defn"
+      defmacro      "defmacro"
+      defcurried    "defcurried"
+      defprotocol   "defprotocol"
+      deftype       "deftype"
+      (def defonce) (if (and (list? (nth form 2 nil))
+                               (= 'fn (first (nth form 2 nil)))
+                               (not (:dynamic (meta (second form)))))
+                        "def fn"
+                        "var")
+      nil)))
 
-      (and (= 'defmacro (first form))
-           (not (:private (meta (second form)))))
-      "defmacro"
-
-      (and (#{'def 'defonce} (first form))
-           (list? (nth form 2 nil))
-           (= 'fn (first (nth form 2 nil)))
-           (not (:private (meta (second form))))
-           (not (:dynamic (meta (second form)))))
-      "def fn"
-
-      (and (#{'def 'defonce} (first form))
-           (not (:private (meta (second form)))))
-      "var"
-
-      (and (= 'defcurried (first form))
-           (not (:private (nth form 3 nil))))
-      "defcurried"
-
-      (and (= 'defprotocol (first form))
-           (not (:private (meta (second form)))))
-      "defprotocol"
-
-      (and (= 'deftype (first form))
-           (not (:private (meta (second form)))))
-      "deftype"
-
-      :else nil)))
-
-(defmethod parse-form* "var"
-  [form]
-  (parse-var form))
-
-(defmethod parse-form* "def fn"
-  [form]
-  (parse-def-fn form))
-
-(defmethod parse-form* "defn"
-  [form]
-  (parse-defn-or-macro form))
-
-(defmethod parse-form* "defmacro"
-  [form]
-  (parse-defn-or-macro form))
-
-(defmethod parse-form* "defcurried"
-  [form]
-  (parse-defcurried form))
-
-(defmethod parse-form* "defprotocol"
-  [form]
-  (parse-defprotocol form))
-
-(defmethod parse-form* "deftype"
-  [form]
-  (parse-deftype form))
-
-(defmethod parse-form* nil
-  [form]
-  nil)
+(defmethod parse-form* "var"         [form] (parse-var form))
+(defmethod parse-form* "def fn"      [form] (parse-def-fn form))
+(defmethod parse-form* "defn"        [form] (parse-defn-or-macro form))
+(defmethod parse-form* "defmacro"    [form] (parse-defn-or-macro form))
+(defmethod parse-form* "defcurried"  [form] (parse-defcurried form))
+(defmethod parse-form* "defprotocol" [form] (parse-defprotocol form))
+(defmethod parse-form* "deftype"     [form] (parse-deftype form))
+(defmethod parse-form* nil           [form] nil)
 
 ;;--------------------------------------------------------------------------------
 ;; Parse common meta for defs
