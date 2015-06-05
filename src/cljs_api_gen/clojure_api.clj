@@ -87,13 +87,24 @@
 ;;   - syntax (from `clojure.lang/LispReader`)
 ;;--------------------------------------------------------------------------------
 
-(def clj-tagged-literals
-  "Hard-coded until clojure adds more tagged literals:
+(def clj-base-tagged-lits
+  "hard-coded base set of tagged literals in Clojure. from:
   https://github.com/clojure/clojure/blob/028af0e0b271aa558ea44780e5d951f4932c7842/src/clj/clojure/core.clj#L6947"
 
-  #{"#uuid" "#inst"})
+  #{"#uuid"
+    "#inst"})
 
-(def clj-syntax
+(defn clj-tagged-lits
+  []
+  ;; NOTE: When new tagged literals are added in future versions of Clojure,
+  ;;       add logic here to conj them on to `clj-base-tagged-lits`
+  ;;       rather than trying to parse them from LispReader.java.
+  clj-base-tagged-lits)
+
+(def clj-base-syntax
+  "hard-coded base set of syntax readers in Clojure. from:
+  https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L87-L118"
+
   {"\"" "StringReader"
    ";"  "CommentReader"
    "'"  "WrappingReader(QUOTE)"
@@ -117,13 +128,22 @@
    "#!"  "CommentReader"
    "#<"  "UnreadableReader"
    "#_"  "DiscardReader"
-   "#?"  "ConditionalReader" ;; added 1.7 (which release?)
 
    ":"        "matchSymbol" ;; (keywords matched w/ symbols)
    "<symbol>" "matchSymbol"
    "<number>" "matchNumber"
    }
   )
+
+(defn clj-syntax
+  ;; NOTE: When new syntax is added in future versions of Clojure,
+  ;;       add logic here to conj them on to `clj-base-tagged-lits`
+  ;;       rather than trying to parse them from LispReader.java.
+  []
+  (case (clj-tag->api-key *clj-tag*)
+    ("1.3" "1.4" "1.5" "1.6") clj-base-syntax
+    (assoc "#?"  "ConditionalReader") ;; add conditional reader, available >= 1.7
+    ))
 
 ;;--------------------------------------------------------------------------------
 ;; ClojureScript -> Clojure name mapping
@@ -196,10 +216,11 @@
   [item]
   (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
         lang-symbol? (get-lang-symbols! *clj-tag*)
+        tagged-lit? (clj-tagged-lits)
         lookup-name (clj-lookup-name item)]
     (if (or (lang-symbol? lookup-name)
             (clj-symbol? lookup-name)
-            (clj-tagged-literals lookup-name))
+            (tagged-lit? lookup-name))
       (assoc item :clj-symbol lookup-name)
       item)))
 

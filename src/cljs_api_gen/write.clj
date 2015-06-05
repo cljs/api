@@ -13,7 +13,7 @@
     [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent
-                                      clj-tagged-literals]]
+                                      clj-tagged-lits]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -115,7 +115,7 @@
   [full-name]
   (let [ns- (-> full-name symbol namespace)
         name- (-> full-name symbol name)]
-    (or (when (clj-tagged-literals full-name)
+    (or (when ((clj-tagged-lits) full-name)
           (str "https://github.com/clojure/clojure/blob/028af0e0b271aa558ea44780e5d951f4932c7842/src/clj/clojure/core.clj#L6947"))
         (when (= "clojure.lang" ns-)
           (let [name- (or (lang-symbols->parent name-) name-)]
