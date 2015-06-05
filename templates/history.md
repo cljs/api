@@ -5,6 +5,7 @@
 <th>Version</th>
 <th>Date</th>
 <th>Clojure</th>
+<th>tools.reader</th>
 <th>Closure Lib</th>
 <th>Library API</th>
 <th>Compiler API</th>
@@ -14,6 +15,7 @@
 <td>__[{{cljs-version}}](https://github.com/cljsinfo/api-refs/tree/{{cljs-version}})__</td>
 <td>{{cljs-date}}</td>
 <td><kbd>{{clj-version}}</kbd></td>
+<td><kbd>{{treader-version}}</kbd></td>
 <td><kbd>{{gclosure-lib}}</kbd></td>
 {{#library-api}}
 <td>
