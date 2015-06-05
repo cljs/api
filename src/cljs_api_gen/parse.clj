@@ -456,7 +456,8 @@
         map-form (get defs '*cljs-data-readers*)]
     (for [[name- func-name] map-]
       {:ns "syntax"
-       :name (str "#" name-)
+       :name (str name- "-literal")
+       :syntax-form (str "#" name-)
        :full-name (str "syntax/#" name-)
        :type "tagged literal"
        :source (:source map-form)
@@ -502,7 +503,8 @@
         type- "syntax"
         base-item (fn [{:keys [desc form] :as info}]
                     {:name desc
-                     :docstring (str "syntax for " desc " " form)
+                     :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
+                                                ;;      so the result parser doesn't purge it
                      :ns ns-
                      :type type-
                      :full-name (str ns- "/" desc)})]

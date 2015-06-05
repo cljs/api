@@ -68,8 +68,12 @@
 
 (defn md-escape
   [sym]
-  (-> sym
-      (replace "*" "\\*")))
+  (when sym
+    (-> sym
+        (replace "\\" "\\\\")
+        (replace "*" "\\*")
+        (replace "[" "\\[")
+        (replace "]" "\\]"))))
 
 (defn md-link-escape
   [s]
@@ -229,6 +233,7 @@
                                    :args (sig-args %))
                         (:signature item))
         :clj-symbol (make-clj-ref item))
+      (update-in [:syntax-form] md-escape)
       (add-source-trees)
       (update-in [:docstring]
         #(if (or (nil? %) (= "" (trim %)))
@@ -375,6 +380,7 @@
                      :clj-symbol (make-clj-ref item)
                      :name (:name item)
                      :type (:type item)
+                     :syntax-form (md-escape (:syntax-form item))
                      :parent-type (:parent-type item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-items (map make-item %))
@@ -382,6 +388,7 @@
                         (group-by :ns)
                         (mapmap transform-syms)
                         (map (fn [[k v]] {:ns k
+                                          :has-syntax (= k "syntax")
                                           :ns-description (ns-descriptions k)
                                           :ns-link (md-header-link k)
                                           :symbols v}))

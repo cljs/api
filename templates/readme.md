@@ -134,6 +134,7 @@ _\* included in and accessible from every ClojureScript application:_
  <table>
 <thead><tr>
 <th>=</th>
+{{#has-syntax}}<th>Syntax</th>{{/has-syntax}}
 <th>Name</th>
 <th>Type</th>
 <th>History</th>
@@ -141,6 +142,7 @@ _\* included in and accessible from every ClojureScript application:_
 {{#symbols}}
 <tr>
 <td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
+{{#syntax-form}}<td><samp>{{&.}}</samp></td>{{/syntax-form}}
 <td><samp>[{{&display-name}}]({{&link}})</samp></td>
 <td><samp>{{type}}</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>

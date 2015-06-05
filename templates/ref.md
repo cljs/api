@@ -2,6 +2,7 @@
 
  <table border="1">
 <tr>
+{{#syntax-form}}<td><samp>{{&.}}</samp></td>{{/syntax-form}}
 <td>{{&type}}</td>
 <td>{{#history}}{{&.}} {{/history}}</td>
 {{#clj-symbol}}
