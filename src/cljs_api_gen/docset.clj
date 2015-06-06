@@ -46,6 +46,8 @@
    "function"            "Function"
    "special form"        "Statement" ;; <-- Pending "Special Form"
    "special form (repl)" "Statement" ;;     (avaiable in next Dash version)
+   "tagged literal"      "Tag"
+   "syntax"              "Operator"  ;; <-- Pending "Syntax"
    })
 
 (defn assert-reqs!
