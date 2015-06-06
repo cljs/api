@@ -27,7 +27,7 @@
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
   [{:char  \"   :form "\"\""    :desc "string"        :clj-doc doc1}
-   {:char  \'   :form "'"       :desc "character"     :clj-doc doc1}
+   {:char  \\   :form "\\"      :desc "character"     :clj-doc doc1}
    {:char  \:   :form ":"       :desc "keyword"       :clj-doc doc1}
    {                            :desc "symbol"        :clj-doc doc1}
    {                            :desc "number"        :clj-doc doc1}
