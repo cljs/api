@@ -213,6 +213,7 @@ These are the source files concerned with the API reference generator:
 | <samp>[docstring.clj]</samp>   | helpers for extracting/formatting/removing docstrings           |
 | <samp>[encode.clj]</samp>      | encoding scheme to create filenames for symbols                 |
 | <samp>[parse.clj]</samp>       | parse namespaces for their symbols                              |
+| <samp>[syntax.clj]</samp>      | all data related to syntax forms                                |
 | <samp>[read.clj]</samp>        | read forms from namespaces                                      |
 | <samp>[repo_cljs.clj]</samp>   | helpers for traversing official Clojure and ClojureScript repos |
 | <samp>[result.clj]</samp>      | transforms parsed data into a final result structure            |
@@ -228,6 +229,7 @@ These are the source files concerned with the API reference generator:
 [docstring.clj]:src/cljs_api_gen/docstring.clj
 [encode.clj]:src/cljs_api_gen/encode.clj
 [parse.clj]:src/cljs_api_gen/parse.clj
+[syntax.clj]:src/cljs_api_gen/syntax.clj
 [read.clj]:src/cljs_api_gen/read.clj
 [repo_cljs.clj]:src/cljs_api_gen/repo_cljs.clj
 [result.clj]:src/cljs_api_gen/result.clj
