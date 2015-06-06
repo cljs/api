@@ -102,22 +102,31 @@ __Compiler API Changes__
 
 ### Sources
 
-Symbols from ClojureScript's core language features and libraries span multiple
-sources:
+ClojureScript's core language features and libraries span multiple sources,
+shown in the table below.
 
-|             | clojure            | cljs compiler      | cljs library       | closure\*          | js\*               |
-|-------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-| macros      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
-| functions   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| vars        |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| specials    |                    | :heavy_check_mark: |                    |                    |                    |
-| protocols   |                    |                    | :heavy_check_mark: |                    |                    |
-| types       |                    |                    | :heavy_check_mark: |                    |                    |
+|                 | clojure            | cljs compiler      | cljs library       | tools.reader       | closure\*          | js\*               |
+|-----------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+| macros          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
+| functions       |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |
+| vars            |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |
+| specials        |                    | :heavy_check_mark: |                    |                    |                    |                    |
+| protocols       |                    |                    | :heavy_check_mark: |                    |                    |                    |
+| types           |                    |                    | :heavy_check_mark: |                    |                    |                    |
+| syntax          |                    |                    |                    | :heavy_check_mark: |                    |                    |
+| tagged literals |                    | :heavy_check_mark: |                    |                    |                    |                    |
 
 _\* included in and accessible from every ClojureScript application:_
 
 - [Google Closure Library](http://www.closurecheatsheet.com/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
+
+### Showing source code
+
+For every symbol in the following reference sections, we extract and show the
+relevant source code to provide a quick view of that symbol's implementation.
+To encourage further exploration, info and links to the full files of their respective
+official github repositories are also included.
 
 ### Library API Reference
 
