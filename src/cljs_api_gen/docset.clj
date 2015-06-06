@@ -50,6 +50,15 @@
    "syntax"              "Operator"  ;; <-- Pending "Syntax"
    })
 
+(defn dash-name
+  [item]
+  (if (= "syntax" (:ns item))
+    (case (:type item)
+      "syntax"         (str (:name item) " " (:syntax-form item))
+      "tagged literal" (:syntax-form item)
+      (:name item))
+    (:name item)))
+
 (defn assert-reqs!
   []
   (let [missing-catalog? (not (directory? "catalog"))
@@ -149,7 +158,7 @@
                            (slurp ref-file)))
                 full-name (decode-fullname encoded-name)
                 item (get syms full-name)]
-            {:name (:name item)
+            {:name (dash-name item)
              :type (type->dash (:type item))
              :path (resolve-path "refs/" (base-name ref-file))}
             ))))
