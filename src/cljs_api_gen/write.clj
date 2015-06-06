@@ -12,8 +12,9 @@
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
-    [cljs-api-gen.clojure-api :refer [lang-symbols->parent
-                                      clj-tagged-lits]]
+    [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
+    [cljs-api-gen.syntax :refer [syntax-order
+                                 syntax-map]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -119,11 +120,15 @@
   [full-name]
   (let [ns- (-> full-name symbol namespace)
         name- (-> full-name symbol name)]
-    (or (when ((clj-tagged-lits) full-name)
-          (str "https://github.com/clojure/clojure/blob/028af0e0b271aa558ea44780e5d951f4932c7842/src/clj/clojure/core.clj#L6947"))
+    (or ;; get syntax doc link
+        (-> full-name syntax-map :clj-doc)
+
+        ;; get clojure.lang link
         (when (= "clojure.lang" ns-)
           (let [name- (or (lang-symbols->parent name-) name-)]
             (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
+
+        ;; get official clojure api link
         (let [ns- (or (clj-ns->page-ns ns-) ns-)]
           (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" (md-link-escape full-name))))))
 
@@ -391,7 +396,9 @@
                                           :has-syntax (= k "syntax")
                                           :ns-description (ns-descriptions k)
                                           :ns-link (md-header-link k)
-                                          :symbols v}))
+                                          :symbols (if (= k "syntax")
+                                                     (sort-by (comp syntax-order :name) v)
+                                                     v)}))
                         (sort-by :ns compare-ns))]
     ns-symbols))
 

@@ -5,7 +5,6 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [lower-case split split-lines join replace]]
     [me.raynes.fs :refer [base-name exists?]]
-    [cljs-api-gen.clojure-api :refer [clj-syntax]]
     [cljs-api-gen.read :refer [read-ns-forms
                                read-clj-core-forms
                                read-treader-forms]]
@@ -17,8 +16,11 @@
                                     *cljs-num*
                                     *clj-tag*
                                     *treader-version*
-                                    *treader-tag*
-                                    ]]
+                                    *treader-tag*]]
+    [cljs-api-gen.syntax :refer [char-map
+                                 dchar-map
+                                 syntax-map
+                                 base-clj-syntax]]
     ))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
@@ -456,9 +458,9 @@
         map-form (get defs '*cljs-data-readers*)]
     (for [[name- func-name] map-]
       {:ns "syntax"
-       :name (str name- "-literal")
+       :name name-
        :syntax-form (str "#" name-)
-       :full-name (str "syntax/#" name-)
+       :full-name (str "syntax/" name-)
        :type "tagged literal"
        :source (:source map-form)
        :extra-sources [(:source (get defs func-name))]})))
@@ -466,36 +468,6 @@
 ;;--------------------------------------------------------------------------------
 ;; Parse syntax readers
 ;;--------------------------------------------------------------------------------
-
-(def macro->info
-  {\" {:form "\"" :desc "string"}
-   \: {:form ":" :desc "keyword"}
-   \; {:form ";" :desc "comment"}
-   \' {:form "'" :desc "quote"}
-   \@ {:form "@" :desc "deref"}
-   \^ {:form "^" :desc "meta"}
-   \` {:form "`" :desc "syntax-quote"}
-   \~ {:form "~" :desc "unquote"}
-   \( {:form "()" :desc "list"}
-   \[ {:form "[]" :desc "vector"}
-   \{ {:form "{}" :desc "map"}
-   \\ {:form "\\" :desc "character"}
-   \% {:form "%" :desc "arg"}
-   })
-
-(def dispatch-macro->info
-  {;; \^ "" ; deprecated
-   \' {:form "#'" :desc "var"}
-   \( {:form "#()" :desc "function"}
-   \= {:form "#=" :desc "eval"}
-   \{ {:form "#{}" :desc "set"}
-   \" {:form "#\"\"" :desc "regex"}
-   \! {:form "#!" :desc "hashbang"}
-   \_ {:form "#_" :desc "ignore"}
-   \? {:form "#?" :desc "cond"}})
-
-;; get all read functions in `macros` and `dispatch-macros` case expressions
-;; get `read-symbol` and `read-number`, name "<symbol>" and "<number>"
 
 (defn parse-syntax-forms
   []
@@ -533,11 +505,11 @@
 
         (keep identity
               (concat
-                (make-items macros macro->info)
-                (make-items dispatch-macros dispatch-macro->info)
-                [(make-single {:desc "symbol"} read-symbol)
-                 (make-single {:desc "number"} read-number)])))
-      (for [info (clj-syntax)]
+                (make-items macros char-map)
+                (make-items dispatch-macros dchar-map)
+                [(make-single (syntax-map "symbol") read-symbol)
+                 (make-single (syntax-map "number") read-number)])))
+      (for [info base-clj-syntax]
         (assoc (base-item info)
           :source {:repo "clojure"
                    :tag *clj-tag*

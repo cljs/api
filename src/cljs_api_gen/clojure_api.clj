@@ -2,6 +2,7 @@
   (:require
     [clojure.set :refer [difference]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files]]
+    [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [base-name]]
     ))
 
@@ -81,65 +82,6 @@
       symbols)))
 
 ;;--------------------------------------------------------------------------------
-;; Clojure's Syntax
-;;
-;;   - tagged literals (from `clojure.core/default-data-readers` >= 1.4)
-;;   - syntax (from `clojure.lang/LispReader`)
-;;--------------------------------------------------------------------------------
-
-(def clj-base-tagged-lits
-  "hard-coded base set of tagged literals in Clojure. from:
-  https://github.com/clojure/clojure/blob/028af0e0b271aa558ea44780e5d951f4932c7842/src/clj/clojure/core.clj#L6947"
-
-  #{"#uuid"
-    "#inst"})
-
-(defn clj-tagged-lits
-  []
-  ;; NOTE: When new tagged literals are added in future versions of Clojure,
-  ;;       add logic here to conj them on to `clj-base-tagged-lits`
-  ;;       rather than trying to parse them from LispReader.java.
-  clj-base-tagged-lits)
-
-(def clj-base-syntax
-  "hard-coded base set of syntax readers in Clojure. from:
-  https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L87-L118"
-
-  [{:form "\"" :desc "string"}
-   {:form ":" :desc "keyword"}
-   {:form ";" :desc "comment"}
-   {:form "'" :desc "quote"}
-   {:form "@" :desc "deref"}
-   {:form "^" :desc "meta"}
-   {:form "`" :desc "syntax-quote"}
-   {:form "~" :desc "unquote"}
-   {:form "()" :desc "list"}
-   {:form "[]" :desc "vector"}
-   {:form "{}" :desc "map"}
-   {:form "\\" :desc "character"}
-   {:form "%" :desc "arg"}
-   {:form "#'" :desc "var"}
-   {:form "#()" :desc "function"}
-   {:form "#=" :desc "eval"}
-   {:form "#{}" :desc "set"}
-   {:form "#\"\"" :desc "regex"}
-   {:form "#!" :desc "hashbang"}
-   {:form "#_" :desc "ignore"}
-   {:desc "number"}
-   {:desc "symbol"}
-   ])
-
-(defn clj-syntax
-  ;; NOTE: When new syntax is added in future versions of Clojure,
-  ;;       add logic here to conj them on to `clj-base-tagged-lits`
-  ;;       rather than trying to parse them from LispReader.java.
-  []
-  (case (clj-tag->api-key *clj-tag*)
-    ("1.3" "1.4" "1.5" "1.6") clj-base-syntax
-    (conj clj-base-syntax {:form "#?" :desc "cond"}) ;; add conditional reader, available >= 1.7
-    ))
-
-;;--------------------------------------------------------------------------------
 ;; ClojureScript -> Clojure name mapping
 ;;--------------------------------------------------------------------------------
 
@@ -189,32 +131,40 @@
 
    ;; member attributes
    "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"
-
-   ;; tagged literals
-   "syntax/#uuid" "#uuid"
-   "syntax/#inst" "#inst"
    })
 
 (defn clj-lookup-name
+  "Map a parsed ClojureScript item to a related Clojure name to be looked up for resolution."
   [item]
-  (or (cljs-full-name->clj (:full-name item))
+  (or ;; use custom name mapping if found
+      (cljs-full-name->clj (:full-name item))
+
+      ;; use syntax name if syntax form
+      (when (= "syntax" (:ns item))
+        (:name item))
+
+      ;; map to clojure.lang namespace
       (when (and (= "cljs.core" (:ns item))
                  (or (:parent-type item)
                      (#{"type" "protocol"} (:type item))))
         (str "clojure.lang/" (:name item)))
+
+      ;; use custom namespace mapping if found
       (when-let [clj-ns (cljs-ns->clj (:ns item))]
         (str clj-ns "/" (:name item)))
+
+      ;; default to use full name unmodified
       (:full-name item)))
 
 (defn attach-clj-symbol
   [item]
   (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
         lang-symbol? (get-lang-symbols! *clj-tag*)
-        tagged-lit? (clj-tagged-lits)
+        syntax? #(:clj-doc (syntax-map %))
         lookup-name (clj-lookup-name item)]
     (if (or (lang-symbol? lookup-name)
             (clj-symbol? lookup-name)
-            (tagged-lit? lookup-name))
+            (syntax? lookup-name))
       (assoc item :clj-symbol lookup-name)
       item)))
 

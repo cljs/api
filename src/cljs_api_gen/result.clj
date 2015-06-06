@@ -26,8 +26,6 @@
 
 (defn transform-item
   [x]
-  (when (= (:ns x) "syntax")
-    (println "syntax form:" (:syntax-form x)))
   (as-> x $
     (select-keys $ [:full-name
                     :ns
