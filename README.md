@@ -299,7 +299,14 @@ $ ./format-pages.js
 ```sh
 # Build docset for Dash.
 # (errors will tell if you something isn't setup correctly)
+$ cd ..
 $ lein run :docset
+```
+
+```sh
+# Prepare a Pull Request commit to update published docset.
+# (manual update steps will be printed)
+$ script/docset-pr.sh
 ```
 
 ## License
