@@ -13,6 +13,9 @@
 (def doc2 (str doc-url "#toc2")) ;; Macro characters
 (def doc4 (str doc-url "#toc4")) ;; Tagged literals
 (def doc5 (str doc-url "#toc5")) ;; Reader conditionals
+
+(def doc-destruct (str "http://clojure.org/special_forms#toc18")) ;; Destructuring
+
 (def undoc (str doc-url "#undocumented")) ;; not real url, just a note
 
 (def doc-lispreader "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java")
@@ -26,7 +29,8 @@
 
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
-  [{:char  \"   :form "\"\""    :desc "string"        :clj-doc doc1}
+  [{                            :desc "destructure"   :clj-doc doc-destruct}
+   {:char  \"   :form "\"\""    :desc "string"        :clj-doc doc1}
    {:char  \\   :form "\\"      :desc "character"     :clj-doc doc1}
    {:char  \:   :form ":"       :desc "keyword"       :clj-doc doc1}
    {                            :desc "symbol"        :clj-doc doc1}

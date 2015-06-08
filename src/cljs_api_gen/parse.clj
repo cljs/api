@@ -530,7 +530,10 @@
     (-> item
         (assoc :ns *cur-ns*
                :name "destructure"
-               :type "syntax")
+               :type "syntax"
+               :syntax-form " " ;; <-- HACK: form needs to be non-empty string
+                                ;;      so the result parser doesn't purge it
+               )
         (dissoc :signature))))
 
 ;;--------------------------------------------------------------------------------
