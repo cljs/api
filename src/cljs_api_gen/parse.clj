@@ -107,11 +107,8 @@
   false)
 
 (defn parse-defn-or-macro
-  [form]
-  (let [type- ({'defn "function"
-                'defn- "function"
-                'defmacro "macro"} (first form))
-        name- (second form)
+  [form type-]
+  (let [name- (second form)
         meta- (meta name-)
         args (drop 2 form)
         docstring (let [ds (first args)]
@@ -229,6 +226,7 @@
     (case (first form)
       defn          "defn"
       defn-         "defn"
+      core/defn     "defn"
       defmacro      "defmacro"
       defcurried    "defcurried"
       defprotocol   "defprotocol"
@@ -242,8 +240,8 @@
 
 (defmethod parse-form* "var"         [form] (parse-var form))
 (defmethod parse-form* "def fn"      [form] (parse-def-fn form))
-(defmethod parse-form* "defn"        [form] (parse-defn-or-macro form))
-(defmethod parse-form* "defmacro"    [form] (parse-defn-or-macro form))
+(defmethod parse-form* "defn"        [form] (parse-defn-or-macro form "function"))
+(defmethod parse-form* "defmacro"    [form] (parse-defn-or-macro form "macro"))
 (defmethod parse-form* "defcurried"  [form] (parse-defcurried form))
 (defmethod parse-form* "defprotocol" [form] (parse-defprotocol form))
 (defmethod parse-form* "deftype"     [form] (parse-deftype form))
@@ -281,8 +279,7 @@
         manual-macro? (or (*fn-macros* name-)
                           (:macro name-meta))]
     (merge
-      {:name name-
-       :full-name (str *cur-ns* "/" name-)
+      {:name (str name-)
        :return-type return-type}
 
       (when manual-macro?
@@ -329,6 +326,8 @@
 
 (defn parse-clj-core
   "Parse clojure.core forms."
+  ;; FIXME: this could be memoized to prevent parsing twice for
+  ;;        imported macros and destructure function retrieval
   []
   (->> (read-clj-core-forms)
        (mapcat #(parse-forms "cljs.core" "clojure" %))))
@@ -376,14 +375,13 @@
              (= (take 2 form) '(defmethod parse)))
     (let [quoted-name (nth form 2)
           name- (second quoted-name)]
-      {:name name-})))
+      {:name (str name-)})))
 
 (defn parse-special
   [form doc-map]
   (when-let [special (parse-special* form)]
     (let [location (parse-location form)
-          extras {:full-name (str *cur-ns* "/" (:name special))
-                  :type "special form"}
+          extras {:type "special form"}
           docs (get doc-map (:name special))
           final (merge special location extras docs)]
       final)))
@@ -433,8 +431,7 @@
   (when-let [specials (parse-repl-specials* form)]
     (let [location (parse-location form)
           make-map (fn [name-]
-                     (let [attrs {:name name-
-                                  :full-name (str *cur-ns* "/" name-)
+                     (let [attrs {:name (str name-)
                                   :type "special form (repl)"}
                            docs (get doc-map name-)]
                        (merge location attrs docs)))]
@@ -455,12 +452,11 @@
 (defn parse-tagged-literals
   [map- parsed-defs]
   (let [defs (zipmap (map :name parsed-defs) parsed-defs)
-        map-form (get defs '*cljs-data-readers*)]
+        map-form (get defs "*cljs-data-readers*")]
     (for [[name- func-name] map-]
-      {:ns "syntax"
+      {:ns *cur-ns*
        :name name-
        :syntax-form (str "#" name-)
-       :full-name (str "syntax/" name-)
        :type "tagged literal"
        :source (:source map-form)
        :extra-sources [(:source (get defs func-name))]})))
@@ -471,18 +467,17 @@
 
 (defn parse-syntax-forms
   []
-  (let [ns- "syntax"
+  (let [ns- *cur-ns*
         type- "syntax"
         base-item (fn [{:keys [desc form] :as info}]
                     {:name desc
                      :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
                                                 ;;      so the result parser doesn't purge it
                      :ns ns-
-                     :type type-
-                     :full-name (str ns- "/" desc)})]
+                     :type type-})]
     (if *treader-version*
       (let [parsed (parse-treader-forms)
-            {:syms [macros
+            {:strs [macros
                     dispatch-macros
                     read-symbol
                     read-number
@@ -520,23 +515,40 @@
                    :filename "src/jvm/clojure/lang/LispReader.java"})))))
 
 ;;--------------------------------------------------------------------------------
+;; Parse destructure reader
+;;--------------------------------------------------------------------------------
+
+(defn parse-destructure
+  []
+  (let [items (cond
+                (>= *cljs-num* 1424) (parse-ns* "cljs.core" "clojurescript" [:compiler])
+                (>= *cljs-num* 0)    (parse-clj-core)
+                :else nil)
+        match? #(= "destructure" (:name %))
+        item (first (filter match? items))]
+    (assoc item
+      :ns *cur-ns*
+      :name "destructure"
+      :type "syntax")))
+
+;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
 ;;--------------------------------------------------------------------------------
 
 (defn get-imported-macro-api
   [forms macro-api]
   (let [get-imports #(match % (['import-macros 'clojure.core x] :seq) x :else nil)
-        macro-names (->> forms (keep get-imports) first set)]
+        macro-names (->> forms (keep get-imports) first (map str) set)]
     (filter #(macro-names (:name %)) macro-api)))
 
 (defn get-non-excluded-macro-api
   [forms macro-api]
   (let [ns-form (first (filter #(= 'ns (first %)) forms))
         get-excludes #(match % ([:refer-clojure :exclude x] :seq) x :else nil)
-        macro-names (->> ns-form (drop 2) (keep get-excludes) first set)]
+        macro-names (->> ns-form (drop 2) (keep get-excludes) first (map str) set)]
     (remove #(macro-names (:name %)) macro-api)))
 
-(defn parse-extra-macros-from-clj
+ (defn parse-extra-macros-from-clj
   "cljs.core uses some macros from clojure.core, so find those here"
   []
   (let [clj-api (->> (parse-clj-core)
@@ -571,7 +583,6 @@
         (when (= type- "function")
           {:signature [(second value)]})
         {:name name-
-         :full-name (str "cljs.core/" name-)
          :parent-type (name parent-type)
          :type type-}))))
 
@@ -641,14 +652,17 @@
     specials))
 
 (defmethod parse-ns "syntax" [ns-]
-  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
-        reader-map (first (keep parse-tagged-literal-map forms))
-        parsed-defs (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
-        tagged-literals (parse-tagged-literals reader-map parsed-defs)
-        syntax-items (parse-syntax-forms)]
-    (concat
-      tagged-literals
-      syntax-items)))
+  (binding [*cur-ns* ns-]
+    (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
+          reader-map (first (keep parse-tagged-literal-map forms))
+          parsed-defs (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
+          tagged-literals (parse-tagged-literals reader-map parsed-defs)
+          syntax-items (parse-syntax-forms)
+          destructure-item (parse-destructure)]
+      (doall (concat
+               tagged-literals
+               syntax-items
+               [destructure-item])))))
 
 (defmethod parse-ns "cljs.test" [ns-]
   (parse-ns* ns- "clojurescript"
@@ -680,11 +694,11 @@
   "`catch` and `finally` are handled inside the `try` special form.
   We cannot parse them, so we add them manually."
   [parsed]
-  (let [try-name (cond
-                   (>= *cljs-num* 1933) "special/try"
-                   (>= *cljs-num* 0)    "cljs.core/try"
-                   :else nil)
-        try-form (first (filter #(= (:full-name %) try-name) parsed))
+  (let [try-ns-name (cond
+                      (>= *cljs-num* 1933) {:ns "special" :name "try"}
+                      (>= *cljs-num* 0)    {:ns "cljs.core" :name "try"}
+                      :else nil)
+        try-form (first (filter #(= (select-keys % [:ns :name]) try-ns-name) parsed))
         get-sigs (fn [name-]
                    ;; parse docstring for signature of `catch` and `finally`:
                    ;;
@@ -702,7 +716,6 @@
                (assoc
                  (select-keys try-form
                               [:docstring :source])
-                 :full-name (str "special/" name-)
                  :ns "special"
                  :type "special form"
                  :name name-

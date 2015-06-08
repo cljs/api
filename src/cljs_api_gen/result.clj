@@ -27,8 +27,7 @@
 (defn transform-item
   [x]
   (as-> x $
-    (select-keys $ [:full-name
-                    :ns
+    (select-keys $ [:ns
                     :name
                     :docstring
                     :syntax-form
@@ -44,6 +43,7 @@
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
     (update-in $ [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
+    (assoc $ :full-name (str (:ns $) "/" (:name $)))
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)
