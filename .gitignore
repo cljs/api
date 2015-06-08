@@ -6,3 +6,11 @@
 .lein-repl-history
 symbol-history
 /api-docs-generated
+
+.DS_Store
+
+/docs-*
+/docset/ClojureScript.*
+/docset/Dash-User-Contributions
+/docset/offline
+/catalog
