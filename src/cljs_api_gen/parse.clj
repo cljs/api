@@ -459,7 +459,7 @@
        :syntax-form (str "#" name-)
        :type "tagged literal"
        :source (:source map-form)
-       :extra-sources [(:source (get defs func-name))]})))
+       :extra-sources [(:source (get defs (str func-name)))]})))
 
 ;;--------------------------------------------------------------------------------
 ;; Parse syntax readers
@@ -495,7 +495,7 @@
                        :extra-sources (if (and (list? func)
                                                (= 'wrapping-reader (first func)))
                                         [(:source wrapping-reader)]
-                                        (when-let [f (get items func)]
+                                        (when-let [f (get items (str func))]
                                           [(:source f)])))))))
             make-single
             (fn [info func]
