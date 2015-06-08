@@ -485,7 +485,8 @@
             {:syms [macros
                     dispatch-macros
                     read-symbol
-                    read-number]
+                    read-number
+                    wrapping-reader]
              :as items} (zipmap (map :name parsed) parsed)
 
             make-items
@@ -496,8 +497,11 @@
                   (when-let [info (info-lookup ch)]
                     (assoc (base-item info)
                        :source (:source map-def)
-                       :extra-sources (when-let [f (get items func)]
-                                        [(:source f)]))))))
+                       :extra-sources (if (and (list? func)
+                                               (= 'wrapping-reader (first func)))
+                                        [(:source wrapping-reader)]
+                                        (when-let [f (get items func)]
+                                          [(:source f)])))))))
             make-single
             (fn [info func]
               (assoc (base-item info)
