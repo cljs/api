@@ -521,7 +521,7 @@
 (defn parse-destructure
   []
   (let [items (cond
-                (>= *cljs-num* 1424) (parse-ns* "cljs.core" "clojurescript" [:compiler])
+                (>= *cljs-num* 1443) (parse-ns* "cljs.core" "clojurescript" [:compiler])
                 (>= *cljs-num* 0)    (parse-clj-core)
                 :else nil)
         match? #(= "destructure" (:name %))

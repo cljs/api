@@ -92,4 +92,5 @@
   "the base syntax of clojure used by clojurescript before tools.reader was used."
   (->> syntax
        (remove :tag)
-       (remove :clj-added)))
+       (remove :clj-added)
+       (remove #(= "destructure" (:desc %)))))
