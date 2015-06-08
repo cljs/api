@@ -526,10 +526,12 @@
                 :else nil)
         match? #(= "destructure" (:name %))
         item (first (filter match? items))]
-    (assoc item
-      :ns *cur-ns*
-      :name "destructure"
-      :type "syntax")))
+
+    (-> item
+        (assoc :ns *cur-ns*
+               :name "destructure"
+               :type "syntax")
+        (dissoc :signature))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
