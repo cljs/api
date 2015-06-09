@@ -183,7 +183,7 @@
 
 (defn sig-args
   [text]
-  (let [[_ args] (re-find #"^\[(.*)\]$" text)]
+  (when-let [[_ args] (re-find #"^\[(.*)\]$" text)]
     (if (not= "" (trim args))
       (md-escape args)
       nil)))

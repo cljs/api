@@ -567,29 +567,72 @@
 
 ;;------------------------------------------------------------
 ;; Type member parsing
+;; (this is really messy since cljs has used a few ways to assign
+;;  type attributes, and I'm just using the reader to find them.)
 ;;------------------------------------------------------------
+
+(defn get-core-type-member-info
+  [form type-names]
+  (cond
+
+    ;; LOOKS LIKE --->  (set! (.-EMPTY List) ...)
+    (>= *cljs-num* 2301)
+    (when (and (= 'set! (first form))
+               (list? (second form))
+               (= ".-" (subs (name (first (second form))) 0 2))
+               (type-names (str (second (second form)))))
+      (let [[_set! [attr parent-type] value] form
+            name- (subs (name attr) 2)]
+        (when-not (.contains name- "prototype")
+          (let [name- (str parent-type "." name-)
+                type- (if (and (list? value) (= 'fn (first value)))
+                        "function" "var")
+                sig (when (= type- "function")
+                      [(second value)])
+                result {:name name-
+                        :type type-
+                        :signature sig
+                        :parent-type (name parent-type)}]
+            result))))
+
+    ;; LOOKS LIKE --->  (set! cljs.core.List.EMPTY ...)
+    ;; (we can cover this case in the one below)
+    ;;
+    ;; (>= *cljs-num* 1933)
+    ;; nil
+
+    ;; LOOKS LIKE --->  (set! cljs.core.List/EMPTY ...)
+    (>= *cljs-num* 0)
+    (when (and (= 'set! (first form))
+               (symbol? (second form))
+               (.startsWith (str (second form)) "cljs.core."))
+      (let [[_set! attr-sym value] form
+            [_cljs _core parent-type attr & others] (split (str attr-sym) #"\.|/")]
+        (when (and (type-names parent-type)
+                   (not= attr "prototype")
+                   (not others))
+          (let [name- (str parent-type "." attr)
+                type- (if (and (list? value) (= 'fn (first value)))
+                        "function" "var")
+                sig (when (= type- "function")
+                      [(second value)])
+                result {:name name-
+                        :type type-
+                        :signature sig
+                        :parent-type (name parent-type)}]
+            result
+            ))))
+
+    :else nil))
 
 (defn parse-core-type-member
   [form type-names]
-  (when (and (list? form)
-             (>= (count form) 3)
-             (= 'set! (first form))
-             (list? (second form))
-             (= ".-" (subs (name (first (second form))) 0 2))
-             (type-names (str (second (second form)))))
-    (let [[_set! [attr parent-type :as attr-form] value] form
-          name- (str parent-type "." (subs (name attr) 2))
-          type- (if (and (list? value) (= 'fn (first value)))
-                  "function" "var")]
-      (merge
-        (binding [*cur-repo* "clojurescript"
-                  *cur-ns* "cljs.core"]
-          (parse-location form))
-        (when (= type- "function")
-          {:signature [(second value)]})
-        {:name name-
-         :parent-type (name parent-type)
-         :type type-}))))
+  (when-let [info (get-core-type-member-info form type-names)]
+    (merge
+      (binding [*cur-repo* "clojurescript"
+                *cur-ns* "cljs.core"]
+        (parse-location form))
+      info)))
 
 (defn get-core-type-members
   [type-names]
