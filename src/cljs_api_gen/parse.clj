@@ -576,7 +576,7 @@
              (= 'set! (first form))
              (list? (second form))
              (= ".-" (subs (name (first (second form))) 0 2))
-             (type-names (second (second form))))
+             (type-names (str (second (second form)))))
     (let [[_set! [attr parent-type :as attr-form] value] form
           name- (str parent-type "." (subs (name attr) 2))
           type- (if (and (list? value) (= 'fn (first value)))
@@ -622,7 +622,7 @@
         lib-parsed (parse-ns* ns- "clojurescript" [:library])
         type-names (->> lib-parsed
                         (filter #(= "type" (:type %)))
-                        (map :name)
+                        (map (comp str :name))
                         set)]
     (concat (parse-extra-macros-from-clj)
             com-parsed
