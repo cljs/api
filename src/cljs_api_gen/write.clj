@@ -378,9 +378,14 @@
   [result api-type]
   ;; clj-name-type-history tuples
   (let [all (-> result api-type :symbols)
+        get-display-name (fn [{:keys [parent-type] :as item}]
+                           (cond-> (:name item)
+                             parent-type (replace (str parent-type ".") "")
+                             true md-escape
+                             (:removed item) md-strikethru))
         make-item (fn [item]
-                    {:display-name (cond-> (md-escape (:name item))
-                                     (:removed item) md-strikethru)
+                    {:display-name (get-display-name item)
+                     :display-prefix (when (:parent-type item) " └── ")
                      :link (str refs-dir "/" (:full-name-encode item) ".md")
                      :clj-symbol (make-clj-ref item)
                      :name (:name item)
