@@ -131,13 +131,14 @@
                         {:whole form
                          :head (take 2 form)
                          :doc doc-forms
-                         :sig-body args})]
+                         :sig-body args})
+        constructor? (some #{"@constructor"} (:jsdoc meta-))]
     (when (or *parse-private-defs?*
               (not private?))
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
        :signature signatures
-       :type type-})))
+       :type (if constructor? "type" type-)})))
 
 (defn parse-def-fn
   [form]
