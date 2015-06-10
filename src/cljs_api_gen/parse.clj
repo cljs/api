@@ -249,6 +249,40 @@
 (defmethod parse-form* nil           [form] nil)
 
 ;;--------------------------------------------------------------------------------
+;; Ignore internal defs
+;;--------------------------------------------------------------------------------
+
+(def unlabeled-internals
+  "Internal symbols that are not labeled as such.
+  Each symbol will be ignored in the given version range pairs [add remove add remove ...etc]"
+  {"cljs.core/INIT"     [2301]
+   "cljs.core/START"    [2301]
+   "cljs.core/fixture1" [927]
+   "cljs.core/fixture2" [927]})
+
+(defn unlabeled-internal?
+  [form]
+  (when-let [version-ranges (unlabeled-internals (str (:ns form) "/" (:name form)))]
+    (some
+      (fn [[start end :as vrange]]
+        (and
+          (or (nil? start) (>= *cljs-num* start))
+          (or (nil? end)   (<  *cljs-num* end))))
+      (partition 2 2 [nil] version-ranges))))
+
+(defn internal-def-only?
+  [form]
+  (let [[c0 c1] (split (:potential-comment form) #"\s+")
+        comment-flag? (and (#{";;" ";"} c0)
+                           c1
+                           (= "internal" (lower-case c1)))
+        [d0] (split (or (:docstring form) "") #"\s+")
+        docstring-flag? (and d0 (= "internal" (lower-case d0)))]
+    (or comment-flag?
+        docstring-flag?
+        (unlabeled-internal? form))))
+
+;;--------------------------------------------------------------------------------
 ;; Parse common meta for defs
 ;;--------------------------------------------------------------------------------
 
@@ -285,16 +319,6 @@
 
       (when manual-macro?
         {:type "macro"}))))
-
-(defn internal-def-only?
-  [form]
-  (let [[c0 c1] (split (:potential-comment form) #"\s+")
-        comment-flag? (and (#{";;" ";"} c0)
-                           c1
-                           (= "internal" (lower-case c1)))
-        [d0] (split (or (:docstring form) "") #"\s+")
-        docstring-flag? (and d0 (= "internal" (lower-case d0)))]
-    (or comment-flag? docstring-flag?)))
 
 (defn parse-form
   [form]
