@@ -19,6 +19,9 @@ cd $repo
 git reset --hard
 git checkout master
 
+# remove cljs branch
+git branch -D cljs
+
 # Need to reset to make simple squashed PRs and to prevent possible problems
 # from Dash's history rewriting from large file removal.
 #    source: https://gist.github.com/glennblock/1974465
