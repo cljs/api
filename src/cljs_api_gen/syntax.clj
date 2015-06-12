@@ -29,35 +29,38 @@
 
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
-  [{                            :desc "destructure"   :clj-doc doc-destruct}
-   {:char  \"   :form "\"\""    :desc "string"        :clj-doc doc1}
-   {:char  \\   :form "\\"      :desc "character"     :clj-doc doc1}
-   {:char  \:   :form ":"       :desc "keyword"       :clj-doc doc1}
-   {                            :desc "symbol"        :clj-doc doc1}
-   {                            :desc "number"        :clj-doc doc1}
-   {:char  \;   :form ";"       :desc "comment"       :clj-doc doc2}
-   {:char  \(   :form "()"      :desc "list"          :clj-doc doc1}
-   {:char  \[   :form "[]"      :desc "vector"        :clj-doc doc1}
-   {:char  \{   :form "{}"      :desc "map"           :clj-doc doc1}
-   {:char  \@   :form "@"       :desc "deref"         :clj-doc doc2}
-   {:char  \^   :form "^"       :desc "meta"          :clj-doc doc2}
-   {:char  \'   :form "'"       :desc "quote"         :clj-doc doc2}
-   {:char  \`   :form "`"       :desc "syntax-quote"  :clj-doc doc2}
-   {:char  \~   :form "~"       :desc "unquote"       :clj-doc doc2}
-   {:char  \%   :form "%"       :desc "arg"           :clj-doc doc2}
-   {:char  \#   :form "#"       :desc "dispatch"      :clj-doc doc2}
-   {:dchar \"   :form "#\"\""   :desc "regex"         :clj-doc doc2}
-   {:dchar \{   :form "#{}"     :desc "set"           :clj-doc doc1}
-   {:dchar \(   :form "#()"     :desc "function"      :clj-doc doc2}
-   {:dchar \'   :form "#'"      :desc "var"           :clj-doc doc2}
-   {:dchar \_   :form "#_"      :desc "ignore"        :clj-doc doc2}
-   {:dchar \=   :form "#="      :desc "eval"          :clj-doc doc-eval}
-   {:dchar \<   :form "#<>"     :desc "unreadable"    :clj-doc doc-unread}
-   {:dchar \!   :form "#!"      :desc "hashbang"      :clj-doc doc-hashbang}
-   {:dchar \?   :form "#?"      :desc "cond"          :clj-doc doc5   :clj-added "1.7"}
+  [{                            :desc "destructure"      :clj-doc doc-destruct}
+   {:char  \"   :form "\"\""    :desc "string"           :clj-doc doc1}
+   {:char  \\   :form "\\"      :desc "character"        :clj-doc doc1}
+   {:char  \:   :form ":"       :desc "keyword"          :clj-doc doc1}
+   {                            :desc "symbol"           :clj-doc doc1}
+   {                            :desc "number"           :clj-doc doc1}
+   {:char  \;   :form ";"       :desc "comment"          :clj-doc doc2}
+   {:char  \(   :form "()"      :desc "list"             :clj-doc doc1}
+   {:char  \[   :form "[]"      :desc "vector"           :clj-doc doc1}
+   {:char  \{   :form "{}"      :desc "map"              :clj-doc doc1}
+   {:char  \@   :form "@"       :desc "deref"            :clj-doc doc2}
+   {:char  \^   :form "^"       :desc "meta"             :clj-doc doc2}
+   {:char  \'   :form "'"       :desc "quote"            :clj-doc doc2}
+   {:char  \`   :form "`"       :desc "syntax-quote"     :clj-doc doc2}
+   {:char  \~   :form "~"       :desc "unquote"          :clj-doc doc2}
+   {:char  \%   :form "%"       :desc "arg"              :clj-doc doc2}
+   {:char  \#   :form "#"       :desc "dispatch"         :clj-doc doc2}
+   {:dchar \"   :form "#\"\""   :desc "regex"            :clj-doc doc2}
+   {:dchar \{   :form "#{}"     :desc "set"              :clj-doc doc1}
+   {:dchar \(   :form "#()"     :desc "function"         :clj-doc doc2}
+   {:dchar \'   :form "#'"      :desc "var"              :clj-doc doc2}
+   {:dchar \_   :form "#_"      :desc "ignore"           :clj-doc doc2}
+   {:dchar \=   :form "#="      :desc "eval"             :clj-doc doc-eval}
+   {:dchar \<   :form "#<>"     :desc "unreadable"       :clj-doc doc-unread}
+   {:dchar \!   :form "#!"      :desc "hashbang"         :clj-doc doc-hashbang}
+   {:dchar \?   :form "#?"      :desc "cond"             :clj-doc doc5   :clj-added "1.7"}
 
-   {:tag true   :form "#uuid"   :desc "uuid"          :clj-doc doc-uuid}
-   {:tag true   :form "#inst"   :desc "inst"          :clj-doc doc-inst}
+   {:parent "~"  :form "~@"  :desc "unquote-splicing" :clj-doc doc2}
+   {:parent "#?" :form "#?@" :desc "cond-splicing"    :clj-doc doc5   :clj-added "1.7"}
+
+   {:tag true   :form "#uuid"   :desc "uuid"             :clj-doc doc-uuid}
+   {:tag true   :form "#inst"   :desc "inst"             :clj-doc doc-inst}
    {:tag true   :form "#queue"  :desc "queue"}
    {:tag true   :form "#js"     :desc "js"}
    ])
@@ -93,4 +96,5 @@
   (->> syntax
        (remove :tag)
        (remove :clj-added)
+       (remove :parent)
        (remove #(= "destructure" (:desc %)))))

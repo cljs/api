@@ -17,7 +17,8 @@
                                     *clj-tag*
                                     *treader-version*
                                     *treader-tag*]]
-    [cljs-api-gen.syntax :refer [char-map
+    [cljs-api-gen.syntax :refer [syntax
+                                 char-map
                                  dchar-map
                                  syntax-map
                                  base-clj-syntax]]
@@ -490,54 +491,83 @@
 ;; Parse syntax readers
 ;;--------------------------------------------------------------------------------
 
-(defn parse-syntax-forms
-  []
-  (let [ns- *cur-ns*
-        type- "syntax"
-        base-item (fn [{:keys [desc form] :as info}]
-                    {:name desc
-                     :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
-                                                ;;      so the result parser doesn't purge it
-                     :ns ns-
-                     :type type-})]
-    (if *treader-version*
-      (let [parsed (parse-treader-forms)
-            {:strs [macros
-                    dispatch-macros
-                    read-symbol
-                    read-number
-                    wrapping-reader]
-             :as items} (zipmap (map :name parsed) parsed)
+(defn base-syntax-item
+  [{:keys [desc form] :as info}]
+  {:name desc
+   :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
+                              ;;      so the result parser doesn't purge it
+   :ns "syntax"
+   :type "syntax"})
 
-            make-items
-            (fn [map-def info-lookup]
-              (let [[_defn- _macros _args [_case _ch & args]] (:form (meta map-def))
-                    {:as reader-map} (drop-last args)]
-                (for [[ch func] reader-map]
-                  (when-let [info (info-lookup ch)]
-                    (assoc (base-item info)
+(defn parse-syntax-treader
+  "Parse syntax forms from tools.reader"
+  []
+  (let [parsed (parse-treader-forms)
+        {:strs [macros
+                dispatch-macros
+                read-symbol
+                read-number
+                wrapping-reader]
+         :as items} (zipmap (map :name parsed) parsed)
+
+        make-items
+        (fn [map-def info-lookup]
+          (let [[_defn- _macros _args [_case _ch & args]] (:form (meta map-def))
+                {:as reader-map} (drop-last args) ;; (case ch :a 1 :b 2 :c 3 nil) => {:a 1 :b 2 :c 3}
+                ]
+            (for [[ch func] reader-map]
+              (when-let [info (info-lookup ch)]
+                (assoc (base-syntax-item info)
                        :source (:source map-def)
                        :extra-sources (if (and (list? func)
                                                (= 'wrapping-reader (first func)))
                                         [(:source wrapping-reader)]
                                         (when-let [f (get items (str func))]
                                           [(:source f)])))))))
-            make-single
-            (fn [info func]
-              (assoc (base-item info)
-                :source (:source func)))]
+        make-single
+        (fn [info func]
+          (assoc (base-syntax-item info)
+                 :source (:source func)))
 
-        (keep identity
-              (concat
-                (make-items macros char-map)
-                (make-items dispatch-macros dchar-map)
-                [(make-single (syntax-map "symbol") read-symbol)
-                 (make-single (syntax-map "number") read-number)])))
-      (for [info base-clj-syntax]
-        (assoc (base-item info)
-          :source {:repo "clojure"
-                   :tag *clj-tag*
-                   :filename "src/jvm/clojure/lang/LispReader.java"})))))
+        macro-items    (make-items macros char-map)
+        dispatch-items (make-items dispatch-macros dchar-map)
+        symbol-item    (make-single (syntax-map "symbol") read-symbol)
+        number-item    (make-single (syntax-map "number") read-number)
+
+        all-items (->> (concat macro-items
+                               dispatch-items
+                               [symbol-item number-item])
+                       (keep identity))]
+    all-items))
+
+(defn parse-syntax-clj
+  "Parse syntax forms from clojure's LispReader, using our base syntax list"
+  []
+  (for [info base-clj-syntax]
+    (assoc (base-syntax-item info)
+           :source {:repo "clojure"
+                    :tag *clj-tag*
+                    :filename "src/jvm/clojure/lang/LispReader.java"})))
+
+(defn get-sub-syntax-forms
+  "Get derived syntax forms from the given forms."
+  [items]
+  (let [make-sub-item (fn [info]
+                        (when-let [parent (first (filter #(= (:syntax-form %) (:parent info)) items))]
+                          (merge parent (base-syntax-item info))))
+        sub-items (->> syntax
+                       (filter :parent)
+                       (map make-sub-item)
+                       (keep identity))]
+    sub-items))
+
+(defn parse-syntax-forms
+  []
+  (let [forms (if *treader-version*
+                (parse-syntax-treader)
+                (parse-syntax-clj))
+        sub-forms (get-sub-syntax-forms forms)]
+    (concat forms sub-forms)))
 
 ;;--------------------------------------------------------------------------------
 ;; Parse destructure reader
