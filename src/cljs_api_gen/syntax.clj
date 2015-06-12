@@ -23,46 +23,74 @@
 (def doc-hashbang (str doc-lispreader "#L114"))
 (def doc-unread   (str doc-lispreader "#L115"))
 
-(def doc-edn "https://github.com/edn-format/edn")
-(def doc-uuid (str doc-edn "#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6"))
-(def doc-inst (str doc-edn "#inst-rfc-3339-format"))
+(def doc-clj-tags
+  "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947")
+
+(defn edn-doc
+  [name-]
+  (str "https://github.com/edn-format/edn#" name-))
 
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
-  [{                            :desc "destructure"      :clj-doc doc-destruct}
-   {:char  \"   :form "\"\""    :desc "string"           :clj-doc doc1}
-   {:char  \\   :form "\\"      :desc "character"        :clj-doc doc1}
-   {:char  \:   :form ":"       :desc "keyword"          :clj-doc doc1}
-   {                            :desc "symbol"           :clj-doc doc1}
-   {                            :desc "number"           :clj-doc doc1}
-   {:char  \;   :form ";"       :desc "comment"          :clj-doc doc2}
-   {:char  \(   :form "()"      :desc "list"             :clj-doc doc1}
-   {:char  \[   :form "[]"      :desc "vector"           :clj-doc doc1}
-   {:char  \{   :form "{}"      :desc "map"              :clj-doc doc1}
-   {:char  \@   :form "@"       :desc "deref"            :clj-doc doc2}
-   {:char  \^   :form "^"       :desc "meta"             :clj-doc doc2}
-   {:char  \'   :form "'"       :desc "quote"            :clj-doc doc2}
-   {:char  \`   :form "`"       :desc "syntax-quote"     :clj-doc doc2}
-   {:char  \~   :form "~"       :desc "unquote"          :clj-doc doc2}
-   {:char  \%   :form "%"       :desc "arg"              :clj-doc doc2}
-   {:char  \#   :form "#"       :desc "dispatch"         :clj-doc doc2}
-   {:dchar \"   :form "#\"\""   :desc "regex"            :clj-doc doc2}
-   {:dchar \{   :form "#{}"     :desc "set"              :clj-doc doc1}
-   {:dchar \(   :form "#()"     :desc "function"         :clj-doc doc2}
-   {:dchar \'   :form "#'"      :desc "var"              :clj-doc doc2}
-   {:dchar \_   :form "#_"      :desc "ignore"           :clj-doc doc2}
-   {:dchar \=   :form "#="      :desc "eval"             :clj-doc doc-eval}
-   {:dchar \<   :form "#<>"     :desc "unreadable"       :clj-doc doc-unread}
-   {:dchar \!   :form "#!"      :desc "hashbang"         :clj-doc doc-hashbang}
-   {:dchar \?   :form "#?"      :desc "cond"             :clj-doc doc5   :clj-added "1.7"}
 
-   {:parent "~"  :form "~@"  :desc "unquote-splicing" :clj-doc doc2}
-   {:parent "#?" :form "#?@" :desc "cond-splicing"    :clj-doc doc5   :clj-added "1.7"}
+  ;; (syntax description)    (type)       (syntax form)          (clojure doc link)  (edn doc link)
 
-   {:tag true   :form "#uuid"   :desc "uuid"             :clj-doc doc-uuid}
-   {:tag true   :form "#inst"   :desc "inst"             :clj-doc doc-inst}
-   {:tag true   :form "#queue"  :desc "queue"}
-   {:tag true   :form "#js"     :desc "js"}
+  [;; destructuring pattern
+   {:desc "destructure"                                          :clj-doc doc-destruct}
+
+   ;; core syntax
+   {:desc "string"           :char  \"    :form "\"\""           :clj-doc doc1     :edn-doc (edn-doc "strings")}
+   {:desc "character"        :char  \\    :form "\\"             :clj-doc doc1     :edn-doc (edn-doc "characters")}
+   {:desc "keyword"          :char  \:    :form ":"              :clj-doc doc1     :edn-doc (edn-doc "keywords")}
+   {:desc "keyword-qualify"  :parent ":"  :form "::"             :clj-doc doc1}
+   {:desc "symbol"                                               :clj-doc doc1     :edn-doc (edn-doc "symbols")}
+   {:desc "number"                                               :clj-doc doc1     :edn-doc (edn-doc "integers")}
+   {:desc "comment"          :char  \;    :form ";"              :clj-doc doc2     :edn-doc (edn-doc "comments")}
+   {:desc "list"             :char  \(    :form "()"             :clj-doc doc1     :edn-doc (edn-doc "lists")}
+   {:desc "vector"           :char  \[    :form "[]"             :clj-doc doc1     :edn-doc (edn-doc "vectors")}
+   {:desc "map"              :char  \{    :form "{}"             :clj-doc doc1     :edn-doc (edn-doc "maps")}
+   {:desc "deref"            :char  \@    :form "@"              :clj-doc doc2}
+   {:desc "meta"             :char  \^    :form "^"              :clj-doc doc2}
+   {:desc "quote"            :char  \'    :form "'"              :clj-doc doc2}
+   {:desc "syntax-quote"     :char  \`    :form "`"              :clj-doc doc2}
+   {:desc "unquote"          :char  \~    :form "~"              :clj-doc doc2}
+   {:desc "unquote-splicing" :parent "~"  :form "~@"             :clj-doc doc2}
+   {:desc "arg"              :char  \%    :form "%"              :clj-doc doc2}
+   {:desc "dispatch"         :char  \#    :form "#"              :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
+
+   ;; dispatch syntax
+   {:desc "regex"            :dchar \"    :form "#\"\""          :clj-doc doc2}
+   {:desc "set"              :dchar \{    :form "#{}"            :clj-doc doc1     :edn-doc (edn-doc "sets")}
+   {:desc "function"         :dchar \(    :form "#()"            :clj-doc doc2}
+   {:desc "var"              :dchar \'    :form "#'"             :clj-doc doc2}
+   {:desc "ignore"           :dchar \_    :form "#_"             :clj-doc doc2     :edn-doc (edn-doc "discard")}
+   {:desc "eval"             :dchar \=    :form "#="             :clj-doc doc-eval}
+   {:desc "unreadable"       :dchar \<    :form "#<>"            :clj-doc doc-unread}
+   {:desc "hashbang"         :dchar \!    :form "#!"             :clj-doc doc-hashbang}
+   {:desc "cond"             :dchar \?    :form "#?"             :clj-doc doc5
+          :clj-added "1.7"}
+   {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5
+          :clj-added "1.7"}
+
+   ;; reserved symbols
+   {:desc "true"             :rsym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "false"            :rsym true   :form "false"          :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "nil"              :rsym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:desc "NaN"              :rsym true   :form "NaN"}
+   {:desc "Infinity"         :rsym true   :form "Infinity"}
+
+   ;; tagged literal pattern
+   {:desc "tagged-literal"                                       :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")
+          :clj-added "1.4"}
+
+   ;; available tagged literals
+   {:desc "uuid"             :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+          :clj-added "1.4"}
+   {:desc "inst"             :tag true    :form "#inst"          :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format")
+          :clj-added "1.4"}
+   {:desc "queue"            :tag true    :form "#queue"}
+   {:desc "js"               :tag true    :form "#js"}
+
    ])
 
 (def syntax-order
@@ -94,7 +122,9 @@
 (def base-clj-syntax
   "the base syntax of clojure used by clojurescript before tools.reader was used."
   (->> syntax
-       (remove :tag)
-       (remove :clj-added)
-       (remove :parent)
-       (remove #(= "destructure" (:desc %)))))
+       (filter :clj-doc)                      ;; all clojure syntax forms should have an associated doc link
+       (remove :tag)                          ;; FIXME: allow tags after 1.4
+       (remove :clj-added)                    ;; FIXME: allow everything given the current clj version
+       (remove :parent)                       ;; already added by the parser if parents are present
+       (remove #(= "destructure" (:desc %)))  ;; already added by the parser
+       ))

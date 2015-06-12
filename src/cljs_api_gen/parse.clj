@@ -507,6 +507,7 @@
                 dispatch-macros
                 read-symbol
                 read-number
+                read-tagged
                 wrapping-reader]
          :as items} (zipmap (map :name parsed) parsed)
 
@@ -533,10 +534,15 @@
         dispatch-items (make-items dispatch-macros dchar-map)
         symbol-item    (make-single (syntax-map "symbol") read-symbol)
         number-item    (make-single (syntax-map "number") read-number)
+        tag-item       (make-single (syntax-map "tagged-literal") read-tagged)
+        rsym-items (->> syntax
+                        (filter :rsym)
+                        (map #(make-single % read-symbol)))
 
         all-items (->> (concat macro-items
                                dispatch-items
-                               [symbol-item number-item])
+                               [symbol-item number-item tag-item]
+                               rsym-items)
                        (keep identity))]
     all-items))
 
