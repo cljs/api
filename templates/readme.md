@@ -95,6 +95,13 @@ __Compiler API Changes__
 
 ## Syntax API
 
+Unlike the Library and Compiler API references, this Syntax API does not list
+literal symbols that you can call to.  Rather, they represent conceptual names
+for the language's building blocks.  When applicable, the __Form__ column shows
+each entry's literal form (e.g. leading characters, delimiters).
+
+Each entry contains the source code for how the syntax form is parsed.
+
 ClojureScript's syntax has some intersection with Clojure and [edn], the extensible data notation.
 To show this relationship, we mark the syntax forms as follows:
 
@@ -115,14 +122,6 @@ available in [edn]
 
 [edn]:https://github.com/edn-format/edn#edn
 
-### Syntax API Reference
-
-Unlike the Library and Compiler API references, this Syntax API does not list
-literal symbols that you can call to.  Rather, they represent conceptual names
-for the language's building blocks.  When applicable, the __Form__ column shows
-each entry's literal form (e.g. leading characters, delimiters).
-
-Each entry contains the source code for how the syntax form is parsed.
 
 {{#syntax-api}}
 {{#ns-symbols}}
