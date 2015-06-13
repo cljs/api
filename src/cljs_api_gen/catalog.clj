@@ -66,10 +66,20 @@
   (let [ns-groups (group-by :ns parsed)
         pairs (sort-by first ns-groups)]
     (doseq [[ns- symbols] pairs]
-      (println "   " ns- ": parsed" (count symbols) "symbols"))))
+      (printf "    %-24s %4s = %s\n"
+        ns-
+        (count symbols)
+        (let [type-groups (group-by :type symbols)
+              pairs (sort-by first type-groups)]
+          (join " + "
+            (for [[type- symbols] pairs]
+              (let [total (count symbols)]
+                (str total " " (cond-> type- (> total 1) (str "s")))))))))))
 
 (defn print-summary
   [parsed]
+  (println " Syntax API:")
+  (print-summary* (:syntax parsed))
   (println " Library API:")
   (print-summary* (:library parsed))
   (println " Compiler API:")
