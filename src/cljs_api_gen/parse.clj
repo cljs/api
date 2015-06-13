@@ -527,10 +527,17 @@
                         (map #(assoc (make-single % read-symbol)
                                 :type "special symbol")))
 
+        ;; special namespaces (e.g. "js", "Math")
+        sns-items (->> syntax
+                       (filter :sns)
+                       (map #(assoc (base-syntax-item %)
+                               :type "special namespace")))
+
         all-items (->> (concat macro-items
                                dispatch-items
                                [symbol-item number-item tag-item]
-                               ssym-items)
+                               ssym-items
+                               sns-items)
                        (keep identity))]
     all-items))
 

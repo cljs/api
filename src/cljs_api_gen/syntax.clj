@@ -25,6 +25,8 @@
 (def doc-hashbang (str doc-lispreader "#L114"))
 (def doc-unread   (str doc-lispreader "#L115"))
 
+(def doc-interop "http://clojure.org/java_interop#toc6")
+
 (def doc-clj-tags
   "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947")
 
@@ -77,7 +79,7 @@
    {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5
           :clj-added "1.7.0-beta1"}
 
-   ;; reserved symbols
+   ;; special symbols
    {:desc "true"             :ssym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
    {:desc "false"            :ssym true   :form "false"          :clj-doc doc1     :edn-doc (edn-doc "booleans")}
    {:desc "nil"              :ssym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
@@ -91,6 +93,10 @@
           :clj-added "1.4.0"}
    {:desc "queue-tag"        :tag true    :form "#queue"}
    {:desc "js-tag"           :tag true    :form "#js"}
+
+   ;; special namespaces
+   {:desc "js-ns"            :sns true    :form "js/"}
+   {:desc "Math-ns"          :sns true    :form "Math/"          :clj-doc doc-interop}
 
    ])
 
