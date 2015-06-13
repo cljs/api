@@ -81,17 +81,13 @@
    {:desc "NaN"              :ssym true   :form "NaN"}
    {:desc "Infinity"         :ssym true   :form "Infinity"}
 
-   ;; tagged literal pattern
-   {:desc "tagged-literal"                                       :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")
-          :clj-added "1.4.0"}
-
    ;; available tagged literals
-   {:desc "uuid"             :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+   {:desc "uuid-tag"         :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
           :clj-added "1.4.0"}
-   {:desc "inst"             :tag true    :form "#inst"          :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format")
+   {:desc "inst-tag"         :tag true    :form "#inst"          :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format")
           :clj-added "1.4.0"}
-   {:desc "queue"            :tag true    :form "#queue"}
-   {:desc "js"               :tag true    :form "#js"}
+   {:desc "queue-tag"        :tag true    :form "#queue"}
+   {:desc "js-tag"           :tag true    :form "#js"}
 
    ])
 
