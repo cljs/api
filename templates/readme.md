@@ -19,10 +19,10 @@ for ClojureScript.  All information here is rendered from
 can download and use yourself.
 
  <dl>
-<dt>[Syntax](#syntax)</dt>
+<dt>[Syntax API](#syntax-api)</dt>
 <dd>
 This is a reference section for the syntax of the language to allow connecting
-the syntax appearance to its conceptual name.  It also offers source
+the syntactic appearance to its conceptual name.  It also offers source
 code of the syntax forms' reader functions for exploring implementation.
 </dd>
 
@@ -41,18 +41,15 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 
 ---
 
----
-
-
 ## Latest Changes
 
 Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HISTORY.md)):
 
-__Syntax Changes__
+__Syntax API Changes__
 
-{{#syntax}}
+{{#syntax-api}}
  <table>
-{{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
+{{#no-changes}}<tr><td>_no syntax forms were added or removed in this version_</td></tr>{{/no-changes}}
 {{#changes}}
 <tr>
 <td>
@@ -62,7 +59,7 @@ __Syntax Changes__
 </tr>
 {{/changes}}
 </table>
-{{/syntax}}
+{{/syntax-api}}
 
 __Library API Changes__
 
@@ -96,20 +93,9 @@ __Compiler API Changes__
 </table>
 {{/compiler-api}}
 
-## Syntax
+## Syntax API
 
-### Sources
-
-ClojureScript's syntax comes from the following sources:
-
-|                 | clojure                       | cljs compiler      | tools.reader                   |
-|-----------------|-------------------------------|--------------------|--------------------------------|
-| syntax          | :heavy_check_mark: < 0.0-1424 |                    | :heavy_check_mark: >= 0.0-1424 |
-| tagged literals |                               | :heavy_check_mark: |                                |
-
-### edn
-
-Clojure and ClojureScript have a separate syntaxes which are supersets of [edn], the extensible data notation.
+ClojureScript's syntax has some intersection with Clojure and [edn], the extensible data notation.
 To show this relationship, we mark the syntax forms as follows:
 
  <table>
@@ -129,7 +115,14 @@ available in [edn]
 
 [edn]:https://github.com/edn-format/edn#edn
 
-### Syntax Reference
+### Syntax API Reference
+
+Unlike the Library and Compiler API references, this Syntax API does not list
+literal symbols that you can call to.  Rather, they represent conceptual names
+for the language's building blocks.  When applicable, the __Form__ column shows
+each entry's literal form (e.g. leading characters, delimiters).
+
+Each entry contains the source code for how the syntax form is parsed.
 
 {{#syntax-api}}
 {{#ns-symbols}}
@@ -137,7 +130,7 @@ available in [edn]
 <thead><tr>
 <th colspan=2>=</th>
 <th>Name</th>
-<th> </th>
+<th>Form</th>
 <th>Type</th>
 <th>History</th>
 </tr></thead>
@@ -147,7 +140,7 @@ available in [edn]
 <td>{{#edn-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">]({{&.}}){{/edn-doc}}</td>
 <td><samp>[{{&display-name}}]({{&link}})</samp></td>
 <td><samp>{{&syntax-form}}</samp></td>
-<td><samp>{{type}}</samp></td>
+<td><samp>{{&type}}</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>
 </tr>
 {{/symbols}}

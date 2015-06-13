@@ -75,11 +75,11 @@
           :clj-added "1.7.0-beta1"}
 
    ;; reserved symbols
-   {:desc "true"             :rsym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:desc "false"            :rsym true   :form "false"          :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:desc "nil"              :rsym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
-   {:desc "NaN"              :rsym true   :form "NaN"}
-   {:desc "Infinity"         :rsym true   :form "Infinity"}
+   {:desc "true"             :ssym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "false"            :ssym true   :form "false"          :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "nil"              :ssym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:desc "NaN"              :ssym true   :form "NaN"}
+   {:desc "Infinity"         :ssym true   :form "Infinity"}
 
    ;; tagged literal pattern
    {:desc "tagged-literal"                                       :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")

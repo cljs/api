@@ -466,35 +466,6 @@
      (doall (map make-map specials)))))
 
 ;;--------------------------------------------------------------------------------
-;; Parse tagged literals
-;;--------------------------------------------------------------------------------
-
-(defn parse-tagged-literal-map
-  [form]
-  (when (and (list? form)
-             (= (take 2 form) '(def *cljs-data-readers*)))
-    (->> (nth form 2)
-         (map (fn [[k v]] [(second k) v])) ;; (quote x) -> x for keys
-         (into {}))))
-
-(defn parse-tagged-literals
-  []
-  ;; NOTE: tagged literals were available since clojure 1.4.0's LispReader was being
-  ;; used by clojurescript 0.0-1211, but cljs.tagged-literals was added 0.0-1424.
-  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
-        reader-map (first (keep parse-tagged-literal-map forms))
-        parsed (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
-        defs (zipmap (map :name parsed) parsed)
-        map-form (get defs "*cljs-data-readers*")]
-    (for [[name- func-name] reader-map]
-      {:ns *cur-ns*
-       :name name-
-       :syntax-form (str "#" name-)
-       :type "tagged literal"
-       :source (:source map-form)
-       :extra-sources [(:source (get defs (str func-name)))]})))
-
-;;--------------------------------------------------------------------------------
 ;; Parse syntax readers
 ;;--------------------------------------------------------------------------------
 
@@ -539,19 +510,27 @@
           (assoc (base-syntax-item info)
                  :source (:source func)))
 
+        ;; syntax forms identified by a leading character (e.g. "(", "[", "#{")
         macro-items    (make-items macros char-map)
         dispatch-items (make-items dispatch-macros dchar-map)
+
+        ;; syntax forms that can't be identified by a leading character
         symbol-item    (make-single (syntax-map "symbol") read-symbol)
         number-item    (make-single (syntax-map "number") read-number)
+
+        ;; the dispatch macro that can't be identified by a leading character
         tag-item       (make-single (syntax-map "tagged-literal") read-tagged)
-        rsym-items (->> syntax
-                        (filter :rsym)
-                        (map #(make-single % read-symbol)))
+
+        ;; special symbols (e.g. "NaN", "Infinity", "true", "false")
+        ssym-items (->> syntax
+                        (filter :ssym)
+                        (map #(assoc (make-single % read-symbol)
+                                :type "special symbol")))
 
         all-items (->> (concat macro-items
                                dispatch-items
                                [symbol-item number-item tag-item]
-                               rsym-items)
+                               ssym-items)
                        (keep identity))]
     all-items))
 
@@ -585,10 +564,39 @@
     (concat forms sub-forms)))
 
 ;;--------------------------------------------------------------------------------
+;; Parse tagged literals
+;;--------------------------------------------------------------------------------
+
+(defn parse-tagged-literal-map
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def *cljs-data-readers*)))
+    (->> (nth form 2)
+         (map (fn [[k v]] [(second k) v])) ;; (quote x) -> x for keys
+         (into {}))))
+
+(defn parse-tagged-literals
+  []
+  ;; NOTE: tagged literals were available since clojure 1.4.0's LispReader was being
+  ;; used by clojurescript 0.0-1211, but cljs.tagged-literals was added 0.0-1424.
+  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
+        reader-map (first (keep parse-tagged-literal-map forms))
+        parsed (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
+        defs (zipmap (map :name parsed) parsed)
+        map-form (get defs "*cljs-data-readers*")]
+    (for [[name- func-name] reader-map]
+      (merge (base-syntax-item (syntax-map (str name-)))
+             {:type "tagged literal"
+              :source (:source map-form)
+              :extra-sources [(:source (get defs (str func-name)))]}))))
+
+;;--------------------------------------------------------------------------------
 ;; Parse destructure reader
 ;;--------------------------------------------------------------------------------
 
 (defn parse-destructure
+  "Pull in the source of the destructure function and file it loosely
+  as a syntax pattern."
   []
   (let [items (cond
                 (>= *cljs-num* 1443) (parse-ns* "cljs.core" "clojurescript" [:compiler])
@@ -596,15 +604,10 @@
                 :else nil)
         match? #(= "destructure" (:name %))
         item (first (filter match? items))]
-
     (-> item
-        (assoc :ns *cur-ns*
-               :name "destructure"
-               :type "syntax"
-               :syntax-form " " ;; <-- HACK: form needs to be non-empty string
-                                ;;      so the result parser doesn't purge it
-               )
-        (dissoc :signature))))
+        (dissoc :signature)
+        (merge (base-syntax-item (syntax-map "destructure")))
+        (assoc :type "binding"))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
