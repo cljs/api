@@ -19,12 +19,20 @@ for ClojureScript.  All information here is rendered from
 can download and use yourself.
 
  <dl>
+<dt>[Syntax](#syntax)</dt>
+<dd>
+This is a reference section for the syntax of the language to allow connecting
+the syntax appearance to its conceptual name.  It also offers source
+code of the syntax forms' reader functions for exploring implementation.
+</dd>
+
 <dt>[Library API](#library-api)</dt>
 <dd>
 The "Library API" is a loose classification of the symbols that you can use
 inside any ClojureScript application.  They comprise ClojureScript's core
 language features and standard libraries.
 </dd>
+
 <dt>[Compiler API](#compiler-api)</dt>
 <dd>The "Compiler API" specifies how you can call out to the ClojureScript compiler
 to perform analysis or compilation of ClojureScript code from a Clojure application.
@@ -33,38 +41,28 @@ to perform analysis or compilation of ClojureScript code from a Clojure applicat
 
 ---
 
- <table>
-<tr><td>
-__Clojure vs. ClojureScript__
-
-To show the significant overlap between Clojure and ClojureScript, we mark the symbols
-in the following reference sections as follows:
-
- <table>
-<tr>
-<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
-<td>
-ported from Clojure (re-implemented)
-</td>
-</tr>
-<tr>
-<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>→</samp></td>
-<td>
-imported directly from Clojure
-</td>
-</tr>
-</table>
-
-Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
-
-</tr></td></table>
-
 ---
 
 
 ## Latest Changes
 
 Changes from __{{#release}}{{cljs-version}}{{/release}}__ ([See Full History](HISTORY.md)):
+
+__Syntax Changes__
+
+{{#syntax}}
+ <table>
+{{#no-changes}}<tr><td>_no symbols were added or removed in this version_</td></tr>{{/no-changes}}
+{{#changes}}
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+</td>
+<td><samp>[{{&text}}]({{&link}})</samp></td>
+</tr>
+{{/changes}}
+</table>
+{{/syntax}}
 
 __Library API Changes__
 
@@ -98,6 +96,65 @@ __Compiler API Changes__
 </table>
 {{/compiler-api}}
 
+## Syntax
+
+### Sources
+
+ClojureScript's syntax comes from the following sources:
+
+|                 | clojure                       | cljs compiler      | tools.reader                   |
+|-----------------|-------------------------------|--------------------|--------------------------------|
+| syntax          | :heavy_check_mark: < 0.0-1424 |                    | :heavy_check_mark: >= 0.0-1424 |
+| tagged literals |                               | :heavy_check_mark: |                                |
+
+### edn
+
+Clojure and ClojureScript have a separate syntaxes which are supersets of [edn], the extensible data notation.
+To show this relationship, we mark the syntax forms as follows:
+
+ <table>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
+<td>
+available in clojure
+</td>
+</tr>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png"></td>
+<td>
+available in [edn]
+</td>
+</tr>
+</table>
+
+[edn]:https://github.com/edn-format/edn#edn
+
+### Syntax Reference
+
+{{#syntax-api}}
+{{#ns-symbols}}
+ <table>
+<thead><tr>
+<th colspan=2>=</th>
+<th>Name</th>
+<th> </th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+{{#symbols}}
+<tr>
+<td>{{#clj-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&.}}){{/clj-doc}}</td>
+<td>{{#edn-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">]({{&.}}){{/edn-doc}}</td>
+<td><samp>[{{&display-name}}]({{&link}})</samp></td>
+<td><samp>{{&syntax-form}}</samp></td>
+<td><samp>{{type}}</samp></td>
+<td>{{#history}}{{&.}} {{/history}}</td>
+</tr>
+{{/symbols}}
+</table>
+{{/ns-symbols}}
+{{/syntax-api}}
+
 ## Library API
 
 ### Sources
@@ -105,28 +162,41 @@ __Compiler API Changes__
 ClojureScript's core language features and libraries span multiple sources,
 shown in the table below.
 
-|                 | clojure            | cljs compiler      | cljs library       | tools.reader       | closure\*          | js\*               |
-|-----------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-| macros          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
-| functions       |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |
-| vars            |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |
-| specials        |                    | :heavy_check_mark: |                    |                    |                    |                    |
-| protocols       |                    |                    | :heavy_check_mark: |                    |                    |                    |
-| types           |                    |                    | :heavy_check_mark: |                    |                    |                    |
-| syntax          |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| tagged literals |                    | :heavy_check_mark: |                    |                    |                    |                    |
+|                 | clojure            | cljs compiler      | cljs library       | closure\*          | js\*               |
+|-----------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+| macros          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
+| functions       |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| vars            |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| specials        |                    | :heavy_check_mark: |                    |                    |                    |
+| protocols       |                    |                    | :heavy_check_mark: |                    |                    |
+| types           |                    |                    | :heavy_check_mark: |                    |                    |
 
 _\* included in and accessible from every ClojureScript application:_
 
 - [Google Closure Library](http://www.closurecheatsheet.com/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
 
-### Showing source code
+### Clojure vs. ClojureScript
 
-For every symbol in the following reference sections, we extract and show the
-relevant source code to provide a quick view of that symbol's implementation.
-To encourage further exploration, info and links to the full files of their respective
-official github repositories are also included.
+To show the significant overlap between Clojure and ClojureScript, we mark the symbols
+in the following reference section as follows:
+
+ <table>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"></td>
+<td>
+ported from Clojure (re-implemented)
+</td>
+</tr>
+<tr>
+<td><img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>→</samp></td>
+<td>
+imported directly from Clojure
+</td>
+</tr>
+</table>
+
+Also, see the :no_entry_sign: [Clojure symbols not yet ported](UNPORTED.md).
 
 ### Library API Reference
 
@@ -144,7 +214,6 @@ official github repositories are also included.
 <thead><tr>
 <th>=</th>
 <th>Name</th>
-{{#has-syntax}}<th> </th>{{/has-syntax}}
 <th>Type</th>
 <th>History</th>
 </tr></thead>
@@ -152,7 +221,6 @@ official github repositories are also included.
 <tr>
 <td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
 <td><samp>{{&display-prefix}}[{{&display-name}}]({{&link}})</samp></td>
-{{#syntax-form}}<td><samp>{{&.}}</samp></td>{{/syntax-form}}
 <td><samp>{{type}}</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>
 </tr>

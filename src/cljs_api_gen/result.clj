@@ -37,7 +37,8 @@
                     :methods
                     :history
                     :return-type
-                    :clj-symbol
+                    :edn-doc
+                    :clj-doc
                     :source
                     :extra-sources])
     (update-in $ [:signature] #(mapv str %))
@@ -122,8 +123,12 @@
 (defn get-result
   ([parsed] (get-result parsed nil))
   ([parsed prev-result]
-   (let [lib-items (transform-items (:library parsed))
+   (let [syntax-items (transform-items (:syntax parsed))
+         syntax-api (make-api-result syntax-items :syntax-api prev-result)
+
+         lib-items (transform-items (:library parsed))
          library-api (make-api-result lib-items :library-api prev-result)
+
          compiler-items (transform-items (:compiler parsed))
          compiler-api (make-api-result compiler-items :compiler-api prev-result)]
 
@@ -143,6 +148,7 @@
       ;; clojure symbols unavailable in clojurescript
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
 
+      :syntax-api syntax-api
       :library-api library-api
       :compiler-api compiler-api})))
 

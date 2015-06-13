@@ -136,10 +136,6 @@
   (or ;; use custom name mapping if found
       (cljs-full-name->clj (:full-name item))
 
-      ;; use syntax name if syntax form
-      (when (= "syntax" (:ns item))
-        (:name item))
-
       ;; map to clojure.lang namespace
       (when (and (= "cljs.core" (:ns item))
                  (or (:parent-type item)
@@ -154,14 +150,13 @@
       (:full-name item)))
 
 (defn attach-clj-symbol
+  "For the given API entry item, attach a :clj-symbol (full-name) for the related Clojure symbol."
   [item]
   (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
         lang-symbol? (get-lang-symbols! *clj-tag*)
-        syntax? #(:clj-doc (syntax-map %))
         lookup-name (clj-lookup-name item)]
     (if (or (lang-symbol? lookup-name)
-            (clj-symbol? lookup-name)
-            (syntax? lookup-name))
+            (clj-symbol? lookup-name))
       (assoc item :clj-symbol lookup-name)
       item)))
 

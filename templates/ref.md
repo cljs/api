@@ -10,6 +10,16 @@
 {{#import}}imported {{/import}}[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&display-name}}</samp>]({{&link}})
 </td>
 {{/clj-symbol}}
+{{#clj-doc}}
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> clj doc]({{&.}})
+</td>
+{{/clj-doc}}
+{{#edn-doc}}
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/I8uNXHv.png"> edn doc]({{&.}})
+</td>
+{{/edn-doc}}
 </tr>
 </table>
 

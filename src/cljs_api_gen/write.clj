@@ -388,6 +388,8 @@
                      :display-prefix (when (:parent-type item) " └── ")
                      :link (str refs-dir "/" (:full-name-encode item) ".md")
                      :clj-symbol (make-clj-ref item)
+                     :clj-doc (:clj-doc item)
+                     :edn-doc (:edn-doc item)
                      :name (:name item)
                      :type (:type item)
                      :syntax-form (md-escape (:syntax-form item))
@@ -398,7 +400,6 @@
                         (group-by :ns)
                         (mapmap transform-syms)
                         (map (fn [[k v]] {:ns k
-                                          :has-syntax (= k "syntax")
                                           :ns-description (ns-descriptions k)
                                           :ns-link (md-header-link k)
                                           :symbols (if (= k "syntax")
@@ -418,6 +419,7 @@
                   :ns-symbols ns-symbols}))]
     {:library-api (make :library-api)
      :compiler-api (make :compiler-api)
+     :syntax-api (make :syntax-api)
      :release (:release result)}))
 
 (defn dump-readme! [result]
@@ -439,6 +441,8 @@
   (dump-edn-file! result)
 
   (println "writing ref files...")
+  (doseq [item (vals (:symbols (:syntax-api result)))]
+    (dump-ref-file! item))
   (doseq [item (vals (:symbols (:library-api result)))]
     (dump-ref-file! item))
   (doseq [item (vals (:symbols (:compiler-api result)))]

@@ -73,7 +73,8 @@
     })
 
 (def cljs-lib-namespaces
-  (into normally-parsed-ns? custom-parsed-ns?))
+  (->> (into normally-parsed-ns? custom-parsed-ns?)
+       (remove #{"syntax"})))
 
 (def cljs-compiler-namespaces
   #{"cljs.analyzer.api"
@@ -498,12 +499,14 @@
 ;;--------------------------------------------------------------------------------
 
 (defn base-syntax-item
-  [{:keys [desc form] :as info}]
+  [{:keys [desc form clj-doc edn-doc] :as info}]
   {:name desc
    :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
                               ;;      so the result parser doesn't purge it
    :ns *cur-ns*
-   :type "syntax"})
+   :type "syntax"
+   :edn-doc edn-doc
+   :clj-doc clj-doc})
 
 (defn parse-syntax-treader
   "Parse syntax forms from tools.reader"
@@ -837,13 +840,15 @@
 
 (defn parse-all
   []
-  (let [lib-parsed (->> cljs-lib-namespaces
+  (let [syntax-parsed (parse-ns "syntax")
+        lib-parsed (->> cljs-lib-namespaces
                         (mapcat parse-ns)
                         doall
                         add-catch-finally)
         compiler-parsed (->> cljs-compiler-namespaces
                              (mapcat parse-ns)
                              doall)]
-    {:library lib-parsed
+    {:syntax syntax-parsed
+     :library lib-parsed
      :compiler compiler-parsed}))
 
