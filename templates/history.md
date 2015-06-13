@@ -11,6 +11,7 @@
 <th>Clojure</th>
 <th>Reader</th>
 <th>Closure Lib</th>
+<th>syn</th>
 <th>lib</th>
 <th>comp</th>
 </tr>
@@ -21,6 +22,13 @@
 <td><kbd>{{clj-version}}</kbd></td>
 <td><kbd>{{treader-version}}</kbd></td>
 <td><kbd>{{gclosure-lib}}</kbd></td>
+{{#syntax-api}}
+<td>
+<a href="#user-content-{{changes-link}}">
+{{#add-count}}<img valign="middle" src="https://img.shields.io/badge/+-{{.}}-brightgreen.svg">{{/add-count}} {{#remove-count}}<img valign="middle" src="https://img.shields.io/badge/×-{{.}}-red.svg">{{/remove-count}}
+</a>
+</td>
+{{/syntax-api}}
 {{#library-api}}
 <td>
 <a href="#user-content-{{changes-link}}">
@@ -42,6 +50,21 @@
 
 {{#versions}}
 ### {{cljs-version}}
+
+{{#syntax-api}}
+<a name="{{changes-link}}"></a> __Syntax API Changes__
+ <table>
+{{#no-changes}}<tr><td>_no syntax forms were added or removed in this version_</td></tr>{{/no-changes}}
+{{#changes}}
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/{{change}}-{{shield-text}}-{{shield-color}}.svg">
+</td>
+<td><samp>[{{&text}}]({{&link}})</samp></td>
+</tr>
+{{/changes}}
+</table>
+{{/syntax-api}}
 
 {{#library-api}}
 <a name="{{changes-link}}"></a> __Library API Changes__

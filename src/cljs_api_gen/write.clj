@@ -286,9 +286,10 @@
             (->> changes
                  (map #(add-change-info % symbols api-type)))))
 
+        syn-changes (get-api-changes :syntax-api)
         com-changes (get-api-changes :compiler-api)
         lib-changes (get-api-changes :library-api)
-        all (reverse (map #(merge %1 %2) com-changes lib-changes))]
+        all (reverse (map #(merge %1 %2 %3) syn-changes com-changes lib-changes))]
     {:versions all}))
 
 (defn dump-history! [result]
