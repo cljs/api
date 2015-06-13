@@ -61,6 +61,9 @@
    {:desc "dispatch"         :char  \#    :form "#"              :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
 
    ;; dispatch syntax
+   {:desc "tagged-literal"                :form "#"              :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")
+          :clj-added "1.4.0"}
+
    {:desc "regex"            :dchar \"    :form "#\"\""          :clj-doc doc2}
    {:desc "set"              :dchar \{    :form "#{}"            :clj-doc doc1     :edn-doc (edn-doc "sets")}
    {:desc "function"         :dchar \(    :form "#()"            :clj-doc doc2}
