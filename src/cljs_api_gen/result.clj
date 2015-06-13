@@ -24,6 +24,13 @@
        (remove (comp removable? second))
        (into {})))
 
+(defn fix-source-lines
+  "Turn the line range into a single line if the end line is the same as the first."
+  [item]
+  (if (:source item)
+    (update-in item [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
+    item))
+
 (defn transform-item
   [x]
   (as-> x $
@@ -43,7 +50,7 @@
                     :extra-sources])
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
-    (update-in $ [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
+    (fix-source-lines $)
     (assoc $ :full-name (str (:ns $) "/" (:name $)))
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
