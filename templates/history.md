@@ -1,15 +1,19 @@
 # ClojureScript API History
 
  <table>
-<thead>
-<th>Version</th>
-<th>Date</th>
+<tr>
+<th rowspan=2>Version</th>
+<th rowspan=2>Date</th>
+<th colspan=3>Dependencies</th>
+<th colspan=3>Changes</th>
+</tr>
+<tr>
 <th>Clojure</th>
-<th>tools.reader</th>
+<th>Reader</th>
 <th>Closure Lib</th>
-<th>Library API</th>
-<th>Compiler API</th>
-</thead>
+<th>lib</th>
+<th>comp</th>
+</tr>
 {{#versions}}
 <tr>
 <td>__[{{cljs-version}}](https://github.com/cljsinfo/api-refs/tree/{{cljs-version}})__</td>
