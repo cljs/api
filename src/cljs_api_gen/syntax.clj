@@ -1,4 +1,6 @@
-(ns cljs-api-gen.syntax)
+(ns cljs-api-gen.syntax
+  (:require
+    [cljs-api-gen.repo-cljs :refer [compare-clj-versions]]))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure's Syntax
@@ -68,9 +70,9 @@
    {:desc "unreadable"       :dchar \<    :form "#<>"            :clj-doc doc-unread}
    {:desc "hashbang"         :dchar \!    :form "#!"             :clj-doc doc-hashbang}
    {:desc "cond"             :dchar \?    :form "#?"             :clj-doc doc5
-          :clj-added "1.7"}
+          :clj-added "1.7.0-beta1"}
    {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5
-          :clj-added "1.7"}
+          :clj-added "1.7.0-beta1"}
 
    ;; reserved symbols
    {:desc "true"             :rsym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
@@ -81,13 +83,13 @@
 
    ;; tagged literal pattern
    {:desc "tagged-literal"                                       :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")
-          :clj-added "1.4"}
+          :clj-added "1.4.0"}
 
    ;; available tagged literals
    {:desc "uuid"             :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-          :clj-added "1.4"}
+          :clj-added "1.4.0"}
    {:desc "inst"             :tag true    :form "#inst"          :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format")
-          :clj-added "1.4"}
+          :clj-added "1.4.0"}
    {:desc "queue"            :tag true    :form "#queue"}
    {:desc "js"               :tag true    :form "#js"}
 
@@ -111,20 +113,20 @@
   (let [items (filter :dchar syntax)]
     (zipmap (map :dchar items) items)))
 
-(def clj-tagged-lits
-  "set of tagged literals available in Clojure (e.g. #uuid, #inst)"
-  (->> syntax
-       (filter :tag)
-       (filter :clj-doc)
-       (map :form)
-       set))
+(defn clj-syntax?
+  "determine if the given syntax item is available for the given clojure version"
+  [version item]
+  (let [added (:clj-added item)]
+    (or (nil? added)
+        (>= (compare-clj-versions version added) 0))))
 
-(def base-clj-syntax
-  "the base syntax of clojure used by clojurescript before tools.reader was used."
+(defn clj-syntax
+  [version]
+  "the syntax of clojure used by clojurescript before tools.reader was used."
   (->> syntax
        (filter :clj-doc)                      ;; all clojure syntax forms should have an associated doc link
-       (remove :tag)                          ;; FIXME: allow tags after 1.4
-       (remove :clj-added)                    ;; FIXME: allow everything given the current clj version
        (remove :parent)                       ;; already added by the parser if parents are present
+       (remove :tag)                          ;; tag literals are handled separately
+       (filter #(clj-syntax? version %))      ;; select syntax forms available for this clojure version
        (remove #(= "destructure" (:desc %)))  ;; already added by the parser
        ))

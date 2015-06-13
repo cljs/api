@@ -1,7 +1,7 @@
 (ns cljs-api-gen.clojure-api
   (:require
     [clojure.set :refer [difference]]
-    [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files]]
+    [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [base-name]]
     ))
@@ -9,9 +9,6 @@
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
 ;;--------------------------------------------------------------------------------
-
-(defn clj-tag->api-key [tag]
-  (second (re-find #"clojure-(\d\.\d)" tag)))
 
 (def versions ["1.3" "1.4" "1.5" "1.6" "1.7"])
 (def api-symbols (atom {}))

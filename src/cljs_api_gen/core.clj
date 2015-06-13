@@ -5,7 +5,8 @@
     [cljs-api-gen.config :refer [*output-dir*]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-latest-repo-tag
-                                    assert-published-versions-have-local-tags!]]
+                                    get-published-cljs-tags!
+                                    get-published-clj-versions!]]
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
@@ -38,7 +39,8 @@
   (clone-or-fetch-repos!)
 
   (println)
-  (assert-published-versions-have-local-tags!)
+  (get-published-cljs-tags!)
+  (get-published-clj-versions!)
 
   (println)
   (get-version-apis!))

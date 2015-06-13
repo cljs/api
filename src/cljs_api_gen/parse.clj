@@ -15,13 +15,14 @@
     [cljs-api-gen.repo-cljs :refer [*cljs-tag*
                                     *cljs-num*
                                     *clj-tag*
+                                    *clj-version*
                                     *treader-version*
                                     *treader-tag*]]
     [cljs-api-gen.syntax :refer [syntax
                                  char-map
                                  dchar-map
                                  syntax-map
-                                 base-clj-syntax]]
+                                 clj-syntax]]
     ))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
@@ -476,10 +477,15 @@
          (into {}))))
 
 (defn parse-tagged-literals
-  [map- parsed-defs]
-  (let [defs (zipmap (map :name parsed-defs) parsed-defs)
+  []
+  ;; NOTE: tagged literals were available since clojure 1.4.0's LispReader was being
+  ;; used by clojurescript 0.0-1211, but cljs.tagged-literals was added 0.0-1424.
+  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
+        reader-map (first (keep parse-tagged-literal-map forms))
+        parsed (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
+        defs (zipmap (map :name parsed) parsed)
         map-form (get defs "*cljs-data-readers*")]
-    (for [[name- func-name] map-]
+    (for [[name- func-name] reader-map]
       {:ns *cur-ns*
        :name name-
        :syntax-form (str "#" name-)
@@ -496,7 +502,7 @@
   {:name desc
    :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
                               ;;      so the result parser doesn't purge it
-   :ns "syntax"
+   :ns *cur-ns*
    :type "syntax"})
 
 (defn parse-syntax-treader
@@ -549,7 +555,7 @@
 (defn parse-syntax-clj
   "Parse syntax forms from clojure's LispReader, using our base syntax list"
   []
-  (for [info base-clj-syntax]
+  (for [info (clj-syntax *clj-version*)]
     (assoc (base-syntax-item info)
            :source {:repo "clojure"
                     :tag *clj-tag*
@@ -762,10 +768,7 @@
 
 (defmethod parse-ns "syntax" [ns-]
   (binding [*cur-ns* ns-]
-    (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
-          reader-map (first (keep parse-tagged-literal-map forms))
-          parsed-defs (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
-          tagged-literals (parse-tagged-literals reader-map parsed-defs)
+    (let [tagged-literals (parse-tagged-literals)
           syntax-items (parse-syntax-forms)
           destructure-item (parse-destructure)]
       (doall (concat

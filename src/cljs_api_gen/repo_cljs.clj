@@ -50,6 +50,10 @@
   (when-let [[_ v] (re-find #"clojure-(.*)" tag)]
     v))
 
+(defn clj-tag->api-key
+  [tag]
+  (second (re-find #"clojure-(\d\.\d)" tag)))
+
 (defn cljs-tag->version
   [tag]
   (when-let [[_ number] (re-find #"r(.*)" tag)]
@@ -89,12 +93,14 @@
       (split #"\s+")
       first))
 
-(def maven-cljs-url
-  "http://search.maven.org/solrsearch/select?q=g:%22org.clojure%22+AND+a:%22clojurescript%22&core=gav&rows=1000&wt=json")
+(defn maven-release-url
+  [group artifact]
+  (str "http://search.maven.org/solrsearch/select?q=g:%22" group "%22+AND+a:%22" artifact "%22&core=gav&rows=1000&wt=json"))
 
-(defn get-published-versions
-  []
-  (let [data (json/read-str (slurp maven-cljs-url) :key-fn keyword)
+(defn maven-versions
+  [group artifact]
+  (let [url (maven-release-url group artifact)
+        data (json/read-str (slurp url) :key-fn keyword)
         versions (map :v (-> data :response :docs))]
     versions))
 
@@ -106,12 +112,20 @@
          (filter #(re-find #"^r" %))
          (sort-by cljs-tag->num))))
 
-(def published-tags
-  (atom nil))
+(def published-cljs-tags
+  (atom nil)) ;; list
 
-(defn assert-published-versions-have-local-tags!
+(def published-clj-versions
+  (atom {})) ;; map version -> index
+
+(defn compare-clj-versions
+  [a b]
+  (let [index @published-clj-versions]
+    (compare (index a) (index b))))
+
+(defn get-published-cljs-tags!
   []
-  (let [pub-versions (get-published-versions)
+  (let [pub-versions (maven-versions "org.clojure" "clojurescript")
         pub-tags (set (map cljs-version->tag pub-versions))
         local-tags (set (get-cljs-version-tags))
         [not-local not-published valid-tags] (diff pub-tags local-tags)]
@@ -127,12 +141,18 @@
       (doseq [tag not-published]
         (println "  " tag)))
 
-    (reset! published-tags (sort-by cljs-tag->num valid-tags))
+    (reset! published-cljs-tags (sort-by cljs-tag->num valid-tags))
     ))
+
+(defn get-published-clj-versions!
+  []
+  (let [versions (reverse (maven-versions "org.clojure" "clojure"))
+        index-map (into {} (map-indexed (fn [i v] [v i]) versions))]
+    (reset! published-clj-versions index-map)))
 
 (defn get-cljs-tags-to-parse*
   [latest]
-  (let [tags @published-tags]
+  (let [tags @published-cljs-tags]
     (if-not latest
       [nil tags]
       (let [latest-num (cljs-tag->num latest)]
@@ -239,9 +259,9 @@
   (doseq [tag (get-cljs-version-tags)]
     (println tag (:gclosure-lib (cljs-tag->dep-releases tag))))
 
-  (checkout-cljs-tag! "r927")
-  (checkout-cljs-tag! "r1885")
-  (checkout-cljs-tag! "r3211")
+  (checkout-repo! "clojurescript" "r927")
+  (checkout-repo! "clojurescript" "r1885")
+  (checkout-repo! "clojurescript" "r3211")
 
   )
 
