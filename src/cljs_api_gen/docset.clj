@@ -3,7 +3,7 @@
   (:require
     [clansi.core :refer [style]]
     [clojure.java.shell :refer [sh]]
-    [clojure.string :refer [replace]]
+    [clojure.string :refer [replace join]]
     [cljs-api-gen.write :refer [get-last-written-result]]
     [cljs-api-gen.encode :refer [decode-fullname]]
     [clojure.java.jdbc :as j]
@@ -48,15 +48,34 @@
    "special form (repl)" "Statement" ;;     (avaiable in next Dash version)
    "tagged literal"      "Tag"
    "syntax"              "Operator"  ;; <-- Pending "Syntax"
+   "special symbol"      "Constant"
+   "special namespace"   "Namespace"
+   "binding"             "Builtin"
    })
 
 (defn dash-name
   [item]
   (if (= "syntax" (:ns item))
-    (case (:type item)
-      "syntax"         (str (:name item) " " (:syntax-form item))
-      "tagged literal" (:syntax-form item)
-      (:name item))
+    (let [name- (:name item)
+          type- (:type item)
+          form (:syntax-form item)
+          forms (if (vector? form) (join " " form) form)
+          name+forms (str name- " " forms)]
+      (cond
+
+        ;; display the conceptual name and its forms (e.g. "boolean true false", "vector []")
+        (#{"syntax"
+           "binding"} type-) name+forms
+
+        ;; just display Infinity, not all the sign variations
+        (= name- "Infinity") name-
+
+        ;; just display the forms (e.g. "#js" "js/" "NaN")
+        (#{"tagged literal"
+           "special symbol"
+           "special namespace"} type-) forms
+
+        :else (:name item)))
     (:name item)))
 
 (defn assert-reqs!

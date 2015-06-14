@@ -470,12 +470,13 @@
 ;;--------------------------------------------------------------------------------
 
 (defn base-syntax-item
+  "A syntax API entry item using info from the syntax table"
   [{:keys [desc form clj-doc edn-doc] :as info}]
   {:name desc
    :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
                               ;;      so the result parser doesn't purge it
    :ns *cur-ns*
-   :type "syntax"
+   :type (or (:type info) "syntax")
    :edn-doc edn-doc
    :clj-doc clj-doc})
 
@@ -511,27 +512,31 @@
                  :source (:source func)))
 
         ;; syntax forms identified by a leading character (e.g. "(", "[", "#{")
+        ;; NOTE: presence determined by parsed char-map and dchar-map
         macro-items    (make-items macros char-map)
         dispatch-items (make-items dispatch-macros dchar-map)
 
         ;; syntax forms that can't be identified by a leading character
+        ;; NOTE: always present
         symbol-item    (make-single (syntax-map "symbol") read-symbol)
         number-item    (make-single (syntax-map "number") read-number)
 
         ;; the dispatch macro that can't be identified by a leading character
+        ;; NOTE: always present (since before tools.reader)
         tag-item       (make-single (syntax-map "tagged-literal") read-tagged)
 
         ;; special symbols (e.g. "NaN", "Infinity", "true", "false")
+        ;; NOTE: assuming NaN and Infinity were available at the time cljs started
+        ;;       using tools.reader.  they are not available in clojure.
         ssym-items (->> syntax
-                        (filter :ssym)
-                        (map #(assoc (make-single % read-symbol)
-                                :type "special symbol")))
+                        (filter #(= (:type %) "special symbol"))
+                        (map #(make-single % read-symbol)))
 
         ;; special namespaces (e.g. "js", "Math")
+        ;; NOTE: always present
         sns-items (->> syntax
-                       (filter :sns)
-                       (map #(assoc (base-syntax-item %)
-                               :type "special namespace")))
+                       (filter #(= (:type %) "special namespace"))
+                       (map #(base-syntax-item %)))
 
         all-items (->> (concat macro-items
                                dispatch-items
@@ -541,14 +546,30 @@
                        (keep identity))]
     all-items))
 
-(defn parse-syntax-clj
-  "Parse syntax forms from clojure's LispReader, using our base syntax list"
+(defn parse-syntax-pre-treader
+  "Get syntax forms available prior to tools.reader.
+  Parse syntax forms from clojure's LispReader, using our base syntax list."
   []
-  (for [info (clj-syntax *clj-version*)]
-    (assoc (base-syntax-item info)
-           :source {:repo "clojure"
-                    :tag *clj-tag*
-                    :filename "src/jvm/clojure/lang/LispReader.java"})))
+  (let [;; clojure syntax forms
+        ;; NOTE: presence determined by clojure version
+        clojure-syntax-items
+        (for [info (clj-syntax *clj-version*)]
+          (assoc (base-syntax-item info)
+                 ;; assuming their source is available in LispReader
+                 ;; FIXME: not always true
+                 :source {:repo "clojure"
+                          :tag *clj-tag*
+                          :filename "src/jvm/clojure/lang/LispReader.java"}))
+
+        ;; js/ special namespace
+        ;; NOTE: always present
+        ;; NOTE: (the Math/ special namespace is already added since it has a clj-doc link in the syntax table)
+        js-ns-item (base-syntax-item (syntax-map "js-ns"))
+
+        all-items (concat
+                    clojure-syntax-items
+                    [js-ns-item])]
+    all-items))
 
 (defn get-sub-syntax-forms
   "Get derived syntax forms from the given forms."
@@ -566,7 +587,7 @@
   []
   (let [forms (if *treader-version*
                 (parse-syntax-treader)
-                (parse-syntax-clj))
+                (parse-syntax-pre-treader))
         sub-forms (get-sub-syntax-forms forms)]
     (concat forms sub-forms)))
 

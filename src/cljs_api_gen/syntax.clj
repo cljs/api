@@ -39,8 +39,7 @@
 
   ;; (syntax description)    (type)       (syntax form)          (clojure doc link)  (edn doc link)
 
-  [
-   ;; core syntax
+  [;; core syntax
    {:desc "string"           :char  \"    :form "\"\""           :clj-doc doc1     :edn-doc (edn-doc "strings")}
    {:desc "character"        :char  \\    :form "\\"             :clj-doc doc1     :edn-doc (edn-doc "characters")}
    {:desc "keyword"          :char  \:    :form ":"              :clj-doc doc1     :edn-doc (edn-doc "keywords")}
@@ -61,9 +60,7 @@
    {:desc "dispatch"         :char  \#    :form "#"              :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
 
    ;; dispatch syntax
-   {:desc "tagged-literal"                :form "#"              :clj-doc doc4     :edn-doc (edn-doc "tagged-elements")
-          :clj-added "1.4.0"}
-
+   {:desc "tagged-literal"                :form "#"              :clj-doc doc4     :edn-doc (edn-doc "tagged-elements") :clj-added "1.4.0"}
    {:desc "regex"            :dchar \"    :form "#\"\""          :clj-doc doc2}
    {:desc "set"              :dchar \{    :form "#{}"            :clj-doc doc1     :edn-doc (edn-doc "sets")}
    {:desc "function"         :dchar \(    :form "#()"            :clj-doc doc2}
@@ -72,40 +69,27 @@
    {:desc "eval"             :dchar \=    :form "#="             :clj-doc doc-eval}
    {:desc "unreadable"       :dchar \<    :form "#<>"            :clj-doc doc-unread}
    {:desc "hashbang"         :dchar \!    :form "#!"             :clj-doc doc-hashbang}
-   {:desc "cond"             :dchar \?    :form "#?"             :clj-doc doc5
-          :clj-added "1.7.0-beta1"}
-   {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5
-          :clj-added "1.7.0-beta1"}
+   {:desc "cond"             :dchar \?    :form "#?"             :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5 :clj-added "1.7.0-beta1"}
 
    ;; special symbols
-   {:desc "boolean"          :ssym true   :form ["true"
-                                                 "false"]        :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:desc "nil"              :ssym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
-   {:desc "NaN"              :ssym true   :form "NaN"}
-   {:desc "Infinity"         :ssym true   :form ["Infinity"
-                                                 "-Infinity"
-                                                 "+Infinity"]}
+   {:desc "boolean"  :type "special symbol" :form ["true" "false"] :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "nil"      :type "special symbol" :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:desc "NaN"      :type "special symbol" :form "NaN"}
+   {:desc "Infinity" :type "special symbol" :form ["Infinity" "-Infinity" "+Infinity"]}
 
    ;; available tagged literals
-   {:desc "uuid-tag"         :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-          :clj-added "1.4.0"}
-   {:desc "inst-tag"         :tag true    :form "#inst"          :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format")
-          :clj-added "1.4.0"}
-   {:desc "queue-tag"        :tag true    :form "#queue"}
-   {:desc "js-tag"           :tag true    :form "#js"}
+   {:desc "uuid-tag"  :type "tagged literal" :form "#uuid" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
+   {:desc "inst-tag"  :type "tagged literal" :form "#inst" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
+   {:desc "queue-tag" :type "tagged literal" :form "#queue"}
+   {:desc "js-tag"    :type "tagged literal" :form "#js"}
 
    ;; special namespaces
-   {:desc "js-ns"            :sns true    :form "js/"}
-   {:desc "Math-ns"          :sns true    :form "Math/"          :clj-doc doc-interop}
+   {:desc "js-ns"   :type "special namespace" :form "js/"}
+   {:desc "Math-ns" :type "special namespace" :form "Math/" :clj-doc doc-interop}
 
    ;; destructuring pattern
-   {:desc "destructure"                   :form [":keys"
-                                                 ":syms"
-                                                 ":strs"
-                                                 ":or"
-                                                 ":as"
-                                                 "&"]            :clj-doc doc-destruct}
-
+   {:desc "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct}
 
    ])
 
@@ -138,9 +122,9 @@
   [version]
   "the syntax of clojure used by clojurescript before tools.reader was used."
   (->> syntax
-       (filter :clj-doc)                      ;; all clojure syntax forms should have an associated doc link
-       (remove :parent)                       ;; already added by the parser if parents are present
-       (remove :tag)                          ;; tag literals are handled separately
-       (filter #(clj-syntax? version %))      ;; select syntax forms available for this clojure version
-       (remove #(= "destructure" (:desc %)))  ;; already added by the parser
+       (filter :clj-doc)                         ;; all clojure syntax forms should have an associated doc link
+       (remove :parent)                          ;; already added by the parser if parents are present
+       (remove #(= (:type %) "tagged literal"))  ;; tag literals are handled separately
+       (filter #(clj-syntax? version %))         ;; select syntax forms available for this clojure version
+       (remove #(= (:desc %) "destructure"))     ;; already added by the parser
        ))
