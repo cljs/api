@@ -63,7 +63,7 @@
           name+forms (str name- " " forms)]
       (cond
 
-        ;; display the conceptual name and its forms (e.g. "boolean true false", "vector []")
+        ;; display the conceptual name and its forms (e.g. "vector []")
         (#{"syntax"
            "binding"} type-) name+forms
 
@@ -125,7 +125,8 @@
   (assert-reqs!)
 
   (let [result (get-last-written-result)
-        syms (merge (-> result :library-api :symbols)
+        syms (merge (-> result :syntax-api :symbols)
+                    (-> result :library-api :symbols)
                     (-> result :compiler-api :symbols))
         namespaces (set (map :ns (vals syms)))]
 
@@ -151,6 +152,7 @@
     (println "Adding sections to index database...")
     (j/insert! sqlite-db :searchIndex
        ;; insert categories
+       {:name "Syntax API" :type "Category" :path (resolve-path "README.html#syntax-api")}
        {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api-reference")}
        {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api-reference")}
 
