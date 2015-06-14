@@ -225,6 +225,12 @@
         (update-in [:source] add-tree)
         (update-in [:extra-sources] #(map add-tree %)))))
 
+(defn fix-syntax-form
+  [syntax-form]
+  (if (vector? syntax-form)
+    (map md-escape syntax-form)
+    (md-escape syntax-form)))
+
 (defn ref-file-data
   [item]
   (-> item
@@ -238,7 +244,7 @@
                                    :args (sig-args %))
                         (:signature item))
         :clj-symbol (make-clj-ref item))
-      (update-in [:syntax-form] md-escape)
+      (update-in [:syntax-form] fix-syntax-form)
       (add-source-trees)
       (update-in [:docstring]
         #(if (or (nil? %) (= "" (trim %)))
@@ -393,7 +399,7 @@
                      :edn-doc (:edn-doc item)
                      :name (:name item)
                      :type (:type item)
-                     :syntax-form (md-escape (:syntax-form item))
+                     :syntax-form (fix-syntax-form (:syntax-form item))
                      :parent-type (:parent-type item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-items (map make-item %))

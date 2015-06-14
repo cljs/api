@@ -39,9 +39,7 @@
 
   ;; (syntax description)    (type)       (syntax form)          (clojure doc link)  (edn doc link)
 
-  [;; destructuring pattern
-   {:desc "destructure"                                          :clj-doc doc-destruct}
-
+  [
    ;; core syntax
    {:desc "string"           :char  \"    :form "\"\""           :clj-doc doc1     :edn-doc (edn-doc "strings")}
    {:desc "character"        :char  \\    :form "\\"             :clj-doc doc1     :edn-doc (edn-doc "characters")}
@@ -80,11 +78,13 @@
           :clj-added "1.7.0-beta1"}
 
    ;; special symbols
-   {:desc "true"             :ssym true   :form "true"           :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:desc "false"            :ssym true   :form "false"          :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:desc "boolean"          :ssym true   :form ["true"
+                                                 "false"]        :clj-doc doc1     :edn-doc (edn-doc "booleans")}
    {:desc "nil"              :ssym true   :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
    {:desc "NaN"              :ssym true   :form "NaN"}
-   {:desc "Infinity"         :ssym true   :form "Infinity"}
+   {:desc "Infinity"         :ssym true   :form ["Infinity"
+                                                 "-Infinity"
+                                                 "+Infinity"]}
 
    ;; available tagged literals
    {:desc "uuid-tag"         :tag true    :form "#uuid"          :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
@@ -97,6 +97,15 @@
    ;; special namespaces
    {:desc "js-ns"            :sns true    :form "js/"}
    {:desc "Math-ns"          :sns true    :form "Math/"          :clj-doc doc-interop}
+
+   ;; destructuring pattern
+   {:desc "destructure"                   :form [":keys"
+                                                 ":syms"
+                                                 ":strs"
+                                                 ":or"
+                                                 ":as"
+                                                 "&"]            :clj-doc doc-destruct}
+
 
    ])
 
