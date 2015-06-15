@@ -835,10 +835,20 @@
 
 (defmethod parse-ns ["cljs.repl.nashorn" :compiler] [ns- api]
   (cond
-    (>= *cljs-num* 3255) nil ;; FIXME: parse defs from 
-    ;; (util/compile-if (Class/forName "jdk.nashorn.api.scripting.NashornException")
-    ;;   (do ... ))
-    (>= *cljs-num* 0) (parse-ns* ns- "clojurescript" :compiler)))
+    (>= *cljs-num* 3255)
+    (let [forms (apply concat (read-ns-forms ns- :compiler))
+          ;; get nested forms inside:
+          ;;   (util/compile-if (Class/forName "jdk.nashorn.api.scripting.NashornException")
+          ;;     (do ... ))
+          [_compile-if _class [_do & nested-forms]] (first
+                                                      (filter
+                                                        #(and (list? %) (= 'util/compile-if (first %)))
+                                                        forms))]
+      (cond-> (parse-ns* ns- "clojurescript" :compiler)
+        nested-forms (concat (parse-forms ns- "clojurescript" nested-forms))))
+
+    (>= *cljs-num* 0)
+    (parse-ns* ns- "clojurescript" :compiler)))
 
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))
