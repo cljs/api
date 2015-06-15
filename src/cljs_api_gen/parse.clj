@@ -48,49 +48,48 @@
     "tools.reader" *treader-tag*
     nil))
 
-(def normally-parsed-ns?
-  #{"cljs.pprint"
-    "cljs.reader"
-    "clojure.set"
-    "clojure.string"
-    "clojure.walk"
-    "clojure.zip"
-    "clojure.data"
-    "clojure.browser.dom"
-    "clojure.browser.event"
-    "clojure.browser.net"
-    "clojure.browser.repl"
-    "clojure.core.reducers"
-    "clojure.reflect"
-    "cljs.nodejs"
-    "cljs.nodejscli"
-    })
+(def namespaces
+  "api -> namespaces, and namespace -> parse type"
 
-(def custom-parsed-ns?
-  #{"cljs.core"
-    "cljs.test"
-    "cljs.repl"
-    "special"     ;; <-- pseudo-namespace for special forms
-    "specialrepl" ;; <-- pseudo-namespace for REPL special forms
-    "syntax"      ;; <-- pseudo-namespace for syntax forms
-    })
+  {:syntax
+   {"syntax"                :custom} ;; <-- pseudo-namespace for syntax forms
 
-(def cljs-lib-namespaces
-  (->> (into normally-parsed-ns? custom-parsed-ns?)
-       (remove #{"syntax"})))
+   :library
+   {"cljs.pprint"           :normal
+    "cljs.reader"           :normal
+    "clojure.set"           :normal
+    "clojure.string"        :normal
+    "clojure.walk"          :normal
+    "clojure.zip"           :normal
+    "clojure.data"          :normal
+    "clojure.browser.dom"   :normal
+    "clojure.browser.event" :normal
+    "clojure.browser.net"   :normal
+    "clojure.browser.repl"  :normal
+    "clojure.core.reducers" :normal
+    "clojure.reflect"       :normal
+    "cljs.nodejs"           :normal
 
-(def cljs-compiler-namespaces
-  #{"cljs.analyzer.api"
-    "cljs.build.api"
-    "cljs.compiler.api"
-    "cljs.repl"
-    "cljs.repl.browser"
-    "cljs.repl.nashorn"
-    "cljs.repl.node"
-    "cljs.repl.reflect"
-    "cljs.repl.rhino"
-    "cljs.repl.server"
-    })
+    "cljs.core"             :custom
+    "cljs.test"             :custom
+    "cljs.repl"             :custom
+    "special"               :custom ;; <-- pseudo-namespace for special forms
+    "specialrepl"           :custom ;; <-- pseudo-namespace for REPL special forms
+    }
+
+   :compiler
+   {"cljs.analyzer.api"     :normal
+    "cljs.build.api"        :normal
+    "cljs.compiler.api"     :normal
+    "cljs.repl"             :normal
+    "cljs.repl.browser"     :normal
+    "cljs.repl.node"        :normal
+    "cljs.repl.reflect"     :normal
+    "cljs.repl.rhino"       :normal
+    "cljs.repl.server"      :normal
+
+    "cljs.repl.nashorn"     :custom
+    }})
 
 ;;--------------------------------------------------------------------------------
 ;; Functions marked as macros
@@ -756,14 +755,12 @@
 ;;------------------------------------------------------------
 
 (defmulti parse-ns
-  (fn [ns-]
-    (cond
-      (custom-parsed-ns?   ns-) ns-
-      (normally-parsed-ns? ns-) :default-lib
-      (cljs-compiler-namespaces ns-) :default-compiler
-      :else nil)))
+  (fn [ns- api]
+    (if (= :custom (get-in namespaces [api ns-]))
+      [ns- api]
+      [:default api])))
 
-(defmethod parse-ns "cljs.core" [ns-]
+(defmethod parse-ns ["cljs.core" :library] [ns- api]
   ;; NOTE: Concatenation order is important here
   ;; so previously defined macros/functions are overwritten
   ;; by subsequent ones.
@@ -784,7 +781,7 @@
             (get-core-type-members type-names))))
 
 ;; pseudo-namespace since special forms don't have a namespace
-(defmethod parse-ns "special" [ns-]
+(defmethod parse-ns ["special" :library] [ns- api]
   (let [docs (->> (read-ns-forms "cljs.repl" :compiler)
                   (apply concat)
                   (keep #(parse-special-docs %))
@@ -802,7 +799,7 @@
     specials))
 
 ;; pseudo-namespace since repl special forms don't have a namespace
-(defmethod parse-ns "specialrepl" [ns-]
+(defmethod parse-ns ["specialrepl" :library] [ns- api]
   (let [forms (apply concat (read-ns-forms "cljs.repl" :compiler))
         docs (first (keep parse-repl-special-docs forms))
         specials (binding [*cur-ns* ns-
@@ -810,7 +807,7 @@
                    (first (keep #(parse-repl-specials % docs) forms)))]
     specials))
 
-(defmethod parse-ns "syntax" [ns-]
+(defmethod parse-ns ["syntax" :syntax] [ns- api]
   (binding [*cur-ns* ns-]
     (let [tagged-literals (parse-tagged-literals)
           syntax-items (parse-syntax-forms)
@@ -820,30 +817,33 @@
                syntax-items
                [destructure-item])))))
 
-(defmethod parse-ns "cljs.test" [ns-]
+(defmethod parse-ns ["cljs.test" :library] [ns- api]
   (parse-ns* ns- "clojurescript"
     (cond
       (>  *cljs-num* 3269) [:library]
-      (>= *cljs-num* 0)    [:library :compiler]
+      (>= *cljs-num* 0)    [:library :compiler] ;; macros mistakenly kept in compiler section before 3269
       :else nil)))
 
-(defmethod parse-ns "cljs.repl" [ns-]
+(defmethod parse-ns ["cljs.repl" :library] [ns- api]
   ;; the library file "repl.cljs" has (:require-macros cljs.repl)
   ;; so we must pull those in from the compiler and add in the
   ;; library functions.
-  (let [comp-syms (cond->> (parse-ns* ns- "clojurescript" [:compiler])
+  (let [macros (->> (parse-ns* ns- "clojurescript" [:compiler])
+                    (filter #(= "macro" (:type %))))
+        lib (parse-ns* ns- "clojurescript" [:library])]
+    (concat macros lib)))
 
-                 ;; if parsing for library API, the macros are the only symbols we can use.
-                 (= "library" *cur-api*) (filter #(= "macro" (:type %))))
+(defmethod parse-ns ["cljs.repl.nashorn" :compiler] [ns- api]
+  (cond
+    (>= *cljs-num* 3255) nil ;; FIXME: parse defs from 
+    ;; (util/compile-if (Class/forName "jdk.nashorn.api.scripting.NashornException")
+    ;;   (do ... ))
+    (>= *cljs-num* 0) (parse-ns* ns- "clojurescript" :compiler)))
 
-        lib-syms (when (= "library" *cur-api*)
-                   (parse-ns* ns- "clojurescript" [:library]))]
-    (concat comp-syms lib-syms)))
-
-(defmethod parse-ns :default-lib [ns-]
+(defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))
 
-(defmethod parse-ns :default-compiler [ns-]
+(defmethod parse-ns [:default :compiler] [ns- api]
   (parse-ns* ns- "clojurescript" :compiler))
 
 ;;------------------------------------------------------------
@@ -883,19 +883,16 @@
         extras (map make ["catch" "finally"])]
     (concat parsed extras)))
 
+(defn parse-all*
+  [api]
+  (->> (get namespaces api)
+       (keys)
+       (mapcat #(parse-ns % api))
+       (doall)))
+
 (defn parse-all
   []
-  (let [syntax-parsed (parse-ns "syntax")
-        lib-parsed (binding [*cur-api* "library"]
-                     (->> cljs-lib-namespaces
-                          (mapcat parse-ns)
-                          doall
-                          add-catch-finally))
-        compiler-parsed (binding [*cur-api* "compiler"]
-                          (->> cljs-compiler-namespaces
-                               (mapcat parse-ns)
-                               doall))]
-    {:syntax syntax-parsed
-     :library lib-parsed
-     :compiler compiler-parsed}))
+  {:syntax   (parse-all* :syntax)
+   :library  (add-catch-finally (parse-all* :library))
+   :compiler (parse-all* :compiler)})
 
