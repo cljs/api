@@ -37,6 +37,9 @@
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
 
+;; current API that we are parsing for (e.g. "library", "compiler")
+(def ^:dynamic *cur-api*)
+
 (defn cur-repo-tag
   []
   (case *cur-repo*
@@ -80,6 +83,13 @@
   #{"cljs.analyzer.api"
     "cljs.build.api"
     "cljs.compiler.api"
+    "cljs.repl"
+    "cljs.repl.browser"
+    "cljs.repl.nashorn"
+    "cljs.repl.node"
+    "cljs.repl.reflect"
+    "cljs.repl.rhino"
+    "cljs.repl.server"
     })
 
 ;;--------------------------------------------------------------------------------
@@ -821,10 +831,14 @@
   ;; the library file "repl.cljs" has (:require-macros cljs.repl)
   ;; so we must pull those in from the compiler and add in the
   ;; library functions.
-  (let [macros (->> (parse-ns* ns- "clojurescript" [:compiler])
-                    (filter #(= "macro" (:type %))))
-        fns (parse-ns* ns- "clojurescript" [:library])]
-    (concat macros fns)))
+  (let [comp-syms (cond->> (parse-ns* ns- "clojurescript" [:compiler])
+
+                 ;; if parsing for library API, the macros are the only symbols we can use.
+                 (= "library" *cur-api*) (filter #(= "macro" (:type %))))
+
+        lib-syms (when (= "library" *cur-api*)
+                   (parse-ns* ns- "clojurescript" [:library]))]
+    (concat comp-syms lib-syms)))
 
 (defmethod parse-ns :default-lib [ns-]
   (parse-ns* ns- "clojurescript" :library))
@@ -872,13 +886,15 @@
 (defn parse-all
   []
   (let [syntax-parsed (parse-ns "syntax")
-        lib-parsed (->> cljs-lib-namespaces
-                        (mapcat parse-ns)
-                        doall
-                        add-catch-finally)
-        compiler-parsed (->> cljs-compiler-namespaces
-                             (mapcat parse-ns)
-                             doall)]
+        lib-parsed (binding [*cur-api* "library"]
+                     (->> cljs-lib-namespaces
+                          (mapcat parse-ns)
+                          doall
+                          add-catch-finally))
+        compiler-parsed (binding [*cur-api* "compiler"]
+                          (->> cljs-compiler-namespaces
+                               (mapcat parse-ns)
+                               doall))]
     {:syntax syntax-parsed
      :library lib-parsed
      :compiler compiler-parsed}))

@@ -22,31 +22,33 @@
 (def ns-descriptions
   "FIXME: put this in the official docstrings if missing (patch request)"
 
-  {"cljs.core"                    "fundamental library of the ClojureScript language"
-   "special"                      "_pseudo-namespace_ for special forms"
-   "specialrepl"                  "_pseudo-namespace_ for REPL special forms"
-   "syntax"                       "_pseudo-namespace_ for syntax forms"
-   "cljs.pprint"                  "a pretty-printer for printing data structures"
-   "cljs.reader"                  "a reader to parse text and produce data structures"
-   "clojure.set"                  "set operations such as union/intersection"
-   "clojure.string"               "string operations"
-   "clojure.walk"                 "a generic tree walker for Clojure data structures"
-   "clojure.zip"                  "functional hierarchical zipper, w/ navigation/editing/enumeration"
-   "clojure.data"                 "non-core data functions"
-   "clojure.browser.dom"          "browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)"
-   "clojure.browser.event"        "browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)"
-   "clojure.browser.net"          "network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)"
-   "clojure.browser.repl"         "evaluate compiled cljs in a browser. send results back to server"
-   "clojure.core.reducers"        "a library for reduction and parallel folding (parallelism not supported)"
-   "clojure.reflect"              "DEPRECATED. Do not use, superceded by REPL enhancements."
-   "cljs.nodejs"                  "nodejs support functions"
-   "cljs.test"                    "a unit-testing framework"
-   "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
+  {:library-api
+   {"cljs.core"                    "fundamental library of the ClojureScript language"
+    "special"                      "_pseudo-namespace_ for special forms"
+    "specialrepl"                  "_pseudo-namespace_ for REPL special forms"
+    "syntax"                       "_pseudo-namespace_ for syntax forms"
+    "cljs.pprint"                  "a pretty-printer for printing data structures"
+    "cljs.reader"                  "a reader to parse text and produce data structures"
+    "clojure.set"                  "set operations such as union/intersection"
+    "clojure.string"               "string operations"
+    "clojure.walk"                 "a generic tree walker for Clojure data structures"
+    "clojure.zip"                  "functional hierarchical zipper, w/ navigation/editing/enumeration"
+    "clojure.data"                 "non-core data functions"
+    "clojure.browser.dom"          "browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)"
+    "clojure.browser.event"        "browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)"
+    "clojure.browser.net"          "network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)"
+    "clojure.browser.repl"         "evaluate compiled cljs in a browser. send results back to server"
+    "clojure.core.reducers"        "a library for reduction and parallel folding (parallelism not supported)"
+    "clojure.reflect"              "DEPRECATED. Do not use, superceded by REPL enhancements."
+    "cljs.nodejs"                  "nodejs support functions"
+    "cljs.test"                    "a unit-testing framework"
+    "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
+    }
 
-   "cljs.build.api"               ""
-   "cljs.compiler.api"            ""
-   "cljs.analyzer.api"            ""
-   })
+   :compiler-api
+   {
+    ;; TODO: create namespace descriptions
+    }})
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
@@ -407,7 +409,7 @@
                         (group-by :ns)
                         (mapmap transform-syms)
                         (map (fn [[k v]] {:ns k
-                                          :ns-description (ns-descriptions k)
+                                          :ns-description (get-in ns-descriptions [api-type k])
                                           :ns-link (md-header-link k)
                                           :symbols (if (= k "syntax")
                                                      (sort-by (comp syntax-order :name) v)
