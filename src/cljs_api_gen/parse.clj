@@ -584,7 +584,7 @@
   "Get derived syntax forms from the given forms."
   [items]
   (let [make-sub-item (fn [info]
-                        (when-let [parent (some #(= (:syntax-form %) (:parent info)) items)]
+                        (when-let [parent (first (filter #(= (:syntax-form %) (:parent info)) items))]
                           (merge parent (base-syntax-item info))))
         sub-items (->> syntax
                        (filter :parent)
@@ -640,7 +640,7 @@
                 (>= *cljs-num* 0)    (parse-clj-core)
                 :else nil)
         match? #(= "destructure" (:name %))
-        item (some match? items)]
+        item (first (filter match? items))]
     (-> item
         (dissoc :signature)
         (merge (base-syntax-item (syntax-map "destructure")))
@@ -658,7 +658,7 @@
 
 (defn get-non-excluded-macro-api
   [forms macro-api]
-  (let [ns-form (some #(= 'ns (first %)) forms)
+  (let [ns-form (first (filter #(= 'ns (first %)) forms))
         get-excludes #(match % ([:refer-clojure :exclude x] :seq) x :else nil)
         macro-names (->> ns-form (drop 2) (keep get-excludes) first (map str) set)]
     (remove #(macro-names (:name %)) macro-api)))
@@ -858,7 +858,7 @@
                       (>= *cljs-num* 1933) {:ns "special" :name "try"}
                       (>= *cljs-num* 0)    {:ns "cljs.core" :name "try"}
                       :else nil)
-        try-form (some #(= (select-keys % [:ns :name]) try-ns-name) parsed)
+        try-form (first (filter #(= (select-keys % [:ns :name]) try-ns-name) parsed))
         get-sigs (fn [name-]
                    ;; parse docstring for signature of `catch` and `finally`:
                    ;;
