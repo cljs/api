@@ -241,6 +241,7 @@
       defn-         "defn"
       core/defn     "defn"
       defmacro      "defmacro"
+      core/defmacro "defmacro"
       defcurried    "defcurried"
       defprotocol   "defprotocol"
       deftype       "deftype"
