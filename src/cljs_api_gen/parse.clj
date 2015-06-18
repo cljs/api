@@ -420,7 +420,7 @@
   (when-let [special (parse-special* form)]
     (let [location (parse-location form)
           extras {:type "special form"}
-          docs (get doc-map (:name special))
+          docs (get doc-map (symbol (:name special)))
           final (merge special location extras docs)]
       final)))
 
