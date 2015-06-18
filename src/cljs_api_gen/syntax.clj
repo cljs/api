@@ -79,10 +79,10 @@
    {:desc "Infinity" :type "special symbol" :form ["Infinity" "-Infinity" "+Infinity"]}
 
    ;; available tagged literals
-   {:desc "uuid-tag"  :type "tagged literal" :form "#uuid" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
-   {:desc "inst-tag"  :type "tagged literal" :form "#inst" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
-   {:desc "queue-tag" :type "tagged literal" :form "#queue"}
-   {:desc "js-tag"    :type "tagged literal" :form "#js"}
+   {:desc "uuid-tag"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
+   {:desc "inst-tag"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
+   {:desc "queue-tag" :type "tagged literal" :form "#queue []"}
+   {:desc "js-tag"    :type "tagged literal" :form ["#js {}" "#js []"]}
 
    ;; special namespaces
    {:desc "js-ns"   :type "special namespace" :form "js/"}
