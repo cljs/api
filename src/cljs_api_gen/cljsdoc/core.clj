@@ -7,6 +7,10 @@
     [me.raynes.fs :refer [list-dir base-name]]
     [clansi.core :refer [style]]))
 
+(def cljsdoc-map
+  "Holds the result of the cljsdoc compiler."
+  (atom nil))
+
 (defn build-doc
   [file]
   (let [filename (base-name file)
@@ -25,7 +29,8 @@
   (let [files (list-dir dir)]
     (filter #(.endsWith (.getName %) ".cljsdoc") files)))
 
-(defn build-docs []
+(defn build-cljsdoc! []
+  (println "Compiling *.cljsdoc files...")
   (let [files (cljsdoc-files cljsdoc-dir)
         mandocs (keep build-doc files)
         mandoc-map (zipmap (map :full-name mandocs)
@@ -33,8 +38,8 @@
         skipped (- (count files) (count mandocs))
         parsed (- (count files) skipped)]
 
-    (println "----------------------------------------------------------------")
-    (println)
+    (reset! cljsdoc-map mandoc-map)
+
     (if (zero? skipped)
       (println (style "Done with no errors." :green))
       (println (style "Done with some errors." :red)))

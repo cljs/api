@@ -11,7 +11,7 @@
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
     [cljs-api-gen.docset :as docset]
-    [cljs-api-gen.cljsdoc.core :refer [build-docs]]
+    [cljs-api-gen.cljsdoc.core :refer [build-cljsdoc!]]
     ))
 
 ;;--------------------------------------------------------------------------------
@@ -35,10 +35,19 @@
 ;; Runners
 ;;--------------------------------------------------------------------------------
 
+(defn run-cljsdoc!
+  []
+  (let [num-skipped (build-cljsdoc!)]
+    (when-not (zero? num-skipped)
+      (System/exit 1))))
+
 (defn prep!
   []
   (println "\nCloning or updating repos...")
   (clone-or-fetch-repos!)
+
+  (println)
+  (run-cljsdoc!)
 
   (println)
   (get-published-cljs-tags!)
@@ -68,10 +77,6 @@
   [out-dir]
   (binding [*output-dir* (or out-dir "catalog")]
     (docset/create!)))
-
-(defn run-cljsdoc!
-  []
-  (build-docs))
 
 (defn main
   [{:keys [cljsdoc catalog version docset out-dir] :as options}]
