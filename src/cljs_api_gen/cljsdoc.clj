@@ -1,4 +1,4 @@
-(ns cljs-api-gen.cljsdoc.core
+(ns cljs-api-gen.cljsdoc
   (:require
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]

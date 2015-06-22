@@ -11,7 +11,7 @@
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
     [cljs-api-gen.docset :as docset]
-    [cljs-api-gen.cljsdoc.core :refer [build-cljsdoc!]]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
     ))
 
 ;;--------------------------------------------------------------------------------
