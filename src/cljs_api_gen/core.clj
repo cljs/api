@@ -10,7 +10,9 @@
     [cljs-api-gen.catalog :refer [create-catalog!
                                   create-single-version!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
-    [cljs-api-gen.docset :as docset]))
+    [cljs-api-gen.docset :as docset]
+    [cljs-api-gen.cljsdoc.core :refer [build-docs]]
+    ))
 
 ;;--------------------------------------------------------------------------------
 ;; Usage
@@ -67,13 +69,18 @@
   (binding [*output-dir* (or out-dir "catalog")]
     (docset/create!)))
 
+(defn run-cljsdoc!
+  []
+  (build-docs))
+
 (defn main
-  [{:keys [catalog version docset out-dir] :as options}]
+  [{:keys [cljsdoc catalog version docset out-dir] :as options}]
 
   (cond
     catalog (run-catalog! catalog out-dir)
     version (run-single-version! version out-dir)
     docset  (run-docset! out-dir)
+    cljsdoc (run-cljsdoc!)
     :else   (show-usage-and-exit!))
 
   ;; have to do this because `sh` leaves futures hanging,

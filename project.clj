@@ -9,5 +9,10 @@
                  [fipp "0.6.1"]
                  [stencil "0.3.5"]
                  [org.clojure/java.jdbc "0.3.7"]
-                 [org.xerial/sqlite-jdbc "3.8.10.1"]]
+                 [org.xerial/sqlite-jdbc "3.8.10.1"]
+                 [ccfontes/fuzzy-matcher "0.0.1"]
+                 ]
+
+  :test-paths ["test"]
+  
   :main cljs-api-gen.core)

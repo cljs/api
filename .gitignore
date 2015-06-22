@@ -4,6 +4,7 @@
 /output
 *.swp
 .lein-repl-history
+.lein-failures
 symbol-history
 /api-docs-generated
 

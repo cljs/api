@@ -1,5 +1,8 @@
 (ns cljs-api-gen.config)
 
+;; location of manual cljsdoc files
+(def cljsdoc-dir "cljsdoc")
+
 ;; location of the clojure & clojurescript repos to parse
 (def repos-dir "repos")
 
