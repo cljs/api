@@ -1,0 +1,18 @@
+===== Name
+cljs.core/repeat
+
+===== Signature
+[x]
+[n x]
+
+===== Description
+
+Returns a lazy sequence of `x`s.
+
+The length of the sequence is infinite, or `n` if provided.
+
+===== Related
+cljs.core/repeatedly
+cljs.core/cycle
+cljs.core/constantly
+cljs.core/dotimes

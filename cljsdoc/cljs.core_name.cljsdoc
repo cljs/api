@@ -1,0 +1,17 @@
+===== Name
+cljs.core/name
+
+===== Signature
+[x]
+
+===== Description
+
+Returns a string value of a keyword, string, or symbol.
+
+`(name :foo)` => `"foo"`
+
+`(name "foo")` => `"foo"`
+
+`(name 'foo)` => `"foo"`
+
+===== Related

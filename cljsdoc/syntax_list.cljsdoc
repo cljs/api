@@ -1,0 +1,37 @@
+===== Name
+syntax/list
+()
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a literal list.  When evaluated, it is interpreted as a call to some
+code.  The first argument is called with the subsequent arguments.
+
+===== Related
+syntax/vector
+syntax/quote
+
+===== Example#cd26b0
+
+The following is a list that is evaluated to create var `a`:
+
+```
+(def a 1)
+```
+
+An empty list is unevaluated and left as an empty list:
+
+```
+()
+;;=> ()
+```
+
+To signify an unevaluated list, precede it with a quote:
+
+```
+'(1 2 3)
+;;=> (1 2 3)
+```

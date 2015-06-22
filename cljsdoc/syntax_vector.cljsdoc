@@ -1,0 +1,24 @@
+===== Name
+syntax/vector
+[]
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a literal vector.
+
+===== TODO
+write about syntactic idiom of using vectors for arg lists and binding forms
+
+===== Related
+cljs.core/vector
+cljs.core/vec
+
+===== Example#18e143
+
+```
+[1 2 3]
+;;=> [1 2 3]
+```

@@ -1,0 +1,19 @@
+===== Name
+cljs.core/replace
+
+===== Signature
+[smap]
+[smap coll]
+
+===== Description
+
+Given a map of replacement pairs `smap` and a vector/collection `coll`, returns
+a vector/seq with any elements `=` to a key in `smap` replaced with the
+corresponding val in `smap`.
+
+Returns a transducer when `coll` is not provided.
+
+===== Related
+cljs.core/map
+clojure.walk/prewalk-replace
+clojure.walk/postwalk-replace

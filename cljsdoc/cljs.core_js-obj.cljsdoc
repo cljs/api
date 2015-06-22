@@ -1,0 +1,21 @@
+===== Name
+cljs.core/js-obj
+
+===== Signature
+[& keyvals]
+
+===== Description
+
+Returns a new JavaScript object using the supplied mappings.
+
+`keyvals` must be an even number of forms.
+
+===== Related
+cljs.core/array
+
+===== Example#657cd7
+
+```
+(js-obj "foo" 1 "bar" 2)
+;;=> #js {:foo 1, :bar 2}
+```

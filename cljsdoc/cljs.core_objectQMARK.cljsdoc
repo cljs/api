@@ -1,0 +1,12 @@
+===== Name
+cljs.core/object?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is a JavaScript object, false otherwise.
+
+===== Related
+cljs.core/array?

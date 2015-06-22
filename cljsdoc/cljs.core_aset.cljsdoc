@@ -1,0 +1,58 @@
+===== Name
+cljs.core/aset
+
+===== Signature
+[array i val]
+[array idx idx2 & idxv]
+
+===== Description
+
+Sets `val` at index `i` in JavaScript arrays and objects.
+
+Can be used to set nested properties with the additional `idxs` arguments.
+
+===== Related
+cljs.core/aget
+cljs.core/set!
+cljs.core/assoc-in
+
+===== Example#d1aa58
+
+```js
+// JavaScript
+var a = {"foo": 3, "bar": [4, 5]};
+
+a["foo"] = 4;
+a;
+//=> {"foo": 4, "bar": [4, 5]}
+
+a["bar"][0] = 6;
+a;
+//=> {"foo": 4, "bar": [6, 5]}
+```
+
+```
+;; ClojureScript
+(def a #js {:foo 3, :bar #js [4 5]})
+
+(aset a "foo" 4)
+a
+;;=> #js {:foo 4, :bar #js [4 5]}
+
+(aset a "bar" 0 6)
+a
+;;=> #js {:foo 4, :bar #js [6 5]}
+```
+
+===== Example#34bbf3
+
+```js
+// JavaScript
+document.location.href = "http://example.com";
+```
+
+```
+;; ClojureScript
+(aset js/document "location" "href" "http://example.com")
+```
+

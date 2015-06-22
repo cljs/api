@@ -1,0 +1,15 @@
+===== Name
+cljs.core/max
+
+===== Signature
+[x]
+[x y]
+[x y & more]
+
+===== Description
+
+Returns the greatest number argument.
+
+===== Related
+cljs.core/min
+cljs.core/max-key

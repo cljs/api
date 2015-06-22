@@ -1,0 +1,20 @@
+===== Name
+specialrepl/load-file
+
+===== Type
+special form (repl)
+
+===== Signature
+[filename]
+
+===== Description
+
+Only usable from a REPL.
+
+Load file at `filename`, then compiles and evaluates its code.
+
+===== Example#0903c5
+
+```
+(load-file "path/to/foo.cljs")
+```

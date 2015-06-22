@@ -1,0 +1,12 @@
+===== Name
+cljs.core/set?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is a set, false otherwise.
+
+===== Related
+cljs.core/set

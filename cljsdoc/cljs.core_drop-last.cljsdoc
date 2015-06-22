@@ -1,0 +1,16 @@
+===== Name
+cljs.core/drop-last
+
+===== Signature
+[s]
+[n s]
+
+===== Description
+
+Return a lazy sequence of all but the last `n` items in `s`.
+
+`n` defaults to 1.
+
+===== Related
+cljs.core/drop
+cljs.core/drop-while

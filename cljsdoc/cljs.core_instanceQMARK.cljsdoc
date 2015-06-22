@@ -1,0 +1,12 @@
+===== Name
+cljs.core/instance?
+
+===== Signature
+[t o]
+
+===== Description
+
+Returns true if `o` is an instance of type `t`, false otherwise.
+
+===== Related
+cljs.core/type

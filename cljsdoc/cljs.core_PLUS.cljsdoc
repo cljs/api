@@ -1,0 +1,37 @@
+===== Name
+cljs.core/+
+
+===== Signature
+[]
+[x]
+[x y]
+[x y & more]
+
+===== Description
+
+Returns the sum of nums.
+
+`(+)` returns 0.
+
+===== Related
+cljs.core/*
+cljs.core/-
+
+===== Example#650668
+
+```
+(+)
+;;=> 0
+
+(+ 1)
+;;=> 1
+
+(+ -10)
+;;=> -10
+
+(+ 1 2)
+;;=> 3
+
+(+ 1 2 3)
+;;=> 6
+```

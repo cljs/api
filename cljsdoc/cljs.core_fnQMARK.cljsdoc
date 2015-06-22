@@ -1,0 +1,12 @@
+===== Name
+cljs.core/fn?
+
+===== Signature
+[f]
+
+===== Description
+
+Returns true if `f` is a function, false otherwise.
+
+===== Related
+cljs.core/ifn?

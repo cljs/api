@@ -1,0 +1,17 @@
+===== Name
+cljs.core/sort
+
+===== Signature
+[coll]
+[comp coll]
+
+===== Description
+
+Returns a sorted sequence of the items in `coll`.
+
+`comp` can be a boolean-valued comparison funcion, or a -/0/+ valued comparator.
+
+`comp` defaults to `compare`.
+
+===== Related
+cljs.core/sort-by

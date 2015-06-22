@@ -1,0 +1,25 @@
+===== Name
+syntax/var-quote
+#'
+
+===== Type
+syntax
+
+===== Description
+
+Accesses the var attached to the given symbol.
+
+`#'x` = `(var x)`
+
+===== Related
+special/var
+
+===== Example#673ef6
+
+Access the metadata of a var:
+
+```
+(def x 123)
+(meta #'x)
+;;=> {:arglists (), :test nil, :name x, :column 1, :line 1, :file "<cljs repl>", :doc nil, :ns cljs.user}
+```

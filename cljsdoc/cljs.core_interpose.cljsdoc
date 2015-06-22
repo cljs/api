@@ -1,0 +1,13 @@
+===== Name
+cljs.core/interpose
+
+===== Signature
+[sep coll]
+
+===== Description
+
+Returns a lazy seq of the elements of `coll` separated by `sep`.
+
+===== Related
+cljs.core/interleave
+clojure.string/join

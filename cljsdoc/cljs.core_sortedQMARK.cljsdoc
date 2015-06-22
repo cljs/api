@@ -1,0 +1,15 @@
+===== Name
+cljs.core/sorted?
+
+===== Signature
+[coll]
+
+===== Description
+
+Returns true if `coll` implements the `ISorted` protocol, false otherwise.
+
+Sorted maps and sorted sets implement `ISorted`.
+
+===== Related
+cljs.core/sorted-map
+cljs.core/sorted-set

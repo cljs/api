@@ -1,0 +1,13 @@
+===== Name
+cljs.core/list
+
+===== Signature
+[& items]
+
+===== Description
+
+Creates a new list containing `items`.
+
+===== Related
+cljs.core/vector
+cljs.core/list?

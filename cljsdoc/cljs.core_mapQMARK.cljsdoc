@@ -1,0 +1,13 @@
+===== Name
+cljs.core/map?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is a map, false otherwise.
+
+===== Related
+cljs.core/hash-map
+cljs.core/sorted-map

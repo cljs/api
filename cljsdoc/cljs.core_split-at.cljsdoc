@@ -1,0 +1,13 @@
+===== Name
+cljs.core/split-at
+
+===== Signature
+[n coll]
+
+===== Description
+
+Returns a vector of `[(take n coll) (drop n coll)]`.
+
+===== Related
+cljs.core/split-with
+clojure.string/split

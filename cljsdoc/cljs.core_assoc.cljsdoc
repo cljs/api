@@ -1,0 +1,54 @@
+===== Name
+cljs.core/assoc
+
+===== Signature
+[coll k v]
+[coll k v & kvs]
+
+===== Description
+
+assoc(iate)
+
+When applied to a map, returns a new map that contains the mapping of key(s) to
+val(s).
+
+Has no effect on the map type (hashed/sorted).
+
+When applied to a vector, returns a new vector that contains value `v` at index
+`k`.
+
+===== Related
+cljs.core/assoc-in
+cljs.core/dissoc
+cljs.core/merge
+
+===== Example#2fa7e0
+
+```
+(def my-map {:foo 1})
+
+(assoc my-map :foo 2)
+;;=> {:foo 2}
+
+(assoc my-map :bar 2)
+;;=> {:foo 1 :bar 2}
+
+(assoc my-map :a 3 :b 4 :c 5 :d 6)
+;;=> {:foo 1 :a 3 :b 4 :c 5 :d 6}
+
+;; you must pass a value for every key
+(assoc my-map :foo)
+;;=> WARNING: Wrong number of args (2) passed to cljs.core/assoc
+```
+
+===== Example#c06eac
+
+```
+(def my-vec [1 2 3])
+
+(assoc my-vec 0 "foo")
+;;=> ["foo" 2 3]
+
+(assoc my-vec 3 "foo")
+;;=> Error: Index 3 out of bounds  [0,0]
+```

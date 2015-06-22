@@ -1,0 +1,24 @@
+===== Name
+cljs.core/js-debugger
+
+===== Description
+
+Creates breakpoint that will stop the debugger if the browser's devtools are
+open.  Equivalent to `debugger;` in JavaScript.
+
+===== TODO
+Check to see if this is allowed as the last expression of a function.
+I think `return debugger;` is not valid JS and will cause an error.
+
+===== Example#87f2fa
+
+```
+(defn foo []
+  (println "HI")
+  (js-debugger)
+  (println "WORLD"))
+
+(foo)
+;; will print "HI" then pause JS inside this function
+;; if browser devtools are open.
+```

@@ -1,0 +1,13 @@
+===== Name
+cljs.core/not-any?
+
+===== Signature
+[pred coll]
+
+===== Description
+
+Returns false if `(pred x)` is logical true for any `x` in `coll`, else true.
+
+===== Related
+cljs.core/every?
+cljs.core/some

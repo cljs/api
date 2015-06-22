@@ -1,0 +1,16 @@
+===== Name
+cljs.core/nthnext
+
+===== Signature
+[coll n]
+
+===== Description
+
+Returns the `n`th `next` of `coll`.
+
+Returns `(seq coll)` when `n` is 0.
+
+===== Related
+cljs.core/nth
+cljs.core/drop
+cljs.core/nthrest

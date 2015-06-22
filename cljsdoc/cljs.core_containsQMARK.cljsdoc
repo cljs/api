@@ -1,0 +1,19 @@
+===== Name
+cljs.core/contains?
+
+===== Signature
+[coll k]
+
+===== Description
+
+Returns true if `k` is present in `coll`, otherwise returns false.
+
+Note that for numerically indexed collections like vectors and arrays, this
+tests if the numeric key is within the range of indexes.
+
+`contains?` operates in constant or logarithmic time; it will not perform a
+linear search for a value.
+
+===== Related
+cljs.core/some
+cljs.core/get

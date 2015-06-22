@@ -1,0 +1,38 @@
+===== Name
+cljs.core/amap
+
+===== Signature
+[a idx ret expr]
+
+===== Description
+
+For quickly creating a new JavaScript array by mapping an expression `expr`
+across a JavaScript array `a`.  The expression can use `ret` as the current
+result, which is initialized to `a`.  It can also use `idx` to get the current
+index.
+
+===== Related
+cljs.core/map
+
+===== Example#3a7471
+
+```
+(def a #js [1 2 3])
+(amap a i ret (* 10 (aget a i)))
+;;=> #js [10 20 30]
+```
+
+===== Example#0f57af
+
+You can also use `ret` inside the mapped expression if you want to use the
+current result:
+
+```
+(def a #js [1 2 3])
+(amap a i ret (+ (if (pos? i)
+                   (aget ret (dec i))
+                   0)
+                 (* 10 (aget a i))))
+;;=> #js [10 30 60]
+```
+

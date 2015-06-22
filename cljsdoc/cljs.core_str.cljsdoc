@@ -1,0 +1,18 @@
+===== Name
+cljs.core/str
+
+===== Signature
+[]
+[x]
+[x & ys]
+
+===== Description
+
+`(str)` and `(str nil)` return the empty string.
+
+`(str x)` returns `x.toString()`.
+
+With more than one argument, returns the concatenation of the `str` values of
+the arguments.
+
+===== Related

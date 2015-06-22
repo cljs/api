@@ -1,0 +1,28 @@
+===== Name
+cljs.core/aclone
+
+===== Signature
+[arr]
+
+===== Description
+
+Creates a clone of the given JavaScript array `arr`.  The result is a new
+JavaScript array, which is a shallow copy, not a deep copy.
+
+===== Related
+cljs.core/array
+cljs.core/make-array
+
+===== Example#422c4e
+
+```
+(def a #js [1 2 3])
+(def b (aclone a))
+(aset b 0 4)
+
+a
+;;=> #js [1 2 3]
+
+b
+;;=> #js [4 2 3]
+```

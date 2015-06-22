@@ -1,0 +1,12 @@
+===== Name
+cljs.core/number?
+
+===== Signature
+[n]
+
+===== Description
+
+Returns true if `n` is a number, false otherwise.
+
+===== Related
+cljs.core/integer?

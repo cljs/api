@@ -1,0 +1,13 @@
+===== Name
+clojure.string/join
+
+===== Signature
+[coll]
+[separator coll]
+
+===== Description
+
+Returns a string of all elements in `coll`, as returned by `(seq coll)`,
+separated by an optional separator.
+
+===== Related

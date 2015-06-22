@@ -1,0 +1,29 @@
+===== Name
+cljs.core/fnext
+
+===== Signature
+[coll]
+
+===== Description
+
+Same as `(first (next coll))`
+
+===== Related
+cljs.core/ffirst
+cljs.core/second
+
+===== Example#92383f
+
+```
+(fnext [1 2 3])
+;;=> 2
+
+(fnext [1 2])
+;;=> 2
+
+(fnext [1])
+;;=> nil
+
+(fnext [])
+;;=> nil
+```

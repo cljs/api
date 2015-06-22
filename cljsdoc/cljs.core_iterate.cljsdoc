@@ -1,0 +1,16 @@
+===== Name
+cljs.core/iterate
+
+===== Signature
+[f x]
+
+===== Description
+
+Returns a lazy sequence of `x`, `(f x)`, `(f (f x))` etc.
+
+`f` must be free of side-effects.
+
+===== Related
+cljs.core/cycle
+cljs.core/repeatedly
+cljs.core/repeat

@@ -1,0 +1,28 @@
+===== Name
+cljs.core/-
+
+===== Signature
+[x]
+[x y]
+[x y & more]
+
+===== Description
+
+If no `y`s are supplied, returns the negation of `x`, else subtracts the `y`s
+from `x` and returns the result.
+
+===== Related
+cljs.core/+
+
+===== Example#0a974e
+
+```
+(- 1)
+;;=> -1
+
+(- 6 3)
+;;=> 3
+
+(- 10 3 2)
+;;=> 5
+```

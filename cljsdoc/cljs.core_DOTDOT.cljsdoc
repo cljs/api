@@ -1,0 +1,60 @@
+===== Name
+cljs.core/..
+
+===== Type
+macro
+
+===== Signature
+[o form]
+[o form & more]
+
+===== Description
+
+For interop, the `..` macro allows method/property chaining on the given JavaScript object `o`.
+
+It essentially combines the thread-first `->` macro with the `.` operator.
+
+===== Related
+special/.
+cljs.core/->
+cljs.core/doto
+
+===== Example#500658
+
+```js
+// JavaScript
+"a b c d".toUpperCase().replace("A", "X")
+//=> "X B C D"
+```
+
+```
+;; ClojureScript
+(.. "a b c d"
+    toUpperCase
+    (replace "A" "X"))
+;;=> "X B C D"
+```
+
+This is expanded to:
+
+```
+(. (. "a b c d" toUpperCase) (replace "A" "X"))
+```
+
+
+which is equivalent to:
+
+```
+(.replace (.toUpperCase "a b c d") "A" "X")
+;;=> "X B C D"
+```
+
+Compare to the equivalent form using the thread-first `->` macro:
+
+```
+(-> "a b c d"
+    .toUpperCase
+    (.replace "A" "X"))
+;;=> "X B C D"
+```
+

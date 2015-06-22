@@ -1,0 +1,13 @@
+===== Name
+cljs.core/reversible?
+
+===== Signature
+[coll]
+
+===== Description
+
+Returns true if `coll` implements the `IReversible` protocol, false otherwise.
+
+Vectors, sorted maps, and sorted sets implement `IReversible`.
+
+===== Related

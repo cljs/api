@@ -1,0 +1,31 @@
+===== Name
+specialrepl/load-namespace
+
+===== Type
+special form (repl)
+
+===== Signature
+[name]
+
+===== Description
+
+Only usable from a REPL.
+
+Load a namespace and all of its dependencies into the evaluation environment.
+The environment is responsible for ensuring that each namespace is loaded once
+and only once.
+
+===== TODO
+
+This example doesn't work.  Why?
+
+```
+(load-namespace 'clojure.set)
+(clojure.set/intersection #{2 3} #{3 4})
+```
+
+===== Example#0b1a1d
+
+```
+(load-namespace 'clojure.set)
+```

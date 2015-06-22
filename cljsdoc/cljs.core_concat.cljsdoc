@@ -1,0 +1,17 @@
+===== Name
+cljs.core/concat
+
+===== Signature
+[]
+[x]
+[x y]
+[x y & zs]
+
+===== Description
+
+Returns a lazy sequence representing the concatenation of the elements in the
+supplied collections.
+
+===== Related
+cljs.core/conj
+cljs.core/into

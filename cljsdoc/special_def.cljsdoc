@@ -1,0 +1,49 @@
+===== Name
+special/def
+
+===== Type
+special form
+
+===== Signature
+[symbol]
+[symbol init]
+[symbol doc-string init]
+
+===== Description
+
+Creates a global variable with the name of `symbol` and a namespace of the
+current namespace.
+
+If `init` is supplied, it is evaluated and the result is assigned to `symbol`.
+
+`doc-string` is an optional documentation string.
+
+`def` is one of ClojureScript's [special forms](http://clojure.org/special_forms)
+and is used by many macros to define common elements (ie: `defn`, `defmacro`,
+etc).
+
+===== Example#a5f898
+
+```
+(def a)
+a
+;;=> nil
+
+(def b 42)
+b
+;;=> 42
+
+(def c "an optional docstring" 42)
+c
+;;=> 42
+```
+
+===== Related
+cljs.core/defn
+cljs.core/fn
+cljs.core/defmacro
+cljs.core/defmulti
+
+===== TODO
+
+Need to include something about metadata here?

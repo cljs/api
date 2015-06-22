@@ -1,0 +1,59 @@
+===== Name
+syntax/keyword
+:
+::
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a keyword, a string-like datatype often used as keys for maps.
+Keywords should not start with a number.
+
+Keywords can have an optional namespace. For example, `:foo/bar`. This is useful
+for functions in a namespace to prevent key collisions on a globally accessible
+map.
+
+Preceding a keyword with `::` will prepend the given keyword with the current
+namespace.  For example, in the user namespace, `::foo` is read as `:user/foo`.
+
+If a keyword is prefixed by `::` and is namespace-qualified, the namespace part is properly resolved.
+For example, if `foo` is an alias of `cljs.core`, then `::foo/bar` evaluates to `:cljs.core/bar`.
+A reader exception is thrown if `foo` is not a namespace.
+
+===== TODO
+when keywords allow number prefixes, make note of the first version when it is allowed
+
+===== Related
+cljs.core/keyword
+cljs.core/keyword?
+
+===== Example#e5fdbe
+
+```
+:foo
+;;=> :foo
+
+::foo
+;;=> :user/foo
+
+:a/foo
+;;=> :a/foo
+```
+
+===== Example#9765fe
+
+A keyword is also callable for retrieving values from a map:
+
+```
+(def m {:foo 1})
+(:foo m)
+;;=> 1
+
+(def things [{:foo 1 :bar 2}
+             {:foo 3 :bar 4}
+             {:foo 5 :bar 6}])
+(map :foo things)
+;;=> (1 3 5)
+```

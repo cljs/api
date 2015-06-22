@@ -1,0 +1,17 @@
+===== Name
+cljs.core/identity
+
+===== Signature
+[x]
+
+===== Description
+
+Returns its argument.
+
+===== Related
+cljs.core/nil?
+
+===== TODO
+
+Would be nice to provide a quick explanation as to why this function can be
+useful.

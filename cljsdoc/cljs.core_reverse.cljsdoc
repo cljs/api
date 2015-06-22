@@ -1,0 +1,12 @@
+===== Name
+cljs.core/reverse
+
+===== Signature
+[coll]
+
+===== Description
+
+Returns a sequence of the items in `coll` in reverse order. Not lazy.
+
+===== Related
+cljs.core/rseq

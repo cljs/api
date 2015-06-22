@@ -1,0 +1,32 @@
+===== Name
+cljs.core/bit-or
+
+===== Signature
+[x y]
+[x y & more]
+
+===== Description
+
+Bitwise "or". Same as `x | y` in JavaScript.
+
+===== Related
+cljs.core/bit-and
+cljs.core/bit-xor
+
+===== Example#ecea10
+
+Bits can be entered using radix notation:
+
+```
+(bit-or 2r1100 2r1010)
+;;=> 14
+;; 14 = 2r1110
+```
+
+Same numbers in decimal:
+
+```
+(bit-or 12 10)
+;;=> 14
+```
+

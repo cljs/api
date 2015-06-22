@@ -1,0 +1,12 @@
+===== Name
+cljs.core/nnext
+
+===== Signature
+[coll]
+
+===== Description
+
+Same as `(next (next coll))`.
+
+===== Related
+cljs.core/next

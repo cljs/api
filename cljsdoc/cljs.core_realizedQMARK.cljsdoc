@@ -1,0 +1,12 @@
+===== Name
+cljs.core/realized?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if a value has been produced for a lazy sequence.
+
+===== Related
+cljs.core/lazy-seq

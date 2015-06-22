@@ -1,0 +1,56 @@
+===== Name
+syntax/number
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a number.  ClojureScript numbers are the same as JavaScript numbers;
+they are represented as double-precision 64-bit format IEEE 754 values.
+
+===== Example#f96060
+
+```
+123
+;;=> 123
+
+123.45
+;;=> 123.45
+```
+
+Scientific notation;
+
+```
+12e3
+;;=> 12000
+
+1.2e-3
+;;=> 0.0012
+```
+
+Standard hex and octal notations:
+
+```
+0x1f
+;;=> 31
+
+010
+;;=> 8
+```
+
+Radix notation for using up to base 36.
+
+```
+2r10111
+;;=> 23
+
+8r32
+;;=> 26
+
+16rFF
+;;=> 255
+
+36rZ
+;;=> 35
+```

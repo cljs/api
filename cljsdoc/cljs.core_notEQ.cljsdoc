@@ -1,0 +1,17 @@
+===== Name
+cljs.core/not=
+
+===== Signature
+[x]
+[x y]
+[x y & more]
+
+===== Description
+
+Returns the opposite of `=`.
+
+Same as `(not (= x y))`
+
+===== Related
+cljs.core/=
+cljs.core/not

@@ -1,0 +1,13 @@
+===== Name
+cljs.core/make-array
+
+===== Signature
+[size]
+
+===== Description
+
+Creates an empty JavaScript array of size `size`.
+
+===== Related
+cljs.core/aclone
+cljs.core/array

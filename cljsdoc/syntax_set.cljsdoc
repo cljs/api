@@ -1,0 +1,29 @@
+===== Name
+syntax/set
+#{}
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a literal set.  Values must be unique.
+
+===== Related
+cljs.core/hash-set
+cljs.core/sorted-set
+cljs.core/sorted-set-by
+
+===== Example#f11ab6
+
+```
+#{1 2 3}
+;;=> #{1 2 3}
+```
+
+Duplicate values will cause an error:
+
+```
+#{1 1 2 3}
+;; Error: Duplicate key: 1
+```

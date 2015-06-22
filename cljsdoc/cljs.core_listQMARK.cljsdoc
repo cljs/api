@@ -1,0 +1,14 @@
+===== Name
+cljs.core/list?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is a list, false otherwise.
+
+===== Related
+cljs.core/seq?
+cljs.core/sequential?
+cljs.core/coll?

@@ -1,0 +1,12 @@
+===== Name
+cljs.core/cons
+
+===== Signature
+[x coll]
+
+===== Description
+
+Returns a new sequence where `x` is the first element and `coll` is the rest.
+
+===== Related
+cljs.core/conj

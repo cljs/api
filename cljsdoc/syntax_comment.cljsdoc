@@ -1,0 +1,28 @@
+===== Name
+syntax/comment
+;
+
+===== Type
+macro character
+
+===== Description
+
+"Comments out" everything after `;` on the current line.
+
+===== Related
+syntax/ignore
+cljs.core/comment
+
+===== Example#ab62d2
+
+Add comments to code:
+
+```
+(def a 1) ; this is a comment
+```
+
+It is common to use `;;` for comments that have their own line:
+
+```
+;; this is comment is on its own line
+```

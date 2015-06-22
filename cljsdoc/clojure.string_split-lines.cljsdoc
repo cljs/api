@@ -1,0 +1,12 @@
+===== Name
+clojure.string/split-lines
+
+===== Signature
+[s]
+
+===== Description
+
+Splits `s` on `\n` or `\r\n`.
+
+===== Related
+clojure.string/split

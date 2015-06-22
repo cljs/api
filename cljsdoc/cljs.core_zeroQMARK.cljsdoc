@@ -1,0 +1,13 @@
+===== Name
+cljs.core/zero?
+
+===== Signature
+[n]
+
+===== Description
+
+Returns true if `n` is 0, false otherwise.
+
+===== Related
+cljs.core/pos?
+cljs.core/neg?

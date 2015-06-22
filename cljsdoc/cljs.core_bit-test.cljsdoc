@@ -1,0 +1,31 @@
+===== Name
+cljs.core/bit-test
+
+===== Signature
+[x n]
+
+===== Description
+
+Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.
+
+===== Example#f64664
+
+Bits can be entered using radix notation:
+
+```
+(bit-test 2r0100 2)
+;;=> true
+
+(bit-test 2r0100 1)
+;;=> false
+```
+
+Same numbers in decimal:
+
+```
+(bit-test 4 2)
+;;=> true
+
+(bit-test 4 1)
+;;=> false
+```

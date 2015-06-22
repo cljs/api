@@ -1,0 +1,22 @@
+===== Name
+clojure.string/replace
+
+===== Signature
+[s match replacement]
+
+===== Description
+
+Replaces all instance of `match` with `replacement` in `s`.
+
+The options for match / replacement are:
+
+| match  | replacement |
+|--------|-------------|
+| string | string      |
+| regex  | string      |
+| regex  | function    |
+
+===== Related
+cljs.core/subs
+clojure.string/split
+clojure.string/replace-first

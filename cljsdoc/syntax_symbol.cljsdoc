@@ -1,0 +1,52 @@
+===== Name
+syntax/symbol
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a symbol.  When evaluated, its result will be the value that the symbol
+is bound to.
+
+Some naming rules:
+
+- must not begin with a number
+- can contain special characters `*`, `+`, `!`, `-`, `_`, `?`
+- symbols starting or ending with a decimal are reserved for interop purposes
+
+Symbols can have an optional namespace. For example, `foo/bar` evaluates to the
+value of the `bar` symbol of the `foo` namespace.
+
+To access symbols in the global JavaScript context, use the namespace `js`.
+For example, use `js/document` to get the global `document` JavaScript object.
+
+===== Related
+cljs.core/symbol
+cljs.core/symbol?
+
+===== Example#cd60a5
+
+The following has two symbols, `def` and `a`:
+
+```
+(def a 1)
+```
+
+The evaluation of the symbols is controlled by the evaluation of the list `(def
+a 1)`.  `def` evaluates to a special form, which suppresses the evaluation of
+`a` since it is just being used as a name for the bound value `1`.
+
+When a symbol is by itself, it will evaluated to 1:
+
+```
+a
+;;=> 1
+```
+
+To signify an unevaluated symbol, precede it with a quote:
+
+```
+'a
+;;=> a
+```

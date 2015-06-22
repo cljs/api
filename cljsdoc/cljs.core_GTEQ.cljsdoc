@@ -1,0 +1,31 @@
+===== Name
+cljs.core/>=
+
+===== Signature
+[x]
+[x y]
+[x y & more]
+
+===== Description
+
+Returns true if each successive number argument is less than or equal to the
+previous one, false otherwise.
+
+===== Related
+cljs.core/>
+
+===== Example#de73d7
+
+```
+(>= 2 1)
+;;=> true
+
+(>= 2 2)
+;;=> true
+
+(>= 1 2)
+;;=> false
+
+(>= 6 5 4 3 2)
+;;=> true
+```

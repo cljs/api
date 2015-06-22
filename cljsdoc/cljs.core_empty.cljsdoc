@@ -1,0 +1,14 @@
+===== Name
+cljs.core/empty
+
+===== Signature
+[coll]
+
+===== Description
+
+Returns an empty collection of the same category as `coll`.
+
+Returns nil if `coll` is nil.
+
+===== Related
+cljs.core/not-empty

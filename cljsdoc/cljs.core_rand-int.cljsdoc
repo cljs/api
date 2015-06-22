@@ -1,0 +1,12 @@
+===== Name
+cljs.core/rand-int
+
+===== Signature
+[n]
+
+===== Description
+
+Returns a random integer between 0 inclusive and `n` exclusive.
+
+===== Related
+cljs.core/rand

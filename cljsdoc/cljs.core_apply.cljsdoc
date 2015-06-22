@@ -1,0 +1,31 @@
+===== Name
+cljs.core/apply
+
+===== Signature
+[f args]
+[f x args]
+[f x y args]
+[f x y z args]
+[f a b c d & args]
+
+===== Description
+
+Applies function `f` to the argument list formed by prepending intervening
+arguments to `args`.
+
+===== Related
+cljs.core/map
+
+===== Example#174052
+
+```
+(max 1 2 3)
+;;=> 3
+
+(apply max [1 2 3])
+;;=> 3
+
+(apply max 1 [2 3])
+;;=> 3
+```
+

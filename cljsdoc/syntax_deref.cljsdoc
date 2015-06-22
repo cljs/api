@@ -1,0 +1,26 @@
+===== Name
+syntax/deref
+@
+
+===== Type
+macro character
+
+===== Description
+
+Used to dereference a reference value (e.g. an atom).  Expands to `(deref ...)`.
+
+`@foo` = `(deref foo)`
+
+===== Related
+cljs.core/deref
+
+===== Example#08f886
+
+```
+(def a (atom 1))
+@a
+;;=> 1
+
+(deref a)
+;;=> 1
+```

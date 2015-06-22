@@ -1,0 +1,27 @@
+===== Name
+cljs.core/associative?
+
+===== Signature
+[coll]
+
+===== Description
+
+Returns true if `coll` implements the `IAssociative` protocol, false otherwise.
+
+Maps and vectors are associative.
+
+===== Example#29a37f
+
+```
+(associative? [1 2 3])
+;;=> true
+
+(associative? {:a 1 :b 2})
+;;=> true
+
+(associative? #{1 2 3})
+;;=> false
+
+(associative? '(1 2 3))
+;;=> false
+```

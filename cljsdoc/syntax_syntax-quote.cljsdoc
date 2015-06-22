@@ -1,0 +1,39 @@
+===== Name
+syntax/syntax-quote
+`
+
+===== Type
+syntax
+
+===== Description
+
+(Only intended for use in Clojure macros, which can be used from but not
+written in ClojureScript.)
+
+Prevent evaluation of the following form.
+
+Adds namespace-qualification to any symbols inside the following form by
+resolving them in the current context.
+
+Any non-namespaced symbols ending with `#` will resolve to a generated symbol
+of the same name with `_` and a unique ID appended.  All references to that
+symbol within a syntax-quoted expression will resolve to the same generated
+symbol.
+
+===== Related
+syntax/quote
+syntax/unquote
+syntax/unquote-splicing
+
+===== Example#bffbdf
+
+```
+`foo
+;;=> cljs.user/foo
+
+`foo#
+;;=> foo__20418__auto__
+
+`(def foo 1)
+;;=> (def cljs.user/foo 1)
+```

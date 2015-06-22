@@ -1,0 +1,12 @@
+===== Name
+cljs.core/key
+
+===== Signature
+[map-entry]
+
+===== Description
+
+Returns the key of the map entry.
+
+===== Related
+cljs.core/keys

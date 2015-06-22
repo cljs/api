@@ -1,0 +1,13 @@
+===== Name
+cljs.core/find
+
+===== Signature
+[coll k]
+
+===== Description
+
+Returns the map entry for key `k`, or nil if `k` is not found.
+
+===== Related
+cljs.core/get
+cljs.core/get-in

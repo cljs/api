@@ -1,0 +1,20 @@
+===== Name
+cljs.core/tree-seq
+
+===== Signature
+[branch? children root]
+
+===== Description
+
+Returns a lazy sequence of the nodes in a tree, via a depth-first walk.
+
+`branch?` must be a function of one argument that returns true if passed a node
+that can have children (but may not).
+
+`children` must be a function of one argument that returns a sequence of the
+children. `children` will only be called on nodes for which `branch?` returns
+true.
+
+`root` is the root node of the tree.
+
+===== Related

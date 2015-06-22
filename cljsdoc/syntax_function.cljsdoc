@@ -1,0 +1,37 @@
+===== Name
+syntax/function
+#()
+
+===== Type
+syntax
+
+===== Description
+
+Create an anonymous function.
+
+`#(...)` = `(fn [args] (...))`
+
+Use `%` or `%1` to access the first argument.  Use `%2`, `%3` and so on to
+access subsequent arguments.  Use `%&` to access the rest of the arguments past
+the highest individually referenced argument.
+
+Note that `#(1)` does not create a function that returns `1`, for the same
+reason that `(1)` does evaluate to `1`.
+
+`#()` forms cannot be nested, since this would create an ambiguity between the
+automatically assigned argument names.
+
+===== Related
+cljs.core/fn
+cljs.core/defn
+
+===== Example#6a87de
+
+```
+(map #(* 2 %) [1 2 3])
+;;=> (2 4 6)
+
+(def f #(println %1 %2 %&))
+(f 1 2 3 4 5)
+;; prints: 1 2 (3 4)
+```

@@ -1,0 +1,14 @@
+===== Name
+cljs.core/odd?
+
+===== Signature
+[n]
+
+===== Description
+
+Returns true if `n` is an odd number.
+
+Throws an exception if `n` is not an integer.
+
+===== Related
+cljs.core/even?

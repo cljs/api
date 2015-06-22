@@ -1,0 +1,25 @@
+===== Name
+cljs.core/doseq
+
+===== Type
+macro
+
+===== Signature
+[seq-exprs & body]
+
+===== Description
+
+Repeatedly executes `body` (presumably for side-effects) with bindings and
+filtering as provided by `for`. Does not retain the head of the sequence.
+
+Returns nil.
+
+===== Related
+cljs.core/doall
+cljs.core/dorun
+cljs.core/for
+cljs.core/dotimes
+
+===== TODO
+
+This needs a better explanation and example.

@@ -1,0 +1,65 @@
+===== Name
+cljs.core/->>
+
+===== Type
+macro
+
+===== Signature
+[x & forms]
+
+===== Description
+
+The thread-last macro "threads" an expression through several forms as the last
+item in a list.
+
+Inserts `x` as the last item in the first form, making a list of it if it is not
+a list already. If there are more forms, inserts the first form as the last item
+in second form, etc.
+
+<table class="code-tbl-9bef6">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Expands To</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><pre>
+(->> x
+  (a b c)
+  d
+  (x y z))</pre></td>
+      <td><pre>
+(x y z (d (a b c x)))</pre></td></tr></tbody></table>
+
+===== Related
+cljs.core/->
+
+===== TODO
+add threading macro animations link here
+
+===== Example#1dc72c
+
+Sequence transformation functions often take a sequence as the last argument,
+thus the thread-last macro is commonly used with them.  Here we compute the sum
+of the first 10 even squares:
+
+``
+(->> (range)
+     (map #(* % %))
+     (filter even?)
+     (take 10)
+     (reduce +))
+;;=> 1140
+```
+
+This expands to:
+
+```
+(reduce +
+  (take 10
+    (filter even?
+      (map #(* % %)
+        (range)))))
+;;=> 1140
+```
+

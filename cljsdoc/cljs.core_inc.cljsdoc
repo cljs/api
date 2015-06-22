@@ -1,0 +1,12 @@
+===== Name
+cljs.core/inc
+
+===== Signature
+[x]
+
+===== Description
+
+Returns a number one greater than `x`.
+
+===== Related
+cljs.core/dec

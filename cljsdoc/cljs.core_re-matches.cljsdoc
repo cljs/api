@@ -1,0 +1,11 @@
+===== Name
+cljs.core/re-matches
+
+===== Signature
+[re s]
+
+===== Description
+
+Returns the result of `(re-find re s)` if `re` fully matches `s`.
+
+===== Related

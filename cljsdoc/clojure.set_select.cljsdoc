@@ -1,0 +1,12 @@
+===== Name
+clojure.set/select
+
+===== Signature
+[pred xset]
+
+===== Description
+
+Returns a set of the elements for which `pred` is true.
+
+===== Related
+cljs.core/filter

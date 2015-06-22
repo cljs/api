@@ -1,0 +1,31 @@
+===== Name
+syntax/map
+{}
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a map.  Must contain pairs of key-values.  Keys and values can be any type.
+
+===== Related
+cljs.core/hash-map
+cljs.core/array-map
+cljs.core/sorted-map
+cljs.core/sorted-map-by
+
+===== Example#4696ad
+
+```
+{:foo 1 :bar 2}
+;;=> {:foo 1, :bar 2}
+```
+
+Use any value as a key:
+
+```
+(def m {[1 2] 3})
+(get m [1 2])
+;;=> 3
+```

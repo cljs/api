@@ -1,0 +1,52 @@
+===== Name
+syntax/regex
+#""
+
+===== Type
+syntax
+
+===== Description
+
+Signifies a regular expression. Represented as JavaScript regular expressions.
+
+An inline modifier can be included at the beginning of the regex:
+
+|  modifier          | ClojureScript | JavaScript |
+|--------------------|---------------|------------|
+|  global match      | N/A           | `/foo/g`   |
+|  case-insensitive  | `#"(?i)foo"`  | `/foo/i`   |
+|  multi-line        | `#"(?m)f.*o"` | `/f.*o/m`  |
+
+Global matches (i.e. multiple matches per line) can be achieved using `re-seq`.
+
+===== Related
+cljs.core/re-pattern
+cljs.core/re-find
+cljs.core/re-seq
+cljs.core/re-matches
+
+===== TODO
+add multi-line example. Why do these have the same output of nil?:
+
+(re-seq #"(?m)a.*b" "a\nb")
+(re-seq #"a.*b" "a\nb")
+
+===== Example#dacf80
+
+```
+#"foo"
+;;=> #"foo"
+
+(re-seq #"foo" "FOO BAR foo bar")
+;;=> ("foo")
+```
+
+Case-insensitive matching:
+
+```
+#"(?i)foo"
+;;=> #"foo"
+
+(re-seq #"(?i)foo" "FOO BAR foo bar")
+;;=> ("FOO" "foo")
+```

@@ -1,0 +1,57 @@
+===== Name
+syntax/metadata
+^
+
+===== Type
+macro character
+
+===== Description
+
+Attaches metadata to the following form.
+
+Metadata is a map.  It can be attached to a collection or symbol.
+
+If the provided metadata is a keyword, the resulting metadata will be a map
+containing that keyword with an associated value `true`.
+
+If the provided metadata is a string or symbol, the resulting metadata will be
+a map associating `:tag` with the value of the string or evaluated symbol.
+
+===== Related
+cljs.core/meta
+cljs.core/with-meta
+cljs.core/vary-meta
+cljs.core/alter-meta!
+
+===== Example#5b8fec
+
+Attach metadata to a collection:
+
+```
+^:foo [1 2 3]
+;;=> [1 2 3]
+```
+
+View the resulting metadata:
+
+```
+(meta ^:foo [1 2 3])
+;;=> {:foo true}
+
+(meta ^{:foo "bar"} [1 2 3])
+;;=> {:foo "bar"}
+
+(meta ^"foo" [1 2 3])
+;;=> {:tag "foo"}
+
+(def foo 1)
+(meta ^foo [1 2 3])
+;;=> {:tag 1}
+```
+
+Chain metadata:
+
+```
+(meta ^:foo ^"foo" [1 2 3])
+;;=> {:foo true, :tag "foo"}
+```

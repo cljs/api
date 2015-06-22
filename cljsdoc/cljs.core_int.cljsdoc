@@ -1,0 +1,13 @@
+===== Name
+cljs.core/int
+
+===== Signature
+[x]
+
+===== Description
+
+Coerces `x` to an integer by stripping decimal places.
+
+===== Related
+cljs.core/char
+cljs.core/integer?

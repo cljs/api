@@ -1,0 +1,12 @@
+===== Name
+cljs.core/true?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is the value true, false otherwise.
+
+===== Related
+cljs.core/false?

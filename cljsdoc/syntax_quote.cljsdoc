@@ -1,0 +1,31 @@
+===== Name
+syntax/quote
+'
+
+===== Type
+syntax
+
+===== Description
+
+Prevent the evaluation of the following form.
+
+`'foo` = `(quote foo)`
+
+===== Related
+special/quote
+
+===== Example#0d2c26
+
+```
+'foo
+;;=> foo
+
+'(a b c)
+;;=> (a b c)
+
+'[a b c]
+;;=> [a b c]
+
+'(a b (c d))
+;;=> (a b (c d))
+```

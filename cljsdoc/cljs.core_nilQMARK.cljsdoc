@@ -1,0 +1,14 @@
+===== Name
+cljs.core/nil?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is nil, false otherwise.
+
+===== Related
+cljs.core/true?
+cljs.core/false?
+cljs.core/identity

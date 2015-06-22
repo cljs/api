@@ -1,0 +1,22 @@
+===== Name
+cljs.core/cond->>
+
+===== Type
+macro
+
+===== Signature
+[expr & clauses]
+
+===== Description
+
+Takes an expression and a set of test/form pairs. Threads `expr` (via `->>`)
+through each form for which the corresponding test expression is true.
+
+Note that, unlike `cond` branching, `cond->>` threading does not short circuit
+after the first true test expression.
+
+===== Related
+cljs.core/->
+cljs.core/->>
+cljs.core/cond->
+cljs.core/cond

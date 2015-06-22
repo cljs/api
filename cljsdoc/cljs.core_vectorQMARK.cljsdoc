@@ -1,0 +1,13 @@
+===== Name
+cljs.core/vector?
+
+===== Signature
+[x]
+
+===== Description
+
+Returns true if `x` is a vector, false otherwise.
+
+===== Related
+cljs.core/vector
+cljs.core/vec

@@ -1,0 +1,15 @@
+===== Name
+cljs.core/lazy-seq
+
+===== Signature
+[& body]
+
+===== Description
+
+Returns a new lazy sequence.
+
+===== Related
+cljs.core/lazy-cat
+cljs.core/realized?
+cljs.core/doall
+cljs.core/iterate
