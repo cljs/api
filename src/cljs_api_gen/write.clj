@@ -7,6 +7,7 @@
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.config :refer [*output-dir*
+                                 cljsdoc-dir
                                  refs-dir
                                  edn-result-file]]
     [cljs-api-gen.encode :as encode]
@@ -245,7 +246,8 @@
                                            (= "type" (:type item)) (str "."))
                                    :args (sig-args %))
                         (:signature item))
-        :clj-symbol (make-clj-ref item))
+        :clj-symbol (make-clj-ref item)
+        :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
       (update-in [:syntax-form] fix-syntax-form)
       (add-source-trees)))
 

@@ -47,7 +47,7 @@ Example:
 See Also:
 
 {{#related}}
-{{.}}
+- `{{.}}`
 {{/related}}
 
 ---
@@ -92,3 +92,12 @@ Data used to generate this document:
 ```clj
 {{&data}}
 ```
+
+---
+
+Contributions to this document are accepted as Pull Requests to the following file:
+
+ <pre>
+[{{&cljsdoc-path}}](https://github.com/cljsinfo/api-refs/blob/master/{{&cljsdoc-path}})
+</pre>
+
