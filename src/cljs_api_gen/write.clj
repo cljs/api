@@ -234,6 +234,15 @@
     (map md-escape syntax-form)
     (md-escape syntax-form)))
 
+(defn add-related-links
+  [{:keys [related] :as item}]
+  (if related
+    (assoc item :related
+           (for [full-name related]
+             {:full-name full-name
+              :link (str (encode/encode-fullname full-name) ".md")}))
+    item))
+
 (defn ref-file-data
   [item]
   (-> item
@@ -249,6 +258,7 @@
         :clj-symbol (make-clj-ref item)
         :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
       (update-in [:syntax-form] fix-syntax-form)
+      (add-related-links)
       (add-source-trees)))
 
 (defn dump-ref-file!

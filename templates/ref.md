@@ -47,7 +47,7 @@ Example:
 See Also:
 
 {{#related}}
-- `{{.}}`
+[`{{&full-name}}`]({{&link}})<br>
 {{/related}}
 
 ---
