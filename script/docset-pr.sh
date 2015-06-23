@@ -5,6 +5,7 @@ set -e
 cd docset
 
 repo=Dash-User-Contributions
+rm -rf $repo
 
 if [ ! -d "$repo" ]; then
   git clone git@github.com:shaunlebron/${repo}.git
@@ -20,7 +21,7 @@ git reset --hard
 git checkout master
 
 # remove cljs branch
-git branch -D cljs
+git branch -D cljs || echo;
 
 # Need to reset to make simple squashed PRs and to prevent possible problems
 # from Dash's history rewriting from large file removal.
