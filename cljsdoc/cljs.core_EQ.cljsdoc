@@ -21,7 +21,7 @@ cljs.core/identical?
 
 ===== Example#edffb6
 
-```
+```clj
 (= 1)
 ;;=> true
 
@@ -42,14 +42,14 @@ cljs.core/identical?
 
 Sequences are considered equal in value if they have the same elements:
 
-```
+```clj
 (= '(1 2) [1 2])
 ;;=> true
 ```
 
 But you cannot compare JavaScript arrays until you convert them to sequences:
 
-```
+```clj
 (def a #js [1 2])
 (def b #js [1 2])
 (= a b)
@@ -64,7 +64,7 @@ But you cannot compare JavaScript arrays until you convert them to sequences:
 It is natural to compare deeply nested collections since value equality checks
 are cheap in ClojureScript:
 
-```
+```clj
 (def a {:foo {:bar "baz"}})
 (def b {:foo {:bar "baz"}})
 (= a b)
@@ -77,7 +77,7 @@ are cheap in ClojureScript:
 JavaScript objects cannot be compared in this way until they are converted to
 ClojureScript collections:
 
-```
+```clj
 (def a #js {:foo #js {:bar "baz"}})
 (def b #js {:foo #js {:bar "baz"}})
 (= a b)

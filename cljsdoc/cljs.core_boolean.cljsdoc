@@ -14,7 +14,7 @@ special/if
 
 ===== Example#9edf3a
 
-```
+```clj
 (boolean 1)
 ;;=> true
 

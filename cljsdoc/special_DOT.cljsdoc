@@ -63,7 +63,7 @@ m.length;
 //=> 11
 ```
 
-```
+```clj
 ;; ClojureScript
 (def m "Hello World")
 (.-length m)
@@ -81,7 +81,7 @@ m.replace("H", "");
 //=> "ello World";
 ```
 
-```
+```clj
 ;; ClojureScript
 (.toUpperCase m)
 ;;=> "HELLO WORLD"
@@ -90,19 +90,17 @@ m.replace("H", "");
 ;;=> "ello World"
 ```
 
-```
-
 ===== Example#7c5e58
 
 Create a JavaScript object `o`:
 
-```
+```clj
 (def o #js {:foo "bar"})
 ```
 
 You can get the value at property `"foo"` with any of the following:
 
-```
+```clj
 (. o -foo)
 ;;=> "bar"
 

@@ -25,7 +25,7 @@ cljs.core/get-validator
 
 ===== Example#e6a38a
 
-```
+```clj
 (def a (atom 1))
 
 @a

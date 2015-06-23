@@ -16,7 +16,7 @@ cljs.core/bit-flip
 
 Bits can be entered using radix notation:
 
-```
+```clj
 (bit-clear 2r1111 2)
 ;;=> 11
 ;; 11 = 2r1011
@@ -24,7 +24,7 @@ Bits can be entered using radix notation:
 
 Same numbers in decimal:
 
-```
+```clj
 (bit-clear 15 2)
 ;;=> 11
 ```

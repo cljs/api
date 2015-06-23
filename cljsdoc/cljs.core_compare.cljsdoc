@@ -17,7 +17,7 @@ other object.
 
 ===== Example#e13fa0
 
-```
+```clj
 (compare 10 12)
 ;;=> -1
 

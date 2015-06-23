@@ -16,7 +16,7 @@ You can also use `;` to "comment out" code until the end of a line.
 
 ===== Example#482fd7
 
-```
+```clj
 (comment 123)
 ;;=> nil
 
@@ -28,7 +28,7 @@ You can also use `;` to "comment out" code until the end of a line.
 
 Inner forms must still be syntactically correct:
 
-```
+```clj
 (comment [1 2 3]])
 ;; Error: Unmatched delimiter ]
 

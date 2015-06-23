@@ -18,7 +18,7 @@ cljs.core/vary-meta
 
 Metadata of symbols and collections can be altered:
 
-```
+```clj
 (def a ^:foo [1 2 3])
 (meta a)
 ;;=> {:foo true}
@@ -30,7 +30,7 @@ Metadata of symbols and collections can be altered:
 
 Metadata of vars cannot be altered:
 
-```
+```clj
 (def a [1 2 3])
 (meta #'a)
 ;;=> {:arglists (), :test nil, :name a, :column 1, :line 1, :file "<cljs repl>", :doc nil, :ns cljs.user}

@@ -29,7 +29,7 @@ cljs.core/symbol?
 
 The following has two symbols, `def` and `a`:
 
-```
+```clj
 (def a 1)
 ```
 
@@ -39,14 +39,14 @@ a 1)`.  `def` evaluates to a special form, which suppresses the evaluation of
 
 When a symbol is by itself, it will evaluated to 1:
 
-```
+```clj
 a
 ;;=> 1
 ```
 
 To signify an unevaluated symbol, precede it with a quote:
 
-```
+```clj
 'a
 ;;=> a
 ```

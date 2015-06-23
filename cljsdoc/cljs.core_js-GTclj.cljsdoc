@@ -25,7 +25,7 @@ cljs.core/clj->js
 
 Parse a JSON string:
 
-```
+```clj
 (def json "{\"foo\": 1, \"bar\": 2, \"baz\": [1,2,3]}")
 (def a (.parse js/JSON json))
 ;;=> #js {:foo 1, :bar 2, :baz #js [1 2 3]}
@@ -33,7 +33,7 @@ Parse a JSON string:
 
 Convert JSON data `a` to ClojureScript data:
 
-```
+```clj
 (js->clj a)
 ;;=> {"foo" 1, "bar" 2, "baz" [1 2 3]}
 

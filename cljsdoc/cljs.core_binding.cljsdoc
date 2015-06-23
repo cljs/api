@@ -20,7 +20,7 @@ cljs.core/let
 
 ===== Example#7dd17f
 
-```
+```clj
 (def ^:dynamic *foo* 1)
 
 (defn do-something []

@@ -21,6 +21,6 @@ specialrepl/require
 
 ===== Example#e34cf4
 
-```
+```clj
 (require-macros '[cljs.core.async.macros :refer [go]])
 ```

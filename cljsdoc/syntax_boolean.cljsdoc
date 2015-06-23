@@ -12,7 +12,7 @@ syntax
 
 ===== Example#1afc59
 
-```
+```clj
 true
 ;;=> true
 

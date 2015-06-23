@@ -12,7 +12,7 @@ Acts as a `recur` target, which will allow tail-call optimization.
 
 ===== Example#60291e
 
-```
+```clj
 (loop [x 0]
   (when (< x 10)
     (println x)

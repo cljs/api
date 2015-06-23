@@ -27,7 +27,7 @@ syntax/unquote-splicing
 
 ===== Example#bffbdf
 
-```
+```clj
 `foo
 ;;=> cljs.user/foo
 

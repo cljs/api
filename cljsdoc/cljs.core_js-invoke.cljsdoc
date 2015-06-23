@@ -22,7 +22,7 @@ var obj = {
 
 We can invoke it from ClojureScript:
 
-```
+```clj
 (js-invoke js/obj "my sum" 1 2)
 ;=> 3
 ```

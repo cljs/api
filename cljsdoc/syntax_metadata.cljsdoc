@@ -27,14 +27,14 @@ cljs.core/alter-meta!
 
 Attach metadata to a collection:
 
-```
+```clj
 ^:foo [1 2 3]
 ;;=> [1 2 3]
 ```
 
 View the resulting metadata:
 
-```
+```clj
 (meta ^:foo [1 2 3])
 ;;=> {:foo true}
 
@@ -51,7 +51,7 @@ View the resulting metadata:
 
 Chain metadata:
 
-```
+```clj
 (meta ^:foo ^"foo" [1 2 3])
 ;;=> {:foo true, :tag "foo"}
 ```

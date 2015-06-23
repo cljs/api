@@ -14,7 +14,7 @@ Returns `nil`.
 
 ===== Example#1dc16f
 
-```
+```clj
 (assert true)
 ;;=> nil
 

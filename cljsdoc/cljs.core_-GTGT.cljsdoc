@@ -43,7 +43,7 @@ Sequence transformation functions often take a sequence as the last argument,
 thus the thread-last macro is commonly used with them.  Here we compute the sum
 of the first 10 even squares:
 
-``
+```clj
 (->> (range)
      (map #(* % %))
      (filter even?)
@@ -54,7 +54,7 @@ of the first 10 even squares:
 
 This expands to:
 
-```
+```clj
 (reduce +
   (take 10
     (filter even?

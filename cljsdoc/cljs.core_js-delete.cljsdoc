@@ -15,7 +15,7 @@ cljs.core/dissoc
 
 ===== Example#5b24ea
 
-```
+```clj
 (def a #js {:foo 1 :bar 2})
 (js-delete a "foo")
 

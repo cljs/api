@@ -14,7 +14,7 @@ cljs.repl/apropos
 
 ===== Example#9bf2b0
 
-```
+```clj
 (require 'clojure.set)
 
 (dir clojure.set)

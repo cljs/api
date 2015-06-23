@@ -21,7 +21,7 @@ syntax/unquote
 
 ===== Example#e6f73d
 
-```
+```clj
 (def foo '[a b c])
 `(~@foo)
 ;;=> (a b c)

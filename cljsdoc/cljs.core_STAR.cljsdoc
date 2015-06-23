@@ -19,7 +19,7 @@ cljs.core//
 
 ===== Example#bc4a1f
 
-```
+```clj
 ;; there is an implicit 1
 (*)
 ;;=> 1

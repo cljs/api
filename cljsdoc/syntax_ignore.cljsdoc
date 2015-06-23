@@ -16,7 +16,7 @@ cljs.core/comment
 
 ===== Example#f36d7a
 
-```
+```clj
 {:foo #_bar 2}
 ;;=> {:foo 2}
 ```
@@ -24,7 +24,7 @@ cljs.core/comment
 To comment out the last line of a function without worrying about commenting out
 the trailing parentheses:
 
-```
+```clj
 (defn foo []
   (println "hello")
   #_(println "world"))

@@ -13,7 +13,7 @@ cljs.core/count
 
 ===== Example#26f79f
 
-```
+```clj
 (def a #js [1 2 3])
 
 (alength a)

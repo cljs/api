@@ -20,7 +20,7 @@ cljs.core/remove-watch
 
 ===== Example#2f2fe0
 
-```
+```clj
 (def a (atom {}))
 
 (add-watch a :logger

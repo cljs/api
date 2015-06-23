@@ -12,7 +12,7 @@ Returns true if no two of the arguments are `=`
 
 ===== Example#b32799
 
-```
+```clj
 (distinct? 1)
 ;;=> true
 
@@ -31,7 +31,7 @@ Returns true if no two of the arguments are `=`
 
 Apply it a collection:
 
-```
+```clj
 (apply distinct? [1 2 3])
 ;;=> true
 

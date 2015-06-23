@@ -27,7 +27,7 @@ cljs.core/doto
 //=> "X B C D"
 ```
 
-```
+```clj
 ;; ClojureScript
 (.. "a b c d"
     toUpperCase
@@ -37,21 +37,21 @@ cljs.core/doto
 
 This is expanded to:
 
-```
+```clj
 (. (. "a b c d" toUpperCase) (replace "A" "X"))
 ```
 
 
 which is equivalent to:
 
-```
+```clj
 (.replace (.toUpperCase "a b c d") "A" "X")
 ;;=> "X B C D"
 ```
 
 Compare to the equivalent form using the thread-first `->` macro:
 
-```
+```clj
 (-> "a b c d"
     .toUpperCase
     (.replace "A" "X"))

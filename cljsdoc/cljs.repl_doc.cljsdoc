@@ -15,7 +15,7 @@ special/var
 
 ===== Example#4d2768
 
-```
+```clj
 (doc map)
 ;; Prints:
 ;;  -------------------------

@@ -32,7 +32,7 @@ cljs.core/str
 
 ===== Example#495a47
 
-```
+```clj
 \c
 ;;=> "c"
 

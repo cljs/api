@@ -15,7 +15,7 @@ cljs.repl/find-doc
 
 ===== Example#aceda4
 
-```
+```clj
 (apropos "some")
 ;;=> (cljs.core/if-some
 ;;    cljs.core/some

@@ -15,7 +15,7 @@ cljs.core/with-meta
 
 ===== Example#8cca62
 
-```
+```clj
 (def a ^:foo [1 2 3])
 (def b (vary-meta a assoc :bar true))
 

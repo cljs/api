@@ -15,7 +15,7 @@ cljs.core/contains?
 
 ===== Example#a45b18
 
-```
+```clj
 (def a #js {:foo 1 :bar 2})
 
 (js-in "foo" a)
@@ -27,7 +27,7 @@ cljs.core/contains?
 
 Properties inherited from prototype chain are also detected:
 
-```
+```clj
 (js-in "toString" a)
 ;;=> true
 ```

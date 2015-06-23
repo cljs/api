@@ -22,7 +22,7 @@ cljs.core/persistent!
 
 ===== Example#7d1e6b
 
-```
+```clj
 (def tcoll (transient! {}))
 (assoc! tcoll :a 1)
 (assoc! tcoll :b 2)

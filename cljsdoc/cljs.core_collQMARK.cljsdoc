@@ -17,7 +17,7 @@ cljs.core/sequential?
 
 ===== Example#d30884
 
-```
+```clj
 (coll? [1 2 3])
 ;;=> true
 
@@ -33,7 +33,7 @@ cljs.core/sequential?
 
 Not collections:
 
-```
+```clj
 (coll? "foo")
 ;;=> false
 

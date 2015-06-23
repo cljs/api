@@ -11,7 +11,7 @@ they are represented as double-precision 64-bit format IEEE 754 values.
 
 ===== Example#f96060
 
-```
+```clj
 123
 ;;=> 123
 
@@ -21,7 +21,7 @@ they are represented as double-precision 64-bit format IEEE 754 values.
 
 Scientific notation;
 
-```
+```clj
 12e3
 ;;=> 12000
 
@@ -31,7 +31,7 @@ Scientific notation;
 
 Standard hex and octal notations:
 
-```
+```clj
 0x1f
 ;;=> 31
 
@@ -41,7 +41,7 @@ Standard hex and octal notations:
 
 Radix notation for using up to base 36.
 
-```
+```clj
 2r10111
 ;;=> 23
 

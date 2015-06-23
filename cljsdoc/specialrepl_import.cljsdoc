@@ -17,7 +17,7 @@ Import Google Closure classes.
 
 ===== Example#03acc0
 
-```
+```clj
 (import 'goog.math.Long
         '[goog.math Vec2 Vec3]
         '[goog.math Integer])

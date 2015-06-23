@@ -17,7 +17,7 @@ cljs.core/quot
 
 ===== Example#824bb7
 
-```
+```clj
 (/ 6 3)
 ;;=> 2
 

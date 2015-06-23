@@ -29,7 +29,7 @@ add threading macro animations link here
 
 ===== Example#5e7eef
 
-```
+```clj
 (as-> [1 2 3 4] x
   (reduce + x)
   (/ x 2))

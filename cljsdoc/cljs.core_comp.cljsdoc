@@ -21,7 +21,7 @@ cljs.core/juxt
 
 ===== Example#5d3250
 
-```
+```clj
 (def f (comp str inc +))
 (f 1 2 3)
 ;;=> "7"

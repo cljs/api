@@ -14,7 +14,7 @@ cljs.repl/doc
 
 ===== Example#50ec43
 
-```
+```clj
 (find-doc "some")
 ;; Prints: (docs truncated)
 ;; - IPrintWriter (docstring match)

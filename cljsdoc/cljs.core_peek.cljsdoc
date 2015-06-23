@@ -21,7 +21,7 @@ cljs.core/conj
 
 With vectors:
 
-```
+```clj
 (peek [1 2 3])
 ;;=> 3
 
@@ -39,7 +39,7 @@ With vectors:
 
 With lists:
 
-```
+```clj
 (peek '(1 2 3))
 ;;=> 1
 

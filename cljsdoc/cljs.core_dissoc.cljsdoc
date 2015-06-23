@@ -17,7 +17,7 @@ Has no effect on the map type (hashed/sorted).
 
 ===== Example#fd6ae9
 
-```
+```clj
 (dissoc {:key "value" :key2 "value2"} :key)
 ;;=> {:key2 "value2"}
 ```

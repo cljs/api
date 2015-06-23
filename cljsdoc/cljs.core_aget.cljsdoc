@@ -30,7 +30,7 @@ a["foo"][0];
 //=> 5
 ```
 
-```
+```clj
 ;; ClojureScript
 (def a #js {:foo #js [5 6]})
 
@@ -51,7 +51,7 @@ document.location.href;
 
 The following are equivalent:
 
-```
+```clj
 ;; ClojureScript
 (aget js/document "location" "href")
 ;;=> "http://example.com"

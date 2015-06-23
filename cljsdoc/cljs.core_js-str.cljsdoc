@@ -15,7 +15,7 @@ cljs.core/str
 
 ===== Example#e92009
 
-```
+```clj
 (js-str 23)
 ;;=> "23"
 

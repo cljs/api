@@ -18,7 +18,7 @@ cljs.core/pop
 
 ===== Example#0869af
 
-```
+```clj
 (rest [1 2 3])
 ;;=> (2 3)
 

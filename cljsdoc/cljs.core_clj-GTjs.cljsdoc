@@ -22,7 +22,7 @@ cljs.core/js->clj
 
 ===== Example#2b1057
 
-```
+```clj
 (clj->js {:foo 1 :bar 2})
 ;;=> #js {:foo 1, :bar 2}
 

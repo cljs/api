@@ -19,7 +19,7 @@ cljs.core/take-last
 
 ===== Example#eb0836
 
-```
+```clj
 (last [1 2 3])
 ;;=> 3
 

@@ -17,7 +17,7 @@ cljs.core/rem
 
 ===== Example#8165e8
 
-```
+```clj
 (mod -5 3)
 ;;=> 1
 

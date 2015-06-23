@@ -16,14 +16,14 @@ cljs.core/sorted-set-by
 
 ===== Example#f11ab6
 
-```
+```clj
 #{1 2 3}
 ;;=> #{1 2 3}
 ```
 
 Duplicate values will cause an error:
 
-```
+```clj
 #{1 1 2 3}
 ;; Error: Duplicate key: 1
 ```

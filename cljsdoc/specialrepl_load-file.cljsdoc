@@ -15,6 +15,6 @@ Load file at `filename`, then compiles and evaluates its code.
 
 ===== Example#0903c5
 
-```
+```clj
 (load-file "path/to/foo.cljs")
 ```

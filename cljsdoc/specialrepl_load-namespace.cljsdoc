@@ -19,13 +19,13 @@ and only once.
 
 This example doesn't work.  Why?
 
-```
+```clj
 (load-namespace 'clojure.set)
 (clojure.set/intersection #{2 3} #{3 4})
 ```
 
 ===== Example#0b1a1d
 
-```
+```clj
 (load-namespace 'clojure.set)
 ```

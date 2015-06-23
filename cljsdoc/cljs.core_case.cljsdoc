@@ -35,7 +35,7 @@ cljs.core/condp
 
 ===== Example#09a90c
 
-```
+```clj
 (def a 1)
 (def b 2)
 

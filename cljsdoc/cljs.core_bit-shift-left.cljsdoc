@@ -15,7 +15,7 @@ cljs.core/bit-shift-right
 
 Bits can be entered using radix notation:
 
-```
+```clj
 (bit-shift-left 2r0101 1)
 ;;=> 10
 ;; 10 = 2r1010
@@ -23,7 +23,7 @@ Bits can be entered using radix notation:
 
 Same numbers in decimal:
 
-```
+```clj
 (bit-shift-left 5 1)
 ;;=> 10
 ```

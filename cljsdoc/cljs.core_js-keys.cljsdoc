@@ -13,7 +13,7 @@ cljs.core/keys
 
 ===== Example#5dd933
 
-```
+```clj
 (js-keys #js {:foo 1 :bar 2})
 ;;=> #js ["foo" "bar"]
 ```

@@ -23,7 +23,7 @@ special/if
 
 ===== Example#a39a73
 
-```
+```clj
 (and)
 ;;=> true
 
@@ -47,7 +47,7 @@ special/if
 
 `nil` and `false` are the only falsy values and everything else is truthy:
 
-```
+```clj
 (and "foo" "bar")
 ;;=> "bar"
 

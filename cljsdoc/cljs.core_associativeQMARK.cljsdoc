@@ -12,7 +12,7 @@ Maps and vectors are associative.
 
 ===== Example#29a37f
 
-```
+```clj
 (associative? [1 2 3])
 ;;=> true
 

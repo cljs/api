@@ -16,7 +16,7 @@ cljs.core/deref
 
 ===== Example#08f886
 
-```
+```clj
 (def a (atom 1))
 @a
 ;;=> 1

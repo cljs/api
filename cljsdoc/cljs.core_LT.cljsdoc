@@ -16,7 +16,7 @@ cljs.core/<=
 
 ===== Example#02e6d3
 
-```
+```clj
 (< 1 2)
 ;;=> true
 

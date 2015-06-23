@@ -23,7 +23,7 @@ cljs.core/cond
 
 ===== Example#f08338
 
-```
+```clj
 (def a 12)
 (cond-> a
   (> a 10) (str " is greater than 10")

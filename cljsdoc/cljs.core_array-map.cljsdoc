@@ -17,7 +17,7 @@ cljs.core/sorted-map
 
 ===== Example#198026
 
-```
+```clj
 (array-map :a 10)
 ;;=> {:a 10}
 

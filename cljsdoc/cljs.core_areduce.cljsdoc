@@ -15,7 +15,7 @@ cljs.core/reduce
 
 ===== Example#20a389
 
-```
+```clj
 (def a #js [1 2 3])
 (areduce a i ret 0 (+ ret (aget a i)))
 ;;=> 6

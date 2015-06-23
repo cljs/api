@@ -15,7 +15,7 @@ Useful for making forward declarations.
 
 ===== Example#5a2dc2
 
-```
+```clj
 a
 ;; WARNING: Use of undeclared Var
 

@@ -12,7 +12,7 @@ I think `return debugger;` is not valid JS and will cause an error.
 
 ===== Example#87f2fa
 
-```
+```clj
 (defn foo []
   (println "HI")
   (js-debugger)

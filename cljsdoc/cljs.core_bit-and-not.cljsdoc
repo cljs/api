@@ -17,7 +17,7 @@ cljs.core/bit-not
 
 Bits can be entered using radix notation:
 
-```
+```clj
 (bit-and-not 2r1100 2r1010)
 ;;=> 4
 ;; 4 = 2r0100
@@ -25,14 +25,14 @@ Bits can be entered using radix notation:
 
 Same numbers in decimal:
 
-```
+```clj
 (bit-and-not 12 10)
 ;;=> 4
 ```
 
 Same result using `bit-and` and `bit-not`:
 
-```
+```clj
 (bit-and 12 (bit-not 10))
 ;;=> 4
 ```

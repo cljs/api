@@ -16,7 +16,7 @@ special/quote
 
 ===== Example#0d2c26
 
-```
+```clj
 'foo
 ;;=> foo
 

@@ -19,7 +19,7 @@ cljs.core/conj
 
 With vectors:
 
-```
+```clj
 (pop [1 2 3])
 ;;=> [1 2]
 
@@ -37,7 +37,7 @@ With vectors:
 
 With lists:
 
-```
+```clj
 (pop '(1 2 3))
 ;;=> (2 3)
 

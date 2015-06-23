@@ -16,7 +16,7 @@ cljs.core/bit-or
 
 Bits can be entered using radix notation:
 
-```
+```clj
 (bit-and 2r1100 2r1010)
 ;;=> 8
 ;; 8 = 2r1000
@@ -24,7 +24,7 @@ Bits can be entered using radix notation:
 
 Same numbers in decimal:
 
-```
+```clj
 (bit-and 12 10)
 ;;=> 8
 ```

@@ -15,7 +15,7 @@ cljs.core/array
 
 ===== Example#657cd7
 
-```
+```clj
 (js-obj "foo" 1 "bar" 2)
 ;;=> #js {:foo 1, :bar 2}
 ```

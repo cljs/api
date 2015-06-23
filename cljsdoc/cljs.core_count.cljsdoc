@@ -14,7 +14,7 @@ Returns the number of items in `x`.
 
 ===== Example#96e470
 
-```
+```clj
 (count [1 2 3])
 ;;=> 3
 

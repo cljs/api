@@ -16,7 +16,7 @@ cljs.core/<
 
 ===== Example#adb3fd
 
-```
+```clj
 (<= 1 2)
 ;;=> true
 

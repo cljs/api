@@ -13,7 +13,7 @@ cljs.core/object?
 
 ===== Example#39913c
 
-```
+```clj
 (array? #js [1 2 3])
 ;;=> true
 

@@ -24,7 +24,7 @@ cljs.core/str
 
 ===== Example#eb97ac
 
-```
+```clj
 "foo"
 ;;=> "foo"
 
@@ -35,7 +35,7 @@ cljs.core/str
 
 Characters can be escaped:
 
-```
+```clj
 (println "foo\nbar")
 ;; prints:
 ;;   foo

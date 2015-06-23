@@ -31,7 +31,7 @@ cljs.core/keyword?
 
 ===== Example#e5fdbe
 
-```
+```clj
 :foo
 ;;=> :foo
 
@@ -46,7 +46,7 @@ cljs.core/keyword?
 
 A keyword is also callable for retrieving values from a map:
 
-```
+```clj
 (def m {:foo 1})
 (:foo m)
 ;;=> 1

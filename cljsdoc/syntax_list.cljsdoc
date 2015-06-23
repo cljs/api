@@ -18,20 +18,20 @@ syntax/quote
 
 The following is a list that is evaluated to create var `a`:
 
-```
+```clj
 (def a 1)
 ```
 
 An empty list is unevaluated and left as an empty list:
 
-```
+```clj
 ()
 ;;=> ()
 ```
 
 To signify an unevaluated list, precede it with a quote:
 
-```
+```clj
 '(1 2 3)
 ;;=> (1 2 3)
 ```

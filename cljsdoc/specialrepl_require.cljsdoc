@@ -44,6 +44,6 @@ specialrepl/require-macros
 
 ===== Example#ab0355
 
-```
+```clj
 (require '[clojure/string :as string])
 ```

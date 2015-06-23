@@ -21,7 +21,7 @@ cljs.core/clj->js
 
 ===== Example#05e121
 
-```
+```clj
 #js {:foo 1 bar 2}
 ;;=> #js {:foo 1, :bar 2}
 
@@ -32,7 +32,7 @@ cljs.core/clj->js
 For readability, it is sometimes preferable to use `clj->js` rather than nested
 `#js` tags.
 
-```
+```clj
 #js {:foo #js {:bar 1}}
 ;;=> #js {:foo #js {:bar 1}}
 

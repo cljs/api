@@ -18,7 +18,7 @@ Only usable from a REPL.
 
 ===== Example#30a861
 
-```
+```clj
 (+ 1 2 3 4)
 ;;=> 10
 
@@ -32,7 +32,7 @@ Only usable from a REPL.
 Note that a standalone evaluation of a special var is not a part of remembered
 history:
 
-```
+```clj
 :first
 ;;=> :first
 
@@ -54,7 +54,7 @@ history:
 
 ===== Example#bea858
 
-```
+```clj
 (defn cause-error []
   (throw "Error: something went wrong"))
 

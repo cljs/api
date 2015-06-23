@@ -22,7 +22,7 @@ cljs.core/identical?
 
 ===== Example#5ac342
 
-```
+```clj
 (== 1 1)
 ;;=> true
 

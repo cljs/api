@@ -18,7 +18,7 @@ cljs.core/map
 
 ===== Example#174052
 
-```
+```clj
 (max 1 2 3)
 ;;=> 3
 

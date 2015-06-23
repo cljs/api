@@ -18,14 +18,14 @@ cljs.core/get-in
 
 ===== Example#e76f20
 
-```
+```clj
 (def users [{:name "James" :age 26}
             {:name "John" :age 43}])
 ```
 
 Update the age of the second (index 1) user:
 
-```
+```clj
 (assoc-in users [1 :age] 44)
 ;;=> [{:name "James", :age 26}
 ;;    {:name "John", :age 44}]
@@ -33,7 +33,7 @@ Update the age of the second (index 1) user:
 
 Insert the password of the second (index 1) user:
 
-```
+```clj
 (assoc-in users [1 :password] "nhoJ")
 ;;=> [{:name "James", :age 26}
 ;;    {:password "nhoJ", :name "John", :age 43}]

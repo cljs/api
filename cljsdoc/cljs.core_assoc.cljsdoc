@@ -24,7 +24,7 @@ cljs.core/merge
 
 ===== Example#2fa7e0
 
-```
+```clj
 (def my-map {:foo 1})
 
 (assoc my-map :foo 2)
@@ -43,7 +43,7 @@ cljs.core/merge
 
 ===== Example#c06eac
 
-```
+```clj
 (def my-vec [1 2 3])
 
 (assoc my-vec 0 "foo")

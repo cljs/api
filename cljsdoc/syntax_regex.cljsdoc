@@ -33,7 +33,7 @@ add multi-line example. Why do these have the same output of nil?:
 
 ===== Example#dacf80
 
-```
+```clj
 #"foo"
 ;;=> #"foo"
 
@@ -43,7 +43,7 @@ add multi-line example. Why do these have the same output of nil?:
 
 Case-insensitive matching:
 
-```
+```clj
 #"(?i)foo"
 ;;=> #"foo"
 

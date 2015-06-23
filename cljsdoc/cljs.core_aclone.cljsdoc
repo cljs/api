@@ -15,7 +15,7 @@ cljs.core/make-array
 
 ===== Example#422c4e
 
-```
+```clj
 (def a #js [1 2 3])
 (def b (aclone a))
 (aset b 0 4)

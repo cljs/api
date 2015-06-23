@@ -15,7 +15,7 @@ cljs.repl/doc
 
 ===== Example#94c94c
 
-```
+```clj
 (source comment)
 ;; Prints:
 ;; (defmacro comment

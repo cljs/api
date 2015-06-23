@@ -24,7 +24,7 @@ etc).
 
 ===== Example#a5f898
 
-```
+```clj
 (def a)
 a
 ;;=> nil
