@@ -4,6 +4,7 @@
     [clojure.data :refer [diff]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.util :refer [mapmap]]
+    [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       attach-clj-symbol]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
@@ -31,6 +32,13 @@
     (update-in item [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
     item))
 
+(defn add-cljsdoc
+  "Merge the given item with its compiled cljsdoc, containing extra doc info."
+  [item]
+  (if-let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
+    (merge item (select-keys cljsdoc [:examples :related :description]))
+    item))
+
 (defn transform-item
   [x]
   (as-> x $
@@ -55,6 +63,7 @@
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)
+    (add-cljsdoc $)
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
 
