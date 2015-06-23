@@ -29,36 +29,65 @@
 {{/signature}}
 </samp>
 
-```
-{{&docstring}}
-```
+{{#description}}
+---
+{{&.}}
+{{/description}}
 
 ---
 
-{{#source}}
- <pre>
-{{&path-tree}}
-</pre>
+{{#examples}}
+Example:
 
+{{&content}}
+
+---
+{{/examples}}
+
+See Also:
+
+{{#related}}
+{{.}}
+{{/related}}
+
+---
+
+{{#docstring}}
+Source docstring:
+
+```
+{{&.}}
+```
+{{/docstring}}
+
+Source code:
+
+{{#source}}
 ```clj
 {{&code}}
 ```
+
+ <pre>
+{{&path-tree}}
+</pre>
 {{/source}}
 
 {{#extra-sources}}
 
 ---
 
- <pre>
-{{&path-tree}}
-</pre>
-
 ```clj
 {{&code}}
 ```
+
+ <pre>
+{{&path-tree}}
+</pre>
 {{/extra-sources}}
 
 ---
+
+Data used to generate this document:
 
 ```clj
 {{&data}}

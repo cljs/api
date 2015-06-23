@@ -247,11 +247,7 @@
                         (:signature item))
         :clj-symbol (make-clj-ref item))
       (update-in [:syntax-form] fix-syntax-form)
-      (add-source-trees)
-      (update-in [:docstring]
-        #(if (or (nil? %) (= "" (trim %)))
-           "(no docstring)"
-           %))))
+      (add-source-trees)))
 
 (defn dump-ref-file!
   [item]
