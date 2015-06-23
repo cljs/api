@@ -35,9 +35,10 @@
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
   [item]
-  (if-let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
-    (merge item (select-keys cljsdoc [:examples :related :description]))
-    item))
+  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
+    (cond-> item
+      cljsdoc              (merge (select-keys cljsdoc [:examples :related :description]))
+      (:signature cljsdoc) (merge (select-keys cljsdoc [:signature])))))
 
 (defn transform-item
   [x]
