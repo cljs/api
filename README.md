@@ -63,84 +63,20 @@ The catalog branch has each of the generated files for exploring/using the API r
 | <samp>[UNPORTED.md]</samp>   | list of symbols that are not ported from Clojure |
 | <samp>[UNFINISHED.md]</samp> | table of symbols that have unfinished manual docs |
 
-[cljs-api.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/cljs-api.edn
 [README.md]:https://github.com/cljsinfo/api-refs/blob/catalog/README.md
 [refs/\*.md]:https://github.com/cljsinfo/api-refs/blob/catalog/refs/cljs.core_assoc-in.md
 [HISTORY.md]:https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md
 [UNPORTED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNPORTED.md
 
-[see format details]:#api-edn-format
+[see format details]:cljs-api-format.edn
 
 #### API EDN format
 
-```clj
-{;; release data
- :release {;; clojurescript
-           :cljs-version     "0.0-3297",
-           :cljs-tag         "r3297",
-           :cljs-date        "2015-05-23",
+See [cljs-api-format.edn] for details on how the latest
+[cljs-api.edn] file is structured.
 
-           ;; clojure
-           :clj-version      "1.7.0-beta2",
-           :clj-tag          "clojure-1.7.0-beta2",
-
-           ;; tools.reader
-           :treader-version  "0.9.2",
-           :treader-tag      "tools.reader-0.9.2",
-
-           ;; google closure library
-           :gclosure-lib     "0.0-20150505-021ed5b3"},
-
- ;; symbols not ported from clojure
- :clj-not-cljs #{"clojure.core/the-ns"
-                 "clojure.core/create-struct"
-                 ;; ...
-                 }
-
- ;; library api symbols and changes
- :library-api {:symbols
-               {"cljs.core/keys"
-                {;; auto-parsed docs
-                 :ns                "cljs.core",
-                 :name              "keys",
-                 :full-name         "cljs.core/keys",
-                 :full-name-encode  "cljs.core_keys",
-                 :clj-symbol        "clojure.core/keys",
-                 :type              "function",
-                 :docstring         "Returns a sequence of the map's keys."},
-                 :signature         ["[hash-map]"],
-                 :history           [["+" "0.0-927"]],
-                 :source {:code     "... full source code ...",
-                          :repo     "clojurescript"
-                          :tag      "r3297"
-                          :filename "src/main/cljs/cljs/core.cljs",
-                          :lines    [7559 7563]},
-
-                 ;; manually added docs
-                 :description "... description in markdown ..."
-                 :examples [{:id "a34fe2"
-                             :content "... example in markdown ..."}]
-                 :related ["cljs.core/foo" "cljs.core/bar"]
-                ;; ...
-                }
-
-               :changes
-               [{:cljs-version     "0.0-3115",
-                 :cljs-date        "2015-03-15",
-                 :clj-version      "1.6.0",
-                 :treader-version  "0.9.2",
-                 :gclosure-lib     "0.0-20140718-946a7d39",
-                 :added            #{"clojure.browser.repl/bootstrap"
-                                     "clojure.browser.repl/load-queue"},
-                 :removed          #{"cljs.core/load-file*"}}
-                ;; ...
-                ]}
-
- ;; compiler api symbols and changes
- :compiler-api {:symbols {} ;; same as :library-api :symbols
-                :changes [] ;; same as :library-api :changes
-                }}
-```
+[cljs-api-format.edn]:cljs-api-format.edn
+[cljs-api.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/cljs-api.edn
 
 ## Manual Docs
 
@@ -160,55 +96,14 @@ We write manual docs to add more detailed descriptions and usage examples to the
 
 _Pull requests welcome!_
 
-### Format Example
+### Example
 
 See [cljs.core_assoc-in.cljsdoc](cljsdoc/cljs.core_assoc-in.cljsdoc)
-for an example of the cljsdoc format used for our manual docs:
-
-    ===== Name
-    cljs.core/assoc-in
-
-    ===== Signature
-    [m [k & ks] v]
-
-    ===== Description
-
-    Associates a value in a nested associative structure, where `ks` is a sequence
-    of keys and `v` is the new value. Returns a new nested structure.
-
-    If any levels do not exist, hash-maps will be created.
-
-    ===== Related
-    cljs.core/assoc
-    cljs.core/update-in
-    cljs.core/get-in
-
-    ===== Example#e76f20
-
-    ```clj
-    (def users [{:name "James" :age 26}
-                {:name "John" :age 43}])
-    ```
-
-    Update the age of the second (index 1) user:
-
-    ```clj
-    (assoc-in users [1 :age] 44)
-    ;;=> [{:name "James", :age 26}
-    ;;    {:name "John", :age 44}]
-    ```
-
-    Insert the password of the second (index 1) user:
-
-    ```clj
-    (assoc-in users [1 :password] "nhoJ")
-    ;;=> [{:name "James", :age 26}
-    ;;    {:password "nhoJ", :name "John", :age 43}]
-    ```
+for an example of the cljsdoc format.
 
 ### Validating
 
-Run the following to compile and validate the manual docs.
+Run the following to compile and validate the manual docs:
 
 ```
 lein run :cljsdoc
