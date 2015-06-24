@@ -2,10 +2,29 @@
 
 This is a table of symbols that have unfinished docs.  The goal is to have every column filled:
 
-- __ref?__ - if this is missing, there was no reference info auto-generated for the symbol. (the symbol must've come from an orphaned cljsdoc)
-- __cljsdoc?__ - if this is missing, the symbol has no associated cljsdoc for adding a description, examples, and related symbols.
-- __examples?__ - if this is missing, the symbol has no documented examples.
-- __related?__ - if this is missing, the symbol has no "See Also" section (i.e. related symbols)
+ <dl>
+
+<dt>ref?</dt>
+<dd>
+if this is missing, there was no reference info auto-generated for the symbol. (the symbol must've come from an orphaned cljsdoc)
+</dd>
+
+<dt>cljsdoc?</dt>
+<dd>
+if this is missing, the symbol has no associated cljsdoc for adding a description, examples, and related symbols.
+</dd>
+
+<dt>examples?</dt>
+<dd>
+if this is missing, the symbol has no documented examples.
+</dd>
+
+<dt>related?</dt>
+<dd>
+if this is missing, the symbol has no "See Also" section (i.e. related symbols)
+</dd>
+
+</dl>
 
 If a symbol has all aforementioned docs, then it is __removed__ from the table.
 
