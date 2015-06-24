@@ -275,6 +275,7 @@
 ;;--------------------------------------------------------------------------------
 ;; history file
 ;;--------------------------------------------------------------------------------
+
 (defn history-file-data
   [result]
   ;;; The problem we're trying to solve here is to merge the history information

@@ -96,9 +96,10 @@
         (dissoc :removed))))
 
 (defn make-api-result
-  [items items-key prev-result]
-  (let [prev-api (get prev-result items-key)
-        prev-items (:symbols prev-api)
+  [items api-key prev-result]
+  (let [prev-api (get-in prev-result [:api api-key])
+        prev-symbols (:symbols prev-result)
+        prev-items (select-keys prev-symbols (:symbol-names prev-api))
         prev-changes (or (:changes prev-api) [])
         prev-version (get-in prev-result [:release :cljs-version])
 
@@ -144,13 +145,13 @@
          ;;; We create the API information here.
          ;;; Each API is {:symbols {} :changes []}
          syntax-items (transform-items (:syntax parsed))
-         syntax-api (make-api-result syntax-items :syntax-api prev-result)
+         syntax-api (make-api-result syntax-items :syntax prev-result)
 
          lib-items (transform-items (:library parsed))
-         library-api (make-api-result lib-items :library-api prev-result)
+         library-api (make-api-result lib-items :library prev-result)
 
          compiler-items (transform-items (:compiler parsed))
-         compiler-api (make-api-result compiler-items :compiler-api prev-result)
+         compiler-api (make-api-result compiler-items :compiler prev-result)
 
          ;;; We want a global symbol map. So we strip out the symbol data from each
          ;;; API, leaving only the symbol names which can be used to lookup the data
