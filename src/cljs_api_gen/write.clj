@@ -416,7 +416,7 @@
 (defn readme-api-symbols
   [result api-type]
   ;; clj-name-type-history tuples
-  (let [all (select-keys (:symbols result) (get-in result [:api api-type]))
+  (let [all (select-keys (:symbols result) (get-in result [:api api-type :symbol-names]))
         get-display-name (fn [{:keys [parent-type] :as item}]
                            (cond-> (:name item)
                              parent-type (replace (str parent-type ".") "")
