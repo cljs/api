@@ -72,16 +72,20 @@
                             ;; ...
                             }
 
-                 ;; history of changes
+                 ;; history of changes (from oldest to newest)
                  :changes
-                 [{:cljs-version     "0.0-3115",
+                 [{
+                   ;; abridged version info
+                   :cljs-version     "0.0-3115",
                    :cljs-date        "2015-03-15",
                    :clj-version      "1.6.0",
                    :treader-version  "0.9.2",
                    :gclosure-lib     "0.0-20140718-946a7d39",
-                   :added            #{"clojure.browser.repl/bootstrap"
-                                       "clojure.browser.repl/load-queue"},
-                   :removed          #{"cljs.core/load-file*"}}
+
+                   ;; symbols added/removed in this version
+                   :added   #{"clojure.browser.repl/bootstrap"
+                              "clojure.browser.repl/load-queue"},
+                   :removed #{"cljs.core/load-file*"}}
                   ;; ...
                   ]}
 
