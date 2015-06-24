@@ -93,6 +93,12 @@ The catalog branch has each of the generated files for exploring/using the API r
                           :tag      "r3297"
                           :filename "src/main/cljs/cljs/core.cljs",
                           :lines    [7559 7563]},
+
+                 ;; manually added docs
+                 :description "... description in markdown ..."
+                 :examples [{:id "a34fe2"
+                             :content "... example in markdown ..."}]
+                 :related ["cljs.core/foo" "cljs.core/bar"]
                 ;; ...
                 }
 
@@ -113,12 +119,6 @@ The catalog branch has each of the generated files for exploring/using the API r
                 :changes [] ;; same as :library-api :changes
                 }}
 ```
-
-#### Better Docs
-
-The [api docs project](https://github.com/cljsinfo/api-docs) is an effort to
-combine this repo's generated API reference with detailed descriptions, example
-usages, and cross-refs.
 
 ## Running
 

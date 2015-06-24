@@ -481,9 +481,9 @@
 
 (defn dump-unfinished! [result]
   (spit (str *output-dir* "/UNFINISHED.md")
-        (stencil/render-string
+        (fix-emoji (stencil/render-string
           (slurp "templates/unfinished.md")
-          (unfinished-file-data result))))
+          (unfinished-file-data result)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Main
