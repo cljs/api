@@ -25,7 +25,7 @@
 (def ns-descriptions
   "FIXME: put this in the official docstrings if missing (patch request)"
 
-  {:library-api
+  {:library
    {"cljs.core"                    "fundamental library of the ClojureScript language"
     "special"                      "_pseudo-namespace_ for special forms"
     "specialrepl"                  "_pseudo-namespace_ for REPL special forms"
@@ -48,7 +48,7 @@
     "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
     }
 
-   :compiler-api
+   :compiler
    {
     ;; TODO: create namespace descriptions
     }})
@@ -287,7 +287,7 @@
                 when-pos (fn [x] (when (pos? x) x))]
             (-> change
                 (assoc
-                   api-type
+                   (str (name api-type) "-api")
                    {:changes-link (md-header-link (str (:cljs-version change) "-" (name api-type)))
                     :changes changes
                     :no-changes no-changes
@@ -300,13 +300,14 @@
 
         get-api-changes
         (fn [api-type]
-          (let [{:keys [symbols changes]} (get result api-type)]
+          (let [{:keys [symbol-names changes]} (get-in result [:api api-type])
+                symbols (select-keys (:symbols result) symbol-names)]
             (->> changes
                  (map #(add-change-info % symbols api-type)))))
 
-        syn-changes (get-api-changes :syntax-api)
-        com-changes (get-api-changes :compiler-api)
-        lib-changes (get-api-changes :library-api)
+        syn-changes (get-api-changes :syntax)
+        com-changes (get-api-changes :compiler)
+        lib-changes (get-api-changes :library)
         all (reverse (map #(merge %1 %2 %3) syn-changes com-changes lib-changes))]
     {:versions all}))
 
@@ -354,9 +355,10 @@
 (defn readme-api-changes
   [result api-type]
   ;; name-link tuples
-  (let [api (get result api-type)
+  (let [api (get-in result [:api api-type])
         changes (last (:changes api))
-        all (version-changes (:symbols api) changes)]
+        symbols (select-keys (:symbols result) (:symbol-names api))
+        all (version-changes symbols changes)]
     all))
 
 (def ns-order
@@ -396,7 +398,7 @@
 (defn readme-api-symbols
   [result api-type]
   ;; clj-name-type-history tuples
-  (let [all (-> result api-type :symbols)
+  (let [all (select-keys (:symbols result) (get-in result [:api api-type]))
         get-display-name (fn [{:keys [parent-type] :as item}]
                            (cond-> (:name item)
                              parent-type (replace (str parent-type ".") "")
@@ -436,9 +438,9 @@
                  {:changes changes
                   :no-changes no-changes
                   :ns-symbols ns-symbols}))]
-    {:library-api (make :library-api)
-     :compiler-api (make :compiler-api)
-     :syntax-api (make :syntax-api)
+    {:library-api (make :library)
+     :compiler-api (make :compiler)
+     :syntax-api (make :syntax)
      :release (:release result)}))
 
 (defn dump-readme! [result]
@@ -455,9 +457,7 @@
 (defn unfinished-file-data
   [result]
   (let [manual-map @cljsdoc-map
-        auto-map (merge (-> result :syntax-api :symbols)
-                        (-> result :library-api :symbols)
-                        (-> result :compiler-api :symbols))
+        auto-map (:symbols result)
         all-syms (into #{} (keys (merge manual-map auto-map)))
         make-item (fn [s]
                     (let [full-name-encode (encode-fullname s)
@@ -497,11 +497,7 @@
   (dump-edn-file! result)
 
   (println "writing ref files...")
-  (doseq [item (vals (:symbols (:syntax-api result)))]
-    (dump-ref-file! item))
-  (doseq [item (vals (:symbols (:library-api result)))]
-    (dump-ref-file! item))
-  (doseq [item (vals (:symbols (:compiler-api result)))]
+  (doseq [item (vals (:symbols result))]
     (dump-ref-file! item))
 
   (println "writing readme...")

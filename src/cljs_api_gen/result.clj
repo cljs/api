@@ -140,14 +140,38 @@
 (defn get-result
   ([parsed] (get-result parsed nil))
   ([parsed prev-result]
-   (let [syntax-items (transform-items (:syntax parsed))
+   (let [
+         ;;; We create the API information here.
+         ;;; Each API is {:symbols {} :changes []}
+         syntax-items (transform-items (:syntax parsed))
          syntax-api (make-api-result syntax-items :syntax-api prev-result)
 
          lib-items (transform-items (:library parsed))
          library-api (make-api-result lib-items :library-api prev-result)
 
          compiler-items (transform-items (:compiler parsed))
-         compiler-api (make-api-result compiler-items :compiler-api prev-result)]
+         compiler-api (make-api-result compiler-items :compiler-api prev-result)
+
+         ;;; We want a global symbol map. So we strip out the symbol data from each
+         ;;; API, leaving only the symbol names which can be used to lookup the data
+         ;;; in said global symbol map.
+
+         ;; NOTE: Since we are merging symbols from multiple APIs which may
+         ;;       refer to the same symbols (e.g. cljs.repl symbols span Library and Compiler API),
+         ;;       the history key part [["+" "0.0-927"]] will be overwritten by whichever comes last.
+         ;;       This should be okay for the cljs.repl since their histories should be the same.
+         ;;       Supporting the general case will require creating separate symbol references
+         ;;       for each API, which I don't want to do.
+         symbols (apply merge (map :symbols [syntax-api library-api compiler-api]))
+
+         strip-symbol-data #(-> %
+                                (assoc :symbol-names (-> % :symbols keys set))
+                                (dissoc :symbols))
+
+         syntax-api   (strip-symbol-data syntax-api)
+         library-api  (strip-symbol-data library-api)
+         compiler-api (strip-symbol-data compiler-api)
+         ]
 
      {:release {:cljs-version *cljs-version*
                 :cljs-tag *cljs-tag*
@@ -165,8 +189,12 @@
       ;; clojure symbols unavailable in clojurescript
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
 
-      :syntax-api syntax-api
-      :library-api library-api
-      :compiler-api compiler-api})))
+      :symbols symbols
+
+      :api {:syntax syntax-api
+            :library library-api
+            :compiler compiler-api
+            }
+      })))
 
 
