@@ -85,12 +85,12 @@ See [cljs-api-format.edn] for details on how the latest
 
 We write manual docs to add more detailed descriptions and usage examples to the generated API.
 
-| File             | Description |
-|-----------------:|:------------|
-| [cljsdoc/]       | extended descriptions and examples for each symbol (as plaintext files) |
-| [encode.clj]     | shows how to encode filenames for symbols<br>(e.g. `cljs.core/assoc!` to `cljs.core_assocBANG`) |
-| [UNFINISHED.md]  | table for tracking which symbols are missing manual docs |
-| [Examples Guide] | guide for writing examples |
+| File                          | Description |
+|------------------------------:|:------------|
+| <samp>[cljsdoc/]</samp>       | extended descriptions and examples for each symbol (as plaintext files) |
+| <samp>[encode.clj]</samp>     | shows how to encode filenames for symbols<br>(e.g. `cljs.core/assoc!` to `cljs.core_assocBANG`) |
+| <samp>[UNFINISHED.md]</samp>  | table for tracking which symbols are missing manual docs |
+| <samp>[Examples Guide]</samp> | guide for writing examples |
 
 [cljsdoc/]:cljsdoc
 [encode.clj]:src/main/cljs_api_gen/encode.clj
