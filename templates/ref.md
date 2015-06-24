@@ -24,9 +24,11 @@
 </table>
 
 {{#signature}}
+{{#sigs}}
  <samp>
 (__{{&name}}__{{#args}} {{&.}}{{/args}})<br>
 </samp>
+{{/sigs}}
 
 ---
 {{/signature}}
@@ -90,7 +92,15 @@ Source code:
 
 ---
 
-Data used to generate this document:
+To retrieve the API data for this symbol:
+
+```clj
+;; from Clojure REPL
+(require '[clojure.edn :as edn])
+(-> (slurp "https://raw.githubusercontent.com/cljsinfo/api-refs/catalog/cljs-api.edn")
+    (edn/read-string)
+    (get-in [:symbols "{{&full-name}}"]))
+```
 
 ```clj
 {{&data}}

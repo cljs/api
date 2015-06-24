@@ -249,14 +249,17 @@
   [item]
   (-> item
       (assoc
+        :full-name (:full-name item)
         :display-name (cond-> (md-escape (:full-name item))
                         (:removed item) md-strikethru)
         :data (with-out-str (pprint item))
         :history (map history-change-shield (:history item))
-        :signature (map #(hash-map :name (cond-> (md-escape (:name item))
-                                           (= "type" (:type item)) (str "."))
-                                   :args (sig-args %))
-                        (:signature item))
+        :signature (let [sigs (:signature item)]
+                     (when (and (sequential? sigs) (pos? (count sigs)))
+                       {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
+                                                      (= "type" (:type item)) (str "."))
+                                              :args (sig-args %))
+                                   sigs)}))
         :clj-symbol (make-clj-ref item)
         :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
       (update-in [:syntax-form] fix-syntax-form)
