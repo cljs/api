@@ -27,7 +27,7 @@ To this end, this repo provides:
 There are two main branches in this repo:
 
 | Branch  | Description |
-|---------|-------------|
+|--------:|:------------|
 | master  | API generator and manual docs |
 | [catalog] | API release (force-pushed) |
 
