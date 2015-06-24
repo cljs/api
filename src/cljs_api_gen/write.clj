@@ -6,6 +6,7 @@
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
+    [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.config :refer [*output-dir*
                                  cljsdoc-dir
                                  refs-dir
@@ -16,6 +17,7 @@
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-order
                                  syntax-map]]
+    [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -447,6 +449,43 @@
           ))))
 
 ;;--------------------------------------------------------------------------------
+;; unfinished file
+;;--------------------------------------------------------------------------------
+
+(defn unfinished-file-data
+  [result]
+  (let [manual-map @cljsdoc-map
+        auto-map (merge (-> result :syntax-api :symbols)
+                        (-> result :library-api :symbols)
+                        (-> result :compiler-api :symbols))
+        all-syms (into #{} (keys (merge manual-map auto-map)))
+        make-item (fn [s]
+                    (let [full-name-encode (encode-fullname s)
+                          {:keys [examples related] :as manual-item} (manual-map s)
+                          filled? #(and (sequential? %) (pos? (count %)))]
+                      {:full-name (md-escape s)
+                       :ref (when (auto-map s) (str refs-dir "/" full-name-encode ".md"))
+                       :cljsdoc (when manual-item (str "https://github.com/cljsinfo/api-refs/blob/master/" full-name-encode ".cljsdoc"))
+                       :examples (filled? examples)
+                       :related (filled? related)}))
+        sort-key (fn [item]
+                   (let [sym (symbol (:full-name item))]
+                     [(namespace sym) (name sym)]))
+        done? (fn [{:keys [ref cljsdoc examples related]}]
+                (and ref cljsdoc examples related))
+        symbols (->> all-syms
+                     (map make-item)
+                     (remove done?)
+                     (sort-by sort-key))]
+    {:symbols symbols}))
+
+(defn dump-unfinished! [result]
+  (spit (str *output-dir* "/UNFINISHED.md")
+        (stencil/render-string
+          (slurp "templates/unfinished.md")
+          (unfinished-file-data result))))
+
+;;--------------------------------------------------------------------------------
 ;; Main
 ;;--------------------------------------------------------------------------------
 
@@ -473,6 +512,9 @@
 
   (println "writing unported...")
   (dump-unported! result)
+
+  (println "writing unfinished...")
+  (dump-unfinished! result)
 
   )
 
