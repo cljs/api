@@ -1,9 +1,12 @@
-# ClojureScript API Reference
+# ClojureScript API Documentation
 
  <table>
 <tr>
 <td>
-  __[Latest API Release](https://github.com/cljsinfo/api-refs/tree/catalog)__
+[<img valign="middle" src="https://travis-ci.org/cljsinfo/api-refs.svg?branch=master">](https://travis-ci.org/cljsinfo/api-refs)
+</td>
+<td>
+  __[Latest API Documentation](https://github.com/cljsinfo/api-refs/tree/catalog)__
 </td>
 </tr>
 </table>
