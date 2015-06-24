@@ -92,7 +92,7 @@ Source code:
 
 ---
 
-To retrieve the API data for this symbol:
+__Meta__ - To retrieve the API data for this symbol:
 
 ```clj
 ;; from Clojure REPL
@@ -108,7 +108,7 @@ To retrieve the API data for this symbol:
 
 ---
 
-Contributions to this document are accepted as Pull Requests to the following file:
+__Contributions__ to this document are accepted as Pull Requests to the following file:
 
  <pre>
 [{{&cljsdoc-path}}](https://github.com/cljsinfo/api-refs/blob/master/{{&cljsdoc-path}})
