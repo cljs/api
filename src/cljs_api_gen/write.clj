@@ -275,9 +275,25 @@
 ;;--------------------------------------------------------------------------------
 ;; history file
 ;;--------------------------------------------------------------------------------
-
 (defn history-file-data
   [result]
+  ;;; The problem we're trying to solve here is to merge the history information
+  ;;; of all the API categories.
+  ;;;
+  ;;; What this function receives:
+  ;;;   {:api {:library {}, :compiler {}, :syntax {}}}
+  ;;;
+  ;;; But each API has its own list of changes, all the same size and with the same version keys per change.
+  ;;;
+  ;;; What this function should output:
+  ;;;   {:versions [
+  ;;;               {;; version keys present but not shown.
+  ;;;                :library-api {}
+  ;;;                :compiler-api {}
+  ;;;                :syntax-api {}}]
+  ;;;
+  ;;; This data transformation is messy.  Need to do this in result.clj
+
   (let [add-change-info
         (fn [change symbols api-type]
           (let [changes (version-changes symbols change)
@@ -308,6 +324,7 @@
         syn-changes (get-api-changes :syntax)
         com-changes (get-api-changes :compiler)
         lib-changes (get-api-changes :library)
+
         all (reverse (map #(merge %1 %2 %3) syn-changes com-changes lib-changes))]
     {:versions all}))
 
