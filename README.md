@@ -90,7 +90,7 @@ We write manual docs to add more detailed descriptions and usage examples to the
 | [Examples Guide] | guide for writing examples |
 
 [cljsdoc/]:cljsdoc
-[encode.clj]:src/cljs_api_gen/encode.clj
+[encode.clj]:src/main/cljs_api_gen/encode.clj
 [UNFINISHED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNFINISHED.md
 [Examples Guide]:https://github.com/cljsinfo/api-refs/wiki/Examples-Guide
 
@@ -216,20 +216,20 @@ These are the source files concerned with the API reference generator:
 | <samp>[util.clj]</samp>        | miscellaneous functions                                         |
 
 
-[core.clj]:src/cljs_api_gen/core.clj
-[catalog.clj]:src/cljs_api_gen/catalog.clj
-[clojure_api.clj]:src/cljs_api_gen/clojure_api.clj
-[config.clj]:src/cljs_api_gen/config.clj
-[docset.clj]:src/cljs_api_gen/docset.clj
-[docstring.clj]:src/cljs_api_gen/docstring.clj
-[encode.clj]:src/cljs_api_gen/encode.clj
-[parse.clj]:src/cljs_api_gen/parse.clj
-[syntax.clj]:src/cljs_api_gen/syntax.clj
-[read.clj]:src/cljs_api_gen/read.clj
-[repo_cljs.clj]:src/cljs_api_gen/repo_cljs.clj
-[result.clj]:src/cljs_api_gen/result.clj
-[write.clj]:src/cljs_api_gen/write.clj
-[util.clj]:src/cljs_api_gen/util.clj
+[core.clj]:src/main/cljs_api_gen/core.clj
+[catalog.clj]:src/main/cljs_api_gen/catalog.clj
+[clojure_api.clj]:src/main/cljs_api_gen/clojure_api.clj
+[config.clj]:src/main/cljs_api_gen/config.clj
+[docset.clj]:src/main/cljs_api_gen/docset.clj
+[docstring.clj]:src/main/cljs_api_gen/docstring.clj
+[encode.clj]:src/main/cljs_api_gen/encode.clj
+[parse.clj]:src/main/cljs_api_gen/parse.clj
+[syntax.clj]:src/main/cljs_api_gen/syntax.clj
+[read.clj]:src/main/cljs_api_gen/read.clj
+[repo_cljs.clj]:src/main/cljs_api_gen/repo_cljs.clj
+[result.clj]:src/main/cljs_api_gen/result.clj
+[write.clj]:src/main/cljs_api_gen/write.clj
+[util.clj]:src/main/cljs_api_gen/util.clj
 
 ### Template Files
 

@@ -13,6 +13,7 @@
                  [ccfontes/fuzzy-matcher "0.0.1"]
                  ]
 
-  :test-paths ["test"]
+  :source-paths ["src/main"]
+  :test-paths ["src/test"]
   
   :main cljs-api-gen.core)
