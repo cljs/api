@@ -1,0 +1,4 @@
+language: clojure
+lein: lein
+install: script/ci-install.sh
+script: script/ci-run.sh
