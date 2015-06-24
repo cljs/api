@@ -23,18 +23,19 @@
 </tr>
 </table>
 
- <samp>
 {{#signature}}
+ <samp>
 (__{{&name}}__{{#args}} {{&.}}{{/args}})<br>
-{{/signature}}
 </samp>
 
-{{#description}}
 ---
+{{/signature}}
+
+{{#description}}
 {{&.}}
-{{/description}}
 
 ---
+{{/description}}
 
 {{#examples}}
 Example:
@@ -44,13 +45,15 @@ Example:
 ---
 {{/examples}}
 
+{{#related}}
 See Also:
 
-{{#related}}
+{{#symbols}}
 [`{{&full-name}}`]({{&link}})<br>
-{{/related}}
+{{/symbols}}
 
 ---
+{{/related}}
 
 {{#docstring}}
 Source docstring:

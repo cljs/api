@@ -239,10 +239,10 @@
 (defn add-related-links
   [{:keys [related] :as item}]
   (if related
-    (assoc item :related
-           (for [full-name related]
-             {:full-name full-name
-              :link (str (encode/encode-fullname full-name) ".md")}))
+    (let [symbols (for [full-name related]
+                    {:full-name full-name
+                     :link (str (encode/encode-fullname full-name) ".md")})]
+      (assoc item :related {:symbols symbols}))
     item))
 
 (defn ref-file-data
