@@ -15,7 +15,7 @@
 
 This is an [auto-generated](https://github.com/cljsinfo/api-refs) API reference
 for ClojureScript.  All information here is rendered from
-[autodocs.edn](autodocs.edn), a data structure of the API information which you
+[cljs-api.edn](cljs-api.edn), a data structure of the API information which you
 can download and use yourself.
 
  <dl>

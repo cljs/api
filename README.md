@@ -35,21 +35,21 @@ The catalog branch has each of the generated files for exploring/using the API r
 
 | Catalog File | Description |
 |-----:|-------------|
-| <samp>[autodocs.edn]</samp> | a data structure containing all API information ([see format details]) |
+| <samp>[cljs-api.edn]</samp> | a data structure containing all API information ([see format details]) |
 | <samp>[README.md]</samp>    | an overview of the API with reference tables |
 | <samp>[refs/\*.md]</samp>   | dedicated view for a specific API symbol |
 | <samp>[HISTORY.md]</samp>   | table of all versions and their changes |
 | <samp>[UNPORTED.md]</samp>  | list of symbols that are not ported from Clojure |
 
-[autodocs.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/autodocs.edn
+[cljs-api.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/cljs-api.edn
 [README.md]:https://github.com/cljsinfo/api-refs/blob/catalog/README.md
 [refs/\*.md]:https://github.com/cljsinfo/api-refs/blob/catalog/refs/cljs.core_assoc-in.md
 [HISTORY.md]:https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md
 [UNPORTED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNPORTED.md
 
-[see format details]:#autodocs-edn-format
+[see format details]:#api-edn-format
 
-##### Autodocs EDN format
+##### API EDN format
 
 ```clj
 {;; release data
@@ -78,7 +78,8 @@ The catalog branch has each of the generated files for exploring/using the API r
  ;; library api symbols and changes
  :library-api {:symbols
                {"cljs.core/keys"
-                {:ns                "cljs.core",
+                {;; auto-parsed docs
+                 :ns                "cljs.core",
                  :name              "keys",
                  :full-name         "cljs.core/keys",
                  :full-name-encode  "cljs.core_keys",
@@ -168,7 +169,7 @@ usages, and cross-refs.
 <tr><td>
 :warning: __Markdown File generation requires a case-sensitive file system__
 
-If you're just trying to generate the autodocs.edn file, you can ignore this.
+If you're just trying to generate the cljs-api.edn file, you can ignore this.
 Otherwise, the per-symbol markdown ref files will overwrite one another if
 they have the same name when case is ignored by the file system. For example,
 `cljs.core_cons.md` and `cljs.core_Cons.md` will clobber one another on Windows
