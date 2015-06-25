@@ -171,7 +171,20 @@
     (let [refs-path (str docset-docs-path "/" (resolve-path "refs"))]
       (apply j/insert! sqlite-db :searchIndex
         (for [ref-file (list-dir refs-path)]
-          (let [encoded-name
+          (let [;; We want to retrieve the full name of the symbol belonging to
+                ;; this file.  We do this by decoding the original filename of
+                ;; the generated page.
+                ;;
+                ;; But, httrack can rename files by appending number suffixes
+                ;; to prevent collision on case-insensitive file systems. This
+                ;; is actually really helpful since it allows us to maintain
+                ;; compatibility with Windows and Mac, but prevents us from
+                ;; decoding the filenames straighaway.
+                ;;
+                ;; Luckily, httrack adds an html comment stamp containing the
+                ;; original filename, which we can parse:
+                ;;    <!-- Mirrored from <url-here> by HTTrack Website Copier ... -->
+                encoded-name
                 (second
                   (re-find #"github\.com/cljsinfo/cljs-api-docs/blob/catalog/refs/(.*)\.md "
                            (slurp ref-file)))
