@@ -55,7 +55,7 @@ function getHtmlFiles(path) {
            .map(function (x) { return path + x; });
 }
 
-var rootPath = "offline/github.com/cljsinfo/api-refs/blob/catalog/";
+var rootPath = "offline/github.com/cljsinfo/cljs-api-docs/blob/catalog/";
 var refsPath = rootPath + "refs/";
 var pages = getHtmlFiles(rootPath)
              .concat(getHtmlFiles(refsPath));

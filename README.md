@@ -3,10 +3,10 @@
  <table>
 <tr>
 <td>
-[<img valign="middle" src="https://travis-ci.org/cljsinfo/api-refs.svg?branch=master">](https://travis-ci.org/cljsinfo/api-refs)
+[<img valign="middle" src="https://travis-ci.org/cljsinfo/cljs-api-docs.svg?branch=master">](https://travis-ci.org/cljsinfo/cljs-api-docs)
 </td>
 <td>
-  __[Latest API Documentation](https://github.com/cljsinfo/api-refs/tree/catalog)__
+  __[Latest API Documentation](https://github.com/cljsinfo/cljs-api-docs/tree/catalog)__
 </td>
 </tr>
 </table>
@@ -72,13 +72,13 @@ just invent some "psuedo-namespaces":
 
 The API docs are published to the [catalog] branch.
 
-[catalog]:https://github.com/cljsinfo/api-refs/tree/catalog
+[catalog]:https://github.com/cljsinfo/cljs-api-docs/tree/catalog
 
 ### Version Tags
 
 The catalog branch contains version tags for locating the API reference for
 specific versions of ClojureScript.  You can use the [history
-table](https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md) to navigate
+table](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md) to navigate
 the version tags.
 
 ### Catalog Files
@@ -94,10 +94,10 @@ The catalog branch has each of the generated files for exploring/using the API r
 | <samp>[UNPORTED.md]</samp>   | list of symbols that are not ported from Clojure |
 | <samp>[UNFINISHED.md]</samp> | table of symbols that have unfinished manual docs |
 
-[README.md]:https://github.com/cljsinfo/api-refs/blob/catalog/README.md
-[refs/\*.md]:https://github.com/cljsinfo/api-refs/blob/catalog/refs/cljs.core_assoc-in.md
-[HISTORY.md]:https://github.com/cljsinfo/api-refs/blob/catalog/HISTORY.md
-[UNPORTED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNPORTED.md
+[README.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md
+[refs/\*.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md
+[HISTORY.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md
+[UNPORTED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNPORTED.md
 
 [see format details]:cljs-api-format.edn
 
@@ -107,7 +107,7 @@ See [cljs-api-format.edn] for details on how the latest
 [cljs-api.edn] file is structured.
 
 [cljs-api-format.edn]:cljs-api-format.edn
-[cljs-api.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/cljs-api.edn
+[cljs-api.edn]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/cljs-api.edn
 
 ---
 
@@ -124,8 +124,8 @@ We write manual docs to add more detailed descriptions and usage examples to the
 
 [cljsdoc/]:cljsdoc
 [encode.clj]:src/main/cljs_api_gen/encode.clj
-[UNFINISHED.md]:https://github.com/cljsinfo/api-refs/blob/catalog/UNFINISHED.md
-[Examples Guide]:https://github.com/cljsinfo/api-refs/wiki/Examples-Guide
+[UNFINISHED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNFINISHED.md
+[Examples Guide]:https://github.com/cljsinfo/cljs-api-docs/wiki/Examples-Guide
 
 _Pull requests welcome!_
 
@@ -163,7 +163,7 @@ only a single version or partial catalog when developing so things go quicker.
     lein run '{:catalog :all}'
     ```
 
-  NOTE: This is how the [catalog branch](https://github.com/cljsinfo/api-refs/tree/catalog)
+  NOTE: This is how the [catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog)
   is [generated](script/build-publish.sh).
 
 
@@ -207,7 +207,7 @@ they have the same name when case is ignored by the file system. For example,
 and Mac since they consider them the same name, whereas Clojure recognizes them
 as separate symbols.
 
-See [Issue #48](https://github.com/cljsinfo/api-refs/issues/48) for how I solved
+See [Issue #48](https://github.com/cljsinfo/cljs-api-docs/issues/48) for how I solved
 this on Mac.
 </td></tr>
 </table>
@@ -299,7 +299,7 @@ This is an offline ClojureScript API docset that can be read by the following ap
 
 There are two options for getting the docset:
 
-1. __Manual:__ [Download ClojureScript.docset](https://github.com/cljsinfo/api-refs/releases) from latest release.
+1. __Manual:__ [Download ClojureScript.docset](https://github.com/cljsinfo/cljs-api-docs/releases) from latest release.
 1. __Auto:__ Search "ClojureScript" in User-Contributed in Dash. This docset will auto-update.
 
     ![user-contributed](http://i.imgur.com/6z2gpCL.png)

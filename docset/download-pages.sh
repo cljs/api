@@ -11,10 +11,10 @@ if [ -d $OUTDIR ]; then
   CONTINUE="--continue"
 fi
 
-httrack "https://github.com/cljsinfo/api-refs/blob/catalog/README.md" \
+httrack "https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md" \
   --path $OUTDIR \
   '-*' \
-  '+https://github.com/cljsinfo/api-refs/blob/catalog/*.md' \
+  '+https://github.com/cljsinfo/cljs-api-docs/blob/catalog/*.md' \
   '+*.css' \
   '+*.ttf' \
   '+*.wof' \

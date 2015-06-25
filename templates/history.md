@@ -17,7 +17,7 @@
 </tr>
 {{#versions}}
 <tr>
-<td>__[{{cljs-version}}](https://github.com/cljsinfo/api-refs/tree/{{cljs-version}})__</td>
+<td>__[{{cljs-version}}](https://github.com/cljsinfo/cljs-api-docs/tree/{{cljs-version}})__</td>
 <td>{{cljs-date}}</td>
 <td><kbd>{{clj-version}}</kbd></td>
 <td><kbd>{{treader-version}}</kbd></td>

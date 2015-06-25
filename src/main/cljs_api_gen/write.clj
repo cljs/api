@@ -160,7 +160,7 @@
   (let [color ({"+" "lightgrey" "-" "red"} change)
         change ({"+" "+", "-" "×"} change)]
     (str 
-      "<a href=\"https://github.com/cljsinfo/api-refs/tree/" version "\">"
+      "<a href=\"https://github.com/cljsinfo/cljs-api-docs/tree/" version "\">"
       "<img valign=\"middle\" alt=\"[" change "] " version "\""
         " src=\"https://img.shields.io/badge/" change "-" (shield-escape version) "-" color ".svg\">"
       "</a>")))
@@ -486,7 +486,7 @@
                           filled? #(and (sequential? %) (pos? (count %)))]
                       {:full-name (md-escape s)
                        :ref (when (auto-map s) (str refs-dir "/" full-name-encode ".md"))
-                       :cljsdoc (when manual-item (str "https://github.com/cljsinfo/api-refs/blob/master/" full-name-encode ".cljsdoc"))
+                       :cljsdoc (when manual-item (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" full-name-encode ".cljsdoc"))
                        :examples (filled? examples)
                        :related (filled? related)}))
         sort-key (fn [item]

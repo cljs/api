@@ -35,7 +35,7 @@
 (defn resolve-path
   "Resolves an asset path for use by the Docset index."
   [& paths]
-  (apply str "offline/github.com/cljsinfo/api-refs/blob/catalog/" paths))
+  (apply str "offline/github.com/cljsinfo/cljs-api-docs/blob/catalog/" paths))
 
 (def type->dash
   {"var"                 "Variable"
@@ -175,7 +175,7 @@
         (for [ref-file (list-dir refs-path)]
           (let [encoded-name
                 (second
-                  (re-find #"github\.com/cljsinfo/api-refs/blob/catalog/refs/(.*)\.md "
+                  (re-find #"github\.com/cljsinfo/cljs-api-docs/blob/catalog/refs/(.*)\.md "
                            (slurp ref-file)))
                 full-name (decode-fullname encoded-name)
                 item (get syms full-name)]

@@ -9,6 +9,6 @@ fi
 lein run '{:catalog :all}'
 
 cd catalog
-git remote add origin git@github.com:cljsinfo/api-refs.git
+git remote add origin git@github.com:cljsinfo/cljs-api-docs.git
 git push --force --tags origin master:catalog
 

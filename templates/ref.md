@@ -97,7 +97,7 @@ __Meta__ - To retrieve the API data for this symbol:
 ```clj
 ;; from Clojure REPL
 (require '[clojure.edn :as edn])
-(-> (slurp "https://raw.githubusercontent.com/cljsinfo/api-refs/catalog/cljs-api.edn")
+(-> (slurp "https://raw.githubusercontent.com/cljsinfo/cljs-api-docs/catalog/cljs-api.edn")
     (edn/read-string)
     (get-in [:symbols "{{&full-name}}"]))
 ```
@@ -111,6 +111,6 @@ __Meta__ - To retrieve the API data for this symbol:
 __Contributions__ to this document are accepted as Pull Requests to the following file:
 
  <pre>
-[{{&cljsdoc-path}}](https://github.com/cljsinfo/api-refs/blob/master/{{&cljsdoc-path}})
+[{{&cljsdoc-path}}](https://github.com/cljsinfo/cljs-api-docs/blob/master/{{&cljsdoc-path}})
 </pre>
 
