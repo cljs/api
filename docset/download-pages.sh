@@ -11,6 +11,8 @@ if [ -d $OUTDIR ]; then
   CONTINUE="--continue"
 fi
 
+DONT_GEN_404_HTML=-o0
+
 httrack "https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md" \
   --path $OUTDIR \
   '-*' \
@@ -20,4 +22,5 @@ httrack "https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md" \
   '+*.wof' \
   '+*.js' \
   '+*camo.githubusercontent.com/*' \
+  $DONT_GEN_404_HTML
   $CONTINUE
