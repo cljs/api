@@ -154,6 +154,8 @@ available in [edn]
 
 {{#syntax-api}}
 {{#ns-symbols}}
+#### {{ns}}
+
  <table>
 <thead><tr>
 <th colspan=2>=</th>
