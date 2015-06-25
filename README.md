@@ -153,15 +153,30 @@ Generating the entire API catalog takes about 15 minutes on my computer since
 there are 123 ClojureScript releases at the time of this writing. I generate
 only a single version or partial catalog when developing so things go quicker.
 
+ <table>
+<tr>
+<td>:warning:</td>
+<td>
+###### Case-Sensitive file system required!
+
+The generated catalog pages are case-sensitive.  Example:
+`cljs.core_cons.md` and `cljs.core_Cons.md` represent different pages.
+See [Issue #48](https://github.com/cljsinfo/cljs-api-docs/issues/48) for Mac solution.
+
+(The generated catalog data is not affected, only the pages)
+
+</td></tr>
+</table>
+
 ### Running
 
 - __Full Catalog__: run the following to build a full catalog of docs. The
   catalog is a git repo with commits tagged for each version of ClojureScript.
   (It can be re-run to update your catalog with a newly released version)
 
-    ```
-    lein run '{:catalog :all}'
-    ```
+  ```
+lein run '{:catalog :all}'
+```
 
   NOTE: This is how the [catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog)
   is [generated](script/build-publish.sh).
@@ -172,45 +187,29 @@ only a single version or partial catalog when developing so things go quicker.
   following will stop after 4 versions. (It can be re-run to process the next
   _n_ versions)
 
-    ```
-    lein run '{:catalog 4}'
-    ```
+  ```
+lein run '{:catalog 4}'
+```
 
 - __Single Version Docs__: To generate docs for a single version (without symbol history data),
   pass it the tag value for the desired ClojureScript version, or `:latest` for the most recent
   version.
 
-    ```
-    lein run '{:version "r3211"}'
-    or
-    lein run '{:version :latest}'
-    ```
+  ```
+lein run '{:version "r3211"}'
+or
+lein run '{:version :latest}'
+```
 
 - __Customize Output Directory__: The default output directory of a catalog is
   `catalog/`, and single-version output is written to `docs-<version>`.  To
   change this, use the `:out-dir` key:
 
-    ```
-    lein run '{:catalog :all, :out-dir "my-catalog"}'
-    or
-    lein run '{:version "r927", :out-dir "old-docs"}'
-    ```
-
- <table>
-<tr><td>
-:warning: __Markdown File generation requires a case-sensitive file system__
-
-If you're just trying to generate the cljs-api.edn file, you can ignore this.
-Otherwise, the per-symbol markdown ref files will overwrite one another if
-they have the same name when case is ignored by the file system. For example,
-`cljs.core_cons.md` and `cljs.core_Cons.md` will clobber one another on Windows
-and Mac since they consider them the same name, whereas Clojure recognizes them
-as separate symbols.
-
-See [Issue #48](https://github.com/cljsinfo/cljs-api-docs/issues/48) for how I solved
-this on Mac.
-</td></tr>
-</table>
+  ```
+lein run '{:catalog :all, :out-dir "my-catalog"}'
+or
+lein run '{:version "r927", :out-dir "old-docs"}'
+```
 
 ### Implementation
 
@@ -344,6 +343,4 @@ $ script/docset-pr.sh
 
 ## License
 
-The API reference generator is released under the MIT license, Copyright © 2014-2015 Shaun LeBron
-
-The source code contained in the API reference files are EPL licensed, Copyright Rich Hickey.
+MIT, Copyright © 2014-2015 Shaun LeBron
