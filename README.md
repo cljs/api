@@ -1,4 +1,4 @@
-# ClojureScript API Documentation
+# ClojureScript API Docs Builder
 
  <table>
 <tr>
@@ -13,14 +13,40 @@
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
-library and syntax.
+syntax, library and compiler.  This repo provides the means to generate this
+documentation.
 
-To this end, this repo provides:
+---
 
-- __API generator__ for each version of ClojureScript
-- __manual docs__ to add extended descriptions and examples to each API symbol
-- __published API__ for browsing the docs online
-- __offline API__ for browsing the docs offline
+## Table of Contents
+
+ <dl>
+
+<dt>[Published API](#published-api)</dt>
+<dd>
+Information on the structure of the published API documentation.
+</dd>
+
+<dt>[Manual Docs](#manual-docs)</dt>
+<dd>
+Information on the manually created descriptions, usage examples, and
+cross-references that supplement the generated docs.
+</dd>
+
+<dt>[API Generator](#api-generator)</dt>
+<dd>
+Information on how the API generator parses the ClojureScript repo to produce
+our published API.
+</dd>
+
+<dt>[Offline Docs](#offline-docset-for-dash)</dt>
+<dd>
+Information on how to use and generate the offline docs available for Dash.
+</dd>
+
+</dl>
+
+---
 
 ### Branches
 
@@ -39,6 +65,8 @@ just invent some "psuedo-namespaces":
 - `special` - special forms
 - `specialrepl` - REPL special forms
 - `syntax` - syntax forms (we think these deserve API docs too)
+
+---
 
 ## Published API
 
@@ -81,6 +109,8 @@ See [cljs-api-format.edn] for details on how the latest
 [cljs-api-format.edn]:cljs-api-format.edn
 [cljs-api.edn]:https://github.com/cljsinfo/api-refs/blob/catalog/cljs-api.edn
 
+---
+
 ## Manual Docs
 
 We write manual docs to add more detailed descriptions and usage examples to the generated API.
@@ -112,10 +142,16 @@ Run the following to compile and validate the manual docs:
 lein run :cljsdoc
 ```
 
-## The API generator
+---
+
+## API Generator
 
 The API generator parses info from the ClojureScript repo and
 merges it with the [manual docs](#manual-docs).
+
+Generating the entire API catalog takes about 15 minutes on my computer since
+there are 123 ClojureScript releases at the time of this writing. I generate
+only a single version or partial catalog when developing so things go quicker.
 
 ### Running
 
@@ -160,8 +196,6 @@ merges it with the [manual docs](#manual-docs).
     lein run '{:version "r927", :out-dir "old-docs"}'
     ```
 
----
-
  <table>
 <tr><td>
 :warning: __Markdown File generation requires a case-sensitive file system__
@@ -177,9 +211,6 @@ See [Issue #48](https://github.com/cljsinfo/api-refs/issues/48) for how I solved
 this on Mac.
 </td></tr>
 </table>
-
----
-
 
 ### Implementation
 
@@ -254,7 +285,9 @@ These are the mustache templates that we use to render the catalog files.
 
 [Grip]:https://github.com/joeyespo/grip
 
-### Offline docset for Dash
+---
+
+## Offline docset for Dash
 
 ![screenshot](http://i.imgur.com/ENMsXHc.png)
 
@@ -272,7 +305,7 @@ There are two options for getting the docset:
     ![user-contributed](http://i.imgur.com/6z2gpCL.png)
 
 
-#### Generating
+### Generating
 
 This is currently a strange setup for making offline versions of GitHub's
 rendered markdown pages for our API catalog.  This is expected to be temporary
@@ -306,6 +339,8 @@ $ lein run :docset
 # (manual update steps will be printed)
 $ script/docset-pr.sh
 ```
+
+---
 
 ## License
 
