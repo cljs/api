@@ -35,6 +35,12 @@ function fixPage() {
     if (link.id) {
       link.id = link.id.replace("user-content-", "");
     }
+
+    // remove link to offline docset since we are in the offline docset
+    if (link.text == "Offline version available here" &&
+        link.href == "https://github.com/cljsinfo/cljs-api-docs#offline-docset-for-dash") {
+      link.parentNode.removeChild(link);
+    }
   };
 
   // TODO: add table of contents for history, unported, readme
