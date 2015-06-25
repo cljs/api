@@ -125,9 +125,7 @@
   (assert-reqs!)
 
   (let [result (get-last-written-result)
-        syms (merge (-> result :syntax-api :symbols)
-                    (-> result :library-api :symbols)
-                    (-> result :compiler-api :symbols))
+        syms (:symbols result)
         namespaces (set (map :ns (vals syms)))]
 
     (println "Clearing previous docset folder...")
