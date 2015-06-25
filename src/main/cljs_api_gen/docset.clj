@@ -153,8 +153,8 @@
     (j/insert! sqlite-db :searchIndex
        ;; insert categories
        {:name "Syntax API" :type "Category" :path (resolve-path "README.html#syntax-api")}
-       {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api-reference")}
-       {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api-reference")}
+       {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api")}
+       {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api")}
 
        ;; insert sections
        {:name "Overview"                :type "Section" :path (resolve-path "README.html")}
