@@ -3,6 +3,11 @@
 ;; location of manual cljsdoc files
 (def cljsdoc-dir "cljsdoc")
 
+;; cache directory
+(def cache-dir ".api-cache")
+(def edn-prelim-file "cljs-api-0.edn")
+(def edn-cljsdoc-file "cljsdoc.edn")
+
 ;; location of the clojure & clojurescript repos to parse
 (def repos-dir "repos")
 
