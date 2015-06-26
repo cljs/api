@@ -19,10 +19,14 @@
 ;;--------------------------------------------------------------------------------
 
 (def usage-examples
-  [{:opts  {:catalog :all}    :desc "Start or resume building docs catalog for all cljs versions"}
-   {:opts  {:catalog 3}       :desc "Start or resume the next 3 cljs versions"}
-   {:opts  {:version "r3211"} :desc "Process and output docs for single cljs version r3211"}
-   {:opts  {:version :latest} :desc "Process and output docs for latest cljs version"}])
+  [{:opts  {:full :latest, :repo? true}     :desc "Build/resume docs catalog for all cljs versions"}
+   {:opts  {:full 6,       :repo? true}     :desc "Build/resume docs catalog for next 3 cljs versions"}
+
+   {:opts  {:single "r3211"}                :desc "Create docs for single cljs version r3211 (WITHOUT history)"}
+   {:opts  {:single :latest}                :desc "Create docs for latest cljs version       (WITHOUT history)"}
+
+   {:opts  {:full "r3211", :pages :latest}  :desc "Create docs for single cljs version r3211 (WITH history)"}
+   ])
 
 (defn show-usage-and-exit! []
   (binding [*out* *err*]
