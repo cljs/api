@@ -10,6 +10,8 @@
     [clansi.core :refer [style]]
     [fuzzy-matcher.core :as fuzzy]))
 
+(def ^:dynamic *known-symbols* nil)
+
 ;;--------------------------------------------------------------------------------
 ;; Required Sections
 ;;--------------------------------------------------------------------------------
@@ -175,9 +177,8 @@
 
 (defn related-missing-error-msg*
   [name-]
-  (let [filename (str cljsdoc-dir "/" (str (encode-fullname name-) ".cljsdoc"))
-        pass? true ;; (exists? filename) ;; TODO: enable when we have enough cljsdoc files
-        ]
+  (let [pass? (or (nil? *known-symbols*) ;; ignore if no known symbols supplied
+                  (*known-symbols* name-))]
     (when-not pass?
       (str "Related symbol '" name- "' is an unknown symbol."))))
 

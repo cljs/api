@@ -2,7 +2,7 @@
   (:require
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
-    [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
+    [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *known-symbols*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
     [me.raynes.fs :refer [list-dir base-name]]
     [clansi.core :refer [style]]))
@@ -29,21 +29,25 @@
   (let [files (list-dir dir)]
     (filter #(.endsWith (.getName %) ".cljsdoc") files)))
 
-(defn build-cljsdoc! []
-  (println "Compiling *.cljsdoc files...")
-  (let [files (cljsdoc-files cljsdoc-dir)
-        mandocs (keep build-doc files)
-        mandoc-map (zipmap (map :full-name mandocs)
-                           (map #(dissoc % :empty-sections) mandocs))
-        skipped (- (count files) (count mandocs))
-        parsed (- (count files) skipped)]
+(defn build-cljsdoc!
+  ([] (build-cljsdoc! nil))
+  ([known-symbols]
 
-    (reset! cljsdoc-map mandoc-map)
+   (println "Compiling *.cljsdoc files...")
+   (let [files (cljsdoc-files cljsdoc-dir)
+         mandocs (binding [*known-symbols* known-symbols]
+                   (doall (keep build-doc files)))
+         mandoc-map (zipmap (map :full-name mandocs)
+                            (map #(dissoc % :empty-sections) mandocs))
+         skipped (- (count files) (count mandocs))
+         parsed (- (count files) skipped)]
 
-    (if (zero? skipped)
-      (println (style "Done with no errors." :green))
-      (println (style "Done with some errors." :red)))
-    (println (format-status parsed skipped))
+     (reset! cljsdoc-map mandoc-map)
 
-    skipped))
+     (if (zero? skipped)
+       (println (style "Done with no errors." :green))
+       (println (style "Done with some errors." :red)))
+     (println (format-status parsed skipped))
+
+     skipped)))
 

@@ -86,12 +86,6 @@
   (println " Compiler API:")
   (print-summary* (:compiler parsed)))
 
-(defn run-cljsdoc!
-  []
-  (let [num-skipped (build-cljsdoc!)]
-    (when-not (zero? num-skipped)
-      (System/exit 1))))
-
 (defn create-catalog!
   [{:as options
     :keys [version
@@ -120,7 +114,7 @@
     (println "Outputting to " (style *output-dir* :cyan))
     (println "   with cache at " (style cache :cyan))
 
-    ;; first pass
+    ;; parse symbol history
     (println "\nStarting first pass (parsing symbol history)...\n")
     (doseq [tag tags]
 
@@ -159,18 +153,31 @@
 
             (println "\nDone.")))))
 
-    ;; second pass
-    ;; TODO: compile cljsdoc files
+    ;; compile cljsdoc files (manual docs)
+    (let [known-symbols (set (keys (:symbols @prev-result)))
+          num-skipped (build-cljsdoc! #_known-symbols) ;; TODO: uncomment param when ready to address symbol errors
+          ] 
+      (when-not (zero? num-skipped)
+        (System/exit 1)))
+
     ;; TODO: create result data
     ;; TODO: render pages
 
     ;; third pass
-    ;; TODO: delete output-dir/.git and create the commits again
-    (comment
-      (catalog-clear!)
-      (println "\nCommitting docs at tag" *cljs-version* "...")
-      (catalog-commit!)
-      ) 
+    (if catalog?
+
+      (do
+        ;; TODO: delete output-dir/.git
+        ;; TODO: create commits
+        (comment
+          (catalog-clear!)
+          (println "\nCommitting docs at tag" *cljs-version* "...")
+          (catalog-commit!)
+          ))
+
+      (do
+        ;; TODO: copy last version files to output-dir
+        nil))
 
     (println (style "Success!" :green))))
 

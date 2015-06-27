@@ -198,4 +198,6 @@
             }
       })))
 
-
+(defn add-cljsdoc-to-result
+  [result]
+  (update-in result [:symbols] #(mapmap add-cljsdoc %)))
