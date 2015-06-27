@@ -5,7 +5,14 @@
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [clojure.java.shell :refer [sh]]
-    [me.raynes.fs :refer [mkdir exists?]]
+    [me.raynes.fs :refer [mkdir
+                          exists?
+                          file?
+                          delete-dir
+                          list-dir
+                          base-name
+                          copy
+                          copy-dir]]
     [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
     [cljs-api-gen.config :refer [*output-dir*
                                  cache-dir
@@ -43,8 +50,13 @@
 (defn catalog-tag []
   (:out (git "describe" "--tags")))
 
-(defn catalog-clear! []
-  (git "rm" "-rf" "."))
+(defn catalog-init! []
+  (delete-dir (str *output-dir* "/.git"))
+  (git "init"))
+
+(defn catalog-add!
+  [f]
+  (git "add" f))
 
 (defn catalog-commit! []
   (let [msg (str *cljs-version* "\n"
@@ -55,7 +67,6 @@
                  "- parsed from:\n"
                  "  ClojureScript " *cljs-version* "\n"
                  "  Clojure " *clj-version* "\n")]
-    (git "add" ".")
     (git "commit" "-m" msg)
     (git "tag" *cljs-version*)))
 
@@ -189,20 +200,38 @@
                 (dump-result! result)))))))
 
     ;; third pass
-    (if catalog?
+    (println "\nStarting final pass (finalizing output directory)...\n")
+    (let [dont-copy? #{edn-parsed-file}
+          should-copy? (complement dont-copy?)
+          files-to-copy (fn [tag]
+                          (->> (list-dir (str cache "/" tag))
+                               (filter #(should-copy? (base-name %)))))
+          copy-to-root! (fn [tag]
+                          (doseq [f (files-to-copy tag)]
+                            (let [filename (base-name f)
+                                  new-loc (str *output-dir* "/" filename)]
+                              (if (file? f)
+                                (copy f new-loc)
+                                (copy-dir f new-loc)))))]
 
-      (do
-        ;; TODO: delete output-dir/.git
-        ;; TODO: create commits
-        (comment
-          (catalog-clear!)
-          (println "\nCommitting docs at tag" *cljs-version* "...")
-          (catalog-commit!)
-          ))
+      (if catalog?
 
-      (do
-        ;; TODO: copy last version files to output-dir
-        nil))
+        (do
+          (println "\nCreating catalog repo...")
+          (catalog-init!)
+          (doseq [tag tags]
 
-    (println (style "Success!" :green))))
+            ;; FIXME: We shouldn't be checking out the repos here, but this
+            ;; wrapper gives us the version bindings, which we haven't separated
+            ;; into its own macro yet.
+            (with-checkout! tag
+              (println "\nCommitting docs at tag" tag "...")
+              (copy-to-root! tag)
+              (doseq [f (files-to-copy tag)]
+                (catalog-add! (base-name f)))
+              (catalog-commit!))))
+
+        (copy-to-root! last-tag))))
+
+    (println (style "Success!" :green)))
 
