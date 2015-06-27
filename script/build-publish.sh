@@ -6,7 +6,7 @@ if [ "$1" == "rebuild" ]; then
   rm -rf catalog
 fi
 
-lein run '{:catalog :all}'
+lein run '{:catalog? true, :skip-pages? false}'
 
 cd catalog
 git remote add origin git@github.com:cljsinfo/cljs-api-docs.git

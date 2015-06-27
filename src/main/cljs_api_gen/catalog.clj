@@ -106,8 +106,8 @@
            skip-parse?]
     :or {version :latest
          catalog? false
-         skip-pages? false
-         skip-parse? false}}]
+         skip-pages? true
+         skip-parse? true}}]
 
   ;; create output directory
   (when-not (exists? *output-dir*)

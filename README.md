@@ -170,46 +170,44 @@ See [Issue #48](https://github.com/cljsinfo/cljs-api-docs/issues/48) for Mac sol
 
 ### Running
 
-- __Full Catalog__: run the following to build a full catalog of docs. The
-  catalog is a git repo with commits tagged for each version of ClojureScript.
-  (It can be re-run to update your catalog with a newly released version)
+This will generate docs for the _latest version_ of ClojureScript
+and output them to the `catalog/` folder.
 
-  ```
-lein run '{:catalog :all}'
+```
+lein run
 ```
 
-  NOTE: This is how the [catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog)
-  is [generated](script/build-publish.sh).
+To get the history data for each symbol, the generator will first parse the
+previous versions of ClojureScript (takes about ~5 minutes), but they will be
+cached for much faster subsequent runs (~15 seconds).
 
+Use this to target a specific version:
 
-- __Partial Catalog__: for development purposes, you may wish to stop the
-  process after a certain number of versions to verify its output.  The
-  following will stop after 4 versions. (It can be re-run to process the next
-  _n_ versions)
-
-  ```
-lein run '{:catalog 4}'
 ```
-
-- __Single Version Docs__: To generate docs for a single version (without symbol history data),
-  pass it the tag value for the desired ClojureScript version, or `:latest` for the most recent
-  version.
-
-  ```
 lein run '{:version "r3211"}'
-or
-lein run '{:version :latest}'
 ```
 
-- __Customize Output Directory__: The default output directory of a catalog is
-  `catalog/`, and single-version output is written to `docs-<version>`.  To
-  change this, use the `:out-dir` key:
+#### Advanced
 
-  ```
-lein run '{:catalog :all, :out-dir "my-catalog"}'
-or
-lein run '{:version "r927", :out-dir "old-docs"}'
+The generator can take an optional map at the command line.  This is how the
+[catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog) is
+[generated](script/build-publish.sh)
+
 ```
+lein run '{:catalog? true      ;; Create a git repo catalog w/ doc commits for each cljs version.
+           :skip-pages? false  ;; Don't skip generating the docs pages for previous versions.
+          }'
+```
+
+Here is a full table of options:
+
+| option | description | e.g. | default |
+|---:|:-------|-------|------|
+| `:task` | a side task to run instead of the main one | `:docset` | `nil` |
+| `:version` | version to process | `<version>` `:latest` | `:latest` |
+| `:catalog?` | create a catalog repo? | `true` `false` | `false` |
+| `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
+| `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
 
 ### Implementation
 
@@ -330,7 +328,7 @@ $ ./format-pages.js
 # Build docset for Dash.
 # (errors will tell if you something isn't setup correctly)
 $ cd ..
-$ lein run :docset
+$ lein run '{:task :docset}'
 ```
 
 ```sh
