@@ -97,10 +97,16 @@
     - keyword `:all` to catalog whatever versions are remaining
     - number `n` of the next remaining versions to catalog before stopping.
   "
-  [n-or-all]
+  [:keys [version
+          catalog?
+          skip-pages?
+          skip-parse?]
+   :or {version :latest
+        catalog? false
+        skip-pages? false
+        skip-parse? false}]
 
-  (println "Creating or using catalog repo at"
-           (str "'" (style *output-dir* :cyan) "'"))
+  (println "Outputting to " (style *output-dir* :cyan))
 
   (catalog-init!)
 

@@ -1,5 +1,7 @@
 (ns cljs-api-gen.config)
 
+(def default-out-dir "catalog")
+
 ;; location of manual cljsdoc files
 (def cljsdoc-dir "cljsdoc")
 
