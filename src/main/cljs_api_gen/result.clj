@@ -32,14 +32,6 @@
     (update-in item [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
     item))
 
-(defn add-cljsdoc
-  "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  [item]
-  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
-    (cond-> item
-      cljsdoc              (merge (select-keys cljsdoc [:examples :related :description]))
-      (:signature cljsdoc) (merge (select-keys cljsdoc [:signature])))))
-
 (defn transform-item
   [x]
   (as-> x $
@@ -64,7 +56,6 @@
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)
-    #_(add-cljsdoc $) ;; forgoing this until after all symbols are parsed so we can validate references
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
 
@@ -197,6 +188,14 @@
             :compiler compiler-api
             }
       })))
+
+(defn add-cljsdoc
+  "Merge the given item with its compiled cljsdoc, containing extra doc info."
+  [item]
+  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
+    (cond-> item
+      cljsdoc              (merge (select-keys cljsdoc [:examples :related :description]))
+      (:signature cljsdoc) (merge (select-keys cljsdoc [:signature])))))
 
 (defn add-cljsdoc-to-result
   [result]

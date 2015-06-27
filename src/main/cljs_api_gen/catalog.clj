@@ -21,7 +21,8 @@
                                     *clj-tag*
                                     *cljs-version*
                                     *clj-version*]]
-    [cljs-api-gen.result :refer [get-result]]
+    [cljs-api-gen.result :refer [get-result
+                                 add-cljsdoc-to-result]]
     [cljs-api-gen.write :refer [dump-result!]]
     ))
 
@@ -102,10 +103,21 @@
     (mkdir *output-dir*))
 
   (let [cache (str *output-dir* "/" cache-dir)
+
+        ;; This holds the "result" data for the most recently parsed cljs version.
+        ;; Sometimes this is cached, so there is some ceremony here to prevent pulling
+        ;; the value from its cache until its actually needed.  We use an expression
+        ;; wrapped in a `delay` to do this.  Since not every value is cached, we just
+        ;; use the `get-prev-result` to not worry about it.
         prev-result (atom nil)
+        get-prev-result #(if (delay? @prev-result)
+                           @@prev-result
+                           @prev-result)
+
         tags (if (= :latest version)
                @published-cljs-tags
-               (concat (take-while (partial not= version) @published-cljs-tags) [version]))]
+               (concat (take-while (partial not= version) @published-cljs-tags) [version]))
+        last-tag (last tags)]
 
     ;; make cache directory
     (when-not (exists? cache)
@@ -133,7 +145,7 @@
 
           (do
             (println "Using cache instead of parsing" (style tag :yellow))
-            (reset! prev-result (edn/read-string (slurp parsed-file))))
+            (reset! prev-result (delay (edn/read-string (slurp parsed-file)))))
 
           ;; parse
           (with-checkout! tag
@@ -147,21 +159,34 @@
               (print-summary parsed)
 
               (println "\nWriting parsed data to" (style parsed-file :cyan))
-              (let [result (get-result parsed @prev-result)]
+              (let [result (get-result parsed (get-prev-result))]
                 (spit parsed-file (with-out-str (pprint result)))
                 (reset! prev-result result)))
 
             (println "\nDone.")))))
 
     ;; compile cljsdoc files (manual docs)
-    (let [known-symbols (set (keys (:symbols @prev-result)))
+    (println)
+    (let [known-symbols (set (keys (:symbols (get-prev-result))))
           num-skipped (build-cljsdoc! #_known-symbols) ;; TODO: uncomment param when ready to address symbol errors
           ] 
       (when-not (zero? num-skipped)
         (System/exit 1)))
 
-    ;; TODO: create result data
-    ;; TODO: render pages
+    ;; create pages
+    (println "\nStarting second pass (merge manual docs and create pages)...\n")
+    (doseq [tag tags]
+      (let [skip? (and skip-pages? (not= tag last-tag))
+            out-folder (str cache "/" tag)]
+        (if skip?
+          (println "Skipping page creation for" (style tag :yellow))
+          (do
+            (println "\nCreating pages for " (style tag :yellow))
+            (let [parsed-file (str out-folder "/" edn-parsed-file)
+                  parsed (edn/read-string (slurp parsed-file))
+                  result (add-cljsdoc-to-result parsed)]
+              (binding [*output-dir* out-folder]
+                (dump-result! result)))))))
 
     ;; third pass
     (if catalog?
