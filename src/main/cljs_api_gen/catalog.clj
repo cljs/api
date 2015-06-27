@@ -1,12 +1,19 @@
 (ns cljs-api-gen.catalog
   (:require
+    [fipp.edn :refer [pprint]]
+    [clojure.edn :as edn]
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :refer [mkdir exists?]]
-    [cljs-api-gen.config :refer [*output-dir*]]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
+    [cljs-api-gen.config :refer [*output-dir*
+                                 cache-dir
+                                 edn-parsed-file
+                                 edn-cljsdoc-file]]
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
+                                    published-cljs-tags
                                     with-checkout!
                                     cljs-tag->version
                                     *cljs-tag*
@@ -15,8 +22,7 @@
                                     *cljs-version*
                                     *clj-version*]]
     [cljs-api-gen.result :refer [get-result]]
-    [cljs-api-gen.write :refer [dump-result!
-                                get-last-written-result]]
+    [cljs-api-gen.write :refer [dump-result!]]
     ))
 
 ;;----------------------------------------------------------------------
@@ -35,11 +41,6 @@
 
 (defn catalog-tag []
   (:out (git "describe" "--tags")))
-
-(defn catalog-init! []
-  (when-not (exists? *output-dir*)
-    (mkdir *output-dir*)
-    (git "init")))
 
 (defn catalog-clear! []
   (git "rm" "-rf" "."))
@@ -85,77 +86,91 @@
   (println " Compiler API:")
   (print-summary* (:compiler parsed)))
 
+(defn run-cljsdoc!
+  []
+  (let [num-skipped (build-cljsdoc!)]
+    (when-not (zero? num-skipped)
+      (System/exit 1))))
+
 (defn create-catalog!
-  "Create a docs catalog repo, or resume progress from its previous state.
+  [{:as options
+    :keys [version
+           catalog?
+           skip-pages?
+           skip-parse?]
+    :or {version :latest
+         catalog? false
+         skip-pages? false
+         skip-parse? false}}]
 
-  The docs catalog repo has one commit per cljs version, with each commit containing:
-    - doc files for that version
-    - current history information for each symbol
-    - a git tag with that version
+  ;; create output directory
+  (when-not (exists? *output-dir*)
+    (mkdir *output-dir*))
 
-  The argument `n-or-all` is either:
-    - keyword `:all` to catalog whatever versions are remaining
-    - number `n` of the next remaining versions to catalog before stopping.
-  "
-  [:keys [version
-          catalog?
-          skip-pages?
-          skip-parse?]
-   :or {version :latest
-        catalog? false
-        skip-pages? false
-        skip-parse? false}]
+  (let [cache (str *output-dir* "/" cache-dir)
+        prev-result (atom nil)
+        tags (if (= :latest version)
+               @published-cljs-tags
+               (concat (take-while (partial not= version) @published-cljs-tags) [version]))]
 
-  (println "Outputting to " (style *output-dir* :cyan))
+    ;; make cache directory
+    (when-not (exists? cache)
+      (mkdir cache))
 
-  (catalog-init!)
+    (println "Outputting to " (style *output-dir* :cyan))
+    (println "   with cache at " (style cache :cyan))
 
-  (let [prev-result (atom (get-last-written-result))
-        latest-tag (when @prev-result
-                     (catalog-tag->cljs (catalog-tag)))
-        tags (get-cljs-tags-to-parse latest-tag n-or-all)]
-
+    ;; first pass
+    (println "\nStarting first pass (parsing symbol history)...\n")
     (doseq [tag tags]
-      (with-checkout! tag
 
-        (println "\n=========================================================")
-        (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
-        (println "with Clojure:" (style *clj-tag* :yellow))
+      ;; check if skip-parse? and if this tag's edn-parsed-file already exists
+      (let [out-folder (str cache "/" tag)
+            parsed-file (str out-folder "/" edn-parsed-file)
+            skip? (and skip-parse?           ;; do we want to skip?
+                       (exists? parsed-file) ;; can we skip?
+                       )]
 
-        (println "\nParsing...")
-        (let [parsed (parse-all)]
-          (print-summary parsed)
+        ;; make output folder for this tag
+        (when-not (exists? out-folder)
+          (mkdir out-folder))
 
-          (catalog-clear!)
+        (if skip?
 
-          (println "\nWriting docs to" (style *output-dir* :cyan))
-          (let [result (get-result parsed @prev-result)]
-            (dump-result! result)
-            (reset! prev-result result))
+          (do
+            (println "Using cache instead of parsing" (style tag :yellow))
+            (reset! prev-result (edn/read-string (slurp parsed-file))))
 
-          (println "\nCommitting docs at tag" *cljs-version* "...")
-          (catalog-commit!))
+          ;; parse
+          (with-checkout! tag
 
-        (println "\nDone.")))
+            (println "\n=========================================================")
+            (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
+            (println "with Clojure:" (style *clj-tag* :yellow))
+
+            (println "\nParsing...")
+            (let [parsed (parse-all)]
+              (print-summary parsed)
+
+              (println "\nWriting parsed data to" (style parsed-file :cyan))
+              (let [result (get-result parsed @prev-result)]
+                (spit parsed-file (with-out-str (pprint result)))
+                (reset! prev-result result)))
+
+            (println "\nDone.")))))
+
+    ;; second pass
+    ;; TODO: compile cljsdoc files
+    ;; TODO: create result data
+    ;; TODO: render pages
+
+    ;; third pass
+    ;; TODO: delete output-dir/.git and create the commits again
+    (comment
+      (catalog-clear!)
+      (println "\nCommitting docs at tag" *cljs-version* "...")
+      (catalog-commit!)
+      ) 
 
     (println (style "Success!" :green))))
 
-(defn create-single-version!
-  [tag]
-
-  (with-checkout! tag
-
-    (println "\n=========================================================")
-    (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
-    (println "with Clojure:" (style *clj-tag* :yellow))
-
-    (println "\nParsing...")
-    (let [parsed (parse-all)]
-
-      (print-summary parsed)
-
-      (println "\nWriting docs to" (style *output-dir* :cyan))
-      (let [result (get-result parsed)]
-        (dump-result! result)))
-
-    (println (style "Success!" :green))))

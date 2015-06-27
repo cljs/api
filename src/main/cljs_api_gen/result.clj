@@ -64,7 +64,7 @@
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
     (prune-map $)
     (attach-clj-symbol $)
-    (add-cljsdoc $)
+    #_(add-cljsdoc $) ;; forgoing this until after all symbols are parsed so we can validate references
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
 

@@ -7,7 +7,7 @@
 
 ;; cache directory
 (def cache-dir ".api-cache")
-(def edn-prelim-file "cljs-api-0.edn")
+(def edn-parsed-file "cljs-api-parsed.edn")
 (def edn-cljsdoc-file "cljsdoc.edn")
 
 ;; location of the clojure & clojurescript repos to parse
