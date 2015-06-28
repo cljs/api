@@ -213,7 +213,9 @@
                                   new-loc (str *output-dir* "/" filename)]
                               (if (file? f)
                                 (copy f new-loc)
-                                (copy-dir f new-loc)))))]
+                                (do
+                                  (delete-dir new-loc)
+                                  (copy-dir f new-loc))))))]
 
       (if catalog?
 
