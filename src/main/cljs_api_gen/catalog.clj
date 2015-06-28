@@ -180,7 +180,7 @@
     ;; compile cljsdoc files (manual docs)
     (println)
     (let [known-symbols (set (keys (:symbols (get-prev-result))))
-          num-skipped (build-cljsdoc! known-symbols) ;; TODO: uncomment param when ready to address symbol errors
+          num-skipped (build-cljsdoc! known-symbols)
           ] 
       (when-not (zero? num-skipped)
         (System/exit 1)))

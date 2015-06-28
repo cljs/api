@@ -124,6 +124,7 @@
     "macro character"
     "syntax"
     "tagged literal"
+    "var"
     "special var"})
 
 (defn type-error-msg

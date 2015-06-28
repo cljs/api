@@ -1,5 +1,5 @@
 ===== Name
-special/loop
+cljs.core/loop
 
 ===== Signature
 [[& bindings] & body-exprs]

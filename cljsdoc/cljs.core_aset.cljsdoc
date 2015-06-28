@@ -13,7 +13,7 @@ Can be used to set nested properties with the additional `idxs` arguments.
 
 ===== Related
 cljs.core/aget
-cljs.core/set!
+special/set!
 cljs.core/assoc-in
 
 ===== Example#d1aa58

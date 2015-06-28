@@ -1,5 +1,5 @@
 ===== Name
-cljs.core/set!
+special/set!
 
 ===== Signature
 [js-var val]
