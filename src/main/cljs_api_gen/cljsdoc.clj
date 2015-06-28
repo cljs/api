@@ -33,7 +33,10 @@
   ([] (build-cljsdoc! nil))
   ([known-symbols]
 
-   (println "Compiling *.cljsdoc files...")
+   (println (cond-> "Compiling cljsdoc/ files"
+              (nil? known-symbols) (str " (without symbol-existence check)"))
+            "...")
+
    (let [files (cljsdoc-files cljsdoc-dir)
          mandocs (binding [*known-symbols* known-symbols]
                    (doall (keep build-doc files)))

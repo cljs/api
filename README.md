@@ -136,10 +136,17 @@ for an example of the cljsdoc format.
 
 ### Validating
 
-Run the following to compile and validate the manual docs:
+Run the following to quickly validate the manual docs:
 
 ```
-lein run :cljsdoc
+lein run '{:task :cljsdoc}'
+```
+
+More exhaustive checking is done by the full API Generator, mentioned in the next section.
+The generator further validates the manual docs against the parsed data:
+
+```
+lein run
 ```
 
 ---
@@ -203,7 +210,7 @@ Here is a full table of options:
 
 | option | description | e.g. | default |
 |---:|:-------|-------|------|
-| `:task` | a side task to run instead of the main one | `:docset` | `nil` |
+| `:task` | a side task to run instead of the main one | `:docset` `:cljsdoc` | `nil` |
 | `:version` | version to process | `<version>` `:latest` | `:latest` |
 | `:catalog?` | create a catalog repo? | `true` `false` | `false` |
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |

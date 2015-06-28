@@ -2,6 +2,7 @@
   (:require
     [clojure.pprint :refer [print-table]]
     [clojure.edn :as edn]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
     [cljs-api-gen.config :refer [*output-dir*
                                  default-out-dir]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
@@ -38,6 +39,7 @@
   (binding [*output-dir* out-dir]
     (case task
       :docset  (docset/create!)
+      :cljsdoc (build-cljsdoc!)
       (do
         (prep!)
         (create-catalog! options))))
