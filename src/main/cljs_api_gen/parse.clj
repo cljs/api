@@ -623,7 +623,7 @@
         defs (zipmap (map :name parsed) parsed)
         map-form (get defs "*cljs-data-readers*")]
     (for [[name- func-name] reader-map]
-      (merge (base-syntax-item (syntax-map (str name- "-tag")))
+      (merge (base-syntax-item (syntax-map (str name- "-literal")))
              {:type "tagged literal"
               :source (:source map-form)
               :extra-sources [(:source (get defs (str func-name)))]}))))
