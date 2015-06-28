@@ -11,9 +11,10 @@
                  [org.clojure/java.jdbc "0.3.7"]
                  [org.xerial/sqlite-jdbc "3.8.10.1"]
                  [ccfontes/fuzzy-matcher "0.0.1"]
+                 [clj-time "0.9.0"]
                  ]
 
   :source-paths ["src/main"]
   :test-paths ["src/test"]
-  
+
   :main cljs-api-gen.core)

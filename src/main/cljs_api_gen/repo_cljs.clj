@@ -7,7 +7,13 @@
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split split-lines]]
     [cljs-api-gen.config :refer [repos-dir]]
+    [clj-time.coerce :as tc]
+    [clj-time.format :as tf]
     ))
+
+(defn timestamp->date-str
+  [t]
+  (tf/unparse (tf/formatters :date) (tc/from-long t)))
 
 (def ^:dynamic *cljs-version*    "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
 (def ^:dynamic *cljs-num*        "ClojureScript version number   (e.g. 3211)" nil)
@@ -97,12 +103,13 @@
   [group artifact]
   (str "http://search.maven.org/solrsearch/select?q=g:%22" group "%22+AND+a:%22" artifact "%22&core=gav&rows=1000&wt=json"))
 
-(defn maven-versions
+(defn maven-releases
   [group artifact]
-  (let [url (maven-release-url group artifact)
-        data (json/read-str (slurp url) :key-fn keyword)
-        versions (map :v (-> data :response :docs))]
-    versions))
+  (-> (maven-release-url group artifact)
+      (slurp)
+      (json/read-str :key-fn keyword)
+      (:response)
+      (:docs)))
 
 (defn get-cljs-version-tags
   []
@@ -115,6 +122,9 @@
 (def published-cljs-tags
   (atom nil)) ;; list
 
+(def cljs-tag->pub-date
+  (atom {}))
+
 (def published-clj-versions
   (atom {})) ;; map version -> index
 
@@ -125,10 +135,12 @@
 
 (defn get-published-cljs-tags!
   []
-  (let [pub-versions (maven-versions "org.clojure" "clojurescript")
-        pub-tags (set (map cljs-version->tag pub-versions))
-        local-tags (set (get-cljs-version-tags))
-        [not-local not-published valid-tags] (diff pub-tags local-tags)]
+  (let [releases (maven-releases "org.clojure" "clojurescript")
+        pub-versions (map :v releases)
+        pub-dates (map (comp timestamp->date-str :timestamp) releases)
+        pub-tags (map cljs-version->tag pub-versions)
+        local-tags (get-cljs-version-tags)
+        [not-local not-published valid-tags] (diff (set pub-tags) (set local-tags))]
 
     (when not-local
       (println (style "Error:" :red) "Found no local tags for the following published versions:")
@@ -141,12 +153,13 @@
       (doseq [tag not-published]
         (println "  " tag)))
 
+    (reset! cljs-tag->pub-date (zipmap pub-tags pub-dates))
     (reset! published-cljs-tags (sort-by cljs-tag->num valid-tags))
     ))
 
 (defn get-published-clj-versions!
   []
-  (let [versions (reverse (maven-versions "org.clojure" "clojure"))
+  (let [versions (reverse (map :v (maven-releases "org.clojure" "clojure")))
         index-map (into {} (map-indexed (fn [i v] [v i]) versions))]
     (reset! published-clj-versions index-map)))
 
@@ -226,7 +239,7 @@
        (checkout-repo! "tools.reader" treader-tag#))
 
      (binding [*cljs-tag*     ~cljs-tag
-               *cljs-date*    (repo-tag-date "clojurescript" ~cljs-tag)
+               *cljs-date*    (@cljs-tag->pub-date ~cljs-tag)
                *cljs-version* (cljs-tag->version ~cljs-tag)
                *cljs-num*     (cljs-tag->num     ~cljs-tag)
 

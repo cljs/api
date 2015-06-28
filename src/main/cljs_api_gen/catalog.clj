@@ -164,6 +164,7 @@
             (println "\n=========================================================")
             (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
             (println "with Clojure:" (style *clj-tag* :yellow))
+            (println "published on" (style *cljs-date* :yellow))
 
             (println "\nParsing...")
             (let [parsed (parse-all)]
