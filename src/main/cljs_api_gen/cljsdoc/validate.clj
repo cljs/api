@@ -172,15 +172,26 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Related
+;; Validate Symbol
+;;--------------------------------------------------------------------------------
+
+(defn symbol-unknown-error-msg
+  [{:keys [full-name] :as doc}]
+  (let [pass? (or (nil? *known-symbols*) ;; ignore if no known symbols supplied
+                  (*known-symbols* full-name))]
+    (when-not pass?
+      (str "This file is for an unknown symbol '" full-name "'."))))
+
+;;--------------------------------------------------------------------------------
+;; Validate Related Symbol
 ;;--------------------------------------------------------------------------------
 
 (defn related-missing-error-msg*
-  [name-]
+  [full-name]
   (let [pass? (or (nil? *known-symbols*) ;; ignore if no known symbols supplied
-                  (*known-symbols* name-))]
+                  (*known-symbols* full-name))]
     (when-not pass?
-      (str "Related symbol '" name- "' is an unknown symbol."))))
+      (str "Related symbol '" full-name "' is an unknown symbol."))))
 
 (defn related-missing-error-msg
   [{:keys [related] :as doc}]
@@ -200,6 +211,7 @@
    signatures-error-msg
    type-error-msg
    examples-error-msg!
+   symbol-unknown-error-msg
    related-missing-error-msg])
 
 (def warning-detectors
@@ -213,17 +225,15 @@
         valid? (not errors)]
     (when (or warnings errors)
       (binding [*out* *err*]
-        (println "----------------------------------------------------------------")
         (println)
         (println (style (:filename doc) :cyan))
         (when errors
-          (println)
-          (println (style "ERRORS" :red))
+          (println (style "  ERRORS" :red))
           (doseq [msg errors]
-            (println msg)))
+            (println "    " msg)))
         (when warnings
-          (println)
-          (println (style "WARNINGS" :yellow))
+          (println (style "  WARNINGS" :yellow))
           (doseq [msg warnings]
-            (println msg)))))
+            (println "    " msg)))
+        ))
     valid?))

@@ -49,7 +49,7 @@
 
      (if (zero? skipped)
        (println (style "Done with no errors." :green))
-       (println (style "Done with some errors." :red)))
+       (println (style "\nDone with some errors." :red)))
      (println (format-status parsed skipped))
 
      skipped)))
