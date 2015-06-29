@@ -7,5 +7,13 @@ cljs.core/constantly
 ===== Description
 Returns a function that takes any number of arguments and always returns `x`.
 
+===== Example#9d5c25
+
+```clj
+(defn forever-ten [anything] ((constantly 10) anything))
+(forever-ten "what ever")
+;; => 10
+```
+
 ===== Related
 cljs.core/repeatedly
