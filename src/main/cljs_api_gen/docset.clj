@@ -92,7 +92,7 @@
         (println)
         (println "Please build/push the latest version of the docs to github:")
         (println)
-        (println (style "$ script/build-publish.sh" :cyan))
+        (println (style "$ script/publish.sh" :cyan))
         (println))
 
       (when missing-offline?
@@ -102,7 +102,7 @@
           (println)
           (println "Please push the latest version of the docs to github:")
           (println)
-          (println (style "$ script/build-publish.sh" :cyan)))
+          (println (style "$ script/publish.sh" :cyan)))
         (println)
         (println "Run the following to create an offline version of")
         (println "  github's rendered markdown docs.")

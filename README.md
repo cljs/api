@@ -198,7 +198,7 @@ lein run '{:version "r3211"}'
 
 The generator can take an optional map at the command line.  This is how the
 [catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog) is
-[generated](script/build-publish.sh)
+[generated](script/publish.sh)
 
 ```
 lein run '{:catalog? true      ;; Create a git repo catalog w/ doc commits for each cljs version.
