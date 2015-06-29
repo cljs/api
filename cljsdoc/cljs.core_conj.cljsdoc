@@ -20,27 +20,35 @@ type.
 
 ===== Example#8c2a84
 
+Append a vector:
+
 ```clj
-;; add at the end for vector
 (conj [1 2 3] 4)
-;; => [1 2 3 4]
+;;=> [1 2 3 4]
+```
 
-;; add at front for list
+Prepend a list:
+
+```clj
 (conj (list 1 2 3) 0)
-;; => (0 1 2 3)
+;;=> (0 1 2 3)
+```
 
-;;adding to a map
-(conj {:key "value" :key2 "value2"} {:key3 "value3"})
-;; => {:key3 "value3", :key "value" :key2 "value2"}
+Prepend a sequence:
 
-;; add element to set
+```clj
+(def x (range 1 4))
+;;=> (1 2 3)
+
+(conj x 0)
+;;=> (0 1 2 3)
+```
+
+Add to set:
+
+```clj
 (conj #{"a" "b" "c"} "d")
-;; => #{"d" "a" "b" "c"}
-
-;;adding a set to another set
-(conj #{"a" "b" "c"} #{"d"})
-;; => #{"a" #{"d"} "b" "c"}
-
+;;=> #{"a" "b" "c" "d"}
 ```
 
 ===== Related
