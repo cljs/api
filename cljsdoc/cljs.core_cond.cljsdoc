@@ -23,20 +23,12 @@ keyword `:else` (a keyword always evaluates to logical true).
 
 ```
 (def a 42)
-(cond (< a 10) (println "a is less than 10")
-      (= a 42) (println "a us 42")
-      (> a 50) (println "a is bigger than 50"))
-
-;;=>"a is less than 10"
-
-(def b 43)
-(cond (even? b) (println "b is an even number")
-      :else (println "b should be an odd number, since it's not an even number"))
-;;=>"b should be an odd number, since it's not an even number"
-
-(def c 10)
-(println 
-  (str "cond say's" (cond (number? c) (println "C is a number")))
+(cond
+  (< a 10) "a is less than 10"
+  (= a 10) "a is 10"
+  (> a 10) "a is bigger than 10"
+  :else "a is not a number!")
+;;=> "a is bigger than 10"
 ```
 
 ===== Related
