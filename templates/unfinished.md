@@ -2,20 +2,6 @@
 
 This is a table of symbols that have unfinished docs.  The goal is to have every column filled:
 
- <dl>
-
-<dt>examples?</dt>
-<dd>
-if this is missing, the symbol has no documented examples.
-</dd>
-
-<dt>related?</dt>
-<dd>
-if this is missing, the symbol has no "See Also" section (i.e. related symbols)
-</dd>
-
-</dl>
-
 If a symbol has all aforementioned docs, then it is __removed__ from the table.
 
  <table>
