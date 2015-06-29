@@ -483,15 +483,19 @@
         all-syms (into #{} (keys (merge manual-map auto-map)))
         make-item (fn [s]
                     (let [full-name-encode (encode-fullname s)
-                          {:keys [examples related] :as manual-item} (manual-map s)
-                          filled? #(and (sequential? %) (pos? (count %)))]
+                          {:keys [description examples related] :as manual-item} (manual-map s)
+                          non-empty-seq? #(and (sequential? %) (pos? (count %)))
+                          non-empty-str? #(and (string? %) (pos? (count %)))]
                       {:full-name (md-escape s)
                        :ref (when (auto-map s) (str refs-dir "/" full-name-encode ".md"))
-                       :cljsdoc (when manual-item (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" full-name-encode ".cljsdoc"))
-                       :examples (filled? examples)
-                       :related (filled? related)}))
-        done? (fn [{:keys [ref cljsdoc examples related]}]
-                (and ref cljsdoc examples related))
+                       :cljsdoc (when manual-item
+                                  (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/"
+                                       cljsdoc-dir "/" full-name-encode ".cljsdoc"))
+                       :description (non-empty-str? description)
+                       :examples (non-empty-seq? examples)
+                       :related (non-empty-seq? related)}))
+        done? (fn [{:keys [ref cljsdoc description examples related]}]
+                (and ref cljsdoc description examples related))
         symbols (->> all-syms
                      (map make-item)
                      (remove done?)
