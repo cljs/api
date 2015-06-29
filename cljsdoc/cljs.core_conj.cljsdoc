@@ -18,6 +18,31 @@ type.
 
 `(conj nil item)` returns `(item)`.
 
+===== Example#8c2a84
+
+```clj
+;; add at the end for vector
+(conj [1 2 3] 4)
+;; => [1 2 3 4]
+
+;; add at front for list
+(conj (list 1 2 3) 0)
+;; => (0 1 2 3)
+
+;;adding to a map
+(conj {:key "value" :key2 "value2"} {:key3 "value3"})
+;; => {:key3 "value3", :key "value" :key2 "value2"}
+
+;; add element to set
+(conj #{"a" "b" "c"} "d")
+;; => #{"d" "a" "b" "c"}
+
+;;adding a set to another set
+(conj #{"a" "b" "c"} #{"d"})
+;; => #{"a" #{"d"} "b" "c"}
+
+```
+
 ===== Related
 cljs.core/cons
 cljs.core/into
