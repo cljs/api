@@ -574,7 +574,7 @@
         ;; js/ special namespace
         ;; NOTE: always present
         ;; NOTE: (the Math/ special namespace is already added since it has a clj-doc link in the syntax table)
-        js-ns-item (base-syntax-item (syntax-map "js-ns"))
+        js-ns-item (base-syntax-item (syntax-map "js-namespace"))
 
         all-items (concat
                     clojure-syntax-items

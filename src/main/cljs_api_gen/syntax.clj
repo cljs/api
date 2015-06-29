@@ -85,8 +85,8 @@
    {:desc "js-literal"    :type "tagged literal" :form ["#js {}" "#js []"]}
 
    ;; special namespaces
-   {:desc "js-ns"   :type "special namespace" :form "js/"}
-   {:desc "Math-ns" :type "special namespace" :form "Math/" :clj-doc doc-interop}
+   {:desc "js-namespace"   :type "special namespace" :form "js/"}
+   {:desc "Math-namespace" :type "special namespace" :form "Math/" :clj-doc doc-interop}
 
    ;; destructuring pattern
    {:desc "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct}
