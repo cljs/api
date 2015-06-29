@@ -13,7 +13,8 @@
                           base-name
                           copy
                           copy-dir]]
-    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!
+                                  create-cljsdoc-stubs!]]
     [cljs-api-gen.config :refer [*output-dir*
                                  cache-dir
                                  edn-parsed-file
@@ -177,13 +178,17 @@
 
             (println "\nDone.")))))
 
-    ;; compile cljsdoc files (manual docs)
     (println)
-    (let [known-symbols (set (keys (:symbols (get-prev-result))))
-          num-skipped (build-cljsdoc! known-symbols)
-          ] 
-      (when-not (zero? num-skipped)
-        (System/exit 1)))
+    (let [known-symbols (set (keys (:symbols (get-prev-result))))]
+
+      ;; create cljsdoc stubs for symbols that don't have them
+      ;; (allowing easier PRs for those wanting to populate them)
+      (create-cljsdoc-stubs! known-symbols)
+
+      ;; compile cljsdoc files (manual docs)
+      (let [num-skipped (build-cljsdoc! known-symbols)]
+        (when-not (zero? num-skipped)
+          (System/exit 1))))
 
     ;; create pages
     (println "\nStarting second pass (merge manual docs and create pages)...\n")

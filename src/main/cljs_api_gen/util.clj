@@ -14,3 +14,10 @@
   (let [[ks vs] ((juxt keys vals) datamap)
         result (zipmap ks (map mapf vs))]
     result))
+
+(defn sym-sort-key
+  "Allows sorting symbols by namespace and then name.
+  Example: (sort-by sym-sort-key syms)"
+  [s]
+  (let [sym (symbol s)]
+    [(namespace sym) (name sym)]))

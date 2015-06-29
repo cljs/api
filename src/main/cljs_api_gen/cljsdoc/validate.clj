@@ -17,8 +17,7 @@
 ;;--------------------------------------------------------------------------------
 
 (def required-sections
-  ["name"
-   "description"])
+  ["name"])
 
 (defn required-section-error-msg
   "Returns error message if section name is not present in doc."

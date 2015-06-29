@@ -1,10 +1,13 @@
 (ns cljs-api-gen.cljsdoc
   (:require
     [cljs-api-gen.config :refer [cljsdoc-dir]]
+    [cljs-api-gen.encode :as encode]
+    [cljs-api-gen.util :refer [sym-sort-key]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *known-symbols*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
-    [me.raynes.fs :refer [list-dir base-name]]
+    [me.raynes.fs :refer [list-dir base-name exists?]]
+    [stencil.core :as stencil]
     [clansi.core :refer [style]]))
 
 (def cljsdoc-map
@@ -28,6 +31,18 @@
 (defn cljsdoc-files [dir]
   (let [files (list-dir dir)]
     (filter #(.endsWith (.getName %) ".cljsdoc") files)))
+
+(defn create-cljsdoc-stubs!
+  [known-symbols]
+  (doseq [full-name (sort-by sym-sort-key known-symbols)]
+    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".cljsdoc")]
+      (when-not (exists? filename)
+        (encode/assert-lossless full-name)
+        (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
+        (spit filename
+              (stencil/render-string
+                (slurp "templates/stub.cljsdoc")
+                {:full-name full-name}))))))
 
 (defn build-cljsdoc!
   ([] (build-cljsdoc! nil))

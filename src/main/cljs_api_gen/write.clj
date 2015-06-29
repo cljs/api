@@ -13,6 +13,7 @@
                                  edn-result-file]]
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.util :refer [mapmap
+                               sym-sort-key
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-order
@@ -489,15 +490,12 @@
                        :cljsdoc (when manual-item (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" full-name-encode ".cljsdoc"))
                        :examples (filled? examples)
                        :related (filled? related)}))
-        sort-key (fn [item]
-                   (let [sym (symbol (:full-name item))]
-                     [(namespace sym) (name sym)]))
         done? (fn [{:keys [ref cljsdoc examples related]}]
                 (and ref cljsdoc examples related))
         symbols (->> all-syms
                      (map make-item)
                      (remove done?)
-                     (sort-by sort-key))]
+                     (sort-by #(sym-sort-key (:full-name %))))]
     {:symbols symbols}))
 
 (defn dump-unfinished! [result]
