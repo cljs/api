@@ -86,56 +86,64 @@ merges it with the [manual docs](https://github.com/cljsinfo/cljs-api-docs/wiki/
 <td>
 ##### Case-Sensitive file system required!
 
-The generated catalog pages are case-sensitive.  Example:
-`cljs.core_cons.md` and `cljs.core_Cons.md` represent different pages.
+Example: `cljs.core_cons.md` and `cljs.core_Cons.md` must represent different pages.
 See [Issue #48](https://github.com/cljsinfo/cljs-api-docs/issues/48) for Mac solution.
-
-(The generated catalog data is not affected, only the pages)
 
 </td></tr>
 </table>
 
-### Running
-
 This will generate docs for the _latest version_ of ClojureScript
-and output them to the `catalog/` folder.
+and output them to the `catalog/` folder:
 
 ```
-lein run
+$ lein run
 ```
 
-To get the history data for each symbol, the generator will first parse the
-previous versions of ClojureScript (takes about ~5 minutes), but they will be
-cached for much faster subsequent runs (~15 seconds).
+The generator has to parse the previous versions of ClojureScript to understand
+the symbol history (takes about 5-10 minutes), but they will be cached for much
+faster subsequent runs (~10 seconds).
 
-Use this to target a specific version:
+Use [Grip] to preview the docs:
 
 ```
-lein run '{:version "r3211"}'
+$ grip catalog
+ * Running on http://localhost:5000/ (Press CTRL+C to quit)
 ```
 
 #### Advanced
 
-The generator can take an optional map at the command line.  This is how the
-[catalog branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog) is
-[generated](script/publish.sh)
+The generator can take an optional map at the command line.
+Use this to target a specific version (i.e. one of ClojureScript's tag):
 
 ```
-lein run '{:catalog? true      ;; Create a git repo catalog w/ doc commits for each cljs version.
-           :skip-pages? false  ;; Don't skip generating the docs pages for previous versions.
-          }'
+$ lein run '{:version "r3211"}'
 ```
 
-Here is a full table of options:
+Or target the master branch:
+
+```
+$ lein run '{:version :master}'
+```
+
+Or generate the [catalog
+branch](https://github.com/cljsinfo/cljs-api-docs/tree/catalog) containing
+pages for every version:
+
+```
+$ lein run '{:catalog? true      ;; Create a git repo catalog w/ doc commits for each cljs version.
+             :skip-pages? false  ;; Don't skip generating the docs pages for previous versions.
+            }'
+```
+
+Full table of options:
 
 | option | description | e.g. | default |
 |---:|:-------|-------|------|
 | `:task` | a side task to run instead of the main one | `:docset` `:cljsdoc` | `nil` |
-| `:version` | version to process | `<version>` `:latest` | `:latest` |
+| `:version` | version to process | `"<tag>"` `:latest` `:master` | `:latest` |
 | `:catalog?` | create a catalog repo? | `true` `false` | `false` |
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
 | `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
-| `:master?` | parse the latest master branch | `true` `false` | `false` |
 
 ### Implementation
 
@@ -145,13 +153,9 @@ wrapper [codox] if this becomes insufficient.
 
 [codox]:https://github.com/weavejester/codox
 
-It's worth nothing that parsing the full `cljs.core` namespace requires:
+Here is sample output of the parser to get an idea of the types of things we parse:
 
-- finding __macros__ in `clojure.core` (specific clj version in `cljs/script/bootstrap`)
-    - excluding those in `(:refer-clojure :exclude` in `cljs.core`
-    - including those in `(import-macros clojure.core` in `cljs.core`
-- finding __special forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
-- finding __repl special forms__ in `cljs.repl`
+![parse-output](http://i.imgur.com/Bgq50Z3.png)
 
 These are the source files concerned with the API reference generator:
 
