@@ -16,46 +16,52 @@ be devoted to providing beautiful and informative documentation for the core
 syntax, library and compiler.  This repo provides the means to generate this
 documentation.
 
+:seedling: __[How to contribute docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files)__
+
 ---
+
+| Git Branch  | Description |
+|------------:|:------------|
+| master      | API generator and manual docs |
+| [catalog]   | API release (force-pushed) |
 
 ## Table of Contents
 
- <dl>
+1. [Published API](#published-api)
+1. [API Generator](#api-generator)
+1. [Offline Docs](#offline-docset-for-dash)
 
-<dt>[Published API](#published-api)</dt>
-<dd>
-Information on the structure of the published API documentation.
-</dd>
+## Published API
 
-<dt>[Manual Docs](#manual-docs)</dt>
-<dd>
-Information on the manually created descriptions, usage examples, and
-cross-references that supplement the generated docs.
-</dd>
 
-<dt>[API Generator](#api-generator)</dt>
-<dd>
-Information on how the API generator parses the ClojureScript repo to produce
-our published API.
-</dd>
+The API docs are published to the [catalog] branch. It contains _version tags_
+for locating the API reference for specific versions of ClojureScript.  You can
+use the [history
+table](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md) to
+navigate the version tags.
 
-<dt>[Offline Docs](#offline-docset-for-dash)</dt>
-<dd>
-Information on how to use and generate the offline docs available for Dash.
-</dd>
+The catalog branch has each of the generated files for exploring/using the API reference:
 
-</dl>
+| Catalog File | Description |
+|-----:|:------------|
+| <samp>[cljs-api.edn]</samp>\*  | a data structure containing all API information |
+| <samp>[README.md]</samp>     | an overview of the API with reference tables |
+| <samp>[refs/\*.md]</samp>    | dedicated view for a specific API symbol |
+| <samp>[HISTORY.md]</samp>    | table of all versions and their changes |
+| <samp>[UNPORTED.md]</samp>   | list of symbols that are not ported from Clojure |
+| <samp>[UNFINISHED.md]</samp> | table of symbols that have unfinished manual docs |
 
----
+_\* see format details at [cljs-api-format.edn]_
 
-### Branches
+[catalog]:https://github.com/cljsinfo/cljs-api-docs/tree/catalog
+[README.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md
+[refs/\*.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md
+[HISTORY.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md
+[UNPORTED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNPORTED.md
+[UNFINISHED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNFINISHED.md
 
-There are two main branches in this repo:
-
-| Branch  | Description |
-|--------:|:------------|
-| master  | API generator and manual docs |
-| [catalog] | API release (force-pushed) |
+[cljs-api-format.edn]:cljs-api-format.edn
+[cljs-api.edn]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/cljs-api.edn
 
 ### Pseudo-namespaces?
 
@@ -68,103 +74,16 @@ just invent some "psuedo-namespaces":
 
 ---
 
-## Published API
-
-The API docs are published to the [catalog] branch.
-
-[catalog]:https://github.com/cljsinfo/cljs-api-docs/tree/catalog
-
-### Version Tags
-
-The catalog branch contains version tags for locating the API reference for
-specific versions of ClojureScript.  You can use the [history
-table](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md) to navigate
-the version tags.
-
-### Catalog Files
-
-The catalog branch has each of the generated files for exploring/using the API reference:
-
-| Catalog File | Description |
-|-----:|:------------|
-| <samp>[cljs-api.edn]</samp>  | a data structure containing all API information ([see format details]) |
-| <samp>[README.md]</samp>     | an overview of the API with reference tables |
-| <samp>[refs/\*.md]</samp>    | dedicated view for a specific API symbol |
-| <samp>[HISTORY.md]</samp>    | table of all versions and their changes |
-| <samp>[UNPORTED.md]</samp>   | list of symbols that are not ported from Clojure |
-| <samp>[UNFINISHED.md]</samp> | table of symbols that have unfinished manual docs |
-
-[README.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md
-[refs/\*.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md
-[HISTORY.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md
-[UNPORTED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNPORTED.md
-
-[see format details]:cljs-api-format.edn
-
-#### API EDN format
-
-See [cljs-api-format.edn] for details on how the latest
-[cljs-api.edn] file is structured.
-
-[cljs-api-format.edn]:cljs-api-format.edn
-[cljs-api.edn]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/cljs-api.edn
-
----
-
-## Manual Docs
-
-We write manual docs to add more detailed descriptions and usage examples to the generated API.
-
-| File                          | Description |
-|------------------------------:|:------------|
-| <samp>[cljsdoc/]</samp>       | extended descriptions and examples for each symbol (as plaintext files) |
-| <samp>[encode.clj]</samp>     | shows how to encode filenames for symbols<br>(e.g. `cljs.core/assoc!` to `cljs.core_assocBANG`) |
-| <samp>[UNFINISHED.md]</samp>  | table for tracking which symbols are missing manual docs |
-| <samp>[Examples Guide]</samp> | guide for writing examples |
-
-[cljsdoc/]:cljsdoc
-[encode.clj]:src/main/cljs_api_gen/encode.clj
-[UNFINISHED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNFINISHED.md
-[Examples Guide]:https://github.com/cljsinfo/cljs-api-docs/wiki/Examples-Guide
-
-_Pull requests welcome!_
-
-### Example
-
-See [cljs.core_assoc-in.cljsdoc](cljsdoc/cljs.core_assoc-in.cljsdoc)
-for an example of the cljsdoc format.
-
-### Validating
-
-Run the following to quickly validate the manual docs:
-
-```
-lein run '{:task :cljsdoc}'
-```
-
-More exhaustive checking is done by the full API Generator, mentioned in the next section.
-The generator further validates the manual docs against the parsed data:
-
-```
-lein run
-```
-
----
-
 ## API Generator
 
 The API generator parses info from the ClojureScript repo and
-merges it with the [manual docs](#manual-docs).
-
-Generating the entire API catalog takes about 15 minutes on my computer since
-there are 123 ClojureScript releases at the time of this writing. I generate
-only a single version or partial catalog when developing so things go quicker.
+merges it with the [manual docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files).
 
  <table>
 <tr>
 <td>:warning:</td>
 <td>
-###### Case-Sensitive file system required!
+##### Case-Sensitive file system required!
 
 The generated catalog pages are case-sensitive.  Example:
 `cljs.core_cons.md` and `cljs.core_Cons.md` represent different pages.
@@ -215,7 +134,7 @@ Here is a full table of options:
 | `:catalog?` | create a catalog repo? | `true` `false` | `false` |
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
 | `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
-| `:master?` | parse the latest master branch | `true` `false` | `false |
+| `:master?` | parse the latest master branch | `true` `false` | `false` |
 
 ### Implementation
 
@@ -233,14 +152,12 @@ It's worth nothing that parsing the full `cljs.core` namespace requires:
 - finding __special forms__ as `(defmethod parse` in `cljs.analyzer` (`cljs.compiler` for older)
 - finding __repl special forms__ in `cljs.repl`
 
-### Source Files
-
 These are the source files concerned with the API reference generator:
 
 | Source File | Description |
 |------------:|:------------|
 | <samp>[core.clj]</samp>        | main entry                                                      |
-| <samp>[catalog.clj]</samp>     | builds a catalog or single version output                       |
+| <samp>[catalog.clj]</samp>     | builds the API catalog of docs for release                      |
 | <samp>[clojure_api.clj]</samp> | retrieves original clojure api info to correlate with cljs      |
 | <samp>[config.clj]</samp>      | filename constants and dynamic vars for output directories      |
 | <samp>[docset.clj]</samp>      | generates the offline docset for Dash                           |
@@ -269,8 +186,6 @@ These are the source files concerned with the API reference generator:
 [result.clj]:src/main/cljs_api_gen/result.clj
 [write.clj]:src/main/cljs_api_gen/write.clj
 [util.clj]:src/main/cljs_api_gen/util.clj
-
-### Template Files
 
 These are the mustache templates that we use to render the catalog files.
 
