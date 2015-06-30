@@ -14,6 +14,28 @@ tests if the numeric key is within the range of indexes.
 `contains?` operates in constant or logarithmic time; it will not perform a
 linear search for a value.
 
+===== Example#2991f0
+
+```clj
+(contains? [1 2 3] 1)
+;; => true
+
+(contains? [1 2 3] 10)
+;; => false
+
+(contains? [10 2 3] 10)
+;;=> false
+
+(contains? [10 2 3] 1)
+;; => true
+
+(contains? nil :what-ever)
+;; => false
+
+(contains? {:key "value" :another-key "another-value"} :key)
+;; => true
+```
+
 ===== Related
 cljs.core/some
 cljs.core/get
