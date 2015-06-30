@@ -16,7 +16,8 @@ be devoted to providing beautiful and informative documentation for the core
 syntax, library and compiler.  This repo provides the means to generate this
 documentation.
 
-:seedling: __[How to contribute docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files)__
+:page_facing_up: __[Doc page sample](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md)__<br>
+:seedling: [How to contribute docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files)
 
 ---
 
