@@ -67,8 +67,11 @@
 
 (defn cljs-tag->num
   [tag]
-  (when-let [[_ number] (re-find #"r(.*)" tag)]
-    (Integer/parseInt number)))
+  (if (= "master" tag)
+    ;; some large constant denoting that the master is ahead of all previous versions
+    100000
+    (when-let [[_ number] (re-find #"r(.*)" tag)]
+      (Integer/parseInt number))))
 
 (defn cljs-version->tag
   [version]

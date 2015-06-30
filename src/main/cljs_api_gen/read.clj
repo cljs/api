@@ -19,7 +19,7 @@
   [r]
   (loop [forms (transient [])]
     (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*]
-                      (reader/read r))
+                      (reader/read {:read-cond :allow, :features #{:clj}} r))
                     (catch Exception e
                       (when-not (= (.getMessage e) "EOF") (throw e))))]
       (recur (conj! forms f))

@@ -104,7 +104,8 @@
     :keys [version
            catalog?
            skip-pages?
-           skip-parse?]
+           skip-parse?
+           master?]
     :or {version :latest
          catalog? false
          skip-pages? true
@@ -127,7 +128,8 @@
                            @prev-result)
 
         tags (if (= :latest version)
-               @published-cljs-tags
+               (cond-> @published-cljs-tags
+                 master? (concat ["master"]))
                (concat (take-while (partial not= version) @published-cljs-tags) [version]))
         last-tag (last tags)]
 
@@ -227,7 +229,9 @@
         (do
           (println "\nCreating catalog repo...")
           (catalog-init!)
-          (doseq [tag tags]
+          (doseq [tag (if (= "master" last-tag)
+                        (butlast tags) ;; don't commit the master tag to the catalog
+                        tags)]
 
             ;; FIXME: We shouldn't be checking out the repos here, but this
             ;; wrapper gives us the version bindings, which we haven't separated

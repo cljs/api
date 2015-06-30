@@ -215,6 +215,7 @@ Here is a full table of options:
 | `:catalog?` | create a catalog repo? | `true` `false` | `false` |
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
 | `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
+| `:master?` | parse the latest master branch | `true` `false` | `false |
 
 ### Implementation
 

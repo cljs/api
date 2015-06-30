@@ -130,7 +130,8 @@
         attr-map (let [m (first args)]
                    (when (map? m) m))
         args (if attr-map (rest args) args)
-        private? (or (= 'defn- (first form))
+        macro? (:macro attr-map)
+        private? (or (#{'core/defn- 'defn-} (first form))
                      (:private meta-)
                      (:private attr-map))
         doc-forms (cond-> []
@@ -150,7 +151,10 @@
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
        :signature signatures
-       :type (if constructor? "type" type-)})))
+       :type (cond
+               constructor? "type"
+               macro? "macro"
+               :else type-)})))
 
 (defn parse-def-fn
   [form]
@@ -240,6 +244,7 @@
       defn          "defn"
       defn-         "defn"
       core/defn     "defn"
+      core/defn-    "defn"
       defmacro      "defmacro"
       core/defmacro "defmacro"
       defcurried    "defcurried"
