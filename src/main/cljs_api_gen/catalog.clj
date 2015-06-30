@@ -104,8 +104,7 @@
     :keys [version
            catalog?
            skip-pages?
-           skip-parse?
-           master?]
+           skip-parse?]
     :or {version :latest
          catalog? false
          skip-pages? true
@@ -127,10 +126,14 @@
                            @@prev-result
                            @prev-result)
 
-        tags (if (= :latest version)
-               (cond-> @published-cljs-tags
-                 master? (concat ["master"]))
-               (concat (take-while (partial not= version) @published-cljs-tags) [version]))
+        tags (case version
+               :latest @published-cljs-tags
+               :master (concat @published-cljs-tags ["master"])
+               (if-not ((set @published-cljs-tags) version)
+                 (do
+                   (println (style "Unrecognized version tag" :red) version)
+                   (System/exit 1))
+                 (concat (take-while (partial not= version) @published-cljs-tags) [version])))
         last-tag (last tags)]
 
     ;; make cache directory
