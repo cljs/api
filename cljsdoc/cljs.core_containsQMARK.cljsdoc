@@ -6,34 +6,55 @@ cljs.core/contains?
 
 ===== Description
 
-Returns true if `k` is present in `coll`, otherwise returns false.
+Returns true if the `coll` contains the lookup key `k`, otherwise returns false.
 
 Note that for numerically indexed collections like vectors and arrays, this
 tests if the numeric key is within the range of indexes.
 
-`contains?` operates in constant or logarithmic time; it will not perform a
-linear search for a value.
+`contains?` operates in constant or logarithmic time, using `get` to perform
+the lookup. It will not perform a linear search for a value.  `some` is
+used for this purpose:
+
+```clj
+(some #{value} coll)
+```
 
 ===== Example#2991f0
 
+Sets and Maps provide key lookups, so `contains?` works as expected:
+
 ```clj
-(contains? [1 2 3] 1)
-;; => true
+(contains? #{:a :b} :a)
+;;=> true
 
-(contains? [1 2 3] 10)
-;; => false
+(contains? {:a 1, :b 2} :a)
+;;=> true
 
-(contains? [10 2 3] 10)
+(contains? {:a 1, :b 2} 1)
+;;=> false
+```
+
+Vectors provide integer index lookups, so `contains?` works appropriately:
+
+```clj
+(contains? [:a :b] :b)
 ;;=> false
 
-(contains? [10 2 3] 1)
-;; => true
+(contains? [:a :b] 1)
+;;=> true
+```
 
-(contains? nil :what-ever)
-;; => false
+Lists and Sequences do not provide lookups, so `contains?` will not work:
 
-(contains? {:key "value" :another-key "another-value"} :key)
-;; => true
+```clj
+(contains? '(:a :b) :a)
+;;=> false
+
+(contains? '(:a :b) 1)
+;;=> false
+
+(contains? (range 3) 1)
+;;=> false
 ```
 
 ===== Related
