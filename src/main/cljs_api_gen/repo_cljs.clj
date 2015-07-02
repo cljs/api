@@ -78,6 +78,10 @@
   (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
     (str "r" n)))
 
+(defn cljs-version->num
+  [version]
+  (-> version cljs-version->tag cljs-tag->num))
+
 (defn treader-tag->version
   [tag]
   (when-let [[_ v] (re-find #"tools\.reader-(.*)")]
