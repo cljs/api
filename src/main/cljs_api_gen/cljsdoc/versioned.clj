@@ -1,26 +1,27 @@
 (ns cljs-api-gen.cljsdoc.versioned
   (:require
+    [clojure.string :refer [trim]]
     [cljs-api-gen.repo-cljs :refer [cljs-version->num]]
     [cljs-api-gen.util :refer [mapmap]]))
 
-(comment
-;; TODO: test this
+;; NOTE: invalid versions will pass here just fine
+;; but we should verify the versions exist, later in the validator.
 
-(defn versioned-docmap
+(defn versioned-doc
   [doc]
   (let [;; get map of section-title -> content
-        doc (select-keys doc (:sections doc))
+        section-map (select-keys doc (:sections doc))
 
         ;; raw title/content pair -> {:title - :content - :version -}
         make-info
         (fn [[full-title content]]
           (merge {:title full-title
                   :content content}
-                 (when-let [[title version] (re-find #"(.+)\((.+)\)\s*$" full-title)]
+                 (when-let [[_ title version] (re-find #"(.+)\((.+)\)\s*$" full-title)]
                    {:title (trim title)
                     :version (trim version)})))]
 
-    (as-> doc $
+    (as-> section-map $
 
       ;; create sorted version/sections pairs
       (map make-info $)
@@ -40,7 +41,11 @@
         (fn [{:keys [previous] :as result} [version section-map]]
           (let [new-map (merge previous section-map)]
             (assoc result
-              version new-map
-              :previous new-map)))
+                   version new-map
+                   :previous new-map)))
         {} $)
-      (dissoc $ :previous)))))
+      (dissoc $ :previous)
+
+      (assoc
+        (select-keys doc (filter keyword? (keys doc)))
+        :versions $))))

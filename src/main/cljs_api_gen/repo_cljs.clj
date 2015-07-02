@@ -67,20 +67,23 @@
 
 (defn cljs-tag->num
   [tag]
-  (if (= "master" tag)
-    ;; some large constant denoting that the master is ahead of all previous versions
-    100000
-    (when-let [[_ number] (re-find #"r(.*)" tag)]
-      (Integer/parseInt number))))
+  (when tag
+    (if (= "master" tag)
+      ;; some large constant denoting that the master is ahead of all previous versions
+      100000
+      (when-let [[_ number] (re-find #"r(.*)" tag)]
+        (Integer/parseInt number)))))
 
 (defn cljs-version->tag
   [version]
-  (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
-    (str "r" n)))
+  (when version
+    (when-let [[_ n] (re-find #"\d\.\d-(.*)" version)]
+      (str "r" n))))
 
 (defn cljs-version->num
   [version]
-  (-> version cljs-version->tag cljs-tag->num))
+  (when version
+    (-> version cljs-version->tag cljs-tag->num)))
 
 (defn treader-tag->version
   [tag]
