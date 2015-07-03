@@ -243,13 +243,13 @@
   "All error detectors, each producing error messages if problem found."
   [(make-multi-version required-sections-error-msg)
    (make-multi-version unrecognized-sections-error-msg)
-   (make-multi-version filename-error-msg)
    (make-multi-version signatures-error-msg)
    (make-multi-version type-error-msg)
    (make-multi-version examples-error-msg!)
    (make-multi-version symbol-unknown-error-msg)
    (make-multi-version related-missing-error-msg)
    ;; (make-multi-version duplicate-sections-error-msg)
+   filename-error-msg
    unrecognized-versions-error-msg
    ])
 
