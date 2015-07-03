@@ -237,12 +237,16 @@
     (map md-escape syntax-form)
     (md-escape syntax-form)))
 
+(defn ref-link
+  [full-name]
+  (when full-name
+    {:full-name full-name
+     :link (str (encode/encode-fullname full-name) ".md")}))
+
 (defn add-related-links
   [{:keys [related] :as item}]
   (if related
-    (let [symbols (for [full-name related]
-                    {:full-name full-name
-                     :link (str (encode/encode-fullname full-name) ".md")})]
+    (let [symbols (map ref-link related)]
       (assoc item :related {:symbols symbols}))
     item))
 
@@ -251,6 +255,7 @@
   (-> item
       (assoc
         :full-name (:full-name item)
+        :moved (ref-link (:moved item))
         :display-name (cond-> (md-escape (:full-name item))
                         (:removed item) md-strikethru)
         :data (with-out-str (pprint item))

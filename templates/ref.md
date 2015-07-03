@@ -23,6 +23,10 @@
 </tr>
 </table>
 
+{{#moved}}
+__MOVED:__ [`{{&full-name}}`]({{&link}})
+{{/moved}}
+
 {{#signature}}
 {{#sigs}}
  <samp>
