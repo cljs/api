@@ -184,14 +184,14 @@
             (println "\nDone.")))))
 
     (println)
-    (let [known-symbols (set (keys (:symbols (get-prev-result))))]
+    (let [result (get-prev-result)]
 
       ;; create cljsdoc stubs for symbols that don't have them
       ;; (allowing easier PRs for those wanting to populate them)
-      (create-cljsdoc-stubs! known-symbols)
+      (create-cljsdoc-stubs! (-> result :symbols keys set))
 
       ;; compile cljsdoc files (manual docs)
-      (let [num-skipped (build-cljsdoc! known-symbols)]
+      (let [num-skipped (build-cljsdoc! result)]
         (when-not (zero? num-skipped)
           (System/exit 1))))
 

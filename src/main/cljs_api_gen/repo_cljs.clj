@@ -130,7 +130,13 @@
          (sort-by cljs-tag->num))))
 
 (def published-cljs-tags
-  (atom nil)) ;; list
+  "ordered list of published cljs tags"
+  (atom nil))
+
+(def published-cljs-tag?
+  "published cljs tag lookup"
+  (atom #{}))
+
 
 (def cljs-tag->pub-date
   (atom {}))
@@ -165,6 +171,7 @@
 
     (reset! cljs-tag->pub-date (zipmap pub-tags pub-dates))
     (reset! published-cljs-tags (sort-by cljs-tag->num valid-tags))
+    (reset! published-cljs-tag? (set valid-tags))
     ))
 
 (defn get-published-clj-versions!

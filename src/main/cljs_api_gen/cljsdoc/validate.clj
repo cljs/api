@@ -5,12 +5,25 @@
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname]]
+    [cljs-api-gen.repo-cljs :refer [published-cljs-tag?
+                                    cljs-version->tag
+                                    ]]
     [me.raynes.fs :refer [exists?]]
     [clojure.string :refer [split split-lines join]]
     [clansi.core :refer [style]]
     [fuzzy-matcher.core :as fuzzy]))
 
-(def ^:dynamic *known-symbols* nil)
+(def ^:dynamic *result*
+  "Parsed result containing full history API"
+  nil)
+
+(defn make-multi-version
+  "Make fn to combine the messages created by the msg-fn for each doc version."
+  [msg-fn]
+  (fn [doc]
+    (let [msgs (keep msg-fn (-> doc :docs vals))]
+      (when (seq msgs)
+        (join "\n" msgs)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Required Sections
@@ -48,7 +61,8 @@
    #"^example#[a-z0-9]+$"
    "related"
    "docstring"
-   "history"])
+   "history"
+   "moved"])
 
 (defn section-match?
   [name- known]
@@ -177,8 +191,8 @@
 
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]
-  (let [pass? (or (nil? *known-symbols*) ;; ignore if no known symbols supplied
-                  (*known-symbols* full-name))]
+  (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
+                  (get-in *result* [:symbols full-name]))]
     (when-not pass?
       (str "This file is for an unknown symbol '" full-name "'."))))
 
@@ -188,8 +202,8 @@
 
 (defn related-missing-error-msg*
   [full-name]
-  (let [pass? (or (nil? *known-symbols*) ;; ignore if no known symbols supplied
-                  (*known-symbols* full-name))]
+  (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
+                  (get-in *result* [:symbols full-name]))]
     (when-not pass?
       (str "Related symbol '" full-name "' is an unknown symbol."))))
 
@@ -200,19 +214,44 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
+;; Validate Versions
+;;--------------------------------------------------------------------------------
+
+(defn unrecognized-version-error-msg
+  [version titles]
+  (let [pass? (or (nil? version) ;; nil means apply to all versions
+                  (@published-cljs-tag? (cljs-version->tag version)))]
+    (when-not pass?
+      (str "Version '" version "' for titles "
+           (join ", " (map #(str "'" % "'") titles))
+           " is not a recognized published version."))))
+
+(defn unrecognized-versions-error-msg
+  [doc]
+  (let [msgs (keep #(unrecognized-version-error-msg
+                      (first %)
+                      (keys (second %)))
+                   (:docs doc))]
+    (when (seq msgs)
+      (join "\n" msgs))))
+
+;;--------------------------------------------------------------------------------
 ;; Validate All
 ;;--------------------------------------------------------------------------------
 
 (def error-detectors
   "All error detectors, each producing error messages if problem found."
-  [required-sections-error-msg
-   unrecognized-sections-error-msg
-   filename-error-msg
-   signatures-error-msg
-   type-error-msg
-   examples-error-msg!
-   symbol-unknown-error-msg
-   related-missing-error-msg])
+  [(make-multi-version required-sections-error-msg)
+   (make-multi-version unrecognized-sections-error-msg)
+   (make-multi-version filename-error-msg)
+   (make-multi-version signatures-error-msg)
+   (make-multi-version type-error-msg)
+   (make-multi-version examples-error-msg!)
+   (make-multi-version symbol-unknown-error-msg)
+   (make-multi-version related-missing-error-msg)
+   ;; (make-multi-version duplicate-sections-error-msg)
+   unrecognized-versions-error-msg
+   ])
 
 (def warning-detectors
   "All warning detectors, each produce warning messages if potential problem found."
@@ -220,7 +259,8 @@
    ])
 
 (defn valid-doc? [doc]
-  (let [errors   (seq (keep #(% doc) error-detectors))
+  (let [
+        errors   (seq (keep #(% doc) error-detectors))
         warnings (seq (keep #(% doc) warning-detectors))
         valid? (not errors)]
     (when (or warnings errors)

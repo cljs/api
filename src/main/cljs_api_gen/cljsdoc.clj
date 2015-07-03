@@ -3,8 +3,9 @@
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.util :refer [sym-sort-key]]
-    [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
-    [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *known-symbols*]]
+    [cljs-api-gen.cljsdoc.transform :refer [transform-versioned-doc]]
+    [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
+    [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
     [me.raynes.fs :refer [list-dir base-name exists?]]
     [stencil.core :as stencil]
@@ -18,7 +19,8 @@
   [file]
   (let [filename (base-name file)
         doc (-> (parse-doc (slurp file) filename)
-                transform-doc)]
+                versioned-doc
+                transform-versioned-doc)]
     (when (valid-doc? doc)
       doc)))
 
@@ -46,14 +48,14 @@
 
 (defn build-cljsdoc!
   ([] (build-cljsdoc! nil))
-  ([known-symbols]
+  ([result]
 
    (println (cond-> "Compiling cljsdoc/ files"
-              (nil? known-symbols) (str " (without symbol-existence check)"))
+              (nil? result) (str " (without parsed API info)"))
             "...")
 
    (let [files (cljsdoc-files cljsdoc-dir)
-         mandocs (binding [*known-symbols* known-symbols]
+         mandocs (binding [*result* result]
                    (doall (keep build-doc files)))
          mandoc-map (zipmap (map :full-name mandocs)
                             (map #(dissoc % :empty-sections) mandocs))

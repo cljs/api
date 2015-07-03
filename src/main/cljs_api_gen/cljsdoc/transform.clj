@@ -1,6 +1,7 @@
 (ns cljs-api-gen.cljsdoc.transform
   (:refer-clojure :exclude [replace])
   (:require
+    [cljs-api-gen.util :refer [mapmap]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [split-lines trim lower-case replace]]))
 
@@ -77,3 +78,13 @@
       transform-type
       transform-examples
       transform-related))
+
+(defn transform-versioned-doc [doc]
+  (let [docs (mapmap transform-doc (:docs doc))
+        {:keys [ns name full-name]} (get docs nil)]
+    (assoc doc
+      :docs docs
+      :ns ns
+      :name name
+      :full-name full-name)))
+

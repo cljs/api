@@ -193,6 +193,7 @@
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
   [item]
   (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
+    ;; TODO: choose correct version inside cljsdoc
     (cond-> item
       cljsdoc              (merge (select-keys cljsdoc [:examples :related :description]))
       (:signature cljsdoc) (merge (select-keys cljsdoc [:signature])))))
