@@ -1,2 +1,5 @@
 ===== Name
 cljs.core/unchecked-substract
+
+===== Moved (0.0-2277)
+cljs.core/unchecked-subtract

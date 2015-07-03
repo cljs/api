@@ -1,2 +1,5 @@
 ===== Name
 cljs.repl.browser/stop-server
+
+===== Moved (0.0-1503)
+cljs.repl.server/stop

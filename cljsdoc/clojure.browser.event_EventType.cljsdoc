@@ -1,2 +1,5 @@
 ===== Name
 clojure.browser.event/EventType
+
+===== Moved (0.0-2301)
+clojure.browser.event/IEventType

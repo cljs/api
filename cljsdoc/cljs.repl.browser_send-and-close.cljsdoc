@@ -1,2 +1,5 @@
 ===== Name
 cljs.repl.browser/send-and-close
+
+===== Moved (0.0-1503)
+cljs.repl.server/send-and-close

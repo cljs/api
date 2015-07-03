@@ -1,2 +1,5 @@
 ===== Name
 cljs.core/PersistentVector.EMPTY_NODE
+
+===== Moved (0.0-2301)
+cljs.core/PersistentVector.EMPTY-NODE
