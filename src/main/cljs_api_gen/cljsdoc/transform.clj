@@ -70,6 +70,13 @@
         (dissoc "related"))
     doc))
 
+(defn transform-moved [doc]
+  (if-let [moved (get doc "moved")]
+    (-> doc
+        (assoc :moved moved)
+        (dissoc "moved"))
+    doc))
+
 (defn transform-doc [doc]
   (-> doc
       transform-name
@@ -77,7 +84,8 @@
       transform-signature
       transform-type
       transform-examples
-      transform-related))
+      transform-related
+      transform-moved))
 
 (defn transform-versioned-doc [doc]
   (let [docs (mapmap transform-doc (:docs doc))

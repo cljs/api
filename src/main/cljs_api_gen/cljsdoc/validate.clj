@@ -6,6 +6,7 @@
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.repo-cljs :refer [published-cljs-tag?
+                                    published-cljs-tags
                                     cljs-version->tag
                                     ]]
     [me.raynes.fs :refer [exists?]]
@@ -189,9 +190,14 @@
 ;; Validate Symbol
 ;;--------------------------------------------------------------------------------
 
+(defn using-latest-result? []
+  (= (-> *result* :release :cljs-tag)
+     (last @published-cljs-tags)))
+
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]
   (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
+                  (not (using-latest-result?)) ;; possible for symbols to exist later, so ignore if not latest
                   (get-in *result* [:symbols full-name]))]
     (when-not pass?
       (str "This file is for an unknown symbol '" full-name "'."))))
@@ -203,6 +209,7 @@
 (defn related-missing-error-msg*
   [full-name]
   (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
+                  (not (using-latest-result?)) ;; possible for symbols to exist later, so ignore if not latest
                   (get-in *result* [:symbols full-name]))]
     (when-not pass?
       (str "Related symbol '" full-name "' is an unknown symbol."))))

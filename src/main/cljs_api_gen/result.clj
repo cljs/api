@@ -14,7 +14,9 @@
                                     *clj-tag*
                                     *treader-version*
                                     *treader-tag*
-                                    *gclosure-lib*]]
+                                    *gclosure-lib*
+                                    cljs-version->num
+                                    ]]
     ))
 
 (defn removable? [v]
@@ -189,15 +191,25 @@
             }
       })))
 
+(def version->num
+  (memoize cljs-version->num))
+
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  [item]
-  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
-    ;; TODO: choose correct version inside cljsdoc
+  [item curr-version]
+  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))
+        doc-version (last (filter #(or (nil? %)
+                                       (<= (version->num %)
+                                           (version->num curr-version)))
+                                  (:versions cljsdoc)))
+        doc (get-in cljsdoc [:docs doc-version])]
     (cond-> item
-      cljsdoc              (merge (select-keys cljsdoc [:examples :related :description]))
-      (:signature cljsdoc) (merge (select-keys cljsdoc [:signature])))))
+      ;; don't overwrite signature if it's null
+      doc              (merge (select-keys doc [:examples :related :description :moved]))
+      (:signature doc) (merge (select-keys doc [:signature])))))
 
 (defn add-cljsdoc-to-result
   [result]
-  (update-in result [:symbols] #(mapmap add-cljsdoc %)))
+  (let [version (-> result :release :cljs-version)
+        update-symbols (fn [symbols] (mapmap #(add-cljsdoc % version) symbols))]
+    (update-in result [:symbols] update-symbols)))
