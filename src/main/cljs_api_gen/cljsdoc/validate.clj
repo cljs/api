@@ -218,20 +218,15 @@
 ;;--------------------------------------------------------------------------------
 
 (defn unrecognized-version-error-msg
-  [version titles]
+  [version]
   (let [pass? (or (nil? version) ;; nil means apply to all versions
                   (@published-cljs-tag? (cljs-version->tag version)))]
     (when-not pass?
-      (str "Version '" version "' for titles "
-           (join ", " (map #(str "'" % "'") titles))
-           " is not a recognized published version."))))
+      (str "Version '" version "' is not a recognized published version."))))
 
 (defn unrecognized-versions-error-msg
   [doc]
-  (let [msgs (keep #(unrecognized-version-error-msg
-                      (first %)
-                      (keys (second %)))
-                   (:docs doc))]
+  (let [msgs (keep unrecognized-version-error-msg (keys (:docs doc)))]
     (when (seq msgs)
       (join "\n" msgs))))
 
