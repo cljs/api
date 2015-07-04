@@ -20,8 +20,7 @@
     [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
-    [cljs-api-gen.syntax :refer [syntax-order
-                                 syntax-map]]
+    [cljs-api-gen.syntax :refer [syntax-map]]
     [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
@@ -433,6 +432,7 @@
                              (:removed item) md-strikethru))
         make-item (fn [item]
                     {:display-name (get-display-name item)
+                     :full-name (:full-name item)
                      :display-prefix (when (:parent-type item) " └── ")
                      :link (str refs-dir "/" (:full-name-encode item) ".md")
                      :clj-symbol (make-clj-ref item)
@@ -454,7 +454,7 @@
                                   :ns-description (get-in ns-descriptions [api-type k])
                                   :ns-link (md-header-link ns-display)
                                   :symbols (if (= k "syntax")
-                                             (sort-by (comp syntax-order :name) v)
+                                             (sort-symbols :full-name v)
                                              v)})))
                         (sort-by :ns compare-ns))]
     ns-symbols))
@@ -494,7 +494,8 @@
                           {:keys [description examples related] :as manual-item} (manual-map s)
                           non-empty-seq? #(and (sequential? %) (pos? (count %)))
                           non-empty-str? #(and (string? %) (pos? (count %)))]
-                      {:full-name (md-escape s)
+                      {:full-name s
+                       :display-name (md-escape (get-full-display-name s))
                        :ref (when (auto-map s) (str refs-dir "/" full-name-encode ".md"))
                        :cljsdoc (when manual-item
                                   (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/"

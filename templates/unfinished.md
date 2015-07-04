@@ -16,7 +16,7 @@ If a symbol has all aforementioned docs, then it is __removed__ from the table.
 
 {{#symbols}}
 <tr>
-<td>{{&full-name}}</td>
+<td>{{&display-name}}</td>
 <td>{{#ref}}[ref]({{&.}}){{/ref}}</td>
 <td>{{#cljsdoc}}[cljsdoc]({{&.}}){{/cljsdoc}}</td>
 <td>{{#description}}:heavy_check_mark:{{/description}}</td>

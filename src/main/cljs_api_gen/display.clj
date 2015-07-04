@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [replace])
   (:require
     [clojure.string :refer [join replace split trim]]
+    [cljs-api-gen.syntax :refer [syntax-order]]
     [cljs-api-gen.util :refer [split-ns-and-name]]
     ))
 
@@ -54,7 +55,8 @@
     [(namespace sym) (name sym)]))
 
 (def ns-order
-  {"special" 1
+  {"syntax" 0
+   "special" 1
    "specialrepl" 2
    "cljs.core" 3})
 
@@ -77,7 +79,10 @@
         name-result (compare a-name b-name)]
     (if-not (zero? ns-result)
       ns-result
-      name-result)))
+      (if (= "syntax" a-ns b-ns)
+        (compare (syntax-order a-name)
+                 (syntax-order b-name))
+        name-result))))
 
 (defn sort-symbols
   "Sort the collection using our custom namespace order,
