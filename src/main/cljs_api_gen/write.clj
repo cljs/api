@@ -12,8 +12,12 @@
                                  refs-dir
                                  edn-result-file]]
     [cljs-api-gen.encode :as encode]
+    [cljs-api-gen.display :refer [get-short-display-name
+                                  get-full-display-name
+                                  get-ns-display-name
+                                  sort-symbols
+                                  compare-ns]]
     [cljs-api-gen.util :refer [mapmap
-                               sym-sort-key
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-order
@@ -54,35 +58,6 @@
     ;; TODO: create namespace descriptions
     }})
 
-
-;;  A 'pseudo-namespace' (e.g. special, specialrepl, syntax) shouldn't be
-;;  displayed to the reader since its only purpose is to help consistent
-;;  categorization of symbols for the generator.
-
-(defn get-short-display-name
-  "Create a short display name for the given item if it has a pseudo-namespace."
-  [item]
-  (cond
-    (:parent-type item) (replace (:name item) (str (:parent-type item) ".") "")
-    (= "syntax" (:ns item)) (replace (:name item) "-" " ")
-    :else (:name item)))
-
-(defn get-full-display-name
-  "Create a full display name for the given item if it has a pseudo-namespace."
-  [item]
-  (cond
-    (= "special" (:ns item)) (str (:name item) " (special)")
-    (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
-    (= "syntax" (:ns item)) (str (replace (:name item) "-" " ") " (syntax)")
-    :else (:full-name item)))
-
-(defn get-ns-display-name
-  [ns-]
-  (cond
-    (= "special" ns-) "special forms"
-    (= "specialrepl" ns-) "special forms (repl)"
-    (= "syntax" ns-) "syntax forms"
-    :else ns-))
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
@@ -210,8 +185,7 @@
                    :link (str refs-dir "/" (:full-name-encode item) ".md"))))
         added (map #(make % :added) (:added changes))
         removed (map #(make % :removed) (:removed changes))
-        sort-key (fn [item] [(:ns item) (:name item)])
-        all (sort-by sort-key (concat added removed))]
+        all (sort-symbols :full-name (concat added removed))]
     all))
 
 ;;--------------------------------------------------------------------------------
@@ -268,19 +242,11 @@
     (map md-escape syntax-form)
     (md-escape syntax-form)))
 
-(defn full-name->item
-  [full-name]
-  (let [[ns- name-] (split-ns-and-name full-name)]
-    {:full-name full-name
-     :ns ns-
-     :name name-}))
-
 (defn ref-link
   [full-name]
   (when full-name
-    (let [item (full-name->item full-name)]
-      {:display-name (get-full-display-name item)
-       :link (str (encode/encode-fullname full-name) ".md")})))
+    {:display-name (get-full-display-name full-name)
+     :link (str (encode/encode-fullname full-name) ".md")}))
 
 (defn add-related-links
   [{:keys [related] :as item}]
@@ -435,21 +401,6 @@
         all (version-changes symbols changes)]
     all))
 
-(def ns-order
-  {"special" 1
-   "specialrepl" 2
-   "cljs.core" 3})
-
-(defn compare-ns
-  [a b]
-  (let [ai (get ns-order a)
-        bi (get ns-order b)]
-    (cond
-      (and (nil? ai) (nil? bi)) (compare a b)
-      (nil? ai) 1
-      (nil? bi) -1
-      :else (compare ai bi))))
-
 (defn sort-items
   [items]
   (let [main (->> items
@@ -473,8 +424,12 @@
   [result api-type]
   ;; clj-name-type-history tuples
   (let [all (select-keys (:symbols result) (get-in result [:api api-type :symbol-names]))
+        get-short-name (fn [item]
+                         (cond-> (get-short-display-name item)
+                           ;; remove parent type (e.g. Vector.EMPTY -> EMPTY)
+                           (:parent-type item) (replace (str (:parent-type item) ".") "")))
         get-display-name (fn [item]
-                           (cond-> (md-escape (get-short-display-name item))
+                           (cond-> (md-escape (get-short-name item))
                              (:removed item) md-strikethru))
         make-item (fn [item]
                     {:display-name (get-display-name item)
@@ -552,7 +507,7 @@
         symbols (->> all-syms
                      (map make-item)
                      (remove done?)
-                     (sort-by #(sym-sort-key (:full-name %))))]
+                     (sort-symbols :full-name))]
     {:symbols symbols}))
 
 (defn dump-unfinished! [result]

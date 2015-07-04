@@ -173,6 +173,7 @@ These are the source files concerned with the API reference generator:
 | <samp>[read.clj]</samp>        | read forms from namespaces                                      |
 | <samp>[repo_cljs.clj]</samp>   | helpers for traversing official Clojure and ClojureScript repos |
 | <samp>[result.clj]</samp>      | transforms parsed data into a final result structure            |
+| <samp>[display.clj]</samp>     | creates titles for pseudo-symbols and sorts them by namespace.  |
 | <samp>[write.clj]</samp>       | writes all output files for the data created by `result.clj`    |
 | <samp>[util.clj]</samp>        | miscellaneous functions                                         |
 

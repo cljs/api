@@ -2,7 +2,7 @@
   (:require
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.encode :as encode]
-    [cljs-api-gen.util :refer [sym-sort-key]]
+    [cljs-api-gen.display :refer [sort-symbols]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-versioned-doc]]
     [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
@@ -36,7 +36,7 @@
 
 (defn create-cljsdoc-stubs!
   [known-symbols]
-  (doseq [full-name (sort-by sym-sort-key known-symbols)]
+  (doseq [full-name (sort-symbols known-symbols)]
     (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".cljsdoc")]
       (when-not (exists? filename)
         (encode/assert-lossless full-name)
