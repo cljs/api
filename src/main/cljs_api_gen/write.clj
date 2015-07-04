@@ -28,9 +28,9 @@
 
   {:library
    {"cljs.core"                    "fundamental library of the ClojureScript language"
-    "special"                      "_pseudo-namespace_ for special forms"
-    "specialrepl"                  "_pseudo-namespace_ for REPL special forms"
-    "syntax"                       "_pseudo-namespace_ for syntax forms"
+    "special"                      "special forms (not in a namespace)"
+    "specialrepl"                  "REPL special forms (not in a namespace)"
+    "syntax"                       "syntax forms (not in a namespace)"
     "cljs.pprint"                  "a pretty-printer for printing data structures"
     "cljs.reader"                  "a reader to parse text and produce data structures"
     "clojure.set"                  "set operations such as union/intersection"
@@ -76,6 +76,14 @@
     (= "syntax" (:ns item)) (str (replace (:name item) "-" " ") " (syntax)")
     :else (:full-name item)))
 
+(defn get-ns-display-name
+  [ns-]
+  (cond
+    (= "special" ns-) "special forms"
+    (= "specialrepl" ns-) "special forms (repl)"
+    (= "syntax" ns-) "syntax forms"
+    :else ns-))
+
 ;;--------------------------------------------------------------------------------
 ;; Result dump
 ;;--------------------------------------------------------------------------------
@@ -115,7 +123,8 @@
 (defn md-header-link
   [s]
   (-> s
-      (replace "." "")))
+      (replace #"[^a-zA-Z0-9 ]" "")
+      (replace " " "-")))
 
 (defn shield-escape
   [s]
@@ -483,12 +492,15 @@
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
-                        (map (fn [[k v]] {:ns k
-                                          :ns-description (get-in ns-descriptions [api-type k])
-                                          :ns-link (md-header-link k)
-                                          :symbols (if (= k "syntax")
-                                                     (sort-by (comp syntax-order :name) v)
-                                                     v)}))
+                        (map (fn [[k v]]
+                               (let [ns-display (get-ns-display-name k)]
+                                 {:ns k
+                                  :ns-display ns-display
+                                  :ns-description (get-in ns-descriptions [api-type k])
+                                  :ns-link (md-header-link ns-display)
+                                  :symbols (if (= k "syntax")
+                                             (sort-by (comp syntax-order :name) v)
+                                             v)})))
                         (sort-by :ns compare-ns))]
     ns-symbols))
 

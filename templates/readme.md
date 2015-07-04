@@ -158,7 +158,7 @@ available in [edn]
 
 {{#syntax-api}}
 {{#ns-symbols}}
-#### {{ns}}
+#### {{ns-display}}
 
  <table>
 <thead><tr>
@@ -210,11 +210,11 @@ application.
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns}}](#{{&ns-link}}) | {{&ns-description}} |
+| [{{&ns-display}}](#{{&ns-link}}) | {{&ns-description}} |
 {{/ns-symbols}}
 
 {{#ns-symbols}}
-#### {{ns}}
+#### {{ns-display}}
 
  <table>
 <thead><tr>
@@ -253,11 +253,11 @@ self-compile.
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns}}](#{{&ns-link}}) | {{&ns-description}} |
+| [{{&ns-display}}](#{{&ns-link}}) | {{&ns-description}} |
 {{/ns-symbols}}
 
 {{#ns-symbols}}
-#### {{ns}}
+#### {{ns-display}}
 
  <table>
 <thead><tr>
