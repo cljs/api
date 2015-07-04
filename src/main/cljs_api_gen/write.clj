@@ -280,6 +280,14 @@
       (assoc item :related {:symbols symbols}))
     item))
 
+(defn add-syntax-usage
+  [{:keys [syntax-form usage] :as item}]
+  (if-let [data (or usage syntax-form)]
+    (assoc item :usage {:usages (if (vector? data)
+                                  (map md-escape data)
+                                  (md-escape data))})
+    item))
+
 (defn ref-file-data
   [item]
   (-> item
@@ -298,7 +306,7 @@
                                    sigs)}))
         :clj-symbol (make-clj-ref item)
         :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
-      (update-in [:syntax-form] fix-syntax-form)
+      (add-syntax-usage)
       (add-related-links)
       (add-source-trees)))
 

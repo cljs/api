@@ -89,7 +89,10 @@
    {:desc "Math-namespace" :type "special namespace" :form "Math/" :clj-doc doc-interop}
 
    ;; destructuring pattern
-   {:desc "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct}
+   {:desc "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct
+    :usage ["{:keys [] :strs [] :syms [] :or {} :as name}"
+            "[arg1 arg2 & args :as name]"]
+    }
 
    ])
 

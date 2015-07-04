@@ -41,6 +41,7 @@
                     :name
                     :docstring
                     :syntax-form
+                    :usage
                     :type
                     :parent-type
                     :signature
