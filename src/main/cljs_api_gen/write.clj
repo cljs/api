@@ -21,7 +21,6 @@
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-map]]
-    [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [me.raynes.fs :refer [exists? mkdir]]
     [stencil.core :as stencil]
     ))
@@ -492,26 +491,22 @@
 
 (defn unfinished-file-data
   [result]
-  (let [manual-map @cljsdoc-map
-        auto-map (:symbols result)
-        all-syms (into #{} (keys (merge manual-map auto-map)))
-        make-item (fn [s]
-                    (let [full-name-encode (encode-fullname s)
-                          {:keys [description examples related] :as manual-item} (manual-map s)
+  (let [make-item (fn [{:keys [full-name description examples related] :as sym}]
+                    (let [s full-name
+                          full-name-encode (encode-fullname s)
                           non-empty-seq? #(and (sequential? %) (pos? (count %)))
                           non-empty-str? #(and (string? %) (pos? (count %)))]
                       {:full-name s
                        :display-name (md-escape (get-full-display-name s))
-                       :ref (when (auto-map s) (str refs-dir "/" full-name-encode ".md"))
-                       :cljsdoc (when manual-item
-                                  (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/"
-                                       cljsdoc-dir "/" full-name-encode ".cljsdoc"))
+                       :ref (str refs-dir "/" full-name-encode ".md")
+                       :cljsdoc (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/"
+                                     cljsdoc-dir "/" full-name-encode ".cljsdoc")
                        :description (non-empty-str? description)
                        :examples (non-empty-seq? examples)
                        :related (non-empty-seq? related)}))
         done? (fn [{:keys [ref cljsdoc description examples related]}]
                 (and ref cljsdoc description examples related))
-        symbols (->> all-syms
+        symbols (->> (vals (:symbols result))
                      (map make-item)
                      (remove done?)
                      (sort-symbols :full-name))]
