@@ -191,6 +191,7 @@ These are the source files concerned with the API reference generator:
 [repo_cljs.clj]:src/main/cljs_api_gen/repo_cljs.clj
 [result.clj]:src/main/cljs_api_gen/result.clj
 [write.clj]:src/main/cljs_api_gen/write.clj
+[display.clj]:src/main/cljs_api_gen/display.clj
 [util.clj]:src/main/cljs_api_gen/util.clj
 
 These are the mustache templates that we use to render the catalog files.
