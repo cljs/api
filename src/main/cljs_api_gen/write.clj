@@ -177,7 +177,7 @@
   (let [make (fn [full-name change]
                (let [item (get symbols full-name)]
                  (assoc item
-                   :text (cond-> (md-escape full-name)
+                   :text (cond-> (md-escape (get-full-display-name full-name))
                            (= change :removed) md-strikethru)
                    :shield-text (shield-escape (:type item))
                    :change ({:added "+" :removed "×"} change)
