@@ -1,5 +1,9 @@
 ## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> {{&display-name}}
 
+{{#moved}}
+> __MOVED__, please see [`{{&display-name}}`]({{&link}})
+{{/moved}}
+
  <table border="1">
 <tr>
 {{#syntax-form}}<td><samp>{{&.}}</samp></td>{{/syntax-form}}
@@ -22,10 +26,6 @@
 {{/edn-doc}}
 </tr>
 </table>
-
-{{#moved}}
-__MOVED:__ [`{{&full-name}}`]({{&link}})
-{{/moved}}
 
 {{#signature}}
 {{#sigs}}
@@ -55,7 +55,7 @@ Example:
 See Also:
 
 {{#symbols}}
-[`{{&full-name}}`]({{&link}})<br>
+[`{{&display-name}}`]({{&link}})<br>
 {{/symbols}}
 
 ---

@@ -54,6 +54,28 @@
     ;; TODO: create namespace descriptions
     }})
 
+
+;;  A 'pseudo-namespace' (e.g. special, specialrepl, syntax) shouldn't be
+;;  displayed to the reader since its only purpose is to help consistent
+;;  categorization of symbols for the generator.
+
+(defn get-short-display-name
+  "Create a short display name for the given item if it has a pseudo-namespace."
+  [item]
+  (cond
+    (:parent-type item) (replace (:name item) (str (:parent-type item) ".") "")
+    (= "syntax" (:ns item)) (replace (:name item) "-" " ")
+    :else (:name item)))
+
+(defn get-full-display-name
+  "Create a full display name for the given item if it has a pseudo-namespace."
+  [item]
+  (cond
+    (= "special" (:ns item)) (str (:name item) " (special)")
+    (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
+    (= "syntax" (:ns item)) (str (replace (:name item) "-" " ") " (syntax)")
+    :else (:full-name item)))
+
 ;;--------------------------------------------------------------------------------
 ;; Result dump
 ;;--------------------------------------------------------------------------------
@@ -237,11 +259,19 @@
     (map md-escape syntax-form)
     (md-escape syntax-form)))
 
+(defn full-name->item
+  [full-name]
+  (let [[ns- name-] (split-ns-and-name full-name)]
+    {:full-name full-name
+     :ns ns-
+     :name name-}))
+
 (defn ref-link
   [full-name]
   (when full-name
-    {:full-name full-name
-     :link (str (encode/encode-fullname full-name) ".md")}))
+    (let [item (full-name->item full-name)]
+      {:display-name (get-full-display-name item)
+       :link (str (encode/encode-fullname full-name) ".md")})))
 
 (defn add-related-links
   [{:keys [related] :as item}]
@@ -256,7 +286,7 @@
       (assoc
         :full-name (:full-name item)
         :moved (ref-link (:moved item))
-        :display-name (cond-> (md-escape (:full-name item))
+        :display-name (cond-> (md-escape (get-full-display-name item))
                         (:removed item) md-strikethru)
         :data (with-out-str (pprint item))
         :history (map history-change-shield (:history item))
@@ -426,10 +456,8 @@
   [result api-type]
   ;; clj-name-type-history tuples
   (let [all (select-keys (:symbols result) (get-in result [:api api-type :symbol-names]))
-        get-display-name (fn [{:keys [parent-type] :as item}]
-                           (cond-> (:name item)
-                             parent-type (replace (str parent-type ".") "")
-                             true md-escape
+        get-display-name (fn [item]
+                           (cond-> (md-escape (get-short-display-name item))
                              (:removed item) md-strikethru))
         make-item (fn [item]
                     {:display-name (get-display-name item)
