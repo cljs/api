@@ -26,6 +26,10 @@
     [stencil.core :as stencil]
     ))
 
+(def ^:dynamic *result*
+  "The current result that we are writing."
+  nil)
+
 (def ns-descriptions
   "FIXME: put this in the official docstrings if missing (patch request)"
 
@@ -244,8 +248,10 @@
 (defn ref-link
   [full-name]
   (when full-name
-    {:display-name (get-full-display-name full-name)
-     :link (str (encode/encode-fullname full-name) ".md")}))
+    (let [item (get-in *result* [:symbols full-name])]
+      {:display-name (cond-> (md-escape (get-full-display-name full-name))
+                       (:removed item) md-strikethru)
+       :link (when item (str (encode/encode-fullname full-name) ".md"))})))
 
 (defn add-related-links
   [{:keys [related] :as item}]
@@ -522,27 +528,28 @@
 ;;--------------------------------------------------------------------------------
 
 (defn dump-result! [result]
-  (mkdir *output-dir*)
-  (mkdir (str *output-dir* "/" refs-dir))
+  (binding [*result* result]
 
-  (println "writing edn...")
-  (dump-edn-file! result)
+    (mkdir *output-dir*)
+    (mkdir (str *output-dir* "/" refs-dir))
 
-  (println "writing ref files...")
-  (doseq [item (vals (:symbols result))]
-    (dump-ref-file! item))
+    (println "writing edn...")
+    (dump-edn-file! result)
 
-  (println "writing readme...")
-  (dump-readme! result)
+    (println "writing ref files...")
+    (doseq [item (vals (:symbols result))]
+      (dump-ref-file! item))
 
-  (println "writing history...")
-  (dump-history! result)
+    (println "writing readme...")
+    (dump-readme! result)
 
-  (println "writing unported...")
-  (dump-unported! result)
+    (println "writing history...")
+    (dump-history! result)
 
-  (println "writing unfinished...")
-  (dump-unfinished! result)
+    (println "writing unported...")
+    (dump-unported! result)
 
+    (println "writing unfinished...")
+    (dump-unfinished! result))
   )
 
