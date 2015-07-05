@@ -115,6 +115,8 @@
   (when-not (exists? *output-dir*)
     (mkdir *output-dir*))
 
+  (println (style "\nCreating api catalog...\n" :cyan))
+
   (let [cache (str *output-dir* "/" cache-dir)
 
         ;; This holds the "result" data for the most recently parsed cljs version.
@@ -128,7 +130,9 @@
                            @prev-result)
 
         ;; normalize the given version to a tag if needed
-        version (or (cljs-version->tag version) version)
+        version (or (and (string? version)
+                         (cljs-version->tag version))
+                    version)
 
         tags (case version
                :latest @published-cljs-tags
@@ -138,6 +142,8 @@
                    (println (style "Unrecognized version tag" :red) version)
                    (System/exit 1))
                  (concat (take-while (partial not= version) @published-cljs-tags) [version])))
+
+        skipped-previous? (atom false)
         last-tag (last tags)]
 
     ;; make cache directory
@@ -148,7 +154,8 @@
     (println "   with cache at " (style cache :cyan))
 
     ;; parse symbol history
-    (println "\nStarting first pass (parsing symbol history)...\n")
+    (println (style "\nStarting first pass (parsing symbol history)...\n" :magenta))
+    (reset! skipped-previous? false)
     (doseq [tag tags]
 
       ;; check if skip-parse? and if this tag's edn-parsed-file already exists
@@ -165,13 +172,17 @@
         (if skip?
 
           (do
-            (println "Using cache instead of parsing" (style tag :yellow))
+            (when-not @skipped-previous?
+              (println (style "\nUsing cache instead of parsing:" :yellow)))
+            (print (str " " tag))
+            (reset! skipped-previous? true)
             (reset! prev-result (delay (edn/read-string (slurp parsed-file)))))
 
           ;; parse
           (with-checkout! tag
+            (reset! skipped-previous? false)
 
-            (println "\n=========================================================")
+            (println "\n\n=========================================================")
             (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
             (println "with Clojure:" (style *clj-tag* :yellow))
             (println "published on" (style *cljs-date* :yellow))
@@ -200,14 +211,20 @@
           (System/exit 1))))
 
     ;; create pages
-    (println "\nStarting second pass (merge manual docs and create pages)...\n")
+    (println (style "\nStarting second pass (merge manual docs and create pages)...\n" :magenta))
+    (reset! skipped-previous? false)
     (doseq [tag tags]
       (let [skip? (and skip-pages? (not= tag last-tag))
             out-folder (str cache "/" tag)]
         (if skip?
-          (println "Skipping page creation for" (style tag :yellow))
           (do
-            (println "\nCreating pages for " (style tag :yellow))
+            (when-not @skipped-previous?
+              (println (style "\nSkipping page creation for:" :yellow)))
+            (print (str " " tag))
+            (reset! skipped-previous? true))
+          (do
+            (reset! skipped-previous? false)
+            (println "\n\nCreating pages for " (style tag :yellow))
             (let [parsed-file (str out-folder "/" edn-parsed-file)
                   parsed (edn/read-string (slurp parsed-file))
                   result (add-cljsdoc-to-result parsed)]
@@ -215,7 +232,7 @@
                 (dump-result! result)))))))
 
     ;; third pass
-    (println "\nStarting final pass (finalizing output directory)...\n")
+    (println (style "\nStarting final pass (finalizing output directory)...\n" :magenta))
     (let [dont-copy? #{edn-parsed-file}
           should-copy? (complement dont-copy?)
           files-to-copy (fn [tag]
@@ -252,5 +269,5 @@
 
         (copy-to-root! last-tag))))
 
-    (println (style "Success!" :green)))
+    (println (style " Success! " :bg-green)))
 

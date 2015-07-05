@@ -39,8 +39,14 @@
   []
   (when-not (exists? repos-dir)
     (mkdir repos-dir))
+
+  (println (style "\nCloning or updating repos:\n" :cyan))
+
+  (println "syncing clojurescript...")
   (clone-or-pull! "https://github.com/clojure/clojurescript")
+  (println "syncing clojure...")
   (clone-or-pull! "https://github.com/clojure/clojure")
+  (println "syncing tools.reader...")
   (clone-or-pull! "https://github.com/clojure/tools.reader"))
 
 (defn get-current-repo-tag
@@ -151,6 +157,7 @@
 
 (defn get-published-cljs-tags!
   []
+  (println (style "\nRetrieving published ClojureScript versions from Maven...\n" :cyan))
   (let [releases (maven-releases "org.clojure" "clojurescript")
         pub-versions (map :v releases)
         pub-dates (map (comp timestamp->date-str :timestamp) releases)
@@ -172,13 +179,18 @@
     (reset! cljs-tag->pub-date (zipmap pub-tags pub-dates))
     (reset! published-cljs-tags (sort-by cljs-tag->num valid-tags))
     (reset! published-cljs-tag? (set valid-tags))
-    ))
+
+    (println (style "\npublished ClojureScript tags:" :green))
+    (apply println @published-cljs-tags)))
 
 (defn get-published-clj-versions!
   []
+  (println (style "\nRetrieving published Clojure versions from Maven...\n" :cyan))
   (let [versions (reverse (map :v (maven-releases "org.clojure" "clojure")))
         index-map (into {} (map-indexed (fn [i v] [v i]) versions))]
-    (reset! published-clj-versions index-map)))
+    (reset! published-clj-versions index-map)
+    (println (style "published Clojure versions:" :green))
+    (apply println versions)))
 
 (defn get-cljs-tags-to-parse*
   [latest]

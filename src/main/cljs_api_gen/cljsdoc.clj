@@ -50,7 +50,7 @@
   ([] (build-cljsdoc! nil))
   ([result]
 
-   (println (cond-> "Compiling cljsdoc/ files"
+   (println (cond-> (style "\nCompiling cljsdoc/ files" :cyan)
               (nil? result) (str " (without parsed API info)"))
             "...")
 

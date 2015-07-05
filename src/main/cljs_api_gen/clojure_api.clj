@@ -1,5 +1,6 @@
 (ns cljs-api-gen.clojure-api
   (:require
+    [clansi.core :refer [style]]
     [clojure.set :refer [difference]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
@@ -17,8 +18,9 @@
   (str "https://raw.githubusercontent.com/clojure/clojure/gh-pages/index-v" v ".clj"))
 
 (defn get-version-apis! []
+  (println (style "\nRetrieving Clojure API files...\n" :cyan))
   (doseq [v versions]
-    (println "Retrieving clojure" v "API...")
+    (println " Clojure" v "API...")
     (let [data (read-string (slurp (version-api-url v)))
           symbols (->> (:vars data)
                        (map #(str (:namespace %) "/" (:name %)))

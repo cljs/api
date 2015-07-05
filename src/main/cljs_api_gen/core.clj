@@ -1,5 +1,6 @@
 (ns cljs-api-gen.core
   (:require
+    [clansi.core :refer [style]]
     [clojure.pprint :refer [print-table]]
     [clojure.edn :as edn]
     [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
@@ -20,15 +21,11 @@
 
 (defn prep!
   []
-  (println "\nCloning or updating repos...")
   (clone-or-fetch-repos!)
-
-  (println)
   (get-published-cljs-tags!)
   (get-published-clj-versions!)
-
-  (println)
-  (get-version-apis!))
+  (get-version-apis!)
+  (println (style "\n DONE PREPPING " :bg-green)))
 
 (defn main
   [{:keys [task
@@ -36,13 +33,15 @@
     :or {out-dir default-out-dir}
     :as options}]
 
+  (prep!)
+
   (binding [*output-dir* out-dir]
     (case task
       :docset  (docset/create!)
-      :cljsdoc (build-cljsdoc!)
-      (do
-        (prep!)
-        (create-catalog! options))))
+      :cljsdoc (let [num-skipped (build-cljsdoc! result)]
+                 (when-not (zero? num-skipped)
+                   (System/exit 1)))
+      (create-catalog! options)))
 
   ;; have to do this because `sh` leaves futures hanging,
   ;; preventing exit, so we must do it manually.
