@@ -20,7 +20,48 @@ in filenames. Thus, `(ns foo.bar-biz.baz)` should be the first form in file
 `references` can be zero or more forms used to import other namespaces, symbols,
 and libraries into the current namespace.
 
+```clj
+(ns example.core
+
+  ;; for excluding clojure symbols
+  (:refer-clojure :exclude [])
+
+  ;; for importing goog classes and enums
+  (:import
+    lib.ns
+    [lib.ns Ctor*])
+
+  (:require-macros
+    [lib.ns :refer []
+            :as alias
+            :reload
+            :reload-all])
+
+  (:require
+    [lib.ns :refer []
+            :refer-macros []
+            :include-macros true|false
+            :as alias
+            :reload
+            :reload-all])
+
+  (:use
+    [lib.ns :only []
+            :reload
+            :reload-all])
+
+  (:use-macros
+    [lib.ns :only []
+            :reload
+            :reload-all]))
+```
+
 ===== Related
+specialrepl/in-ns
+specialrepl/load-namespace
+specialrepl/import
+specialrepl/require
+specialrepl/require-macros
 
 ===== TODO
 we need to write a comprehensive namespace tutorial and link to it here
