@@ -113,10 +113,10 @@ $ grip catalog
 #### Advanced
 
 The generator can take an optional map at the command line.
-Use this to target a specific version (i.e. one of ClojureScript's tag):
+Use this to target a specific version or tag.
 
 ```
-$ lein run '{:version "r3211"}'
+$ lein run '{:version "0.0-3211"}'
 ```
 
 Or target the master branch:

@@ -21,6 +21,7 @@
                                  edn-cljsdoc-file]]
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
+                                    cljs-version->tag
                                     published-cljs-tags
                                     with-checkout!
                                     cljs-tag->version
@@ -125,6 +126,9 @@
         get-prev-result #(if (delay? @prev-result)
                            @@prev-result
                            @prev-result)
+
+        ;; normalize the given version to a tag if needed
+        version (or (cljs-version->tag version) version)
 
         tags (case version
                :latest @published-cljs-tags
