@@ -22,6 +22,12 @@ If `init` is supplied, it is evaluated and the result is assigned to `symbol`.
 and is used by many macros to define common elements (ie: `defn`, `defmacro`,
 etc).
 
+Supported metadata:
+
+- `^:private`
+- `^:dynamic`
+- `^:const`
+
 ===== Example#a5f898
 
 ```clj
