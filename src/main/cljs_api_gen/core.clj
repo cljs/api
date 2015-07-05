@@ -38,7 +38,7 @@
   (binding [*output-dir* out-dir]
     (case task
       :docset  (docset/create!)
-      :cljsdoc (let [num-skipped (build-cljsdoc! result)]
+      :cljsdoc (let [num-skipped (build-cljsdoc!)]
                  (when-not (zero? num-skipped)
                    (System/exit 1)))
       (create-catalog! options)))
