@@ -58,16 +58,6 @@ Example:
 ---
 {{/examples}}
 
-{{#external-doc-links}}
-External Doc Links:
-
-{{#links}}
-[`{{&symbol}}` @ {{&source}}]({{&link}})<br>
-{{/links}}
-
----
-{{/external-doc-links}}
-
 {{#related}}
 See Also:
 
@@ -77,6 +67,7 @@ See Also:
 
 ---
 {{/related}}
+
 
 {{#docstring}}
 Source docstring:
@@ -97,11 +88,11 @@ Source code:
  <pre>
 {{&path-tree}}
 </pre>
+
+---
 {{/source}}
 
 {{#extra-sources}}
-
----
 
 ```clj
 {{&code}}
@@ -110,9 +101,21 @@ Source code:
  <pre>
 {{&path-tree}}
 </pre>
-{{/extra-sources}}
 
 ---
+{{/extra-sources}}
+
+
+{{#external-doc-links}}
+External Doc Links:
+
+{{#links}}
+[`{{&symbol}}` @ {{&source}}]({{&link}})<br>
+{{/links}}
+
+---
+{{/external-doc-links}}
+
 
 __Meta__ - To retrieve the API data for this symbol:
 
