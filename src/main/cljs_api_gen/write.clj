@@ -96,6 +96,15 @@
         name-enc (URLEncoder/encode name- "UTF-8")]
     (str "http://crossclj.info/fun/" ns- "/" name-enc ".html")))
 
+(defn crosscljs-link
+  [{:keys [full-name] :as item}]
+  (let [[ns- name-] (split-ns-and-name full-name)
+        filename (or (-> item :source :filename) "")
+        ns- (cond-> ns-
+              (re-find #"\.cljs$" filename) (str ".cljs"))
+        name-enc (URLEncoder/encode name- "UTF-8")]
+    (str "http://crossclj.info/fun/" ns- "/" name-enc ".html")))
+
 (defn crossclj-has-cljs?
   [full-name]
   (let [[ns- name-] (split-ns-and-name full-name)]
@@ -122,7 +131,7 @@
            (when (crossclj-has-cljs? cljs-full)
              {:source "crossclj"
               :symbol cljs-full
-              :link (crossclj-link cljs-full)})])]
+              :link (crosscljs-link item)})])]
     (cond-> item
       (seq links) (assoc :external-doc-links {:links links}))))
 
