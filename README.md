@@ -19,6 +19,8 @@ documentation.
 :page_facing_up: __[Doc page sample](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md)__<br>
 :seedling: [How to contribute docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files)
 
+![overview](http://i.imgur.com/y8t80rb.png)
+
 ---
 
 | Git Branch  | Description |
