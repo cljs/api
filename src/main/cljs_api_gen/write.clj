@@ -1,5 +1,7 @@
 (ns cljs-api-gen.write
   (:refer-clojure :exclude [replace])
+  (:import
+    [java.net URLEncoder])
   (:require
     [clojure.edn :as edn]
     [clojure.set :refer [rename-keys]]
@@ -60,6 +62,69 @@
     ;; TODO: create namespace descriptions
     }})
 
+;;--------------------------------------------------------------------------------
+;; External links
+;;--------------------------------------------------------------------------------
+
+;; https://github.com/zk/clojuredocs/blob/master/src/cljx/clojuredocs/util.cljx#L58-L66
+(defn cd-encode
+  "clojuredocs' custom encoding scheme."
+  [s]
+  (when s
+    (cond
+      (= "." s) "_."
+      (= ".." s) "_.."
+      :else (-> s
+                (replace #"/" "_fs")
+                (replace #"\\" "_bs")
+                (replace #"\?" "_q")))))
+
+(defn clojuredocs-link
+  [full-name]
+  (let [[ns- name-] (split-ns-and-name full-name)]
+    (str "http://clojuredocs.org/" ns- "/" (cd-encode name-))))
+
+(defn grimoire-link
+  [full-name]
+  (let [[ns- name-] (split-ns-and-name full-name)
+        name-enc (URLEncoder/encode name- "UTF-8")]
+    (str "http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/" ns- "/" name-enc "/")))
+
+(defn crossclj-link
+  [full-name]
+  (let [[ns- name-] (split-ns-and-name full-name)
+        name-enc (URLEncoder/encode name- "UTF-8")]
+    (str "http://crossclj.info/fun/" ns- "/" name-enc ".html")))
+
+(defn crossclj-has-cljs?
+  [full-name]
+  (let [[ns- name-] (split-ns-and-name full-name)]
+    (not (#{"syntax" "special" "specialrepl"} ns-))))
+
+(defn add-external-doc-links
+  [{:keys [clj-symbol] :as item}]
+  (let [cljs-full (:full-name item)
+        clj-full (:full-name clj-symbol)
+        links
+        (keep identity
+          [(when clj-full
+             {:source "clojuredocs"
+              :symbol clj-full
+              :link (clojuredocs-link clj-full)})
+           (when clj-full
+             {:source "grimoire"
+              :symbol clj-full
+              :link (grimoire-link clj-full)})
+           (when clj-full
+             {:source "crossclj"
+              :symbol clj-full
+              :link (crossclj-link clj-full)})
+           (when (crossclj-has-cljs? cljs-full)
+             {:source "crossclj"
+              :symbol cljs-full
+              :link (crossclj-link cljs-full)})])]
+    (cond-> item
+      (seq links) (assoc :external-doc-links {:links links}))))
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
@@ -285,6 +350,7 @@
                                    sigs)}))
         :clj-symbol (make-clj-ref item)
         :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
+      (add-external-doc-links)
       (add-syntax-usage)
       (add-related-links)
       (add-source-trees)))

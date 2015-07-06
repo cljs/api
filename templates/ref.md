@@ -58,6 +58,16 @@ Example:
 ---
 {{/examples}}
 
+{{#external-doc-links}}
+External Doc Links:
+
+{{#links}}
+[`{{&symbol}}` @ {{&source}}]({{&link}})<br>
+{{/links}}
+
+---
+{{/external-doc-links}}
+
 {{#related}}
 See Also:
 
@@ -76,9 +86,10 @@ Source docstring:
 ```
 {{/docstring}}
 
-Source code:
 
 {{#source}}
+Source code:
+
 ```clj
 {{&code}}
 ```
