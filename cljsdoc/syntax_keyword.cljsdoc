@@ -1,31 +1,24 @@
 ===== Name
 syntax/keyword
 :
-::
 
 ===== Type
 syntax
 
 ===== Description
 
-Signifies a keyword, a string-like datatype often used as keys for maps.
-Keywords should not start with a number.
+A keyword is a string-like datatype that evaluates to itself.  Keywords are often used
+as enums or keys for maps.  Keywords should not start with a number.
 
 Keywords can have an optional namespace. For example, `:foo/bar`. This is useful
 for functions in a namespace to prevent key collisions on a globally accessible
 map.
 
-Preceding a keyword with `::` will prepend the given keyword with the current
-namespace.  For example, in the user namespace, `::foo` is read as `:user/foo`.
-
-If a keyword is prefixed by `::` and is namespace-qualified, the namespace part is properly resolved.
-For example, if `foo` is an alias of `cljs.core`, then `::foo/bar` evaluates to `:cljs.core/bar`.
-A reader exception is thrown if `foo` is not a namespace.
-
 ===== TODO
 when keywords allow number prefixes, make note of the first version when it is allowed
 
 ===== Related
+syntax/keyword-qualify
 cljs.core/keyword
 cljs.core/keyword?
 
@@ -34,9 +27,6 @@ cljs.core/keyword?
 ```clj
 :foo
 ;;=> :foo
-
-::foo
-;;=> :user/foo
 
 :a/foo
 ;;=> :a/foo
