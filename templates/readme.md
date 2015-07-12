@@ -164,15 +164,13 @@ available in [edn]
 <thead><tr>
 <th colspan=2>=</th>
 <th>Name</th>
-<th>Form</th>
 <th>History</th>
 </tr></thead>
 {{#symbols}}
 <tr valign=top>
 <td>{{#clj-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&.}}){{/clj-doc}}</td>
 <td>{{#edn-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">]({{&.}}){{/edn-doc}}</td>
-<td>[{{&display-name}}]({{&link}})</td>
-<td><samp>{{#syntax-form}}{{&.}}<br>{{/syntax-form}}</samp></td>
+<td><samp>[{{&display-name}}]({{&link}})</samp></td>
 <td>{{#history}}{{&.}} {{/history}}</td>
 </tr>
 {{/symbols}}

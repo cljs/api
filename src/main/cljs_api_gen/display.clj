@@ -2,7 +2,7 @@
   (:refer-clojure :exclude [replace])
   (:require
     [clojure.string :refer [join replace split trim]]
-    [cljs-api-gen.syntax :refer [syntax-order]]
+    [cljs-api-gen.syntax :refer [syntax-order syntax-map]]
     [cljs-api-gen.util :refer [split-ns-and-name]]
     ))
 
@@ -22,7 +22,9 @@
   [item]
   (let [item (cond-> item (string? item) full-name->item)]
     (cond
-      (= "syntax" (:ns item)) (replace (:name item) "-" " ")
+      ;; HACK: we should be able to access the :display key of the symbols' result entry
+      ;; but this is a workaround to keep this module from depending on the result data.
+      (= "syntax" (:ns item)) (get-in syntax-map [(:name item) :display])
       :else (:name item))))
 
 (defn get-full-display-name
@@ -30,9 +32,9 @@
   [item]
   (let [item (cond-> item (string? item) full-name->item)]
     (cond
-      (= "special" (:ns item)) (str (:name item) " (special)")
+      (= "special" (:ns item)) (:name item)
       (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
-      (= "syntax" (:ns item)) (str (replace (:name item) "-" " ") " (syntax)")
+      (= "syntax" (:ns item)) (get-in syntax-map [(:name item) :display])
       :else (:full-name item))))
 
 (defn get-ns-display-name

@@ -486,10 +486,10 @@
 
 (defn base-syntax-item
   "A syntax API entry item using info from the syntax table"
-  [{:keys [desc form clj-doc edn-doc usage] :as info}]
-  {:name desc
-   :syntax-form (or form " ") ;; <-- HACK: form needs to be non-empty string
-                              ;;      so the result parser doesn't purge it
+  [{:keys [display id form clj-doc edn-doc usage] :as info}]
+  {:name id
+   :display display
+   :syntax-form form
    :ns *cur-ns*
    :usage usage
    :type (or (:type info) "syntax")

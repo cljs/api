@@ -37,59 +37,71 @@
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
 
-  ;; (syntax description)    (type)       (syntax form)          (clojure doc link)  (edn doc link)
+  ;; POSSIBLE KEYS
+  ;;
+  ;; :display       human readable display name
+  ;; :id            ID used for indexing (as pseudo-symbol `syntax/<id>`)
+  ;; :char          identifying character in reader map of tools.reader
+  ;; :dchar         identifying character in dispatch reader map of tools.reader
+  ;; :parent        if this is a sub-form, include parent form (use parent's :form)
+  ;; :type          special syntax type (if applicable)
+  ;; :form          string or array of strings showing syntax prefix or empty syntax form
+  ;; :clj-doc       link to official clojure doc (signifies clojure relationship)
+  ;; :edn-doc       link to official edn doc (signifies edn relationship)
+  ;; :clj-added     version this was added to Clojure's lisp reader
+  ;; :usage         if :form is not sufficient to show usage, use this
 
   [;; core syntax
-   {:desc "string"           :char  \"    :form "\"\""           :clj-doc doc1     :edn-doc (edn-doc "strings")}
-   {:desc "character"        :char  \\    :form "\\"             :clj-doc doc1     :edn-doc (edn-doc "characters")}
-   {:desc "keyword"          :char  \:    :form ":"              :clj-doc doc1     :edn-doc (edn-doc "keywords")}
-   {:desc "keyword-qualify"  :parent ":"  :form "::"             :clj-doc doc1}
-   {:desc "symbol"                                               :clj-doc doc1     :edn-doc (edn-doc "symbols")}
-   {:desc "number"                                               :clj-doc doc1     :edn-doc (edn-doc "integers")}
-   {:desc "comment"          :char  \;    :form ";"              :clj-doc doc2     :edn-doc (edn-doc "comments")}
-   {:desc "list"             :char  \(    :form "()"             :clj-doc doc1     :edn-doc (edn-doc "lists")}
-   {:desc "vector"           :char  \[    :form "[]"             :clj-doc doc1     :edn-doc (edn-doc "vectors")}
-   {:desc "map"              :char  \{    :form "{}"             :clj-doc doc1     :edn-doc (edn-doc "maps")}
-   {:desc "deref"            :char  \@    :form "@"              :clj-doc doc2}
-   {:desc "meta"             :char  \^    :form "^"              :clj-doc doc2}
-   {:desc "quote"            :char  \'    :form "'"              :clj-doc doc2}
-   {:desc "syntax-quote"     :char  \`    :form "`"              :clj-doc doc2}
-   {:desc "unquote"          :char  \~    :form "~"              :clj-doc doc2}
-   {:desc "unquote-splicing" :parent "~"  :form "~@"             :clj-doc doc2}
-   {:desc "arg"              :char  \%    :form "%"              :clj-doc doc2}
-   {:desc "dispatch"         :char  \#    :form "#"              :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
+   {:display "\"\" string"                      :id "string"             :char  \"    :form "\"\""           :clj-doc doc1     :edn-doc (edn-doc "strings")}
+   {:display "\\ character"                     :id "character"          :char  \\    :form "\\"             :clj-doc doc1     :edn-doc (edn-doc "characters")}
+   {:display ": keyword"                        :id "keyword"            :char  \:    :form ":"              :clj-doc doc1     :edn-doc (edn-doc "keywords")}
+   {:display ":: keyword qualify"               :id "keyword-qualify"    :parent ":"  :form "::"             :clj-doc doc1}
+   {:display "symbol (syntax)"                  :id "symbol"                                                 :clj-doc doc1     :edn-doc (edn-doc "symbols")}
+   {:display "number (syntax)"                  :id "number"                                                 :clj-doc doc1     :edn-doc (edn-doc "integers")}
+   {:display "; comment"                        :id "comment"            :char  \;    :form ";"              :clj-doc doc2     :edn-doc (edn-doc "comments")}
+   {:display "() list"                          :id "list"               :char  \(    :form "()"             :clj-doc doc1     :edn-doc (edn-doc "lists")}
+   {:display "[] vector"                        :id "vector"             :char  \[    :form "[]"             :clj-doc doc1     :edn-doc (edn-doc "vectors")}
+   {:display "{} map"                           :id "map"                :char  \{    :form "{}"             :clj-doc doc1     :edn-doc (edn-doc "maps")}
+   {:display "@ deref"                          :id "deref"              :char  \@    :form "@"              :clj-doc doc2}
+   {:display "^ meta"                           :id "meta"               :char  \^    :form "^"              :clj-doc doc2}
+   {:display "' quote"                          :id "quote"              :char  \'    :form "'"              :clj-doc doc2}
+   {:display "` syntax quote"                   :id "syntax-quote"       :char  \`    :form "`"              :clj-doc doc2}
+   {:display "~ unquote"                        :id "unquote"            :char  \~    :form "~"              :clj-doc doc2}
+   {:display "~@ unquote splicing"              :id "unquote-splicing"   :parent "~"  :form "~@"             :clj-doc doc2}
+   {:display "% arg"                            :id "arg"                :char  \%    :form "%"              :clj-doc doc2}
+   {:display "# dispatch"                       :id "dispatch"           :char  \#    :form "#"              :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
 
    ;; dispatch syntax
-   {:desc "tagged-literal"                :form "#"              :clj-doc doc4     :edn-doc (edn-doc "tagged-elements") :clj-added "1.4.0"}
-   {:desc "regex"            :dchar \"    :form "#\"\""          :clj-doc doc2}
-   {:desc "set"              :dchar \{    :form "#{}"            :clj-doc doc1     :edn-doc (edn-doc "sets")}
-   {:desc "function"         :dchar \(    :form "#()"            :clj-doc doc2}
-   {:desc "var"              :dchar \'    :form "#'"             :clj-doc doc2}
-   {:desc "ignore"           :dchar \_    :form "#_"             :clj-doc doc2     :edn-doc (edn-doc "discard")}
-   {:desc "eval"             :dchar \=    :form "#="             :clj-doc doc-eval}
-   {:desc "unreadable"       :dchar \<    :form "#<>"            :clj-doc doc-unread}
-   {:desc "hashbang"         :dchar \!    :form "#!"             :clj-doc doc-hashbang}
-   {:desc "cond"             :dchar \?    :form "#?"             :clj-doc doc5 :clj-added "1.7.0-beta1"}
-   {:desc "cond-splicing"    :parent "#?" :form "#?@"            :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:display "# tagged literal"                 :id "tagged-literal"                  :form "#"              :clj-doc doc4     :edn-doc (edn-doc "tagged-elements") :clj-added "1.4.0"}
+   {:display "#\"\" regex"                      :id "regex"              :dchar \"    :form "#\"\""          :clj-doc doc2}
+   {:display "#{} set"                          :id "set"                :dchar \{    :form "#{}"            :clj-doc doc1     :edn-doc (edn-doc "sets")}
+   {:display "#() function"                     :id "function"           :dchar \(    :form "#()"            :clj-doc doc2}
+   {:display "#' var"                           :id "var"                :dchar \'    :form "#'"             :clj-doc doc2}
+   {:display "#_ ignore"                        :id "ignore"             :dchar \_    :form "#_"             :clj-doc doc2     :edn-doc (edn-doc "discard")}
+   {:display "#= eval"                          :id "eval"               :dchar \=    :form "#="             :clj-doc doc-eval}
+   {:display "#<> unreadable"                   :id "unreadable"         :dchar \<    :form "#<>"            :clj-doc doc-unread}
+   {:display "#! hashbang"                      :id "hashbang"           :dchar \!    :form "#!"             :clj-doc doc-hashbang}
+   {:display "#? reader conditional"            :id "cond"               :dchar \?    :form "#?"             :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:display "#?@ reader conditional splicing"  :id "cond-splicing"      :parent "#?" :form "#?@"            :clj-doc doc5 :clj-added "1.7.0-beta1"}
 
    ;; special symbols
-   {:desc "boolean"  :type "special symbol" :form ["true" "false"] :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:desc "nil"      :type "special symbol" :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
-   {:desc "NaN"      :type "special symbol" :form "NaN"}
-   {:desc "Infinity" :type "special symbol" :form ["Infinity" "-Infinity" "+Infinity"]}
+   {:display "true|false"                       :id "boolean"  :type "special symbol" :form ["true" "false"] :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:display "nil"                              :id "nil"      :type "special symbol" :form "nil"            :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:display "NaN"                              :id "NaN"      :type "special symbol" :form "NaN"}
+   {:display "Infinity"                         :id "Infinity" :type "special symbol" :form ["Infinity" "-Infinity" "+Infinity"]}
 
    ;; available tagged literals
-   {:desc "uuid-literal"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
-   {:desc "inst-literal"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
-   {:desc "queue-literal" :type "tagged literal" :form "#queue []"}
-   {:desc "js-literal"    :type "tagged literal" :form ["#js {}" "#js []"]}
+   {:display "#uuid \"\" literal"               :id "uuid-literal"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
+   {:display "#inst \"\" literal"               :id "inst-literal"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
+   {:display "#queue [] literal"                :id "queue-literal" :type "tagged literal" :form "#queue []"}
+   {:display "#js []|{} literal"                :id "js-literal"    :type "tagged literal" :form ["#js {}" "#js []"]}
 
    ;; special namespaces
-   {:desc "js-namespace"   :type "special namespace" :form "js/"}
-   {:desc "Math-namespace" :type "special namespace" :form "Math/" :clj-doc doc-interop}
+   {:display "js/ namespace"                    :id "js-namespace"   :type "special namespace" :form "js/"}
+   {:display "Math/ namespace"                  :id "Math-namespace" :type "special namespace" :form "Math/" :clj-doc doc-interop}
 
    ;; destructuring pattern
-   {:desc "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct
+   {:display "[]|{} destructure"                :id "destructure" :type "binding" :form [":keys" ":syms" ":strs" ":or" ":as" "&"] :clj-doc doc-destruct
     :usage ["{:keys [] :strs [] :syms [] :or {} :as name}"
             "[arg1 arg2 & args :as name]"]
     }
@@ -98,11 +110,11 @@
 
 (def syntax-order
   "name -> ordered index"
-  (into {} (map-indexed (fn [i v] [(:desc v) i]) syntax)))
+  (into {} (map-indexed (fn [i v] [(:id v) i]) syntax)))
 
 (def syntax-map
   "name -> item"
-  (zipmap (map :desc syntax) syntax))
+  (zipmap (map :id syntax) syntax))
 
 (def char-map
   "macro character -> item"
@@ -129,5 +141,5 @@
        (remove :parent)                          ;; already added by the parser if parents are present
        (remove #(= (:type %) "tagged literal"))  ;; tag literals are handled separately
        (filter #(clj-syntax? version %))         ;; select syntax forms available for this clojure version
-       (remove #(= (:desc %) "destructure"))     ;; already added by the parser
+       (remove #(= (:id %) "destructure"))     ;; already added by the parser
        ))

@@ -39,6 +39,7 @@
   (as-> x $
     (select-keys $ [:ns
                     :name
+                    :display
                     :docstring
                     :syntax-form
                     :usage
