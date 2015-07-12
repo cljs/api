@@ -7,12 +7,17 @@ macro character
 
 ===== Description
 
-Used to dereference a reference value (e.g. an atom).  Expands to `(deref ...)`.
+Retrieve the underlying value of a reference.  References can be created by
+[cljs.core/atom] or [cljs.core/delay].
+
+Sugar for [cljs.core/deref]:
 
 `@foo` = `(deref foo)`
 
 ===== Related
 cljs.core/deref
+cljs.core/atom
+cljs.core/delay
 
 ===== Example#08f886
 
