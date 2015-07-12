@@ -7,7 +7,7 @@ syntax
 
 ===== Description
 
-Signifies a single character string.  Carried over from Clojure for
+A single character string.  Carried over from Clojure for
 compatibility.  They are represented as single character JavaScript strings.
 
 `\c` = `"c"`
