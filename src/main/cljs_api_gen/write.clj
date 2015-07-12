@@ -7,6 +7,7 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
+    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -134,6 +135,22 @@
               :link (crosscljs-link item)})])]
     (cond-> item
       (seq links) (assoc :external-doc-links {:links links}))))
+
+;;--------------------------------------------------------------------------------
+;; symbol links in markdown
+;;--------------------------------------------------------------------------------
+
+(defn resolve-reflink
+  [[whole-match full-name]]
+  (if (contains? (:symbols *result*) full-name)
+    (str "[`" (get-short-display-name full-name) "`](" (encode/encode-fullname full-name) ".md)")
+    whole-match))
+
+(defn resolve-reflinks
+  "Replace symbol reflinks in given markdown body."
+  [md-body]
+  (when md-body
+    (replace md-body reflink-pattern resolve-reflink)))
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
@@ -341,6 +358,13 @@
                                   (md-escape data))})
     item))
 
+(defn resolve-all-reflinks
+  [item]
+  (-> item
+      (update-in [:description] resolve-reflinks)
+      (update-in [:examples] (fn [examples]
+                               (map #(update-in % [:content] resolve-reflinks) examples)))))
+
 (defn ref-file-data
   [item]
   (-> item
@@ -362,7 +386,8 @@
       (add-external-doc-links)
       (add-syntax-usage)
       (add-related-links)
-      (add-source-trees)))
+      (add-source-trees)
+      (resolve-all-reflinks)))
 
 (defn dump-ref-file!
   [item]

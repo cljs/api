@@ -2,6 +2,7 @@
   (:import
     [java.util.regex Pattern])
   (:require
+    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname]]
@@ -221,6 +222,30 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
+;; Validate Reflinks
+;;--------------------------------------------------------------------------------
+
+(defn ref-error
+  [[whole-match full-name]]
+  (when-not (contains? (:symbols *result*) full-name)
+    (str "Unknown symbol reference: " full-name)))
+
+(defn reflink-missing-error-msg*
+  "Gather missing reflinks from given markdown body text."
+  [md-body]
+  (let [msgs (keep ref-error (re-seq reflink-pattern md-body))]
+    (when (seq msgs)
+      (join "\n" msgs))))
+
+(defn reflink-missing-error-msg
+  "Gather missing reflinks from markdown description and examples."
+  [{:keys [description examples] :as doc}]
+  (let [md-bodies (keep identity (cons description (map :content examples)))
+        msgs (keep reflink-missing-error-msg* md-bodies)]
+    (when (seq msgs)
+      (join "\n" msgs))))
+
+;;--------------------------------------------------------------------------------
 ;; Validate Versions
 ;;--------------------------------------------------------------------------------
 
@@ -250,6 +275,7 @@
    (make-multi-version examples-error-msg!)
    (make-multi-version symbol-unknown-error-msg)
    (make-multi-version related-missing-error-msg)
+   (make-multi-version reflink-missing-error-msg)
    ;; (make-multi-version duplicate-sections-error-msg)
    filename-error-msg
    unrecognized-versions-error-msg
