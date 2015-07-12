@@ -338,10 +338,11 @@
 (defn ref-link
   [full-name]
   (when full-name
-    (let [item (get-in *result* [:symbols full-name])]
-      {:display-name (cond-> (md-escape (get-full-display-name full-name))
-                       (:removed item) md-strikethru)
-       :link (when item (str (encode/encode-fullname full-name) ".md"))})))
+    (let [item (get-in *result* [:symbols full-name])
+          display (get-full-display-name full-name)
+          link (str (encode/encode-fullname full-name) ".md")]
+      (cond-> (str "[`" display "`](" link ")")
+         (:removed item) md-strikethru))))
 
 (defn add-related-links
   [{:keys [related] :as item}]

@@ -1,7 +1,7 @@
-## <img width="48px" valign="middle" src="http://i.imgur.com/Hi20huC.png"> {{&display-name}}
+## {{&display-name}}`
 
 {{#moved}}
-> __MOVED__, please see [`{{&display-name}}`]({{&link}})
+> __MOVED__, please see {{&.}}
 {{/moved}}
 
  <table border="1">
@@ -62,7 +62,7 @@ Example:
 See Also:
 
 {{#symbols}}
-[`{{&display-name}}`]({{&link}})<br>
+{{&.}}<br>
 {{/symbols}}
 
 ---
