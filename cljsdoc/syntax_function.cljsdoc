@@ -7,23 +7,27 @@ syntax
 
 ===== Description
 
-Create an anonymous function.
+Shorthand for creating an anonymous function:
 
 `#(...)` = `(fn [args] (...))`
 
-Use `%` or `%1` to access the first argument.  Use `%2`, `%3` and so on to
-access subsequent arguments.  Use `%&` to access the rest of the arguments past
-the highest individually referenced argument.
+Use the following to access the implicit function arguments:
+
+- `%` or `%1` for first argument.
+- `%2`, `%3` and so on for subsequent arguments
+- `%&` for the rest of the arguments after the highest individually referenced argument
 
 Note that `#(1)` does not create a function that returns `1`, for the same
 reason that `(1)` does evaluate to `1`.
 
 `#()` forms cannot be nested, since this would create an ambiguity between the
-automatically assigned argument names.
+automatically assigned `%` argument names.
 
 ===== Related
+syntax/arg
 cljs.core/fn
 cljs.core/defn
+cljs.core/partial
 
 ===== Example#6a87de
 
@@ -33,5 +37,5 @@ cljs.core/defn
 
 (def f #(println %1 %2 %&))
 (f 1 2 3 4 5)
-;; prints: 1 2 (3 4)
+;; prints: 1 2 (3 4 5)
 ```
