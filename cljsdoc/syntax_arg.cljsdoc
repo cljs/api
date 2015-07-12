@@ -5,7 +5,7 @@ syntax/arg
 
 Special vars for accessing implicit function arguments.
 
-Only usable inside an anonymous function of the form `#()`.
+Only usable inside [syntax/function].
 
 - `%` or `%1` for first argument.
 - `%2`, `%3` and so on for subsequent arguments
