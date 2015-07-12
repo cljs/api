@@ -8,7 +8,8 @@ syntax
 
 ===== Description
 
-`true` or `false`
+Special symbols representing the boolean literals `true` and `false`.
+Both evaluate to themselves.
 
 ===== Example#1afc59
 
@@ -23,7 +24,7 @@ false
 ===== Related
 cljs.core/boolean
 special/if
-cljs.core/if-not
 cljs.core/not
-cljs.core/cond
+cljs.core/true?
+cljs.core/false?
 
