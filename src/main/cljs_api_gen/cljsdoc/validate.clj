@@ -195,13 +195,17 @@
   (= (-> *result* :release :cljs-tag)
      (last @published-cljs-tags)))
 
+(defn symbol-check-pass?
+  "Determines if we should pass the symbol check."
+  [full-name]
+  (or (nil? *result*)               ;; ignore if no known symbols supplied
+      (not (using-latest-result?))  ;; possible for symbols to exist later, so ignore if not latest
+      (get-in *result* [:symbols full-name])))
+
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]
-  (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
-                  (not (using-latest-result?)) ;; possible for symbols to exist later, so ignore if not latest
-                  (get-in *result* [:symbols full-name]))]
-    (when-not pass?
-      (str "This file is for an unknown symbol '" full-name "'."))))
+  (when-not (symbol-check-pass? full-name)
+    (str "This file is for an unknown symbol '" full-name "'.")))
 
 ;;--------------------------------------------------------------------------------
 ;; Validate Related Symbol
@@ -209,11 +213,8 @@
 
 (defn related-missing-error-msg*
   [full-name]
-  (let [pass? (or (nil? *result*) ;; ignore if no known symbols supplied
-                  (not (using-latest-result?)) ;; possible for symbols to exist later, so ignore if not latest
-                  (get-in *result* [:symbols full-name]))]
-    (when-not pass?
-      (str "Related symbol '" full-name "' is an unknown symbol."))))
+  (when-not (symbol-check-pass? full-name)
+    (str "Related symbol '" full-name "' is an unknown symbol.")))
 
 (defn related-missing-error-msg
   [{:keys [related] :as doc}]
@@ -227,7 +228,7 @@
 
 (defn ref-error
   [[whole-match full-name]]
-  (when-not (contains? (:symbols *result*) full-name)
+  (when-not (symbol-check-pass? full-name)
     (str "Unknown symbol reference: " full-name)))
 
 (defn reflink-missing-error-msg*
