@@ -1,2 +1,97 @@
 ===== Name
 syntax/dispatch
+#
+
+===== Description
+
+`#` is a prefix character that is called the dispatch macro, because it allows
+the behavior of the reader to be dispatched to another table, indexed by the
+character following the `#`.
+
+Syntax forms prefixed with `#` are made to bear some similarity to their
+original forms:
+
+| original                | with `#` prefix                 | relation                  |
+|-------------------------|---------------------------------|---------------------------|
+| [syntax/string]         | [syntax/regex]                  | string-related            |
+| [syntax/list]           | [syntax/function]               | code-related              |
+| [syntax/map]            | [syntax/set]                    | lookup-related            |
+| [syntax/quote]          | [syntax/var]                    | quote-related             |
+| `_ (ignored var)`       | [syntax/ignore]                 | ignore-related            |
+| `foo (var name)`        | [syntax/tagged-literal]         | name-related              |
+| `foo? (predicate name)` | [syntax/cond]                   | conditional-related       |
+
+===== Related
+syntax/regex
+syntax/function
+syntax/set
+syntax/var
+syntax/ignore
+syntax/tagged-literal
+syntax/cond
+
+===== Example#0a1f4c
+
+The dispatch macro is not usable on its own.  Rather, it dispatches to other
+syntax forms.
+
+Regular expression:
+
+```clj
+#"[a-zA-Z0-9]+"
+;;=> #"[a-zA-Z0-9]+"
+```
+
+Set:
+
+```clj
+#{:foo 1 2}
+;;=> #{:foo 1 2}
+```
+
+Function:
+
+```clj
+#(foo 1 2)
+;;=> #<function (){
+;;   return cljs.user.foo.call(null,(1),(2));
+;;   }>
+```
+
+Var reference:
+
+```clj
+(def a)
+#'a
+;;=> #'cljs.user/a
+```
+
+Ignore form:
+
+```clj
+#_foo
+;; waits for next form since #_foo was ignored
+
+#_123 456
+;;=> 456
+```
+
+Tagged Literals:
+
+```clj
+#queue [1 2 3]
+;;=> #queue [1 2 3]
+
+#js {:foo 1}
+;;=> #js {:foo 1}
+
+#inst "2010-11-12T18:14:15.666-00:00"
+;;=> #inst "2010-11-12T18:14:15.666-00:00"
+```
+
+Reader Conditional:
+
+```clj
+#?(:clj "Clojure" :cljs "ClojureScript")
+;;=> "ClojureScript"
+```
