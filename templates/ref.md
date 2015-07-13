@@ -1,4 +1,4 @@
-## {{&display-name}}`
+## {{&display-name}}
 
 {{#moved}}
 > __MOVED__, please see {{&.}}
