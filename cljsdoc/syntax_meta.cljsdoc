@@ -7,15 +7,14 @@ macro character
 
 ===== Description
 
-Attaches metadata to the following form.
+Attaches metadata to the following form.  Metadata can only be attached to a
+symbol or collection.
 
-Metadata is a map.  It can be attached to a collection or symbol.
+Metadata will assume the following transformations depending on its type:
 
-If the provided metadata is a keyword, the resulting metadata will be a map
-containing that keyword with an associated value `true`.
-
-If the provided metadata is a string or symbol, the resulting metadata will be
-a map associating `:tag` with the value of the string or evaluated symbol.
+- keyword `^:foo` => `^{:foo true}`
+- string `^"foo"` => `^{:tag "foo"}`
+- symbol `^foo` => `^{:tag <value of foo>}`
 
 ===== Related
 cljs.core/meta

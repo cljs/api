@@ -63,7 +63,8 @@
    {:display "[] vector"                        :id "vector"             :char  \[    :form "[]"             :clj-doc doc1     :edn-doc (edn-doc "vectors")}
    {:display "{} map"                           :id "map"                :char  \{    :form "{}"             :clj-doc doc1     :edn-doc (edn-doc "maps")}
    {:display "@ deref"                          :id "deref"              :char  \@    :form "@"              :clj-doc doc2}
-   {:display "^ meta"                           :id "meta"               :char  \^    :form "^"              :clj-doc doc2}
+   {:display "^ meta"                           :id "meta"               :char  \^    :form "^"              :clj-doc doc2
+    :usage ["^{}" "^:foo" "^\"foo\"" "^foo"]}
    {:display "' quote"                          :id "quote"              :char  \'    :form "'"              :clj-doc doc2}
    {:display "` syntax quote"                   :id "syntax-quote"       :char  \`    :form "`"              :clj-doc doc2}
    {:display "~ unquote"                        :id "unquote"            :char  \~    :form "~"              :clj-doc doc2}
