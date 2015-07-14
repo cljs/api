@@ -91,7 +91,8 @@
    {:display "Infinity"                         :id "Infinity" :type "special symbol" :form ["Infinity" "-Infinity" "+Infinity"]}
 
    ;; available tagged literals
-   {:display "#uuid \"\" literal"               :id "uuid-literal"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
+   {:display "#uuid \"\" literal"               :id "uuid-literal"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"
+    :usage ["#uuid \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""]}
    {:display "#inst \"\" literal"               :id "inst-literal"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"
     :usage ["#inst \"yyyy-mm-dd\""
             "#inst \"yyyy-mm-ddThh:mm:ss\""
