@@ -7,7 +7,7 @@ syntax
 
 ===== Description
 
-Signifies a literal set.  Values must be unique.
+Create a literal set.  Values must be unique.
 
 ===== Related
 cljs.core/hash-set
