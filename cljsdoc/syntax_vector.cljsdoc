@@ -7,7 +7,9 @@ syntax
 
 ===== Description
 
-Signifies a literal vector.
+Creates a vector.
+
+See [cljs.core/PersistentVector] for data structure details.
 
 ===== TODO
 write about syntactic idiom of using vectors for arg lists and binding forms
