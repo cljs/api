@@ -6,7 +6,7 @@ syntax
 
 ===== Description
 
-Signifies a symbol.  When evaluated, its result will be the value that the symbol
+A symbol represents a name.  When evaluated, its result will be the value that the symbol
 is bound to.
 
 Some naming rules:
