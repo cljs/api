@@ -6,12 +6,41 @@ cljs.core/name
 
 ===== Description
 
-Returns a string value of a keyword, string, or symbol.
+Returns the name string of a possibly namespace-qualified keyword or symbol.
 
-`(name :foo)` => `"foo"`
-
-`(name "foo")` => `"foo"`
-
-`(name 'foo)` => `"foo"`
+Equivalent to [cljs.core/identity] for strings.
 
 ===== Related
+cljs.core/namespace
+
+===== Example#363fb7
+
+With namespaces:
+
+```clj
+(name :foo/bar)
+;;=> "bar"
+
+(name 'foo/bar)
+;;=> "bar"
+```
+
+Without namespaces:
+
+```clj
+(name :foo)
+;;=> "foo"
+
+(name 'foo)
+;;=> "foo"
+```
+
+Strings have no concept of a namespace:
+
+```clj
+(name "foo/bar")
+;;=> "foo/bar"
+
+(name "foo")
+;;=> "foo"
+```
