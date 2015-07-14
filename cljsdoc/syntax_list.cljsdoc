@@ -7,8 +7,16 @@ syntax
 
 ===== Description
 
-Signifies a literal list.  When evaluated, it is interpreted as a call to some
-code.  The first argument is called with the subsequent arguments.
+Creates a list.  When evaluated, it is interpreted as a call to some
+code.
+
+When `(a b c)` is evaluated, it calls `a` with two arguments `b` and `c`.
+
+If `a` is a function, its arguments `b` and `c` will be evaluated before
+the function receives them.
+
+If `a` is a special form or macro, it will receive its arguments `b` and `c`
+unevaluated, where they _may_ be evaluated internally.
 
 ===== Related
 syntax/vector
