@@ -7,7 +7,9 @@ syntax
 
 ===== Description
 
-Signifies a string.  ClojureScript strings are the same as JavaScript strings.
+Create a string.  ClojureScript strings are the same as [JavaScript strings].
+
+[JavaScript strings]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 Strings may span multiple lines.
 
