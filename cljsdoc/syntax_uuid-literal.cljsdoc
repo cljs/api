@@ -12,10 +12,12 @@ Representing UUIDs with `#uuid` rather than just a plain string has the followin
 - the reader will throw an exception on malformed UUIDs
 - its UUID type is preserved and shown when serialized to [edn].
 
+To create a UUID from an evaluated expression, use [cljs.core/uuid].
+
 [edn]:https://github.com/edn-format/edn
 
 ===== Related
-cljs.core/UUID
+cljs.core/uuid
 cljs.core/random-uuid
 
 ===== Example#12c0f0
