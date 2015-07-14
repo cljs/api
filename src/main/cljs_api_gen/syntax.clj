@@ -92,7 +92,11 @@
 
    ;; available tagged literals
    {:display "#uuid \"\" literal"               :id "uuid-literal"  :type "tagged literal" :form "#uuid \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
-   {:display "#inst \"\" literal"               :id "inst-literal"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
+   {:display "#inst \"\" literal"               :id "inst-literal"  :type "tagged literal" :form "#inst \"\"" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"
+    :usage ["#inst \"yyyy-mm-dd\""
+            "#inst \"yyyy-mm-ddThh:mm:ss\""
+            "#inst \"yyyy-mm-ddThh:mm:ssZ\""
+            "#inst \"yyyy-mm-ddThh:mm:ss-hh:mm\""]}
    {:display "#queue [] literal"                :id "queue-literal" :type "tagged literal" :form "#queue []"}
    {:display "#js []|{} literal"                :id "js-literal"    :type "tagged literal" :form ["#js {}" "#js []"]}
 
