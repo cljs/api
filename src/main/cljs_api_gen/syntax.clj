@@ -82,8 +82,8 @@
    {:display "#= eval"                          :id "eval"               :dchar \=    :form "#="             :clj-doc doc-eval}
    {:display "#<> unreadable"                   :id "unreadable"         :dchar \<    :form "#<>"            :clj-doc doc-unread}
    {:display "#! hashbang"                      :id "hashbang"           :dchar \!    :form "#!"             :clj-doc doc-hashbang}
-   {:display "#? reader conditional"            :id "cond"               :dchar \?    :form "#?"             :clj-doc doc5 :clj-added "1.7.0-beta1"}
-   {:display "#?@ reader conditional splicing"  :id "cond-splicing"      :parent "#?" :form "#?@"            :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:display "#?() reader conditional"          :id "cond"               :dchar \?    :form "#?()"           :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:display "#?@() reader conditional splicing" :id "cond-splicing"   :parent "#?()" :form "#?@()"          :clj-doc doc5 :clj-added "1.7.0-beta1"}
 
    ;; special symbols
    {:display "true|false"                       :id "boolean"  :type "special symbol" :form ["true" "false"] :clj-doc doc1     :edn-doc (edn-doc "booleans")}
