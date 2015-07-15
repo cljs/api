@@ -14,7 +14,7 @@ As a language idiom, vectors are used for binding forms:
 - `[a b]` as function arg bindings in `(fn [a b] ...)`
 - `[a 1 b 2]` as let bindings in `(let [a 1 b 2] ...)`
 
-This helps differentiate binding forms from the parentheses of callable forms.
+This helps differentiate binding forms from the parentheses of [callable forms](syntax/list).
 
 ===== Related
 cljs.core/vector
