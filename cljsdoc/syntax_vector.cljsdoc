@@ -7,12 +7,14 @@ syntax
 
 ===== Description
 
-Creates a vector.
+Creates a vector. See [cljs.core/PersistentVector] for data structure details.
 
-See [cljs.core/PersistentVector] for data structure details.
+As a language idiom, vectors are used for binding forms:
 
-===== TODO
-write about syntactic idiom of using vectors for arg lists and binding forms
+- `[a b]` as function arg bindings in `(fn [a b] ...)`
+- `[a 1 b 2]` as let bindings in `(let [a 1 b 2] ...)`
+
+This helps differentiate binding forms from the parentheses of callable forms.
 
 ===== Related
 cljs.core/vector
