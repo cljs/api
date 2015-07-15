@@ -2,7 +2,8 @@
   (:import
     [java.util.regex Pattern])
   (:require
-    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern]]
+    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern
+                                          named-reflink-pattern]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname]]
@@ -234,7 +235,9 @@
 (defn reflink-missing-error-msg*
   "Gather missing reflinks from given markdown body text."
   [md-body]
-  (let [msgs (keep ref-error (re-seq reflink-pattern md-body))]
+  (let [ref-links (concat (re-seq reflink-pattern md-body)
+                          (re-seq named-reflink-pattern md-body))
+        msgs (keep ref-error ref-links)]
     (when (seq msgs)
       (join "\n" msgs))))
 

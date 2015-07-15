@@ -7,7 +7,8 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
-    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern]]
+    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern
+                                          named-reflink-pattern]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -146,11 +147,19 @@
     (str "[`" (get-short-display-name full-name) "`](" (encode/encode-fullname full-name) ".md)")
     whole-match))
 
+(defn resolve-named-reflink
+  [[whole-match full-name]]
+  (if (contains? (:symbols *result*) full-name)
+    (str "](" (encode/encode-fullname full-name) ".md)")
+    whole-match))
+
 (defn resolve-reflinks
   "Replace symbol reflinks in given markdown body."
   [md-body]
   (when md-body
-    (replace md-body reflink-pattern resolve-reflink)))
+    (-> md-body
+        (replace reflink-pattern resolve-reflink)
+        (replace named-reflink-pattern resolve-named-reflink))))
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
