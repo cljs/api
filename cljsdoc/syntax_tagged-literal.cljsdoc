@@ -37,6 +37,7 @@ ClojureScript supports the following tagged literals:
 
 ===== Related
 syntax/dispatch
+cljs.core/tagged-literal
 
 ===== Example#e84f6a
 
