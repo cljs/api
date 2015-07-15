@@ -7,7 +7,9 @@ syntax
 
 ===== Description
 
-Signifies a regular expression. Represented as JavaScript regular expressions.
+Signifies a regular expression. Represented as native [JavaScript regular expressions].
+
+[JavaScript regular expressions]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 An inline modifier can be included at the beginning of the regex:
 
