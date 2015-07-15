@@ -1,2 +1,7 @@
 ===== Name
 cljs.core/tagged-literal
+
+===== Description
+
+Internal use only.  Create tagged literals with their [syntax form](syntax/tagged-literal) instead.
+
