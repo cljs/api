@@ -1,2 +1,43 @@
 ===== Name
 syntax/cond
+#?()
+
+===== Description
+
+(Only allowed in `.cljc` files or the REPL)
+
+Allows the reader to conditionally select from the given list of forms
+depending on available "feature" keys.  For example:
+
+```clj
+#?(:clj "Clojure"
+   :cljs "ClojureScript")
+```
+
+ClojureScript's reader is configured with the `:cljs` feature key, making the
+expression above read as `"ClojureScript"`.  Clojure's reader is
+similarly configured with the `:clj` key.
+
+===== Related
+syntax/cond-splicing
+
+===== Example#eec90f
+
+```clj
+#?(:clj "Clojure" :cljs "ClojureScript")
+;;=> "ClojureScript"
+```
+
+A function that works in Clojure and ClojureScript ([source]):
+
+[source]:https://github.com/lymingtonprecision/route-ccrs/blob/c579aea05504736f2cfbd31c3c755f7e25fdad77/src/route_ccrs/manufacturing_methods.cljc#L8-L10
+
+```clj
+(defn str->int [s]
+  #?(:clj  (java.lang.Integer/parseInt s)
+     :cljs (js/parseInt s)))
+
+(str->int "123")
+;;=> 123
+```
+
