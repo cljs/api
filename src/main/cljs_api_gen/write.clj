@@ -606,7 +606,7 @@
                        :examples (non-empty-seq? examples)
                        :related (non-empty-seq? related)}))
         done? (fn [{:keys [ref cljsdoc description examples related]}]
-                (and ref cljsdoc description examples related))
+                (and ref cljsdoc description examples))
         symbols (->> (vals (:symbols result))
                      (map make-item)
                      (remove done?)
