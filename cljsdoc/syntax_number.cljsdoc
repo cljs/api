@@ -19,7 +19,7 @@ a custom base.
 - hexadecimal `0x123`
 - octal `0123`
 - binary `2r0110`
-- arbitrary `NrXXX` where `(<= 2 N 35)` and `X` is in `[0-9,A-Z]`
+- arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
 
 ===== Related
 syntax/Infinity
