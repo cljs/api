@@ -2,6 +2,9 @@
 syntax/var
 #'
 
+===== Display
+#' var
+
 ===== Type
 syntax
 

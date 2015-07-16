@@ -2,6 +2,12 @@
 syntax/cond-splicing
 #?@()
 
+===== Display
+#?@ cond-splicing
+
+===== Usage
+#?@(...)
+
 ===== Description
 
 (Only allowed in `.cljc` files or the REPL)

@@ -1,6 +1,9 @@
 ===== Name
 syntax/destructure
 
+===== Display
+destructure [] or {}
+
 ===== Usage
 [arg1 arg2 & args :as name]
 {:keys [] :strs [] :syms [] :or {} :as name}

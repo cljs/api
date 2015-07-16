@@ -1,6 +1,8 @@
 ===== Name
 syntax/queue-literal
-#queue []
+
+===== Display
+#queue [] literal
 
 ===== Description
 

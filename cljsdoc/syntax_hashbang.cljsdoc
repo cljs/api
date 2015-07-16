@@ -2,6 +2,9 @@
 syntax/hashbang
 #!
 
+===== Display
+#! hashbang
+
 ===== Description
 
 Equivalent to [syntax/comment].

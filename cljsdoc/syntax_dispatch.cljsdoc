@@ -2,6 +2,9 @@
 syntax/dispatch
 #
 
+===== Display
+# dispatch
+
 ===== Description
 
 `#` is a prefix character that is called the dispatch macro, because it allows

@@ -2,6 +2,9 @@
 syntax/deref
 @
 
+===== Display
+@ deref
+
 ===== Type
 macro character
 

@@ -1,6 +1,9 @@
 ===== Name
 syntax/arg
 
+===== Display
+% arg
+
 ===== Description
 
 Special vars for accessing implicit function arguments.

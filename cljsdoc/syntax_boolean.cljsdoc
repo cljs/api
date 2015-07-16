@@ -3,6 +3,9 @@ syntax/boolean
 true
 false
 
+===== Display
+true|false
+
 ===== Type
 syntax
 

@@ -2,6 +2,9 @@
 syntax/unquote-splicing
 ~@
 
+===== Display
+~@ unquote splicing
+
 ===== Type
 syntax
 

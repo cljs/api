@@ -1,6 +1,9 @@
 ===== Name
 syntax/tagged-literal
 
+===== Display
+# tagged literal
+
 ===== Description
 
 A tagged literal is a way to tag another core syntax literal to represent a

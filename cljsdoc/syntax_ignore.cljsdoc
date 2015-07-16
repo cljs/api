@@ -2,6 +2,9 @@
 syntax/ignore
 #_
 
+===== Display
+#_ ignore
+
 ===== Type
 macro character
 

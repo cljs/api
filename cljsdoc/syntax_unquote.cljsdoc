@@ -2,6 +2,9 @@
 syntax/unquote
 ~
 
+===== Display
+~ unquote
+
 ===== Type
 syntax
 

@@ -2,6 +2,9 @@
 syntax/meta
 ^
 
+===== Display
+^ meta
+
 ===== Usage
 ^{}
 ^:foo

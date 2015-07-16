@@ -143,8 +143,8 @@
 
 (defn resolve-reflink
   [[whole-match full-name]]
-  (if (contains? (:symbols *result*) full-name)
-    (str "[`" (get-short-display-name full-name) "`](" (encode/encode-fullname full-name) ".md)")
+  (if-let [item (get-in *result* [:symbols full-name])]
+    (str "[`" (get-short-display-name item) "`](" (encode/encode-fullname full-name) ".md)")
     whole-match))
 
 (defn resolve-named-reflink
@@ -279,7 +279,7 @@
   (let [make (fn [full-name change]
                (let [item (get symbols full-name)]
                  (assoc item
-                   :text (cond-> (md-escape (get-full-display-name full-name))
+                   :text (cond-> (md-escape (get-full-display-name item))
                            (= change :removed) md-strikethru)
                    :shield-text (shield-escape (:type item))
                    :change ({:added "+" :removed "×"} change)
@@ -342,7 +342,7 @@
   [full-name]
   (when full-name
     (let [item (get-in *result* [:symbols full-name])
-          display (get-full-display-name full-name)
+          display (get-full-display-name item)
           link (str (encode/encode-fullname full-name) ".md")]
       (cond-> (str "[`" display "`](" link ")")
          (:removed item) md-strikethru))))
@@ -598,7 +598,7 @@
                           non-empty-seq? #(and (sequential? %) (pos? (count %)))
                           non-empty-str? #(and (string? %) (pos? (count %)))]
                       {:full-name s
-                       :display-name (md-escape (get-full-display-name s))
+                       :display-name (md-escape (get-full-display-name sym))
                        :ref (str refs-dir "/" full-name-encode ".md")
                        :cljsdoc (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/"
                                      cljsdoc-dir "/" full-name-encode ".cljsdoc")

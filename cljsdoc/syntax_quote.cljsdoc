@@ -2,6 +2,9 @@
 syntax/quote
 '
 
+===== Display
+' quote
+
 ===== Type
 syntax
 

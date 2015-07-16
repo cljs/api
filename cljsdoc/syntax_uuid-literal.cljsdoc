@@ -1,6 +1,9 @@
 ===== Name
 syntax/uuid-literal
 
+===== Display
+#uuid "" literal
+
 ===== Usage
 #uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 

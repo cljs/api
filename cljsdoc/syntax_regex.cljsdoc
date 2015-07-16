@@ -2,6 +2,9 @@
 syntax/regex
 #""
 
+===== Display
+#"" regex
+
 ===== Type
 syntax
 

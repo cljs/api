@@ -39,7 +39,6 @@
 
   ;; POSSIBLE KEYS
   ;;
-  ;; :display       human readable display name
   ;; :id            ID used for indexing (as pseudo-symbol `syntax/<id>`)
   ;; :char          identifying character in reader map of tools.reader
   ;; :dchar         identifying character in dispatch reader map of tools.reader
@@ -48,59 +47,58 @@
   ;; :clj-doc       link to official clojure doc (signifies clojure relationship)
   ;; :edn-doc       link to official edn doc (signifies edn relationship)
   ;; :clj-added     version this was added to Clojure's lisp reader
-  ;; :usage         if :form is not sufficient to show usage, use this
 
   [;; core syntax
-   {:display "\"\" string"                      :id "string"             :char  \"     :clj-doc doc1     :edn-doc (edn-doc "strings")}
-   {:display "\\ character"                     :id "character"          :char  \\     :clj-doc doc1     :edn-doc (edn-doc "characters")}
-   {:display ": keyword"                        :id "keyword"            :char  \:     :clj-doc doc1     :edn-doc (edn-doc "keywords")}
-   {:display ":: keyword qualify"               :id "keyword-qualify"    :parent "keyword"   :clj-doc doc1}
-   {:display "symbol (syntax)"                  :id "symbol"                           :clj-doc doc1     :edn-doc (edn-doc "symbols")}
-   {:display "number (syntax)"                  :id "number"                           :clj-doc doc1     :edn-doc (edn-doc "integers")}
-   {:display "; comment"                        :id "comment"            :char  \;     :clj-doc doc2     :edn-doc (edn-doc "comments")}
-   {:display "() list"                          :id "list"               :char  \(     :clj-doc doc1     :edn-doc (edn-doc "lists")}
-   {:display "[] vector"                        :id "vector"             :char  \[     :clj-doc doc1     :edn-doc (edn-doc "vectors")}
-   {:display "{} map"                           :id "map"                :char  \{     :clj-doc doc1     :edn-doc (edn-doc "maps")}
-   {:display "@ deref"                          :id "deref"              :char  \@     :clj-doc doc2}
-   {:display "^ meta"                           :id "meta"               :char  \^     :clj-doc doc2}
-   {:display "' quote"                          :id "quote"              :char  \'     :clj-doc doc2}
-   {:display "` syntax quote"                   :id "syntax-quote"       :char  \`     :clj-doc doc2}
-   {:display "~ unquote"                        :id "unquote"            :char  \~     :clj-doc doc2}
-   {:display "~@ unquote splicing"              :id "unquote-splicing"   :parent "unquote"   :clj-doc doc2}
-   {:display "% arg"                            :id "arg"                :char  \%     :clj-doc doc2}
-   {:display "# dispatch"                       :id "dispatch"           :char  \#     :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
+   {:id "string"             :char  \"     :clj-doc doc1     :edn-doc (edn-doc "strings")}
+   {:id "character"          :char  \\     :clj-doc doc1     :edn-doc (edn-doc "characters")}
+   {:id "keyword"            :char  \:     :clj-doc doc1     :edn-doc (edn-doc "keywords")}
+   {:id "keyword-qualify"    :parent "keyword"   :clj-doc doc1}
+   {:id "symbol"                           :clj-doc doc1     :edn-doc (edn-doc "symbols")}
+   {:id "number"                           :clj-doc doc1     :edn-doc (edn-doc "integers")}
+   {:id "comment"            :char  \;     :clj-doc doc2     :edn-doc (edn-doc "comments")}
+   {:id "list"               :char  \(     :clj-doc doc1     :edn-doc (edn-doc "lists")}
+   {:id "vector"             :char  \[     :clj-doc doc1     :edn-doc (edn-doc "vectors")}
+   {:id "map"                :char  \{     :clj-doc doc1     :edn-doc (edn-doc "maps")}
+   {:id "deref"              :char  \@     :clj-doc doc2}
+   {:id "meta"               :char  \^     :clj-doc doc2}
+   {:id "quote"              :char  \'     :clj-doc doc2}
+   {:id "syntax-quote"       :char  \`     :clj-doc doc2}
+   {:id "unquote"            :char  \~     :clj-doc doc2}
+   {:id "unquote-splicing"   :parent "unquote"   :clj-doc doc2}
+   {:id "arg"                :char  \%     :clj-doc doc2}
+   {:id "dispatch"           :char  \#     :clj-doc doc2     :edn-doc (edn-doc "-dispatch-character")}
 
    ;; dispatch syntax
-   {:display "# tagged literal"                 :id "tagged-literal"                   :clj-doc doc4     :edn-doc (edn-doc "tagged-elements") :clj-added "1.4.0"}
-   {:display "#\"\" regex"                      :id "regex"              :dchar \"     :clj-doc doc2}
-   {:display "#{} set"                          :id "set"                :dchar \{     :clj-doc doc1     :edn-doc (edn-doc "sets")}
-   {:display "#() function"                     :id "function"           :dchar \(     :clj-doc doc2}
-   {:display "#' var"                           :id "var"                :dchar \'     :clj-doc doc2}
-   {:display "#_ ignore"                        :id "ignore"             :dchar \_     :clj-doc doc2     :edn-doc (edn-doc "discard")}
-   {:display "#= eval"                          :id "eval"               :dchar \=     :clj-doc doc-eval}
-   {:display "#<> unreadable"                   :id "unreadable"         :dchar \<     :clj-doc doc-unread}
-   {:display "#! hashbang"                      :id "hashbang"           :dchar \!     :clj-doc doc-hashbang}
-   {:display "#?() reader conditional"          :id "cond"               :dchar \?     :clj-doc doc5 :clj-added "1.7.0-beta1"}
-   {:display "#?@() reader conditional splicing" :id "cond-splicing"   :parent "cond"  :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:id "tagged-literal"                   :clj-doc doc4     :edn-doc (edn-doc "tagged-elements") :clj-added "1.4.0"}
+   {:id "regex"              :dchar \"     :clj-doc doc2}
+   {:id "set"                :dchar \{     :clj-doc doc1     :edn-doc (edn-doc "sets")}
+   {:id "function"           :dchar \(     :clj-doc doc2}
+   {:id "var"                :dchar \'     :clj-doc doc2}
+   {:id "ignore"             :dchar \_     :clj-doc doc2     :edn-doc (edn-doc "discard")}
+   {:id "eval"               :dchar \=     :clj-doc doc-eval}
+   {:id "unreadable"         :dchar \<     :clj-doc doc-unread}
+   {:id "hashbang"           :dchar \!     :clj-doc doc-hashbang}
+   {:id "cond"               :dchar \?     :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:id "cond-splicing"   :parent "cond"  :clj-doc doc5 :clj-added "1.7.0-beta1"}
 
    ;; special symbols
-   {:display "true|false"                       :id "boolean"  :type "special symbol" :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:display "nil"                              :id "nil"      :type "special symbol"             :clj-doc doc1     :edn-doc (edn-doc "nil")}
-   {:display "NaN"                              :id "NaN"      :type "special symbol" }
-   {:display "Infinity"                         :id "Infinity" :type "special symbol" }
+   {:id "boolean"  :type "special symbol" :clj-doc doc1     :edn-doc (edn-doc "booleans")}
+   {:id "nil"      :type "special symbol"             :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:id "NaN"      :type "special symbol"}
+   {:id "Infinity" :type "special symbol"}
 
    ;; available tagged literals
-   {:display "#uuid \"\" literal"               :id "uuid-literal"  :type "tagged literal" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
-   {:display "#inst \"\" literal"               :id "inst-literal"  :type "tagged literal" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
-   {:display "#queue [] literal"                :id "queue-literal" :type "tagged literal"}
-   {:display "#js []|{} literal"                :id "js-literal"    :type "tagged literal"}
+   {:id "uuid-literal"  :type "tagged literal" :clj-doc doc-clj-tags :edn-doc (edn-doc "uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6") :clj-added "1.4.0"}
+   {:id "inst-literal"  :type "tagged literal" :clj-doc doc-clj-tags :edn-doc (edn-doc "inst-rfc-3339-format") :clj-added "1.4.0"}
+   {:id "queue-literal" :type "tagged literal"}
+   {:id "js-literal"    :type "tagged literal"}
 
    ;; special namespaces
-   {:display "js/ namespace"                    :id "js-namespace"   :type "special namespace"}
-   {:display "Math/ namespace"                  :id "Math-namespace" :type "special namespace" :clj-doc doc-interop}
+   {:id "js-namespace"   :type "special namespace"}
+   {:id "Math-namespace" :type "special namespace" :clj-doc doc-interop}
 
    ;; destructuring pattern
-   {:display "[]|{} destructure"                :id "destructure" :type "binding"  :clj-doc doc-destruct}
+   {:id "destructure" :type "binding"  :clj-doc doc-destruct}
    ])
 
 (def syntax-order

@@ -54,6 +54,7 @@
 
 (def recognized-sections
   ["name"
+   "display"
    "type"
    "return type"
    "description"

@@ -1,6 +1,9 @@
 ===== Name
 syntax/NaN
 
+===== Display
+NaN
+
 ===== Description
 
 The IEEE 754 Floating Point representation of NaN (not a number), an undefined

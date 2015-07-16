@@ -1,6 +1,8 @@
 ===== Name
 syntax/inst-literal
-#inst ""
+
+===== Display
+#inst "" literal
 
 ===== Usage
 #inst "yyyy-mm-dd"

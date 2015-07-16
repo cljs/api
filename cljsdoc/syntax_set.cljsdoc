@@ -2,6 +2,9 @@
 syntax/set
 #{}
 
+===== Display
+#{} set
+
 ===== Type
 syntax
 

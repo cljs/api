@@ -25,6 +25,13 @@
           (dissoc "name")))
     doc))
 
+(defn transform-display [doc]
+  (if-let [display (get doc "display")]
+    (-> doc
+        (assoc :display display)
+        (dissoc "display"))
+    doc))
+
 (defn transform-description [doc]
   (if-let [desc (get doc "description")]
     (-> doc
@@ -87,6 +94,7 @@
 (defn transform-doc [doc]
   (-> doc
       transform-name
+      transform-display
       transform-description
       transform-signature
       transform-usage

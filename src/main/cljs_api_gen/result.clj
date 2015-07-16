@@ -39,9 +39,7 @@
   (as-> x $
     (select-keys $ [:ns
                     :name
-                    :display
                     :docstring
-                    :usage
                     :type
                     :parent-type
                     :signature
@@ -207,6 +205,7 @@
     (cond-> item
       ;; don't overwrite signature if it's null
       doc              (merge (select-keys doc [:examples :related :description :moved :usage]))
+      (:display doc)   (merge (select-keys doc [:display]))
       (:signature doc) (merge (select-keys doc [:signature])))))
 
 (defn add-cljsdoc-to-result

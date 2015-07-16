@@ -2,7 +2,7 @@
   (:refer-clojure :exclude [replace])
   (:require
     [clojure.string :refer [join replace split trim]]
-    [cljs-api-gen.syntax :refer [syntax-order syntax-map]]
+    [cljs-api-gen.syntax :refer [syntax-order]]
     [cljs-api-gen.util :refer [split-ns-and-name]]
     ))
 
@@ -21,21 +21,18 @@
   "Create a short display name for the given item if it has a pseudo-namespace."
   [item]
   (let [item (cond-> item (string? item) full-name->item)]
-    (cond
-      ;; HACK: we should be able to access the :display key of the symbols' result entry
-      ;; but this is a workaround to keep this module from depending on the result data.
-      (= "syntax" (:ns item)) (get-in syntax-map [(:name item) :display])
-      :else (:name item))))
+    (or (:display item)
+        (:name item))))
 
 (defn get-full-display-name
   "Create a full display name for the given item if it has a pseudo-namespace."
   [item]
   (let [item (cond-> item (string? item) full-name->item)]
-    (cond
-      (= "special" (:ns item)) (:name item)
-      (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
-      (= "syntax" (:ns item)) (get-in syntax-map [(:name item) :display])
-      :else (:full-name item))))
+    (or (:display item)
+        (cond
+          (= "special" (:ns item)) (:name item)
+          (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
+          :else (:full-name item)))))
 
 (defn get-ns-display-name
   [ns-]

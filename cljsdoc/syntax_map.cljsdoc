@@ -2,6 +2,9 @@
 syntax/map
 {}
 
+===== Display
+{} map
+
 ===== Type
 syntax
 
