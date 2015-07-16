@@ -83,7 +83,7 @@
 
    ;; special symbols
    {:id "boolean"  :type "special symbol" :clj-doc doc1     :edn-doc (edn-doc "booleans")}
-   {:id "nil"      :type "special symbol"             :clj-doc doc1     :edn-doc (edn-doc "nil")}
+   {:id "nil"      :type "special symbol" :clj-doc doc1     :edn-doc (edn-doc "nil")}
    {:id "NaN"      :type "special symbol"}
    {:id "Infinity" :type "special symbol"}
 
@@ -98,7 +98,10 @@
    {:id "Math-namespace" :type "special namespace" :clj-doc doc-interop}
 
    ;; destructuring pattern
-   {:id "destructure" :type "binding"  :clj-doc doc-destruct}
+   ;; (uses destructure source)
+   {:id "destructure-vector" :type "binding"  :clj-doc doc-destruct}
+   {:id "destructure-map"    :type "binding"  :clj-doc doc-destruct}
+
    ])
 
 (def syntax-order
@@ -134,5 +137,6 @@
        (remove :parent)                          ;; already added by the parser if parents are present
        (remove #(= (:type %) "tagged literal"))  ;; tag literals are handled separately
        (filter #(clj-syntax? version %))         ;; select syntax forms available for this clojure version
-       (remove #(= (:id %) "destructure"))     ;; already added by the parser
+       (remove #(#{"destructure-vector"
+                   "destructure-map"} (:id %)))  ;; already added by the parser
        ))

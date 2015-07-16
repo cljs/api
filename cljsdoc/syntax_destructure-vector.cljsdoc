@@ -1,0 +1,12 @@
+===== Name
+syntax/destructure-vector
+
+===== Display
+destructure []
+
+===== Usage
+[arg1 arg2 & args :as name]
+
+
+===== Related
+syntax/destructure-map

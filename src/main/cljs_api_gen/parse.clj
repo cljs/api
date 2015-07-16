@@ -644,11 +644,12 @@
                 (>= *cljs-num* 0)    (parse-clj-core)
                 :else nil)
         match? #(= "destructure" (:name %))
-        item (first (filter match? items))]
-    (-> item
-        (dissoc :signature)
-        (merge (base-syntax-item (syntax-map "destructure")))
-        (assoc :type "binding"))))
+        item (first (filter match? items))
+        make-destruct #(-> item
+                           (merge (base-syntax-item (syntax-map %)))
+                           (assoc :type "binding"))]
+    (map make-destruct ["destructure-vector"
+                        "destructure-map"])))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
@@ -815,11 +816,11 @@
   (binding [*cur-ns* ns-]
     (let [tagged-literals (parse-tagged-literals)
           syntax-items (parse-syntax-forms)
-          destructure-item (parse-destructure)]
+          destructure-items (parse-destructure)]
       (doall (concat
                tagged-literals
                syntax-items
-               [destructure-item])))))
+               destructure-items)))))
 
 (defmethod parse-ns ["cljs.test" :library] [ns- api]
   (parse-ns* ns- "clojurescript"

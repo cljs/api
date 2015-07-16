@@ -1,10 +1,11 @@
 ===== Name
-syntax/destructure
+syntax/destructure-map
 
 ===== Display
-destructure [] or {}
+destructure {}
 
 ===== Usage
-[arg1 arg2 & args :as name]
 {:keys [] :strs [] :syms [] :or {} :as name}
 
+===== Related
+syntax/destructure-vector
