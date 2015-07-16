@@ -1,12 +1,11 @@
 ===== Name
 syntax/set
-#{}
 
 ===== Display
 #{} set
 
-===== Type
-syntax
+===== Usage
+#{...}
 
 ===== Description
 

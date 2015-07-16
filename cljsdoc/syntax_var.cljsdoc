@@ -1,12 +1,12 @@
 ===== Name
 syntax/var
-#'
 
 ===== Display
 #' var
 
-===== Type
-syntax
+===== Usage
+#'foo
+#'foo/bar
 
 ===== Description
 

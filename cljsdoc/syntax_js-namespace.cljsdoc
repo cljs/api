@@ -4,6 +4,10 @@ syntax/js-namespace
 ===== Display
 js/ namespace
 
+===== Usage
+js/foo
+js/foo.bar
+
 ===== Description
 
 A special namespace used for accessing any symbol defined

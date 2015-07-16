@@ -2,7 +2,10 @@
 syntax/queue-literal
 
 ===== Display
-#queue [] literal
+#queue literal
+
+===== Usage
+#queue [...]
 
 ===== Description
 

@@ -1,12 +1,11 @@
 ===== Name
 syntax/deref
-@
 
 ===== Display
 @ deref
 
-===== Type
-macro character
+===== Usage
+@foo
 
 ===== Description
 

@@ -1,12 +1,12 @@
 ===== Name
 syntax/keyword-qualify
-::
 
 ===== Display
 :: keyword
 
-===== Type
-syntax
+===== Usage
+::foo
+::foo/bar
 
 ===== Description
 

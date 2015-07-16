@@ -2,7 +2,7 @@
 syntax/uuid-literal
 
 ===== Display
-#uuid "" literal
+#uuid literal
 
 ===== Usage
 #uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

@@ -2,10 +2,7 @@
 syntax/number
 
 ===== Display
-number (syntax)
-
-===== Type
-syntax
+number literal
 
 ===== Description
 

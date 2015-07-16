@@ -1,18 +1,14 @@
 ===== Name
 syntax/meta
-^
 
 ===== Display
 ^ meta
 
 ===== Usage
-^{}
+^{...}
 ^:foo
 ^"foo"
 ^foo
-
-===== Type
-macro character
 
 ===== Description
 

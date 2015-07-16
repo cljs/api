@@ -1,12 +1,12 @@
 ===== Name
 syntax/keyword
-:
 
 ===== Display
 : keyword
 
-===== Type
-syntax
+===== Usage
+:foo
+:foo/bar
 
 ===== Description
 

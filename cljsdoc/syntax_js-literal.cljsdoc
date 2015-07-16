@@ -8,9 +8,6 @@ syntax/js-literal
 #js [...]
 #js {...}
 
-===== Type
-tagged literal
-
 ===== Description
 
 Create a literal JavaScript object or array.  Data in the form of a map `{}` or

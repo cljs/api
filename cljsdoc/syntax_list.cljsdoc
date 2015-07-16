@@ -1,12 +1,11 @@
 ===== Name
 syntax/list
-()
 
 ===== Display
 () list
 
-===== Type
-syntax
+===== Usage
+(...)
 
 ===== Description
 

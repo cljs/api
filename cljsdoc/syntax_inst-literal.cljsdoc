@@ -2,7 +2,7 @@
 syntax/inst-literal
 
 ===== Display
-#inst "" literal
+#inst literal
 
 ===== Usage
 #inst "yyyy-mm-dd"

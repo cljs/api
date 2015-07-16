@@ -2,10 +2,11 @@
 syntax/symbol
 
 ===== Display
-symbol (syntax)
+symbol literal
 
-===== Type
-syntax
+===== Usage
+foo
+foo/bar
 
 ===== Description
 

@@ -1,13 +1,12 @@
 ===== Name
 syntax/boolean
-true
-false
 
 ===== Display
-true|false
+boolean literal
 
-===== Type
-syntax
+===== Usage
+true
+false
 
 ===== Description
 

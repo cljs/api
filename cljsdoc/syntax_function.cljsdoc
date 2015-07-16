@@ -1,12 +1,11 @@
 ===== Name
 syntax/function
-#()
 
 ===== Display
 #() function
 
-===== Type
-syntax
+===== Usage
+#(...)
 
 ===== Description
 

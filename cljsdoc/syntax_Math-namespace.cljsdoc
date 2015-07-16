@@ -4,6 +4,9 @@ syntax/Math-namespace
 ===== Display
 Math/ namespace
 
+===== Usage
+Math/foo
+
 ===== Description
 
 A special namespace for direct access to the native JavaScript [Math library].

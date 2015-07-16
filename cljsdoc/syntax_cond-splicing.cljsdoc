@@ -1,9 +1,8 @@
 ===== Name
 syntax/cond-splicing
-#?@()
 
 ===== Display
-#?@ cond-splicing
+#?@ reader conditional splicing
 
 ===== Usage
 #?@(...)

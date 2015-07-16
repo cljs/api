@@ -1,12 +1,11 @@
 ===== Name
 syntax/map
-{}
 
 ===== Display
 {} map
 
-===== Type
-syntax
+===== Usage
+{...}
 
 ===== Description
 
