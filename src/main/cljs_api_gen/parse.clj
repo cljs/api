@@ -646,6 +646,7 @@
         match? #(= "destructure" (:name %))
         item (first (filter match? items))
         make-destruct #(-> item
+                           (dissoc :signature)
                            (merge (base-syntax-item (syntax-map %)))
                            (assoc :type "binding"))]
     (map make-destruct ["destructure-vector"
