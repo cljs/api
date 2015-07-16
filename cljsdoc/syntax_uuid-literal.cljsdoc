@@ -1,6 +1,9 @@
 ===== Name
 syntax/uuid-literal
 
+===== Usage
+#uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
 ===== Description
 
 Creates a universally unique identifier (UUID), using the [cljs.core/UUID] type.

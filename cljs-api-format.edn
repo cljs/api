@@ -42,9 +42,9 @@
               ;; equivalent symbol in Clojure (if applicable)
               :clj-symbol        "clojure.core/keys",
 
-              ;; literal syntax form if applicable (e.g. "[]", "{}", "()", "#js []")
-              ;; (see cljsdoc/syntax_* for examples)
-              :syntax-form "... literal syntax form ..." ;; or vector if multiple
+              ;; syntax usage strings
+              ;; (see cljsdoc/syntax_inst-literal.cljsdoc for example)
+              :usage []
 
               ;; syntax equivalency to clojure or edn if applicable
               :clj-doc "... external URL for clojure syntax doc ..."

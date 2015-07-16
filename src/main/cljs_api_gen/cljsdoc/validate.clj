@@ -57,6 +57,7 @@
    "type"
    "return type"
    "description"
+   "usage"
    "signature"
    "todo"
    "notes"

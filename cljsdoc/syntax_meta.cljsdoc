@@ -2,6 +2,12 @@
 syntax/meta
 ^
 
+===== Usage
+^{}
+^:foo
+^"foo"
+^foo
+
 ===== Type
 macro character
 

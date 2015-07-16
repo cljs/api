@@ -2,6 +2,12 @@
 syntax/inst-literal
 #inst ""
 
+===== Usage
+#inst "yyyy-mm-dd"
+#inst "yyyy-mm-ddThh:mm:ss"
+#inst "yyyy-mm-ddThh:mm:ssZ"
+#inst "yyyy-mm-ddThh:mm:ss-hh:mm"
+
 ===== Description
 
 An instant in time, using a [RFC-3339] formatted string. Creates a JavaScript [Date] object.

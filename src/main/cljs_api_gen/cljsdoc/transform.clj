@@ -40,6 +40,13 @@
         (dissoc "signature"))
     doc))
 
+(defn transform-usage [doc]
+  (if-let [sig (get doc "usage")]
+    (-> doc
+        (assoc :usage (section-as-list sig))
+        (dissoc "usage"))
+    doc))
+
 (defn transform-type [doc]
   (if-let [type- (get doc "type")]
     (-> doc
@@ -82,6 +89,7 @@
       transform-name
       transform-description
       transform-signature
+      transform-usage
       transform-type
       transform-examples
       transform-related

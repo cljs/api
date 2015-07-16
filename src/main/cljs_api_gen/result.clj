@@ -41,7 +41,6 @@
                     :name
                     :display
                     :docstring
-                    :syntax-form
                     :usage
                     :type
                     :parent-type
@@ -207,7 +206,7 @@
         doc (get-in cljsdoc [:docs doc-version])]
     (cond-> item
       ;; don't overwrite signature if it's null
-      doc              (merge (select-keys doc [:examples :related :description :moved]))
+      doc              (merge (select-keys doc [:examples :related :description :moved :usage]))
       (:signature doc) (merge (select-keys doc [:signature])))))
 
 (defn add-cljsdoc-to-result

@@ -486,12 +486,10 @@
 
 (defn base-syntax-item
   "A syntax API entry item using info from the syntax table"
-  [{:keys [display id form clj-doc edn-doc usage] :as info}]
+  [{:keys [display id form clj-doc edn-doc] :as info}]
   {:name id
    :display display
-   :syntax-form form
    :ns *cur-ns*
-   :usage usage
    :type (or (:type info) "syntax")
    :edn-doc edn-doc
    :clj-doc clj-doc})
@@ -591,7 +589,7 @@
   "Get derived syntax forms from the given forms."
   [items]
   (let [make-sub-item (fn [info]
-                        (when-let [parent (first (filter #(= (:syntax-form %) (:parent info)) items))]
+                        (when-let [parent (first (filter #(= (:id %) (:parent info)) items))]
                           (merge parent (base-syntax-item info))))
         sub-items (->> syntax
                        (filter :parent)

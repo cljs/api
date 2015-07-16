@@ -338,12 +338,6 @@
         (update-in [:source] add-tree)
         (update-in [:extra-sources] #(map add-tree %)))))
 
-(defn fix-syntax-form
-  [syntax-form]
-  (if (vector? syntax-form)
-    (map md-escape syntax-form)
-    (md-escape syntax-form)))
-
 (defn ref-link
   [full-name]
   (when full-name
@@ -361,11 +355,9 @@
     item))
 
 (defn add-syntax-usage
-  [{:keys [syntax-form usage] :as item}]
-  (if-let [data (or usage syntax-form)]
-    (assoc item :usage {:usages (if (vector? data)
-                                  (map md-escape data)
-                                  (md-escape data))})
+  [{:keys [usage] :as item}]
+  (if usage
+    (assoc item :usage {:usages (map md-escape usage)})
     item))
 
 (defn resolve-all-reflinks
@@ -555,7 +547,6 @@
                      :edn-doc (:edn-doc item)
                      :name (:name item)
                      :type (:type item)
-                     :syntax-form (fix-syntax-form (:syntax-form item))
                      :parent-type (:parent-type item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-items (map make-item %))
