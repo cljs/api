@@ -25,6 +25,9 @@ value of the `bar` symbol of the `foo` namespace.
 To access symbols in the global JavaScript context, use the namespace `js`.
 For example, use `js/document` to get the global `document` JavaScript object.
 
+===== TODO
+mention dots and slashes: http://clojure.org/reader#toc1
+
 ===== Related
 cljs.core/symbol
 cljs.core/symbol?
