@@ -116,8 +116,34 @@ External Doc Links:
 ---
 {{/external-doc-links}}
 
+ <table>
+<tr><td>
+<img valign="middle" align="right" width="48px" src="http://i.imgur.com/Hi20huC.png">
+</td><td>
+Created for the upcoming ClojureScript website.<br>
+[edit here] | [learn how]
+</td></tr></table>
 
-__Meta__ - To retrieve the API data for this symbol:
+[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/{{&cljsdoc-path}}
+[learn how]:https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files
+
+<!--
+
+This information was too distracting to show to readers, but I'll leave it
+commented here since it is helpful to:
+
+- pretty-print the data used to generate this document
+- and show how to retrieve that data
+
+
+
+The API data for this symbol:
+
+```clj
+{{&data}}
+```
+
+Retrieve the API data for this symbol:
 
 ```clj
 ;; from Clojure REPL
@@ -127,15 +153,4 @@ __Meta__ - To retrieve the API data for this symbol:
     (get-in [:symbols "{{&full-name}}"]))
 ```
 
-```clj
-{{&data}}
-```
-
----
-
-__Contributions__ to this document are accepted as Pull Requests to the following file:
-
- <pre>
-[{{&cljsdoc-path}}](https://github.com/cljsinfo/cljs-api-docs/blob/master/{{&cljsdoc-path}})
-</pre>
-
+-->
