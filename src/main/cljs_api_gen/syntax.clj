@@ -36,6 +36,10 @@
 
 (def doc-cheatsheet "http://clojure.org/cheatsheet")
 (def doc-syntax-quote "http://clojure.org/reader#syntax-quote")
+(def doc-ampersand "http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/&")
+
+;; an edn doc (there is no clojure doc on whitespace)
+(def doc-whitespace "https://github.com/edn-format/edn#general-considerations")
 
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
@@ -115,6 +119,9 @@
    {:id "comma"         :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "general-considerations")}
    {:id "ns-separator"  :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "symbols")}
    {:id "auto-gensym"   :type "special character" :clj-doc doc-syntax-quote}
+   {:id "dot"           :type "special character" :clj-doc doc1}
+   {:id "ampersand"     :type "special character" :clj-doc doc-ampersand}
+   {:id "whitespace"    :type "special character" :clj-doc doc-whitespace :edn-doc doc-whitespace}
 
    ])
 
