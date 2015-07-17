@@ -20,10 +20,12 @@ Some naming rules:
 - symbols starting or ending with a decimal are reserved for interop purposes
 
 Symbols can have an optional namespace. For example, `foo/bar` evaluates to the
-value of the `bar` symbol of the `foo` namespace.
+value of the `bar` symbol of the `foo` namespace.  See [syntax/ns-separator].
 
 To access symbols in the global JavaScript context, use the namespace `js`.
 For example, use `js/document` to get the global `document` JavaScript object.
+Dots can also be included in symbols for direct property access, see
+[syntax/dot].
 
 ===== TODO
 mention dots and slashes: http://clojure.org/reader#toc1

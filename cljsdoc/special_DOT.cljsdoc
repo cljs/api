@@ -1,6 +1,9 @@
 ===== Name
 special/.
-.-
+
+===== Usage
+(.-foo obj)
+(.foo obj)
 
 ===== Type
 special form
