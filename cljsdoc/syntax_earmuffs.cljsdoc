@@ -19,7 +19,7 @@ Dynamic vars are global vars that you intend to temporarily rebind with
 ===== Related
 cljs.core/binding
 
-==== TODO
+===== TODO
 The following emits a warning in Clojure.  We should provide the same in ClojureScript:
 
 ```clj
