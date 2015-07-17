@@ -1,0 +1,8 @@
+===== Name
+syntax/predicate
+
+===== Display
+? predicate
+
+===== Usage
+foo?

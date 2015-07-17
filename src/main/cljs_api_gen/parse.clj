@@ -486,7 +486,7 @@
 
 (defn base-syntax-item
   "A syntax API entry item using info from the syntax table"
-  [{:keys [id form clj-doc edn-doc] :as info}]
+  [{:keys [id clj-doc edn-doc] :as info}]
   {:name id
    :ns *cur-ns*
    :type (or (:type info) "syntax")
@@ -545,17 +545,10 @@
                         (filter #(= (:type %) "special symbol"))
                         (map #(make-single % read-symbol)))
 
-        ;; special namespaces (e.g. "js", "Math")
-        ;; NOTE: always present
-        sns-items (->> syntax
-                       (filter #(= (:type %) "special namespace"))
-                       (map #(base-syntax-item %)))
-
         all-items (->> (concat macro-items
                                dispatch-items
                                [symbol-item number-item tag-item]
-                               ssym-items
-                               sns-items)
+                               ssym-items)
                        (keep identity))]
     all-items))
 
@@ -563,26 +556,15 @@
   "Get syntax forms available prior to tools.reader.
   Parse syntax forms from clojure's LispReader, using our base syntax list."
   []
-  (let [;; clojure syntax forms
-        ;; NOTE: presence determined by clojure version
-        clojure-syntax-items
-        (for [info (clj-syntax *clj-version*)]
-          (assoc (base-syntax-item info)
-                 ;; assuming their source is available in LispReader
-                 ;; FIXME: not always true
-                 :source {:repo "clojure"
-                          :tag *clj-tag*
-                          :filename "src/jvm/clojure/lang/LispReader.java"}))
-
-        ;; js/ special namespace
-        ;; NOTE: always present
-        ;; NOTE: (the Math/ special namespace is already added since it has a clj-doc link in the syntax table)
-        js-ns-item (base-syntax-item (syntax-map "js-namespace"))
-
-        all-items (concat
-                    clojure-syntax-items
-                    [js-ns-item])]
-    all-items))
+  ;; clojure syntax forms
+  ;; NOTE: presence determined by clojure version
+  (for [info (clj-syntax *clj-version*)]
+    (assoc (base-syntax-item info)
+           ;; assuming their source is available in LispReader
+           ;; FIXME: not always true
+           :source {:repo "clojure"
+                    :tag *clj-tag*
+                    :filename "src/jvm/clojure/lang/LispReader.java"})))
 
 (defn get-sub-syntax-forms
   "Get derived syntax forms from the given forms."
@@ -644,13 +626,34 @@
                 (>= *cljs-num* 0)    (parse-clj-core)
                 :else nil)
         match? #(= "destructure" (:name %))
-        item (first (filter match? items))
-        make-destruct #(-> item
-                           (dissoc :signature)
-                           (merge (base-syntax-item (syntax-map %)))
-                           (assoc :type "binding"))]
+        code-item (first (filter match? items))
+        make-destruct (fn [name-]
+                        (let [destruct-item (base-syntax-item (syntax-map name-))]
+                          (-> code-item
+                              (dissoc :signature)
+                              (merge destruct-item))))]
     (map make-destruct ["destructure-vector"
                         "destructure-map"])))
+
+;;--------------------------------------------------------------------------------
+;; Parse other syntax items
+;;--------------------------------------------------------------------------------
+
+(defn parse-misc-syntax
+  []
+  (let [match? #{"special namespace"
+                 "convention"
+                 "special character"}]
+    (->> syntax
+         (filter #(match? (:type %)))
+         (map base-syntax-item))))
+
+(defn parse-other-syntax
+  "Parse all syntax items that are not part of the reader table"
+  []
+  (concat (parse-tagged-literals)
+          (parse-destructure)
+          (parse-misc-syntax)))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure Macros to import or exclude
@@ -815,13 +818,8 @@
 
 (defmethod parse-ns ["syntax" :syntax] [ns- api]
   (binding [*cur-ns* ns-]
-    (let [tagged-literals (parse-tagged-literals)
-          syntax-items (parse-syntax-forms)
-          destructure-items (parse-destructure)]
-      (doall (concat
-               tagged-literals
-               syntax-items
-               destructure-items)))))
+    (doall (concat (parse-syntax-forms)
+                   (parse-other-syntax)))))
 
 (defmethod parse-ns ["cljs.test" :library] [ns- api]
   (parse-ns* ns- "clojurescript"

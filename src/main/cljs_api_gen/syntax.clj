@@ -96,14 +96,14 @@
    {:id "queue-literal" :type "tagged literal"}
    {:id "js-literal"    :type "tagged literal"}
 
-   ;; special namespaces
-   {:id "js-namespace"   :type "special namespace"}
-   {:id "Math-namespace" :type "special namespace" :clj-doc doc-interop}
-
    ;; destructuring pattern
    ;; (uses destructure source)
    {:id "destructure-vector" :type "binding"  :clj-doc doc-destruct}
    {:id "destructure-map"    :type "binding"  :clj-doc doc-destruct}
+
+   ;; special namespaces
+   {:id "js-namespace"   :type "special namespace"}
+   {:id "Math-namespace" :type "special namespace" :clj-doc doc-interop}
 
    ;; conventions
    {:id "predicate" :type "convention" :clj-doc doc-cheatsheet}
@@ -114,7 +114,7 @@
    ;; characters
    {:id "comma"         :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "general-considerations")}
    {:id "ns-separator"  :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "symbols")}
-   {:id "gensym"        :type "special character" :clj-doc doc-syntax-quote}
+   {:id "auto-gensym"   :type "special character" :clj-doc doc-syntax-quote}
 
    ])
 
@@ -150,8 +150,9 @@
        (filter :clj-doc)                         ;; all clojure syntax forms should have an associated doc link
        (remove :parent)                          ;; already added by the parser if parents are present
        (filter #(clj-syntax? version %))         ;; select syntax forms available for this clojure version
-       (remove #(#{"tagged-literal"
+       (remove #(#{"tagged-literal"              ;; these are all handled manually
                    "binding"
+                   "special namespace"
                    "convention"
-                   "special character"} (:type %)))  ;; handled manually
+                   "special character"} (:type %)))
        ))
