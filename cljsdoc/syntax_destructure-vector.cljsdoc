@@ -36,12 +36,15 @@ Use `:as foo` to name the original value:
 ;;=> [1 2 3 4 5]
 ```
 
-Use the special destructuring vector in place of any local name binding in the
+Use the special destructure vector in place of any local name binding in the
 following forms:
 
 - `(let [...])`
 - `(fn [...])`
 - `(loop [...])`
+
+Destructure vectors can be nested, even in place of names in [destructure
+maps](syntax/destructure-map).
 
 ===== Related
 syntax/destructure-map
