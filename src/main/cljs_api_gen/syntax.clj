@@ -34,6 +34,9 @@
   [name-]
   (str "https://github.com/edn-format/edn#" name-))
 
+(def doc-cheatsheet "http://clojure.org/cheatsheet")
+(def doc-syntax-quote "http://clojure.org/reader#syntax-quote")
+
 (def syntax
   "list of syntax forms, in the desired display order of reference table."
 
@@ -102,6 +105,17 @@
    {:id "destructure-vector" :type "binding"  :clj-doc doc-destruct}
    {:id "destructure-map"    :type "binding"  :clj-doc doc-destruct}
 
+   ;; conventions
+   {:id "predicate" :type "convention" :clj-doc doc-cheatsheet}
+   {:id "impure"    :type "convention" :clj-doc doc-cheatsheet}
+   {:id "earmuffs"  :type "convention" :clj-doc doc-cheatsheet}
+   {:id "unused"    :type "convention" :clj-doc doc-cheatsheet}
+
+   ;; characters
+   {:id "comma"         :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "general-considerations")}
+   {:id "ns-separator"  :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "symbols")}
+   {:id "gensym"        :type "special character" :clj-doc doc-syntax-quote}
+
    ])
 
 (def syntax-order
@@ -135,8 +149,9 @@
   (->> syntax
        (filter :clj-doc)                         ;; all clojure syntax forms should have an associated doc link
        (remove :parent)                          ;; already added by the parser if parents are present
-       (remove #(= (:type %) "tagged literal"))  ;; tag literals are handled separately
        (filter #(clj-syntax? version %))         ;; select syntax forms available for this clojure version
-       (remove #(#{"destructure-vector"
-                   "destructure-map"} (:id %)))  ;; already added by the parser
+       (remove #(#{"tagged-literal"
+                   "binding"
+                   "convention"
+                   "special character"} (:type %)))  ;; handled manually
        ))
