@@ -6,3 +6,33 @@ syntax/impure
 
 ===== Usage
 foo!
+
+===== Description
+
+A naming convention for impure functions (unenforced).
+
+Impure functions are those that have side-effects on some state.
+
+Some impure functions which use this convention:
+
+- [special/set!]
+- [cljs.core/swap!]
+- [cljs.core/conj!]
+- [cljs.core/specify!]
+
+===== Related
+syntax/predicate
+
+===== Example#c1dbc0
+
+The following causes a side-effect in the state of `a`:
+
+```clj
+(def a (atom 1))
+@a
+;;=> 1
+
+(reset! a 2)
+@a
+;;=> 2
+```
