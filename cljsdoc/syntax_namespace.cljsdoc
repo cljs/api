@@ -1,8 +1,8 @@
 ===== Name
-syntax/ns-separator
+syntax/namespace
 
 ===== Display
-/ namespace separator
+/ namespace slash
 
 ===== Usage
 foo/baz

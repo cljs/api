@@ -117,10 +117,10 @@
 
    ;; characters
    {:id "comma"         :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "general-considerations")}
-   {:id "ns-separator"  :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "symbols")}
+   {:id "namespace"     :type "special character" :clj-doc doc-cheatsheet :edn-doc (edn-doc "symbols")}
    {:id "auto-gensym"   :type "special character" :clj-doc doc-syntax-quote}
    {:id "dot"           :type "special character" :clj-doc doc1}
-   {:id "ampersand"     :type "special character" :clj-doc doc-ampersand}
+   {:id "rest"          :type "special character" :clj-doc doc-ampersand}
    {:id "whitespace"    :type "special character" :clj-doc doc-whitespace :edn-doc doc-whitespace}
 
    ])

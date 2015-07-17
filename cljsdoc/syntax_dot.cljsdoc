@@ -15,4 +15,4 @@ Dots can be used inside symbols. Its meaning depends on its position in the symb
 
 ===== Related
 syntax/symbol
-syntax/ns-separator
+syntax/namespace
