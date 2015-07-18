@@ -25,8 +25,6 @@ Binding `c` to the rest of the function arguments:
 ;;=> (3 4)
 ```
 
-===== Example#bd73e3
-
 Binding `c` to the rest of the destructured values:
 
 ```clj
