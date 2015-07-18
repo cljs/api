@@ -427,7 +427,10 @@
     (let [location (parse-location form)
           extras {:type "special form"}
           docs (get doc-map (symbol (:name special)))
-          final (merge special location extras docs)]
+          final (-> special
+                    (merge location docs)
+                    (assoc :type "special form")
+                    (assoc-in [:source :title] "Parser code"))]
       final)))
 
 ;;--------------------------------------------------------------------------------
@@ -475,10 +478,12 @@
   (when-let [specials (parse-repl-specials* form)]
     (let [location (parse-location form)
           make-map (fn [name-]
-                     (let [attrs {:name (str name-)
-                                  :type "special form (repl)"}
+                     (let [base {:name (str name-)
+                                 :type "special form (repl)"}
                            docs (get doc-map name-)]
-                       (merge location attrs docs)))]
+                       (-> base
+                           (merge location docs)
+                           (assoc-in [:source :title] "repl specials table"))))]
      (doall (map make-map specials)))))
 
 ;;--------------------------------------------------------------------------------
