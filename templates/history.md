@@ -52,7 +52,7 @@
 ### {{cljs-version}}
 
 {{#syntax-api}}
-<a name="{{changes-link}}"></a> __Syntax API Changes__
+<a name="{{changes-link}}"></a> __Syntax Changes__
  <table>
 {{#no-changes}}<tr><td>_no syntax forms were added or removed in this version_</td></tr>{{/no-changes}}
 {{#changes}}
