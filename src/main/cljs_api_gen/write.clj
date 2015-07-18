@@ -333,12 +333,15 @@
                    crumb)))
           crumbs)))))
 
-(defn add-source-trees
+(defn add-source-extras
   [item]
-  (let [add-tree #(when % (assoc % :path-tree (source-path %)))]
+  (let [add-extras #(when %
+                      (-> %
+                          (assoc :path-tree (source-path %)
+                                 :github-link (github-src-href %))))]
     (-> item
-        (update-in [:source] add-tree)
-        (update-in [:extra-sources] #(map add-tree %)))))
+        (update-in [:source] add-extras)
+        (update-in [:extra-sources] #(map add-extras %)))))
 
 (defn add-source-links
   [item]
@@ -397,8 +400,7 @@
       (add-external-doc-links)
       (add-syntax-usage)
       (add-related-links)
-      #_(add-source-trees)
-      (add-source-links)
+      (add-source-extras)
       (resolve-all-reflinks)))
 
 (defn dump-ref-file!
