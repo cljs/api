@@ -16,15 +16,15 @@ character following the `#`.
 Syntax forms prefixed with `#` are made to bear some similarity to their
 original forms:
 
-| original                | with `#` prefix                 | relation                  |
-|-------------------------|---------------------------------|---------------------------|
-| [syntax/string]         | [syntax/regex]                  | string-related            |
-| [syntax/list]           | [syntax/function]               | code-related              |
-| [syntax/map]            | [syntax/set]                    | lookup-related            |
-| [syntax/quote]          | [syntax/var]                    | quote-related             |
-| `_ (ignored var)`       | [syntax/ignore]                 | ignore-related            |
-| `foo (var name)`        | [syntax/tagged-literal]         | name-related              |
-| `foo? (predicate name)` | [syntax/cond]                   | conditional-related       |
+| original                           | with `#` prefix                                  | relation               |
+|------------------------------------|--------------------------------------------------|------------------------|
+| [syntax/string]                    | [syntax/regex]                                   | string-related         |
+| [syntax/list]                      | [syntax/function]                                | code-related           |
+| [syntax/map]                       | [syntax/set]                                     | lookup-related         |
+| [syntax/quote]                     | [syntax/var]                                     | quote-related          |
+| [syntax/unused]                    | [syntax/ignore]                                  | ignore-related         |
+| [`foo (symbol)`](syntax/symbol)    | [`#foo (tagged literal)`](syntax/tagged-literal) | name-related           |
+| [syntax/predicate]                 | [syntax/cond]                                    | conditional-related    |
 
 ===== Related
 syntax/regex
