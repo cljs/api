@@ -258,20 +258,18 @@
   [item]
   (str *output-dir* "/" refs-dir "/" (encode/encode-fullname (:full-name item))))
 
-(defn history-change
-  [[change version]]
-  (let [change ({"+" "Added", "-" "Removed"} change)]
-    {:change change
-     :version version}))
-
 (defn history-change-shield
   [[change version]]
   (let [color ({"+" "lightgrey" "-" "red"} change)
-        change ({"+" "+", "-" "×"} change)]
+        change-symbol ({"+" "+", "-" "×"} change)
+        change-word ({"+" "Added", "-" "Removed"} change)
+        ]
     (str 
       "<a href=\"https://github.com/cljsinfo/cljs-api-docs/tree/" version "\">"
-      "<img valign=\"middle\" alt=\"[" change "] " version "\""
-        " src=\"https://img.shields.io/badge/" change "-" (shield-escape version) "-" color ".svg\">"
+      "<img valign=\"middle\""
+        " alt=\"[" change-symbol "] " version "\""
+        " title=\"" change-word " in " version "\""
+        " src=\"https://img.shields.io/badge/" change-symbol "-" (shield-escape version) "-" color ".svg\">"
       "</a>")))
 
 (defn version-changes
