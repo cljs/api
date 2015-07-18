@@ -63,10 +63,24 @@
 (defn resolve-duplicates
   [items]
   (let [item (last items)
-        shadowed (drop 1 (reverse items))]
-    (if-not (empty? shadowed)
-      (assoc item :extra-sources (map :source shadowed))
-      item)))
+        shadowed (drop 1 (reverse items))
+        merged (if-not (empty? shadowed)
+                 (assoc item :extra-sources (map :source shadowed))
+                 item)
+
+        ;; Some core symbols have function and macro implementations.
+        ;; (see: https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure#macros)
+        fn-macro-pair? (and (= "function" (:type item))
+                            (= "macro" (:type (first shadowed))))
+
+        final (if fn-macro-pair?
+                ;; Set function and macro source titles for distinguishing the two.
+                (-> merged
+                    (assoc-in [:source :title] "Function code")
+                    (update-in [:extra-sources] vec)
+                    (assoc-in [:extra-sources 0 :title] "Macro code"))
+                merged)]
+    final))
 
 (defn transform-items
   [items]
