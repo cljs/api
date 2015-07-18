@@ -51,7 +51,7 @@
 {{/description}}
 
 {{#examples}}
-Example:
+###### Examples:
 
 {{&content}}
 
@@ -59,7 +59,7 @@ Example:
 {{/examples}}
 
 {{#related}}
-See Also:
+###### See Also:
 
 {{#symbols}}
 {{&.}}<br>
@@ -117,7 +117,7 @@ Repo - tag - source tree - lines:
 
 
 {{#external-doc-links}}
-External Doc Links:
+###### External doc links:
 
 {{#links}}
 [`{{&symbol}}` @ {{&source}}]({{&link}})<br>
