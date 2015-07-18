@@ -4,7 +4,7 @@
     [clojure.set :refer [difference]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
-    [me.raynes.fs :refer [base-name]]
+    [me.raynes.fs :refer [exists? base-name]]
     ))
 
 ;;--------------------------------------------------------------------------------
@@ -14,6 +14,9 @@
 (def versions ["1.3" "1.4" "1.5" "1.6" "1.7"])
 (def api-symbols (atom {}))
 
+(defn api-cache [v]
+  (str "clj-api-" v ".clj"))
+
 (defn version-api-url [v]
   (str "https://raw.githubusercontent.com/clojure/clojure/gh-pages/index-v" v ".clj"))
 
@@ -21,11 +24,14 @@
   (println (style "\nRetrieving Clojure API files...\n" :cyan))
   (doseq [v versions]
     (println " Clojure" v "API...")
-    (let [data (read-string (slurp (version-api-url v)))
-          symbols (->> (:vars data)
-                       (map #(str (:namespace %) "/" (:name %)))
-                       set)]
-      (swap! api-symbols assoc v symbols))))
+    (let [cache-filename (api-cache v)]
+      (when-not (exists? cache-filename)
+        (spit cache-filename (slurp (version-api-url v))))
+      (let [data (read-string (slurp cache-filename))
+            symbols (->> (:vars data)
+                         (map #(str (:namespace %) "/" (:name %)))
+                         set)]
+        (swap! api-symbols assoc v symbols)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure's Types and Protocols

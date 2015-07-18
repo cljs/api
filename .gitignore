@@ -15,3 +15,5 @@ symbol-history
 /docset/Dash-User-Contributions
 /docset/offline
 /catalog
+
+clj-api-*.clj
