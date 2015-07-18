@@ -318,6 +318,7 @@
         filename (subs (:file m) (inc (count (str repos-dir "/" *cur-repo*))))]
     {:ns *cur-ns*
      :source {:code source
+              :title "Source code"
               :repo *cur-repo*
               :tag (cur-repo-tag)
               :filename filename
@@ -512,17 +513,22 @@
                 ]
             (for [[ch func] reader-map]
               (when-let [info (info-lookup ch)]
-                (assoc (base-syntax-item info)
-                       :source (:source map-def)
-                       :extra-sources (if (and (list? func)
-                                               (= 'wrapping-reader (first func)))
-                                        [(:source wrapping-reader)]
-                                        (when-let [f (get items (str func))]
-                                          [(:source f)])))))))
+                (let [base (base-syntax-item info)
+                      table-src (assoc (:source map-def)
+                                       :title "Reader table")
+                      reader-src (when-let [f (get items (str func))]
+                                   (assoc (:source f)
+                                          :title "Reader code"))
+                      sources (keep identity [reader-src table-src])]
+                  (assoc (base-syntax-item info)
+                         :extra-sources sources))))))
+
         make-single
         (fn [info func]
-          (assoc (base-syntax-item info)
-                 :source (:source func)))
+          (let [src (assoc (:source func)
+                           :title "Reader code")]
+            (assoc (base-syntax-item info)
+                   :extra-sources [src])))
 
         ;; syntax forms identified by a leading character (e.g. "(", "[", "#{")
         ;; NOTE: presence determined by parsed char-map and dchar-map
@@ -608,10 +614,16 @@
         defs (zipmap (map :name parsed) parsed)
         map-form (get defs "*cljs-data-readers*")]
     (for [[name- func-name] reader-map]
-      (merge (base-syntax-item (syntax-map (str name- "-literal")))
-             {:type "tagged literal"
-              :source (:source map-form)
-              :extra-sources [(:source (get defs (str func-name)))]}))))
+      (let [base (base-syntax-item (syntax-map (str name- "-literal")))
+            table-src (assoc (:source map-form)
+                             :title "Reader table")
+            reader-fn (get defs (str func-name))
+            reader-src (assoc (:source reader-fn)
+                              :title "Reader code")
+            sources (keep identity [reader-src table-src])]
+        (merge base
+               {:type "tagged literal"
+                :extra-sources sources})))))
 
 ;;--------------------------------------------------------------------------------
 ;; Parse destructure reader
@@ -626,12 +638,13 @@
                 (>= *cljs-num* 0)    (parse-clj-core)
                 :else nil)
         match? #(= "destructure" (:name %))
-        code-item (first (filter match? items))
+        destruct-fn (first (filter match? items))
         make-destruct (fn [name-]
-                        (let [destruct-item (base-syntax-item (syntax-map name-))]
-                          (-> code-item
+                        (let [syntax-info (base-syntax-item (syntax-map name-))]
+                          (-> destruct-fn
                               (dissoc :signature)
-                              (merge destruct-item))))]
+                              (merge syntax-info)
+                              (assoc-in [:source :title] "Parser code"))))]
     (map make-destruct ["destructure-vector"
                         "destructure-map"])))
 

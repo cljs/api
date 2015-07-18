@@ -301,11 +301,15 @@
       (md-escape args)
       nil)))
 
+(defn github-src-href
+  [{:keys [lines repo tag filename] :as source}]
+  (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
+       "#" (join "-" (map #(str "L" %) lines))))
+
 (defn source-link
-  [basename {:keys [lines repo tag filename] :as source}]
+  [basename {:keys [lines] :as source}]
   (let [label (str basename ":" (join "-" lines))
-        link (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
-                  "#" (join "-" (map #(str "L" %) lines)))]
+        link (github-src-href source)]
     (str "<ins>[" label "](" link ")</ins>")))
 
 (defn source-path
@@ -337,6 +341,13 @@
     (-> item
         (update-in [:source] add-tree)
         (update-in [:extra-sources] #(map add-tree %)))))
+
+(defn add-source-links
+  [item]
+  (let [add-link #(when % (assoc % :github-link (github-src-href %)))]
+    (-> item
+        (update-in [:source] add-link)
+        (update-in [:extra-sources] #(map add-link %)))))
 
 (defn ref-link
   [full-name]
@@ -388,7 +399,8 @@
       (add-external-doc-links)
       (add-syntax-usage)
       (add-related-links)
-      (add-source-trees)
+      #_(add-source-trees)
+      (add-source-links)
       (resolve-all-reflinks)))
 
 (defn dump-ref-file!

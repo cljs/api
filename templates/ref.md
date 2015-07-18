@@ -79,28 +79,38 @@ Source docstring:
 
 
 {{#source}}
-Source code:
+{{&title}} @ [github]({{&github-link}}):
 
 ```clj
 {{&code}}
 ```
 
+<!--
+Repo - tag - source tree - lines:
+
  <pre>
 {{&path-tree}}
 </pre>
+
+-->
 
 ---
 {{/source}}
 
 {{#extra-sources}}
+{{&title}} @ [github]({{&github-link}}):
 
 ```clj
 {{&code}}
 ```
 
+<!--
+Repo - tag - source tree - lines:
+
  <pre>
 {{&path-tree}}
 </pre>
+-->
 
 ---
 {{/extra-sources}}
