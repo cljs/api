@@ -9,14 +9,23 @@ syntax/vector
 
 ===== Description
 
-Creates a vector. See [cljs.core/PersistentVector] for data structure details.
+Creates a vector.  A vector is the most commonly used form for creating literal
+sequences, and supports random-access and inserting at the end via [cljs.core/conj]:
 
-As a language idiom, vectors are used for binding forms:
+```clj
+(def a [1 2 3 4 5])
+```
 
-- `[a b]` as function arg bindings in `(fn [a b] ...)`
-- `[a 1 b 2]` as let bindings in `(let [a 1 b 2] ...)`
+Vectors also serve an important language role as the convention for signaling a
+_binding form_, that is, when local names are created and bound to values.
+Examples:
+
+- `[a b]` as function arg bindings in [`(fn [a b] ...)`](cljs.core/fn)
+- `[a 1 b 2]` as let bindings in [`(let [a 1 b 2] ...)`](cljs.core/let)
 
 This helps differentiate binding forms from the parentheses of [callable forms](syntax/list).
+
+See [cljs.core/PersistentVector] for data structure details.
 
 ===== Related
 cljs.core/vector
