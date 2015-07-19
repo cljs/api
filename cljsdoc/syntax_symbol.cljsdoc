@@ -16,19 +16,22 @@ is bound to.
 Some naming rules:
 
 - must not begin with a number
-- can contain special characters `*`, `+`, `!`, `-`, `_`, `?`
-- symbols starting or ending with a decimal are reserved for interop purposes
+- can contain special characters `. * + ! - _ ? $ % & = < > : #`, as long as:
+  - if starting with `-`, `+`, or `.`, next character cannot be numeric (would be interpreted as number)
+  - cannot start with `:` and `#`
+- symbols starting or ending with a decimal are reserved for interop purposes (see [syntax/dot])
 
-Symbols can have an optional namespace. For example, `foo/bar` evaluates to the
-value of the `bar` symbol of the `foo` namespace.  See [syntax/namespace].
+Symbols can use a single `/` for an optional namespace. See [syntax/namespace]:
 
-To access symbols in the global JavaScript context, use the namespace `js`.
-For example, use `js/document` to get the global `document` JavaScript object.
-Dots can also be included in symbols for direct property access, see
-[syntax/dot].
+- `foo/bar` => value of `bar` in the `foo` namespace
 
-===== TODO
-mention dots and slashes: http://clojure.org/reader#toc1
+To access symbols in the global JavaScript context, use the [syntax/js-namespace]:
+
+- `js/document` => global `document` JavaScript object
+
+Dots can also be included in symbols for direct JS property access, see [syntax/dot]:
+
+- `js/console.log` => the `console.log` JavaScript function
 
 ===== Related
 cljs.core/symbol
@@ -59,3 +62,4 @@ To signify an unevaluated symbol, precede it with a quote:
 'a
 ;;=> a
 ```
+
