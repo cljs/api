@@ -9,16 +9,33 @@ syntax/list
 
 ===== Description
 
-Creates a list.  When evaluated, it is interpreted as a call to some
-code.
+Creates a list.  The most salient feature of a list is that, when evaluated, it
+is interpreted as a _call_.
 
-When `(a b c)` is evaluated, it calls `a` with two arguments `b` and `c`.
+In most languages, the parenthesis is on the right side of a function when
+calling:
 
-If `a` is a function, its arguments `b` and `c` will be evaluated before
+```js
+// (not ClojureScript)
+f(a, b)
+```
+
+In ClojureScript, the parenthesis simply starts on the left side:
+
+```clj
+;; ClojureScript (comma is optional)
+(f a, b)
+```
+
+Thus, when `(f a b)` is evaluated, it calls `f` with two arguments `a` and `b`.
+
+If `f` is a function, its arguments `a` and `b` will be evaluated before
 the function receives them.
 
-If `a` is a special form or macro, it will receive its arguments `b` and `c`
+If `f` is a special form or macro, it will receive its arguments `a` and `b`
 unevaluated, where they _may_ be evaluated internally.
+
+(See [cljs.core/List] for data structure details.)
 
 ===== Related
 syntax/vector
