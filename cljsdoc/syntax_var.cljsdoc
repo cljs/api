@@ -10,9 +10,9 @@ syntax/var
 
 ===== Description
 
-Accesses the var attached to the given symbol.
+`#'foo` is sugar for [`(var foo)`](special/var).
 
-`#'x` = `(var x)`
+Accesses the var attached to the given symbol.
 
 ===== Related
 special/var

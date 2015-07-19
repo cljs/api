@@ -6,9 +6,9 @@ syntax/quote
 
 ===== Description
 
-Prevent the evaluation of the following form.
+`'foo` is sugar for [`(quote foo)`](special/quote).
 
-`'foo` = `(quote foo)`
+Prevent the evaluation of the following form.
 
 ===== Related
 special/quote
