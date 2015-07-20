@@ -6,7 +6,7 @@
 [<img valign="middle" src="https://travis-ci.org/cljsinfo/cljs-api-docs.svg?branch=master">](https://travis-ci.org/cljsinfo/cljs-api-docs)
 </td>
 <td>
-  __[:book: Latest API Documentation](https://github.com/cljsinfo/cljs-api-docs/tree/catalog)__
+  __[:book: Latest API Documentation](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.md)__
 </td>
 </tr>
 </table>
