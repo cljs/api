@@ -154,8 +154,6 @@
           pairs (->> (:api result)
                      (mapcat get-api-ns-pairs)
                      (set))]
-      (doseq [p pairs]
-        (println "pair:" (pr-str p)))
       (apply j/insert! sqlite-db :searchIndex
         (for [[api-type ns-] pairs]
           (let [ns-display (get-ns-display-name ns- api-type)
