@@ -112,6 +112,12 @@ $ grip catalog
  * Running on http://localhost:5000/ (Press CTRL+C to quit)
 ```
 
+__Watch/auto-compile cljsdoc changes__ with the following:
+
+```
+$ lein run '{:watch? true}'
+```
+
 #### Advanced
 
 The generator can take an optional map at the command line.
@@ -146,6 +152,7 @@ Full table of options:
 | `:catalog?` | create a catalog repo? | `true` `false` | `false` |
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
 | `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
+| `:watch?` | watch and recompile cljsdoc changes | `true` `false` | `false` |
 
 ### Implementation
 

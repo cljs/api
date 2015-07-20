@@ -213,18 +213,20 @@
 
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  [item curr-tag]
-  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))
-        doc-version (last (filter #(or (nil? %)
-                                       (<= (version->num %)
-                                           (tag->num curr-tag)))
-                                  (:versions cljsdoc)))
-        doc (get-in cljsdoc [:docs doc-version])]
-    (cond-> item
-      ;; don't overwrite signature if it's null
-      doc              (merge (select-keys doc [:examples :related :description :moved :usage]))
-      (:display doc)   (merge (select-keys doc [:display]))
-      (:signature doc) (merge (select-keys doc [:signature])))))
+  ([item curr-tag]
+   (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
+     (add-cljsdoc item curr-tag cljsdoc)))
+  ([item curr-tag cljsdoc]
+   (let [doc-version (last (filter #(or (nil? %)
+                                        (<= (version->num %)
+                                            (tag->num curr-tag)))
+                                   (:versions cljsdoc)))
+         doc (get-in cljsdoc [:docs doc-version])]
+     (cond-> item
+       ;; don't overwrite signature if it's null
+       doc              (merge (select-keys doc [:examples :related :description :moved :usage]))
+       (:display doc)   (merge (select-keys doc [:display]))
+       (:signature doc) (merge (select-keys doc [:signature]))))))
 
 (defn add-cljsdoc-to-result
   [result]

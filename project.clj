@@ -12,6 +12,7 @@
                  [org.xerial/sqlite-jdbc "3.8.10.1"]
                  [ccfontes/fuzzy-matcher "0.0.1"]
                  [clj-time "0.9.0"]
+                 [clojure-watch "0.1.11"]
                  ]
 
   :source-paths ["src/main"]

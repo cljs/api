@@ -13,7 +13,9 @@
                           base-name
                           copy
                           copy-dir]]
-    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!
+    [cljs-api-gen.encode :refer [decode-fullname]]
+    [cljs-api-gen.cljsdoc :refer [build-doc
+                                  build-cljsdoc!
                                   create-cljsdoc-stubs!]]
     [cljs-api-gen.config :refer [*output-dir*
                                  cache-dir
@@ -30,9 +32,12 @@
                                     *clj-tag*
                                     *cljs-version*
                                     *clj-version*]]
-    [cljs-api-gen.result :refer [get-result
+    [cljs-api-gen.result :refer [add-cljsdoc
+                                 get-result
                                  add-cljsdoc-to-result]]
-    [cljs-api-gen.write :refer [dump-result!]]
+    [cljs-api-gen.write :refer [dump-result!
+                                dump-ref-file!] :as write]
+    [clojure-watch.core :refer [start-watch]]
     ))
 
 ;;----------------------------------------------------------------------
@@ -104,6 +109,7 @@
   [{:as options
     :keys [version
            catalog?
+           watch?
            skip-pages?
            skip-parse?]
     :or {version :latest
@@ -144,7 +150,9 @@
                  (concat (take-while (partial not= version) @published-cljs-tags) [version])))
 
         skipped-previous? (atom false)
-        last-tag (last tags)]
+        last-tag (last tags)
+
+        full-result (atom nil)]
 
     ;; make cache directory
     (when-not (exists? cache)
@@ -228,6 +236,7 @@
             (let [parsed-file (str out-folder "/" edn-parsed-file)
                   parsed (edn/read-string (slurp parsed-file))
                   result (add-cljsdoc-to-result parsed)]
+              (reset! full-result result)
               (binding [*output-dir* out-folder]
                 (dump-result! result)))))))
 
@@ -267,7 +276,40 @@
                 (catalog-add! (base-name f)))
               (catalog-commit!))))
 
-        (copy-to-root! last-tag))))
+        (copy-to-root! last-tag)))
 
-    (println (style " Success! " :bg-green)))
+    (println (style " Success! " :bg-green))
+
+    (when (and watch? (not catalog?))
+
+      (start-watch
+        [{:path "cljsdoc"
+          :event-types [:modify]
+          :bootstrap (fn [path] (println (style "\nStarting to watch for cljsdoc changes..." :yellow)))
+          :callback
+          (fn [event filename]
+            (when-not (.endsWith filename ".swp")
+              (println "\nre-rendering" filename "changes...")
+              (let [full-name (decode-fullname (base-name filename true))
+
+                    ;; get this symbol's parsed information (before cljsdoc was merged in)
+                    item (get-in (get-prev-result) [:symbols full-name])]
+
+                ;; compile cljsdoc
+                (when-let [cljsdoc (build-doc filename)]
+
+                  ;; add cljsdoc to the parsed info
+                  (let [new-item (add-cljsdoc item last-tag cljsdoc)]
+
+                    ;; update symbol in the full-result map
+                    (swap! full-result assoc-in [:symbols full-name] new-item)
+
+                    ;; dump the new ref file
+                    (binding [write/*result* @full-result]
+                      (dump-ref-file! new-item)))
+
+                  (println "Done.")))))
+          }])
+
+      )))
 

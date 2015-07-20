@@ -29,7 +29,8 @@
 
 (defn main
   [{:keys [task
-           out-dir]
+           out-dir
+           watch?]
     :or {out-dir default-out-dir}
     :as options}]
 
@@ -45,7 +46,8 @@
 
   ;; have to do this because `sh` leaves futures hanging,
   ;; preventing exit, so we must do it manually.
-  (System/exit 0))
+  (when-not watch?
+    (System/exit 0)))
 
 ;;--------------------------------------------------------------------------------
 ;; Entry
