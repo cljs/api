@@ -183,7 +183,7 @@ table below).  We omit Google Closure\* and JavaScript\*\* symbols from this API
 reference, though they are included in and accessible from every ClojureScript
 application.
 
-- [Google Closure Library](http://www.closurecheatsheet.com/)
+- [Google Closure Library](http://google.github.io/closure-library/api/)
 - [JavaScript's native library](https://developer.mozilla.org/docs/Web/JavaScript/Reference)
 
 |                 | clojure            | cljs compiler      | cljs library       | closure\*          | js\*\*             |
