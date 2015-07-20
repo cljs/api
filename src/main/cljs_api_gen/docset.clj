@@ -51,32 +51,14 @@
    "special symbol"      "Constant"
    "special namespace"   "Namespace"
    "binding"             "Builtin"
+   "convention"          "Builtin"
+   "special character"   "Builtin"
    })
 
 (defn dash-name
   [item]
-  (if (= "syntax" (:ns item))
-    (let [name- (:name item)
-          type- (:type item)
-          form (:syntax-form item)
-          forms (if (vector? form) (join " " form) form)
-          name+forms (str name- " " forms)]
-      (cond
-
-        ;; display the conceptual name and its forms (e.g. "vector []")
-        (#{"syntax"
-           "binding"} type-) name+forms
-
-        ;; just display Infinity, not all the sign variations
-        (= name- "Infinity") name-
-
-        ;; just display the forms (e.g. "#js" "js/" "NaN")
-        (#{"tagged literal"
-           "special symbol"
-           "special namespace"} type-) forms
-
-        :else (:name item)))
-    (:name item)))
+  (or (:display item)
+      (:name item)))
 
 (defn assert-reqs!
   []
@@ -150,7 +132,7 @@
     (println "Adding sections to index database...")
     (j/insert! sqlite-db :searchIndex
        ;; insert categories
-       {:name "Syntax API" :type "Category" :path (resolve-path "README.html#syntax-api")}
+       {:name "Syntax" :type "Category" :path (resolve-path "README.html#syntax")}
        {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api")}
        {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api")}
 
