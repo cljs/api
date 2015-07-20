@@ -532,7 +532,7 @@
                         (group-by :ns)
                         (mapmap transform-syms)
                         (map (fn [[k v]]
-                               (let [ns-display (get-ns-display-name k)]
+                               (let [ns-display (get-ns-display-name k api-type)]
                                  {:ns k
                                   :ns-display ns-display
                                   :ns-description (get-in ns-descriptions [api-type k])

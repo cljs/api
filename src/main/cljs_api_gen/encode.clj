@@ -91,6 +91,6 @@
   (reduce
     (fn [s emoji]
       (replace s emoji
-        (str "<img width=\"20px\" height=\"20px\" valign=\"middle\" src=\"" (emoji-url emoji) "\"> )))
+        (str "<img width=\"20px\" height=\"20px\" valign=\"middle\" src=\"" (emoji-url emoji) "\">")))
     s (keys emoji-url)))
 

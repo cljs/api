@@ -5,7 +5,10 @@
     [clojure.java.shell :refer [sh]]
     [clojure.string :refer [replace join]]
     [cljs-api-gen.write :refer [get-last-written-result]]
-    [cljs-api-gen.encode :refer [decode-fullname]]
+    [cljs-api-gen.encode :refer [decode-fullname
+                                 md-header-link]]
+    [cljs-api-gen.display :refer [get-ns-display-name]]
+    [cljs-api-gen.util :refer [split-ns-and-name]]
     [clojure.java.jdbc :as j]
     [me.raynes.fs :refer [delete-dir copy copy-dir list-dir base-name mkdirs directory?]]
     ))
@@ -107,8 +110,7 @@
   (assert-reqs!)
 
   (let [result (get-last-written-result)
-        syms (:symbols result)
-        namespaces (set (map :ns (vals syms)))]
+        syms (:symbols result)]
 
     (println "Clearing previous docset folder...")
     (delete-dir docset-path)
@@ -144,9 +146,21 @@
 
     ;; insert namespaces
     (println "Adding namespaces to index database...")
-    (apply j/insert! sqlite-db :searchIndex
-      (for [ns- namespaces]
-        {:name ns- :type "Namespace" :path (resolve-path "README.html#" (replace ns- "." ""))}))
+    (let [get-api-ns-pairs
+          (fn [[api-type {:keys [symbol-names]}]]
+            (for [s symbol-names]
+              (let [[ns-] (split-ns-and-name s)]
+                [api-type ns-])))
+          pairs (->> (:api result)
+                     (mapcat get-api-ns-pairs)
+                     (set))]
+      (doseq [p pairs]
+        (println "pair:" (pr-str p)))
+      (apply j/insert! sqlite-db :searchIndex
+        (for [[api-type ns-] pairs]
+          (let [ns-display (get-ns-display-name ns- api-type)
+                ns-link (resolve-path "README.html#" (md-header-link ns-display))]
+            {:name ns-display :type "Namespace" :path ns-link}))))
 
     ;; insert symbols
     (println "Adding symbols to index database...")
