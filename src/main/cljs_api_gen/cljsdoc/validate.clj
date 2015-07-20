@@ -56,6 +56,7 @@
   ["name"
    "display"
    "type"
+   "tags"
    "return type"
    "description"
    "usage"

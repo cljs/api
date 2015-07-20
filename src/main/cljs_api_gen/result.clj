@@ -224,7 +224,7 @@
          doc (get-in cljsdoc [:docs doc-version])]
      (cond-> item
        ;; don't overwrite signature if it's null
-       doc              (merge (select-keys doc [:examples :related :description :moved :usage]))
+       doc              (merge (select-keys doc [:examples :related :description :moved :usage :tags]))
        (:display doc)   (merge (select-keys doc [:display]))
        (:signature doc) (merge (select-keys doc [:signature]))))))
 

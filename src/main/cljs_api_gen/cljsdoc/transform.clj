@@ -91,6 +91,13 @@
         (dissoc "moved"))
     doc))
 
+(defn transform-tags [doc]
+  (if-let [tags (get doc "tags")]
+    (-> doc
+        (assoc :tags (set (section-as-list tags)))
+        (dissoc "tags"))
+    doc))
+
 (defn transform-doc [doc]
   (-> doc
       transform-name
@@ -101,7 +108,8 @@
       transform-type
       transform-examples
       transform-related
-      transform-moved))
+      transform-moved
+      transform-tags))
 
 (defn transform-versioned-doc [doc]
   (let [docs (mapmap transform-doc (:docs doc))
