@@ -473,10 +473,10 @@
           (unported-file-data result)))))
 
 ;;--------------------------------------------------------------------------------
-;; readme file
+;; index file
 ;;--------------------------------------------------------------------------------
 
-(defn readme-api-changes
+(defn index-api-changes
   [result api-type]
   ;; name-link tuples
   (let [api (get-in result [:api api-type])
@@ -504,7 +504,7 @@
         types+ (mapcat #(cons % (members (:name %))) types)]
     (concat main protocols types+)))
 
-(defn readme-api-symbols
+(defn index-api-symbols
   [result api-type]
   ;; clj-name-type-history tuples
   (let [all (select-keys (:symbols result) (get-in result [:api api-type :symbol-names]))
@@ -543,12 +543,12 @@
                         (sort-by :ns compare-ns))]
     ns-symbols))
 
-(defn readme-file-data
+(defn index-file-data
   [result]
   (let [make (fn [api-type]
-               (let [changes (readme-api-changes result api-type)
+               (let [changes (index-api-changes result api-type)
                      no-changes (if (zero? (count changes)) true nil)
-                     ns-symbols (readme-api-symbols result api-type)]
+                     ns-symbols (index-api-symbols result api-type)]
                  {:changes changes
                   :no-changes no-changes
                   :ns-symbols ns-symbols}))]
@@ -557,11 +557,18 @@
      :syntax-api (make :syntax)
      :release (:release result)}))
 
+(defn dump-index! [result]
+  (spit (str *output-dir* "/INDEX.md")
+        (fix-emoji (stencil/render-string
+          (slurp "templates/index.md")
+          (index-file-data result)
+          ))))
+
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
         (fix-emoji (stencil/render-string
           (slurp "templates/readme.md")
-          (readme-file-data result)
+          result
           ))))
 
 ;;--------------------------------------------------------------------------------
@@ -616,6 +623,9 @@
 
     (println "writing readme...")
     (dump-readme! result)
+
+    (println "writing index...")
+    (dump-index! result)
 
     (println "writing history...")
     (dump-history! result)

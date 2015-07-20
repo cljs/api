@@ -48,7 +48,7 @@ The catalog branch has each of the generated files for exploring/using the API r
 | Catalog File | Description |
 |-----:|:------------|
 | <samp>[cljs-api.edn]</samp>\*  | a data structure containing all API information |
-| <samp>[README.md]</samp>     | an overview of the API with reference tables |
+| <samp>[INDEX.md]</samp>     | an overview of the API with reference tables |
 | <samp>[refs/\*.md]</samp>    | dedicated view for a specific API symbol |
 | <samp>[HISTORY.md]</samp>    | table of all versions and their changes |
 | <samp>[UNPORTED.md]</samp>   | list of symbols that are not ported from Clojure |
@@ -57,7 +57,7 @@ The catalog branch has each of the generated files for exploring/using the API r
 _\* see format details at [cljs-api-format.edn]_
 
 [catalog]:https://github.com/cljsinfo/cljs-api-docs/tree/catalog
-[README.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md
+[INDEX.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.md
 [refs/\*.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/refs/cljs.core_assoc-in.md
 [HISTORY.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/HISTORY.md
 [UNPORTED.md]:https://github.com/cljsinfo/cljs-api-docs/blob/catalog/UNPORTED.md
@@ -207,12 +207,12 @@ These are the mustache templates that we use to render the catalog files.
 
 | Template File | Description |
 |--------------:|:------------|
-| <samp>[readme.md]</samp>   | API overview page |
+| <samp>[index.md]</samp>   | API overview page |
 | <samp>[ref.md]</samp>      | per-symbol details page |
 | <samp>[history.md]</samp>  | version history and changes |
 | <samp>[unported.md]</samp> | table of symbols not ported from clojure |
 
-[readme.md]:templates/readme.md
+[index.md]:templates/index.md
 [ref.md]:templates/ref.md
 [history.md]:templates/history.md
 [unported.md]:templates/unported.md

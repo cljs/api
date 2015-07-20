@@ -13,7 +13,7 @@ fi
 
 DONT_GEN_404_HTML=-o0
 
-httrack "https://github.com/cljsinfo/cljs-api-docs/blob/catalog/README.md" \
+httrack "https://github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.md" \
   --path $OUTDIR \
   '-*' \
   '+https://github.com/cljsinfo/cljs-api-docs/blob/catalog/*.md' \

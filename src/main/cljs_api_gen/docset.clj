@@ -134,12 +134,12 @@
     (println "Adding sections to index database...")
     (j/insert! sqlite-db :searchIndex
        ;; insert categories
-       {:name "Syntax" :type "Category" :path (resolve-path "README.html#syntax")}
-       {:name "Library API"  :type "Category" :path (resolve-path "README.html#library-api")}
-       {:name "Compiler API" :type "Category" :path (resolve-path "README.html#compiler-api")}
+       {:name "Syntax" :type "Category" :path (resolve-path "INDEX.html#syntax")}
+       {:name "Library API"  :type "Category" :path (resolve-path "INDEX.html#library-api")}
+       {:name "Compiler API" :type "Category" :path (resolve-path "INDEX.html#compiler-api")}
 
        ;; insert sections
-       {:name "Overview"                :type "Section" :path (resolve-path "README.html")}
+       {:name "Overview"                :type "Section" :path (resolve-path "INDEX.html")}
        {:name "History"                 :type "Section" :path (resolve-path "HISTORY.html")}
        {:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")}
        )
@@ -159,7 +159,7 @@
       (apply j/insert! sqlite-db :searchIndex
         (for [[api-type ns-] pairs]
           (let [ns-display (get-ns-display-name ns- api-type)
-                ns-link (resolve-path "README.html#" (md-header-link ns-display))]
+                ns-link (resolve-path "INDEX.html#" (md-header-link ns-display))]
             {:name ns-display :type "Namespace" :path ns-link}))))
 
     ;; insert symbols

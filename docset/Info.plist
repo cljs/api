@@ -15,6 +15,6 @@
 	<true/>
 
   <key>dashIndexFilePath</key>
-  <string>offline/github.com/cljsinfo/cljs-api-docs/blob/catalog/README.html</string>
+  <string>offline/github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.html</string>
 </dict>
 </plist>
