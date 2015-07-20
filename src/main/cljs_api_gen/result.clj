@@ -16,6 +16,7 @@
                                     *treader-tag*
                                     *gclosure-lib*
                                     cljs-version->num
+                                    cljs-tag->num
                                     ]]
     ))
 
@@ -207,13 +208,16 @@
 (def version->num
   (memoize cljs-version->num))
 
+(def tag->num
+  (memoize cljs-tag->num))
+
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  [item curr-version]
+  [item curr-tag]
   (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))
         doc-version (last (filter #(or (nil? %)
                                        (<= (version->num %)
-                                           (version->num curr-version)))
+                                           (tag->num curr-tag)))
                                   (:versions cljsdoc)))
         doc (get-in cljsdoc [:docs doc-version])]
     (cond-> item
@@ -224,6 +228,6 @@
 
 (defn add-cljsdoc-to-result
   [result]
-  (let [version (-> result :release :cljs-version)
-        update-symbols (fn [symbols] (mapmap #(add-cljsdoc % version) symbols))]
+  (let [tag (-> result :release :cljs-tag)
+        update-symbols (fn [symbols] (mapmap #(add-cljsdoc % tag) symbols))]
     (update-in result [:symbols] update-symbols)))
