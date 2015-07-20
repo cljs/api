@@ -61,7 +61,15 @@
 
    :compiler
    {
-    ;; TODO: create namespace descriptions
+    "cljs.analyzer.api" "programmatic access to the analyzer (producing AST)"
+    "cljs.compiler.api" "programmatic access to the compiler (emitting JS)"
+    "cljs.build.api"    "programmatic access to project-building facilities"
+    "cljs.repl"         "REPL (read eval print loop)"
+    "cljs.repl.browser" "browser-connected REPL"
+    "cljs.repl.node"    "Node.js REPL"
+    "cljs.repl.nashorn" "Nashorn REPL (JS on Java 8)"
+    "cljs.repl.rhino"   "Rhino REPL (JS on Java 6+)"
+
     }})
 
 ;;--------------------------------------------------------------------------------
