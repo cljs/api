@@ -41,9 +41,7 @@
      (= "special" ns-) "special forms"
      (= "specialrepl" ns-) "special forms (repl)"
      (= "syntax" ns-) "syntax forms"
-     (= "cljs.repl" ns-) (do
-                           (println "api-type for" ns- "=" api-type)
-                           (str ns- " (" (name api-type) ")"))
+     (= "cljs.repl" ns-) (str ns- " (" (name api-type) ")")
      :else ns-)))
 
 ;;----------------------------------------------------------------------
