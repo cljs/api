@@ -15,7 +15,12 @@
                                  cljsdoc-dir
                                  refs-dir
                                  edn-result-file]]
-    [cljs-api-gen.encode :as encode]
+    [cljs-api-gen.encode :as encode :refer [md-escape
+                                            md-link-escape
+                                            md-strikethru
+                                            md-header-link
+                                            shield-escape
+                                            fix-emoji]]
     [cljs-api-gen.display :refer [get-short-display-name
                                   get-full-display-name
                                   get-ns-display-name
@@ -183,53 +188,6 @@
 
 (defn dump-edn-file! [result]
   (spit (get-edn-path) (with-out-str (pprint result))))
-
-;;--------------------------------------------------------------------------------
-;; Encoding helpers
-;;--------------------------------------------------------------------------------
-
-(defn md-escape
-  [sym]
-  (when sym
-    (-> sym
-        (replace "\\" "\\\\")
-        (replace "*" "\\*")
-        (replace "[" "\\[")
-        (replace "]" "\\]"))))
-
-(defn md-link-escape
-  [s]
-  (replace s ">" "%3E"))
-
-(defn md-strikethru
-  [s]
-  (str "~~" s "~~"))
-
-(defn md-header-link
-  [s]
-  (-> s
-      (replace #"[^a-zA-Z0-9 ]" "")
-      (replace " " "-")))
-
-(defn shield-escape
-  [s]
-  (-> s
-      (replace "-" "--")
-      ))
-
-(def emoji-url
-  "emoji table here: http://apps.timwhitlock.info/emoji/tables/unicode"
-  {":heavy_check_mark:" "http://i.imgur.com/JfULGnn.png"
-   ":no_entry_sign:"    "http://i.imgur.com/sWBgjc6.png"})
-
-(defn fix-emoji
-  "github currently disables emoji-rendering for large readmes, so just process them here."
-  [s]
-  (reduce
-    (fn [s emoji]
-      (replace s emoji
-        (str "<img width=\"20px\" height=\"20px\" valign=\"middle\" src=\"" (emoji-url emoji) "\">")))
-    s (keys emoji-url)))
 
 ;;--------------------------------------------------------------------------------
 ;; Common
