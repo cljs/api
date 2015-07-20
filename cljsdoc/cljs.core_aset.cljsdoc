@@ -7,52 +7,38 @@ cljs.core/aset
 
 ===== Description
 
-Sets `val` at index `i` in JavaScript arrays and objects.
+Sets `val` at index `i` in a JavaScript array.
 
-Can be used to set nested properties with the additional `idxs` arguments.
+```clj
+(def a #js [1 2 3])
+(aset a 0 "foo")
+a
+;;=> #js ["foo" 2 3]
+```
+
+Set nested elements with the additional `idxs` arguments.
+
+```clj
+(def a #js [1 2 #js [3 4]])
+(aset a 2 0 "foo")
+a
+;;=> #js [1 2 #js ["foo" 4]]
+```
+
+For JavaScript objects, use [`goog.object/set`].
+
+[`goog.object/set`]:http://google.github.io/closure-library/api/namespace_goog_object.html#set
+
+```clj
+(require 'goog.object)
+(def obj #js {:foo 1})
+
+(goog.object/set obj "foo" "bar")
+obj
+;;=> #js {:foo "bar"}
+```
 
 ===== Related
 cljs.core/aget
 special/set!
 cljs.core/assoc-in
-
-===== Example#d1aa58
-
-```js
-// JavaScript
-var a = {"foo": 3, "bar": [4, 5]};
-
-a["foo"] = 4;
-a;
-//=> {"foo": 4, "bar": [4, 5]}
-
-a["bar"][0] = 6;
-a;
-//=> {"foo": 4, "bar": [6, 5]}
-```
-
-```clj
-;; ClojureScript
-(def a #js {:foo 3, :bar #js [4 5]})
-
-(aset a "foo" 4)
-a
-;;=> #js {:foo 4, :bar #js [4 5]}
-
-(aset a "bar" 0 6)
-a
-;;=> #js {:foo 4, :bar #js [6 5]}
-```
-
-===== Example#34bbf3
-
-```js
-// JavaScript
-document.location.href = "http://example.com";
-```
-
-```clj
-;; ClojureScript
-(aset js/document "location" "href" "http://example.com")
-```
-
