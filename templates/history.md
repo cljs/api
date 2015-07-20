@@ -20,7 +20,7 @@
 <td>__[{{cljs-version}}](https://github.com/cljsinfo/cljs-api-docs/tree/{{cljs-version}})__</td>
 <td>{{cljs-date}}</td>
 <td><kbd>{{clj-version}}</kbd></td>
-<td><kbd>{{treader-version}}</kbd></td>
+<td>{{#treader-version}}<kbd>{{.}}</kbd>{{/treader-version}}</td>
 <td><kbd>{{gclosure-lib}}</kbd></td>
 {{#syntax-api}}
 <td>

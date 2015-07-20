@@ -382,6 +382,12 @@
 ;; history file
 ;;--------------------------------------------------------------------------------
 
+(defn abbrev-gclosure
+  [{:keys [gclosure-lib] :as item}]
+  (if-let [[_ prefix] (re-find #"(0\.0-\d+)-.+" gclosure-lib)]
+    (assoc item :gclosure-lib prefix)
+    item))
+
 (defn history-file-data
   [result]
   ;;; The problem we're trying to solve here is to merge the history information
@@ -426,7 +432,8 @@
           (let [{:keys [symbol-names changes]} (get-in result [:api api-type])
                 symbols (select-keys (:symbols result) symbol-names)]
             (->> changes
-                 (map #(add-change-info % symbols api-type)))))
+                 (map #(add-change-info % symbols api-type))
+                 (map abbrev-gclosure))))
 
         syn-changes (get-api-changes :syntax)
         com-changes (get-api-changes :compiler)
