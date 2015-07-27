@@ -59,7 +59,8 @@
   {"syntax" 0
    "special" 1
    "specialrepl" 2
-   "cljs.core" 3})
+   "cljs.core" 3
+   "cljs.js" 4})
 
 (defn compare-ns
   "Compare two namespaces using our custom namespace order"

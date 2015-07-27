@@ -62,6 +62,7 @@
     "cljs.nodejs"                  "nodejs support functions"
     "cljs.test"                    "a unit-testing framework"
     "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
+    "cljs.js"                      "compile/analyze ClojureScript code at runtime"
     }
 
    :compiler

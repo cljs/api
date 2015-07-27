@@ -69,6 +69,7 @@
     "clojure.core.reducers" :normal
     "clojure.reflect"       :normal
     "cljs.nodejs"           :normal
+    "cljs.js"               :normal
 
     "cljs.core"             :custom
     "cljs.test"             :custom
