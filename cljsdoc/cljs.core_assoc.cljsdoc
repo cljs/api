@@ -1,6 +1,9 @@
 ===== Name
 cljs.core/assoc
 
+===== Known As
+associate
+
 ===== Signature
 [coll k v]
 [coll k v & kvs]

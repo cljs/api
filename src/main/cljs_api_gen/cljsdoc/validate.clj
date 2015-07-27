@@ -54,6 +54,7 @@
 
 (def recognized-sections
   ["name"
+   "known as"
    "display"
    "type"
    "tags"

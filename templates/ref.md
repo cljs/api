@@ -1,5 +1,9 @@
 ## {{&display-name}}
 
+{{#known-as}}
+_known as "{{&.}}"_
+{{/known-as}}
+
 {{#moved}}
 > __MOVED__, please see {{&.}}
 {{/moved}}

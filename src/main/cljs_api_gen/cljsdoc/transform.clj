@@ -25,6 +25,13 @@
           (dissoc "name")))
     doc))
 
+(defn transform-known-as [doc]
+  (if-let [known-as (get doc "known as")]
+    (-> doc
+        (assoc :known-as known-as)
+        (dissoc "known-as"))
+    doc))
+
 (defn transform-display [doc]
   (if-let [display (get doc "display")]
     (-> doc
@@ -101,6 +108,7 @@
 (defn transform-doc [doc]
   (-> doc
       transform-name
+      transform-known-as
       transform-display
       transform-description
       transform-signature

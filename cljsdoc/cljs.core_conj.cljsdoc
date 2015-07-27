@@ -1,6 +1,9 @@
 ===== Name
 cljs.core/conj
 
+===== Known As
+conjoin
+
 ===== Signature
 []
 [coll]

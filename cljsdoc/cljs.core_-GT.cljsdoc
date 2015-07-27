@@ -1,6 +1,9 @@
 ===== Name
 cljs.core/->
 
+===== Known As
+thread first
+
 ===== Type
 macro
 
