@@ -119,7 +119,7 @@
   [tag]
   (if-let [[_ revision] (re-find #"r(\d+)$" tag)]
     (str "0.0-" revision)
-    (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+)$")]
+    (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+)$" tag)]
       full)))
 
 (defn cljs-version->tag
