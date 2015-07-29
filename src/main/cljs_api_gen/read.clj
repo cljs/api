@@ -8,7 +8,7 @@
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [exists?]]
     [cljs-api-gen.config :refer [repos-dir]]
-    [cljs-api-gen.repo-cljs :refer [*cljs-num*]]
+    [cljs-api-gen.repo-cljs :refer [cljs-cmp]]
     ))
 
 ;;--------------------------------------------------------------------------------
@@ -49,16 +49,14 @@
 (defmethod src-path :library
   [src-type]
   (cond
-    (>= *cljs-num* 3255) "src/main/cljs"
-    (>= *cljs-num* 0)    "src/cljs"
-    :else nil))
+    (cljs-cmp >= "0.0-3255") "src/main/cljs"
+    :else                    "src/cljs"))
 
 (defmethod src-path :compiler
   [src-type]
   (cond
-    (>= *cljs-num* 3255) "src/main/clojure"
-    (>= *cljs-num* 0)    "src/clj"
-    :else nil))
+    (cljs-cmp >= "0.0-3255") "src/main/clojure"
+    :else                    "src/clj"))
 
 (defn get-ns-files
   [ns- src-types]

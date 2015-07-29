@@ -13,11 +13,11 @@
                                     fix-docstring
                                     try-remove-docs]]
     [cljs-api-gen.repo-cljs :refer [*cljs-tag*
-                                    *cljs-num*
                                     *clj-tag*
                                     *clj-version*
                                     *treader-version*
-                                    *treader-tag*]]
+                                    *treader-tag*
+                                    cljs-cmp]]
     [cljs-api-gen.syntax :refer [syntax
                                  char-map
                                  dchar-map
@@ -274,10 +274,10 @@
 (def unlabeled-internals
   "Internal symbols that are not labeled as such.
   Each symbol will be ignored in the given version range pairs [add remove add remove ...etc]"
-  {"cljs.core/INIT"     [2301]
-   "cljs.core/START"    [2301]
-   "cljs.core/fixture1" [927]
-   "cljs.core/fixture2" [927]})
+  {"cljs.core/INIT"     ["0.0-2301"]
+   "cljs.core/START"    ["0.0-2301"]
+   "cljs.core/fixture1" ["0.0-927"]
+   "cljs.core/fixture2" ["0.0-927"]})
 
 (defn unlabeled-internal?
   [form]
@@ -285,8 +285,8 @@
     (some
       (fn [[start end :as vrange]]
         (and
-          (or (nil? start) (>= *cljs-num* start))
-          (or (nil? end)   (<  *cljs-num* end))))
+          (or (nil? start) (cljs-cmp >= start))
+          (or (nil? end)   (cljs-cmp <  end))))
       (partition 2 2 [nil] version-ranges))))
 
 (defn internal-def-only?
@@ -640,9 +640,8 @@
   as a syntax pattern."
   []
   (let [items (cond
-                (>= *cljs-num* 1443) (parse-ns* "cljs.core" "clojurescript" [:compiler])
-                (>= *cljs-num* 0)    (parse-clj-core)
-                :else nil)
+                (cljs-cmp >= "0.0-1443") (parse-ns* "cljs.core" "clojurescript" [:compiler])
+                :else                    (parse-clj-core))
         match? #(= "destructure" (:name %))
         destruct-fn (first (filter match? items))
         make-destruct (fn [name-]
@@ -714,7 +713,7 @@
   (cond
 
     ;; LOOKS LIKE --->  (set! (.-EMPTY List) ...)
-    (>= *cljs-num* 2301)
+    (cljs-cmp >= "0.0-2301")
     (when (and (= 'set! (first form))
                (list? (second form))
                (= ".-" (subs (name (first (second form))) 0 2))
@@ -736,11 +735,11 @@
     ;; LOOKS LIKE --->  (set! cljs.core.List.EMPTY ...)
     ;; (we can cover this case in the one below)
     ;;
-    ;; (>= *cljs-num* 1933)
+    ;; (cljs-cmp >= "0.0-1933")
     ;; nil
 
     ;; LOOKS LIKE --->  (set! cljs.core.List/EMPTY ...)
-    (>= *cljs-num* 0)
+    :else
     (when (and (= 'set! (first form))
                (symbol? (second form))
                (.startsWith (str (second form)) "cljs.core."))
@@ -760,8 +759,7 @@
                         :parent-type (name parent-type)}]
             result
             ))))
-
-    :else nil))
+    ))
 
 (defn parse-core-type-member
   [form type-names]
@@ -815,9 +813,8 @@
                   (keep #(parse-special-docs %))
                   first)
         ns-with-specials (cond
-                           (>= *cljs-num* 1424) "cljs.analyzer"
-                           (>= *cljs-num* 0)    "cljs.compiler"
-                           :else nil)
+                           (cljs-cmp >= "0.0-1424") "cljs.analyzer"
+                           :else                    "cljs.compiler")
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
                    (->> (read-ns-forms ns-with-specials :compiler)
@@ -843,9 +840,9 @@
 (defmethod parse-ns ["cljs.test" :library] [ns- api]
   (parse-ns* ns- "clojurescript"
     (cond
-      (>  *cljs-num* 3269) [:library]
-      (>= *cljs-num* 0)    [:library :compiler] ;; macros mistakenly kept in compiler section before 3269
-      :else nil)))
+      (cljs-cmp > "0.0-3269") [:library]
+      :else                   [:library :compiler] ;; macros mistakenly kept in compiler section before 3269
+      )))
 
 (defmethod parse-ns ["cljs.repl" :library] [ns- api]
   ;; the library file "repl.cljs" has (:require-macros cljs.repl)
@@ -858,7 +855,7 @@
 
 (defmethod parse-ns ["cljs.repl.nashorn" :compiler] [ns- api]
   (cond
-    (>= *cljs-num* 3255)
+    (cljs-cmp >= "0.0-3255")
     (let [forms (apply concat (read-ns-forms ns- :compiler))
           ;; get nested forms inside:
           ;;   (util/compile-if (Class/forName "jdk.nashorn.api.scripting.NashornException")
@@ -870,7 +867,7 @@
       (cond-> (parse-ns* ns- "clojurescript" :compiler)
         nested-forms (concat (parse-forms ns- "clojurescript" nested-forms))))
 
-    (>= *cljs-num* 0)
+    :else
     (parse-ns* ns- "clojurescript" :compiler)))
 
 (defmethod parse-ns [:default :library] [ns- api]
@@ -888,9 +885,8 @@
   We cannot parse them, so we add them manually."
   [parsed]
   (let [try-ns-name (cond
-                      (>= *cljs-num* 1933) {:ns "special" :name "try"}
-                      (>= *cljs-num* 0)    {:ns "cljs.core" :name "try"}
-                      :else nil)
+                      (cljs-cmp >= "0.0-1933") {:ns "special" :name "try"}
+                      :else                    {:ns "cljs.core" :name "try"})
         try-form (first (filter #(= (select-keys % [:ns :name]) try-ns-name) parsed))
         get-sigs (fn [name-]
                    ;; parse docstring for signature of `catch` and `finally`:
