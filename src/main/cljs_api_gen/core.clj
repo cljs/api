@@ -9,7 +9,8 @@
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-latest-repo-tag
                                     get-published-cljs-tags!
-                                    get-published-clj-versions!]]
+                                    get-published-clj-versions!
+                                    new-maven-release]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
     [cljs-api-gen.docset :as docset]
@@ -30,9 +31,13 @@
 (defn main
   [{:keys [task
            out-dir
-           watch?]
+           watch?
+           new-release]
     :or {out-dir default-out-dir}
     :as options}]
+
+  (when new-release
+    (reset! new-maven-release new-release))
 
   (prep!)
 

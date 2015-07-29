@@ -7,9 +7,13 @@
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split split-lines]]
     [cljs-api-gen.config :refer [repos-dir]]
+    [clj-time.core :as time]
     [clj-time.coerce :as tc]
     [clj-time.format :as tf]
     ))
+
+(defn epoch-now []
+  (tc/to-long (time/now)))
 
 (defn timestamp->date-str [t]
   (tf/unparse (tf/formatters :date) (tc/from-long t)))
@@ -238,10 +242,15 @@
       (reverse) ;; properly sorted by version
       ))
 
+(def new-maven-release
+  "a maven release that is not yet visible from their API (slow to update sometimes)"
+  (atom nil))
+
 (defn get-published-cljs-tags!
   []
   (println (style "\nRetrieving published ClojureScript versions from Maven...\n" :cyan))
-  (let [releases (maven-releases "org.clojure" "clojurescript")
+  (let [releases (cond-> (maven-releases "org.clojure" "clojurescript")
+                   @new-maven-release (concat [{:v @new-maven-release :timestamp (epoch-now)}]))
         pub-versions (map :v releases)
         pub-dates (map (comp timestamp->date-str :timestamp) releases)
         pub-tags (map cljs-version->tag pub-versions)
