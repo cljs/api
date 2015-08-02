@@ -1,2 +1,8 @@
 ===== Name
 cljs.core/make-hierarchy
+
+===== Related
+cljs.core/ancestors
+cljs.core/descendants
+cljs.core/isa?
+cljs.core/derive
