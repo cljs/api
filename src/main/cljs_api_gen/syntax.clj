@@ -22,7 +22,7 @@
 
 (def doc-lispreader "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java")
 (def doc-eval     (str doc-lispreader "#L113"))
-(def doc-hashbang (str doc-lispreader "#L114"))
+(def doc-shebang  (str doc-lispreader "#L114"))
 (def doc-unread   (str doc-lispreader "#L115"))
 
 (def doc-interop "http://clojure.org/java_interop#toc6")
@@ -84,7 +84,7 @@
    {:id "ignore"             :dchar \_     :clj-doc doc2     :edn-doc (edn-doc "discard")}
    {:id "eval"               :dchar \=     :clj-doc doc-eval}
    {:id "unreadable"         :dchar \<     :clj-doc doc-unread}
-   {:id "hashbang"           :dchar \!     :clj-doc doc-hashbang}
+   {:id "shebang"            :dchar \!     :clj-doc doc-shebang}
    {:id "cond"               :dchar \?     :clj-doc doc5 :clj-added "1.7.0-beta1"}
    {:id "cond-splicing"   :parent "cond"  :clj-doc doc5 :clj-added "1.7.0-beta1"}
 

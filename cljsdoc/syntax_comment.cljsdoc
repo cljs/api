@@ -11,7 +11,7 @@ syntax/comment
 ===== Related
 syntax/ignore
 cljs.core/comment
-syntax/hashbang
+syntax/shebang
 
 ===== Example#ab62d2
 

@@ -1,15 +1,15 @@
 ===== Name
-syntax/hashbang
+syntax/shebang
 
 ===== Display
-#! hashbang
+#! shebang
 
 ===== Description
 
 Equivalent to [syntax/comment].
 
 This is intended to allow executable ClojureScript files under Unix by allowing
-the first line of the file to have a [hashbang line](https://en.wikipedia.org/wiki/Shebang_(Unix)).
+the first line of the file to have a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix)).
 
 ===== Example#de569a
 
