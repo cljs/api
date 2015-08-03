@@ -3,7 +3,9 @@
 set -e
 
 # build if the catalog doesn't exist, or if we force it.
-if [ "$1" == "build" ] || [ ! -d "catalog" ]; then
+if [ "$1" == "reparse" ]; then
+  lein run '{:catalog? true, :skip-pages? false, :skip-parse? false}'
+elif [ "$1" == "build" ] || [ ! -d "catalog" ]; then
   lein run '{:catalog? true, :skip-pages? false}'
 fi
 
