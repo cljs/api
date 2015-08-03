@@ -27,9 +27,22 @@ etc).
 
 Supported metadata:
 
-- `^:private`
-- `^:dynamic`
-- `^:const`
+- `^:private boolean`
+- `^:dynamic boolean`
+- `^:const boolean`
+- `^:jsdoc [""]`
+- `^:test (fn [] (assert ...))`
+- `^:doc ""`
+
+Compiler will also add metadata:
+
+- `:ns`
+- `:name`
+- `:file`
+- `:line`, `:end-line`
+- `:column`, `:end-column`
+- `:source`
+- `:arglists`
 
 ===== Example#a5f898
 
