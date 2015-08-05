@@ -25,21 +25,21 @@
 {{#syntax-api}}
 <td>
 <a href="#user-content-{{changes-link}}">
-{{#add-count}}<img valign="middle" src="https://img.shields.io/badge/+-{{.}}-brightgreen.svg">{{/add-count}} {{#remove-count}}<img valign="middle" src="https://img.shields.io/badge/×-{{.}}-red.svg">{{/remove-count}}
+{{#add-count}}+{{.}}{{/add-count}} {{#remove-count}}-{{.}}{{/remove-count}}
 </a>
 </td>
 {{/syntax-api}}
 {{#library-api}}
 <td>
 <a href="#user-content-{{changes-link}}">
-{{#add-count}}<img valign="middle" src="https://img.shields.io/badge/+-{{.}}-brightgreen.svg">{{/add-count}} {{#remove-count}}<img valign="middle" src="https://img.shields.io/badge/×-{{.}}-red.svg">{{/remove-count}}
+{{#add-count}}+{{.}}{{/add-count}} {{#remove-count}}-{{.}}{{/remove-count}}
 </a>
 </td>
 {{/library-api}}
 {{#compiler-api}}
 <td>
 <a href="#user-content-{{changes-link}}">
-{{#add-count}}<img valign="middle" src="https://img.shields.io/badge/+-{{.}}-brightgreen.svg">{{/add-count}} {{#remove-count}}<img valign="middle" src="https://img.shields.io/badge/×-{{.}}-red.svg">{{/remove-count}}
+{{#add-count}}+{{.}}{{/add-count}} {{#remove-count}}-{{.}}{{/remove-count}}
 </a>
 </td>
 {{/compiler-api}}
