@@ -16,6 +16,10 @@ A naming convention for dynamic vars (unenforced).
 Dynamic vars are global vars that you intend to temporarily rebind with
 [cljs.core/binding].
 
+NOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic
+special global vars (e.g. [cljs.core/*clojurescript-version*],
+[cljs.core/*main-cli-fn*]).
+
 ===== Related
 cljs.core/binding
 
