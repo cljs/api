@@ -59,19 +59,24 @@
     :else                    "src/clj"))
 
 (defn get-ns-files
-  [ns- src-types]
+  [ns- src-type]
   (doall (filter exists?
-    (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))]
-      (for [src (map src-path src-types)
-            ext  ["clj" "cljs" "cljc"]]
+    (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))
+          src (src-path src-type)]
+      (for [ext  ["clj" "cljs" "cljc"]]
         (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
 
 (defn read-ns-forms
-  [ns- k-or-ks]
-  (let [src-types (if (sequential? k-or-ks) k-or-ks [k-or-ks])]
-    (->> (get-ns-files ns- src-types)
-         (map read-forms-from-file)
-         doall)))
+  "Get all forms from given namespace into a filename -> forms map (possibly a .cljs .clj(c) pairing)"
+  [ns- src-type]
+  (let [filenames (get-ns-files ns- src-type)
+        forms (doall (map read-forms-from-file filenames))]
+    (zipmap filenames forms)))
+
+(defn read-all-ns-forms
+  "Get all forms for the given namespace (possibly concatenated from multiple files)"
+  [ns- src-type]
+  (apply concat (vals (read-ns-forms ns- src-type))))
 
 (defn read-clj-core-forms
   []
@@ -94,6 +99,6 @@
   (require '[cljs-api-gen.repo-cljs :refer [with-checkout!]])
 
   (with-checkout! "r927"
-    (get-ns-files "cljs.core" [:library :compiler]))
+    (get-ns-files "cljs.core" :library))
 
 )

@@ -6,6 +6,7 @@
     [clojure.string :refer [lower-case split split-lines join replace]]
     [me.raynes.fs :refer [base-name exists?]]
     [cljs-api-gen.read :refer [read-ns-forms
+                               read-all-ns-forms
                                read-clj-core-forms
                                read-treader-forms]]
     [cljs-api-gen.config :refer [repos-dir]]
@@ -389,16 +390,24 @@
 (defn parse-forms
   "Parse given forms from a given namespace and repo."
   [ns- repo forms]
-  (binding [*cur-ns* ns-
+  (binding [*cur-ns* ns- ;; TODO: maybe bind *ns* to make the reader eval `::foo` => `:*ns*/foo`
             *cur-repo* repo
             *fn-macros* (get-fn-macros forms)]
     (doall (keep parse-form forms))))
 
 (defn parse-ns*
   "Parse namespace of the given source types, :compiler or :library or both."
-  [ns- repo src-types]
-  (->> (read-ns-forms ns- src-types)
-       (mapcat #(parse-forms ns- repo %))))
+  [ns- repo src-type]
+  (let [compiler-macros? (= src-type :compiler-macros)
+        src-type (if compiler-macros? :compiler src-type)]
+    (apply concat
+      (for [[filename forms] (read-ns-forms ns- src-type)]
+        (let [lib-macros? (and (= :library src-type)
+                               (.endsWith filename ".clj")) ;; ^NOTE: need to rethink how we import macros
+                                                            ;;       if we have to start taking .cljc into account.
+              macros-only? (or lib-macros? compiler-macros?)]
+          (cond->> (parse-forms ns- repo forms)
+            macros-only? (filter #(= "macro" (:type %)))))))))
 
 (defn parse-clj-core
   "Parse clojure.core forms."
@@ -645,7 +654,7 @@
   []
   ;; NOTE: tagged literals were available since clojure 1.4.0's LispReader was being
   ;; used by clojurescript 0.0-1211, but cljs.tagged-literals was added 0.0-1424.
-  (let [forms (apply concat (read-ns-forms "cljs.tagged-literals" :compiler))
+  (let [forms (read-all-ns-forms "cljs.tagged-literals" :compiler)
         reader-map (first (keep parse-tagged-literal-map forms))
         parsed (parse-ns* "cljs.tagged-literals" "clojurescript" :compiler)
         defs (zipmap (map :name parsed) parsed)
@@ -671,7 +680,7 @@
   as a syntax pattern."
   []
   (let [items (cond
-                (cljs-cmp >= "0.0-1443") (parse-ns* "cljs.core" "clojurescript" [:compiler])
+                (cljs-cmp >= "0.0-1443") (parse-ns* "cljs.core" "clojurescript" :compiler)
                 :else                    (parse-clj-core))
         match? #(= "destructure" (:name %))
         destruct-fn (first (filter match? items))
@@ -726,7 +735,7 @@
   []
   (let [clj-api (->> (parse-clj-core)
                      (filter #(= "macro" (:type %))))
-        cljs-forms   (apply concat (read-ns-forms "cljs.core" :compiler))
+        cljs-forms   (read-all-ns-forms "cljs.core" :compiler)
         imports      (get-imported-macro-api     cljs-forms clj-api)
         non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
     (println "   " (count imports) "macros imported from clojure.core")
@@ -803,7 +812,7 @@
 
 (defn get-core-type-members
   [type-names]
-  (->> (apply concat (read-ns-forms "cljs.core" :library))
+  (->> (read-all-ns-forms "cljs.core" :library)
        (keep #(parse-core-type-member % type-names))))
 
 ;;------------------------------------------------------------
@@ -825,9 +834,8 @@
   ;; The library functions are intended to be used over the macros.
   ;; And the imported macros from "clojure.core" should be overwritten
   ;; by cljs.core's macros.
-  (let [com-parsed (->> (parse-ns* ns- "clojurescript" [:compiler])
-                        (filter #(= "macro" (:type %))))
-        lib-parsed (parse-ns* ns- "clojurescript" [:library])
+  (let [com-parsed (parse-ns* ns- "clojurescript" :compiler-macros)
+        lib-parsed (parse-ns* ns- "clojurescript" :library)
         type-names (->> lib-parsed
                         (filter #(= "type" (:type %)))
                         (map (comp str :name))
@@ -839,8 +847,7 @@
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns ["special" :library] [ns- api]
-  (let [docs (->> (read-ns-forms "cljs.repl" :compiler)
-                  (apply concat)
+  (let [docs (->> (read-all-ns-forms "cljs.repl" :compiler)
                   (keep #(parse-special-docs %))
                   first)
         ns-with-specials (cond
@@ -848,15 +855,14 @@
                            :else                    "cljs.compiler")
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
-                   (->> (read-ns-forms ns-with-specials :compiler)
-                        (apply concat)
+                   (->> (read-all-ns-forms ns-with-specials :compiler)
                         (keep #(parse-special % docs))
                         doall))]
     specials))
 
 ;; pseudo-namespace since repl special forms don't have a namespace
 (defmethod parse-ns ["specialrepl" :library] [ns- api]
-  (let [forms (apply concat (read-ns-forms "cljs.repl" :compiler))
+  (let [forms (read-all-ns-forms "cljs.repl" :compiler)
         docs (first (keep parse-repl-special-docs forms))
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
@@ -869,25 +875,22 @@
                    (parse-other-syntax)))))
 
 (defmethod parse-ns ["cljs.test" :library] [ns- api]
-  (parse-ns* ns- "clojurescript"
-    (cond
-      (cljs-cmp > "0.0-3269") [:library]
-      :else                   [:library :compiler] ;; macros mistakenly kept in compiler section before 3269
-      )))
+  (cond-> (parse-ns* ns- "clojurescript" :library)
+    (cljs-cmp <= "0.0-3269")
+    (concat (parse-ns* ns- "clojurescript" :compiler-macros))))
 
 (defmethod parse-ns ["cljs.repl" :library] [ns- api]
   ;; the library file "repl.cljs" has (:require-macros cljs.repl)
   ;; so we must pull those in from the compiler and add in the
   ;; library functions.
-  (let [macros (->> (parse-ns* ns- "clojurescript" [:compiler])
-                    (filter #(= "macro" (:type %))))
-        lib (parse-ns* ns- "clojurescript" [:library])]
-    (concat macros lib)))
+  (concat
+    (parse-ns* ns- "clojurescript" :compiler-macros)
+    (parse-ns* ns- "clojurescript" :library)))
 
 (defmethod parse-ns ["cljs.repl.nashorn" :compiler] [ns- api]
   (cond
     (cljs-cmp >= "0.0-3255")
-    (let [forms (apply concat (read-ns-forms ns- :compiler))
+    (let [forms (read-all-ns-forms ns- :compiler)
           ;; get nested forms inside:
           ;;   (util/compile-if (Class/forName "jdk.nashorn.api.scripting.NashornException")
           ;;     (do ... ))
