@@ -3,7 +3,7 @@
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
     [cljs-api-gen.encode :refer [encode-fullname]]
-    [cljs-api-gen.util :refer [mapmap]]
+    [cljs-api-gen.util :refer [mapmap filtermap]]
     [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       attach-clj-symbol]]
@@ -60,34 +60,57 @@
     ;; NOTE: don't forget to add a $ for any following expressions
     ))
 
-(defn resolve-duplicates
+(defn shadow-duplicates-by-order
   [items]
   (let [item (last items)
         shadowed (drop 1 (reverse items))
         merged (if-not (empty? shadowed)
                  (assoc item :extra-sources (map :source shadowed))
-                 item)
+                 item)]
+    {:item item
+     :shadowed shadowed
+     :merged merged}))
 
-        ;; Some core symbols have function and macro implementations.
-        ;; (see: https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure#macros)
-        fn-macro-pair? (and (= "function" (:type item))
-                            (= "macro" (:type (first shadowed))))
+(defn fn-macro-pair
+  [items]
+  ;; Some core symbols have function and macro implementations.
+  ;; (see: https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure#macros)
+  (let [{:keys  [item shadowed merged]} (shadow-duplicates-by-order items)]
+    (when (and (= "function" (:type item))
+               (= "macro" (:type (first shadowed))))
+      (-> merged
+          (assoc-in [:source :title] "Function code")
+          (update-in [:extra-sources] vec)
+          (assoc-in [:extra-sources 0 :title] "Macro code")))))
 
-        final (if fn-macro-pair?
-                ;; Set function and macro source titles for distinguishing the two.
-                (-> merged
-                    (assoc-in [:source :title] "Function code")
-                    (update-in [:extra-sources] vec)
-                    (assoc-in [:extra-sources 0 :title] "Macro code"))
-                merged)]
-    final))
+(defn multimethods
+  [items]
+  (let [item (last (remove #(= "method" (:type %)) items))
+        method-items (filter #(= "method" (:type %)) items)]
+    (when (= "multimethod" (:type item))
+      (assoc item :extra-sources
+        (for [m method-items]
+          (assoc (:source m)
+                 :title "Dispatch method"))))))
+
+(defn resolve-duplicates
+  [items]
+  (if (= (count items) 1)
+    (first items)
+    (first (keep #(% items) [fn-macro-pair
+                             multimethods
+                             #(-> % shadow-duplicates-by-order :merged)]))))
 
 (defn transform-items
   [items]
   (->> items
        (map transform-item)
        (group-by :full-name)
-       (mapmap resolve-duplicates)))
+       (mapmap resolve-duplicates)
+
+       ;; dangling defmethods probably means its defmulti is private
+       (filtermap #(not= "method" (:type %)))
+       ))
 
 (defn mark-removed
   [prev-item prev-hist prev-version]

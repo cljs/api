@@ -239,6 +239,33 @@
         {:signature (when signature [signature])
          :type "type"}))))
 
+(defn parse-defmulti
+  [form]
+  (let [name- (second form)
+        meta- (meta name-)
+        private? (:private meta-)
+        form (drop 2 form)
+        docstring (let [d (first form)]
+                    (if (string? d)
+                      d
+                      (:doc meta-)))
+        form (if docstring (drop 1 form) form)
+        dispatch (first form)
+        dispatch (when (and (list? dispatch) (= (first dispatch) 'fn))
+                   dispatch)
+        signature (and dispatch (second dispatch))
+        signature (when (vector? signature)
+                    signature)]
+    (when (or *parse-private-defs?*
+              (not private?))
+      {:docstring docstring
+       :signature (when signature [signature])
+       :type "multimethod"})))
+
+(defn parse-defmethod
+  [[_defmethod name- value :as form]]
+  {:type "method"})
+
 (defmulti parse-form*
   (fn [form]
     (case (first form)
@@ -251,6 +278,8 @@
       defcurried    "defcurried"
       defprotocol   "defprotocol"
       deftype       "deftype"
+      defmulti      "defmulti"
+      defmethod     "defmethod"
       (def defonce) (if (and (list? (nth form 2 nil))
                                (= 'fn (first (nth form 2 nil)))
                                (not (:dynamic (meta (second form)))))
@@ -265,6 +294,8 @@
 (defmethod parse-form* "defcurried"  [form] (parse-defcurried form))
 (defmethod parse-form* "defprotocol" [form] (parse-defprotocol form))
 (defmethod parse-form* "deftype"     [form] (parse-deftype form))
+(defmethod parse-form* "defmulti"    [form] (parse-defmulti form))
+(defmethod parse-form* "defmethod"   [form] (parse-defmethod form))
 (defmethod parse-form* nil           [form] nil)
 
 ;;--------------------------------------------------------------------------------
