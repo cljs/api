@@ -2,7 +2,9 @@
 
 set -e
 
-cd docset
+docset_dir=docset
+
+cd $docset_dir
 
 repo=Dash-User-Contributions
 rm -rf $repo
@@ -38,5 +40,5 @@ cp ../ClojureScript.tgz docsets/ClojureScript/
 echo "latest docset copied."
 
 echo
-echo "Now, update the version in docsets/ClojureScript/docset.json"
+echo "Now, update the version in $docset_dir/$repo/docsets/ClojureScript/docset.json"
 echo "and commit, push, and submit PR."
