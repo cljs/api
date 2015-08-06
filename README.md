@@ -155,7 +155,7 @@ Full table of options:
 | `:skip-pages?` | skip page-creation for previous versions? | `true` `false` | `true` |
 | `:skip-parse?` | skip parsing versions if already cached? | `true` `false` | `true` |
 | `:watch?` | watch and recompile cljsdoc changes | `true` `false` | `false` |
-| `:new-release` | force recognize new version (because maven api can be slow) | `1.7.10` | `nil` |
+| `:new-release` | force recognize new version (because maven api can be slow) | `"1.7.10"` | `nil` |
 
 ### Implementation
 
