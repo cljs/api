@@ -56,6 +56,7 @@
    "binding"             "Builtin"
    "convention"          "Builtin"
    "special character"   "Builtin"
+   "multimethod"         "Method"
    })
 
 (defn dash-name
