@@ -281,6 +281,8 @@
       deftype       "deftype"
       defmulti      "defmulti"
       defmethod     "defmethod"
+      goog-define   "var"
+
       (def defonce) (if (and (list? (nth form 2 nil))
                                (= 'fn (first (nth form 2 nil)))
                                (not (:dynamic (meta (second form)))))
