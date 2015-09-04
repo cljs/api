@@ -14,6 +14,7 @@
     [cljs-api-gen.config :refer [*output-dir*
                                  cljsdoc-dir
                                  refs-dir
+                                 site-dir
                                  edn-result-file]]
     [cljs-api-gen.encode :as encode :refer [md-escape
                                             md-link-escape
@@ -645,3 +646,11 @@
     (dump-unfinished! result))
   )
 
+(defn dump-site-pages! [result]
+  (binding [*result* result]
+    (mkdir *output-dir*)
+    (mkdir *output-dir* "/" site-dir)
+
+    ;; TODO: write site pages
+    )
+  )

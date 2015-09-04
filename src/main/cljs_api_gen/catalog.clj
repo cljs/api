@@ -36,6 +36,7 @@
                                  get-result
                                  add-cljsdoc-to-result]]
     [cljs-api-gen.write :refer [dump-result!
+                                dump-site-pages!
                                 dump-ref-file!] :as write]
     [clojure-watch.core :refer [start-watch]]
     ))
@@ -110,6 +111,7 @@
     :keys [version
            catalog?
            watch?
+           gen-site?
            skip-pages?
            skip-parse?]
     :or {version :latest
@@ -238,7 +240,10 @@
                   result (add-cljsdoc-to-result parsed)]
               (reset! full-result result)
               (binding [*output-dir* out-folder]
-                (dump-result! result)))))))
+                (dump-result! result)
+                (when gen-site?
+                  (dump-site-pages! result))
+                ))))))
 
     ;; third pass
     (println (style "\nStarting final pass (finalizing output directory)...\n" :magenta))
