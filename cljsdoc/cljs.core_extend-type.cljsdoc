@@ -1,2 +1,33 @@
 ===== Name
 cljs.core/extend-type
+
+===== Signature
+[type-sym & impls]
+
+===== Description
+
+Extend a type to a series of protocols. Useful when you are
+supplying the definitions explicitly inline. Propagates the
+type as a type hint on the first argument of all fns.
+
+`type-sym` can be a type created by [cljs.core/deftype], or any of the
+following base types, which are associated with type strings deduced by
+[`goog/typeOf`]:
+
+| type symbol  | corresponding `goog/typeOf` value |
+|--------------|-------------|
+| `nil`        | `"null"` |
+| `object`     | `"object"` |
+| `string`     | `"string"` |
+| `number`     | `"number"` |
+| `array`      | `"array"` |
+| `function`   | `"function"` |
+| `boolean`    | `"boolean"` |
+
+`type-sym` can also be specified as `default` in order to provide default
+implementations for protocols.
+
+[`goog/typeOf`]:http://google.github.io/closure-library/api/namespace_goog.html#typeOf
+
+===== Related
+cljs.core/extend-protocol
