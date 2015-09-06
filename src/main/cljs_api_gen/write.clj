@@ -654,19 +654,21 @@
   [result]
   ;; URL: /versions.html (version/date/dependency table, link to changes)
   ;; URL: /changes.html (version symbol additions/removals)
+  ;; NOTE: urls are not under version paths. the latest always includes previous history.
   )
 
 (defn dump-site-symbols!
   [result]
-  ;; URL: /<version>/syntax/<pseudo-symbol>.html
-  ;; URL: /<version>/<api-type>/<ns>/<symbol>.html
-
+  ;; URL: /<version>/<ns>/<symbol>.html
+  ;; URL: /<version>/<ns>/<symbol>.html#compiler   <--- to load compiler (not library) in ns sidebar
+  ;; NOTE: when linking to macros that are in both library and compiler APIs,
+  ;;       we will just use the hash to load the appropriate ns in the sidebar.
   )
 
 (defn dump-site-namespaces!
   [result]
-  ;; URL: /<version>/syntax/index.html
-  ;; URL: /<version>/<api-type>/<ns>/index.html
+  ;; URL: /<version>/syntax.html
+  ;; URL: /<version>/<api-type>/<ns>.html
 
   )
 
