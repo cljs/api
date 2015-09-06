@@ -646,11 +646,45 @@
     (dump-unfinished! result))
   )
 
+;;--------------------------------------------------------------------------------
+;; Site
+;;--------------------------------------------------------------------------------
+
+(defn dump-site-history!
+  [result]
+  ;; URL: /versions.html (version/date/dependency table, link to changes)
+  ;; URL: /changes.html (version symbol additions/removals)
+  )
+
+(defn dump-site-symbols!
+  [result]
+  ;; URL: /<version>/syntax/<pseudo-symbol>.html
+  ;; URL: /<version>/<api-type>/<ns>/<symbol>.html
+
+  )
+
+(defn dump-site-namespaces!
+  [result]
+  ;; URL: /<version>/syntax/index.html
+  ;; URL: /<version>/<api-type>/<ns>/index.html
+
+  )
+
+(defn dump-site-index!
+  [result]
+  ;; URL: /<version>/index.html
+
+  )
+
 (defn dump-site-pages! [result]
   (binding [*result* result]
     (mkdir *output-dir*)
     (mkdir *output-dir* "/" site-dir)
 
-    ;; TODO: write site pages
+    (dump-site-index! result)
+
+    (dump-site-namespaces! result)
+
+    (dump-site-symbols! result)
     )
   )
