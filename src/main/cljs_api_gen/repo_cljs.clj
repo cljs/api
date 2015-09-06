@@ -121,10 +121,11 @@
   OLD =    rXXXX       0.0-XXXX
   NEW =    r1.7.XXXX   1.7.XXXX"
   [tag]
-  (if-let [[_ revision] (re-find #"r(\d+)$" tag)]
-    (str "0.0-" revision)
-    (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+)$" tag)]
-      full)))
+  (or (#{"master"} tag)
+    (if-let [[_ revision] (re-find #"r(\d+)$" tag)]
+      (str "0.0-" revision)
+      (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+)$" tag)]
+        full))))
 
 (defn cljs-version->tag
   "cljs version -> revision tag:
@@ -133,11 +134,12 @@
   OLD =   0.0-XXXX   rXXXX
   NEW =   1.7.XXXX   r1.7.XXXX"
   [version]
-  (when version
-    (when-let [[_ major-minor revision] (re-find #"(\d+\.\d+)[.-](\d+)" version)]
-      (if (= "0.0" major-minor)
-        (str "r" revision)
-        (str "r" major-minor "." revision)))))
+  (or (#{"master"} version)
+    (when version
+      (when-let [[_ major-minor revision] (re-find #"(\d+\.\d+)[.-](\d+)" version)]
+        (if (= "0.0" major-minor)
+          (str "r" revision)
+          (str "r" major-minor "." revision))))))
 
 (def cljs-tag->pub
   "cljs tag -> maven published info {:order _ :date _}"
@@ -165,7 +167,8 @@
    (let [versions (cons version others)
          ->num (fn [v]
                  (if (string? v)
-                   (if (.startsWith v "r")
+                   (if (or (= "master" v)
+                           (.startsWith v "r"))
                      (cljs-tag->num v)
                      (cljs-version->num v))
                    nil))
