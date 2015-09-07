@@ -8,7 +8,11 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Syntax
 
-[ClojureScript's syntax forms]()
+{{#syntax-api}}
+{{#ns-symbols}}
+[syntax forms]({{&ns-link}})
+{{/ns-symbols}}
+{{/syntax-api}}
 
 ## Library API
 
