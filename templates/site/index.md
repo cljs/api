@@ -18,8 +18,9 @@ The core ClojureScript library.
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns-display}}](#{{&ns-link}}) | {{&ns-description}} |
+| [{{&ns-display}}]({{&ns-link}}) | {{&ns-description}} |
 {{/ns-symbols}}
+{{/library-api}}
 
 ## Compiler API
 
@@ -32,6 +33,6 @@ expected to be public and stable.
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns-display}}](#{{&ns-link}}) | {{&ns-description}} |
+| [{{&ns-display}}]({{&ns-link}}) | {{&ns-description}} |
 {{/ns-symbols}}
-
+{{/compiler-api}}

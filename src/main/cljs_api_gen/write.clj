@@ -31,7 +31,7 @@
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-map]]
-    [me.raynes.fs :refer [exists? mkdir]]
+    [me.raynes.fs :refer [exists? mkdir mkdirs]]
     [stencil.core :as stencil]
     ))
 
@@ -650,6 +650,14 @@
 ;; Site
 ;;--------------------------------------------------------------------------------
 
+(def site-docs-root "docs")
+
+(def site-url-index "index.html")
+(def site-url-versions "versions.html")
+(def site-url-changes "changes.html")
+(defn site-url-ns     [api-type ns-] (str (name api-type) "/" ns- ".html"))
+(defn site-url-symbol [ns- symbol-]  (str ns- "/" symbol- ".html"))
+
 (defn dump-site-history!
   [result]
   ;; URL: /versions.html (version/date/dependency table, link to changes)
@@ -675,18 +683,34 @@
 (defn dump-site-index!
   [result]
   ;; URL: /<version>/index.html
-
-  )
+  ;; same as index, but different ns links
+  (let [change-ns-links (fn [ns-symbols api-type]
+                          (map #(assoc % :ns-link
+                                  (str "/" site-docs-root "/" (site-url-ns api-type (:ns %))))
+                            ns-symbols))
+        data (-> (index-file-data result)
+                 (update-in [:library-api :ns-symbols] change-ns-links :library)
+                 (update-in [:compiler-api :ns-symbols] change-ns-links :compiler))]
+    (spit (str *output-dir* "/index.md")
+          (stencil/render-string
+            (slurp "templates/site/index.md")
+            data))))
 
 (defn dump-site-pages! [result]
-  (binding [*result* result]
-    (mkdir *output-dir*)
-    (mkdir *output-dir* "/" site-dir)
+  (binding [*result* result
+            *output-dir* (str *output-dir* "/" site-dir "/" site-docs-root)]
+    (mkdirs *output-dir*)
 
+    (println "writing site index...")
     (dump-site-index! result)
 
+    (println "writing site namespaces...")
     (dump-site-namespaces! result)
 
+    (println "writing site symbols...")
     (dump-site-symbols! result)
+
+    (println "writing site history...")
+    (dump-site-history! result)
     )
   )
