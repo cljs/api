@@ -403,6 +403,11 @@
   (let [compiler-macros? (= src-type :compiler-macros)
         src-type (if compiler-macros? :compiler src-type)]
     (apply concat
+      ;; TODO: append a 'namespace item' to the returned parsed forms
+      ;;      containing metadata about this namespace for tracking:
+      ;;      - docstring (possibly multiple?)
+      ;;      - filenames
+      ;;      - :type "namespace"
       (for [[filename forms] (read-ns-forms ns- src-type)]
         (let [lib-macros? (and (= :library src-type)
                                (.endsWith filename ".clj")) ;; ^NOTE: need to rethink how we import macros

@@ -145,7 +145,8 @@
     "syntax"
     "tagged literal"
     "var"
-    "special var"})
+    "special var"
+    "namespace"})
 
 (defn type-error-msg
   "If type is not valid, return error message."

@@ -49,12 +49,18 @@
                     :edn-doc
                     :clj-doc
                     :source
-                    :extra-sources])
+                    :extra-sources
+                    ;; TODO: add other fields required for namespace items
+                    
+                    ])
     (update-in $ [:signature] #(mapv str %))
     (update-in $ [:name] str)
     (fix-source-lines $)
-    (assoc $ :full-name (str (:ns $) "/" (:name $)))
+
+    (assoc $ :full-name (cond-> (:ns $)
+                          (:name $) (str "/" (:name $))))
     (assoc $ :full-name-encode (encode-fullname (:full-name $)))
+
     (prune-map $)
     (attach-clj-symbol $)
     ;; NOTE: don't forget to add a $ for any following expressions
@@ -127,25 +133,46 @@
 (defn make-api-result
   [items api-key prev-result]
   (let [prev-api (get-in prev-result [:api api-key])
-        prev-symbols (:symbols prev-result)
-        prev-items (select-keys prev-symbols (:symbol-names prev-api))
+        prev-all-syms (:symbols prev-result)
+        prev-syms (select-keys prev-all-syms (:symbol-names prev-api))
+
+        prev-all-nss (:namespaces prev-result)
+        prev-nss (select-keys prev-all-nss (:namespace-names prev-api))
+
         prev-changes (or (:changes prev-api) [])
         prev-version (get-in prev-result [:release :cljs-version])
 
-        ;; get symbol names
-        all-prev-names (->> (vals prev-items)
-                            (map :full-name))
-        prev-names (->> (vals prev-items)
-                        (remove :removed)
-                        (map :full-name)
-                        set)
-        curr-names (-> items keys set)
-        all-names (set (into all-prev-names curr-names))
-        [removed? added? stayed?] (diff prev-names curr-names)
+        get-diff
+        (fn [prevs curr-names]
+          (let [all-prev-names (->> (vals prevs)
+                                    (map :full-name))
+                prev-names (->> (vals prevs)
+                                (remove :removed)
+                                (map :full-name)
+                                set)
+                all-names (set (into all-prev-names curr-names))
+                [removed? added? stayed?] (diff prev-names curr-names)]
+            {:all-names all-names
+             :added? added?
+             :removed? removed?
+             :stayed? stayed?}))
+
+        curr-sym-names (->> items
+                            (remove #(= "namespace" (:type %)))
+                            (map :full-name)
+                            set)
+
+        curr-ns-names (->> items
+                           (filter #(= "namespace" (:type %)))
+                           (map :full-name)
+                           set)
+
+        syms-diff (get-diff prev-syms cur-sym-names)
+        nss-diff (get-diff prev-nss curr-ns-names)
 
         make-item
-        (fn [name-]
-          (let [prev (get prev-items name-)
+        (fn [name- {:keys [removed? added? stayed?] :as diff}]
+          (let [prev (get prev-syms name-)
                 prev-hist (:history prev)
                 curr (get items name-)]
             (cond
@@ -154,8 +181,17 @@
               (contains? stayed? name-)  (assoc curr :history prev-hist)            ;; still here
               :else                      prev)))                                    ;; still removed
 
-        new-items (map make-item all-names)
-        new-symbols (zipmap (map :full-name new-items) new-items)
+        new-sym-items (map #(make-item % syms-diff)
+                           (:all-names syms-diff))
+        new-syms (zipmap (map :full-name new-sym-items) new-sym-items)
+
+        new-ns-items (map #(make-item % nss-diff)
+                           (:all-names nss-diff))
+        new-nss (zipmap (map :full-name new-ns-items) new-ns-items)
+
+        added? (into (:added? syms-diff) (:added? nss-diff))
+        removed? (into (:removed? syms-diff) (:removed? nss-diff))
+
         change (prune-map {:cljs-version *cljs-version*
                            :cljs-date *cljs-date*
                            :clj-version *clj-version*
@@ -164,7 +200,8 @@
                            :added added?
                            :removed removed?})
         new-changes (conj prev-changes change)]
-    {:symbols new-symbols
+    {:symbols new-syms
+     :namespaces new-nss
      :changes new-changes}))
 
 (defn get-result
@@ -193,14 +230,17 @@
          ;;       Supporting the general case will require creating separate symbol references
          ;;       for each API, which I don't want to do.
          symbols (apply merge (map :symbols [syntax-api library-api compiler-api]))
+         namespaces (apply merge (map :namespaces [syntax-api library-api compiler-api]))
 
-         strip-symbol-data #(-> %
-                                (assoc :symbol-names (-> % :symbols keys set))
-                                (dissoc :symbols))
+         strip-data #(-> %
+                         (assoc :symbol-names (-> % :symbols keys set))
+                         (dissoc :symbols)
+                         (assoc :namespace-names (-> % :namespaces keys set))
+                         (dissoc :namespaces))
 
-         syntax-api   (strip-symbol-data syntax-api)
-         library-api  (strip-symbol-data library-api)
-         compiler-api (strip-symbol-data compiler-api)
+         syntax-api   (strip-data syntax-api)
+         library-api  (strip-data library-api)
+         compiler-api (strip-data compiler-api)
          ]
 
      {:release {:cljs-version *cljs-version*
@@ -220,6 +260,7 @@
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
 
       :symbols symbols
+      :namespaces namespaces
 
       :api {:syntax syntax-api
             :library library-api

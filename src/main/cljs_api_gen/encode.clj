@@ -29,13 +29,23 @@
 
 (defn decode-fullname
   [fullname]
-  (let [[_ ns- name-] (re-find #"([^_]*)_(.*)" fullname)]
-    (str ns- "/" (decode-name name-))))
+  (if-let [[_ ns- name-] (re-find #"([^_]*)_(.*)" fullname)]
+    (str ns- "/" (decode-name name-))
+
+    ;; NOTE: if there is no underscore present, this is just a namespace name.
+    full-name))
 
 (defn encode-fullname
   [fullname]
   (let [[ns- name-] ((juxt namespace name) (symbol fullname))
-        encoded (str ns- "_" (encode-name name-))]
+
+        ;; NOTE: if our symbol is not fully-qualified, it can only mean
+        ;;       that it is a namespace, not an unqualified symbol.
+        qualified? (not (nil? ns-))
+        [ns- name-] (if qualified? [ns- name-] [name- nil])
+
+        encoded (cond-> ns-
+                  name- (str "_" (encode-name name-)))]
     encoded))
 
 (defn assert-lossless
