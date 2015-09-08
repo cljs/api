@@ -33,7 +33,7 @@
     (str ns- "/" (decode-name name-))
 
     ;; NOTE: if there is no underscore present, this is just a namespace name.
-    full-name))
+    fullname))
 
 (defn encode-fullname
   [fullname]

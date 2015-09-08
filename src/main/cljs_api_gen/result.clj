@@ -167,7 +167,7 @@
                            (map :full-name)
                            set)
 
-        syms-diff (get-diff prev-syms cur-sym-names)
+        syms-diff (get-diff prev-syms curr-sym-names)
         nss-diff (get-diff prev-nss curr-ns-names)
 
         make-item
