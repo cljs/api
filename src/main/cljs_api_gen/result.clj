@@ -34,12 +34,31 @@
     (update-in item [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
     item))
 
+(defn handle-ns-item
+  "a namespace item does not have a :name, only a :ns"
+  [item]
+  (let [ns? (= "namespace" (:type item))]
+    (cond-> item
+      ns? (dissoc :name))))
+
+(defn assign-full-names
+  "Create the cannonical lookup names (full-name) for this item."
+  [item]
+  (let [ns? (= "namespace" (:type item))
+        fullname (cond-> (:ns item)
+                   (not ns?) (str "/" (:name item)))
+        encoded (encode-fullname fullname)]
+    (assoc item
+      :full-name fullname
+      :full-name-encode encode)))
+
 (defn transform-item
   [x]
-  (as-> x $
-    (select-keys $ [:ns
+  (-> x
+      (select-keys [:ns
                     :name
                     :docstring
+                    :author
                     :type
                     :parent-type
                     :signature
@@ -50,21 +69,14 @@
                     :clj-doc
                     :source
                     :extra-sources
-                    ;; TODO: add other fields required for namespace items
-                    
                     ])
-    (update-in $ [:signature] #(mapv str %))
-    (update-in $ [:name] str)
-    (fix-source-lines $)
-
-    (assoc $ :full-name (cond-> (:ns $)
-                          (:name $) (str "/" (:name $))))
-    (assoc $ :full-name-encode (encode-fullname (:full-name $)))
-
-    (prune-map $)
-    (attach-clj-symbol $)
-    ;; NOTE: don't forget to add a $ for any following expressions
-    ))
+      (update-in [:signature] #(mapv str %))
+      (update-in [:name] str)
+      (fix-source-lines)
+      (handle-ns-item)
+      (assign-full-names)
+      (prune-map)
+      (attach-clj-symbol)))
 
 (defn shadow-duplicates-by-order
   [items]
@@ -77,7 +89,7 @@
      :shadowed shadowed
      :merged merged}))
 
-(defn fn-macro-pair
+(defn combine-fn-macro-pair
   [items]
   ;; Some core symbols have function and macro implementations.
   ;; (see: https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure#macros)
@@ -89,7 +101,7 @@
           (update-in [:extra-sources] vec)
           (assoc-in [:extra-sources 0 :title] "Macro code")))))
 
-(defn multimethods
+(defn combine-multimethods
   [items]
   (let [item (last (remove #(= "method" (:type %)) items))
         method-items (filter #(= "method" (:type %)) items)]
@@ -99,12 +111,22 @@
           (assoc (:source m)
                  :title "Dispatch method"))))))
 
+(defn combine-namespaces
+  [items]
+  ;; TODO
+  ;; - favor them in this order: .cljs, .cljc, .clj
+  ;; - get the first docstring available
+  ;; - get the first author available
+  ;; - combine the sources (not sure if useful yet)
+  (first items))
+
 (defn resolve-duplicates
   [items]
   (if (= (count items) 1)
     (first items)
-    (first (keep #(% items) [fn-macro-pair
-                             multimethods
+    (first (keep #(% items) [combine-fn-macro-pair
+                             combine-multimethods
+                             combine-namespaces
                              #(-> % shadow-duplicates-by-order :merged)]))))
 
 (defn transform-items

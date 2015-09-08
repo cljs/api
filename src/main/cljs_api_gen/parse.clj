@@ -267,9 +267,20 @@
   [[_defmethod name- value :as form]]
   {:type "method"})
 
+(defn parse-ns-form
+  [[_ns name- :as form]]
+  (let [meta- (meta name-)
+        docstring (:doc meta-)
+        author (:author meta-)]
+    {:type "namespace"
+     :docstring docstring
+     :author author
+     }))
+
 (defmulti parse-form*
   (fn [form]
     (case (first form)
+      ns            "ns"
       defn          "defn"
       defn-         "defn"
       core/defn     "defn"
@@ -290,6 +301,7 @@
                         "var")
       nil)))
 
+(defmethod parse-form* "ns"          [form] (parse-ns-form form))
 (defmethod parse-form* "var"         [form] (parse-var form))
 (defmethod parse-form* "def fn"      [form] (parse-def-fn form))
 (defmethod parse-form* "defn"        [form] (parse-defn-or-macro form "function"))
@@ -403,11 +415,6 @@
   (let [compiler-macros? (= src-type :compiler-macros)
         src-type (if compiler-macros? :compiler src-type)]
     (apply concat
-      ;; TODO: append a 'namespace item' to the returned parsed forms
-      ;;      containing metadata about this namespace for tracking:
-      ;;      - docstring (possibly multiple?)
-      ;;      - filenames
-      ;;      - :type "namespace"
       (for [[filename forms] (read-ns-forms ns- src-type)]
         (let [lib-macros? (and (= :library src-type)
                                (.endsWith filename ".clj")) ;; ^NOTE: need to rethink how we import macros

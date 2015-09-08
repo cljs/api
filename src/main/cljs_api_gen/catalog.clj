@@ -214,6 +214,7 @@
       ;; create cljsdoc stubs for symbols that don't have them
       ;; (allowing easier PRs for those wanting to populate them)
       (create-cljsdoc-stubs! (-> result :symbols keys set))
+      (create-cljsdoc-stubs! (-> result :namespaces keys set))
 
       ;; compile cljsdoc files (manual docs)
       (let [num-skipped (build-cljsdoc! result)]
