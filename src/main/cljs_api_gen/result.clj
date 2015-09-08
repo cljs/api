@@ -50,7 +50,7 @@
         encoded (encode-fullname fullname)]
     (assoc item
       :full-name fullname
-      :full-name-encode encode)))
+      :full-name-encode encoded)))
 
 (defn transform-item
   [x]
