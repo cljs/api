@@ -691,10 +691,24 @@
         data (-> (index-file-data result)
                  (update-in [:library-api :ns-symbols] change-ns-links :library)
                  (update-in [:compiler-api :ns-symbols] change-ns-links :compiler))]
+
     (spit (str *output-dir* "/index.md")
           (stencil/render-string
             (slurp "templates/site/index.md")
-            data))))
+            data))
+
+    (doseq [[prefix api-type] [["/library" :library-api]
+                               ["/compiler" :compiler-api]
+                               ["" :syntax-api]]]
+
+      (mkdirs (str *output-dir* prefix))
+
+      (doseq [ns-data (get-in data [api-type :ns-symbols])]
+        (spit (str *output-dir* prefix "/" (:ns ns-data) ".html")
+              (stencil/render-string
+                (slurp "templates/site/ns.md")
+                ns-data))))
+    ))
 
 (defn dump-site-pages! [result]
   (binding [*result* result
