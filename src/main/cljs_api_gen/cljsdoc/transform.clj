@@ -40,10 +40,16 @@
         (dissoc "display"))
     doc))
 
+(defn transform-caption [doc]
+  (if-let [caption (get doc "caption")]
+    (-> doc
+        (assoc :caption caption)
+        (dissoc "caption"))
+    doc))
+
 (defn transform-description [doc]
   (if-let [desc (get doc "description")]
     (-> doc
-        ;; TODO: markdown process desc
         (assoc :description desc)
         (dissoc "description"))
     doc))

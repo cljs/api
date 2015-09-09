@@ -59,6 +59,7 @@
    "type"
    "tags"
    "return type"
+   "caption"
    "description"
    "usage"
    "signature"
