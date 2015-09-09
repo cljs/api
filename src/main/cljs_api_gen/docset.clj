@@ -7,7 +7,6 @@
     [cljs-api-gen.write :refer [get-last-written-result]]
     [cljs-api-gen.encode :refer [decode-fullname
                                  md-header-link]]
-    [cljs-api-gen.display :refer [get-ns-display-name]]
     [cljs-api-gen.util :refer [split-ns-and-name]]
     [clojure.java.jdbc :as j]
     [me.raynes.fs :refer [delete-dir copy copy-dir list-dir base-name mkdirs directory?]]
@@ -157,7 +156,8 @@
                      (set))]
       (apply j/insert! sqlite-db :searchIndex
         (for [[api-type ns-] pairs]
-          (let [ns-display (get-ns-display-name ns- api-type)
+          (let [ns-meta (get-in result [:namespaces ns-])
+                ns-display (or (:display ns-meta) ns-)
                 ns-link (resolve-path "INDEX.html#" (md-header-link ns-display))]
             {:name ns-display :type "Namespace" :path ns-link}))))
 

@@ -36,16 +36,6 @@
           (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
           :else (:full-name item)))))
 
-(defn get-ns-display-name
-  ([ns-] (get-ns-display-name ns- nil))
-  ([ns- api-type]
-   (cond
-     (= "special" ns-) "special forms"
-     (= "specialrepl" ns-) "special forms (repl)"
-     (= "syntax" ns-) "syntax forms"
-     (= "cljs.repl" ns-) (str ns- " (" (name api-type) ")")
-     :else ns-)))
-
 ;;----------------------------------------------------------------------
 ;; Sorting
 ;;----------------------------------------------------------------------

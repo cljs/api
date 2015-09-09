@@ -24,7 +24,6 @@
                                             fix-emoji]]
     [cljs-api-gen.display :refer [get-short-display-name
                                   get-full-display-name
-                                  get-ns-display-name
                                   sort-symbols
                                   compare-ns]]
     [cljs-api-gen.util :refer [mapmap
@@ -38,46 +37,6 @@
 (def ^:dynamic *result*
   "The current result that we are writing."
   nil)
-
-(def ns-descriptions
-  "FIXME: put this in the official docstrings if missing (patch request)"
-
-  {:library
-   {"cljs.core"                    "fundamental library of the ClojureScript language"
-    "special"                      "special forms (not in a namespace)"
-    "specialrepl"                  "REPL special forms (not in a namespace)"
-    "syntax"                       "syntax forms (not in a namespace)"
-    "cljs.pprint"                  "a pretty-printer for printing data structures"
-    "cljs.reader"                  "a reader to parse text and produce data structures"
-    "clojure.set"                  "set operations such as union/intersection"
-    "clojure.string"               "string operations"
-    "clojure.walk"                 "a generic tree walker for Clojure data structures"
-    "clojure.zip"                  "functional hierarchical zipper, w/ navigation/editing/enumeration"
-    "clojure.data"                 "non-core data functions"
-    "clojure.browser.dom"          "browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)"
-    "clojure.browser.event"        "browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)"
-    "clojure.browser.net"          "network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)"
-    "clojure.browser.repl"         "evaluate compiled cljs in a browser. send results back to server"
-    "clojure.core.reducers"        "a library for reduction and parallel folding (parallelism not supported)"
-    "clojure.reflect"              "DEPRECATED. Do not use, superceded by REPL enhancements."
-    "cljs.nodejs"                  "nodejs support functions"
-    "cljs.test"                    "a unit-testing framework"
-    "cljs.repl"                    "macros auto-imported into a ClojureScript REPL"
-    "cljs.js"                      "compile/analyze ClojureScript code at runtime"
-    }
-
-   :compiler
-   {
-    "cljs.analyzer.api" "programmatic access to the analyzer (producing AST)"
-    "cljs.compiler.api" "programmatic access to the compiler (emitting JS)"
-    "cljs.build.api"    "programmatic access to project-building facilities"
-    "cljs.repl"         "REPL (read eval print loop)"
-    "cljs.repl.browser" "browser-connected REPL"
-    "cljs.repl.node"    "Node.js REPL"
-    "cljs.repl.nashorn" "Nashorn REPL (JS on Java 8)"
-    "cljs.repl.rhino"   "Rhino REPL (JS on Java 6+)"
-
-    }})
 
 ;;--------------------------------------------------------------------------------
 ;; External links
@@ -540,15 +499,21 @@
         ns-symbols (->> (vals all)
                         (group-by :ns)
                         (mapmap transform-syms)
-                        (map (fn [[k v]]
-                               (let [ns-display (get-ns-display-name k api-type)]
-                                 {:ns k
+                        (map (fn [[ns- syms]]
+                               (let [ns-meta (get-in result [:namespaces ns-])
+                                     ns-display (or (:display ns-meta) ns-)
+                                     ns-desc (or (:caption ns-meta)
+                                                 (case api-type
+                                                   :library (:caption-library ns-meta)
+                                                   :compiler (:caption-compiler ns-meta)
+                                                   nil))]
+                                 {:ns ns-
                                   :ns-display ns-display
-                                  :ns-description (get-in ns-descriptions [api-type k])
+                                  :ns-description ns-desc
                                   :ns-link (md-header-link ns-display)
-                                  :symbols (if (= k "syntax")
-                                             (sort-symbols :full-name v)
-                                             v)})))
+                                  :symbols (if (= ns- "syntax")
+                                             (sort-symbols :full-name syms)
+                                             syms)})))
                         (sort-by :ns compare-ns))]
     ns-symbols))
 
