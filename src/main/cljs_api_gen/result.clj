@@ -302,15 +302,29 @@
   ([item curr-tag cljsdoc]
    (let [doc-version (last (filter #(or (nil? %) (cljs-cmp <= % curr-tag))
                                    (:versions cljsdoc)))
-         doc (get-in cljsdoc [:docs doc-version])]
-     (cond-> item
-       ;; don't overwrite signature if it's null
-       doc              (merge (select-keys doc [:examples :related :description :moved :usage :tags :known-as]))
-       (:display doc)   (merge (select-keys doc [:display]))
-       (:signature doc) (merge (select-keys doc [:signature]))))))
+         doc (get-in cljsdoc [:docs doc-version])
+         data (prune-map (select-keys doc
+                [:examples
+                 :known-as
+                 :display
+                 :caption
+                 :caption-library
+                 :caption-compiler
+                 :description
+                 :description-library
+                 :description-compiler
+                 :signature
+                 :usage
+                 :related
+                 :moved
+                 :tags
+                 ]))]
+     (merge item data))))
 
 (defn add-cljsdoc-to-result
   [result]
   (let [tag (-> result :release :cljs-tag)
-        update-symbols (fn [symbols] (mapmap #(add-cljsdoc % tag) symbols))]
-    (update-in result [:symbols] update-symbols)))
+        update (fn [symbols] (mapmap #(add-cljsdoc % tag) symbols))]
+    (-> result
+        (update-in [:symbols] update)
+        (update-in [:namespaces] update))))
