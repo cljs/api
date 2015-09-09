@@ -1,5 +1,3 @@
-__status 2015-07-21__: feature freeze. break time! moving to website form in August.
-
 # ClojureScript API Docs Builder
 
  <table>
