@@ -216,16 +216,16 @@
         new-ns-items (map #(make-item % nss-diff) (:all-names nss-diff))
         new-nss (zipmap (map :full-name new-ns-items) new-ns-items)
 
-        added? (into (:added? syms-diff) (:added? nss-diff))
-        removed? (into (:removed? syms-diff) (:removed? nss-diff))
-
         change (prune-map {:cljs-version *cljs-version*
                            :cljs-date *cljs-date*
                            :clj-version *clj-version*
                            :gclosure-lib *gclosure-lib*
                            :treader-version *treader-version*
-                           :added added?
-                           :removed removed?})
+
+                           ;; FIXME: add namespace changes once we decide we want it
+                           ;; (will have to fix write.clj to not assume all changes are symbol changes)
+                           :added (:added? syms-diff)
+                           :removed (:removed? syms-diff)})
         new-changes (conj prev-changes change)]
     {:symbols new-syms
      :namespaces new-nss
