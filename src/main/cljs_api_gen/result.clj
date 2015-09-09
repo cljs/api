@@ -130,6 +130,7 @@
                              #(-> % shadow-duplicates-by-order :merged)]))))
 
 (defn transform-items
+  "transforms a sequence of parsed items to a processed map of full-name -> item"
   [items]
   (->> items
        (map transform-item)
@@ -153,8 +154,14 @@
         (dissoc :removed))))
 
 (defn make-api-result
-  [items api-key prev-result]
-  (let [prev-api (get-in prev-result [:api api-key])
+  "Create API data for the given api-type.
+
+  items       = map full-name -> item (symbol or namespace data)
+  api-type    = :syntax | :library | :compiler
+  prev-result = previous result data (in its entirety)
+  "
+  [items api-type prev-result]
+  (let [prev-api (get-in prev-result [:api api-type])
         prev-all-syms (:symbols prev-result)
         prev-syms (select-keys prev-all-syms (:symbol-names prev-api))
 
@@ -179,12 +186,12 @@
              :removed? removed?
              :stayed? stayed?}))
 
-        curr-sym-names (->> items
+        curr-sym-names (->> (vals items)
                             (remove #(= "namespace" (:type %)))
                             (map :full-name)
                             set)
 
-        curr-ns-names (->> items
+        curr-ns-names (->> (vals items)
                            (filter #(= "namespace" (:type %)))
                            (map :full-name)
                            set)
@@ -203,12 +210,10 @@
               (contains? stayed? name-)  (assoc curr :history prev-hist)            ;; still here
               :else                      prev)))                                    ;; still removed
 
-        new-sym-items (map #(make-item % syms-diff)
-                           (:all-names syms-diff))
+        new-sym-items (map #(make-item % syms-diff) (:all-names syms-diff))
         new-syms (zipmap (map :full-name new-sym-items) new-sym-items)
 
-        new-ns-items (map #(make-item % nss-diff)
-                           (:all-names nss-diff))
+        new-ns-items (map #(make-item % nss-diff) (:all-names nss-diff))
         new-nss (zipmap (map :full-name new-ns-items) new-ns-items)
 
         added? (into (:added? syms-diff) (:added? nss-diff))
