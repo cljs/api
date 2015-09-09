@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [replace])
   (:require
     [cljs-api-gen.util :refer [mapmap]]
+    [cljs-api-gen.encode :refer [fullname->ns-name]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [split-lines trim lower-case replace]]))
 
@@ -16,7 +17,7 @@
 (defn transform-name [doc]
   (if-let [body (get doc "name")]
     (let [[full-name & search-terms] (section-as-list body)
-          [ns- name-] ((juxt namespace name) (symbol full-name))]
+          [ns- name-] (fullname->ns-name full-name)]
       (-> doc
           (assoc :ns ns-
                  :name name-

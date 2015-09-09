@@ -206,7 +206,8 @@
   [full-name]
   (or (nil? *result*)               ;; ignore if no known symbols supplied
       (not (using-latest-result?))  ;; possible for symbols to exist later, so ignore if not latest
-      (get-in *result* [:symbols full-name])))
+      (get-in *result* [:symbols full-name])
+      (get-in *result* [:namespaces full-name])))
 
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]

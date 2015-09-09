@@ -19,6 +19,22 @@
    "/"  "SLASH"
    })
 
+(defn fullname->ns-name
+  "fullname has a special meaning:
+
+  foo     <-- we consider a standalone symbol a namespace
+  foo/bar <-- normal qualified symbol
+
+  return [ns name] pair for the given 'fullname'
+  "
+  [fullname]
+  (let [[ns- name-] ((juxt namespace name) (symbol fullname))
+        qualified? (not (nil? ns-))]
+
+    (if qualified?
+      [ns- name-]
+      [name- nil])))
+
 (defn encode-name [name-]
   (reduce (fn [s [a b]] (replace s a b))
     (name name-) encoding))
@@ -37,13 +53,7 @@
 
 (defn encode-fullname
   [fullname]
-  (let [[ns- name-] ((juxt namespace name) (symbol fullname))
-
-        ;; NOTE: if our symbol is not fully-qualified, it can only mean
-        ;;       that it is a namespace, not an unqualified symbol.
-        qualified? (not (nil? ns-))
-        [ns- name-] (if qualified? [ns- name-] [name- nil])
-
+  (let [[ns- name-] (fullname->ns-name fullname)
         encoded (cond-> ns-
                   name- (str "_" (encode-name name-)))]
     encoded))

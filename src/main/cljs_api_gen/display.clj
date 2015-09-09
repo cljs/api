@@ -3,7 +3,7 @@
   (:require
     [clojure.string :refer [join replace split trim]]
     [cljs-api-gen.syntax :refer [syntax-order]]
-    [cljs-api-gen.util :refer [split-ns-and-name]]
+    [cljs-api-gen.encode :refer [fullname->ns-name]]
     ))
 
 ;;;  A 'pseudo-namespace' (e.g. special, specialrepl, syntax) shouldn't be
@@ -12,7 +12,7 @@
 
 (defn- full-name->item
   [full-name]
-  (let [[ns- name-] (split-ns-and-name full-name)]
+  (let [[ns- name-] (fullname->ns-name full-name)]
     {:full-name full-name
      :ns ns-
      :name name-}))
@@ -22,7 +22,9 @@
   [item]
   (let [item (cond-> item (string? item) full-name->item)]
     (or (:display item)
-        (:name item))))
+        (:name item)
+        (:ns item) ;; <-- for standalone namespace names
+        )))
 
 (defn get-full-display-name
   "Create a full display name for the given item if it has a pseudo-namespace."
