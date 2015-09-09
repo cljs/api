@@ -267,6 +267,13 @@
   [[_defmethod name- value :as form]]
   {:type "method"})
 
+(defn pseudo-ns-item
+  "added manually when parsing pseudo-namespaces"
+  [ns-]
+  {:type "namespace"
+   :pseudo-ns? true
+   :ns ns-})
+
 (defn parse-ns-form
   [[_ns name- & args :as form]]
   (let [meta- (meta name-)
@@ -873,8 +880,9 @@
                            *cur-repo* "clojurescript"]
                    (->> (read-all-ns-forms ns-with-specials :compiler)
                         (keep #(parse-special % docs))
-                        doall))]
-    specials))
+                        doall))
+        all (cons (pseudo-ns-item ns-) specials)]
+    all))
 
 ;; pseudo-namespace since repl special forms don't have a namespace
 (defmethod parse-ns ["specialrepl" :library] [ns- api]
@@ -882,13 +890,16 @@
         docs (first (keep parse-repl-special-docs forms))
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
-                   (first (keep #(parse-repl-specials % docs) forms)))]
-    specials))
+                   (first (keep #(parse-repl-specials % docs) forms)))
+        all (cons (pseudo-ns-item ns-) specials)]
+    all))
 
 (defmethod parse-ns ["syntax" :syntax] [ns- api]
-  (binding [*cur-ns* ns-]
-    (doall (concat (parse-syntax-forms)
-                   (parse-other-syntax)))))
+  (let [syntaxes (binding [*cur-ns* ns-]
+                   (doall (concat (parse-syntax-forms)
+                                  (parse-other-syntax))))
+        all (cons (pseudo-ns-item ns-) syntaxes)]
+    all))
 
 (defmethod parse-ns ["cljs.test" :library] [ns- api]
   (cond-> (parse-ns* ns- "clojurescript" :library)

@@ -56,6 +56,7 @@
   [x]
   (-> x
       (select-keys [:ns
+                    :pseudo-ns?
                     :name
                     :docstring
                     :author
