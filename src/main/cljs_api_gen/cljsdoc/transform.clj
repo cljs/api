@@ -14,6 +14,15 @@
        (remove #{""})
        vec))
 
+(defn transform-key
+  ([doc key- new-key] (transform-key doc key- new-key identity))
+  ([doc key- new-key process]
+   (if-let [value (get doc key-)]
+     (-> doc
+         (assoc new-key (process value))
+         (dissoc key-))
+     doc)))
+
 (defn transform-name [doc]
   (if-let [body (get doc "name")]
     (let [[full-name & search-terms] (section-as-list body)
@@ -26,59 +35,9 @@
           (dissoc "name")))
     doc))
 
-(defn transform-known-as [doc]
-  (if-let [known-as (get doc "known as")]
-    (-> doc
-        (assoc :known-as known-as)
-        (dissoc "known-as"))
-    doc))
-
-(defn transform-display [doc]
-  (if-let [display (get doc "display")]
-    (-> doc
-        (assoc :display display)
-        (dissoc "display"))
-    doc))
-
-(defn transform-caption [doc]
-  (if-let [caption (get doc "caption")]
-    (-> doc
-        (assoc :caption caption)
-        (dissoc "caption"))
-    doc))
-
-(defn transform-description [doc]
-  (if-let [desc (get doc "description")]
-    (-> doc
-        (assoc :description desc)
-        (dissoc "description"))
-    doc))
-
-(defn transform-signature [doc]
-  (if-let [sig (get doc "signature")]
-    (-> doc
-        (assoc :signature (section-as-list sig))
-        (dissoc "signature"))
-    doc))
-
-(defn transform-usage [doc]
-  (if-let [sig (get doc "usage")]
-    (-> doc
-        (assoc :usage (section-as-list sig))
-        (dissoc "usage"))
-    doc))
-
-(defn transform-type [doc]
-  (if-let [type- (get doc "type")]
-    (-> doc
-        (assoc :type (lower-case type-))
-        (dissoc "type"))
-    doc))
-
 (defn make-example
   [name- doc]
   {:id (replace name- #"example#?" "")
-   ;; TODO: markdown process content
    :content (get doc name-)})
 
 (defn transform-examples [doc]
@@ -91,40 +50,24 @@
         (apply dissoc d example-names))
       doc)))
 
-(defn transform-related [doc]
-  (if-let [related (get doc "related")]
-    (-> doc
-        (assoc :related (section-as-list related))
-        (dissoc "related"))
-    doc))
-
-(defn transform-moved [doc]
-  (if-let [moved (get doc "moved")]
-    (-> doc
-        (assoc :moved moved)
-        (dissoc "moved"))
-    doc))
-
-(defn transform-tags [doc]
-  (if-let [tags (get doc "tags")]
-    (-> doc
-        (assoc :tags (set (section-as-list tags)))
-        (dissoc "tags"))
-    doc))
-
 (defn transform-doc [doc]
   (-> doc
       transform-name
-      transform-known-as
-      transform-display
-      transform-description
-      transform-signature
-      transform-usage
-      transform-type
       transform-examples
-      transform-related
-      transform-moved
-      transform-tags))
+      (transform-key "known as" :known-as)
+      (transform-key "display" :display)
+      (transform-key "caption" :caption)
+      (transform-key "caption for library" :caption-library)
+      (transform-key "caption for compiler" :caption-compiler)
+      (transform-key "description" :description)
+      (transform-key "description for library" :description-library)
+      (transform-key "description for compiler" :description-compiler)
+      (transform-key "signature" :signature section-as-list)
+      (transform-key "usage" :usage section-as-list)
+      (transform-key "type" :type lower-case)
+      (transform-key "related" :related section-as-list)
+      (transform-key "moved" :moved)
+      (transform-key "tags" :tags section-as-list)))
 
 (defn transform-versioned-doc [doc]
   (let [docs (mapmap transform-doc (:docs doc))
