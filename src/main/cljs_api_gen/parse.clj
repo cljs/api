@@ -268,12 +268,14 @@
   {:type "method"})
 
 (defn parse-ns-form
-  [[_ns name- :as form]]
+  [[_ns name- & args :as form]]
   (let [meta- (meta name-)
-        docstring (:doc meta-)
+        doc (if (string? (first args))
+              (first args)
+              (:doc meta-))
         author (:author meta-)]
     {:type "namespace"
-     :docstring docstring
+     :docstring doc
      :author author
      }))
 

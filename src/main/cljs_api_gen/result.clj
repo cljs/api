@@ -114,11 +114,9 @@
 (defn combine-namespaces
   [items]
   ;; TODO
-  ;; - favor them in this order: .cljs, .cljc, .clj
-  ;; - get the first docstring available
-  ;; - get the first author available
-  ;; - combine the sources (not sure if useful yet)
-  (first items))
+  ;; we choose the last since the read.clj parses with the order:
+  ;; .clj, .cljs, .cljc (priority last)
+  (last items))
 
 (defn resolve-duplicates
   [items]
