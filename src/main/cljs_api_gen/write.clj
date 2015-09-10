@@ -115,16 +115,20 @@
 ;; symbol links in markdown
 ;;--------------------------------------------------------------------------------
 
+(def ^:dynamic *reflink-prefix* "")
+
 (defn resolve-reflink
   [[whole-match full-name]]
   (if-let [item (get-in *result* [:symbols full-name])]
-    (str "[`" (get-short-display-name item) "`](" (encode/encode-fullname full-name) ".md)")
+    (let [path (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
+      (str "[`" (get-short-display-name item) "`](" path ")"))
     whole-match))
 
 (defn resolve-named-reflink
   [[whole-match full-name]]
   (if (contains? (:symbols *result*) full-name)
-    (str "](" (encode/encode-fullname full-name) ".md)")
+    (let [path (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
+      (str "](" path ")"))
     whole-match))
 
 (defn resolve-reflinks
@@ -282,14 +286,14 @@
   (when full-name
     (let [item (get-in *result* [:symbols full-name])
           display (get-full-display-name item)
-          link (str (encode/encode-fullname full-name) ".md")]
+          link (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
       (cond-> (str "[`" display "`](" link ")")
          (:removed item) md-strikethru))))
 
 (defn add-related-links
   [{:keys [related] :as item}]
   (if related
-    (let [symbols (map ref-link related)]
+    (let [symbols (doall (map ref-link related))]
       (assoc item :related {:symbols symbols}))
     item))
 
@@ -304,31 +308,32 @@
   (-> item
       (update-in [:description] resolve-reflinks)
       (update-in [:examples] (fn [examples]
-                               (map #(update-in % [:content] resolve-reflinks) examples)))))
+                               (doall (map #(update-in % [:content] resolve-reflinks) examples))))))
 
 (defn ref-file-data
   [item]
-  (-> item
-      (assoc
-        :full-name (:full-name item)
-        :moved (ref-link (:moved item))
-        :display-name (cond-> (md-escape (get-full-display-name item))
-                        (:removed item) md-strikethru)
-        :data (with-out-str (pprint item))
-        :history (map history-change-shield (:history item))
-        :signature (let [sigs (:signature item)]
-                     (when (and (sequential? sigs) (pos? (count sigs)))
-                       {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
-                                                      (= "type" (:type item)) (str "."))
-                                              :args (sig-args %))
-                                   sigs)}))
-        :clj-symbol (make-clj-ref item)
-        :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
-      (add-external-doc-links)
-      (add-syntax-usage)
-      (add-related-links)
-      (add-source-extras)
-      (resolve-all-reflinks)))
+  (binding [*reflink-prefix* "../"] ;; assuming we are in a symbol's parent dir <ns>
+    (-> item
+        (assoc
+          :full-name (:full-name item)
+          :moved (ref-link (:moved item))
+          :display-name (cond-> (md-escape (get-full-display-name item))
+                          (:removed item) md-strikethru)
+          :data (with-out-str (pprint item))
+          :history (map history-change-shield (:history item))
+          :signature (let [sigs (:signature item)]
+                       (when (and (sequential? sigs) (pos? (count sigs)))
+                         {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
+                                                        (= "type" (:type item)) (str "."))
+                                                :args (sig-args %))
+                                     sigs)}))
+          :clj-symbol (make-clj-ref item)
+          :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
+        (add-external-doc-links)
+        (add-syntax-usage)
+        (add-related-links)
+        (add-source-extras)
+        (resolve-all-reflinks))))
 
 (defn dump-ref-file!
   [item]
