@@ -19,7 +19,7 @@
 
 (defn parse-doc
   "Convert cljsdoc content to a map of section title => section body text."
-  [content filename]
+  [content filename parentdir]
   (let [lines (split-lines content)
 
         ;; parse content as a list of section title/body pairs
@@ -44,6 +44,7 @@
         ;; final structure
         result (-> (into {} pairs)
                    (assoc :filename filename
+                          :parentdir parentdir
                           :sections titles
                           :empty-sections empty-titles))]
     result))

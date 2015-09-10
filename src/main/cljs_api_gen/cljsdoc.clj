@@ -7,7 +7,7 @@
     [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
-    [me.raynes.fs :refer [list-dir base-name exists?]]
+    [me.raynes.fs :refer [list-dir base-name exists? parent directory?]]
     [stencil.core :as stencil]
     [clansi.core :refer [style]]))
 
@@ -18,7 +18,8 @@
 (defn build-doc
   [file]
   (let [filename (base-name file)
-        doc (-> (parse-doc (slurp file) filename)
+        parentdir (base-name (parent file))
+        doc (-> (parse-doc (slurp file) filename parentdir)
                 versioned-doc
                 transform-versioned-doc)]
     (when (valid-doc? doc)
@@ -31,8 +32,16 @@
     true (str ".")))
 
 (defn cljsdoc-files [dir]
-  (let [files (list-dir dir)]
-    (filter #(.endsWith (.getName %) ".cljsdoc") files)))
+  (let [all (list-dir dir)
+        files (->> all
+                (remove directory?)
+                (filter #(.endsWith (.getName %) ".cljsdoc")))
+        subfiles (->> all
+                      (filter directory?)
+                      (map cljsdoc-files)
+                      (apply concat))]
+    (cond-> files
+      (seq subfiles) (concat subfiles))))
 
 (defn create-cljsdoc-stubs!
   [known-symbols]

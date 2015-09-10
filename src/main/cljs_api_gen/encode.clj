@@ -45,17 +45,16 @@
 
 (defn decode-fullname
   [fullname]
-  (if-let [[_ ns- name-] (re-find #"([^_]*)_(.*)" fullname)]
-    (str ns- "/" (decode-name name-))
-
-    ;; NOTE: if there is no underscore present, this is just a namespace name.
-    fullname))
+  (let [[ns- name-] (fullname->ns-name fullname)
+        decoded (cond-> ns-
+                  name- (str "/" (decode-name name-)))]
+    decoded))
 
 (defn encode-fullname
   [fullname]
   (let [[ns- name-] (fullname->ns-name fullname)
         encoded (cond-> ns-
-                  name- (str "_" (encode-name name-)))]
+                  name- (str "/" (encode-name name-)))]
     encoded))
 
 (defn assert-lossless

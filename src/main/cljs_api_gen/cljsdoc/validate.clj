@@ -6,7 +6,8 @@
                                           named-reflink-pattern]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
-    [cljs-api-gen.encode :refer [encode-fullname]]
+    [cljs-api-gen.encode :refer [encode-fullname
+                                 fullname->ns-name]]
     [cljs-api-gen.repo-cljs :refer [published-cljs-tag?
                                     published-cljs-tags
                                     cljs-version->tag
@@ -111,11 +112,14 @@
 
 (defn filename-error-msg
   "If filename is not valid, return error message."
-  [{:keys [full-name filename] :as doc}]
+  [{:keys [full-name filename parentdir] :as doc}]
   (when full-name
-    (let [expected (str (encode-fullname full-name) ".cljsdoc")]
-      (when (not= filename expected)
-        (str full-name " should be in a file called " expected)))))
+    (let [[ns- name-] (fullname->ns-name full-name)
+          actual (cond->> filename
+                     name- (str parentdir "/"))
+          expected (str (encode-fullname full-name) ".cljsdoc")]
+      (when (not= actual expected)
+        (str full-name " should be in " expected ", not " actual)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Validate Signature
