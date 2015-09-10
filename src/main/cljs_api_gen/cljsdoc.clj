@@ -7,7 +7,7 @@
     [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
-    [me.raynes.fs :refer [list-dir base-name exists? parent directory?]]
+    [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [stencil.core :as stencil]
     [clansi.core :refer [style]]))
 
@@ -49,6 +49,7 @@
     (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".cljsdoc")]
       (when-not (exists? filename)
         (encode/assert-lossless full-name)
+        (mkdir (parent filename))
         (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
         (spit filename
               (stencil/render-string
