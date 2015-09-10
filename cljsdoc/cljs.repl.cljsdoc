@@ -6,3 +6,10 @@ macros auto-imported into a ClojureScript REPL
 
 ===== Caption for Compiler
 interactive ClojureScript REPL (Read Eval Print Loop)
+
+===== Description for Library
+These macros are intended as utilities for use in a REPL session, but can be used
+outside of one as well.
+
+These macros are automatically included in a REPL (i.e. they do not need to be
+explicitly qualified or required.)

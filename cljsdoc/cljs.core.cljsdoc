@@ -3,3 +3,8 @@ cljs.core
 
 ===== Caption
 fundamental library of the ClojureScript language
+
+===== Description
+This is the fundamental library of ClojureScript.  All symbols defined
+in this namespace are automatically included (i.e. you do not need to
+explicitly qualify or require them).
