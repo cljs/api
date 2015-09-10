@@ -4,8 +4,8 @@
     [clojure.test :refer [deftest is]]))
 
 (deftest filename-test
-  (let [msg-bad  (filename-error-msg {:full-name "cljs.core/cond*->" :filename "cljs.core_cond*->.cljsdoc"})
-        msg-good (filename-error-msg {:full-name "cljs.core/cond*->" :filename "cljs.core_condSTAR-GT.cljsdoc"})]
+  (let [msg-bad  (filename-error-msg {:full-name "cljs.core/cond*->" :parentdir "cljs.core" :filename "cond*->.cljsdoc"})
+        msg-good (filename-error-msg {:full-name "cljs.core/cond*->" :parentdir "cljs.core" :filename "condSTAR-GT.cljsdoc"})]
     (is (= true (boolean msg-bad)))
     (is (= false (boolean msg-good)))))
 

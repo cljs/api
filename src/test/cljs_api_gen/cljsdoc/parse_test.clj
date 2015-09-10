@@ -3,8 +3,8 @@
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
     [clojure.test :refer [deftest is]]))
 
-(def example1-filename
-  "cljs.core_foo.cljsdoc")
+(def example1-parentdir "cljs.core")
+(def example1-filename "foo.cljsdoc")
 
 (def example1
 "
@@ -43,7 +43,8 @@ N/A
    "example#1" "N/A"
    "example#2" "N/A"
    "example#3" "N/A"
-   :filename "cljs.core_foo.cljsdoc"
+   :parentdir "cljs.core"
+   :filename "foo.cljsdoc"
    :sections ["name" "description" "example#1" "example#2" "example#3"]
    :empty-sections #{"empty1"
                      "empty2"
@@ -52,6 +53,6 @@ N/A
    })
 
 (deftest example1-test
-  (let [parsed (parse-doc example1 example1-filename)]
+  (let [parsed (parse-doc example1 example1-filename example1-parentdir)]
     (is (= parsed example1-parsed))))
 

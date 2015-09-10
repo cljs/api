@@ -6,8 +6,8 @@
     [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
     [clojure.test :refer [deftest is]]))
 
-(def example1-filename
-  "cljs.core_foo.cljsdoc")
+(def example1-parentdir "cljs.core")
+(def example1-filename "foo.cljsdoc")
 
 (def example1
 "
@@ -55,7 +55,8 @@ cljs.core/bar
                       "example#3"   "3 - 3308"
                       :sections ["name" "description" "moved" "example#2" "example#1" "example#3"]}}
    :versions [nil "0.0-3211" "0.0-3308"]
-   :filename "cljs.core_foo.cljsdoc"
+   :parentdir "cljs.core"
+   :filename "foo.cljsdoc"
    :sections ["name"
               "description"
               "description (0.0-3211)"
@@ -67,6 +68,6 @@ cljs.core/bar
    :empty-sections #{}})
 
 (deftest example1-test
-  (let [parsed (parse-doc example1 example1-filename)
+  (let [parsed (parse-doc example1 example1-filename example1-parentdir)
         versioned (versioned-doc parsed)]
     (is (= versioned example1-versioned))))
