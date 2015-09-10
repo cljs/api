@@ -30,7 +30,7 @@
                                split-ns-and-name]]
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-map]]
-    [me.raynes.fs :refer [exists? mkdir mkdirs]]
+    [me.raynes.fs :refer [exists? mkdir mkdirs parent]]
     [stencil.core :as stencil]
     ))
 
@@ -334,6 +334,7 @@
   [item]
   (encode/assert-lossless (:full-name item))
   (let [filename (item-filename item)]
+    (mkdir (parent filename))
     (spit (str filename ".md")
       (stencil/render-string
         (slurp "templates/ref.md")
