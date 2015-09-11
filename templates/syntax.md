@@ -1,6 +1,6 @@
 # ClojureScript Syntax
 
-{{ns-description}}
+{{description}}
 
 To let you know which syntax forms are also available in Clojure or [edn], we
 mark the syntax forms with clickable icons linking to the appropriate official

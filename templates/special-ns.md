@@ -1,6 +1,6 @@
-## {{ns-display}}
+## {{display}}
 
-{{ns-description}}
+{{description}}
 
  <table>
 <thead><tr>

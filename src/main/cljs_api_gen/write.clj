@@ -509,24 +509,25 @@
                         (mapmap transform-syms)
                         (map (fn [[ns- syms]]
                                (let [ns-meta (get-in result [:namespaces ns-])
-                                     ns-display (or (:display ns-meta) ns-)
-                                     ns-caption (or (:caption ns-meta)
+                                     display (or (:display ns-meta) ns-)
+                                     caption (or (:caption ns-meta)
                                                     (case api-type
                                                       :library (:caption-library ns-meta)
                                                       :compiler (:caption-compiler ns-meta)
                                                       nil))
-                                     ns-description (or (:description ns-meta)
+                                     description (or (:description ns-meta)
                                                         (case api-type
                                                           :library (:description-library ns-meta)
                                                           :compiler (:description-compiler ns-meta)
                                                           nil))]
                                  {:ns ns-
-                                  :ns-pseudo (:pseudo-ns? ns-meta)
-                                  :ns-display ns-display
-                                  :ns-caption ns-caption
-                                  :ns-description (or ns-description ns-caption)
-                                  :ns-docstring (:docstring ns-meta)
-                                  :ns-link (str (name api-type) "/" ns- ".md")
+                                  :pseudo (:pseudo-ns? ns-meta)
+                                  :display display
+                                  :caption caption
+                                  :description (or description caption)
+                                  :docstring (:docstring ns-meta)
+                                  :link (str (name api-type) "/" ns- ".md")
+                                  :history (map history-change-shield (:history ns-meta))
                                   :symbols (if (= ns- "syntax")
                                              (sort-symbols :full-name syms)
                                              syms)})))
@@ -545,8 +546,8 @@
         library-api (let [api (make :library)
                           ns-symbols (:ns-symbols api)]
                       (assoc api
-                             :ns-symbols (remove :ns-pseudo ns-symbols)
-                             :special-ns-symbols (filter :ns-pseudo ns-symbols)))
+                             :ns-symbols (remove :pseudo ns-symbols)
+                             :special-ns-symbols (filter :pseudo ns-symbols)))
 
         compiler-api (make :compiler)
         syntax-api (make :syntax)

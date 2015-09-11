@@ -5,7 +5,7 @@ The core ClojureScript library.
 Some symbols are not namespaced:
 
 {{#special-ns-symbols}}
-- [{{&ns-display}}]({{&ns-link}})
+- [{{&display}}]({{&link}})
 {{/special-ns-symbols}}
 
 The rest of the symbols are in the following namespaces:
@@ -13,7 +13,7 @@ The rest of the symbols are in the following namespaces:
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns-display}}]({{&ns-link}}) | {{&ns-caption}} |
+| [{{&display}}]({{&link}}) | {{&caption}} |
 {{/ns-symbols}}
 
 _See external API references for [Google Closure Library] and [JavaScript's

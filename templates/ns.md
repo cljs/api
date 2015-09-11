@@ -1,16 +1,17 @@
-## {{ns-display}}
+## {{display}}
 
  <table border="1">
 <tr>
 <td>namespace</td>
+<td>{{#history}}{{&.}} {{/history}}</td>
 </tr>
 </table>
 
-{{ns-description}}
+{{description}}
 
 ---
 
-{{#ns-docstring}}
+{{#docstring}}
 
 Source Docstring:
 
@@ -19,7 +20,7 @@ Source Docstring:
 ```
 
 ---
-{{/ns-docstring}}
+{{/docstring}}
 
  <table>
 <thead><tr>

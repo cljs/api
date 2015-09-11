@@ -5,5 +5,5 @@ The ClojureScript compiler, just the parts that are expected to be public and st
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}
-| [{{&ns-display}}]({{&ns-link}}) | {{&ns-caption}} |
+| [{{&display}}]({{&link}}) | {{&caption}} |
 {{/ns-symbols}}
