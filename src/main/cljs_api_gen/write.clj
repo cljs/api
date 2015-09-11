@@ -511,6 +511,7 @@
                      :name (:name item)
                      :type (:type item)
                      :parent-type (:parent-type item)
+                     :removed (:removed item)
                      :history (map history-change-shield (:history item))})
         transform-syms #(sort-items (map make-item %))
         ns-symbols (->> (vals all)
@@ -528,7 +529,14 @@
                                                         (case api-type
                                                           :library (:description-library ns-item)
                                                           :compiler (:description-compiler ns-item)
-                                                          nil))]
+                                                          nil))
+                                     symbols (if (= ns- "syntax")
+                                               (sort-symbols :full-name syms)
+                                               syms)
+                                     public-symbols (remove :removed symbols)
+                                     removed-symbols (filter :removed symbols)
+
+                                     ]
                                  {:ns ns-
                                   :pseudo (:pseudo-ns? ns-item)
                                   :clj-ns (make-clj-ref ns-item)
@@ -538,9 +546,9 @@
                                   :docstring (:docstring ns-item)
                                   :link (str (name api-type) "/" ns- ".md")
                                   :history (map history-change-shield (:history ns-item))
-                                  :symbols (if (= ns- "syntax")
-                                             (sort-symbols :full-name syms)
-                                             syms)})))
+                                  :symbols public-symbols
+                                  :removed (when (seq removed-symbols)
+                                             {:symbols removed-symbols})})))
                         (sort-by :ns compare-ns))]
     ns-symbols))
 
