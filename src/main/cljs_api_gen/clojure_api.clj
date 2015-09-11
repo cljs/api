@@ -12,6 +12,7 @@
 ;;--------------------------------------------------------------------------------
 
 (def versions ["1.3" "1.4" "1.5" "1.6" "1.7"])
+(def api-namespaces (atom {}))
 (def api-symbols (atom {}))
 
 (defn api-cache [v]
@@ -28,10 +29,14 @@
       (when-not (exists? cache-filename)
         (spit cache-filename (slurp (version-api-url v))))
       (let [data (read-string (slurp cache-filename))
+            namespaces (->> (:namespaces data)
+                            (map :name)
+                            set)
             symbols (->> (:vars data)
                          (map #(str (:namespace %) "/" (:name %)))
                          set)]
-        (swap! api-symbols assoc v symbols)))))
+        (swap! api-symbols assoc v symbols)
+        (swap! api-namespaces assoc v namespaces)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure's Types and Protocols
@@ -160,12 +165,23 @@
 (defn attach-clj-symbol
   "For the given API entry item, attach a :clj-symbol (full-name) for the related Clojure symbol."
   [item]
-  (let [clj-symbol? (get @api-symbols (clj-tag->api-key *clj-tag*))
+  (let [clj-version (clj-tag->api-key *clj-tag*)
+        clj-symbol? (get @api-symbols clj-version)
         lang-symbol? (get-lang-symbols! *clj-tag*)
         lookup-name (clj-lookup-name item)]
     (if (or (lang-symbol? lookup-name)
             (clj-symbol? lookup-name))
       (assoc item :clj-symbol lookup-name)
+      item)))
+
+(defn attach-clj-ns
+  [item]
+  (let [clj-version (clj-tag->api-key *clj-tag*)
+        clj-ns? (get @api-namespaces clj-version)
+        ns- (:ns item)
+        lookup-name (or (cljs-ns->clj ns-) ns-)]
+    (if (clj-ns? lookup-name)
+      (assoc item :clj-ns lookup-name)
       item)))
 
 (defn get-clojure-symbols-not-in-items

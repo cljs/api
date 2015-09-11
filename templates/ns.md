@@ -4,6 +4,11 @@
 <tr>
 <td>namespace</td>
 <td>{{#history}}{{&.}} {{/history}}</td>
+{{#clj-ns}}
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&display-name}}</samp>]({{&link}})
+</td>
+{{/clj-ns}}
 </tr>
 </table>
 

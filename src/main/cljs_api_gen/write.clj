@@ -16,7 +16,8 @@
                                  refs-dir
                                  site-dir
                                  edn-result-file]]
-    [cljs-api-gen.encode :as encode :refer [md-escape
+    [cljs-api-gen.encode :as encode :refer [fullname->ns-name
+                                            md-escape
                                             md-link-escape
                                             md-strikethru
                                             md-header-link
@@ -163,23 +164,25 @@
 
 (defn get-clj-link
   [full-name]
-  (let [ns- (-> full-name symbol namespace)
-        name- (-> full-name symbol name)]
-    (or ;; get syntax doc link
-        (-> full-name syntax-map :clj-doc)
+  (let [ns-url #(str "http://clojure.github.io/clojure/branch-master/" % "-api.html")
+        [ns- name-] (fullname->ns-name full-name)]
+    (if (nil? name-)
+      (ns-url ns-)
+      (or ;; get syntax doc link
+          (-> full-name syntax-map :clj-doc)
 
-        ;; get clojure.lang link
-        (when (= "clojure.lang" ns-)
-          (let [name- (or (lang-symbols->parent name-) name-)]
-            (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
+          ;; get clojure.lang link
+          (when (= "clojure.lang" ns-)
+            (let [name- (or (lang-symbols->parent name-) name-)]
+              (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
 
-        ;; get official clojure api link
-        (let [ns- (or (clj-ns->page-ns ns-) ns-)]
-          (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html#" (md-link-escape full-name))))))
+          ;; get official clojure api link
+          (let [ns- (or (clj-ns->page-ns ns-) ns-)]
+            (str (ns-url ns-) "#" (md-link-escape full-name)))))))
 
 (defn make-clj-ref
   [item]
-  (when-let [full-name (:clj-symbol item)]
+  (when-let [full-name (or (:clj-symbol item) (:clj-ns item))]
     {:full-name full-name
      :display-name (md-escape full-name)
      :import (= "clojure" (-> item :source :repo))
@@ -508,26 +511,27 @@
                         (group-by :ns)
                         (mapmap transform-syms)
                         (map (fn [[ns- syms]]
-                               (let [ns-meta (get-in result [:namespaces ns-])
-                                     display (or (:display ns-meta) ns-)
-                                     caption (or (:caption ns-meta)
+                               (let [ns-item (get-in result [:namespaces ns-])
+                                     display (or (:display ns-item) ns-)
+                                     caption (or (:caption ns-item)
                                                     (case api-type
-                                                      :library (:caption-library ns-meta)
-                                                      :compiler (:caption-compiler ns-meta)
+                                                      :library (:caption-library ns-item)
+                                                      :compiler (:caption-compiler ns-item)
                                                       nil))
-                                     description (or (:description ns-meta)
+                                     description (or (:description ns-item)
                                                         (case api-type
-                                                          :library (:description-library ns-meta)
-                                                          :compiler (:description-compiler ns-meta)
+                                                          :library (:description-library ns-item)
+                                                          :compiler (:description-compiler ns-item)
                                                           nil))]
                                  {:ns ns-
-                                  :pseudo (:pseudo-ns? ns-meta)
+                                  :pseudo (:pseudo-ns? ns-item)
+                                  :clj-ns (make-clj-ref ns-item)
                                   :display display
                                   :caption caption
                                   :description (or description caption)
-                                  :docstring (:docstring ns-meta)
+                                  :docstring (:docstring ns-item)
                                   :link (str (name api-type) "/" ns- ".md")
-                                  :history (map history-change-shield (:history ns-meta))
+                                  :history (map history-change-shield (:history ns-item))
                                   :symbols (if (= ns- "syntax")
                                              (sort-symbols :full-name syms)
                                              syms)})))
