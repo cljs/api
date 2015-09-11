@@ -546,7 +546,7 @@
                           ns-symbols (:ns-symbols api)]
                       (assoc api
                              :ns-symbols (remove :ns-pseudo ns-symbols)
-                             :pseudo-ns-symbols (filter :ns-pseudo ns-symbols)))
+                             :special-ns-symbols (filter :ns-pseudo ns-symbols)))
 
         compiler-api (make :compiler)
         syntax-api (make :syntax)
@@ -571,6 +571,8 @@
           (let [filename (full-path filename)
                 ns-dir (full-path ns-dir)]
             (spit filename (render-template templ data))
+            (doseq [ns-data (:special-ns-symbols data)]
+              (spit (str ns-dir "/" (:ns ns-data) ".md") (render-template "special-ns.md" ns-data)))
             (doseq [ns-data (:ns-symbols data)]
               (spit (str ns-dir "/" (:ns ns-data) ".md") (render-template "ns.md" ns-data)))))]
 
