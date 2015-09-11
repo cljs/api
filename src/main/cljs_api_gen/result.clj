@@ -105,6 +105,7 @@
     (when (and (= "function" (:type item))
                (= "macro" (:type (first shadowed))))
       (-> merged
+          (assoc :type "function/macro")
           (assoc-in [:source :title] "Function code")
           (update-in [:extra-sources] vec)
           (assoc-in [:extra-sources 0 :title] "Macro code")))))

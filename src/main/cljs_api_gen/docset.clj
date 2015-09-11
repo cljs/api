@@ -46,6 +46,7 @@
    "type"                "Type"
    "macro"               "Macro"
    "function"            "Function"
+   "function/macro"      "Function"
    "special form"        "Statement" ;; <-- Pending "Special Form"
    "special form (repl)" "Statement" ;;     (avaiable in next Dash version)
    "tagged literal"      "Tag"
