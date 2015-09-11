@@ -167,7 +167,13 @@
   (let [ns-url #(str "http://clojure.github.io/clojure/branch-master/" % "-api.html")
         [ns- name-] (fullname->ns-name full-name)]
     (if (nil? name-)
-      (ns-url ns-)
+
+      ;; namespace
+      (if-let [page-ns (clj-ns->page-ns ns-)]
+        (str (ns-url page-ns) "#" ns-)
+        (ns-url ns-))
+
+      ;; symbol
       (or ;; get syntax doc link
           (-> full-name syntax-map :clj-doc)
 

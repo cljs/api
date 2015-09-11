@@ -10,11 +10,20 @@ Some symbols are not namespaced:
 
 The rest of the symbols are in the following namespaces:
 
-| Namespace | Description |
-|-----------|-------------|
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Namespace</th>
+<th>Description</th>
+</tr></thead>
 {{#ns-symbols}}
-| [{{&display}}]({{&link}}) | {{&caption}} |
+<tr>
+<td>{{#clj-ns}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{/clj-ns}}</td>
+<td>[{{&display}}]({{&link}})</td>
+<td>{{&caption}}</td>
+</tr>
 {{/ns-symbols}}
+</table>
 
 _See external API references for [Google Closure Library] and [JavaScript's
 native library], both accessible from every ClojureScript application._
