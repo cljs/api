@@ -199,8 +199,8 @@
         nss-diff (get-diff prev-nss curr-ns-names)
 
         make-item
-        (fn [name- {:keys [removed? added? stayed?] :as diff}]
-          (let [prev (get prev-syms name-)
+        (fn [name- prevs {:keys [removed? added? stayed?] :as diff}]
+          (let [prev (get prevs name-)
                 prev-hist (:history prev)
                 curr (get items name-)]
             (cond
@@ -209,10 +209,10 @@
               (contains? stayed? name-)  (assoc curr :history prev-hist)            ;; still here
               :else                      prev)))                                    ;; still removed
 
-        new-sym-items (map #(make-item % syms-diff) (:all-names syms-diff))
+        new-sym-items (map #(make-item % prev-syms syms-diff) (:all-names syms-diff))
         new-syms (zipmap (map :full-name new-sym-items) new-sym-items)
 
-        new-ns-items (map #(make-item % nss-diff) (:all-names nss-diff))
+        new-ns-items (map #(make-item % prev-nss nss-diff) (:all-names nss-diff))
         new-nss (zipmap (map :full-name new-ns-items) new-ns-items)
 
         change (prune-map {:cljs-version *cljs-version*
