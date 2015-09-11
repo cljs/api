@@ -2,6 +2,14 @@
 
 The core ClojureScript library.
 
+Some symbols are not namespaced:
+
+{{#pseudo-ns-symbols}}
+- [{{&ns-display}}]({{&ns-link}})
+{{/pseudo-ns-symbols}}
+
+The rest of the symbols are in the following namespaces:
+
 | Namespace | Description |
 |-----------|-------------|
 {{#ns-symbols}}

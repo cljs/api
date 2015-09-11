@@ -521,6 +521,7 @@
                                                           :compiler (:description-compiler ns-meta)
                                                           nil))]
                                  {:ns ns-
+                                  :ns-pseudo (:pseudo-ns? ns-meta)
                                   :ns-display ns-display
                                   :ns-caption ns-caption
                                   :ns-description (or ns-description ns-caption)
@@ -541,7 +542,12 @@
                   :no-changes no-changes
                   :ns-symbols ns-symbols}))
 
-        library-api (make :library)
+        library-api (let [api (make :library)
+                          ns-symbols (:ns-symbols api)]
+                      (assoc api
+                             :ns-symbols (remove :ns-pseudo ns-symbols)
+                             :pseudo-ns-symbols (filter :ns-pseudo ns-symbols)))
+
         compiler-api (make :compiler)
         syntax-api (make :syntax)
         syntax (first (:ns-symbols syntax-api))
