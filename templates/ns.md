@@ -1,15 +1,25 @@
-## {{title}}
+## {{ns-display}}
 
-{{description}}
+ <table border="1">
+<tr>
+<td>namespace</td>
+</tr>
+</table>
 
-{{#docstring}}
+{{ns-description}}
 
-__Namespace Docstring__:
+---
+
+{{#ns-docstring}}
+
+Source Docstring:
 
 ```
 {{&.}}
 ```
-{{/docstring}}
+
+---
+{{/ns-docstring}}
 
  <table>
 <thead><tr>

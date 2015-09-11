@@ -1,4 +1,4 @@
-# Syntax
+# ClojureScript Syntax
 
 {{ns-description}}
 

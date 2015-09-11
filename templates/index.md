@@ -23,17 +23,26 @@ and supplemented by curated descriptions, examples, and cross-refs.
 
 __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#offline-docset-for-dash)__
 
----
+## Table of Contents
 
-{{syntax}}
+This reference is divided into three categories:
 
----
+ <dl>
+<dt>[Syntax]({{&syntax-link}})</dt>
+<dd>
+index of ClojureScript's syntax forms
+</dd>
 
-{{library}}
+<dt>[Library API]({{&library-link}})</dt>
+<dd>
+core ClojureScript library symbols
+</dd>
 
----
-
-{{compiler}}
+<dt>[Compiler API]({{&compiler-link}})</dt>
+<dd>
+ClojureScript analysis and compilation
+</dd>
+</dl>
 
 ---
 

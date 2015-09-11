@@ -219,6 +219,12 @@
         all (sort-symbols :full-name (concat added removed))]
     all))
 
+(defn render-template
+  [filename data]
+  (-> (slurp (str "templates/" filename))
+      (stencil/render-string data)
+      (fix-emoji)))
+
 ;;--------------------------------------------------------------------------------
 ;; ref file
 ;;--------------------------------------------------------------------------------
@@ -341,9 +347,7 @@
   (let [filename (item-filename item)]
     (mkdir (parent filename))
     (spit (str filename ".md")
-      (stencil/render-string
-        (slurp "templates/ref.md")
-        (ref-file-data item)))))
+      (render-template "ref.md" (ref-file-data item)))))
 
 ;;--------------------------------------------------------------------------------
 ;; history file
@@ -411,10 +415,7 @@
 
 (defn dump-history! [result]
   (spit (str *output-dir* "/HISTORY.md")
-        (fix-emoji (stencil/render-string
-          (slurp "templates/history.md")
-          (history-file-data result)
-          ))))
+        (render-template "history.md" (history-file-data result))))
 
 ;;--------------------------------------------------------------------------------
 ;; unported file
@@ -442,9 +443,7 @@
 
 (defn dump-unported! [result]
   (spit (str *output-dir* "/UNPORTED.md")
-        (fix-emoji (stencil/render-string
-          (slurp "templates/unported.md")
-          (unported-file-data result)))))
+        (render-template "unported.md" (unported-file-data result))))
 
 ;;--------------------------------------------------------------------------------
 ;; index file
@@ -489,11 +488,14 @@
         get-display-name (fn [item]
                            (cond-> (md-escape (get-short-name item))
                              (:removed item) md-strikethru))
+        reflink-prefix (if (= api-type :syntax)
+                         ""
+                         "../")
         make-item (fn [item]
                     {:display-name (get-display-name item)
                      :full-name (:full-name item)
                      :display-prefix (when (:parent-type item) " └── ")
-                     :link (str refs-dir "/" (:full-name-encode item) ".md")
+                     :link (str reflink-prefix (:full-name-encode item) ".md")
                      :clj-symbol (make-clj-ref item)
                      :clj-doc (:clj-doc item)
                      :edn-doc (:edn-doc item)
@@ -508,41 +510,72 @@
                         (map (fn [[ns- syms]]
                                (let [ns-meta (get-in result [:namespaces ns-])
                                      ns-display (or (:display ns-meta) ns-)
-                                     ns-desc (or (:caption ns-meta)
-                                                 (case api-type
-                                                   :library (:caption-library ns-meta)
-                                                   :compiler (:caption-compiler ns-meta)
-                                                   nil))]
+                                     ns-caption (or (:caption ns-meta)
+                                                    (case api-type
+                                                      :library (:caption-library ns-meta)
+                                                      :compiler (:caption-compiler ns-meta)
+                                                      nil))
+                                     ns-description (or (:description ns-meta)
+                                                        (case api-type
+                                                          :library (:description-library ns-meta)
+                                                          :compiler (:description-compiler ns-meta)
+                                                          nil))]
                                  {:ns ns-
                                   :ns-display ns-display
-                                  :ns-description ns-desc
-                                  :ns-link (md-header-link ns-display)
+                                  :ns-caption ns-caption
+                                  :ns-description (or ns-description ns-caption)
+                                  :ns-docstring (:docstring ns-meta)
+                                  :ns-link (str (name api-type) "/" ns- ".md")
                                   :symbols (if (= ns- "syntax")
                                              (sort-symbols :full-name syms)
                                              syms)})))
                         (sort-by :ns compare-ns))]
     ns-symbols))
 
-(defn index-file-data
-  [result]
+(defn dump-index! [result]
   (let [make (fn [api-type]
                (let [changes (index-api-changes result api-type)
                      no-changes (if (zero? (count changes)) true nil)
                      ns-symbols (index-api-symbols result api-type)]
                  {:changes changes
                   :no-changes no-changes
-                  :ns-symbols ns-symbols}))]
-    {:library-api (make :library)
-     :compiler-api (make :compiler)
-     :syntax-api (make :syntax)
-     :release (:release result)}))
+                  :ns-symbols ns-symbols}))
 
-(defn dump-index! [result]
-  (spit (str *output-dir* "/INDEX.md")
-        (fix-emoji (stencil/render-string
-          (slurp "templates/index.md")
-          (index-file-data result)
-          ))))
+        library-api (make :library)
+        compiler-api (make :compiler)
+        syntax-api (make :syntax)
+        syntax (first (:ns-symbols syntax-api))
+
+        full-path #(str *output-dir* "/" %)
+
+        library-dir (str refs-dir "/library")
+        compiler-dir (str refs-dir "/compiler")
+
+        library-file (str library-dir ".md")
+        compiler-file (str compiler-dir ".md")
+        syntax-file (str refs-dir "/syntax.md")
+
+        index-data {:library-link library-file
+                    :compiler-link compiler-file
+                    :syntax-link syntax-file
+                    :release (:release result)}
+
+        dump-api-index!
+        (fn [filename ns-dir templ data]
+          (let [filename (full-path filename)
+                ns-dir (full-path ns-dir)]
+            (spit filename (render-template templ data))
+            (doseq [ns-data (:ns-symbols data)]
+              (spit (str ns-dir "/" (:ns ns-data) ".md") (render-template "ns.md" ns-data)))))]
+
+    (mkdir (full-path library-dir))
+    (mkdir (full-path compiler-dir))
+
+    (dump-api-index! library-file library-dir "library.md" library-api)
+    (dump-api-index! compiler-file compiler-dir "compiler.md" compiler-api)
+    (spit (full-path syntax-file) (render-template "syntax.md" syntax))
+
+    (spit (full-path "INDEX.md") (render-template "index.md" index-data))))
 
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
@@ -655,7 +688,7 @@
   [result]
   ;; URL: /<version>/index.html
   ;; same as index, but different ns links
-  (let [change-ns-links (fn [ns-symbols api-type]
+  #_(let [change-ns-links (fn [ns-symbols api-type]
                           (map #(assoc % :ns-link
                                   (str "/" site-docs-root "/" (site-url-ns api-type (:ns %))))
                             ns-symbols))
