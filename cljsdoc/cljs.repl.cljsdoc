@@ -8,8 +8,10 @@ macros auto-imported into a ClojureScript REPL
 interactive ClojureScript REPL (Read Eval Print Loop)
 
 ===== Description for Library
-These macros are intended as utilities for use in a REPL session, but can be used
-outside of one as well.
 
-These macros are automatically included in a REPL (i.e. they do not need to be
-explicitly qualified or required.)
+This namespace mainly provides reflection capabilities to assist you in
+exploring code in a REPL.  It comes with macros that are automatically imported
+into your REPL environment, but you can use them outside of one as well.
+
+These macros allow you to explore code by listing/searching available vars in a
+namespace and viewing a var's documentation or source.

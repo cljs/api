@@ -6,8 +6,8 @@ cljs.repl/pst
 
 ===== Description
 
-__P__rint __s__tack __t__race for a given exception `e` or the most recent
-exception, stored implicitly by `*e`.
+Print Stack Trace for a given exception `e` or the most recent
+exception, stored implicitly by [cljs.core/*e].
 
 ===== TODO
 
