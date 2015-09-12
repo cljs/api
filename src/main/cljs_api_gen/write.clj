@@ -530,6 +530,9 @@
                                                           :library (:description-library ns-item)
                                                           :compiler (:description-compiler ns-item)
                                                           nil))
+                                     description (when description
+                                                   (binding [*reflink-prefix* "../"]
+                                                     (resolve-reflinks description)))
                                      symbols (if (= ns- "syntax")
                                                (sort-symbols :full-name syms)
                                                syms)
