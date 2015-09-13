@@ -8,7 +8,8 @@
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
-                                          unnamed-doclink-pattern]]
+                                          unnamed-doclink-pattern
+                                          valid-doclink?]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -118,14 +119,19 @@
 
 (def ^:dynamic *doclink-prefix* "")
 
-(defn valid-fullname?
+(defn doclink-path
   [full-name]
-  (or (contains? (:symbols *result*) full-name)
-      (contains? (:namespaces *result*) full-name)))
+  (let [[a b] (fullname->ns-name full-name)
+        ns-link? (or (and (= "syntax" a) (nil? b))
+                     (#{"library" "compiler"} a))
+        encoded (if ns-link?
+                  full-name
+                  (encode/encode-fullname full-name))]
+    (str *doclink-prefix* encoded ".md")))
 
 (defn insert-doclink-name
   [[whole-match full-name]]
-  (if (valid-fullname? full-name)
+  (if (valid-doclink? *result* full-name)
     (let [name- (get-short-display-name full-name)]
       (str "[`" name- "`]" whole-match))
     whole-match))
@@ -135,14 +141,13 @@
   (->> md-body
        (re-seq doclink-pattern)
        (map second)
-       (filter valid-fullname?)))
+       (filter #(valid-doclink? *result* %))))
 
 (defn doclinks-md-biblio
   [md-body]
   (join "\n"
     (for [full-name (valid-doclinks md-body)]
-      (let [path (str *doclink-prefix* (encode/encode-fullname full-name) ".md")]
-        (str "[doc:" full-name "]:" path)))))
+      (str "[doc:" full-name "]:" (doclink-path full-name)))))
 
 (defn process-doclinks
   "Process doclinks in given markdown body."
@@ -308,19 +313,21 @@
         (update-in [:source] add-link)
         (update-in [:extra-sources] #(map add-link %)))))
 
-(defn ref-link
+(defn unprefixed-doclink
+  "Process a doclink from Related or Moved section.
+  (no `doc:` prefix like when they appear in markdown sections)"
   [full-name]
   (when full-name
     (let [item (get-in *result* [:symbols full-name])
           display (get-full-display-name item)
-          link (str *doclink-prefix* (encode/encode-fullname full-name) ".md")]
+          link (doclink-path full-name)]
       (cond-> (str "[`" display "`](" link ")")
          (:removed item) md-strikethru))))
 
 (defn add-related-links
   [{:keys [related] :as item}]
   (if related
-    (let [symbols (doall (map ref-link related))]
+    (let [symbols (doall (map unprefixed-doclink related))]
       (assoc item :related {:symbols symbols}))
     item))
 
@@ -343,7 +350,7 @@
     (-> item
         (assoc
           :full-name (:full-name item)
-          :moved (ref-link (:moved item))
+          :moved (unprefixed-doclink (:moved item))
           :display-name (cond-> (md-escape (get-full-display-name item))
                           (:removed item) md-strikethru)
           :data (with-out-str (pprint item))

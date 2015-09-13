@@ -3,7 +3,8 @@
     [java.util.regex Pattern])
   (:require
     [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
-                                          unnamed-doclink-pattern]]
+                                          unnamed-doclink-pattern
+                                          valid-doclink?]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname
@@ -218,6 +219,14 @@
       (get-in *result* [:symbols full-name])
       (get-in *result* [:namespaces full-name])))
 
+(defn doclink-check-pass?
+  "Determines if we should pass the doclink check.
+  (very similar to `symbol-check-pass?`, please see `cljs-api-gen.cljsdoc.doclink` for details)"
+  [full-name]
+  (or (nil? *result*)               ;; ignore if no known symbols supplied
+      (not (using-latest-result?))  ;; possible for symbols to exist later, so ignore if not latest
+      (valid-doclink? *result* full-name)))
+
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]
   (when-not (symbol-check-pass? full-name)
@@ -229,7 +238,7 @@
 
 (defn related-missing-error-msg*
   [full-name]
-  (when-not (symbol-check-pass? full-name)
+  (when-not (doclink-check-pass? full-name)
     (str "Related symbol '" full-name "' is an unknown symbol.")))
 
 (defn related-missing-error-msg
@@ -239,13 +248,19 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Reflinks
+;; Validate Doclinks
 ;;--------------------------------------------------------------------------------
 
 (defn doclink-error
   [[whole-match full-name]]
-  (when-not (symbol-check-pass? full-name)
-    (str "Unknown symbol reference: " full-name)))
+  (when-not (doclink-check-pass? full-name)
+    (let [[ns- name-] (fullname->ns-name full-name)
+          ns-only? (nil? name-)]
+    (cond-> (str "Unknown doclink reference: " full-name)
+      ns-only?  (str "\n"
+                     "     when linking namespaces, please prefix it with the API.  examples:\n"
+                     "      - library/cljs.repl\n"
+                     "      - compiler/cljs.repl")))))
 
 (defn doclink-missing-error-msg*
   "Gather missing doclinks from given markdown body text."
