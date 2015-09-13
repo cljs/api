@@ -14,3 +14,5 @@ This is useful in a REPL so you can quickly reference symbols, reload
 namespaces if they have changed since you've started the REPL, or change your
 evaluation context to a specific namespace.
 
+You can also use the [`cljs.repl` macros][doc:library/cljs.repl] for exploring
+code from the REPL.
