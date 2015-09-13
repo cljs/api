@@ -2,8 +2,8 @@
   (:import
     [java.util.regex Pattern])
   (:require
-    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern
-                                          named-reflink-pattern]]
+    [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
+                                          unnamed-doclink-pattern]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname
@@ -242,25 +242,24 @@
 ;; Validate Reflinks
 ;;--------------------------------------------------------------------------------
 
-(defn ref-error
+(defn doclink-error
   [[whole-match full-name]]
   (when-not (symbol-check-pass? full-name)
     (str "Unknown symbol reference: " full-name)))
 
-(defn reflink-missing-error-msg*
-  "Gather missing reflinks from given markdown body text."
+(defn doclink-missing-error-msg*
+  "Gather missing doclinks from given markdown body text."
   [md-body]
-  (let [ref-links (concat (re-seq reflink-pattern md-body)
-                          (re-seq named-reflink-pattern md-body))
-        msgs (keep ref-error ref-links)]
+  (let [doclinks (re-seq doclink-pattern md-body)
+        msgs (keep doclink-error doclinks)]
     (when (seq msgs)
       (join "\n" msgs))))
 
-(defn reflink-missing-error-msg
-  "Gather missing reflinks from markdown description and examples."
+(defn doclink-missing-error-msg
+  "Gather missing doclinks from markdown description and examples."
   [{:keys [description examples] :as doc}]
   (let [md-bodies (keep identity (cons description (map :content examples)))
-        msgs (keep reflink-missing-error-msg* md-bodies)]
+        msgs (keep doclink-missing-error-msg* md-bodies)]
     (when (seq msgs)
       (join "\n" msgs))))
 
@@ -294,7 +293,7 @@
    (make-multi-version examples-error-msg!)
    (make-multi-version symbol-unknown-error-msg)
    (make-multi-version related-missing-error-msg)
-   (make-multi-version reflink-missing-error-msg)
+   (make-multi-version doclink-missing-error-msg)
    ;; (make-multi-version duplicate-sections-error-msg)
    filename-error-msg
    unrecognized-versions-error-msg

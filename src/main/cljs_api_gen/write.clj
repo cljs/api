@@ -7,8 +7,8 @@
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
     [fipp.edn :refer [pprint]]
-    [cljs-api-gen.cljsdoc.reflink :refer [reflink-pattern
-                                          named-reflink-pattern]]
+    [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
+                                          unnamed-doclink-pattern]]
     [cljs-api-gen.repo-cljs :refer [cljs-tag->version *clj-tag*]]
     [cljs-api-gen.encode :refer [encode-fullname]]
     [cljs-api-gen.config :refer [*output-dir*
@@ -116,29 +116,41 @@
 ;; symbol links in markdown
 ;;--------------------------------------------------------------------------------
 
-(def ^:dynamic *reflink-prefix* "")
+(def ^:dynamic *doclink-prefix* "")
 
-(defn resolve-reflink
+(defn valid-fullname?
+  [full-name]
+  (or (contains? (:symbols *result*) full-name)
+      (contains? (:namespaces *result*) full-name)))
+
+(defn insert-doclink-name
   [[whole-match full-name]]
-  (if-let [item (get-in *result* [:symbols full-name])]
-    (let [path (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
-      (str "[`" (get-short-display-name item) "`](" path ")"))
+  (if (valid-fullname? full-name)
+    (let [name- (get-short-display-name full-name)]
+      (str "[`" name- "`]" whole-match))
     whole-match))
 
-(defn resolve-named-reflink
-  [[whole-match full-name]]
-  (if (contains? (:symbols *result*) full-name)
-    (let [path (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
-      (str "](" path ")"))
-    whole-match))
+(defn valid-doclinks
+  [md-body]
+  (->> md-body
+       (re-seq doclink-pattern)
+       (map second)
+       (filter valid-fullname?)))
 
-(defn resolve-reflinks
-  "Replace symbol reflinks in given markdown body."
+(defn doclinks-md-biblio
+  [md-body]
+  (join "\n"
+    (for [full-name (valid-doclinks md-body)]
+      (let [path (str *doclink-prefix* (encode/encode-fullname full-name) ".md")]
+        (str "[doc:" full-name "]:" path)))))
+
+(defn process-doclinks
+  "Process doclinks in given markdown body."
   [md-body]
   (when md-body
     (-> md-body
-        (replace reflink-pattern resolve-reflink)
-        (replace named-reflink-pattern resolve-named-reflink))))
+        (replace unnamed-doclink-pattern insert-doclink-name)
+        (str "\n\n" (doclinks-md-biblio md-body)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Result dump
@@ -301,7 +313,7 @@
   (when full-name
     (let [item (get-in *result* [:symbols full-name])
           display (get-full-display-name item)
-          link (str *reflink-prefix* (encode/encode-fullname full-name) ".md")]
+          link (str *doclink-prefix* (encode/encode-fullname full-name) ".md")]
       (cond-> (str "[`" display "`](" link ")")
          (:removed item) md-strikethru))))
 
@@ -318,16 +330,16 @@
     (assoc item :usage {:usages (map md-escape usage)})
     item))
 
-(defn resolve-all-reflinks
+(defn process-all-doclinks
   [item]
   (-> item
-      (update-in [:description] resolve-reflinks)
+      (update-in [:description] process-doclinks)
       (update-in [:examples] (fn [examples]
-                               (doall (map #(update-in % [:content] resolve-reflinks) examples))))))
+                               (doall (map #(update-in % [:content] process-doclinks) examples))))))
 
 (defn ref-file-data
   [item]
-  (binding [*reflink-prefix* "../"] ;; assuming we are in a symbol's parent dir <ns>
+  (binding [*doclink-prefix* "../"] ;; assuming we are in a symbol's parent dir <ns>
     (-> item
         (assoc
           :full-name (:full-name item)
@@ -348,7 +360,7 @@
         (add-syntax-usage)
         (add-related-links)
         (add-source-extras)
-        (resolve-all-reflinks))))
+        (process-all-doclinks))))
 
 (defn dump-ref-file!
   [item]
@@ -497,14 +509,14 @@
         get-display-name (fn [item]
                            (cond-> (md-escape (get-short-name item))
                              (:removed item) md-strikethru))
-        reflink-prefix (if (= api-type :syntax)
+        doclink-prefix (if (= api-type :syntax)
                          ""
                          "../")
         make-item (fn [item]
                     {:display-name (get-display-name item)
                      :full-name (:full-name item)
                      :display-prefix (when (:parent-type item) " └── ")
-                     :link (str reflink-prefix (:full-name-encode item) ".md")
+                     :link (str doclink-prefix (:full-name-encode item) ".md")
                      :clj-symbol (make-clj-ref item)
                      :clj-doc (:clj-doc item)
                      :edn-doc (:edn-doc item)
@@ -531,8 +543,8 @@
                                                           :compiler (:description-compiler ns-item)
                                                           nil))
                                      description (when description
-                                                   (binding [*reflink-prefix* "../"]
-                                                     (resolve-reflinks description)))
+                                                   (binding [*doclink-prefix* "../"]
+                                                     (process-doclinks description)))
                                      symbols (if (= ns- "syntax")
                                                (sort-symbols :full-name syms)
                                                syms)
