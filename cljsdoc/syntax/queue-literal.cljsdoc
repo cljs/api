@@ -14,7 +14,7 @@ Create a persistent queue. The form following `#queue` must be a vector.
 Queues are the only core collection type that requires a tagged literal to
 create, while the other collections have built-in delimiters `()` `[]` `{}` `#{}`.
 
-See [cljs.core/PersistentQueue] for data structure details.
+See [doc:cljs.core/PersistentQueue] for data structure details.
 
 ===== Notes
 

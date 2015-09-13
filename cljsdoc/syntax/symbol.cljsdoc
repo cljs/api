@@ -19,17 +19,17 @@ Some naming rules:
 - can contain special characters `. * + ! - _ ? $ % & = < > : #`, as long as:
   - if starting with `-`, `+`, or `.`, next character cannot be numeric (would be interpreted as number)
   - cannot start with `:` and `#`
-- symbols starting or ending with a decimal are reserved for interop purposes (see [syntax/dot])
+- symbols starting or ending with a decimal are reserved for interop purposes (see [doc:syntax/dot])
 
-Symbols can use a single `/` for an optional namespace. See [syntax/namespace]:
+Symbols can use a single `/` for an optional namespace. See [doc:syntax/namespace]:
 
 - `foo/bar` => value of `bar` in the `foo` namespace
 
-To access symbols in the global JavaScript context, use the [syntax/js-namespace]:
+To access symbols in the global JavaScript context, use the [doc:syntax/js-namespace]:
 
 - `js/document` => global `document` JavaScript object
 
-Dots can also be included in symbols for direct JS property access, see [syntax/dot]:
+Dots can also be included in symbols for direct JS property access, see [doc:syntax/dot]:
 
 - `js/console.log` => the `console.log` JavaScript function
 

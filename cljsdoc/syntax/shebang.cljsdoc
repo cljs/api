@@ -6,7 +6,7 @@ syntax/shebang
 
 ===== Description
 
-Equivalent to [syntax/comment].
+Equivalent to [doc:syntax/comment].
 
 This is intended to allow executable ClojureScript files under Unix by allowing
 the first line of the file to have a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix)).

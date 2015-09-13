@@ -8,7 +8,7 @@ syntax/arg
 
 Special vars for accessing implicit function arguments.
 
-Only usable inside [syntax/function].
+Only usable inside [doc:syntax/function].
 
 - `%` or `%1` for first argument.
 - `%2`, `%3` and so on for subsequent arguments

@@ -9,14 +9,14 @@ foo#
 
 ===== Description
 
-(Only intended for use in a [syntax/syntax-quote].)
+(Only intended for use in a [doc:syntax/syntax-quote].)
 
 ``foo#` => `foo__135__auto__`
 
 Auto-generates a unique symbol with the given prefix, particularly one that
 will not shadow any existing symbol in its resulting scope.  This is intended
 as a convenience for creating hygienic macros without calling
-[cljs.core/gensym] directly.
+[doc:cljs.core/gensym] directly.
 
 Every symbol matching a unique `foo#` symbol within a syntax quoted form will
 be replaced with the same generated symbol.

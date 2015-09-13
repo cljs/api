@@ -10,7 +10,7 @@ Extend a type to a series of protocols. Useful when you are
 supplying the definitions explicitly inline. Propagates the
 type as a type hint on the first argument of all fns.
 
-`type-sym` can be a type created by [cljs.core/deftype], or any of the
+`type-sym` can be a type created by [doc:cljs.core/deftype], or any of the
 following base types, which are associated with type strings deduced by
 [`goog/typeOf`]:
 

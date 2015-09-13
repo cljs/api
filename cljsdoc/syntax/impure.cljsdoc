@@ -15,10 +15,10 @@ Impure functions are those that have side-effects on some state.
 
 Some impure functions which use this convention:
 
-- [special/set!]
-- [cljs.core/swap!]
-- [cljs.core/conj!]
-- [cljs.core/specify!]
+- [doc:special/set!]
+- [doc:cljs.core/swap!]
+- [doc:cljs.core/conj!]
+- [doc:cljs.core/specify!]
 
 ===== Related
 syntax/predicate

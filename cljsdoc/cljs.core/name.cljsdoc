@@ -8,7 +8,7 @@ cljs.core/name
 
 Returns the name string of a possibly namespace-qualified keyword or symbol.
 
-Equivalent to [cljs.core/identity] for strings.
+Equivalent to [doc:cljs.core/identity] for strings.
 
 ===== Related
 cljs.core/namespace

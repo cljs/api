@@ -16,10 +16,10 @@ pure (not having any side-effects on state).
 
 Some predicate functions which use this convention:
 
-- [cljs.core/even?]
-- [cljs.core/empty?]
-- [cljs.core/contains?]
-- [cljs.core/nil?]
+- [doc:cljs.core/even?]
+- [doc:cljs.core/empty?]
+- [doc:cljs.core/contains?]
+- [doc:cljs.core/nil?]
 
 It is sometimes used to name boolean values as well, not just predicate functions.
 

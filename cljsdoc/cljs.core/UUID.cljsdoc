@@ -5,7 +5,7 @@ cljs.core/UUID
 
 A type representing a universally unique identifier ([UUID]).
 
-Use [cljs.core/uuid] or [syntax/uuid-literal] to create one.
+Use [doc:cljs.core/uuid] or [doc:syntax/uuid-literal] to create one.
 
 [UUID]:https://en.wikipedia.org/wiki/Universally_unique_identifier
 

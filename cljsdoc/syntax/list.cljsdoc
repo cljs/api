@@ -35,7 +35,7 @@ the function receives them.
 If `f` is a special form or macro, it will receive its arguments `a` and `b`
 unevaluated, where they _may_ be evaluated internally.
 
-(See [cljs.core/List] for data structure details.)
+(See [doc:cljs.core/List] for data structure details.)
 
 ===== Related
 syntax/vector

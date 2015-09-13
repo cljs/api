@@ -5,7 +5,7 @@ cljs.core/namespace
 
 Returns the namespace string of a possibly namespace-qualified keyword or symbol.
 
-Returns [syntax/nil] if not present.
+Returns [doc:syntax/nil] if not present.
 
 ===== Related
 cljs.core/name

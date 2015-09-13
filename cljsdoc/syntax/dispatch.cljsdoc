@@ -18,13 +18,13 @@ original forms:
 
 | original                           | with `#` prefix                                  | relation               |
 |------------------------------------|--------------------------------------------------|------------------------|
-| [syntax/string]                    | [syntax/regex]                                   | string-related         |
-| [syntax/list]                      | [syntax/function]                                | code-related           |
-| [syntax/map]                       | [syntax/set]                                     | lookup-related         |
-| [syntax/quote]                     | [syntax/var]                                     | quote-related          |
-| [syntax/unused]                    | [syntax/ignore]                                  | ignore-related         |
-| [`foo (symbol)`](syntax/symbol)    | [`#foo (tagged literal)`](syntax/tagged-literal) | name-related           |
-| [syntax/predicate]                 | [syntax/cond]                                    | conditional-related    |
+| [doc:syntax/string]                    | [doc:syntax/regex]                                   | string-related         |
+| [doc:syntax/list]                      | [doc:syntax/function]                                | code-related           |
+| [doc:syntax/map]                       | [doc:syntax/set]                                     | lookup-related         |
+| [doc:syntax/quote]                     | [doc:syntax/var]                                     | quote-related          |
+| [doc:syntax/unused]                    | [doc:syntax/ignore]                                  | ignore-related         |
+| [`foo (symbol)`][doc:syntax/symbol]    | [`#foo (tagged literal)`][doc:syntax/tagged-literal] | name-related           |
+| [doc:syntax/predicate]                 | [doc:syntax/cond]                                    | conditional-related    |
 
 ===== Related
 syntax/regex

@@ -6,7 +6,7 @@ syntax/quote
 
 ===== Description
 
-`'foo` is sugar for [`(quote foo)`](special/quote).
+`'foo` is sugar for [`(quote foo)`][doc:special/quote].
 
 Prevent the evaluation of the following form.
 

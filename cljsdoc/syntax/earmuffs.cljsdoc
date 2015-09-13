@@ -14,11 +14,11 @@ A naming convention for dynamic vars (unenforced).
 `(def ^:dynamic *foo* 1)`
 
 Dynamic vars are global vars that you intend to temporarily rebind with
-[cljs.core/binding].
+[doc:cljs.core/binding].
 
 NOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic
-special global vars (e.g. [cljs.core/*clojurescript-version*],
-[cljs.core/*main-cli-fn*]).
+special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
+[doc:cljs.core/*main-cli-fn*]).
 
 ===== Related
 cljs.core/binding

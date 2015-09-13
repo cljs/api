@@ -18,7 +18,7 @@ single, new literal.
 - `#foo 123`
 - ...
 
-If a [symbol](syntax/symbol) is prefixed by `#`, that symbol is considered a
+If a [symbol][doc:syntax/symbol] is prefixed by `#`, that symbol is considered a
 __tag__ for the following form.  Together they represent a new value.  Real
 examples:
 
@@ -36,10 +36,10 @@ These tagged literals are the "extensible" part of extensible data notation
 
 ClojureScript supports the following tagged literals:
 
-- [syntax/inst-literal]
-- [syntax/uuid-literal]
-- [syntax/js-literal]
-- [syntax/queue-literal]
+- [doc:syntax/inst-literal]
+- [doc:syntax/uuid-literal]
+- [doc:syntax/js-literal]
+- [doc:syntax/queue-literal]
 
 ===== Related
 syntax/dispatch

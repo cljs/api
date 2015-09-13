@@ -10,7 +10,7 @@ syntax/rest
 ===== Description
 
 A concept for binding the rest of the values of some sequence to a name.  See
-[syntax/destructure-vector] or [cljs.core/fn] for exact usage details in their
+[doc:syntax/destructure-vector] or [doc:cljs.core/fn] for exact usage details in their
 respective contexts.
 
 ===== Example#ebd356

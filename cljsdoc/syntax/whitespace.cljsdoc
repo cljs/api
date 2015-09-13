@@ -23,7 +23,7 @@ Whitespace around collection delimiters is not required:
 #inst"2015-10-12"
 ```
 
-A [comma](syntax/comma) is considered whitespace:
+A [comma][doc:syntax/comma] is considered whitespace:
 
 ```clj
 [1, 2, 3]

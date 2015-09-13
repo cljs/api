@@ -11,7 +11,7 @@ syntax/cond-splicing
 
 (Only allowed in `.cljc` files or the REPL)
 
-Like [syntax/cond], except:
+Like [doc:syntax/cond], except:
 
 - each conditional value must be a sequence,
 - the selected sequence is spliced into the parent form,

@@ -8,7 +8,7 @@ Special Forms (REPL)
 
 These are Special Forms that are only available in a ClojureScript REPL
 session.  They mainly allow you to cherry-pick individual facilities out of the
-larger [`ns`](special/ns) form.
+larger [`ns`][doc:special/ns] form.
 
 This is useful in a REPL so you can quickly reference symbols, reload
 namespaces if they have changed since you've started the REPL, or change your

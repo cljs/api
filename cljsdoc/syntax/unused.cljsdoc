@@ -16,7 +16,7 @@ For example, create a function whose first two arguments are ignored:
   (println a))
 ```
 
-Ignore the first and third value of a [destructured](syntax/destructure-vector) sequence:
+Ignore the first and third value of a [destructured][doc:syntax/destructure-vector] sequence:
 
 ```clj
 (let [ [_ a b _ c]
@@ -25,7 +25,7 @@ Ignore the first and third value of a [destructured](syntax/destructure-vector) 
 ;; 2 3 5
 ```
 
-Ignore return values of debug statements in a [cljs.core/let] block:
+Ignore return values of debug statements in a [doc:cljs.core/let] block:
 
 ```clj
 (let [a 1
@@ -45,7 +45,7 @@ names.
 ===== Example#705f5e
 
 It is common to use `_` to ignore all but the latest value of a changing atom
-inside an [cljs.core/add-watch] callback:
+inside an [doc:cljs.core/add-watch] callback:
 
 ```clj
 (def a (atom 1))

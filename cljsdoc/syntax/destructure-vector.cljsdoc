@@ -44,7 +44,7 @@ following forms:
 - `(loop [...])`
 
 Destructure vectors can be nested, even in place of names in [destructure
-maps](syntax/destructure-map).
+maps][doc:syntax/destructure-map].
 
 ===== Related
 syntax/destructure-map

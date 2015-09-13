@@ -9,10 +9,10 @@ syntax/deref
 
 ===== Description
 
-`@foo` is sugar for [`(deref foo)`](cljs.core/deref).
+`@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].
 
 Retrieve the underlying value of a reference.  References can be created by
-[cljs.core/atom] or [cljs.core/delay].
+[doc:cljs.core/atom] or [doc:cljs.core/delay].
 
 ===== Related
 cljs.core/deref

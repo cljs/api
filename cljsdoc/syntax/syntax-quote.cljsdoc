@@ -15,7 +15,7 @@ Adds namespace-qualification to any symbols inside the following form by
 resolving them in the current context.
 
 Any non-namespaced symbols ending with `#` are replaced with unique symbols.
-See [syntax/auto-gensym].
+See [doc:syntax/auto-gensym].
 
 ===== Related
 syntax/auto-gensym

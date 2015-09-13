@@ -9,7 +9,7 @@ syntax/uuid-literal
 
 ===== Description
 
-Creates a universally unique identifier (UUID), using the [cljs.core/UUID] type.
+Creates a universally unique identifier (UUID), using the [doc:cljs.core/UUID] type.
 
 The format is `#uuid "8-4-4-4-12"`, where the numbers represent the number of hex digits.
 
@@ -18,7 +18,7 @@ Representing UUIDs with `#uuid` rather than just a plain string has the followin
 - the reader will throw an exception on malformed UUIDs
 - its UUID type is preserved and shown when serialized to [edn].
 
-To create a UUID from an evaluated expression, use [cljs.core/uuid].
+To create a UUID from an evaluated expression, use [doc:cljs.core/uuid].
 
 [edn]:https://github.com/edn-format/edn
 
