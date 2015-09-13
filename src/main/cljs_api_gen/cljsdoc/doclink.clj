@@ -3,16 +3,18 @@
 ;;; Whenever we want to reference another doc page in markdown, we use the
 ;;; following forms
 ;;;
-;;; - unnamed:              [doc:cljs.core/foo]
-;;; - named:     [some name][doc:cljs.core/foo]
+;;; 1. unnamed:              [doc:cljs.core/foo]      --> name inserted and resolved to biblio link
+;;; 2. named:     [some name][doc:cljs.core/foo]      --> resolved to biblio link
+;;; 3. ignored:              [doc:cljs.core/foo](...)
+;;; 4. ignored:              [doc:cljs.core/foo][...]
 ;;;
 ;;; To give these 'doc' forms meaning, we do the following:
 ;;;
-;;;  Step 1: Insert display names for unnamed links:
+;;;  A: Insert display names for unnamed links:
 ;;;
 ;;;     [doc:cljs.core/foo] --> [<short display name>][doc:cljs.core/foo]
 ;;;
-;;;  Step 2: Append links to the end of the body for all detected 'doc' forms:
+;;;  B: Append biblio links to the end of the body for all detected 'doc' forms:
 ;;;
 ;;;     [doc:cljs.core/foo]:<full path to actual page for 'cljs.core/foo'>
 ;;;
@@ -28,11 +30,11 @@
     - [doc:cljs.core/foo][link-alias]
     - [name][doc:cljs.core/foo]
   "
-  ;;    do not allow a preceding "]" char
+  ;;    do not allow a preceding "]" char (see #2 above)
   ;;    |
   ;;    |   same as doclink-pattern
   ;;    |   |
-  ;;    |   |                do not allow a trailing "[" or "(" chars
+  ;;    |   |                do not allow a trailing "[" or "(" chars (see #3 and #4 above)
   ;;    |   |                |
   ;;    |   |                |
   #"(?<!])\[doc:([^\]]+)\](?![\(\[])")
