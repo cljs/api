@@ -208,13 +208,23 @@ These are the mustache templates that we use to render the catalog files.
 
 | Template File | Description |
 |--------------:|:------------|
-| <samp>[index.md]</samp>   | API overview page |
-| <samp>[ref.md]</samp>      | per-symbol details page |
-| <samp>[history.md]</samp>  | version history and changes |
-| <samp>[unported.md]</samp> | table of symbols not ported from clojure |
+| <samp>[index.md]</samp>      | API overview page |
+| <samp>[syntax.md]</samp>     | Syntax overview page |
+| <samp>[library.md]</samp>    | Library API page |
+| <samp>[compiler.md]</samp>   | Compiler API page |
+| <samp>[ns.md]</samp>         | per Namespace page |
+| <samp>[var.md]</samp>        | per Var page |
+| <samp>[special-ns.md]</samp> | per Special Forms category page |
+| <samp>[history.md]</samp>    | version history and changes |
+| <samp>[unported.md]</samp>   | table of symbols not ported from clojure |
 
 [index.md]:templates/index.md
-[ref.md]:templates/ref.md
+[syntax.md]:templates/syntax.md
+[library.md]:templates/library.md
+[compiler.md]:templates/compiler.md
+[ns.md]:templates/ns.md
+[var.md]:templates/var.md
+[special-ns.md]:templates/special-ns.md
 [history.md]:templates/history.md
 [unported.md]:templates/unported.md
 
