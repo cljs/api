@@ -37,7 +37,7 @@
                                  add-cljsdoc-to-result]]
     [cljs-api-gen.write :refer [dump-result!
                                 dump-site-pages!
-                                dump-ref-file!] :as write]
+                                dump-var-file!] :as write]
     [clojure-watch.core :refer [start-watch]]
     ))
 
@@ -312,7 +312,7 @@
 
                     ;; dump the new ref file
                     (binding [write/*result* @full-result]
-                      (dump-ref-file! new-item)))
+                      (dump-var-file! new-item)))
 
                   (println "Done.")))))
           }])

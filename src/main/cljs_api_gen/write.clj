@@ -252,7 +252,7 @@
       (fix-emoji)))
 
 ;;--------------------------------------------------------------------------------
-;; ref file
+;; var file
 ;;--------------------------------------------------------------------------------
 
 (defn sig-args
@@ -344,7 +344,7 @@
       (update-in [:examples] (fn [examples]
                                (doall (map #(update-in % [:content] process-doclinks) examples))))))
 
-(defn ref-file-data
+(defn var-file-data
   [item]
   (binding [*doclink-prefix* "../"] ;; assuming we are in a symbol's parent dir <ns>
     (-> item
@@ -369,13 +369,13 @@
         (add-source-extras)
         (process-all-doclinks))))
 
-(defn dump-ref-file!
+(defn dump-var-file!
   [item]
   (encode/assert-lossless (:full-name item))
   (let [filename (item-filename item)]
     (mkdir (parent filename))
     (spit (str filename ".md")
-      (render-template "ref.md" (ref-file-data item)))))
+      (render-template "var.md" (var-file-data item)))))
 
 ;;--------------------------------------------------------------------------------
 ;; history file
@@ -569,6 +569,7 @@
                                   :link (str (name api-type) "/" ns- ".md")
                                   :history (map history-change-shield (:history ns-item))
                                   :symbols public-symbols
+                                  :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode ns-item) ".cljsdoc") 
                                   :removed (when (seq removed-symbols)
                                              {:symbols removed-symbols})})))
                         (sort-by :ns compare-ns))]
@@ -679,9 +680,9 @@
     (println "writing edn...")
     (dump-edn-file! result)
 
-    (println "writing ref files...")
+    (println "writing var files...")
     (doseq [item (vals (:symbols result))]
-      (dump-ref-file! item))
+      (dump-var-file! item))
 
     (println "writing readme...")
     (dump-readme! result)

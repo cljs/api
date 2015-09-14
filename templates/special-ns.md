@@ -39,3 +39,13 @@
 </table>
 
 {{/removed}}
+
+---
+
+ <table>
+<tr><td>
+<img valign="middle" align="right" width="48px" src="http://i.imgur.com/Hi20huC.png">
+</td><td>
+Created for the upcoming ClojureScript website.<br>
+[edit here] | [learn how]
+</td></tr></table>
