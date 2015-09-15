@@ -6,13 +6,12 @@ cljs.core/extend-type
 
 ===== Description
 
-Extend a type to a series of protocols. Useful when you are
-supplying the definitions explicitly inline. Propagates the
-type as a type hint on the first argument of all fns.
+Extend a [type] to implement one or more [protocols].
 
-`type-sym` can be a type created by [doc:cljs.core/deftype], or any of the
-following base types, which are associated with type strings deduced by
-[`goog/typeOf`]:
+`type-sym` can be the result of a [doc:cljs.core/deftype] or any JS constructor
+function (e.g. `js/Date`).  But when targetting JS base types (e.g.
+`js/Number`, `js/String`), you must use special _type symbols_ instead.  These
+type symbols are associated with type strings deduced by [`goog/typeOf`]:
 
 | type symbol  | corresponding `goog/typeOf` value |
 |--------------|-------------|
