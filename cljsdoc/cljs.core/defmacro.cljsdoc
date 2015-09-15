@@ -26,13 +26,15 @@ for the optimized "ClojureScript JVM" compiler and the newer bootstrapped
 In order to create macros that are portable between either compiler version,
 you must place macros in a `.cljc` file, but a `.clj` file is sufficient if no
 [reader conditionals][doc:syntax/cond] are needed.  Why would they be needed?
-Because ClojureScript macros may be handed off to Clojure for evaluation,
-depending on the compiler version:
+Because ClojureScript macro namespaces may be handed off to Clojure for
+evaluation, depending on the compiler version:
 
-| compiler version  | macros evaluated by |
-|-------------------|---------------------|
-| ClojureScript JVM | Clojure             |
-| ClojureScript JS  | ClojureScript       |
+| compiler version  | macro namespaces evaluated by |
+|-------------------|-------------------------------|
+| ClojureScript JVM | Clojure                       |
+| ClojureScript JS  | ClojureScript                 |
+
+Please see the examples section below for a more concrete look.
 
 ===== Example#8040c8
 
