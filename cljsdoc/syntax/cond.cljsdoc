@@ -23,6 +23,23 @@ ClojureScript's reader is configured with the `:cljs` feature key, making the
 expression above read as `"ClojureScript"`.  Clojure's reader is
 similarly configured with the `:clj` key.
 
+This essentially allows us to write portable code for use in both Clojure and
+ClojureScript.
+
+## For Macros
+
+Reader conditionals are especially important when writing macros in
+ClojureScript, since the macros may be handed off to Clojure for evaluation,
+depending on the ClojureScript compiler version:
+
+| compiler version  | macros evaluated by |
+|-------------------|---------------------|
+| ClojureScript JVM | Clojure             |
+| ClojureScript JS  | ClojureScript       |
+
+Thus, reader conditionals allow us to account for differences in both versions
+of the compiler.  See [doc:cljs.core/defmacro] for details.
+
 ===== Related
 syntax/cond-splicing
 
