@@ -8,7 +8,7 @@ cljs.core/macroexpand-1
 If the given quoted form is a macro call, expand it once. NOTE: subforms are
 _not_ expanded.
 
-See [doc:cljs.core/macroexpand] if you only wish to repeatedly expand a form.
+See [doc:cljs.core/macroexpand] if you wish to repeatedly expand a form.
 
 ===== Example#1bc6af
 
