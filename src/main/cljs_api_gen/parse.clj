@@ -139,6 +139,9 @@
         doc-forms (cond-> []
                     docstring (conj docstring)
                     attr-map (conj attr-map))
+        arglists (when-let [arglists (:arglists attr-map)]
+                   (when (= 'quote (first arglists))
+                     (second arglists)))
         signatures (if (vector? (first args))
                      (take 1 args)
                      (map first args))
@@ -152,7 +155,7 @@
               (not private?))
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
-       :signature signatures
+       :signature (or arglists signatures)
        :type (cond
                constructor? "type"
                macro? "macro"
