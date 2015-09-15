@@ -1,2 +1,39 @@
 ===== Name
 cljs.core/macroexpand
+
+===== Description
+
+(only intended as a REPL utility)
+
+If the given quoted form is a macro call, expand it once, then repeat until a
+subsequent result is _not_ a macro call.  NOTE: nested forms are _not_ expanded.
+
+See [doc:cljs.core/macroexpand-1] if you only wish to expand a form once.
+
+===== Example#b773af
+
+See how [doc:cljs.core/when] expands to [doc:special/if]:
+
+```clj
+(macroexpand '(when true :foo))
+;;=> (if true (do :foo))
+```
+
+The following goes through three expansion steps, but you can use
+[doc:cljs.core/macroexpand-1] to do one at a time instead.
+
+```clj
+(macroexpand '(-> 2 inc))
+;;=> (js* "(~{} + ~{})" 2 1)
+```
+
+Notice how the nested `inc` form is not expanded:
+
+```clj
+(macroexpand '(inc (inc 2)))
+;;=> (js* "(~{} + ~{})" (inc 2) 1)
+```
+
+===== Related
+cljs.core/macroexpand-1
+cljs.core/defmacro
