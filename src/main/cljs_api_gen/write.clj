@@ -6,6 +6,7 @@
     [clojure.edn :as edn]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
+    [clj-yaml.core :as yaml]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
                                           unnamed-doclink-pattern
@@ -211,12 +212,9 @@
      :import (= "clojure" (-> item :source :repo))
      :link (get-clj-link full-name)}))
 
-(defn item-filename
-  [item]
-  (str *output-dir* "/" refs-dir "/" (encode/encode-fullname (:full-name item))))
-
 (defn history-change-shield
   [[change version]]
+  ;; TODO: add data attrs in addition to string inside a map for use in site
   (let [color ({"+" "lightgrey" "-" "red"} change)
         change-symbol ({"+" "+", "-" "×"} change)
         change-word ({"+" "Added", "-" "Removed"} change)
@@ -372,10 +370,18 @@
 (defn dump-var-file!
   [item]
   (encode/assert-lossless (:full-name item))
-  (let [filename (item-filename item)]
-    (mkdir (parent filename))
-    (spit (str filename ".md")
-      (render-template "var.md" (var-file-data item)))))
+
+  (let [path (encode/encode-fullname (:full-name item))
+        gh-filename (str *output-dir* "/" refs-dir "/" path ".md")
+        site-filename (str *output-dir* "/" site-dir "/" path ".md")
+        data (var-file-data item)
+        data-yaml-str (yaml/generate-string data)]
+
+    (mkdirs (parent gh-filename))
+    (mkdirs (parent site-filename))
+
+    (spit gh-filename (render-template "var.md" data))
+    (spit site-filename data-yaml-str)))
 
 ;;--------------------------------------------------------------------------------
 ;; history file
