@@ -3,7 +3,7 @@
  <table border="1">
 <tr>
 <td>namespace</td>
-<td>{{#history}}{{&.}} {{/history}}</td>
+<td>{{#history}}{{&shield}} {{/history}}</td>
 {{#clj-ns}}
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&display-name}}</samp>]({{&link}})
@@ -41,7 +41,7 @@ Source Docstring:
 <td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
 <td><samp>{{&display-prefix}}[{{&display-name}}]({{&link}})</samp></td>
 <td><samp>{{type}}</samp></td>
-<td>{{#history}}{{&.}} {{/history}}</td>
+<td>{{#history}}{{&shield}} {{/history}}</td>
 </tr>
 {{/symbols}}
 </table>
@@ -63,7 +63,7 @@ Source Docstring:
 <td>{{#clj-symbol}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&link}}){{#import}} <samp>→</samp>{{/import}}{{/clj-symbol}}</td>
 <td><samp>{{&display-prefix}}[{{&display-name}}]({{&link}})</samp></td>
 <td><samp>{{type}}</samp></td>
-<td>{{#history}}{{&.}} {{/history}}</td>
+<td>{{#history}}{{&shield}} {{/history}}</td>
 </tr>
 {{/symbols}}
 </table>

@@ -11,7 +11,7 @@ _known as "{{&.}}"_
  <table border="1">
 <tr>
 <td>{{&type}}</td>
-<td>{{#history}}{{&.}} {{/history}}</td>
+<td>{{#history}}{{&shield}} {{/history}}</td>
 {{#clj-symbol}}
 <td>
 {{#import}}imported {{/import}}[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>{{&display-name}}</samp>]({{&link}})

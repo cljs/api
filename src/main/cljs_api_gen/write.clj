@@ -212,20 +212,21 @@
      :import (= "clojure" (-> item :source :repo))
      :link (get-clj-link full-name)}))
 
-(defn history-change-shield
+(defn history-change
   [[change version]]
-  ;; TODO: add data attrs in addition to string inside a map for use in site
   (let [color ({"+" "lightgrey" "-" "red"} change)
         change-symbol ({"+" "+", "-" "×"} change)
         change-word ({"+" "Added", "-" "Removed"} change)
-        ]
-    (str 
-      "<a href=\"https://github.com/cljsinfo/cljs-api-docs/tree/" version "\">"
-      "<img valign=\"middle\""
-        " alt=\"[" change-symbol "] " version "\""
-        " title=\"" change-word " in " version "\""
-        " src=\"https://img.shields.io/badge/" change-symbol "-" (shield-escape version) "-" color ".svg\">"
-      "</a>")))
+        shield (str
+                 "<a href=\"https://github.com/cljsinfo/cljs-api-docs/tree/" version "\">"
+                 "<img valign=\"middle\""
+                 " alt=\"[" change-symbol "] " version "\""
+                 " title=\"" change-word " in " version "\""
+                 " src=\"https://img.shields.io/badge/" change-symbol "-" (shield-escape version) "-" color ".svg\">"
+                 "</a>")]
+    {:change change-word
+     :version version
+     :shield shield}))
 
 (defn version-changes
   [symbols changes]
@@ -352,7 +353,7 @@
           :display-name (cond-> (md-escape (get-full-display-name item))
                           (:removed item) md-strikethru)
           :data (with-out-str (pprint item))
-          :history (map history-change-shield (:history item))
+          :history (map history-change (:history item))
           :signature (let [sigs (:signature item)]
                        (when (and (sequential? sigs) (pos? (count sigs)))
                          {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
@@ -537,7 +538,7 @@
                      :type (:type item)
                      :parent-type (:parent-type item)
                      :removed (:removed item)
-                     :history (map history-change-shield (:history item))})
+                     :history (map history-change (:history item))})
         transform-syms #(sort-items (map make-item %))
         ns-symbols (->> (vals all)
                         (group-by :ns)
@@ -573,9 +574,9 @@
                                   :description (or description caption)
                                   :docstring (:docstring ns-item)
                                   :link (str (name api-type) "/" ns- ".md")
-                                  :history (map history-change-shield (:history ns-item))
+                                  :history (map history-change (:history ns-item))
                                   :symbols public-symbols
-                                  :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode ns-item) ".cljsdoc") 
+                                  :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode ns-item) ".cljsdoc")
                                   :removed (when (seq removed-symbols)
                                              {:symbols removed-symbols})})))
                         (sort-by :ns compare-ns))]
