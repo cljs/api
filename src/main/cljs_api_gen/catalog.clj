@@ -111,7 +111,6 @@
     :keys [version
            catalog?
            watch?
-           gen-site?
            skip-pages?
            skip-parse?]
     :or {version :latest
@@ -241,10 +240,7 @@
                   result (add-cljsdoc-to-result parsed)]
               (reset! full-result result)
               (binding [*output-dir* out-folder]
-                (dump-result! result)
-                (when gen-site?
-                  (dump-site-pages! result))
-                ))))))
+                (dump-result! result)))))))
 
     ;; third pass
     (println (style "\nStarting final pass (finalizing output directory)...\n" :magenta))
