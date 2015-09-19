@@ -36,7 +36,6 @@
                                  get-result
                                  add-cljsdoc-to-result]]
     [cljs-api-gen.write :refer [dump-result!
-                                dump-site-pages!
                                 dump-var-file!] :as write]
     [clojure-watch.core :refer [start-watch]]
     ))

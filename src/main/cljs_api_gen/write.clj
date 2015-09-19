@@ -119,6 +119,7 @@
 ;;--------------------------------------------------------------------------------
 
 (def ^:dynamic *doclink-prefix* "")
+(def ^:dynamic *doclink-ext* "")
 
 (defn doclink-path
   [full-name]
@@ -128,7 +129,7 @@
         encoded (if ns-link?
                   full-name
                   (encode/encode-fullname full-name))]
-    (str *doclink-prefix* encoded ".md")))
+    (str *doclink-prefix* encoded *doclink-ext*)))
 
 (defn insert-doclink-name
   [[whole-match full-name]]
@@ -345,28 +346,27 @@
 
 (defn var-file-data
   [item]
-  (binding [*doclink-prefix* "../"] ;; assuming we are in a symbol's parent dir <ns>
-    (-> item
-        (assoc
-          :full-name (:full-name item)
-          :moved (unprefixed-doclink (:moved item))
-          :display-name (cond-> (md-escape (get-full-display-name item))
-                          (:removed item) md-strikethru)
-          :data (with-out-str (pprint item))
-          :history (map history-change (:history item))
-          :signature (let [sigs (:signature item)]
-                       (when (and (sequential? sigs) (pos? (count sigs)))
-                         {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
-                                                        (= "type" (:type item)) (str "."))
-                                                :args (sig-args %))
-                                     sigs)}))
-          :clj-symbol (make-clj-ref item)
-          :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
-        (add-external-doc-links)
-        (add-syntax-usage)
-        (add-related-links)
-        (add-source-extras)
-        (process-all-doclinks))))
+  (-> item
+      (assoc
+        :full-name (:full-name item)
+        :moved (unprefixed-doclink (:moved item))
+        :display-name (cond-> (md-escape (get-full-display-name item))
+                        (:removed item) md-strikethru)
+        :data (with-out-str (pprint item))
+        :history (map history-change (:history item))
+        :signature (let [sigs (:signature item)]
+                     (when (and (sequential? sigs) (pos? (count sigs)))
+                       {:sigs (map #(hash-map :name (cond-> (md-escape (:name item))
+                                                      (= "type" (:type item)) (str "."))
+                                              :args (sig-args %))
+                                   sigs)}))
+        :clj-symbol (make-clj-ref item)
+        :cljsdoc-path (str cljsdoc-dir "/" (:full-name-encode item) ".cljsdoc"))
+      (add-external-doc-links)
+      (add-syntax-usage)
+      (add-related-links)
+      (add-source-extras)
+      (process-all-doclinks)))
 
 (defn dump-var-file!
   [item]
@@ -375,14 +375,22 @@
   (let [path (encode/encode-fullname (:full-name item))
         gh-filename (str *output-dir* "/" refs-dir "/" path ".md")
         site-filename (str *output-dir* "/" site-dir "/" path ".md")
-        data (var-file-data item)
-        data-yaml-str (yaml/generate-string data)]
+        data (binding [*doclink-prefix* "../" ;; assuming we are in a symbol's parent dir <ns> 
+                       *doclink-ext* ".md"]
+               (var-file-data item))]
 
     (mkdirs (parent gh-filename))
     (mkdirs (parent site-filename))
 
     (spit gh-filename (render-template "var.md" data))
-    (spit site-filename data-yaml-str)))
+    (spit site-filename
+      (yaml/generate-string
+        {:sectionid "docs"
+         :layout "var"
+         :ns (:ns item)
+         :name (:name item)
+         :full-name (:full-name item)
+         :title (get-full-display-name item)}))))
 
 ;;--------------------------------------------------------------------------------
 ;; history file
@@ -678,6 +686,8 @@
 ;; Main
 ;;--------------------------------------------------------------------------------
 
+(def site-docs-root "/docs/")
+
 (defn dump-result! [result]
   (binding [*result* result]
 
@@ -690,6 +700,14 @@
     (println "writing var files...")
     (doseq [item (vals (:symbols result))]
       (dump-var-file! item))
+
+    (println "writing var data for site...")
+    (spit (str *output-dir* "/" site-dir "/vars.yaml")
+          (binding [*doclink-prefix* site-docs-root
+                    *doclink-ext* ".html"]
+            (let [vars (map var-file-data (vals (:symbols result)))
+                  data (zipmap (map :full-name vars) vars)]
+              (yaml/generate-string data))))
 
     (println "writing readme...")
     (dump-readme! result)
