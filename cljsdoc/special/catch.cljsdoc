@@ -16,6 +16,9 @@ special form
 `name` inside of `expr*` and `expr*` will be evaluated and returned as the value
 of the `try` expression.
 
+Since JavaScript allows you to throw anything, `exception-type` can be set to
+`:default` to catch all types of exceptions.
+
 ===== Related
 special/try
 special/finally
