@@ -534,7 +534,11 @@
     ;; everything >= r993
     (when (and (list? form)
                (= (take 2 form) '(def default-special-fns)))
-      (let [[_let _bindings form-map] (nth form 2)]
+      (let [[_let _bindings value] (nth form 2)
+            form-map (if (cljs-cmp >= "1.7.145")
+                       (let [[_wrap-special-fns _wrap-self form-map] value]
+                         form-map)
+                       value)]
         (->> (keys form-map)
              (map second) ;; (quote x) => x
              (remove namespace)) ;; we'll ignore namespace-qualified special forms
