@@ -23,6 +23,8 @@ and supplemented by curated descriptions, examples, and cross-refs.
 
 __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#offline-docset-for-dash)__
 
+{{&latest}}
+
 ## Table of Contents
 
 This reference is divided into three categories:

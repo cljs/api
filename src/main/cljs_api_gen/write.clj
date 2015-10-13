@@ -618,9 +618,15 @@
         compiler-file (str compiler-dir ".md")
         syntax-file (str refs-dir "/syntax.md")
 
+        latest (render-template "latest.md" {:syntax-api syntax-api
+                                             :library-api library-api
+                                             :compiler-api compiler-api
+                                             :release (:release result)})
+
         index-data {:library-link library-file
                     :compiler-link compiler-file
                     :syntax-link syntax-file
+                    :latest latest
                     :release (:release result)}
 
         dump-api-index!
