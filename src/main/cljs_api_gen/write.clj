@@ -383,7 +383,7 @@
     (mkdirs (parent site-filename))
 
     (spit gh-filename (render-template "var.md" data))
-    (spit site-filename
+    #_(spit site-filename
       (yaml/generate-string
         {:sectionid "docs"
          :layout "var"
@@ -701,8 +701,8 @@
     (doseq [item (vals (:symbols result))]
       (dump-var-file! item))
 
-    (println "writing var data for site...")
-    (spit (str *output-dir* "/" site-dir "/vars.yaml")
+    #_(println "writing var data for site...")
+    #_(spit (str *output-dir* "/" site-dir "/vars.yaml")
           (binding [*doclink-prefix* site-docs-root
                     *doclink-ext* ".html"]
             (let [vars (map var-file-data (vals (:symbols result)))
