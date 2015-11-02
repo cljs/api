@@ -61,10 +61,22 @@ function getHtmlFiles(path) {
            .map(function (x) { return path + x; });
 }
 
+function getSubDirs(path) {
+  return fs.list(path)
+           .map(function (x) { return path + x; })
+           .filter(fs.isDirectory);
+}
+
 var rootPath = "offline/github.com/cljsinfo/cljs-api-docs/blob/catalog/";
 var refsPath = rootPath + "refs/";
 var pages = getHtmlFiles(rootPath)
              .concat(getHtmlFiles(refsPath));
+
+var subdirs = getSubDirs(refsPath);
+for (i=0; i<subdirs.length; i++) {
+  var files = getHtmlFiles(subdirs[i]+"/");
+  pages = pages.concat(files);
+}
 
 function nextPage() {
   var file = pages.shift();
