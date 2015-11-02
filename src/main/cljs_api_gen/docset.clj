@@ -142,7 +142,7 @@
        ;; insert sections
        {:name "Overview"                :type "Section" :path (resolve-path "INDEX.html")}
        {:name "History"                 :type "Section" :path (resolve-path "HISTORY.html")}
-       {:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")}
+       #_{:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")}
        )
 
     ;; insert namespaces
