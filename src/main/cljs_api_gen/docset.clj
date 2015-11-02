@@ -135,9 +135,9 @@
     (println "Adding sections to index database...")
     (j/insert! sqlite-db :searchIndex
        ;; insert categories
-       {:name "Syntax" :type "Category" :path (resolve-path "INDEX.html#syntax")}
-       {:name "Library API"  :type "Category" :path (resolve-path "INDEX.html#library-api")}
-       {:name "Compiler API" :type "Category" :path (resolve-path "INDEX.html#compiler-api")}
+       {:name "Syntax" :type "Category" :path (resolve-path "refs/syntax.html")}
+       {:name "Library API"  :type "Category" :path (resolve-path "refs/library.html")}
+       {:name "Compiler API" :type "Category" :path (resolve-path "refs/compiler.html")}
 
        ;; insert sections
        {:name "Overview"                :type "Section" :path (resolve-path "INDEX.html")}
@@ -147,49 +147,60 @@
 
     ;; insert namespaces
     (println "Adding namespaces to index database...")
-    (let [get-api-ns-pairs
-          (fn [[api-type {:keys [symbol-names]}]]
-            (for [s symbol-names]
-              (let [[ns-] (split-ns-and-name s)]
-                [api-type ns-])))
-          pairs (->> (:api result)
-                     (mapcat get-api-ns-pairs)
-                     (set))]
+    (let [ns->entry
+          (fn [api-type ns-]
+            (let [ns-meta (get-in result [:namespaces ns-])
+                  ns-display (or (:display ns-meta) ns-)
+                  ns-link (resolve-path "refs/" (name api-type) "/" ns- ".html")]
+              {:name ns-display
+               :type "Namespace"
+               :path ns-link}))
+
+          api-entries
+          (fn [api-type]
+            (let [namespaces (get-in result [:api api-type :namespace-names])]
+              (map (partial ns->entry api-type) namespaces)))]
+
       (apply j/insert! sqlite-db :searchIndex
-        (for [[api-type ns-] pairs]
-          (let [ns-meta (get-in result [:namespaces ns-])
-                ns-display (or (:display ns-meta) ns-)
-                ns-link (resolve-path "INDEX.html#" (md-header-link ns-display))]
-            {:name ns-display :type "Namespace" :path ns-link}))))
+             (mapcat api-entries [:library :compiler])))
 
     ;; insert symbols
     (println "Adding symbols to index database...")
-    (let [refs-path (str docset-docs-path "/" (resolve-path "refs"))]
+    (let [;; We want to retrieve the full name of the symbol belonging to
+          ;; this file.  We do this by decoding the original filename of
+          ;; the generated page.
+          ;;
+          ;; But, httrack can rename files by appending number suffixes
+          ;; to prevent collision on case-insensitive file systems. This
+          ;; is actually really helpful since it allows us to maintain
+          ;; compatibility with Windows and Mac, but prevents us from
+          ;; decoding the filenames straighaway.
+          ;;
+          ;; Luckily, httrack adds an html comment stamp containing the
+          ;; original filename, which we can parse:
+          ;;    <!-- Mirrored from <url-here> by HTTrack Website Copier ... --> 
+          symbol-file->entry
+          (fn [ref-file]
+            (let [encoded-name
+                  (second
+                    (re-find #"github\.com/cljsinfo/cljs-api-docs/blob/catalog/refs/(.*)\.md "
+                             (slurp ref-file)))
+                  full-name (decode-fullname encoded-name)
+                  item (get syms full-name)] 
+              {:name (dash-name item)
+               :type (type->dash (:type item))
+               :path (resolve-path "refs/" (:ns item) "/" (base-name ref-file))}))
+
+          ns-entries
+          (fn [ns-]
+            (let [ns-dir (str docset-docs-path "/" (resolve-path "refs/" ns-))
+                  symbol-files (list-dir ns-dir)]
+              (map symbol-file->entry symbol-files)))
+
+          namespaces (keys (:namespaces result))]
+
       (apply j/insert! sqlite-db :searchIndex
-        (for [ref-file (list-dir refs-path)]
-          (let [;; We want to retrieve the full name of the symbol belonging to
-                ;; this file.  We do this by decoding the original filename of
-                ;; the generated page.
-                ;;
-                ;; But, httrack can rename files by appending number suffixes
-                ;; to prevent collision on case-insensitive file systems. This
-                ;; is actually really helpful since it allows us to maintain
-                ;; compatibility with Windows and Mac, but prevents us from
-                ;; decoding the filenames straighaway.
-                ;;
-                ;; Luckily, httrack adds an html comment stamp containing the
-                ;; original filename, which we can parse:
-                ;;    <!-- Mirrored from <url-here> by HTTrack Website Copier ... -->
-                encoded-name
-                (second
-                  (re-find #"github\.com/cljsinfo/cljs-api-docs/blob/catalog/refs/(.*)\.md "
-                           (slurp ref-file)))
-                full-name (decode-fullname encoded-name)
-                item (get syms full-name)]
-            {:name (dash-name item)
-             :type (type->dash (:type item))
-             :path (resolve-path "refs/" (base-name ref-file))}
-            ))))
+        (mapcat ns-entries namespaces)))
 
     ;; create the tar file
     (println "Creating final docset tar file...")
