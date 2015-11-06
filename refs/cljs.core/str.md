@@ -48,20 +48,19 @@ one arg, returns the concatenation of the str values of the args.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L1763-L1777):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1748-L1761):
 
 ```clj
 (defn str
   ([] "")
-  ([x] (cond
-        (keyword? x) (str* ":" (. x (substring 2 (alength x))))
-        (nil? x) ""
-        :else (. x (toString))))
+  ([x] (if (nil? x)
+         ""
+         (.toString x)))
   ([x & ys]
      ((fn [sb more]
         (if more
           (recur (. sb  (append (str (first more)))) (next more))
-          (str* sb)))
+          (.toString sb)))
       (gstring/StringBuffer. (str x)) ys)))
 ```
 
@@ -69,18 +68,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1763-1777](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L1763-L1777)</ins>
+            └── <ins>[core.cljs:1748-1761](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1748-L1761)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/clj/cljs/core.clj#L187-L191):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L187-L191):
 
 ```clj
 (defmacro str [& xs]
@@ -94,11 +93,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:187-191](https://github.com/clojure/clojurescript/blob/r1859/src/clj/cljs/core.clj#L187-L191)</ins>
+            └── <ins>[core.clj:187-191](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L187-L191)</ins>
 </pre>
 -->
 
@@ -145,16 +144,16 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :full-name-encode "cljs.core/str",
- :source {:code "(defn str\n  ([] \"\")\n  ([x] (cond\n        (keyword? x) (str* \":\" (. x (substring 2 (alength x))))\n        (nil? x) \"\"\n        :else (. x (toString))))\n  ([x & ys]\n     ((fn [sb more]\n        (if more\n          (recur (. sb  (append (str (first more)))) (next more))\n          (str* sb)))\n      (gstring/StringBuffer. (str x)) ys)))",
+ :source {:code "(defn str\n  ([] \"\")\n  ([x] (if (nil? x)\n         \"\"\n         (.toString x)))\n  ([x & ys]\n     ((fn [sb more]\n        (if more\n          (recur (. sb  (append (str (first more)))) (next more))\n          (.toString sb)))\n      (gstring/StringBuffer. (str x)) ys)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1763 1777]},
+          :lines [1748 1761]},
  :extra-sources [{:code "(defmacro str [& xs]\n  (let [strs (->> (repeat (count xs) \"cljs.core.str(~{})\")\n                  (interpose \",\")\n                  (apply core/str))]\n    (list* 'js* (core/str \"[\" strs \"].join('')\") xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1859",
+                  :tag "r1877",
                   :filename "src/clj/cljs/core.clj",
                   :lines [187 191]}],
  :full-name "cljs.core/str",

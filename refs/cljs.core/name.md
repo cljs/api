@@ -77,32 +77,27 @@ Returns the name String of a string, symbol or keyword.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6224-L6236):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6240-L6247):
 
 ```clj
 (defn name
   [x]
   (if (satisfies? INamed x false)
     (-name ^not-native x)
-    (cond
-      (string? x) x
-      (keyword? x)
-      (let [i (.lastIndexOf x "/" (- (alength x) 2))]
-        (if (< i 0)
-          (subs x 2)
-          (subs x (inc i))))
-      :else (throw (js/Error. (str "Doesn't support name: " x))))))
+    (if (string? x)
+      x
+      (throw (js/Error. (str "Doesn't support name: " x))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6224-6236](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6224-L6236)</ins>
+            └── <ins>[core.cljs:6240-6247](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6240-L6247)</ins>
 </pre>
 
 -->
@@ -152,12 +147,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/namespace"],
  :full-name-encode "cljs.core/name",
- :source {:code "(defn name\n  [x]\n  (if (satisfies? INamed x false)\n    (-name ^not-native x)\n    (cond\n      (string? x) x\n      (keyword? x)\n      (let [i (.lastIndexOf x \"/\" (- (alength x) 2))]\n        (if (< i 0)\n          (subs x 2)\n          (subs x (inc i))))\n      :else (throw (js/Error. (str \"Doesn't support name: \" x))))))",
+ :source {:code "(defn name\n  [x]\n  (if (satisfies? INamed x false)\n    (-name ^not-native x)\n    (if (string? x)\n      x\n      (throw (js/Error. (str \"Doesn't support name: \" x))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6224 6236]},
+          :lines [6240 6247]},
  :examples [{:id "363fb7",
              :content "With namespaces:\n\n```clj\n(name :foo/bar)\n;;=> \"bar\"\n\n(name 'foo/bar)\n;;=> \"bar\"\n```\n\nWithout namespaces:\n\n```clj\n(name :foo)\n;;=> \"foo\"\n\n(name 'foo)\n;;=> \"foo\"\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> \"foo/bar\"\n\n(name \"foo\")\n;;=> \"foo\"\n```"}],
  :full-name "cljs.core/name",

@@ -33,7 +33,7 @@ Elides the first n values from the reduction of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/clojure/core/reducers.cljs#L169-L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/clojure/core/reducers.cljs#L169-L181):
 
 ```clj
 (defcurried drop
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:169-181](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/clojure/core/reducers.cljs#L169-L181)</ins>
+                └── <ins>[reducers.cljs:169-181](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/clojure/core/reducers.cljs#L169-L181)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defcurried drop\n  \"Elides the first n values from the reduction of coll.\"\n  {}\n  [n coll]\n  (reducer coll\n   (fn [f1]\n     (let [cnt (atom n)]\n       (rfn [f1 k]\n         ([ret k v]\n            (swap! cnt dec)\n            (if (neg? @cnt)\n              (f1 ret k v)\n              ret)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [169 181]},
  :full-name "clojure.core.reducers/drop",

@@ -74,29 +74,25 @@ Returns the namespace String of a symbol or keyword, or nil if not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6238-L6247):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6249-L6254):
 
 ```clj
 (defn namespace
   [x]
   (if (satisfies? INamed x false)
     (-namespace ^not-native x)
-    (if (keyword? x)
-      (let [i (.lastIndexOf x "/" (- (alength x) 2))]
-        (when (> i -1)
-          (subs x 2 i)))
-      (throw (js/Error. (str "Doesn't support namespace: " x))))))
+    (throw (js/Error. (str "Doesn't support namespace: " x)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6238-6247](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6238-L6247)</ins>
+            └── <ins>[core.cljs:6249-6254](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6249-L6254)</ins>
 </pre>
 
 -->
@@ -146,12 +142,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/name"],
  :full-name-encode "cljs.core/namespace",
- :source {:code "(defn namespace\n  [x]\n  (if (satisfies? INamed x false)\n    (-namespace ^not-native x)\n    (if (keyword? x)\n      (let [i (.lastIndexOf x \"/\" (- (alength x) 2))]\n        (when (> i -1)\n          (subs x 2 i)))\n      (throw (js/Error. (str \"Doesn't support namespace: \" x))))))",
+ :source {:code "(defn namespace\n  [x]\n  (if (satisfies? INamed x false)\n    (-namespace ^not-native x)\n    (throw (js/Error. (str \"Doesn't support namespace: \" x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6238 6247]},
+          :lines [6249 6254]},
  :examples [{:id "5bd3b4",
              :content "With namespaces:\n\n```clj\n(namespace :foo/bar)\n;;=> \"foo\"\n\n(namespace 'foo/bar)\n;;=> \"foo\"\n```\n\nWithout namespaces:\n\n```clj\n(namespace :foo)\n;;=> nil\n\n(namespace 'foo)\n;;=> nil\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> nil\n```"}],
  :full-name "cljs.core/namespace",

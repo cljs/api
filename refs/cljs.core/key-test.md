@@ -22,24 +22,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L4289-L4292):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L4304-L4308):
 
 ```clj
 (defn ^boolean key-test [key other]
-  (if ^boolean (goog/isString key)
-    (identical? key other)
-    (= key other)))
+  (cond
+    (identical? key other) true
+    (keyword-identical? key other) true
+    :else (= key other)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4289-4292](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L4289-L4292)</ins>
+            └── <ins>[core.cljs:4304-4308](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L4304-L4308)</ins>
 </pre>
 
 -->
@@ -85,12 +86,12 @@ The API data for this symbol:
  :history [["+" "0.0-1424"]],
  :type "function",
  :full-name-encode "cljs.core/key-test",
- :source {:code "(defn ^boolean key-test [key other]\n  (if ^boolean (goog/isString key)\n    (identical? key other)\n    (= key other)))",
+ :source {:code "(defn ^boolean key-test [key other]\n  (cond\n    (identical? key other) true\n    (keyword-identical? key other) true\n    :else (= key other)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4289 4292]},
+          :lines [4304 4308]},
  :full-name "cljs.core/key-test"}
 
 ```

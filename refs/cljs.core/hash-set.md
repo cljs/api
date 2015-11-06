@@ -41,41 +41,23 @@ Any equal keys are handled as if by repeated uses of `conj`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6151-L6171):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6190-L6192):
 
 ```clj
 (defn hash-set
-  ([] cljs.core.PersistentHashSet/EMPTY)
-  ([& ^not-native keys]
-     (if (and (instance? IndexedSeq keys)
-              (< (alength (.-arr keys)) cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD))
-       (let [karr (.-arr keys)
-             klen (alength karr)
-             alen (* 2 klen)
-             arr  (make-array alen)]
-         (loop [ki 0]
-           (if (< ki klen)
-             (let [ai (* 2 ki)]
-               (aset arr ai (aget karr ki))
-               (aset arr (inc ai) nil)
-               (recur (inc ki)))
-             (cljs.core.PersistentHashSet/fromArray arr true))))
-       (loop [in keys
-              ^not-native out (-as-transient cljs.core.PersistentHashSet/EMPTY)]
-         (if-not (nil? in)
-           (recur (-next in) (-conj! out (-first in)))
-           (-persistent! out))))))
+  ([] #{})
+  ([& keys] (set keys)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6151-6171](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6151-L6171)</ins>
+            └── <ins>[core.cljs:6190-6192](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6190-L6192)</ins>
 </pre>
 
 -->
@@ -125,12 +107,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/set" "cljs.core/sorted-set"],
  :full-name-encode "cljs.core/hash-set",
- :source {:code "(defn hash-set\n  ([] cljs.core.PersistentHashSet/EMPTY)\n  ([& ^not-native keys]\n     (if (and (instance? IndexedSeq keys)\n              (< (alength (.-arr keys)) cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD))\n       (let [karr (.-arr keys)\n             klen (alength karr)\n             alen (* 2 klen)\n             arr  (make-array alen)]\n         (loop [ki 0]\n           (if (< ki klen)\n             (let [ai (* 2 ki)]\n               (aset arr ai (aget karr ki))\n               (aset arr (inc ai) nil)\n               (recur (inc ki)))\n             (cljs.core.PersistentHashSet/fromArray arr true))))\n       (loop [in keys\n              ^not-native out (-as-transient cljs.core.PersistentHashSet/EMPTY)]\n         (if-not (nil? in)\n           (recur (-next in) (-conj! out (-first in)))\n           (-persistent! out))))))",
+ :source {:code "(defn hash-set\n  ([] #{})\n  ([& keys] (set keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6151 6171]},
+          :lines [6190 6192]},
  :full-name "cljs.core/hash-set",
  :clj-symbol "clojure.core/hash-set"}
 

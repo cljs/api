@@ -34,25 +34,26 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L1797-L1803):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L2064-L2071):
 
 ```clj
 (defn keyword
-  ([name] (cond (keyword? name) name
-                (symbol? name) (str* "\uFDD0" ":" (cljs.core/name name))
-                :else (str* "\uFDD0" ":" name)))
-  ([ns name] (keyword (str* ns "/" name))))
+  ([name] (cond
+            (keyword? name)(Keyword. nil name name nil)
+            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)
+            :else (Keyword. nil name name nil)))
+  ([ns name] (Keyword. ns name (str (when ns (str ns "/")) name) nil)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1797-1803](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L1797-L1803)</ins>
+            └── <ins>[core.cljs:2064-2071](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L2064-L2071)</ins>
 </pre>
 
 -->
@@ -100,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/keyword",
- :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \":\" (cljs.core/name name))\n                :else (str* \"\\uFDD0\" \":\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
+ :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name)(Keyword. nil name name nil)\n            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)\n            :else (Keyword. nil name name nil)))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1797 1803]},
+          :lines [2064 2071]},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

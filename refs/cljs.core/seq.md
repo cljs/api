@@ -47,7 +47,7 @@ Strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L423-L444):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L425-L446):
 
 ```clj
 (defn ^seq seq
@@ -65,7 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/c
       (when-not (zero? (alength coll))
         (IndexedSeq. coll 0))
 
-      (type_satisfies_ ILookup coll)
+      (type_satisfies_ ISeqable coll)
       (-seq coll)
 
       :else (throw (js/Error. (str coll "is not ISeqable"))))))
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:423-444](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L423-L444)</ins>
+            └── <ins>[core.cljs:425-446](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L425-L446)</ins>
 </pre>
 
 -->
@@ -130,12 +130,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/seq?" "cljs.core/empty?"],
  :full-name-encode "cljs.core/seq",
- :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (satisfies? ISeqable coll false)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (string? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (type_satisfies_ ILookup coll)\n      (-seq coll)\n\n      :else (throw (js/Error. (str coll \"is not ISeqable\"))))))",
+ :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (satisfies? ISeqable coll false)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (string? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (type_satisfies_ ISeqable coll)\n      (-seq coll)\n\n      :else (throw (js/Error. (str coll \"is not ISeqable\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [423 444]},
+          :lines [425 446]},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

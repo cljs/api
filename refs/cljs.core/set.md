@@ -54,23 +54,35 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6173-L6176):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6173-L6188):
 
 ```clj
 (defn set
   [coll]
-  (apply hash-set coll))
+  (let [^not-native in (seq coll)]
+    (cond
+      (nil? in) #{}
+
+      (instance? IndexedSeq in)
+      (set-from-indexed-seq in)
+
+      :else
+      (loop [in in
+              ^not-native out (-as-transient #{})]
+        (if-not (nil? in)
+          (recur (-next in) (-conj! out (-first in)))
+          (-persistent! out))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1859
+clojurescript @ r1877
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6173-6176](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/cljs/core.cljs#L6173-L6176)</ins>
+            └── <ins>[core.cljs:6173-6188](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6173-L6188)</ins>
 </pre>
 
 -->
@@ -134,12 +146,12 @@ The API data for this symbol:
            "clojure.set/rename-keys"
            "clojure.set/map-invert"],
  :full-name-encode "cljs.core/set",
- :source {:code "(defn set\n  [coll]\n  (apply hash-set coll))",
+ :source {:code "(defn set\n  [coll]\n  (let [^not-native in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (instance? IndexedSeq in)\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [in in\n              ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (-next in) (-conj! out (-first in)))\n          (-persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1859",
+          :tag "r1877",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6173 6176]},
+          :lines [6173 6188]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}
