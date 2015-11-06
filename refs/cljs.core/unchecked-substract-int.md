@@ -34,10 +34,10 @@ the ys from x and returns the result.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1610-L1615):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1610-L1615):
 
 ```clj
-(defn unchecked-substract-int
+(defn ^number unchecked-substract-int
   ([x] (cljs.core/unchecked-subtract-int x))
   ([x y] (cljs.core/unchecked-subtract-int x y))
   ([x y & more] (reduce unchecked-substract-int (cljs.core/unchecked-subtract-int x y) more)))
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1610-1615](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1610-L1615)</ins>
+            └── <ins>[core.cljs:1610-1615](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1610-L1615)</ins>
 </pre>
 
 -->
@@ -90,16 +90,17 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type number,
+ :ns "cljs.core",
  :name "unchecked-substract-int",
  :signature ["[x]" "[x y]" "[x y & more]"],
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core/unchecked-substract-int",
- :source {:code "(defn unchecked-substract-int\n  ([x] (cljs.core/unchecked-subtract-int x))\n  ([x y] (cljs.core/unchecked-subtract-int x y))\n  ([x y & more] (reduce unchecked-substract-int (cljs.core/unchecked-subtract-int x y) more)))",
+ :source {:code "(defn ^number unchecked-substract-int\n  ([x] (cljs.core/unchecked-subtract-int x))\n  ([x y] (cljs.core/unchecked-subtract-int x y))\n  ([x y & more] (reduce unchecked-substract-int (cljs.core/unchecked-subtract-int x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1610 1615]},
  :full-name "cljs.core/unchecked-substract-int",

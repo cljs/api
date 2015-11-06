@@ -30,10 +30,10 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1632-L1635):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1632-L1635):
 
 ```clj
-(defn long
+(defn ^number long
   [x]
   (fix x))
 ```
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1632-1635](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1632-L1635)</ins>
+            └── <ins>[core.cljs:1632-1635](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1632-L1635)</ins>
 </pre>
 
 -->
@@ -88,16 +88,17 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type number,
+ :ns "cljs.core",
  :name "long",
  :signature ["[x]"],
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/long",
- :source {:code "(defn long\n  [x]\n  (fix x))",
+ :source {:code "(defn ^number long\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1632 1635]},
  :full-name "cljs.core/long",

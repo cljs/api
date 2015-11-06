@@ -60,10 +60,10 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1656-L1659):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1656-L1659):
 
 ```clj
-(defn mod
+(defn ^number mod
   [n d]
   (js-mod (+ (js-mod n d) d) d))
 ```
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1656-1659](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1656-L1659)</ins>
+            └── <ins>[core.cljs:1656-1659](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1656-L1659)</ins>
 </pre>
 
 -->
@@ -119,6 +119,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns the modulus of dividing numerator `n` by denominator `d`.\n\nReturns `NaN` when `d` is 0 (divide by 0 error).\n\nTruncates toward negative infinity.",
+ :return-type number,
  :ns "cljs.core",
  :name "mod",
  :signature ["[n d]"],
@@ -126,10 +127,10 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/rem"],
  :full-name-encode "cljs.core/mod",
- :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
+ :source {:code "(defn ^number mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1656 1659]},
  :examples [{:id "8165e8",

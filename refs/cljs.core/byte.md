@@ -25,28 +25,28 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1525):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1525):
 
 ```clj
-(defn byte [x] x)
+(defn ^number byte [x] x)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1525](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1525)</ins>
+            └── <ins>[core.cljs:1525](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1525)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L336):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L336):
 
 ```clj
 (defmacro byte [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:336](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L336)</ins>
+            └── <ins>[core.clj:336](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L336)</ins>
 </pre>
 -->
 
@@ -100,22 +100,23 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type number,
+ :ns "cljs.core",
  :name "byte",
  :signature ["[x]"],
  :history [["+" "0.0-1798"]],
  :type "function/macro",
  :full-name-encode "cljs.core/byte",
- :source {:code "(defn byte [x] x)",
+ :source {:code "(defn ^number byte [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1525]},
  :extra-sources [{:code "(defmacro byte [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2069",
+                  :tag "r2075",
                   :filename "src/clj/cljs/core.clj",
                   :lines [336]}],
  :full-name "cljs.core/byte",

@@ -25,28 +25,28 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1535):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1535):
 
 ```clj
-(defn short [x] x)
+(defn ^number short [x] x)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1535](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1535)</ins>
+            └── <ins>[core.cljs:1535](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1535)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L337):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L337):
 
 ```clj
 (defmacro short [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:337](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L337)</ins>
+            └── <ins>[core.clj:337](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L337)</ins>
 </pre>
 -->
 
@@ -100,22 +100,23 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type number,
+ :ns "cljs.core",
  :name "short",
  :signature ["[x]"],
  :history [["+" "0.0-1798"]],
  :type "function/macro",
  :full-name-encode "cljs.core/short",
- :source {:code "(defn short [x] x)",
+ :source {:code "(defn ^number short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1535]},
  :extra-sources [{:code "(defmacro short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2069",
+                  :tag "r2075",
                   :filename "src/clj/cljs/core.clj",
                   :lines [337]}],
  :full-name "cljs.core/short",

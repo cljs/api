@@ -25,10 +25,10 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1595-L1596):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1595-L1596):
 
 ```clj
-(defn unchecked-negate-int [x]
+(defn ^number unchecked-negate-int [x]
   (cljs.core/unchecked-negate-int x))
 ```
 
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1595-1596](https://github.com/clojure/clojurescript/blob/r2069/src/cljs/cljs/core.cljs#L1595-L1596)</ins>
+            └── <ins>[core.cljs:1595-1596](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L1595-L1596)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L377-L378):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L377-L378):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-negate-int
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:377-378](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/core.clj#L377-L378)</ins>
+            └── <ins>[core.clj:377-378](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/core.clj#L377-L378)</ins>
 </pre>
 -->
 
@@ -102,22 +102,23 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type number,
+ :ns "cljs.core",
  :name "unchecked-negate-int",
  :signature ["[x]"],
  :history [["+" "0.0-1798"]],
  :type "function/macro",
  :full-name-encode "cljs.core/unchecked-negate-int",
- :source {:code "(defn unchecked-negate-int [x]\n  (cljs.core/unchecked-negate-int x))",
+ :source {:code "(defn ^number unchecked-negate-int [x]\n  (cljs.core/unchecked-negate-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1595 1596]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-negate-int\n  ([x] `(- ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2069",
+                  :tag "r2075",
                   :filename "src/clj/cljs/core.clj",
                   :lines [377 378]}],
  :full-name "cljs.core/unchecked-negate-int",

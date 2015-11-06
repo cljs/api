@@ -32,7 +32,7 @@ not be readable by the Clojure reader.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/repl.clj#L69-L97):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/repl.clj#L69-L97):
 
 ```clj
 (defn evaluate-form
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2069/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2069
+clojurescript @ r2075
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:69-97](https://github.com/clojure/clojurescript/blob/r2069/src/clj/cljs/repl.clj#L69-L97)</ins>
+            └── <ins>[repl.clj:69-97](https://github.com/clojure/clojurescript/blob/r2075/src/clj/cljs/repl.clj#L69-L97)</ins>
 </pre>
 
 -->
@@ -120,7 +120,7 @@ The API data for this symbol:
  :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n     (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n     (try\n       (let [ast (ana/analyze env form)\n             js (comp/emit-str ast)\n             wrap-js (comp/emit-str (ana/no-warn (ana/analyze env (wrap form))))]\n         (when (= (:op ast) :ns)\n           (load-dependencies repl-env (into (vals (:requires ast))\n                                             (distinct (vals (:uses ast))))))\n         (when *cljs-verbose*\n           (print js))\n         (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n           (case (:status ret)\n             ;;we eat ns errors because we know goog.provide() will throw when reloaded\n             ;;TODO - file bug with google, this is bs error\n             ;;this is what you get when you try to 'teach new developers'\n             ;;via errors (goog/base.js 104)\n             :error (display-error ret form)\n             :exception (display-error ret form\n                          #(prn \"Error evaluating:\" form :as js))\n             :success (:value ret))))\n       (catch Throwable ex\n         (.printStackTrace ex)\n         (println (str ex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2069",
+          :tag "r2075",
           :filename "src/clj/cljs/repl.clj",
           :lines [69 97]},
  :full-name "cljs.repl/evaluate-form",
