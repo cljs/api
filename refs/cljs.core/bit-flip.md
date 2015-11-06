@@ -61,7 +61,7 @@ Flip bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L2378-L2381):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2378-L2381):
 
 ```clj
 (defn bit-flip
@@ -73,18 +73,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2378-2381](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L2378-L2381)</ins>
+            └── <ins>[core.cljs:2378-2381](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2378-L2381)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L587-L588):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L587-L588):
 
 ```clj
 (defmacro ^::ana/numeric bit-flip [x n]
@@ -95,11 +95,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:587-588](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L587-L588)</ins>
+            └── <ins>[core.clj:587-588](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L587-L588)</ins>
 </pre>
 -->
 
@@ -150,13 +150,13 @@ The API data for this symbol:
  :source {:code "(defn bit-flip\n  [x n]\n  (cljs.core/bit-flip x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2378 2381]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-flip [x n]\n  (core/list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3178",
+                  :tag "r3190",
                   :filename "src/clj/cljs/core.clj",
                   :lines [587 588]}],
  :examples [{:id "5d7ee0",

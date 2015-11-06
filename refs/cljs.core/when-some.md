@@ -43,7 +43,7 @@ value of test
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L1776-L1791):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1780-L1795):
 
 ```clj
 (defmacro when-some
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.6.0
+clojure @ clojure-1.7.0-alpha6
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1776-1791](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L1776-L1791)</ins>
+            └── <ins>[core.clj:1780-1795](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1780-L1795)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defmacro when-some\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n    `(let [temp# ~tst]\n       (if (nil? temp#)\n         nil\n         (let [~form temp#]\n           ~@body)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.6.0",
+          :tag "clojure-1.7.0-alpha6",
           :filename "src/clj/clojure/core.clj",
-          :lines [1776 1791]},
+          :lines [1780 1795]},
  :full-name "cljs.core/when-some",
  :clj-symbol "clojure.core/when-some",
  :docstring "bindings => binding-form test\n\nWhen test is not nil, evaluates body with binding-form bound to the\nvalue of test"}

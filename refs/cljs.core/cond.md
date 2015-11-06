@@ -68,7 +68,7 @@ other tests or exprs. (cond) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L558-L571):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L562-L575):
 
 ```clj
 (defmacro cond
@@ -86,11 +86,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.6.0
+clojure @ clojure-1.7.0-alpha6
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:558-571](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L558-L571)</ins>
+            └── <ins>[core.clj:562-575](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L562-L575)</ins>
 </pre>
 
 -->
@@ -143,9 +143,9 @@ The API data for this symbol:
  :source {:code "(defmacro cond\n  [& clauses]\n    (when clauses\n      (list 'if (first clauses)\n            (if (next clauses)\n                (second clauses)\n                (throw (IllegalArgumentException.\n                         \"cond requires an even number of forms\")))\n            (cons 'clojure.core/cond (next (next clauses))))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.6.0",
+          :tag "clojure-1.7.0-alpha6",
           :filename "src/clj/clojure/core.clj",
-          :lines [558 571]},
+          :lines [562 575]},
  :examples [{:id "0cc9ac",
              :content "```\n(def a 42)\n(cond\n  (< a 10) \"a is less than 10\"\n  (= a 10) \"a is 10\"\n  (> a 10) \"a is bigger than 10\"\n  :else \"a is not a number!\")\n;;=> \"a is bigger than 10\"\n```"}],
  :full-name "cljs.core/cond",

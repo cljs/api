@@ -32,7 +32,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/clojure/walk.cljs#L50-L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/clojure/walk.cljs#L50-L56):
 
 ```clj
 (defn postwalk
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/clojure/walk.cljs#L50-L56)</ins>
+            └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/clojure/walk.cljs#L50-L56)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn postwalk\n  [f form]\n  (walk (partial postwalk f) f form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/clojure/walk.cljs",
           :lines [50 56]},
  :full-name "clojure.walk/postwalk",

@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2411"><img valign="middle" alt="[+] 0.0-2411" title="Added in 0.0-2411" src="https://img.shields.io/badge/+-0.0--2411-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/ensure-reduced</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ensure-reduced)
+</td>
 </tr>
 </table>
 
@@ -27,7 +30,7 @@ If x is already reduced?, returns it, else returns (reduced x)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L1140-L1143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L1140-L1143):
 
 ```clj
 (defn ensure-reduced
@@ -39,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1140-1143](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L1140-L1143)</ins>
+            └── <ins>[core.cljs:1140-1143](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L1140-L1143)</ins>
 </pre>
 
 -->
@@ -54,6 +57,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.core/ensure-reduced` @ clojuredocs](http://clojuredocs.org/clojure.core/ensure-reduced)<br>
+[`clojure.core/ensure-reduced` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/ensure-reduced/)<br>
+[`clojure.core/ensure-reduced` @ crossclj](http://crossclj.info/fun/clojure.core/ensure-reduced.html)<br>
 [`cljs.core/ensure-reduced` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/ensure-reduced.html)<br>
 
 ---
@@ -91,10 +97,11 @@ The API data for this symbol:
  :source {:code "(defn ensure-reduced\n  [x]\n  (if (reduced? x) x (reduced x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1140 1143]},
  :full-name "cljs.core/ensure-reduced",
+ :clj-symbol "clojure.core/ensure-reduced",
  :docstring "If x is already reduced?, returns it, else returns (reduced x)"}
 
 ```

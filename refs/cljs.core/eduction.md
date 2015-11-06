@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2371"><img valign="middle" alt="[+] 0.0-2371" title="Added in 0.0-2371" src="https://img.shields.io/badge/+-0.0--2371-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/eduction</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/eduction)
+</td>
 </tr>
 </table>
 
@@ -29,7 +32,7 @@ will be performed every time iterator/seq/reduce is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L8940-L8945):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L8940-L8945):
 
 ```clj
 (defn eduction
@@ -41,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8940-8945](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L8940-L8945)</ins>
+            └── <ins>[core.cljs:8940-8945](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L8940-L8945)</ins>
 </pre>
 
 -->
@@ -56,6 +59,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.core/eduction` @ clojuredocs](http://clojuredocs.org/clojure.core/eduction)<br>
+[`clojure.core/eduction` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/eduction/)<br>
+[`clojure.core/eduction` @ crossclj](http://crossclj.info/fun/clojure.core/eduction.html)<br>
 [`cljs.core/eduction` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/eduction.html)<br>
 
 ---
@@ -93,10 +99,11 @@ The API data for this symbol:
  :source {:code "(defn eduction\n  [xform coll]\n  (Eduction. xform coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8940 8945]},
  :full-name "cljs.core/eduction",
+ :clj-symbol "clojure.core/eduction",
  :docstring "Returns a reducible/iterable/seqable application of\nthe transducer to the items in coll. Note that these applications\t\nwill be performed every time iterator/seq/reduce is called."}
 
 ```

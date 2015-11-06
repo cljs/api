@@ -24,30 +24,35 @@ Source docstring:
 
 ```
 Map a JavaScript output file back to the original ClojureScript source
-file.
+file (.cljs or .cljc).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L203-L210):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L203-L215):
 
 ```clj
 (defn ^File js-src->cljs-src
   [f]
   (let [f (io/file f)
         dir (.getParentFile f)
-        name (.getName f)]
-    (io/file dir (string/replace name ".js" ".cljs"))))
+        base-name (string/replace (.getName f) ".js" "")
+        cljsf (io/file dir (str base-name ".cljs"))]
+    (if (.exists cljsf)
+      cljsf
+      (let [cljcf (io/file dir (str base-name ".cljc"))]
+        (if (.exists cljcf)
+          cljcf)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:203-210](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L203-L210)</ins>
+            └── <ins>[repl.clj:203-215](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L203-L215)</ins>
 </pre>
 
 -->
@@ -93,14 +98,14 @@ The API data for this symbol:
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl/js-src-GTcljs-src",
- :source {:code "(defn ^File js-src->cljs-src\n  [f]\n  (let [f (io/file f)\n        dir (.getParentFile f)\n        name (.getName f)]\n    (io/file dir (string/replace name \".js\" \".cljs\"))))",
+ :source {:code "(defn ^File js-src->cljs-src\n  [f]\n  (let [f (io/file f)\n        dir (.getParentFile f)\n        base-name (string/replace (.getName f) \".js\" \"\")\n        cljsf (io/file dir (str base-name \".cljs\"))]\n    (if (.exists cljsf)\n      cljsf\n      (let [cljcf (io/file dir (str base-name \".cljc\"))]\n        (if (.exists cljcf)\n          cljcf)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/clj/cljs/repl.clj",
-          :lines [203 210]},
+          :lines [203 215]},
  :full-name "cljs.repl/js-src->cljs-src",
- :docstring "Map a JavaScript output file back to the original ClojureScript source\nfile."}
+ :docstring "Map a JavaScript output file back to the original ClojureScript source\nfile (.cljs or .cljc)."}
 
 ```
 

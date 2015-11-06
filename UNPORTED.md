@@ -115,6 +115,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/->Eduction](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EEduction)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/->Vec](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EVec)</samp></td>
 </tr>
 <tr>
@@ -128,6 +132,14 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/ArrayChunk](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ArrayChunk)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/Eduction](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/Eduction)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/Throwable->map](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/Throwable-%3Emap)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -611,6 +623,14 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/reader-conditional](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reader-conditional)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/reader-conditional?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reader-conditional?)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/record?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/record?)</samp></td>
 </tr>
 <tr>
@@ -724,6 +744,14 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/sync](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sync)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/tagged-literal](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tagged-literal)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/tagged-literal?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tagged-literal?)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1090,6 +1118,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/Cycle](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Cycle.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/DynamicClassLoader](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/DynamicClassLoader.java)</samp></td>
 </tr>
 <tr>
@@ -1130,6 +1162,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/IMapIterable](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IMapIterable.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/IObj](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IObj.java)</samp></td>
 </tr>
 <tr>
@@ -1146,6 +1182,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/IReduceInit](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IReduceInit.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/IRef](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IRef.java)</samp></td>
 </tr>
 <tr>
@@ -1159,6 +1199,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Intrinsics](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Intrinsics.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/Iterate](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Iterate.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1230,11 +1274,23 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/ReaderConditional](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ReaderConditional.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/RecordIterator](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/RecordIterator.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Ref](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Ref.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Reflector](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Reflector.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/Repeat](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Repeat.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1262,11 +1318,23 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/TaggedLiteral](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TaggedLiteral.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/TransactionalHashMap](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TransactionalHashMap.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/TransformerIterator](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TransformerIterator.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Util](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Util.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/WarnBoxedMath](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/WarnBoxedMath.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

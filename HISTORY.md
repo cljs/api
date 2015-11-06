@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3190](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3190)__</td>
+<td>2015-04-09</td>
+<td><kbd>1.7.0-alpha6</kbd></td>
+<td><kbd>0.9.0</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003190syntax">
++2 
+</a>
+</td>
+<td>
+<a href="#user-content-003190library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003190compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3178](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3178)__</td>
 <td>2015-04-06</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2545,6 +2568,35 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3190
+
+<a name="003190syntax"></a> __Syntax Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-syntax-brightgreen.svg">
+</td>
+<td><samp>[#? reader conditional](refs/syntax/cond.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-syntax-brightgreen.svg">
+</td>
+<td><samp>[#?@ reader conditional splicing](refs/syntax/cond-splicing.md)</samp></td>
+</tr>
+</table>
+
+<a name="003190library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="003190compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-3178

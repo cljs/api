@@ -6,6 +6,9 @@
 <tr>
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2173"><img valign="middle" alt="[+] 0.0-2173" title="Added in 0.0-2173" src="https://img.shields.io/badge/+-0.0--2173-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IAtom</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IAtom.java)
+</td>
 </tr>
 </table>
 
@@ -22,7 +25,7 @@ Marker protocol indicating an atom.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L614-L615):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L614-L615):
 
 ```clj
 (defprotocol IAtom
@@ -33,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:614-615](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L614-L615)</ins>
+            └── <ins>[core.cljs:614-615](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L614-L615)</ins>
 </pre>
 
 -->
@@ -48,6 +51,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.lang/IAtom` @ clojuredocs](http://clojuredocs.org/clojure.lang/IAtom)<br>
+[`clojure.lang/IAtom` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.lang/IAtom/)<br>
+[`clojure.lang/IAtom` @ crossclj](http://crossclj.info/fun/clojure.lang/IAtom.html)<br>
 [`cljs.core/IAtom` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/IAtom.html)<br>
 
 ---
@@ -78,17 +84,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IAtom",
+ :history [["+" "0.0-2173"]],
  :type "protocol",
  :full-name-encode "cljs.core/IAtom",
  :source {:code "(defprotocol IAtom\n  \"Marker protocol indicating an atom.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [614 615]},
  :full-name "cljs.core/IAtom",
- :docstring "Marker protocol indicating an atom.",
- :history [["+" "0.0-2173"]]}
+ :clj-symbol "clojure.lang/IAtom",
+ :docstring "Marker protocol indicating an atom."}
 
 ```
 

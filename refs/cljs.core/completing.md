@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2341"><img valign="middle" alt="[+] 0.0-2341" title="Added in 0.0-2341" src="https://img.shields.io/badge/+-0.0--2341-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/completing</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/completing)
+</td>
 </tr>
 </table>
 
@@ -32,7 +35,7 @@ identity) on the result argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L2071-L2080):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2071-L2080):
 
 ```clj
 (defn completing
@@ -48,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2071-2080](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L2071-L2080)</ins>
+            └── <ins>[core.cljs:2071-2080](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2071-L2080)</ins>
 </pre>
 
 -->
@@ -63,6 +66,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.core/completing` @ clojuredocs](http://clojuredocs.org/clojure.core/completing)<br>
+[`clojure.core/completing` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/completing/)<br>
+[`clojure.core/completing` @ crossclj](http://crossclj.info/fun/clojure.core/completing.html)<br>
 [`cljs.core/completing` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/completing.html)<br>
 
 ---
@@ -100,10 +106,11 @@ The API data for this symbol:
  :source {:code "(defn completing\n  ([f] (completing f identity))\n  ([f cf]\n    (fn\n      ([] (f))\n      ([x] (cf x))\n      ([x y] (f x y)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2071 2080]},
  :full-name "cljs.core/completing",
+ :clj-symbol "clojure.core/completing",
  :docstring "Takes a reducing function f of 2 args and returns a fn suitable for\ntransduce by adding an arity-1 signature that calls cf (default -\nidentity) on the result argument."}
 
 ```

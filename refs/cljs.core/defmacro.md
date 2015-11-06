@@ -55,7 +55,7 @@ evaluation, depending on the compiler version:
 
 Please see the examples section below for a more concrete look.
 
-
+[doc:syntax/cond]:../syntax/cond.md
 
 ---
 
@@ -110,7 +110,7 @@ called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L422-L466):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L426-L470):
 
 ```clj
 (def
@@ -164,11 +164,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.6.0
+clojure @ clojure-1.7.0-alpha6
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:422-466](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L422-L466)</ins>
+            └── <ins>[core.clj:426-470](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L426-L470)</ins>
 </pre>
 
 -->
@@ -225,9 +225,9 @@ The API data for this symbol:
  :source {:code "(def\n\n ^{:doc \"Like defn, but the resulting function name is declared as a\n  macro and will be used as a macro by the compiler when it is\n  called.\"\n   :arglists '([name doc-string? attr-map? [params*] body]\n                 [name doc-string? attr-map? ([params*] body)+ attr-map?])\n   :added \"1.0\"}\n defmacro (fn [&form &env \n                name & args]\n             (let [prefix (loop [p (list name) args args]\n                            (let [f (first args)]\n                              (if (string? f)\n                                (recur (cons f p) (next args))\n                                (if (map? f)\n                                  (recur (cons f p) (next args))\n                                  p))))\n                   fdecl (loop [fd args]\n                           (if (string? (first fd))\n                             (recur (next fd))\n                             (if (map? (first fd))\n                               (recur (next fd))\n                               fd)))\n                   fdecl (if (vector? (first fdecl))\n                           (list fdecl)\n                           fdecl)\n                   add-implicit-args (fn [fd]\n                             (let [args (first fd)]\n                               (cons (vec (cons '&form (cons '&env args))) (next fd))))\n                   add-args (fn [acc ds]\n                              (if (nil? ds)\n                                acc\n                                (let [d (first ds)]\n                                  (if (map? d)\n                                    (conj acc d)\n                                    (recur (conj acc (add-implicit-args d)) (next ds))))))\n                   fdecl (seq (add-args [] fdecl))\n                   decl (loop [p prefix d fdecl]\n                          (if p\n                            (recur (next p) (cons (first p) d))\n                            d))]\n               (list 'do\n                     (cons `defn decl)\n                     (list '. (list 'var name) '(setMacro))\n                     (list 'var name)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.6.0",
+          :tag "clojure-1.7.0-alpha6",
           :filename "src/clj/clojure/core.clj",
-          :lines [422 466]},
+          :lines [426 470]},
  :examples [{:id "8040c8",
              :content "Here is a `str->int` macro that works for either ClojureScript compiler\nversion.  It simply expands to a `js/parseInt` call:\n\n```clj\n;; in macros.clj\n(ns foo.macros)\n\n;; expands to a runtime call\n(defmacro str->int [s]\n  `(js/parseInt s))\n```\n\nIf we want to evaluate the conversion at _compile time_ instead of expanding it\nto a runtime call, we must use reader conditionals (in a `.cljc` file) to\nchoose the function appropriate for each compiler's evaluation environment.\n\n```clj\n;; in macros.cljc\n(ns foo.macros)\n\n;; expands to the result of the conversion\n(defmacro str->int [s]\n  #?(:clj  (Integer/parseInt s)\n     :cljs (js/parseInt s)))\n```"}],
  :full-name "cljs.core/defmacro",

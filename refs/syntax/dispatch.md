@@ -35,7 +35,7 @@ original forms:
 | [`quote`][doc:syntax/quote]                     | [`var`][doc:syntax/var]                                     | quote-related          |
 | [`unused`][doc:syntax/unused]                    | [`ignore`][doc:syntax/ignore]                                  | ignore-related         |
 | [`foo (symbol)`][doc:syntax/symbol]    | [`#foo (tagged literal)`][doc:syntax/tagged-literal] | name-related           |
-| [`predicate`][doc:syntax/predicate]                 | [doc:syntax/cond]                                    | conditional-related    |
+| [`predicate`][doc:syntax/predicate]                 | [`cond`][doc:syntax/cond]                                    | conditional-related    |
 
 [doc:syntax/string]:../syntax/string.md
 [doc:syntax/regex]:../syntax/regex.md
@@ -50,6 +50,7 @@ original forms:
 [doc:syntax/symbol]:../syntax/symbol.md
 [doc:syntax/tagged-literal]:../syntax/tagged-literal.md
 [doc:syntax/predicate]:../syntax/predicate.md
+[doc:syntax/cond]:../syntax/cond.md
 
 ---
 
@@ -131,7 +132,7 @@ Reader Conditional:
 [`#' var`](../syntax/var.md)<br>
 [`#_ ignore`](../syntax/ignore.md)<br>
 [`# tagged literal`](../syntax/tagged-literal.md)<br>
-[``](../syntax/cond.md)<br>
+[`#? reader conditional`](../syntax/cond.md)<br>
 
 ---
 
@@ -139,15 +140,15 @@ Reader Conditional:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L54-L62):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L57-L65):
 
 ```clj
 (defn- read-dispatch
-  [rdr _]
+  [rdr _ opts pending-forms]
   (if-let [ch (read-char rdr)]
     (if-let [dm (dispatch-macros ch)]
-      (dm rdr ch)
-      (if-let [obj (read-tagged (doto rdr (unread ch)) ch)] ;; ctor reader is implemented as a taggged literal
+      (dm rdr ch opts pending-forms)
+      (if-let [obj (read-tagged (doto rdr (unread ch)) ch opts pending-forms)] ;; ctor reader is implemented as a tagged literal
         obj
         (reader-error rdr "No dispatch macro for " ch)))
     (reader-error rdr "EOF while reading character")))
@@ -157,18 +158,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.16
+tools.reader @ tools.reader-0.9.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:54-62](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L54-L62)</ins>
+                    └── <ins>[reader.clj:57-65](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L57-L65)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L729-L748):
 
 ```clj
 (defn- macros [ch]
@@ -197,13 +198,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.16
+tools.reader @ tools.reader-0.9.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:588-607](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607)</ins>
+                    └── <ins>[reader.clj:729-748](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L729-L748)</ins>
 </pre>
 -->
 
@@ -248,18 +249,18 @@ The API data for this symbol:
            "syntax/tagged-literal"
            "syntax/cond"],
  :full-name-encode "syntax/dispatch",
- :extra-sources ({:code "(defn- read-dispatch\n  [rdr _]\n  (if-let [ch (read-char rdr)]\n    (if-let [dm (dispatch-macros ch)]\n      (dm rdr ch)\n      (if-let [obj (read-tagged (doto rdr (unread ch)) ch)] ;; ctor reader is implemented as a taggged literal\n        obj\n        (reader-error rdr \"No dispatch macro for \" ch)))\n    (reader-error rdr \"EOF while reading character\")))",
+ :extra-sources ({:code "(defn- read-dispatch\n  [rdr _ opts pending-forms]\n  (if-let [ch (read-char rdr)]\n    (if-let [dm (dispatch-macros ch)]\n      (dm rdr ch opts pending-forms)\n      (if-let [obj (read-tagged (doto rdr (unread ch)) ch opts pending-forms)] ;; ctor reader is implemented as a tagged literal\n        obj\n        (reader-error rdr \"No dispatch macro for \" ch)))\n    (reader-error rdr \"EOF while reading character\")))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.16",
+                  :tag "tools.reader-0.9.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [54 62]}
+                  :lines [57 65]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.16",
+                  :tag "tools.reader-0.9.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [588 607]}),
+                  :lines [729 748]}),
  :usage ["#..."],
  :examples [{:id "0a1f4c",
              :content "The dispatch macro is not usable on its own.  Rather, it dispatches to other\nsyntax forms.\n\nRegular expression:\n\n```clj\n#\"[a-zA-Z0-9]+\"\n;;=> #\"[a-zA-Z0-9]+\"\n```\n\nSet:\n\n```clj\n#{:foo 1 2}\n;;=> #{:foo 1 2}\n```\n\nFunction:\n\n```clj\n#(foo 1 2)\n;;=> #<function (){\n;;   return cljs.user.foo.call(null,(1),(2));\n;;   }>\n```\n\nVar reference:\n\n```clj\n(def a)\n#'a\n;;=> #'cljs.user/a\n```\n\nIgnore form:\n\n```clj\n#_foo\n;; waits for next form since #_foo was ignored\n\n#_123 456\n;;=> 456\n```\n\nTagged Literals:\n\n```clj\n#queue [1 2 3]\n;;=> #queue [1 2 3]\n\n#js {:foo 1}\n;;=> #js {:foo 1}\n\n#inst \"2010-11-12T18:14:15.666-00:00\"\n;;=> #inst \"2010-11-12T18:14:15.666-00:00\"\n```\n\nReader Conditional:\n\n```clj\n#?(:clj \"Clojure\" :cljs \"ClojureScript\")\n;;=> \"ClojureScript\"\n```"}],

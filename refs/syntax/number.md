@@ -100,32 +100,32 @@ Radix notation for using up to base 36.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L227-L236):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L251-L260):
 
 ```clj
 (defn- read-number
-  [reader initch]
+  [rdr initch]
   (loop [sb (doto (StringBuilder.) (.append initch))
-         ch (read-char reader)]
+         ch (read-char rdr)]
     (if (or (whitespace? ch) (macros ch) (nil? ch))
       (let [s (str sb)]
-        (unread reader ch)
+        (unread rdr ch)
         (or (match-number s)
-            (reader-error reader "Invalid number format [" s "]")))
-      (recur (doto sb (.append ch)) (read-char reader)))))
+            (reader-error rdr "Invalid number format [" s "]")))
+      (recur (doto sb (.append ch)) (read-char rdr)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.16
+tools.reader @ tools.reader-0.9.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:227-236](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L227-L236)</ins>
+                    └── <ins>[reader.clj:251-260](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L251-L260)</ins>
 </pre>
 -->
 
@@ -168,12 +168,12 @@ The API data for this symbol:
            "cljs.core/integer?"
            "cljs.core/int"],
  :full-name-encode "syntax/number",
- :extra-sources [{:code "(defn- read-number\n  [reader initch]\n  (loop [sb (doto (StringBuilder.) (.append initch))\n         ch (read-char reader)]\n    (if (or (whitespace? ch) (macros ch) (nil? ch))\n      (let [s (str sb)]\n        (unread reader ch)\n        (or (match-number s)\n            (reader-error reader \"Invalid number format [\" s \"]\")))\n      (recur (doto sb (.append ch)) (read-char reader)))))",
+ :extra-sources [{:code "(defn- read-number\n  [rdr initch]\n  (loop [sb (doto (StringBuilder.) (.append initch))\n         ch (read-char rdr)]\n    (if (or (whitespace? ch) (macros ch) (nil? ch))\n      (let [s (str sb)]\n        (unread rdr ch)\n        (or (match-number s)\n            (reader-error rdr \"Invalid number format [\" s \"]\")))\n      (recur (doto sb (.append ch)) (read-char rdr)))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.16",
+                  :tag "tools.reader-0.9.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [227 236]}],
+                  :lines [251 260]}],
  :examples [{:id "f96060",
              :content "```clj\n123\n;;=> 123\n\n123.45\n;;=> 123.45\n```\n\nScientific notation;\n\n```clj\n12e3\n;;=> 12000\n\n1.2e-3\n;;=> 0.0012\n```\n\nStandard hex and octal notations:\n\n```clj\n0x1f\n;;=> 31\n\n010\n;;=> 8\n```\n\nRadix notation for using up to base 36.\n\n```clj\n2r10111\n;;=> 23\n\n8r32\n;;=> 26\n\n16rFF\n;;=> 255\n\n36rZ\n;;=> 35\n```"}],
  :edn-doc "https://github.com/edn-format/edn#integers",

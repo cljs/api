@@ -6,6 +6,9 @@
 <tr>
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/vswap!</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vswap!)
+</td>
 </tr>
 </table>
 
@@ -35,7 +38,7 @@ was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L2023-L2028):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L2023-L2028):
 
 ```clj
 (defmacro vswap!
@@ -47,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:2023-2028](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L2023-L2028)</ins>
+            └── <ins>[core.clj:2023-2028](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L2023-L2028)</ins>
 </pre>
 
 -->
@@ -62,6 +65,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.core/vswap!` @ clojuredocs](http://clojuredocs.org/clojure.core/vswap!)<br>
+[`clojure.core/vswap!` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/vswap%21/)<br>
+[`clojure.core/vswap!` @ crossclj](http://crossclj.info/fun/clojure.core/vswap%21.html)<br>
 [`cljs.core/vswap!` @ crossclj](http://crossclj.info/fun/cljs.core/vswap%21.html)<br>
 
 ---
@@ -100,10 +106,11 @@ The API data for this symbol:
  :source {:code "(defmacro vswap!\n  [vol f & args]\n  `(-vreset! ~vol (~f (-deref ~vol) ~@args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/clj/cljs/core.clj",
           :lines [2023 2028]},
  :full-name "cljs.core/vswap!",
+ :clj-symbol "clojure.core/vswap!",
  :docstring "Non-atomically swaps the value of the volatile as if:\n(apply f current-value-of-vol args). Returns the value that\nwas swapped in."}
 
 ```

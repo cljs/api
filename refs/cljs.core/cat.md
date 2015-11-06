@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2341"><img valign="middle" alt="[+] 0.0-2341" title="Added in 0.0-2341" src="https://img.shields.io/badge/+-0.0--2341-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/cat</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cat)
+</td>
 </tr>
 </table>
 
@@ -28,7 +31,7 @@ collection, into the reduction.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L8886-L8896):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L8886-L8896):
 
 ```clj
 (defn cat
@@ -45,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8886-8896](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L8886-L8896)</ins>
+            └── <ins>[core.cljs:8886-8896](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L8886-L8896)</ins>
 </pre>
 
 -->
@@ -60,6 +63,9 @@ clojurescript @ r3178
 
 ###### External doc links:
 
+[`clojure.core/cat` @ clojuredocs](http://clojuredocs.org/clojure.core/cat)<br>
+[`clojure.core/cat` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/cat/)<br>
+[`clojure.core/cat` @ crossclj](http://crossclj.info/fun/clojure.core/cat.html)<br>
 [`cljs.core/cat` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/cat.html)<br>
 
 ---
@@ -97,10 +103,11 @@ The API data for this symbol:
  :source {:code "(defn cat\n  [rf]\n  (let [rf1 (preserving-reduced rf)]  \n    (fn\n      ([] (rf))\n      ([result] (rf result))\n      ([result input]\n         (reduce rf1 result input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8886 8896]},
  :full-name "cljs.core/cat",
+ :clj-symbol "clojure.core/cat",
  :docstring "A transducer which concatenates the contents of each input, which must be a\ncollection, into the reduction."}
 
 ```

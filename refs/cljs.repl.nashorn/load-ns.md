@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl/nashorn.clj#L134-L136):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl/nashorn.clj#L108-L110):
 
 ```clj
 (defn load-ns [engine ns]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3178
+clojurescript @ r3190
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:134-136](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl/nashorn.clj#L134-L136)</ins>
+                └── <ins>[nashorn.clj:108-110](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl/nashorn.clj#L108-L110)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn load-ns [engine ns]\n  (eval-str engine\n    (format \"goog.require(\\\"%s\\\");\" (comp/munge (first ns)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3178",
+          :tag "r3190",
           :filename "src/clj/cljs/repl/nashorn.clj",
-          :lines [134 136]},
+          :lines [108 110]},
  :full-name "cljs.repl.nashorn/load-ns",
  :full-name-encode "cljs.repl.nashorn/load-ns",
  :history [["+" "0.0-2814"]]}

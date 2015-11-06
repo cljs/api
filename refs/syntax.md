@@ -196,6 +196,18 @@ available in [edn]
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr valign=top>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.org/reader#toc5)</td>
+<td></td>
+<td><samp>[#? reader conditional](syntax/cond.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3190"><img valign="middle" alt="[+] 0.0-3190" title="Added in 0.0-3190" src="https://img.shields.io/badge/+-0.0--3190-lightgrey.svg"></a> </td>
+</tr>
+<tr valign=top>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.org/reader#toc5)</td>
+<td></td>
+<td><samp>[#?@ reader conditional splicing](syntax/cond-splicing.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3190"><img valign="middle" alt="[+] 0.0-3190" title="Added in 0.0-3190" src="https://img.shields.io/badge/+-0.0--3190-lightgrey.svg"></a> </td>
+</tr>
+<tr valign=top>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.org/reader#toc1)</td>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">](https://github.com/edn-format/edn#booleans)</td>
 <td><samp>[boolean literal](syntax/boolean.md)</samp></td>
