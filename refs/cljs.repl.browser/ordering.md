@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L119):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L24):
 
 ```clj
-(def ordering (agent {:expecting nil :fns {}}))
+(def ^:dynamic ordering nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:119](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L119)</ins>
+                └── <ins>[browser.clj:24](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L24)</ins>
 </pre>
 
 -->
@@ -73,13 +73,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "ordering",
- :type "var",
- :source {:code "(def ordering (agent {:expecting nil :fns {}}))",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic ordering nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [119]},
+          :lines [24]},
  :full-name "cljs.repl.browser/ordering",
  :full-name-encode "cljs.repl.browser/ordering",
  :history [["+" "0.0-927"]]}

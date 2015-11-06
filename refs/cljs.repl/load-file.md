@@ -25,21 +25,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L454-L468):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L474-L495):
 
 ```clj
 (defn load-file
-  ([repl-env f] (load-file repl-env f nil))
+  ([repl-env f] (load-file repl-env f *repl-opts*))
   ([repl-env f opts]
     (if (:output-dir opts)
-      (let [src (if (util/url? f) f (io/resource f))
+      (let [src (cond
+                  (util/url? f) f
+                  (.exists (io/file f)) (io/file f)
+                  :else (io/resource f))
             compiled (cljsc/compile src
                        (assoc opts
                          :output-file
                          (cljsc/src-file->target-file src)))]
+        ;; make sure it's been analyzed, this is because if it's already compiled
+        ;; cljs.compiler/compile-file won't do anything, good for builds,
+        ;; but a bit annoying here
+        (ana/analyze-file src opts)
         (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))
         (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))
-      (binding [ana/*cljs-ns* 'cljs.user]
+      (binding [ana/*cljs-ns* ana/*cljs-ns*]
         (let [res (if (= File/separatorChar (first f)) f (io/resource f))]
           (assert res (str "Can't find " f " in classpath"))
           (load-stream repl-env f res))))))
@@ -49,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:454-468](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L454-L468)</ins>
+            └── <ins>[repl.clj:474-495](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L474-L495)</ins>
 </pre>
 
 -->
@@ -96,12 +103,12 @@ The API data for this symbol:
  :name "load-file",
  :type "function",
  :signature ["[repl-env f]" "[repl-env f opts]"],
- :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f nil))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (if (util/url? f) f (io/resource f))\n            compiled (cljsc/compile src\n                       (assoc opts\n                         :output-file\n                         (cljsc/src-file->target-file src)))]\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))\n      (binding [ana/*cljs-ns* 'cljs.user]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
+ :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f *repl-opts*))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (cond\n                  (util/url? f) f\n                  (.exists (io/file f)) (io/file f)\n                  :else (io/resource f))\n            compiled (cljsc/compile src\n                       (assoc opts\n                         :output-file\n                         (cljsc/src-file->target-file src)))]\n        ;; make sure it's been analyzed, this is because if it's already compiled\n        ;; cljs.compiler/compile-file won't do anything, good for builds,\n        ;; but a bit annoying here\n        (ana/analyze-file src opts)\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))\n      (binding [ana/*cljs-ns* ana/*cljs-ns*]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl.clj",
-          :lines [454 468]},
+          :lines [474 495]},
  :full-name "cljs.repl/load-file",
  :full-name-encode "cljs.repl/load-file",
  :history [["+" "0.0-927"]]}

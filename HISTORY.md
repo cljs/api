@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3148](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3148)__</td>
+<td>2015-03-23</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.16</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003148syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003148library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-003148compiler">
++5 -1
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3126](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3126)__</td>
 <td>2015-03-18</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2407,6 +2430,65 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3148
+
+<a name="003148syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003148library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/err-out](refs/cljs.repl/err-out.md)</samp></td>
+</tr>
+</table>
+
+<a name="003148compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/canonicalize-specs](refs/cljs.repl/canonicalize-specs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/decorate-specs](refs/cljs.repl/decorate-specs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/err-out](refs/cljs.repl/err-out.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl/mapped-line-and-column~~](refs/cljs.repl/mapped-line-and-column.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/repl-quit-prompt](refs/cljs.repl/repl-quit-prompt.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.browser/es](refs/cljs.repl.browser/es.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-3126
@@ -6384,7 +6466,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.repl.browser/browser-state](refs/cljs.repl.browser/browser-state.md)</samp></td>
 </tr>
@@ -6564,7 +6646,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.repl.server/state](refs/cljs.repl.server/state.md)</samp></td>
 </tr>
@@ -11203,7 +11285,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.repl.browser/ordering](refs/cljs.repl.browser/ordering.md)</samp></td>
 </tr>

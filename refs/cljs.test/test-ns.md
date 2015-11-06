@@ -38,7 +38,7 @@ Internally binds *report-counters* to a ref initialized to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/test.clj#L353-L365):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/test.clj#L353-L365):
 
 ```clj
 (defmacro test-ns
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:353-365](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/test.clj#L353-L365)</ins>
+            └── <ins>[test.clj:353-365](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/test.clj#L353-L365)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   `(cljs.test/run-block\n     (concat (cljs.test/test-ns-block ~env ~form)\n             [(fn []\n                (cljs.test/clear-env!))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/test.clj",
           :lines [353 365]},
  :full-name "cljs.test/test-ns",

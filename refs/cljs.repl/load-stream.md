@@ -22,25 +22,26 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L446-L450):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L465-L470):
 
 ```clj
 (defn load-stream [repl-env filename res]
   (let [env (ana/empty-env)]
-    (doseq [form (ana/forms-seq res filename)]
-      (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]
-        (evaluate-form repl-env env filename form)))))
+    (with-open [rdr (io/reader res)]
+      (doseq [form (ana/forms-seq* rdr filename)]
+        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]
+          (evaluate-form repl-env env filename form))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:446-450](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L446-L450)</ins>
+            └── <ins>[repl.clj:465-470](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L465-L470)</ins>
 </pre>
 
 -->
@@ -83,12 +84,12 @@ The API data for this symbol:
  :name "load-stream",
  :type "function",
  :signature ["[repl-env filename res]"],
- :source {:code "(defn load-stream [repl-env filename res]\n  (let [env (ana/empty-env)]\n    (doseq [form (ana/forms-seq res filename)]\n      (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n        (evaluate-form repl-env env filename form)))))",
+ :source {:code "(defn load-stream [repl-env filename res]\n  (let [env (ana/empty-env)]\n    (with-open [rdr (io/reader res)]\n      (doseq [form (ana/forms-seq* rdr filename)]\n        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n          (evaluate-form repl-env env filename form))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl.clj",
-          :lines [446 450]},
+          :lines [465 470]},
  :full-name "cljs.repl/load-stream",
  :full-name-encode "cljs.repl/load-stream",
  :history [["+" "0.0-927"]]}

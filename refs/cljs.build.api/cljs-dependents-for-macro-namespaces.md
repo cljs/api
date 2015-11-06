@@ -39,7 +39,7 @@ compile env that you are inspecting. See cljs.env/with-compile-env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/build/api.clj#L45-L64):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/build/api.clj#L45-L64):
 
 ```clj
 (defn cljs-dependents-for-macro-namespaces
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── build
-                └── <ins>[api.clj:45-64](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/build/api.clj#L45-L64)</ins>
+                └── <ins>[api.clj:45-64](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/build/api.clj#L45-L64)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn cljs-dependents-for-macro-namespaces\n  [namespaces]\n  (map :name\n       (let [namespaces-set (set namespaces)]\n         (filter (fn [x] (not-empty\n                         (intersection namespaces-set (-> x :require-macros vals set))))\n                 (vals (:cljs.analyzer/namespaces @env/*compiler*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/build/api.clj",
           :lines [45 64]},
  :full-name "cljs.build.api/cljs-dependents-for-macro-namespaces",

@@ -22,31 +22,35 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L485-L494):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L484-L497):
 
 ```clj
 (defn setup [{:keys [working-dir] :as repl-env} opts]
-  (println "Compiling client js ...")
-  (swap! browser-state
-    (fn [old]
-      (assoc old :client-js
-        (create-client-js-file
-          repl-env (io/file working-dir "client.js")))))
-  (println "Waiting for browser to connect ...")
-  opts
-  (server/start repl-env))
+  (binding [browser-state (:browser-state repl-env)
+            ordering (:ordering repl-env)
+            es (:es repl-env)
+            server/state (:server-state repl-env)]
+    (repl/err-out ((:print opts) "Compiling client js ..."))
+    (swap! browser-state
+      (fn [old]
+        (assoc old :client-js
+          (create-client-js-file
+            repl-env (io/file working-dir "client.js")))))
+    (repl/err-out ((:print opts) "Waiting for browser to connect ..."))
+    opts
+    (server/start repl-env)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:485-494](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L485-L494)</ins>
+                └── <ins>[browser.clj:484-497](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L484-L497)</ins>
 </pre>
 
 -->
@@ -89,12 +93,12 @@ The API data for this symbol:
  :name "setup",
  :type "function",
  :signature ["[{:keys [working-dir], :as repl-env} opts]"],
- :source {:code "(defn setup [{:keys [working-dir] :as repl-env} opts]\n  (println \"Compiling client js ...\")\n  (swap! browser-state\n    (fn [old]\n      (assoc old :client-js\n        (create-client-js-file\n          repl-env (io/file working-dir \"client.js\")))))\n  (println \"Waiting for browser to connect ...\")\n  opts\n  (server/start repl-env))",
+ :source {:code "(defn setup [{:keys [working-dir] :as repl-env} opts]\n  (binding [browser-state (:browser-state repl-env)\n            ordering (:ordering repl-env)\n            es (:es repl-env)\n            server/state (:server-state repl-env)]\n    (repl/err-out ((:print opts) \"Compiling client js ...\"))\n    (swap! browser-state\n      (fn [old]\n        (assoc old :client-js\n          (create-client-js-file\n            repl-env (io/file working-dir \"client.js\")))))\n    (repl/err-out ((:print opts) \"Waiting for browser to connect ...\"))\n    opts\n    (server/start repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [485 494]},
+          :lines [484 497]},
  :full-name "cljs.repl.browser/setup",
  :full-name-encode "cljs.repl.browser/setup",
  :history [["+" "0.0-2665"]]}

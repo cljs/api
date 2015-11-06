@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/clojure/browser/repl.cljs#L36-L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/browser/repl.cljs#L36-L41):
 
 ```clj
 (defn get-ua-product []
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:36-41](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/clojure/browser/repl.cljs#L36-L41)</ins>
+                └── <ins>[repl.cljs:36-41](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/browser/repl.cljs#L36-L41)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn get-ua-product []\n  (cond\n    (gbrowser/isSafari) :safari\n    (gbrowser/isChrome) :chrome\n    (gbrowser/isFirefox) :firefox\n    (gbrowser/isIE) :ie))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/cljs/clojure/browser/repl.cljs",
           :lines [36 41]},
  :full-name "clojure.browser.repl/get-ua-product",

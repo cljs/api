@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L524-L535):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L532-L552):
 
 ```clj
 (defn repl-env*
@@ -35,7 +35,16 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
      :static-dir (cond-> ["." "out/"] output-dir (conj output-dir))
      :preloaded-libs []
      :optimizations :simple
-     :src "src/"}
+     :src "src/"
+     :browser-state (atom {:return-value-fn nil
+                          :client-js nil})
+     :ordering (agent {:expecting nil :fns {}})
+     :es (Executors/newFixedThreadPool 16)
+     :server-state
+     (atom
+       {:socket nil
+        :connection nil
+        :promised-conn nil})}
     opts))
 ```
 
@@ -43,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:524-535](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L524-L535)</ins>
+                └── <ins>[browser.clj:532-552](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L532-L552)</ins>
 </pre>
 
 -->
@@ -91,12 +100,12 @@ The API data for this symbol:
  :name "repl-env*",
  :type "function",
  :signature ["[{:keys [output-dir], :as opts}]"],
- :source {:code "(defn repl-env*\n  [{:keys [output-dir] :as opts}]\n  (merge (BrowserEnv.)\n    {:port 9000\n     :working-dir (->> [\".repl\" (util/clojurescript-version)]\n                       (remove empty?) (string/join \"-\"))\n     :serve-static true\n     :static-dir (cond-> [\".\" \"out/\"] output-dir (conj output-dir))\n     :preloaded-libs []\n     :optimizations :simple\n     :src \"src/\"}\n    opts))",
+ :source {:code "(defn repl-env*\n  [{:keys [output-dir] :as opts}]\n  (merge (BrowserEnv.)\n    {:port 9000\n     :working-dir (->> [\".repl\" (util/clojurescript-version)]\n                       (remove empty?) (string/join \"-\"))\n     :serve-static true\n     :static-dir (cond-> [\".\" \"out/\"] output-dir (conj output-dir))\n     :preloaded-libs []\n     :optimizations :simple\n     :src \"src/\"\n     :browser-state (atom {:return-value-fn nil\n                          :client-js nil})\n     :ordering (agent {:expecting nil :fns {}})\n     :es (Executors/newFixedThreadPool 16)\n     :server-state\n     (atom\n       {:socket nil\n        :connection nil\n        :promised-conn nil})}\n    opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [524 535]},
+          :lines [532 552]},
  :full-name "cljs.repl.browser/repl-env*",
  :full-name-encode "cljs.repl.browser/repl-envSTAR",
  :history [["+" "0.0-3030"]]}

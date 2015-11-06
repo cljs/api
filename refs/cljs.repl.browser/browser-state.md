@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" title="Added in 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -17,24 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L22-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L23):
 
 ```clj
-(defonce browser-state
-  (atom {:return-value-fn nil
-         :client-js nil}))
+(def ^:dynamic browser-state nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:22-24](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L22-L24)</ins>
+                └── <ins>[browser.clj:23](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L23)</ins>
 </pre>
 
 -->
@@ -75,13 +73,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "browser-state",
- :type "var",
- :source {:code "(defonce browser-state\n  (atom {:return-value-fn nil\n         :client-js nil}))",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic browser-state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [22 24]},
+          :lines [23]},
  :full-name "cljs.repl.browser/browser-state",
  :full-name-encode "cljs.repl.browser/browser-state",
  :history [["+" "0.0-1503"]]}

@@ -27,7 +27,7 @@ Defaults to true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/cljs/core.cljs#L41-L46):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L41-L46):
 
 ```clj
 (def
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:41-46](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/cljs/core.cljs#L41-L46)</ins>
+            └── <ins>[core.cljs:41-46](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L41-L46)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to true, output will be flushed whenever a newline is printed.\n\n  Defaults to true.\"}\n  *flush-on-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/cljs/cljs/core.cljs",
           :lines [41 46]},
  :full-name "cljs.core/*flush-on-newline*",

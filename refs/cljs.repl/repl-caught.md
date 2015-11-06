@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L629-L644):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L673-L687):
 
 ```clj
 (defn repl-caught [e repl-env opts]
@@ -39,19 +39,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
             #(prn "Error evaluating:" form :as js)
             (constantly nil))
           opts)))
-    (binding [*out* *err*]
-      (.printStackTrace e))))
+    (.printStackTrace e *err*)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:629-644](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L629-L644)</ins>
+            └── <ins>[repl.clj:673-687](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L673-L687)</ins>
 </pre>
 
 -->
@@ -94,12 +93,12 @@ The API data for this symbol:
  :name "repl-caught",
  :type "function",
  :signature ["[e repl-env opts]"],
- :source {:code "(defn repl-caught [e repl-env opts]\n  (if (and (instance? IExceptionInfo e)\n           (#{:js-eval-error :js-eval-exception} (:type (ex-data e))))\n    (let [{:keys [type repl-env error form js]} (ex-data e)]\n      (case type\n        :js-eval-error\n        (display-error repl-env error form opts)\n\n        :js-eval-exception\n        (display-error repl-env error form\n          (if (:repl-verbose opts)\n            #(prn \"Error evaluating:\" form :as js)\n            (constantly nil))\n          opts)))\n    (binding [*out* *err*]\n      (.printStackTrace e))))",
+ :source {:code "(defn repl-caught [e repl-env opts]\n  (if (and (instance? IExceptionInfo e)\n           (#{:js-eval-error :js-eval-exception} (:type (ex-data e))))\n    (let [{:keys [type repl-env error form js]} (ex-data e)]\n      (case type\n        :js-eval-error\n        (display-error repl-env error form opts)\n\n        :js-eval-exception\n        (display-error repl-env error form\n          (if (:repl-verbose opts)\n            #(prn \"Error evaluating:\" form :as js)\n            (constantly nil))\n          opts)))\n    (.printStackTrace e *err*)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl.clj",
-          :lines [629 644]},
+          :lines [673 687]},
  :full-name "cljs.repl/repl-caught",
  :full-name-encode "cljs.repl/repl-caught",
  :history [["+" "0.0-2911"]]}

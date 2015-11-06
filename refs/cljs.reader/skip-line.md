@@ -27,7 +27,7 @@ Advances the reader to the end of a line. Returns the reader
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/cljs/reader.cljs#L89-L96):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/reader.cljs#L89-L96):
 
 ```clj
 (defn skip-line
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:89-96](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/cljs/reader.cljs#L89-L96)</ins>
+            └── <ins>[reader.cljs:89-96](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/reader.cljs#L89-L96)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn skip-line\n  [reader _]\n  (loop []\n    (let [ch (read-char reader)]\n      (if (or (identical? ch \\newline) (identical? ch \\return) (nil? ch))\n        reader\n        (recur)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [89 96]},
  :full-name "cljs.reader/skip-line",

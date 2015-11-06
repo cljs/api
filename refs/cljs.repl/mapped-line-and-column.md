@@ -1,11 +1,11 @@
-## cljs.repl/mapped-line-and-column
+## ~~cljs.repl/mapped-line-and-column~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3148"><img valign="middle" alt="[×] 0.0-3148" title="Removed in 0.0-3148" src="https://img.shields.io/badge/×-0.0--3148-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -100,7 +100,7 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "mapped-line-and-column",
  :signature ["[source-map line column]"],
- :history [["+" "0.0-2814"]],
+ :history [["+" "0.0-2814"] ["-" "0.0-3148"]],
  :type "function",
  :full-name-encode "cljs.repl/mapped-line-and-column",
  :source {:code "(defn mapped-line-and-column\n  [source-map line column]\n  (let [default [line column]]\n    ;; source maps are 0 indexed for lines\n    (if-let [columns (get source-map (dec line))]\n      (vec\n        (map inc\n          (map\n            ;; source maps are 0 indexed for columns\n            ;; multiple segments may exist at column\n            ;; the last segment seems most accurate\n            (last\n              (if-let [mapping (get columns (dec column))]\n                mapping\n                (second (first columns))))\n            [:line :col])))\n      default)))",
@@ -110,7 +110,8 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl.clj",
           :lines [223 241]},
  :full-name "cljs.repl/mapped-line-and-column",
- :docstring "Given a cljs.source-map source map data structure map a generated line\nand column back to the original line and column."}
+ :docstring "Given a cljs.source-map source map data structure map a generated line\nand column back to the original line and column.",
+ :removed {:in "0.0-3148", :last-seen "0.0-3126"}}
 
 ```
 

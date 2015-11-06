@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/analyzer.clj#L1120-L1122):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/analyzer.clj#L1122-L1124):
 
 ```clj
 (defmethod parse 'let*
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1120-1122](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/analyzer.clj#L1120-L1122)</ins>
+            └── <ins>[analyzer.clj:1122-1124](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/analyzer.clj#L1122-L1124)</ins>
 </pre>
 
 -->
@@ -73,9 +73,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'let*\n  [op encl-env form _ _]\n  (analyze-let encl-env form false))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1120 1122]},
+          :lines [1122 1124]},
  :full-name "special/let*",
  :full-name-encode "special/letSTAR",
  :history [["+" "0.0-927"]]}

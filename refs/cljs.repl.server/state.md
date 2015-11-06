@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[+] 0.0-1503" title="Added in 0.0-1503" src="https://img.shields.io/badge/+-0.0--1503-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -17,26 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/server.clj#L8-L12):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/server.clj#L8):
 
 ```clj
-(defonce state
-  (atom
-    {:socket nil
-     :connection nil
-     :promised-conn nil}))
+(def ^:dynamic state nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:8-12](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/server.clj#L8-L12)</ins>
+                └── <ins>[server.clj:8](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/server.clj#L8)</ins>
 </pre>
 
 -->
@@ -77,13 +73,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "state",
- :type "var",
- :source {:code "(defonce state\n  (atom\n    {:socket nil\n     :connection nil\n     :promised-conn nil}))",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [8 12]},
+          :lines [8]},
  :full-name "cljs.repl.server/state",
  :full-name-encode "cljs.repl.server/state",
  :history [["+" "0.0-1503"]]}

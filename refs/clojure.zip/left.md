@@ -30,7 +30,7 @@ Returns the loc of the left sibling of the node at this loc, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/clojure/zip.cljs#L150-L155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/zip.cljs#L150-L155):
 
 ```clj
 (defn left
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:150-155](https://github.com/clojure/clojurescript/blob/r3126/src/cljs/clojure/zip.cljs#L150-L155)</ins>
+            └── <ins>[zip.cljs:150-155](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/zip.cljs#L150-L155)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn left\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (when (and path (seq l))\n        (with-meta [(peek l) (assoc path :l (pop l) :r (cons node r))] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [150 155]},
  :full-name "clojure.zip/left",

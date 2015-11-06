@@ -28,25 +28,25 @@ that they are printed in the correct order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L141-L146):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L140-L145):
 
 ```clj
 (defn constrain-order
   [order f]
-  (send-off ordering add-in-order order f)
-  (send-off ordering run-in-order))
+  (send-via es ordering add-in-order order f)
+  (send-via es ordering run-in-order))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
+clojurescript @ r3148
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:141-146](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl/browser.clj#L141-L146)</ins>
+                └── <ins>[browser.clj:140-145](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L140-L145)</ins>
 </pre>
 
 -->
@@ -91,12 +91,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/constrain-order",
- :source {:code "(defn constrain-order\n  [order f]\n  (send-off ordering add-in-order order f)\n  (send-off ordering run-in-order))",
+ :source {:code "(defn constrain-order\n  [order f]\n  (send-via es ordering add-in-order order f)\n  (send-via es ordering run-in-order))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3126",
+          :tag "r3148",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [141 146]},
+          :lines [140 145]},
  :full-name "cljs.repl.browser/constrain-order",
  :docstring "Elements to be printed in the REPL will arrive out of order. Ensure\nthat they are printed in the correct order."}
 
