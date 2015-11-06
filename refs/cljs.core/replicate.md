@@ -30,7 +30,7 @@ Returns a lazy seq of n xs.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L4170-L4172):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L4170-L4172):
 
 ```clj
 (defn replicate
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4170-4172](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L4170-L4172)</ins>
+            └── <ins>[core.cljs:4170-4172](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L4170-L4172)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn replicate\n  [n x] (take n (repeat x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4170 4172]},
  :full-name "cljs.core/replicate",

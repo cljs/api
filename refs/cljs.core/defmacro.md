@@ -95,8 +95,8 @@ choose the function appropriate for each compiler's evaluation environment.
 
 [`` syntax quote`](../syntax/syntax-quote.md)<br>
 [`~ unquote`](../syntax/unquote.md)<br>
-[``](../cljs.core/macroexpand.md)<br>
-[``](../cljs.core/macroexpand-1.md)<br>
+[`cljs.core/macroexpand`](../cljs.core/macroexpand.md)<br>
+[`cljs.core/macroexpand-1`](../cljs.core/macroexpand-1.md)<br>
 
 ---
 

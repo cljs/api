@@ -47,7 +47,7 @@ Returns a new sorted map with supplied mappings, using the supplied comparator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L7466-L7474):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L7466-L7474):
 
 ```clj
 (defn sorted-map-by
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7466-7474](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L7466-L7474)</ins>
+            └── <ins>[core.cljs:7466-7474](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L7466-L7474)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(defn sorted-map-by\n  ([comparator & keyvals]\n     (loop [in (seq keyvals)\n            out (PersistentTreeMap. (fn->comparator comparator) nil 0 nil 0)]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7466 7474]},
  :full-name "cljs.core/sorted-map-by",

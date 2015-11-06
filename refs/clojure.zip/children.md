@@ -30,7 +30,7 @@ Returns a seq of the children of node at loc, which must be a branch
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/zip.cljs#L69-L74):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/zip.cljs#L69-L74):
 
 ```clj
 (defn children
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:69-74](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/zip.cljs#L69-L74)</ins>
+            └── <ins>[zip.cljs:69-74](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/zip.cljs#L69-L74)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn children\n  [loc]\n    (if (branch? loc)\n      ((:zip/children (meta loc)) (node loc))\n      (throw \"called children on a leaf node\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [69 74]},
  :full-name "clojure.zip/children",

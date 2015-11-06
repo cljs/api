@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L9238-L9245):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L9238-L9247):
 
 ```clj
 (defprotocol IMultiFn
@@ -27,18 +27,20 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
   (-prefer-method [mf dispatch-val dispatch-val-y])
   (-get-method [mf dispatch-val])
   (-methods [mf])
-  (-prefers [mf]))
+  (-prefers [mf])
+  (-default-dispatch-val [mf])
+  (-dispatch-fn [mf]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9238-9245](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L9238-L9245)</ins>
+            └── <ins>[core.cljs:9238-9247](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L9238-L9247)</ins>
 </pre>
 
 -->
@@ -81,12 +83,12 @@ The API data for this symbol:
  :name "IMultiFn",
  :type "protocol",
  :full-name-encode "cljs.core/IMultiFn",
- :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf]))",
+ :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf])\n  (-default-dispatch-val [mf])\n  (-dispatch-fn [mf]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9238 9245]},
+          :lines [9238 9247]},
  :methods [{:name "-reset", :signature ["[mf]"], :docstring nil}
            {:name "-add-method",
             :signature ["[mf dispatch-val method]"],
@@ -101,7 +103,11 @@ The API data for this symbol:
             :signature ["[mf dispatch-val]"],
             :docstring nil}
            {:name "-methods", :signature ["[mf]"], :docstring nil}
-           {:name "-prefers", :signature ["[mf]"], :docstring nil}],
+           {:name "-prefers", :signature ["[mf]"], :docstring nil}
+           {:name "-default-dispatch-val",
+            :signature ["[mf]"],
+            :docstring nil}
+           {:name "-dispatch-fn", :signature ["[mf]"], :docstring nil}],
  :full-name "cljs.core/IMultiFn",
  :history [["+" "0.0-927"]]}
 

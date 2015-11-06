@@ -27,7 +27,7 @@ Return true if x implements IIterable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L915-L918):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L915-L918):
 
 ```clj
 (defn iterable?
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:915-918](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L915-L918)</ins>
+            └── <ins>[core.cljs:915-918](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L915-L918)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn iterable?\n  [x]\n  (satisfies? IIterable x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [915 918]},
  :full-name "cljs.core/iterable?",

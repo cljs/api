@@ -27,7 +27,7 @@ Coerce the argument to a dom element if possible.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/browser/dom.cljs#L107-L112):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/browser/dom.cljs#L107-L112):
 
 ```clj
 (defn ensure-element
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:107-112](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/browser/dom.cljs#L107-L112)</ins>
+                └── <ins>[dom.cljs:107-112](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/browser/dom.cljs#L107-L112)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn ensure-element\n  [e]\n  (cond (keyword? e) (get-element e)\n        (string? e) (html->dom e)\n        :else e))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [107 112]},
  :full-name "clojure.browser.dom/ensure-element",

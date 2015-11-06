@@ -55,7 +55,7 @@ bound in a repl thread to the most recent exception caught by the repl
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L130-L132):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L130-L132):
 
 ```clj
 (def
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:130-132](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L130-L132)</ins>
+            └── <ins>[core.cljs:130-132](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L130-L132)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent exception caught by the repl\"}\n  *e)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [130 132]},
  :examples [{:id "bea858",

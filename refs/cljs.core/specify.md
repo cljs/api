@@ -28,7 +28,7 @@ argument must be an ICloneable instance.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/core.clj#L695-L700):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/core.clj#L695-L700):
 
 ```clj
 (defmacro specify
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:695-700](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/core.clj#L695-L700)</ins>
+            └── <ins>[core.clj:695-700](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/core.clj#L695-L700)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defmacro specify\n  [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/clj/cljs/core.clj",
           :lines [695 700]},
  :full-name "cljs.core/specify",

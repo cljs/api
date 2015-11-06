@@ -23,6 +23,12 @@ Nashorn REPL (JS on Java 8)
 </tr></thead>
 <tr>
 <td></td>
+<td><samp>[-main](../cljs.repl.nashorn/-main.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3165"><img valign="middle" alt="[+] 0.0-3165" title="Added in 0.0-3165" src="https://img.shields.io/badge/+-0.0--3165-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[bootstrap-repl](../cljs.repl.nashorn/bootstrap-repl.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl/browser.clj#L52-L63):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/browser.clj#L52-L63):
 
 ```clj
 (defn send-repl-client-page
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:52-63](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl/browser.clj#L52-L63)</ins>
+                └── <ins>[browser.clj:52-63](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/browser.clj#L52-L63)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn send-repl-client-page\n  [request conn opts]\n  (server/send-and-close conn 200\n    (str \"<html><head><meta charset=\\\"UTF-8\\\"></head><body>\n          <script type=\\\"text/javascript\\\">\"\n         (repl-client-js)\n         \"</script>\"\n         \"<script type=\\\"text/javascript\\\">\n          clojure.browser.repl.client.start(\\\"http://\" (-> request :headers :host) \"\\\");\n          </script>\"\n         \"</body></html>\")\n    \"text/html\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [52 63]},
  :full-name "cljs.repl.browser/send-repl-client-page",

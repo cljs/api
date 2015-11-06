@@ -28,7 +28,7 @@ file.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L203-L210):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L203-L210):
 
 ```clj
 (defn ^File js-src->cljs-src
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:203-210](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L203-L210)</ins>
+            └── <ins>[repl.clj:203-210](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L203-L210)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn ^File js-src->cljs-src\n  [f]\n  (let [f (io/file f)\n        dir (.getParentFile f)\n        name (.getName f)]\n    (io/file dir (string/replace name \".js\" \".cljs\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/clj/cljs/repl.clj",
           :lines [203 210]},
  :full-name "cljs.repl/js-src->cljs-src",

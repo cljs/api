@@ -23,6 +23,12 @@ browser-connected REPL
 </tr></thead>
 <tr>
 <td></td>
+<td><samp>[-main](../cljs.repl.browser/-main.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3165"><img valign="middle" alt="[+] 0.0-3165" title="Added in 0.0-3165" src="https://img.shields.io/badge/+-0.0--3165-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[add-in-order](../cljs.repl.browser/add-in-order.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/test.cljs#L270-L271):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/test.cljs#L270-L271):
 
 ```clj
 (defn clear-env! []
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:270-271](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/test.cljs#L270-L271)</ins>
+            └── <ins>[test.cljs:270-271](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/test.cljs#L270-L271)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn clear-env! []\n  (set! *current-env* nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/test.cljs",
           :lines [270 271]},
  :full-name "cljs.test/clear-env!",

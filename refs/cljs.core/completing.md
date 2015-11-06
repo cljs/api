@@ -32,7 +32,7 @@ identity) on the result argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L2071-L2080):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L2071-L2080):
 
 ```clj
 (defn completing
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2071-2080](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L2071-L2080)</ins>
+            └── <ins>[core.cljs:2071-2080](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L2071-L2080)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn completing\n  ([f] (completing f identity))\n  ([f cf]\n    (fn\n      ([] (f))\n      ([x] (cf x))\n      ([x y] (f x y)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2071 2080]},
  :full-name "cljs.core/completing",

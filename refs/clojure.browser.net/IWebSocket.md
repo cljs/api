@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/browser/net.cljs#L143-L144):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/browser/net.cljs#L143-L144):
 
 ```clj
 (defprotocol IWebSocket
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:143-144](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/clojure/browser/net.cljs#L143-L144)</ins>
+                └── <ins>[net.cljs:143-144](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/browser/net.cljs#L143-L144)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IWebSocket\n  (open? [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [143 144]},
  :methods [{:name "open?", :signature ["[this]"], :docstring nil}],

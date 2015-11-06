@@ -495,14 +495,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/macroexpand](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/macroexpand)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/macroexpand-1](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/macroexpand-1)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/monitor-enter](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/monitor-enter)</samp></td>
 </tr>
 <tr>

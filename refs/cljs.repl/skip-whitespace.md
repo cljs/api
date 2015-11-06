@@ -34,7 +34,7 @@ supporting .unread and collapsing all of CR, LF, and CRLF to a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L58-L75):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L58-L75):
 
 ```clj
 (defn skip-whitespace
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:58-75](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L58-L75)</ins>
+            └── <ins>[repl.clj:58-75](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L58-L75)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn skip-whitespace\n  [s]\n  (loop [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      \\; (do (readers/read-line s) :line-start)\n      (if (or (Character/isWhitespace c) (identical? c \\,))\n        (recur (readers/read-char s))\n        (do (readers/unread s c) :body)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/clj/cljs/repl.clj",
           :lines [58 75]},
  :full-name "cljs.repl/skip-whitespace",

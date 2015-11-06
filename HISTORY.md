@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3165](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3165)__</td>
+<td>2015-03-27</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.16</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003165syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003165library">
++4 
+</a>
+</td>
+<td>
+<a href="#user-content-003165compiler">
++4 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3153](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3153)__</td>
 <td>2015-03-25</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2476,6 +2499,71 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3165
+
+<a name="003165syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003165library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/default-dispatch-val](refs/cljs.core/default-dispatch-val.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/dispatch-fn](refs/cljs.core/dispatch-fn.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/macroexpand](refs/cljs.core/macroexpand.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/macroexpand-1](refs/cljs.core/macroexpand-1.md)</samp></td>
+</tr>
+</table>
+
+<a name="003165compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.browser/-main](refs/cljs.repl.browser/-main.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.nashorn/-main](refs/cljs.repl.nashorn/-main.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.node/-main](refs/cljs.repl.node/-main.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.rhino/-main](refs/cljs.repl.rhino/-main.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-3153

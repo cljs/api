@@ -25,7 +25,7 @@ Protocol for adding vector functionality to collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L434-L437):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L434-L437):
 
 ```clj
 (defprotocol IVector
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3153
+clojurescript @ r3165
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:434-437](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L434-L437)</ins>
+            └── <ins>[core.cljs:434-437](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/core.cljs#L434-L437)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IVector\n  \"Protocol for adding vector functionality to collections.\"\n  (^clj -assoc-n [coll n val]\n    \"Returns a new vector with value val added at position n.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3153",
+          :tag "r3165",
           :filename "src/cljs/cljs/core.cljs",
           :lines [434 437]},
  :methods [{:name "-assoc-n",
