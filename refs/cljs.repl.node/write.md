@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl/node.clj#L33-L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl/node.clj#L33-L36):
 
 ```clj
 (defn write [^BufferedWriter out ^String js]
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:33-36](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl/node.clj#L33-L36)</ins>
+                └── <ins>[node.clj:33-36](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl/node.clj#L33-L36)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defn write [^BufferedWriter out ^String js]\n  (.write out js)\n  (.write out (int 0)) ;; terminator\n  (.flush out))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [33 36]},
  :full-name "cljs.repl.node/write",

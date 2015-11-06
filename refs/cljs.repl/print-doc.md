@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/repl.cljs#L11-L31):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/repl.cljs#L11-L31):
 
 ```clj
 (defn print-doc [m]
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[repl.cljs:11-31](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/repl.cljs#L11-L31)</ins>
+            └── <ins>[repl.cljs:11-31](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/repl.cljs#L11-L31)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn print-doc [m]\n  (println \"-------------------------\")\n  (println (str (when-let [ns (:ns m)] (str ns \"/\")) (:name m)))\n  (cond\n    (:forms m) (doseq [f (:forms m)]\n                 (print \"  \")\n                 (prn f))\n    (:arglists m) (prn (:arglists m)))\n  (if (:special-form m)\n    (do\n      (println \"Special Form\")\n      (println \" \" (:doc m)) \n      (if (contains? m :url)\n        (when (:url m)\n          (println (str \"\\n  Please see http://clojure.org/\" (:url m))))\n        (println (str \"\\n  Please see http://clojure.org/special_forms#\"\n                   (:name m)))))\n    (do\n      (when (:macro m)\n        (println \"Macro\")) \n      (println \" \" (:doc m)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/cljs/cljs/repl.cljs",
           :lines [11 31]},
  :full-name "cljs.repl/print-doc",

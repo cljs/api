@@ -28,7 +28,7 @@ i.e. substituting true for :unknown if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L80-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L80-L85):
 
 ```clj
 (defmacro with-read-known
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:80-85](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L80-L85)</ins>
+            └── <ins>[repl.clj:80-85](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L80-L85)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defmacro with-read-known\n  [& body]\n  `(binding [*read-eval* (if (= :unknown *read-eval*) true *read-eval*)]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/repl.clj",
           :lines [80 85]},
  :full-name "cljs.repl/with-read-known",

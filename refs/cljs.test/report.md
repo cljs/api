@@ -28,7 +28,7 @@ Generic reporting function, may be overridden to plug in
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L261-L267):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L261-L267):
 
 ```clj
 (defmulti
@@ -44,18 +44,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:261-267](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L261-L267)</ins>
+            └── <ins>[test.cljs:261-267](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L261-L267)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L269):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L269):
 
 ```clj
 (defmethod report :default [m])
@@ -65,16 +65,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:269](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L269)</ins>
+            └── <ins>[test.cljs:269](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L269)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L271-L272):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L271-L272):
 
 ```clj
 (defmethod report [::default :pass] [m]
@@ -85,16 +85,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:271-272](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L271-L272)</ins>
+            └── <ins>[test.cljs:271-272](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L271-L272)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L274-L281):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L274-L281):
 
 ```clj
 (defmethod report [::default :fail] [m]
@@ -111,16 +111,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:274-281](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L274-L281)</ins>
+            └── <ins>[test.cljs:274-281](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L274-L281)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L283-L290):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L283-L290):
 
 ```clj
 (defmethod report [::default :error] [m]
@@ -137,16 +137,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:283-290](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L283-L290)</ins>
+            └── <ins>[test.cljs:283-290](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L283-L290)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L292-L295):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L292-L295):
 
 ```clj
 (defmethod report [::default :summary] [m]
@@ -159,16 +159,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:292-295](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L292-L295)</ins>
+            └── <ins>[test.cljs:292-295](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L292-L295)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L297-L298):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L297-L298):
 
 ```clj
 (defmethod report [::default :begin-test-ns] [m]
@@ -179,16 +179,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:297-298](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L297-L298)</ins>
+            └── <ins>[test.cljs:297-298](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L297-L298)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L301):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L301):
 
 ```clj
 (defmethod report [::default :end-test-ns] [m])
@@ -198,16 +198,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:301](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L301)</ins>
+            └── <ins>[test.cljs:301](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L301)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L302):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L302):
 
 ```clj
 (defmethod report [::default :begin-test-var] [m])
@@ -217,16 +217,16 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:302](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L302)</ins>
+            └── <ins>[test.cljs:302](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L302)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L303):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L303):
 
 ```clj
 (defmethod report [::default :end-test-var] [m])
@@ -236,11 +236,11 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2725/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:303](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/test.cljs#L303)</ins>
+            └── <ins>[test.cljs:303](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/test.cljs#L303)</ins>
 </pre>
 -->
 
@@ -288,61 +288,61 @@ The API data for this symbol:
  :source {:code "(defmulti\n  ^{:doc \"Generic reporting function, may be overridden to plug in\n   different report formats (e.g., TAP, JUnit).  Assertions such as\n   'is' call 'report' to indicate results.  The argument given to\n   'report' will be a map with a :type key.\"\n     :dynamic true}\n  report (fn [m] [(:reporter (get-current-env)) (:type m)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/cljs/cljs/test.cljs",
           :lines [261 267]},
  :extra-sources ({:code "(defmethod report :default [m])",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [269]}
                  {:code "(defmethod report [::default :pass] [m]\n  (inc-report-counter! :pass))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [271 272]}
                  {:code "(defmethod report [::default :fail] [m]\n  (inc-report-counter! :fail)\n  (println \"\\nFAIL in\" (testing-vars-str m))\n  (when (seq (:testing-contexts (get-current-env)))\n    (println (testing-contexts-str)))\n  (when-let [message (:message m)] (println message))\n  (println \"expected:\" (pr-str (:expected m)))\n  (println \"  actual:\" (pr-str (:actual m))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [274 281]}
                  {:code "(defmethod report [::default :error] [m]\n  (inc-report-counter! :error)\n  (println \"\\nERROR in\" (testing-vars-str m))\n  (when (seq (:testing-contexts (get-current-env)))\n    (println (testing-contexts-str)))\n  (when-let [message (:message m)] (println message))\n  (println \"expected:\" (pr-str (:expected m)))\n  (print \"  actual: \") (prn (:actual m)))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [283 290]}
                  {:code "(defmethod report [::default :summary] [m]\n  (println \"\\nRan\" (:test m) \"tests containing\"\n    (+ (:pass m) (:fail m) (:error m)) \"assertions.\")\n  (println (:fail m) \"failures,\" (:error m) \"errors.\"))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [292 295]}
                  {:code "(defmethod report [::default :begin-test-ns] [m]\n  (println \"\\nTesting\" (name (:ns m))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [297 298]}
                  {:code "(defmethod report [::default :end-test-ns] [m])",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [301]}
                  {:code "(defmethod report [::default :begin-test-var] [m])",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [302]}
                  {:code "(defmethod report [::default :end-test-var] [m])",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2725",
+                  :tag "r2727",
                   :filename "src/cljs/cljs/test.cljs",
                   :lines [303]}),
  :full-name "cljs.test/report",

@@ -36,7 +36,7 @@ supporting .unread and collapsing all of CR, LF, and CRLF into a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L62-L78):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L62-L78):
 
 ```clj
 (defn repl-read
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:62-78](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L62-L78)</ins>
+            └── <ins>[repl.clj:62-78](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L62-L78)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn repl-read\n  [request-prompt request-exit]\n  (or ({:line-start request-prompt :stream-end request-exit}\n        (skip-whitespace *in*))\n    (let [input (read)]\n      (skip-if-eol *in*)\n      input)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/repl.clj",
           :lines [62 78]},
  :full-name "cljs.repl/repl-read",

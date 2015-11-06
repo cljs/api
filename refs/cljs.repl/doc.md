@@ -63,7 +63,7 @@ Prints documentation for a var or special form given its name
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L439-L442):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L439-L442):
 
 ```clj
 (defmacro doc
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:439-442](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl.clj#L439-L442)</ins>
+            └── <ins>[repl.clj:439-442](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/repl.clj#L439-L442)</ins>
 </pre>
 
 -->
@@ -132,7 +132,7 @@ The API data for this symbol:
  :source {:code "(defmacro doc\n  [sym]\n  `(cljs.repl/print-doc (meta (var ~sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/repl.clj",
           :lines [439 442]},
  :examples [{:id "4d2768",

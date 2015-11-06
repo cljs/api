@@ -35,7 +35,7 @@ Like core/reduce except:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/core/reducers.cljs#L33-L44):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/core/reducers.cljs#L33-L44):
 
 ```clj
 (defn reduce
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:33-44](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/core/reducers.cljs#L33-L44)</ins>
+                └── <ins>[reducers.cljs:33-44](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/core/reducers.cljs#L33-L44)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defn reduce\n  ([f coll] (reduce f (f) coll))\n  ([f init coll]\n     (if (map? coll)\n       (-kv-reduce coll f init)\n       (cond\n         (nil? coll) init\n         (array? coll) (array-reduce coll f init)\n         :else (-reduce coll f init)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [33 44]},
  :full-name "clojure.core.reducers/reduce",

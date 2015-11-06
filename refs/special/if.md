@@ -60,7 +60,7 @@ false or nil).
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/analyzer.clj#L562-L572):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/analyzer.clj#L562-L572):
 
 ```clj
 (defmethod parse 'if
@@ -80,11 +80,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:562-572](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/analyzer.clj#L562-L572)</ins>
+            └── <ins>[analyzer.clj:562-572](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/analyzer.clj#L562-L572)</ins>
 </pre>
 
 -->
@@ -139,7 +139,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name _]\n  (when (< (count form) 3)\n    (throw (error env \"Too few arguments to if\")))\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (allowing-redef (analyze env then))\n        else-expr (allowing-redef (analyze env else))]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [562 572]},
  :examples [{:id "e591ff",

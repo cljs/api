@@ -44,7 +44,7 @@ open.  Equivalent to `debugger;` in JavaScript.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/core.clj#L293-L294):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/core.clj#L293-L294):
 
 ```clj
 (defmacro js-debugger []
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/core.clj#L293-L294)</ins>
+            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r2727/src/clj/cljs/core.clj#L293-L294)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defmacro js-debugger []\n  (core/list 'js* \"debugger;\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/clj/cljs/core.clj",
           :lines [293 294]},
  :examples [{:id "87f2fa",

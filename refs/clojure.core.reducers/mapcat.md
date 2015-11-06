@@ -34,7 +34,7 @@ Applies f to every value in the reduction of coll, concatenating the result
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/core/reducers.cljs#L106-L115):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/core/reducers.cljs#L106-L115):
 
 ```clj
 (defcurried mapcat
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2725
+clojurescript @ r2727
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:106-115](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/core/reducers.cljs#L106-L115)</ins>
+                └── <ins>[reducers.cljs:106-115](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/core/reducers.cljs#L106-L115)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defcurried mapcat\n  \"Applies f to every value in the reduction of coll, concatenating the result\n  colls of (f val). Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (reduce f1 ret (f k v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2725",
+          :tag "r2727",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [106 115]},
  :full-name "clojure.core.reducers/mapcat",
