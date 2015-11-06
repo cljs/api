@@ -30,7 +30,7 @@ Given a multimethod, returns a map of dispatch values -> dispatch fns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L7177-L7179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L7274-L7276):
 
 ```clj
 (defn methods
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7177-7179](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L7177-L7179)</ins>
+            └── <ins>[core.cljs:7274-7276](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L7274-L7276)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defn methods\n  [multifn] (-methods multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7177 7179]},
+          :lines [7274 7276]},
  :full-name "cljs.core/methods",
  :clj-symbol "clojure.core/methods",
  :docstring "Given a multimethod, returns a map of dispatch values -> dispatch fns"}

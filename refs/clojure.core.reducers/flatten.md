@@ -32,7 +32,7 @@ Takes any nested combination of sequential things (lists, vectors,
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/core/reducers.cljs#L119-L132):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L119-L132):
 
 ```clj
 (defcurried flatten
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:119-132](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/core/reducers.cljs#L119-L132)</ins>
+                └── <ins>[reducers.cljs:119-132](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L119-L132)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defcurried flatten\n  \"Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection.\"\n  {}\n  [coll]\n  (folder coll\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([ret v]\n          (if (sequential? v)\n            (-reduce (flatten v) f1 ret)\n            (f1 ret v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [119 132]},
  :full-name "clojure.core.reducers/flatten",

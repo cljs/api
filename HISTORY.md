@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1552](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1552)__</td>
+<td>2012-12-03</td>
+<td><kbd>1.4.0</kbd></td>
+<td></td>
+<td><kbd>20120710-r2029</kbd></td>
+<td>
+<a href="#user-content-001552syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001552library">
++5 
+</a>
+</td>
+<td>
+<a href="#user-content-001552compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1535](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1535)__</td>
 <td>2012-11-08</td>
 <td><kbd>1.4.0</kbd></td>
@@ -337,6 +360,53 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1552
+
+<a name="001552syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001552library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/Fn](refs/cljs.core/Fn.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IEncodeClojure](refs/cljs.core/IEncodeClojure.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/IEncodeJS](refs/cljs.core/IEncodeJS.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/clj->js](refs/cljs.core/clj-GTjs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-mod](refs/cljs.core/js-mod.md)</samp></td>
+</tr>
+</table>
+
+<a name="001552compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1535
@@ -3620,7 +3690,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/mod](refs/cljs.core/mod.md)</samp></td>
 </tr>

@@ -29,7 +29,7 @@ that id will be used and returned.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/dom.cljs#L124-L129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/dom.cljs#L124-L129):
 
 ```clj
 (defn set-text
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:124-129](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/clojure/browser/dom.cljs#L124-L129)</ins>
+                └── <ins>[dom.cljs:124-129](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/browser/dom.cljs#L124-L129)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn set-text\n  [e s]\n  (gdom/setTextContent (ensure-element e) s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [124 129]},
  :full-name "clojure.browser.dom/set-text",

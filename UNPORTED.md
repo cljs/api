@@ -1273,10 +1273,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Fn](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Fn.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/FnLoaderThunk](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/FnLoaderThunk.java)</samp></td>
 </tr>
 <tr>

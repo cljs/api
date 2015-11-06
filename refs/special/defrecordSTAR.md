@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L705-L716):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L700-L709):
 
 ```clj
 (defmethod parse 'defrecord*
@@ -28,9 +28,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
              (let [m (assoc (or m {}) :name t :type true)]
                (merge m
                  {:protocols (-> tsym meta :protocols)}
-                 (when-let [line (:line env)]
-                   {:file *cljs-file*
-                    :line line})))))
+                 (source-info env)))))
     {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))
 ```
 
@@ -38,11 +36,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:705-716](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L705-L716)</ins>
+            └── <ins>[analyzer.clj:700-709](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L700-L709)</ins>
 </pre>
 
 -->
@@ -79,12 +77,12 @@ The API data for this symbol:
 {:ns "special",
  :name "defrecord*",
  :type "special form",
- :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t :type true)]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (when-let [line (:line env)]\n                   {:file *cljs-file*\n                    :line line})))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
+ :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t :type true)]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info env)))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [705 716]},
+          :lines [700 709]},
  :full-name "special/defrecord*",
  :full-name-encode "special/defrecordSTAR",
  :history [["+" "0.0-927"]]}

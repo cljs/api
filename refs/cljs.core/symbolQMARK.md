@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1021-L1023):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1042-L1044):
 
 ```clj
 (defn ^boolean symbol? [x]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1021-1023](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1021-L1023)</ins>
+            └── <ins>[core.cljs:1042-1044](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1042-L1044)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1021 1023]},
+          :lines [1042 1044]},
  :full-name "cljs.core/symbol?",
  :clj-symbol "clojure.core/symbol?"}
 

@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L689-L703):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L686-L698):
 
 ```clj
 (defmethod parse 'deftype*
@@ -31,9 +31,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
                        :num-fields (count fields))]
                (merge m
                  {:protocols (-> tsym meta :protocols)}
-                 (when-let [line (:line env)]
-                   {:file *cljs-file*
-                    :line line})))))
+                 (source-info env)))))
     {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))
 ```
 
@@ -41,11 +39,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:689-703](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/analyzer.clj#L689-L703)</ins>
+            └── <ins>[analyzer.clj:686-698](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L686-L698)</ins>
 </pre>
 
 -->
@@ -82,12 +80,12 @@ The API data for this symbol:
 {:ns "special",
  :name "deftype*",
  :type "special form",
- :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {})\n                       :name t\n                       :type true\n                       :num-fields (count fields))]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (when-let [line (:line env)]\n                   {:file *cljs-file*\n                    :line line})))))\n    {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))",
+ :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {})\n                       :name t\n                       :type true\n                       :num-fields (count fields))]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info env)))))\n    {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [689 703]},
+          :lines [686 698]},
  :full-name "special/deftype*",
  :full-name-encode "special/deftypeSTAR",
  :history [["+" "0.0-927"]]}

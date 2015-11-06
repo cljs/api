@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/repl/rhino.clj#L19):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L19):
 
 ```clj
 (def current-repl-env (atom nil))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:19](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/repl/rhino.clj#L19)</ins>
+                └── <ins>[rhino.clj:19](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L19)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def current-repl-env (atom nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [19]},
  :full-name "cljs.repl.rhino/current-repl-env",

@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function/macro</td>
+<td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/mod</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/mod)
@@ -60,49 +60,29 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1314-L1317):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1340-L1343):
 
 ```clj
 (defn mod
   [n d]
-  (cljs.core/mod n d))
+  (js-mod (+ (js-mod n d) d) d))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1314-1317](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1314-L1317)</ins>
+            └── <ins>[core.cljs:1340-1343](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1340-L1343)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L293-L294):
-
-```clj
-(defmacro mod [num div]
-  (list 'js* "(~{} % ~{})" num div))
-```
-
-<!--
-Repo - tag - source tree - lines:
-
- <pre>
-clojurescript @ r1535
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L293-L294)</ins>
-</pre>
--->
-
----
 
 
 ###### External doc links:
@@ -143,21 +123,15 @@ The API data for this symbol:
  :name "mod",
  :signature ["[n d]"],
  :history [["+" "0.0-927"]],
- :type "function/macro",
+ :type "function",
  :related ["cljs.core/rem"],
  :full-name-encode "cljs.core/mod",
- :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
-          :title "Function code",
+ :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
+          :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1314 1317]},
- :extra-sources [{:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
-                  :title "Macro code",
-                  :repo "clojurescript",
-                  :tag "r1535",
-                  :filename "src/clj/cljs/core.clj",
-                  :lines [293 294]}],
+          :lines [1340 1343]},
  :examples [{:id "8165e8",
              :content "```clj\n(mod -5 3)\n;;=> 1\n\n(mod 5 3)\n;;=> 2\n\n(mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/mod",

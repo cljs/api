@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/repl/rhino.clj#L27-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L27-L28):
 
 ```clj
 (defprotocol IEval
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1535
+clojurescript @ r1552
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:27-28](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/repl/rhino.clj#L27-L28)</ins>
+                └── <ins>[rhino.clj:27-28](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L27-L28)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IEval\n  (-eval [this env filename line]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1535",
+          :tag "r1552",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [27 28]},
  :methods [{:name "-eval",
