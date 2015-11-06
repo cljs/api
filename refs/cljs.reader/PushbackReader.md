@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/reader.cljs#L13-L16):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/reader.cljs#L13-L16):
 
 ```clj
 (defprotocol PushbackReader
@@ -30,11 +30,11 @@ nil if the end of stream has been reached")
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:13-16](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/reader.cljs#L13-L16)</ins>
+            └── <ins>[reader.cljs:13-16](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/reader.cljs#L13-L16)</ins>
 </pre>
 
 -->
@@ -80,7 +80,7 @@ The API data for this symbol:
  :source {:code "(defprotocol PushbackReader\n  (read-char [reader] \"Returns the next char from the Reader,\nnil if the end of stream has been reached\")\n  (unread [reader ch] \"Push back a single character on to the stream\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [13 16]},
  :methods [{:name "read-char",

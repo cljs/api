@@ -1,11 +1,11 @@
-## cljs.core/iteration
+## ~~cljs.core/iteration~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2371"><img valign="middle" alt="[×] 0.0-2371" title="Removed in 0.0-2371" src="https://img.shields.io/badge/×-0.0--2371-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "iteration",
  :signature ["[xform coll]"],
- :history [["+" "0.0-2301"]],
+ :history [["+" "0.0-2301"] ["-" "0.0-2371"]],
  :type "function",
  :full-name-encode "cljs.core/iteration",
  :source {:code "(defn iteration\n  [xform coll]\n  (Iteration. xform coll))",
@@ -97,7 +97,8 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [8205 8210]},
  :full-name "cljs.core/iteration",
- :docstring "Returns an iterable/seqable/reducible sequence of applications of\nthe transducer to the items in coll. Note that these applications\nwill be performed every time iterator/seq/reduce is called."}
+ :docstring "Returns an iterable/seqable/reducible sequence of applications of\nthe transducer to the items in coll. Note that these applications\nwill be performed every time iterator/seq/reduce is called.",
+ :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 
 ```
 

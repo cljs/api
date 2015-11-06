@@ -30,7 +30,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/clj/cljs/core.clj#L1085-L1105):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L1087-L1107):
 
 ```clj
 (defmacro satisfies?
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1085-1105](https://github.com/clojure/clojurescript/blob/r2356/src/clj/cljs/core.clj#L1085-L1105)</ins>
+            └── <ins>[core.clj:1087-1107](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L1087-L1107)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p          (:name\n                     (cljs.analyzer/resolve-var\n                       (dissoc &env :locals) psym))\n         prefix     (protocol-prefix p)\n         xsym       (bool-expr (gensym))\n         [part bit] (fast-path-protocols p)\n         msym       (symbol\n                      (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if ~xsym\n         (let [bit# ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))]\n           (if (or bit#\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             (if (coercive-not (. ~xsym ~msym))\n               (cljs.core/native-satisfies? ~psym ~xsym)\n               false)))\n         (cljs.core/native-satisfies? ~psym ~xsym)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/clj/cljs/core.clj",
-          :lines [1085 1105]},
+          :lines [1087 1107]},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

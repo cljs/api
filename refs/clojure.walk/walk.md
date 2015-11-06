@@ -33,7 +33,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/clojure/walk.cljs#L37-L48):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/walk.cljs#L37-L48):
 
 ```clj
 (defn walk
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── cljs
         └── clojure
-            └── <ins>[walk.cljs:37-48](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/clojure/walk.cljs#L37-L48)</ins>
+            └── <ins>[walk.cljs:37-48](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/walk.cljs#L37-L48)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn walk\n  [inner outer form]\n  (cond\n   (seq? form) (outer (doall (map inner form)))\n   (coll? form) (outer (into (empty form) (map inner form)))\n   :else (outer form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/cljs/clojure/walk.cljs",
           :lines [37 48]},
  :full-name "clojure.walk/walk",

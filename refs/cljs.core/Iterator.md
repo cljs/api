@@ -1,11 +1,11 @@
-## cljs.core/Iterator
+## ~~cljs.core/Iterator~~
 
 
 
  <table border="1">
 <tr>
 <td>type</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2268"><img valign="middle" alt="[+] 0.0-2268" title="Added in 0.0-2268" src="https://img.shields.io/badge/+-0.0--2268-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2268"><img valign="middle" alt="[+] 0.0-2268" title="Added in 0.0-2268" src="https://img.shields.io/badge/+-0.0--2268-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2371"><img valign="middle" alt="[×] 0.0-2371" title="Removed in 0.0-2371" src="https://img.shields.io/badge/×-0.0--2371-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -84,8 +84,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Iterator",
- :type "type",
  :signature ["[s]"],
+ :history [["+" "0.0-2268"] ["-" "0.0-2371"]],
+ :type "type",
+ :full-name-encode "cljs.core/Iterator",
  :source {:code "(deftype Iterator [^:mutable s]\n  Object\n  (next [_]\n    (if-not (nil? s)\n      (let [x (first s)]\n        (set! s (next s))\n        #js {:value x :done false})\n      #js {:value nil :done true})))",
           :title "Source code",
           :repo "clojurescript",
@@ -93,8 +95,7 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [4861 4868]},
  :full-name "cljs.core/Iterator",
- :full-name-encode "cljs.core/Iterator",
- :history [["+" "0.0-2268"]]}
+ :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 
 ```
 

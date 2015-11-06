@@ -11,7 +11,7 @@
 
 
  <samp>
-(__cat__ f1)<br>
+(__cat__ rf)<br>
 </samp>
 
 ---
@@ -28,15 +28,15 @@ collection, into the reduction.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8155-L8165):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L8257-L8267):
 
 ```clj
 (defn cat
-  [f1]
-  (let [rf1 (preserving-reduced f1)]  
+  [rf]
+  (let [rf1 (preserving-reduced rf)]  
     (fn
-      ([] (f1))
-      ([result] (f1 result))
+      ([] (rf))
+      ([result] (rf result))
       ([result input]
          (reduce rf1 result input)))))
 ```
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8155-8165](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8155-L8165)</ins>
+            └── <ins>[core.cljs:8257-8267](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L8257-L8267)</ins>
 </pre>
 
 -->
@@ -90,16 +90,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "cat",
- :signature ["[f1]"],
+ :signature ["[rf]"],
  :history [["+" "0.0-2341"]],
  :type "function",
  :full-name-encode "cljs.core/cat",
- :source {:code "(defn cat\n  [f1]\n  (let [rf1 (preserving-reduced f1)]  \n    (fn\n      ([] (f1))\n      ([result] (f1 result))\n      ([result input]\n         (reduce rf1 result input)))))",
+ :source {:code "(defn cat\n  [rf]\n  (let [rf1 (preserving-reduced rf)]  \n    (fn\n      ([] (rf))\n      ([result] (rf result))\n      ([result input]\n         (reduce rf1 result input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8155 8165]},
+          :lines [8257 8267]},
  :full-name "cljs.core/cat",
  :docstring "A transducer which concatenates the contents of each input, which must be a\ncollection, into the reduction."}
 

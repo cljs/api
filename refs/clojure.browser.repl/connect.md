@@ -29,7 +29,7 @@ the document that called this function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/clojure/browser/repl.cljs#L90-L109):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/browser/repl.cljs#L90-L109):
 
 ```clj
 (defn connect
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:90-109](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/clojure/browser/repl.cljs#L90-L109)</ins>
+                └── <ins>[repl.cljs:90-109](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/browser/repl.cljs#L90-L109)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection (net/xpc-connection\n                         {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n                          :evaluate-javascript\n                          (fn [js]\n                            (net/transmit\n                             repl-connection\n                             :send-result\n                             (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n                 (constantly nil)\n                 (fn [iframe]\n                   (set! (.-display (.-style iframe))\n                         \"none\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/cljs/clojure/browser/repl.cljs",
           :lines [90 109]},
  :full-name "clojure.browser.repl/connect",

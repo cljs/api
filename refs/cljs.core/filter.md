@@ -51,18 +51,18 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L3726-L3753):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3739-L3766):
 
 ```clj
 (defn filter
   ([pred]
-    (fn [f1]
+    (fn [rf]
       (fn
-        ([] (f1))
-        ([result] (f1 result))
+        ([] (rf))
+        ([result] (rf result))
         ([result input]
            (if (pred input)
-             (f1 result input)
+             (rf result input)
              result)))))
   ([pred coll]
    (lazy-seq
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
+clojurescript @ r2371
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3726-3753](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L3726-L3753)</ins>
+            └── <ins>[core.cljs:3739-3766](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3739-L3766)</ins>
 </pre>
 
 -->
@@ -139,12 +139,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/remove" "cljs.core/keep"],
  :full-name-encode "cljs.core/filter",
- :source {:code "(defn filter\n  ([pred]\n    (fn [f1]\n      (fn\n        ([] (f1))\n        ([result] (f1 result))\n        ([result input]\n           (if (pred input)\n             (f1 result input)\n             result)))))\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
+ :source {:code "(defn filter\n  ([pred]\n    (fn [rf]\n      (fn\n        ([] (rf))\n        ([result] (rf result))\n        ([result input]\n           (if (pred input)\n             (rf result input)\n             result)))))\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2356",
+          :tag "r2371",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3726 3753]},
+          :lines [3739 3766]},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}
