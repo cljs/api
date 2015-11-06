@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/analyzer.clj#L624-L639):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/analyzer.clj#L627-L642):
 
 ```clj
 (defmethod parse 'new
@@ -45,11 +45,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:624-639](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/analyzer.clj#L624-L639)</ins>
+            └── <ins>[analyzer.clj:627-642](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/analyzer.clj#L627-L642)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))\n         known-num-fields (:num-fields (resolve-existing-var env ctor))\n         argc (count args)]\n     (when (and known-num-fields (not= known-num-fields argc))\n       (warning env\n         (str \"WARNING: Wrong number of args (\" argc \") passed to \" ctor)))\n\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [624 639]},
+          :lines [627 642]},
  :full-name "special/new",
  :full-name-encode "special/new",
  :clj-symbol "clojure.core/new",

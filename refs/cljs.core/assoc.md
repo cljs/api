@@ -94,7 +94,7 @@ contains val at index.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L980-L993):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L971-L984):
 
 ```clj
 (defn assoc
@@ -113,11 +113,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:980-993](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L980-L993)</ins>
+            └── <ins>[core.cljs:971-984](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L971-L984)</ins>
 </pre>
 
 -->
@@ -170,9 +170,9 @@ The API data for this symbol:
  :source {:code "(defn assoc\n  ([coll k v]\n    (if-not (nil? coll)\n      (-assoc coll k v)\n      (hash-map k v)))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [980 993]},
+          :lines [971 984]},
  :examples [{:id "2fa7e0",
              :content "```clj\n(def my-map {:foo 1})\n\n(assoc my-map :foo 2)\n;;=> {:foo 2}\n\n(assoc my-map :bar 2)\n;;=> {:foo 1 :bar 2}\n\n(assoc my-map :a 3 :b 4 :c 5 :d 6)\n;;=> {:foo 1 :a 3 :b 4 :c 5 :d 6}\n\n;; you must pass a value for every key\n(assoc my-map :foo)\n;;=> WARNING: Wrong number of args (2) passed to cljs.core/assoc\n```"}
             {:id "c06eac",

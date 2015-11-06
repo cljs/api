@@ -133,12 +133,13 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L479-L491):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L479-L492):
 
 ```clj
 (defn ^boolean =
   ([x] true)
-  ([x y] (or (identical? x y) (-equiv x y)))
+  ([x y] (or (identical? x y)
+             ^boolean (-equiv x y)))
   ([x y & more]
      (if (= x y)
        (if (next more)
@@ -151,11 +152,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:479-491](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L479-L491)</ins>
+            └── <ins>[core.cljs:479-492](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L479-L492)</ins>
 </pre>
 
 -->
@@ -206,12 +207,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/==" "cljs.core/not=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQ",
- :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y) (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
+ :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y)\n             ^boolean (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [479 491]},
+          :lines [479 492]},
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}
             {:id "a2d064",

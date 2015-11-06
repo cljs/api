@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1822-L1874):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1828-L1880):
 
 ```clj
 (deftype List [meta first rest count ^:mutable __hash]
@@ -87,11 +87,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1822-1874](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1822-L1874)</ins>
+            └── <ins>[core.cljs:1828-1880](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1828-L1880)</ins>
 </pre>
 
 -->
@@ -142,9 +142,9 @@ The API data for this symbol:
  :source {:code "(deftype List [meta first rest count ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IList\n\n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll]\n    (if (== count 1)\n      ()\n      rest))\n\n  INext\n  (-next [coll]\n    (if (== count 1)\n      nil\n      rest))\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count) nil))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List.EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count)\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1822 1874]},
+          :lines [1828 1880]},
  :full-name "cljs.core/List",
  :clj-symbol "clojure.lang/PersistentList"}
 

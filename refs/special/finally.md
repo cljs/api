@@ -40,7 +40,7 @@ an error or not, but they are never the return value of a `try` expression.
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/analyzer.clj#L299-L334):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/analyzer.clj#L300-L335):
 
 ```clj
 (defmethod parse 'try
@@ -85,11 +85,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:299-334](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/analyzer.clj#L299-L334)</ins>
+            └── <ins>[analyzer.clj:300-335](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/analyzer.clj#L300-L335)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'try\n  [op env [_ & body :as form] name]\n  (let [catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        catch? (every-pred seq? #(= (first %) 'catch))\n        finally? (every-pred seq? #(= (first %) 'finally))\n        [body tail] (split-with (complement (some-fn catch? finally?)) body)\n        [cblocks [fblock]] (split-with catch? tail)\n        finally (when (seq fblock)\n                  (analyze (assoc env :context :statement) `(do ~@(rest fblock))))\n        e (when (seq cblocks) (gensym \"e\"))\n        cblock (when e\n                 `(cljs.core/cond\n                   ~@(mapcat\n                      (fn [[_ type name & cb]]\n                        (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n                        `[(cljs.core/instance? ~type ~e)\n                          (cljs.core/let [~name ~e] ~@cb)])\n                      cblocks)\n                   :else (throw ~e)))\n        locals (:locals catchenv)\n        locals (if e\n                 (assoc locals e\n                        {:name e\n                         :line (get-line e env)\n                         :column (get-col e env)})\n                 locals)\n        catch (when cblock\n                (analyze (assoc catchenv :locals locals) cblock))\n        try (analyze (if (or e finally) catchenv env) `(do ~@body))]\n\n    {:env env :op :try :form form\n     :try try\n     :finally finally\n     :name e\n     :catch catch\n     :children [try catch finally]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [299 334]},
+          :lines [300 335]},
  :full-name "special/finally",
  :clj-symbol "clojure.core/finally"}
 

@@ -100,7 +100,7 @@ Radix notation for using up to base 36.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L200-L209):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L200-L209):
 
 ```clj
 (defn- read-number
@@ -119,13 +119,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.9
+tools.reader @ tools.reader-0.7.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:200-209](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L200-L209)</ins>
+                    └── <ins>[reader.clj:200-209](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L200-L209)</ins>
 </pre>
 -->
 
@@ -171,7 +171,7 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-number\n  [reader initch]\n  (loop [sb (doto (StringBuilder.) (.append initch))\n         ch (read-char reader)]\n    (if (or (whitespace? ch) (macros ch) (nil? ch))\n      (let [s (str sb)]\n        (unread reader ch)\n        (or (match-number s)\n            (reader-error reader \"Invalid number format [\" s \"]\")))\n      (recur (doto sb (.append ch)) (read-char reader)))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.9",
+                  :tag "tools.reader-0.7.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [200 209]}],
  :examples [{:id "f96060",

@@ -30,7 +30,7 @@ Naive impl of to-array as a start.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2264-L2272):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2263-L2271):
 
 ```clj
 (defn to-array
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2264-2272](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2264-L2272)</ins>
+            └── <ins>[core.cljs:2263-2271](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2263-L2271)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn to-array\n  [s]\n  (let [ary (array)]\n    (loop [s s]\n      (if (seq s)\n        (do (. ary push (first s))\n            (recur (next s)))\n        ary))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2264 2272]},
+          :lines [2263 2271]},
  :full-name "cljs.core/to-array",
  :clj-symbol "clojure.core/to-array",
  :docstring "Naive impl of to-array as a start."}

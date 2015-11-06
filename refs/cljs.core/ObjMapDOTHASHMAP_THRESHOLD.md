@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L3976):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L3974):
 
 ```clj
 (set! cljs.core.ObjMap.HASHMAP_THRESHOLD 8)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3976](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L3976)</ins>
+            └── <ins>[core.cljs:3974](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L3974)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.ObjMap.HASHMAP_THRESHOLD 8)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3976]},
+          :lines [3974]},
  :full-name "cljs.core/ObjMap.HASHMAP_THRESHOLD",
  :full-name-encode "cljs.core/ObjMapDOTHASHMAP_THRESHOLD",
  :history [["+" "0.0-1211"]]}

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2422-L2423):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2421-L2422):
 
 ```clj
 (defn persistent! [tcoll]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2422-2423](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2422-L2423)</ins>
+            └── <ins>[core.cljs:2421-2422](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2421-L2422)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn persistent! [tcoll]\n  (-persistent! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2422 2423]},
+          :lines [2421 2422]},
  :full-name "cljs.core/persistent!",
  :clj-symbol "clojure.core/persistent!"}
 

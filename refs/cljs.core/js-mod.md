@@ -58,7 +58,7 @@ Modulus of num and div with original javascript behavior. i.e. bug for negative 
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1617-L1620):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1619-L1622):
 
 ```clj
 (defn js-mod
@@ -70,18 +70,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1617-1620](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1617-L1620)</ins>
+            └── <ins>[core.cljs:1619-1622](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1619-L1622)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L414-L415):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L456-L457):
 
 ```clj
 (defmacro js-mod [num div]
@@ -92,11 +92,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:414-415](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L414-L415)</ins>
+            └── <ins>[core.clj:456-457](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L456-L457)</ins>
 </pre>
 -->
 
@@ -144,15 +144,15 @@ The API data for this symbol:
  :source {:code "(defn js-mod\n  [n d]\n  (cljs.core/js-mod n d))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1617 1620]},
+          :lines [1619 1622]},
  :extra-sources [{:code "(defmacro js-mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1934",
+                  :tag "r1978",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [414 415]}],
+                  :lines [456 457]}],
  :examples [{:id "75fa6d",
              :content "```clj\n(js-mod -5 3)\n;;=> -2\n\n(js-mod 5 3)\n;;=> 2\n\n(js-mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/js-mod",

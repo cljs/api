@@ -89,7 +89,7 @@ To signify an unevaluated list, precede it with a quote:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L165-L174):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L165-L174):
 
 ```clj
 (defn- read-list
@@ -108,18 +108,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.9
+tools.reader @ tools.reader-0.7.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:165-174](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L165-L174)</ins>
+                    └── <ins>[reader.clj:165-174](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L165-L174)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L551-L570):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L559-L578):
 
 ```clj
 (defn- macros [ch]
@@ -148,13 +148,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.9
+tools.reader @ tools.reader-0.7.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:551-570](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L551-L570)</ins>
+                    └── <ins>[reader.clj:559-578](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L559-L578)</ins>
 </pre>
 -->
 
@@ -196,15 +196,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-list\n  [rdr _]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])\n        the-list (read-delimited \\) rdr true)]\n    (if (empty? the-list)\n      '()\n      (with-meta (clojure.lang.PersistentList/create the-list)\n        (when line\n          {:line line :column column})))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.9",
+                  :tag "tools.reader-0.7.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [165 174]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.9",
+                  :tag "tools.reader-0.7.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [551 570]}),
+                  :lines [559 578]}),
  :usage ["(...)"],
  :examples [{:id "cd26b0",
              :content "The following is a list that is evaluated to create var `a`:\n\n```clj\n(def a 1)\n```\n\nAn empty list is unevaluated and left as an empty list:\n\n```clj\n()\n;;=> ()\n```\n\nTo signify an unevaluated list, precede it with a quote:\n\n```clj\n'(1 2 3)\n;;=> (1 2 3)\n```"}],

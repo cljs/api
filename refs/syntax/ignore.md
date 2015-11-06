@@ -55,7 +55,7 @@ the trailing parentheses:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L321-L324):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L329-L332):
 
 ```clj
 (defn- read-discard
@@ -68,18 +68,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.9
+tools.reader @ tools.reader-0.7.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:321-324](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L321-L324)</ins>
+                    └── <ins>[reader.clj:329-332](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L329-L332)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L572-L583):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L580-L591):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -100,13 +100,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.9
+tools.reader @ tools.reader-0.7.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:572-583](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.9/src/main/clojure/clojure/tools/reader.clj#L572-L583)</ins>
+                    └── <ins>[reader.clj:580-591](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L580-L591)</ins>
 </pre>
 -->
 
@@ -148,15 +148,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-discard\n  [rdr _]\n  (read rdr true nil true)\n  rdr)",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.9",
+                  :tag "tools.reader-0.7.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [321 324]}
+                  :lines [329 332]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.9",
+                  :tag "tools.reader-0.7.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [572 583]}),
+                  :lines [580 591]}),
  :examples [{:id "f36d7a",
              :content "```clj\n{:foo #_bar 2}\n;;=> {:foo 2}\n```\n\nTo comment out the last line of a function without worrying about commenting out\nthe trailing parentheses:\n\n```clj\n(defn foo []\n  (println \"hello\")\n  #_(println \"world\"))\n```"}],
  :edn-doc "https://github.com/edn-format/edn#discard",

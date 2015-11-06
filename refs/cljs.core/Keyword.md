@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2010-L2043):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2012-L2042):
 
 ```clj
 (deftype Keyword [ns name fqn ^:mutable _hash]
@@ -38,16 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
       (identical? fqn (.-fqn other))
       false))
   IFn
-  (invoke [kw coll]
-    (when-not (nil? coll)
-      (when (satisfies? ILookup coll)
-        (-lookup coll kw nil))))
-  (invoke [kw coll not-found]
-    (if (nil? coll)
-      not-found
-      (if (satisfies? ILookup coll)
-        (-lookup coll kw not-found)
-        not-found)))
+  (-invoke [kw coll]
+    (get coll kw))
+  (-invoke [kw coll not-found]
+    (get coll kw not-found))
+
   IHash
   (-hash [_]
     ; This was checking if _hash == -1, should it stay that way?
@@ -57,9 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
                         0x9e3779b9))
         _hash)
       _hash))
+
   INamed
   (-name [_] name)
   (-namespace [_] ns)
+
   IPrintWithWriter
   (-pr-writer [o writer _] (-write writer (str ":" fqn))))
 ```
@@ -68,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2010-2043](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2010-L2043)</ins>
+            └── <ins>[core.cljs:2012-2042](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2012-L2042)</ins>
 </pre>
 
 -->
@@ -120,12 +117,12 @@ The API data for this symbol:
  :history [["+" "0.0-1424"]],
  :type "type",
  :full-name-encode "cljs.core/Keyword",
- :source {:code "(deftype Keyword [ns name fqn ^:mutable _hash]\n  Object\n  (toString [_] (str \":\" fqn))\n  \n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Keyword other)\n      (identical? fqn (.-fqn other))\n      false))\n  IFn\n  (invoke [kw coll]\n    (when-not (nil? coll)\n      (when (satisfies? ILookup coll)\n        (-lookup coll kw nil))))\n  (invoke [kw coll not-found]\n    (if (nil? coll)\n      not-found\n      (if (satisfies? ILookup coll)\n        (-lookup coll kw not-found)\n        not-found)))\n  IHash\n  (-hash [_]\n    ; This was checking if _hash == -1, should it stay that way?\n    (if (nil? _hash)\n      (do\n        (set! _hash (+ (hash-combine (hash ns) (hash name))\n                        0x9e3779b9))\n        _hash)\n      _hash))\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer (str \":\" fqn))))",
+ :source {:code "(deftype Keyword [ns name fqn ^:mutable _hash]\n  Object\n  (toString [_] (str \":\" fqn))\n  \n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Keyword other)\n      (identical? fqn (.-fqn other))\n      false))\n  IFn\n  (-invoke [kw coll]\n    (get coll kw))\n  (-invoke [kw coll not-found]\n    (get coll kw not-found))\n\n  IHash\n  (-hash [_]\n    ; This was checking if _hash == -1, should it stay that way?\n    (if (nil? _hash)\n      (do\n        (set! _hash (+ (hash-combine (hash ns) (hash name))\n                        0x9e3779b9))\n        _hash)\n      _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer (str \":\" fqn))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2010 2043]},
+          :lines [2012 2042]},
  :full-name "cljs.core/Keyword",
  :clj-symbol "clojure.lang/Keyword"}
 

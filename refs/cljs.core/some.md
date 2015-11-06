@@ -51,7 +51,7 @@ this will return :fred if :fred is in the sequence, otherwise nil:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2527-L2534):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2526-L2533):
 
 ```clj
 (defn some
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2527-2534](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2527-L2534)</ins>
+            └── <ins>[core.cljs:2526-2533](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2526-L2533)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defn some\n  [pred coll]\n    (when (seq coll)\n      (or (pred (first coll)) (recur pred (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2527 2534]},
+          :lines [2526 2533]},
  :full-name "cljs.core/some",
  :clj-symbol "clojure.core/some",
  :docstring "Returns the first logical true value of (pred x) for any x in coll,\nelse nil.  One common idiom is to use a set as pred, for example\nthis will return :fred if :fred is in the sequence, otherwise nil:\n(some #{:fred} coll)"}

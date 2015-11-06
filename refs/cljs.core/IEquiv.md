@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L268-L269):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L268-L269):
 
 ```clj
 (defprotocol IEquiv
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:268-269](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L268-L269)</ins>
+            └── <ins>[core.cljs:268-269](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L268-L269)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IEquiv\n  (-equiv [o other]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
           :lines [268 269]},
  :methods [{:name "-equiv", :signature ["[o other]"], :docstring nil}],

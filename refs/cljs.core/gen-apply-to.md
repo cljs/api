@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L1326-L1334):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L1417-L1425):
 
 ```clj
 (defmacro gen-apply-to []
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1326-1334](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L1326-L1334)</ins>
+            └── <ins>[core.clj:1417-1425](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L1417-L1425)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/clj/cljs/core.clj",
-          :lines [1326 1334]},
+          :lines [1417 1425]},
  :full-name "cljs.core/gen-apply-to",
  :full-name-encode "cljs.core/gen-apply-to",
  :history [["+" "0.0-1211"]]}

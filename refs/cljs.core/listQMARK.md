@@ -37,7 +37,7 @@ Returns true if `x` is a list, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2003-L2004):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2009-L2010):
 
 ```clj
 (defn ^boolean list? [x]
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2003-2004](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2003-L2004)</ins>
+            └── <ins>[core.cljs:2009-2010](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2009-L2010)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean list? [x]\n  (satisfies? IList x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2003 2004]},
+          :lines [2009 2010]},
  :full-name "cljs.core/list?",
  :clj-symbol "clojure.core/list?"}
 

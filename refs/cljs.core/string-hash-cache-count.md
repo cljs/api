@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1057):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1048):
 
 ```clj
 (def string-hash-cache-count 0)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1057](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1057)</ins>
+            └── <ins>[core.cljs:1048](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1048)</ins>
 </pre>
 
 -->
@@ -76,9 +76,9 @@ The API data for this symbol:
  :source {:code "(def string-hash-cache-count 0)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1057]},
+          :lines [1048]},
  :full-name "cljs.core/string-hash-cache-count",
  :full-name-encode "cljs.core/string-hash-cache-count",
  :history [["+" "0.0-1424"]]}

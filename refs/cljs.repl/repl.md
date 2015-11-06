@@ -27,7 +27,7 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/repl.clj#L152-L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L144-L182):
 
 ```clj
 (defn repl
@@ -42,22 +42,31 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
       (analyze-source analyze-path))
     (let [env {:context :expr :locals {}}
           special-fns (merge default-special-fns special-fns)
-          is-special-fn? (set (keys special-fns))]
+          is-special-fn? (set (keys special-fns))
+          read-error (Object.)]
       (-setup repl-env)
-      (loop []
+      (loop [forms (ana/forms-seq *in* "NO_SOURCE_FILE")]
         (print (str "ClojureScript:" ana/*cljs-ns* "> "))
         (flush)
-        (let [{:keys [status form]} (read-next-form)]
+        (let [form (try
+                     (binding [*data-readers* tags/*cljs-data-readers*]
+                       (first forms))
+                     (catch Exception e
+                       (println (.getMessage e))
+                       read-error))]
           (cond
+           (identical? form read-error) (recur (ana/forms-seq *in* "NO_SOURCE_FILE"))
+           
            (= form :cljs/quit) :quit
 
-           (= status :error) (recur)
-
            (and (seq? form) (is-special-fn? (first form)))
-           (do (apply (get special-fns (first form)) repl-env (rest form)) (newline) (recur))
+           (do (apply (get special-fns (first form)) repl-env (rest form))
+               (newline)
+               (recur (rest forms)))
 
            :else
-           (do (eval-and-print repl-env env form) (recur)))))
+           (do (eval-and-print repl-env env form)
+               (recur (rest forms))))))
       (-tear-down repl-env))))
 ```
 
@@ -65,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:152-181](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/repl.clj#L152-L181)</ins>
+            └── <ins>[repl.clj:144-182](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L144-L182)</ins>
 </pre>
 
 -->
@@ -114,12 +123,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl/repl",
- :source {:code "(defn repl\n  [repl-env & {:keys [analyze-path verbose warn-on-undeclared special-fns static-fns]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [ana/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            ana/*cljs-warnings* (assoc ana/*cljs-warnings*\n                                  :undeclared warn-on-undeclared)\n            ana/*cljs-static-fns* static-fns]\n    (when analyze-path\n      (analyze-source analyze-path))\n    (let [env {:context :expr :locals {}}\n          special-fns (merge default-special-fns special-fns)\n          is-special-fn? (set (keys special-fns))]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" ana/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n\n           (= status :error) (recur)\n\n           (and (seq? form) (is-special-fn? (first form)))\n           (do (apply (get special-fns (first form)) repl-env (rest form)) (newline) (recur))\n\n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
+ :source {:code "(defn repl\n  [repl-env & {:keys [analyze-path verbose warn-on-undeclared special-fns static-fns]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [ana/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            ana/*cljs-warnings* (assoc ana/*cljs-warnings*\n                                  :undeclared warn-on-undeclared)\n            ana/*cljs-static-fns* static-fns]\n    (when analyze-path\n      (analyze-source analyze-path))\n    (let [env {:context :expr :locals {}}\n          special-fns (merge default-special-fns special-fns)\n          is-special-fn? (set (keys special-fns))\n          read-error (Object.)]\n      (-setup repl-env)\n      (loop [forms (ana/forms-seq *in* \"NO_SOURCE_FILE\")]\n        (print (str \"ClojureScript:\" ana/*cljs-ns* \"> \"))\n        (flush)\n        (let [form (try\n                     (binding [*data-readers* tags/*cljs-data-readers*]\n                       (first forms))\n                     (catch Exception e\n                       (println (.getMessage e))\n                       read-error))]\n          (cond\n           (identical? form read-error) (recur (ana/forms-seq *in* \"NO_SOURCE_FILE\"))\n           \n           (= form :cljs/quit) :quit\n\n           (and (seq? form) (is-special-fn? (first form)))\n           (do (apply (get special-fns (first form)) repl-env (rest form))\n               (newline)\n               (recur (rest forms)))\n\n           :else\n           (do (eval-and-print repl-env env form)\n               (recur (rest forms))))))\n      (-tear-down repl-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/clj/cljs/repl.clj",
-          :lines [152 181]},
+          :lines [144 182]},
  :full-name "cljs.repl/repl",
  :docstring "Note - repl will reload core.cljs every time, even if supplied old repl-env"}
 

@@ -16,9 +16,6 @@
  <samp>
 (__hash__ o)<br>
 </samp>
- <samp>
-(__hash__ o check-cache)<br>
-</samp>
 
 ---
 
@@ -28,26 +25,37 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1074-L1079):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1065-L1081):
 
 ```clj
-(defn hash
-  ([o] (hash o true))
-  ([o ^boolean check-cache]
-     (if (and ^boolean (goog/isString o) check-cache)
-       (check-string-hash-cache o)
-       (-hash o))))
+(defn hash [o]
+  (cond
+    (satisfies? IHash o false)
+    (-hash ^not-native o)
+
+    (number? o)
+    (js-mod (.floor js/Math o) 2147483647)
+
+    (true? o) 1
+
+    (false? o) 0
+
+    (string? o)
+    (check-string-hash-cache o)
+
+    :else
+    (-hash o)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1074-1079](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L1074-L1079)</ins>
+            └── <ins>[core.cljs:1065-1081](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1065-L1081)</ins>
 </pre>
 
 -->
@@ -91,16 +99,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "hash",
- :signature ["[o]" "[o check-cache]"],
+ :signature ["[o]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/hash",
- :source {:code "(defn hash\n  ([o] (hash o true))\n  ([o ^boolean check-cache]\n     (if (and ^boolean (goog/isString o) check-cache)\n       (check-string-hash-cache o)\n       (-hash o))))",
+ :source {:code "(defn hash [o]\n  (cond\n    (satisfies? IHash o false)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (.floor js/Math o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (check-string-hash-cache o)\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1074 1079]},
+          :lines [1065 1081]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash"}
 

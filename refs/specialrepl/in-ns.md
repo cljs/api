@@ -43,7 +43,7 @@ Sets `*cljs-ns*` to the namespace `name`.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/repl.clj#L132-L141):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L124-L133):
 
 ```clj
 (def default-special-fns
@@ -62,11 +62,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r19
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:132-141](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/repl.clj#L132-L141)</ins>
+            └── <ins>[repl.clj:124-133](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L124-L133)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (ana/set-namespace ns-name {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/clj/cljs/repl.clj",
-          :lines [132 141]},
+          :lines [124 133]},
  :examples [{:id "e81eb3", :content "```clj\n(in-ns 'foo.core)\n```"}],
  :full-name "specialrepl/in-ns",
  :clj-symbol "clojure.core/in-ns"}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L6578-L6585):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6577-L6584):
 
 ```clj
 (defn pr-sequential-writer [writer print-one begin sep end opts coll]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6578-6585](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L6578-L6585)</ins>
+            └── <ins>[core.cljs:6577-6584](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6577-L6584)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (-write writer begin)\n  (when (seq coll)\n    (print-one (first coll) writer opts))\n  (doseq [o (next coll)]\n    (-write writer sep)\n    (print-one o writer opts))\n  (-write writer end))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6578 6585]},
+          :lines [6577 6584]},
  :full-name "cljs.core/pr-sequential-writer",
  :full-name-encode "cljs.core/pr-sequential-writer",
  :history [["+" "0.0-1503"]]}

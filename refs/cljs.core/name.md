@@ -77,7 +77,7 @@ Returns the name String of a string, symbol or keyword.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L6249-L6256):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6248-L6255):
 
 ```clj
 (defn name
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6249-6256](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L6249-L6256)</ins>
+            └── <ins>[core.cljs:6248-6255](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6248-L6255)</ins>
 </pre>
 
 -->
@@ -150,9 +150,9 @@ The API data for this symbol:
  :source {:code "(defn name\n  [x]\n  (if (satisfies? INamed x false)\n    (-name ^not-native x)\n    (if (string? x)\n      x\n      (throw (js/Error. (str \"Doesn't support name: \" x))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6249 6256]},
+          :lines [6248 6255]},
  :examples [{:id "363fb7",
              :content "With namespaces:\n\n```clj\n(name :foo/bar)\n;;=> \"bar\"\n\n(name 'foo/bar)\n;;=> \"bar\"\n```\n\nWithout namespaces:\n\n```clj\n(name :foo)\n;;=> \"foo\"\n\n(name 'foo)\n;;=> \"foo\"\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> \"foo/bar\"\n\n(name \"foo\")\n;;=> \"foo\"\n```"}],
  :full-name "cljs.core/name",

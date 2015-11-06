@@ -25,7 +25,7 @@ Implementation detail. Subject to change.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/clojure/data.cljs#L75-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/data.cljs#L75-L77):
 
 ```clj
 (defprotocol EqualityPartition
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── clojure
-            └── <ins>[data.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/clojure/data.cljs#L75-L77)</ins>
+            └── <ins>[data.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/data.cljs#L75-L77)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defprotocol EqualityPartition\n  \"Implementation detail. Subject to change.\"\n  (equality-partition [x] \"Implementation detail. Subject to change.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/clojure/data.cljs",
           :lines [75 77]},
  :methods [{:name "equality-partition",

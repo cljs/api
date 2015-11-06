@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/nodejs.cljs#L7):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/nodejs.cljs#L7):
 
 ```clj
 (def require (js* "require"))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1934
+clojurescript @ r1978
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:7](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/nodejs.cljs#L7)</ins>
+            └── <ins>[nodejs.cljs:7](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/nodejs.cljs#L7)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def require (js* \"require\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1934",
+          :tag "r1978",
           :filename "src/cljs/cljs/nodejs.cljs",
           :lines [7]},
  :full-name "cljs.nodejs/require",
