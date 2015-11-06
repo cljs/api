@@ -1,11 +1,11 @@
-## cljs.repl.browser/handle-connection
+## ~~cljs.repl.browser/handle-connection~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -86,8 +86,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "handle-connection",
- :type "function",
  :signature ["[opts conn]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/handle-connection",
  :source {:code "(defn handle-connection\n  [opts conn]\n  (let [rdr (BufferedReader. (InputStreamReader. (.getInputStream conn)))]\n    (if-let [request (read-request rdr)]\n      (case (:method request)\n        :get (handle-get opts conn request)\n        :post (handle-post conn (read-string (:content request)))\n        (.close conn))\n      (.close conn))))",
           :title "Source code",
           :repo "clojurescript",
@@ -95,8 +97,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [248 256]},
  :full-name "cljs.repl.browser/handle-connection",
- :full-name-encode "cljs.repl.browser/handle-connection",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 

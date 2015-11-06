@@ -20,7 +20,17 @@ The ClojureScript compiler, just the parts that are expected to be public and st
 </tr>
 <tr>
 <td></td>
+<td>[cljs.repl.reflect](compiler/cljs.repl.reflect.md)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>[cljs.repl.rhino](compiler/cljs.repl.rhino.md)</td>
 <td>Rhino REPL (JS on Java 6+)</td>
+</tr>
+<tr>
+<td></td>
+<td>[cljs.repl.server](compiler/cljs.repl.server.md)</td>
+<td></td>
 </tr>
 </table>

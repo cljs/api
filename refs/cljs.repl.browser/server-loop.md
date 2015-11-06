@@ -1,11 +1,11 @@
-## cljs.repl.browser/server-loop
+## ~~cljs.repl.browser/server-loop~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -83,8 +83,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "server-loop",
- :type "function",
  :signature ["[opts server-socket]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/server-loop",
  :source {:code "(defn server-loop\n  [opts server-socket]\n  (let [conn (.accept server-socket)]\n    (do (.setKeepAlive conn true)\n        (future (handle-connection opts conn))\n        (recur opts server-socket))))",
           :title "Source code",
           :repo "clojurescript",
@@ -92,8 +94,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [258 263]},
  :full-name "cljs.repl.browser/server-loop",
- :full-name-encode "cljs.repl.browser/server-loop",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 

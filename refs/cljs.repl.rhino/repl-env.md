@@ -28,7 +28,7 @@ Hang on to return for use across repl calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/rhino.clj#L123-L141):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/rhino.clj#L123-L141):
 
 ```clj
 (defn repl-env
@@ -37,7 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
         scope (.initStandardObjects cx)
         base (io/resource "goog/base.js")
         deps (io/resource "goog/deps.js")
-        new-repl-env {:cx cx :scope scope}]
+        new-repl-env (merge (RhinoEnv.) {:cx cx :scope scope})]
     (assert base "Can't find goog/base.js in classpath")
     (assert deps "Can't find goog/deps.js in classpath")
     (swap! current-repl-env (fn [old] new-repl-env))
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:123-141](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/rhino.clj#L123-L141)</ins>
+                └── <ins>[rhino.clj:123-141](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/rhino.clj#L123-L141)</ins>
 </pre>
 
 -->
@@ -104,10 +104,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.rhino/repl-env",
- :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)\n        scope (.initStandardObjects cx)\n        base (io/resource \"goog/base.js\")\n        deps (io/resource \"goog/deps.js\")\n        new-repl-env {:cx cx :scope scope}]\n    (assert base \"Can't find goog/base.js in classpath\")\n    (assert deps \"Can't find goog/deps.js in classpath\")\n    (swap! current-repl-env (fn [old] new-repl-env))\n    (with-open [r (io/reader base)]\n      (-eval r new-repl-env \"goog/base.js\" 1))\n    (-eval bootjs new-repl-env \"bootjs\" 1)\n    ;; Load deps.js line-by-line to avoid 64K method limit\n    (doseq [^String line (line-seq (io/reader deps))]\n      (-eval line new-repl-env \"goog/deps.js\" 1))\n    new-repl-env))",
+ :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)\n        scope (.initStandardObjects cx)\n        base (io/resource \"goog/base.js\")\n        deps (io/resource \"goog/deps.js\")\n        new-repl-env (merge (RhinoEnv.) {:cx cx :scope scope})]\n    (assert base \"Can't find goog/base.js in classpath\")\n    (assert deps \"Can't find goog/deps.js in classpath\")\n    (swap! current-repl-env (fn [old] new-repl-env))\n    (with-open [r (io/reader base)]\n      (-eval r new-repl-env \"goog/base.js\" 1))\n    (-eval bootjs new-repl-env \"bootjs\" 1)\n    ;; Load deps.js line-by-line to avoid 64K method limit\n    (doseq [^String line (line-seq (io/reader deps))]\n      (-eval line new-repl-env \"goog/deps.js\" 1))\n    new-repl-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [123 141]},
  :full-name "cljs.repl.rhino/repl-env",

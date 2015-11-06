@@ -1022,18 +1022,6 @@ symbols that are not yet ported to ClojureScript:
  <table>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.data/Diff](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/Diff)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.data/EqualityPartition](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/EqualityPartition)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.data/diff](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/diff)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.data/diff-similar](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/diff-similar)</samp></td>
 </tr>
 <tr>

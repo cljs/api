@@ -22,12 +22,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L4684-L4690):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L4723-L4729):
 
 ```clj
 (set! cljs.core.PersistentHashMap/fromArrays
       (fn [ks vs]
-        (let [len (.-length ks)]
+        (let [len (alength ks)]
           (loop [i 0 out (transient cljs.core.PersistentHashMap/EMPTY)]
             (if (< i len)
               (recur (inc i) (assoc! out (aget ks i) (aget vs i)))
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4684-4690](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L4684-L4690)</ins>
+            └── <ins>[core.cljs:4723-4729](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L4723-L4729)</ins>
 </pre>
 
 -->
@@ -88,12 +88,12 @@ The API data for this symbol:
  :parent-type "PersistentHashMap",
  :type "function",
  :full-name-encode "cljs.core/PersistentHashMapDOTfromArrays",
- :source {:code "(set! cljs.core.PersistentHashMap/fromArrays\n      (fn [ks vs]\n        (let [len (.-length ks)]\n          (loop [i 0 out (transient cljs.core.PersistentHashMap/EMPTY)]\n            (if (< i len)\n              (recur (inc i) (assoc! out (aget ks i) (aget vs i)))\n              (persistent! out))))))",
+ :source {:code "(set! cljs.core.PersistentHashMap/fromArrays\n      (fn [ks vs]\n        (let [len (alength ks)]\n          (loop [i 0 out (transient cljs.core.PersistentHashMap/EMPTY)]\n            (if (< i len)\n              (recur (inc i) (assoc! out (aget ks i) (aget vs i)))\n              (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4684 4690]},
+          :lines [4723 4729]},
  :full-name "cljs.core/PersistentHashMap.fromArrays"}
 
 ```

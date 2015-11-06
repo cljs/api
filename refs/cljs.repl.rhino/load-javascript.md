@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/rhino.clj#L87-L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/rhino.clj#L87-L94):
 
 ```clj
 (defn load-javascript [repl-env ns url]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:87-94](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/rhino.clj#L87-L94)</ins>
+                └── <ins>[rhino.clj:87-94](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/rhino.clj#L87-L94)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript [repl-env ns url]\n  (let [missing (remove #(contains? @loaded-libs %) ns)]\n    (when (seq missing)\n      (do (try \n            (-eval (io/reader url) repl-env (.toString url) 1)\n            ;; TODO: don't show errors for goog/base.js line number 105\n            (catch Throwable ex (println (.getMessage ex))))\n          (swap! loaded-libs (partial apply conj) missing)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [87 94]},
  :full-name "cljs.repl.rhino/load-javascript",

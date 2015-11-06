@@ -29,7 +29,7 @@ only once.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl.clj#L26-L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl.clj#L27-L42):
 
 ```clj
 (defn load-namespace
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:26-41](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl.clj#L26-L41)</ins>
+            └── <ins>[repl.clj:27-42](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl.clj#L27-L42)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn load-namespace\n  [repl-env sym]\n  (let [sym (if (and (seq? sym)\n                     (= (first sym) 'quote))\n              (second sym)\n              sym)\n        opts {:output-dir (get repl-env :working-dir \".repl\")}\n        deps (->> (cljsc/add-dependencies opts {:requires [(name sym)] :type :seed})\n                  (remove (comp #{[\"goog\"]} :provides))\n                  (remove (comp #{:seed} :type))\n                  (map #(select-keys % [:provides :url])))]\n    (doseq [{:keys [url provides]} deps]\n      (-load repl-env provides url))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/clj/cljs/repl.clj",
-          :lines [26 41]},
+          :lines [27 42]},
  :full-name "cljs.repl/load-namespace",
  :docstring "Load a namespace and all of its dependencies into the evaluation environment.\nThe environment is responsible for ensuring that each namespace is loaded once and\nonly once."}
 

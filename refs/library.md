@@ -56,6 +56,16 @@ The rest of the symbols are in the following namespaces:
 <td>a library for reduction and parallel folding (parallelism not supported)</td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.data-api.html)</td>
+<td>[clojure.data](library/clojure.data.md)</td>
+<td>non-core data functions</td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html)</td>
+<td>[clojure.reflect](library/clojure.reflect.md)</td>
+<td>deprecated</td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.set-api.html)</td>
 <td>[clojure.set](library/clojure.set.md)</td>
 <td>set operations such as union/intersection</td>

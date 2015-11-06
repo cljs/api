@@ -1,11 +1,12 @@
-## cljs.repl.browser/server-state
+## ~~cljs.repl.browser/server-state~~
 
 
+> __MOVED__, please see [`cljs.repl.server/state`](../cljs.repl.server/state.md)
 
  <table border="1">
 <tr>
 <td>var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -86,7 +87,9 @@ The API data for this symbol:
           :lines [24 28]},
  :full-name "cljs.repl.browser/server-state",
  :full-name-encode "cljs.repl.browser/server-state",
- :history [["+" "0.0-927"]]}
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"},
+ :moved "cljs.repl.server/state"}
 
 ```
 

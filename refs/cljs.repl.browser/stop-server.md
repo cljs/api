@@ -1,11 +1,12 @@
-## cljs.repl.browser/stop-server
+## ~~cljs.repl.browser/stop-server~~
 
 
+> __MOVED__, please see [`cljs.repl.server/stop`](../cljs.repl.server/stop.md)
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -78,10 +79,13 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.repl.browser",
+{:moved "cljs.repl.server/stop",
+ :ns "cljs.repl.browser",
  :name "stop-server",
- :type "function",
  :signature ["[]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/stop-server",
  :source {:code "(defn stop-server\n  []\n  (.close (:socket @server-state)))",
           :title "Source code",
           :repo "clojurescript",
@@ -89,8 +93,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [272 274]},
  :full-name "cljs.repl.browser/stop-server",
- :full-name-encode "cljs.repl.browser/stop-server",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 

@@ -1,11 +1,12 @@
-## cljs.repl.browser/send-and-close
+## ~~cljs.repl.browser/send-and-close~~
 
 
+> __MOVED__, please see [`cljs.repl.server/send-and-close`](../cljs.repl.server/send-and-close.md)
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -104,10 +105,11 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.repl.browser",
+{:moved "cljs.repl.server/send-and-close",
+ :ns "cljs.repl.browser",
  :name "send-and-close",
  :signature ["[conn status form]" "[conn status form content-type]"],
- :history [["+" "0.0-927"]],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/send-and-close",
  :source {:code "(defn send-and-close\n  ([conn status form]\n     (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n     (let [utf-8-form (.getBytes form \"UTF-8\")\n           content-length (count utf-8-form)\n           headers (map #(.getBytes (str % \"\\r\\n\"))\n                        [(status-line status)\n                         \"Server: ClojureScript REPL\"\n                         (str \"Content-Type: \"\n                              content-type\n                              \"; charset=utf-8\")\n                         (str \"Content-Length: \" content-length)\n                         \"\"])]\n       (with-open [os (.getOutputStream conn)]\n         (do (doseq [header headers]\n               (.write os header 0 (count header)))\n             (.write os utf-8-form 0 content-length)\n             (.flush os)\n             (.close conn))))))",
@@ -117,7 +119,8 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [69 90]},
  :full-name "cljs.repl.browser/send-and-close",
- :docstring "Use the passed connection to send a form to the browser. Send a\nproper HTTP response."}
+ :docstring "Use the passed connection to send a form to the browser. Send a\nproper HTTP response.",
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 

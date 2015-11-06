@@ -39,25 +39,29 @@ preloaded-libs: List of namespaces that should not be sent from the REPL server
                 loading code and reloading it would cause a problem.
 optimizations:  The level of optimization to use when compiling the client
                 end of the REPL. Defaults to :simple.
+src:            The source directory containing user-defined cljs files. Used to
+                support reflection. Defaults to "src/".
 
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L347-L380):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/browser.clj#L208-L245):
 
 ```clj
 (defn repl-env
   [& {:as opts}]
-  (let [opts (merge {:port          9000
+  (let [opts (merge (BrowserEnv.)
+                    {:port          9000
                      :optimizations :simple
                      :working-dir   ".repl"
                      :serve-static  true
                      :static-dir    ["." "out/"]
-                     :preloaded-libs   []}
+                     :preloaded-libs   []
+                     :src           "src/"}
                     opts)]
     (do (reset! preloaded-libs (set (concat (always-preload) (map str (:preloaded-libs opts)))))
         (reset! loaded-libs @preloaded-libs)
-        (swap! server-state
+        (swap! browser-state
                (fn [old] (assoc old :client-js
                                (future (create-client-js-file
                                         opts
@@ -69,12 +73,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:347-380](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L347-L380)</ins>
+                └── <ins>[browser.clj:208-245](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/repl/browser.clj#L208-L245)</ins>
 </pre>
 
 -->
@@ -119,14 +123,14 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/repl-env",
- :source {:code "(defn repl-env\n  [& {:as opts}]\n  (let [opts (merge {:port          9000\n                     :optimizations :simple\n                     :working-dir   \".repl\"\n                     :serve-static  true\n                     :static-dir    [\".\" \"out/\"]\n                     :preloaded-libs   []}\n                    opts)]\n    (do (reset! preloaded-libs (set (concat (always-preload) (map str (:preloaded-libs opts)))))\n        (reset! loaded-libs @preloaded-libs)\n        (swap! server-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
+ :source {:code "(defn repl-env\n  [& {:as opts}]\n  (let [opts (merge (BrowserEnv.)\n                    {:port          9000\n                     :optimizations :simple\n                     :working-dir   \".repl\"\n                     :serve-static  true\n                     :static-dir    [\".\" \"out/\"]\n                     :preloaded-libs   []\n                     :src           \"src/\"}\n                    opts)]\n    (do (reset! preloaded-libs (set (concat (always-preload) (map str (:preloaded-libs opts)))))\n        (reset! loaded-libs @preloaded-libs)\n        (swap! browser-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [347 380]},
+          :lines [208 245]},
  :full-name "cljs.repl.browser/repl-env",
- :docstring "Create a browser-connected REPL environment.\n\nOptions:\n\nport:           The port on which the REPL server will run. Defaults to 9000.\nworking-dir:    The directory where the compiled REPL client JavaScript will\n                be stored. Defaults to \".repl\".\nserve-static:   Should the REPL server attempt to serve static content?\n                Defaults to true.\nstatic-dir:     List of directories to search for static content. Defaults to\n                [\".\" \"out/\"].\npreloaded-libs: List of namespaces that should not be sent from the REPL server\n                to the browser. This may be required if the browser is already\n                loading code and reloading it would cause a problem.\noptimizations:  The level of optimization to use when compiling the client\n                end of the REPL. Defaults to :simple.\n"}
+ :docstring "Create a browser-connected REPL environment.\n\nOptions:\n\nport:           The port on which the REPL server will run. Defaults to 9000.\nworking-dir:    The directory where the compiled REPL client JavaScript will\n                be stored. Defaults to \".repl\".\nserve-static:   Should the REPL server attempt to serve static content?\n                Defaults to true.\nstatic-dir:     List of directories to search for static content. Defaults to\n                [\".\" \"out/\"].\npreloaded-libs: List of namespaces that should not be sent from the REPL server\n                to the browser. This may be required if the browser is already\n                loading code and reloading it would cause a problem.\noptimizations:  The level of optimization to use when compiling the client\n                end of the REPL. Defaults to :simple.\nsrc:            The source directory containing user-defined cljs files. Used to\n                support reflection. Defaults to \"src/\".\n"}
 
 ```
 

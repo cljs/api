@@ -28,23 +28,25 @@ options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6158-L6162):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6260-L6266):
 
 ```clj
 (defn pr-str-with-opts
   [objs opts]
-  (str (pr-sb objs opts)))
+  (if (empty? objs)
+    ""
+    (str (pr-sb-with-opts objs opts))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6158-6162](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6158-L6162)</ins>
+            └── <ins>[core.cljs:6260-6266](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6260-L6266)</ins>
 </pre>
 
 -->
@@ -89,12 +91,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/pr-str-with-opts",
- :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (str (pr-sb objs opts)))",
+ :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (if (empty? objs)\n    \"\"\n    (str (pr-sb-with-opts objs opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6158 6162]},
+          :lines [6260 6266]},
  :full-name "cljs.core/pr-str-with-opts",
  :docstring "Prints a sequence of objects to a string, observing all the\noptions given in opts"}
 

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2053-L2054):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2090-L2091):
 
 ```clj
 (defn transient [coll]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2053-2054](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L2053-L2054)</ins>
+            └── <ins>[core.cljs:2090-2091](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2090-L2091)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn transient [coll]\n  (-as-transient coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2053 2054]},
+          :lines [2090 2091]},
  :full-name "cljs.core/transient",
  :clj-symbol "clojure.core/transient"}
 

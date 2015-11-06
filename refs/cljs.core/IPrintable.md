@@ -15,12 +15,22 @@
 
 
 
+Source docstring:
+
+```
+Do not use this.  It is kept for backwards compatibility with existing
+   user code that depends on it, but it has been superceded by IPrintWithWriter
+   User code that depends on this should be changed to use -pr-writer instead.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L238-L239):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L250-L254):
 
 ```clj
-(defprotocol IPrintable
+(defprotocol ^:deprecated IPrintable
+  "Do not use this.  It is kept for backwards compatibility with existing
+   user code that depends on it, but it has been superceded by IPrintWithWriter
+   User code that depends on this should be changed to use -pr-writer instead."
   (-pr-seq [o opts]))
 ```
 
@@ -28,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
+clojurescript @ r1503
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:238-239](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L238-L239)</ins>
+            └── <ins>[core.cljs:250-254](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L250-L254)</ins>
 </pre>
 
 -->
@@ -73,17 +83,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IPrintable",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IPrintable",
- :source {:code "(defprotocol IPrintable\n  (-pr-seq [o opts]))",
+ :source {:code "(defprotocol ^:deprecated IPrintable\n  \"Do not use this.  It is kept for backwards compatibility with existing\n   user code that depends on it, but it has been superceded by IPrintWithWriter\n   User code that depends on this should be changed to use -pr-writer instead.\"\n  (-pr-seq [o opts]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1450",
+          :tag "r1503",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [238 239]},
+          :lines [250 254]},
  :methods [{:name "-pr-seq", :signature ["[o opts]"], :docstring nil}],
  :full-name "cljs.core/IPrintable",
- :history [["+" "0.0-927"]]}
+ :docstring "Do not use this.  It is kept for backwards compatibility with existing\n   user code that depends on it, but it has been superceded by IPrintWithWriter\n   User code that depends on this should be changed to use -pr-writer instead."}
 
 ```
 

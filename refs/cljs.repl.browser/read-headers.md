@@ -1,11 +1,12 @@
-## cljs.repl.browser/read-headers
+## ~~cljs.repl.browser/read-headers~~
 
 
+> __MOVED__, please see [`cljs.repl.server/read-headers`](../cljs.repl.server/read-headers.md)
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -81,10 +82,13 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.repl.browser",
+{:moved "cljs.repl.server/read-headers",
+ :ns "cljs.repl.browser",
  :name "read-headers",
- :type "function",
  :signature ["[rdr]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/read-headers",
  :source {:code "(defn read-headers [rdr]\n  (loop [next-line (.readLine rdr)\n         header-lines []]\n    (if (= \"\" next-line)\n      header-lines                      ;we're done reading headers\n      (recur (.readLine rdr) (conj header-lines next-line)))))",
           :title "Source code",
           :repo "clojurescript",
@@ -92,8 +96,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [136 141]},
  :full-name "cljs.repl.browser/read-headers",
- :full-name-encode "cljs.repl.browser/read-headers",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 

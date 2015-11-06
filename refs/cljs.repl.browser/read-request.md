@@ -1,11 +1,12 @@
-## cljs.repl.browser/read-request
+## ~~cljs.repl.browser/read-request~~
 
 
+> __MOVED__, please see [`cljs.repl.server/read-request`](../cljs.repl.server/read-request.md)
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -80,10 +81,13 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.repl.browser",
+{:moved "cljs.repl.server/read-request",
+ :ns "cljs.repl.browser",
  :name "read-request",
- :type "function",
  :signature ["[rdr]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/read-request",
  :source {:code "(defn read-request [rdr]\n  (let [line (.readLine rdr)]\n    (cond (.startsWith line \"POST\") (read-post line rdr)\n          (.startsWith line \"GET\") (read-get line rdr)\n          :else {:method :unknown :content line})))",
           :title "Source code",
           :repo "clojurescript",
@@ -91,8 +95,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [161 165]},
  :full-name "cljs.repl.browser/read-request",
- :full-name-encode "cljs.repl.browser/read-request",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 
 ```
 
