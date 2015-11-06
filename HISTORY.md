@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3178](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3178)__</td>
+<td>2015-04-06</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.16</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003178syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003178library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-003178compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3169](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3169)__</td>
 <td>2015-03-31</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2522,6 +2545,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3178
+
+<a name="003178syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003178library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/array-index-of](refs/cljs.core/array-index-of.md)</samp></td>
+</tr>
+</table>
+
+<a name="003178compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-3169

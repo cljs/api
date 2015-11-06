@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L37-L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L37-L39):
 
 ```clj
 (defmacro err-out [& body]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:37-39](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L37-L39)</ins>
+            └── <ins>[repl.clj:37-39](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L37-L39)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defmacro err-out [& body]\n  `(binding [*out* *err*]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/clj/cljs/repl.clj",
           :lines [37 39]},
  :full-name "cljs.repl/err-out",

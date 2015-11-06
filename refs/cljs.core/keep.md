@@ -52,7 +52,7 @@ side-effects.  Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/core.cljs#L3741-L3770):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L3741-L3770):
 
 ```clj
 (defn keep
@@ -88,11 +88,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3741-3770](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/core.cljs#L3741-L3770)</ins>
+            └── <ins>[core.cljs:3741-3770](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/core.cljs#L3741-L3770)</ins>
 </pre>
 
 -->
@@ -147,7 +147,7 @@ The API data for this symbol:
  :source {:code "(defn keep\n  ([f]\n   (fn [rf]\n     (fn\n       ([] (rf))\n       ([result] (rf result))\n       ([result input]\n          (let [v (f input)]\n            (if (nil? v)\n              result\n              (rf result v)))))))\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n            (let [x (f (-nth c i))]\n              (when-not (nil? x)\n                (chunk-append b x))))\n          (chunk-cons (chunk b) (keep f (chunk-rest s))))\n        (let [x (f (first s))]\n          (if (nil? x)\n            (keep f (rest s))\n            (cons x (keep f (rest s))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3741 3770]},
  :full-name "cljs.core/keep",

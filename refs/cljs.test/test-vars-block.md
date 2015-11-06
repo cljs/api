@@ -28,7 +28,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/test.cljs#L519-L553):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/test.cljs#L511-L540):
 
 ```clj
 (defn test-vars-block
@@ -49,9 +49,6 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
                  (wrap-map-fixtures once-fixtures))
             :sync
             (do
-              (update-current-env! [:async-disabled]
-                                   (constantly
-                                    "Async tests require fixtures to be specified as maps"))
               (let [each-fixture-fn (join-fixtures each-fixtures)]
                 [(fn []
                    ((join-fixtures once-fixtures)
@@ -60,9 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
                         (when (:test (meta v))
                           (each-fixture-fn
                            (fn []
-                             (test-var v)))))))
-                   (update-current-env! [:async-disabled]
-                                        (constantly nil)))])))))))
+                             (test-var v))))))))])))))))
    (group-by (comp :ns meta) vars)))
 ```
 
@@ -70,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:519-553](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/test.cljs#L519-L553)</ins>
+            └── <ins>[test.cljs:511-540](https://github.com/clojure/clojurescript/blob/r3178/src/cljs/cljs/test.cljs#L511-L540)</ins>
 </pre>
 
 -->
@@ -119,12 +114,12 @@ The API data for this symbol:
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.test/test-vars-block",
- :source {:code "(defn test-vars-block\n  [vars]\n  (map\n   (fn [[ns vars]]\n     (fn []\n       (block\n        (let [env (get-current-env)\n              once-fixtures (get-in env [:once-fixtures ns])\n              each-fixtures (get-in env [:each-fixtures ns])]\n          (case (execution-strategy once-fixtures each-fixtures)\n            :async\n            (->> vars\n                 (filter (comp :test meta))\n                 (mapcat (comp (partial wrap-map-fixtures each-fixtures)\n                               test-var-block))\n                 (wrap-map-fixtures once-fixtures))\n            :sync\n            (do\n              (update-current-env! [:async-disabled]\n                                   (constantly\n                                    \"Async tests require fixtures to be specified as maps\"))\n              (let [each-fixture-fn (join-fixtures each-fixtures)]\n                [(fn []\n                   ((join-fixtures once-fixtures)\n                    (fn []\n                      (doseq [v vars]\n                        (when (:test (meta v))\n                          (each-fixture-fn\n                           (fn []\n                             (test-var v)))))))\n                   (update-current-env! [:async-disabled]\n                                        (constantly nil)))])))))))\n   (group-by (comp :ns meta) vars)))",
+ :source {:code "(defn test-vars-block\n  [vars]\n  (map\n   (fn [[ns vars]]\n     (fn []\n       (block\n        (let [env (get-current-env)\n              once-fixtures (get-in env [:once-fixtures ns])\n              each-fixtures (get-in env [:each-fixtures ns])]\n          (case (execution-strategy once-fixtures each-fixtures)\n            :async\n            (->> vars\n                 (filter (comp :test meta))\n                 (mapcat (comp (partial wrap-map-fixtures each-fixtures)\n                               test-var-block))\n                 (wrap-map-fixtures once-fixtures))\n            :sync\n            (do\n              (let [each-fixture-fn (join-fixtures each-fixtures)]\n                [(fn []\n                   ((join-fixtures once-fixtures)\n                    (fn []\n                      (doseq [v vars]\n                        (when (:test (meta v))\n                          (each-fixture-fn\n                           (fn []\n                             (test-var v))))))))])))))))\n   (group-by (comp :ns meta) vars)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [519 553]},
+          :lines [511 540]},
  :full-name "cljs.test/test-vars-block",
  :docstring "Like test-vars, but returns a block for further composition and\nlater execution."}
 

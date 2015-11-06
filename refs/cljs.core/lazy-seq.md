@@ -46,7 +46,7 @@ seq calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/core.clj#L1338-L1344):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L1387-L1393):
 
 ```clj
 (defmacro lazy-seq
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1338-1344](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/core.clj#L1338-L1344)</ins>
+            └── <ins>[core.clj:1387-1393](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/core.clj#L1387-L1393)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defmacro lazy-seq\n  [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/clj/cljs/core.clj",
-          :lines [1338 1344]},
+          :lines [1387 1393]},
  :full-name "cljs.core/lazy-seq",
  :clj-symbol "clojure.core/lazy-seq",
  :docstring "Takes a body of expressions that returns an ISeq or nil, and yields\na ISeqable object that will invoke the body only the first time seq\nis called, and will cache the result and return it on all subsequent\nseq calls."}

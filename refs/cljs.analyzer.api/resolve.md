@@ -31,7 +31,7 @@ clojure.core/resolve
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/analyzer/api.clj#L15-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/analyzer/api.clj#L15-L24):
 
 ```clj
 (defn resolve
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:15-24](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/analyzer/api.clj#L15-L24)</ins>
+                └── <ins>[api.clj:15-24](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/analyzer/api.clj#L15-L24)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (try\n    (ana/resolve-var env sym\n      (ana/confirm-var-exists-throw))\n    (catch Exception e\n      (ana/resolve-macro-var env sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [15 24]},
  :full-name "cljs.analyzer.api/resolve",

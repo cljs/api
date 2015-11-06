@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L481-L504):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L481-L511):
 
 ```clj
 (defn load-file
@@ -40,6 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
                        (assoc opts
                          :output-file
                          (cljsc/src-file->target-file src)))]
+        ;; copy over the original source file if source maps enabled
+        (when-let [ns (and (:source-map opts) (first (:provides compiled)))]
+          (spit
+            (io/file (io/file (util/output-directory opts))
+              (util/ns->relpath ns))
+            (slurp src)))
         ;; need to load dependencies first
         (load-dependencies repl-env (:requires compiled) opts)
         ;; make sure it's been analyzed, this is because if it's already compiled
@@ -47,7 +53,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
         ;; but a bit annoying here
         (ana/analyze-file src opts)
         (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))
-        (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))
+        (-evaluate repl-env f 1
+          (cljsc/src-file->goog-require src {:wrap true :reload true})))
       (binding [ana/*cljs-ns* ana/*cljs-ns*]
         (let [res (if (= File/separatorChar (first f)) f (io/resource f))]
           (assert res (str "Can't find " f " in classpath"))
@@ -58,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3169
+clojurescript @ r3178
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:481-504](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L481-L504)</ins>
+            └── <ins>[repl.clj:481-511](https://github.com/clojure/clojurescript/blob/r3178/src/clj/cljs/repl.clj#L481-L511)</ins>
 </pre>
 
 -->
@@ -105,12 +112,12 @@ The API data for this symbol:
  :name "load-file",
  :type "function",
  :signature ["[repl-env f]" "[repl-env f opts]"],
- :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f *repl-opts*))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (cond\n                  (util/url? f) f\n                  (.exists (io/file f)) (io/file f)\n                  :else (io/resource f))\n            compiled (cljsc/compile src\n                       (assoc opts\n                         :output-file\n                         (cljsc/src-file->target-file src)))]\n        ;; need to load dependencies first\n        (load-dependencies repl-env (:requires compiled) opts)\n        ;; make sure it's been analyzed, this is because if it's already compiled\n        ;; cljs.compiler/compile-file won't do anything, good for builds,\n        ;; but a bit annoying here\n        (ana/analyze-file src opts)\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))\n      (binding [ana/*cljs-ns* ana/*cljs-ns*]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
+ :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f *repl-opts*))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (cond\n                  (util/url? f) f\n                  (.exists (io/file f)) (io/file f)\n                  :else (io/resource f))\n            compiled (cljsc/compile src\n                       (assoc opts\n                         :output-file\n                         (cljsc/src-file->target-file src)))]\n        ;; copy over the original source file if source maps enabled\n        (when-let [ns (and (:source-map opts) (first (:provides compiled)))]\n          (spit\n            (io/file (io/file (util/output-directory opts))\n              (util/ns->relpath ns))\n            (slurp src)))\n        ;; need to load dependencies first\n        (load-dependencies repl-env (:requires compiled) opts)\n        ;; make sure it's been analyzed, this is because if it's already compiled\n        ;; cljs.compiler/compile-file won't do anything, good for builds,\n        ;; but a bit annoying here\n        (ana/analyze-file src opts)\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1\n          (cljsc/src-file->goog-require src {:wrap true :reload true})))\n      (binding [ana/*cljs-ns* ana/*cljs-ns*]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3169",
+          :tag "r3178",
           :filename "src/clj/cljs/repl.clj",
-          :lines [481 504]},
+          :lines [481 511]},
  :full-name "cljs.repl/load-file",
  :full-name-encode "cljs.repl/load-file",
  :history [["+" "0.0-927"]]}
