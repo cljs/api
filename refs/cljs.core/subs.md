@@ -42,7 +42,7 @@ at end (defaults to length of string), exclusive.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1437-L1441):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1442-L1446):
 
 ```clj
 (defn subs
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1437-1441](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1437-L1441)</ins>
+            └── <ins>[core.cljs:1442-1446](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1442-L1446)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn subs\n  ([s start] (.substring s start))\n  ([s start end] (.substring s start end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1437 1441]},
+          :lines [1442 1446]},
  :full-name "cljs.core/subs",
  :clj-symbol "clojure.core/subs",
  :docstring "Returns the substring of s beginning at start inclusive, and ending\nat end (defaults to length of string), exclusive."}

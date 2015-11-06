@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L978-L980):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L983-L985):
 
 ```clj
 (defn ^boolean keyword? [x]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:978-980](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L978-L980)</ins>
+            └── <ins>[core.cljs:983-985](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L983-L985)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean keyword? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [978 980]},
+          :lines [983 985]},
  :full-name "cljs.core/keyword?",
  :clj-symbol "clojure.core/keyword?"}
 

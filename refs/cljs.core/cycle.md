@@ -41,7 +41,7 @@ Returns a lazy (infinite!) sequence of repetitions of the items in coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2472-L2476):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2486-L2490):
 
 ```clj
 (defn cycle
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2472-2476](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2472-L2476)</ins>
+            └── <ins>[core.cljs:2486-2490](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2486-L2490)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn cycle\n  [coll] (lazy-seq\n          (when-let [s (seq coll)]\n            (concat s (cycle s)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2472 2476]},
+          :lines [2486 2490]},
  :full-name "cljs.core/cycle",
  :clj-symbol "clojure.core/cycle",
  :docstring "Returns a lazy (infinite!) sequence of repetitions of the items in coll."}

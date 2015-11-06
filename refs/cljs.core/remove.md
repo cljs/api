@@ -49,7 +49,7 @@ Returns a lazy sequence of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2563-L2567):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2577-L2581):
 
 ```clj
 (defn remove
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2563-2567](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2563-L2567)</ins>
+            └── <ins>[core.cljs:2577-2581](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2577-L2581)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn remove\n  [pred coll]\n  (filter (complement pred) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2563 2567]},
+          :lines [2577 2581]},
  :full-name "cljs.core/remove",
  :clj-symbol "clojure.core/remove",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects."}

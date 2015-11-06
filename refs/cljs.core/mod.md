@@ -60,7 +60,7 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1291-L1294):
 
 ```clj
 (defn mod
@@ -72,18 +72,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1286-1289](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289)</ins>
+            └── <ins>[core.cljs:1291-1294](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1291-L1294)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L293-L294):
 
 ```clj
 (defmacro mod [num div]
@@ -94,11 +94,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:188-189](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189)</ins>
+            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L293-L294)</ins>
 </pre>
 -->
 
@@ -149,15 +149,15 @@ The API data for this symbol:
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1286 1289]},
+          :lines [1291 1294]},
  :extra-sources [{:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1424",
+                  :tag "r1443",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [188 189]}],
+                  :lines [293 294]}],
  :examples [{:id "8165e8",
              :content "```clj\n(mod -5 3)\n;;=> 1\n\n(mod 5 3)\n;;=> 2\n\n(mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/mod",

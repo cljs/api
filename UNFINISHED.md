@@ -770,6 +770,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/PersistentHashSet.fromArray](refs/cljs.core/PersistentHashSetDOTfromArray.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSetDOTfromArray.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/PersistentQueue](refs/cljs.core/PersistentQueue.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentQueue.cljsdoc)</td>
 <td></td>
@@ -1414,6 +1421,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/format](refs/cljs.core/format.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/format.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/frequencies](refs/cljs.core/frequencies.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/frequencies.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1486,6 +1500,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/hash-map](refs/cljs.core/hash-map.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-map.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/hash-set](refs/cljs.core/hash-set.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-set.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1792,6 +1813,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/memfn](refs/cljs.core/memfn.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/memfn.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/memoize](refs/cljs.core/memoize.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/memoize.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1932,6 +1960,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/obj-map](refs/cljs.core/obj-map.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/obj-map.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/object-array](refs/cljs.core/object-array.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/object-array.cljsdoc)</td>
 <td></td>
@@ -2067,6 +2102,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/print-str](refs/cljs.core/print-str.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/print-str.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/printf](refs/cljs.core/printf.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/printf.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

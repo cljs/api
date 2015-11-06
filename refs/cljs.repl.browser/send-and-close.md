@@ -31,7 +31,7 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L69-L90):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/repl/browser.clj#L69-L90):
 
 ```clj
 (defn send-and-close
@@ -60,12 +60,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:69-90](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L69-L90)</ins>
+                └── <ins>[browser.clj:69-90](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/repl/browser.clj#L69-L90)</ins>
 </pre>
 
 -->
@@ -113,7 +113,7 @@ The API data for this symbol:
  :source {:code "(defn send-and-close\n  ([conn status form]\n     (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n     (let [utf-8-form (.getBytes form \"UTF-8\")\n           content-length (count utf-8-form)\n           headers (map #(.getBytes (str % \"\\r\\n\"))\n                        [(status-line status)\n                         \"Server: ClojureScript REPL\"\n                         (str \"Content-Type: \"\n                              content-type\n                              \"; charset=utf-8\")\n                         (str \"Content-Length: \" content-length)\n                         \"\"])]\n       (with-open [os (.getOutputStream conn)]\n         (do (doseq [header headers]\n               (.write os header 0 (count header)))\n             (.write os utf-8-form 0 content-length)\n             (.flush os)\n             (.close conn))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [69 90]},
  :full-name "cljs.repl.browser/send-and-close",

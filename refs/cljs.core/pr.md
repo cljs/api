@@ -33,7 +33,7 @@ read by the reader
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6167-L6173):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6208-L6214):
 
 ```clj
 (defn pr
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6167-6173](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6167-L6173)</ins>
+            └── <ins>[core.cljs:6208-6214](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6208-L6214)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn pr\n  [& objs]\n  (pr-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6167 6173]},
+          :lines [6208 6214]},
  :full-name "cljs.core/pr",
  :clj-symbol "clojure.core/pr",
  :docstring "Prints the object(s) using string-print.  Prints the\nobject(s), separated by spaces if there is more than one.\nBy default, pr and prn print in a way that objects can be\nread by the reader"}

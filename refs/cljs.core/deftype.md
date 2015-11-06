@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L460-L478):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L565-L583):
 
 ```clj
 (defmacro deftype [t fields & impls]
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:460-478](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L460-L478)</ins>
+            └── <ins>[core.clj:565-583](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L565-L583)</ins>
 </pre>
 
 -->
@@ -108,9 +108,9 @@ The API data for this symbol:
  :source {:code "(defmacro deftype [t fields & impls]\n  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks &env t impls)\n        protocols (collect-protocols impls &env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorPrSeq ~t) (fn [this#] (list ~(core/str r))))\n         (extend-type ~t ~@(dt->et impls fields true))\n         ~t)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorPrSeq ~t) (fn [this#] (list ~(core/str r))))\n         ~t))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/core.clj",
-          :lines [460 478]},
+          :lines [565 583]},
  :full-name "cljs.core/deftype",
  :clj-symbol "clojure.core/deftype"}
 

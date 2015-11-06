@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L267-L268):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L269-L270):
 
 ```clj
 (defprotocol IComparable
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:267-268](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L267-L268)</ins>
+            └── <ins>[core.cljs:269-270](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L269-L270)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IComparable\n  (-compare [x y]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [267 268]},
+          :lines [269 270]},
  :methods [{:name "-compare", :signature ["[x y]"], :docstring nil}],
  :full-name "cljs.core/IComparable",
  :history [["+" "0.0-1424"]]}

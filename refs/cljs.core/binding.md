@@ -72,7 +72,7 @@ before the vars are bound to their new values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L641-L665):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L747-L771):
 
 ```clj
 (defmacro binding
@@ -99,11 +99,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:641-665](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L641-L665)</ins>
+            └── <ins>[core.clj:747-771](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L747-L771)</ins>
 </pre>
 
 -->
@@ -156,9 +156,9 @@ The API data for this symbol:
  :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)\n        vals (take-nth 2 (drop 1 bindings))\n        tempnames (map (comp gensym name) names)\n        binds (map vector names vals)\n        resets (reverse (map vector names tempnames))]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(let [~@(interleave tempnames names)]\n       (try\n        ~@(map\n           (fn [[k v]] (list 'set! k v))\n           binds)\n        ~@body\n        (finally\n         ~@(map\n            (fn [[k v]] (list 'set! k v))\n            resets))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/core.clj",
-          :lines [641 665]},
+          :lines [747 771]},
  :examples [{:id "7dd17f",
              :content "```clj\n(def ^:dynamic *foo* 1)\n\n(defn do-something []\n  (println *foo*))\n\n(binding [*foo* 2]\n  (do-something))\n;;=> prints 2\n\n*foo*\n;;=> 1\n```"}],
  :full-name "cljs.core/binding",

@@ -24,7 +24,7 @@ Strings which should be printed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L17-L23):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L18-L24):
 
 ```clj
 (def
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:17-23](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L17-L23)</ins>
+            └── <ins>[core.cljs:18-24](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L18-L24)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"Each runtime environment provides a diffenent way to print output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\"}\n  *print-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-fn* fn set for evaluation environment\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [17 23]},
+          :lines [18 24]},
  :full-name "cljs.core/*print-fn*",
  :full-name-encode "cljs.core/STARprint-fnSTAR",
  :history [["+" "0.0-927"]]}

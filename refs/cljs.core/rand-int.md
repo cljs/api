@@ -40,7 +40,7 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6596-L6598):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6642-L6644):
 
 ```clj
 (defn rand-int
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6596-6598](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6596-L6598)</ins>
+            └── <ins>[core.cljs:6642-6644](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6642-L6644)</ins>
 </pre>
 
 -->
@@ -108,9 +108,9 @@ The API data for this symbol:
  :source {:code "(defn rand-int\n  [n] (Math/floor (* (Math/random) n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6596 6598]},
+          :lines [6642 6644]},
  :full-name "cljs.core/rand-int",
  :clj-symbol "clojure.core/rand-int",
  :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}

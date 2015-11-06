@@ -31,7 +31,7 @@ when there is a conflict
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6865-L6869):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6911-L6915):
 
 ```clj
 (defn prefer-method
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6865-6869](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6865-L6869)</ins>
+            └── <ins>[core.cljs:6911-6915](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6911-L6915)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn prefer-method\n  [multifn dispatch-val-x dispatch-val-y]\n  (-prefer-method multifn dispatch-val-x dispatch-val-y))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6865 6869]},
+          :lines [6911 6915]},
  :full-name "cljs.core/prefer-method",
  :clj-symbol "clojure.core/prefer-method",
  :docstring "Causes the multimethod to prefer matches of dispatch-val-x over dispatch-val-y\nwhen there is a conflict"}

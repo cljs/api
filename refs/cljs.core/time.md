@@ -30,14 +30,14 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L993-L999):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L1091-L1097):
 
 ```clj
 (defmacro time
   [expr]
-  `(let [start# (.getTime (js/Date.) ())
+  `(let [start# (.getTime (js/Date.))
          ret# ~expr]
-     (prn (core/str "Elapsed time: " (- (.getTime (js/Date.) ()) start#) " msecs"))
+     (prn (core/str "Elapsed time: " (- (.getTime (js/Date.)) start#) " msecs"))
      ret#))
 ```
 
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:993-999](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L993-L999)</ins>
+            └── <ins>[core.clj:1091-1097](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L1091-L1097)</ins>
 </pre>
 
 -->
@@ -97,12 +97,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/time",
- :source {:code "(defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.) ())\n         ret# ~expr]\n     (prn (core/str \"Elapsed time: \" (- (.getTime (js/Date.) ()) start#) \" msecs\"))\n     ret#))",
+ :source {:code "(defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.))\n         ret# ~expr]\n     (prn (core/str \"Elapsed time: \" (- (.getTime (js/Date.)) start#) \" msecs\"))\n     ret#))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/core.clj",
-          :lines [993 999]},
+          :lines [1091 1097]},
  :full-name "cljs.core/time",
  :clj-symbol "clojure.core/time",
  :docstring "Evaluates expr and prints the time it took. Returns the value of expr."}

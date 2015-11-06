@@ -40,7 +40,7 @@ Returns true if a value has been produced for a promise, delay, future or lazy s
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6536-L6539):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6582-L6585):
 
 ```clj
 (defn ^boolean realized?
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6536-6539](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6536-L6539)</ins>
+            └── <ins>[core.cljs:6582-6585](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6582-L6585)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean realized?\n  [d]\n  (-realized? d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6536 6539]},
+          :lines [6582 6585]},
  :full-name "cljs.core/realized?",
  :clj-symbol "clojure.core/realized?",
  :docstring "Returns true if a value has been produced for a promise, delay, future or lazy sequence."}

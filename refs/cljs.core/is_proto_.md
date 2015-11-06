@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L54-L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L56-L58):
 
 ```clj
 (defn is_proto_
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:54-56](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L54-L56)</ins>
+            └── <ins>[core.cljs:56-58](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L56-L58)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn is_proto_\n  [x]\n  (identical? (.-prototype (.-constructor x)) x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [54 56]},
+          :lines [56 58]},
  :full-name "cljs.core/is_proto_",
  :full-name-encode "cljs.core/is_proto_",
  :history [["+" "0.0-927"]]}

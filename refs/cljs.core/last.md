@@ -65,7 +65,7 @@ Return the last item in coll, in linear time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L682-L688):
 
 ```clj
 (defn last
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:674-680](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680)</ins>
+            └── <ins>[core.cljs:682-688](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L682-L688)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(defn last\n  [s]\n  (let [sn (next s)]\n    (if-not (nil? sn)\n      (recur sn)\n      (first s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [674 680]},
+          :lines [682 688]},
  :examples [{:id "eb0836",
              :content "```clj\n(last [1 2 3])\n;;=> 3\n\n(last [1 2])\n;;=> 2\n\n(last [1])\n;;=> 1\n\n(last [])\n;;=> nil\n```"}],
  :full-name "cljs.core/last",

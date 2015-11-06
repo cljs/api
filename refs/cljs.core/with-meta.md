@@ -62,7 +62,7 @@ map m as its metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L793-L797):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L801-L805):
 
 ```clj
 (defn with-meta
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:793-797](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L793-L797)</ins>
+            └── <ins>[core.cljs:801-805](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L801-L805)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defn with-meta\n  [o meta]\n  (-with-meta o meta))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [793 797]},
+          :lines [801 805]},
  :examples [{:id "f189d4",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (with-meta a {:bar true}))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:bar true}\n```"}],
  :full-name "cljs.core/with-meta",

@@ -51,7 +51,7 @@ corresponding val in smap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5705-L5717):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5746-L5758):
 
 ```clj
 (defn replace
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5705-5717](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5705-L5717)</ins>
+            └── <ins>[core.cljs:5746-5758](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5746-L5758)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [smap coll]\n  (if (vector? coll)\n    (let [n (count coll)]\n      (reduce (fn [v i]\n                (if-let [e (find smap (nth v i))]\n                  (assoc v i (second e))\n                  v))\n              coll (take n (iterate inc 0))))\n    (map #(if-let [e (find smap %)] (second e) %) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5705 5717]},
+          :lines [5746 5758]},
  :full-name "cljs.core/replace",
  :clj-symbol "clojure.core/replace",
  :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap"}

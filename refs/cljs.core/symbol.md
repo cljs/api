@@ -33,7 +33,7 @@ Returns a Symbol with the given namespace and name.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1443-L1448):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1453-L1458):
 
 ```clj
 (defn symbol
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1443-1448](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1443-L1448)</ins>
+            └── <ins>[core.cljs:1453-1458](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1453-L1458)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn symbol\n  ([name] (cond (symbol? name) name\n                (keyword? name) (str* \"\\uFDD1\" \"'\" (subs name 2)))\n     :else (str* \"\\uFDD1\" \"'\" name))\n  ([ns name] (symbol (str* ns \"/\" name))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1443 1448]},
+          :lines [1453 1458]},
  :full-name "cljs.core/symbol",
  :clj-symbol "clojure.core/symbol",
  :docstring "Returns a Symbol with the given namespace and name."}

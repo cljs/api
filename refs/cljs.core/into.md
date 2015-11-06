@@ -47,7 +47,7 @@ from-coll conjoined.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2592-L2598):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2606-L2612):
 
 ```clj
 (defn into
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2592-2598](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2592-L2598)</ins>
+            └── <ins>[core.cljs:2606-2612](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2606-L2612)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn into\n  [to from]\n  (if (satisfies? IEditableCollection to)\n    (persistent! (reduce -conj! (transient to) from))\n    (reduce -conj to from)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2592 2598]},
+          :lines [2606 2612]},
  :full-name "cljs.core/into",
  :clj-symbol "clojure.core/into",
  :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined."}

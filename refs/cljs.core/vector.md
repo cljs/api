@@ -38,7 +38,7 @@ Creates a new vector containing `args`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3031):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3045):
 
 ```clj
 (defn vector [& args] (vec args))
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3031](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3031)</ins>
+            └── <ins>[core.cljs:3045](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3045)</ins>
 </pre>
 
 -->
@@ -108,9 +108,9 @@ The API data for this symbol:
  :source {:code "(defn vector [& args] (vec args))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3031]},
+          :lines [3045]},
  :full-name "cljs.core/vector",
  :clj-symbol "clojure.core/vector"}
 

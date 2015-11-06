@@ -47,7 +47,7 @@ Strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L606-L614):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L614-L622):
 
 ```clj
 (defn ^seq seq
@@ -62,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:606-614](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L606-L614)</ins>
+            └── <ins>[core.cljs:614-622](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L614-L622)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? ASeq coll)\n      coll\n      (-seq coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [606 614]},
+          :lines [614 622]},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

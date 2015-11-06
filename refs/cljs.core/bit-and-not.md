@@ -71,7 +71,7 @@ Bitwise and
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1324-L1326):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1329-L1331):
 
 ```clj
 (defn bit-and-not
@@ -82,18 +82,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1324-1326](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1324-L1326)</ins>
+            └── <ins>[core.cljs:1329-1331](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1329-L1331)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L211-L213):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L316-L318):
 
 ```clj
 (defmacro bit-and-not
@@ -105,11 +105,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:211-213](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L211-L213)</ins>
+            └── <ins>[core.clj:316-318](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L316-L318)</ins>
 </pre>
 -->
 
@@ -160,15 +160,15 @@ The API data for this symbol:
  :source {:code "(defn bit-and-not\n  [x y] (cljs.core/bit-and-not x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1324 1326]},
+          :lines [1329 1331]},
  :extra-sources [{:code "(defmacro bit-and-not\n  ([x y] (list 'js* \"(~{} & ~~{})\" x y))\n  ([x y & more] `(bit-and-not (bit-and-not ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1424",
+                  :tag "r1443",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [211 213]}],
+                  :lines [316 318]}],
  :examples [{:id "16f35d",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-and-not 2r1100 2r1010)\n;;=> 4\n;; 4 = 2r0100\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-and-not 12 10)\n;;=> 4\n```\n\nSame result using `bit-and` and `bit-not`:\n\n```clj\n(bit-and 12 (bit-not 10))\n;;=> 4\n```"}],
  :full-name "cljs.core/bit-and-not",

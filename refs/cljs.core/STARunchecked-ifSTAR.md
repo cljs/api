@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L15):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L16):
 
 ```clj
 (def *unchecked-if* false)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:15](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L15)</ins>
+            └── <ins>[core.cljs:16](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L16)</ins>
 </pre>
 
 -->
@@ -76,9 +76,9 @@ The API data for this symbol:
  :source {:code "(def *unchecked-if* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [15]},
+          :lines [16]},
  :full-name "cljs.core/*unchecked-if*",
  :full-name-encode "cljs.core/STARunchecked-ifSTAR",
  :history [["+" "0.0-1211"]]}

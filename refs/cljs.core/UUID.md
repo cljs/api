@@ -38,7 +38,7 @@ Use [doc:cljs.core/uuid] or [`uuid-literal`][doc:syntax/uuid-literal] to create 
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6886-L6901):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6932-L6947):
 
 ```clj
 (deftype UUID [uuid]
@@ -48,7 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
     
   IEquiv
   (-equiv [_ other]
-    (identical? uuid (.-uuid other)))
+    (and (instance? UUID other) (identical? uuid (.-uuid other))))
 
   IPrintable
   (-pr-seq [_ _]
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6886-6901](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6886-L6901)</ins>
+            └── <ins>[core.cljs:6932-6947](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6932-L6947)</ins>
 </pre>
 
 -->
@@ -116,12 +116,12 @@ The API data for this symbol:
            "cljs.core/random-uuid"
            "cljs.core/uuid"],
  :full-name-encode "cljs.core/UUID",
- :source {:code "(deftype UUID [uuid]\n  Object\n  (toString [this]\n    (pr-str this))\n    \n  IEquiv\n  (-equiv [_ other]\n    (identical? uuid (.-uuid other)))\n\n  IPrintable\n  (-pr-seq [_ _]\n    (list (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
+ :source {:code "(deftype UUID [uuid]\n  Object\n  (toString [this]\n    (pr-str this))\n    \n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintable\n  (-pr-seq [_ _]\n    (list (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6886 6901]},
+          :lines [6932 6947]},
  :full-name "cljs.core/UUID"}
 
 ```

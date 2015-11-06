@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1713-L1720):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1723-L1734):
 
 ```clj
 (deftype Keyword [k]
@@ -35,18 +35,22 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
       (let [strobj (.-strobj coll)]
         (if (nil? strobj)
           (-lookup coll k nil)
-          (aget strobj k))))))
+          (aget strobj k)))))
+  (invoke [_ coll not-found]
+    (if (nil? coll)
+      not-found
+      (-lookup coll k not-found))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1713-1720](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1713-L1720)</ins>
+            └── <ins>[core.cljs:1723-1734](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1723-L1734)</ins>
 </pre>
 
 -->
@@ -94,12 +98,12 @@ The API data for this symbol:
  :history [["+" "0.0-1424"]],
  :type "type",
  :full-name-encode "cljs.core/Keyword",
- :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (let [strobj (.-strobj coll)]\n        (if (nil? strobj)\n          (-lookup coll k nil)\n          (aget strobj k))))))",
+ :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (let [strobj (.-strobj coll)]\n        (if (nil? strobj)\n          (-lookup coll k nil)\n          (aget strobj k)))))\n  (invoke [_ coll not-found]\n    (if (nil? coll)\n      not-found\n      (-lookup coll k not-found))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1713 1720]},
+          :lines [1723 1734]},
  :full-name "cljs.core/Keyword",
  :clj-symbol "clojure.lang/Keyword"}
 

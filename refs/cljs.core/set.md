@@ -28,7 +28,7 @@ Returns a set of the distinct elements of `coll`.
 
 ###### See Also:
 
-[``](../cljs.core/hash-set.md)<br>
+[`cljs.core/hash-set`](../cljs.core/hash-set.md)<br>
 [`cljs.core/sorted-set`](../cljs.core/sorted-set.md)<br>
 [`cljs.core/conj`](../cljs.core/conj.md)<br>
 [`cljs.core/disj`](../cljs.core/disj.md)<br>
@@ -54,27 +54,23 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5684-L5691):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5729-L5732):
 
 ```clj
 (defn set
   [coll]
-  (loop [in (seq coll)
-         out (transient cljs.core.PersistentHashSet/EMPTY)]
-    (if (seq in)
-      (recur (next in) (conj! out (first in)))
-      (persistent! out))))
+  (apply hash-set coll))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5684-5691](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L5684-L5691)</ins>
+            └── <ins>[core.cljs:5729-5732](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L5729-L5732)</ins>
 </pre>
 
 -->
@@ -138,12 +134,12 @@ The API data for this symbol:
            "clojure.set/rename-keys"
            "clojure.set/map-invert"],
  :full-name-encode "cljs.core/set",
- :source {:code "(defn set\n  [coll]\n  (loop [in (seq coll)\n         out (transient cljs.core.PersistentHashSet/EMPTY)]\n    (if (seq in)\n      (recur (next in) (conj! out (first in)))\n      (persistent! out))))",
+ :source {:code "(defn set\n  [coll]\n  (apply hash-set coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5684 5691]},
+          :lines [5729 5732]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1516-L1564):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1526-L1574):
 
 ```clj
 (deftype List [meta first rest count ^:mutable __hash]
@@ -83,11 +83,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1516-1564](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1516-L1564)</ins>
+            └── <ins>[core.cljs:1526-1574](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1526-L1574)</ins>
 </pre>
 
 -->
@@ -138,9 +138,9 @@ The API data for this symbol:
  :source {:code "(deftype List [meta first rest count ^:mutable __hash]\n  IList\n  \n  Object\n  (toString [this]\n    (pr-str this))\n  \n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll]\n    (if (== count 1)\n      ()\n      rest))\n\n  INext\n  (-next [coll]\n    (if (== count 1)\n      nil\n      rest))\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count) nil))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1516 1564]},
+          :lines [1526 1574]},
  :full-name "cljs.core/List",
  :clj-symbol "clojure.lang/PersistentList"}
 

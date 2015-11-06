@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3461-L3463):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3475-L3477):
 
 ```clj
 (deftype NeverEquiv []
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3461-3463](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3461-L3463)</ins>
+            └── <ins>[core.cljs:3475-3477](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L3475-L3477)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(deftype NeverEquiv []\n  IEquiv\n  (-equiv [o other] false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3461 3463]},
+          :lines [3475 3477]},
  :full-name "cljs.core/NeverEquiv",
  :full-name-encode "cljs.core/NeverEquiv",
  :history [["+" "0.0-927"]]}

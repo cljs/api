@@ -41,7 +41,7 @@ Returns true if num is greater than zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1384-L1386):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1389-L1391):
 
 ```clj
 (defn ^boolean pos?
@@ -52,18 +52,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1384-1386](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1384-L1386)</ins>
+            └── <ins>[core.cljs:1389-1391](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1389-L1391)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L172-L173):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L277-L278):
 
 ```clj
 (defmacro pos? [x]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:172-173](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L172-L173)</ins>
+            └── <ins>[core.clj:277-278](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L277-L278)</ins>
 </pre>
 -->
 
@@ -130,15 +130,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean pos?\n  [n] (cljs.core/pos? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1384 1386]},
+          :lines [1389 1391]},
  :extra-sources [{:code "(defmacro pos? [x]\n  `(> ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1424",
+                  :tag "r1443",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [172 173]}],
+                  :lines [277 278]}],
  :full-name "cljs.core/pos?",
  :clj-symbol "clojure.core/pos?",
  :docstring "Returns true if num is greater than zero, else false"}

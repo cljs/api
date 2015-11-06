@@ -28,28 +28,28 @@ the options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6130-L6139):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180):
 
 ```clj
 (defn pr-with-opts
   [objs opts]
-  (let [first-obj (first objs)]
-    (doseq [obj objs]
-      (when-not (identical? obj first-obj)
-        (string-print " "))
-      (doseq [string (pr-seq obj opts)]
-        (string-print string)))))
+  (doseq [string (pr-seq (first objs) opts)]
+    (string-print string))
+  (doseq [obj (next objs)]
+    (string-print " ")
+    (doseq [string (pr-seq obj opts)]
+      (string-print string))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6130-6139](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6130-L6139)</ins>
+            └── <ins>[core.cljs:6171-6180](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180)</ins>
 </pre>
 
 -->
@@ -94,12 +94,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/pr-with-opts",
- :source {:code "(defn pr-with-opts\n  [objs opts]\n  (let [first-obj (first objs)]\n    (doseq [obj objs]\n      (when-not (identical? obj first-obj)\n        (string-print \" \"))\n      (doseq [string (pr-seq obj opts)]\n        (string-print string)))))",
+ :source {:code "(defn pr-with-opts\n  [objs opts]\n  (doseq [string (pr-seq (first objs) opts)]\n    (string-print string))\n  (doseq [obj (next objs)]\n    (string-print \" \")\n    (doseq [string (pr-seq obj opts)]\n      (string-print string))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6130 6139]},
+          :lines [6171 6180]},
  :full-name "cljs.core/pr-with-opts",
  :docstring "Prints a sequence of objects using string-print, observing all\nthe options given in opts"}
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L236-L237):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L238-L239):
 
 ```clj
 (defprotocol IPrintable
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:236-237](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L236-L237)</ins>
+            └── <ins>[core.cljs:238-239](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L238-L239)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IPrintable\n  (-pr-seq [o opts]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [236 237]},
+          :lines [238 239]},
  :methods [{:name "-pr-seq", :signature ["[o opts]"], :docstring nil}],
  :full-name "cljs.core/IPrintable",
  :history [["+" "0.0-927"]]}

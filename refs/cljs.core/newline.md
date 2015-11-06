@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6141-L6144):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6182-L6185):
 
 ```clj
 (defn newline [opts]
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6141-6144](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6141-L6144)</ins>
+            └── <ins>[core.cljs:6182-6185](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6182-L6185)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn newline [opts]\n  (string-print \"\\n\")\n  (when (get opts :flush-on-newline)\n    (flush)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6141 6144]},
+          :lines [6182 6185]},
  :full-name "cljs.core/newline",
  :clj-symbol "clojure.core/newline"}
 

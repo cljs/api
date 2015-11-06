@@ -30,7 +30,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L613-L629):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L719-L735):
 
 ```clj
 (defmacro satisfies?
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:613-629](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L613-L629)</ins>
+            └── <ins>[core.clj:719-735](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/core.clj#L719-L735)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)\n        xsym (bool-expr (gensym))\n        [part bit] (fast-path-protocols p)\n        msym (symbol (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if ~xsym\n         (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n           true\n           (if (coercive-not (. ~xsym ~msym))\n             (cljs.core/type_satisfies_ ~psym ~xsym)\n             false))\n         (cljs.core/type_satisfies_ ~psym ~xsym)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/core.clj",
-          :lines [613 629]},
+          :lines [719 735]},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

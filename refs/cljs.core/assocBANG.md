@@ -69,7 +69,7 @@ tcoll
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2048-L2049):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2062-L2063):
 
 ```clj
 (defn assoc! [tcoll key val]
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2048-2049](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2048-L2049)</ins>
+            └── <ins>[core.cljs:2062-2063](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2062-L2063)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defn assoc! [tcoll key val]\n  (-assoc! tcoll key val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2048 2049]},
+          :lines [2062 2063]},
  :examples [{:id "7d1e6b",
              :content "```clj\n(def tcoll (transient! {}))\n(assoc! tcoll :a 1)\n(assoc! tcoll :b 2)\n\ntcoll\n;;=> #<[object Object]> \n\n(:a tcoll)\n;;=> 1\n\n(:b tcoll)\n;;=> 2\n\n(def a (persistent! tcoll))\n;;=> {:a 1 :b 2}\n```"}],
  :full-name "cljs.core/assoc!",

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L230-L234):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L232-L236):
 
 ```clj
 (defprotocol ISorted
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:230-234](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L230-L234)</ins>
+            └── <ins>[core.cljs:232-236](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L232-L236)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISorted\n  (-sorted-seq [coll ascending?])\n  (-sorted-seq-from [coll k ascending?])\n  (-entry-key [coll entry])\n  (-comparator [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [230 234]},
+          :lines [232 236]},
  :methods [{:name "-sorted-seq",
             :signature ["[coll ascending?]"],
             :docstring nil}

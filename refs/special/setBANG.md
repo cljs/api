@@ -36,7 +36,7 @@ Sets `js-var` to `val` using the JavaScript `=` operator.
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L527-L561):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L527-L561):
 
 ```clj
 (defmethod parse 'set!
@@ -80,11 +80,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:527-561](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L527-L561)</ins>
+            └── <ins>[analyzer.clj:527-561](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/analyzer.clj#L527-L561)</ins>
 </pre>
 
 -->
@@ -136,7 +136,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'set!\n  [_ env [_ target val alt :as form] _]\n  (let [[target val] (if alt\n                       ;; (set! o -prop val)\n                       [`(. ~target ~val) alt]\n                       [target val])]\n    (disallowing-recur\n     (let [enve (assoc env :context :expr)\n           targetexpr (cond\n                       ;; TODO: proper resolve\n                       (= target '*unchecked-if*)\n                       (do\n                         (reset! *unchecked-if* val)\n                         ::set-unchecked-if)\n\n                       (symbol? target)\n                       (do\n                         (let [local (-> env :locals target)]\n                           (assert (or (nil? local)\n                                       (and (:field local)\n                                            (:mutable local)))\n                                   \"Can't set! local var or non-mutable field\"))\n                         (analyze-symbol enve target))\n\n                       :else\n                       (when (seq? target)\n                         (let [targetexpr (analyze-seq enve target nil)]\n                           (when (:field targetexpr)\n                             targetexpr))))\n           valexpr (analyze enve val)]\n       (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n       (cond\n        (= targetexpr ::set-unchecked-if) {:env env :op :no-op}\n        :else {:env env :op :set! :form form :target targetexpr :val valexpr\n               :children [targetexpr valexpr]})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [527 561]},
  :full-name "special/set!",

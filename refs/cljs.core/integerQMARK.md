@@ -40,7 +40,7 @@ Returns true if n is an integer.  Warning: returns true on underflow condition.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L995-L999):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1000-L1004):
 
 ```clj
 (defn ^boolean integer?
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:995-999](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L995-L999)</ins>
+            └── <ins>[core.cljs:1000-1004](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L1000-L1004)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (coercive-= n (.toFixed n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [995 999]},
+          :lines [1000 1004]},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer.  Warning: returns true on underflow condition."}

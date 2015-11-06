@@ -62,7 +62,7 @@ fn (right-to-left) to the result, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2185-L2212):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2199-L2226):
 
 ```clj
 (defn comp
@@ -95,11 +95,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2185-2212](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L2185-L2212)</ins>
+            └── <ins>[core.cljs:2199-2226](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L2199-L2226)</ins>
 </pre>
 
 -->
@@ -152,9 +152,9 @@ The API data for this symbol:
  :source {:code "(defn comp\n  ([] identity)\n  ([f] f)\n  ([f g]\n     (fn\n       ([] (f (g)))\n       ([x] (f (g x)))\n       ([x y] (f (g x y)))\n       ([x y z] (f (g x y z)))\n       ([x y z & args] (f (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (f (g (h))))\n       ([x] (f (g (h x))))\n       ([x y] (f (g (h x y))))\n       ([x y z] (f (g (h x y z))))\n       ([x y z & args] (f (g (apply h x y z args))))))\n  ([f1 f2 f3 & fs]\n    (let [fs (reverse (list* f1 f2 f3 fs))]\n      (fn [& args]\n        (loop [ret (apply (first fs) args) fs (next fs)]\n          (if fs\n            (recur ((first fs) ret) (next fs))\n            ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2185 2212]},
+          :lines [2199 2226]},
  :examples [{:id "5d3250",
              :content "```clj\n(def f (comp str inc +))\n(f 1 2 3)\n;;=> \"7\"\n```"}],
  :full-name "cljs.core/comp",

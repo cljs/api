@@ -25,7 +25,7 @@ Marker interface indicating a persistent list
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L221-L222):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L223-L224):
 
 ```clj
 (defprotocol IList
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1424
+clojurescript @ r1443
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:221-222](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L221-L222)</ins>
+            └── <ins>[core.cljs:223-224](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L223-L224)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IList\n  \"Marker interface indicating a persistent list\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1424",
+          :tag "r1443",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [221 222]},
+          :lines [223 224]},
  :full-name "cljs.core/IList",
  :clj-symbol "clojure.lang/IPersistentList",
  :docstring "Marker interface indicating a persistent list"}
