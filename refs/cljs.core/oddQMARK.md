@@ -42,7 +42,7 @@ Returns true if n is odd, throws an exception if n is not an integer
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3254-L3256):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3260-L3262):
 
 ```clj
 (defn ^boolean odd?
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3254-3256](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3254-L3256)</ins>
+            └── <ins>[core.cljs:3260-3262](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3260-L3262)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean odd?\n  [n] (not (even? n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3254 3256]},
+          :lines [3260 3262]},
  :full-name "cljs.core/odd?",
  :clj-symbol "clojure.core/odd?",
  :docstring "Returns true if n is odd, throws an exception if n is not an integer"}

@@ -30,7 +30,7 @@ Returns a seq of the right siblings of this loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/clojure/zip.cljs#L92-L95):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/clojure/zip.cljs#L92-L95):
 
 ```clj
 (defn rights
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:92-95](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/clojure/zip.cljs#L92-L95)</ins>
+            └── <ins>[zip.cljs:92-95](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/clojure/zip.cljs#L92-L95)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn rights\n  [loc]\n    (:r (loc 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [92 95]},
  :full-name "clojure.zip/rights",

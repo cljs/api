@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2589-L2595):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2595-L2601):
 
 ```clj
 (defn array-chunk
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2589-2595](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2589-L2595)</ins>
+            └── <ins>[core.cljs:2595-2601](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2595-L2601)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn array-chunk\n  ([arr]\n     (ArrayChunk. arr 0 (alength arr)))\n  ([arr off]\n     (ArrayChunk. arr off (alength arr)))\n  ([arr off end]\n     (ArrayChunk. arr off end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2589 2595]},
+          :lines [2595 2601]},
  :full-name "cljs.core/array-chunk",
  :full-name-encode "cljs.core/array-chunk",
  :history [["+" "0.0-1424"]]}

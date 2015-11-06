@@ -28,7 +28,7 @@ Hang on to return for use across repl calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/rhino.clj#L140-L160):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/rhino.clj#L136-L156):
 
 ```clj
 (defn repl-env
@@ -56,12 +56,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:140-160](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/rhino.clj#L140-L160)</ins>
+                └── <ins>[rhino.clj:136-156](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/rhino.clj#L136-L156)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)\n        scope (.initStandardObjects cx)\n        base (io/resource \"goog/base.js\")\n        deps (io/resource \"goog/deps.js\")\n        new-repl-env (merge (RhinoEnv.) {:cx cx :scope scope})]\n    (assert base \"Can't find goog/base.js in classpath\")\n    (assert deps \"Can't find goog/deps.js in classpath\")\n    (ScriptableObject/putProperty scope\n      \"___repl_env\" (Context/javaToJS new-repl-env scope))\n    (with-open [r (io/reader base)]\n      (-eval r new-repl-env \"goog/base.js\" 1))\n    (-eval bootjs new-repl-env \"bootjs\" 1)\n    ;; Load deps.js line-by-line to avoid 64K method limit\n    (with-open [reader (io/reader deps)]\n      (doseq [^String line (line-seq reader)]\n        (-eval line new-repl-env \"goog/deps.js\" 1)))\n    new-repl-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [140 160]},
+          :lines [136 156]},
  :full-name "cljs.repl.rhino/repl-env",
  :docstring "Returns a fresh JS environment, suitable for passing to repl.\nHang on to return for use across repl calls."}
 

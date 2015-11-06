@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L7987-L8004):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7993-L8010):
 
 ```clj
 (defn pr-sequential-writer [writer print-one begin sep end opts coll]
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7987-8004](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L7987-L8004)</ins>
+            └── <ins>[core.cljs:7993-8010](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7993-L8010)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (binding [*print-level* (when-not (nil? *print-level*) (dec *print-level*))]\n    (if (and (not (nil? *print-level*)) (neg? *print-level*))\n      (-write writer \"#\")\n      (do\n        (-write writer begin)\n        (when (seq coll)\n          (print-one (first coll) writer opts))\n        (loop [coll (next coll) n (dec (:print-length opts))]\n          (if (and coll (or (nil? n) (not (zero? n))))\n            (do\n              (-write writer sep)\n              (print-one (first coll) writer opts)\n              (recur (next coll) (dec n)))\n            (when (and (seq coll) (zero? n))\n              (-write writer sep)\n              (-write writer \"...\"))))\n        (-write writer end)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7987 8004]},
+          :lines [7993 8010]},
  :full-name "cljs.core/pr-sequential-writer",
  :full-name-encode "cljs.core/pr-sequential-writer",
  :history [["+" "0.0-1503"]]}

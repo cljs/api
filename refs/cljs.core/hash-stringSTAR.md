@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L502-L511):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L508-L517):
 
 ```clj
 (defn hash-string* [s]
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:502-511](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L502-L511)</ins>
+            └── <ins>[core.cljs:508-517](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L508-L517)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn hash-string* [s]\n  (if-not (nil? s)\n    (let [len (alength s)]\n      (if (pos? len)\n        (loop [i 0 hash 0]\n          (if (< i len)\n            (recur (inc i) (+ (imul 31 hash) (.charCodeAt s i)))\n            hash))\n        0))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [502 511]},
+          :lines [508 517]},
  :full-name "cljs.core/hash-string*",
  :full-name-encode "cljs.core/hash-stringSTAR",
  :history [["+" "0.0-2261"]]}

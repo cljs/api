@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L4166-L4171):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L4172-L4177):
 
 ```clj
 (defn ranged-iterator [v start end]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4166-4171](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L4166-L4171)</ins>
+            └── <ins>[core.cljs:4172-4177](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L4172-L4177)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn ranged-iterator [v start end]\n  (let [i start]\n    (RangedIterator. i (- i (js-mod i 32))\n      (when (< start (count v))\n        (unchecked-array-for v i))\n      v start end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4166 4171]},
+          :lines [4172 4177]},
  :full-name "cljs.core/ranged-iterator",
  :full-name-encode "cljs.core/ranged-iterator",
  :history [["+" "0.0-2371"]]}

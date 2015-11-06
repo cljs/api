@@ -65,7 +65,7 @@ therein.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L146-L156):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L146-L156):
 
 ```clj
 (defmacro let
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:146-156](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L146-L156)</ins>
+            └── <ins>[core.clj:146-156](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L146-L156)</ins>
 </pre>
 
 -->
@@ -137,7 +137,7 @@ The API data for this symbol:
  :source {:code "(defmacro let\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (even? (count bindings)) \"an even number of forms in binding vector\")\n  `(let* ~(destructure bindings) ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/clj/cljs/core.clj",
           :lines [146 156]},
  :full-name "cljs.core/let",

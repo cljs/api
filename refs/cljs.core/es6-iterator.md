@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L729-L730):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L735-L736):
 
 ```clj
 (defn es6-iterator [coll]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:729-730](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L729-L730)</ins>
+            └── <ins>[core.cljs:735-736](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L735-L736)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn es6-iterator [coll]\n  (ES6Iterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [729 730]},
+          :lines [735 736]},
  :full-name "cljs.core/es6-iterator",
  :full-name-encode "cljs.core/es6-iterator",
  :history [["+" "0.0-2371"]]}

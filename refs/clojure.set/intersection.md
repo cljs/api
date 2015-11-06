@@ -49,7 +49,7 @@ Return a set that is the intersection of the input sets
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/clojure/set.cljs#L31-L44):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/clojure/set.cljs#L31-L44):
 
 ```clj
 (defn intersection
@@ -71,11 +71,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:31-44](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/clojure/set.cljs#L31-L44)</ins>
+            └── <ins>[set.cljs:31-44](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/clojure/set.cljs#L31-L44)</ins>
 </pre>
 
 -->
@@ -131,7 +131,7 @@ The API data for this symbol:
  :source {:code "(defn intersection\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s2) (count s1))\n       (recur s2 s1)\n       (reduce (fn [result item]\n                   (if (contains? s2 item)\n\t\t     result\n                     (disj result item)))\n\t       s1 s1)))\n  ([s1 s2 & sets] \n     (let [bubbled-sets (bubble-max-key #(- (count %)) (conj sets s2 s1))]\n       (reduce intersection (first bubbled-sets) (rest bubbled-sets)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/clojure/set.cljs",
           :lines [31 44]},
  :full-name "clojure.set/intersection",

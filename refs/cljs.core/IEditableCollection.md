@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L362-L363):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L368-L369):
 
 ```clj
 (defprotocol IEditableCollection
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:362-363](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L362-L363)</ins>
+            └── <ins>[core.cljs:368-369](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L368-L369)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEditableCollection\n  (^clj -as-transient [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [362 363]},
+          :lines [368 369]},
  :methods [{:name "-as-transient",
             :signature ["[coll]"],
             :docstring nil}],

@@ -28,7 +28,7 @@ Does nothing if *report-counters* is nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/test.cljs#L254-L259):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/test.cljs#L254-L259):
 
 ```clj
 (defn inc-report-counter!
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:254-259](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/test.cljs#L254-L259)</ins>
+            └── <ins>[test.cljs:254-259](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/test.cljs#L254-L259)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn inc-report-counter!\n  [name]\n  (if (:report-counters (get-current-env))\n    (update-current-env! [:report-counters name] (fnil inc 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/test.cljs",
           :lines [254 259]},
  :full-name "cljs.test/inc-report-counter!",

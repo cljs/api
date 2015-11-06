@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1989):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1995):
 
 ```clj
 (defn booleans [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1989](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1989)</ins>
+            └── <ins>[core.cljs:1995](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1995)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn booleans [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1989]},
+          :lines [1995]},
  :full-name "cljs.core/booleans",
  :clj-symbol "clojure.core/booleans"}
 

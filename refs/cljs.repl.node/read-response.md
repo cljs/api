@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/node.clj#L37-L47):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/node.clj#L38-L48):
 
 ```clj
 (defn read-response [^BufferedReader in]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:37-47](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/node.clj#L37-L47)</ins>
+                └── <ins>[node.clj:38-48](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/node.clj#L38-L48)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn read-response [^BufferedReader in]\n  (let [sb (StringBuilder.)]\n    (loop [sb sb c (.read in)]\n      (cond\n       (= c 1) (let [ret (str sb)]\n                 (print ret)\n                 (recur (StringBuilder.) (.read in)))\n       (= c 0) (str sb)\n       :else (do\n               (.append sb (char c))\n               (recur sb (.read in)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/clj/cljs/repl/node.clj",
-          :lines [37 47]},
+          :lines [38 48]},
  :full-name "cljs.repl.node/read-response",
  :full-name-encode "cljs.repl.node/read-response",
  :history [["+" "0.0-2629"]]}

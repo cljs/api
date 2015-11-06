@@ -47,7 +47,7 @@ Equivalent to `''+s` in JavaScript.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L1666-L1667):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L1666-L1667):
 
 ```clj
 (defmacro js-str [s]
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1666-1667](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L1666-L1667)</ins>
+            └── <ins>[core.clj:1666-1667](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L1666-L1667)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defmacro js-str [s]\n  (core/list 'js* \"''+~{}\" s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/clj/cljs/core.clj",
           :lines [1666 1667]},
  :examples [{:id "e92009",

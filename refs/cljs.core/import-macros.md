@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L46-L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L46-L56):
 
 ```clj
 (defmacro import-macros [ns [& vars]]
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2657
+clojurescript @ r2665
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:46-56](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/core.clj#L46-L56)</ins>
+            └── <ins>[core.clj:46-56](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L46-L56)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defmacro import-macros [ns [& vars]]\n  (core/let [ns (find-ns ns)\n             vars (map #(ns-resolve ns %) vars)\n             syms (map (core/fn [^clojure.lang.Var v] (core/-> v .sym (with-meta {:macro true}))) vars)\n             defs (map (core/fn [sym var]\n                                `(do (def ~sym (deref ~var))\n                                     ;for AOT compilation\n                                     (alter-meta! (var ~sym) assoc :macro true)))\n                       syms vars)]\n            `(do ~@defs\n                 :imported)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2657",
+          :tag "r2665",
           :filename "src/clj/cljs/core.clj",
           :lines [46 56]},
  :full-name "cljs.core/import-macros",
