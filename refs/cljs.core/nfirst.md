@@ -59,7 +59,7 @@ Same as (next (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L1400-L1403):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L1400-L1403):
 
 ```clj
 (defn nfirst
@@ -71,12 +71,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1400-1403](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L1400-L1403)</ins>
+                └── <ins>[core.cljs:1400-1403](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L1400-L1403)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn nfirst\n  [coll]\n  (next (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1400 1403]},
  :examples [{:id "60b8a4",

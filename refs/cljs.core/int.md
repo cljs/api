@@ -41,7 +41,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L2309-L2312):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L2309-L2312):
 
 ```clj
 (defn int
@@ -53,19 +53,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2309-2312](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L2309-L2312)</ins>
+                └── <ins>[core.cljs:2309-2312](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L2309-L2312)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L573-L574):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/core.clj#L573-L574):
 
 ```clj
 (defmacro ^::ana/numeric int [x]
@@ -76,12 +76,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:573-574](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L573-L574)</ins>
+                └── <ins>[core.clj:573-574](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/core.clj#L573-L574)</ins>
 </pre>
 -->
 
@@ -132,13 +132,13 @@ The API data for this symbol:
  :source {:code "(defn int\n  [x]\n  (bit-or x 0))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2309 2312]},
  :extra-sources [{:code "(defmacro ^::ana/numeric int [x]\n  `(bit-or ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3255",
+                  :tag "r3263",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [573 574]}],
  :full-name "cljs.core/int",

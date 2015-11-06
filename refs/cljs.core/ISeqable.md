@@ -25,7 +25,7 @@ Protocol for adding the ability to a type to be transformed into a sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L482-L485):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L482-L485):
 
 ```clj
 (defprotocol ISeqable
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:482-485](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L482-L485)</ins>
+                └── <ins>[core.cljs:482-485](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L482-L485)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeqable\n  \"Protocol for adding the ability to a type to be transformed into a sequence.\"\n  (^clj-or-nil -seq [o]\n    \"Returns a seq of o, or nil if o is empty.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [482 485]},
  :methods [{:name "-seq",

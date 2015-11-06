@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L692-L693):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl.cljc#L695-L696):
 
 ```clj
 (defn repl-quit-prompt []
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:692-693](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L692-L693)</ins>
+                └── <ins>[repl.cljc:695-696](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl.cljc#L695-L696)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn repl-quit-prompt []\n  (println \"To quit, type:\" :cljs/quit))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [692 693]},
+          :lines [695 696]},
  :full-name "cljs.repl/repl-quit-prompt",
  :full-name-encode "cljs.repl/repl-quit-prompt",
  :history [["+" "0.0-3148"]]}

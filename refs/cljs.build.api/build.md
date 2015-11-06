@@ -30,7 +30,7 @@ Given a source which can be compiled, produce runnable JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/build/api.clj#L116-L121):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/build/api.clj#L116-L121):
 
 ```clj
 (defn build
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:116-121](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/build/api.clj#L116-L121)</ins>
+                    └── <ins>[api.clj:116-121](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/build/api.clj#L116-L121)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn build\n  ([source opts]\n   (closure/build source opts))\n  ([source opts compiler-env]\n   (closure/build source opts compiler-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [116 121]},
  :full-name "cljs.build.api/build",

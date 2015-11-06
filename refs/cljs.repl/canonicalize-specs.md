@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L553-L559):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl.cljc#L556-L562):
 
 ```clj
 (defn canonicalize-specs [specs]
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:553-559](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L553-L559)</ins>
+                └── <ins>[repl.cljc:556-562](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl.cljc#L556-L562)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defn canonicalize-specs [specs]\n  (letfn [(canonicalize [quoted-spec-or-kw]\n            (if (keyword? quoted-spec-or-kw)\n              quoted-spec-or-kw\n              (as-> (second quoted-spec-or-kw) spec\n                (if (vector? spec) spec [spec]))))]\n    (map canonicalize specs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [553 559]},
+          :lines [556 562]},
  :full-name "cljs.repl/canonicalize-specs",
  :full-name-encode "cljs.repl/canonicalize-specs",
  :history [["+" "0.0-3148"]]}

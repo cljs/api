@@ -32,7 +32,7 @@ a seq of fns tagged per block - are invoked immediately after fn
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L407-L424):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/test.cljs#L407-L424):
 
 ```clj
 (defn run-block
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:407-424](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L407-L424)</ins>
+                └── <ins>[test.cljs:407-424](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/test.cljs#L407-L424)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn run-block\n  [fns]\n  (when-first [f fns]\n    (let [obj (f)]\n      (if (async? obj)\n        (obj (let [d (delay (run-block (rest fns)))]\n               (fn []\n                 (if (realized? d)\n                   (println \"WARNING: Async test called done more than one time.\")\n                   @d))))\n        (recur (cond->> (rest fns)\n                 (::block? (meta obj)) (concat obj)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [407 424]},
  :full-name "cljs.test/run-block",

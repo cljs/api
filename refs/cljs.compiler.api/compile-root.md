@@ -37,7 +37,7 @@ in dependency order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/compiler/api.clj#L67-L78):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/compiler/api.clj#L67-L78):
 
 ```clj
 (defn compile-root
@@ -53,13 +53,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:67-78](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/compiler/api.clj#L67-L78)</ins>
+                    └── <ins>[api.clj:67-78](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/compiler/api.clj#L67-L78)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defn compile-root\n  ([src-dir]\n   (comp/compile-root src-dir \"out\"))\n  ([src-dir target-dir]\n   (comp/compile-root src-dir target-dir nil))\n  ([src-dir target-dir opts]\n   (comp/compile-root src-dir target-dir opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [67 78]},
  :full-name "cljs.compiler.api/compile-root",

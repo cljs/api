@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L704-L716):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L704-L716):
 
 ```clj
 (defn ^number m3-hash-unencoded-chars [in]
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3255
+clojurescript @ r3263
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:704-716](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L704-L716)</ins>
+                └── <ins>[core.cljs:704-716](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L704-L716)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-hash-unencoded-chars [in]\n  (let [h1 (loop [i 1 h1 m3-seed]\n             (if (< i (alength in))\n               (recur (+ i 2)\n                 (m3-mix-H1 h1\n                   (m3-mix-K1\n                     (bit-or (.charCodeAt in (dec i))\n                       (bit-shift-left (.charCodeAt in i) 16)))))\n               h1))\n        h1 (if (== (bit-and (alength in) 1) 1)\n             (bit-xor h1 (m3-mix-K1 (.charCodeAt in (dec (alength in)))))\n             h1)]\n    (m3-fmix h1 (imul 2 (alength in)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3255",
+          :tag "r3263",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [704 716]},
  :full-name "cljs.core/m3-hash-unencoded-chars"}
