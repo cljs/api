@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L40-L47):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L41-L48):
 
 ```clj
 (defmacro import-macros [ns [& vars]]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:40-47](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L40-L47)</ins>
+            └── <ins>[core.clj:41-48](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L41-L48)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defmacro import-macros [ns [& vars]]\n  (core/let [ns (find-ns ns)\n             vars (map #(ns-resolve ns %) vars)\n             syms (map (core/fn [^clojure.lang.Var v] (core/-> v .sym (with-meta {:macro true}))) vars)\n             defs (map (core/fn [sym var]\n                                `(def ~sym (deref ~var))) syms vars)]\n            `(do ~@defs\n                 :imported)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/clj/cljs/core.clj",
-          :lines [40 47]},
+          :lines [41 48]},
  :full-name "cljs.core/import-macros",
  :full-name-encode "cljs.core/import-macros",
  :history [["+" "0.0-927"]]}

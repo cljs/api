@@ -45,14 +45,14 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L929-L969):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L932-L972):
 
 ```clj
 (defn get
   ([o k]
     (when-not (nil? o)
       (cond
-        (satisfies? ILookup o false)
+        (implements? ILookup o)
         (-lookup ^not-native o k)
 
         (array? o)
@@ -63,14 +63,14 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
         (when (< k (.-length o))
           (aget o k))
 
-        (type_satisfies_ ILookup o)
+        (native-satisfies? ILookup o)
         (-lookup o k)
         
         :else nil)))
   ([o k not-found]
     (if-not (nil? o)
       (cond
-        (satisfies? ILookup o false)
+        (implements? ILookup o)
         (-lookup ^not-native o k not-found)
 
         (array? o)
@@ -83,7 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
           (aget o k)
           not-found)
 
-        (type_satisfies_ ILookup o)
+        (native-satisfies? ILookup o)
         (-lookup o k not-found)
 
         :else not-found)
@@ -94,11 +94,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:929-969](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L929-L969)</ins>
+            └── <ins>[core.cljs:932-972](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L932-L972)</ins>
 </pre>
 
 -->
@@ -148,12 +148,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/get-in"],
  :full-name-encode "cljs.core/get",
- :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o k))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o k))\n\n        (type_satisfies_ ILookup o)\n        (-lookup o k)\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        (type_satisfies_ ILookup o)\n        (-lookup o k not-found)\n\n        :else not-found)\n      not-found)))",
+ :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o k))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o k))\n\n        (native-satisfies? ILookup o)\n        (-lookup o k)\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        (native-satisfies? ILookup o)\n        (-lookup o k not-found)\n\n        :else not-found)\n      not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [929 969]},
+          :lines [932 972]},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

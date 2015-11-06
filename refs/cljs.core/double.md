@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1505):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1508):
 
 ```clj
 (defn double [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1505](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1505)</ins>
+            └── <ins>[core.cljs:1508](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1508)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L333):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L337):
 
 ```clj
 (defmacro double [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:333](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L333)</ins>
+            └── <ins>[core.clj:337](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L337)</ins>
 </pre>
 -->
 
@@ -109,15 +109,15 @@ The API data for this symbol:
  :source {:code "(defn double [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1505]},
+          :lines [1508]},
  :extra-sources [{:code "(defmacro double [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1978",
+                  :tag "r2014",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [333]}],
+                  :lines [337]}],
  :full-name "cljs.core/double",
  :clj-symbol "clojure.core/double"}
 

@@ -77,12 +77,12 @@ Returns the name String of a string, symbol or keyword.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6248-L6255):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L6251-L6258):
 
 ```clj
 (defn name
   [x]
-  (if (satisfies? INamed x false)
+  (if (implements? INamed x)
     (-name ^not-native x)
     (if (string? x)
       x
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6248-6255](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L6248-L6255)</ins>
+            └── <ins>[core.cljs:6251-6258](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L6251-L6258)</ins>
 </pre>
 
 -->
@@ -147,12 +147,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/namespace"],
  :full-name-encode "cljs.core/name",
- :source {:code "(defn name\n  [x]\n  (if (satisfies? INamed x false)\n    (-name ^not-native x)\n    (if (string? x)\n      x\n      (throw (js/Error. (str \"Doesn't support name: \" x))))))",
+ :source {:code "(defn name\n  [x]\n  (if (implements? INamed x)\n    (-name ^not-native x)\n    (if (string? x)\n      x\n      (throw (js/Error. (str \"Doesn't support name: \" x))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6248 6255]},
+          :lines [6251 6258]},
  :examples [{:id "363fb7",
              :content "With namespaces:\n\n```clj\n(name :foo/bar)\n;;=> \"bar\"\n\n(name 'foo/bar)\n;;=> \"bar\"\n```\n\nWithout namespaces:\n\n```clj\n(name :foo)\n;;=> \"foo\"\n\n(name 'foo)\n;;=> \"foo\"\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> \"foo/bar\"\n\n(name \"foo\")\n;;=> \"foo\"\n```"}],
  :full-name "cljs.core/name",

@@ -31,7 +31,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/zip.cljs#L200-L204):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/zip.cljs#L200-L204):
 
 ```clj
 (defn append-child
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:200-204](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/zip.cljs#L200-L204)</ins>
+            └── <ins>[zip.cljs:200-204](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/zip.cljs#L200-L204)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn append-child\n  [loc item]\n    (replace loc (make-node loc (node loc) (concat (children loc) [item]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [200 204]},
  :full-name "clojure.zip/append-child",

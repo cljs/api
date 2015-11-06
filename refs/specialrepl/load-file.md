@@ -41,7 +41,7 @@ Load file at `filename`, then compiles and evaluates its code.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L124-L133):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L134-L143):
 
 ```clj
 (def default-special-fns
@@ -49,7 +49,7 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r19
     {'in-ns (fn [_ quoted-ns]
               (let [ns-name (second quoted-ns)]
                 (when-not (ana/get-namespace ns-name)
-                  (ana/set-namespace ns-name {:name ns-name}))
+                  (swap! env/*compiler* update-in [::ana/namespaces ns-name] {:name ns-name}))
                 (set! ana/*cljs-ns* ns-name)))
      'load-file load-file-fn
      'clojure.core/load-file load-file-fn
@@ -60,11 +60,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r19
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:124-133](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L124-L133)</ins>
+            └── <ins>[repl.clj:134-143](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L134-L143)</ins>
 </pre>
 
 -->
@@ -112,12 +112,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form (repl)",
  :full-name-encode "specialrepl/load-file",
- :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (ana/set-namespace ns-name {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
+ :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (swap! env/*compiler* update-in [::ana/namespaces ns-name] {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/clj/cljs/repl.clj",
-          :lines [124 133]},
+          :lines [134 143]},
  :examples [{:id "0903c5",
              :content "```clj\n(load-file \"path/to/foo.cljs\")\n```"}],
  :full-name "specialrepl/load-file",

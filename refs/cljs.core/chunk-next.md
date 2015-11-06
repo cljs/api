@@ -22,11 +22,11 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2256-L2259):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L2259-L2262):
 
 ```clj
 (defn chunk-next [s]
-  (if (satisfies? IChunkedNext s false)
+  (if (implements? IChunkedNext s)
     (-chunked-next s)
     (seq (-chunked-rest s))))
 ```
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2256-2259](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2256-L2259)</ins>
+            └── <ins>[core.cljs:2259-2262](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L2259-L2262)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :name "chunk-next",
  :type "function",
  :signature ["[s]"],
- :source {:code "(defn chunk-next [s]\n  (if (satisfies? IChunkedNext s false)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
+ :source {:code "(defn chunk-next [s]\n  (if (implements? IChunkedNext s)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2256 2259]},
+          :lines [2259 2262]},
  :full-name "cljs.core/chunk-next",
  :full-name-encode "cljs.core/chunk-next",
  :history [["+" "0.0-1424"]]}

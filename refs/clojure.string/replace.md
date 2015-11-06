@@ -54,7 +54,7 @@ pattern / (string or function of match).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/string.cljs#L23-L34):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/string.cljs#L23-L34):
 
 ```clj
 (defn replace
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:23-34](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/string.cljs#L23-L34)</ins>
+            └── <ins>[string.cljs:23-34](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/string.cljs#L23-L34)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [s match replacement]\n  (cond (string? match)\n        (.replace s (js/RegExp. (gstring/regExpEscape match) \"g\") replacement)\n        (.hasOwnProperty match \"source\")\n        (.replace s (js/RegExp. (.-source match) \"g\") replacement)\n        :else (throw (str \"Invalid match arg: \" match))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/clojure/string.cljs",
           :lines [23 34]},
  :full-name "clojure.string/replace",

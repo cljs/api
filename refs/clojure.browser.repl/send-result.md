@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/browser/repl.cljs#L38-L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/browser/repl.cljs#L38-L39):
 
 ```clj
 (defn send-result [connection url data]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:38-39](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/browser/repl.cljs#L38-L39)</ins>
+                └── <ins>[repl.cljs:38-39](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/browser/repl.cljs#L38-L39)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn send-result [connection url data]\n  (net/transmit connection url \"POST\" data nil 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/clojure/browser/repl.cljs",
           :lines [38 39]},
  :full-name "clojure.browser.repl/send-result",

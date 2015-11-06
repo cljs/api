@@ -22,22 +22,24 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L282-L283):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L284-L287):
 
 ```clj
 (defmacro exists? [x]
-  (bool-expr (list 'js* "typeof ~{} !== 'undefined'" x)))
+  (bool-expr
+    (list 'js* "typeof ~{} !== 'undefined'"
+      (vary-meta x assoc :cljs.analyzer/no-resolve true))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:282-283](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L282-L283)</ins>
+            └── <ins>[core.clj:284-287](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L284-L287)</ins>
 </pre>
 
 -->
@@ -80,12 +82,12 @@ The API data for this symbol:
  :name "exists?",
  :type "macro",
  :signature ["[x]"],
- :source {:code "(defmacro exists? [x]\n  (bool-expr (list 'js* \"typeof ~{} !== 'undefined'\" x)))",
+ :source {:code "(defmacro exists? [x]\n  (bool-expr\n    (list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/clj/cljs/core.clj",
-          :lines [282 283]},
+          :lines [284 287]},
  :full-name "cljs.core/exists?",
  :full-name-encode "cljs.core/existsQMARK",
  :history [["+" "0.0-1798"]]}

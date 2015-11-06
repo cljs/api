@@ -47,13 +47,13 @@ from-coll conjoined.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2974-L2982):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L2977-L2985):
 
 ```clj
 (defn into
   [to from]
   (if-not (nil? to)
-    (if (satisfies? IEditableCollection to false)
+    (if (implements? IEditableCollection to)
       (persistent! (reduce -conj! (transient to) from))
       (reduce -conj to from))
     (reduce conj () from)))
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2974-2982](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L2974-L2982)</ins>
+            └── <ins>[core.cljs:2977-2985](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L2977-L2985)</ins>
 </pre>
 
 -->
@@ -117,12 +117,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/conj"],
  :full-name-encode "cljs.core/into",
- :source {:code "(defn into\n  [to from]\n  (if-not (nil? to)\n    (if (satisfies? IEditableCollection to false)\n      (persistent! (reduce -conj! (transient to) from))\n      (reduce -conj to from))\n    (reduce conj () from)))",
+ :source {:code "(defn into\n  [to from]\n  (if-not (nil? to)\n    (if (implements? IEditableCollection to)\n      (persistent! (reduce -conj! (transient to) from))\n      (reduce -conj to from))\n    (reduce conj () from)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2974 2982]},
+          :lines [2977 2985]},
  :full-name "cljs.core/into",
  :clj-symbol "clojure.core/into",
  :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined."}

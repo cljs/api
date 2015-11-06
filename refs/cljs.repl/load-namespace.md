@@ -29,7 +29,7 @@ only once.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L27-L42):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L37-L52):
 
 ```clj
 (defn load-namespace
@@ -38,8 +38,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
                      (= (first sym) 'quote))
               (second sym)
               sym)
-        opts {:output-dir (get repl-env :working-dir ".repl")}
-        deps (->> (cljsc/add-dependencies opts {:requires [(name sym)] :type :seed})
+        deps (->> (cljsc/add-dependencies (env->opts repl-env)
+                                          {:requires [(name sym)] :type :seed})
                   (remove (comp #{["goog"]} :provides))
                   (remove (comp #{:seed} :type))
                   (map #(select-keys % [:provides :url])))]
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:27-42](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L27-L42)</ins>
+            └── <ins>[repl.clj:37-52](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L37-L52)</ins>
 </pre>
 
 -->
@@ -100,12 +100,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl/load-namespace",
- :source {:code "(defn load-namespace\n  [repl-env sym]\n  (let [sym (if (and (seq? sym)\n                     (= (first sym) 'quote))\n              (second sym)\n              sym)\n        opts {:output-dir (get repl-env :working-dir \".repl\")}\n        deps (->> (cljsc/add-dependencies opts {:requires [(name sym)] :type :seed})\n                  (remove (comp #{[\"goog\"]} :provides))\n                  (remove (comp #{:seed} :type))\n                  (map #(select-keys % [:provides :url])))]\n    (doseq [{:keys [url provides]} deps]\n      (-load repl-env provides url))))",
+ :source {:code "(defn load-namespace\n  [repl-env sym]\n  (let [sym (if (and (seq? sym)\n                     (= (first sym) 'quote))\n              (second sym)\n              sym)\n        deps (->> (cljsc/add-dependencies (env->opts repl-env)\n                                          {:requires [(name sym)] :type :seed})\n                  (remove (comp #{[\"goog\"]} :provides))\n                  (remove (comp #{:seed} :type))\n                  (map #(select-keys % [:provides :url])))]\n    (doseq [{:keys [url provides]} deps]\n      (-load repl-env provides url))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/clj/cljs/repl.clj",
-          :lines [27 42]},
+          :lines [37 52]},
  :full-name "cljs.repl/load-namespace",
  :docstring "Load a namespace and all of its dependencies into the evaluation environment.\nThe environment is responsible for ensuring that each namespace is loaded once and\nonly once."}
 

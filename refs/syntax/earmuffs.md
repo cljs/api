@@ -25,10 +25,11 @@ Dynamic vars are global vars that you intend to temporarily rebind with
 [`binding`][doc:cljs.core/binding].
 
 NOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic
-special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
+special global vars (e.g. [`*clojurescript-version*`][doc:cljs.core/*clojurescript-version*],
 [`*main-cli-fn*`][doc:cljs.core/*main-cli-fn*]).
 
 [doc:cljs.core/binding]:../cljs.core/binding.md
+[doc:cljs.core/*clojurescript-version*]:../cljs.core/STARclojurescript-versionSTAR.md
 [doc:cljs.core/*main-cli-fn*]:../cljs.core/STARmain-cli-fnSTAR.md
 
 ---

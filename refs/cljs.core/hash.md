@@ -25,12 +25,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1065-L1081):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1068-L1084):
 
 ```clj
 (defn hash [o]
   (cond
-    (satisfies? IHash o false)
+    (implements? IHash o)
     (-hash ^not-native o)
 
     (number? o)
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1065-1081](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L1065-L1081)</ins>
+            └── <ins>[core.cljs:1068-1084](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1068-L1084)</ins>
 </pre>
 
 -->
@@ -103,12 +103,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/hash",
- :source {:code "(defn hash [o]\n  (cond\n    (satisfies? IHash o false)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (.floor js/Math o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (check-string-hash-cache o)\n\n    :else\n    (-hash o)))",
+ :source {:code "(defn hash [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (.floor js/Math o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (check-string-hash-cache o)\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1065 1081]},
+          :lines [1068 1084]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash"}
 

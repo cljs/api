@@ -35,7 +35,7 @@ Returns true if `o` is an instance of type `t`, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L373-L374):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L376-L377):
 
 ```clj
 (defn ^boolean instance? [t o]
@@ -46,18 +46,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:373-374](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/cljs/core.cljs#L373-L374)</ins>
+            └── <ins>[core.cljs:376-377](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L376-L377)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L291-L298):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L295-L302):
 
 ```clj
 (defmacro instance? [t o]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:291-298](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/core.clj#L291-L298)</ins>
+            └── <ins>[core.clj:295-302](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L295-L302)</ins>
 </pre>
 -->
 
@@ -130,15 +130,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean instance? [t o]\n  (cljs.core/instance? t o))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [373 374]},
+          :lines [376 377]},
  :extra-sources [{:code "(defmacro instance? [t o]\n  ;; Google Closure warns about some references to RegExp, so\n  ;; (instance? RegExp ...) needs to be inlined, but the expansion\n  ;; should preserve the order of argument evaluation.\n  (bool-expr (if (clojure.core/symbol? t)\n               (list 'js* \"(~{} instanceof ~{})\" o t)\n               `(let [t# ~t o# ~o]\n                  (~'js* \"(~{} instanceof ~{})\" o# t#)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1978",
+                  :tag "r2014",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [291 298]}],
+                  :lines [295 302]}],
  :full-name "cljs.core/instance?",
  :clj-symbol "clojure.core/instance?"}
 

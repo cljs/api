@@ -38,7 +38,7 @@ string.  Similar to Perl's chomp.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/string.cljs#L147-L157):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/string.cljs#L147-L157):
 
 ```clj
 (defn trim-newline
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:147-157](https://github.com/clojure/clojurescript/blob/r1978/src/cljs/clojure/string.cljs#L147-L157)</ins>
+            └── <ins>[string.cljs:147-157](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/string.cljs#L147-L157)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn trim-newline\n  [s]\n  (loop [index (.-length s)]\n    (if (zero? index)\n      \"\"\n      (let [ch (get s (dec index))]\n        (if (or (= ch \\newline) (= ch \\return))\n          (recur (dec index))\n          (.substring s 0 index))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/cljs/clojure/string.cljs",
           :lines [147 157]},
  :full-name "clojure.string/trim-newline",

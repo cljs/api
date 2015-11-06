@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L89-L93):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L99-L103):
 
 ```clj
 (defn load-stream [repl-env filename res]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1978/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1978
+clojurescript @ r2014
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:89-93](https://github.com/clojure/clojurescript/blob/r1978/src/clj/cljs/repl.clj#L89-L93)</ins>
+            └── <ins>[repl.clj:99-103](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl.clj#L99-L103)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn load-stream [repl-env filename res]\n  (let [env (ana/empty-env)]\n    (doseq [form (ana/forms-seq res filename)]\n      (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n        (evaluate-form repl-env env filename form)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1978",
+          :tag "r2014",
           :filename "src/clj/cljs/repl.clj",
-          :lines [89 93]},
+          :lines [99 103]},
  :full-name "cljs.repl/load-stream",
  :full-name-encode "cljs.repl/load-stream",
  :history [["+" "0.0-927"]]}
