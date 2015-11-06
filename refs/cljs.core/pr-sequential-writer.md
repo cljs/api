@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L6631-L6643):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L6635-L6647):
 
 ```clj
 (defn pr-sequential-writer [writer print-one begin sep end opts coll]
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2075/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2075
+clojurescript @ r2080
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6631-6643](https://github.com/clojure/clojurescript/blob/r2075/src/cljs/cljs/core.cljs#L6631-L6643)</ins>
+            └── <ins>[core.cljs:6635-6647](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L6635-L6647)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (-write writer begin)\n  (when (seq coll)\n    (print-one (first coll) writer opts))\n  (loop [coll (next coll) n (:print-length opts)]\n    (when (and coll (or (nil? n) (not (zero? n))))\n      (-write writer sep)\n      (print-one (first coll) writer opts)\n      (recur (next coll) (dec n))))\n  (when (:print-length opts)\n    (-write writer sep)\n    (print-one \"...\" writer opts))\n  (-write writer end))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2075",
+          :tag "r2080",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6631 6643]},
+          :lines [6635 6647]},
  :full-name "cljs.core/pr-sequential-writer",
  :full-name-encode "cljs.core/pr-sequential-writer",
  :history [["+" "0.0-1503"]]}

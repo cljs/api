@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2080](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2080)__</td>
+<td>2013-11-23</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.8.0</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002080syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002080library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-002080compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2075](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2075)__</td>
 <td>2013-11-23</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1096,6 +1119,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2080
+
+<a name="002080syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002080library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/unsigned-bit-shift-right](refs/cljs.core/unsigned-bit-shift-right.md)</samp></td>
+</tr>
+</table>
+
+<a name="002080compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2075
