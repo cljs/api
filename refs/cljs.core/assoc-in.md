@@ -73,7 +73,7 @@ If any levels do not exist, hash-maps will be created.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L4103-L4110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L4103-L4110):
 
 ```clj
 (defn assoc-in
@@ -87,11 +87,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4103-4110](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L4103-L4110)</ins>
+            └── <ins>[core.cljs:4103-4110](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L4103-L4110)</ins>
 </pre>
 
 -->
@@ -144,7 +144,7 @@ The API data for this symbol:
  :source {:code "(defn assoc-in\n  [m [k & ks] v]\n  (if ks\n    (assoc m k (assoc-in (get m k) ks v))\n    (assoc m k v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4103 4110]},
  :examples [{:id "e76f20",

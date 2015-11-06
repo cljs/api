@@ -27,7 +27,7 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L607-L610):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L613-L616):
 
 ```clj
 (defn repl
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:607-610](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L607-L610)</ins>
+            └── <ins>[repl.clj:613-616](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L613-L616)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & {:as opts}]\n  (repl* repl-env opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/clj/cljs/repl.clj",
-          :lines [607 610]},
+          :lines [613 616]},
  :full-name "cljs.repl/repl",
  :docstring "Note - repl will reload core.cljs every time, even if supplied old repl-env"}
 

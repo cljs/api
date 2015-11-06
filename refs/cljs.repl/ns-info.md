@@ -28,7 +28,7 @@ ClojureScript file if it exists.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L188-L194):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L188-L194):
 
 ```clj
 (defn ns-info
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:188-194](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L188-L194)</ins>
+            └── <ins>[repl.clj:188-194](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L188-L194)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn ns-info\n  [f]\n  (let [f' (js-src->cljs-src f)]\n    (when (.exists f')\n      (ana/parse-ns f'))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/clj/cljs/repl.clj",
           :lines [188 194]},
  :full-name "cljs.repl/ns-info",

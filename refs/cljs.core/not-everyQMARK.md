@@ -43,7 +43,7 @@ coll, else true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L3304-L3307):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L3304-L3307):
 
 ```clj
 (defn ^boolean not-every?
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3304-3307](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L3304-L3307)</ins>
+            └── <ins>[core.cljs:3304-3307](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L3304-L3307)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not-every?\n  [pred coll] (not (every? pred coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3304 3307]},
  :full-name "cljs.core/not-every?",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L5170-L5171):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L5170-L5171):
 
 ```clj
 (defn es6-entries-iterator [coll]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5170-5171](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L5170-L5171)</ins>
+            └── <ins>[core.cljs:5170-5171](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L5170-L5171)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn es6-entries-iterator [coll]\n  (ES6EntriesIterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [5170 5171]},
  :full-name "cljs.core/es6-entries-iterator",

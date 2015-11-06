@@ -25,7 +25,7 @@ Marker interface indicating a persistent collection of sequential items
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L339-L340):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L339-L340):
 
 ```clj
 (defprotocol ISequential
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:339-340](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L339-L340)</ins>
+            └── <ins>[core.cljs:339-340](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L339-L340)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISequential\n  \"Marker interface indicating a persistent collection of sequential items\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [339 340]},
  :full-name "cljs.core/ISequential",

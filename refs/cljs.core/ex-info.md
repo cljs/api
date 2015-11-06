@@ -35,7 +35,7 @@ map of additional data.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L9193-L9212):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L9193-L9212):
 
 ```clj
 (defn ex-info
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9193-9212](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L9193-L9212)</ins>
+            └── <ins>[core.cljs:9193-9212](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L9193-L9212)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn ex-info\n  ([msg data] (ex-info msg data nil))\n  ([msg data cause]\n    ;; this way each new ExceptionInfo instance will inherit\n    ;; stack property from newly created Error\n    (set! (.-prototype ExceptionInfo) (js/Error msg))\n    (set! (.. ExceptionInfo -prototype -name) \"ExceptionInfo\")\n    (set! (.. ExceptionInfo -prototype -constructor) ExceptionInfo)\n\n    ;; since we've changed the prototype, we need to\n    ;; re-establish protocol implementations here\n    (set! (.. ExceptionInfo -prototype -toString) pr-str*)\n    (extend-type ExceptionInfo\n      IPrintWithWriter\n      (-pr-writer [obj writer opts]\n        (pr-writer-ex-info obj writer opts)))\n    (ExceptionInfo. msg data cause)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9193 9212]},
  :full-name "cljs.core/ex-info",

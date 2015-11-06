@@ -44,7 +44,7 @@ defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L8808-L8814):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L8808-L8814):
 
 ```clj
 (defn ancestors
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8808-8814](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L8808-L8814)</ins>
+            └── <ins>[core.cljs:8808-8814](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L8808-L8814)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn ancestors\n  ([tag] (ancestors @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:ancestors h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8808 8814]},
  :full-name "cljs.core/ancestors",

@@ -76,7 +76,7 @@ f must be free of side-effects
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L8465-L8472):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L8465-L8472):
 
 ```clj
 (defn alter-meta!
@@ -88,11 +88,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8465-8472](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L8465-L8472)</ins>
+            └── <ins>[core.cljs:8465-8472](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L8465-L8472)</ins>
 </pre>
 
 -->
@@ -145,7 +145,7 @@ The API data for this symbol:
  :source {:code "(defn alter-meta!\n  [iref f & args]\n  (set! (.-meta iref) (apply f (.-meta iref) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8465 8472]},
  :examples [{:id "8378a0",

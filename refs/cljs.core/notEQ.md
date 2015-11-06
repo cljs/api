@@ -49,7 +49,7 @@ Same as (not (= obj1 obj2))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L3051-L3056):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L3051-L3056):
 
 ```clj
 (defn ^boolean not=
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2843
+clojurescript @ r2850
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3051-3056](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L3051-L3056)</ins>
+            └── <ins>[core.cljs:3051-3056](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L3051-L3056)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not=\n  ([x] false)\n  ([x y] (not (= x y)))\n  ([x y & more]\n   (not (apply = x y more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2843",
+          :tag "r2850",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3051 3056]},
  :full-name "cljs.core/not=",
