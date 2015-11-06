@@ -1,11 +1,11 @@
-## cljs.repl/with-read-known
+## ~~cljs.repl/with-read-known~~
 
 
 
  <table border="1">
 <tr>
 <td>macro</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2911"><img valign="middle" alt="[×] 0.0-2911" title="Removed in 0.0-2911" src="https://img.shields.io/badge/×-0.0--2911-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "with-read-known",
  :signature ["[& body]"],
- :history [["+" "0.0-2719"]],
+ :history [["+" "0.0-2719"] ["-" "0.0-2911"]],
  :type "macro",
  :full-name-encode "cljs.repl/with-read-known",
  :source {:code "(defmacro with-read-known\n  [& body]\n  `(binding [*read-eval* (if (= :unknown *read-eval*) true *read-eval*)]\n     ~@body))",
@@ -97,7 +97,8 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl.clj",
           :lines [84 89]},
  :full-name "cljs.repl/with-read-known",
- :docstring "Evaluates body with *read-eval* set to a \"known\" value,\ni.e. substituting true for :unknown if necessary."}
+ :docstring "Evaluates body with *read-eval* set to a \"known\" value,\ni.e. substituting true for :unknown if necessary.",
+ :removed {:in "0.0-2911", :last-seen "0.0-2850"}}
 
 ```
 

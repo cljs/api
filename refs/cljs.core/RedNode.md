@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L6730-L6869):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/cljs/cljs/core.cljs#L6730-L6869):
 
 ```clj
 (deftype RedNode [key val left right ^:mutable __hash]
@@ -171,11 +171,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
+clojurescript @ r2911
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6730-6869](https://github.com/clojure/clojurescript/blob/r2850/src/cljs/cljs/core.cljs#L6730-L6869)</ins>
+            └── <ins>[core.cljs:6730-6869](https://github.com/clojure/clojurescript/blob/r2911/src/cljs/cljs/core.cljs#L6730-L6869)</ins>
 </pre>
 
 -->
@@ -221,7 +221,7 @@ The API data for this symbol:
  :source {:code "(deftype RedNode [key val left right ^:mutable __hash]\n  Object\n  (add-left [node ins]\n    (RedNode. key val ins right nil))\n\n  (add-right [node ins]\n    (RedNode. key val left ins nil))\n\n  (remove-left [node del]\n    (RedNode. key val del right nil))\n\n  (remove-right [node del]\n    (RedNode. key val left del nil))\n\n  (blacken [node]\n    (BlackNode. key val left right nil))\n\n  (redden [node]\n    (throw (js/Error. \"red-black tree invariant violation\")))\n\n  (balance-left [node parent]\n    (cond\n      (instance? RedNode left)\n      (RedNode. key val\n                (.blacken left)\n                (BlackNode. (.-key parent) (.-val parent) right (.-right parent) nil)\n                nil)\n\n      (instance? RedNode right)\n      (RedNode. (.-key right) (.-val right)\n                (BlackNode. key val left (.-left right) nil)\n                (BlackNode. (.-key parent) (.-val parent)\n                            (.-right right)\n                            (.-right parent)\n                            nil)\n                nil)\n\n      :else\n      (BlackNode. (.-key parent) (.-val parent) node (.-right parent) nil)))\n\n  (balance-right [node parent]\n    (cond\n      (instance? RedNode right)\n      (RedNode. key val\n                (BlackNode. (.-key parent) (.-val parent)\n                            (.-left parent)\n                            left\n                            nil)\n                (.blacken right)\n                nil)\n\n      (instance? RedNode left)\n      (RedNode. (.-key left) (.-val left)\n                (BlackNode. (.-key parent) (.-val parent)\n                            (.-left parent)\n                            (.-left left)\n                            nil)\n                (BlackNode. key val (.-right left) right nil)\n                nil)\n\n      :else\n      (BlackNode. (.-key parent) (.-val parent) (.-left parent) node nil)))\n\n  (replace [node key val left right]\n    (RedNode. key val left right nil))\n\n  (kv-reduce [node f init]\n    (tree-map-kv-reduce node f init))\n\n  IMapEntry\n  (-key [node] key)\n  (-val [node] val)\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IMeta\n  (-meta [node] nil)\n\n  IWithMeta\n  (-with-meta [node meta]\n    (with-meta [key val] meta))\n\n  IStack\n  (-peek [node] val)\n\n  (-pop [node] [key])\n\n  ICollection\n  (-conj [node o] [key val o])\n\n  IEmptyableCollection\n  (-empty [node] [])\n\n  ISequential\n  ISeqable\n  (-seq [node] (list key val))\n\n  ICounted\n  (-count [node] 2)\n\n  IIndexed\n  (-nth [node n]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    nil))\n\n  (-nth [node n not-found]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    not-found))\n\n  ILookup\n  (-lookup [node k] (-nth node k nil))\n  (-lookup [node k not-found] (-nth node k not-found))\n\n  IAssociative\n  (-assoc [node k v]\n    (assoc [key val] k v))\n\n  IVector\n  (-assoc-n [node n v]\n    (-assoc-n [key val] n v))\n\n  IReduce\n  (-reduce [node f]\n    (ci-reduce node f))\n\n  (-reduce [node f start]\n    (ci-reduce node f start))\n\n  IFn\n  (-invoke [node k]\n    (-lookup node k))\n\n  (-invoke [node k not-found]\n    (-lookup node k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2850",
+          :tag "r2911",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6730 6869]},
  :full-name "cljs.core/RedNode",

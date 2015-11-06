@@ -34,29 +34,30 @@ supporting .unread and collapsing all of CR, LF, and CRLF to a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L48-L64):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L50-L67):
 
 ```clj
 (defn skip-whitespace
   [s]
-  (loop [c (.read s)]
-    (cond
-      (= c (int \newline)) :line-start
-      (= c -1) :stream-end
-      (= c (int \;)) (do (.readLine s) :line-start)
-      (or (Character/isWhitespace (char c)) (= c (int \,))) (recur (.read s))
-      :else (do (.unread s c) :body))))
+  (loop [c (readers/read-char s)]
+    (case c
+      \newline :line-start
+      nil :stream-end
+      \; (do (readers/read-line s) :line-start)
+      (if (or (Character/isWhitespace c) (identical? c \,))
+        (recur (readers/read-char s))
+        (do (readers/unread s c) :body)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
+clojurescript @ r2911
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:48-64](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L48-L64)</ins>
+            └── <ins>[repl.clj:50-67](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L50-L67)</ins>
 </pre>
 
 -->
@@ -101,12 +102,12 @@ The API data for this symbol:
  :history [["+" "0.0-2719"]],
  :type "function",
  :full-name-encode "cljs.repl/skip-whitespace",
- :source {:code "(defn skip-whitespace\n  [s]\n  (loop [c (.read s)]\n    (cond\n      (= c (int \\newline)) :line-start\n      (= c -1) :stream-end\n      (= c (int \\;)) (do (.readLine s) :line-start)\n      (or (Character/isWhitespace (char c)) (= c (int \\,))) (recur (.read s))\n      :else (do (.unread s c) :body))))",
+ :source {:code "(defn skip-whitespace\n  [s]\n  (loop [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      \\; (do (readers/read-line s) :line-start)\n      (if (or (Character/isWhitespace c) (identical? c \\,))\n        (recur (readers/read-char s))\n        (do (readers/unread s c) :body)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2850",
+          :tag "r2911",
           :filename "src/clj/cljs/repl.clj",
-          :lines [48 64]},
+          :lines [50 67]},
  :full-name "cljs.repl/skip-whitespace",
  :docstring "Skips whitespace characters on stream s. Returns :line-start, :stream-end,\nor :body to indicate the relative location of the next character on s.\nInterprets comma as whitespace and semicolon as comment to end of line.\nDoes not interpret #! as comment to end of line because only one\ncharacter of lookahead is available. The stream must either be an\ninstance of LineNumberingPushbackReader or duplicate its behavior of both\nsupporting .unread and collapsing all of CR, LF, and CRLF to a single\n\\newline."}
 

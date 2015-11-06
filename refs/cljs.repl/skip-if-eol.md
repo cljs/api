@@ -32,27 +32,27 @@ CRLF to a single \newline.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L34-L46):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L36-L48):
 
 ```clj
 (defn skip-if-eol
   [s]
-  (let [c (.read s)]
-    (cond
-      (= c (int \newline)) :line-start
-      (= c -1) :stream-end
-      :else (do (.unread s c) :body))))
+  (let [c (readers/read-char s)]
+    (case c
+      \newline :line-start
+      nil :stream-end
+      (do (readers/unread s c) :body))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
+clojurescript @ r2911
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:34-46](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L34-L46)</ins>
+            └── <ins>[repl.clj:36-48](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L36-L48)</ins>
 </pre>
 
 -->
@@ -97,12 +97,12 @@ The API data for this symbol:
  :history [["+" "0.0-2719"]],
  :type "function",
  :full-name-encode "cljs.repl/skip-if-eol",
- :source {:code "(defn skip-if-eol\n  [s]\n  (let [c (.read s)]\n    (cond\n      (= c (int \\newline)) :line-start\n      (= c -1) :stream-end\n      :else (do (.unread s c) :body))))",
+ :source {:code "(defn skip-if-eol\n  [s]\n  (let [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      (do (readers/unread s c) :body))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2850",
+          :tag "r2911",
           :filename "src/clj/cljs/repl.clj",
-          :lines [34 46]},
+          :lines [36 48]},
  :full-name "cljs.repl/skip-if-eol",
  :docstring "If the next character on stream s is a newline, skips it, otherwise\nleaves the stream untouched. Returns :line-start, :stream-end, or :body\nto indicate the relative location of the next character on s. The stream\nmust either be an instance of LineNumberingPushbackReader or duplicate\nits behavior of both supporting .unread and collapsing all of CR, LF, and\nCRLF to a single \\newline."}
 

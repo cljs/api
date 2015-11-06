@@ -28,7 +28,7 @@ and column back to the original line and column.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L196-L214):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L197-L215):
 
 ```clj
 (defn mapped-line-and-column
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
+clojurescript @ r2911
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:196-214](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L196-L214)</ins>
+            └── <ins>[repl.clj:197-215](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L197-L215)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(defn mapped-line-and-column\n  [source-map line column]\n  (let [default [line column]]\n    ;; source maps are 0 indexed for lines\n    (if-let [columns (get source-map (dec line))]\n      (vec\n        (map inc\n          (map\n            ;; source maps are 0 indexed for columns\n            ;; multiple segments may exist at column\n            ;; the last segment seems most accurate\n            (last\n              (if-let [mapping (get columns (dec column))]\n                mapping\n                (second (first columns))))\n            [:line :col])))\n      default)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2850",
+          :tag "r2911",
           :filename "src/clj/cljs/repl.clj",
-          :lines [196 214]},
+          :lines [197 215]},
  :full-name "cljs.repl/mapped-line-and-column",
  :docstring "Given a cljs.source-map source map data structure map a generated line\nand column back to the original line and column."}
 

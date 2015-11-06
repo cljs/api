@@ -44,6 +44,12 @@ Includes a common API over XhrIo, CrossPageChannel, and Websockets.
 </tr>
 <tr>
 <td></td>
+<td><samp>[websocket-connection](../clojure.browser.net/websocket-connection.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2911"><img valign="middle" alt="[+] 0.0-2911" title="Added in 0.0-2911" src="https://img.shields.io/badge/+-0.0--2911-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[xhr-connection](../clojure.browser.net/xhr-connection.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -71,6 +77,12 @@ Includes a common API over XhrIo, CrossPageChannel, and Websockets.
 <td><samp>[ICrossPageChannel](../clojure.browser.net/ICrossPageChannel.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[IWebSocket](../clojure.browser.net/IWebSocket.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2911"><img valign="middle" alt="[+] 0.0-2911" title="Added in 0.0-2911" src="https://img.shields.io/badge/+-0.0--2911-lightgrey.svg"></a> </td>
 </tr>
 </table>
 

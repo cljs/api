@@ -41,7 +41,7 @@ Load file at `filename`, then compiles and evaluates its code.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L456-L517):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L475-L543):
 
 ```clj
 (def default-special-fns
@@ -54,69 +54,76 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r28
     {'in-ns
      (fn self
        ([repl-env env form]
-         (self repl-env env form nil))
+        (self repl-env env form nil))
        ([repl-env env [_ [quote ns-name] :as form] _]
          ;; guard against craziness like '5 which wreaks havoc
-         (when-not (and (= quote 'quote) (symbol? ns-name))
-           (throw (IllegalArgumentException. "Argument to in-ns must be a symbol.")))
-         (when-not (ana/get-namespace ns-name)
-           (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})
-           (-evaluate repl-env "<cljs repl>" 1
-             (str "goog.provide('" (comp/munge ns-name) "');")))
-         (set! ana/*cljs-ns* ns-name)))
+        (when-not (and (= quote 'quote) (symbol? ns-name))
+          (throw (IllegalArgumentException. "Argument to in-ns must be a symbol.")))
+        (when-not (ana/get-namespace ns-name)
+          (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})
+          (-evaluate repl-env "<cljs repl>" 1
+            (str "goog.provide('" (comp/munge ns-name) "');")))
+        (set! ana/*cljs-ns* ns-name)))
      'require
      (fn self
        ([repl-env env form]
-         (self repl-env env form nil))
+        (self repl-env env form nil))
        ([repl-env env [_ & specs :as form] opts]
-         (evaluate-form repl-env env "<cljs repl>"
-           (with-meta
-             `(~'ns ~ana/*cljs-ns*
-                (:require
-                  ~@(map
-                      (fn [quoted-spec-or-kw]
-                        (if (keyword? quoted-spec-or-kw)
-                          quoted-spec-or-kw
-                          (second quoted-spec-or-kw)))
-                      specs)))
-             {:merge true :line 1 :column 1})
-           identity opts)))
+        (let [is-self-require? (self-require? specs)
+              [target-ns restore-ns]
+              (if-not is-self-require?
+                [ana/*cljs-ns* nil]
+                ['cljs.user ana/*cljs-ns*])]
+          (evaluate-form repl-env env "<cljs repl>"
+            (with-meta
+              `(~'ns ~target-ns
+                 (:require
+                   ~@(map
+                       (fn [quoted-spec-or-kw]
+                         (if (keyword? quoted-spec-or-kw)
+                           quoted-spec-or-kw
+                           (second quoted-spec-or-kw)))
+                       specs)))
+              {:merge true :line 1 :column 1})
+            identity opts)
+          (when is-self-require?
+            (set! ana/*cljs-ns* restore-ns)))))
      'require-macros
      (fn self
        ([repl-env env form]
-         (self repl-env env form nil))
+        (self repl-env env form nil))
        ([repl-env env [_ & specs :as form] opts]
-         (evaluate-form repl-env env "<cljs repl>"
-           (with-meta
-             `(~'ns ~ana/*cljs-ns*
-                (:require-macros
-                  ~@(map
-                      (fn [quoted-spec-or-kw]
-                        (if (keyword? quoted-spec-or-kw)
-                          quoted-spec-or-kw
-                          (second quoted-spec-or-kw)))
-                      specs)))
-             {:merge true :line 1 :column 1})
-           identity opts)))
+        (evaluate-form repl-env env "<cljs repl>"
+          (with-meta
+            `(~'ns ~ana/*cljs-ns*
+               (:require-macros
+                 ~@(map
+                     (fn [quoted-spec-or-kw]
+                       (if (keyword? quoted-spec-or-kw)
+                         quoted-spec-or-kw
+                         (second quoted-spec-or-kw)))
+                     specs)))
+            {:merge true :line 1 :column 1})
+          identity opts)))
      'load-file load-file-fn
      'clojure.core/load-file load-file-fn
      'load-namespace
      (fn self
        ([repl-env env form]
-         (self env repl-env form nil))
+        (self env repl-env form nil))
        ([repl-env env [_ ns :as form] opts]
-         (load-namespace repl-env ns opts)))}))
+        (load-namespace repl-env ns opts)))}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
+clojurescript @ r2911
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:456-517](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L456-L517)</ins>
+            └── <ins>[repl.clj:475-543](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L475-L543)</ins>
 </pre>
 
 -->
@@ -164,12 +171,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form (repl)",
  :full-name-encode "specialrepl/load-file",
- :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         ;; guard against craziness like '5 which wreaks havoc\n         (when-not (and (= quote 'quote) (symbol? ns-name))\n           (throw (IllegalArgumentException. \"Argument to in-ns must be a symbol.\")))\n         (when-not (ana/get-namespace ns-name)\n           (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n           (-evaluate repl-env \"<cljs repl>\" 1\n             (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n         (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n         (evaluate-form repl-env env \"<cljs repl>\"\n           (with-meta\n             `(~'ns ~ana/*cljs-ns*\n                (:require\n                  ~@(map\n                      (fn [quoted-spec-or-kw]\n                        (if (keyword? quoted-spec-or-kw)\n                          quoted-spec-or-kw\n                          (second quoted-spec-or-kw)))\n                      specs)))\n             {:merge true :line 1 :column 1})\n           identity opts)))\n     'require-macros\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n         (evaluate-form repl-env env \"<cljs repl>\"\n           (with-meta\n             `(~'ns ~ana/*cljs-ns*\n                (:require-macros\n                  ~@(map\n                      (fn [quoted-spec-or-kw]\n                        (if (keyword? quoted-spec-or-kw)\n                          quoted-spec-or-kw\n                          (second quoted-spec-or-kw)))\n                      specs)))\n             {:merge true :line 1 :column 1})\n           identity opts)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n         (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n         (load-namespace repl-env ns opts)))}))",
+ :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         ;; guard against craziness like '5 which wreaks havoc\n        (when-not (and (= quote 'quote) (symbol? ns-name))\n          (throw (IllegalArgumentException. \"Argument to in-ns must be a symbol.\")))\n        (when-not (ana/get-namespace ns-name)\n          (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n          (-evaluate repl-env \"<cljs repl>\" 1\n            (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n        (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (let [is-self-require? (self-require? specs)\n              [target-ns restore-ns]\n              (if-not is-self-require?\n                [ana/*cljs-ns* nil]\n                ['cljs.user ana/*cljs-ns*])]\n          (evaluate-form repl-env env \"<cljs repl>\"\n            (with-meta\n              `(~'ns ~target-ns\n                 (:require\n                   ~@(map\n                       (fn [quoted-spec-or-kw]\n                         (if (keyword? quoted-spec-or-kw)\n                           quoted-spec-or-kw\n                           (second quoted-spec-or-kw)))\n                       specs)))\n              {:merge true :line 1 :column 1})\n            identity opts)\n          (when is-self-require?\n            (set! ana/*cljs-ns* restore-ns)))))\n     'require-macros\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (evaluate-form repl-env env \"<cljs repl>\"\n          (with-meta\n            `(~'ns ~ana/*cljs-ns*\n               (:require-macros\n                 ~@(map\n                     (fn [quoted-spec-or-kw]\n                       (if (keyword? quoted-spec-or-kw)\n                         quoted-spec-or-kw\n                         (second quoted-spec-or-kw)))\n                     specs)))\n            {:merge true :line 1 :column 1})\n          identity opts)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n        (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n        (load-namespace repl-env ns opts)))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r2850",
+          :tag "r2911",
           :filename "src/clj/cljs/repl.clj",
-          :lines [456 517]},
+          :lines [475 543]},
  :examples [{:id "0903c5",
              :content "```clj\n(load-file \"path/to/foo.cljs\")\n```"}],
  :full-name "specialrepl/load-file",
