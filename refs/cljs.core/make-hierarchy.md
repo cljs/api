@@ -38,7 +38,7 @@ Creates a hierarchy object for use with derive, isa? etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L7195-L7197):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L7195-L7197):
 
 ```clj
 (defn make-hierarchy
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7195-7197](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L7195-L7197)</ins>
+            └── <ins>[core.cljs:7195-7197](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L7195-L7197)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn make-hierarchy\n  [] {:parents {} :descendants {} :ancestors {}})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7195 7197]},
  :full-name "cljs.core/make-hierarchy",

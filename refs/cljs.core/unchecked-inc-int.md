@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1546-L1547):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1546-L1547):
 
 ```clj
 (defn unchecked-inc-int [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1546-1547](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1546-L1547)</ins>
+            └── <ins>[core.cljs:1546-1547](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1546-L1547)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L363-L364):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L363-L364):
 
 ```clj
 (defmacro unchecked-inc-int
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:363-364](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L363-L364)</ins>
+            └── <ins>[core.clj:363-364](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L363-L364)</ins>
 </pre>
 -->
 
@@ -111,13 +111,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-inc-int [x]\n  (cljs.core/unchecked-inc-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1546 1547]},
  :extra-sources [{:code "(defmacro unchecked-inc-int\n  ([x] `(inc ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2024",
+                  :tag "r2027",
                   :filename "src/clj/cljs/core.clj",
                   :lines [363 364]}],
  :full-name "cljs.core/unchecked-inc-int",

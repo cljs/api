@@ -85,7 +85,7 @@ atom's value will change.  Example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L6987-L7009):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6987-L7009):
 
 ```clj
 (defn add-watch
@@ -97,11 +97,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6987-7009](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L6987-L7009)</ins>
+            └── <ins>[core.cljs:6987-7009](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6987-L7009)</ins>
 </pre>
 
 -->
@@ -154,7 +154,7 @@ The API data for this symbol:
  :source {:code "(defn add-watch\n  [iref key f]\n  (-add-watch iref key f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6987 7009]},
  :examples [{:id "2f2fe0",

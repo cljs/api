@@ -36,7 +36,7 @@ old values. Useful for mocking out functions during testing.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1016-L1036):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1016-L1036):
 
 ```clj
 (defmacro with-redefs
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1016-1036](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1016-L1036)</ins>
+            └── <ins>[core.clj:1016-1036](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1016-L1036)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defmacro with-redefs\n  [bindings & body]\n  (let [names (take-nth 2 bindings)\n        vals (take-nth 2 (drop 1 bindings))\n        tempnames (map (comp gensym name) names)\n        binds (map core/vector names vals)\n        resets (reverse (map core/vector names tempnames))\n        bind-value (fn [[k v]] (core/list 'set! k v))]\n    `(let [~@(interleave tempnames names)]\n       (try\n        ~@(map bind-value binds)\n        ~@body\n        (finally\n         ~@(map bind-value resets))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/clj/cljs/core.clj",
           :lines [1016 1036]},
  :full-name "cljs.core/with-redefs",

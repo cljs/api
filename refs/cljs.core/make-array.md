@@ -36,7 +36,7 @@ Creates an empty JavaScript array of size `size`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L139-L143):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L139-L143):
 
 ```clj
 (defn make-array
@@ -50,18 +50,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:139-143](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L139-L143)</ins>
+            └── <ins>[core.cljs:139-143](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L139-L143)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1287-L1289):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1287-L1289):
 
 ```clj
 (defmacro make-array
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1287-1289](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1287-L1289)</ins>
+            └── <ins>[core.clj:1287-1289](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1287-L1289)</ins>
 </pre>
 -->
 
@@ -128,13 +128,13 @@ The API data for this symbol:
  :source {:code "(defn make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [139 143]},
  :extra-sources [{:code "(defmacro make-array\n  [size]\n  `(js/Array. ~size))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2024",
+                  :tag "r2027",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1287 1289]}],
  :full-name "cljs.core/make-array",

@@ -41,7 +41,7 @@ Any equal keys are handled as if by repeated uses of `conj`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L6204-L6206):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6204-L6206):
 
 ```clj
 (defn hash-set
@@ -53,35 +53,35 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6204-6206](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L6204-L6206)</ins>
+            └── <ins>[core.cljs:6204-6206](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6204-L6206)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1316-L1319):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1316-L1319):
 
 ```clj
 (defmacro hash-set
-  ([] #{})
+  ([] `cljs.core.PersistentHashSet.EMPTY)
   ([& xs]
-    `#{~@xs}))
+    `(set (array ~@xs))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1316-1319](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1316-L1319)</ins>
+            └── <ins>[core.clj:1316-1319](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1316-L1319)</ins>
 </pre>
 -->
 
@@ -132,13 +132,13 @@ The API data for this symbol:
  :source {:code "(defn hash-set\n  ([] #{})\n  ([& keys] (set keys)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6204 6206]},
- :extra-sources [{:code "(defmacro hash-set\n  ([] #{})\n  ([& xs]\n    `#{~@xs}))",
+ :extra-sources [{:code "(defmacro hash-set\n  ([] `cljs.core.PersistentHashSet.EMPTY)\n  ([& xs]\n    `(set (array ~@xs))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2024",
+                  :tag "r2027",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1316 1319]}],
  :full-name "cljs.core/hash-set",

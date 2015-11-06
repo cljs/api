@@ -58,7 +58,7 @@ Returns a new array map with supplied mappings.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L5791-L5795):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L5791-L5795):
 
 ```clj
 (defn array-map
@@ -70,22 +70,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5791-5795](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L5791-L5795)</ins>
+            └── <ins>[core.cljs:5791-5795](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L5791-L5795)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1301-L1306):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1301-L1306):
 
 ```clj
 (defmacro array-map
-  ([] {})
+  ([] `cljs.core.PersistentArrayMap.EMPTY)
   ([& kvs]
     (if (core/> (count kvs) 8)
       `(hash-map ~@kvs)
@@ -96,11 +96,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1301-1306](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1301-L1306)</ins>
+            └── <ins>[core.clj:1301-1306](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1301-L1306)</ins>
 </pre>
 -->
 
@@ -153,13 +153,13 @@ The API data for this symbol:
  :source {:code "(defn array-map\n  [& keyvals]\n  (PersistentArrayMap. nil (quot (count keyvals) 2) (apply array keyvals) nil))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/cljs/cljs/core.cljs",
           :lines [5791 5795]},
- :extra-sources [{:code "(defmacro array-map\n  ([] {})\n  ([& kvs]\n    (if (core/> (count kvs) 8)\n      `(hash-map ~@kvs)\n      `(cljs.core.PersistentArrayMap.fromArray (array ~@kvs) true))))",
+ :extra-sources [{:code "(defmacro array-map\n  ([] `cljs.core.PersistentArrayMap.EMPTY)\n  ([& kvs]\n    (if (core/> (count kvs) 8)\n      `(hash-map ~@kvs)\n      `(cljs.core.PersistentArrayMap.fromArray (array ~@kvs) true))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2024",
+                  :tag "r2027",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1301 1306]}],
  :examples [{:id "198026",

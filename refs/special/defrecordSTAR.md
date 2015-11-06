@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/analyzer.clj#L946-L955):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/analyzer.clj#L946-L955):
 
 ```clj
 (defmethod parse 'defrecord*
@@ -36,11 +36,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2024
+clojurescript @ r2027
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:946-955](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/analyzer.clj#L946-L955)</ins>
+            └── <ins>[analyzer.clj:946-955](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/analyzer.clj#L946-L955)</ins>
 </pre>
 
 -->
@@ -80,7 +80,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! env/*compiler* update-in [::namespaces (-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t :type true)]\n               (merge m\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info tsym env)))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2024",
+          :tag "r2027",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [946 955]},
  :full-name "special/defrecord*",
