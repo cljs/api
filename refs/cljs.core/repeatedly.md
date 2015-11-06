@@ -50,7 +50,7 @@ to it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4341-L4346):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4346-L4351):
 
 ```clj
 (defn repeatedly
@@ -62,12 +62,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4341-4346](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4341-L4346)</ins>
+                └── <ins>[core.cljs:4346-4351](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4346-L4351)</ins>
 </pre>
 
 -->
@@ -124,9 +124,9 @@ The API data for this symbol:
  :source {:code "(defn repeatedly\n  ([f] (lazy-seq (cons (f) (repeatedly f))))\n  ([n f] (take n (repeatedly f))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4341 4346]},
+          :lines [4346 4351]},
  :full-name "cljs.core/repeatedly",
  :clj-symbol "clojure.core/repeatedly",
  :docstring "Takes a function of no args, presumably with side effects, and\nreturns an infinite (or length n if supplied) lazy sequence of calls\nto it"}

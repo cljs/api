@@ -39,7 +39,7 @@ Example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L690-L718):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L690-L718):
 
 ```clj
 (core/defmacro goog-define
@@ -64,12 +64,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:690-718](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L690-L718)</ins>
+                └── <ins>[core.cljc:690-718](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L690-L718)</ins>
 </pre>
 
 -->
@@ -117,7 +117,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro goog-define\n  [sym default]\n  (assert-args goog-define\n   (core/or (core/string? default)\n            (core/number? default)\n            (core/true? default)\n            (core/false? default)) \"a string, number or boolean as default value\")\n  (core/let [defname (comp/munge (core/str *ns* \"/\" sym))\n             type    (core/cond\n                       (core/string? default) \"string\"\n                       (core/number? default) \"number\"\n                       (core/or (core/true? default) (core/false? default)) \"boolean\")]\n    `(do\n       (declare ~(symbol sym))\n       (~'js* ~(core/str \"/** @define {\" type \"} */\"))\n       (goog/define ~defname ~default))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [690 718]},
  :full-name "cljs.core/goog-define",

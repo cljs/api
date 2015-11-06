@@ -33,7 +33,7 @@ Given a source which can be compiled, watch it for changes to produce.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L221-L232):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L209-L220):
 
 ```clj
 (defn watch
@@ -53,13 +53,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:221-232](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L221-L232)</ins>
+                    └── <ins>[api.clj:209-220](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L209-L220)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn watch\n  ([source opts]\n   (watch source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (watch source opts compiler-env nil))\n  ([source opts compiler-env stop]\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/watch source opts compiler-env stop))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [221 232]},
+          :lines [209 220]},
  :full-name "cljs.build.api/watch",
  :docstring "Given a source which can be compiled, watch it for changes to produce."}
 

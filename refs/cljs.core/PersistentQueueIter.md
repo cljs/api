@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L5350-L5363):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L5355-L5368):
 
 ```clj
 (deftype PersistentQueueIter [^:mutable fseq riter]
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:5350-5363](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L5350-L5363)</ins>
+                └── <ins>[core.cljs:5355-5368](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L5355-L5368)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(deftype PersistentQueueIter [^:mutable fseq riter]\n  Object\n  (hasNext [_]\n    (or (and (some? fseq) (seq fseq)) (and (some? riter) (.hasNext riter))))\n  (next [_]\n    (cond\n      (some? fseq)\n      (let [ret (first fseq)]\n        (set! fseq (next fseq))\n        ret)\n      (and (some? riter) ^boolean (.hasNext riter))\n      (.next riter)\n      :else (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5350 5363]},
+          :lines [5355 5368]},
  :full-name "cljs.core/PersistentQueueIter",
  :full-name-encode "cljs.core/PersistentQueueIter",
  :history [["+" "1.7.28"]]}

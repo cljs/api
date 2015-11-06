@@ -45,7 +45,7 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L1698-L1738):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L1703-L1743):
 
 ```clj
 (defn get
@@ -94,12 +94,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1698-1738](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L1698-L1738)</ins>
+                └── <ins>[core.cljs:1703-1743](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L1703-L1743)</ins>
 </pre>
 
 -->
@@ -152,9 +152,9 @@ The API data for this symbol:
  :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o (int k)))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o (int k)))\n\n        (native-satisfies? ILookup o)\n        (-lookup o k)\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        (native-satisfies? ILookup o)\n        (-lookup o k not-found)\n\n        :else not-found)\n      not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1698 1738]},
+          :lines [1703 1743]},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

@@ -31,7 +31,7 @@ exception, stored implicitly by [`*e`][doc:cljs.core/*e].
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl.cljc#L1267-L1284):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl.cljc#L1267-L1284):
 
 ```clj
 (defmacro pst
@@ -58,12 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1267-1284](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl.cljc#L1267-L1284)</ins>
+                └── <ins>[repl.cljc:1267-1284](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl.cljc#L1267-L1284)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defmacro pst\n  ([] `(pst *e))\n  ([e]\n   (let [{:keys [repl-env] :as env} &env]\n     (when (and e repl-env)\n       (when-let [ret (if (satisfies? IGetError repl-env)\n                   (-get-error repl-env e env *repl-opts*)\n                   (edn/read-string\n                     (evaluate-form repl-env env \"<cljs repl>\"\n                       `(when ~e\n                          (pr-str\n                            {:value (str ~e)\n                             :stacktrace (.-stack ~e)})))))]\n         (display-error repl-env\n           (if (satisfies? IParseError repl-env)\n             (-parse-error repl-env ret *repl-opts*)\n             ret)\n           nil *repl-opts*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [1267 1284]},
  :full-name "cljs.repl/pst",

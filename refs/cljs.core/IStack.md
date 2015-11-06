@@ -27,7 +27,7 @@ Protocol for collections to provide access to their items as stacks. The top
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L533-L541):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L538-L546):
 
 ```clj
 (defprotocol IStack
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:533-541](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L533-L541)</ins>
+                └── <ins>[core.cljs:538-546](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L538-L546)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IStack\n  \"Protocol for collections to provide access to their items as stacks. The top\n  of the stack should be accessed in the most efficient way for the different\n  data structures.\"\n  (-peek [coll]\n    \"Returns the item from the top of the stack. Is used by cljs.core/peek.\")\n  (^clj -pop [coll]\n    \"Returns a new stack without the item on top of the stack. Is used\n     by cljs.core/pop.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [533 541]},
+          :lines [538 546]},
  :methods [{:name "-peek",
             :signature ["[coll]"],
             :docstring "Returns the item from the top of the stack. Is used by cljs.core/peek."}

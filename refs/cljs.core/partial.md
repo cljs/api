@@ -60,7 +60,7 @@ called, the returned function calls f with args + additional args.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3822-L3849):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3827-L3854):
 
 ```clj
 (defn partial
@@ -94,12 +94,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3822-3849](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3822-L3849)</ins>
+                └── <ins>[core.cljs:3827-3854](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3827-L3854)</ins>
 </pre>
 
 -->
@@ -156,9 +156,9 @@ The API data for this symbol:
  :source {:code "(defn partial\n  ([f] f)\n  ([f arg1]\n   (fn\n     ([] (f arg1))\n     ([x] (f arg1 x))\n     ([x y] (f arg1 x y))\n     ([x y z] (f arg1 x y z))\n     ([x y z & args] (apply f arg1 x y z args))))\n  ([f arg1 arg2]\n   (fn\n     ([] (f arg1 arg2))\n     ([x] (f arg1 arg2 x))\n     ([x y] (f arg1 arg2 x y))\n     ([x y z] (f arg1 arg2 x y z))\n     ([x y z & args] (apply f arg1 arg2 x y z args))))\n  ([f arg1 arg2 arg3]\n   (fn\n     ([] (f arg1 arg2 arg3))\n     ([x] (f arg1 arg2 arg3 x))\n     ([x y] (f arg1 arg2 arg3 x y))\n     ([x y z] (f arg1 arg2 arg3 x y z))\n     ([x y z & args] (apply f arg1 arg2 arg3 x y z args))))\n  ([f arg1 arg2 arg3 & more]\n   (fn [& args] (apply f arg1 arg2 arg3 (concat more args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3822 3849]},
+          :lines [3827 3854]},
  :full-name "cljs.core/partial",
  :clj-symbol "clojure.core/partial",
  :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args."}

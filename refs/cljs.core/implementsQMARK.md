@@ -27,7 +27,7 @@ EXPERIMENTAL
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1904-L1928):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L1919-L1943):
 
 ```clj
 (core/defmacro implements?
@@ -60,12 +60,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1904-1928](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1904-L1928)</ins>
+                └── <ins>[core.cljc:1919-1943](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L1919-L1943)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(core/defmacro implements?\n  [psym x]\n  (core/let [p          (:name\n                          (cljs.analyzer/resolve-var\n                            (dissoc &env :locals) psym))\n             prefix     (protocol-prefix p)\n             xsym       (bool-expr (gensym))\n             [part bit] (fast-path-protocols p)\n             msym       (symbol\n                          (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    (core/if-not (core/symbol? x)\n      `(let [~xsym ~x]\n         (if ~xsym\n           (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit) false)\n                   ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             false)\n           false))\n      `(if-not (nil? ~x)\n         (if (or ~(if bit `(unsafe-bit-and (. ~x ~msym) ~bit) false)\n                 ~(bool-expr `(. ~x ~(symbol (core/str \"-\" prefix)))))\n           true\n           false)\n         false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1904 1928]},
+          :lines [1919 1943]},
  :full-name "cljs.core/implements?",
  :docstring "EXPERIMENTAL"}
 

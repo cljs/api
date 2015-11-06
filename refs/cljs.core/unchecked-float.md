@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2364):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L2369):
 
 ```clj
 (defn ^number unchecked-float [x] x)
@@ -35,19 +35,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2364](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2364)</ins>
+                └── <ins>[core.cljs:2369](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L2369)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L969):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L969):
 
 ```clj
 (core/defmacro unchecked-float [x] x)
@@ -57,12 +57,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:969](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L969)</ins>
+                └── <ins>[core.cljc:969](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L969)</ins>
 </pre>
 -->
 
@@ -112,13 +112,13 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-float [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2364]},
+          :lines [2369]},
  :extra-sources [{:code "(core/defmacro unchecked-float [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.145",
+                  :tag "r1.7.166",
                   :filename "src/main/clojure/cljs/core.cljc",
                   :lines [969]}],
  :full-name "cljs.core/unchecked-float",

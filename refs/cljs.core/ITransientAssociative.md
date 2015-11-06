@@ -25,7 +25,7 @@ Protocol for adding associativity to transient collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L670-L674):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L675-L679):
 
 ```clj
 (defprotocol ITransientAssociative
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:670-674](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L670-L674)</ins>
+                └── <ins>[core.cljs:675-679](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L675-L679)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientAssociative\n  \"Protocol for adding associativity to transient collections.\"\n  (^clj -assoc! [tcoll key val]\n    \"Returns a new transient collection of tcoll with a mapping from key to\n     val added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [670 674]},
+          :lines [675 679]},
  :methods [{:name "-assoc!",
             :signature ["[tcoll key val]"],
             :docstring "Returns a new transient collection of tcoll with a mapping from key to\n     val added to it."}],

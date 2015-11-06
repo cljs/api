@@ -52,7 +52,7 @@ interleaved keys and values.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L1933-L1939):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L1938-L1944):
 
 ```clj
 (defn js-obj
@@ -66,19 +66,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1933-1939](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L1933-L1939)</ins>
+                └── <ins>[core.cljs:1938-1944](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L1938-L1944)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L2379-L2397):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L2394-L2412):
 
 ```clj
 (core/defmacro js-obj [& rest]
@@ -106,12 +106,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2379-2397](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L2379-L2397)</ins>
+                └── <ins>[core.cljc:2394-2412](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L2394-L2412)</ins>
 </pre>
 -->
 
@@ -159,15 +159,15 @@ The API data for this symbol:
  :source {:code "(defn js-obj\n  ([]\n     (cljs.core/js-obj))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1933 1939]},
+          :lines [1938 1944]},
  :extra-sources [{:code "(core/defmacro js-obj [& rest]\n  (core/let [sym-or-str? (core/fn [x] (core/or (core/symbol? x) (core/string? x)))\n             filter-on-keys (core/fn [f coll]\n                              (core/->> coll\n                                (filter (core/fn [[k _]] (f k)))\n                                (into {})))\n             kvs (into {} (map vec (partition 2 rest)))\n             sym-pairs (filter-on-keys core/symbol? kvs)\n             expr->local (zipmap\n                           (filter (complement sym-or-str?) (keys kvs))\n                           (repeatedly gensym))\n             obj (gensym \"obj\")]\n    (if (empty? rest)\n      (js-obj* '())\n      `(let [~@(apply concat (clojure.set/map-invert expr->local))\n            ~obj ~(js-obj* (filter-on-keys core/string? kvs))]\n        ~@(map (core/fn [[k v]] `(aset ~obj ~k ~v)) sym-pairs)\n        ~@(map (core/fn [[k v]] `(aset ~obj ~v ~(core/get kvs k))) expr->local)\n        ~obj))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.145",
+                  :tag "r1.7.166",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2379 2397]}],
+                  :lines [2394 2412]}],
  :examples [{:id "657cd7",
              :content "```clj\n(js-obj \"foo\" 1 \"bar\" 2)\n;;=> #js {:foo 1, :bar 2}\n```"}],
  :full-name "cljs.core/js-obj",

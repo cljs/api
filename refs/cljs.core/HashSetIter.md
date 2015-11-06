@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L7953-L7961):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L7958-L7966):
 
 ```clj
 (deftype HashSetIter [iter]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:7953-7961](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L7953-L7961)</ins>
+                └── <ins>[core.cljs:7958-7966](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L7958-L7966)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(deftype HashSetIter [iter]\n  Object\n  (hasNext [_]\n    (.hasNext iter))\n  (next [_]\n    (if ^boolean (.hasNext iter)\n      (aget (.-tail (.next iter)) 0)\n      (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7953 7961]},
+          :lines [7958 7966]},
  :full-name "cljs.core/HashSetIter",
  :full-name-encode "cljs.core/HashSetIter",
  :history [["+" "1.7.28"]]}

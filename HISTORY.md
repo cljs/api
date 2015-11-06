@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.166](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.166)__</td>
+<td>2015-11-04</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-17166syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17166library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17166compiler">
+ -1
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.145](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.145)__</td>
 <td>2015-10-13</td>
 <td><kbd>1.7.0</kbd></td>
@@ -3005,6 +3028,29 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.166
+
+<a name="17166syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="17166library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="17166compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.build.api/cljs-ns-dependents~~](refs/cljs.build.api/cljs-ns-dependents.md)</samp></td>
+</tr>
 </table>
 
 ### 1.7.145

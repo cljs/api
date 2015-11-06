@@ -29,7 +29,7 @@ true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L164-L169):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L150-L155):
 
 ```clj
 (defn add-implicit-options
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:164-169](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L164-L169)</ins>
+                    └── <ins>[api.clj:150-155](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L150-L155)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn add-implicit-options\n  [opts]\n  (closure/add-implicit-options opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [164 169]},
+          :lines [150 155]},
  :full-name "cljs.build.api/add-implicit-options",
  :docstring "Given a valid map of build options add any standard implicit options. For\nexample :optimizations :none implies :cache-analysis true and :source-map\ntrue."}
 

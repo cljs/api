@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3606-L3629):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3611-L3634):
 
 ```clj
 (deftype MultiStepper [xform iters nexts]
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3606-3629](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3606-L3629)</ins>
+                └── <ins>[core.cljs:3611-3634](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3611-L3634)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(deftype MultiStepper [xform iters nexts]\n  Object\n  (hasNext [_]\n    (loop [iters (seq iters)]\n      (if-not (nil? iters)\n        (let [iter (first iters)]\n          (if-not (.hasNext iter)\n            false\n            (recur (next iters))))\n        true)))\n  (next [_]\n    (dotimes [i (alength iters)]\n      (aset nexts i (.next (aget iters i))))\n    (prim-seq nexts 0))\n  (step [this lt]\n    (loop []\n      (if (and (not (nil? (.-stepper lt)))\n               (.hasNext this))\n        (if (reduced? (apply xform (cons lt (.next this))))\n          (when-not (nil? (.-rest lt))\n            (set! (.. lt -rest -stepper) nil))\n          (recur))))\n    (when-not (nil? (.-stepper lt))\n      (xform lt))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3606 3629]},
+          :lines [3611 3634]},
  :full-name "cljs.core/MultiStepper",
  :full-name-encode "cljs.core/MultiStepper",
  :history [["+" "0.0-2301"]]}

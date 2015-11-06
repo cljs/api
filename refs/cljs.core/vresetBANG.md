@@ -37,7 +37,7 @@ current value. Returns newval.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4064-L4067):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4069-L4072):
 
 ```clj
 (defn vreset!
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4064-4067](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4064-L4067)</ins>
+                └── <ins>[core.cljs:4069-4072](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4069-L4072)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn vreset!\n  [vol newval]  (-vreset! vol newval))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4064 4067]},
+          :lines [4069 4072]},
  :full-name "cljs.core/vreset!",
  :clj-symbol "clojure.core/vreset!",
  :docstring "Sets the value of volatile to newval without regard for the\ncurrent value. Returns newval."}

@@ -59,7 +59,7 @@ argument that triggers a logical true result against the original predicates.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4144-L4181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4149-L4186):
 
 ```clj
 (defn some-fn
@@ -102,12 +102,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4144-4181](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4144-L4181)</ins>
+                └── <ins>[core.cljs:4149-4186](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4149-L4186)</ins>
 </pre>
 
 -->
@@ -160,9 +160,9 @@ The API data for this symbol:
  :source {:code "(defn some-fn\n  ([p]\n     (fn sp1\n       ([] nil)\n       ([x] (p x))\n       ([x y] (or (p x) (p y)))\n       ([x y z] (or (p x) (p y) (p z)))\n       ([x y z & args] (or (sp1 x y z)\n                           (some p args)))))\n  ([p1 p2]\n     (fn sp2\n       ([] nil)\n       ([x] (or (p1 x) (p2 x)))\n       ([x y] (or (p1 x) (p1 y) (p2 x) (p2 y)))\n       ([x y z] (or (p1 x) (p1 y) (p1 z) (p2 x) (p2 y) (p2 z)))\n       ([x y z & args] (or (sp2 x y z)\n                           (some #(or (p1 %) (p2 %)) args)))))\n  ([p1 p2 p3]\n     (fn sp3\n       ([] nil)\n       ([x] (or (p1 x) (p2 x) (p3 x)))\n       ([x y] (or (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y)))\n       ([x y z] (or (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y) (p1 z) (p2 z) (p3 z)))\n       ([x y z & args] (or (sp3 x y z)\n                           (some #(or (p1 %) (p2 %) (p3 %)) args)))))\n  ([p1 p2 p3 & ps]\n     (let [ps (list* p1 p2 p3 ps)]\n       (fn spn\n         ([] nil)\n         ([x] (some #(% x) ps))\n         ([x y] (some #(or (% x) (% y)) ps))\n         ([x y z] (some #(or (% x) (% y) (% z)) ps))\n         ([x y z & args] (or (spn x y z)\n                             (some #(some % args) ps)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4144 4181]},
+          :lines [4149 4186]},
  :full-name "cljs.core/some-fn",
  :clj-symbol "clojure.core/some-fn",
  :docstring "Takes a set of predicates and returns a function f that returns the first logical true value\nreturned by one of its composing predicates against any of its arguments, else it returns\nlogical false. Note that f is short-circuiting in that it will stop execution on the first\nargument that triggers a logical true result against the original predicates."}

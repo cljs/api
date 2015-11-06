@@ -31,7 +31,7 @@ compiler state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer/api.clj#L61-L66):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer/api.clj#L61-L66):
 
 ```clj
 (defn get-js-index
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:61-66](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer/api.clj#L61-L66)</ins>
+                    └── <ins>[api.clj:61-66](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer/api.clj#L61-L66)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn get-js-index\n  ([] (get-options env/*compiler*))\n  ([state]\n   (get @state :js-dependency-index)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [61 66]},
  :full-name "cljs.analyzer.api/get-js-index",

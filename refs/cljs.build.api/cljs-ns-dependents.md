@@ -1,11 +1,11 @@
-## cljs.build.api/cljs-ns-dependents
+## ~~cljs.build.api/cljs-ns-dependents~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.166"><img valign="middle" alt="[×] 1.7.166" title="Removed in 1.7.166" src="https://img.shields.io/badge/×-1.7.166-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -99,7 +99,7 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "cljs-ns-dependents",
  :signature ["[ns]" "[state ns]"],
- :history [["+" "0.0-2629"]],
+ :history [["+" "0.0-2629"] ["-" "1.7.166"]],
  :type "function",
  :full-name-encode "cljs.build.api/cljs-ns-dependents",
  :source {:code "(defn cljs-ns-dependents\n  ([ns]\n   (cljs-ns-dependents\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     ns))\n  ([state ns]\n   (env/with-compiler-env state\n     (ana/ns-dependents ns))))",
@@ -109,7 +109,8 @@ The API data for this symbol:
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [73 85]},
  :full-name "cljs.build.api/cljs-ns-dependents",
- :docstring "Given a namespace symbol return a seq of all dependent\nnamespaces sorted in dependency order. Will include\ntransient dependents."}
+ :docstring "Given a namespace symbol return a seq of all dependent\nnamespaces sorted in dependency order. Will include\ntransient dependents.",
+ :removed {:in "1.7.166", :last-seen "1.7.145"}}
 
 ```
 

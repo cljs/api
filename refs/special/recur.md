@@ -32,7 +32,7 @@ Execution then jumps back to the recursion point, a loop or fn method.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L1536-L1549):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L1517-L1530):
 
 ```clj
 (defmethod parse 'recur
@@ -40,9 +40,9 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
   (let [context (:context env)
         frame (first *recur-frames*)
         exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]
-    (when-not frame 
+    (when-not frame
       (throw (error env "Can't recur here")))
-    (when-not (= (count exprs) (count (:params frame))) 
+    (when-not (= (count exprs) (count (:params frame)))
       (throw (error env "recur argument count mismatch")))
     (reset! (:flag frame) true)
     (assoc {:env env :op :recur :form form}
@@ -55,12 +55,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1536-1549](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L1536-L1549)</ins>
+                └── <ins>[analyzer.cljc:1517-1530](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L1517-L1530)</ins>
 </pre>
 
 -->
@@ -107,12 +107,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form",
  :full-name-encode "special/recur",
- :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _ _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (when-not frame \n      (throw (error env \"Can't recur here\")))\n    (when-not (= (count exprs) (count (:params frame))) \n      (throw (error env \"recur argument count mismatch\")))\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
+ :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _ _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (when-not frame\n      (throw (error env \"Can't recur here\")))\n    (when-not (= (count exprs) (count (:params frame)))\n      (throw (error env \"recur argument count mismatch\")))\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1536 1549]},
+          :lines [1517 1530]},
  :full-name "special/recur",
  :clj-symbol "clojure.core/recur",
  :docstring "Evaluates the exprs in order, then, in parallel, rebinds\nthe bindings of the recursion point to the values of the exprs.\nExecution then jumps back to the recursion point, a loop or fn method."}

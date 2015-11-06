@@ -26,7 +26,7 @@ Protocol for seq types that can reduce themselves.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L566-L572):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L571-L577):
 
 ```clj
 (defprotocol IReduce
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:566-572](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L566-L572)</ins>
+                └── <ins>[core.cljs:571-577](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L571-L577)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IReduce\n  \"Protocol for seq types that can reduce themselves.\n  Called by cljs.core/reduce.\"\n  (-reduce [coll f] [coll f start]\n    \"f should be a function of 2 arguments. If start is not supplied,\n     returns the result of applying f to the first 2 items in coll, then\n     applying f to that result and the 3rd item, etc.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [566 572]},
+          :lines [571 577]},
  :methods [{:name "-reduce",
             :signature ["[coll f]" "[coll f start]"],
             :docstring "f should be a function of 2 arguments. If start is not supplied,\n     returns the result of applying f to the first 2 items in coll, then\n     applying f to that result and the 3rd item, etc."}],

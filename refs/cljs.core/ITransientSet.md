@@ -25,7 +25,7 @@ Protocol for adding set functionality to a transient collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L688-L691):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L693-L696):
 
 ```clj
 (defprotocol ITransientSet
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:688-691](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L688-L691)</ins>
+                └── <ins>[core.cljs:693-696](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L693-L696)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientSet\n  \"Protocol for adding set functionality to a transient collection.\"\n  (^clj -disjoin! [tcoll v]\n    \"Returns tcoll without v.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [688 691]},
+          :lines [693 696]},
  :methods [{:name "-disjoin!",
             :signature ["[tcoll v]"],
             :docstring "Returns tcoll without v."}],

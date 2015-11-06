@@ -50,7 +50,7 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4257-L4280):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4262-L4285):
 
 ```clj
 (defn drop
@@ -81,12 +81,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4257-4280](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L4257-L4280)</ins>
+                └── <ins>[core.cljs:4262-4285](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L4262-L4285)</ins>
 </pre>
 
 -->
@@ -143,9 +143,9 @@ The API data for this symbol:
  :source {:code "(defn drop\n  ([n]\n   {:pre [(number? n)]}\n     (fn [rf]\n       (let [na (volatile! n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na]\n                (vswap! na dec)\n                (if (pos? n)\n                  result\n                  (rf result input))))))))\n  ([n coll]\n   {:pre [(number? n)]}\n     (let [step (fn [n coll]\n                  (let [s (seq coll)]\n                    (if (and (pos? n) s)\n                      (recur (dec n) (rest s))\n                      s)))]\n       (lazy-seq (step n coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4257 4280]},
+          :lines [4262 4285]},
  :full-name "cljs.core/drop",
  :clj-symbol "clojure.core/drop",
  :docstring "Returns a lazy sequence of all but the first n items in coll.\nReturns a stateful transducer when no collection is provided."}

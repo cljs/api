@@ -25,7 +25,7 @@ Protocol for adding basic functionality to transient collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L663-L668):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L668-L673):
 
 ```clj
 (defprotocol ITransientCollection
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:663-668](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L663-L668)</ins>
+                └── <ins>[core.cljs:668-673](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L668-L673)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientCollection\n  \"Protocol for adding basic functionality to transient collections.\"\n  (^clj -conj! [tcoll val]\n    \"Adds value val to tcoll and returns tcoll.\")\n  (^clj -persistent! [tcoll]\n    \"Creates a persistent data structure from tcoll and returns it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [663 668]},
+          :lines [668 673]},
  :methods [{:name "-conj!",
             :signature ["[tcoll val]"],
             :docstring "Adds value val to tcoll and returns tcoll."}

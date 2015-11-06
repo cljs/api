@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10133-L10141):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L10138-L10155):
 
 ```clj
 (defn find-ns-obj [ns]
@@ -30,7 +30,16 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
         segs (.split munged-ns ".")]
     (case *target*
       "nodejs"  (if ^boolean js/COMPILED
-                  (js/eval munged-ns)
+                  ; Under simple optimizations on nodejs, namespaces will be in module
+                  ; rather than global scope and must be accessed by a direct call to eval.
+                  ; The first segment may refer to an undefined variable, so its evaluation
+                  ; may throw ReferenceError.
+                  (find-ns-obj*
+                    (try
+                      (js/eval (first segs))
+                      (catch js/ReferenceError e
+                        nil))
+                    (next segs))
                   (find-ns-obj* js/global segs))
       "default" (find-ns-obj* goog/global segs)
       (throw (js/Error. (str "find-ns-obj not supported for target " *target*))))))
@@ -40,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10133-10141](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10133-L10141)</ins>
+                └── <ins>[core.cljs:10138-10155](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L10138-L10155)</ins>
 </pre>
 
 -->
@@ -88,12 +97,12 @@ The API data for this symbol:
  :name "find-ns-obj",
  :type "function",
  :signature ["[ns]"],
- :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  (js/eval munged-ns)\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
+ :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  ; Under simple optimizations on nodejs, namespaces will be in module\n                  ; rather than global scope and must be accessed by a direct call to eval.\n                  ; The first segment may refer to an undefined variable, so its evaluation\n                  ; may throw ReferenceError.\n                  (find-ns-obj*\n                    (try\n                      (js/eval (first segs))\n                      (catch js/ReferenceError e\n                        nil))\n                    (next segs))\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10133 10141]},
+          :lines [10138 10155]},
  :full-name "cljs.core/find-ns-obj",
  :full-name-encode "cljs.core/find-ns-obj",
  :history [["+" "1.7.10"]]}

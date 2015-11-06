@@ -35,12 +35,12 @@ returned.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L1555-L1581):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L1536-L1562):
 
 ```clj
 (defmethod parse 'new
   [_ env [_ ctor & args :as form] _ _]
-  (when-not (symbol? ctor) 
+  (when-not (symbol? ctor)
     (throw (error env "First arg to new must be a symbol")))
   (disallowing-recur
    (let [enve (assoc env :context :expr)
@@ -71,12 +71,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1555-1581](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L1555-L1581)</ins>
+                └── <ins>[analyzer.cljc:1536-1562](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L1536-L1562)</ins>
 </pre>
 
 -->
@@ -123,12 +123,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form",
  :full-name-encode "special/new",
- :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _ _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         ctor-var (resolve-existing-var env ctor)\n         record-args\n         (when (and (:record ctor-var) (not (-> ctor meta :internal-ctor)))\n           (repeat 3 (analyze enve nil)))\n         argexprs (into (vec (map #(analyze enve %) args)) record-args)\n         known-num-fields (:num-fields ctor-var)\n         argc (count args)]\n     (when (and (not (-> ctor meta :internal-ctor))\n                known-num-fields (not= known-num-fields argc))\n       (warning :fn-arity env {:argc argc :ctor ctor}))\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)\n      :tag (let [name (-> ctorexpr :info :name)]\n             (or ('{js/Object object\n                    js/String string\n                    js/Array  array\n                    js/Number number\n                    js/Function function\n                    js/Boolean boolean} name)\n                 name))})))",
+ :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _ _]\n  (when-not (symbol? ctor)\n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         ctor-var (resolve-existing-var env ctor)\n         record-args\n         (when (and (:record ctor-var) (not (-> ctor meta :internal-ctor)))\n           (repeat 3 (analyze enve nil)))\n         argexprs (into (vec (map #(analyze enve %) args)) record-args)\n         known-num-fields (:num-fields ctor-var)\n         argc (count args)]\n     (when (and (not (-> ctor meta :internal-ctor))\n                known-num-fields (not= known-num-fields argc))\n       (warning :fn-arity env {:argc argc :ctor ctor}))\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)\n      :tag (let [name (-> ctorexpr :info :name)]\n             (or ('{js/Object object\n                    js/String string\n                    js/Array  array\n                    js/Number number\n                    js/Function function\n                    js/Boolean boolean} name)\n                 name))})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1555 1581]},
+          :lines [1536 1562]},
  :full-name "special/new",
  :clj-symbol "clojure.core/new",
  :docstring "The args, if any, are evaluated from left to right, and\npassed to the JavaScript constructor. The constructed object is\nreturned."}

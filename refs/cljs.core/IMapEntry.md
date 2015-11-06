@@ -25,7 +25,7 @@ Protocol for examining a map entry.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L521-L526):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L526-L531):
 
 ```clj
 (defprotocol IMapEntry
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:521-526](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L521-L526)</ins>
+                └── <ins>[core.cljs:526-531](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L526-L531)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IMapEntry\n  \"Protocol for examining a map entry.\"\n  (-key [coll]\n    \"Returns the key of the map entry.\")\n  (-val [coll]\n    \"Returns the value of the map entry.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [521 526]},
+          :lines [526 531]},
  :methods [{:name "-key",
             :signature ["[coll]"],
             :docstring "Returns the key of the map entry."}

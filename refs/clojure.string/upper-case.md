@@ -35,7 +35,7 @@ Converts string to all upper-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/string.cljs#L85-L88):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L85-L88):
 
 ```clj
 (defn upper-case
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/string.cljs#L85-L88)</ins>
+                └── <ins>[string.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L85-L88)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn upper-case\n  [s]\n  (.toUpperCase s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [85 88]},
  :full-name "clojure.string/upper-case",

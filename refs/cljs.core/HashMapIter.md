@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L6782-L6792):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L6787-L6797):
 
 ```clj
 (deftype HashMapIter [nil-val root-iter ^:mutable seen]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:6782-6792](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L6782-L6792)</ins>
+                └── <ins>[core.cljs:6787-6797](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L6787-L6797)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(deftype HashMapIter [nil-val root-iter ^:mutable seen]\n  Object\n  (hasNext [_]\n    (and ^boolean seen ^boolean (.hasNext root-iter)))\n  (next [_]\n    (if-not ^boolean seen\n      (do\n        (set! seen true)\n        nil-val)\n      (.next root-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6782 6792]},
+          :lines [6787 6797]},
  :full-name "cljs.core/HashMapIter",
  :full-name-encode "cljs.core/HashMapIter",
  :history [["+" "1.7.28"]]}

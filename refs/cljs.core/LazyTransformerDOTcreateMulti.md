@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3714-L3721):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3719-L3726):
 
 ```clj
 (set! (.-createMulti LazyTransformer)
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3714-3721](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L3714-L3721)</ins>
+                └── <ins>[core.cljs:3719-3726](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L3719-L3726)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(set! (.-createMulti LazyTransformer)\n  (fn [xform colls]\n    (let [iters (array)]\n      (doseq [coll colls]\n        (.push iters (iter coll)))\n      (LazyTransformer.\n        (multi-stepper xform iters (make-array (alength iters)))\n        nil nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3714 3721]},
+          :lines [3719 3726]},
  :full-name "cljs.core/LazyTransformer.createMulti"}
 
 ```

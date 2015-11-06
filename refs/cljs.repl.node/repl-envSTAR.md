@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl/node.clj#L211-L218):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl/node.clj#L211-L218):
 
 ```clj
 (defn repl-env* [options]
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:211-218](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl/node.clj#L211-L218)</ins>
+                    └── <ins>[node.clj:211-218](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl/node.clj#L211-L218)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env* [options]\n  (let [{:keys [host port debug-port]}\n        (merge\n          {:host \"localhost\"\n           :port (+ 49000 (rand-int 10000))}\n          options)]\n    (assoc (NodeEnv. host port (atom nil) (atom nil))\n      :debug-port debug-port)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [211 218]},
  :full-name "cljs.repl.node/repl-env*",

@@ -74,7 +74,7 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2056-L2080):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L2061-L2085):
 
 ```clj
 (defn ^number compare
@@ -104,12 +104,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2056-2080](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2056-L2080)</ins>
+                └── <ins>[core.cljs:2061-2085](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L2061-L2085)</ins>
 </pre>
 
 -->
@@ -165,9 +165,9 @@ The API data for this symbol:
  :source {:code "(defn ^number compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (number? x) (if (number? y)\n                 (garray/defaultCompare x y)\n                 (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))\n\n   (satisfies? IComparable x)\n   (-compare x y)\n\n   :else\n   (if (and (or (string? x) (array? x) (true? x) (false? x))\n            (identical? (type x) (type y)))\n     (garray/defaultCompare x y)\n     (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2056 2080]},
+          :lines [2061 2085]},
  :examples [{:id "e13fa0",
              :content "```clj\n(compare 10 12)\n;;=> -1\n\n(compare 12 10)\n;;=> 1\n\n(compare 10 10)\n;;=> 0\n\n(compare 10 nil)\n;;=>  1\n\n(compare 10 (list 1 2 3))\n;; Error: compare on non-nil objects of different types\n```"}],
  :full-name "cljs.core/compare",

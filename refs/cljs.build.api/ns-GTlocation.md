@@ -33,7 +33,7 @@ uri of the corresponding source regardless of the source language extension:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L144-L155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L130-L141):
 
 ```clj
 (defn ns->location
@@ -50,13 +50,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
+clojurescript @ r1.7.166
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:144-155](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L144-L155)</ins>
+                    └── <ins>[api.clj:130-141](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/build/api.clj#L130-L141)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn ns->location\n  ([ns]\n   (ns->location ns\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))))\n  ([ns compiler-env]\n   (closure/source-for-namespace ns compiler-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.145",
+          :tag "r1.7.166",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [144 155]},
+          :lines [130 141]},
  :full-name "cljs.build.api/ns->location",
  :docstring "Given a namespace and compilation environment return the relative path and\nuri of the corresponding source regardless of the source language extension:\n.cljs, .cljc, .js. Returns a map containing :relative-path a string, and\n:uri a URL."}
 
