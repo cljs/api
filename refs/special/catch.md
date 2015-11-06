@@ -36,62 +36,65 @@ Since JavaScript allows you to throw anything, `exception-type` can be set to
 
 ###### See Also:
 
-[``](../special/try.md)<br>
+[`try`](../special/try.md)<br>
 [`finally`](../special/finally.md)<br>
 [`throw`](../special/throw.md)<br>
 
 ---
 
 
-Source docstring:
-
-```
-(try expr* catch-clause* finally-clause?)
-
- Special Form
-
- catch-clause => (catch protoname name expr*)
- finally-clause => (finally expr*)
-
-Catches and handles JavaScript exceptions.
-```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L1004-L1032):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L290-L325):
 
 ```clj
-(defmacro try
-  [& forms]
-  (let [catch? #(and (seq? %) (= (first %) 'catch))
-        [body catches] (split-with (complement catch?) forms)
-        [catches fin] (split-with catch? catches)
-        e (gensym "e")]
-    (assert (every? #(clojure.core/> (count %) 2) catches) "catch block must specify a prototype and a name")
-    (if (seq catches)
-      `(~'try*
-        ~@body
-        (catch ~e
-            (cond
-             ~@(mapcat
-                (fn [[_ type name & cb]]
-                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])
-                catches)
-             :else (throw ~e)))
-        ~@fin)
-      `(~'try*
-        ~@body
-        ~@fin))))
+(defmethod parse 'try
+  [op env [_ & body :as form] name]
+  (let [catchenv (update-in env [:context] #(if (= :expr %) :return %))
+        catch? (every-pred seq? #(= (first %) 'catch))
+        finally? (every-pred seq? #(= (first %) 'finally))
+        [body tail] (split-with (complement (some-fn catch? finally?)) body)
+        [cblocks [fblock]] (split-with catch? tail)
+        finally (when (seq fblock)
+                  (analyze (assoc env :context :statement) `(do ~@(rest fblock))))
+        e (when (seq cblocks) (gensym "e"))
+        cblock (when e
+                 `(cljs.core/cond
+                   ~@(mapcat
+                      (fn [[_ type name & cb]]
+                        (when name (assert (not (namespace name)) "Can't qualify symbol in catch"))
+                        `[(cljs.core/instance? ~type ~e)
+                          (cljs.core/let [~name ~e] ~@cb)])
+                      cblocks)
+                   :else (throw ~e)))
+        locals (:locals catchenv)
+        locals (if e
+                 (assoc locals e
+                        {:name e
+                         :line (get-line e env)
+                         :column (get-col e env)})
+                 locals)
+        catch (when cblock
+                (analyze (assoc catchenv :locals locals) cblock))
+        try (analyze (if (or e finally) catchenv env) `(do ~@body))]
+
+    {:env env :op :try :form form
+     :try try
+     :finally finally
+     :name e
+     :catch catch
+     :children [try catch finally]}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1004-1032](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L1004-L1032)</ins>
+            └── <ins>[analyzer.clj:290-325](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L290-L325)</ins>
 </pre>
 
 -->
@@ -140,15 +143,14 @@ The API data for this symbol:
  :type "special form",
  :related ["special/try" "special/finally" "special/throw"],
  :full-name-encode "special/catch",
- :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (seq? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
-          :title "Source code",
+ :source {:code "(defmethod parse 'try\n  [op env [_ & body :as form] name]\n  (let [catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        catch? (every-pred seq? #(= (first %) 'catch))\n        finally? (every-pred seq? #(= (first %) 'finally))\n        [body tail] (split-with (complement (some-fn catch? finally?)) body)\n        [cblocks [fblock]] (split-with catch? tail)\n        finally (when (seq fblock)\n                  (analyze (assoc env :context :statement) `(do ~@(rest fblock))))\n        e (when (seq cblocks) (gensym \"e\"))\n        cblock (when e\n                 `(cljs.core/cond\n                   ~@(mapcat\n                      (fn [[_ type name & cb]]\n                        (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n                        `[(cljs.core/instance? ~type ~e)\n                          (cljs.core/let [~name ~e] ~@cb)])\n                      cblocks)\n                   :else (throw ~e)))\n        locals (:locals catchenv)\n        locals (if e\n                 (assoc locals e\n                        {:name e\n                         :line (get-line e env)\n                         :column (get-col e env)})\n                 locals)\n        catch (when cblock\n                (analyze (assoc catchenv :locals locals) cblock))\n        try (analyze (if (or e finally) catchenv env) `(do ~@body))]\n\n    {:env env :op :try :form form\n     :try try\n     :finally finally\n     :name e\n     :catch catch\n     :children [try catch finally]}))",
+          :title "Parser code",
           :repo "clojurescript",
-          :tag "r1913",
-          :filename "src/clj/cljs/core.clj",
-          :lines [1004 1032]},
+          :tag "r1933",
+          :filename "src/clj/cljs/analyzer.clj",
+          :lines [290 325]},
  :full-name "special/catch",
- :clj-symbol "clojure.core/catch",
- :docstring "(try expr* catch-clause* finally-clause?)\n\n Special Form\n\n catch-clause => (catch protoname name expr*)\n finally-clause => (finally expr*)\n\nCatches and handles JavaScript exceptions."}
+ :clj-symbol "clojure.core/catch"}
 
 ```
 

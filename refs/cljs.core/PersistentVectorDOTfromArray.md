@@ -22,17 +22,17 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3324-L3335):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3325-L3336):
 
 ```clj
-(set! cljs.core.PersistentVector/fromArray
+(set! cljs.core.PersistentVector.fromArray
   (fn [xs ^boolean no-clone]
     (let [l (alength xs)
           xs (if no-clone xs (aclone xs))]
       (if (< l 32)
-        (PersistentVector. nil l 5 cljs.core.PersistentVector/EMPTY_NODE xs nil)
+        (PersistentVector. nil l 5 cljs.core.PersistentVector.EMPTY_NODE xs nil)
         (let [node (.slice xs 0 32)
-              v (PersistentVector. nil 32 5 cljs.core.PersistentVector/EMPTY_NODE node nil)]
+              v (PersistentVector. nil 32 5 cljs.core.PersistentVector.EMPTY_NODE node nil)]
           (loop [i 32 out (-as-transient v)]
             (if (< i l)
               (recur (inc i) (conj! out (aget xs i)))
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3324-3335](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3324-L3335)</ins>
+            └── <ins>[core.cljs:3325-3336](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3325-L3336)</ins>
 </pre>
 
 -->
@@ -93,12 +93,12 @@ The API data for this symbol:
  :parent-type "PersistentVector",
  :type "function",
  :full-name-encode "cljs.core/PersistentVectorDOTfromArray",
- :source {:code "(set! cljs.core.PersistentVector/fromArray\n  (fn [xs ^boolean no-clone]\n    (let [l (alength xs)\n          xs (if no-clone xs (aclone xs))]\n      (if (< l 32)\n        (PersistentVector. nil l 5 cljs.core.PersistentVector/EMPTY_NODE xs nil)\n        (let [node (.slice xs 0 32)\n              v (PersistentVector. nil 32 5 cljs.core.PersistentVector/EMPTY_NODE node nil)]\n          (loop [i 32 out (-as-transient v)]\n            (if (< i l)\n              (recur (inc i) (conj! out (aget xs i)))\n              (persistent! out))))))))",
+ :source {:code "(set! cljs.core.PersistentVector.fromArray\n  (fn [xs ^boolean no-clone]\n    (let [l (alength xs)\n          xs (if no-clone xs (aclone xs))]\n      (if (< l 32)\n        (PersistentVector. nil l 5 cljs.core.PersistentVector.EMPTY_NODE xs nil)\n        (let [node (.slice xs 0 32)\n              v (PersistentVector. nil 32 5 cljs.core.PersistentVector.EMPTY_NODE node nil)]\n          (loop [i 32 out (-as-transient v)]\n            (if (< i l)\n              (recur (inc i) (conj! out (aget xs i)))\n              (persistent! out))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3324 3335]},
+          :lines [3325 3336]},
  :full-name "cljs.core/PersistentVector.fromArray"}
 
 ```

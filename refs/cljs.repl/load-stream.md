@@ -11,7 +11,7 @@
 
 
  <samp>
-(__load-stream__ repl-env filename stream)<br>
+(__load-stream__ repl-env filename res)<br>
 </samp>
 
 ---
@@ -22,30 +22,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl.clj#L96-L105):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/repl.clj#L89-L93):
 
 ```clj
-(defn load-stream [repl-env filename stream]
-  (with-open [r (io/reader stream)]
-    (let [env (ana/empty-env)
-          pbr (clojure.lang.LineNumberingPushbackReader. r)
-          eof (Object.)]
-      (loop [r (read pbr false eof false)]
-        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]
-          (when-not (identical? eof r)
-            (evaluate-form repl-env env filename r)
-            (recur (read pbr false eof false))))))))
+(defn load-stream [repl-env filename res]
+  (let [env (ana/empty-env)]
+    (doseq [form (ana/forms-seq res)]
+      (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]
+        (evaluate-form repl-env env filename form)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:96-105](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl.clj#L96-L105)</ins>
+            └── <ins>[repl.clj:89-93](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/repl.clj#L89-L93)</ins>
 </pre>
 
 -->
@@ -87,13 +82,13 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "load-stream",
  :type "function",
- :signature ["[repl-env filename stream]"],
- :source {:code "(defn load-stream [repl-env filename stream]\n  (with-open [r (io/reader stream)]\n    (let [env (ana/empty-env)\n          pbr (clojure.lang.LineNumberingPushbackReader. r)\n          eof (Object.)]\n      (loop [r (read pbr false eof false)]\n        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n          (when-not (identical? eof r)\n            (evaluate-form repl-env env filename r)\n            (recur (read pbr false eof false))))))))",
+ :signature ["[repl-env filename res]"],
+ :source {:code "(defn load-stream [repl-env filename res]\n  (let [env (ana/empty-env)]\n    (doseq [form (ana/forms-seq res)]\n      (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n        (evaluate-form repl-env env filename form)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/clj/cljs/repl.clj",
-          :lines [96 105]},
+          :lines [89 93]},
  :full-name "cljs.repl/load-stream",
  :full-name-encode "cljs.repl/load-stream",
  :history [["+" "0.0-927"]]}

@@ -30,7 +30,7 @@
 
 ###### See Also:
 
-[``](../special/try.md)<br>
+[`try`](../special/try.md)<br>
 [`catch`](../special/catch.md)<br>
 [`finally`](../special/finally.md)<br>
 
@@ -39,7 +39,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L273-L278):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L283-L288):
 
 ```clj
 (defmethod parse 'throw
@@ -54,11 +54,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:273-278](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L273-L278)</ins>
+            └── <ins>[analyzer.clj:283-288](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L283-L288)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'throw\n  [op env [_ throw :as form] name]\n  (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]\n    {:env env :op :throw :form form\n     :throw throw-expr\n     :children [throw-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [273 278]},
+          :lines [283 288]},
  :full-name "special/throw",
  :clj-symbol "clojure.core/throw"}
 

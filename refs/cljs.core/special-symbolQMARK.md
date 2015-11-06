@@ -25,12 +25,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L7524-L7528):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L7525-L7529):
 
 ```clj
 (defn ^boolean special-symbol? [x]
   (contains?
-    '#{if def fn* do let* loop* letfn* throw try*
+    '#{if def fn* do let* loop* letfn* throw try
        recur new set! ns deftype* defrecord* . js* & quote}
     x))
 ```
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7524-7528](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L7524-L7528)</ins>
+            └── <ins>[core.cljs:7525-7529](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L7525-L7529)</ins>
 </pre>
 
 -->
@@ -92,12 +92,12 @@ The API data for this symbol:
  :history [["+" "0.0-1803"]],
  :type "function",
  :full-name-encode "cljs.core/special-symbolQMARK",
- :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try*\n       recur new set! ns deftype* defrecord* . js* & quote}\n    x))",
+ :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try\n       recur new set! ns deftype* defrecord* . js* & quote}\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7524 7528]},
+          :lines [7525 7529]},
  :full-name "cljs.core/special-symbol?",
  :clj-symbol "clojure.core/special-symbol?"}
 

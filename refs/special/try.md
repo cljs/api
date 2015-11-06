@@ -1,28 +1,39 @@
-## finally
+## try
 
 
 
  <table border="1">
 <tr>
 <td>special form</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[+] 0.0-1933" title="Added in 0.0-1933" src="https://img.shields.io/badge/+-0.0--1933-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/finally</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/finally)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/try</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/try)
 </td>
 </tr>
 </table>
 
 
  <samp>
-(__finally__ expr\*)<br>
+(__try__ expr\* catch-clause\* finally-clause?)<br>
 </samp>
 
 ---
 
-`finally` should be the last form inside of a `try` expression. It is optional.
+The expressions (`expr*`) are evaluated and, if no exceptions occur, the value
+of the last is returned.
 
-`finally` clauses are always evaluated for their side effects whether there was
-an error or not, but they are never the return value of a `try` expression.
+If an exception occurs and catch clauses (`catch-clause*`) are provided, each is
+examined in turn and the first for which the thrown exception is an instance of
+the named class is considered a matching catch clause. If there is a matching
+catch clause, its expressions are evaluated in a context in which name is bound
+to the thrown exception, and the value of the last is the return value of the
+function.
+
+If there is no matching catch clause, the exception propagates out of the
+function. Before returning, normally or abnormally, any `finally-clause?`
+expressions will be evaluated for their side effects.
+
+`try` is one of ClojureScript's [special forms](http://clojure.org/special_forms).
 
 
 
@@ -31,8 +42,8 @@ an error or not, but they are never the return value of a `try` expression.
 
 ###### See Also:
 
-[`try`](../special/try.md)<br>
 [`catch`](../special/catch.md)<br>
+[`finally`](../special/finally.md)<br>
 [`throw`](../special/throw.md)<br>
 
 ---
@@ -100,9 +111,9 @@ clojurescript @ r1933
 
 ###### External doc links:
 
-[`clojure.core/finally` @ clojuredocs](http://clojuredocs.org/clojure.core/finally)<br>
-[`clojure.core/finally` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/finally/)<br>
-[`clojure.core/finally` @ crossclj](http://crossclj.info/fun/clojure.core/finally.html)<br>
+[`clojure.core/try` @ clojuredocs](http://clojuredocs.org/clojure.core/try)<br>
+[`clojure.core/try` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/try/)<br>
+[`clojure.core/try` @ crossclj](http://crossclj.info/fun/clojure.core/try.html)<br>
 
 ---
 
@@ -114,7 +125,7 @@ Created for the upcoming ClojureScript website.<br>
 [edit here] | [learn how]
 </td></tr></table>
 
-[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/finally.cljsdoc
+[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/try.cljsdoc
 [learn how]:https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files
 
 <!--
@@ -130,22 +141,22 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:description "`finally` should be the last form inside of a `try` expression. It is optional.\n\n`finally` clauses are always evaluated for their side effects whether there was\nan error or not, but they are never the return value of a `try` expression.",
+{:description "The expressions (`expr*`) are evaluated and, if no exceptions occur, the value\nof the last is returned.\n\nIf an exception occurs and catch clauses (`catch-clause*`) are provided, each is\nexamined in turn and the first for which the thrown exception is an instance of\nthe named class is considered a matching catch clause. If there is a matching\ncatch clause, its expressions are evaluated in a context in which name is bound\nto the thrown exception, and the value of the last is the return value of the\nfunction.\n\nIf there is no matching catch clause, the exception propagates out of the\nfunction. Before returning, normally or abnormally, any `finally-clause?`\nexpressions will be evaluated for their side effects.\n\n`try` is one of ClojureScript's [special forms](http://clojure.org/special_forms).",
  :ns "special",
- :name "finally",
- :signature ["[expr*]"],
- :history [["+" "0.0-927"]],
+ :name "try",
+ :signature ["[expr* catch-clause* finally-clause?]"],
+ :history [["+" "0.0-1933"]],
  :type "special form",
- :related ["special/try" "special/catch" "special/throw"],
- :full-name-encode "special/finally",
+ :related ["special/catch" "special/finally" "special/throw"],
+ :full-name-encode "special/try",
  :source {:code "(defmethod parse 'try\n  [op env [_ & body :as form] name]\n  (let [catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        catch? (every-pred seq? #(= (first %) 'catch))\n        finally? (every-pred seq? #(= (first %) 'finally))\n        [body tail] (split-with (complement (some-fn catch? finally?)) body)\n        [cblocks [fblock]] (split-with catch? tail)\n        finally (when (seq fblock)\n                  (analyze (assoc env :context :statement) `(do ~@(rest fblock))))\n        e (when (seq cblocks) (gensym \"e\"))\n        cblock (when e\n                 `(cljs.core/cond\n                   ~@(mapcat\n                      (fn [[_ type name & cb]]\n                        (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n                        `[(cljs.core/instance? ~type ~e)\n                          (cljs.core/let [~name ~e] ~@cb)])\n                      cblocks)\n                   :else (throw ~e)))\n        locals (:locals catchenv)\n        locals (if e\n                 (assoc locals e\n                        {:name e\n                         :line (get-line e env)\n                         :column (get-col e env)})\n                 locals)\n        catch (when cblock\n                (analyze (assoc catchenv :locals locals) cblock))\n        try (analyze (if (or e finally) catchenv env) `(do ~@body))]\n\n    {:env env :op :try :form form\n     :try try\n     :finally finally\n     :name e\n     :catch catch\n     :children [try catch finally]}))",
           :title "Parser code",
           :repo "clojurescript",
           :tag "r1933",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [290 325]},
- :full-name "special/finally",
- :clj-symbol "clojure.core/finally"}
+ :full-name "special/try",
+ :clj-symbol "clojure.core/try"}
 
 ```
 
@@ -156,7 +167,7 @@ Retrieve the API data for this symbol:
 (require '[clojure.edn :as edn])
 (-> (slurp "https://raw.githubusercontent.com/cljsinfo/cljs-api-docs/catalog/cljs-api.edn")
     (edn/read-string)
-    (get-in [:symbols "special/finally"]))
+    (get-in [:symbols "special/try"]))
 ```
 
 -->

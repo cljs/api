@@ -61,7 +61,7 @@ argument. If coll is nil, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L446-L455):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L446-L455):
 
 ```clj
 (defn first
@@ -78,11 +78,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:446-455](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L446-L455)</ins>
+            └── <ins>[core.cljs:446-455](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L446-L455)</ins>
 </pre>
 
 -->
@@ -140,7 +140,7 @@ The API data for this symbol:
  :source {:code "(defn first\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? ISeq coll false)\n      (-first ^not-native coll)\n      (let [s (seq coll)]\n        (when-not (nil? s)\n          (-first s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
           :lines [446 455]},
  :examples [{:id "40e413",

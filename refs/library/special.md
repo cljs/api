@@ -114,9 +114,27 @@ shadowed by your own vars.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/try)</td>
+<td><samp>[try](../special/try.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[+] 0.0-1933" title="Added in 0.0-1933" src="https://img.shields.io/badge/+-0.0--1933-lightgrey.svg"></a> </td>
+</tr>
+</table>
+
+
+---
+
+###### Removed Symbols
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>History</th>
+</tr></thead>
+<tr>
 <td></td>
-<td><samp>[try\*](../special/trySTAR.md)</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><samp>[~~try\*~~](../special/trySTAR.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[×] 0.0-1933" title="Removed in 0.0-1933" src="https://img.shields.io/badge/×-0.0--1933-red.svg"></a> </td>
 </tr>
 </table>
 

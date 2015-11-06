@@ -1,11 +1,12 @@
-## try\*
+## ~~try\*~~
 
 
+> __MOVED__, please see [`try`](../special/try.md)
 
  <table border="1">
 <tr>
 <td>special form</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[×] 0.0-1933" title="Removed in 0.0-1933" src="https://img.shields.io/badge/×-0.0--1933-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -108,7 +109,9 @@ The API data for this symbol:
           :lines [280 312]},
  :full-name "special/try*",
  :full-name-encode "special/trySTAR",
- :history [["+" "0.0-927"]]}
+ :history [["+" "0.0-927"] ["-" "0.0-1933"]],
+ :removed {:in "0.0-1933", :last-seen "0.0-1913"},
+ :moved "special/try"}
 
 ```
 

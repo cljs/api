@@ -44,12 +44,12 @@ Returns a new hash map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5777-L5784):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5778-L5785):
 
 ```clj
 (defn hash-map
   [& keyvals]
-  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]
+  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap.EMPTY)]
     (if in
       (recur (nnext in) (assoc! out (first in) (second in)))
       (persistent! out))))
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5777-5784](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5777-L5784)</ins>
+            └── <ins>[core.cljs:5778-5785](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5778-L5785)</ins>
 </pre>
 
 -->
@@ -113,12 +113,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/array-map" "cljs.core/sorted-map"],
  :full-name-encode "cljs.core/hash-map",
- :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
+ :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap.EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5777 5784]},
+          :lines [5778 5785]},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

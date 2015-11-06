@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1913__ [all](HISTORY.md)</td>
-<td>2013-10-05</td>
+<td>__0.0-1933__ [all](HISTORY.md)</td>
+<td>2013-10-11</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.5.1</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-1913__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1933__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,7 +34,25 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-special form-brightgreen.svg">
+</td>
+<td><samp>[try](refs/special/try.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-special form-red.svg">
+</td>
+<td><samp>[~~try\*~~](refs/special/trySTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-macro-red.svg">
+</td>
+<td><samp>[~~cljs.core/try~~](refs/cljs.core/try.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__

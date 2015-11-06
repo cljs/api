@@ -17,21 +17,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L4219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L4220):
 
 ```clj
-(set! cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD 8)
+(set! cljs.core.PersistentArrayMap.HASHMAP_THRESHOLD 8)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4219](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L4219)</ins>
+            └── <ins>[core.cljs:4220](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L4220)</ins>
 </pre>
 
 -->
@@ -74,12 +74,12 @@ The API data for this symbol:
  :name "PersistentArrayMap.HASHMAP_THRESHOLD",
  :type "var",
  :parent-type "PersistentArrayMap",
- :source {:code "(set! cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD 8)",
+ :source {:code "(set! cljs.core.PersistentArrayMap.HASHMAP_THRESHOLD 8)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4219]},
+          :lines [4220]},
  :full-name "cljs.core/PersistentArrayMap.HASHMAP_THRESHOLD",
  :full-name-encode "cljs.core/PersistentArrayMapDOTHASHMAP_THRESHOLD",
  :history [["+" "0.0-1211"]]}

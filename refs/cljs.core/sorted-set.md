@@ -43,23 +43,23 @@ Returns a new sorted set with supplied keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L6202-L6205):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L6203-L6206):
 
 ```clj
 (defn sorted-set
   ([& keys]
-   (reduce -conj cljs.core.PersistentTreeSet/EMPTY keys)))
+   (reduce -conj cljs.core.PersistentTreeSet.EMPTY keys)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6202-6205](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L6202-L6205)</ins>
+            └── <ins>[core.cljs:6203-6206](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L6203-L6206)</ins>
 </pre>
 
 -->
@@ -112,12 +112,12 @@ The API data for this symbol:
            "cljs.core/rsubseq"
            "cljs.core/sorted-map"],
  :full-name-encode "cljs.core/sorted-set",
- :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj cljs.core.PersistentTreeSet/EMPTY keys)))",
+ :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj cljs.core.PersistentTreeSet.EMPTY keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6202 6205]},
+          :lines [6203 6206]},
  :full-name "cljs.core/sorted-set",
  :clj-symbol "clojure.core/sorted-set",
  :docstring "Returns a new sorted set with supplied keys."}

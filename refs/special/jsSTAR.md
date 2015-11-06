@@ -17,12 +17,13 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L885-L909):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L918-L943):
 
 ```clj
 (defmethod parse 'js*
   [op env [_ jsform & args :as form] _]
-  (assert (string? jsform))
+  (when-not (string? jsform)
+    (throw (error env "Invalid js* form")))
   (if args
     (disallowing-recur
      (let [seg (fn seg [^String s]
@@ -51,11 +52,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:885-909](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L885-L909)</ins>
+            └── <ins>[analyzer.clj:918-943](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L918-L943)</ins>
 </pre>
 
 -->
@@ -92,12 +93,12 @@ The API data for this symbol:
 {:ns "special",
  :name "js*",
  :type "special form",
- :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (assert (string? jsform))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (-> form meta :tag) :form form :children argexprs\n        :js-op (-> form meta :js-op)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (-> form meta :tag) :js-op (-> form meta :js-op)})))",
+ :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (-> form meta :tag) :form form :children argexprs\n        :js-op (-> form meta :js-op)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (-> form meta :tag) :js-op (-> form meta :js-op)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [885 909]},
+          :lines [918 943]},
  :full-name "special/js*",
  :full-name-encode "special/jsSTAR",
  :history [["+" "0.0-927"]]}

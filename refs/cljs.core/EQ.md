@@ -133,7 +133,7 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L479-L491):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L479-L491):
 
 ```clj
 (defn ^boolean =
@@ -151,11 +151,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:479-491](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L479-L491)</ins>
+            └── <ins>[core.cljs:479-491](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L479-L491)</ins>
 </pre>
 
 -->
@@ -209,7 +209,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y) (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
           :lines [479 491]},
  :examples [{:id "edffb6",

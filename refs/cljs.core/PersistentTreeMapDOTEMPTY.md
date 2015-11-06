@@ -20,21 +20,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5775):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5776):
 
 ```clj
-(set! cljs.core.PersistentTreeMap/EMPTY (PersistentTreeMap. compare nil 0 nil 0))
+(set! cljs.core.PersistentTreeMap.EMPTY (PersistentTreeMap. compare nil 0 nil 0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5775](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5775)</ins>
+            └── <ins>[core.cljs:5776](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5776)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :parent-type "PersistentTreeMap",
  :type "var",
  :full-name-encode "cljs.core/PersistentTreeMapDOTEMPTY",
- :source {:code "(set! cljs.core.PersistentTreeMap/EMPTY (PersistentTreeMap. compare nil 0 nil 0))",
+ :source {:code "(set! cljs.core.PersistentTreeMap.EMPTY (PersistentTreeMap. compare nil 0 nil 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5775]},
+          :lines [5776]},
  :full-name "cljs.core/PersistentTreeMap.EMPTY",
  :clj-symbol "clojure.lang/PersistentTreeMap.EMPTY"}
 

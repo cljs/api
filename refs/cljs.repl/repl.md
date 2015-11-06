@@ -27,7 +27,7 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl.clj#L164-L193):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/repl.clj#L152-L181):
 
 ```clj
 (defn repl
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:164-193](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl.clj#L164-L193)</ins>
+            └── <ins>[repl.clj:152-181](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/repl.clj#L152-L181)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & {:keys [analyze-path verbose warn-on-undeclared special-fns static-fns]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [ana/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            ana/*cljs-warnings* (assoc ana/*cljs-warnings*\n                                  :undeclared warn-on-undeclared)\n            ana/*cljs-static-fns* static-fns]\n    (when analyze-path\n      (analyze-source analyze-path))\n    (let [env {:context :expr :locals {}}\n          special-fns (merge default-special-fns special-fns)\n          is-special-fn? (set (keys special-fns))]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" ana/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n\n           (= status :error) (recur)\n\n           (and (seq? form) (is-special-fn? (first form)))\n           (do (apply (get special-fns (first form)) repl-env (rest form)) (newline) (recur))\n\n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/clj/cljs/repl.clj",
-          :lines [164 193]},
+          :lines [152 181]},
  :full-name "cljs.repl/repl",
  :docstring "Note - repl will reload core.cljs every time, even if supplied old repl-env"}
 

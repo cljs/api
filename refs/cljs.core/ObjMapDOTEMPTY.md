@@ -17,21 +17,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3973):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3974):
 
 ```clj
-(set! cljs.core.ObjMap/EMPTY (ObjMap. nil (array) (js-obj) 0 0))
+(set! cljs.core.ObjMap.EMPTY (ObjMap. nil (array) (js-obj) 0 0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3973](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3973)</ins>
+            └── <ins>[core.cljs:3974](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3974)</ins>
 </pre>
 
 -->
@@ -74,12 +74,12 @@ The API data for this symbol:
  :name "ObjMap.EMPTY",
  :type "var",
  :parent-type "ObjMap",
- :source {:code "(set! cljs.core.ObjMap/EMPTY (ObjMap. nil (array) (js-obj) 0 0))",
+ :source {:code "(set! cljs.core.ObjMap.EMPTY (ObjMap. nil (array) (js-obj) 0 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3973]},
+          :lines [3974]},
  :full-name "cljs.core/ObjMap.EMPTY",
  :full-name-encode "cljs.core/ObjMapDOTEMPTY",
  :history [["+" "0.0-927"]]}

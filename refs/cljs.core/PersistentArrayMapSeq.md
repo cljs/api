@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L4056-L4105):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L4057-L4106):
 
 ```clj
 (deftype PersistentArrayMapSeq [arr i _meta]
@@ -53,7 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
     (cons o coll))
 
   IEmptyableCollection
-  (-empty [coll] (with-meta cljs.core.List/EMPTY _meta))
+  (-empty [coll] (with-meta cljs.core.List.EMPTY _meta))
 
   IHash
   (-hash [coll] (hash-coll coll))
@@ -81,11 +81,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4056-4105](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L4056-L4105)</ins>
+            └── <ins>[core.cljs:4057-4106](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L4057-L4106)</ins>
 </pre>
 
 -->
@@ -128,12 +128,12 @@ The API data for this symbol:
  :name "PersistentArrayMapSeq",
  :type "type",
  :signature ["[arr i _meta]"],
- :source {:code "(deftype PersistentArrayMapSeq [arr i _meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  \n  IMeta\n  (-meta [coll] _meta)\n\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (PersistentArrayMapSeq. arr i new-meta))\n\n  ICounted\n  (-count [coll]\n    (/ (- (alength arr) i) 2))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY _meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n  \n  ISeq\n  (-first [coll]\n    [(aget arr i) (aget arr (inc i))])\n\n  (-rest [coll]\n    (if (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta)\n      ()))\n\n  INext\n  (-next [coll]\n    (when (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta)))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
+ :source {:code "(deftype PersistentArrayMapSeq [arr i _meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  \n  IMeta\n  (-meta [coll] _meta)\n\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (PersistentArrayMapSeq. arr i new-meta))\n\n  ICounted\n  (-count [coll]\n    (/ (- (alength arr) i) 2))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List.EMPTY _meta))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n  \n  ISeq\n  (-first [coll]\n    [(aget arr i) (aget arr (inc i))])\n\n  (-rest [coll]\n    (if (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta)\n      ()))\n\n  INext\n  (-next [coll]\n    (when (< i (- (alength arr) 2))\n      (PersistentArrayMapSeq. arr (+ i 2) _meta)))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4056 4105]},
+          :lines [4057 4106]},
  :full-name "cljs.core/PersistentArrayMapSeq",
  :full-name-encode "cljs.core/PersistentArrayMapSeq",
  :history [["+" "0.0-1820"]]}

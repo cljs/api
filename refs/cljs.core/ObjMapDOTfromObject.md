@@ -22,21 +22,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3977):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3978):
 
 ```clj
-(set! cljs.core.ObjMap/fromObject (fn [ks obj] (ObjMap. nil ks obj 0 nil)))
+(set! cljs.core.ObjMap.fromObject (fn [ks obj] (ObjMap. nil ks obj 0 nil)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3977](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L3977)</ins>
+            └── <ins>[core.cljs:3978](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L3978)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :parent-type "ObjMap",
  :type "function",
  :full-name-encode "cljs.core/ObjMapDOTfromObject",
- :source {:code "(set! cljs.core.ObjMap/fromObject (fn [ks obj] (ObjMap. nil ks obj 0 nil)))",
+ :source {:code "(set! cljs.core.ObjMap.fromObject (fn [ks obj] (ObjMap. nil ks obj 0 nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3977]},
+          :lines [3978]},
  :full-name "cljs.core/ObjMap.fromObject"}
 
 ```

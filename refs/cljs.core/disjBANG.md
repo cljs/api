@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L2437-L2438):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2437-L2438):
 
 ```clj
 (defn disj! [tcoll val]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2437-2438](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L2437-L2438)</ins>
+            └── <ins>[core.cljs:2437-2438](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2437-L2438)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn disj! [tcoll val]\n  (-disjoin! tcoll val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2437 2438]},
  :full-name "cljs.core/disj!",

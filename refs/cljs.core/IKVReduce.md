@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L265-L266):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L265-L266):
 
 ```clj
 (defprotocol IKVReduce
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:265-266](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L265-L266)</ins>
+            └── <ins>[core.cljs:265-266](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L265-L266)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IKVReduce\n  (-kv-reduce [coll f init]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
           :lines [265 266]},
  :methods [{:name "-kv-reduce",

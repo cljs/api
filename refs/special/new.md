@@ -20,12 +20,13 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L590-L604):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L615-L630):
 
 ```clj
 (defmethod parse 'new
   [_ env [_ ctor & args :as form] _]
-  (assert (symbol? ctor) "First arg to new must be a symbol")
+  (when-not (symbol? ctor) 
+    (throw (error env "First arg to new must be a symbol")))
   (disallowing-recur
    (let [enve (assoc env :context :expr)
          ctorexpr (analyze enve ctor)
@@ -44,11 +45,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:590-604](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L590-L604)</ins>
+            └── <ins>[analyzer.clj:615-630](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/analyzer.clj#L615-L630)</ins>
 </pre>
 
 -->
@@ -92,12 +93,12 @@ The API data for this symbol:
 {:ns "special",
  :name "new",
  :type "special form",
- :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (assert (symbol? ctor) \"First arg to new must be a symbol\")\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))\n         known-num-fields (:num-fields (resolve-existing-var env ctor))\n         argc (count args)]\n     (when (and known-num-fields (not= known-num-fields argc))\n       (warning env\n         (str \"WARNING: Wrong number of args (\" argc \") passed to \" ctor)))\n\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)})))",
+ :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))\n         known-num-fields (:num-fields (resolve-existing-var env ctor))\n         argc (count args)]\n     (when (and known-num-fields (not= known-num-fields argc))\n       (warning env\n         (str \"WARNING: Wrong number of args (\" argc \") passed to \" ctor)))\n\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [590 604]},
+          :lines [615 630]},
  :full-name "special/new",
  :full-name-encode "special/new",
  :clj-symbol "clojure.core/new",

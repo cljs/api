@@ -48,12 +48,12 @@ Returns a new sorted map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5805-L5812):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5806-L5813):
 
 ```clj
 (defn sorted-map
   ([& keyvals]
-     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap/EMPTY]
+     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap.EMPTY]
        (if in
          (recur (nnext in) (assoc out (first in) (second in)))
          out))))
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
+clojurescript @ r1933
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5805-5812](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L5805-L5812)</ins>
+            └── <ins>[core.cljs:5806-5813](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5806-L5813)</ins>
 </pre>
 
 -->
@@ -122,12 +122,12 @@ The API data for this symbol:
            "cljs.core/array-map"
            "cljs.core/hash-map"],
  :full-name-encode "cljs.core/sorted-map",
- :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap/EMPTY]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
+ :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap.EMPTY]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1913",
+          :tag "r1933",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5805 5812]},
+          :lines [5806 5813]},
  :full-name "cljs.core/sorted-map",
  :clj-symbol "clojure.core/sorted-map",
  :docstring "keyval => key val\nReturns a new sorted map with supplied mappings."}
