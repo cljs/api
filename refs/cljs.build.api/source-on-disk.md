@@ -28,7 +28,7 @@ Return updated IJavaScript with the new location if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L106-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L106-L110):
 
 ```clj
 (defn source-on-disk
@@ -40,13 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:106-110](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L106-L110)</ins>
+                    └── <ins>[api.clj:106-110](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L106-L110)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn source-on-disk\n  [opts ijs]\n  (closure/source-on-disk opts ijs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [106 110]},
  :full-name "cljs.build.api/source-on-disk",

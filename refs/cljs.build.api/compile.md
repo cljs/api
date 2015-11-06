@@ -27,7 +27,7 @@ Given a Compilable, compile it and return an IJavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L157-L160):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L157-L160):
 
 ```clj
 (defn compile
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:157-160](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L157-L160)</ins>
+                    └── <ins>[api.clj:157-160](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L157-L160)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn compile\n  [opts compilable]\n  (closure/compile compilable opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [157 160]},
  :full-name "cljs.build.api/compile",

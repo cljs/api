@@ -64,7 +64,7 @@ Bitwise exclusive or
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2363-L2367):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2370-L2374):
 
 ```clj
 (defn bit-xor
@@ -77,19 +77,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2363-2367](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2363-L2367)</ins>
+                └── <ins>[core.cljs:2370-2374](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2370-L2374)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L576-L578):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L576-L578):
 
 ```clj
 (defmacro ^::ana/numeric bit-xor
@@ -101,12 +101,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:576-578](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L576-L578)</ins>
+                └── <ins>[core.clj:576-578](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L576-L578)</ins>
 </pre>
 -->
 
@@ -157,13 +157,13 @@ The API data for this symbol:
  :source {:code "(defn bit-xor\n  ([x y] (cljs.core/bit-xor x y))\n  ([x y & more]\n     (reduce bit-xor (cljs.core/bit-xor x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2363 2367]},
+          :lines [2370 2374]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-xor\n  ([x y] (core/list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3297",
+                  :tag "r3308",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [576 578]}],
  :examples [{:id "3ccd99",

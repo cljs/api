@@ -44,7 +44,7 @@ If the file was not compiled returns only {:file ...}
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/compiler/api.clj#L42-L60):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L42-L60):
 
 ```clj
 (defn compile-file
@@ -60,13 +60,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:42-60](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/compiler/api.clj#L42-L60)</ins>
+                    └── <ins>[api.clj:42-60](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L42-L60)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn compile-file\n  ([src]\n   (comp/compile-file src))\n  ([src dest]\n   (comp/compile-file src dest))\n  ([src dest opts]\n   (comp/compile-file src dest opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [42 60]},
  :full-name "cljs.compiler.api/compile-file",

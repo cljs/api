@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L307-L329):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L310-L332):
 
 ```clj
 (defmacro test-all-vars-block
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.clj:307-329](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L307-L329)</ins>
+                └── <ins>[test.clj:310-332](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L310-L332)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defmacro test-all-vars-block\n  ([[quote ns]]\n   `(let [env# (cljs.test/get-current-env)]\n      (concat\n       [(fn []\n          (when (nil? env#)\n            (cljs.test/set-env! (cljs.test/empty-env)))\n          ~(when (ana-api/ns-resolve ns 'cljs-test-once-fixtures)\n             `(cljs.test/update-current-env! [:once-fixtures] assoc '~ns\n                                             ~(symbol (name ns) \"cljs-test-once-fixtures\")))\n          ~(when (ana-api/ns-resolve ns 'cljs-test-each-fixtures)\n             `(cljs.test/update-current-env! [:each-fixtures] assoc '~ns\n                                             ~(symbol (name ns) \"cljs-test-each-fixtures\"))))]\n       (cljs.test/test-vars-block\n        [~@(map\n            (fn [[k _]]\n              `(var ~(symbol (name ns) (name k))))\n            (filter\n             (fn [[_ v]] (:test v))\n             (ana-api/ns-interns ns)))])\n       [(fn []\n          (when (nil? env#)\n            (cljs.test/clear-env!)))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [307 329]},
+          :lines [310 332]},
  :full-name "cljs.test/test-all-vars-block",
  :full-name-encode "cljs.test/test-all-vars-block",
  :history [["+" "0.0-2814"]]}

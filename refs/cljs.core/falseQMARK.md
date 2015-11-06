@@ -41,7 +41,7 @@ Returns true if x is the value false, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L1845-L1847):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1847-L1849):
 
 ```clj
 (defn ^boolean false?
@@ -52,19 +52,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1845-1847](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L1845-L1847)</ins>
+                └── <ins>[core.cljs:1847-1849](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1847-L1849)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L366-L367):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L366-L367):
 
 ```clj
 (defmacro false? [x]
@@ -75,12 +75,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:366-367](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L366-L367)</ins>
+                └── <ins>[core.clj:366-367](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L366-L367)</ins>
 </pre>
 -->
 
@@ -132,13 +132,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean false?\n  [x] (cljs.core/false? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1845 1847]},
+          :lines [1847 1849]},
  :extra-sources [{:code "(defmacro false? [x]\n  (bool-expr (core/list 'js* \"~{} === false\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3297",
+                  :tag "r3308",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [366 367]}],
  :full-name "cljs.core/false?",

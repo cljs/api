@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2290-L2291):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2297-L2298):
 
 ```clj
 (defn unchecked-remainder-int [x n]
@@ -36,19 +36,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2290-2291](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2290-L2291)</ins>
+                └── <ins>[core.cljs:2297-2298](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2297-L2298)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L472-L473):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L472-L473):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-remainder-int
@@ -59,12 +59,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:472-473](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L472-L473)</ins>
+                └── <ins>[core.clj:472-473](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L472-L473)</ins>
 </pre>
 -->
 
@@ -113,13 +113,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-remainder-int [x n]\n  (cljs.core/unchecked-remainder-int x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2290 2291]},
+          :lines [2297 2298]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-remainder-int\n  ([x n] `(mod ~x ~n)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3297",
+                  :tag "r3308",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [472 473]}],
  :full-name "cljs.core/unchecked-remainder-int",

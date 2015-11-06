@@ -33,7 +33,7 @@ NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.cljs#L478-L484):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L478-L484):
 
 ```clj
 (defn compose-fixtures
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:478-484](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.cljs#L478-L484)</ins>
+                └── <ins>[test.cljs:478-484](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L478-L484)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn compose-fixtures\n  [f1 f2]\n  (fn [g] (f1 (fn [] (f2 g)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [478 484]},
  :full-name "cljs.test/compose-fixtures",

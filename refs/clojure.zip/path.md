@@ -30,7 +30,7 @@ Returns a seq of nodes leading to this loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L82-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L82-L85):
 
 ```clj
 (defn path
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:82-85](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L82-L85)</ins>
+                └── <ins>[zip.cljs:82-85](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L82-L85)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn path\n  [loc]\n    (:pnodes (loc 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [82 85]},
  :full-name "clojure.zip/path",

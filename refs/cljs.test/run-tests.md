@@ -33,11 +33,14 @@ Source docstring:
 
 ```
 Runs all tests in the given namespaces; prints results.
-Defaults to current namespace if none given.
+Defaults to current namespace if none given. Does not return a meaningful
+value due to the possiblity of asynchronous execution. To detect test
+completion add a :end-run-tests method case to the cljs.test/report
+multimethod.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L282-L291):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L282-L294):
 
 ```clj
 (defmacro run-tests
@@ -54,12 +57,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.clj:282-291](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L282-L291)</ins>
+                └── <ins>[test.clj:282-294](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L282-L294)</ins>
 </pre>
 
 -->
@@ -110,12 +113,12 @@ The API data for this symbol:
  :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [282 291]},
+          :lines [282 294]},
  :full-name "cljs.test/run-tests",
  :clj-symbol "clojure.test/run-tests",
- :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given."}
+ :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given. Does not return a meaningful\nvalue due to the possiblity of asynchronous execution. To detect test\ncompletion add a :end-run-tests method case to the cljs.test/report\nmultimethod."}
 
 ```
 

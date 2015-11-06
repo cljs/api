@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/reader.cljs#L18-L27):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/reader.cljs#L18-L27):
 
 ```clj
 (deftype StringPushbackReader [s buffer ^:mutable idx]
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[reader.cljs:18-27](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/reader.cljs#L18-L27)</ins>
+                └── <ins>[reader.cljs:18-27](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/reader.cljs#L18-L27)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(deftype StringPushbackReader [s buffer ^:mutable idx]\n  PushbackReader\n  (read-char [reader]\n    (if (zero? (alength buffer))\n      (do\n        (set! idx (inc idx))\n        (aget s idx))\n      (.pop buffer)))\n  (unread [reader ch]\n    (.push buffer ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [18 27]},
  :full-name "cljs.reader/StringPushbackReader",

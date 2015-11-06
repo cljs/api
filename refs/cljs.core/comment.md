@@ -66,7 +66,7 @@ Ignores body, yields nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L4529-L4532):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L4529-L4532):
 
 ```clj
 (defmacro comment
@@ -77,11 +77,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-bet
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-beta2
+clojure @ clojure-1.7.0-RC1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4529-4532](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L4529-L4532)</ins>
+            └── <ins>[core.clj:4529-4532](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L4529-L4532)</ins>
 </pre>
 
 -->
@@ -133,7 +133,7 @@ The API data for this symbol:
  :source {:code "(defmacro comment\n  [& body])",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-beta2",
+          :tag "clojure-1.7.0-RC1",
           :filename "src/clj/clojure/core.clj",
           :lines [4529 4532]},
  :examples [{:id "482fd7",

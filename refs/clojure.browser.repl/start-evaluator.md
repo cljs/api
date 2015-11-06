@@ -27,7 +27,7 @@ Start the REPL server connection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/repl.cljs#L80-L108):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L81-L109):
 
 ```clj
 (defn start-evaluator
@@ -64,13 +64,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:80-108](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/repl.cljs#L80-L108)</ins>
+                    └── <ins>[repl.cljs:81-109](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L81-L109)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn start-evaluator\n  [url]\n  (if-let [repl-connection (net/xpc-connection)]\n    (let [connection (net/xhr-connection)]\n      (event/listen connection\n        :success\n        (fn [e]\n          (net/transmit\n            repl-connection\n            :evaluate-javascript\n            (.getResponseText (.-currentTarget e)\n              ()))))\n\n      (net/register-service repl-connection\n        :send-result\n        (fn [data]\n          (send-result connection url (wrap-message :result data))))\n\n      (net/register-service repl-connection\n        :print\n        (fn [data]\n          (send-print url (wrap-message :print data))))\n\n      (net/connect repl-connection\n        (constantly nil))\n\n      (js/setTimeout #(send-result connection url (wrap-message :ready \"ready\")) 50))\n    (js/alert \"No 'xpc' param provided to child iframe.\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [80 108]},
+          :lines [81 109]},
  :full-name "clojure.browser.repl/start-evaluator",
  :docstring "Start the REPL server connection."}
 

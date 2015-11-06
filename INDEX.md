@@ -2,10 +2,10 @@
 
  <table border="1">
 <tr>
-<td>__0.0-3297__ [all](HISTORY.md)</td>
-<td>2015-05-23</td>
+<td>__0.0-3308__ [all](HISTORY.md)</td>
+<td>2015-06-01</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
-<kbd>Clojure 1.7.0-beta2</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
+<kbd>Clojure 1.7.0-RC1</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
 <kbd>Closure Lib 0.0-20150505-021ed5b3</kbd>](http://google.github.io/closure-library/api/)</td>
 </tr>
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-3297__ ([See Full History](HISTORY.md)):
+Changes from __0.0-3308__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,19 +34,19 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/random-uuid](refs/cljs.core/random-uuid.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl.browser/mime-type->encoding](refs/cljs.repl.browser/mime-type-GTencoding.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 

@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L812-L823):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L813-L824):
 
 ```clj
 (defn pprint
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:812-823](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L812-L823)</ins>
+                └── <ins>[pprint.cljs:813-824](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L813-L824)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn pprint\n  ([object]\n   (let [sb (StringBuffer.)]\n     (binding [*out* (StringBufferWriter. sb)]\n       (pprint object *out*)\n       (*print-fn* (str sb)))))\n  ([object writer]\n   (with-pretty-writer writer\n                       (binding [*print-pretty* true]\n                         (write-out object))\n                       (if (not (= 0 (get-column *out*)))\n                         (-write *out* \\newline)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [812 823]},
+          :lines [813 824]},
  :full-name "cljs.pprint/pprint",
  :clj-symbol "clojure.pprint/pprint"}
 

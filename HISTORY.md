@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3308](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3308)__</td>
+<td>2015-06-01</td>
+<td><kbd>1.7.0-RC1</kbd></td>
+<td><kbd>0.9.2</kbd></td>
+<td><kbd>0.0-20150505</kbd></td>
+<td>
+<a href="#user-content-003308syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003308library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-003308compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3297](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3297)__</td>
 <td>2015-05-23</td>
 <td><kbd>1.7.0-beta2</kbd></td>
@@ -2821,6 +2844,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3308
+
+<a name="003308syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003308library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/random-uuid](refs/cljs.core/random-uuid.md)</samp></td>
+</tr>
+</table>
+
+<a name="003308compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-3297

@@ -33,7 +33,7 @@ performed every time reduce/iterator is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L8957-L8964):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8976-L8983):
 
 ```clj
 (defn eduction
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8957-8964](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L8957-L8964)</ins>
+                └── <ins>[core.cljs:8976-8983](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8976-L8983)</ins>
 </pre>
 
 -->
@@ -101,9 +101,9 @@ The API data for this symbol:
  :source {:code "(defn eduction\n  [& xforms]\n  (Eduction. (apply comp (butlast xforms)) (last xforms)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8957 8964]},
+          :lines [8976 8983]},
  :full-name "cljs.core/eduction",
  :clj-symbol "clojure.core/eduction",
  :docstring "Returns a reducible/iterable application of the transducers\nto the items in coll. Transducers are applied in order as if\ncombined with comp. Note that these applications will be\nperformed every time reduce/iterator is called."}

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L135-L137):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L135-L137):
 
 ```clj
 (defmacro defonce [x init]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:135-137](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L135-L137)</ins>
+                └── <ins>[core.clj:135-137](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L135-L137)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defmacro defonce [x init]\n  `(when-not (exists? ~x)\n     (def ~x ~init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [135 137]},
  :full-name "cljs.core/defonce",

@@ -31,7 +31,7 @@ namespace, with fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L331-L335):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L334-L338):
 
 ```clj
 (defmacro test-all-vars
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.clj:331-335](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/test.clj#L331-L335)</ins>
+                └── <ins>[test.clj:334-338](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L334-L338)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defmacro test-all-vars\n  [[quote ns :as form]]\n  `(cljs.test/run-block (test-all-vars-block ~form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [331 335]},
+          :lines [334 338]},
  :full-name "cljs.test/test-all-vars",
  :clj-symbol "clojure.test/test-all-vars",
  :docstring "Calls test-vars on every var with :test metadata interned in the\nnamespace, with fixtures."}

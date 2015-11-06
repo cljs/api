@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/event.cljs#L64-L71):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/event.cljs#L64-L71):
 
 ```clj
 (defn unlisten
@@ -42,13 +42,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[event.cljs:64-71](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/event.cljs#L64-L71)</ins>
+                    └── <ins>[event.cljs:64-71](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/event.cljs#L64-L71)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn unlisten\n  ([src type fn]\n     (unlisten src type fn false))\n  ([src type fn capture?]\n     (events/unlisten src\n                      (get (event-types src) type type)\n                      fn\n                      capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [64 71]},
  :full-name "clojure.browser.event/unlisten",

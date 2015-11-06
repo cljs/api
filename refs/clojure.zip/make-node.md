@@ -31,7 +31,7 @@ children. The loc is only used to supply the constructor.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L76-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L76-L80):
 
 ```clj
 (defn make-node
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L76-L80)</ins>
+                └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L76-L80)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn make-node\n  [loc node children]\n    ((:zip/make-node (meta loc)) node children))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [76 80]},
  :full-name "clojure.zip/make-node",

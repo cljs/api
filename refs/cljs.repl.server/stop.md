@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/server.clj#L179-L180):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/server.clj#L180-L181):
 
 ```clj
 (defn stop []
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:179-180](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/server.clj#L179-L180)</ins>
+                    └── <ins>[server.clj:180-181](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/server.clj#L180-L181)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn stop []\n  (.close (:socket @state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [179 180]},
+          :lines [180 181]},
  :full-name "cljs.repl.server/stop",
  :full-name-encode "cljs.repl.server/stop",
  :history [["+" "0.0-1503"]]}

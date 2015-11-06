@@ -25,7 +25,7 @@ Protocol for adding set functionality to a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L419-L422):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L419-L422):
 
 ```clj
 (defprotocol ISet
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:419-422](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L419-L422)</ins>
+                └── <ins>[core.cljs:419-422](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L419-L422)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISet\n  \"Protocol for adding set functionality to a collection.\"\n  (^clj -disjoin [coll v]\n    \"Returns a new collection of coll that does not contain v.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [419 422]},
  :methods [{:name "-disjoin",

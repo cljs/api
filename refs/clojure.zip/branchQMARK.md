@@ -30,7 +30,7 @@ Returns true if the node at loc is a branch
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L64-L67):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L64-L67):
 
 ```clj
 (defn branch?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/zip.cljs#L64-L67)</ins>
+                └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L64-L67)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn branch?\n  [loc]\n    ((:zip/branch? (meta loc)) (node loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [64 67]},
  :full-name "clojure.zip/branch?",

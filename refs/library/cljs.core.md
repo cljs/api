@@ -2147,6 +2147,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[random-uuid](../cljs.core/random-uuid.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3308"><img valign="middle" alt="[+] 0.0-3308" title="Added in 0.0-3308" src="https://img.shields.io/badge/+-0.0--3308-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/range)</td>
 <td><samp>[range](../cljs.core/range.md)</samp></td>
 <td><samp>function</samp></td>

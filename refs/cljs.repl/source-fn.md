@@ -36,7 +36,7 @@ Example: (source-fn 'filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl.cljc#L1114-L1134):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L1122-L1142):
 
 ```clj
 (defn source-fn
@@ -59,12 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1114-1134](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl.cljc#L1114-L1134)</ins>
+                └── <ins>[repl.cljc:1122-1142](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L1122-L1142)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defn source-fn\n  [env x]\n  (when-let [v (ana-api/resolve env x)]\n    (when-let [filepath (:file v)]\n      (let [f (io/file filepath)\n            f (if (.exists f)\n                f\n                (io/resource filepath))]\n        (when f\n          (with-open [pbr (PushbackReader. (io/reader f))]\n            (let [rdr (readers/source-logging-push-back-reader pbr)]\n              (dotimes [_ (dec (:line v))] (readers/read-line rdr))\n              (-> (reader/read {:read-cond :allow :features #{:cljs}} rdr)\n                meta :source))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1114 1134]},
+          :lines [1122 1142]},
  :full-name "cljs.repl/source-fn",
  :clj-symbol "clojure.repl/source-fn",
  :docstring "Returns a string of the source code for the given symbol, if it can\nfind it.  This requires that the symbol resolve to a Var defined in\na namespace for which the .clj is in the classpath.  Returns nil if\nit can't find the source.  For most REPL usage, 'source' is more\nconvenient.\n\nExample: (source-fn 'filter)"}

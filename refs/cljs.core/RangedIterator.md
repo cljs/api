@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L4552-L4562):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L4559-L4569):
 
 ```clj
 (deftype RangedIterator [^:mutable i ^:mutable base ^:mutable arr v start end]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4552-4562](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L4552-L4562)</ins>
+                └── <ins>[core.cljs:4559-4569](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L4559-L4569)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(deftype RangedIterator [^:mutable i ^:mutable base ^:mutable arr v start end]\n  Object\n  (hasNext [this]\n    (< i end))\n  (next [this]\n    (when (== (- i base) 32)\n      (set! arr (unchecked-array-for v i))\n      (set! base (+ base 32)))\n    (let [ret (aget arr (bit-and i 0x01f))]\n      (set! i (inc i))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4552 4562]},
+          :lines [4559 4569]},
  :full-name "cljs.core/RangedIterator",
  :full-name-encode "cljs.core/RangedIterator",
  :history [["+" "0.0-2371"]]}

@@ -25,7 +25,7 @@ The pretty print dispatch function for simple data structure format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L2911-L2913):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L2900-L2902):
 
 ```clj
 (defmulti simple-dispatch
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:2911-2913](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L2911-L2913)</ins>
+                └── <ins>[pprint.cljs:2900-2902](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L2900-L2902)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defmulti simple-dispatch\n  \"The pretty print dispatch function for simple data structure format.\"\n  type-dispatcher)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [2911 2913]},
+          :lines [2900 2902]},
  :full-name "cljs.pprint/simple-dispatch",
  :clj-symbol "clojure.pprint/simple-dispatch",
  :docstring "The pretty print dispatch function for simple data structure format."}

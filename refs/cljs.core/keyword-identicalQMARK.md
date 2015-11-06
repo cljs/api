@@ -27,7 +27,7 @@ Efficient test to determine that two keywords are identical.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2814-L2822):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2821-L2829):
 
 ```clj
 (defn ^boolean keyword-identical?
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2814-2822](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2814-L2822)</ins>
+                └── <ins>[core.cljs:2821-2829](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2821-L2829)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean keyword-identical?\n  [x y]\n  (if (identical? x y)\n    true\n    (if (and (keyword? x)\n             (keyword? y))\n      (identical? (.-fqn x) (.-fqn y))\n      false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2814 2822]},
+          :lines [2821 2829]},
  :full-name "cljs.core/keyword-identical?",
  :docstring "Efficient test to determine that two keywords are identical."}
 

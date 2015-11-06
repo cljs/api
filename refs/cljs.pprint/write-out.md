@@ -39,7 +39,7 @@ Normal library clients should use the standard "write" interface.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L725-L747):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L726-L748):
 
 ```clj
 (defn write-out
@@ -61,12 +61,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:725-747](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L725-L747)</ins>
+                └── <ins>[pprint.cljs:726-748](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L726-L748)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defn write-out\n  [object]\n  (let [length-reached (and *current-length*\n                            *print-length*\n                            (>= *current-length* *print-length*))]\n    (if-not *print-pretty*\n      (pr object)\n      (if length-reached\n        (-write *out* \"...\") ;;TODO could this (incorrectly) print ... on the next line?\n        (do\n          (if *current-length* (set! *current-length* (inc *current-length*)))\n          (*print-pprint-dispatch* object))))\n    length-reached))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [725 747]},
+          :lines [726 748]},
  :full-name "cljs.pprint/write-out",
  :clj-symbol "clojure.pprint/write-out",
  :docstring "Write an object to *out* subject to the current bindings of the printer control\nvariables. Use the kw-args argument to override individual variables for this call (and\nany recursive calls).\n\n*out* must be a PrettyWriter if pretty printing is enabled. This is the responsibility\nof the caller.\n\nThis method is primarily intended for use by pretty print dispatch functions that\nalready know that the pretty printer will have set up their environment appropriately.\nNormal library clients should use the standard \"write\" interface. "}

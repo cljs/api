@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2339):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2346):
 
 ```clj
 (defn longs [x] x)
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2339](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L2339)</ins>
+                └── <ins>[core.cljs:2346](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2346)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn longs [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2339]},
+          :lines [2346]},
  :full-name "cljs.core/longs",
  :clj-symbol "clojure.core/longs"}
 

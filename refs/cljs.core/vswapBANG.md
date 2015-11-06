@@ -38,7 +38,7 @@ was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L2026-L2031):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2026-L2031):
 
 ```clj
 (defmacro vswap!
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:2026-2031](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L2026-L2031)</ins>
+                └── <ins>[core.clj:2026-2031](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2026-L2031)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defmacro vswap!\n  [vol f & args]\n  `(-vreset! ~vol (~f (-deref ~vol) ~@args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [2026 2031]},
  :full-name "cljs.core/vswap!",

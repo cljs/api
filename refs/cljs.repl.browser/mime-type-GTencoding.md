@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/browser.clj#L40-L48):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L40-L48):
 
 ```clj
 (def mime-type->encoding
@@ -35,13 +35,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:40-48](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/browser.clj#L40-L48)</ins>
+                    └── <ins>[browser.clj:40-48](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L40-L48)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(def mime-type->encoding\n  {\"text/html\" \"UTF-8\"\n   \"text/css\" \"UTF-8\"\n   \"image/jpeg\" \"ISO-8859-1\"\n   \"image/png\" \"ISO-8859-1\"\n   \"image/gif\" \"ISO-8859-1\"\n   \"text/javascript\" \"UTF-8\"\n   \"text/x-clojure\" \"UTF-8\"\n   \"application/json\" \"UTF-8\"})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [40 48]},
  :full-name "cljs.repl.browser/mime-type->encoding",

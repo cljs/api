@@ -35,7 +35,7 @@ in ks. If ks are not specified, use the keys of the first item in rows.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L3308-L3332):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L3297-L3321):
 
 ```clj
 (defn print-table
@@ -65,12 +65,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:3308-3332](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L3308-L3332)</ins>
+                └── <ins>[pprint.cljs:3297-3321](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L3297-L3321)</ins>
 </pre>
 
 -->
@@ -121,9 +121,9 @@ The API data for this symbol:
  :source {:code "(defn print-table\n  ([ks rows]\n   (binding [*print-newline*]\n     (when (seq rows)\n       (let [widths (map\n                      (fn [k]\n                        (apply max (count (str k)) (map #(count (str (get % k))) rows)))\n                      ks)\n             spacers (map #(apply str (repeat % \"-\")) widths)\n             fmt-row (fn [leader divider trailer row]\n                       (str leader\n                            (apply str (interpose divider\n                                                  (for [[col width] (map vector (map #(get row %) ks) widths)]\n                                                    (add-padding width (str col)))))\n                            trailer))]\n         (cljs.core/println)\n         (cljs.core/println (fmt-row \"| \" \" | \" \" |\" (zipmap ks ks)))\n         (cljs.core/println (fmt-row \"|-\" \"-+-\" \"-|\" (zipmap ks spacers)))\n         (doseq [row rows]\n           (cljs.core/println (fmt-row \"| \" \" | \" \" |\" row)))))))\n  ([rows] (print-table (keys (first rows)) rows)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [3308 3332]},
+          :lines [3297 3321]},
  :full-name "cljs.pprint/print-table",
  :clj-symbol "clojure.pprint/print-table",
  :docstring "Prints a collection of maps in a textual table. Prints table headings\nks, and then a line of output for each row, corresponding to the keys\nin ks. If ks are not specified, use the keys of the first item in rows."}

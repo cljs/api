@@ -31,7 +31,7 @@ the goog.require statement for it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L90-L95):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L90-L95):
 
 ```clj
 (defn ^String src-file->goog-require
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3297
+clojurescript @ r3308
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:90-95](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L90-L95)</ins>
+                    └── <ins>[api.clj:90-95](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L90-L95)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn ^String src-file->goog-require\n  ([src] (closure/src-file->goog-require src))\n  ([src options]\n    (closure/src-file->goog-require src options)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3297",
+          :tag "r3308",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [90 95]},
  :full-name "cljs.build.api/src-file->goog-require",

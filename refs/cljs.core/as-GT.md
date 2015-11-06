@@ -64,7 +64,7 @@ successive form, returning the result of the last form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L7257-L7265):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L7257-L7265):
 
 ```clj
 (defmacro as->
@@ -78,11 +78,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-bet
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-beta2
+clojure @ clojure-1.7.0-RC1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7257-7265](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L7257-L7265)</ins>
+            └── <ins>[core.clj:7257-7265](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L7257-L7265)</ins>
 </pre>
 
 -->
@@ -140,7 +140,7 @@ The API data for this symbol:
  :source {:code "(defmacro as->\n  [expr name & forms]\n  `(let [~name ~expr\n         ~@(interleave (repeat name) forms)]\n     ~name))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-beta2",
+          :tag "clojure-1.7.0-RC1",
           :filename "src/clj/clojure/core.clj",
           :lines [7257 7265]},
  :examples [{:id "5e7eef",
