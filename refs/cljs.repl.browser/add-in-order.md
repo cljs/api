@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/repl/browser.clj#L125-L126):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/repl/browser.clj#L125-L126):
 
 ```clj
 (defn add-in-order [{:keys [expecting fns]} order f]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:125-126](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/repl/browser.clj#L125-L126)</ins>
+                └── <ins>[browser.clj:125-126](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/repl/browser.clj#L125-L126)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn add-in-order [{:keys [expecting fns]} order f]\n  {:expecting (or expecting order) :fns (assoc fns order f)})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [125 126]},
  :full-name "cljs.repl.browser/add-in-order",

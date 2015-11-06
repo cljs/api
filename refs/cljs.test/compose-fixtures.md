@@ -31,7 +31,7 @@ that combines their behavior.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L400-L404):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L383-L387):
 
 ```clj
 (defn compose-fixtures
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:400-404](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L400-L404)</ins>
+            └── <ins>[test.cljs:383-387](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L383-L387)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn compose-fixtures\n  [f1 f2]\n  (fn [g] (f1 (fn [] (f2 g)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [400 404]},
+          :lines [383 387]},
  :full-name "cljs.test/compose-fixtures",
  :clj-symbol "clojure.test/compose-fixtures",
  :docstring "Composes two fixture functions, creating a new fixture function\nthat combines their behavior."}

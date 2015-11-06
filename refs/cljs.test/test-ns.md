@@ -39,7 +39,7 @@ Internally binds *report-counters* to a ref initialized to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L270-L293):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L276-L299):
 
 ```clj
 (defmacro test-ns
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:270-293](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L270-L293)</ins>
+            └── <ins>[test.clj:276-299](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L276-L299)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   (assert (and (= quote 'quote) (symbol? ns)) \"Argument to test-ns must be a quoted symbol\")\n   (assert (ana-api/find-ns ns) (str \"Namespace \" ns \" does not exist\"))\n   `(do\n      (cljs.test/set-env! ~env)\n      (cljs.test/do-report {:type :begin-test-ns, :ns ~form})\n      ;; If the namespace has a test-ns-hook function, call that:\n      ~(if-let [v (ana-api/ns-resolve ns 'test-ns-hook)]\n         `(~(symbol (name ns) \"test-ns-hook\"))\n         ;; Otherwise, just test every var in the namespace.\n         `(cljs.test/test-all-vars ~form))\n      (cljs.test/do-report {:type :end-test-ns, :ns ~form})\n      (let [ret# (cljs.test/get-current-env)]\n        (cljs.test/clear-env!)\n        ret#))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/test.clj",
-          :lines [270 293]},
+          :lines [276 299]},
  :full-name "cljs.test/test-ns",
  :clj-symbol "clojure.test/test-ns",
  :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  Returns the final, dereferenced state of\n*report-counters*."}

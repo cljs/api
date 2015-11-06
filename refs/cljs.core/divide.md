@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L429-L432):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L429-L432):
 
 ```clj
 (defmacro ^::ana/numeric divide
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:429-432](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L429-L432)</ins>
+            └── <ins>[core.clj:429-432](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L429-L432)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defmacro ^::ana/numeric divide\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/core.clj",
           :lines [429 432]},
  :full-name "cljs.core/divide",

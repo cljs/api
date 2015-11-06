@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/analyzer/api.clj#L17-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L17-L18):
 
 ```clj
 (defn all-ns []
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:17-18](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/analyzer/api.clj#L17-L18)</ins>
+                └── <ins>[api.clj:17-18](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L17-L18)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn all-ns []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [17 18]},
  :full-name "cljs.analyzer.api/all-ns",

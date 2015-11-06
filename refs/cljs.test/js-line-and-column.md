@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L322-L326):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L305-L309):
 
 ```clj
 (defn js-line-and-column [stack-element]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:322-326](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L322-L326)</ins>
+            └── <ins>[test.cljs:305-309](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L305-L309)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn js-line-and-column [stack-element]\n  (let [parts (.split stack-element \":\")\n        cnt   (count parts)]\n    [(js/parseInt (nth parts (- cnt 2)))\n     (js/parseInt (nth parts (dec cnt)))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [322 326]},
+          :lines [305 309]},
  :full-name "cljs.test/js-line-and-column",
  :full-name-encode "cljs.test/js-line-and-column",
  :history [["+" "0.0-2496"]]}

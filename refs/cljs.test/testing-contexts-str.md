@@ -31,7 +31,7 @@ strings in *testing-contexts* with spaces.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L265-L269):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L248-L252):
 
 ```clj
 (defn testing-contexts-str
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:265-269](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L265-L269)</ins>
+            └── <ins>[test.cljs:248-252](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L248-L252)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn testing-contexts-str\n  []\n  (apply str (interpose \" \" (reverse (:testing-contexts (get-current-env))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [265 269]},
+          :lines [248 252]},
  :full-name "cljs.test/testing-contexts-str",
  :clj-symbol "clojure.test/testing-contexts-str",
  :docstring "Returns a string representation of the current test context. Joins\nstrings in *testing-contexts* with spaces."}

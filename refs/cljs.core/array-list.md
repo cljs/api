@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L7602-L7603):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L7602-L7603):
 
 ```clj
 (defn array-list []
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7602-7603](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L7602-L7603)</ins>
+            └── <ins>[core.cljs:7602-7603](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L7602-L7603)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn array-list []\n  (ArrayList. (array)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7602 7603]},
  :full-name "cljs.core/array-list",

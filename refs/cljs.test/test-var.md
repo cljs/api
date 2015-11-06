@@ -31,7 +31,7 @@ add v to :testing-vars property of env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L374-L393):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L357-L376):
 
 ```clj
 (defn test-var
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:374-393](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L374-L393)</ins>
+            └── <ins>[test.cljs:357-376](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L357-L376)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defn test-var\n  [v]\n  {:pre [(instance? Var v)]}\n  (if-let [t (:test (meta v))]\n    (do\n      (update-current-env! [:testing-vars] conj v)\n      (update-current-env! [:report-counters :test] inc)\n      (do-report {:type :begin-test-var :var v})\n      (try\n        (t)\n        (catch :default e\n          (do-report\n            {:type :error\n             :message \"Uncaught exception, not in assertion.\"\n             :expected nil\n             :actual e})))\n      (do-report {:type :end-test-var :var v})\n      (update-current-env! [:testing-vars] rest))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [374 393]},
+          :lines [357 376]},
  :full-name "cljs.test/test-var",
  :clj-symbol "clojure.test/test-var",
  :docstring "If v has a function in its :test metadata, calls that function,\nadd v to :testing-vars property of env."}

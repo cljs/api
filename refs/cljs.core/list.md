@@ -36,7 +36,7 @@ Creates a new list containing `items`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2344-L2357):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L2344-L2357):
 
 ```clj
 (defn list [& xs]
@@ -59,18 +59,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2344-2357](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2344-L2357)</ins>
+            └── <ins>[core.cljs:2344-2357](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L2344-L2357)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L1413-L1416):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L1413-L1416):
 
 ```clj
 (defmacro list
@@ -83,11 +83,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1413-1416](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L1413-L1416)</ins>
+            └── <ins>[core.clj:1413-1416](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L1413-L1416)</ins>
 </pre>
 -->
 
@@ -138,13 +138,13 @@ The API data for this symbol:
  :source {:code "(defn list [& xs]\n  (let [arr (if (and (instance? IndexedSeq xs) (zero? (.-i xs)))\n              (.-arr xs)\n              (let [arr (array)]\n                (loop [^not-native xs xs]\n                  (if-not (nil? xs)\n                    (do\n                      (.push arr (-first xs))\n                      (recur (-next xs)))\n                    arr))))]\n    (loop [i (alength arr) ^not-native r ()]\n      (if (> i 0)\n        (recur (dec i) (-conj r (aget arr (dec i))))\n        r))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2344 2357]},
  :extra-sources [{:code "(defmacro list\n  ([] '(.-EMPTY cljs.core/List))\n  ([x & xs]\n    `(-conj (list ~@xs) ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2496",
+                  :tag "r2498",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1413 1416]}],
  :full-name "cljs.core/list",

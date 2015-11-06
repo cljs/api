@@ -41,7 +41,7 @@ Tests if 2 arguments are the same object
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L78-L81):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L78-L81):
 
 ```clj
 (defn ^boolean identical?
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:78-81](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L78-L81)</ins>
+            └── <ins>[core.cljs:78-81](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L78-L81)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L318-L319):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L318-L319):
 
 ```clj
 (defmacro identical? [a b]
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:318-319](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L318-L319)</ins>
+            └── <ins>[core.clj:318-319](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L318-L319)</ins>
 </pre>
 -->
 
@@ -131,13 +131,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean identical?\n  [x y]\n  (cljs.core/identical? x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/core.cljs",
           :lines [78 81]},
  :extra-sources [{:code "(defmacro identical? [a b]\n  (bool-expr (core/list 'js* \"(~{} === ~{})\" a b)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2496",
+                  :tag "r2498",
                   :filename "src/clj/cljs/core.clj",
                   :lines [318 319]}],
  :full-name "cljs.core/identical?",

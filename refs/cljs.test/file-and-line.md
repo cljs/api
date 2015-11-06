@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L349-L362):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L332-L345):
 
 ```clj
 (defn file-and-line [exception depth]
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:349-362](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L349-L362)</ins>
+            └── <ins>[test.cljs:332-345](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L332-L345)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn file-and-line [exception depth]\n  (let [stack (.-stack exception)]\n      (if (and stack (string? stack))\n        ;; TODO: flesh out\n        (let [stacktrace\n              (vec (map string/trim\n                     (string/split stack #\"\\n\")))\n              stack-element (nth stacktrace depth)\n              fname (js-filename stack-element)\n              [line column] (js-line-and-column stack-element)\n              [fname line column] (mapped-line-and-column fname line column)]\n          {:file fname :line line :column column})\n        {:file (.-fileName exception)\n         :line (.-lineNumber exception)}))  )",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [349 362]},
+          :lines [332 345]},
  :full-name "cljs.test/file-and-line",
  :full-name-encode "cljs.test/file-and-line",
  :history [["+" "0.0-2496"]]}

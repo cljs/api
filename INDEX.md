@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2496__ [all](HISTORY.md)</td>
-<td>2014-12-17</td>
+<td>__0.0-2498__ [all](HISTORY.md)</td>
+<td>2014-12-19</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2496__ ([See Full History](HISTORY.md)):
+Changes from __0.0-2498__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -37,316 +37,16 @@ __Library API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-special form-brightgreen.svg">
-</td>
-<td><samp>[var](refs/special/var.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/IVolatile](refs/cljs.core/IVolatile.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/Var](refs/cljs.core/Var.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/Volatile](refs/cljs.core/Volatile.md)</samp></td>
-</tr>
-<tr>
-<td>
 <img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/js-debugger](refs/cljs.core/js-debugger.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/ns-interns](refs/cljs.core/ns-interns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/test](refs/cljs.core/test.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/volatile!](refs/cljs.core/volatileBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/volatile?](refs/cljs.core/volatileQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/vreset!](refs/cljs.core/vresetBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/vswap!](refs/cljs.core/vswapBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[cljs.pprint/PrettyFlush](refs/cljs.pprint/PrettyFlush.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/doc](refs/cljs.repl/doc.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/print-doc](refs/cljs.repl/print-doc.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/\*current-env\*](refs/cljs.test/STARcurrent-envSTAR.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/clear-env!](refs/cljs.test/clear-envBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/compose-fixtures](refs/cljs.test/compose-fixtures.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/deftest](refs/cljs.test/deftest.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/do-report](refs/cljs.test/do-report.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/empty-env](refs/cljs.test/empty-env.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/file-and-line](refs/cljs.test/file-and-line.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/get-current-env](refs/cljs.test/get-current-env.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/inc-report-counter!](refs/cljs.test/inc-report-counterBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/is](refs/cljs.test/is.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/join-fixtures](refs/cljs.test/join-fixtures.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/js-filename](refs/cljs.test/js-filename.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/js-line-and-column](refs/cljs.test/js-line-and-column.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/mapped-line-and-column](refs/cljs.test/mapped-line-and-column.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-multimethod-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/report](refs/cljs.test/report.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/run-all-tests](refs/cljs.test/run-all-tests.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/run-tests](refs/cljs.test/run-tests.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/set-env!](refs/cljs.test/set-envBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/successful?](refs/cljs.test/successfulQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/test-all-vars](refs/cljs.test/test-all-vars.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/test-ns](refs/cljs.test/test-ns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/test-var](refs/cljs.test/test-var.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/test-vars](refs/cljs.test/test-vars.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/testing](refs/cljs.test/testing.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/testing-contexts-str](refs/cljs.test/testing-contexts-str.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/testing-vars-str](refs/cljs.test/testing-vars-str.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/try-expr](refs/cljs.test/try-expr.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.test/update-current-env!](refs/cljs.test/update-current-envBANG.md)</samp></td>
+<td><samp>[cljs.test/use-fixtures](refs/cljs.test/use-fixtures.md)</samp></td>
 </tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/all-ns](refs/cljs.analyzer.api/all-ns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/find-ns](refs/cljs.analyzer.api/find-ns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/ns-interns](refs/cljs.analyzer.api/ns-interns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/ns-resolve](refs/cljs.analyzer.api/ns-resolve.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/resolve](refs/cljs.analyzer.api/resolve.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.build.api/cljs-dependents-for-macro-namespaces](refs/cljs.build.api/cljs-dependents-for-macro-namespaces.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.build.api/mark-cljs-ns-for-recompile!](refs/cljs.build.api/mark-cljs-ns-for-recompileBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.build.api/target-file-for-cljs-ns](refs/cljs.build.api/target-file-for-cljs-ns.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/doc](refs/cljs.repl/doc.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 

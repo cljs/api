@@ -31,7 +31,7 @@ fixture function, even if the collection is empty.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L406-L410):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L389-L393):
 
 ```clj
 (defn join-fixtures
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:406-410](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L406-L410)</ins>
+            └── <ins>[test.cljs:389-393](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L389-L393)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn join-fixtures\n  [fixtures]\n  (reduce compose-fixtures default-fixture fixtures))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [406 410]},
+          :lines [389 393]},
  :full-name "cljs.test/join-fixtures",
  :clj-symbol "clojure.test/join-fixtures",
  :docstring "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty."}

@@ -39,7 +39,7 @@ When cljs.analyzer/*load-tests* is false, deftest is ignored.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L179-L195):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L179-L195):
 
 ```clj
 (defmacro deftest
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:179-195](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L179-L195)</ins>
+            └── <ins>[test.clj:179-195](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L179-L195)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defmacro deftest\n  [name & body]\n  (when ana/*load-tests*\n    `(do\n       (def ~(vary-meta name assoc :test `(fn [] ~@body))\n         (fn [] (cljs.test/test-var (.-cljs$lang$var ~name))))\n       (set! (.-cljs$lang$var ~name) (var ~name)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/test.clj",
           :lines [179 195]},
  :full-name "cljs.test/deftest",

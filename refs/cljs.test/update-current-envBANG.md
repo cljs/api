@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L246-L247):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L229-L230):
 
 ```clj
 (defn update-current-env! [ks f & args]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:246-247](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L246-L247)</ins>
+            └── <ins>[test.cljs:229-230](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L229-L230)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn update-current-env! [ks f & args]\n  (set! *current-env* (apply update-in (get-current-env) ks f args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [246 247]},
+          :lines [229 230]},
  :full-name "cljs.test/update-current-env!",
  :full-name-encode "cljs.test/update-current-envBANG",
  :history [["+" "0.0-2496"]]}

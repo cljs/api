@@ -28,7 +28,7 @@ Does nothing if *report-counters* is nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L271-L276):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L254-L259):
 
 ```clj
 (defn inc-report-counter!
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:271-276](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L271-L276)</ins>
+            └── <ins>[test.cljs:254-259](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L254-L259)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn inc-report-counter!\n  [name]\n  (if (:report-counters (get-current-env))\n    (update-current-env! [:report-counters name] (fnil inc 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [271 276]},
+          :lines [254 259]},
  :full-name "cljs.test/inc-report-counter!",
  :docstring "Increments the named counter in *report-counters*, a ref to a map.\nDoes nothing if *report-counters* is nil."}
 

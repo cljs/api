@@ -31,7 +31,7 @@ that would apply to that value, or nil if none apply and no default
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L9027-L9030):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L9027-L9030):
 
 ```clj
 (defn get-method
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9027-9030](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L9027-L9030)</ins>
+            └── <ins>[core.cljs:9027-9030](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L9027-L9030)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn get-method\n  [multifn dispatch-val] (-get-method multifn dispatch-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9027 9030]},
  :full-name "cljs.core/get-method",

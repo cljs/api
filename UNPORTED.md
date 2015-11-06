@@ -1718,10 +1718,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/use-fixtures](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/use-fixtures)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/with-test](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/with-test)</samp></td>
 </tr>
 <tr>

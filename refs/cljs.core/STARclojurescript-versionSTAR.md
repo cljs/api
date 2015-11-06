@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L16):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L16):
 
 ```clj
 (def *clojurescript-version*)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:16](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L16)</ins>
+            └── <ins>[core.cljs:16](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/core.cljs#L16)</ins>
 </pre>
 
 -->
@@ -82,7 +82,7 @@ The API data for this symbol:
  :source {:code "(def *clojurescript-version*)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/core.cljs",
           :lines [16]},
  :full-name "cljs.core/*clojurescript-version*",

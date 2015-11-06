@@ -30,7 +30,7 @@ Creates and installs a new method of multimethod associated with dispatch-value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L1589-L1592):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L1589-L1592):
 
 ```clj
 (defmacro defmethod
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1589-1592](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L1589-L1592)</ins>
+            └── <ins>[core.clj:1589-1592](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/core.clj#L1589-L1592)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defmacro defmethod\n  [multifn dispatch-val & fn-tail]\n  `(-add-method ~(with-meta multifn {:tag 'cljs.core/MultiFn}) ~dispatch-val (fn ~@fn-tail)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/core.clj",
           :lines [1589 1592]},
  :full-name "cljs.core/defmethod",

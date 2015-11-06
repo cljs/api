@@ -27,11 +27,12 @@ Source docstring:
 
 ```
 Groups vars by their namespace and runs test-vars on them with
-appropriate fixtures applied.
+appropriate fixtures assuming they are present in the current
+testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L412-L424):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L395-L408):
 
 ```clj
 (defn test-vars
@@ -51,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:412-424](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/test.cljs#L412-L424)</ins>
+            └── <ins>[test.cljs:395-408](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L395-L408)</ins>
 </pre>
 
 -->
@@ -106,12 +107,12 @@ The API data for this symbol:
  :source {:code "(defn test-vars\n  [vars]\n  (doseq [[ns vars] (group-by (comp :ns meta) vars)]\n    (let [env (get-current-env)\n          once-fixture-fn (join-fixtures (get-in env [:once-fixtures ns]))\n          each-fixture-fn (join-fixtures (get-in env [:each-fixtures ns]))]\n      (once-fixture-fn\n        (fn []\n          (doseq [v vars]\n            (when (:test (meta v))\n              (each-fixture-fn (fn [] (test-var v))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [412 424]},
+          :lines [395 408]},
  :full-name "cljs.test/test-vars",
  :clj-symbol "clojure.test/test-vars",
- :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures applied."}
+ :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures assuming they are present in the current\ntesting environment."}
 
 ```
 

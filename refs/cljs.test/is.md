@@ -45,7 +45,7 @@ re-find) the regular expression re.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L148-L164):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L148-L164):
 
 ```clj
 (defmacro is
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2496
+clojurescript @ r2498
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:148-164](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/test.clj#L148-L164)</ins>
+            └── <ins>[test.clj:148-164](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/test.clj#L148-L164)</ins>
 </pre>
 
 -->
@@ -113,7 +113,7 @@ The API data for this symbol:
  :source {:code "(defmacro is\n  ([form] `(cljs.test/is ~form nil))\n  ([form msg]\n   `(cljs.test/try-expr ~msg ~form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2496",
+          :tag "r2498",
           :filename "src/clj/cljs/test.clj",
           :lines [148 164]},
  :full-name "cljs.test/is",
