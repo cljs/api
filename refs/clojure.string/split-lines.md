@@ -42,7 +42,7 @@ Splits s on
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/clojure/string.cljs#L127-L130):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/clojure/string.cljs#L127-L130):
 
 ```clj
 (defn split-lines
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:127-130](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/clojure/string.cljs#L127-L130)</ins>
+            └── <ins>[string.cljs:127-130](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/clojure/string.cljs#L127-L130)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn split-lines\n  [s]\n  (split s #\"\\n|\\r\\n\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/cljs/clojure/string.cljs",
           :lines [127 130]},
  :full-name "clojure.string/split-lines",

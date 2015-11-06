@@ -30,24 +30,24 @@ Reads one object from the string s
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L431-L435):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L423-L427):
 
 ```clj
 (defn read-string
   [s]
   (let [r (push-back-reader s)]
-    (read r true nil false)))
+    (read r false nil false)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:431-435](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L431-L435)</ins>
+            └── <ins>[reader.cljs:423-427](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L423-L427)</ins>
 </pre>
 
 -->
@@ -95,12 +95,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader/read-string",
- :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r true nil false)))",
+ :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r false nil false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [431 435]},
+          :lines [423 427]},
  :full-name "cljs.reader/read-string",
  :clj-symbol "clojure.core/read-string",
  :docstring "Reads one object from the string s"}

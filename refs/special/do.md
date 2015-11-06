@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/analyzer.clj#L785-L794):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/analyzer.clj#L804-L813):
 
 ```clj
 (defmethod parse 'do
@@ -39,11 +39,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:785-794](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/analyzer.clj#L785-L794)</ins>
+            └── <ins>[analyzer.clj:804-813](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/analyzer.clj#L804-L813)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [785 794]},
+          :lines [804 813]},
  :full-name "special/do",
  :full-name-encode "special/do",
  :clj-symbol "clojure.core/do",

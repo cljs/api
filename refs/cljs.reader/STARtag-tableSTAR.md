@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L555-L558):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L547-L550):
 
 ```clj
 (def *tag-table* (atom {"inst"  read-date
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:555-558](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L555-L558)</ins>
+            └── <ins>[reader.cljs:547-550](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L547-L550)</ins>
 </pre>
 
 -->
@@ -79,9 +79,9 @@ The API data for this symbol:
  :source {:code "(def *tag-table* (atom {\"inst\"  read-date\n                        \"uuid\"  read-uuid\n                        \"queue\" read-queue\n                        \"js\"    read-js}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [555 558]},
+          :lines [547 550]},
  :full-name "cljs.reader/*tag-table*",
  :full-name-encode "cljs.reader/STARtag-tableSTAR",
  :history [["+" "0.0-1236"]]}

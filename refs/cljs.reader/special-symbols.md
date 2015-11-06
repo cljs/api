@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L310-L315):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L302-L307):
 
 ```clj
 (defn special-symbols [t not-found]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:310-315](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/reader.cljs#L310-L315)</ins>
+            └── <ins>[reader.cljs:302-307](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L302-L307)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn special-symbols [t not-found]\n  (cond\n   (identical? t \"nil\") nil\n   (identical? t \"true\") true\n   (identical? t \"false\") false\n   :else not-found))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [310 315]},
+          :lines [302 307]},
  :full-name "cljs.reader/special-symbols",
  :full-name-encode "cljs.reader/special-symbols",
  :history [["+" "0.0-927"]]}

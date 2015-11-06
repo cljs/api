@@ -24,6 +24,11 @@ shadowed by your own vars.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[case\*](../special/caseSTAR.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2227"><img valign="middle" alt="[+] 0.0-2227" title="Added in 0.0-2227" src="https://img.shields.io/badge/+-0.0--2227-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/catch)</td>
 <td><samp>[catch](../special/catch.md)</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

@@ -31,7 +31,7 @@ one. Will not force a lazy seq. (sequence nil) yields ()
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1292-L1298):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1292-L1298):
 
 ```clj
 (defn ^seq sequence
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2202
+clojurescript @ r2227
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1292-1298](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1292-L1298)</ins>
+            └── <ins>[core.cljs:1292-1298](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1292-L1298)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn ^seq sequence\n  [coll]\n   (if (seq? coll)\n     coll\n     (or (seq coll) ())))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2202",
+          :tag "r2227",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1292 1298]},
  :full-name "cljs.core/sequence",
