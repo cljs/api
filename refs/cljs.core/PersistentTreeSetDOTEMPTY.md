@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L6399-L6400):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6444-L6445):
 
 ```clj
 (set! cljs.core.PersistentTreeSet.EMPTY
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6399-6400](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L6399-L6400)</ins>
+            └── <ins>[core.cljs:6444-6445](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6444-L6445)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.PersistentTreeSet.EMPTY\n  (PersistentTreeSet. nil cljs.core.PersistentTreeMap.EMPTY 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6399 6400]},
+          :lines [6444 6445]},
  :full-name "cljs.core/PersistentTreeSet.EMPTY",
  :clj-symbol "clojure.lang/PersistentTreeSet.EMPTY"}
 

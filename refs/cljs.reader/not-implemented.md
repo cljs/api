@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L242-L244):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L242-L244):
 
 ```clj
 (defn not-implemented
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:242-244](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L242-L244)</ins>
+            └── <ins>[reader.cljs:242-244](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L242-L244)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn not-implemented\n  [rdr ch]\n  (reader-error rdr \"Reader for \" ch \" not implemented yet\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [242 244]},
  :full-name "cljs.reader/not-implemented",

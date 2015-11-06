@@ -44,7 +44,7 @@ Returns the nth next of coll, (seq coll) when n is 0.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1801-L1807):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1846-L1852):
 
 ```clj
 (defn nthnext
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1801-1807](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1801-L1807)</ins>
+            └── <ins>[core.cljs:1846-1852](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1846-L1852)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn nthnext\n  [coll n]\n  (loop [n n xs (seq coll)]\n    (if (and xs (pos? n))\n      (recur (dec n) (next xs))\n      xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1801 1807]},
+          :lines [1846 1852]},
  :full-name "cljs.core/nthnext",
  :clj-symbol "clojure.core/nthnext",
  :docstring "Returns the nth next of coll, (seq coll) when n is 0."}

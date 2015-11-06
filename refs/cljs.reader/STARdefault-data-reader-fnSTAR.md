@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1576"><img valign="middle" alt="[+] 0.0-1576" title="Added in 0.0-1576" src="https://img.shields.io/badge/+-0.0--1576-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -17,10 +17,10 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L552-L553):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L553-L554):
 
 ```clj
-(def *default-data-reader-fn*
+(def ^:dynamic *default-data-reader-fn*
   (atom nil))
 ```
 
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:552-553](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L552-L553)</ins>
+            └── <ins>[reader.cljs:553-554](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L553-L554)</ins>
 </pre>
 
 -->
@@ -73,13 +73,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "*default-data-reader-fn*",
- :type "var",
- :source {:code "(def *default-data-reader-fn*\n  (atom nil))",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic *default-data-reader-fn*\n  (atom nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [552 553]},
+          :lines [553 554]},
  :full-name "cljs.reader/*default-data-reader-fn*",
  :full-name-encode "cljs.reader/STARdefault-data-reader-fnSTAR",
  :history [["+" "0.0-1576"]]}

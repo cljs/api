@@ -55,7 +55,7 @@ implementations for protocols.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L794-L805):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L794-L805):
 
 ```clj
 (defmacro extend-type [type-sym & impls]
@@ -76,11 +76,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:794-805](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L794-L805)</ins>
+            └── <ins>[core.clj:794-805](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L794-L805)</ins>
 </pre>
 
 -->
@@ -133,7 +133,7 @@ The API data for this symbol:
  :source {:code "(defmacro extend-type [type-sym & impls]\n  (let [env &env\n        resolve (partial resolve-var env)\n        impl-map (->impl-map impls)\n        [type assign-impls] (if-let [type (base-type type-sym)]\n                              [type base-assign-impls]\n                              [(resolve type-sym) proto-assign-impls])]\n    (when (core/and (:extending-base-js-type cljs.analyzer/*cljs-warnings*)\n                    (js-base-type type-sym))\n      (cljs.analyzer/warning :extending-base-js-type env\n          {:current-symbol type-sym :suggested-symbol (js-base-type type-sym)}))\n    `(do ~@(mapcat #(assign-impls env resolve type-sym type %) impl-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/clj/cljs/core.clj",
           :lines [794 805]},
  :full-name "cljs.core/extend-type",

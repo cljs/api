@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1675):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1720):
 
 ```clj
 (defn shorts [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1675](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1675)</ins>
+            └── <ins>[core.cljs:1720](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1720)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn shorts [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1675]},
+          :lines [1720]},
  :full-name "cljs.core/shorts",
  :clj-symbol "clojure.core/shorts"}
 

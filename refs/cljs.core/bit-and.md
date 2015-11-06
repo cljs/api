@@ -63,7 +63,7 @@ Bitwise and
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1716-L1718):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1761-L1763):
 
 ```clj
 (defn bit-and
@@ -74,18 +74,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1716-1718](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1716-L1718)</ins>
+            └── <ins>[core.cljs:1761-1763](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1761-L1763)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L503-L505):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L503-L505):
 
 ```clj
 (defmacro ^::ana/numeric bit-and
@@ -97,11 +97,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:503-505](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L503-L505)</ins>
+            └── <ins>[core.clj:503-505](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L503-L505)</ins>
 </pre>
 -->
 
@@ -152,13 +152,13 @@ The API data for this symbol:
  :source {:code "(defn bit-and\n  [x y] (cljs.core/bit-and x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1716 1718]},
+          :lines [1761 1763]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-and\n  ([x y] (core/list 'js* \"(~{} & ~{})\" x y))\n  ([x y & more] `(bit-and (bit-and ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2227",
+                  :tag "r2234",
                   :filename "src/clj/cljs/core.clj",
                   :lines [503 505]}],
  :examples [{:id "3c0470",

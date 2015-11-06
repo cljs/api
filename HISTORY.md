@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2234](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2234)__</td>
+<td>2014-06-13</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.8.3</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002234syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002234library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-002234compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2227](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2227)__</td>
 <td>2014-05-22</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1349,6 +1372,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2234
+
+<a name="002234syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002234library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/MetaFn](refs/cljs.core/MetaFn.md)</samp></td>
+</tr>
+</table>
+
+<a name="002234compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2227
@@ -2731,7 +2777,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.reader/\*default-data-reader-fn\*](refs/cljs.reader/STARdefault-data-reader-fnSTAR.md)</samp></td>
 </tr>
@@ -3526,7 +3572,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.reader/\*tag-table\*](refs/cljs.reader/STARtag-tableSTAR.md)</samp></td>
 </tr>

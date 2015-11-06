@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L68-L70):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L68-L70):
 
 ```clj
 (defn reader-error
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:68-70](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/reader.cljs#L68-L70)</ins>
+            └── <ins>[reader.cljs:68-70](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L68-L70)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (js/Error. (apply str msg))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [68 70]},
  :full-name "cljs.reader/reader-error",

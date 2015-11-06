@@ -31,7 +31,7 @@ the top
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/clojure/zip.cljs#L111-L122):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/zip.cljs#L111-L122):
 
 ```clj
 (defn up
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:111-122](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/clojure/zip.cljs#L111-L122)</ins>
+            └── <ins>[zip.cljs:111-122](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/zip.cljs#L111-L122)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn up\n  [loc]\n    (let [[node {l :l, ppath :ppath, pnodes :pnodes r :r, changed? :changed?, :as path}] loc]\n      (when pnodes\n        (let [pnode (peek pnodes)]\n          (with-meta (if changed?\n                       [(make-node loc pnode (concat l (cons node r))) \n                        (and ppath (assoc ppath :changed? true))]\n                       [pnode ppath])\n                     (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [111 122]},
  :full-name "clojure.zip/up",

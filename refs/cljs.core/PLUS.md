@@ -74,7 +74,7 @@ Returns the sum of nums. (+) returns 0.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1458-L1464):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1503-L1509):
 
 ```clj
 (defn ^number +
@@ -89,18 +89,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1458-1464](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1458-L1464)</ins>
+            └── <ins>[core.cljs:1503-1509](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1503-L1509)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L365-L369):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L365-L369):
 
 ```clj
 (defmacro ^::ana/numeric +
@@ -114,11 +114,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:365-369](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L365-L369)</ins>
+            └── <ins>[core.clj:365-369](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L365-L369)</ins>
 </pre>
 -->
 
@@ -170,13 +170,13 @@ The API data for this symbol:
  :source {:code "(defn ^number +\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/+ x y))\n  ([x y & more]\n    (reduce + (cljs.core/+ x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1458 1464]},
+          :lines [1503 1509]},
  :extra-sources [{:code "(defmacro ^::ana/numeric +\n  ([] 0)\n  ([x] x)\n  ([x y] (core/list 'js* \"(~{} + ~{})\" x y))\n  ([x y & more] `(+ (+ ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2227",
+                  :tag "r2234",
                   :filename "src/clj/cljs/core.clj",
                   :lines [365 369]}],
  :examples [{:id "650668",

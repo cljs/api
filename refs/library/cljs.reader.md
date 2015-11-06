@@ -24,13 +24,13 @@ a reader to parse text and produce data structures
 <tr>
 <td></td>
 <td><samp>[\*default-data-reader-fn\*](../cljs.reader/STARdefault-data-reader-fnSTAR.md)</samp></td>
-<td><samp>var</samp></td>
+<td><samp>dynamic var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1576"><img valign="middle" alt="[+] 0.0-1576" title="Added in 0.0-1576" src="https://img.shields.io/badge/+-0.0--1576-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
 <td><samp>[\*tag-table\*](../cljs.reader/STARtag-tableSTAR.md)</samp></td>
-<td><samp>var</samp></td>
+<td><samp>dynamic var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" title="Added in 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
 </tr>
 <tr>

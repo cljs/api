@@ -41,7 +41,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1652-L1655):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1697-L1700):
 
 ```clj
 (defn int
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1652-1655](https://github.com/clojure/clojurescript/blob/r2227/src/cljs/cljs/core.cljs#L1652-L1655)</ins>
+            └── <ins>[core.cljs:1697-1700](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1697-L1700)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L516-L517):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L516-L517):
 
 ```clj
 (defmacro ^::ana/numeric int [x]
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2227/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2227
+clojurescript @ r2234
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:516-517](https://github.com/clojure/clojurescript/blob/r2227/src/clj/cljs/core.clj#L516-L517)</ins>
+            └── <ins>[core.clj:516-517](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L516-L517)</ins>
 </pre>
 -->
 
@@ -130,13 +130,13 @@ The API data for this symbol:
  :source {:code "(defn int\n  [x]\n  (bit-or x 0))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2227",
+          :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1652 1655]},
+          :lines [1697 1700]},
  :extra-sources [{:code "(defmacro ^::ana/numeric int [x]\n  `(bit-or ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2227",
+                  :tag "r2234",
                   :filename "src/clj/cljs/core.clj",
                   :lines [516 517]}],
  :full-name "cljs.core/int",
