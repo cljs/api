@@ -30,7 +30,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7735-L7742):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L7768-L7775):
 
 ```clj
 (defn ex-cause
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7735-7742](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7735-L7742)</ins>
+            └── <ins>[core.cljs:7768-7775](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L7768-L7775)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn ex-cause\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-cause ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7735 7742]},
+          :lines [7768 7775]},
  :full-name "cljs.core/ex-cause",
  :docstring "Alpha - subject to change.\nReturns exception cause (an Error / ExceptionInfo) if ex is an\nExceptionInfo.\nOtherwise returns nil."}
 

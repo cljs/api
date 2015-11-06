@@ -31,7 +31,7 @@ one. Will not force a lazy seq. (sequence nil) yields ()
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1279-L1285):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1292-L1298):
 
 ```clj
 (defn ^seq sequence
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1279-1285](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1279-L1285)</ins>
+            └── <ins>[core.cljs:1292-1298](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1292-L1298)</ins>
 </pre>
 
 -->
@@ -101,9 +101,9 @@ The API data for this symbol:
  :source {:code "(defn ^seq sequence\n  [coll]\n   (if (seq? coll)\n     coll\n     (or (seq coll) ())))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1279 1285]},
+          :lines [1292 1298]},
  :full-name "cljs.core/sequence",
  :clj-symbol "clojure.core/sequence",
  :docstring "Coerces coll to a (possibly empty) sequence, if it is not already\none. Will not force a lazy seq. (sequence nil) yields ()"}

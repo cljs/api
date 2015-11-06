@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1832-L1836):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1845-L1849):
 
 ```clj
 (defn hash-combine [seed hash]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1832-1836](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1832-L1836)</ins>
+            └── <ins>[core.cljs:1845-1849](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1845-L1849)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn hash-combine [seed hash]\n  ; a la boost\n  (bit-xor seed (+ hash 0x9e3779b9\n                   (bit-shift-left seed 6)\n                   (bit-shift-right seed 2))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1832 1836]},
+          :lines [1845 1849]},
  :full-name "cljs.core/hash-combine",
  :full-name-encode "cljs.core/hash-combine",
  :history [["+" "0.0-927"]]}

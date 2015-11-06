@@ -52,7 +52,7 @@ truthiness condition used by `if` expressions.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1228-L1229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1241-L1242):
 
 ```clj
 (defn ^boolean boolean [x]
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1228-1229](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L1228-L1229)</ins>
+            └── <ins>[core.cljs:1241-1242](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L1241-L1242)</ins>
 </pre>
 
 -->
@@ -121,9 +121,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean boolean [x]\n  (if x true false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1228 1229]},
+          :lines [1241 1242]},
  :examples [{:id "9edf3a",
              :content "```clj\n(boolean 1)\n;;=> true\n\n(boolean 0)\n;;=> true\n\n(boolean nil)\n;;=> false\n```"}],
  :full-name "cljs.core/boolean",

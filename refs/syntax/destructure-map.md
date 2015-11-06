@@ -124,7 +124,7 @@ A non-vector sequence can be destructured as a map:
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/clj/cljs/core.clj#L77-L136):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/clj/cljs/core.clj#L77-L140):
 
 ```clj
 (defn destructure [bindings]
@@ -168,7 +168,8 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
                                                     (dissoc bes (key entry))
                                                     ((key entry) bes)))
                                           (dissoc b :as :or)
-                                          {:keys #(keyword (core/str %)), :strs core/str, :syms #(core/list `quote %)})]
+                                          {:keys #(if (core/keyword? %) % (keyword (core/str %))),
+                                           :strs core/str, :syms #(core/list `quote %)})]
                            (if (seq bes)
                              (core/let [bb (key (first bes))
                                         bk (val (first bes))
@@ -179,25 +180,28 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
                                       (next bes)))
                              ret))))]
                     (core/cond
-                      (core/symbol? b) (-> bvec (conj b) (conj v))
+                      (core/symbol? b) (-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))
+                      (core/keyword? b) (-> bvec (conj (symbol (name b))) (conj v))
                       (vector? b) (pvec bvec b v)
                       (map? b) (pmap bvec b v)
                       :else (throw (new Exception (core/str "Unsupported binding form: " b))))))
          process-entry (fn [bvec b] (pb bvec (first b) (second b)))]
         (if (every? core/symbol? (map first bents))
           bindings
-          (reduce process-entry [] bents))))
+          (if-let [kwbs (seq (filter #(core/keyword? (first %)) bents))]
+            (throw (new Exception (core/str "Unsupported binding key: " (ffirst kwbs))))
+            (reduce process-entry [] bents)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:77-136](https://github.com/clojure/clojurescript/blob/r2173/src/clj/cljs/core.clj#L77-L136)</ins>
+            └── <ins>[core.clj:77-140](https://github.com/clojure/clojurescript/blob/r2197/src/clj/cljs/core.clj#L77-L140)</ins>
 </pre>
 
 -->
@@ -238,12 +242,12 @@ The API data for this symbol:
  :type "binding",
  :related ["syntax/destructure-vector"],
  :full-name-encode "syntax/destructure-map",
- :source {:code "(defn destructure [bindings]\n  (core/let [bents (partition 2 bindings)\n         pb (fn pb [bvec b v]\n              (core/let [pvec\n                     (fn [bvec b val]\n                       (core/let [gvec (gensym \"vec__\")]\n                         (core/loop [ret (-> bvec (conj gvec) (conj val))\n                                     n 0\n                                     bs b\n                                     seen-rest? false]\n                           (if (seq bs)\n                             (core/let [firstb (first bs)]\n                               (core/cond\n                                 (= firstb '&) (recur (pb ret (second bs) (core/list `nthnext gvec n))\n                                                      n\n                                                      (nnext bs)\n                                                      true)\n                                 (= firstb :as) (pb ret (second bs) gvec)\n                                 :else (if seen-rest?\n                                         (throw (new Exception \"Unsupported binding form, only :as can follow & parameter\"))\n                                         (recur (pb ret firstb (core/list `nth gvec n nil))\n                                                (core/inc n)\n                                                (next bs)\n                                                seen-rest?))))\n                             ret))))\n                     pmap\n                     (fn [bvec b v]\n                       (core/let [gmap (gensym \"map__\")\n                                  defaults (:or b)]\n                         (core/loop [ret (-> bvec (conj gmap) (conj v)\n                                             (conj gmap) (conj `(if (seq? ~gmap) (apply core/hash-map ~gmap) ~gmap))\n                                             ((fn [ret]\n                                                (if (:as b)\n                                                  (conj ret (:as b) gmap)\n                                                  ret))))\n                                     bes (reduce\n                                          (fn [bes entry]\n                                            (reduce #(assoc %1 %2 ((val entry) %2))\n                                                    (dissoc bes (key entry))\n                                                    ((key entry) bes)))\n                                          (dissoc b :as :or)\n                                          {:keys #(keyword (core/str %)), :strs core/str, :syms #(core/list `quote %)})]\n                           (if (seq bes)\n                             (core/let [bb (key (first bes))\n                                        bk (val (first bes))\n                                        has-default (contains? defaults bb)]\n                               (recur (pb ret bb (if has-default\n                                                   (core/list `get gmap bk (defaults bb))\n                                                   (core/list `get gmap bk)))\n                                      (next bes)))\n                             ret))))]\n                    (core/cond\n                      (core/symbol? b) (-> bvec (conj b) (conj v))\n                      (vector? b) (pvec bvec b v)\n                      (map? b) (pmap bvec b v)\n                      :else (throw (new Exception (core/str \"Unsupported binding form: \" b))))))\n         process-entry (fn [bvec b] (pb bvec (first b) (second b)))]\n        (if (every? core/symbol? (map first bents))\n          bindings\n          (reduce process-entry [] bents))))",
+ :source {:code "(defn destructure [bindings]\n  (core/let [bents (partition 2 bindings)\n         pb (fn pb [bvec b v]\n              (core/let [pvec\n                     (fn [bvec b val]\n                       (core/let [gvec (gensym \"vec__\")]\n                         (core/loop [ret (-> bvec (conj gvec) (conj val))\n                                     n 0\n                                     bs b\n                                     seen-rest? false]\n                           (if (seq bs)\n                             (core/let [firstb (first bs)]\n                               (core/cond\n                                 (= firstb '&) (recur (pb ret (second bs) (core/list `nthnext gvec n))\n                                                      n\n                                                      (nnext bs)\n                                                      true)\n                                 (= firstb :as) (pb ret (second bs) gvec)\n                                 :else (if seen-rest?\n                                         (throw (new Exception \"Unsupported binding form, only :as can follow & parameter\"))\n                                         (recur (pb ret firstb (core/list `nth gvec n nil))\n                                                (core/inc n)\n                                                (next bs)\n                                                seen-rest?))))\n                             ret))))\n                     pmap\n                     (fn [bvec b v]\n                       (core/let [gmap (gensym \"map__\")\n                                  defaults (:or b)]\n                         (core/loop [ret (-> bvec (conj gmap) (conj v)\n                                             (conj gmap) (conj `(if (seq? ~gmap) (apply core/hash-map ~gmap) ~gmap))\n                                             ((fn [ret]\n                                                (if (:as b)\n                                                  (conj ret (:as b) gmap)\n                                                  ret))))\n                                     bes (reduce\n                                          (fn [bes entry]\n                                            (reduce #(assoc %1 %2 ((val entry) %2))\n                                                    (dissoc bes (key entry))\n                                                    ((key entry) bes)))\n                                          (dissoc b :as :or)\n                                          {:keys #(if (core/keyword? %) % (keyword (core/str %))),\n                                           :strs core/str, :syms #(core/list `quote %)})]\n                           (if (seq bes)\n                             (core/let [bb (key (first bes))\n                                        bk (val (first bes))\n                                        has-default (contains? defaults bb)]\n                               (recur (pb ret bb (if has-default\n                                                   (core/list `get gmap bk (defaults bb))\n                                                   (core/list `get gmap bk)))\n                                      (next bes)))\n                             ret))))]\n                    (core/cond\n                      (core/symbol? b) (-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))\n                      (core/keyword? b) (-> bvec (conj (symbol (name b))) (conj v))\n                      (vector? b) (pvec bvec b v)\n                      (map? b) (pmap bvec b v)\n                      :else (throw (new Exception (core/str \"Unsupported binding form: \" b))))))\n         process-entry (fn [bvec b] (pb bvec (first b) (second b)))]\n        (if (every? core/symbol? (map first bents))\n          bindings\n          (if-let [kwbs (seq (filter #(core/keyword? (first %)) bents))]\n            (throw (new Exception (core/str \"Unsupported binding key: \" (ffirst kwbs))))\n            (reduce process-entry [] bents)))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/clj/cljs/core.clj",
-          :lines [77 136]},
+          :lines [77 140]},
  :usage ["{:keys [] :strs [] :syms [] :or {} :as name}"],
  :examples [{:id "0d56ee",
              :content "Use in place of function arguments:\n\n```clj\n(defn print-point\n  [{:keys [x y z]}]\n  (println x y z))\n\n(print-point {:x 1, :y 2, :z 3})\n;; 1 2 3\n```"}

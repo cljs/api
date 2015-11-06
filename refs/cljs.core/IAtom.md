@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7068):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L7096):
 
 ```clj
 (defprotocol IAtom)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7068](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7068)</ins>
+            └── <ins>[core.cljs:7096](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L7096)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IAtom)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7068]},
+          :lines [7096]},
  :full-name "cljs.core/IAtom",
  :history [["+" "0.0-2173"]]}
 

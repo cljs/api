@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L229-L230):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L229-L230):
 
 ```clj
 (defprotocol ICounted
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2173
+clojurescript @ r2197
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:229-230](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L229-L230)</ins>
+            └── <ins>[core.cljs:229-230](https://github.com/clojure/clojurescript/blob/r2197/src/cljs/cljs/core.cljs#L229-L230)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ICounted\n  (^number -count [coll] \"constant time count\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2173",
+          :tag "r2197",
           :filename "src/cljs/cljs/core.cljs",
           :lines [229 230]},
  :methods [{:name "-count",
