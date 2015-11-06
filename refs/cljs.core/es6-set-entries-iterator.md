@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L5483-L5484):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L5493-L5494):
 
 ```clj
 (defn es6-set-entries-iterator [coll]
@@ -33,11 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:5483-5484](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L5483-L5484)</ins>
+            └── cljs
+                └── <ins>[core.cljs:5493-5494](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L5493-L5494)</ins>
 </pre>
 
 -->
@@ -83,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn es6-set-entries-iterator [coll]\n  (ES6SetEntriesIterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [5483 5484]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [5493 5494]},
  :full-name "cljs.core/es6-set-entries-iterator",
  :full-name-encode "cljs.core/es6-set-entries-iterator",
  :history [["+" "0.0-2371"]]}

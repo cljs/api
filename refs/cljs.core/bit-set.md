@@ -60,7 +60,7 @@ Set bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2388-L2391):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L2398-L2401):
 
 ```clj
 (defn bit-set
@@ -72,18 +72,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:2388-2391](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2388-L2391)</ins>
+            └── cljs
+                └── <ins>[core.cljs:2398-2401](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L2398-L2401)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L605-L606):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L605-L606):
 
 ```clj
 (defmacro ^::ana/numeric bit-set [x n]
@@ -94,11 +95,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:605-606](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L605-L606)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:605-606](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L605-L606)</ins>
 </pre>
 -->
 
@@ -149,14 +151,14 @@ The API data for this symbol:
  :source {:code "(defn bit-set\n  [x n]\n  (cljs.core/bit-set x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [2388 2391]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [2398 2401]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-set [x n]\n  (core/list 'js* \"(~{} | (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3211",
-                  :filename "src/clj/cljs/core.clj",
+                  :tag "r3255",
+                  :filename "src/main/clojure/cljs/core.clj",
                   :lines [605 606]}],
  :examples [{:id "6a8a49",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-set 2r1100 1)\n;;=> 14\n;; 14 = 2r1110\n```\n\nSame number in decimal:\n\n```clj\n(bit-set 12 1)\n;;=> 14\n```"}],

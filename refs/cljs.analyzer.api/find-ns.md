@@ -31,7 +31,7 @@ to clojure.core/find-ns.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L86-L91):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L86-L91):
 
 ```clj
 (defn find-ns
@@ -44,12 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── analyzer
-                └── <ins>[api.clj:86-91](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L86-L91)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── analyzer
+                    └── <ins>[api.clj:86-91](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L86-L91)</ins>
 </pre>
 
 -->
@@ -100,8 +101,8 @@ The API data for this symbol:
  :source {:code "(defn find-ns\n  [sym]\n  {:pre [(symbol? sym)]}\n  (get-in @env/*compiler* [::ana/namespaces sym]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/analyzer/api.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [86 91]},
  :full-name "cljs.analyzer.api/find-ns",
  :clj-symbol "clojure.core/find-ns",

@@ -40,7 +40,7 @@ root is the root node.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L18-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L18-L32):
 
 ```clj
 (defn zipper
@@ -53,11 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[zip.cljs:18-32](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L18-L32)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[zip.cljs:18-32](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L18-L32)</ins>
 </pre>
 
 -->
@@ -108,8 +109,8 @@ The API data for this symbol:
  :source {:code "(defn zipper\n  [branch? children make-node root]\n    ^{:zip/branch? branch? :zip/children children :zip/make-node make-node}\n    [root nil])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/zip.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/zip.cljs",
           :lines [18 32]},
  :full-name "clojure.zip/zipper",
  :clj-symbol "clojure.zip/zipper",

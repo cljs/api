@@ -56,7 +56,7 @@ defs the supplied var names with no bindings, useful for making forward declarat
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L2643-L2646):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L2643-L2646):
 
 ```clj
 (defmacro declare
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-bet
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-beta1
+clojure @ clojure-1.7.0-beta2
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:2643-2646](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L2643-L2646)</ins>
+            └── <ins>[core.clj:2643-2646](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta2/src/clj/clojure/core.clj#L2643-L2646)</ins>
 </pre>
 
 -->
@@ -124,7 +124,7 @@ The API data for this symbol:
  :source {:code "(defmacro declare\n  [& names] `(do ~@(map #(list 'def (vary-meta % assoc :declared true)) names)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-beta1",
+          :tag "clojure-1.7.0-beta2",
           :filename "src/clj/clojure/core.clj",
           :lines [2643 2646]},
  :examples [{:id "5a2dc2",

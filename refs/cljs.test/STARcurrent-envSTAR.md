@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L259):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L259):
 
 ```clj
 (def ^:dynamic *current-env* nil)
@@ -27,11 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[test.cljs:259](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L259)</ins>
+            └── cljs
+                └── <ins>[test.cljs:259](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L259)</ins>
 </pre>
 
 -->
@@ -76,8 +77,8 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *current-env* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/test.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/test.cljs",
           :lines [259]},
  :full-name "cljs.test/*current-env*",
  :full-name-encode "cljs.test/STARcurrent-envSTAR",

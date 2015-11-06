@@ -30,7 +30,7 @@ Replaces the node at this loc with the value of (f node args)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L189-L192):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L189-L192):
 
 ```clj
 (defn edit
@@ -42,11 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L189-L192)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L189-L192)</ins>
 </pre>
 
 -->
@@ -97,8 +98,8 @@ The API data for this symbol:
  :source {:code "(defn edit\n  [loc f & args]\n    (replace loc (apply f (node loc) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/zip.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/zip.cljs",
           :lines [189 192]},
  :full-name "clojure.zip/edit",
  :clj-symbol "clojure.zip/edit",

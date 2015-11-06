@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L79-L87):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/reader.cljs#L79-L87):
 
 ```clj
 (defn read-token
@@ -40,11 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[reader.cljs:79-87](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L79-L87)</ins>
+            └── cljs
+                └── <ins>[reader.cljs:79-87](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/reader.cljs#L79-L87)</ins>
 </pre>
 
 -->
@@ -90,8 +91,8 @@ The API data for this symbol:
  :source {:code "(defn read-token\n  [rdr initch]\n  (loop [sb (StringBuffer. initch)\n         ch (read-char rdr)]\n    (if (or (nil? ch)\n            (whitespace? ch)\n            (macro-terminating? ch))\n      (do (unread rdr ch) (.toString sb))\n      (recur (do (.append sb ch) sb) (read-char rdr)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/reader.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/reader.cljs",
           :lines [79 87]},
  :full-name "cljs.reader/read-token",
  :full-name-encode "cljs.reader/read-token",

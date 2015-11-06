@@ -30,7 +30,7 @@ Removes the mappings for the symbol from the namespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L2014-L2021):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L2016-L2023):
 
 ```clj
 (defmacro ns-unmap
@@ -46,11 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:2014-2021](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L2014-L2021)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:2016-2023](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L2016-L2023)</ins>
 </pre>
 
 -->
@@ -101,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defmacro ns-unmap\n  [[quote0 ns] [quote1 sym]]\n  (core/assert (core/and (= quote0 'quote) (core/symbol? ns)\n                         (= quote1 'quote) (core/symbol? sym))\n    \"Arguments to ns-unmap must be quoted symbols\")\n  (swap! env/*compiler* update-in [::ana/namespaces ns :defs] dissoc sym)\n  `(js-delete ~(cljs.compiler/munge ns) ~(cljs.compiler/munge (core/str sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/core.clj",
-          :lines [2014 2021]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/core.clj",
+          :lines [2016 2023]},
  :full-name "cljs.core/ns-unmap",
  :clj-symbol "clojure.core/ns-unmap",
  :docstring "Removes the mappings for the symbol from the namespace."}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L591-L600):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L594-L603):
 
 ```clj
 (defn self-require? [specs]
@@ -41,11 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:591-600](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L591-L600)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[repl.cljc:594-603](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L594-L603)</ins>
 </pre>
 
 -->
@@ -91,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn self-require? [specs]\n  (some\n    (fn [quoted-spec-or-kw]\n      (and (not (keyword? quoted-spec-or-kw))\n           (let [spec (second quoted-spec-or-kw)\n                 ns (if (sequential? spec)\n                      (first spec)\n                      spec)]\n             (= ns ana/*cljs-ns*))))\n    specs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl.clj",
-          :lines [591 600]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl.cljc",
+          :lines [594 603]},
  :full-name "cljs.repl/self-require?",
  :full-name-encode "cljs.repl/self-requireQMARK",
  :history [["+" "0.0-2911"]]}

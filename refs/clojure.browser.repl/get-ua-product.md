@@ -22,27 +22,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/repl.cljs#L36-L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/repl.cljs#L36-L41):
 
 ```clj
 (defn get-ua-product []
   (cond
-    (gbrowser/isSafari) :safari
-    (gbrowser/isChrome) :chrome
-    (gbrowser/isFirefox) :firefox
-    (gbrowser/isIE) :ie))
+    product/SAFARI :safari
+    product/CHROME :chrome
+    product/FIREFOX :firefox
+    product/IE :ie))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── browser
-                └── <ins>[repl.cljs:36-41](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/repl.cljs#L36-L41)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── browser
+                    └── <ins>[repl.cljs:36-41](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/repl.cljs#L36-L41)</ins>
 </pre>
 
 -->
@@ -85,11 +86,11 @@ The API data for this symbol:
  :name "get-ua-product",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn get-ua-product []\n  (cond\n    (gbrowser/isSafari) :safari\n    (gbrowser/isChrome) :chrome\n    (gbrowser/isFirefox) :firefox\n    (gbrowser/isIE) :ie))",
+ :source {:code "(defn get-ua-product []\n  (cond\n    product/SAFARI :safari\n    product/CHROME :chrome\n    product/FIREFOX :firefox\n    product/IE :ie))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/browser/repl.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [36 41]},
  :full-name "clojure.browser.repl/get-ua-product",
  :full-name-encode "clojure.browser.repl/get-ua-product",

@@ -29,7 +29,7 @@ meta information.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/reflect.cljs#L25-L31):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/reflect.cljs#L25-L31):
 
 ```clj
 (defn meta
@@ -42,11 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[reflect.cljs:25-31](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/reflect.cljs#L25-L31)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[reflect.cljs:25-31](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/reflect.cljs#L25-L31)</ins>
 </pre>
 
 -->
@@ -94,8 +95,8 @@ The API data for this symbol:
  :source {:code "(defn meta\n  [sym cb]\n  (query-reflection (str \"var=\" (js/encodeURIComponent (str sym)))\n                    #(cb (evaluate-javascript %))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/reflect.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/reflect.cljs",
           :lines [25 31]},
  :full-name "clojure.reflect/meta",
  :docstring "Queries the reflection api with a fully qualified symbol, then calls\ncallback fn cb with the evaluated cljs map containing that symbol's\nmeta information."}

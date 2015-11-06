@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/dom.cljs#L17-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/dom.cljs#L17-L18):
 
 ```clj
 (defprotocol DOMBuilder
@@ -28,12 +28,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── browser
-                └── <ins>[dom.cljs:17-18](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/dom.cljs#L17-L18)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── browser
+                    └── <ins>[dom.cljs:17-18](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/dom.cljs#L17-L18)</ins>
 </pre>
 
 -->
@@ -79,8 +80,8 @@ The API data for this symbol:
  :source {:code "(defprotocol DOMBuilder\n  (-element [this] [this attrs-or-children] [this attrs children]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/browser/dom.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [17 18]},
  :methods [{:name "-element",
             :signature ["[this]"

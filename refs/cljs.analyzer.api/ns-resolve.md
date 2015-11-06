@@ -31,7 +31,7 @@ Analagous to clojure.core/ns-resolve but returns var analysis map not Var.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L113-L118):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L113-L118):
 
 ```clj
 (defn ns-resolve
@@ -44,12 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── analyzer
-                └── <ins>[api.clj:113-118](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L113-L118)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── analyzer
+                    └── <ins>[api.clj:113-118](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L113-L118)</ins>
 </pre>
 
 -->
@@ -100,8 +101,8 @@ The API data for this symbol:
  :source {:code "(defn ns-resolve\n  [ns sym]\n  {:pre [(symbol? ns) (symbol? sym)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/analyzer/api.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [113 118]},
  :full-name "cljs.analyzer.api/ns-resolve",
  :clj-symbol "clojure.core/ns-resolve",

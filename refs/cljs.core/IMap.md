@@ -22,7 +22,7 @@ Protocol for adding mapping functionality to collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L406-L410):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L406-L410):
 
 ```clj
 (defprotocol IMap
@@ -36,11 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:406-410](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L406-L410)</ins>
+            └── cljs
+                └── <ins>[core.cljs:406-410](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L406-L410)</ins>
 </pre>
 
 -->
@@ -87,8 +88,8 @@ The API data for this symbol:
  :source {:code "(defprotocol IMap\n  \"Protocol for adding mapping functionality to collections.\"\n  #_(-assoc-ex [coll k v])\n  (^clj -dissoc [coll k]\n    \"Returns a new collection of coll without the mapping for key k.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
           :lines [406 410]},
  :methods [{:name "-dissoc",
             :signature ["[coll k]"],

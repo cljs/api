@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/node.clj#L24-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/node.clj#L24-L28):
 
 ```clj
 (defn socket [host port]
@@ -36,12 +36,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[node.clj:24-28](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/node.clj#L24-L28)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── repl
+                    └── <ins>[node.clj:24-28](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/node.clj#L24-L28)</ins>
 </pre>
 
 -->
@@ -87,8 +88,8 @@ The API data for this symbol:
  :source {:code "(defn socket [host port]\n  (let [socket (Socket. host port)\n        in     (io/reader socket)\n        out    (io/writer socket)]\n    {:socket socket :in in :out out}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl/node.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [24 28]},
  :full-name "cljs.repl.node/socket",
  :full-name-encode "cljs.repl.node/socket",

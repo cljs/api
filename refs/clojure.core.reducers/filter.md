@@ -34,7 +34,7 @@ Retains values in the reduction of coll for which (pred val)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/core/reducers.cljs#L117-L128):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/core/reducers.cljs#L117-L128):
 
 ```clj
 (defcurried filter
@@ -55,12 +55,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── core
-                └── <ins>[reducers.cljs:117-128](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/core/reducers.cljs#L117-L128)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── core
+                    └── <ins>[reducers.cljs:117-128](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/core/reducers.cljs#L117-L128)</ins>
 </pre>
 
 -->
@@ -111,8 +112,8 @@ The API data for this symbol:
  :source {:code "(defcurried filter\n  \"Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/core/reducers.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/core/reducers.cljs",
           :lines [117 128]},
  :full-name "clojure.core.reducers/filter",
  :clj-symbol "clojure.core.reducers/filter",

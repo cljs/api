@@ -27,7 +27,7 @@ EXPERIMENTAL: Given an ES2015 compatible iterator return a seq.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L1031-L1037):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L1036-L1042):
 
 ```clj
 (defn es6-iterator-seq
@@ -42,11 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:1031-1037](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L1031-L1037)</ins>
+            └── cljs
+                └── <ins>[core.cljs:1036-1042](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L1036-L1042)</ins>
 </pre>
 
 -->
@@ -94,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn es6-iterator-seq\n  [iter]\n  (let [v (.next iter)]\n    (if (.-done v)\n      ()\n      (ES6IteratorSeq. (.-value v) iter nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [1031 1037]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [1036 1042]},
  :full-name "cljs.core/es6-iterator-seq",
  :docstring "EXPERIMENTAL: Given an ES2015 compatible iterator return a seq."}
 

@@ -30,7 +30,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L1365-L1385):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L1367-L1387):
 
 ```clj
 (defmacro satisfies?
@@ -59,11 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:1365-1385](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L1365-L1385)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:1367-1387](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L1367-L1387)</ins>
 </pre>
 
 -->
@@ -114,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p          (:name\n                     (cljs.analyzer/resolve-var\n                       (dissoc &env :locals) psym))\n         prefix     (protocol-prefix p)\n         xsym       (bool-expr (gensym))\n         [part bit] (fast-path-protocols p)\n         msym       (symbol\n                      (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if ~xsym\n         (let [bit# ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))]\n           (if (or bit#\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             (if (coercive-not (. ~xsym ~msym))\n               (cljs.core/native-satisfies? ~psym ~xsym)\n               false)))\n         (cljs.core/native-satisfies? ~psym ~xsym)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/core.clj",
-          :lines [1365 1385]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/core.clj",
+          :lines [1367 1387]},
  :full-name "cljs.core/satisfies?",
  :clj-symbol "clojure.core/satisfies?",
  :docstring "Returns true if x satisfies the protocol"}

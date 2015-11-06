@@ -38,7 +38,7 @@ per the CrossPageChannel API.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/net.cljs#L116-L138):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/net.cljs#L116-L138):
 
 ```clj
 (defn xpc-connection
@@ -61,12 +61,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── browser
-                └── <ins>[net.cljs:116-138](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/net.cljs#L116-L138)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── browser
+                    └── <ins>[net.cljs:116-138](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/net.cljs#L116-L138)</ins>
 </pre>
 
 -->
@@ -114,8 +115,8 @@ The API data for this symbol:
  :source {:code "(defn xpc-connection\n  ([]\n     (when-let [config (.getParameterValue\n                        (Uri. (.-href (.-location js/window)))\n                        \"xpc\")]\n       (CrossPageChannel. (gjson/parse config))))\n  ([config]\n     (CrossPageChannel.\n      (reduce (fn [sum [k v]]\n                (if-let [field (get xpc-config-fields k)]\n                  (doto sum (aset field v))\n                  sum))\n              (js-obj)\n              config))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/browser/net.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [116 138]},
  :full-name "clojure.browser.net/xpc-connection",
  :docstring "When passed with a config hash-map, returns a parent\nCrossPageChannel object. Keys in the config hash map are downcased\nversions of the goog.net.xpc.CfgFields enum keys,\ne.g. goog.net.xpc.CfgFields.PEER_URI becomes :peer_uri in the config\nhash.\n\nWhen passed with no args, creates a child CrossPageChannel object,\nand the config is automatically taken from the URL param 'xpc', as\nper the CrossPageChannel API."}

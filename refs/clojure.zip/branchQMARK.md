@@ -30,7 +30,7 @@ Returns true if the node at loc is a branch
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L64-L67):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L64-L67):
 
 ```clj
 (defn branch?
@@ -42,11 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L64-L67)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L64-L67)</ins>
 </pre>
 
 -->
@@ -97,8 +98,8 @@ The API data for this symbol:
  :source {:code "(defn branch?\n  [loc]\n    ((:zip/branch? (meta loc)) (node loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/zip.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/zip.cljs",
           :lines [64 67]},
  :full-name "clojure.zip/branch?",
  :clj-symbol "clojure.zip/branch?",

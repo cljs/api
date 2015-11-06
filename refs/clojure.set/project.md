@@ -30,7 +30,7 @@ Returns a rel of the elements of xrel with only the keys in ks
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/set.cljs#L67-L70):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/set.cljs#L67-L70):
 
 ```clj
 (defn project
@@ -42,11 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[set.cljs:67-70](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/set.cljs#L67-L70)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[set.cljs:67-70](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/set.cljs#L67-L70)</ins>
 </pre>
 
 -->
@@ -97,8 +98,8 @@ The API data for this symbol:
  :source {:code "(defn project\n  [xrel ks]\n    (set (map #(select-keys % ks) xrel)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/set.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/set.cljs",
           :lines [67 70]},
  :full-name "clojure.set/project",
  :clj-symbol "clojure.set/project",

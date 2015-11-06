@@ -31,7 +31,7 @@ children. The loc is only used to supply the constructor.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L76-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L76-L80):
 
 ```clj
 (defn make-node
@@ -43,11 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/zip.cljs#L76-L80)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/zip.cljs#L76-L80)</ins>
 </pre>
 
 -->
@@ -98,8 +99,8 @@ The API data for this symbol:
  :source {:code "(defn make-node\n  [loc node children]\n    ((:zip/make-node (meta loc)) node children))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/zip.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/zip.cljs",
           :lines [76 80]},
  :full-name "clojure.zip/make-node",
  :clj-symbol "clojure.zip/make-node",

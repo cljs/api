@@ -32,7 +32,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/walk.cljs#L50-L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/walk.cljs#L50-L56):
 
 ```clj
 (defn postwalk
@@ -44,11 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/walk.cljs#L50-L56)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/walk.cljs#L50-L56)</ins>
 </pre>
 
 -->
@@ -99,8 +100,8 @@ The API data for this symbol:
  :source {:code "(defn postwalk\n  [f form]\n  (walk (partial postwalk f) f form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/walk.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/walk.cljs",
           :lines [50 56]},
  :full-name "clojure.walk/postwalk",
  :clj-symbol "clojure.walk/postwalk",

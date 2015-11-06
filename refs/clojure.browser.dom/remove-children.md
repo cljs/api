@@ -27,7 +27,7 @@ Remove all children from the element with the passed id.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/dom.cljs#L92-L96):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/dom.cljs#L92-L96):
 
 ```clj
 (defn remove-children
@@ -40,12 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
-        └── clojure
-            └── browser
-                └── <ins>[dom.cljs:92-96](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/dom.cljs#L92-L96)</ins>
+    └── main
+        └── cljs
+            └── clojure
+                └── browser
+                    └── <ins>[dom.cljs:92-96](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/clojure/browser/dom.cljs#L92-L96)</ins>
 </pre>
 
 -->
@@ -93,8 +94,8 @@ The API data for this symbol:
  :source {:code "(defn remove-children\n  [id]\n  (let [parent (gdom/getElement (name id))]\n    (do (gdom/removeChildren parent))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/clojure/browser/dom.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [92 96]},
  :full-name "clojure.browser.dom/remove-children",
  :docstring "Remove all children from the element with the passed id."}

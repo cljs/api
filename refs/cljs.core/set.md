@@ -54,12 +54,12 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L7898-L7913):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L7908-L7923):
 
 ```clj
 (defn set
   [coll]
-  (let [^not-native in (seq coll)]
+  (let [in (seq coll)]
     (cond
       (nil? in) #{}
 
@@ -67,22 +67,23 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
       (set-from-indexed-seq in)
 
       :else
-      (loop [in in
-              ^not-native out (-as-transient #{})]
+      (loop [^not-native in in
+             ^not-native out (-as-transient #{})]
         (if-not (nil? in)
-          (recur (-next in) (-conj! out (-first in)))
-          (-persistent! out))))))
+          (recur (next in) (-conj! out (-first in)))
+          (persistent! out))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:7898-7913](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L7898-L7913)</ins>
+            └── cljs
+                └── <ins>[core.cljs:7908-7923](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L7908-L7923)</ins>
 </pre>
 
 -->
@@ -146,12 +147,12 @@ The API data for this symbol:
            "clojure.set/rename-keys"
            "clojure.set/map-invert"],
  :full-name-encode "cljs.core/set",
- :source {:code "(defn set\n  [coll]\n  (let [^not-native in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (and (instance? IndexedSeq in) (zero? (.-i in)))\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [in in\n              ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (-next in) (-conj! out (-first in)))\n          (-persistent! out))))))",
+ :source {:code "(defn set\n  [coll]\n  (let [in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (and (instance? IndexedSeq in) (zero? (.-i in)))\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [^not-native in in\n             ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (next in) (-conj! out (-first in)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [7898 7913]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [7908 7923]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

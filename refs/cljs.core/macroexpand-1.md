@@ -72,7 +72,7 @@ else returns form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L2034-L2041):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L2036-L2043):
 
 ```clj
 (defmacro macroexpand-1
@@ -87,11 +87,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:2034-2041](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L2034-L2041)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:2036-2043](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L2036-L2043)</ins>
 </pre>
 
 -->
@@ -144,9 +145,9 @@ The API data for this symbol:
  :source {:code "(defmacro macroexpand-1\n  [quoted]\n  (core/assert (core/= (core/first quoted) 'quote)\n    \"Argument to macroexpand-1 must be quoted\")\n  (core/let [form (second quoted)]\n    `(quote ~(ana/macroexpand-1 &env form))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/core.clj",
-          :lines [2034 2041]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/core.clj",
+          :lines [2036 2043]},
  :examples [{:id "1bc6af",
              :content "See how `(-> 2 inc)` is progressively expanded:\n\n```clj\n(macroexpand-1 '(-> 2 inc))\n;;=> (inc 2)\n\n(macroexpand-1 '(inc 2))\n;;=> (cljs.core/+ 2 1)\n\n(macroexpand-1 '(cljs.core/+ 2 1))\n;;=> (js* \"(~{} + ~{})\" 2 1)\n```\n\nNotice how the nested `inc` form is not expanded:\n\n```clj\n(macroexpand-1 '(inc (inc 2)))\n;;=> (cljs.core/+ (inc 2) 1)\n```"}],
  :full-name "cljs.core/macroexpand-1",

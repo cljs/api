@@ -41,7 +41,7 @@ Returns true if x is logical false, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L165-L167):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L165-L167):
 
 ```clj
 (defn ^boolean not
@@ -52,11 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:165-167](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L165-L167)</ins>
+            └── cljs
+                └── <ins>[core.cljs:165-167](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L165-L167)</ins>
 </pre>
 
 -->
@@ -110,8 +111,8 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not\n  [x] (if x false true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
           :lines [165 167]},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",

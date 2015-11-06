@@ -14,7 +14,7 @@
 
 
  <samp>
-(__eduction__ xform coll)<br>
+(__eduction__ xform\* coll)<br>
 </samp>
 
 ---
@@ -26,29 +26,31 @@
 Source docstring:
 
 ```
-Returns a reducible/iterable/seqable application of
-the transducer to the items in coll. Note that these applications	
-will be performed every time iterator/seq/reduce is called.
+Returns a reducible/iterable application of the transducers
+to the items in coll. Transducers are applied in order as if
+combined with comp. Note that these applications will be
+performed every time reduce/iterator is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L8941-L8946):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L8951-L8958):
 
 ```clj
 (defn eduction
-  [xform coll]
-  (Eduction. xform coll))
+  [& xforms]
+  (Eduction. (apply comp (butlast xforms)) (last xforms)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:8941-8946](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L8941-L8946)</ins>
+            └── cljs
+                └── <ins>[core.cljs:8951-8958](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L8951-L8958)</ins>
 </pre>
 
 -->
@@ -92,19 +94,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "eduction",
- :signature ["[xform coll]"],
+ :signature ["[xform* coll]"],
  :history [["+" "0.0-2371"]],
  :type "function",
  :full-name-encode "cljs.core/eduction",
- :source {:code "(defn eduction\n  [xform coll]\n  (Eduction. xform coll))",
+ :source {:code "(defn eduction\n  [& xforms]\n  (Eduction. (apply comp (butlast xforms)) (last xforms)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [8941 8946]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [8951 8958]},
  :full-name "cljs.core/eduction",
  :clj-symbol "clojure.core/eduction",
- :docstring "Returns a reducible/iterable/seqable application of\nthe transducer to the items in coll. Note that these applications\t\nwill be performed every time iterator/seq/reduce is called."}
+ :docstring "Returns a reducible/iterable application of the transducers\nto the items in coll. Transducers are applied in order as if\ncombined with comp. Note that these applications will be\nperformed every time reduce/iterator is called."}
 
 ```
 

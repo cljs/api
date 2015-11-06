@@ -28,39 +28,25 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L436-L456):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L457-L462):
 
 ```clj
 (defn test-var-block
   [v]
-  {:pre [(instance? Var v)]}
   (if-let [t (:test (meta v))]
-    [(fn []
-       (update-current-env! [:testing-vars] conj v)
-       (update-current-env! [:report-counters :test] inc)
-       (do-report {:type :begin-test-var :var v})
-       (try
-         (t)
-         (catch :default e
-           (do-report
-             {:type :error
-              :message "Uncaught exception, not in assertion."
-              :expected nil
-              :actual e}))))
-     (fn []
-       (do-report {:type :end-test-var :var v})
-       (update-current-env! [:testing-vars] rest))]))
+    (test-var-block* v t)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[test.cljs:436-456](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L436-L456)</ins>
+            └── cljs
+                └── <ins>[test.cljs:457-462](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L457-L462)</ins>
 </pre>
 
 -->
@@ -105,12 +91,12 @@ The API data for this symbol:
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.test/test-var-block",
- :source {:code "(defn test-var-block\n  [v]\n  {:pre [(instance? Var v)]}\n  (if-let [t (:test (meta v))]\n    [(fn []\n       (update-current-env! [:testing-vars] conj v)\n       (update-current-env! [:report-counters :test] inc)\n       (do-report {:type :begin-test-var :var v})\n       (try\n         (t)\n         (catch :default e\n           (do-report\n             {:type :error\n              :message \"Uncaught exception, not in assertion.\"\n              :expected nil\n              :actual e}))))\n     (fn []\n       (do-report {:type :end-test-var :var v})\n       (update-current-env! [:testing-vars] rest))]))",
+ :source {:code "(defn test-var-block\n  [v]\n  (if-let [t (:test (meta v))]\n    (test-var-block* v t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/test.cljs",
-          :lines [436 456]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/test.cljs",
+          :lines [457 462]},
  :full-name "cljs.test/test-var-block",
  :docstring "Like test-var, but returns a block for further composition and\nlater execution."}
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/rhino.clj#L211-L219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/rhino.clj#L211-L219):
 
 ```clj
 (defn repl-env*
@@ -40,12 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[rhino.clj:211-219](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/rhino.clj#L211-L219)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── repl
+                    └── <ins>[rhino.clj:211-219](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/rhino.clj#L211-L219)</ins>
 </pre>
 
 -->
@@ -91,8 +92,8 @@ The API data for this symbol:
  :source {:code "(defn repl-env*\n  [opts]\n  (let [cx (Context/enter)]\n    ;; just avoid the 64K method limit\n    ;; Rhino is slow even with optimizations enabled\n    (.setOptimizationLevel cx -1)\n    (merge (RhinoEnv.)\n      {:cx cx\n       :scope (.initStandardObjects cx)})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl/rhino.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [211 219]},
  :full-name "cljs.repl.rhino/repl-env*",
  :full-name-encode "cljs.repl.rhino/repl-envSTAR",

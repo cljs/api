@@ -34,7 +34,7 @@ with Clojure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L3081-L3101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L3091-L3111):
 
 ```clj
 (defn long-array
@@ -62,11 +62,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:3081-3101](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L3081-L3101)</ins>
+            └── cljs
+                └── <ins>[core.cljs:3091-3111](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L3091-L3111)</ins>
 </pre>
 
 -->
@@ -117,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn long-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (long-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [3081 3101]},
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
+          :lines [3091 3111]},
  :full-name "cljs.core/long-array",
  :clj-symbol "clojure.core/long-array",
  :docstring "Creates an array of longs. Does not coerce array, provided for compatibility\nwith Clojure."}

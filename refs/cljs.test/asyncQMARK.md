@@ -27,7 +27,7 @@ Returns whether x implements IAsyncTest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L402-L405):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L402-L405):
 
 ```clj
 (defn async?
@@ -39,11 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[test.cljs:402-405](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L402-L405)</ins>
+            └── cljs
+                └── <ins>[test.cljs:402-405](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L402-L405)</ins>
 </pre>
 
 -->
@@ -91,8 +92,8 @@ The API data for this symbol:
  :source {:code "(defn async?\n  [x]\n  (satisfies? IAsyncTest x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/test.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/test.cljs",
           :lines [402 405]},
  :full-name "cljs.test/async?",
  :docstring "Returns whether x implements IAsyncTest."}

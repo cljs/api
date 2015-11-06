@@ -31,7 +31,7 @@ exception, stored implicitly by [`*e`][doc:cljs.core/*e].
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L1171-L1188):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L1175-L1192):
 
 ```clj
 (defmacro pst
@@ -58,11 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:1171-1188](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L1171-L1188)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[repl.cljc:1175-1192](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L1175-L1192)</ins>
 </pre>
 
 -->
@@ -114,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defmacro pst\n  ([] `(pst *e))\n  ([e]\n   (let [{:keys [repl-env] :as env} &env]\n     (when (and e repl-env)\n       (when-let [ret (if (satisfies? IGetError repl-env)\n                   (-get-error repl-env e env *repl-opts*)\n                   (edn/read-string\n                     (evaluate-form repl-env env \"<cljs repl>\"\n                       `(when ~e\n                          (pr-str\n                            {:value (str ~e)\n                             :stacktrace (.-stack ~e)})))))]\n         (display-error repl-env\n           (if (satisfies? IParseError repl-env)\n             (-parse-error repl-env ret *repl-opts*)\n             ret)\n           nil *repl-opts*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl.clj",
-          :lines [1171 1188]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl.cljc",
+          :lines [1175 1192]},
  :full-name "cljs.repl/pst",
  :clj-symbol "clojure.repl/pst"}
 

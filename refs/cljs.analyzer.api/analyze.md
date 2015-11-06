@@ -38,7 +38,7 @@ facilitate code walking without knowing the details of the op set.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L23-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L23-L32):
 
 ```clj
 (defn analyze
@@ -51,12 +51,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── analyzer
-                └── <ins>[api.clj:23-32](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L23-L32)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── analyzer
+                    └── <ins>[api.clj:23-32](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/analyzer/api.clj#L23-L32)</ins>
 </pre>
 
 -->
@@ -104,8 +105,8 @@ The API data for this symbol:
  :source {:code "(defn analyze\n  ([env form] (ana/analyze env form nil))\n  ([env form name] (ana/analyze env form name nil))\n  ([env form name opts] (ana/analyze env form name opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/analyzer/api.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [23 32]},
  :full-name "cljs.analyzer.api/analyze",
  :docstring "Given an environment, a map containing {:locals (mapping of names to bindings), :context\n(one of :statement, :expr, :return), :ns (a symbol naming the\ncompilation ns)}, and form, returns an expression object (a map\ncontaining at least :form, :op and :env keys). If expr has any (immediately)\nnested exprs, must have :children [exprs...] entry. This will\nfacilitate code walking without knowing the details of the op set."}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L558-L561):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L561-L564):
 
 ```clj
 (defn decorate-specs [specs]
@@ -35,11 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:558-561](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L558-L561)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[repl.cljc:561-564](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl.cljc#L561-L564)</ins>
 </pre>
 
 -->
@@ -85,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn decorate-specs [specs]\n  (if-let [k (some #{:reload :reload-all} specs)]\n    (->> specs (remove #{k}) (map #(vary-meta % assoc :reload k)))\n    specs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl.clj",
-          :lines [558 561]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl.cljc",
+          :lines [561 564]},
  :full-name "cljs.repl/decorate-specs",
  :full-name-encode "cljs.repl/decorate-specs",
  :history [["+" "0.0-3148"]]}

@@ -28,7 +28,7 @@ argument must be an ICloneable instance.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L744-L749):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L744-L749):
 
 ```clj
 (defmacro specify
@@ -41,11 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:744-749](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L744-L749)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:744-749](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L744-L749)</ins>
 </pre>
 
 -->
@@ -93,8 +94,8 @@ The API data for this symbol:
  :source {:code "(defmacro specify\n  [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/core.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/core.clj",
           :lines [744 749]},
  :full-name "cljs.core/specify",
  :docstring "Identical to specify but does not mutate its first argument. The first\nargument must be an ICloneable instance."}

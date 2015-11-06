@@ -28,7 +28,7 @@ later execution.  Does not clear the current env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L336-L351):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L336-L351):
 
 ```clj
 (defmacro test-ns-block
@@ -51,11 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[test.clj:336-351](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L336-L351)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[test.clj:336-351](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L336-L351)</ins>
 </pre>
 
 -->
@@ -103,8 +104,8 @@ The API data for this symbol:
  :source {:code "(defmacro test-ns-block\n  ([env [quote ns :as form]]\n   (assert (and (= quote 'quote) (symbol? ns)) \"Argument to test-ns must be a quoted symbol\")\n   (assert (ana-api/find-ns ns) (str \"Namespace \" ns \" does not exist\"))\n   `[(fn []\n       (cljs.test/set-env! ~env)\n       (cljs.test/do-report {:type :begin-test-ns, :ns ~form})\n       ;; If the namespace has a test-ns-hook function, call that:\n       ~(if-let [v (ana-api/ns-resolve ns 'test-ns-hook)]\n          `(~(symbol (name ns) \"test-ns-hook\"))\n          ;; Otherwise, just test every var in the namespace.\n          `(cljs.test/block (cljs.test/test-all-vars-block ~form))))\n     (fn []\n       (cljs.test/do-report {:type :end-test-ns, :ns ~form}))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/test.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/test.clj",
           :lines [336 351]},
  :full-name "cljs.test/test-ns-block",
  :docstring "Like test-ns, but returns a block for further composition and\nlater execution.  Does not clear the current env."}

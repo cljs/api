@@ -28,7 +28,7 @@ continuation.  See run-block.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L426-L431):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L426-L431):
 
 ```clj
 (defn block
@@ -41,11 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[test.cljs:426-431](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/test.cljs#L426-L431)</ins>
+            └── cljs
+                └── <ins>[test.cljs:426-431](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/test.cljs#L426-L431)</ins>
 </pre>
 
 -->
@@ -93,8 +94,8 @@ The API data for this symbol:
  :source {:code "(defn block\n  [fns]\n  (some-> fns\n          (vary-meta assoc ::block? true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/test.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/test.cljs",
           :lines [426 431]},
  :full-name "cljs.test/block",
  :docstring "Tag a seq of fns to be picked up by run-block as injected\ncontinuation.  See run-block."}

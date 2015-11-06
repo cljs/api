@@ -22,24 +22,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/nashorn.clj#L108-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/nashorn.clj#L95-L97):
 
 ```clj
 (defn load-ns [engine ns]
-  (eval-str engine
-    (format "goog.require(\"%s\");" (comp/munge (first ns)))))
+      (eval-str engine
+        (format "goog.require(\"%s\");" (comp/munge (first ns)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[nashorn.clj:108-110](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/nashorn.clj#L108-L110)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── repl
+                    └── <ins>[nashorn.clj:95-97](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/repl/nashorn.clj#L95-L97)</ins>
 </pre>
 
 -->
@@ -82,12 +83,12 @@ The API data for this symbol:
  :name "load-ns",
  :type "function",
  :signature ["[engine ns]"],
- :source {:code "(defn load-ns [engine ns]\n  (eval-str engine\n    (format \"goog.require(\\\"%s\\\");\" (comp/munge (first ns)))))",
+ :source {:code "(defn load-ns [engine ns]\n      (eval-str engine\n        (format \"goog.require(\\\"%s\\\");\" (comp/munge (first ns)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/repl/nashorn.clj",
-          :lines [108 110]},
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/repl/nashorn.clj",
+          :lines [95 97]},
  :full-name "cljs.repl.nashorn/load-ns",
  :full-name-encode "cljs.repl.nashorn/load-ns",
  :history [["+" "0.0-2814"]]}

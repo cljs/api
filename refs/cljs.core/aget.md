@@ -76,7 +76,7 @@ Returns the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L269-L274):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L269-L274):
 
 ```clj
 (defn aget
@@ -90,18 +90,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:269-274](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L269-L274)</ins>
+            └── cljs
+                └── <ins>[core.cljs:269-274](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L269-L274)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L407-L412):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L407-L412):
 
 ```clj
 (defmacro aget
@@ -116,11 +117,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:407-412](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L407-L412)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[core.clj:407-412](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/core.clj#L407-L412)</ins>
 </pre>
 -->
 
@@ -174,14 +176,14 @@ The API data for this symbol:
  :source {:code "(defn aget\n  ([array i]\n     (cljs.core/aget array i))\n  ([array i & idxs]\n     (apply aget (aget array i) idxs)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
           :lines [269 274]},
  :extra-sources [{:code "(defmacro aget\n  ([a i]\n     (core/list 'js* \"(~{}[~{}])\" a i))\n  ([a i & idxs]\n     (let [astr (apply core/str (repeat (count idxs) \"[~{}]\"))]\n      `(~'js* ~(core/str \"(~{}[~{}]\" astr \")\") ~a ~i ~@idxs))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3211",
-                  :filename "src/clj/cljs/core.clj",
+                  :tag "r3255",
+                  :filename "src/main/clojure/cljs/core.clj",
                   :lines [407 412]}],
  :full-name "cljs.core/aget",
  :clj-symbol "clojure.core/aget",

@@ -37,7 +37,7 @@ Defaults to current namespace if none given.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L281-L290):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L281-L290):
 
 ```clj
 (defmacro run-tests
@@ -54,11 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[test.clj:281-290](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L281-L290)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[test.clj:281-290](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L281-L290)</ins>
 </pre>
 
 -->
@@ -109,8 +110,8 @@ The API data for this symbol:
  :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/test.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/test.clj",
           :lines [281 290]},
  :full-name "cljs.test/run-tests",
  :clj-symbol "clojure.test/run-tests",

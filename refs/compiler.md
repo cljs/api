@@ -19,6 +19,11 @@ The ClojureScript compiler, just the parts that are expected to be public and st
 <td>programmatic access to project-building facilities</td>
 </tr>
 <tr>
+<td></td>
+<td>[cljs.compiler.api](compiler/cljs.compiler.api.md)</td>
+<td>programmatic access to the compiler (emitting JS)</td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html)</td>
 <td>[cljs.repl](compiler/cljs.repl.md)</td>
 <td>interactive ClojureScript REPL (Read Eval Print Loop)</td>

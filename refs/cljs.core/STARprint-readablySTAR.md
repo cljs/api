@@ -28,7 +28,7 @@ Defaults to true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L55-L61):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L55-L61):
 
 ```clj
 (def
@@ -44,11 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[core.cljs:55-61](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L55-L61)</ins>
+            └── cljs
+                └── <ins>[core.cljs:55-61](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/core.cljs#L55-L61)</ins>
 </pre>
 
 -->
@@ -98,8 +99,8 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false, strings and characters will be printed with\n  non-alphanumeric characters converted to the appropriate escape sequences.\n\n  Defaults to true\"}\n  *print-readably* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/core.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/core.cljs",
           :lines [55 61]},
  :full-name "cljs.core/*print-readably*",
  :clj-symbol "clojure.core/*print-readably*",

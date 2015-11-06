@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/reader.cljs#L181):
 
 ```clj
 (def unicode-2-pattern (re-pattern "^[0-9A-Fa-f]{2}$"))
@@ -27,11 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── cljs
+    └── main
         └── cljs
-            └── <ins>[reader.cljs:181](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L181)</ins>
+            └── cljs
+                └── <ins>[reader.cljs:181](https://github.com/clojure/clojurescript/blob/r3255/src/main/cljs/cljs/reader.cljs#L181)</ins>
 </pre>
 
 -->
@@ -76,8 +77,8 @@ The API data for this symbol:
  :source {:code "(def unicode-2-pattern (re-pattern \"^[0-9A-Fa-f]{2}$\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/cljs/cljs/reader.cljs",
+          :tag "r3255",
+          :filename "src/main/cljs/cljs/reader.cljs",
           :lines [181]},
  :full-name "cljs.reader/unicode-2-pattern",
  :full-name-encode "cljs.reader/unicode-2-pattern",

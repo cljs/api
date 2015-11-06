@@ -1,11 +1,12 @@
-## cljs.pprint/PrettyFlush
+## ~~cljs.pprint/PrettyFlush~~
 
 
+> __MOVED__, please see [`cljs.pprint/IPrettyFlush`](../cljs.pprint/IPrettyFlush.md)
 
  <table border="1">
 <tr>
 <td>protocol</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[×] 0.0-3255" title="Removed in 0.0-3255" src="https://img.shields.io/badge/×-0.0--3255-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -70,8 +71,10 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.pprint",
+{:moved "cljs.pprint/IPrettyFlush",
+ :ns "cljs.pprint",
  :name "PrettyFlush",
+ :history [["+" "0.0-2496"] ["-" "0.0-3255"]],
  :type "protocol",
  :full-name-encode "cljs.pprint/PrettyFlush",
  :source {:code "(defprotocol PrettyFlush (ppflush [this]))",
@@ -82,7 +85,7 @@ The API data for this symbol:
           :lines [120]},
  :methods [{:name "ppflush", :signature ["[this]"], :docstring nil}],
  :full-name "cljs.pprint/PrettyFlush",
- :history [["+" "0.0-2496"]]}
+ :removed {:in "0.0-3255", :last-seen "0.0-3211"}}
 
 ```
 

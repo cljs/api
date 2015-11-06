@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L370-L380):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L370-L380):
 
 ```clj
 (defmacro use-fixtures [type & fns]
@@ -45,11 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
+clojurescript @ r3255
 └── src
-    └── clj
-        └── cljs
-            └── <ins>[test.clj:370-380](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/test.clj#L370-L380)</ins>
+    └── main
+        └── clojure
+            └── cljs
+                └── <ins>[test.clj:370-380](https://github.com/clojure/clojurescript/blob/r3255/src/main/clojure/cljs/test.clj#L370-L380)</ins>
 </pre>
 
 -->
@@ -100,8 +101,8 @@ The API data for this symbol:
  :source {:code "(defmacro use-fixtures [type & fns]\n  (condp = type\n    :once\n    `(def ~'cljs-test-once-fixtures\n       [~@fns])\n    :each\n    `(def ~'cljs-test-each-fixtures\n       [~@fns])\n    :else\n    (throw\n      (Exception. \"First argument to cljs.test/use-fixtures must be :once or :each\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3211",
-          :filename "src/clj/cljs/test.clj",
+          :tag "r3255",
+          :filename "src/main/clojure/cljs/test.clj",
           :lines [370 380]},
  :full-name "cljs.test/use-fixtures",
  :clj-symbol "clojure.test/use-fixtures"}
