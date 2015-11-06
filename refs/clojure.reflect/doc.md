@@ -28,7 +28,7 @@ documentation information at the repl.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/clojure/reflect.cljs#L44-L48):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/clojure/reflect.cljs#L45-L49):
 
 ```clj
 (defn doc
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:44-48](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/clojure/reflect.cljs#L44-L48)</ins>
+            └── <ins>[reflect.cljs:45-49](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/clojure/reflect.cljs#L45-L49)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn doc\n  [sym]\n  (meta sym print-doc))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/clojure/reflect.cljs",
-          :lines [44 48]},
+          :lines [45 49]},
  :full-name "clojure.reflect/doc",
  :docstring "Queries the reflection api with a fully qualified symbol, then prints\ndocumentation information at the repl."}
 

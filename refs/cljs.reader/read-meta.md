@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/reader.cljs#L371-L379):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/reader.cljs#L371-L379):
 
 ```clj
 (defn read-meta
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:371-379](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/reader.cljs#L371-L379)</ins>
+            └── <ins>[reader.cljs:371-379](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/reader.cljs#L371-L379)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn read-meta\n  [rdr _]\n  (let [m (desugar-meta (read rdr true nil true))]\n    (when-not (map? m)\n      (reader-error rdr \"Metadata must be Symbol,Keyword,String or Map\"))\n    (let [o (read rdr true nil true)]\n      (if (satisfies? IWithMeta o)\n        (with-meta o (merge (meta o) m))\n        (reader-error rdr \"Metadata can only be applied to IWithMetas\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [371 379]},
  :full-name "cljs.reader/read-meta",

@@ -35,9 +35,9 @@ Rhino REPL (JS on Java 6+)
 </tr>
 <tr>
 <td></td>
-<td><samp>[goog-require](../cljs.repl.rhino/goog-require.md)</samp></td>
+<td><samp>[load-file](../cljs.repl.rhino/load-file.md)</samp></td>
 <td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2985"><img valign="middle" alt="[+] 0.0-2985" title="Added in 0.0-2985" src="https://img.shields.io/badge/+-0.0--2985-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -71,6 +71,12 @@ Rhino REPL (JS on Java 6+)
 </tr>
 <tr>
 <td></td>
+<td><samp>[wrap-fn](../cljs.repl.rhino/wrap-fn.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2985"><img valign="middle" alt="[+] 0.0-2985" title="Added in 0.0-2985" src="https://img.shields.io/badge/+-0.0--2985-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[IEval](../cljs.repl.rhino/IEval.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -93,6 +99,12 @@ Rhino REPL (JS on Java 6+)
 <td><samp>[~~current-repl-env~~](../cljs.repl.rhino/current-repl-env.md)</samp></td>
 <td><samp>var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[×] 0.0-2629" title="Removed in 0.0-2629" src="https://img.shields.io/badge/×-0.0--2629-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~goog-require~~](../cljs.repl.rhino/goog-require.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2985"><img valign="middle" alt="[×] 0.0-2985" title="Removed in 0.0-2985" src="https://img.shields.io/badge/×-0.0--2985-red.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

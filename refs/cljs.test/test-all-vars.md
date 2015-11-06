@@ -31,7 +31,7 @@ namespace, with fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/test.clj#L329-L333):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/test.clj#L329-L333):
 
 ```clj
 (defmacro test-all-vars
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:329-333](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/test.clj#L329-L333)</ins>
+            └── <ins>[test.clj:329-333](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/test.clj#L329-L333)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defmacro test-all-vars\n  [[quote ns :as form]]\n  `(cljs.test/run-block (test-all-vars-block ~form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/test.clj",
           :lines [329 333]},
  :full-name "cljs.test/test-all-vars",

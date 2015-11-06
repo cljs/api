@@ -13,14 +13,25 @@
 </table>
 
 
+ <samp>
+(__var__ symbol)<br>
+</samp>
+
+---
 
 
 
 
 
+Source docstring:
+
+```
+The symbol must resolve to a var, and the Var object
+itself (not its value) is returned. The reader macro #'x expands to (var x).
+```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L552-L568):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L560-L576):
 
 ```clj
 (defmethod parse 'var
@@ -46,11 +57,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:552-568](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L552-L568)</ins>
+            └── <ins>[analyzer.clj:560-576](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L560-L576)</ins>
 </pre>
 
 -->
@@ -93,17 +104,19 @@ The API data for this symbol:
 ```clj
 {:ns "special",
  :name "var",
+ :signature ["[symbol]"],
+ :history [["+" "0.0-2496"]],
  :type "special form",
+ :full-name-encode "special/var",
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym (confirm-var-exists-throw))]\n    {:env env :op :var-special :form form\n     :var (analyze env sym)\n     :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :doc :file :line :column]\n                 m (merge\n                     (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                       :name `(quote ~(symbol (name (:name var))))\n                       :test `(when ~sym (.-cljs$lang$test ~sym))\n                       :arglists (map with-meta (:arglists var) (:arglists-meta var)))\n                     (let [user-meta (:meta var)\n                           uks (keys user-meta)]\n                       (zipmap uks\n                         (map #(list 'quote (get user-meta %)) uks))))]\n             (analyze env m))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [552 568]},
+          :lines [560 576]},
  :full-name "special/var",
- :full-name-encode "special/var",
  :clj-symbol "clojure.core/var",
- :history [["+" "0.0-2496"]]}
+ :docstring "The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x)."}
 
 ```
 

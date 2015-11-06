@@ -13,14 +13,25 @@
 </table>
 
 
+ <samp>
+(__do__ exprs\*)<br>
+</samp>
+
+---
 
 
 
 
 
+Source docstring:
+
+```
+Evaluates the expressions in order and returns the value of
+the last. If no expressions are supplied, returns nil.
+```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L922-L931):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L935-L944):
 
 ```clj
 (defmethod parse 'do
@@ -39,11 +50,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:922-931](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L922-L931)</ins>
+            └── <ins>[analyzer.clj:935-944](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L935-L944)</ins>
 </pre>
 
 -->
@@ -86,17 +97,19 @@ The API data for this symbol:
 ```clj
 {:ns "special",
  :name "do",
+ :signature ["[exprs*]"],
+ :history [["+" "0.0-927"]],
  :type "special form",
+ :full-name-encode "special/do",
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [922 931]},
+          :lines [935 944]},
  :full-name "special/do",
- :full-name-encode "special/do",
  :clj-symbol "clojure.core/do",
- :history [["+" "0.0-927"]]}
+ :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil."}
 
 ```
 

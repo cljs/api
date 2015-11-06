@@ -17,26 +17,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L20-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L22-L29):
 
 ```clj
 (def ^String bootjs
-  (str "var global = this;"
-       "goog.require = function(rule){"
-       "Packages.clojure.lang.RT[\"var\"](\"cljs.repl.rhino\",\"goog-require\")"
-       ".invoke(___repl_env, __repl_opts, rule);}"))
+  (str "var global = this;\n"
+       "var CLOSURE_IMPORT_SCRIPT = function(src) {\n"
+       "    var ns = \"cljs.repl.rhino\","
+       "        name = \"load-file\","
+       "        loadFile = Packages.clojure.lang.RT[\"var\"](ns,name);\n"
+       "    if(src) loadFile.invoke(___repl_env, __repl_opts, src);\n"
+       "};\n"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:20-24](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L20-L24)</ins>
+                └── <ins>[rhino.clj:22-29](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L22-L29)</ins>
 </pre>
 
 -->
@@ -79,12 +82,12 @@ The API data for this symbol:
  :name "bootjs",
  :type "var",
  :return-type String,
- :source {:code "(def ^String bootjs\n  (str \"var global = this;\"\n       \"goog.require = function(rule){\"\n       \"Packages.clojure.lang.RT[\\\"var\\\"](\\\"cljs.repl.rhino\\\",\\\"goog-require\\\")\"\n       \".invoke(___repl_env, __repl_opts, rule);}\"))",
+ :source {:code "(def ^String bootjs\n  (str \"var global = this;\\n\"\n       \"var CLOSURE_IMPORT_SCRIPT = function(src) {\\n\"\n       \"    var ns = \\\"cljs.repl.rhino\\\",\"\n       \"        name = \\\"load-file\\\",\"\n       \"        loadFile = Packages.clojure.lang.RT[\\\"var\\\"](ns,name);\\n\"\n       \"    if(src) loadFile.invoke(___repl_env, __repl_opts, src);\\n\"\n       \"};\\n\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [20 24]},
+          :lines [22 29]},
  :full-name "cljs.repl.rhino/bootjs",
  :full-name-encode "cljs.repl.rhino/bootjs",
  :history [["+" "0.0-927"]]}

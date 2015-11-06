@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L37):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L41):
 
 ```clj
 (def ^:dynamic *print-length* nil)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:37](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L37)</ins>
+            └── <ins>[core.cljs:41](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L41)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *print-length* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [37]},
+          :lines [41]},
  :full-name "cljs.core/*print-length*",
  :full-name-encode "cljs.core/STARprint-lengthSTAR",
  :clj-symbol "clojure.core/*print-length*",

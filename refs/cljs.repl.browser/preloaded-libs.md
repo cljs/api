@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/browser.clj#L27):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L27):
 
 ```clj
 (def preloaded-libs (atom #{}))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:27](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/browser.clj#L27)</ins>
+                └── <ins>[browser.clj:27](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L27)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def preloaded-libs (atom #{}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [27]},
  :full-name "cljs.repl.browser/preloaded-libs",

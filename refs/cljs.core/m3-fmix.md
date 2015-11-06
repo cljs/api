@@ -22,16 +22,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L478-L485):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L482-L489):
 
 ```clj
 (defn ^number m3-fmix [h1 len]
-  (as-> h1 h1
+  (as-> (int h1) h1
     (bit-xor h1 len)
     (bit-xor h1 (unsigned-bit-shift-right h1 16))
-    (imul h1 0x85ebca6b)
+    (imul h1 (int 0x85ebca6b))
     (bit-xor h1 (unsigned-bit-shift-right h1 13))
-    (imul h1 0xc2b2ae35)
+    (imul h1 (int 0xc2b2ae35))
     (bit-xor h1 (unsigned-bit-shift-right h1 16))))
 ```
 
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:478-485](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L478-L485)</ins>
+            └── <ins>[core.cljs:482-489](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L482-L489)</ins>
 </pre>
 
 -->
@@ -89,12 +89,12 @@ The API data for this symbol:
  :history [["+" "0.0-2261"]],
  :type "function",
  :full-name-encode "cljs.core/m3-fmix",
- :source {:code "(defn ^number m3-fmix [h1 len]\n  (as-> h1 h1\n    (bit-xor h1 len)\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))\n    (imul h1 0x85ebca6b)\n    (bit-xor h1 (unsigned-bit-shift-right h1 13))\n    (imul h1 0xc2b2ae35)\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))))",
+ :source {:code "(defn ^number m3-fmix [h1 len]\n  (as-> (int h1) h1\n    (bit-xor h1 len)\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))\n    (imul h1 (int 0x85ebca6b))\n    (bit-xor h1 (unsigned-bit-shift-right h1 13))\n    (imul h1 (int 0xc2b2ae35))\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [478 485]},
+          :lines [482 489]},
  :full-name "cljs.core/m3-fmix"}
 
 ```

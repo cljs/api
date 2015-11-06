@@ -451,10 +451,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/import](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/import)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/inc'](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/inc')</samp></td>
 </tr>
 <tr>
@@ -1562,27 +1558,11 @@ symbols that are not yet ported to ClojureScript:
  <table>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/apropos](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/apropos)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.repl/demunge](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/demunge)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/dir](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/dir)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.repl/dir-fn](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/dir-fn)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/find-doc](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/find-doc)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/pst](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/pst)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1591,10 +1571,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.repl/set-break-handler!](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/set-break-handler!)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/source](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/source)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/repl.cljs#L12-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/repl.cljs#L12-L31):
 
 ```clj
 (defn print-doc [m]
@@ -30,9 +30,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
   (println (str (when-let [ns (:ns m)] (str ns "/")) (:name m)))
   (cond
     (:forms m) (doseq [f (:forms m)]
-                 (print "  ")
-                 (prn f))
-    (:arglists m) (prn (:arglists m)))
+                 (println "  " f))
+    (:arglists m) (prn (second (:arglists m))))
   (if (:special-form m)
     (do
       (println "Special Form")
@@ -52,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[repl.cljs:12-32](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/repl.cljs#L12-L32)</ins>
+            └── <ins>[repl.cljs:12-31](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/repl.cljs#L12-L31)</ins>
 </pre>
 
 -->
@@ -99,12 +98,12 @@ The API data for this symbol:
  :name "print-doc",
  :type "function",
  :signature ["[m]"],
- :source {:code "(defn print-doc [m]\n  (println \"-------------------------\")\n  (println (str (when-let [ns (:ns m)] (str ns \"/\")) (:name m)))\n  (cond\n    (:forms m) (doseq [f (:forms m)]\n                 (print \"  \")\n                 (prn f))\n    (:arglists m) (prn (:arglists m)))\n  (if (:special-form m)\n    (do\n      (println \"Special Form\")\n      (println \" \" (:doc m)) \n      (if (contains? m :url)\n        (when (:url m)\n          (println (str \"\\n  Please see http://clojure.org/\" (:url m))))\n        (println (str \"\\n  Please see http://clojure.org/special_forms#\"\n                   (:name m)))))\n    (do\n      (when (:macro m)\n        (println \"Macro\")) \n      (println \" \" (:doc m)))))",
+ :source {:code "(defn print-doc [m]\n  (println \"-------------------------\")\n  (println (str (when-let [ns (:ns m)] (str ns \"/\")) (:name m)))\n  (cond\n    (:forms m) (doseq [f (:forms m)]\n                 (println \"  \" f))\n    (:arglists m) (prn (second (:arglists m))))\n  (if (:special-form m)\n    (do\n      (println \"Special Form\")\n      (println \" \" (:doc m)) \n      (if (contains? m :url)\n        (when (:url m)\n          (println (str \"\\n  Please see http://clojure.org/\" (:url m))))\n        (println (str \"\\n  Please see http://clojure.org/special_forms#\"\n                   (:name m)))))\n    (do\n      (when (:macro m)\n        (println \"Macro\")) \n      (println \" \" (:doc m)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/repl.cljs",
-          :lines [12 32]},
+          :lines [12 31]},
  :full-name "cljs.repl/print-doc",
  :full-name-encode "cljs.repl/print-doc",
  :history [["+" "0.0-2496"]]}

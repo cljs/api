@@ -22,22 +22,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L472-L473):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L476-L477):
 
 ```clj
 (defn ^number m3-mix-K1 [k1]
-  (-> k1 (imul m3-C1) (int-rotate-left 15) (imul m3-C2)))
+  (-> (int k1) (imul m3-C1) (int-rotate-left 15) (imul m3-C2)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:472-473](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L472-L473)</ins>
+            └── <ins>[core.cljs:476-477](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L476-L477)</ins>
 </pre>
 
 -->
@@ -83,12 +83,12 @@ The API data for this symbol:
  :history [["+" "0.0-2261"]],
  :type "function",
  :full-name-encode "cljs.core/m3-mix-K1",
- :source {:code "(defn ^number m3-mix-K1 [k1]\n  (-> k1 (imul m3-C1) (int-rotate-left 15) (imul m3-C2)))",
+ :source {:code "(defn ^number m3-mix-K1 [k1]\n  (-> (int k1) (imul m3-C1) (int-rotate-left 15) (imul m3-C2)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [472 473]},
+          :lines [476 477]},
  :full-name "cljs.core/m3-mix-K1"}
 
 ```

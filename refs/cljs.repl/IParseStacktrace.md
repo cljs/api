@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L109-L120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L129-L142):
 
 ```clj
 (defprotocol IParseStacktrace
@@ -31,18 +31,20 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
        :line <integer>
        :column <integer>}*]
 
-     :file must be a URL path (without protocol) relative to :output-dir."))
+     :file must be a URL path (without protocol) relative to :output-dir. If
+     no source file can be supplied (such as REPL defs), :file may be a custom
+     identifier string surrounded by angle brackets, i.e. \"<cljs repl>\"."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:109-120](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L109-L120)</ins>
+            └── <ins>[repl.clj:129-142](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L129-L142)</ins>
 </pre>
 
 -->
@@ -85,15 +87,15 @@ The API data for this symbol:
  :name "IParseStacktrace",
  :type "protocol",
  :full-name-encode "cljs.repl/IParseStacktrace",
- :source {:code "(defprotocol IParseStacktrace\n  (-parse-stacktrace [repl-env stacktrace error build-options]\n    \"Given the original JavaScript stacktrace string, the entire original error\n     value and current compiler build options, parse the stacktrace into the\n     canonical form:\n\n     [{:file <string>\n       :function <string>\n       :line <integer>\n       :column <integer>}*]\n\n     :file must be a URL path (without protocol) relative to :output-dir.\"))",
+ :source {:code "(defprotocol IParseStacktrace\n  (-parse-stacktrace [repl-env stacktrace error build-options]\n    \"Given the original JavaScript stacktrace string, the entire original error\n     value and current compiler build options, parse the stacktrace into the\n     canonical form:\n\n     [{:file <string>\n       :function <string>\n       :line <integer>\n       :column <integer>}*]\n\n     :file must be a URL path (without protocol) relative to :output-dir. If\n     no source file can be supplied (such as REPL defs), :file may be a custom\n     identifier string surrounded by angle brackets, i.e. \\\"<cljs repl>\\\".\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl.clj",
-          :lines [109 120]},
+          :lines [129 142]},
  :methods [{:name "-parse-stacktrace",
             :signature ["[repl-env stacktrace error build-options]"],
-            :docstring "Given the original JavaScript stacktrace string, the entire original error\n     value and current compiler build options, parse the stacktrace into the\n     canonical form:\n\n     [{:file <string>\n       :function <string>\n       :line <integer>\n       :column <integer>}*]\n\n     :file must be a URL path (without protocol) relative to :output-dir."}],
+            :docstring "Given the original JavaScript stacktrace string, the entire original error\n     value and current compiler build options, parse the stacktrace into the\n     canonical form:\n\n     [{:file <string>\n       :function <string>\n       :line <integer>\n       :column <integer>}*]\n\n     :file must be a URL path (without protocol) relative to :output-dir. If\n     no source file can be supplied (such as REPL defs), :file may be a custom\n     identifier string surrounded by angle brackets, i.e. \"<cljs repl>\"."}],
  :full-name "cljs.repl/IParseStacktrace",
  :history [["+" "0.0-2843"]]}
 

@@ -58,9 +58,16 @@ false or nil).
 ---
 
 
+Source docstring:
+
+```
+Evaluates test. If not the singular values nil or false,
+evaluates and yields then, otherwise, evaluates and yields else. If
+else is not supplied it defaults to nil.
+```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L570-L580):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L578-L588):
 
 ```clj
 (defmethod parse 'if
@@ -80,11 +87,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:570-580](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer.clj#L570-L580)</ins>
+            └── <ins>[analyzer.clj:578-588](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L578-L588)</ins>
 </pre>
 
 -->
@@ -139,13 +146,14 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name _]\n  (when (< (count form) 3)\n    (throw (error env \"Too few arguments to if\")))\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (allowing-redef (analyze env then))\n        else-expr (allowing-redef (analyze env else))]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [570 580]},
+          :lines [578 588]},
  :examples [{:id "e591ff",
              :content "```clj\n(def v [1 2])\n\n(if (empty? v) \"empty!\" \"filled!\")\n;;=> \"filled!\"\n\n(str \"This vector is \"\n  (if (empty? v) \"empty!\" \"filled!\"))\n;;=> \"This vector is filled!\"\n```"}],
  :full-name "special/if",
- :clj-symbol "clojure.core/if"}
+ :clj-symbol "clojure.core/if",
+ :docstring "Evaluates test. If not the singular values nil or false,\nevaluates and yields then, otherwise, evaluates and yields else. If\nelse is not supplied it defaults to nil."}
 
 ```
 

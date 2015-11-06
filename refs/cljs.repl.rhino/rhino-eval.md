@@ -11,7 +11,7 @@
 
 
  <samp>
-(__rhino-eval__ repl-env filename line js)<br>
+(__rhino-eval__ {:keys \[scope\], :as repl-env} filename line js)<br>
 </samp>
 
 ---
@@ -22,31 +22,37 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L67-L76):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L71-L86):
 
 ```clj
 (defn rhino-eval
-  [repl-env filename line js]
+  [{:keys [scope] :as repl-env} filename line js]
   (try
     (let [linenum (or line Integer/MIN_VALUE)]
       {:status :success
        :value (eval-result (-eval js repl-env filename linenum))})
     (catch Throwable ex
-      {:status :exception
-       :value (.toString ex)
-       :stacktrace (stacktrace ex)})))
+      ;; manually set *e
+      (let [top-level (-> scope
+                        (ScriptableObject/getProperty "cljs")
+                        (ScriptableObject/getProperty "core"))]
+        (ScriptableObject/putProperty top-level "_STAR_e"
+          (Context/javaToJS ex scope))
+        {:status :exception
+         :value (.toString ex)
+         :stacktrace (stacktrace ex)}))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:67-76](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L67-L76)</ins>
+                └── <ins>[rhino.clj:71-86](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L71-L86)</ins>
 </pre>
 
 -->
@@ -88,13 +94,13 @@ The API data for this symbol:
 {:ns "cljs.repl.rhino",
  :name "rhino-eval",
  :type "function",
- :signature ["[repl-env filename line js]"],
- :source {:code "(defn rhino-eval\n  [repl-env filename line js]\n  (try\n    (let [linenum (or line Integer/MIN_VALUE)]\n      {:status :success\n       :value (eval-result (-eval js repl-env filename linenum))})\n    (catch Throwable ex\n      {:status :exception\n       :value (.toString ex)\n       :stacktrace (stacktrace ex)})))",
+ :signature ["[{:keys [scope], :as repl-env} filename line js]"],
+ :source {:code "(defn rhino-eval\n  [{:keys [scope] :as repl-env} filename line js]\n  (try\n    (let [linenum (or line Integer/MIN_VALUE)]\n      {:status :success\n       :value (eval-result (-eval js repl-env filename linenum))})\n    (catch Throwable ex\n      ;; manually set *e\n      (let [top-level (-> scope\n                        (ScriptableObject/getProperty \"cljs\")\n                        (ScriptableObject/getProperty \"core\"))]\n        (ScriptableObject/putProperty top-level \"_STAR_e\"\n          (Context/javaToJS ex scope))\n        {:status :exception\n         :value (.toString ex)\n         :stacktrace (stacktrace ex)}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [67 76]},
+          :lines [71 86]},
  :full-name "cljs.repl.rhino/rhino-eval",
  :full-name-encode "cljs.repl.rhino/rhino-eval",
  :history [["+" "0.0-927"]]}

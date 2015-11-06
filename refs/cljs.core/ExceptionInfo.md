@@ -25,21 +25,37 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L9180):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L9194-L9210):
 
 ```clj
-(deftype ExceptionInfo [message data cause])
+(defn ^{:jsdoc ["@constructor"]}
+  ExceptionInfo [message data cause]
+  (let [e (js/Error.)]
+    (this-as this
+      (set! (.-message this) message)
+      (set! (.-data this) data)
+      (set! (.-cause this) cause)
+      (do
+        (set! (.-name this) (.-name e))
+        ;; non-standard
+        (set! (.-description this) (.-description e))
+        (set! (.-number this) (.-number e))
+        (set! (.-fileName this) (.-fileName e))
+        (set! (.-lineNumber this) (.-lineNumber e))
+        (set! (.-columnNumber this) (.-columnNumber e))
+        (set! (.-stack this) (.-stack e)))
+      this)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9180](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L9180)</ins>
+            └── <ins>[core.cljs:9194-9210](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L9194-L9210)</ins>
 </pre>
 
 -->
@@ -87,12 +103,12 @@ The API data for this symbol:
  :history [["+" "0.0-1576"]],
  :type "type",
  :full-name-encode "cljs.core/ExceptionInfo",
- :source {:code "(deftype ExceptionInfo [message data cause])",
+ :source {:code "(defn ^{:jsdoc [\"@constructor\"]}\n  ExceptionInfo [message data cause]\n  (let [e (js/Error.)]\n    (this-as this\n      (set! (.-message this) message)\n      (set! (.-data this) data)\n      (set! (.-cause this) cause)\n      (do\n        (set! (.-name this) (.-name e))\n        ;; non-standard\n        (set! (.-description this) (.-description e))\n        (set! (.-number this) (.-number e))\n        (set! (.-fileName this) (.-fileName e))\n        (set! (.-lineNumber this) (.-lineNumber e))\n        (set! (.-columnNumber this) (.-columnNumber e))\n        (set! (.-stack this) (.-stack e)))\n      this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9180]},
+          :lines [9194 9210]},
  :full-name "cljs.core/ExceptionInfo",
  :clj-symbol "clojure.lang/ExceptionInfo"}
 

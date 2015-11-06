@@ -55,7 +55,7 @@ bound in a repl thread to the most recent exception caught by the repl
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L71-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L75-L77):
 
 ```clj
 (def
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-73](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L71-L73)</ins>
+            └── <ins>[core.cljs:75-77](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L75-L77)</ins>
 </pre>
 
 -->
@@ -123,9 +123,9 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent exception caught by the repl\"}\n  *e)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [71 73]},
+          :lines [75 77]},
  :examples [{:id "bea858",
              :content "```clj\n(defn cause-error []\n  (throw \"Error: something went wrong\"))\n\n(cause-error)\n;; Error: something went wrong\n\n*e\n;;=> \"Error: something went wrong\"\n```"}],
  :full-name "cljs.core/*e",

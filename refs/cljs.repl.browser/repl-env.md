@@ -46,7 +46,7 @@ src:            The source directory containing user-defined cljs files. Used to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/browser.clj#L256-L311):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L256-L311):
 
 ```clj
 (defn repl-env
@@ -91,12 +91,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:256-311](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/browser.clj#L256-L311)</ins>
+                └── <ins>[browser.clj:256-311](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L256-L311)</ins>
 </pre>
 
 -->
@@ -144,7 +144,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as opts}]\n  (let [ups-deps (cljsc/get-upstream-deps (java.lang.ClassLoader/getSystemClassLoader))\n        opts (assoc opts\n               :ups-libs (:libs ups-deps)\n               :ups-foreign-libs (:foreign-libs ups-deps))\n        compiler-env (cljs.env/default-compiler-env opts)\n        opts (merge (BrowserEnv.)\n               {:port           9000\n                :optimizations  :simple\n                :working-dir    (or (:output-dir opts)\n                                    (->> [\".repl\" (util/clojurescript-version)]\n                                      (remove empty?) (string/join \"-\")))\n                :serve-static   true\n                :static-dir     (cond-> [\".\" \"out/\"]\n                                  (:output-dir opts) (conj (:output-dir opts)))\n                :preloaded-libs []\n                :src            \"src/\"\n                ::env/compiler  compiler-env\n                :source-map     false}\n               opts)]\n    (cljs.env/with-compiler-env compiler-env\n      (reset! preloaded-libs\n        (set (concat\n               (always-preload opts)\n               (map str (:preloaded-libs opts)))))\n      (reset! loaded-libs @preloaded-libs)\n      (println \"Compiling client js ...\")\n      (swap! browser-state\n        (fn [old]\n          (assoc old :client-js\n            (create-client-js-file\n              opts\n              (io/file (:working-dir opts) \"client.js\")))))\n      (println \"Waiting for browser to connect ...\")\n      opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [256 311]},
  :full-name "cljs.repl.browser/repl-env",

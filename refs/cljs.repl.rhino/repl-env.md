@@ -28,40 +28,30 @@ Hang on to return for use across repl calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L145-L165):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L201-L211):
 
 ```clj
 (defn repl-env
   []
-  (let [cx (Context/enter)
-        scope (.initStandardObjects cx)
-        base (io/resource "goog/base.js")
-        deps (io/resource "goog/deps.js")
-        new-repl-env (merge (RhinoEnv.) {:cx cx :scope scope})]
-    (assert base "Can't find goog/base.js in classpath")
-    (assert deps "Can't find goog/deps.js in classpath")
-    (ScriptableObject/putProperty scope
-      "___repl_env" (Context/javaToJS new-repl-env scope))
-    (with-open [r (io/reader base)]
-      (-eval r new-repl-env "goog/base.js" 1))
-    (-eval bootjs new-repl-env "bootjs" 1)
-    ;; Load deps.js line-by-line to avoid 64K method limit
-    (with-open [reader (io/reader deps)]
-      (doseq [^String line (line-seq reader)]
-        (-eval line new-repl-env "goog/deps.js" 1)))
-    new-repl-env))
+  (let [cx (Context/enter)]
+    ;; just avoid the 64K method limit
+    ;; Rhino is slow even with optimizations enabled
+    (.setOptimizationLevel cx -1)
+    (merge (RhinoEnv.)
+      {:cx cx
+       :scope (.initStandardObjects cx)})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:145-165](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L145-L165)</ins>
+                └── <ins>[rhino.clj:201-211](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L201-L211)</ins>
 </pre>
 
 -->
@@ -106,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.rhino/repl-env",
- :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)\n        scope (.initStandardObjects cx)\n        base (io/resource \"goog/base.js\")\n        deps (io/resource \"goog/deps.js\")\n        new-repl-env (merge (RhinoEnv.) {:cx cx :scope scope})]\n    (assert base \"Can't find goog/base.js in classpath\")\n    (assert deps \"Can't find goog/deps.js in classpath\")\n    (ScriptableObject/putProperty scope\n      \"___repl_env\" (Context/javaToJS new-repl-env scope))\n    (with-open [r (io/reader base)]\n      (-eval r new-repl-env \"goog/base.js\" 1))\n    (-eval bootjs new-repl-env \"bootjs\" 1)\n    ;; Load deps.js line-by-line to avoid 64K method limit\n    (with-open [reader (io/reader deps)]\n      (doseq [^String line (line-seq reader)]\n        (-eval line new-repl-env \"goog/deps.js\" 1)))\n    new-repl-env))",
+ :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)]\n    ;; just avoid the 64K method limit\n    ;; Rhino is slow even with optimizations enabled\n    (.setOptimizationLevel cx -1)\n    (merge (RhinoEnv.)\n      {:cx cx\n       :scope (.initStandardObjects cx)})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [145 165]},
+          :lines [201 211]},
  :full-name "cljs.repl.rhino/repl-env",
  :docstring "Returns a fresh JS environment, suitable for passing to repl.\nHang on to return for use across repl calls."}
 

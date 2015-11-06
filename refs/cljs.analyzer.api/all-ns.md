@@ -26,12 +26,12 @@
 Source docstring:
 
 ```
-Return all the namespace analysis maps. Analagous to clojure.core/all-ns but
-returns analysis maps not Namespace instances.
+Return all namespaces. Analagous to clojure.core/all-ns but
+returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer/api.clj#L24-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer/api.clj#L25-L29):
 
 ```clj
 (defn all-ns
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:24-28](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/analyzer/api.clj#L24-L28)</ins>
+                └── <ins>[api.clj:25-29](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer/api.clj#L25-L29)</ins>
 </pre>
 
 -->
@@ -99,12 +99,12 @@ The API data for this symbol:
  :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [24 28]},
+          :lines [25 29]},
  :full-name "cljs.analyzer.api/all-ns",
  :clj-symbol "clojure.core/all-ns",
- :docstring "Return all the namespace analysis maps. Analagous to clojure.core/all-ns but\nreturns analysis maps not Namespace instances."}
+ :docstring "Return all namespaces. Analagous to clojure.core/all-ns but\nreturns symbols identifying namespaces not Namespace instances."}
 
 ```
 

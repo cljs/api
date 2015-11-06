@@ -35,13 +35,14 @@ in the form:
    :line <integer>
    :column <integer>}*]
 
-:file must be a URL path (without protocol) relative to :output-dir. The
-returned mapped stacktrace will also contain :url entries to the original
-sources if it can be determined from the classpath.
+:file must be a URL path (without protocol) relative to :output-dir or a
+identifier delimited by angle brackets. The returned mapped stacktrace will
+also contain :url entries to the original sources if it can be determined
+from the classpath.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L217-L260):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L242-L297):
 
 ```clj
 (defn mapped-stacktrace
@@ -52,28 +53,39 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
       (vec
         (for [{:keys [function file line column] :as frame} stacktrace]
           ;; need to convert file, a relative URL style path, to host-specific file
-          (let [rfile (io/file (URL. (.toURL (io/file (util/output-directory opts))) file))
+          (let [no-source-file? (if-not file
+                                  true
+                                  (.startsWith file "<"))
+                rfile (when-not no-source-file?
+                        (io/file (URL. (.toURL (io/file (util/output-directory opts))) file)))
                 [sm {:keys [ns source-file] :as ns-info}]
-                ((juxt read-source-map' ns-info') rfile)
+                (when-not no-source-file?
+                  ((juxt read-source-map' ns-info') rfile))
                 [line' column'] (if ns-info
                                   (mapped-line-and-column sm line column)
                                   [line column])
                 name' (if (and ns-info function)
                         (symbol (name ns) (cljrepl/demunge function))
                         function)
-                file' (string/replace
-                        (.getCanonicalFile
-                          (if ns-info
-                            source-file
-                            (io/file rfile)))
-                        (str (System/getProperty "user.dir") File/separator) "")
+                file' (if no-source-file?
+                        file
+                        (string/replace
+                         (.getCanonicalFile
+                           (if ns-info
+                             source-file
+                             (io/file rfile)))
+                         (str (System/getProperty "user.dir") File/separator) ""))
                 url   (or (and ns-info (io/resource (util/ns->relpath ns)))
-                          (io/resource file))]
+                          (and file (io/resource file)))]
             (merge
               {:function name'
-               :file     (io/file file')
-               :line     line'
-               :column   column'}
+               :file (if no-source-file?
+                       (str "NO_SOURCE_FILE"
+                         (when file
+                           (str " " file)))
+                       (io/file file'))
+               :line line'
+               :column column'}
               (when url
                 {:url url}))))))))
 ```
@@ -82,11 +94,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:217-260](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L217-L260)</ins>
+            └── <ins>[repl.clj:242-297](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L242-L297)</ins>
 </pre>
 
 -->
@@ -131,14 +143,14 @@ The API data for this symbol:
  :history [["+" "0.0-2843"]],
  :type "function",
  :full-name-encode "cljs.repl/mapped-stacktrace",
- :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n    (let [read-source-map' (memoize read-source-map)\n          ns-info' (memoize ns-info)]\n      (vec\n        (for [{:keys [function file line column] :as frame} stacktrace]\n          ;; need to convert file, a relative URL style path, to host-specific file\n          (let [rfile (io/file (URL. (.toURL (io/file (util/output-directory opts))) file))\n                [sm {:keys [ns source-file] :as ns-info}]\n                ((juxt read-source-map' ns-info') rfile)\n                [line' column'] (if ns-info\n                                  (mapped-line-and-column sm line column)\n                                  [line column])\n                name' (if (and ns-info function)\n                        (symbol (name ns) (cljrepl/demunge function))\n                        function)\n                file' (string/replace\n                        (.getCanonicalFile\n                          (if ns-info\n                            source-file\n                            (io/file rfile)))\n                        (str (System/getProperty \"user.dir\") File/separator) \"\")\n                url   (or (and ns-info (io/resource (util/ns->relpath ns)))\n                          (io/resource file))]\n            (merge\n              {:function name'\n               :file     (io/file file')\n               :line     line'\n               :column   column'}\n              (when url\n                {:url url}))))))))",
+ :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n    (let [read-source-map' (memoize read-source-map)\n          ns-info' (memoize ns-info)]\n      (vec\n        (for [{:keys [function file line column] :as frame} stacktrace]\n          ;; need to convert file, a relative URL style path, to host-specific file\n          (let [no-source-file? (if-not file\n                                  true\n                                  (.startsWith file \"<\"))\n                rfile (when-not no-source-file?\n                        (io/file (URL. (.toURL (io/file (util/output-directory opts))) file)))\n                [sm {:keys [ns source-file] :as ns-info}]\n                (when-not no-source-file?\n                  ((juxt read-source-map' ns-info') rfile))\n                [line' column'] (if ns-info\n                                  (mapped-line-and-column sm line column)\n                                  [line column])\n                name' (if (and ns-info function)\n                        (symbol (name ns) (cljrepl/demunge function))\n                        function)\n                file' (if no-source-file?\n                        file\n                        (string/replace\n                         (.getCanonicalFile\n                           (if ns-info\n                             source-file\n                             (io/file rfile)))\n                         (str (System/getProperty \"user.dir\") File/separator) \"\"))\n                url   (or (and ns-info (io/resource (util/ns->relpath ns)))\n                          (and file (io/resource file)))]\n            (merge\n              {:function name'\n               :file (if no-source-file?\n                       (str \"NO_SOURCE_FILE\"\n                         (when file\n                           (str \" \" file)))\n                       (io/file file'))\n               :line line'\n               :column column'}\n              (when url\n                {:url url}))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl.clj",
-          :lines [217 260]},
+          :lines [242 297]},
  :full-name "cljs.repl/mapped-stacktrace",
- :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nreturn the ClojureScript stacktrace. The canonical stacktrace must be\nin the form:\n\n [{:file <string>\n   :function <string>\n   :line <integer>\n   :column <integer>}*]\n\n:file must be a URL path (without protocol) relative to :output-dir. The\nreturned mapped stacktrace will also contain :url entries to the original\nsources if it can be determined from the classpath."}
+ :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nreturn the ClojureScript stacktrace. The canonical stacktrace must be\nin the form:\n\n [{:file <string>\n   :function <string>\n   :line <integer>\n   :column <integer>}*]\n\n:file must be a URL path (without protocol) relative to :output-dir or a\nidentifier delimited by angle brackets. The returned mapped stacktrace will\nalso contain :url entries to the original sources if it can be determined\nfrom the classpath."}
 
 ```
 

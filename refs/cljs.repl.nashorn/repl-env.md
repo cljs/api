@@ -33,15 +33,14 @@ opts has the following extra parameters:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/nashorn.clj#L198-L211):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/nashorn.clj#L200-L212):
 
 ```clj
 (defn repl-env 
   [& {:keys [debug] :as opts}]
-  (let [engine (create-engine)
-        compiler-env (env/default-compiler-env)]
-    (merge (NashornEnv. engine debug)
-      {:cljs.env/compiler compiler-env}  ; required by cider middleware ?
+  (let [engine (create-engine)]
+    (merge
+      (NashornEnv. engine debug)
       opts)))
 ```
 
@@ -49,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:198-211](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/nashorn.clj#L198-L211)</ins>
+                └── <ins>[nashorn.clj:200-212](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/nashorn.clj#L200-L212)</ins>
 </pre>
 
 -->
@@ -99,12 +98,12 @@ The API data for this symbol:
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl.nashorn/repl-env",
- :source {:code "(defn repl-env \n  [& {:keys [debug] :as opts}]\n  (let [engine (create-engine)\n        compiler-env (env/default-compiler-env)]\n    (merge (NashornEnv. engine debug)\n      {:cljs.env/compiler compiler-env}  ; required by cider middleware ?\n      opts)))",
+ :source {:code "(defn repl-env \n  [& {:keys [debug] :as opts}]\n  (let [engine (create-engine)]\n    (merge\n      (NashornEnv. engine debug)\n      opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/nashorn.clj",
-          :lines [198 211]},
+          :lines [200 212]},
  :full-name "cljs.repl.nashorn/repl-env",
  :docstring "Create a Nashorn repl-env for use with the repl/repl* method in Clojurescript and as the\n:repl-env argument to piggieback/cljs-repl. Besides the usual repl options (e.g. :source-map),\nopts has the following extra parameters:\n\n:output-dir  the directory of the compiled files, e.g. \"resources/public/my-app\" (mandatory).\n:output-to   load this file initially into Nashorn, relative to output-dir.\n             Use a minimal bootstrapped cljs.core environment if not specified."}
 

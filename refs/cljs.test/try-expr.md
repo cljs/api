@@ -31,7 +31,7 @@ You don't call this.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/test.clj#L135-L144):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/test.clj#L135-L144):
 
 ```clj
 (defmacro try-expr
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:135-144](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/test.clj#L135-L144)</ins>
+            └── <ins>[test.clj:135-144](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/test.clj#L135-L144)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defmacro try-expr\n  [msg form]\n  `(try\n     ~(cljs.test/assert-expr &env msg form)\n     (catch :default t#\n       (cljs.test/do-report \n         {:type :error, :message ~msg,\n          :expected '~form, :actual t#}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/test.clj",
           :lines [135 144]},
  :full-name "cljs.test/try-expr",

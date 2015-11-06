@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L60):
 
 ```clj
 (defmulti eval-result class)
@@ -27,19 +27,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:56](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L56)</ins>
+                └── <ins>[rhino.clj:60](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L60)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L58-L59):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L62-L63):
 
 ```clj
 (defmethod eval-result :default [r]
@@ -50,17 +50,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:58-59](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L58-L59)</ins>
+                └── <ins>[rhino.clj:62-63](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L62-L63)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L61):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L65):
 
 ```clj
 (defmethod eval-result nil [_] "")
@@ -70,17 +70,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:61](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L61)</ins>
+                └── <ins>[rhino.clj:65](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L65)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L63):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L67):
 
 ```clj
 (defmethod eval-result Undefined [_] "")
@@ -90,12 +90,12 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2913/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
+clojurescript @ r2985
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:63](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L63)</ins>
+                └── <ins>[rhino.clj:67](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/rhino.clj#L67)</ins>
 </pre>
 -->
 
@@ -138,29 +138,29 @@ The API data for this symbol:
  :source {:code "(defmulti eval-result class)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2913",
+          :tag "r2985",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [56]},
+          :lines [60]},
  :full-name "cljs.repl.rhino/eval-result",
  :full-name-encode "cljs.repl.rhino/eval-result",
  :extra-sources ({:code "(defmethod eval-result :default [r]\n  (.toString r))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2913",
+                  :tag "r2985",
                   :filename "src/clj/cljs/repl/rhino.clj",
-                  :lines [58 59]}
+                  :lines [62 63]}
                  {:code "(defmethod eval-result nil [_] \"\")",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2913",
+                  :tag "r2985",
                   :filename "src/clj/cljs/repl/rhino.clj",
-                  :lines [61]}
+                  :lines [65]}
                  {:code "(defmethod eval-result Undefined [_] \"\")",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2913",
+                  :tag "r2985",
                   :filename "src/clj/cljs/repl/rhino.clj",
-                  :lines [63]}),
+                  :lines [67]}),
  :history [["+" "0.0-927"]]}
 
 ```
