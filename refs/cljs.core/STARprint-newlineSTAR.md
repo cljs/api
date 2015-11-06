@@ -24,7 +24,7 @@ console objects.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L48-L53):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L48-L53):
 
 ```clj
 (def
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:48-53](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L48-L53)</ins>
+            └── <ins>[core.cljs:48-53](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L48-L53)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false will drop newlines from printing calls.\n  This is to work around the implicit newlines emitted by standard JavaScript\n  console objects.\"}\n  *print-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/cljs/core.cljs",
           :lines [48 53]},
  :full-name "cljs.core/*print-newline*",

@@ -40,7 +40,7 @@ certain transforms may inject or skip items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L2083-L2096):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2083-L2096):
 
 ```clj
 (defn transduce
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2083-2096](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L2083-L2096)</ins>
+            └── <ins>[core.cljs:2083-2096](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L2083-L2096)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn transduce\n  ([xform f coll] (transduce xform f (f) coll))\n  ([xform f init coll]\n     (let [f (xform f)\n           ret (reduce f init coll)]\n       (f ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2083 2096]},
  :full-name "cljs.core/transduce",

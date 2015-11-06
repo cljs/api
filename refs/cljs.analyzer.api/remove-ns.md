@@ -30,7 +30,7 @@ Removes the namespace named by the symbol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L120-L124):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L120-L124):
 
 ```clj
 (defn remove-ns
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:120-124](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L120-L124)</ins>
+                └── <ins>[api.clj:120-124](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L120-L124)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn remove-ns\n  [ns]\n  {:pre [(symbol? ns)]}\n  (swap! env/*compiler* update-in [::ana/namespaces] dissoc ns))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [120 124]},
  :full-name "cljs.analyzer.api/remove-ns",

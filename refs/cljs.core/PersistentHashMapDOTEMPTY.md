@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L6642):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L6642):
 
 ```clj
 (set! (.-EMPTY PersistentHashMap) (PersistentHashMap. nil 0 nil false nil empty-unordered-hash))
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6642](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L6642)</ins>
+            └── <ins>[core.cljs:6642](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L6642)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY PersistentHashMap) (PersistentHashMap. nil 0 nil false nil empty-unordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6642]},
  :full-name "cljs.core/PersistentHashMap.EMPTY",

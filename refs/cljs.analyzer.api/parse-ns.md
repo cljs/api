@@ -41,7 +41,7 @@ requested via opts where :restore is false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L40-L52):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L40-L52):
 
 ```clj
 (defn parse-ns
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:40-52](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L40-L52)</ins>
+                └── <ins>[api.clj:40-52](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L40-L52)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn parse-ns\n  ([src] (ana/parse-ns src nil nil))\n  ([src opts] (ana/parse-ns src nil opts))\n  ([src dest opts] (ana/parse-ns src dest opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [40 52]},
  :full-name "cljs.analyzer.api/parse-ns",

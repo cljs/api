@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/clojure/browser/net.cljs#L21-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/net.cljs#L21-L28):
 
 ```clj
 (def event-types
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:21-28](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/clojure/browser/net.cljs#L21-L28)</ins>
+                └── <ins>[net.cljs:21-28](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/clojure/browser/net.cljs#L21-L28)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (merge\n          (js->clj EventType)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [21 28]},
  :full-name "clojure.browser.net/event-types",

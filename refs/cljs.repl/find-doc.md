@@ -66,7 +66,7 @@ contains a match for re-string-or-pattern
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl.clj#L1083-L1105):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L1083-L1105):
 
 ```clj
 (defmacro find-doc
@@ -96,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:1083-1105](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl.clj#L1083-L1105)</ins>
+            └── <ins>[repl.clj:1083-1105](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl.clj#L1083-L1105)</ins>
 </pre>
 
 -->
@@ -153,7 +153,7 @@ The API data for this symbol:
  :source {:code "(defmacro find-doc\n  [re-string-or-pattern]\n  (let [re (re-pattern re-string-or-pattern)\n        ms (concat\n             (mapcat\n               (fn [ns]\n                 (map\n                   (fn [m]\n                     (update-in (select-keys m [:ns :name :doc :forms :arglists :macro :url])\n                       [:name] clojure.core/name))\n                   (sort-by :name (vals (ana-api/ns-interns ns)))))\n               (ana-api/all-ns))\n             (map #(select-keys (ana-api/find-ns %) [:name :doc]) (ana-api/all-ns))\n             (map special-doc (keys special-doc-map)))\n        ms (for [m ms\n                 :when (and (:doc m)\n                            (or (re-find (re-matcher re (:doc m)))\n                                (re-find (re-matcher re (str (:name m))))))]\n             m)]\n    `(doseq [m# (quote ~ms)]\n       (cljs.repl/print-doc m#))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/repl.clj",
           :lines [1083 1105]},
  :examples [{:id "50ec43",

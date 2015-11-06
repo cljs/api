@@ -31,7 +31,7 @@ returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L80-L84):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L80-L84):
 
 ```clj
 (defn all-ns
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:80-84](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L80-L84)</ins>
+                └── <ins>[api.clj:80-84](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L80-L84)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [80 84]},
  :full-name "cljs.analyzer.api/all-ns",

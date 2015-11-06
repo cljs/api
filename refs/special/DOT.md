@@ -153,7 +153,7 @@ They all expand into calls to the dot operator at macroexpansion time.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer.clj#L1668-L1686):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer.clj#L1668-L1686):
 
 ```clj
 (defmethod parse '.
@@ -181,11 +181,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1668-1686](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer.clj#L1668-L1686)</ins>
+            └── <ins>[analyzer.clj:1668-1686](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer.clj#L1668-L1686)</ins>
 </pre>
 
 -->
@@ -237,7 +237,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _ _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)]\n     (case dot-action\n           ::access {:env env :op :dot :form form\n                     :target targetexpr\n                     :field field\n                     :children [targetexpr]\n                     :tag (-> form meta :tag)}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :form form\n                       :target targetexpr\n                       :method method\n                       :args argexprs\n                       :children (into [targetexpr] argexprs)\n                       :tag (-> form meta :tag)})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1668 1686]},
  :usage ["(.-foo obj)" "(.foo obj)"],

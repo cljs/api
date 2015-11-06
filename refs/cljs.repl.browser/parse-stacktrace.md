@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L192):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L192):
 
 ```clj
 (defmulti parse-stacktrace (fn [repl-env st err opts] (:ua-product err)))
@@ -32,19 +32,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:192](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L192)</ins>
+                └── <ins>[browser.clj:192](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L192)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L194-L195):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L194-L195):
 
 ```clj
 (defmethod parse-stacktrace :default
@@ -55,17 +55,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:194-195](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L194-L195)</ins>
+                └── <ins>[browser.clj:194-195](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L194-L195)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L256-L264):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L256-L264):
 
 ```clj
 (defmethod parse-stacktrace :chrome
@@ -83,17 +83,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:256-264](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L256-L264)</ins>
+                └── <ins>[browser.clj:256-264](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L256-L264)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L323-L332):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L323-L332):
 
 ```clj
 (defmethod parse-stacktrace :safari
@@ -112,17 +112,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:323-332](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L323-L332)</ins>
+                └── <ins>[browser.clj:323-332](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L323-L332)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L418-L427):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L418-L427):
 
 ```clj
 (defmethod parse-stacktrace :firefox
@@ -141,12 +141,12 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r3208/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:418-427](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L418-L427)</ins>
+                └── <ins>[browser.clj:418-427](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/repl/browser.clj#L418-L427)</ins>
 </pre>
 -->
 
@@ -192,31 +192,31 @@ The API data for this symbol:
  :source {:code "(defmulti parse-stacktrace (fn [repl-env st err opts] (:ua-product err)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [192]},
  :extra-sources ({:code "(defmethod parse-stacktrace :default\n  [repl-env st err opts] st)",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r3208",
+                  :tag "r3211",
                   :filename "src/clj/cljs/repl/browser.clj",
                   :lines [194 195]}
                  {:code "(defmethod parse-stacktrace :chrome\n  [repl-env st err opts]\n  (->> st\n    string/split-lines\n    (drop-while #(.startsWith % \"Error\"))\n    (take-while #(not (.startsWith % \"    at eval\")))\n    (map #(chrome-st-el->frame % opts))\n    (remove nil?)\n    vec))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r3208",
+                  :tag "r3211",
                   :filename "src/clj/cljs/repl/browser.clj",
                   :lines [256 264]}
                  {:code "(defmethod parse-stacktrace :safari\n  [repl-env st err opts]\n  (->> st\n    string/split-lines\n    (drop-while #(.startsWith % \"Error\"))\n    (take-while #(not (.startsWith % \"eval code\")))\n    (remove string/blank?)\n    (map #(safari-st-el->frame % opts))\n    (remove nil?)\n    vec))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r3208",
+                  :tag "r3211",
                   :filename "src/clj/cljs/repl/browser.clj",
                   :lines [323 332]}
                  {:code "(defmethod parse-stacktrace :firefox\n  [repl-env st err opts]\n  (->> st\n    string/split-lines\n    (drop-while #(.startsWith % \"Error\"))\n    (take-while #(= (.indexOf % \"> eval\") -1))\n    (remove string/blank?)\n    (map #(firefox-st-el->frame % opts))\n    (remove nil?)\n    vec))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r3208",
+                  :tag "r3211",
                   :filename "src/clj/cljs/repl/browser.clj",
                   :lines [418 427]}),
  :full-name "cljs.repl.browser/parse-stacktrace"}

@@ -37,7 +37,7 @@ meaningful value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L54-L64):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L54-L64):
 
 ```clj
 (defn analyze-file
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:54-64](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L54-L64)</ins>
+                └── <ins>[api.clj:54-64](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer/api.clj#L54-L64)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn analyze-file\n  ([f] (ana/analyze-file f nil))\n  ([f opts] (ana/analyze-file f opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [54 64]},
  :full-name "cljs.analyzer.api/analyze-file",

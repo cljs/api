@@ -27,7 +27,7 @@ Identical to reify but mutates its first argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/core.clj#L736-L742):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L736-L742):
 
 ```clj
 (defmacro specify!
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:736-742](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/core.clj#L736-L742)</ins>
+            └── <ins>[core.clj:736-742](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L736-L742)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defmacro specify!\n  [expr & impls]\n  (let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/core.clj",
           :lines [736 742]},
  :full-name "cljs.core/specify!",

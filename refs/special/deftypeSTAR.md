@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer.clj#L1604-L1606):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer.clj#L1604-L1606):
 
 ```clj
 (defmethod parse 'deftype*
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1604-1606](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer.clj#L1604-L1606)</ins>
+            └── <ins>[analyzer.clj:1604-1606](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/analyzer.clj#L1604-L1606)</ins>
 </pre>
 
 -->
@@ -73,7 +73,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'deftype*\n  [_ env form _ _]\n  (parse-type :deftype* env form))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1604 1606]},
  :full-name "special/deftype*",

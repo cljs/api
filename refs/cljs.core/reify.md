@@ -66,7 +66,7 @@ reify is a macro with the following structure:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/core.clj#L680-L734):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L680-L734):
 
 ```clj
 (defmacro reify
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:680-734](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/core.clj#L680-L734)</ins>
+            └── <ins>[core.clj:680-734](https://github.com/clojure/clojurescript/blob/r3211/src/clj/cljs/core.clj#L680-L734)</ins>
 </pre>
 
 -->
@@ -148,7 +148,7 @@ The API data for this symbol:
  :source {:code "(defmacro reify\n  [& impls]\n  (let [t        (with-meta (gensym \"t\") {:anonymous true})\n        meta-sym (gensym \"meta\")\n        this-sym (gensym \"_\")\n        locals   (keys (:locals &env))\n        ns       (-> &env :ns :name)\n        munge    cljs.compiler/munge]\n    `(do\n       (when-not (exists? ~(symbol (core/str ns) (core/str t)))\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals ~(ana/elide-reader-meta (meta &form))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/clj/cljs/core.clj",
           :lines [680 734]},
  :full-name "cljs.core/reify",

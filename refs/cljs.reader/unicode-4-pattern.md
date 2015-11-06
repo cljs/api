@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/reader.cljs#L182):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L182):
 
 ```clj
 (def unicode-4-pattern (re-pattern "^[0-9A-Fa-f]{4}$"))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:182](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/reader.cljs#L182)</ins>
+            └── <ins>[reader.cljs:182](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/reader.cljs#L182)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def unicode-4-pattern (re-pattern \"^[0-9A-Fa-f]{4}$\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [182]},
  :full-name "cljs.reader/unicode-4-pattern",

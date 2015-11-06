@@ -53,7 +53,7 @@ Returns true if x is a JavaScript array.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L153-L158):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L153-L158):
 
 ```clj
 (defn ^boolean array?
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3208
+clojurescript @ r3211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:153-158](https://github.com/clojure/clojurescript/blob/r3208/src/cljs/cljs/core.cljs#L153-L158)</ins>
+            └── <ins>[core.cljs:153-158](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/core.cljs#L153-L158)</ins>
 </pre>
 
 -->
@@ -122,7 +122,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean array?\n  [x]\n  (if (identical? *target* \"nodejs\")\n    (.isArray js/Array x)\n    (instance? js/Array x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3208",
+          :tag "r3211",
           :filename "src/cljs/cljs/core.cljs",
           :lines [153 158]},
  :examples [{:id "39913c",
