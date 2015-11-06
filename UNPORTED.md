@@ -427,6 +427,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/format](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/format)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/future](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/future)</samp></td>
 </tr>
 <tr>
@@ -596,6 +600,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/pop-thread-bindings](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pop-thread-bindings)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/printf](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/printf)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

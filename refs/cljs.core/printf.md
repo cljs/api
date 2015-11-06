@@ -1,11 +1,11 @@
-## cljs.core/printf
+## ~~cljs.core/printf~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1443"><img valign="middle" alt="[+] 0.0-1443" title="Added in 0.0-1443" src="https://img.shields.io/badge/+-0.0--1443-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1443"><img valign="middle" alt="[+] 0.0-1443" title="Added in 0.0-1443" src="https://img.shields.io/badge/+-0.0--1443-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1885"><img valign="middle" alt="[×] 0.0-1885" title="Removed in 0.0-1885" src="https://img.shields.io/badge/×-0.0--1885-red.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/printf</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/printf)
 </td>
@@ -91,7 +91,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "printf",
  :signature ["[fmt & args]"],
- :history [["+" "0.0-1443"]],
+ :history [["+" "0.0-1443"] ["-" "0.0-1885"]],
  :type "function",
  :full-name-encode "cljs.core/printf",
  :source {:code "(defn printf\n  [fmt & args]\n  (print (apply format fmt args)))",
@@ -102,7 +102,8 @@ The API data for this symbol:
           :lines [6758 6761]},
  :full-name "cljs.core/printf",
  :clj-symbol "clojure.core/printf",
- :docstring "Prints formatted output, as per format"}
+ :docstring "Prints formatted output, as per format",
+ :removed {:in "0.0-1885", :last-seen "0.0-1878"}}
 
 ```
 

@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1885](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1885)__</td>
+<td>2013-09-15</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.7.6</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-001885syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001885library">
+ -2
+</a>
+</td>
+<td>
+<a href="#user-content-001885compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1878](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1878)__</td>
 <td>2013-09-11</td>
 <td><kbd>1.5.1</kbd></td>
@@ -682,6 +705,35 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1885
+
+<a name="001885syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001885library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.core/format~~](refs/cljs.core/format.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.core/printf~~](refs/cljs.core/printf.md)</samp></td>
+</tr>
+</table>
+
+<a name="001885compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1878
@@ -5246,7 +5298,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/string?](refs/cljs.core/stringQMARK.md)</samp></td>
 </tr>
