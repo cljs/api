@@ -35,7 +35,7 @@ not be readable by the Clojure reader.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L160-L216):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L256-L313):
 
 ```clj
 (defn evaluate-form
@@ -82,11 +82,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
             (print js))
           (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]
             (case (:status ret)
-              :error (display-error ret form)
+              :error (display-error ret form opts)
               :exception (display-error ret form
                            (if (:repl-verbose opts)
                              #(prn "Error evaluating:" form :as js)
-                             (constantly nil)))
+                             (constantly nil))
+                           opts)
               :success (:value ret)))))
       (catch Throwable ex
         (.printStackTrace ex)
@@ -98,11 +99,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:160-216](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L160-L216)</ins>
+            └── <ins>[repl.clj:256-313](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L256-L313)</ins>
 </pre>
 
 -->
@@ -149,12 +150,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl/evaluate-form",
- :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n    (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n    (evaluate-form repl-env env filename form wrap nil))\n  ([repl-env env filename form wrap opts]\n    (try\n      (binding [ana/*cljs-file* filename]\n        (let [ast (ana/analyze env form opts)\n              js (comp/emit-str ast)\n              wrap-js\n              ;; TODO: check opts as well - David\n              (if (:source-map repl-env)\n                (binding [comp/*source-map-data*\n                          (atom {:source-map (sorted-map)\n                                 :gen-col 0\n                                 :gen-line 0})]\n                  (let [js (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts)))\n                        t (System/currentTimeMillis)]\n                    (str js\n                      \"\\n//# sourceURL=repl-\" t \".js\"\n                      \"\\n//# sourceMappingURL=data:application/json;base64,\"\n                      (DatatypeConverter/printBase64Binary\n                        (.getBytes\n                          (sm/encode\n                            {(str \"repl-\" t \".cljs\")\n                             (:source-map @comp/*source-map-data*)}\n                            {:lines (+ (:gen-line @comp/*source-map-data*) 3)\n                             :file  (str \"repl-\" t \".js\")\n                             :sources-content\n                                    [(or (:source (meta form))\n                                       ;; handle strings / primitives without metadata\n                                       (with-out-str (pr form)))]})\n                          \"UTF-8\")))))\n                (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts))))]\n          (when (= (:op ast) :ns)\n            (load-dependencies repl-env\n              (into (vals (:requires ast))\n                (distinct (vals (:uses ast))))\n              opts))\n          (when *cljs-verbose*\n            (print js))\n          (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n            (case (:status ret)\n              :error (display-error ret form)\n              :exception (display-error ret form\n                           (if (:repl-verbose opts)\n                             #(prn \"Error evaluating:\" form :as js)\n                             (constantly nil)))\n              :success (:value ret)))))\n      (catch Throwable ex\n        (.printStackTrace ex)\n        (println (str ex))\n        (flush)))))",
+ :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n    (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n    (evaluate-form repl-env env filename form wrap nil))\n  ([repl-env env filename form wrap opts]\n    (try\n      (binding [ana/*cljs-file* filename]\n        (let [ast (ana/analyze env form opts)\n              js (comp/emit-str ast)\n              wrap-js\n              ;; TODO: check opts as well - David\n              (if (:source-map repl-env)\n                (binding [comp/*source-map-data*\n                          (atom {:source-map (sorted-map)\n                                 :gen-col 0\n                                 :gen-line 0})]\n                  (let [js (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts)))\n                        t (System/currentTimeMillis)]\n                    (str js\n                      \"\\n//# sourceURL=repl-\" t \".js\"\n                      \"\\n//# sourceMappingURL=data:application/json;base64,\"\n                      (DatatypeConverter/printBase64Binary\n                        (.getBytes\n                          (sm/encode\n                            {(str \"repl-\" t \".cljs\")\n                             (:source-map @comp/*source-map-data*)}\n                            {:lines (+ (:gen-line @comp/*source-map-data*) 3)\n                             :file  (str \"repl-\" t \".js\")\n                             :sources-content\n                                    [(or (:source (meta form))\n                                       ;; handle strings / primitives without metadata\n                                       (with-out-str (pr form)))]})\n                          \"UTF-8\")))))\n                (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts))))]\n          (when (= (:op ast) :ns)\n            (load-dependencies repl-env\n              (into (vals (:requires ast))\n                (distinct (vals (:uses ast))))\n              opts))\n          (when *cljs-verbose*\n            (print js))\n          (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n            (case (:status ret)\n              :error (display-error ret form opts)\n              :exception (display-error ret form\n                           (if (:repl-verbose opts)\n                             #(prn \"Error evaluating:\" form :as js)\n                             (constantly nil))\n                           opts)\n              :success (:value ret)))))\n      (catch Throwable ex\n        (.printStackTrace ex)\n        (println (str ex))\n        (flush)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/clj/cljs/repl.clj",
-          :lines [160 216]},
+          :lines [256 313]},
  :full-name "cljs.repl/evaluate-form",
  :docstring "Evaluate a ClojureScript form in the JavaScript environment. Returns a\nstring which is the ClojureScript return value. This string may or may\nnot be readable by the Clojure reader."}
 

@@ -31,38 +31,23 @@ add v to :testing-vars property of env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L357-L376):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L446-L450):
 
 ```clj
 (defn test-var
   [v]
-  {:pre [(instance? Var v)]}
-  (if-let [t (:test (meta v))]
-    (do
-      (update-current-env! [:testing-vars] conj v)
-      (update-current-env! [:report-counters :test] inc)
-      (do-report {:type :begin-test-var :var v})
-      (try
-        (t)
-        (catch :default e
-          (do-report
-            {:type :error
-             :message "Uncaught exception, not in assertion."
-             :expected nil
-             :actual e})))
-      (do-report {:type :end-test-var :var v})
-      (update-current-env! [:testing-vars] rest))))
+  (run-block (test-var-block v)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:357-376](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L357-L376)</ins>
+            └── <ins>[test.cljs:446-450](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L446-L450)</ins>
 </pre>
 
 -->
@@ -110,12 +95,12 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/test-var",
- :source {:code "(defn test-var\n  [v]\n  {:pre [(instance? Var v)]}\n  (if-let [t (:test (meta v))]\n    (do\n      (update-current-env! [:testing-vars] conj v)\n      (update-current-env! [:report-counters :test] inc)\n      (do-report {:type :begin-test-var :var v})\n      (try\n        (t)\n        (catch :default e\n          (do-report\n            {:type :error\n             :message \"Uncaught exception, not in assertion.\"\n             :expected nil\n             :actual e})))\n      (do-report {:type :end-test-var :var v})\n      (update-current-env! [:testing-vars] rest))))",
+ :source {:code "(defn test-var\n  [v]\n  (run-block (test-var-block v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [357 376]},
+          :lines [446 450]},
  :full-name "cljs.test/test-var",
  :clj-symbol "clojure.test/test-var",
  :docstring "If v has a function in its :test metadata, calls that function,\nadd v to :testing-vars property of env."}

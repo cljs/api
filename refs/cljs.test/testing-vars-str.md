@@ -32,7 +32,7 @@ current assertion.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L238-L246):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L264-L272):
 
 ```clj
 (defn testing-vars-str
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:238-246](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L238-L246)</ins>
+            └── <ins>[test.cljs:264-272](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L264-L272)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn testing-vars-str\n  [m]\n  (let [{:keys [file line]} m]\n    (str\n      (reverse (map #(:name (meta %)) (:testing-vars (get-current-env))))\n      \" (\" file \":\" line \")\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [238 246]},
+          :lines [264 272]},
  :full-name "cljs.test/testing-vars-str",
  :clj-symbol "clojure.test/testing-vars-str",
  :docstring "Returns a string representation of the current test.  Renders names\nin *testing-vars* as a list, then the source file and line of\ncurrent assertion."}

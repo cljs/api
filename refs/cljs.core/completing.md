@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L1812-L1818):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L1816-L1822):
 
 ```clj
 (defn completing
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1812-1818](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L1812-L1818)</ins>
+            └── <ins>[core.cljs:1816-1822](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L1816-L1822)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn completing\n  ([f] (completing f identity))\n  ([f cf]\n    (fn\n      ([] (f))\n      ([x] (cf x))\n      ([x y] (f x y)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1812 1818]},
+          :lines [1816 1822]},
  :full-name "cljs.core/completing",
  :full-name-encode "cljs.core/completing",
  :history [["+" "0.0-2341"]]}

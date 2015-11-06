@@ -72,7 +72,7 @@ remembered history:
 
 [`cljs.core/*1`](../cljs.core/STAR1.md)<br>
 [`cljs.core/*2`](../cljs.core/STAR2.md)<br>
-[``](../cljs.core/STARe.md)<br>
+[`cljs.core/*e`](../cljs.core/STARe.md)<br>
 
 ---
 
@@ -84,7 +84,7 @@ bound in a repl thread to the third most recent value printed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L67-L69):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L67-L69):
 
 ```clj
 (def
@@ -96,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:67-69](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L67-L69)</ins>
+            └── <ins>[core.cljs:67-69](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L67-L69)</ins>
 </pre>
 
 -->
@@ -152,7 +152,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the third most recent value printed\"}\n  *3)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/core.cljs",
           :lines [67 69]},
  :examples [{:id "d7a6e9",

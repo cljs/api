@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/browser/repl.cljs#L23-L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/clojure/browser/repl.cljs#L28-L30):
 
 ```clj
 (defn repl-print [data]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:23-25](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/browser/repl.cljs#L23-L25)</ins>
+                └── <ins>[repl.cljs:28-30](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/clojure/browser/repl.cljs#L28-L30)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn repl-print [data]\n  (if-let [conn @xpc-connection]\n    (net/transmit conn :print (pr-str data))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/clojure/browser/repl.cljs",
-          :lines [23 25]},
+          :lines [28 30]},
  :full-name "clojure.browser.repl/repl-print",
  :full-name-encode "clojure.browser.repl/repl-print",
  :history [["+" "0.0-927"]]}

@@ -34,42 +34,31 @@ Otherwise, calls test-all-vars on the namespace.  'ns' is a
 namespace object or a symbol.
 
 Internally binds *report-counters* to a ref initialized to
-*initial-report-counters*.  Returns the final, dereferenced state of
-*report-counters*.
+*initial-report-counters*.  
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L301-L324):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L352-L364):
 
 ```clj
 (defmacro test-ns
   ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))
   ([env [quote ns :as form]]
-   (assert (and (= quote 'quote) (symbol? ns)) "Argument to test-ns must be a quoted symbol")
-   (assert (ana-api/find-ns ns) (str "Namespace " ns " does not exist"))
-   `(do
-      (cljs.test/set-env! ~env)
-      (cljs.test/do-report {:type :begin-test-ns, :ns ~form})
-      ;; If the namespace has a test-ns-hook function, call that:
-      ~(if-let [v (ana-api/ns-resolve ns 'test-ns-hook)]
-         `(~(symbol (name ns) "test-ns-hook"))
-         ;; Otherwise, just test every var in the namespace.
-         `(cljs.test/test-all-vars ~form))
-      (cljs.test/do-report {:type :end-test-ns, :ns ~form})
-      (let [ret# (cljs.test/get-current-env)]
-        (cljs.test/clear-env!)
-        ret#))))
+   `(cljs.test/run-block
+     (concat (cljs.test/test-ns-block ~env ~form)
+             [(fn []
+                (cljs.test/clear-env!))]))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:301-324](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L301-L324)</ins>
+            └── <ins>[test.clj:352-364](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L352-L364)</ins>
 </pre>
 
 -->
@@ -117,15 +106,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.test/test-ns",
- :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   (assert (and (= quote 'quote) (symbol? ns)) \"Argument to test-ns must be a quoted symbol\")\n   (assert (ana-api/find-ns ns) (str \"Namespace \" ns \" does not exist\"))\n   `(do\n      (cljs.test/set-env! ~env)\n      (cljs.test/do-report {:type :begin-test-ns, :ns ~form})\n      ;; If the namespace has a test-ns-hook function, call that:\n      ~(if-let [v (ana-api/ns-resolve ns 'test-ns-hook)]\n         `(~(symbol (name ns) \"test-ns-hook\"))\n         ;; Otherwise, just test every var in the namespace.\n         `(cljs.test/test-all-vars ~form))\n      (cljs.test/do-report {:type :end-test-ns, :ns ~form})\n      (let [ret# (cljs.test/get-current-env)]\n        (cljs.test/clear-env!)\n        ret#))))",
+ :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   `(cljs.test/run-block\n     (concat (cljs.test/test-ns-block ~env ~form)\n             [(fn []\n                (cljs.test/clear-env!))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/clj/cljs/test.clj",
-          :lines [301 324]},
+          :lines [352 364]},
  :full-name "cljs.test/test-ns",
  :clj-symbol "clojure.test/test-ns",
- :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  Returns the final, dereferenced state of\n*report-counters*."}
+ :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  "}
 
 ```
 

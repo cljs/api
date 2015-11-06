@@ -28,10 +28,12 @@ Source docstring:
 ```
 Composes two fixture functions, creating a new fixture function
 that combines their behavior.
+
+NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L383-L387):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L459-L465):
 
 ```clj
 (defn compose-fixtures
@@ -43,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:383-387](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L383-L387)</ins>
+            └── <ins>[test.cljs:459-465](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L459-L465)</ins>
 </pre>
 
 -->
@@ -98,12 +100,12 @@ The API data for this symbol:
  :source {:code "(defn compose-fixtures\n  [f1 f2]\n  (fn [g] (f1 (fn [] (f2 g)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [383 387]},
+          :lines [459 465]},
  :full-name "cljs.test/compose-fixtures",
  :clj-symbol "clojure.test/compose-fixtures",
- :docstring "Composes two fixture functions, creating a new fixture function\nthat combines their behavior."}
+ :docstring "Composes two fixture functions, creating a new fixture function\nthat combines their behavior.\n\nNOTE: Incompatible with map fixtures."}
 
 ```
 

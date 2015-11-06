@@ -28,7 +28,7 @@ i.e. substituting true for :unknown if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L80-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L83-L88):
 
 ```clj
 (defmacro with-read-known
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:80-85](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L80-L85)</ins>
+            └── <ins>[repl.clj:83-88](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L83-L88)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defmacro with-read-known\n  [& body]\n  `(binding [*read-eval* (if (= :unknown *read-eval*) true *read-eval*)]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/clj/cljs/repl.clj",
-          :lines [80 85]},
+          :lines [83 88]},
  :full-name "cljs.repl/with-read-known",
  :docstring "Evaluates body with *read-eval* set to a \"known\" value,\ni.e. substituting true for :unknown if necessary."}
 

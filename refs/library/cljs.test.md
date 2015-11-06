@@ -153,14 +153,17 @@ A unit testing framework.
    Fixtures allow you to run code before and after tests, to set up
    the context in which tests should be run.
 
-   A fixture is just a function that calls another function passed as
-   an argument.  It looks like this:
+   A fixture is a map of one or two functions that run code before and
+   after tests.  It looks like this:
 
-   (defn my-fixture [f]
-      Perform setup, establish bindings, whatever.
-     (f)  Then call the function we were passed.
-      Tear-down / clean-up code here.
-    )
+   {:before (fn []
+              Perform setup, establish bindings, whatever.
+              )
+    :after (fn []
+             Tear-down / clean-up code here.
+             )}
+
+   Both are optional and can be left out.
 
    Fixtures are attached to namespaces in one of two ways.  "each"
    fixtures are run repeatedly, once for each test function created
@@ -170,9 +173,10 @@ A unit testing framework.
 
    "each" fixtures can be attached to the current namespace like this:
    (use-fixtures :each fixture1 fixture2 ...)
-   The fixture1, fixture2 are just functions like the example above.
-   They can also be anonymous functions, like this:
-   (use-fixtures :each (fn [f] setup... (f) cleanup...))
+   The fixture1, fixture2 are just maps like the example above.
+   They can also be passed directly, like this:
+   (use-fixtures :each
+     {:before (fn [] setup...), :after (fn [] cleanup...)})
 
    The other kind of fixture, a "once" fixture, is only run once,
    around ALL the tests in the namespace.  "once" fixtures are useful
@@ -184,6 +188,21 @@ A unit testing framework.
 
    Note: Fixtures and test-ns-hook are mutually incompatible.  If you
    are using test-ns-hook, fixture functions will *never* be run.
+
+
+   WRAPPING FIXTURES
+
+   Instead of a map, a fixture can be specified like this:
+
+   (defn my-fixture [f]
+      Perform setup, establish bindings, whatever.
+     (f)  Then call the function we were passed.
+      Tear-down / clean-up code here.
+    )
+
+   This style is incompatible with async tests. If an async test is
+   encountered, testing will be aborted. It can't be mixed with
+   fixtures specified as maps.
 
 
    EXTENDING TEST-IS (ADVANCED)
@@ -242,6 +261,24 @@ A unit testing framework.
 </tr>
 <tr>
 <td></td>
+<td><samp>[async](../cljs.test/async.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[async?](../cljs.test/asyncQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[block](../cljs.test/block.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[clear-env!](../cljs.test/clear-envBANG.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
@@ -275,6 +312,12 @@ A unit testing framework.
 <td><samp>[file-and-line](../cljs.test/file-and-line.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[get-and-clear-env!](../cljs.test/get-and-clear-envBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -331,10 +374,22 @@ A unit testing framework.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[run-block](../cljs.test/run-block.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/run-tests)</td>
 <td><samp>[run-tests](../cljs.test/run-tests.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[run-tests-block](../cljs.test/run-tests-block.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -355,10 +410,22 @@ A unit testing framework.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[test-all-vars-block](../cljs.test/test-all-vars-block.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-ns)</td>
 <td><samp>[test-ns](../cljs.test/test-ns.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[test-ns-block](../cljs.test/test-ns-block.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-var)</td>
@@ -367,10 +434,22 @@ A unit testing framework.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[test-var-block](../cljs.test/test-var-block.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-vars)</td>
 <td><samp>[test-vars](../cljs.test/test-vars.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[test-vars-block](../cljs.test/test-vars-block.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing)</td>
@@ -407,6 +486,12 @@ A unit testing framework.
 <td><samp>[use-fixtures](../cljs.test/use-fixtures.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2498"><img valign="middle" alt="[+] 0.0-2498" title="Added in 0.0-2498" src="https://img.shields.io/badge/+-0.0--2498-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[IAsyncTest](../cljs.test/IAsyncTest.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>
 </tr>
 </table>
 

@@ -14,7 +14,7 @@
 
 
  <samp>
-(__test-all-vars__ \[quote ns\])<br>
+(__test-all-vars__ \[quote ns :as form\])<br>
 </samp>
 
 ---
@@ -31,40 +31,23 @@ namespace, with fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L278-L299):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L329-L333):
 
 ```clj
 (defmacro test-all-vars
-  ([[quote ns]]
-   `(let [env# (cljs.test/get-current-env)]
-      (when (nil? env#)
-        (cljs.test/set-env! (cljs.test/empty-env)))
-      ~(when (ana-api/ns-resolve ns 'cljs-test-once-fixtures)
-         `(cljs.test/update-current-env! [:once-fixtures] assoc '~ns
-            ~(symbol (name ns) "cljs-test-once-fixtures")))
-      ~(when (ana-api/ns-resolve ns 'cljs-test-each-fixtures)
-         `(cljs.test/update-current-env! [:each-fixtures] assoc '~ns
-            ~(symbol (name ns) "cljs-test-each-fixtures")))
-      (cljs.test/test-vars
-        [~@(map
-             (fn [[k _]]
-               `(var ~(symbol (name ns) (name k))))
-             (filter
-               (fn [[_ v]] (:test v))
-               (ana-api/ns-interns ns)))])
-      (when (nil? env#)
-        (cljs.test/clear-env!)))))
+  [[quote ns :as form]]
+  `(cljs.test/run-block (test-all-vars-block ~form)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:278-299](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L278-L299)</ins>
+            └── <ins>[test.clj:329-333](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L329-L333)</ins>
 </pre>
 
 -->
@@ -108,16 +91,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "test-all-vars",
- :signature ["[[quote ns]]"],
+ :signature ["[[quote ns :as form]]"],
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.test/test-all-vars",
- :source {:code "(defmacro test-all-vars\n  ([[quote ns]]\n   `(let [env# (cljs.test/get-current-env)]\n      (when (nil? env#)\n        (cljs.test/set-env! (cljs.test/empty-env)))\n      ~(when (ana-api/ns-resolve ns 'cljs-test-once-fixtures)\n         `(cljs.test/update-current-env! [:once-fixtures] assoc '~ns\n            ~(symbol (name ns) \"cljs-test-once-fixtures\")))\n      ~(when (ana-api/ns-resolve ns 'cljs-test-each-fixtures)\n         `(cljs.test/update-current-env! [:each-fixtures] assoc '~ns\n            ~(symbol (name ns) \"cljs-test-each-fixtures\")))\n      (cljs.test/test-vars\n        [~@(map\n             (fn [[k _]]\n               `(var ~(symbol (name ns) (name k))))\n             (filter\n               (fn [[_ v]] (:test v))\n               (ana-api/ns-interns ns)))])\n      (when (nil? env#)\n        (cljs.test/clear-env!)))))",
+ :source {:code "(defmacro test-all-vars\n  [[quote ns :as form]]\n  `(cljs.test/run-block (test-all-vars-block ~form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/clj/cljs/test.clj",
-          :lines [278 299]},
+          :lines [329 333]},
  :full-name "cljs.test/test-all-vars",
  :clj-symbol "clojure.test/test-all-vars",
  :docstring "Calls test-vars on every var with :test metadata interned in the\nnamespace, with fixtures."}

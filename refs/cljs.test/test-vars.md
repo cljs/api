@@ -32,31 +32,23 @@ testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L395-L408):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L541-L546):
 
 ```clj
 (defn test-vars
   [vars]
-  (doseq [[ns vars] (group-by (comp :ns meta) vars)]
-    (let [env (get-current-env)
-          once-fixture-fn (join-fixtures (get-in env [:once-fixtures ns]))
-          each-fixture-fn (join-fixtures (get-in env [:each-fixtures ns]))]
-      (once-fixture-fn
-        (fn []
-          (doseq [v vars]
-            (when (:test (meta v))
-              (each-fixture-fn (fn [] (test-var v))))))))))
+  (run-block (test-vars-block vars)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:395-408](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L395-L408)</ins>
+            └── <ins>[test.cljs:541-546](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/test.cljs#L541-L546)</ins>
 </pre>
 
 -->
@@ -104,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/test-vars",
- :source {:code "(defn test-vars\n  [vars]\n  (doseq [[ns vars] (group-by (comp :ns meta) vars)]\n    (let [env (get-current-env)\n          once-fixture-fn (join-fixtures (get-in env [:once-fixtures ns]))\n          each-fixture-fn (join-fixtures (get-in env [:each-fixtures ns]))]\n      (once-fixture-fn\n        (fn []\n          (doseq [v vars]\n            (when (:test (meta v))\n              (each-fixture-fn (fn [] (test-var v))))))))))",
+ :source {:code "(defn test-vars\n  [vars]\n  (run-block (test-vars-block vars)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [395 408]},
+          :lines [541 546]},
  :full-name "cljs.test/test-vars",
  :clj-symbol "clojure.test/test-vars",
  :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures assuming they are present in the current\ntesting environment."}

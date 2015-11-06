@@ -33,12 +33,11 @@ Source docstring:
 
 ```
 Runs all tests in the given namespaces; prints results.
-Defaults to current namespace if none given.  Returns a map
-summarizing test results.
+Defaults to current namespace if none given.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L228-L263):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L281-L290):
 
 ```clj
 (defmacro run-tests
@@ -48,43 +47,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
      `(run-tests (cljs.test/empty-env) ~env-or-ns)
      `(run-tests ~env-or-ns '~ana/*cljs-ns*)))
   ([env-or-ns & namespaces]
-   (assert (every?
-             (fn [[quote ns]] (and (= quote 'quote) (symbol? ns)))
-             namespaces)
-     "All arguments to run-tests must be quoted symbols")
-   (let [is-ns (ns? env-or-ns)]
-     `(do
-        ~(if is-ns
-           `(cljs.test/set-env! (cljs.test/empty-env))
-           `(cljs.test/set-env! ~env-or-ns))
-        ;; TODO: support async - David
-        (let [summary# (assoc
-                         (reduce
-                           (fn [acc# res#]
-                             (merge-with +
-                               acc#
-                               (:report-counters res#)))
-                           {:test 0 :pass 0 :fail 0 :error 0}
-                           [~@(map
-                                (fn [ns]
-                                  `(cljs.test/test-ns ~ns))
-                                (if is-ns
-                                  (concat [env-or-ns] namespaces)
-                                  namespaces))])
-                         :type :summary)]
-          (do-report summary#)
-          summary#)))))
+   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:228-263](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/test.clj#L228-L263)</ins>
+            └── <ins>[test.clj:281-290](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/test.clj#L281-L290)</ins>
 </pre>
 
 -->
@@ -132,15 +106,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.test/run-tests",
- :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   (assert (every?\n             (fn [[quote ns]] (and (= quote 'quote) (symbol? ns)))\n             namespaces)\n     \"All arguments to run-tests must be quoted symbols\")\n   (let [is-ns (ns? env-or-ns)]\n     `(do\n        ~(if is-ns\n           `(cljs.test/set-env! (cljs.test/empty-env))\n           `(cljs.test/set-env! ~env-or-ns))\n        ;; TODO: support async - David\n        (let [summary# (assoc\n                         (reduce\n                           (fn [acc# res#]\n                             (merge-with +\n                               acc#\n                               (:report-counters res#)))\n                           {:test 0 :pass 0 :fail 0 :error 0}\n                           [~@(map\n                                (fn [ns]\n                                  `(cljs.test/test-ns ~ns))\n                                (if is-ns\n                                  (concat [env-or-ns] namespaces)\n                                  namespaces))])\n                         :type :summary)]\n          (do-report summary#)\n          summary#)))))",
+ :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/clj/cljs/test.clj",
-          :lines [228 263]},
+          :lines [281 290]},
  :full-name "cljs.test/run-tests",
  :clj-symbol "clojure.test/run-tests",
- :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given.  Returns a map\nsummarizing test results."}
+ :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given."}
 
 ```
 

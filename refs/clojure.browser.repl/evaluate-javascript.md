@@ -27,7 +27,7 @@ Process a single block of JavaScript received from the server
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/browser/repl.cljs#L27-L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/clojure/browser/repl.cljs#L32-L41):
 
 ```clj
 (defn evaluate-javascript
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2760
+clojurescript @ r2814
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:27-36](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/browser/repl.cljs#L27-L36)</ins>
+                └── <ins>[repl.cljs:32-41](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/clojure/browser/repl.cljs#L32-L41)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn evaluate-javascript\n  [conn block]\n  (let [result (try {:status :success :value (str (js* \"eval(~{block})\"))}\n                    (catch :default e\n                      {:status :exception :value (pr-str e)\n                       :stacktrace (if (.hasOwnProperty e \"stack\")\n                                     (.-stack e)\n                                     \"No stacktrace available.\")}))]\n    (pr-str result)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2760",
+          :tag "r2814",
           :filename "src/cljs/clojure/browser/repl.cljs",
-          :lines [27 36]},
+          :lines [32 41]},
  :full-name "clojure.browser.repl/evaluate-javascript",
  :docstring "Process a single block of JavaScript received from the server"}
 
