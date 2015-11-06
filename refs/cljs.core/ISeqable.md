@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding the ability to a type to be transformed into a sequence.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L354-L355):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L482-L485):
 
 ```clj
 (defprotocol ISeqable
-  (^clj-or-nil -seq [o]))
+  "Protocol for adding the ability to a type to be transformed into a sequence."
+  (^clj-or-nil -seq [o]
+    "Returns a seq of o, or nil if o is empty."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:354-355](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L354-L355)</ins>
+            └── <ins>[core.cljs:482-485](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L482-L485)</ins>
 </pre>
 
 -->
@@ -82,15 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISeqable",
- :source {:code "(defprotocol ISeqable\n  (^clj-or-nil -seq [o]))",
+ :source {:code "(defprotocol ISeqable\n  \"Protocol for adding the ability to a type to be transformed into a sequence.\"\n  (^clj-or-nil -seq [o]\n    \"Returns a seq of o, or nil if o is empty.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [354 355]},
- :methods [{:name "-seq", :signature ["[o]"], :docstring nil}],
+          :lines [482 485]},
+ :methods [{:name "-seq",
+            :signature ["[o]"],
+            :docstring "Returns a seq of o, or nil if o is empty."}],
  :full-name "cljs.core/ISeqable",
- :clj-symbol "clojure.lang/Seqable"}
+ :clj-symbol "clojure.lang/Seqable",
+ :docstring "Protocol for adding the ability to a type to be transformed into a sequence."}
 
 ```
 

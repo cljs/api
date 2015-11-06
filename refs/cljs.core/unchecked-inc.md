@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2052-L2053):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2248-L2249):
 
 ```clj
 (defn unchecked-inc [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2052-2053](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2052-L2053)</ins>
+            └── <ins>[core.cljs:2248-2249](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2248-L2249)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L394-L395):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L405-L406):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-inc
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:394-395](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L394-L395)</ins>
+            └── <ins>[core.clj:405-406](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L405-L406)</ins>
 </pre>
 -->
 
@@ -111,15 +111,15 @@ The API data for this symbol:
  :source {:code "(defn unchecked-inc [x]\n  (cljs.core/unchecked-inc x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2052 2053]},
+          :lines [2248 2249]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-inc\n  ([x] `(inc ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3058",
+                  :tag "r3115",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [394 395]}],
+                  :lines [405 406]}],
  :full-name "cljs.core/unchecked-inc",
  :clj-symbol "clojure.core/unchecked-inc"}
 

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L622-L654):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L814-L846):
 
 ```clj
 (deftype Symbol [ns name str ^:mutable _hash _meta]
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:622-654](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L622-L654)</ins>
+            └── <ins>[core.cljs:814-846](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L814-L846)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  (equiv [this other] (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n\n  IFn\n  (-invoke [sym coll]\n    (-lookup coll sym nil))\n  (-invoke [sym coll not-found]\n    (-lookup coll sym not-found))\n\n  IMeta\n  (-meta [_] _meta)\n\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [622 654]},
+          :lines [814 846]},
  :full-name "cljs.core/Symbol",
  :clj-symbol "clojure.lang/Symbol"}
 

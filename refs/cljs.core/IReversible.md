@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for reversing a seq.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L366-L367):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L496-L499):
 
 ```clj
 (defprotocol IReversible
-  (^clj -rseq [coll]))
+  "Protocol for reversing a seq."
+  (^clj -rseq [coll]
+    "Returns a seq of the items in coll in reversed order."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:366-367](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L366-L367)</ins>
+            └── <ins>[core.cljs:496-499](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L496-L499)</ins>
 </pre>
 
 -->
@@ -82,15 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/IReversible",
- :source {:code "(defprotocol IReversible\n  (^clj -rseq [coll]))",
+ :source {:code "(defprotocol IReversible\n  \"Protocol for reversing a seq.\"\n  (^clj -rseq [coll]\n    \"Returns a seq of the items in coll in reversed order.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [366 367]},
- :methods [{:name "-rseq", :signature ["[coll]"], :docstring nil}],
+          :lines [496 499]},
+ :methods [{:name "-rseq",
+            :signature ["[coll]"],
+            :docstring "Returns a seq of the items in coll in reversed order."}],
  :full-name "cljs.core/IReversible",
- :clj-symbol "clojure.lang/Reversible"}
+ :clj-symbol "clojure.lang/Reversible",
+ :docstring "Protocol for reversing a seq."}
 
 ```
 

@@ -27,7 +27,7 @@ Returns true if coll implements nth in constant time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1034-L1036):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1230-L1232):
 
 ```clj
 (defn ^boolean indexed?
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1034-1036](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1034-L1036)</ins>
+            └── <ins>[core.cljs:1230-1232](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1230-L1232)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean indexed?\n  [x] (satisfies? IIndexed x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1034 1036]},
+          :lines [1230 1232]},
  :full-name "cljs.core/indexed?",
  :docstring "Returns true if coll implements nth in constant time"}
 

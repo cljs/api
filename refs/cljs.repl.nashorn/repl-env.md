@@ -27,12 +27,11 @@ Create a Nashorn repl-env for use with the repl/repl* method in Clojurescript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/nashorn.clj#L225-L229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/nashorn.clj#L225-L228):
 
 ```clj
 (defn repl-env 
   [& {:as opts}]
-  (assert (even? (count opts)) "Arguments must be interleaved key value pairs")
   (repl-env* opts))
 ```
 
@@ -40,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:225-229](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/nashorn.clj#L225-L229)</ins>
+                └── <ins>[nashorn.clj:225-228](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/nashorn.clj#L225-L228)</ins>
 </pre>
 
 -->
@@ -90,12 +89,12 @@ The API data for this symbol:
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl.nashorn/repl-env",
- :source {:code "(defn repl-env \n  [& {:as opts}]\n  (assert (even? (count opts)) \"Arguments must be interleaved key value pairs\")\n  (repl-env* opts))",
+ :source {:code "(defn repl-env \n  [& {:as opts}]\n  (repl-env* opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/nashorn.clj",
-          :lines [225 229]},
+          :lines [225 228]},
  :full-name "cljs.repl.nashorn/repl-env",
  :docstring "Create a Nashorn repl-env for use with the repl/repl* method in Clojurescript."}
 

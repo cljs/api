@@ -58,7 +58,7 @@ f should accept number-of-colls arguments.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4123-L4137):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4319-L4333):
 
 ```clj
 (defn mapv
@@ -77,11 +77,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4123-4137](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4123-L4137)</ins>
+            └── <ins>[core.cljs:4319-4333](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4319-L4333)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defn mapv\n  ([f coll]\n     (-> (reduce (fn [v o] (conj! v (f o))) (transient []) coll)\n         persistent!))\n  ([f c1 c2]\n     (into [] (map f c1 c2)))\n  ([f c1 c2 c3]\n     (into [] (map f c1 c2 c3)))\n  ([f c1 c2 c3 & colls]\n     (into [] (apply map f c1 c2 c3 colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4123 4137]},
+          :lines [4319 4333]},
  :full-name "cljs.core/mapv",
  :clj-symbol "clojure.core/mapv",
  :docstring "Returns a vector consisting of the result of applying f to the\nset of first items of each coll, followed by applying f to the set\nof second items in each coll, until any one of the colls is\nexhausted.  Any remaining items in other colls are ignored. Function\nf should accept number-of-colls arguments."}

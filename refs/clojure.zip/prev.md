@@ -31,7 +31,7 @@ at the root, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/zip.cljs#L221-L230):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/clojure/zip.cljs#L221-L230):
 
 ```clj
 (defn prev
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:221-230](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/zip.cljs#L221-L230)</ins>
+            └── <ins>[zip.cljs:221-230](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/clojure/zip.cljs#L221-L230)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn prev\n  [loc]\n    (if-let [lloc (left loc)]\n      (loop [loc lloc]\n        (if-let [child (and (branch? loc) (down loc))]\n          (recur (rightmost child))\n          loc))\n      (up loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [221 230]},
  :full-name "clojure.zip/prev",

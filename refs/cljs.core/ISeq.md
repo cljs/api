@@ -18,25 +18,36 @@
 
 
 
+Source docstring:
+
+```
+Protocol for collections to provide access to their items as sequences.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L297-L299):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L373-L381):
 
 ```clj
 (defprotocol ISeq
-  (-first [coll])
-  (^clj -rest [coll]))
+  "Protocol for collections to provide access to their items as sequences."
+  (-first [coll]
+    "Returns the first item in the collection coll. Used by cljs.core/first.")
+  (^clj -rest [coll]
+    "Returns a new collection of coll without the first item. It should
+     always return a seq, e.g.
+     (rest []) => ()
+     (rest nil) => ()"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:297-299](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L297-L299)</ins>
+            └── <ins>[core.cljs:373-381](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L373-L381)</ins>
 </pre>
 
 -->
@@ -83,16 +94,21 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISeq",
- :source {:code "(defprotocol ISeq\n  (-first [coll])\n  (^clj -rest [coll]))",
+ :source {:code "(defprotocol ISeq\n  \"Protocol for collections to provide access to their items as sequences.\"\n  (-first [coll]\n    \"Returns the first item in the collection coll. Used by cljs.core/first.\")\n  (^clj -rest [coll]\n    \"Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [297 299]},
- :methods [{:name "-first", :signature ["[coll]"], :docstring nil}
-           {:name "-rest", :signature ["[coll]"], :docstring nil}],
+          :lines [373 381]},
+ :methods [{:name "-first",
+            :signature ["[coll]"],
+            :docstring "Returns the first item in the collection coll. Used by cljs.core/first."}
+           {:name "-rest",
+            :signature ["[coll]"],
+            :docstring "Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()"}],
  :full-name "cljs.core/ISeq",
- :clj-symbol "clojure.lang/ISeq"}
+ :clj-symbol "clojure.lang/ISeq",
+ :docstring "Protocol for collections to provide access to their items as sequences."}
 
 ```
 

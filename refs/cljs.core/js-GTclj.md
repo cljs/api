@@ -75,7 +75,7 @@ strings to keywords.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8775-L8803):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8982-L9010):
 
 ```clj
 (defn js->clj
@@ -109,11 +109,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8775-8803](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8775-L8803)</ins>
+            └── <ins>[core.cljs:8982-9010](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8982-L9010)</ins>
 </pre>
 
 -->
@@ -163,9 +163,9 @@ The API data for this symbol:
  :source {:code "(defn js->clj\n  ([x] (js->clj x {:keywordize-keys false}))\n  ([x & opts]\n    (let [{:keys [keywordize-keys]} opts\n          keyfn (if keywordize-keys keyword str)\n          f (fn thisfn [x]\n              (cond\n                (satisfies? IEncodeClojure x)\n                (-js->clj x (apply array-map opts))\n\n                (seq? x)\n                (doall (map thisfn x))\n\n                (coll? x)\n                (into (empty x) (map thisfn x))\n\n                (array? x)\n                (vec (map thisfn x))\n                 \n                (identical? (type x) js/Object)\n                (into {} (for [k (js-keys x)]\n                           [(keyfn k) (thisfn (aget x k))]))\n\n                :else x))]\n      (f x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8775 8803]},
+          :lines [8982 9010]},
  :examples [{:id "61d263",
              :content "Parse a JSON string:\n\n```clj\n(def json \"{\\\"foo\\\": 1, \\\"bar\\\": 2, \\\"baz\\\": [1,2,3]}\")\n(def a (.parse js/JSON json))\n;;=> #js {:foo 1, :bar 2, :baz #js [1 2 3]}\n```\n\nConvert JSON data `a` to ClojureScript data:\n\n```clj\n(js->clj a)\n;;=> {\"foo\" 1, \"bar\" 2, \"baz\" [1 2 3]}\n\n(js->clj a :keywordize-keys true)\n;;=> {:foo 1, :bar 2, :baz [1 2 3]}\n```"}],
  :full-name "cljs.core/js->clj",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2831-L2832):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3027-L3028):
 
 ```clj
 (defn chunk-rest [s]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2831-2832](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2831-L2832)</ins>
+            └── <ins>[core.cljs:3027-3028](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3027-L3028)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn chunk-rest [s]\n  (-chunked-rest s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2831 2832]},
+          :lines [3027 3028]},
  :full-name "cljs.core/chunk-rest",
  :full-name-encode "cljs.core/chunk-rest",
  :history [["+" "0.0-1424"]]}

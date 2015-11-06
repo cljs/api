@@ -60,7 +60,7 @@ called, the returned function calls f with args + additional args.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3464-L3491):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3660-L3687):
 
 ```clj
 (defn partial
@@ -94,11 +94,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3464-3491](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3464-L3491)</ins>
+            └── <ins>[core.cljs:3660-3687](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3660-L3687)</ins>
 </pre>
 
 -->
@@ -155,9 +155,9 @@ The API data for this symbol:
  :source {:code "(defn partial\n  ([f] f)\n  ([f arg1]\n   (fn\n     ([] (f arg1))\n     ([x] (f arg1 x))\n     ([x y] (f arg1 x y))\n     ([x y z] (f arg1 x y z))\n     ([x y z & args] (apply f arg1 x y z args))))\n  ([f arg1 arg2]\n   (fn\n     ([] (f arg1 arg2))\n     ([x] (f arg1 arg2 x))\n     ([x y] (f arg1 arg2 x y))\n     ([x y z] (f arg1 arg2 x y z))\n     ([x y z & args] (apply f arg1 arg2 x y z args))))\n  ([f arg1 arg2 arg3]\n   (fn\n     ([] (f arg1 arg2 arg3))\n     ([x] (f arg1 arg2 arg3 x))\n     ([x y] (f arg1 arg2 arg3 x y))\n     ([x y z] (f arg1 arg2 arg3 x y z))\n     ([x y z & args] (apply f arg1 arg2 arg3 x y z args))))\n  ([f arg1 arg2 arg3 & more]\n   (fn [& args] (apply f arg1 arg2 arg3 (concat more args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3464 3491]},
+          :lines [3660 3687]},
  :full-name "cljs.core/partial",
  :clj-symbol "clojure.core/partial",
  :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args."}

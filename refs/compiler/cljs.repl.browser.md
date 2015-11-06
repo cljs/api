@@ -89,12 +89,6 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
-<td><samp>[loaded-libs](../cljs.repl.browser/loaded-libs.md)</samp></td>
-<td><samp>var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[ordering](../cljs.repl.browser/ordering.md)</samp></td>
 <td><samp>var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -116,12 +110,6 @@ browser-connected REPL
 <td><samp>[parse-stacktrace](../cljs.repl.browser/parse-stacktrace.md)</samp></td>
 <td><samp>multimethod</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
-<td><samp>[preloaded-libs](../cljs.repl.browser/preloaded-libs.md)</samp></td>
-<td><samp>var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -204,9 +192,21 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
+<td><samp>[~~loaded-libs~~](../cljs.repl.browser/loaded-libs.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115"><img valign="middle" alt="[×] 0.0-3115" title="Removed in 0.0-3115" src="https://img.shields.io/badge/×-0.0--3115-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[~~parse-headers~~](../cljs.repl.browser/parse-headers.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~preloaded-libs~~](../cljs.repl.browser/preloaded-libs.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115"><img valign="middle" alt="[×] 0.0-3115" title="Removed in 0.0-3115" src="https://img.shields.io/badge/×-0.0--3115-red.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

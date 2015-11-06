@@ -15,24 +15,32 @@
 
 
 
+Source docstring:
+
+```
+Protocol for values that can be compared.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L415-L416):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L584-L588):
 
 ```clj
 (defprotocol IComparable
-  (^number -compare [x y]))
+  "Protocol for values that can be compared."
+  (^number -compare [x y]
+    "Returns a negative number, zero, or a positive number when x is logically
+     'less than', 'equal to', or 'greater than' y."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:415-416](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L415-L416)</ins>
+            └── <ins>[core.cljs:584-588](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L584-L588)</ins>
 </pre>
 
 -->
@@ -73,17 +81,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IComparable",
+ :history [["+" "0.0-1424"]],
  :type "protocol",
  :full-name-encode "cljs.core/IComparable",
- :source {:code "(defprotocol IComparable\n  (^number -compare [x y]))",
+ :source {:code "(defprotocol IComparable\n  \"Protocol for values that can be compared.\"\n  (^number -compare [x y]\n    \"Returns a negative number, zero, or a positive number when x is logically\n     'less than', 'equal to', or 'greater than' y.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [415 416]},
- :methods [{:name "-compare", :signature ["[x y]"], :docstring nil}],
+          :lines [584 588]},
+ :methods [{:name "-compare",
+            :signature ["[x y]"],
+            :docstring "Returns a negative number, zero, or a positive number when x is logically\n     'less than', 'equal to', or 'greater than' y."}],
  :full-name "cljs.core/IComparable",
- :history [["+" "0.0-1424"]]}
+ :docstring "Protocol for values that can be compared."}
 
 ```
 

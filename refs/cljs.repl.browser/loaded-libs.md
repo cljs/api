@@ -1,11 +1,11 @@
-## cljs.repl.browser/loaded-libs
+## ~~cljs.repl.browser/loaded-libs~~
 
 
 
  <table border="1">
 <tr>
 <td>var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115"><img valign="middle" alt="[×] 0.0-3115" title="Removed in 0.0-3115" src="https://img.shields.io/badge/×-0.0--3115-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -82,7 +82,8 @@ The API data for this symbol:
           :lines [26]},
  :full-name "cljs.repl.browser/loaded-libs",
  :full-name-encode "cljs.repl.browser/loaded-libs",
- :history [["+" "0.0-927"]]}
+ :history [["+" "0.0-927"] ["-" "0.0-3115"]],
+ :removed {:in "0.0-3115", :last-seen "0.0-3058"}}
 
 ```
 

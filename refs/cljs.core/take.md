@@ -51,7 +51,7 @@ no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3871-L3894):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4067-L4090):
 
 ```clj
 (defn take
@@ -81,11 +81,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3871-3894](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3871-L3894)</ins>
+            └── <ins>[core.cljs:4067-4090](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4067-L4090)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(defn take\n  ([n]\n     (fn [rf]\n       (let [na (volatile! n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na\n                    nn (vswap! na dec)\n                    result (if (pos? n)\n                             (rf result input)\n                             result)]\n                (if (not (pos? nn))\n                  (ensure-reduced result)\n                  result)))))))\n  ([n coll]\n     (lazy-seq\n       (when (pos? n)\n         (when-let [s (seq coll)]\n           (cons (first s) (take (dec n) (rest s))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3871 3894]},
+          :lines [4067 4090]},
  :full-name "cljs.core/take",
  :clj-symbol "clojure.core/take",
  :docstring "Returns a lazy sequence of the first n items in coll, or all items if\nthere are fewer than n.  Returns a stateful transducer when\nno collection is provided."}

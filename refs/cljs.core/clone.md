@@ -27,7 +27,7 @@ Clone the supplied value which must implement ICloneable.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L728-L731):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L920-L923):
 
 ```clj
 (defn clone
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:728-731](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L728-L731)</ins>
+            └── <ins>[core.cljs:920-923](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L920-L923)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn clone\n  [value]\n  (-clone value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [728 731]},
+          :lines [920 923]},
  :full-name "cljs.core/clone",
  :docstring "Clone the supplied value which must implement ICloneable."}
 

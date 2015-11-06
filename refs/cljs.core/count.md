@@ -62,7 +62,7 @@ Returns the number of items in the collection. (count nil) returns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1253-L1272):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1449-L1468):
 
 ```clj
 (defn count
@@ -89,11 +89,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1253-1272](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1253-L1272)</ins>
+            └── <ins>[core.cljs:1449-1468](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1449-L1468)</ins>
 </pre>
 
 -->
@@ -145,9 +145,9 @@ The API data for this symbol:
  :source {:code "(defn count\n  [coll]\n  (if-not (nil? coll)\n    (cond\n      (implements? ICounted coll)\n      (-count ^not-native coll)\n\n      (array? coll)\n      (alength coll)\n    \n      (string? coll)\n      (alength coll)\n\n      (native-satisfies? ICounted coll)\n      (-count coll)\n\n      :else (accumulating-seq-count coll))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1253 1272]},
+          :lines [1449 1468]},
  :examples [{:id "96e470",
              :content "```clj\n(count [1 2 3])\n;;=> 3\n\n(count [])\n;;=> 0\n\n(count nil)\n;;=> 0\n\n(count #{:a :b})\n;;=> 2\n\n(count {:key \"value\" :key2 \"value2\"})\n;;=> 2\n```"}],
  :full-name "cljs.core/count",

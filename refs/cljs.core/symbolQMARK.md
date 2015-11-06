@@ -30,7 +30,7 @@ Return true if x is a Symbol
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L600-L603):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L792-L795):
 
 ```clj
 (defn ^boolean symbol?
@@ -42,18 +42,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:600-603](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L600-L603)</ins>
+            └── <ins>[core.cljs:792-795](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L792-L795)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L341-L342):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L352-L353):
 
 ```clj
 (defmacro symbol? [x]
@@ -64,11 +64,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:341-342](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L341-L342)</ins>
+            └── <ins>[core.clj:352-353](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L352-L353)</ins>
 </pre>
 -->
 
@@ -118,15 +118,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol?\n  [x]\n  (instance? Symbol x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [600 603]},
+          :lines [792 795]},
  :extra-sources [{:code "(defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3058",
+                  :tag "r3115",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [341 342]}],
+                  :lines [352 353]}],
  :full-name "cljs.core/symbol?",
  :clj-symbol "clojure.core/symbol?",
  :docstring "Return true if x is a Symbol"}

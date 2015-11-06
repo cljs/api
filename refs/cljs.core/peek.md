@@ -89,7 +89,7 @@ more efficient than, last. If the collection is empty, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1513-L1518):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1709-L1714):
 
 ```clj
 (defn peek
@@ -102,11 +102,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1513-1518](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1513-L1518)</ins>
+            └── <ins>[core.cljs:1709-1714](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1709-L1714)</ins>
 </pre>
 
 -->
@@ -159,9 +159,9 @@ The API data for this symbol:
  :source {:code "(defn peek\n  [coll]\n  (when-not (nil? coll)\n    (-peek coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1513 1518]},
+          :lines [1709 1714]},
  :examples [{:id "4abc4c",
              :content "With vectors:\n\n```clj\n(peek [1 2 3])\n;;=> 3\n\n(peek [1 2])\n;;=> 2\n\n(peek [1])\n;;=> 1\n\n(peek [])\n;;=> nil\n```"}
             {:id "d50bd0",

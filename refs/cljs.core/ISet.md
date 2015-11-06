@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding set functionality to a collection.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L320-L321):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L419-L422):
 
 ```clj
 (defprotocol ISet
-  (^clj -disjoin [coll v]))
+  "Protocol for adding set functionality to a collection."
+  (^clj -disjoin [coll v]
+    "Returns a new collection of coll that does not contain v."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:320-321](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L320-L321)</ins>
+            └── <ins>[core.cljs:419-422](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L419-L422)</ins>
 </pre>
 
 -->
@@ -82,15 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISet",
- :source {:code "(defprotocol ISet\n  (^clj -disjoin [coll v]))",
+ :source {:code "(defprotocol ISet\n  \"Protocol for adding set functionality to a collection.\"\n  (^clj -disjoin [coll v]\n    \"Returns a new collection of coll that does not contain v.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [320 321]},
- :methods [{:name "-disjoin", :signature ["[coll v]"], :docstring nil}],
+          :lines [419 422]},
+ :methods [{:name "-disjoin",
+            :signature ["[coll v]"],
+            :docstring "Returns a new collection of coll that does not contain v."}],
  :full-name "cljs.core/ISet",
- :clj-symbol "clojure.lang/IPersistentSet"}
+ :clj-symbol "clojure.lang/IPersistentSet",
+ :docstring "Protocol for adding set functionality to a collection."}
 
 ```
 

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7543-L7578):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7749-L7784):
 
 ```clj
 (deftype TransientHashSet [^:mutable transient-map]
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7543-7578](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7543-L7578)</ins>
+            └── <ins>[core.cljs:7749-7784](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7749-L7784)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(deftype TransientHashSet [^:mutable transient-map]\n  ITransientCollection\n  (-conj! [tcoll o]\n    (set! transient-map (assoc! transient-map o nil))\n    tcoll)\n\n  (-persistent! [tcoll]\n    (PersistentHashSet. nil (persistent! transient-map) nil))\n\n  ITransientSet\n  (-disjoin! [tcoll v]\n    (set! transient-map (dissoc! transient-map v))\n    tcoll)\n\n  ICounted\n  (-count [tcoll] (count transient-map))\n\n  ILookup\n  (-lookup [tcoll v]\n    (-lookup tcoll v nil))\n\n  (-lookup [tcoll v not-found]\n    (if (identical? (-lookup transient-map v lookup-sentinel) lookup-sentinel)\n      not-found\n      v))\n\n  IFn\n  (-invoke [tcoll k]\n    (if (identical? (-lookup transient-map k lookup-sentinel) lookup-sentinel)\n      nil\n      k))\n\n  (-invoke [tcoll k not-found]\n    (if (identical? (-lookup transient-map k lookup-sentinel) lookup-sentinel)\n      not-found\n      k)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7543 7578]},
+          :lines [7749 7784]},
  :full-name "cljs.core/TransientHashSet",
  :clj-symbol "clojure.lang/TransientHashSet"}
 

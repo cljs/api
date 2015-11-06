@@ -59,7 +59,7 @@ Returns a javascript array, cloned from the passed in array
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L189-L196):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L246-L253):
 
 ```clj
 (defn aclone
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:189-196](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L189-L196)</ins>
+            └── <ins>[core.cljs:246-253](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L246-L253)</ins>
 </pre>
 
 -->
@@ -132,9 +132,9 @@ The API data for this symbol:
  :source {:code "(defn aclone\n  [arr]\n  (let [len (alength arr)\n        new-arr (make-array len)]\n    (dotimes [i len]\n      (aset new-arr i (aget arr i)))\n    new-arr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [189 196]},
+          :lines [246 253]},
  :examples [{:id "422c4e",
              :content "```clj\n(def a #js [1 2 3])\n(def b (aclone a))\n(aset b 0 4)\n\na\n;;=> #js [1 2 3]\n\nb\n;;=> #js [4 2 3]\n```"}],
  :full-name "cljs.core/aclone",

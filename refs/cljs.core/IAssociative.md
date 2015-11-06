@@ -18,26 +18,35 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding associativity to collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L307-L310):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L397-L404):
 
 ```clj
 (defprotocol IAssociative
-  (^boolean -contains-key? [coll k])
+  "Protocol for adding associativity to collections."
+  (^boolean -contains-key? [coll k]
+    "Returns true if k is a key in coll.")
   #_(-entry-at [coll k])
-  (^clj -assoc [coll k v]))
+  (^clj -assoc [coll k v]
+    "Returns a new collection of coll with a mapping from key k to
+     value v added to it."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:307-310](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L307-L310)</ins>
+            └── <ins>[core.cljs:397-404](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L397-L404)</ins>
 </pre>
 
 -->
@@ -84,18 +93,21 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IAssociative",
- :source {:code "(defprotocol IAssociative\n  (^boolean -contains-key? [coll k])\n  #_(-entry-at [coll k])\n  (^clj -assoc [coll k v]))",
+ :source {:code "(defprotocol IAssociative\n  \"Protocol for adding associativity to collections.\"\n  (^boolean -contains-key? [coll k]\n    \"Returns true if k is a key in coll.\")\n  #_(-entry-at [coll k])\n  (^clj -assoc [coll k v]\n    \"Returns a new collection of coll with a mapping from key k to\n     value v added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [307 310]},
+          :lines [397 404]},
  :methods [{:name "-contains-key?",
             :signature ["[coll k]"],
-            :docstring nil}
-           {:name "-assoc", :signature ["[coll k v]"], :docstring nil}],
+            :docstring "Returns true if k is a key in coll."}
+           {:name "-assoc",
+            :signature ["[coll k v]"],
+            :docstring "Returns a new collection of coll with a mapping from key k to\n     value v added to it."}],
  :full-name "cljs.core/IAssociative",
- :clj-symbol "clojure.lang/Associative"}
+ :clj-symbol "clojure.lang/Associative",
+ :docstring "Protocol for adding associativity to collections."}
 
 ```
 

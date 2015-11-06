@@ -15,23 +15,35 @@
 
 
 
+Source docstring:
+
+```
+When set to logical false will drop newlines from printing calls.
+This is to work around the implicit newlines emitted by standard JavaScript
+console objects.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L37):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L48-L53):
 
 ```clj
-(def ^:dynamic *print-newline* true)
+(def
+  ^{:dynamic true
+    :doc "When set to logical false will drop newlines from printing calls.
+  This is to work around the implicit newlines emitted by standard JavaScript
+  console objects."}
+  *print-newline* true)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:37](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L37)</ins>
+            └── <ins>[core.cljs:48-53](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L48-L53)</ins>
 </pre>
 
 -->
@@ -72,13 +84,14 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-newline*",
+ :docstring "When set to logical false will drop newlines from printing calls.\nThis is to work around the implicit newlines emitted by standard JavaScript\nconsole objects.",
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-newline* true)",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false will drop newlines from printing calls.\n  This is to work around the implicit newlines emitted by standard JavaScript\n  console objects.\"}\n  *print-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [37]},
+          :lines [48 53]},
  :full-name "cljs.core/*print-newline*",
  :full-name-encode "cljs.core/STARprint-newlineSTAR",
  :history [["+" "0.0-2060"]]}

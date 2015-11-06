@@ -66,7 +66,7 @@ reify is a macro with the following structure:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L620-L674):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L631-L685):
 
 ```clj
 (defmacro reify
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:620-674](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L620-L674)</ins>
+            └── <ins>[core.clj:631-685](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L631-L685)</ins>
 </pre>
 
 -->
@@ -148,9 +148,9 @@ The API data for this symbol:
  :source {:code "(defmacro reify\n  [& impls]\n  (let [t        (with-meta (gensym \"t\") {:anonymous true})\n        meta-sym (gensym \"meta\")\n        this-sym (gensym \"_\")\n        locals   (keys (:locals &env))\n        ns       (-> &env :ns :name)\n        munge    cljs.compiler/munge]\n    `(do\n       (when-not (exists? ~(symbol (core/str ns) (core/str t)))\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals ~(ana/elide-reader-meta (meta &form))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/core.clj",
-          :lines [620 674]},
+          :lines [631 685]},
  :full-name "cljs.core/reify",
  :clj-symbol "clojure.core/reify",
  :docstring "reify is a macro with the following structure:\n\n(reify options* specs*)\n\n Currently there are no options.\n\n Each spec consists of the protocol name followed by zero\n or more method bodies:\n\n protocol\n (methodName [args+] body)*\n\n Methods should be supplied for all methods of the desired\n protocol(s). You can also define overrides for Object methods. Note that\n the first parameter must be supplied to correspond to the target object\n ('this' in JavaScript parlance). Note also that recur calls\n to the method head should *not* pass the target object, it will be supplied\n automatically and can not be substituted.\n\n recur works to method heads The method bodies of reify are lexical\n closures, and can refer to the surrounding local scope:\n\n (str (let [f \"foo\"]\n      (reify Object\n        (toString [this] f))))\n == \"foo\"\n\n (seq (let [f \"foo\"]\n      (reify ISeqable\n        (-seq [this] (-seq f)))))\n == (\\f \\o \\o))\n\n reify always implements IMeta and IWithMeta and transfers meta\n data of the form to the created object.\n\n (meta ^{:k :v} (reify Object (toString [this] \"foo\")))\n == {:k :v}"}

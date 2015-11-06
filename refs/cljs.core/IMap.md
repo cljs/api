@@ -15,25 +15,32 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding mapping functionality to collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L312-L314):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L406-L410):
 
 ```clj
 (defprotocol IMap
+  "Protocol for adding mapping functionality to collections."
   #_(-assoc-ex [coll k v])
-  (^clj -dissoc [coll k]))
+  (^clj -dissoc [coll k]
+    "Returns a new collection of coll without the mapping for key k."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:312-314](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L312-L314)</ins>
+            └── <ins>[core.cljs:406-410](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L406-L410)</ins>
 </pre>
 
 -->
@@ -74,17 +81,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IMap",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IMap",
- :source {:code "(defprotocol IMap\n  #_(-assoc-ex [coll k v])\n  (^clj -dissoc [coll k]))",
+ :source {:code "(defprotocol IMap\n  \"Protocol for adding mapping functionality to collections.\"\n  #_(-assoc-ex [coll k v])\n  (^clj -dissoc [coll k]\n    \"Returns a new collection of coll without the mapping for key k.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [312 314]},
- :methods [{:name "-dissoc", :signature ["[coll k]"], :docstring nil}],
+          :lines [406 410]},
+ :methods [{:name "-dissoc",
+            :signature ["[coll k]"],
+            :docstring "Returns a new collection of coll without the mapping for key k."}],
  :full-name "cljs.core/IMap",
- :history [["+" "0.0-927"]]}
+ :docstring "Protocol for adding mapping functionality to collections."}
 
 ```
 

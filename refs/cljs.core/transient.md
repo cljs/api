@@ -30,7 +30,7 @@ Returns a new, transient version of the collection, in constant time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3004-L3007):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3200-L3203):
 
 ```clj
 (defn transient
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3004-3007](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3004-L3007)</ins>
+            └── <ins>[core.cljs:3200-3203](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3200-L3203)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn transient\n  [coll]\n  (-as-transient coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3004 3007]},
+          :lines [3200 3203]},
  :full-name "cljs.core/transient",
  :clj-symbol "clojure.core/transient",
  :docstring "Returns a new, transient version of the collection, in constant time."}

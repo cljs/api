@@ -61,7 +61,7 @@ Returns the length of the array. Works on arrays of all types.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L226-L229):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L283-L286):
 
 ```clj
 (defn ^number alength
@@ -73,18 +73,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:226-229](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L226-L229)</ins>
+            └── <ins>[core.cljs:283-286](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L283-L286)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L1722-L1725):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L1768-L1771):
 
 ```clj
 (defmacro alength [a]
@@ -97,11 +97,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1722-1725](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L1722-L1725)</ins>
+            └── <ins>[core.clj:1768-1771](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L1768-L1771)</ins>
 </pre>
 -->
 
@@ -153,15 +153,15 @@ The API data for this symbol:
  :source {:code "(defn ^number alength\n  [array]\n  (cljs.core/alength array))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [226 229]},
+          :lines [283 286]},
  :extra-sources [{:code "(defmacro alength [a]\n  (vary-meta\n    (core/list 'js* \"~{}.length\" a)\n    assoc :tag 'number))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3058",
+                  :tag "r3115",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1722 1725]}],
+                  :lines [1768 1771]}],
  :examples [{:id "26f79f",
              :content "```clj\n(def a #js [1 2 3])\n\n(alength a)\n;;=> 3\n\n(.-length a)\n;;=> 3\n\n(aget a \"length\")\n;;=> 3\n\n(count a)\n;;=> 3\n```"}],
  :full-name "cljs.core/alength",

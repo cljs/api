@@ -41,7 +41,7 @@ Returns true if x is the value false, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1636-L1638):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1832-L1834):
 
 ```clj
 (defn ^boolean false?
@@ -52,18 +52,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1636-1638](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1636-L1638)</ins>
+            └── <ins>[core.cljs:1832-1834](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1832-L1834)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L301-L302):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L317-L318):
 
 ```clj
 (defmacro false? [x]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:301-302](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L301-L302)</ins>
+            └── <ins>[core.clj:317-318](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L317-L318)</ins>
 </pre>
 -->
 
@@ -130,15 +130,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean false?\n  [x] (cljs.core/false? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1636 1638]},
+          :lines [1832 1834]},
  :extra-sources [{:code "(defmacro false? [x]\n  (bool-expr (core/list 'js* \"~{} === false\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3058",
+                  :tag "r3115",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [301 302]}],
+                  :lines [317 318]}],
  :full-name "cljs.core/false?",
  :clj-symbol "clojure.core/false?",
  :docstring "Returns true if x is the value false, false otherwise."}

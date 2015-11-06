@@ -30,7 +30,7 @@ Return x's constructor.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L149-L153):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L206-L210):
 
 ```clj
 (defn type
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:149-153](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L149-L153)</ins>
+            └── <ins>[core.cljs:206-210](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L206-L210)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn type\n  [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [149 153]},
+          :lines [206 210]},
  :full-name "cljs.core/type",
  :clj-symbol "clojure.core/type",
  :docstring "Return x's constructor."}

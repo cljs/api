@@ -23,7 +23,7 @@ Marker protocol denoting CPS function to begin asynchronous
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L399-L401):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L398-L400):
 
 ```clj
 (defprotocol IAsyncTest
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:399-401](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L399-L401)</ins>
+            └── <ins>[test.cljs:398-400](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L398-L400)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IAsyncTest\n  \"Marker protocol denoting CPS function to begin asynchronous\n  testing.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [399 401]},
+          :lines [398 400]},
  :full-name "cljs.test/IAsyncTest",
  :docstring "Marker protocol denoting CPS function to begin asynchronous\n  testing.",
  :history [["+" "0.0-2814"]]}

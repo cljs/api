@@ -18,25 +18,33 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding basic functionality to transient collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L398-L400):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L554-L559):
 
 ```clj
 (defprotocol ITransientCollection
-  (^clj -conj! [tcoll val])
-  (^clj -persistent! [tcoll]))
+  "Protocol for adding basic functionality to transient collections."
+  (^clj -conj! [tcoll val]
+    "Adds value val to tcoll and returns tcoll.")
+  (^clj -persistent! [tcoll]
+    "Creates a persistent data structure from tcoll and returns it."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:398-400](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L398-L400)</ins>
+            └── <ins>[core.cljs:554-559](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L554-L559)</ins>
 </pre>
 
 -->
@@ -83,20 +91,21 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ITransientCollection",
- :source {:code "(defprotocol ITransientCollection\n  (^clj -conj! [tcoll val])\n  (^clj -persistent! [tcoll]))",
+ :source {:code "(defprotocol ITransientCollection\n  \"Protocol for adding basic functionality to transient collections.\"\n  (^clj -conj! [tcoll val]\n    \"Adds value val to tcoll and returns tcoll.\")\n  (^clj -persistent! [tcoll]\n    \"Creates a persistent data structure from tcoll and returns it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [398 400]},
+          :lines [554 559]},
  :methods [{:name "-conj!",
             :signature ["[tcoll val]"],
-            :docstring nil}
+            :docstring "Adds value val to tcoll and returns tcoll."}
            {:name "-persistent!",
             :signature ["[tcoll]"],
-            :docstring nil}],
+            :docstring "Creates a persistent data structure from tcoll and returns it."}],
  :full-name "cljs.core/ITransientCollection",
- :clj-symbol "clojure.lang/ITransientCollection"}
+ :clj-symbol "clojure.lang/ITransientCollection",
+ :docstring "Protocol for adding basic functionality to transient collections."}
 
 ```
 

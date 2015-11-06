@@ -18,23 +18,37 @@
 
 
 
+Source docstring:
+
+```
+When set to logical true, objects will be printed in a way that preserves
+their type when read in later.
+
+Defaults to false.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L79-L85):
 
 ```clj
-(def ^:dynamic *print-length* nil)
+(def
+  ^{:dynamic true
+    :doc "When set to logical true, objects will be printed in a way that preserves
+  their type when read in later.
+
+  Defaults to false."}
+  *print-length* nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:41](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L41)</ins>
+            └── <ins>[core.cljs:79-85](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L79-L85)</ins>
 </pre>
 
 -->
@@ -78,17 +92,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-length*",
+ :history [["+" "0.0-2060"]],
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-length* nil)",
+ :full-name-encode "cljs.core/STARprint-lengthSTAR",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical true, objects will be printed in a way that preserves\n  their type when read in later.\n\n  Defaults to false.\"}\n  *print-length* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [41]},
+          :lines [79 85]},
  :full-name "cljs.core/*print-length*",
- :full-name-encode "cljs.core/STARprint-lengthSTAR",
  :clj-symbol "clojure.core/*print-length*",
- :history [["+" "0.0-2060"]]}
+ :docstring "When set to logical true, objects will be printed in a way that preserves\ntheir type when read in later.\n\nDefaults to false."}
 
 ```
 

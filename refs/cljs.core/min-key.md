@@ -49,7 +49,7 @@ Returns the x for which (k x), a number, is least.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7792-L7797):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7998-L8003):
 
 ```clj
 (defn min-key
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7792-7797](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7792-L7797)</ins>
+            └── <ins>[core.cljs:7998-8003](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7998-L8003)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn min-key\n  ([k x] x)\n  ([k x y] (if (< (k x) (k y)) x y))\n  ([k x y & more]\n     (reduce #(min-key k %1 %2) (min-key k x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7792 7797]},
+          :lines [7998 8003]},
  :full-name "cljs.core/min-key",
  :clj-symbol "clojure.core/min-key",
  :docstring "Returns the x for which (k x), a number, is least."}

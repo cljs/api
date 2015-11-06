@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for accessing the items of a chunk.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L418-L419):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L590-L593):
 
 ```clj
 (defprotocol IChunk
-  (-drop-first [coll]))
+  "Protocol for accessing the items of a chunk."
+  (-drop-first [coll]
+    "Return a new chunk of coll with the first item removed."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:418-419](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L418-L419)</ins>
+            └── <ins>[core.cljs:590-593](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L590-L593)</ins>
 </pre>
 
 -->
@@ -82,17 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-1424"]],
  :type "protocol",
  :full-name-encode "cljs.core/IChunk",
- :source {:code "(defprotocol IChunk\n  (-drop-first [coll]))",
+ :source {:code "(defprotocol IChunk\n  \"Protocol for accessing the items of a chunk.\"\n  (-drop-first [coll]\n    \"Return a new chunk of coll with the first item removed.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [418 419]},
+          :lines [590 593]},
  :methods [{:name "-drop-first",
             :signature ["[coll]"],
-            :docstring nil}],
+            :docstring "Return a new chunk of coll with the first item removed."}],
  :full-name "cljs.core/IChunk",
- :clj-symbol "clojure.lang/IChunk"}
+ :clj-symbol "clojure.lang/IChunk",
+ :docstring "Protocol for accessing the items of a chunk."}
 
 ```
 

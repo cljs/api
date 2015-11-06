@@ -38,7 +38,7 @@ Internally binds *report-counters* to a ref initialized to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/test.clj#L352-L364):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/test.clj#L353-L365):
 
 ```clj
 (defmacro test-ns
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:352-364](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/test.clj#L352-L364)</ins>
+            └── <ins>[test.clj:353-365](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/test.clj#L353-L365)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   `(cljs.test/run-block\n     (concat (cljs.test/test-ns-block ~env ~form)\n             [(fn []\n                (cljs.test/clear-env!))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/test.clj",
-          :lines [352 364]},
+          :lines [353 365]},
  :full-name "cljs.test/test-ns",
  :clj-symbol "clojure.test/test-ns",
  :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  "}

@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding mapping functionality to transient collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L405-L406):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L567-L570):
 
 ```clj
 (defprotocol ITransientMap
-  (^clj -dissoc! [tcoll key]))
+  "Protocol for adding mapping functionality to transient collections."
+  (^clj -dissoc! [tcoll key]
+    "Returns a new transient collection of tcoll without the mapping for key."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:405-406](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L405-L406)</ins>
+            └── <ins>[core.cljs:567-570](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L567-L570)</ins>
 </pre>
 
 -->
@@ -82,17 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ITransientMap",
- :source {:code "(defprotocol ITransientMap\n  (^clj -dissoc! [tcoll key]))",
+ :source {:code "(defprotocol ITransientMap\n  \"Protocol for adding mapping functionality to transient collections.\"\n  (^clj -dissoc! [tcoll key]\n    \"Returns a new transient collection of tcoll without the mapping for key.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [405 406]},
+          :lines [567 570]},
  :methods [{:name "-dissoc!",
             :signature ["[tcoll key]"],
-            :docstring nil}],
+            :docstring "Returns a new transient collection of tcoll without the mapping for key."}],
  :full-name "cljs.core/ITransientMap",
- :clj-symbol "clojure.lang/ITransientMap"}
+ :clj-symbol "clojure.lang/ITransientMap",
+ :docstring "Protocol for adding mapping functionality to transient collections."}
 
 ```
 

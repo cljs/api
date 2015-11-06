@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3178-L3179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3374-L3375):
 
 ```clj
 (defn array-iter [x]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3178-3179](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3178-L3179)</ins>
+            └── <ins>[core.cljs:3374-3375](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3374-L3375)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn array-iter [x]\n  (ArrayIter. x 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3178 3179]},
+          :lines [3374 3375]},
  :full-name "cljs.core/array-iter",
  :full-name-encode "cljs.core/array-iter",
  :history [["+" "0.0-2301"]]}

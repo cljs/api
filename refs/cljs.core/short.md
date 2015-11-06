@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2011):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2207):
 
 ```clj
 (defn ^number short [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2011](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2011)</ins>
+            └── <ins>[core.cljs:2207](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2207)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L369):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L380):
 
 ```clj
 (defmacro short [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:369](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L369)</ins>
+            └── <ins>[core.clj:380](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L380)</ins>
 </pre>
 -->
 
@@ -110,15 +110,15 @@ The API data for this symbol:
  :source {:code "(defn ^number short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2011]},
+          :lines [2207]},
  :extra-sources [{:code "(defmacro short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3058",
+                  :tag "r3115",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [369]}],
+                  :lines [380]}],
  :full-name "cljs.core/short",
  :clj-symbol "clojure.core/short"}
 

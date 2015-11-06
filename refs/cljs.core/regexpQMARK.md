@@ -27,7 +27,7 @@ Returns true if x is a JavaScript RegExp instance.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8159-L8162):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8365-L8368):
 
 ```clj
 (defn regexp?
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8159-8162](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8159-L8162)</ins>
+            └── <ins>[core.cljs:8365-8368](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8365-L8368)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn regexp?\n  [x]\n  (instance? js/RegExp x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8159 8162]},
+          :lines [8365 8368]},
  :full-name "cljs.core/regexp?",
  :docstring "Returns true if x is a JavaScript RegExp instance."}
 

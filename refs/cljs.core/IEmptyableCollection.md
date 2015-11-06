@@ -15,24 +15,32 @@
 
 
 
+Source docstring:
+
+```
+Protocol for creating an empty collection.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L283-L284):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L347-L351):
 
 ```clj
 (defprotocol IEmptyableCollection
-  (-empty [coll]))
+  "Protocol for creating an empty collection."
+  (-empty [coll]
+    "Returns an empty collection of the same category as coll. Used
+     by cljs.core/count."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:283-284](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L283-L284)</ins>
+            └── <ins>[core.cljs:347-351](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L347-L351)</ins>
 </pre>
 
 -->
@@ -73,17 +81,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IEmptyableCollection",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IEmptyableCollection",
- :source {:code "(defprotocol IEmptyableCollection\n  (-empty [coll]))",
+ :source {:code "(defprotocol IEmptyableCollection\n  \"Protocol for creating an empty collection.\"\n  (-empty [coll]\n    \"Returns an empty collection of the same category as coll. Used\n     by cljs.core/count.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [283 284]},
- :methods [{:name "-empty", :signature ["[coll]"], :docstring nil}],
+          :lines [347 351]},
+ :methods [{:name "-empty",
+            :signature ["[coll]"],
+            :docstring "Returns an empty collection of the same category as coll. Used\n     by cljs.core/count."}],
  :full-name "cljs.core/IEmptyableCollection",
- :history [["+" "0.0-927"]]}
+ :docstring "Protocol for creating an empty collection."}
 
 ```
 

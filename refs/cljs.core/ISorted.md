@@ -18,27 +18,44 @@
 
 
 
+Source docstring:
+
+```
+Protocol for a collection which can represent their items
+  in a sorted manner. 
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L369-L373):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L501-L516):
 
 ```clj
 (defprotocol ISorted
-  (^clj -sorted-seq [coll ascending?])
-  (^clj -sorted-seq-from [coll k ascending?])
-  (-entry-key [coll entry])
-  (-comparator [coll]))
+  "Protocol for a collection which can represent their items
+  in a sorted manner. "
+  (^clj -sorted-seq [coll ascending?]
+    "Returns a sorted seq from coll in either ascending or descending order.")
+  (^clj -sorted-seq-from [coll k ascending?]
+    "Returns a sorted seq from coll in either ascending or descending order.
+     If ascending is true, the result should contain all items which are > or >=
+     than k. If ascending is false, the result should contain all items which
+     are < or <= than k, e.g.
+     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 true) => (3 4 5)
+     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 false) => (3 2 1)")
+  (-entry-key [coll entry]
+    "Returns the key for entry.")
+  (-comparator [coll]
+    "Returns the comparator for coll."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:369-373](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L369-L373)</ins>
+            └── <ins>[core.cljs:501-516](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L501-L516)</ins>
 </pre>
 
 -->
@@ -85,26 +102,27 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISorted",
- :source {:code "(defprotocol ISorted\n  (^clj -sorted-seq [coll ascending?])\n  (^clj -sorted-seq-from [coll k ascending?])\n  (-entry-key [coll entry])\n  (-comparator [coll]))",
+ :source {:code "(defprotocol ISorted\n  \"Protocol for a collection which can represent their items\n  in a sorted manner. \"\n  (^clj -sorted-seq [coll ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\")\n  (^clj -sorted-seq-from [coll k ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\n     If ascending is true, the result should contain all items which are > or >=\n     than k. If ascending is false, the result should contain all items which\n     are < or <= than k, e.g.\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 true) => (3 4 5)\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 false) => (3 2 1)\")\n  (-entry-key [coll entry]\n    \"Returns the key for entry.\")\n  (-comparator [coll]\n    \"Returns the comparator for coll.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [369 373]},
+          :lines [501 516]},
  :methods [{:name "-sorted-seq",
             :signature ["[coll ascending?]"],
-            :docstring nil}
+            :docstring "Returns a sorted seq from coll in either ascending or descending order."}
            {:name "-sorted-seq-from",
             :signature ["[coll k ascending?]"],
-            :docstring nil}
+            :docstring "Returns a sorted seq from coll in either ascending or descending order.\n     If ascending is true, the result should contain all items which are > or >=\n     than k. If ascending is false, the result should contain all items which\n     are < or <= than k, e.g.\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 true) => (3 4 5)\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 false) => (3 2 1)"}
            {:name "-entry-key",
             :signature ["[coll entry]"],
-            :docstring nil}
+            :docstring "Returns the key for entry."}
            {:name "-comparator",
             :signature ["[coll]"],
-            :docstring nil}],
+            :docstring "Returns the comparator for coll."}],
  :full-name "cljs.core/ISorted",
- :clj-symbol "clojure.lang/Sorted"}
+ :clj-symbol "clojure.lang/Sorted",
+ :docstring "Protocol for a collection which can represent their items\n  in a sorted manner. "}
 
 ```
 

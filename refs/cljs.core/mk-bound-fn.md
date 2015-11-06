@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7860-L7864):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8066-L8070):
 
 ```clj
 (defn mk-bound-fn
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7860-7864](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7860-L7864)</ins>
+            └── <ins>[core.cljs:8066-8070](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8066-L8070)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn mk-bound-fn\n  [sc test key]\n  (fn [e]\n    (let [comp (-comparator sc)]\n      (test (comp (-entry-key sc e) key) 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7860 7864]},
+          :lines [8066 8070]},
  :full-name "cljs.core/mk-bound-fn",
  :full-name-encode "cljs.core/mk-bound-fn",
  :history [["+" "0.0-1211"]]}

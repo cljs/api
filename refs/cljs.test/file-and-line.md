@@ -22,34 +22,33 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L374-L387):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L374-L386):
 
 ```clj
 (defn file-and-line [exception depth]
-  (let [stack (.-stack exception)]
-      (if (and stack (string? stack))
-        ;; TODO: flesh out
-        (let [stacktrace
-              (vec (map string/trim
-                     (string/split stack #"\n")))
-              stack-element (nth stacktrace depth)
-              fname (js-filename stack-element)
-              [line column] (js-line-and-column stack-element)
-              [fname line column] (mapped-line-and-column fname line column)]
-          {:file fname :line line :column column})
-        {:file (.-fileName exception)
-         :line (.-lineNumber exception)}))  )
+  ;; TODO: flesh out
+  (if-let [stack-element (and (string? (.-stack exception))
+                              (some-> (.-stack exception)
+                                      string/split-lines
+                                      (get depth)
+                                      string/trim))]
+    (let [fname (js-filename stack-element)
+          [line column] (js-line-and-column stack-element)
+          [fname line column] (mapped-line-and-column fname line column)]
+      {:file fname :line line :column column})
+    {:file (.-fileName exception)
+     :line (.-lineNumber exception)}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:374-387](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L374-L387)</ins>
+            └── <ins>[test.cljs:374-386](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L374-L386)</ins>
 </pre>
 
 -->
@@ -92,12 +91,12 @@ The API data for this symbol:
  :name "file-and-line",
  :type "function",
  :signature ["[exception depth]"],
- :source {:code "(defn file-and-line [exception depth]\n  (let [stack (.-stack exception)]\n      (if (and stack (string? stack))\n        ;; TODO: flesh out\n        (let [stacktrace\n              (vec (map string/trim\n                     (string/split stack #\"\\n\")))\n              stack-element (nth stacktrace depth)\n              fname (js-filename stack-element)\n              [line column] (js-line-and-column stack-element)\n              [fname line column] (mapped-line-and-column fname line column)]\n          {:file fname :line line :column column})\n        {:file (.-fileName exception)\n         :line (.-lineNumber exception)}))  )",
+ :source {:code "(defn file-and-line [exception depth]\n  ;; TODO: flesh out\n  (if-let [stack-element (and (string? (.-stack exception))\n                              (some-> (.-stack exception)\n                                      string/split-lines\n                                      (get depth)\n                                      string/trim))]\n    (let [fname (js-filename stack-element)\n          [line column] (js-line-and-column stack-element)\n          [fname line column] (mapped-line-and-column fname line column)]\n      {:file fname :line line :column column})\n    {:file (.-fileName exception)\n     :line (.-lineNumber exception)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [374 387]},
+          :lines [374 386]},
  :full-name "cljs.test/file-and-line",
  :full-name-encode "cljs.test/file-and-line",
  :history [["+" "0.0-2496"]]}

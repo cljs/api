@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for collections which can transformed to transients.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L395-L396):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L549-L552):
 
 ```clj
 (defprotocol IEditableCollection
-  (^clj -as-transient [coll]))
+  "Protocol for collections which can transformed to transients."
+  (^clj -as-transient [coll]
+    "Returns a new, transient version of the collection, in constant time."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:395-396](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L395-L396)</ins>
+            └── <ins>[core.cljs:549-552](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L549-L552)</ins>
 </pre>
 
 -->
@@ -82,17 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/IEditableCollection",
- :source {:code "(defprotocol IEditableCollection\n  (^clj -as-transient [coll]))",
+ :source {:code "(defprotocol IEditableCollection\n  \"Protocol for collections which can transformed to transients.\"\n  (^clj -as-transient [coll]\n    \"Returns a new, transient version of the collection, in constant time.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [395 396]},
+          :lines [549 552]},
  :methods [{:name "-as-transient",
             :signature ["[coll]"],
-            :docstring nil}],
+            :docstring "Returns a new, transient version of the collection, in constant time."}],
  :full-name "cljs.core/IEditableCollection",
- :clj-symbol "clojure.lang/IEditableCollection"}
+ :clj-symbol "clojure.lang/IEditableCollection",
+ :docstring "Protocol for collections which can transformed to transients."}
 
 ```
 

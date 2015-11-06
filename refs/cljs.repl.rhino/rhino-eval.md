@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/rhino.clj#L71-L86):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/rhino.clj#L71-L86):
 
 ```clj
 (defn rhino-eval
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:71-86](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/rhino.clj#L71-L86)</ins>
+                └── <ins>[rhino.clj:71-86](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/rhino.clj#L71-L86)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn rhino-eval\n  [{:keys [scope] :as repl-env} filename line js]\n  (try\n    (let [linenum (or line Integer/MIN_VALUE)]\n      {:status :success\n       :value (eval-result (-eval js repl-env filename linenum))})\n    (catch Throwable ex\n      ;; manually set *e\n      (let [top-level (-> scope\n                        (ScriptableObject/getProperty \"cljs\")\n                        (ScriptableObject/getProperty \"core\"))]\n        (ScriptableObject/putProperty top-level \"_STAR_e\"\n          (Context/javaToJS ex scope))\n        {:status :exception\n         :value (.toString ex)\n         :stacktrace (stacktrace ex)}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [71 86]},
  :full-name "cljs.repl.rhino/rhino-eval",

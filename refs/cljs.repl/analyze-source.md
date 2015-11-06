@@ -31,7 +31,7 @@ Given a source directory, analyzes all .cljs files. Used to populate
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl.clj#L616-L624):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl.clj#L616-L624):
 
 ```clj
 (defn analyze-source
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:616-624](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl.clj#L616-L624)</ins>
+            └── <ins>[repl.clj:616-624](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl.clj#L616-L624)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn analyze-source\n  ([src-dir] (analyze-source src-dir nil))\n  ([src-dir opts]\n    (if-let [src-dir (and (not (empty? src-dir))\n                       (File. src-dir))]\n      (doseq [file (comp/cljs-files-in src-dir)]\n        (ana/analyze-file (str \"file://\" (.getAbsolutePath file)) opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl.clj",
           :lines [616 624]},
  :full-name "cljs.repl/analyze-source",

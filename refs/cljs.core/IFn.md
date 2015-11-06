@@ -18,12 +18,22 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding the ability to invoke an object as a function.
+  For example, a vector can also be used to look up a value:
+  ([1 2 3 4] 1) => 2
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L252-L275):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L309-L335):
 
 ```clj
 (defprotocol IFn
+  "Protocol for adding the ability to invoke an object as a function.
+  For example, a vector can also be used to look up a value:
+  ([1 2 3 4] 1) => 2"
   (-invoke
     [this]
     [this a]
@@ -53,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:252-275](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L252-L275)</ins>
+            └── <ins>[core.cljs:309-335](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L309-L335)</ins>
 </pre>
 
 -->
@@ -104,12 +114,12 @@ The API data for this symbol:
  :history [["+" "0.0-971"]],
  :type "protocol",
  :full-name-encode "cljs.core/IFn",
- :source {:code "(defprotocol IFn\n  (-invoke\n    [this]\n    [this a]\n    [this a b]\n    [this a b c]\n    [this a b c d]\n    [this a b c d e]\n    [this a b c d e f]\n    [this a b c d e f g]\n    [this a b c d e f g h]\n    [this a b c d e f g h i]\n    [this a b c d e f g h i j]\n    [this a b c d e f g h i j k]\n    [this a b c d e f g h i j k l]\n    [this a b c d e f g h i j k l m]\n    [this a b c d e f g h i j k l m n]\n    [this a b c d e f g h i j k l m n o]\n    [this a b c d e f g h i j k l m n o p]\n    [this a b c d e f g h i j k l m n o p q]\n    [this a b c d e f g h i j k l m n o p q r]\n    [this a b c d e f g h i j k l m n o p q r s]\n    [this a b c d e f g h i j k l m n o p q r s t]\n    [this a b c d e f g h i j k l m n o p q r s t rest]))",
+ :source {:code "(defprotocol IFn\n  \"Protocol for adding the ability to invoke an object as a function.\n  For example, a vector can also be used to look up a value:\n  ([1 2 3 4] 1) => 2\"\n  (-invoke\n    [this]\n    [this a]\n    [this a b]\n    [this a b c]\n    [this a b c d]\n    [this a b c d e]\n    [this a b c d e f]\n    [this a b c d e f g]\n    [this a b c d e f g h]\n    [this a b c d e f g h i]\n    [this a b c d e f g h i j]\n    [this a b c d e f g h i j k]\n    [this a b c d e f g h i j k l]\n    [this a b c d e f g h i j k l m]\n    [this a b c d e f g h i j k l m n]\n    [this a b c d e f g h i j k l m n o]\n    [this a b c d e f g h i j k l m n o p]\n    [this a b c d e f g h i j k l m n o p q]\n    [this a b c d e f g h i j k l m n o p q r]\n    [this a b c d e f g h i j k l m n o p q r s]\n    [this a b c d e f g h i j k l m n o p q r s t]\n    [this a b c d e f g h i j k l m n o p q r s t rest]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [252 275]},
+          :lines [309 335]},
  :methods [{:name "-invoke",
             :signature ["[this]"
                         "[this a]"
@@ -135,7 +145,8 @@ The API data for this symbol:
                         "[this a b c d e f g h i j k l m n o p q r s t rest]"],
             :docstring nil}],
  :full-name "cljs.core/IFn",
- :clj-symbol "clojure.lang/IFn"}
+ :clj-symbol "clojure.lang/IFn",
+ :docstring "Protocol for adding the ability to invoke an object as a function.\n  For example, a vector can also be used to look up a value:\n  ([1 2 3 4] 1) => 2"}
 
 ```
 

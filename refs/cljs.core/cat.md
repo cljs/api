@@ -28,7 +28,7 @@ collection, into the reduction.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8667-L8677):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8874-L8884):
 
 ```clj
 (defn cat
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8667-8677](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8667-L8677)</ins>
+            └── <ins>[core.cljs:8874-8884](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8874-L8884)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn cat\n  [rf]\n  (let [rf1 (preserving-reduced rf)]  \n    (fn\n      ([] (rf))\n      ([result] (rf result))\n      ([result input]\n         (reduce rf1 result input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8667 8677]},
+          :lines [8874 8884]},
  :full-name "cljs.core/cat",
  :docstring "A transducer which concatenates the contents of each input, which must be a\ncollection, into the reduction."}
 

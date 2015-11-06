@@ -18,23 +18,37 @@
 
 
 
+Source docstring:
+
+```
+If set to logical true, when printing an object, its metadata will also
+be printed in a form that can be read back by the reader.
+
+Defaults to false.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L63-L69):
 
 ```clj
-(def ^:dynamic *print-meta* false)
+(def
+  ^{:dynamic true
+    :doc "If set to logical true, when printing an object, its metadata will also
+  be printed in a form that can be read back by the reader.
+
+  Defaults to false."}
+  *print-meta* false)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:39](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L39)</ins>
+            └── <ins>[core.cljs:63-69](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L63-L69)</ins>
 </pre>
 
 -->
@@ -78,17 +92,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-meta*",
+ :history [["+" "0.0-927"]],
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-meta* false)",
+ :full-name-encode "cljs.core/STARprint-metaSTAR",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"If set to logical true, when printing an object, its metadata will also\n  be printed in a form that can be read back by the reader.\n\n  Defaults to false.\"}\n  *print-meta* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [39]},
+          :lines [63 69]},
  :full-name "cljs.core/*print-meta*",
- :full-name-encode "cljs.core/STARprint-metaSTAR",
  :clj-symbol "clojure.core/*print-meta*",
- :history [["+" "0.0-927"]]}
+ :docstring "If set to logical true, when printing an object, its metadata will also\nbe printed in a form that can be read back by the reader.\n\nDefaults to false."}
 
 ```
 

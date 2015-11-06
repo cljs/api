@@ -46,7 +46,7 @@ the latter (left-to-right) will be the mapping in the result.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7406-L7412):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7612-L7618):
 
 ```clj
 (defn merge
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7406-7412](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L7406-L7412)</ins>
+            └── <ins>[core.cljs:7612-7618](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L7612-L7618)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn merge\n  [& maps]\n  (when (some identity maps)\n    (reduce #(conj (or %1 {}) %2) maps)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7406 7412]},
+          :lines [7612 7618]},
  :full-name "cljs.core/merge",
  :clj-symbol "clojure.core/merge",
  :docstring "Returns a map that consists of the rest of the maps conj-ed onto\nthe first.  If a key occurs in more than one map, the mapping from\nthe latter (left-to-right) will be the mapping in the result."}

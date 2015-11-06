@@ -15,24 +15,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding resetting functionality.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L434-L435):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L617-L620):
 
 ```clj
 (defprotocol IReset
-  (-reset! [o new-value]))
+  "Protocol for adding resetting functionality."
+  (-reset! [o new-value]
+    "Sets the value of o to new-value."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:434-435](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L434-L435)</ins>
+            └── <ins>[core.cljs:617-620](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L617-L620)</ins>
 </pre>
 
 -->
@@ -73,19 +80,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IReset",
+ :history [["+" "0.0-2173"]],
  :type "protocol",
  :full-name-encode "cljs.core/IReset",
- :source {:code "(defprotocol IReset\n  (-reset! [o new-value]))",
+ :source {:code "(defprotocol IReset\n  \"Protocol for adding resetting functionality.\"\n  (-reset! [o new-value]\n    \"Sets the value of o to new-value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [434 435]},
+          :lines [617 620]},
  :methods [{:name "-reset!",
             :signature ["[o new-value]"],
-            :docstring nil}],
+            :docstring "Sets the value of o to new-value."}],
  :full-name "cljs.core/IReset",
- :history [["+" "0.0-2173"]]}
+ :docstring "Protocol for adding resetting functionality."}
 
 ```
 

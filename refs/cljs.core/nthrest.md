@@ -44,7 +44,7 @@ Returns the nth rest of coll, coll when n is 0.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1358-L1364):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1554-L1560):
 
 ```clj
 (defn nthrest
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1358-1364](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1358-L1364)</ins>
+            └── <ins>[core.cljs:1554-1560](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1554-L1560)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn nthrest\n  [coll n]\n    (loop [n n xs coll]\n      (if (and (pos? n) (seq xs))\n        (recur (dec n) (rest xs))\n        xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1358 1364]},
+          :lines [1554 1560]},
  :full-name "cljs.core/nthrest",
  :clj-symbol "clojure.core/nthrest",
  :docstring "Returns the nth rest of coll, coll when n is 0."}

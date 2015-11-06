@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/rhino.clj#L96-L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/rhino.clj#L96-L101):
 
 ```clj
 (defn load-javascript [repl-env ns url]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:96-101](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/rhino.clj#L96-L101)</ins>
+                └── <ins>[rhino.clj:96-101](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/rhino.clj#L96-L101)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript [repl-env ns url]\n  (try\n    (with-open [reader (io/reader url)]\n      (-eval reader repl-env (.toString url) 1))\n    ;; TODO: don't show errors for goog/base.js line number 105\n    (catch Throwable ex (println (.getMessage ex)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [96 101]},
  :full-name "cljs.repl.rhino/load-javascript",

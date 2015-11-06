@@ -38,7 +38,7 @@ Returns a vector of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4139-L4146):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4335-L4342):
 
 ```clj
 (defn filterv
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4139-4146](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4139-L4146)</ins>
+            └── <ins>[core.cljs:4335-4342](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4335-L4342)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn filterv\n  [pred coll]\n  (-> (reduce (fn [v o] (if (pred o) (conj! v o) v))\n              (transient [])\n              coll)\n      persistent!))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4139 4146]},
+          :lines [4335 4342]},
  :full-name "cljs.core/filterv",
  :clj-symbol "clojure.core/filterv",
  :docstring "Returns a vector of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}

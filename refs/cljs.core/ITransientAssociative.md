@@ -18,24 +18,32 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding associativity to transient collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L402-L403):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L561-L565):
 
 ```clj
 (defprotocol ITransientAssociative
-  (^clj -assoc! [tcoll key val]))
+  "Protocol for adding associativity to transient collections."
+  (^clj -assoc! [tcoll key val]
+    "Returns a new transient collection of tcoll with a mapping from key to
+     val added to it."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:402-403](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L402-L403)</ins>
+            └── <ins>[core.cljs:561-565](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L561-L565)</ins>
 </pre>
 
 -->
@@ -82,17 +90,18 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ITransientAssociative",
- :source {:code "(defprotocol ITransientAssociative\n  (^clj -assoc! [tcoll key val]))",
+ :source {:code "(defprotocol ITransientAssociative\n  \"Protocol for adding associativity to transient collections.\"\n  (^clj -assoc! [tcoll key val]\n    \"Returns a new transient collection of tcoll with a mapping from key to\n     val added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [402 403]},
+          :lines [561 565]},
  :methods [{:name "-assoc!",
             :signature ["[tcoll key val]"],
-            :docstring nil}],
+            :docstring "Returns a new transient collection of tcoll with a mapping from key to\n     val added to it."}],
  :full-name "cljs.core/ITransientAssociative",
- :clj-symbol "clojure.lang/ITransientAssociative"}
+ :clj-symbol "clojure.lang/ITransientAssociative",
+ :docstring "Protocol for adding associativity to transient collections."}
 
 ```
 

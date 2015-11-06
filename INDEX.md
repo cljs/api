@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-3058__ [all](HISTORY.md)</td>
-<td>2015-03-09</td>
+<td>__0.0-3115__ [all](HISTORY.md)</td>
+<td>2015-03-15</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-3058__ ([See Full History](HISTORY.md)):
+Changes from __0.0-3115__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -37,9 +37,21 @@ __Library API Changes__
 
 <tr>
 <td>
+<img valign="middle" src="https://img.shields.io/badge/×-macro-red.svg">
+</td>
+<td><samp>[~~cljs.core/load-file\*~~](refs/cljs.core/load-fileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[clojure.browser.repl/get-ua-product](refs/clojure.browser.repl/get-ua-product.md)</samp></td>
+<td><samp>[clojure.browser.repl/bootstrap](refs/clojure.browser.repl/bootstrap.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[clojure.browser.repl/load-queue](refs/clojure.browser.repl/load-queue.md)</samp></td>
 </tr>
 </table>
 
@@ -49,9 +61,15 @@ __Compiler API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
 </td>
-<td><samp>[cljs.repl/repl-special-doc-map](refs/cljs.repl/repl-special-doc-map.md)</samp></td>
+<td><samp>[~~cljs.repl.browser/loaded-libs~~](refs/cljs.repl.browser/loaded-libs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/preloaded-libs~~](refs/cljs.repl.browser/preloaded-libs.md)</samp></td>
 </tr>
 </table>
 

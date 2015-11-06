@@ -15,24 +15,34 @@
 
 
 
+Source docstring:
+
+```
+Protocol for accessing the next items of a collection.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L301-L302):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L383-L389):
 
 ```clj
 (defprotocol INext
-  (^clj-or-nil -next [coll]))
+  "Protocol for accessing the next items of a collection."
+  (^clj-or-nil -next [coll]
+    "Returns a new collection of coll without the first item. In contrast to
+     rest, it should return nil if there are no more items, e.g.
+     (next []) => nil
+     (next nil) => nil"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:301-302](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L301-L302)</ins>
+            └── <ins>[core.cljs:383-389](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L383-L389)</ins>
 </pre>
 
 -->
@@ -73,17 +83,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "INext",
+ :history [["+" "0.0-1424"]],
  :type "protocol",
  :full-name-encode "cljs.core/INext",
- :source {:code "(defprotocol INext\n  (^clj-or-nil -next [coll]))",
+ :source {:code "(defprotocol INext\n  \"Protocol for accessing the next items of a collection.\"\n  (^clj-or-nil -next [coll]\n    \"Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [301 302]},
- :methods [{:name "-next", :signature ["[coll]"], :docstring nil}],
+          :lines [383 389]},
+ :methods [{:name "-next",
+            :signature ["[coll]"],
+            :docstring "Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil"}],
  :full-name "cljs.core/INext",
- :history [["+" "0.0-1424"]]}
+ :docstring "Protocol for accessing the next items of a collection."}
 
 ```
 

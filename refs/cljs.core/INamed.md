@@ -18,25 +18,33 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding a name.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L428-L430):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L607-L612):
 
 ```clj
 (defprotocol INamed
-  (^string -name [x])
-  (^string -namespace [x]))
+  "Protocol for adding a name."
+  (^string -name [x]
+    "Returns the name String of x.")
+  (^string -namespace [x]
+    "Returns the namespace String of x."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:428-430](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L428-L430)</ins>
+            └── <ins>[core.cljs:607-612](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L607-L612)</ins>
 </pre>
 
 -->
@@ -83,16 +91,21 @@ The API data for this symbol:
  :history [["+" "0.0-1798"]],
  :type "protocol",
  :full-name-encode "cljs.core/INamed",
- :source {:code "(defprotocol INamed\n  (^string -name [x])\n  (^string -namespace [x]))",
+ :source {:code "(defprotocol INamed\n  \"Protocol for adding a name.\"\n  (^string -name [x]\n    \"Returns the name String of x.\")\n  (^string -namespace [x]\n    \"Returns the namespace String of x.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [428 430]},
- :methods [{:name "-name", :signature ["[x]"], :docstring nil}
-           {:name "-namespace", :signature ["[x]"], :docstring nil}],
+          :lines [607 612]},
+ :methods [{:name "-name",
+            :signature ["[x]"],
+            :docstring "Returns the name String of x."}
+           {:name "-namespace",
+            :signature ["[x]"],
+            :docstring "Returns the namespace String of x."}],
  :full-name "cljs.core/INamed",
- :clj-symbol "clojure.lang/Named"}
+ :clj-symbol "clojure.lang/Named",
+ :docstring "Protocol for adding a name."}
 
 ```
 

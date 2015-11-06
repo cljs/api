@@ -18,23 +18,37 @@
 
 
 
+Source docstring:
+
+```
+When set to logical false, strings and characters will be printed with
+non-alphanumeric characters converted to the appropriate escape sequences.
+
+Defaults to true
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L38):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L55-L61):
 
 ```clj
-(def ^:dynamic *print-readably* true)
+(def
+  ^{:dynamic true
+    :doc "When set to logical false, strings and characters will be printed with
+  non-alphanumeric characters converted to the appropriate escape sequences.
+
+  Defaults to true"}
+  *print-readably* true)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:38](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L38)</ins>
+            └── <ins>[core.cljs:55-61](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L55-L61)</ins>
 </pre>
 
 -->
@@ -78,17 +92,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-readably*",
+ :history [["+" "0.0-927"]],
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-readably* true)",
+ :full-name-encode "cljs.core/STARprint-readablySTAR",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false, strings and characters will be printed with\n  non-alphanumeric characters converted to the appropriate escape sequences.\n\n  Defaults to true\"}\n  *print-readably* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [38]},
+          :lines [55 61]},
  :full-name "cljs.core/*print-readably*",
- :full-name-encode "cljs.core/STARprint-readablySTAR",
  :clj-symbol "clojure.core/*print-readably*",
- :history [["+" "0.0-927"]]}
+ :docstring "When set to logical false, strings and characters will be printed with\nnon-alphanumeric characters converted to the appropriate escape sequences.\n\nDefaults to true"}
 
 ```
 

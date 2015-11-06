@@ -18,23 +18,45 @@
 
 
 
+Source docstring:
+
+```
+*print-level* controls how many levels deep the printer will
+print nested objects. If it is bound to logical false, there is no
+limit. Otherwise, it must be bound to an integer indicating the maximum
+level to print. Each argument to print is at level 0; if an argument is a
+collection, its items are at level 1; and so on. If an object is a
+collection and is at a level greater than or equal to the value bound to
+*print-level*, the printer prints '#' to represent it. The root binding
+is nil indicating no limit.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L42):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L87-L97):
 
 ```clj
-(def ^:dynamic *print-level* nil)
+(def
+  ^{:dynamic true
+    :doc "*print-level* controls how many levels deep the printer will
+  print nested objects. If it is bound to logical false, there is no
+  limit. Otherwise, it must be bound to an integer indicating the maximum
+  level to print. Each argument to print is at level 0; if an argument is a
+  collection, its items are at level 1; and so on. If an object is a
+  collection and is at a level greater than or equal to the value bound to
+  *print-level*, the printer prints '#' to represent it. The root binding
+  is nil indicating no limit."}
+  *print-level* nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:42](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L42)</ins>
+            └── <ins>[core.cljs:87-97](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L87-L97)</ins>
 </pre>
 
 -->
@@ -78,17 +100,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-level*",
+ :history [["+" "0.0-2120"]],
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-level* nil)",
+ :full-name-encode "cljs.core/STARprint-levelSTAR",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"*print-level* controls how many levels deep the printer will\n  print nested objects. If it is bound to logical false, there is no\n  limit. Otherwise, it must be bound to an integer indicating the maximum\n  level to print. Each argument to print is at level 0; if an argument is a\n  collection, its items are at level 1; and so on. If an object is a\n  collection and is at a level greater than or equal to the value bound to\n  *print-level*, the printer prints '#' to represent it. The root binding\n  is nil indicating no limit.\"}\n  *print-level* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [42]},
+          :lines [87 97]},
  :full-name "cljs.core/*print-level*",
- :full-name-encode "cljs.core/STARprint-levelSTAR",
  :clj-symbol "clojure.core/*print-level*",
- :history [["+" "0.0-2120"]]}
+ :docstring "*print-level* controls how many levels deep the printer will\nprint nested objects. If it is bound to logical false, there is no\nlimit. Otherwise, it must be bound to an integer indicating the maximum\nlevel to print. Each argument to print is at level 0; if an argument is a\ncollection, its items are at level 1; and so on. If an object is a\ncollection and is at a level greater than or equal to the value bound to\n*print-level*, the printer prints '#' to represent it. The root binding\nis nil indicating no limit."}
 
 ```
 

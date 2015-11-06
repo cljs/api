@@ -6118,6 +6118,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[clojure.browser.repl/bootstrap](refs/clojure.browser.repl/bootstrap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/bootstrap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[clojure.browser.repl/connect](refs/clojure.browser.repl/connect.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/connect.cljsdoc)</td>
 <td></td>
@@ -6134,6 +6141,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[clojure.browser.repl/get-ua-product](refs/clojure.browser.repl/get-ua-product.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/get-ua-product.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[clojure.browser.repl/load-queue](refs/clojure.browser.repl/load-queue.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/load-queue.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

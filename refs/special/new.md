@@ -35,7 +35,7 @@ returned.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L1103-L1129):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L1147-L1173):
 
 ```clj
 (defmethod parse 'new
@@ -71,11 +71,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1103-1129](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L1103-L1129)</ins>
+            └── <ins>[analyzer.clj:1147-1173](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L1147-L1173)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _ _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         ctor-var (resolve-existing-var env ctor)\n         record-args\n         (when (and (:record ctor-var) (not (-> ctor meta :internal-ctor)))\n           (repeat 3 (analyze enve nil)))\n         argexprs (into (vec (map #(analyze enve %) args)) record-args)\n         known-num-fields (:num-fields ctor-var)\n         argc (count args)]\n     (when (and (not (-> ctor meta :internal-ctor))\n                known-num-fields (not= known-num-fields argc))\n       (warning :fn-arity env {:argc argc :ctor ctor}))\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)\n      :tag (let [name (-> ctorexpr :info :name)]\n             (or ('{js/Object object\n                    js/String string\n                    js/Array  array\n                    js/Number number\n                    js/Function function\n                    js/Boolean boolean} name)\n                 name))})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1103 1129]},
+          :lines [1147 1173]},
  :full-name "special/new",
  :clj-symbol "clojure.core/new",
  :docstring "The args, if any, are evaluated from left to right, and\npassed to the JavaScript constructor. The constructed object is\nreturned."}

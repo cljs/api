@@ -31,27 +31,24 @@ ClojureScript REPL.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L183-L193):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L179-L186):
 
 ```clj
 (defn load-javascript
   [repl-env provides url]
-  (let [missing (remove #(contains? @loaded-libs %) provides)]
-    (when (seq missing)
-      (browser-eval (slurp url))
-      (swap! loaded-libs (partial apply conj) missing))))
+  (browser-eval (slurp url)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:183-193](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L183-L193)</ins>
+                └── <ins>[browser.clj:179-186](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L179-L186)</ins>
 </pre>
 
 -->
@@ -96,12 +93,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/load-javascript",
- :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (let [missing (remove #(contains? @loaded-libs %) provides)]\n    (when (seq missing)\n      (browser-eval (slurp url))\n      (swap! loaded-libs (partial apply conj) missing))))",
+ :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (browser-eval (slurp url)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [183 193]},
+          :lines [179 186]},
  :full-name "cljs.repl.browser/load-javascript",
  :docstring "Accepts a REPL environment, a list of namespaces, and a URL for a\nJavaScript file which contains the implementation for the list of\nnamespaces. Will load the JavaScript file into the REPL environment\nif any of the namespaces have not already been loaded from the\nClojureScript REPL."}
 

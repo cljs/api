@@ -32,26 +32,26 @@ current assertion.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L279-L287):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L279-L287):
 
 ```clj
 (defn testing-vars-str
   [m]
-  (let [{:keys [file line]} m]
+  (let [{:keys [file line column]} m]
     (str
       (reverse (map #(:name (meta %)) (:testing-vars (get-current-env))))
-      " (" file ":" line ")")))
+      " (" file ":" line (when column (str ":" column)) ")")))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:279-287](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/test.cljs#L279-L287)</ins>
+            └── <ins>[test.cljs:279-287](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/test.cljs#L279-L287)</ins>
 </pre>
 
 -->
@@ -99,10 +99,10 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/testing-vars-str",
- :source {:code "(defn testing-vars-str\n  [m]\n  (let [{:keys [file line]} m]\n    (str\n      (reverse (map #(:name (meta %)) (:testing-vars (get-current-env))))\n      \" (\" file \":\" line \")\")))",
+ :source {:code "(defn testing-vars-str\n  [m]\n  (let [{:keys [file line column]} m]\n    (str\n      (reverse (map #(:name (meta %)) (:testing-vars (get-current-env))))\n      \" (\" file \":\" line (when column (str \":\" column)) \")\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/test.cljs",
           :lines [279 287]},
  :full-name "cljs.test/testing-vars-str",

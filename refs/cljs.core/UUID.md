@@ -38,7 +38,7 @@ Use [doc:cljs.core/uuid] or [`uuid-literal`][doc:syntax/uuid-literal] to create 
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L9259-L9275):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L9466-L9486):
 
 ```clj
 (deftype UUID [uuid]
@@ -57,18 +57,22 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 
   IHash
   (-hash [this]
-    (goog.string/hashCode (pr-str this))))
+    (goog.string/hashCode (pr-str this)))
+
+  IComparable
+  (-compare [_ other]
+    (garray/defaultCompare uuid (.-uuid other))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9259-9275](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L9259-L9275)</ins>
+            └── <ins>[core.cljs:9466-9486](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L9466-L9486)</ins>
 </pre>
 
 -->
@@ -117,12 +121,12 @@ The API data for this symbol:
            "cljs.core/random-uuid"
            "cljs.core/uuid"],
  :full-name-encode "cljs.core/UUID",
- :source {:code "(deftype UUID [uuid]\n  Object\n  (toString [_] uuid)\n  (equiv [this other]\n    (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
+ :source {:code "(deftype UUID [uuid]\n  Object\n  (toString [_] uuid)\n  (equiv [this other]\n    (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this)))\n\n  IComparable\n  (-compare [_ other]\n    (garray/defaultCompare uuid (.-uuid other))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9259 9275]},
+          :lines [9466 9486]},
  :full-name "cljs.core/UUID"}
 
 ```

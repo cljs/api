@@ -50,7 +50,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4078-L4084):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4274-L4280):
 
 ```clj
 (defn remove
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4078-4084](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4078-L4084)</ins>
+            └── <ins>[core.cljs:4274-4280](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4274-L4280)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn remove\n  ([pred] (filter (complement pred)))\n  ([pred coll]\n     (filter (complement pred) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4078 4084]},
+          :lines [4274 4280]},
  :full-name "cljs.core/remove",
  :clj-symbol "clojure.core/remove",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}

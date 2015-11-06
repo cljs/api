@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding the ability to count a collection in constant time.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L280-L281):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L342-L345):
 
 ```clj
 (defprotocol ICounted
-  (^number -count [coll] "constant time count"))
+  "Protocol for adding the ability to count a collection in constant time."
+  (^number -count [coll]
+    "Calculates the count of coll in constant time. Used by cljs.core/count."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:280-281](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L280-L281)</ins>
+            └── <ins>[core.cljs:342-345](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L342-L345)</ins>
 </pre>
 
 -->
@@ -82,17 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ICounted",
- :source {:code "(defprotocol ICounted\n  (^number -count [coll] \"constant time count\"))",
+ :source {:code "(defprotocol ICounted\n  \"Protocol for adding the ability to count a collection in constant time.\"\n  (^number -count [coll]\n    \"Calculates the count of coll in constant time. Used by cljs.core/count.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [280 281]},
+          :lines [342 345]},
  :methods [{:name "-count",
             :signature ["[coll]"],
-            :docstring "constant time count"}],
+            :docstring "Calculates the count of coll in constant time. Used by cljs.core/count."}],
  :full-name "cljs.core/ICounted",
- :clj-symbol "clojure.lang/Counted"}
+ :clj-symbol "clojure.lang/Counted",
+ :docstring "Protocol for adding the ability to count a collection in constant time."}
 
 ```
 

@@ -43,7 +43,7 @@ Returns true if coll satisfies ISorted
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1570-L1572):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1766-L1768):
 
 ```clj
 (defn ^boolean sorted?
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1570-1572](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1570-L1572)</ins>
+            └── <ins>[core.cljs:1766-1768](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1766-L1768)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean sorted?\n  [x] (satisfies? ISorted x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1570 1572]},
+          :lines [1766 1768]},
  :full-name "cljs.core/sorted?",
  :clj-symbol "clojure.core/sorted?",
  :docstring "Returns true if coll satisfies ISorted"}

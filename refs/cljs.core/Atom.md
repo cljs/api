@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3579-L3606):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3775-L3802):
 
 ```clj
 (deftype Atom [state meta validator watches]
@@ -62,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3579-3606](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3579-L3606)</ins>
+            └── <ins>[core.cljs:3775-3802](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3775-L3802)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(deftype Atom [state meta validator watches]\n  Object\n  (equiv [this other]\n    (-equiv this other))\n\n  IAtom\n  \n  IEquiv\n  (-equiv [o other] (identical? o other))\n\n  IDeref\n  (-deref [_] state)\n\n  IMeta\n  (-meta [_] meta)\n\n  IWatchable\n  (-notify-watches [this oldval newval]\n    (doseq [[key f] watches]\n      (f key this oldval newval)))\n  (-add-watch [this key f]\n    (set! (.-watches this) (assoc watches key f))\n    this)\n  (-remove-watch [this key]\n    (set! (.-watches this) (dissoc watches key)))\n\n  IHash\n  (-hash [this] (goog/getUid this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3579 3606]},
+          :lines [3775 3802]},
  :full-name "cljs.core/Atom",
  :clj-symbol "clojure.lang/Atom"}
 

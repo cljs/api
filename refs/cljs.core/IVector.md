@@ -18,24 +18,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding vector functionality to collections.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L327-L328):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L434-L437):
 
 ```clj
 (defprotocol IVector
-  (^clj -assoc-n [coll n val]))
+  "Protocol for adding vector functionality to collections."
+  (^clj -assoc-n [coll n val]
+    "Returns a new vector with value val added at position n."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:327-328](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L327-L328)</ins>
+            └── <ins>[core.cljs:434-437](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L434-L437)</ins>
 </pre>
 
 -->
@@ -82,17 +89,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IVector",
- :source {:code "(defprotocol IVector\n  (^clj -assoc-n [coll n val]))",
+ :source {:code "(defprotocol IVector\n  \"Protocol for adding vector functionality to collections.\"\n  (^clj -assoc-n [coll n val]\n    \"Returns a new vector with value val added at position n.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [327 328]},
+          :lines [434 437]},
  :methods [{:name "-assoc-n",
             :signature ["[coll n val]"],
-            :docstring nil}],
+            :docstring "Returns a new vector with value val added at position n."}],
  :full-name "cljs.core/IVector",
- :clj-symbol "clojure.lang/IPersistentVector"}
+ :clj-symbol "clojure.lang/IPersistentVector",
+ :docstring "Protocol for adding vector functionality to collections."}
 
 ```
 

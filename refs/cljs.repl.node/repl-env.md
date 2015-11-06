@@ -27,12 +27,11 @@ Construct a Node.js evalution environment. Can supply :host and :port.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/node.clj#L198-L202):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/node.clj#L198-L201):
 
 ```clj
 (defn repl-env
   [& {:as options}]
-  (assert (even? (count options)) "Arguments must be interleaved key value pairs")
   (repl-env* options))
 ```
 
@@ -40,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:198-202](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/node.clj#L198-L202)</ins>
+                └── <ins>[node.clj:198-201](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/node.clj#L198-L201)</ins>
 </pre>
 
 -->
@@ -90,12 +89,12 @@ The API data for this symbol:
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.repl.node/repl-env",
- :source {:code "(defn repl-env\n  [& {:as options}]\n  (assert (even? (count options)) \"Arguments must be interleaved key value pairs\")\n  (repl-env* options))",
+ :source {:code "(defn repl-env\n  [& {:as options}]\n  (repl-env* options))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/node.clj",
-          :lines [198 202]},
+          :lines [198 201]},
  :full-name "cljs.repl.node/repl-env",
  :docstring "Construct a Node.js evalution environment. Can supply :host and :port."}
 

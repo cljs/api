@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/browser/dom.cljs#L104-L105):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/clojure/browser/dom.cljs#L104-L105):
 
 ```clj
 (defn insert-at [parent child index]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:104-105](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/browser/dom.cljs#L104-L105)</ins>
+                └── <ins>[dom.cljs:104-105](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/clojure/browser/dom.cljs#L104-L105)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn insert-at [parent child index]\n  (gdom/insertChildAt parent child index))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [104 105]},
  :full-name "clojure.browser.dom/insert-at",

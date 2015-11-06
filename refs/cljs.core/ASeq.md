@@ -18,23 +18,29 @@
 
 
 
+Source docstring:
+
+```
+Marker protocol indicating an array sequence.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L295):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L370-L371):
 
 ```clj
-(defprotocol ASeq)
+(defprotocol ASeq
+  "Marker protocol indicating an array sequence.")
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:295](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L295)</ins>
+            └── <ins>[core.cljs:370-371](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L370-L371)</ins>
 </pre>
 
 -->
@@ -78,17 +84,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ASeq",
+ :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ASeq",
- :source {:code "(defprotocol ASeq)",
+ :source {:code "(defprotocol ASeq\n  \"Marker protocol indicating an array sequence.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [295]},
+          :lines [370 371]},
  :full-name "cljs.core/ASeq",
  :clj-symbol "clojure.lang/ASeq",
- :history [["+" "0.0-1211"]]}
+ :docstring "Marker protocol indicating an array sequence."}
 
 ```
 

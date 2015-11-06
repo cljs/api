@@ -48,7 +48,7 @@ accept 2 arguments, index and item.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3518-L3543):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3714-L3739):
 
 ```clj
 (defn map-indexed
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3518-3543](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3518-L3543)</ins>
+            └── <ins>[core.cljs:3714-3739](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3714-L3739)</ins>
 </pre>
 
 -->
@@ -136,9 +136,9 @@ The API data for this symbol:
  :source {:code "(defn map-indexed\n  ([f]\n    (fn [rf]\n      (let [i (volatile! -1)]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (rf result (f (vswap! i inc) input)))))))\n  ([f coll]\n    (letfn [(mapi [idx coll]\n              (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (chunk-append b (f (+ idx i) (-nth c i))))\n                      (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                    (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n      (mapi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3518 3543]},
+          :lines [3714 3739]},
  :full-name "cljs.core/map-indexed",
  :clj-symbol "clojure.core/map-indexed",
  :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item."}

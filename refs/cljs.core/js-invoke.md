@@ -55,7 +55,7 @@ string is not a valid unquoted property name.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L241-L245):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L298-L302):
 
 ```clj
 (defn js-invoke
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:241-245](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L241-L245)</ins>
+            └── <ins>[core.cljs:298-302](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L298-L302)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn js-invoke\n  [obj s & args]\n  (.apply (aget obj s) obj (into-array args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [241 245]},
+          :lines [298 302]},
  :examples [{:id "373cce",
              :content "If we have a JavaScript object with an unusual property name:\n\n```js\n// JavaScript\nvar obj = {\n  \"my sum\": function(a,b) { return a+b; }\n};\n```\n\nWe can invoke it from ClojureScript:\n\n```clj\n(js-invoke js/obj \"my sum\" 1 2)\n;=> 3\n```"}],
  :full-name "cljs.core/js-invoke",

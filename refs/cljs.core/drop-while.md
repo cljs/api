@@ -49,7 +49,7 @@ stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3933-L3956):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4129-L4152):
 
 ```clj
 (defn drop-while
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3933-3956](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3933-L3956)</ins>
+            └── <ins>[core.cljs:4129-4152](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4129-L4152)</ins>
 </pre>
 
 -->
@@ -136,9 +136,9 @@ The API data for this symbol:
  :source {:code "(defn drop-while\n  ([pred]\n     (fn [rf]\n       (let [da (volatile! true)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [drop? @da]\n                (if (and drop? (pred input))\n                  result\n                  (do\n                    (vreset! da nil)\n                    (rf result input)))))))))\n  ([pred coll]\n     (let [step (fn [pred coll]\n                  (let [s (seq coll)]\n                    (if (and s (pred (first s)))\n                      (recur pred (rest s))\n                      s)))]\n       (lazy-seq (step pred coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3933 3956]},
+          :lines [4129 4152]},
  :full-name "cljs.core/drop-while",
  :clj-symbol "clojure.core/drop-while",
  :docstring "Returns a lazy sequence of the items in coll starting from the\nfirst item for which (pred item) returns logical false.  Returns a\nstateful transducer when no collection is provided."}

@@ -30,7 +30,7 @@ Removes the method of multimethod associated with dispatch-value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L9233-L9236):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L9440-L9443):
 
 ```clj
 (defn remove-method
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9233-9236](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L9233-L9236)</ins>
+            └── <ins>[core.cljs:9440-9443](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L9440-L9443)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn remove-method\n [multifn dispatch-val]\n (-remove-method multifn dispatch-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9233 9236]},
+          :lines [9440 9443]},
  :full-name "cljs.core/remove-method",
  :clj-symbol "clojure.core/remove-method",
  :docstring "Removes the method of multimethod associated with dispatch-value."}

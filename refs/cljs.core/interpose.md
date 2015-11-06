@@ -41,7 +41,7 @@ Returns a lazy seq of the elements of coll separated by sep
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4004-L4021):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4200-L4217):
 
 ```clj
 (defn interpose
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4004-4021](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4004-L4021)</ins>
+            └── <ins>[core.cljs:4200-4217](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L4200-L4217)</ins>
 </pre>
 
 -->
@@ -124,9 +124,9 @@ The API data for this symbol:
  :source {:code "(defn interpose\n  ([sep]\n    (fn [rf]\n      (let [started (volatile! false)]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if @started\n              (let [sepr (rf result sep)]\n                (if (reduced? sepr)\n                  sepr\n                  (rf sepr input)))\n              (do\n                (vreset! started true)\n                (rf result input))))))))\n  ([sep coll] (drop 1 (interleave (repeat sep) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4004 4021]},
+          :lines [4200 4217]},
  :full-name "cljs.core/interpose",
  :clj-symbol "clojure.core/interpose",
  :docstring "Returns a lazy seq of the elements of coll separated by sep"}

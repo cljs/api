@@ -36,6 +36,12 @@ Receive - Eval - Print - Loop
 </tr></thead>
 <tr>
 <td></td>
+<td><samp>[bootstrap](../clojure.browser.repl/bootstrap.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115"><img valign="middle" alt="[+] 0.0-3115" title="Added in 0.0-3115" src="https://img.shields.io/badge/+-0.0--3115-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[connect](../clojure.browser.repl/connect.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -51,6 +57,12 @@ Receive - Eval - Print - Loop
 <td><samp>[get-ua-product](../clojure.browser.repl/get-ua-product.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3058"><img valign="middle" alt="[+] 0.0-3058" title="Added in 0.0-3058" src="https://img.shields.io/badge/+-0.0--3058-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[load-queue](../clojure.browser.repl/load-queue.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115"><img valign="middle" alt="[+] 0.0-3115" title="Added in 0.0-3115" src="https://img.shields.io/badge/+-0.0--3115-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

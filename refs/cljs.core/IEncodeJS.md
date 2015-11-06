@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8734-L8737):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8941-L8944):
 
 ```clj
 (defprotocol IEncodeJS
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8734-8737](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L8734-L8737)</ins>
+            └── <ins>[core.cljs:8941-8944](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L8941-L8944)</ins>
 </pre>
 
 -->
@@ -80,9 +80,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEncodeJS\n  (-clj->js [x] \"Recursively transforms clj values to JavaScript\")\n  (-key->js [x] \"Transforms map keys to valid JavaScript keys. Arbitrary keys are\n  encoded to their string representation via (pr-str x)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8734 8737]},
+          :lines [8941 8944]},
  :methods [{:name "-clj->js",
             :signature ["[x]"],
             :docstring "Recursively transforms clj values to JavaScript"}

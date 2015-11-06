@@ -37,7 +37,7 @@ certain transforms may inject or skip items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1886-L1899):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2082-L2095):
 
 ```clj
 (defn transduce
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1886-1899](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L1886-L1899)</ins>
+            └── <ins>[core.cljs:2082-2095](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2082-L2095)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn transduce\n  ([xform f coll] (transduce xform f (f) coll))\n  ([xform f init coll]\n     (let [f (xform f)\n           ret (reduce f init coll)]\n       (f ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1886 1899]},
+          :lines [2082 2095]},
  :full-name "cljs.core/transduce",
  :docstring "reduce with a transformation of f (xf). If init is not\nsupplied, (f) will be called to produce it. f should be a reducing\nstep function that accepts both 1 and 2 arguments, if it accepts\nonly 2 you can add the arity-1 with 'completing'. Returns the result\nof applying (the transformed) xf to init and the first item in coll,\nthen applying xf to that result and the 2nd item, etc. If coll\ncontains no items, returns init and f is not called. Note that\ncertain transforms may inject or skip items."}
 

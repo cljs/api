@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L650-L665):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L684-L702):
 
 ```clj
 (defmethod parse 'case*
@@ -29,10 +29,13 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
         tests    (mapv #(mapv (fn [t] (analyze expr-env t)) %) tests)
         thens    (mapv #(analyze env %) thens)
         default  (analyze env default)]
-    (assert (every? (fn [t] (and (= :constant (:op t))
-                              ((some-fn number? string? char?) (:form t))))
+    (assert (every? (fn [t]
+                      (or
+                        (-> t :info :const)
+                        (and (= :constant (:op t))
+                             ((some-fn number? string? char?) (:form t)))))
               (apply concat tests))
-      "case* tests must be numbers or strings")
+      "case* tests must be numbers, strings, or constants")
     {:env env :op :case* :form form
      :v v :tests tests :thens thens :default default
      :children (vec (concat [v] tests thens (if default [default])))}))
@@ -42,11 +45,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:650-665](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L650-L665)</ins>
+            └── <ins>[analyzer.clj:684-702](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L684-L702)</ins>
 </pre>
 
 -->
@@ -83,12 +86,12 @@ The API data for this symbol:
 {:ns "special",
  :name "case*",
  :type "special form",
- :source {:code "(defmethod parse 'case*\n  [op env [_ sym tests thens default :as form] name _]\n  (assert (symbol? sym) \"case* must switch on symbol\")\n  (assert (every? vector? tests) \"case* tests must be grouped in vectors\")\n  (let [expr-env (assoc env :context :expr)\n        v        (disallowing-recur (analyze expr-env sym))\n        tests    (mapv #(mapv (fn [t] (analyze expr-env t)) %) tests)\n        thens    (mapv #(analyze env %) thens)\n        default  (analyze env default)]\n    (assert (every? (fn [t] (and (= :constant (:op t))\n                              ((some-fn number? string? char?) (:form t))))\n              (apply concat tests))\n      \"case* tests must be numbers or strings\")\n    {:env env :op :case* :form form\n     :v v :tests tests :thens thens :default default\n     :children (vec (concat [v] tests thens (if default [default])))}))",
+ :source {:code "(defmethod parse 'case*\n  [op env [_ sym tests thens default :as form] name _]\n  (assert (symbol? sym) \"case* must switch on symbol\")\n  (assert (every? vector? tests) \"case* tests must be grouped in vectors\")\n  (let [expr-env (assoc env :context :expr)\n        v        (disallowing-recur (analyze expr-env sym))\n        tests    (mapv #(mapv (fn [t] (analyze expr-env t)) %) tests)\n        thens    (mapv #(analyze env %) thens)\n        default  (analyze env default)]\n    (assert (every? (fn [t]\n                      (or\n                        (-> t :info :const)\n                        (and (= :constant (:op t))\n                             ((some-fn number? string? char?) (:form t)))))\n              (apply concat tests))\n      \"case* tests must be numbers, strings, or constants\")\n    {:env env :op :case* :form form\n     :v v :tests tests :thens thens :default default\n     :children (vec (concat [v] tests thens (if default [default])))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [650 665]},
+          :lines [684 702]},
  :full-name "special/case*",
  :full-name-encode "special/caseSTAR",
  :history [["+" "0.0-2227"]]}

@@ -15,24 +15,34 @@
 
 
 
+Source docstring:
+
+```
+Protocol for associative types that can reduce themselves
+  via a function of key and val. Called by cljs.core/reduce-kv.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L345-L346):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L465-L470):
 
 ```clj
 (defprotocol IKVReduce
-  (-kv-reduce [coll f init]))
+  "Protocol for associative types that can reduce themselves
+  via a function of key and val. Called by cljs.core/reduce-kv."
+  (-kv-reduce [coll f init]
+    "Reduces an associative collection and returns the result. f should be
+     a function that takes three arguments."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:345-346](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L345-L346)</ins>
+            └── <ins>[core.cljs:465-470](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L465-L470)</ins>
 </pre>
 
 -->
@@ -73,19 +83,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IKVReduce",
+ :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/IKVReduce",
- :source {:code "(defprotocol IKVReduce\n  (-kv-reduce [coll f init]))",
+ :source {:code "(defprotocol IKVReduce\n  \"Protocol for associative types that can reduce themselves\n  via a function of key and val. Called by cljs.core/reduce-kv.\"\n  (-kv-reduce [coll f init]\n    \"Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [345 346]},
+          :lines [465 470]},
  :methods [{:name "-kv-reduce",
             :signature ["[coll f init]"],
-            :docstring nil}],
+            :docstring "Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments."}],
  :full-name "cljs.core/IKVReduce",
- :history [["+" "0.0-1211"]]}
+ :docstring "Protocol for associative types that can reduce themselves\n  via a function of key and val. Called by cljs.core/reduce-kv."}
 
 ```
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3202-L3203):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3398-L3399):
 
 ```clj
 (defn seq-iter [coll]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3202-3203](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3202-L3203)</ins>
+            └── <ins>[core.cljs:3398-3399](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3398-L3399)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn seq-iter [coll]\n  (SeqIter. INIT coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3202 3203]},
+          :lines [3398 3399]},
  :full-name "cljs.core/seq-iter",
  :full-name-encode "cljs.core/seq-iter",
  :history [["+" "0.0-2301"]]}

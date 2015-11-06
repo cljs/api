@@ -15,24 +15,34 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding to a collection.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L286-L287):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L353-L359):
 
 ```clj
 (defprotocol ICollection
-  (^clj -conj [coll o]))
+  "Protocol for adding to a collection."
+  (^clj -conj [coll o]
+    "Returns a new collection of coll with o added to it. The new item
+     should be added to the most efficient place, e.g.
+     (conj [1 2 3 4] 5) => [1 2 3 4 5]
+     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:286-287](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L286-L287)</ins>
+            └── <ins>[core.cljs:353-359](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L353-L359)</ins>
 </pre>
 
 -->
@@ -73,17 +83,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ICollection",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ICollection",
- :source {:code "(defprotocol ICollection\n  (^clj -conj [coll o]))",
+ :source {:code "(defprotocol ICollection\n  \"Protocol for adding to a collection.\"\n  (^clj -conj [coll o]\n    \"Returns a new collection of coll with o added to it. The new item\n     should be added to the most efficient place, e.g.\n     (conj [1 2 3 4] 5) => [1 2 3 4 5]\n     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [286 287]},
- :methods [{:name "-conj", :signature ["[coll o]"], :docstring nil}],
+          :lines [353 359]},
+ :methods [{:name "-conj",
+            :signature ["[coll o]"],
+            :docstring "Returns a new collection of coll with o added to it. The new item\n     should be added to the most efficient place, e.g.\n     (conj [1 2 3 4] 5) => [1 2 3 4 5]\n     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)"}],
  :full-name "cljs.core/ICollection",
- :history [["+" "0.0-927"]]}
+ :docstring "Protocol for adding to a collection."}
 
 ```
 

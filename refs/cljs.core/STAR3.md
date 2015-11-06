@@ -84,7 +84,7 @@ bound in a repl thread to the third most recent value printed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L71-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L126-L128):
 
 ```clj
 (def
@@ -96,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-73](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L71-L73)</ins>
+            └── <ins>[core.cljs:126-128](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L126-L128)</ins>
 </pre>
 
 -->
@@ -152,9 +152,9 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the third most recent value printed\"}\n  *3)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [71 73]},
+          :lines [126 128]},
  :examples [{:id "d7a6e9",
              :content "```clj\n(+ 1 2 3 4)\n;;=> 10\n\n(+ 4 8)\n;;=> 12\n\n(+ 1 2)\n;;=> 3\n\n*3\n;;=> 10\n\n(inc *3)\n;;=> 11\n```\n\nNote that a standalone evaluation of `*1`, `*2`, `*3`, or `*e` is not a part of\nremembered history:\n\n```clj\n:first\n;;=> :first\n\n:second\n;;=> :second\n\n:third\n;;=> :third\n\n*3\n;;=> :first\n\n*2\n;;=> :second\n\n*1\n;;=> :third\n```"}],
  :full-name "cljs.core/*3",

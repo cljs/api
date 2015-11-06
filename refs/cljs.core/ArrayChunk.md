@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2721-L2743):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2917-L2939):
 
 ```clj
 (deftype ArrayChunk [arr off end]
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2721-2743](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L2721-L2743)</ins>
+            └── <ins>[core.cljs:2917-2939](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L2917-L2939)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(deftype ArrayChunk [arr off end]\n  ICounted\n  (-count [_] (- end off))\n\n  IIndexed\n  (-nth [coll i]\n    (aget arr (+ off i)))\n  (-nth [coll i not-found]\n    (if (and (>= i 0) (< i (- end off)))\n      (aget arr (+ off i))\n      not-found))\n\n  IChunk\n  (-drop-first [coll]\n    (if (== off end)\n      (throw (js/Error. \"-drop-first of empty chunk\"))\n      (ArrayChunk. arr (inc off) end)))\n\n  IReduce\n  (-reduce [coll f]\n    (array-reduce arr f (aget arr off) (inc off)))\n  (-reduce [coll f start]\n    (array-reduce arr f start off)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2721 2743]},
+          :lines [2917 2939]},
  :full-name "cljs.core/ArrayChunk",
  :clj-symbol "clojure.lang/ArrayChunk"}
 

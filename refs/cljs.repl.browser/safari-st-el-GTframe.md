@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L310-L325):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L300-L315):
 
 ```clj
 (defn safari-st-el->frame
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:310-325](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L310-L325)</ins>
+                └── <ins>[browser.clj:300-315](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L300-L315)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn safari-st-el->frame\n  [st-el opts]\n  (let [[function flc] (if (re-find #\"@\" st-el)\n                         (string/split st-el #\"@\")\n                         [nil st-el])\n        [file line column] (parse-file-line-column flc)]\n    (if (and file function line column)\n      {:file (parse-file file opts)\n       :function function\n       :line line\n       :column column}\n      (when-not (string/blank? function)\n        {:file nil\n         :function (string/trim function)\n         :line nil\n         :column nil}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [310 325]},
+          :lines [300 315]},
  :full-name "cljs.repl.browser/safari-st-el->frame",
  :full-name-encode "cljs.repl.browser/safari-st-el-GTframe",
  :history [["+" "0.0-3053"]]}

@@ -19,6 +19,9 @@
  <samp>
 (__run-all-tests__ re)<br>
 </samp>
+ <samp>
+(__run-all-tests__ re env)<br>
+</samp>
 
 ---
 
@@ -36,13 +39,14 @@ tested.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/test.clj#L292-L303):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/test.clj#L292-L304):
 
 ```clj
 (defmacro run-all-tests
-  ([] `(cljs.test/run-all-tests nil))
-  ([re]
-   `(cljs.test/run-tests (cljs.test/empty-env)
+  ([] `(cljs.test/run-all-tests nil (cljs.test/empty-env)))
+  ([re] `(cljs.test/run-all-tests ~re (cljs.test/empty-env)))
+  ([re env]
+   `(cljs.test/run-tests ~env
       ~@(map
           (fn [ns] `(quote ~ns))
           (cond->> (ana-api/all-ns)
@@ -53,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:292-303](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/test.clj#L292-L303)</ins>
+            └── <ins>[test.clj:292-304](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/test.clj#L292-L304)</ins>
 </pre>
 
 -->
@@ -101,16 +105,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "run-all-tests",
- :signature ["[]" "[re]"],
+ :signature ["[]" "[re]" "[re env]"],
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.test/run-all-tests",
- :source {:code "(defmacro run-all-tests\n  ([] `(cljs.test/run-all-tests nil))\n  ([re]\n   `(cljs.test/run-tests (cljs.test/empty-env)\n      ~@(map\n          (fn [ns] `(quote ~ns))\n          (cond->> (ana-api/all-ns)\n            re (filter #(re-matches re (name %))))))))",
+ :source {:code "(defmacro run-all-tests\n  ([] `(cljs.test/run-all-tests nil (cljs.test/empty-env)))\n  ([re] `(cljs.test/run-all-tests ~re (cljs.test/empty-env)))\n  ([re env]\n   `(cljs.test/run-tests ~env\n      ~@(map\n          (fn [ns] `(quote ~ns))\n          (cond->> (ana-api/all-ns)\n            re (filter #(re-matches re (name %))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/clj/cljs/test.clj",
-          :lines [292 303]},
+          :lines [292 304]},
  :full-name "cljs.test/run-all-tests",
  :clj-symbol "clojure.test/run-all-tests",
  :docstring "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested."}

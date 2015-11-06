@@ -18,24 +18,32 @@
 
 
 
+Source docstring:
+
+```
+Protocol for looking up a value in a data structure.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L304-L305):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L391-L395):
 
 ```clj
 (defprotocol ILookup
-  (-lookup [o k] [o k not-found]))
+  "Protocol for looking up a value in a data structure."
+  (-lookup [o k] [o k not-found]
+    "Use k to look up a value in o. If not-found is supplied and k is not
+     a valid value that can be used for look up, not-found is returned."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:304-305](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L304-L305)</ins>
+            └── <ins>[core.cljs:391-395](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L391-L395)</ins>
 </pre>
 
 -->
@@ -82,17 +90,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ILookup",
- :source {:code "(defprotocol ILookup\n  (-lookup [o k] [o k not-found]))",
+ :source {:code "(defprotocol ILookup\n  \"Protocol for looking up a value in a data structure.\"\n  (-lookup [o k] [o k not-found]\n    \"Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [304 305]},
+          :lines [391 395]},
  :methods [{:name "-lookup",
             :signature ["[o k]" "[o k not-found]"],
-            :docstring nil}],
+            :docstring "Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned."}],
  :full-name "cljs.core/ILookup",
- :clj-symbol "clojure.lang/ILookup"}
+ :clj-symbol "clojure.lang/ILookup",
+ :docstring "Protocol for looking up a value in a data structure."}
 
 ```
 

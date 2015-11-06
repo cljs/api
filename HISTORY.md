@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3115](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3115)__</td>
+<td>2015-03-15</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.16</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003115syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003115library">
++2 -1
+</a>
+</td>
+<td>
+<a href="#user-content-003115compiler">
+ -2
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3058](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3058)__</td>
 <td>2015-03-09</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2292,6 +2315,53 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3115
+
+<a name="003115syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003115library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-macro-red.svg">
+</td>
+<td><samp>[~~cljs.core/load-file\*~~](refs/cljs.core/load-fileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.browser.repl/bootstrap](refs/clojure.browser.repl/bootstrap.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[clojure.browser.repl/load-queue](refs/clojure.browser.repl/load-queue.md)</samp></td>
+</tr>
+</table>
+
+<a name="003115compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/loaded-libs~~](refs/cljs.repl.browser/loaded-libs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/preloaded-libs~~](refs/cljs.repl.browser/preloaded-libs.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-3058
@@ -5567,7 +5637,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/array?](refs/cljs.core/arrayQMARK.md)</samp></td>
 </tr>

@@ -15,24 +15,31 @@
 
 
 
+Source docstring:
+
+```
+Protocol for adding value comparison functionality to a type.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L348-L349):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L472-L475):
 
 ```clj
 (defprotocol IEquiv
-  (^boolean -equiv [o other]))
+  "Protocol for adding value comparison functionality to a type."
+  (^boolean -equiv [o other]
+    "Returns true if o and other are equal, false otherwise."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:348-349](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L348-L349)</ins>
+            └── <ins>[core.cljs:472-475](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L472-L475)</ins>
 </pre>
 
 -->
@@ -73,17 +80,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IEquiv",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IEquiv",
- :source {:code "(defprotocol IEquiv\n  (^boolean -equiv [o other]))",
+ :source {:code "(defprotocol IEquiv\n  \"Protocol for adding value comparison functionality to a type.\"\n  (^boolean -equiv [o other]\n    \"Returns true if o and other are equal, false otherwise.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [348 349]},
- :methods [{:name "-equiv", :signature ["[o other]"], :docstring nil}],
+          :lines [472 475]},
+ :methods [{:name "-equiv",
+            :signature ["[o other]"],
+            :docstring "Returns true if o and other are equal, false otherwise."}],
  :full-name "cljs.core/IEquiv",
- :history [["+" "0.0-927"]]}
+ :docstring "Protocol for adding value comparison functionality to a type."}
 
 ```
 

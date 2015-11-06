@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3184-L3200):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3380-L3396):
 
 ```clj
 (deftype SeqIter [^:mutable _seq ^:mutable _next]
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3184-3200](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L3184-L3200)</ins>
+            └── <ins>[core.cljs:3380-3396](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L3380-L3396)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(deftype SeqIter [^:mutable _seq ^:mutable _next]\n  Object\n  (hasNext [_]\n    (if (identical? _seq INIT)\n      (do\n        (set! _seq START)\n        (set! _next (seq _next)))\n      (if (identical? _seq _next)\n        (set! _next (next _seq))))\n    (not (nil? _next)))\n  (next [this]\n    (if-not (.hasNext this)\n      (throw (js/Error. \"No such element\"))\n      (do\n        (set! _seq _next)\n        (first _next))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3184 3200]},
+          :lines [3380 3396]},
  :full-name "cljs.core/SeqIter",
  :clj-symbol "clojure.lang/SeqIterator"}
 

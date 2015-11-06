@@ -18,23 +18,35 @@
 
 
 
+Source docstring:
+
+```
+When set to true, output will be flushed whenever a newline is printed.
+
+Defaults to true.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L41-L46):
 
 ```clj
-(def ^:dynamic *flush-on-newline* true)
+(def
+  ^{:dynamic true
+    :doc "When set to true, output will be flushed whenever a newline is printed.
+
+  Defaults to true."}
+  *flush-on-newline* true)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:36](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L36)</ins>
+            └── <ins>[core.cljs:41-46](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L41-L46)</ins>
 </pre>
 
 -->
@@ -78,17 +90,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*flush-on-newline*",
+ :history [["+" "0.0-927"]],
  :type "dynamic var",
- :source {:code "(def ^:dynamic *flush-on-newline* true)",
+ :full-name-encode "cljs.core/STARflush-on-newlineSTAR",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to true, output will be flushed whenever a newline is printed.\n\n  Defaults to true.\"}\n  *flush-on-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [36]},
+          :lines [41 46]},
  :full-name "cljs.core/*flush-on-newline*",
- :full-name-encode "cljs.core/STARflush-on-newlineSTAR",
  :clj-symbol "clojure.core/*flush-on-newline*",
- :history [["+" "0.0-927"]]}
+ :docstring "When set to true, output will be flushed whenever a newline is printed.\n\nDefaults to true."}
 
 ```
 

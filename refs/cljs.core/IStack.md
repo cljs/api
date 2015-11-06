@@ -18,25 +18,38 @@
 
 
 
+Source docstring:
+
+```
+Protocol for collections to provide access to their items as stacks. The top
+  of the stack should be accessed in the most efficient way for the different
+  data structures.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L323-L325):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L424-L432):
 
 ```clj
 (defprotocol IStack
-  (-peek [coll])
-  (^clj -pop [coll]))
+  "Protocol for collections to provide access to their items as stacks. The top
+  of the stack should be accessed in the most efficient way for the different
+  data structures."
+  (-peek [coll]
+    "Returns the item from the top of the stack. Is used by cljs.core/peek.")
+  (^clj -pop [coll]
+    "Returns a new stack without the item on top of the stack. Is used
+     by cljs.core/pop."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
+clojurescript @ r3115
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:323-325](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L323-L325)</ins>
+            └── <ins>[core.cljs:424-432](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L424-L432)</ins>
 </pre>
 
 -->
@@ -83,16 +96,21 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IStack",
- :source {:code "(defprotocol IStack\n  (-peek [coll])\n  (^clj -pop [coll]))",
+ :source {:code "(defprotocol IStack\n  \"Protocol for collections to provide access to their items as stacks. The top\n  of the stack should be accessed in the most efficient way for the different\n  data structures.\"\n  (-peek [coll]\n    \"Returns the item from the top of the stack. Is used by cljs.core/peek.\")\n  (^clj -pop [coll]\n    \"Returns a new stack without the item on top of the stack. Is used\n     by cljs.core/pop.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3058",
+          :tag "r3115",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [323 325]},
- :methods [{:name "-peek", :signature ["[coll]"], :docstring nil}
-           {:name "-pop", :signature ["[coll]"], :docstring nil}],
+          :lines [424 432]},
+ :methods [{:name "-peek",
+            :signature ["[coll]"],
+            :docstring "Returns the item from the top of the stack. Is used by cljs.core/peek."}
+           {:name "-pop",
+            :signature ["[coll]"],
+            :docstring "Returns a new stack without the item on top of the stack. Is used\n     by cljs.core/pop."}],
  :full-name "cljs.core/IStack",
- :clj-symbol "clojure.lang/IPersistentStack"}
+ :clj-symbol "clojure.lang/IPersistentStack",
+ :docstring "Protocol for collections to provide access to their items as stacks. The top\n  of the stack should be accessed in the most efficient way for the different\n  data structures."}
 
 ```
 
