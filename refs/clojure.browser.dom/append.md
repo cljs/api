@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L12-L14):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L12-L14):
 
 ```clj
 (defn append [parent & children]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:12-14](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L12-L14)</ins>
+                └── <ins>[dom.cljs:12-14](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L12-L14)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn append [parent & children]\n  (apply gdom/append parent children)\n  parent)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [12 14]},
  :full-name "clojure.browser.dom/append",

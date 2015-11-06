@@ -55,7 +55,7 @@ implementations for protocols.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L211-L260):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L211-L260):
 
 ```clj
 (defmacro extend-type [tsym & impls]
@@ -114,11 +114,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:211-260](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L211-L260)</ins>
+            └── <ins>[core.clj:211-260](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L211-L260)</ins>
 </pre>
 
 -->
@@ -171,7 +171,7 @@ The API data for this symbol:
  :source {:code "(defmacro extend-type [tsym & impls]\n  (let [resolve #(let [ret (:name (cljs.compiler/resolve-var (dissoc &env :locals) %))]\n                   (assert ret (str \"Can't resolve: \" %))\n                   ret)\n        impl-map (loop [ret {} s impls]\n                   (if (seq s)\n                     (recur (assoc ret (first s) (take-while seq? (next s)))\n                            (drop-while seq? (next s)))\n                     ret))]\n    (if (base-type tsym)\n      (let [t (base-type tsym)\n            assign-impls (fn [[p sigs]]\n                           (let [psym (resolve p)\n                                 pfn-prefix (subs (str psym) 0 (clojure.core/inc (.lastIndexOf (str psym) \".\")))]\n                             (cons `(aset ~psym ~t true)\n                                   (map (fn [[f & meths]]\n                                          `(aset ~(symbol (str pfn-prefix f)) ~t (fn ~@meths)))\n                                        sigs))))]\n        `(do ~@(mapcat assign-impls impl-map)))\n      (let [t (resolve tsym)\n            prototype-prefix (str t \".prototype.\")\n            assign-impls (fn [[p sigs]]\n                           (let [psym (resolve p)\n                                 pprefix (protocol-prefix psym)]\n                             (if (= p 'Object)\n                               (let [adapt-params (fn [[sig & body]]\n                                                    (let [[tname & args] sig]\n                                                      (list (with-meta (vec args) (meta sig))\n                                                            (list* 'this-as tname body))))]\n                                 (map (fn [[f & meths]]\n                                        `(set! ~(symbol (str prototype-prefix f)) (fn ~@(map adapt-params meths))))\n                                      sigs))\n                               (cons `(set! ~(symbol (str prototype-prefix pprefix)) true)\n                                     (map (fn [[f & meths]]\n                                            (let [ifn? (= psym 'cljs.core.IFn)\n                                                  pf (if ifn?\n                                                       (str prototype-prefix 'call)\n                                                       (str prototype-prefix pprefix f))\n                                                  adapt-params (fn [[[targ & args :as sig] & body]]\n                                                                 (let [tsym (gensym \"tsym\")]\n                                                                   `(~(with-meta (vec (cons tsym args)) (meta sig))\n                                                                     (this-as ~tsym\n                                                                              (let [~targ ~tsym]\n                                                                                ~@body)))))\n                                                  meths (if ifn?\n                                                          (map adapt-params meths)\n                                                          meths)]\n                                              `(set! ~(symbol pf) (fn ~@meths))))\n                                          sigs)))))]\n        `(do ~@(mapcat assign-impls impl-map))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/core.clj",
           :lines [211 260]},
  :full-name "cljs.core/extend-type",

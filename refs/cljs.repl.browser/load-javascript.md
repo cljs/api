@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/browser.clj#L283-L290):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/browser.clj#L283-L290):
 
 ```clj
 (defn load-javascript [repl-env ns url]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:283-290](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/browser.clj#L283-L290)</ins>
+                └── <ins>[browser.clj:283-290](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/browser.clj#L283-L290)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript [repl-env ns url]\n  (let [missing (remove #(contains? @loaded-libs %) ns)]\n    (when (seq missing)\n      (let [ret (browser-eval (object-query-str ns))]\n        (when-not (and (= (:status ret) :success)\n                       (= (:value ret) \"true\"))\n          (browser-eval (slurp url))))\n      (swap! loaded-libs (partial apply conj) missing))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [283 290]},
  :full-name "cljs.repl.browser/load-javascript",

@@ -52,7 +52,7 @@ side-effects.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1574-L1584):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1578-L1588):
 
 ```clj
 (defn keep
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1574-1584](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1574-L1584)</ins>
+            └── <ins>[core.cljs:1578-1588](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1578-L1588)</ins>
 </pre>
 
 -->
@@ -128,9 +128,9 @@ The API data for this symbol:
  :source {:code "(defn keep\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (let [x (f (first s))]\n        (if (nil? x)\n          (keep f (rest s))\n          (cons x (keep f (rest s)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1574 1584]},
+          :lines [1578 1588]},
  :full-name "cljs.core/keep",
  :clj-symbol "clojure.core/keep",
  :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}

@@ -1599,14 +1599,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/PersistentVector](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/PersistentVector.EMPTY](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/ProxyHandler](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ProxyHandler.java)</samp></td>
 </tr>
 <tr>

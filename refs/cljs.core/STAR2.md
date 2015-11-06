@@ -81,10 +81,10 @@ bound in a repl thread to the second most recent value printed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L27-L29):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L27-L29):
 
 ```clj
-(def 
+(def
   ^{:doc "bound in a repl thread to the second most recent value printed"}
   *2)
 ```
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:27-29](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L27-L29)</ins>
+            └── <ins>[core.cljs:27-29](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L27-L29)</ins>
 </pre>
 
 -->
@@ -146,10 +146,10 @@ The API data for this symbol:
  :type "var",
  :related ["cljs.core/*1" "cljs.core/*3" "cljs.core/*e"],
  :full-name-encode "cljs.core/STAR2",
- :source {:code "(def \n  ^{:doc \"bound in a repl thread to the second most recent value printed\"}\n  *2)",
+ :source {:code "(def\n  ^{:doc \"bound in a repl thread to the second most recent value printed\"}\n  *2)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [27 29]},
  :examples [{:id "208d41",

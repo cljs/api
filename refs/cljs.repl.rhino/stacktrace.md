@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L40):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L40):
 
 ```clj
 (defmulti stacktrace class)
@@ -27,19 +27,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:40](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L40)</ins>
+                └── <ins>[rhino.clj:40](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L40)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L42-L43):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L42-L43):
 
 ```clj
 (defmethod stacktrace :default [e]
@@ -50,17 +50,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r993/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:42-43](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L42-L43)</ins>
+                └── <ins>[rhino.clj:42-43](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L42-L43)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L45-L46):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L45-L46):
 
 ```clj
 (defmethod stacktrace org.mozilla.javascript.RhinoException [e]
@@ -71,12 +71,12 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r993/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:45-46](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L45-L46)</ins>
+                └── <ins>[rhino.clj:45-46](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L45-L46)</ins>
 </pre>
 -->
 
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(defmulti stacktrace class)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [40]},
  :full-name "cljs.repl.rhino/stacktrace",
@@ -127,13 +127,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defmethod stacktrace :default [e]\n  (apply str (interpose \"\\n\" (map #(str \"        \" (.toString %)) (.getStackTrace e)))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r993",
+                  :tag "r1006",
                   :filename "src/clj/cljs/repl/rhino.clj",
                   :lines [42 43]}
                  {:code "(defmethod stacktrace org.mozilla.javascript.RhinoException [e]\n  (.getScriptStackTrace e))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r993",
+                  :tag "r1006",
                   :filename "src/clj/cljs/repl/rhino.clj",
                   :lines [45 46]}),
  :history [["+" "0.0-927"]]}

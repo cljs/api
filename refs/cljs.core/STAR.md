@@ -73,7 +73,7 @@ Returns the product of nums. (*) returns 1.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L824-L829):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L824-L829):
 
 ```clj
 (defn *
@@ -87,18 +87,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:824-829](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L824-L829)</ins>
+            └── <ins>[core.cljs:824-829](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L824-L829)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L77-L81):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L77-L81):
 
 ```clj
 (defmacro *
@@ -112,11 +112,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:77-81](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L77-L81)</ins>
+            └── <ins>[core.clj:77-81](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L77-L81)</ins>
 </pre>
 -->
 
@@ -167,13 +167,13 @@ The API data for this symbol:
  :source {:code "(defn *\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/* x y))\n  ([x y & more] (reduce * (cljs.core/* x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [824 829]},
  :extra-sources [{:code "(defmacro *\n  ([] 1)\n  ([x] x)\n  ([x y] (list 'js* \"(~{} * ~{})\" x y))\n  ([x y & more] `(* (* ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r993",
+                  :tag "r1006",
                   :filename "src/clj/cljs/core.clj",
                   :lines [77 81]}],
  :examples [{:id "bc4a1f",

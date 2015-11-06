@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L209-L211):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L209-L211):
 
 ```clj
 (defn read-vector
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:209-211](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L209-L211)</ins>
+            └── <ins>[reader.cljs:209-211](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L209-L211)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn read-vector\n  [rdr _]\n  (read-delimited-list \"]\" rdr true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [209 211]},
  :full-name "cljs.reader/read-vector",

@@ -60,7 +60,7 @@ false or nil).
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L639-L646):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L639-L646):
 
 ```clj
 (defmethod parse 'if
@@ -77,11 +77,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:639-646](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L639-L646)</ins>
+            └── <ins>[compiler.clj:639-646](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L639-L646)</ins>
 </pre>
 
 -->
@@ -136,7 +136,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/compiler.clj",
           :lines [639 646]},
  :examples [{:id "e591ff",

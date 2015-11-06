@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L16-L17):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L16-L17):
 
 ```clj
 (defprotocol DOMBuilder
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:16-17](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L16-L17)</ins>
+                └── <ins>[dom.cljs:16-17](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/dom.cljs#L16-L17)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol DOMBuilder\n  (-element [this] [this attrs-or-children] [this attrs children]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [16 17]},
  :methods [{:name "-element",

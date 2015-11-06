@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/browser.clj#L24-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/browser.clj#L24-L28):
 
 ```clj
 (defonce server-state (atom {:socket nil
@@ -31,12 +31,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:24-28](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/browser.clj#L24-L28)</ins>
+                └── <ins>[browser.clj:24-28](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/browser.clj#L24-L28)</ins>
 </pre>
 
 -->
@@ -81,7 +81,7 @@ The API data for this symbol:
  :source {:code "(defonce server-state (atom {:socket nil\n                             :connection nil\n                             :promised-conn nil\n                             :return-value-fn nil\n                             :client-js nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [24 28]},
  :full-name "cljs.repl.browser/server-state",

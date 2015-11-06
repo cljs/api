@@ -53,12 +53,12 @@ has the same effects, if any, and returns the opposite truth value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1482-L1490):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494):
 
 ```clj
 (defn complement
-  [f] 
-  (fn 
+  [f]
+  (fn
     ([] (not (f)))
     ([x] (not (f x)))
     ([x y] (not (f x y)))
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1482-1490](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1482-L1490)</ins>
+            └── <ins>[core.cljs:1486-1494](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1486-L1494)</ins>
 </pre>
 
 -->
@@ -123,12 +123,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/not"],
  :full-name-encode "cljs.core/complement",
- :source {:code "(defn complement\n  [f] \n  (fn \n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
+ :source {:code "(defn complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1482 1490]},
+          :lines [1486 1494]},
  :examples [{:id "69e359",
              :content "```clj\n(def a 10)\n((complement #(= a %)) 12)\n;;=> true\n```"}],
  :full-name "cljs.core/complement",

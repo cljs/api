@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/event.cljs#L82-L83):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/event.cljs#L82-L83):
 
 ```clj
 (defn fire-listeners
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:82-83](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/event.cljs#L82-L83)</ins>
+                └── <ins>[event.cljs:82-83](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/browser/event.cljs#L82-L83)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn fire-listeners\n  [obj type capture event])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [82 83]},
  :full-name "clojure.browser.event/fire-listeners",

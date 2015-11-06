@@ -67,7 +67,7 @@ otherwise false.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L838-L848):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L838-L848):
 
 ```clj
 (defn <
@@ -85,18 +85,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:838-848](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L838-L848)</ins>
+            └── <ins>[core.cljs:838-848](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L838-L848)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L88-L91):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L88-L91):
 
 ```clj
 (defmacro <
@@ -109,11 +109,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:88-91](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L88-L91)</ins>
+            └── <ins>[core.clj:88-91](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L88-L91)</ins>
 </pre>
 -->
 
@@ -164,13 +164,13 @@ The API data for this symbol:
  :source {:code "(defn <\n  ([x] true)\n  ([x y] (cljs.core/< x y))\n  ([x y & more]\n     (if (cljs.core/< x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (cljs.core/< y (first more)))\n       false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [838 848]},
  :extra-sources [{:code "(defmacro <\n  ([x] true)\n  ([x y] (list 'js* \"(~{} < ~{})\" x y))\n  ([x y & more] `(and (< ~x ~y) (< ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r993",
+                  :tag "r1006",
                   :filename "src/clj/cljs/core.clj",
                   :lines [88 91]}],
  :examples [{:id "02e6d3",

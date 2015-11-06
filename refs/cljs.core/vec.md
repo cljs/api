@@ -36,22 +36,22 @@ Creates a new vector containing the contents of `coll`
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2021-L2022):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2205-L2206):
 
 ```clj
 (defn vec [coll]
-  (reduce conj cljs.core.Vector/EMPTY coll))
+  (reduce conj cljs.core.PersistentVector/EMPTY coll))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2021-2022](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2021-L2022)</ins>
+            └── <ins>[core.cljs:2205-2206](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L2205-L2206)</ins>
 </pre>
 
 -->
@@ -101,12 +101,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/vector" "cljs.core/vector?"],
  :full-name-encode "cljs.core/vec",
- :source {:code "(defn vec [coll]\n  (reduce conj cljs.core.Vector/EMPTY coll))",
+ :source {:code "(defn vec [coll]\n  (reduce conj cljs.core.PersistentVector/EMPTY coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2021 2022]},
+          :lines [2205 2206]},
  :full-name "cljs.core/vec",
  :clj-symbol "clojure.core/vec"}
 

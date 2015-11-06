@@ -33,7 +33,7 @@ calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3204-L3210):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3388-L3394):
 
 ```clj
 (defn delay
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3204-3210](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L3204-L3210)</ins>
+            └── <ins>[core.cljs:3388-3394](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3388-L3394)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn delay\n  [& body]\n  (Delay. (fn [] (apply identity body)) (atom nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3204 3210]},
+          :lines [3388 3394]},
  :full-name "cljs.core/delay",
  :clj-symbol "clojure.core/delay",
  :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}

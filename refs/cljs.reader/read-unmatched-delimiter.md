@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L199-L201):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L199-L201):
 
 ```clj
 (defn read-unmatched-delimiter
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:199-201](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L199-L201)</ins>
+            └── <ins>[reader.cljs:199-201](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/reader.cljs#L199-L201)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn read-unmatched-delimiter\n  [rdr ch]\n  (reader-error rdr \"Unmached delimiter \" ch))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [199 201]},
  :full-name "cljs.reader/read-unmatched-delimiter",

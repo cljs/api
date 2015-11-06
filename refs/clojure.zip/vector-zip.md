@@ -30,7 +30,7 @@ Returns a zipper for nested vectors, given a root vector
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/zip.cljs#L42-L48):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/zip.cljs#L42-L48):
 
 ```clj
 (defn vector-zip
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:42-48](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/zip.cljs#L42-L48)</ins>
+            └── <ins>[zip.cljs:42-48](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/clojure/zip.cljs#L42-L48)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn vector-zip\n  [root]\n    (zipper vector?\n            seq\n            (fn [node children] (with-meta (vec children) (meta node)))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [42 48]},
  :full-name "clojure.zip/vector-zip",

@@ -54,7 +54,7 @@ Bitwise complement
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L961-L963):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L961-L963):
 
 ```clj
 (defn bit-not
@@ -65,18 +65,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:961-963](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L961-L963)</ins>
+            └── <ins>[core.cljs:961-963](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L961-L963)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L141-L142):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L141-L142):
 
 ```clj
 (defmacro bit-not [x]
@@ -87,11 +87,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:141-142](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L141-L142)</ins>
+            └── <ins>[core.clj:141-142](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L141-L142)</ins>
 </pre>
 -->
 
@@ -141,13 +141,13 @@ The API data for this symbol:
  :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [961 963]},
  :extra-sources [{:code "(defmacro bit-not [x]\n  (list 'js* \"(~ ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r993",
+                  :tag "r1006",
                   :filename "src/clj/cljs/core.clj",
                   :lines [141 142]}],
  :examples [{:id "d4c5e3",

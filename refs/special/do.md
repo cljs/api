@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L762-L764):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L762-L764):
 
 ```clj
 (defmethod parse 'do
@@ -32,11 +32,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:762-764](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L762-L764)</ins>
+            └── <ins>[compiler.clj:762-764](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L762-L764)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs] _]\n  (merge {:env env :op :do} (analyze-block env exprs)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/compiler.clj",
           :lines [762 764]},
  :full-name "special/do",

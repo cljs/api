@@ -40,7 +40,7 @@ Returns true if n is an integer.  Warning: returns true on underflow condition.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L684-L688):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L684-L688):
 
 ```clj
 (defn integer?
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:684-688](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L684-L688)</ins>
+            └── <ins>[core.cljs:684-688](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L684-L688)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn integer?\n  [n]\n  (and (number? n)\n       (js* \"(~{n} == ~{n}.toFixed())\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [684 688]},
  :full-name "cljs.core/integer?",

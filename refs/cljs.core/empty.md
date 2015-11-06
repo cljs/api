@@ -42,7 +42,7 @@ Returns an empty collection of the same category as coll, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L490-L493):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L490-L493):
 
 ```clj
 (defn empty
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:490-493](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L490-L493)</ins>
+            └── <ins>[core.cljs:490-493](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L490-L493)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn empty\n  [coll]\n  (-empty coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/cljs/cljs/core.cljs",
           :lines [490 493]},
  :full-name "cljs.core/empty",

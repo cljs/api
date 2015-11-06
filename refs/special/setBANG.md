@@ -36,7 +36,7 @@ Sets `js-var` to `val` using the JavaScript `=` operator.
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L825-L843):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L825-L843):
 
 ```clj
 (defmethod parse 'set!
@@ -64,11 +64,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:825-843](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/compiler.clj#L825-L843)</ins>
+            └── <ins>[compiler.clj:825-843](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/compiler.clj#L825-L843)</ins>
 </pre>
 
 -->
@@ -120,7 +120,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'set!\n  [_ env [_ target val] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         targetexpr (if (symbol? target)\n                      (do\n                        (let [local (-> env :locals target)]\n                          (assert (or (nil? local)\n                                      (and (:field local)\n                                           (:mutable local)))\n                                  \"Can't set! local var or non-mutable field\"))\n                        (analyze-symbol enve target))\n                      (when (seq? target)\n                        (let [targetexpr (analyze-seq enve target nil)]\n                          (when (:field targetexpr)\n                            targetexpr))))\n         valexpr (analyze enve val)]\n     (assert targetexpr \"set! target must be a field or a symbol naming a var\")\n     {:env env :op :set! :target targetexpr :val valexpr :children [targetexpr valexpr]})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/compiler.clj",
           :lines [825 843]},
  :full-name "special/set!",

@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1006](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1006)__</td>
+<td>2012-03-30</td>
+<td><kbd>1.3.0</kbd></td>
+<td></td>
+<td><kbd>20110323-r790</kbd></td>
+<td>
+<a href="#user-content-001006syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001006library">
++4 
+</a>
+</td>
+<td>
+<a href="#user-content-001006compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-993](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-993)__</td>
 <td>2012-02-27</td>
 <td><kbd>1.3.0</kbd></td>
@@ -84,6 +107,47 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1006
+
+<a name="001006syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001006library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentVector](refs/cljs.core/PersistentVector.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentVector.EMPTY](refs/cljs.core/PersistentVectorDOTEMPTY.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentVector.EMPTY_NODE](refs/cljs.core/PersistentVectorDOTEMPTY_NODE.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentVector.fromArray](refs/cljs.core/PersistentVectorDOTfromArray.md)</samp></td>
+</tr>
+</table>
+
+<a name="001006compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-993
@@ -1032,7 +1096,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/array](refs/cljs.core/array.md)</samp></td>
 </tr>

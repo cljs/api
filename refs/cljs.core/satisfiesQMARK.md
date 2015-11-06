@@ -30,7 +30,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L422-L432):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L422-L432):
 
 ```clj
 (defmacro satisfies?
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r993
+clojurescript @ r1006
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:422-432](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L422-L432)</ins>
+            └── <ins>[core.clj:422-432](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L422-L432)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defmacro satisfies?\n  [psym x]\n  (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))\n        prefix (protocol-prefix p)]\n    `(let [x# ~x]\n       (if (and x#\n                (. x# ~(symbol (str \"-\" prefix)))        ;; Need prop lookup here\n                (not (. x# (~'hasOwnProperty ~prefix))))\n\t true\n\t (cljs.core/type_satisfies_ ~psym x#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r993",
+          :tag "r1006",
           :filename "src/clj/cljs/core.clj",
           :lines [422 432]},
  :full-name "cljs.core/satisfies?",

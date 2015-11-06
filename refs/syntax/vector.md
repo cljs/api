@@ -36,12 +36,13 @@ Examples:
 
 This helps differentiate binding forms from the parentheses of [callable forms][doc:syntax/list].
 
-See [doc:cljs.core/PersistentVector] for data structure details.
+See [`PersistentVector`][doc:cljs.core/PersistentVector] for data structure details.
 
 [doc:cljs.core/conj]:../cljs.core/conj.md
 [doc:cljs.core/fn]:../cljs.core/fn.md
 [doc:cljs.core/let]:../cljs.core/let.md
 [doc:syntax/list]:../syntax/list.md
+[doc:cljs.core/PersistentVector]:../cljs.core/PersistentVector.md
 
 ---
 
