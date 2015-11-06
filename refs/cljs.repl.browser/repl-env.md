@@ -45,7 +45,7 @@ src:            The source directory containing user-defined cljs files. Used to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/browser.clj#L208-L245):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/repl/browser.clj#L208-L245):
 
 ```clj
 (defn repl-env
@@ -73,12 +73,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:208-245](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/browser.clj#L208-L245)</ins>
+                └── <ins>[browser.clj:208-245](https://github.com/clojure/clojurescript/blob/r1586/src/clj/cljs/repl/browser.clj#L208-L245)</ins>
 </pre>
 
 -->
@@ -126,7 +126,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as opts}]\n  (let [opts (merge (BrowserEnv.)\n                    {:port          9000\n                     :optimizations :simple\n                     :working-dir   \".repl\"\n                     :serve-static  true\n                     :static-dir    [\".\" \"out/\"]\n                     :preloaded-libs   []\n                     :src           \"src/\"}\n                    opts)]\n    (do (reset! preloaded-libs (set (concat (always-preload) (map str (:preloaded-libs opts)))))\n        (reset! loaded-libs @preloaded-libs)\n        (swap! browser-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1576",
+          :tag "r1586",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [208 245]},
  :full-name "cljs.repl.browser/repl-env",

@@ -41,7 +41,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1325-L1328):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328):
 
 ```clj
 (defn int
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1576
+clojurescript @ r1586
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1325-1328](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1325-L1328)</ins>
+            └── <ins>[core.cljs:1325-1328](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn int\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1576",
+          :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1325 1328]},
  :full-name "cljs.core/int",
