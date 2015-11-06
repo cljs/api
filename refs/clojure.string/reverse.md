@@ -35,7 +35,7 @@ Returns s with its characters reversed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/clojure/string.cljs#L21-L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/string.cljs#L21-L25):
 
 ```clj
 (defn reverse
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:21-25](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/clojure/string.cljs#L21-L25)</ins>
+            └── <ins>[string.cljs:21-25](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/string.cljs#L21-L25)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn reverse\n  [s]\n  (-> (.replace s re-surrogate-pair \"$2$1\")\n      (.. (split \"\") (reverse) (join \"\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/cljs/clojure/string.cljs",
           :lines [21 25]},
  :full-name "clojure.string/reverse",

@@ -31,7 +31,7 @@ were successful, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/test.cljs#L413-L418):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L413-L418):
 
 ```clj
 (defn successful?
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:413-418](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/test.cljs#L413-L418)</ins>
+            └── <ins>[test.cljs:413-418](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/test.cljs#L413-L418)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn successful?\n  [summary]\n  (and (zero? (:fail summary 0))\n       (zero? (:error summary 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/cljs/cljs/test.cljs",
           :lines [413 418]},
  :full-name "cljs.test/successful?",

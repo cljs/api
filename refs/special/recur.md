@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/analyzer.clj#L988-L1001):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/analyzer.clj#L988-L1001):
 
 ```clj
 (defmethod parse 'recur
@@ -43,11 +43,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:988-1001](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/analyzer.clj#L988-L1001)</ins>
+            └── <ins>[analyzer.clj:988-1001](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/analyzer.clj#L988-L1001)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _ _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (when-not frame \n      (throw (error env \"Can't recur here\")))\n    (when-not (= (count exprs) (count (:params frame))) \n      (throw (error env \"recur argument count mismatch\")))\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [988 1001]},
  :full-name "special/recur",

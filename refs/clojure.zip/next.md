@@ -32,7 +32,7 @@ at the end, stays there.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/clojure/zip.cljs#L206-L219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/zip.cljs#L206-L219):
 
 ```clj
 (defn next
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:206-219](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/clojure/zip.cljs#L206-L219)</ins>
+            └── <ins>[zip.cljs:206-219](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/clojure/zip.cljs#L206-L219)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn next\n  [loc]\n    (if (= :end (loc 1))\n      loc\n      (or \n       (and (branch? loc) (down loc))\n       (right loc)\n       (loop [p loc]\n         (if (up p)\n           (or (right (up p)) (recur (up p)))\n           [(node p) :end])))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [206 219]},
  :full-name "clojure.zip/next",

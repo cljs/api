@@ -71,7 +71,7 @@ Bitwise and
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/core.cljs#L2101-L2105):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L2101-L2105):
 
 ```clj
 (defn bit-and-not
@@ -84,18 +84,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2101-2105](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/core.cljs#L2101-L2105)</ins>
+            └── <ins>[core.cljs:2101-2105](https://github.com/clojure/clojurescript/blob/r2760/src/cljs/cljs/core.cljs#L2101-L2105)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/core.clj#L513-L515):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/core.clj#L513-L515):
 
 ```clj
 (defmacro ^::ana/numeric bit-and-not
@@ -107,11 +107,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:513-515](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/core.clj#L513-L515)</ins>
+            └── <ins>[core.clj:513-515](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/core.clj#L513-L515)</ins>
 </pre>
 -->
 
@@ -162,13 +162,13 @@ The API data for this symbol:
  :source {:code "(defn bit-and-not\n  ([x y] (cljs.core/bit-and-not x y))\n  ([x y & more]\n     (reduce bit-and-not (cljs.core/bit-and-not x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2101 2105]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-and-not\n  ([x y] (core/list 'js* \"(~{} & ~~{})\" x y))\n  ([x y & more] `(bit-and-not (bit-and-not ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2758",
+                  :tag "r2760",
                   :filename "src/clj/cljs/core.clj",
                   :lines [513 515]}],
  :examples [{:id "16f35d",

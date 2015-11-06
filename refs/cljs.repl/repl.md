@@ -27,7 +27,7 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl.clj#L426-L429):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L426-L429):
 
 ```clj
 (defn repl
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:426-429](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl.clj#L426-L429)</ins>
+            └── <ins>[repl.clj:426-429](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl.clj#L426-L429)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & {:as opts}]\n  (repl* repl-env opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/clj/cljs/repl.clj",
           :lines [426 429]},
  :full-name "cljs.repl/repl",

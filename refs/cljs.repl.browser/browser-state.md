@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl/browser.clj#L21-L23):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl/browser.clj#L21-L23):
 
 ```clj
 (defonce browser-state
@@ -29,12 +29,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2758
+clojurescript @ r2760
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:21-23](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl/browser.clj#L21-L23)</ins>
+                └── <ins>[browser.clj:21-23](https://github.com/clojure/clojurescript/blob/r2760/src/clj/cljs/repl/browser.clj#L21-L23)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defonce browser-state\n  (atom {:return-value-fn nil\n         :client-js nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2758",
+          :tag "r2760",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [21 23]},
  :full-name "cljs.repl.browser/browser-state",
