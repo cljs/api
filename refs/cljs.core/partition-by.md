@@ -49,7 +49,7 @@ a new value.  Returns a lazy seq of partitions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6443-L6452):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L6448-L6457):
 
 ```clj
 (defn partition-by
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6443-6452](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L6443-L6452)</ins>
+            └── <ins>[core.cljs:6448-6457](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L6448-L6457)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defn partition-by\n  [f coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (let [fst (first s)\n           fv (f fst)\n           run (cons fst (take-while #(= fv (f %)) (next s)))]\n       (cons run (partition-by f (seq (drop (count run) s))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6443 6452]},
+          :lines [6448 6457]},
  :full-name "cljs.core/partition-by",
  :clj-symbol "clojure.core/partition-by",
  :docstring "Applies f to each value in coll, splitting it each time f returns\na new value.  Returns a lazy seq of partitions."}

@@ -22,7 +22,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1177-L1178):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1177-L1178):
 
 ```clj
 (defn ^boolean undefined? [x]
@@ -33,18 +33,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1177-1178](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1177-L1178)</ins>
+            └── <ins>[core.cljs:1177-1178](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1177-L1178)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L289-L290):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L289-L290):
 
 ```clj
 (defmacro undefined? [x]
@@ -55,11 +55,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:289-290](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L289-L290)</ins>
+            └── <ins>[core.clj:289-290](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L289-L290)</ins>
 </pre>
 -->
 
@@ -106,13 +106,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean undefined? [x]\n  (cljs.core/undefined? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1177 1178]},
  :extra-sources [{:code "(defmacro undefined? [x]\n  (bool-expr (core/list 'js* \"(void 0 === ~{})\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2027",
+                  :tag "r2030",
                   :filename "src/clj/cljs/core.clj",
                   :lines [289 290]}],
  :full-name "cljs.core/undefined?"}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2259-L2262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2271-L2274):
 
 ```clj
 (defn chunk-next [s]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2259-2262](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2259-L2262)</ins>
+            └── <ins>[core.cljs:2271-2274](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2271-L2274)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn chunk-next [s]\n  (if (implements? IChunkedNext s)\n    (-chunked-next s)\n    (seq (-chunked-rest s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2259 2262]},
+          :lines [2271 2274]},
  :full-name "cljs.core/chunk-next",
  :full-name-encode "cljs.core/chunk-next",
  :history [["+" "0.0-1424"]]}

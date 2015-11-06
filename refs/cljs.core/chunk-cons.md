@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2242-L2245):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2254-L2257):
 
 ```clj
 (defn chunk-cons [chunk rest]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2242-2245](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2242-L2245)</ins>
+            └── <ins>[core.cljs:2254-2257](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2254-L2257)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn chunk-cons [chunk rest]\n  (if (zero? (-count chunk))\n    rest\n    (ChunkedCons. chunk rest nil nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2242 2245]},
+          :lines [2254 2257]},
  :full-name "cljs.core/chunk-cons",
  :full-name-encode "cljs.core/chunk-cons",
  :history [["+" "0.0-1424"]]}

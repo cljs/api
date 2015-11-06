@@ -46,7 +46,7 @@ Returns a new JavaScript object using the supplied mappings.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1135-L1139):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1135-L1139):
 
 ```clj
 (defn js-obj
@@ -60,18 +60,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1135-1139](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1135-L1139)</ins>
+            └── <ins>[core.cljs:1135-1139](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1135-L1139)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1321-L1326):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L1321-L1326):
 
 ```clj
 (defmacro js-obj [& rest]
@@ -86,11 +86,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1321-1326](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L1321-L1326)</ins>
+            └── <ins>[core.clj:1321-1326](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L1321-L1326)</ins>
 </pre>
 -->
 
@@ -138,13 +138,13 @@ The API data for this symbol:
  :source {:code "(defn js-obj\n  ([]\n     (cljs.core/js-obj))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1135 1139]},
  :extra-sources [{:code "(defmacro js-obj [& rest]\n  (let [kvs-str (->> (repeat \"~{}:~{}\")\n                     (take (quot (count rest) 2))\n                     (interpose \",\")\n                     (apply core/str))]\n    (list* 'js* (core/str \"{\" kvs-str \"}\") rest)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2027",
+                  :tag "r2030",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1321 1326]}],
  :examples [{:id "657cd7",

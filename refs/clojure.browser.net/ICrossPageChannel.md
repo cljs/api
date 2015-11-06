@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/clojure/browser/net.cljs#L88-L89):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/clojure/browser/net.cljs#L88-L89):
 
 ```clj
 (defprotocol ICrossPageChannel
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:88-89](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/clojure/browser/net.cljs#L88-L89)</ins>
+                └── <ins>[net.cljs:88-89](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/clojure/browser/net.cljs#L88-L89)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ICrossPageChannel\n  (register-service [this service-name fn] [this service-name fn encode-json?]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [88 89]},
  :methods [{:name "register-service",

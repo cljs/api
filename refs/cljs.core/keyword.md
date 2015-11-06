@@ -34,14 +34,19 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2058-L2065):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2065-L2077):
 
 ```clj
 (defn keyword
   ([name] (cond
             (keyword? name) name
-            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)
-            :else (Keyword. nil name name nil)))
+            (symbol? name) (Keyword.
+                             (cljs.core/namespace name)
+                             (cljs.core/name name) (.-str name) nil)
+            (string? name) (let [parts (.split name "/")]
+                             (if (== (alength parts) 2)
+                               (Keyword. (aget parts 0) (aget parts 1) name nil)
+                               (Keyword. nil (aget parts 0) name nil)))))
   ([ns name] (Keyword. ns name (str (when ns (str ns "/")) name) nil)))
 ```
 
@@ -49,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2058-2065](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2058-L2065)</ins>
+            └── <ins>[core.cljs:2065-2077](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2065-L2077)</ins>
 </pre>
 
 -->
@@ -101,12 +106,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/keyword",
- :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)\n            :else (Keyword. nil name name nil)))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
+ :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword.\n                             (cljs.core/namespace name)\n                             (cljs.core/name name) (.-str name) nil)\n            (string? name) (let [parts (.split name \"/\")]\n                             (if (== (alength parts) 2)\n                               (Keyword. (aget parts 0) (aget parts 1) name nil)\n                               (Keyword. nil (aget parts 0) name nil)))))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2058 2065]},
+          :lines [2065 2077]},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

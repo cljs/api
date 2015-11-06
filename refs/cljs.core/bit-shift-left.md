@@ -60,7 +60,7 @@ Bitwise shift left
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1693-L1695):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1693-L1695):
 
 ```clj
 (defn bit-shift-left
@@ -71,18 +71,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1693-1695](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L1693-L1695)</ins>
+            └── <ins>[core.cljs:1693-1695](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L1693-L1695)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L499-L500):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L499-L500):
 
 ```clj
 (defmacro bit-shift-left [x n]
@@ -93,11 +93,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:499-500](https://github.com/clojure/clojurescript/blob/r2027/src/clj/cljs/core.clj#L499-L500)</ins>
+            └── <ins>[core.clj:499-500](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L499-L500)</ins>
 </pre>
 -->
 
@@ -148,13 +148,13 @@ The API data for this symbol:
  :source {:code "(defn bit-shift-left\n  [x n] (cljs.core/bit-shift-left x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1693 1695]},
  :extra-sources [{:code "(defmacro bit-shift-left [x n]\n  (core/list 'js* \"(~{} << ~{})\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2027",
+                  :tag "r2030",
                   :filename "src/clj/cljs/core.clj",
                   :lines [499 500]}],
  :examples [{:id "67c34a",

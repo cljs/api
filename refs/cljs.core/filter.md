@@ -50,7 +50,7 @@ Returns a lazy sequence of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2929-L2946):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2941-L2958):
 
 ```clj
 (defn filter
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2027/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2027
+clojurescript @ r2030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2929-2946](https://github.com/clojure/clojurescript/blob/r2027/src/cljs/cljs/core.cljs#L2929-L2946)</ins>
+            └── <ins>[core.cljs:2941-2958](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2941-L2958)</ins>
 </pre>
 
 -->
@@ -132,9 +132,9 @@ The API data for this symbol:
  :source {:code "(defn filter\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2027",
+          :tag "r2030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2929 2946]},
+          :lines [2941 2958]},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}
