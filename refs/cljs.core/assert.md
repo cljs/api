@@ -59,7 +59,7 @@ logical true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/core.clj#L1004-L1016):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L1004-L1016):
 
 ```clj
 (defmacro assert
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1004-1016](https://github.com/clojure/clojurescript/blob/r1933/src/clj/cljs/core.clj#L1004-L1016)</ins>
+            └── <ins>[core.clj:1004-1016](https://github.com/clojure/clojurescript/blob/r1934/src/clj/cljs/core.clj#L1004-L1016)</ins>
 </pre>
 
 -->
@@ -135,7 +135,7 @@ The API data for this symbol:
  :source {:code "(defmacro assert\n  ([x]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" (cljs.core/pr-str '~x)))))))\n  ([x message]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" ~message \"\\n\" (cljs.core/pr-str '~x))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/clj/cljs/core.clj",
           :lines [1004 1016]},
  :examples [{:id "1dc16f",

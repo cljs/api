@@ -34,7 +34,7 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2056-L2063):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2056-L2063):
 
 ```clj
 (defn keyword
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2056-2063](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2056-L2063)</ins>
+            └── <ins>[core.cljs:2056-2063](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2056-L2063)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)\n            :else (Keyword. nil name name nil)))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2056 2063]},
  :full-name "cljs.core/keyword",

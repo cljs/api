@@ -50,7 +50,7 @@ there are fewer than n.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2811-L2818):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2811-L2818):
 
 ```clj
 (defn take
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2811-2818](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2811-L2818)</ins>
+            └── <ins>[core.cljs:2811-2818](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2811-L2818)</ins>
 </pre>
 
 -->
@@ -125,7 +125,7 @@ The API data for this symbol:
  :source {:code "(defn take\n  [n coll]\n  (lazy-seq\n   (when (pos? n)\n     (when-let [s (seq coll)]\n      (cons (first s) (take (dec n) (rest s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2811 2818]},
  :full-name "cljs.core/take",

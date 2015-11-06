@@ -58,7 +58,7 @@ Returns a new array map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5787-L5791):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L5787-L5791):
 
 ```clj
 (defn array-map
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5787-5791](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L5787-L5791)</ins>
+            └── <ins>[core.cljs:5787-5791](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L5787-L5791)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn array-map\n  [& keyvals]\n  (PersistentArrayMap. nil (quot (count keyvals) 2) (apply array keyvals) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/cljs/cljs/core.cljs",
           :lines [5787 5791]},
  :examples [{:id "198026",

@@ -28,7 +28,7 @@ callback function with the macroexpanded form, as a string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/clojure/reflect.cljs#L32-L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/clojure/reflect.cljs#L32-L36):
 
 ```clj
 (defn macroexpand
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:32-36](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/clojure/reflect.cljs#L32-L36)</ins>
+            └── <ins>[reflect.cljs:32-36](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/clojure/reflect.cljs#L32-L36)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn macroexpand\n  [form]\n  (query-reflection (str \"macroform=\" (js/encodeURIComponent (str form))) println))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/cljs/clojure/reflect.cljs",
           :lines [32 36]},
  :full-name "clojure.reflect/macroexpand",

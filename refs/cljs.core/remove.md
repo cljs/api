@@ -49,7 +49,7 @@ Returns a lazy sequence of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2946-L2950):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2946-L2950):
 
 ```clj
 (defn remove
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1933/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1933
+clojurescript @ r1934
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2946-2950](https://github.com/clojure/clojurescript/blob/r1933/src/cljs/cljs/core.cljs#L2946-L2950)</ins>
+            └── <ins>[core.cljs:2946-2950](https://github.com/clojure/clojurescript/blob/r1934/src/cljs/cljs/core.cljs#L2946-L2950)</ins>
 </pre>
 
 -->
@@ -118,7 +118,7 @@ The API data for this symbol:
  :source {:code "(defn remove\n  [pred coll]\n  (filter (complement pred) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1933",
+          :tag "r1934",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2946 2950]},
  :full-name "cljs.core/remove",
