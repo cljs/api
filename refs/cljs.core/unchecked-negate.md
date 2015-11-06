@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L2002-L2003):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/cljs/core.cljs#L2002-L2003):
 
 ```clj
 (defn unchecked-negate [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2740
+clojurescript @ r2755
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2002-2003](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L2002-L2003)</ins>
+            └── <ins>[core.cljs:2002-2003](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/cljs/core.cljs#L2002-L2003)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/clj/cljs/core.clj#L399-L400):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/core.clj#L399-L400):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-negate
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2740
+clojurescript @ r2755
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:399-400](https://github.com/clojure/clojurescript/blob/r2740/src/clj/cljs/core.clj#L399-L400)</ins>
+            └── <ins>[core.clj:399-400](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/core.clj#L399-L400)</ins>
 </pre>
 -->
 
@@ -111,13 +111,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-negate [x]\n  (cljs.core/unchecked-negate x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2740",
+          :tag "r2755",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2002 2003]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-negate\n  ([x] `(- ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2740",
+                  :tag "r2755",
                   :filename "src/clj/cljs/core.clj",
                   :lines [399 400]}],
  :full-name "cljs.core/unchecked-negate",

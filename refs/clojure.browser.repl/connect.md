@@ -29,38 +29,60 @@ the document that called this function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/browser/repl.cljs#L90-L109):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/clojure/browser/repl.cljs#L90-L131):
 
 ```clj
 (defn connect
   [repl-server-url]
-  (let [repl-connection (net/xpc-connection
-                         {:peer_uri repl-server-url})]
+  (let [repl-connection
+        (net/xpc-connection
+          {:peer_uri repl-server-url})]
     (swap! xpc-connection (constantly repl-connection))
     (net/register-service repl-connection
-                          :evaluate-javascript
-                          (fn [js]
-                            (net/transmit
-                             repl-connection
-                             :send-result
-                             (evaluate-javascript repl-connection js))))
+      :evaluate-javascript
+      (fn [js]
+        (net/transmit
+          repl-connection
+          :send-result
+          (evaluate-javascript repl-connection js))))
     (net/connect repl-connection
-                 (constantly nil)
-                 (fn [iframe]
-                   (set! (.-display (.-style iframe))
-                         "none")))))
+      (constantly nil)
+      (fn [iframe]
+        (set! (.-display (.-style iframe))
+          "none")))
+    ;; Monkey-patch goog.require if running under optimizations :none - David
+    (when-not js/COMPILED
+      (set! *loaded-libs*
+        (let [gntp (.. js/goog -dependencies_ -nameToPath)]
+          (into #{}
+            (filter
+              (fn [name]
+                (aget (.. js/goog -dependencies_ -visited) (aget gntp name)))
+              (js-keys gntp)))))
+      (set! (.-isProvided_ js/goog) (fn [_] false))
+      (set! (.-require js/goog)
+        (fn [name reload]
+          (when (or (not (contains? *loaded-libs* name)) reload)
+            (set! *loaded-libs* (conj (or *loaded-libs* #{}) name))
+            (.appendChild js/document.body
+              (let [script (.createElement js/document "script")]
+                (set! (.-type script) "text/javascript")
+                (set! (.-src script)
+                  (str js/goog.basePath
+                    (aget (.. js/goog -dependencies_ -nameToPath) name)))
+                script))))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2740
+clojurescript @ r2755
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:90-109](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/browser/repl.cljs#L90-L109)</ins>
+                └── <ins>[repl.cljs:90-131](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/clojure/browser/repl.cljs#L90-L131)</ins>
 </pre>
 
 -->
@@ -105,12 +127,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.repl/connect",
- :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection (net/xpc-connection\n                         {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n                          :evaluate-javascript\n                          (fn [js]\n                            (net/transmit\n                             repl-connection\n                             :send-result\n                             (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n                 (constantly nil)\n                 (fn [iframe]\n                   (set! (.-display (.-style iframe))\n                         \"none\")))))",
+ :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection\n        (net/xpc-connection\n          {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n      :evaluate-javascript\n      (fn [js]\n        (net/transmit\n          repl-connection\n          :send-result\n          (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n      (constantly nil)\n      (fn [iframe]\n        (set! (.-display (.-style iframe))\n          \"none\")))\n    ;; Monkey-patch goog.require if running under optimizations :none - David\n    (when-not js/COMPILED\n      (set! *loaded-libs*\n        (let [gntp (.. js/goog -dependencies_ -nameToPath)]\n          (into #{}\n            (filter\n              (fn [name]\n                (aget (.. js/goog -dependencies_ -visited) (aget gntp name)))\n              (js-keys gntp)))))\n      (set! (.-isProvided_ js/goog) (fn [_] false))\n      (set! (.-require js/goog)\n        (fn [name reload]\n          (when (or (not (contains? *loaded-libs* name)) reload)\n            (set! *loaded-libs* (conj (or *loaded-libs* #{}) name))\n            (.appendChild js/document.body\n              (let [script (.createElement js/document \"script\")]\n                (set! (.-type script) \"text/javascript\")\n                (set! (.-src script)\n                  (str js/goog.basePath\n                    (aget (.. js/goog -dependencies_ -nameToPath) name)))\n                script))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2740",
+          :tag "r2755",
           :filename "src/cljs/clojure/browser/repl.cljs",
-          :lines [90 109]},
+          :lines [90 131]},
  :full-name "clojure.browser.repl/connect",
  :docstring "Connects to a REPL server from an HTML document. After the\nconnection is made, the REPL will evaluate forms in the context of\nthe document that called this function."}
 

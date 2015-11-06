@@ -56,7 +56,7 @@ Properties inherited from prototype chain are also detected:
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/clj/cljs/core.clj#L290-L291):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/core.clj#L290-L291):
 
 ```clj
 (defmacro js-in [key obj]
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2740
+clojurescript @ r2755
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:290-291](https://github.com/clojure/clojurescript/blob/r2740/src/clj/cljs/core.clj#L290-L291)</ins>
+            └── <ins>[core.clj:290-291](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/core.clj#L290-L291)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defmacro js-in [key obj]\n  (core/list 'js* \"~{} in ~{}\" key obj))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2740",
+          :tag "r2755",
           :filename "src/clj/cljs/core.clj",
           :lines [290 291]},
  :examples [{:id "a45b18",

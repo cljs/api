@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2755](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2755)__</td>
+<td>2015-02-01</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002755syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002755library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002755compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2740](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2740)__</td>
 <td>2015-01-28</td>
 <td><kbd>1.6.0</kbd></td>
@@ -1993,6 +2016,23 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2755
+
+<a name="002755syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002755library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="002755compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2740
