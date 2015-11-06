@@ -42,7 +42,7 @@ from the classpath.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl.clj#L265-L330):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl.clj#L266-L331):
 
 ```clj
 (defn mapped-stacktrace
@@ -104,11 +104,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3196
+clojurescript @ r3208
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:265-330](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl.clj#L265-L330)</ins>
+            └── <ins>[repl.clj:266-331](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl.clj#L266-L331)</ins>
 </pre>
 
 -->
@@ -156,9 +156,9 @@ The API data for this symbol:
  :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n   (vec\n     (let [with-calls\n           (for [{:keys [function file line column] :as frame} stacktrace]\n             ;; need to convert file, a relative URL style path, to host-specific file\n             (let [no-source-file? (if-not file\n                                     true\n                                     (.startsWith file \"<\"))\n                   rfile (when-not no-source-file?\n                           (io/file (URL. (.toURL (io/file (util/output-directory opts))) file)))\n                   [sm {:keys [ns source-file] :as ns-info}]\n                   (when-not no-source-file?\n                     ((juxt read-source-map ns-info) rfile))\n                   [line' column' call] (if ns-info\n                                          (mapped-line-column-call sm line column)\n                                          [line column])\n                   name' (when (and ns-info function)\n                           function)\n                   file' (if no-source-file?\n                           file\n                           (string/replace\n                             (.getCanonicalFile\n                               (if ns-info\n                                 source-file\n                                 (io/file rfile)))\n                             (str (System/getProperty \"user.dir\") File/separator) \"\"))\n                   url (or (and ns-info (util/ns->source ns))\n                           (and file (io/resource file)))]\n               (merge\n                 {:function name'\n                  :call call\n                  :file (if no-source-file?\n                          (str \"NO_SOURCE_FILE\"\n                            (when file\n                              (str \" \" file)))\n                          (io/file file'))\n                  :line line'\n                  :column column'}\n                 (when url\n                   {:url url}))))]\n       ;; take each non-nil :call and optionally merge it into :function one-level up\n       ;; to avoid replacing with local symbols, we only replace munged name if we can munge call symbol back to it\n       (map #(merge-with (fn [munged-fn-name unmunged-call-name]\n                           (if (= munged-fn-name (string/replace (cljs.compiler/munge unmunged-call-name) \".\" \"$\"))\n                             unmunged-call-name\n                             munged-fn-name)) %1 %2)\n         (map #(dissoc % :call) with-calls)\n         (concat (rest (map #(if (:call %)\n                              (hash-map :function (:call %))\n                              {})\n                         with-calls)) [{}]))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3196",
+          :tag "r3208",
           :filename "src/clj/cljs/repl.clj",
-          :lines [265 330]},
+          :lines [266 331]},
  :full-name "cljs.repl/mapped-stacktrace",
  :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nreturn the ClojureScript stacktrace. The canonical stacktrace must be\nin the form:\n\n [{:file <string>\n   :function <string>\n   :line <integer>\n   :column <integer>}*]\n\n:file must be a URL path (without protocol) relative to :output-dir or a\nidentifier delimited by angle brackets. The returned mapped stacktrace will\nalso contain :url entries to the original sources if it can be determined\nfrom the classpath."}
 

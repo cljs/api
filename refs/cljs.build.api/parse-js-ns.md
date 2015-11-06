@@ -29,7 +29,7 @@ first provide statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/build/api.clj#L73-L78):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/build/api.clj#L76-L81):
 
 ```clj
 (defn parse-js-ns
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3196
+clojurescript @ r3208
 └── src
     └── clj
         └── cljs
             └── build
-                └── <ins>[api.clj:73-78](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/build/api.clj#L73-L78)</ins>
+                └── <ins>[api.clj:76-81](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/build/api.clj#L76-L81)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn parse-js-ns\n  [f]\n  (closure/parse-js-ns f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3196",
+          :tag "r3208",
           :filename "src/clj/cljs/build/api.clj",
-          :lines [73 78]},
+          :lines [76 81]},
  :full-name "cljs.build.api/parse-js-ns",
  :docstring "Given a Google Closure style JavaScript file or resource return the namespace\ninformation for the given file. Only returns the value extracted from the\nfirst provide statement."}
 

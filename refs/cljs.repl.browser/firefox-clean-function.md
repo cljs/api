@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/browser.clj#L372-L382):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L372-L382):
 
 ```clj
 (defn firefox-clean-function [f]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3196
+clojurescript @ r3208
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:372-382](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/browser.clj#L372-L382)</ins>
+                └── <ins>[browser.clj:372-382](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/repl/browser.clj#L372-L382)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn firefox-clean-function [f]\n  (as-> f f\n    (cond\n      (string/blank? f) nil\n      (not= (.indexOf f \"</\") -1)\n      (let [idx (.indexOf f \"</\")]\n        (.substring f (+ idx 2)))\n      :else f)\n    (-> f\n      (string/replace #\"<\" \"\")\n      (string/replace #\"\\/\" \"\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3196",
+          :tag "r3208",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [372 382]},
  :full-name "cljs.repl.browser/firefox-clean-function",

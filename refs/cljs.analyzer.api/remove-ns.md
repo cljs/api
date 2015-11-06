@@ -1,0 +1,121 @@
+## cljs.analyzer.api/remove-ns
+
+
+
+ <table border="1">
+<tr>
+<td>function</td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3208"><img valign="middle" alt="[+] 0.0-3208" title="Added in 0.0-3208" src="https://img.shields.io/badge/+-0.0--3208-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/remove-ns</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove-ns)
+</td>
+</tr>
+</table>
+
+
+ <samp>
+(__remove-ns__ ns)<br>
+</samp>
+
+---
+
+
+
+
+
+Source docstring:
+
+```
+Removes the namespace named by the symbol.
+```
+
+
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L120-L124):
+
+```clj
+(defn remove-ns
+  [ns]
+  {:pre [(symbol? ns)]}
+  (swap! env/*compiler* update-in [::ana/namespaces] dissoc ns))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r3208
+└── src
+    └── clj
+        └── cljs
+            └── analyzer
+                └── <ins>[api.clj:120-124](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L120-L124)</ins>
+</pre>
+
+-->
+
+---
+
+
+
+###### External doc links:
+
+[`clojure.core/remove-ns` @ clojuredocs](http://clojuredocs.org/clojure.core/remove-ns)<br>
+[`clojure.core/remove-ns` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/remove-ns/)<br>
+[`clojure.core/remove-ns` @ crossclj](http://crossclj.info/fun/clojure.core/remove-ns.html)<br>
+[`cljs.analyzer.api/remove-ns` @ crossclj](http://crossclj.info/fun/cljs.analyzer.api/remove-ns.html)<br>
+
+---
+
+ <table>
+<tr><td>
+<img valign="middle" align="right" width="48px" src="http://i.imgur.com/Hi20huC.png">
+</td><td>
+Created for the upcoming ClojureScript website.<br>
+[edit here] | [learn how]
+</td></tr></table>
+
+[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/remove-ns.cljsdoc
+[learn how]:https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files
+
+<!--
+
+This information was too distracting to show to readers, but I'll leave it
+commented here since it is helpful to:
+
+- pretty-print the data used to generate this document
+- and show how to retrieve that data
+
+
+
+The API data for this symbol:
+
+```clj
+{:ns "cljs.analyzer.api",
+ :name "remove-ns",
+ :signature ["[ns]"],
+ :history [["+" "0.0-3208"]],
+ :type "function",
+ :full-name-encode "cljs.analyzer.api/remove-ns",
+ :source {:code "(defn remove-ns\n  [ns]\n  {:pre [(symbol? ns)]}\n  (swap! env/*compiler* update-in [::ana/namespaces] dissoc ns))",
+          :title "Source code",
+          :repo "clojurescript",
+          :tag "r3208",
+          :filename "src/clj/cljs/analyzer/api.clj",
+          :lines [120 124]},
+ :full-name "cljs.analyzer.api/remove-ns",
+ :clj-symbol "clojure.core/remove-ns",
+ :docstring "Removes the namespace named by the symbol."}
+
+```
+
+Retrieve the API data for this symbol:
+
+```clj
+;; from Clojure REPL
+(require '[clojure.edn :as edn])
+(-> (slurp "https://raw.githubusercontent.com/cljsinfo/cljs-api-docs/catalog/cljs-api.edn")
+    (edn/read-string)
+    (get-in [:symbols "cljs.analyzer.api/remove-ns"]))
+```
+
+-->

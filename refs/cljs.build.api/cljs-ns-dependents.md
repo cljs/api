@@ -29,7 +29,7 @@ transient dependents.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/build/api.clj#L66-L71):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/build/api.clj#L69-L74):
 
 ```clj
 (defn cljs-ns-dependents
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3196
+clojurescript @ r3208
 └── src
     └── clj
         └── cljs
             └── build
-                └── <ins>[api.clj:66-71](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/build/api.clj#L66-L71)</ins>
+                └── <ins>[api.clj:69-74](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/build/api.clj#L69-L74)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn cljs-ns-dependents\n  [ns]\n  (ana/ns-dependents ns))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3196",
+          :tag "r3208",
           :filename "src/clj/cljs/build/api.clj",
-          :lines [66 71]},
+          :lines [69 74]},
  :full-name "cljs.build.api/cljs-ns-dependents",
  :docstring "Given a namespace symbol return a seq of all dependent\nnamespaces sorted in dependency order. Will include\ntransient dependents."}
 

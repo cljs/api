@@ -31,7 +31,7 @@ returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/analyzer/api.clj#L26-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L80-L84):
 
 ```clj
 (defn all-ns
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3196
+clojurescript @ r3208
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:26-30](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/analyzer/api.clj#L26-L30)</ins>
+                └── <ins>[api.clj:80-84](https://github.com/clojure/clojurescript/blob/r3208/src/clj/cljs/analyzer/api.clj#L80-L84)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3196",
+          :tag "r3208",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [26 30]},
+          :lines [80 84]},
  :full-name "cljs.analyzer.api/all-ns",
  :clj-symbol "clojure.core/all-ns",
  :docstring "Return all namespaces. Analagous to clojure.core/all-ns but\nreturns symbols identifying namespaces not Namespace instances."}

@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-3208](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3208)__</td>
+<td>2015-04-16</td>
+<td><kbd>1.7.0-beta1</kbd></td>
+<td><kbd>0.9.1</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-003208syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003208library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-003208compiler">
++9 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3196](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3196)__</td>
 <td>2015-04-10</td>
 <td><kbd>1.7.0-beta1</kbd></td>
@@ -2637,6 +2660,77 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-3208
+
+<a name="003208syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="003208library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="003208compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/analyze](refs/cljs.analyzer.api/analyze.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/analyze-file](refs/cljs.analyzer.api/analyze-file.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/empty-env](refs/cljs.analyzer.api/empty-env.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/forms-seq](refs/cljs.analyzer.api/forms-seq.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/parse-ns](refs/cljs.analyzer.api/parse-ns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/remove-ns](refs/cljs.analyzer.api/remove-ns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.build.api/build](refs/cljs.build.api/build.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.build.api/inputs](refs/cljs.build.api/inputs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.build.api/watch](refs/cljs.build.api/watch.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-3196
