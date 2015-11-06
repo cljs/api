@@ -74,7 +74,7 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1716-L1735):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L1716-L1735):
 
 ```clj
 (defn ^number compare
@@ -99,11 +99,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1716-1735](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1716-L1735)</ins>
+            └── <ins>[core.cljs:1716-1735](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L1716-L1735)</ins>
 </pre>
 
 -->
@@ -159,7 +159,7 @@ The API data for this symbol:
  :source {:code "(defn ^number compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (identical? (type x) (type y))\n   (if (implements? IComparable x)\n     (-compare ^not-native x y)\n     (garray/defaultCompare x y))\n\n   :else\n   (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1716 1735]},
  :examples [{:id "e13fa0",

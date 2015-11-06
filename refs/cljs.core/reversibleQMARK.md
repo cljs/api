@@ -37,7 +37,7 @@ Returns true if coll satisfies? IReversible.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2459-L2462):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L2459-L2462):
 
 ```clj
 (defn ^boolean reversible?
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2459-2462](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2459-L2462)</ins>
+            └── <ins>[core.cljs:2459-2462](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L2459-L2462)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean reversible?\n  [coll]\n  (satisfies? IReversible coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2459 2462]},
  :full-name "cljs.core/reversible?",

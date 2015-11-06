@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2012):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L2012):
 
 ```clj
 (defn ^number float [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2012](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2012)</ins>
+            └── <ins>[core.cljs:2012](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L2012)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L370):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L370):
 
 ```clj
 (defmacro float [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:370](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L370)</ins>
+            └── <ins>[core.clj:370](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L370)</ins>
 </pre>
 -->
 
@@ -110,13 +110,13 @@ The API data for this symbol:
  :source {:code "(defn ^number float [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2012]},
  :extra-sources [{:code "(defmacro float [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3030",
+                  :tag "r3053",
                   :filename "src/clj/cljs/core.clj",
                   :lines [370]}],
  :full-name "cljs.core/float",

@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-3030__ [all](HISTORY.md)</td>
-<td>2015-03-07</td>
+<td>__0.0-3053__ [all](HISTORY.md)</td>
+<td>2015-03-09</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-3030__ ([See Full History](HISTORY.md)):
+Changes from __0.0-3053__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -43,33 +43,45 @@ __Compiler API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl/IParseError](refs/cljs.repl/IParseError.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-protocol-red.svg">
-</td>
-<td><samp>[~~cljs.repl/IParseErrorMessage~~](refs/cljs.repl/IParseErrorMessage.md)</samp></td>
+<td><samp>[cljs.repl.browser/chrome-st-el->frame](refs/cljs.repl.browser/chrome-st-el-GTframe.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.browser/repl-env\*](refs/cljs.repl.browser/repl-envSTAR.md)</samp></td>
+<td><samp>[cljs.repl.browser/firefox-clean-function](refs/cljs.repl.browser/firefox-clean-function.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.nashorn/repl-env\*](refs/cljs.repl.nashorn/repl-envSTAR.md)</samp></td>
+<td><samp>[cljs.repl.browser/firefox-st-el->frame](refs/cljs.repl.browser/firefox-st-el-GTframe.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.rhino/repl-env\*](refs/cljs.repl.rhino/repl-envSTAR.md)</samp></td>
+<td><samp>[cljs.repl.browser/parse-file](refs/cljs.repl.browser/parse-file.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.browser/parse-file-line-column](refs/cljs.repl.browser/parse-file-line-column.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-multimethod-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.browser/parse-stacktrace](refs/cljs.repl.browser/parse-stacktrace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl.browser/safari-st-el->frame](refs/cljs.repl.browser/safari-st-el-GTframe.md)</samp></td>
 </tr>
 </table>
 

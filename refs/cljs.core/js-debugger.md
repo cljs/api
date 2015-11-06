@@ -49,7 +49,7 @@ Emit JavaScript "debugger;" statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L293-L296):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L293-L296):
 
 ```clj
 (defmacro js-debugger
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:293-296](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L293-L296)</ins>
+            └── <ins>[core.clj:293-296](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L293-L296)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defmacro js-debugger\n  []\n  (core/list 'js* \"debugger;\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/clj/cljs/core.clj",
           :lines [293 296]},
  :examples [{:id "87f2fa",

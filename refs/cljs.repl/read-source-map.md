@@ -27,7 +27,7 @@ Return the source map for the JavaScript source file.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L198-L203):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl.clj#L199-L204):
 
 ```clj
 (defn read-source-map
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:198-203](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L198-L203)</ins>
+            └── <ins>[repl.clj:199-204](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl.clj#L199-L204)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn read-source-map\n  [f]\n  (let [smf (io/file (str f \".map\"))]\n    (when (.exists smf)\n      (sm/decode (json/read-str (slurp smf) :key-fn keyword)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/clj/cljs/repl.clj",
-          :lines [198 203]},
+          :lines [199 204]},
  :full-name "cljs.repl/read-source-map",
  :docstring "Return the source map for the JavaScript source file."}
 

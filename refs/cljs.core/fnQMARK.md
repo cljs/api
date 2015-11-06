@@ -40,7 +40,7 @@ Return true if f is a JavaScript function or satisfies the Fn protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1439-L1442):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L1439-L1442):
 
 ```clj
 (defn ^boolean fn?
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1439-1442](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1439-L1442)</ins>
+            └── <ins>[core.cljs:1439-1442](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L1439-L1442)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean fn?\n  [f]\n  (or ^boolean (goog/isFunction f) (satisfies? Fn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1439 1442]},
  :full-name "cljs.core/fn?",

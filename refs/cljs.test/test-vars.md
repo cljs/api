@@ -32,7 +32,7 @@ testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/test.cljs#L556-L561):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/test.cljs#L556-L561):
 
 ```clj
 (defn test-vars
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:556-561](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/test.cljs#L556-L561)</ins>
+            └── <ins>[test.cljs:556-561](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/test.cljs#L556-L561)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn test-vars\n  [vars]\n  (run-block (test-vars-block vars)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/cljs/test.cljs",
           :lines [556 561]},
  :full-name "cljs.test/test-vars",

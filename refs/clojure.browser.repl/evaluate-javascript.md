@@ -27,17 +27,30 @@ Process a single block of JavaScript received from the server
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/clojure/browser/repl.cljs#L32-L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/clojure/browser/repl.cljs#L34-L56):
 
 ```clj
 (defn evaluate-javascript
   [conn block]
-  (let [result (try {:status :success :value (str (js* "eval(~{block})"))}
-                    (catch :default e
-                      {:status :exception :value (pr-str e)
-                       :stacktrace (if (.hasOwnProperty e "stack")
-                                     (.-stack e)
-                                     "No stacktrace available.")}))]
+  (let [result
+        (try
+          {:status :success
+           :value (str (js* "eval(~{block})"))}
+          (catch :default e
+            {:status :exception
+             ;; TODO: latest GCL interface for this is different
+             ;; see goog.userAgent.product
+             :ua-product
+             (cond
+               (gbrowser/isSafari) :safari
+               (gbrowser/isChrome) :chrome
+               (gbrowser/isFirefox) :firefox
+               (gbrowser/isIE) :ie)
+             :value (pr-str e)
+             :stacktrace
+             (if (.hasOwnProperty e "stack")
+               (.-stack e)
+               "No stacktrace available.")}))]
     (pr-str result)))
 ```
 
@@ -45,12 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:32-41](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/clojure/browser/repl.cljs#L32-L41)</ins>
+                └── <ins>[repl.cljs:34-56](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/clojure/browser/repl.cljs#L34-L56)</ins>
 </pre>
 
 -->
@@ -95,12 +108,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.repl/evaluate-javascript",
- :source {:code "(defn evaluate-javascript\n  [conn block]\n  (let [result (try {:status :success :value (str (js* \"eval(~{block})\"))}\n                    (catch :default e\n                      {:status :exception :value (pr-str e)\n                       :stacktrace (if (.hasOwnProperty e \"stack\")\n                                     (.-stack e)\n                                     \"No stacktrace available.\")}))]\n    (pr-str result)))",
+ :source {:code "(defn evaluate-javascript\n  [conn block]\n  (let [result\n        (try\n          {:status :success\n           :value (str (js* \"eval(~{block})\"))}\n          (catch :default e\n            {:status :exception\n             ;; TODO: latest GCL interface for this is different\n             ;; see goog.userAgent.product\n             :ua-product\n             (cond\n               (gbrowser/isSafari) :safari\n               (gbrowser/isChrome) :chrome\n               (gbrowser/isFirefox) :firefox\n               (gbrowser/isIE) :ie)\n             :value (pr-str e)\n             :stacktrace\n             (if (.hasOwnProperty e \"stack\")\n               (.-stack e)\n               \"No stacktrace available.\")}))]\n    (pr-str result)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/cljs/clojure/browser/repl.cljs",
-          :lines [32 41]},
+          :lines [34 56]},
  :full-name "clojure.browser.repl/evaluate-javascript",
  :docstring "Process a single block of JavaScript received from the server"}
 

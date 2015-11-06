@@ -32,13 +32,14 @@ printing calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1879-L1887):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L1879-L1888):
 
 ```clj
 (defmacro with-out-str
   [& body]
   `(let [sb# (goog.string.StringBuffer.)]
-     (binding [cljs.core/*print-fn* (fn [x#] (.append sb# x#))]
+     (binding [cljs.core/*print-newline* true
+               cljs.core/*print-fn* (fn [x#] (.append sb# x#))]
        ~@body)
      (cljs.core/str sb#)))
 ```
@@ -47,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3030
+clojurescript @ r3053
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1879-1887](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1879-L1887)</ins>
+            └── <ins>[core.clj:1879-1888](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/core.clj#L1879-L1888)</ins>
 </pre>
 
 -->
@@ -99,12 +100,12 @@ The API data for this symbol:
  :history [["+" "0.0-1535"]],
  :type "macro",
  :full-name-encode "cljs.core/with-out-str",
- :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
+ :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-newline* true\n               cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3030",
+          :tag "r3053",
           :filename "src/clj/cljs/core.clj",
-          :lines [1879 1887]},
+          :lines [1879 1888]},
  :full-name "cljs.core/with-out-str",
  :clj-symbol "clojure.core/with-out-str",
  :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}
