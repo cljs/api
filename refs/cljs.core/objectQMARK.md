@@ -32,7 +32,7 @@ Returns true if `x` is a JavaScript object, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L91-L92):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L91-L92):
 
 ```clj
 (defn ^boolean object? [x]
@@ -43,18 +43,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2120
+clojurescript @ r2127
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:91-92](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L91-L92)</ins>
+            └── <ins>[core.cljs:91-92](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L91-L92)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L282-L283):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L282-L283):
 
 ```clj
 (defmacro object? [x]
@@ -65,11 +65,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2120
+clojurescript @ r2127
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:282-283](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L282-L283)</ins>
+            └── <ins>[core.clj:282-283](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L282-L283)</ins>
 </pre>
 -->
 
@@ -118,13 +118,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean object? [x]\n  (cljs.core/object? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2120",
+          :tag "r2127",
           :filename "src/cljs/cljs/core.cljs",
           :lines [91 92]},
  :extra-sources [{:code "(defmacro object? [x]\n  (bool-expr (core/list 'js* \"~{}.constructor === Object\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2120",
+                  :tag "r2127",
                   :filename "src/clj/cljs/core.clj",
                   :lines [282 283]}],
  :full-name "cljs.core/object?"}

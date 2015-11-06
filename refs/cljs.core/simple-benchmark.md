@@ -32,7 +32,7 @@ using pr-str in any case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L1499-L1515):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L1499-L1515):
 
 ```clj
 (defmacro simple-benchmark
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2120
+clojurescript @ r2127
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1499-1515](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L1499-L1515)</ins>
+            └── <ins>[core.clj:1499-1515](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L1499-L1515)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defmacro simple-benchmark\n  [bindings expr iterations & {:keys [print-fn] :or {print-fn 'println}}]\n  (let [bs-str   (pr-str bindings)\n        expr-str (pr-str expr)]\n    `(let ~bindings\n       (let [start#   (.getTime (js/Date.))\n             ret#     (dotimes [_# ~iterations] ~expr)\n             end#     (.getTime (js/Date.))\n             elapsed# (- end# start#)]\n         (~print-fn (str ~bs-str \", \" ~expr-str \", \"\n                         ~iterations \" runs, \" elapsed# \" msecs\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2120",
+          :tag "r2127",
           :filename "src/clj/cljs/core.clj",
           :lines [1499 1515]},
  :full-name "cljs.core/simple-benchmark",

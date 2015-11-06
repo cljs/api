@@ -50,13 +50,14 @@ does not contain key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1047-L1058):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L1048-L1060):
 
 ```clj
 (defn disj
   ([coll] coll)
   ([coll k]
-     (-disjoin coll k))
+    (when-not (nil? coll)
+      (-disjoin coll k)))
   ([coll k & ks]
     (when-not (nil? coll)
       (let [ret (disj coll k)]
@@ -69,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2120
+clojurescript @ r2127
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1047-1058](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1047-L1058)</ins>
+            └── <ins>[core.cljs:1048-1060](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L1048-L1060)</ins>
 </pre>
 
 -->
@@ -125,12 +126,12 @@ The API data for this symbol:
            "cljs.core/disj!"
            "clojure.set/difference"],
  :full-name-encode "cljs.core/disj",
- :source {:code "(defn disj\n  ([coll] coll)\n  ([coll k]\n     (-disjoin coll k))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (disj coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
+ :source {:code "(defn disj\n  ([coll] coll)\n  ([coll k]\n    (when-not (nil? coll)\n      (-disjoin coll k)))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (disj coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2120",
+          :tag "r2127",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1047 1058]},
+          :lines [1048 1060]},
  :full-name "cljs.core/disj",
  :clj-symbol "clojure.core/disj",
  :docstring "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}

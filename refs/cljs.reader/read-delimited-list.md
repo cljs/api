@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/reader.cljs#L231-L244):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L231-L244):
 
 ```clj
 (defn read-delimited-list
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2120
+clojurescript @ r2127
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:231-244](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/reader.cljs#L231-L244)</ins>
+            └── <ins>[reader.cljs:231-244](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L231-L244)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn read-delimited-list\n  [delim rdr recursive?]\n  (loop [a (transient [])]\n    (let [ch (read-past whitespace? rdr)]\n      (when-not ch (reader-error rdr \"EOF while reading\"))\n      (if (identical? delim ch)\n        (persistent! a)\n        (if-let [macrofn (macros ch)]\n          (let [mret (macrofn rdr ch)]\n            (recur (if (identical? mret rdr) a (conj! a mret))))\n          (do\n            (unread rdr ch)\n            (let [o (read rdr true nil recursive?)]\n              (recur (if (identical? o rdr) a (conj! a o))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2120",
+          :tag "r2127",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [231 244]},
  :full-name "cljs.reader/read-delimited-list",
