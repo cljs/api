@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/clojure/core/reducers.cljs#L53):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/clojure/core/reducers.cljs#L53):
 
 ```clj
 (def fold reduce)
@@ -30,12 +30,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1853
+clojurescript @ r1859
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:53](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/clojure/core/reducers.cljs#L53)</ins>
+                └── <ins>[reducers.cljs:53](https://github.com/clojure/clojurescript/blob/r1859/src/cljs/clojure/core/reducers.cljs#L53)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(def fold reduce)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1853",
+          :tag "r1859",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [53]},
  :full-name "clojure.core.reducers/fold",

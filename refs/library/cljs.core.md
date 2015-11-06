@@ -2303,6 +2303,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-971"><img valign="middle" alt="[+] 0.0-971" title="Added in 0.0-971" src="https://img.shields.io/badge/+-0.0--971-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[type->str](../cljs.core/type-GTstr.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1859"><img valign="middle" alt="[+] 0.0-1859" title="Added in 0.0-1859" src="https://img.shields.io/badge/+-0.0--1859-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-add)</td>
 <td><samp>[unchecked-add](../cljs.core/unchecked-add.md)</samp></td>
 <td><samp>function/macro</samp></td>
