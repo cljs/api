@@ -22,22 +22,24 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L969-L970):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1037-L1040):
 
 ```clj
 (defn ^boolean chunked-seq?
-  [x] (satisfies? IChunkedSeq x))
+  [x]
+  (or (instance? ChunkedCons x)
+      (instance? ChunkedSeq x)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:969-970](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L969-L970)</ins>
+            └── <ins>[core.cljs:1037-1040](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1037-L1040)</ins>
 </pre>
 
 -->
@@ -83,12 +85,12 @@ The API data for this symbol:
  :history [["+" "0.0-1424"]],
  :type "function",
  :full-name-encode "cljs.core/chunked-seqQMARK",
- :source {:code "(defn ^boolean chunked-seq?\n  [x] (satisfies? IChunkedSeq x))",
+ :source {:code "(defn ^boolean chunked-seq?\n  [x]\n  (or (instance? ChunkedCons x)\n      (instance? ChunkedSeq x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [969 970]},
+          :lines [1037 1040]},
  :full-name "cljs.core/chunked-seq?"}
 
 ```

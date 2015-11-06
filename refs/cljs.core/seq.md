@@ -47,26 +47,34 @@ Strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L314-L322):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L382-L398):
 
 ```clj
 (defn ^seq seq
   [coll]
   (when-not (nil? coll)
-    (if (satisfies? ASeq coll)
-      coll
-      (-seq coll))))
+    (cond
+      (satisfies? ISeqable coll false)
+      (-seq ^not-native coll)
+
+      (array? coll)
+      (IndexedSeq. coll 0)
+
+      (string? coll)
+      (IndexedSeq. coll 0)
+
+      :else (throw (js/Error. (str coll "is not ISeqable"))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:314-322](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L314-L322)</ins>
+            └── <ins>[core.cljs:382-398](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L382-L398)</ins>
 </pre>
 
 -->
@@ -117,12 +125,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/seq?" "cljs.core/empty?"],
  :full-name-encode "cljs.core/seq",
- :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? ASeq coll)\n      coll\n      (-seq coll))))",
+ :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (satisfies? ISeqable coll false)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (IndexedSeq. coll 0)\n\n      (string? coll)\n      (IndexedSeq. coll 0)\n\n      :else (throw (js/Error. (str coll \"is not ISeqable\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [314 322]},
+          :lines [382 398]},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

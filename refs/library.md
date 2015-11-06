@@ -51,7 +51,7 @@ The rest of the symbols are in the following namespaces:
 <td>evaluate compiled cljs in a browser. send results back to server</td>
 </tr>
 <tr>
-<td></td>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers)</td>
 <td>[clojure.core.reducers](library/clojure.core.reducers.md)</td>
 <td>a library for reduction and parallel folding (parallelism not supported)</td>
 </tr>

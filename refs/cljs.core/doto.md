@@ -34,7 +34,7 @@ are evaluated in order.  Returns x.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3397-L3412):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L3463-L3478):
 
 ```clj
 (defmacro doto
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3397-3412](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3397-L3412)</ins>
+            └── <ins>[core.clj:3463-3478](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L3463-L3478)</ins>
 </pre>
 
 -->
@@ -108,9 +108,9 @@ The API data for this symbol:
  :source {:code "(defmacro doto\n  [x & forms]\n    (let [gx (gensym)]\n      `(let [~gx ~x]\n         ~@(map (fn [f]\n                  (if (seq? f)\n                    `(~(first f) ~gx ~@(next f))\n                    `(~f ~gx)))\n                forms)\n         ~gx)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.4.0",
+          :tag "clojure-1.5.1",
           :filename "src/clj/clojure/core.clj",
-          :lines [3397 3412]},
+          :lines [3463 3478]},
  :full-name "cljs.core/doto",
  :clj-symbol "clojure.core/doto",
  :docstring "Evaluates x then calls all of the methods and functions with the\nvalue of x supplied at the front of the given arguments.  The forms\nare evaluated in order.  Returns x.\n\n(doto (new java.util.HashMap) (.put \"a\" 1) (.put \"b\" 2))"}

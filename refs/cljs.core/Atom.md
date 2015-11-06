@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6698-L6728):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6512-L6538):
 
 ```clj
 (deftype Atom [state meta validator watches]
@@ -38,14 +38,10 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
   IMeta
   (-meta [_] meta)
 
-  ^:deprecation-nowarn IPrintable
-  (-pr-seq [a opts]
-    (concat  ["#<Atom: "] (-pr-seq state opts) ">"))
-
   IPrintWithWriter
   (-pr-writer [a writer opts]
     (-write writer "#<Atom: ")
-    (-pr-writer state writer opts)
+    (pr-writer state writer opts)
     (-write writer ">"))
 
   IWatchable
@@ -58,18 +54,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
     (set! (.-watches this) (dissoc watches key)))
 
   IHash
-  (-hash [this] (goog.getUid this)))
+  (-hash [this] (goog/getUid this)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6698-6728](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6698-L6728)</ins>
+            └── <ins>[core.cljs:6512-6538](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6512-L6538)</ins>
 </pre>
 
 -->
@@ -117,12 +113,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/Atom",
- :source {:code "(deftype Atom [state meta validator watches]\n  IEquiv\n  (-equiv [o other] (identical? o other))\n\n  IDeref\n  (-deref [_] state)\n\n  IMeta\n  (-meta [_] meta)\n\n  ^:deprecation-nowarn IPrintable\n  (-pr-seq [a opts]\n    (concat  [\"#<Atom: \"] (-pr-seq state opts) \">\"))\n\n  IPrintWithWriter\n  (-pr-writer [a writer opts]\n    (-write writer \"#<Atom: \")\n    (-pr-writer state writer opts)\n    (-write writer \">\"))\n\n  IWatchable\n  (-notify-watches [this oldval newval]\n    (doseq [[key f] watches]\n      (f key this oldval newval)))\n  (-add-watch [this key f]\n    (set! (.-watches this) (assoc watches key f)))\n  (-remove-watch [this key]\n    (set! (.-watches this) (dissoc watches key)))\n\n  IHash\n  (-hash [this] (goog.getUid this)))",
+ :source {:code "(deftype Atom [state meta validator watches]\n  IEquiv\n  (-equiv [o other] (identical? o other))\n\n  IDeref\n  (-deref [_] state)\n\n  IMeta\n  (-meta [_] meta)\n\n  IPrintWithWriter\n  (-pr-writer [a writer opts]\n    (-write writer \"#<Atom: \")\n    (pr-writer state writer opts)\n    (-write writer \">\"))\n\n  IWatchable\n  (-notify-watches [this oldval newval]\n    (doseq [[key f] watches]\n      (f key this oldval newval)))\n  (-add-watch [this key f]\n    (set! (.-watches this) (assoc watches key f)))\n  (-remove-watch [this key]\n    (set! (.-watches this) (dissoc watches key)))\n\n  IHash\n  (-hash [this] (goog/getUid this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6698 6728]},
+          :lines [6512 6538]},
  :full-name "cljs.core/Atom",
  :clj-symbol "clojure.lang/Atom"}
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L910-L917):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L976-L983):
 
 ```clj
 (defn check-string-hash-cache [k]
@@ -30,7 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
     (set! string-hash-cache (js-obj))
     (set! string-hash-cache-count 0))
   (let [h (aget string-hash-cache k)]
-    (if-not (nil? h)
+    (if (number? h)
       h
       (add-to-string-hash-cache k))))
 ```
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:910-917](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L910-L917)</ins>
+            └── <ins>[core.cljs:976-983](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L976-L983)</ins>
 </pre>
 
 -->
@@ -86,12 +86,12 @@ The API data for this symbol:
  :name "check-string-hash-cache",
  :type "function",
  :signature ["[k]"],
- :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if-not (nil? h)\n      h\n      (add-to-string-hash-cache k))))",
+ :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [910 917]},
+          :lines [976 983]},
  :full-name "cljs.core/check-string-hash-cache",
  :full-name-encode "cljs.core/check-string-hash-cache",
  :history [["+" "0.0-1424"]]}

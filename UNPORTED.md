@@ -7,7 +7,9 @@ symbols that are not yet ported to ClojureScript:
 
 - [clojure.core](#clojurecore)
 - [clojure.core.protocols](#clojurecoreprotocols)
+- [clojure.core.reducers](#clojurecorereducers)
 - [clojure.data](#clojuredata)
+- [clojure.edn](#clojureedn)
 - [clojure.inspector](#clojureinspector)
 - [clojure.instant](#clojureinstant)
 - [clojure.java.browse](#clojurejavabrowse)
@@ -20,6 +22,7 @@ symbols that are not yet ported to ClojureScript:
 - [clojure.reflect](#clojurereflect)
 - [clojure.repl](#clojurerepl)
 - [clojure.stacktrace](#clojurestacktrace)
+- [clojure.string](#clojurestring)
 - [clojure.template](#clojuretemplate)
 - [clojure.test](#clojuretest)
 - [clojure.test.junit](#clojuretestjunit)
@@ -65,6 +68,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/\*data-readers\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*data-readers*)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/\*default-data-reader-fn\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*default-data-reader-fn*)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -252,10 +259,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/booleans](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/booleans)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/bound-fn](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bound-fn)</samp></td>
 </tr>
 <tr>
@@ -268,23 +271,11 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/byte](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/byte)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/byte-array](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/byte-array)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/bytes](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bytes)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/cast](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cast)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/char](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/char)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -301,10 +292,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/char?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/char?)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/chars](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/chars)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -360,6 +347,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/definterface](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/definterface)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/defonce](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defonce)</samp></td>
 </tr>
 <tr>
@@ -377,14 +368,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/dosync](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dosync)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/double](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/double)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/doubles](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/doubles)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -436,19 +419,11 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/float](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/float)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/float-array](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/float-array)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/float?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/float?)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/floats](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/floats)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -504,15 +479,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/int-array](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/int-array)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/intern](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/intern)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/ints](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ints)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -549,10 +516,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/locking](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/locking)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/longs](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/longs)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -748,11 +711,23 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/send-via](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/send-via)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/seque](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/seque)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/sequence](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sequence)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/set-agent-send-executor!](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set-agent-send-executor!)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/set-agent-send-off-executor!](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set-agent-send-off-executor!)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -764,15 +739,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/short](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/short)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/short-array](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/short-array)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/shorts](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shorts)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -821,90 +788,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/thread-bound?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/thread-bound?)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-add](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-add)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-add-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-add-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-byte](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-byte)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-char](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-char)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-dec](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-dec)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-dec-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-dec-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-divide-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-divide-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-double](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-double)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-float](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-float)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-inc](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-inc)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-inc-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-inc-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-long](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-long)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-multiply](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-multiply)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-multiply-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-multiply-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-negate](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-negate)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-negate-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-negate-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-remainder-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-remainder-int)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-short](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-short)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-subtract](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-subtract)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/unchecked-subtract-int](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-subtract-int)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1001,6 +884,15 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 </table>
 
+## clojure.core.reducers
+
+ <table>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.reducers/->Cat](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/-%3ECat)</samp></td>
+</tr>
+</table>
+
 ## clojure.data
 
  <table>
@@ -1011,6 +903,19 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.data/equality-partition](http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/equality-partition)</samp></td>
+</tr>
+</table>
+
+## clojure.edn
+
+ <table>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.edn/read](http://clojure.github.io/clojure/branch-master/clojure.edn-api.html#clojure.edn/read)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.edn/read-string](http://clojure.github.io/clojure/branch-master/clojure.edn-api.html#clojure.edn/read-string)</samp></td>
 </tr>
 </table>
 
@@ -1253,6 +1158,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/EdnReader](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/EdnReader.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/EnumerationSeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/EnumerationSeq.java)</samp></td>
 </tr>
 <tr>
@@ -1262,6 +1171,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/IBlockingDeref](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IBlockingDeref.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/IExceptionInfo](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IExceptionInfo.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1353,10 +1266,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Named](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Named.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Namespace](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Namespace.java)</samp></td>
 </tr>
 <tr>
@@ -1421,10 +1330,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Symbol](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Symbol.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/TransactionalHashMap](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TransactionalHashMap.java)</samp></td>
 </tr>
 <tr>
@@ -1482,6 +1387,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.main/repl-requires](http://clojure.github.io/clojure/branch-master/clojure.main-api.html#clojure.main/repl-requires)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.main/root-cause](http://clojure.github.io/clojure/branch-master/clojure.main-api.html#clojure.main/root-cause)</samp></td>
 </tr>
 <tr>
@@ -1499,6 +1408,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.main/with-bindings](http://clojure.github.io/clojure/branch-master/clojure.main-api.html#clojure.main/with-bindings)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.main/with-read-known](http://clojure.github.io/clojure/branch-master/clojure.main-api.html#clojure.main/with-read-known)</samp></td>
 </tr>
 </table>
 
@@ -1787,6 +1700,15 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.stacktrace/root-cause](http://clojure.github.io/clojure/branch-master/clojure.stacktrace-api.html#clojure.stacktrace/root-cause)</samp></td>
+</tr>
+</table>
+
+## clojure.string
+
+ <table>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.string/re-quote-replacement](http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/re-quote-replacement)</samp></td>
 </tr>
 </table>
 

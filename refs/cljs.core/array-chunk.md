@@ -28,14 +28,14 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1899-L1905):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2055-L2061):
 
 ```clj
 (defn array-chunk
   ([arr]
-     (array-chunk arr 0 (alength arr)))
+     (ArrayChunk. arr 0 (alength arr)))
   ([arr off]
-     (array-chunk arr off (alength arr)))
+     (ArrayChunk. arr off (alength arr)))
   ([arr off end]
      (ArrayChunk. arr off end)))
 ```
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1899-1905](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1899-L1905)</ins>
+            └── <ins>[core.cljs:2055-2061](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2055-L2061)</ins>
 </pre>
 
 -->
@@ -91,12 +91,12 @@ The API data for this symbol:
  :name "array-chunk",
  :type "function",
  :signature ["[arr]" "[arr off]" "[arr off end]"],
- :source {:code "(defn array-chunk\n  ([arr]\n     (array-chunk arr 0 (alength arr)))\n  ([arr off]\n     (array-chunk arr off (alength arr)))\n  ([arr off end]\n     (ArrayChunk. arr off end)))",
+ :source {:code "(defn array-chunk\n  ([arr]\n     (ArrayChunk. arr 0 (alength arr)))\n  ([arr off]\n     (ArrayChunk. arr off (alength arr)))\n  ([arr off end]\n     (ArrayChunk. arr off end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1899 1905]},
+          :lines [2055 2061]},
  :full-name "cljs.core/array-chunk",
  :full-name-encode "cljs.core/array-chunk",
  :history [["+" "0.0-1424"]]}

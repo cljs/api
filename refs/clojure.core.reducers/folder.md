@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" title="Added in 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/folder</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/folder)
+</td>
 </tr>
 </table>
 
@@ -30,7 +33,7 @@ reducing fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L66-L83):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L68-L85):
 
 ```clj
 (defn folder
@@ -53,12 +56,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:66-83](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L66-L83)</ins>
+                └── <ins>[reducers.cljs:68-85](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L68-L85)</ins>
 </pre>
 
 -->
@@ -69,6 +72,9 @@ clojurescript @ r1586
 
 ###### External doc links:
 
+[`clojure.core.reducers/folder` @ clojuredocs](http://clojuredocs.org/clojure.core.reducers/folder)<br>
+[`clojure.core.reducers/folder` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core.reducers/folder/)<br>
+[`clojure.core.reducers/folder` @ crossclj](http://crossclj.info/fun/clojure.core.reducers/folder.html)<br>
 [`clojure.core.reducers/folder` @ crossclj](http://crossclj.info/fun/clojure.core.reducers.cljs/folder.html)<br>
 
 ---
@@ -106,10 +112,11 @@ The API data for this symbol:
  :source {:code "(defn folder\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [_ f1]\n         (-reduce coll (xf f1) (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init))\n\n       #_\n       CollFold\n       #_\n       (coll-fold [_ n combinef reducef]\n         (coll-fold coll n combinef (xf reducef))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [66 83]},
+          :lines [68 85]},
  :full-name "clojure.core.reducers/folder",
+ :clj-symbol "clojure.core.reducers/folder",
  :docstring "Given a foldable collection, and a transformation function xf,\nreturns a foldable collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn."}
 
 ```

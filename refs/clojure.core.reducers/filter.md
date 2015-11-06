@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" title="Added in 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/filter</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/filter)
+</td>
 </tr>
 </table>
 
@@ -31,7 +34,7 @@ Retains values in the reduction of coll for which (pred val)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L106-L117):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L108-L119):
 
 ```clj
 (defcurried filter
@@ -52,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:106-117](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L106-L117)</ins>
+                └── <ins>[reducers.cljs:108-119](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L108-L119)</ins>
 </pre>
 
 -->
@@ -68,6 +71,9 @@ clojurescript @ r1586
 
 ###### External doc links:
 
+[`clojure.core.reducers/filter` @ clojuredocs](http://clojuredocs.org/clojure.core.reducers/filter)<br>
+[`clojure.core.reducers/filter` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core.reducers/filter/)<br>
+[`clojure.core.reducers/filter` @ crossclj](http://crossclj.info/fun/clojure.core.reducers/filter.html)<br>
 [`clojure.core.reducers/filter` @ crossclj](http://crossclj.info/fun/clojure.core.reducers.cljs/filter.html)<br>
 
 ---
@@ -105,10 +111,11 @@ The API data for this symbol:
  :source {:code "(defcurried filter\n  \"Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [106 117]},
+          :lines [108 119]},
  :full-name "clojure.core.reducers/filter",
+ :clj-symbol "clojure.core.reducers/filter",
  :docstring "Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable."}
 
 ```

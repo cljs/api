@@ -41,7 +41,7 @@ Returns the map entry for key, or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1074-L1080):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1138-L1144):
 
 ```clj
 (defn find
@@ -49,18 +49,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
   (when (and (not (nil? coll))
              (associative? coll)
              (contains? coll k))
-    [k (-lookup coll k)]))
+    [k (get coll k)]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1074-1080](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1074-L1080)</ins>
+            └── <ins>[core.cljs:1138-1144](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1138-L1144)</ins>
 </pre>
 
 -->
@@ -110,12 +110,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/get" "cljs.core/get-in"],
  :full-name-encode "cljs.core/find",
- :source {:code "(defn find\n  [coll k]\n  (when (and (not (nil? coll))\n             (associative? coll)\n             (contains? coll k))\n    [k (-lookup coll k)]))",
+ :source {:code "(defn find\n  [coll k]\n  (when (and (not (nil? coll))\n             (associative? coll)\n             (contains? coll k))\n    [k (get coll k)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1074 1080]},
+          :lines [1138 1144]},
  :full-name "cljs.core/find",
  :clj-symbol "clojure.core/find",
  :docstring "Returns the map entry for key, or nil if key not present."}

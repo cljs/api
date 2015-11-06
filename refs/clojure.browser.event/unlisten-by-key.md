@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/event.cljs#L71-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/event.cljs#L71-L73):
 
 ```clj
 (defn unlisten-by-key
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:71-73](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/browser/event.cljs#L71-L73)</ins>
+                └── <ins>[event.cljs:71-73](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/browser/event.cljs#L71-L73)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn unlisten-by-key\n  [key]\n  (goog.events/unlistenByKey key))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [71 73]},
  :full-name "clojure.browser.event/unlisten-by-key",

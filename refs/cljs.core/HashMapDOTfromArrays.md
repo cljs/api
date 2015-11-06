@@ -1,11 +1,11 @@
-## cljs.core/HashMap.fromArrays
+## ~~cljs.core/HashMap.fromArrays~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[×] 0.0-1798" title="Removed in 0.0-1798" src="https://img.shields.io/badge/×-0.0--1798-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -83,7 +83,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "HashMap.fromArrays",
  :signature ["[ks vs]"],
- :history [["+" "0.0-927"]],
+ :history [["+" "0.0-927"] ["-" "0.0-1798"]],
  :parent-type "HashMap",
  :type "function",
  :full-name-encode "cljs.core/HashMapDOTfromArrays",
@@ -93,7 +93,8 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3832 3837]},
- :full-name "cljs.core/HashMap.fromArrays"}
+ :full-name "cljs.core/HashMap.fromArrays",
+ :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 
 ```
 

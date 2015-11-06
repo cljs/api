@@ -135,7 +135,7 @@ second item in second form, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1529-L1539):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1545-L1555):
 
 ```clj
 (defmacro ->
@@ -150,11 +150,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.4.0
+clojure @ clojure-1.5.1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1529-1539](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L1529-L1539)</ins>
+            └── <ins>[core.clj:1545-1555](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1545-L1555)</ins>
 </pre>
 
 -->
@@ -207,9 +207,9 @@ The API data for this symbol:
  :source {:code "(defmacro ->\n  ([x] x)\n  ([x form] (if (seq? form)\n              (with-meta `(~(first form) ~x ~@(next form)) (meta form))\n              (list form x)))\n  ([x form & more] `(-> (-> ~x ~form) ~@more)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.4.0",
+          :tag "clojure-1.5.1",
           :filename "src/clj/clojure/core.clj",
-          :lines [1529 1539]},
+          :lines [1545 1555]},
  :examples [{:id "19b460",
              :content "The first is arguably a bit more cumbersome to read than the second:\n\n```clj\n(first (.split (.replace (.toUpperCase \"a b c d\") \"A\" \"X\") \" \"))\n;;=> \"X\"\n\n(-> \"a b c d\"\n    .toUpperCase\n    (.replace \"A\" \"X\")\n    (.split \" \")\n    first)\n;;=> \"X\"\n```"}
             {:id "78ad8f",

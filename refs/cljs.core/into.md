@@ -47,25 +47,27 @@ from-coll conjoined.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2672-L2678):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2849-L2857):
 
 ```clj
 (defn into
   [to from]
-  (if (satisfies? IEditableCollection to)
-    (persistent! (reduce -conj! (transient to) from))
-    (reduce -conj to from)))
+  (if-not (nil? to)
+    (if (satisfies? IEditableCollection to false)
+      (persistent! (reduce -conj! (transient to) from))
+      (reduce -conj to from))
+    (reduce conj () from)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2672-2678](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2672-L2678)</ins>
+            └── <ins>[core.cljs:2849-2857](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2849-L2857)</ins>
 </pre>
 
 -->
@@ -115,12 +117,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/conj"],
  :full-name-encode "cljs.core/into",
- :source {:code "(defn into\n  [to from]\n  (if (satisfies? IEditableCollection to)\n    (persistent! (reduce -conj! (transient to) from))\n    (reduce -conj to from)))",
+ :source {:code "(defn into\n  [to from]\n  (if-not (nil? to)\n    (if (satisfies? IEditableCollection to false)\n      (persistent! (reduce -conj! (transient to) from))\n      (reduce -conj to from))\n    (reduce conj () from)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2672 2678]},
+          :lines [2849 2857]},
  :full-name "cljs.core/into",
  :clj-symbol "clojure.core/into",
  :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined."}

@@ -1,11 +1,11 @@
-## cljs.core/Vector.EMPTY
+## ~~cljs.core/Vector.EMPTY~~
 
 
 
  <table border="1">
 <tr>
 <td>var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[×] 0.0-1798" title="Removed in 0.0-1798" src="https://img.shields.io/badge/×-0.0--1798-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -72,8 +72,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Vector.EMPTY",
- :type "var",
+ :history [["+" "0.0-927"] ["-" "0.0-1798"]],
  :parent-type "Vector",
+ :type "var",
+ :full-name-encode "cljs.core/VectorDOTEMPTY",
  :source {:code "(set! cljs.core.Vector/EMPTY (Vector. nil (array) 0))",
           :title "Source code",
           :repo "clojurescript",
@@ -81,8 +83,7 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [2859]},
  :full-name "cljs.core/Vector.EMPTY",
- :full-name-encode "cljs.core/VectorDOTEMPTY",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 
 ```
 

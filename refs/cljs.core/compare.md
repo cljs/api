@@ -74,30 +74,36 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1100-L1113):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1164-L1183):
 
 ```clj
 (defn compare
   [x y]
   (cond
    (identical? x y) 0
+
    (nil? x) -1
+
    (nil? y) 1
-   (identical? (type x) (type y)) (if (satisfies? IComparable x)
-                                    (-compare x y)
-                                    (garray/defaultCompare x y))
-   :else (throw (js/Error. "compare on non-nil objects of different types"))))
+
+   (identical? (type x) (type y))
+   (if (satisfies? IComparable x false)
+     (-compare ^not-native x y)
+     (garray/defaultCompare x y))
+
+   :else
+   (throw (js/Error. "compare on non-nil objects of different types"))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1100-1113](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1100-L1113)</ins>
+            └── <ins>[core.cljs:1164-1183](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1164-L1183)</ins>
 </pre>
 
 -->
@@ -149,12 +155,12 @@ The API data for this symbol:
            "cljs.core/sorted-set-by"
            "cljs.core/sorted-map-by"],
  :full-name-encode "cljs.core/compare",
- :source {:code "(defn compare\n  [x y]\n  (cond\n   (identical? x y) 0\n   (nil? x) -1\n   (nil? y) 1\n   (identical? (type x) (type y)) (if (satisfies? IComparable x)\n                                    (-compare x y)\n                                    (garray/defaultCompare x y))\n   :else (throw (js/Error. \"compare on non-nil objects of different types\"))))",
+ :source {:code "(defn compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (identical? (type x) (type y))\n   (if (satisfies? IComparable x false)\n     (-compare ^not-native x y)\n     (garray/defaultCompare x y))\n\n   :else\n   (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1100 1113]},
+          :lines [1164 1183]},
  :examples [{:id "e13fa0",
              :content "```clj\n(compare 10 12)\n;;=> -1\n\n(compare 12 10)\n;;=> 1\n\n(compare 10 10)\n;;=> 0\n\n(compare 10 nil)\n;;=>  1\n\n(compare 10 (list 1 2 3))\n;; Error: compare on non-nil objects of different types\n```"}],
  :full-name "cljs.core/compare",

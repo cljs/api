@@ -1,11 +1,11 @@
-## cljs.core/PersistentArrayMap.fromArrays
+## ~~cljs.core/PersistentArrayMap.fromArrays~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[×] 0.0-1798" title="Removed in 0.0-1798" src="https://img.shields.io/badge/×-0.0--1798-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -85,7 +85,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentArrayMap.fromArrays",
  :signature ["[ks vs]"],
- :history [["+" "0.0-1211"]],
+ :history [["+" "0.0-1211"] ["-" "0.0-1798"]],
  :parent-type "PersistentArrayMap",
  :type "function",
  :full-name-encode "cljs.core/PersistentArrayMapDOTfromArrays",
@@ -95,7 +95,8 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3976 3983]},
- :full-name "cljs.core/PersistentArrayMap.fromArrays"}
+ :full-name "cljs.core/PersistentArrayMap.fromArrays",
+ :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 
 ```
 

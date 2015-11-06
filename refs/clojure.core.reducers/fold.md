@@ -6,6 +6,9 @@
 <tr>
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" title="Added in 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core.reducers/fold</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/fold)
+</td>
 </tr>
 </table>
 
@@ -17,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L51):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L53):
 
 ```clj
 (def fold reduce)
@@ -27,12 +30,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:51](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/clojure/core/reducers.cljs#L51)</ins>
+                └── <ins>[reducers.cljs:53](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/clojure/core/reducers.cljs#L53)</ins>
 </pre>
 
 -->
@@ -43,6 +46,9 @@ clojurescript @ r1586
 
 ###### External doc links:
 
+[`clojure.core.reducers/fold` @ clojuredocs](http://clojuredocs.org/clojure.core.reducers/fold)<br>
+[`clojure.core.reducers/fold` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core.reducers/fold/)<br>
+[`clojure.core.reducers/fold` @ crossclj](http://crossclj.info/fun/clojure.core.reducers/fold.html)<br>
 [`clojure.core.reducers/fold` @ crossclj](http://crossclj.info/fun/clojure.core.reducers.cljs/fold.html)<br>
 
 ---
@@ -77,11 +83,12 @@ The API data for this symbol:
  :source {:code "(def fold reduce)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [51]},
+          :lines [53]},
  :full-name "clojure.core.reducers/fold",
  :full-name-encode "clojure.core.reducers/fold",
+ :clj-symbol "clojure.core.reducers/fold",
  :history [["+" "0.0-1236"]]}
 
 ```

@@ -20,21 +20,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5814):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5794-L5795):
 
 ```clj
-(set! cljs.core.PersistentTreeSet/EMPTY (PersistentTreeSet. nil (sorted-map) 0))
+(set! cljs.core.PersistentTreeSet/EMPTY
+  (PersistentTreeSet. nil cljs.core.PersistentTreeMap/EMPTY 0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5814](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L5814)</ins>
+            └── <ins>[core.cljs:5794-5795](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5794-L5795)</ins>
 </pre>
 
 -->
@@ -82,12 +83,12 @@ The API data for this symbol:
  :parent-type "PersistentTreeSet",
  :type "var",
  :full-name-encode "cljs.core/PersistentTreeSetDOTEMPTY",
- :source {:code "(set! cljs.core.PersistentTreeSet/EMPTY (PersistentTreeSet. nil (sorted-map) 0))",
+ :source {:code "(set! cljs.core.PersistentTreeSet/EMPTY\n  (PersistentTreeSet. nil cljs.core.PersistentTreeMap/EMPTY 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5814]},
+          :lines [5794 5795]},
  :full-name "cljs.core/PersistentTreeSet.EMPTY",
  :clj-symbol "clojure.lang/PersistentTreeSet.EMPTY"}
 

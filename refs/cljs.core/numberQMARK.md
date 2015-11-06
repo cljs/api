@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/number?</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/number?)
@@ -35,28 +35,48 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1046-L1047):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1110-L1111):
 
 ```clj
 (defn ^boolean number? [n]
-  (goog/isNumber n))
+  (cljs.core/number? n))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1046-1047](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1046-L1047)</ins>
+            └── <ins>[core.cljs:1110-1111](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1110-L1111)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L248-L249):
+
+```clj
+(defmacro number? [x]
+  (bool-expr (list 'js* "typeof ~{} === 'number'" x)))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:248-249](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L248-L249)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -98,15 +118,21 @@ The API data for this symbol:
  :name "number?",
  :signature ["[n]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/integer?"],
  :full-name-encode "cljs.core/numberQMARK",
- :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
-          :title "Source code",
+ :source {:code "(defn ^boolean number? [n]\n  (cljs.core/number? n))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1046 1047]},
+          :lines [1110 1111]},
+ :extra-sources [{:code "(defmacro number? [x]\n  (bool-expr (list 'js* \"typeof ~{} === 'number'\" x)))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r1798",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [248 249]}],
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

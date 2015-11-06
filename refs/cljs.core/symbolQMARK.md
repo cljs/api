@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/symbol?</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/symbol?)
@@ -25,29 +25,48 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1042-L1044):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1107-L1108):
 
 ```clj
 (defn ^boolean symbol? [x]
-  (and ^boolean (goog/isString x)
-       (identical? (.charAt x 0) \uFDD1)))
+  (instance? Symbol x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1042-1044](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1042-L1044)</ins>
+            └── <ins>[core.cljs:1107-1108](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1107-L1108)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L251-L252):
+
+```clj
+(defmacro symbol? [x]
+  (bool-expr `(instance? Symbol ~x)))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:251-252](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L251-L252)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -88,14 +107,20 @@ The API data for this symbol:
  :name "symbol?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :full-name-encode "cljs.core/symbolQMARK",
- :source {:code "(defn ^boolean symbol? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD1)))",
-          :title "Source code",
+ :source {:code "(defn ^boolean symbol? [x]\n  (instance? Symbol x))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1042 1044]},
+          :lines [1107 1108]},
+ :extra-sources [{:code "(defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r1798",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [251 252]}],
  :full-name "cljs.core/symbol?",
  :clj-symbol "clojure.core/symbol?"}
 

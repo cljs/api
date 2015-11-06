@@ -30,24 +30,23 @@ Returns true if `x` is a string, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1033-L1036):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L378-L380):
 
 ```clj
 (defn ^boolean string? [x]
   (and ^boolean (goog/isString x)
-       (not (or (identical? (.charAt x 0) \uFDD0)
-                (identical? (.charAt x 0) \uFDD1)))))
+    (not (identical? (.charAt x 0) \uFDD0))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1033-1036](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1033-L1036)</ins>
+            └── <ins>[core.cljs:378-380](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L378-L380)</ins>
 </pre>
 
 -->
@@ -97,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/stringQMARK",
- :source {:code "(defn ^boolean string? [x]\n  (and ^boolean (goog/isString x)\n       (not (or (identical? (.charAt x 0) \\uFDD0)\n                (identical? (.charAt x 0) \\uFDD1)))))",
+ :source {:code "(defn ^boolean string? [x]\n  (and ^boolean (goog/isString x)\n    (not (identical? (.charAt x 0) \\uFDD0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1033 1036]},
+          :lines [378 380]},
  :full-name "cljs.core/string?",
  :clj-symbol "clojure.core/string?"}
 

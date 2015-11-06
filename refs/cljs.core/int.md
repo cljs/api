@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/int</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/int)
@@ -28,7 +28,7 @@ Coerces `x` to an integer by stripping decimal places.
 
 ###### See Also:
 
-[``](../cljs.core/char.md)<br>
+[`cljs.core/char`](../cljs.core/char.md)<br>
 [`cljs.core/integer?`](../cljs.core/integerQMARK.md)<br>
 
 ---
@@ -41,29 +41,49 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1506-L1509):
 
 ```clj
 (defn int
   [x]
-  (fix x))
+  (bit-or x 0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
+clojurescript @ r1798
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1325-1328](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L1325-L1328)</ins>
+            └── <ins>[core.cljs:1506-1509](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1506-L1509)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L413-L414):
+
+```clj
+(defmacro int [x]
+  `(bit-or ~x 0))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r1798
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:413-414](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L413-L414)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -104,15 +124,21 @@ The API data for this symbol:
  :name "int",
  :signature ["[x]"],
  :history [["+" "0.0-1211"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/char" "cljs.core/integer?"],
  :full-name-encode "cljs.core/int",
- :source {:code "(defn int\n  [x]\n  (fix x))",
-          :title "Source code",
+ :source {:code "(defn int\n  [x]\n  (bit-or x 0))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r1586",
+          :tag "r1798",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1325 1328]},
+          :lines [1506 1509]},
+ :extra-sources [{:code "(defmacro int [x]\n  `(bit-or ~x 0))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r1798",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [413 414]}],
  :full-name "cljs.core/int",
  :clj-symbol "clojure.core/int",
  :docstring "Coerce to int by stripping decimal places."}
