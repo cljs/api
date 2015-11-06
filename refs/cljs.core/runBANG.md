@@ -28,7 +28,7 @@ effects, on successive items in the collection. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8194-L8198):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8197-L8201):
 
 ```clj
 (defn run!
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8194-8198](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8194-L8198)</ins>
+            └── <ins>[core.cljs:8197-8201](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8197-L8201)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn run!\n  [proc coll]\n  (reduce #(proc %2) nil coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8194 8198]},
+          :lines [8197 8201]},
  :full-name "cljs.core/run!",
  :docstring "Runs the supplied procedure (via reduce), for purposes of side\neffects, on successive items in the collection. Returns nil"}
 

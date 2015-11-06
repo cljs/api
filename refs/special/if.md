@@ -60,11 +60,11 @@ false or nil).
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L472-L482):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L472-L482):
 
 ```clj
 (defmethod parse 'if
-  [op env [_ test then else :as form] name]
+  [op env [_ test then else :as form] name _]
   (when (< (count form) 3)
     (throw (error env "Too few arguments to if")))
   (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))
@@ -80,11 +80,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:472-482](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L472-L482)</ins>
+            └── <ins>[analyzer.clj:472-482](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L472-L482)</ins>
 </pre>
 
 -->
@@ -136,10 +136,10 @@ The API data for this symbol:
            "cljs.core/if-let"
            "cljs.core/if-not"],
  :full-name-encode "special/if",
- :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (when (< (count form) 3)\n    (throw (error env \"Too few arguments to if\")))\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
+ :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name _]\n  (when (< (count form) 3)\n    (throw (error env \"Too few arguments to if\")))\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [472 482]},
  :examples [{:id "e591ff",

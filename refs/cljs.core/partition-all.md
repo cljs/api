@@ -52,7 +52,7 @@ transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7332-L7362):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L7335-L7365):
 
 ```clj
 (defn partition-all
@@ -89,11 +89,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7332-7362](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7332-L7362)</ins>
+            └── <ins>[core.cljs:7335-7365](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L7335-L7365)</ins>
 </pre>
 
 -->
@@ -146,9 +146,9 @@ The API data for this symbol:
  :source {:code "(defn partition-all\n  ([n]\n   (fn [f1]\n     (let [a (array-list)]\n       (fn\n         ([] (f1))\n         ([result]\n            (let [result (if (.isEmpty a)\n                           result\n                           (let [v (vec (.toArray a))]\n                             ;;flushing ops must clear before invoking possibly\n                             ;;failing nested op, else infinite loop\n                             (.clear a)\n                             (f1 result v)))]\n              (f1 result)))\n         ([result input]\n            (.add a input)\n            (if (== n (.size a))\n              (let [v (vec (.toArray a))]\n                (.clear a)\n                (f1 result v))\n              result))))))\n  ([n coll]\n     (partition-all n n coll))\n  ([n step coll]\n     (lazy-seq\n      (when-let [s (seq coll)]\n        (cons (take n s) (partition-all n step (drop step s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7332 7362]},
+          :lines [7335 7365]},
  :full-name "cljs.core/partition-all",
  :clj-symbol "clojure.core/partition-all",
  :docstring "Returns a lazy sequence of lists like partition, but may include\npartitions with fewer than n items at the end.  Returns a stateful\ntransducer when no collection is provided."}

@@ -17,11 +17,11 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L878-L880):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L878-L880):
 
 ```clj
 (defmethod parse 'let*
-  [op encl-env form _]
+  [op encl-env form _ _]
   (analyze-let encl-env form false))
 ```
 
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:878-880](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L878-L880)</ins>
+            └── <ins>[analyzer.clj:878-880](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L878-L880)</ins>
 </pre>
 
 -->
@@ -70,10 +70,10 @@ The API data for this symbol:
 {:ns "special",
  :name "let*",
  :type "special form",
- :source {:code "(defmethod parse 'let*\n  [op encl-env form _]\n  (analyze-let encl-env form false))",
+ :source {:code "(defmethod parse 'let*\n  [op encl-env form _ _]\n  (analyze-let encl-env form false))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [878 880]},
  :full-name "special/let*",

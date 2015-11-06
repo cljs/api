@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/dom.cljs#L81-L90):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/clojure/browser/dom.cljs#L81-L90):
 
 ```clj
 (defn element
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
+                └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn element\n  ([tag-or-text]\n     (log \"(element \" tag-or-text \")\")\n     (-element tag-or-text))\n  ([tag & children]\n     (log \"(element \" tag \" \" children \")\")\n     (let [attrs (first children)]\n       (if (map? attrs)\n         (-element tag attrs (rest children))\n         (-element tag nil children)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [81 90]},
  :full-name "clojure.browser.dom/element",

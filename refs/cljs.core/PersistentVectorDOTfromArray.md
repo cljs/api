@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L4145-L4156):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4148-L4159):
 
 ```clj
 (set! (.-fromArray PersistentVector)
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4145-4156](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L4145-L4156)</ins>
+            └── <ins>[core.cljs:4148-4159](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4148-L4159)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentVector)\n  (fn [xs ^boolean no-clone]\n    (let [l (alength xs)\n          xs (if no-clone xs (aclone xs))]\n      (if (< l 32)\n        (PersistentVector. nil l 5 (.-EMPTY-NODE PersistentVector) xs nil)\n        (let [node (.slice xs 0 32)\n              v (PersistentVector. nil 32 5 (.-EMPTY-NODE PersistentVector) node nil)]\n          (loop [i 32 out (-as-transient v)]\n            (if (< i l)\n              (recur (inc i) (conj! out (aget xs i)))\n              (persistent! out))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4145 4156]},
+          :lines [4148 4159]},
  :full-name "cljs.core/PersistentVector.fromArray"}
 
 ```

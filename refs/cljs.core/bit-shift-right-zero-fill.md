@@ -27,7 +27,7 @@ DEPRECATED: Bitwise shift right with zero fill
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1982-L1984):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L1982-L1984):
 
 ```clj
 (defn bit-shift-right-zero-fill
@@ -38,18 +38,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1982-1984](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1982-L1984)</ins>
+            └── <ins>[core.cljs:1982-1984](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L1982-L1984)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L546-L547):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/core.clj#L546-L547):
 
 ```clj
 (defmacro ^::ana/numeric bit-shift-right-zero-fill [x n]
@@ -60,11 +60,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:546-547](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L546-L547)</ins>
+            └── <ins>[core.clj:546-547](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/core.clj#L546-L547)</ins>
 </pre>
 -->
 
@@ -110,13 +110,13 @@ The API data for this symbol:
  :source {:code "(defn bit-shift-right-zero-fill\n  [x n] (cljs.core/bit-shift-right-zero-fill x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1982 1984]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-shift-right-zero-fill [x n]\n  (core/list 'js* \"(~{} >>> ~{})\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2311",
+                  :tag "r2322",
                   :filename "src/clj/cljs/core.clj",
                   :lines [546 547]}],
  :full-name "cljs.core/bit-shift-right-zero-fill",

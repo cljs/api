@@ -43,7 +43,7 @@ Creates a `seq` from a JavaScript array, starting at index `i` if given.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L929-L933):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L929-L933):
 
 ```clj
 (defn array-seq
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:929-933](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L929-L933)</ins>
+            └── <ins>[core.cljs:929-933](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L929-L933)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [929 933]},
  :examples [{:id "9ef6de",

@@ -41,7 +41,7 @@ Load file at `filename`, then compiles and evaluates its code.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/repl.clj#L162-L171):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/repl.clj#L162-L171):
 
 ```clj
 (def default-special-fns
@@ -60,11 +60,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r23
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:162-171](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/repl.clj#L162-L171)</ins>
+            └── <ins>[repl.clj:162-171](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/repl.clj#L162-L171)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (swap! env/*compiler* update-in [::ana/namespaces ns-name] {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/repl.clj",
           :lines [162 171]},
  :examples [{:id "0903c5",

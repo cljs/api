@@ -32,7 +32,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L701-L710):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L701-L710):
 
 ```clj
 (defn ^number hash-ordered-coll
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:701-710](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L701-L710)</ins>
+            └── <ins>[core.cljs:701-710](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L701-L710)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn ^number hash-ordered-coll\n  [coll]\n  (loop [n 0 hash-code 1 coll (seq coll)]\n    (if-not (nil? coll)\n      (recur (inc n) (bit-or (+ (imul 31 hash-code) (hash (first coll))) 0)\n        (next coll))\n      (mix-collection-hash hash-code n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [701 710]},
  :full-name "cljs.core/hash-ordered-coll",

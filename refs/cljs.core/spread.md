@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2683-L2689):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L2686-L2692):
 
 ```clj
 (defn spread
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2683-2689](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2683-L2689)</ins>
+            └── <ins>[core.cljs:2686-2692](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L2686-L2692)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn spread\n  [arglist]\n  (cond\n   (nil? arglist) nil\n   (nil? (next arglist)) (seq (first arglist))\n   :else (cons (first arglist)\n               (spread (next arglist)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2683 2689]},
+          :lines [2686 2692]},
  :full-name "cljs.core/spread",
  :full-name-encode "cljs.core/spread",
  :history [["+" "0.0-927"]]}

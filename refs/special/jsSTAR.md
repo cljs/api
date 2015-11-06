@@ -17,11 +17,11 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L1282-L1335):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L1284-L1337):
 
 ```clj
 (defmethod parse 'js*
-  [op env [_ jsform & args :as form] _]
+  [op env [_ jsform & args :as form] _ _]
   (when-not (string? jsform)
     (throw (error env "Invalid js* form")))
   (if args
@@ -80,11 +80,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1282-1335](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L1282-L1335)</ins>
+            └── <ins>[analyzer.clj:1284-1337](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L1284-L1337)</ins>
 </pre>
 
 -->
@@ -121,12 +121,12 @@ The API data for this symbol:
 {:ns "special",
  :name "js*",
  :type "special form",
- :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (lazy-seq\n                         (cons (subs s 0 idx)\n                           (seg (subs s (inc end)))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       (when (-> form meta :numeric)\n         (let [types (map #(infer-tag env %) argexprs)]\n           (when-not (every?\n                       (fn [t]\n                         (or (nil? t)\n                             (and (symbol? t) ('#{any number} t))\n                             ;; TODO: type inference is not strong enough to detect that\n                             ;; when functions like first won't return nil, so variadic\n                             ;; numeric functions like cljs.core/< would produce a spurious\n                             ;; warning without this - David\n                             (and (set? t) (set/subset? t '#{any number nil clj-nil}))))\n                       types)\n             (warning :invalid-arithmetic env\n               {:js-op (-> form meta :js-op)\n                :types (into [] types)}))))\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (or (-> form meta :tag)\n                 (and (-> form meta :numeric) 'number)\n                 nil)\n        :form form :children argexprs\n        :js-op (-> form meta :js-op)\n        :numeric (-> form meta :numeric)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (lazy-seq\n                           (cons (subs s 0 idx)\n                             (cons inner\n                               (interp (subs s (inc end))))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (or (-> form meta :tag)\n                (and (-> form meta :numeric) 'number)\n                nil)\n       :js-op (-> form meta :js-op)\n       :numeric (-> form meta :numeric)})))",
+ :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _ _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (lazy-seq\n                         (cons (subs s 0 idx)\n                           (seg (subs s (inc end)))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       (when (-> form meta :numeric)\n         (let [types (map #(infer-tag env %) argexprs)]\n           (when-not (every?\n                       (fn [t]\n                         (or (nil? t)\n                             (and (symbol? t) ('#{any number} t))\n                             ;; TODO: type inference is not strong enough to detect that\n                             ;; when functions like first won't return nil, so variadic\n                             ;; numeric functions like cljs.core/< would produce a spurious\n                             ;; warning without this - David\n                             (and (set? t) (set/subset? t '#{any number nil clj-nil}))))\n                       types)\n             (warning :invalid-arithmetic env\n               {:js-op (-> form meta :js-op)\n                :types (into [] types)}))))\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (or (-> form meta :tag)\n                 (and (-> form meta :numeric) 'number)\n                 nil)\n        :form form :children argexprs\n        :js-op (-> form meta :js-op)\n        :numeric (-> form meta :numeric)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (lazy-seq\n                           (cons (subs s 0 idx)\n                             (cons inner\n                               (interp (subs s (inc end))))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (or (-> form meta :tag)\n                (and (-> form meta :numeric) 'number)\n                nil)\n       :js-op (-> form meta :js-op)\n       :numeric (-> form meta :numeric)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1282 1335]},
+          :lines [1284 1337]},
  :full-name "special/js*",
  :full-name-encode "special/jsSTAR",
  :history [["+" "0.0-927"]]}

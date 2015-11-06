@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/repl/browser.clj#L193-L203):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/repl/browser.clj#L193-L203):
 
 ```clj
 (defn compile-client-js [opts]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:193-203](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/repl/browser.clj#L193-L203)</ins>
+                └── <ins>[browser.clj:193-203](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/repl/browser.clj#L193-L203)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn compile-client-js [opts]\n  (cljsc/build '[(ns clojure.browser.repl.client\n                   (:require [goog.events :as event]\n                             [clojure.browser.repl :as repl]))\n                 (defn start [url]\n                   (event/listen js/window\n                                 \"load\"\n                                 (fn []\n                                   (repl/start-evaluator url))))]\n               {:optimizations (:optimizations opts)\n                :output-dir (:working-dir opts)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [193 203]},
  :full-name "cljs.repl.browser/compile-client-js",

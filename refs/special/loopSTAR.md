@@ -17,11 +17,11 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L882-L884):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L882-L884):
 
 ```clj
 (defmethod parse 'loop*
-  [op encl-env form _]
+  [op encl-env form _ _]
   (analyze-let encl-env form true))
 ```
 
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:882-884](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L882-L884)</ins>
+            └── <ins>[analyzer.clj:882-884](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L882-L884)</ins>
 </pre>
 
 -->
@@ -70,10 +70,10 @@ The API data for this symbol:
 {:ns "special",
  :name "loop*",
  :type "special form",
- :source {:code "(defmethod parse 'loop*\n  [op encl-env form _]\n  (analyze-let encl-env form true))",
+ :source {:code "(defmethod parse 'loop*\n  [op encl-env form _ _]\n  (analyze-let encl-env form true))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [882 884]},
  :full-name "special/loop*",

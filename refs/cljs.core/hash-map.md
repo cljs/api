@@ -44,7 +44,7 @@ Returns a new hash map with supplied mappings.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6768-L6775):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L6771-L6778):
 
 ```clj
 (defn hash-map
@@ -59,18 +59,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6768-6775](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6768-L6775)</ins>
+            └── <ins>[core.cljs:6771-6778](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L6771-L6778)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L1419-L1427):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/core.clj#L1419-L1427):
 
 ```clj
 (defmacro hash-map
@@ -88,11 +88,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1419-1427](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L1419-L1427)</ins>
+            └── <ins>[core.clj:1419-1427](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/core.clj#L1419-L1427)</ins>
 </pre>
 -->
 
@@ -143,13 +143,13 @@ The API data for this symbol:
  :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient (.-EMPTY PersistentHashMap))]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6768 6775]},
+          :lines [6771 6778]},
  :extra-sources [{:code "(defmacro hash-map\n  ([] `(.-EMPTY cljs.core/PersistentHashMap))\n  ([& kvs]\n    (let [pairs (partition 2 kvs)\n          ks    (map first pairs)\n          vs    (map second pairs)]\n      (vary-meta\n        `(.fromArrays cljs.core/PersistentHashMap (array ~@ks) (array ~@vs))\n        assoc :tag 'cljs.core/PersistentHashMap))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2311",
+                  :tag "r2322",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1419 1427]}],
  :full-name "cljs.core/hash-map",

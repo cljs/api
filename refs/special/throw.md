@@ -39,11 +39,11 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L501-L506):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L501-L506):
 
 ```clj
 (defmethod parse 'throw
-  [op env [_ throw :as form] name]
+  [op env [_ throw :as form] name _]
   (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]
     {:env env :op :throw :form form
      :throw throw-expr
@@ -54,11 +54,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:501-506](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/analyzer.clj#L501-L506)</ins>
+            └── <ins>[analyzer.clj:501-506](https://github.com/clojure/clojurescript/blob/r2322/src/clj/cljs/analyzer.clj#L501-L506)</ins>
 </pre>
 
 -->
@@ -107,10 +107,10 @@ The API data for this symbol:
  :type "special form",
  :related ["special/try" "special/catch" "special/finally"],
  :full-name-encode "special/throw",
- :source {:code "(defmethod parse 'throw\n  [op env [_ throw :as form] name]\n  (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]\n    {:env env :op :throw :form form\n     :throw throw-expr\n     :children [throw-expr]}))",
+ :source {:code "(defmethod parse 'throw\n  [op env [_ throw :as form] name _]\n  (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]\n    {:env env :op :throw :form form\n     :throw throw-expr\n     :children [throw-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [501 506]},
  :full-name "special/throw",

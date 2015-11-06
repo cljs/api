@@ -30,7 +30,7 @@ Replaces the node at this loc with the value of (f node args)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/zip.cljs#L189-L192):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/clojure/zip.cljs#L189-L192):
 
 ```clj
 (defn edit
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/zip.cljs#L189-L192)</ins>
+            └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/clojure/zip.cljs#L189-L192)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn edit\n  [loc f & args]\n    (replace loc (apply f (node loc) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [189 192]},
  :full-name "clojure.zip/edit",

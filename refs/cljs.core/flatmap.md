@@ -32,7 +32,7 @@ is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8136-L8147):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8139-L8150):
 
 ```clj
 (defn flatmap
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8136-8147](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8136-L8147)</ins>
+            └── <ins>[core.cljs:8139-8150](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8139-L8150)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn flatmap\n  ([f]\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([result] (f1 result))\n       ([result input]\n          (reduce (preserving-reduced f1) result (f input))))))\n  ([f coll] (sequence (flatmap f) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8136 8147]},
+          :lines [8139 8150]},
  :full-name "cljs.core/flatmap",
  :docstring "maps f over coll and concatenates the results.  Thus function f\nshould return a collection.  Returns a transducer when no collection\nis provided."}
 

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L381-L383):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L381-L383):
 
 ```clj
 (defprotocol INamed
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:381-383](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L381-L383)</ins>
+            └── <ins>[core.cljs:381-383](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L381-L383)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defprotocol INamed\n  (^string -name [x])\n  (^string -namespace [x]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [381 383]},
  :methods [{:name "-name", :signature ["[x]"], :docstring nil}

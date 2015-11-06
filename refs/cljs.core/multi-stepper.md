@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2997-L3015):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L3000-L3018):
 
 ```clj
 (defn multi-stepper
@@ -46,18 +46,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
                     (set! (.-rest lt) (lazy-transformer (.-stepper lt)))
                     (set! (.-stepper lt) nil)
                     (.-rest lt))))]
-       (MultiStepper. xform iters nexts))))
+       (MultiStepper. (xform stepfn) iters nexts))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2997-3015](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2997-L3015)</ins>
+            └── <ins>[core.cljs:3000-3018](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L3000-L3018)</ins>
 </pre>
 
 -->
@@ -100,12 +100,12 @@ The API data for this symbol:
  :name "multi-stepper",
  :type "function",
  :signature ["[xform iters]" "[xform iters nexts]"],
- :source {:code "(defn multi-stepper\n  ([xform iters]\n     (multi-stepper xform iters\n       (make-array (alength iters))))\n  ([xform iters nexts]\n     (letfn [(stepfn\n               ([result]\n                  (let [lt (if (reduced? result)\n                             @result\n                             result)]\n                    (set! (.-stepper lt) nil)\n                    lt))\n               ([result input]\n                  (let [lt result]\n                    (set! (.-first lt) input)\n                    (set! (.-rest lt) (lazy-transformer (.-stepper lt)))\n                    (set! (.-stepper lt) nil)\n                    (.-rest lt))))]\n       (MultiStepper. xform iters nexts))))",
+ :source {:code "(defn multi-stepper\n  ([xform iters]\n     (multi-stepper xform iters\n       (make-array (alength iters))))\n  ([xform iters nexts]\n     (letfn [(stepfn\n               ([result]\n                  (let [lt (if (reduced? result)\n                             @result\n                             result)]\n                    (set! (.-stepper lt) nil)\n                    lt))\n               ([result input]\n                  (let [lt result]\n                    (set! (.-first lt) input)\n                    (set! (.-rest lt) (lazy-transformer (.-stepper lt)))\n                    (set! (.-stepper lt) nil)\n                    (.-rest lt))))]\n       (MultiStepper. (xform stepfn) iters nexts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2997 3015]},
+          :lines [3000 3018]},
  :full-name "cljs.core/multi-stepper",
  :full-name-encode "cljs.core/multi-stepper",
  :history [["+" "0.0-2301"]]}

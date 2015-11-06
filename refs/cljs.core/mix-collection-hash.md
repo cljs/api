@@ -34,7 +34,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L689-L699):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L689-L699):
 
 ```clj
 (defn ^number mix-collection-hash
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:689-699](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L689-L699)</ins>
+            └── <ins>[core.cljs:689-699](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L689-L699)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn ^number mix-collection-hash\n  [hash-basis count]\n  (let [h1 m3-seed\n        k1 (m3-mix-K1 hash-basis)\n        h1 (m3-mix-H1 h1 k1)]\n    (m3-fmix h1 count)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [689 699]},
  :full-name "cljs.core/mix-collection-hash",

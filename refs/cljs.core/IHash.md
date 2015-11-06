@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L304-L305):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L304-L305):
 
 ```clj
 (defprotocol IHash
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:304-305](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L304-L305)</ins>
+            └── <ins>[core.cljs:304-305](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L304-L305)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IHash\n  (-hash [o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [304 305]},
  :methods [{:name "-hash", :signature ["[o]"], :docstring nil}],

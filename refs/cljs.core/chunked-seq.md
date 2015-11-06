@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L4244-L4248):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4247-L4251):
 
 ```clj
 (defn chunked-seq
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2311
+clojurescript @ r2322
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4244-4248](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L4244-L4248)</ins>
+            └── <ins>[core.cljs:4247-4251](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4247-L4251)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn chunked-seq\n  ([vec i off] (ChunkedSeq. vec (array-for vec i) i off nil nil))\n  ([vec node i off] (ChunkedSeq. vec node i off nil nil))\n  ([vec node i off meta]\n     (ChunkedSeq. vec node i off meta nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2311",
+          :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4244 4248]},
+          :lines [4247 4251]},
  :full-name "cljs.core/chunked-seq",
  :full-name-encode "cljs.core/chunked-seq",
  :history [["+" "0.0-1424"]]}
