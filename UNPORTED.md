@@ -1230,6 +1230,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/LongRange](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/LongRange.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/MapEntry](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/MapEntry.java)</samp></td>
 </tr>
 <tr>

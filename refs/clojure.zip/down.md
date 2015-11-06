@@ -31,7 +31,7 @@ nil if no children
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/clojure/zip.cljs#L98-L109):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/clojure/zip.cljs#L98-L109):
 
 ```clj
 (defn down
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:98-109](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/clojure/zip.cljs#L98-L109)</ins>
+            └── <ins>[zip.cljs:98-109](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/clojure/zip.cljs#L98-L109)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn down\n  [loc]\n    (when (branch? loc)\n      (let [[node path] loc\n            [c & cnext :as cs] (children loc)]\n        (when cs\n          (with-meta [c {:l [] \n                         :pnodes (if path (conj (:pnodes path) node) [node]) \n                         :ppath path \n                         :r cnext}] (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [98 109]},
  :full-name "clojure.zip/down",

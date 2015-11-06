@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl.clj#L693-L694):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl.clj#L693-L694):
 
 ```clj
 (defn repl-prompt []
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:693-694](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl.clj#L693-L694)</ins>
+            └── <ins>[repl.clj:693-694](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl.clj#L693-L694)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn repl-prompt []\n  (print (str ana/*cljs-ns* \"=> \")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/clj/cljs/repl.clj",
           :lines [693 694]},
  :full-name "cljs.repl/repl-prompt",

@@ -38,7 +38,7 @@ Roughly the same as (when (seq xs) (let [x (first xs)] body)) but xs is evaluate
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L4420-L4432):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L4418-L4430):
 
 ```clj
 (defmacro when-first
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4420-4432](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L4420-L4432)</ins>
+            └── <ins>[core.clj:4418-4430](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L4418-L4430)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defmacro when-first\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n  (let [[x xs] bindings]\n    `(when-let [xs# (seq ~xs)]\n       (let [~x (first xs#)]\n           ~@body))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
-          :lines [4420 4432]},
+          :lines [4418 4430]},
  :full-name "cljs.core/when-first",
  :clj-symbol "clojure.core/when-first",
  :docstring "bindings => x xs\n\nRoughly the same as (when (seq xs) (let [x (first xs)] body)) but xs is evaluated only once"}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L1021-L1029):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L1021-L1029):
 
 ```clj
 (deftype ES6IteratorSeq [value iter ^:mutable _rest]
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1021-1029](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L1021-L1029)</ins>
+            └── <ins>[core.cljs:1021-1029](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L1021-L1029)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(deftype ES6IteratorSeq [value iter ^:mutable _rest]\n  ISeqable\n  (-seq [this] this)\n  ISeq\n  (-first [_] value)\n  (-rest [_]\n    (when (nil? _rest)\n      (set! _rest (es6-iterator-seq iter)))\n    _rest))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1021 1029]},
  :full-name "cljs.core/ES6IteratorSeq",

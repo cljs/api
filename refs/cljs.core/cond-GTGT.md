@@ -65,7 +65,7 @@ after the first true test expression.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L7245-L7257):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L7243-L7255):
 
 ```clj
 (defmacro cond->>
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7245-7257](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L7245-L7257)</ins>
+            └── <ins>[core.clj:7243-7255](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L7243-L7255)</ins>
 </pre>
 
 -->
@@ -142,9 +142,9 @@ The API data for this symbol:
  :source {:code "(defmacro cond->>\n  [expr & clauses]\n  (assert (even? (count clauses)))\n  (let [g (gensym)\n        pstep (fn [[test step]] `(if ~test (->> ~g ~step) ~g))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep (partition 2 clauses)))]\n       ~g)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
-          :lines [7245 7257]},
+          :lines [7243 7255]},
  :examples [{:id "e07a05",
              :content "```clj\n(def filter? true)\n(def sum? true)\n\n(cond->> [1 2 3 4]\n  filter? (filter even?)\n  sum?    (reduce +))\n;;=> 6\n```"}],
  :full-name "cljs.core/cond->>",

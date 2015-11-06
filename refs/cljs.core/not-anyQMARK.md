@@ -42,7 +42,7 @@ else true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3602-L3605):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3602-L3605):
 
 ```clj
 (defn ^boolean not-any?
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3602-3605](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3602-L3605)</ins>
+            └── <ins>[core.cljs:3602-3605](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3602-L3605)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not-any?\n  [pred coll] (not (some pred coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3602 3605]},
  :full-name "cljs.core/not-any?",

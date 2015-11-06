@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3154-L3160):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3154-L3160):
 
 ```clj
 (defn spread
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3154-3160](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3154-L3160)</ins>
+            └── <ins>[core.cljs:3154-3160](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3154-L3160)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn spread\n  [arglist]\n  (cond\n   (nil? arglist) nil\n   (nil? (next arglist)) (seq (first arglist))\n   :else (cons (first arglist)\n               (spread (next arglist)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3154 3160]},
  :full-name "cljs.core/spread",

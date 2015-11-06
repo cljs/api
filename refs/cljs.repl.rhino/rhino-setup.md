@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/rhino.clj#L103-L152):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/rhino.clj#L103-L152):
 
 ```clj
 (defn rhino-setup [repl-env opts]
@@ -81,12 +81,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:103-152](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/rhino.clj#L103-L152)</ins>
+                └── <ins>[rhino.clj:103-152](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/rhino.clj#L103-L152)</ins>
 </pre>
 
 -->
@@ -132,7 +132,7 @@ The API data for this symbol:
  :source {:code "(defn rhino-setup [repl-env opts]\n  (let [scope   (:scope repl-env)\n        env     (ana/empty-env)\n        core    (io/resource \"cljs/core.cljs\")\n        base-js (io/resource \"goog/base.js\")\n        core-js (closure/compile core\n                  (assoc opts\n                    :output-file\n                    (closure/src-file->target-file core)))\n        deps    (closure/add-dependencies opts core-js)\n        output-dir (util/output-directory opts)\n        repl-deps (io/file output-dir \"rhino_repl_deps.js\")]\n    ;; emit core and deps\n    (apply closure/output-unoptimized\n      (assoc opts :output-to (.getPath repl-deps)) deps)\n\n    ;; setup back references & output stream\n    (ScriptableObject/putProperty scope\n      \"___repl_env\" (Context/javaToJS repl-env scope))\n    (ScriptableObject/putProperty scope \"__repl_opts\"\n      (Context/javaToJS opts scope))\n    (ScriptableObject/putProperty scope\n      \"out\" (Context/javaToJS *out* scope))\n\n    ;; define file loading, load goog.base, load repl deps\n    (rhino-eval repl-env \"bootjs\" 1 bootjs)\n    (rhino-eval repl-env \"goog/base.js\" 1 (io/reader base-js))\n    (rhino-eval repl-env \"rhino_repl_deps.js\" 1 (io/reader repl-deps))\n\n    ;; === Bootstrap ===\n    ;; load cljs.core, setup printing\n    (repl/evaluate-form repl-env env \"<cljs repl>\"\n      '(do\n         (.require js/goog \"cljs.core\")\n         (set! *print-fn* (fn [x] (.write js/out x)))))\n\n    ;; allow namespace reloading\n    (repl/evaluate-form repl-env env \"<cljs repl>\"\n      '(set! js/goog.isProvided_ (fn [x] false)))\n\n    ;; monkey-patch goog.require\n    (repl/evaluate-form repl-env env \"<cljs repl>\"\n      '(do\n         (set! *loaded-libs* #{\"cljs.core\"})\n         (set! (.-require js/goog)\n           (fn [name reload]\n             (when (or (not (contains? *loaded-libs* name)) reload)\n               (set! *loaded-libs* (conj (or *loaded-libs* #{}) name))\n               (js/CLOSURE_IMPORT_SCRIPT\n                 (aget (.. js/goog -dependencies_ -nameToPath) name)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [103 152]},
  :full-name "cljs.repl.rhino/rhino-setup",

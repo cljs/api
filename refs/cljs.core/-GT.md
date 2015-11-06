@@ -135,7 +135,7 @@ second item in second form, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1562-L1576):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L1562-L1576):
 
 ```clj
 (defmacro ->
@@ -154,11 +154,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1562-1576](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1562-L1576)</ins>
+            └── <ins>[core.clj:1562-1576](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L1562-L1576)</ins>
 </pre>
 
 -->
@@ -211,7 +211,7 @@ The API data for this symbol:
  :source {:code "(defmacro ->\n  [x & forms]\n  (loop [x x, forms forms]\n    (if forms\n      (let [form (first forms)\n            threaded (if (seq? form)\n                       (with-meta `(~(first form) ~x ~@(next form)) (meta form))\n                       (list form x))]\n        (recur threaded (next forms)))\n      x)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
           :lines [1562 1576]},
  :examples [{:id "19b460",

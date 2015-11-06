@@ -27,7 +27,7 @@ Load a Closure JavaScript file into the Node REPL process.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/node.clj#L69-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/node.clj#L69-L73):
 
 ```clj
 (defn load-javascript
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:69-73](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/node.clj#L69-L73)</ins>
+                └── <ins>[node.clj:69-73](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/repl/node.clj#L69-L73)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (node-eval repl-env\n    (str \"goog.require('\" (comp/munge (first provides)) \"')\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [69 73]},
  :full-name "cljs.repl.node/load-javascript",

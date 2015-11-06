@@ -43,7 +43,7 @@ Returns a new sorted set with supplied keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L7920-L7923):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L7920-L7923):
 
 ```clj
 (defn sorted-set
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7920-7923](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L7920-L7923)</ins>
+            └── <ins>[core.cljs:7920-7923](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L7920-L7923)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj (.-EMPTY PersistentTreeSet) keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7920 7923]},
  :full-name "cljs.core/sorted-set",

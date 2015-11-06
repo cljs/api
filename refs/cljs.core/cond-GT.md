@@ -63,7 +63,7 @@ not short circuit after the first true test expression.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L7231-L7243):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L7229-L7241):
 
 ```clj
 (defmacro cond->
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7231-7243](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L7231-L7243)</ins>
+            └── <ins>[core.clj:7229-7241](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L7229-L7241)</ins>
 </pre>
 
 -->
@@ -140,9 +140,9 @@ The API data for this symbol:
  :source {:code "(defmacro cond->\n  [expr & clauses]\n  (assert (even? (count clauses)))\n  (let [g (gensym)\n        pstep (fn [[test step]] `(if ~test (-> ~g ~step) ~g))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep (partition 2 clauses)))]\n       ~g)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
-          :lines [7231 7243]},
+          :lines [7229 7241]},
  :examples [{:id "f08338",
              :content "```clj\n(def a 12)\n(cond-> a\n  (> a 10) (str \" is greater than 10\")\n  (< a 20) (str \" and less than 20\"))\n;;=> \"12 is greater than 10 and less than 20\"\n```"}],
  :full-name "cljs.core/cond->",

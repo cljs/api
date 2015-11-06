@@ -66,7 +66,7 @@ Ignores body, yields nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L4531-L4534):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L4529-L4532):
 
 ```clj
 (defmacro comment
@@ -77,11 +77,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4531-4534](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L4531-L4534)</ins>
+            └── <ins>[core.clj:4529-4532](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L4529-L4532)</ins>
 </pre>
 
 -->
@@ -133,9 +133,9 @@ The API data for this symbol:
  :source {:code "(defmacro comment\n  [& body])",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
-          :lines [4531 4534]},
+          :lines [4529 4532]},
  :examples [{:id "482fd7",
              :content "```clj\n(comment 123)\n;;=> nil\n\n(comment\n  (foo 1 2 3)\n  (bar \"hello\"))\n;;=> nil\n```\n\nInner forms must still be syntactically correct:\n\n```clj\n(comment [1 2 3]])\n;; Error: Unmatched delimiter ]\n\n(comment a : b)\n;; Error: Invalid token :\n```"}],
  :full-name "cljs.core/comment",

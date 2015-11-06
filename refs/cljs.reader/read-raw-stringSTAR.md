@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/reader.cljs#L304-L317):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/reader.cljs#L304-L317):
 
 ```clj
 (defn read-raw-string*
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:304-317](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/reader.cljs#L304-L317)</ins>
+            └── <ins>[reader.cljs:304-317](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/reader.cljs#L304-L317)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn read-raw-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n      (nil? ch) (reader-error reader \"EOF while reading\")\n      (identical? \"\\\\\" ch) (do (.append buffer ch)\n                             (let [nch (read-char reader)]\n                               (if (nil? nch)\n                                 (reader-error reader \"EOF while reading\")\n                                 (recur (doto buffer (.append nch))\n                                        (read-char reader)))))\n      (identical? \"\\\"\" ch) (.toString buffer)\n      :else (recur (doto buffer (.append ch)) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [304 317]},
  :full-name "cljs.reader/read-raw-string*",

@@ -30,7 +30,7 @@ Return true if x is a Symbol
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L792-L795):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L792-L795):
 
 ```clj
 (defn ^boolean symbol?
@@ -42,18 +42,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:792-795](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L792-L795)</ins>
+            └── <ins>[core.cljs:792-795](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L792-L795)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/core.clj#L401-L402):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/core.clj#L401-L402):
 
 ```clj
 (defmacro symbol? [x]
@@ -64,11 +64,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:401-402](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/core.clj#L401-L402)</ins>
+            └── <ins>[core.clj:401-402](https://github.com/clojure/clojurescript/blob/r3196/src/clj/cljs/core.clj#L401-L402)</ins>
 </pre>
 -->
 
@@ -118,13 +118,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol?\n  [x]\n  (instance? Symbol x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [792 795]},
  :extra-sources [{:code "(defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3195",
+                  :tag "r3196",
                   :filename "src/clj/cljs/core.clj",
                   :lines [401 402]}],
  :full-name "cljs.core/symbol?",

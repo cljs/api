@@ -44,7 +44,7 @@ they appear.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L8289-L8296):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L8289-L8296):
 
 ```clj
 (defn frequencies
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8289-8296](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L8289-L8296)</ins>
+            └── <ins>[core.cljs:8289-8296](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L8289-L8296)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8289 8296]},
  :full-name "cljs.core/frequencies",

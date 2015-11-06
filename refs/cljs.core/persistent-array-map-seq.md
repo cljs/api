@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L5621-L5623):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L5621-L5623):
 
 ```clj
 (defn persistent-array-map-seq [arr i _meta]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5621-5623](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L5621-L5623)</ins>
+            └── <ins>[core.cljs:5621-5623](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L5621-L5623)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn persistent-array-map-seq [arr i _meta]\n  (when (<= i (- (alength arr) 2))\n    (PersistentArrayMapSeq. arr i _meta)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [5621 5623]},
  :full-name "cljs.core/persistent-array-map-seq",

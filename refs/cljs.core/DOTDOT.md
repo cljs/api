@@ -101,7 +101,7 @@ but is easier to write, read, and understand.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1544-L1560):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L1544-L1560):
 
 ```clj
 (defmacro ..
@@ -113,11 +113,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-alp
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-alpha6
+clojure @ clojure-1.7.0-beta1
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1544-1560](https://github.com/clojure/clojure/blob/clojure-1.7.0-alpha6/src/clj/clojure/core.clj#L1544-L1560)</ins>
+            └── <ins>[core.clj:1544-1560](https://github.com/clojure/clojure/blob/clojure-1.7.0-beta1/src/clj/clojure/core.clj#L1544-L1560)</ins>
 </pre>
 
 -->
@@ -170,7 +170,7 @@ The API data for this symbol:
  :source {:code "(defmacro ..\n  ([x form] `(. ~x ~form))\n  ([x form & more] `(.. (. ~x ~form) ~@more)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-alpha6",
+          :tag "clojure-1.7.0-beta1",
           :filename "src/clj/clojure/core.clj",
           :lines [1544 1560]},
  :examples [{:id "500658",

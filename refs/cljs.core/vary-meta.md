@@ -62,7 +62,7 @@ Returns an object of the same type and value as obj, with
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3319-L3333):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3319-L3333):
 
 ```clj
 (defn vary-meta
@@ -84,11 +84,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3195
+clojurescript @ r3196
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3319-3333](https://github.com/clojure/clojurescript/blob/r3195/src/cljs/cljs/core.cljs#L3319-L3333)</ins>
+            └── <ins>[core.cljs:3319-3333](https://github.com/clojure/clojurescript/blob/r3196/src/cljs/cljs/core.cljs#L3319-L3333)</ins>
 </pre>
 
 -->
@@ -141,7 +141,7 @@ The API data for this symbol:
  :source {:code "(defn vary-meta\n  ([obj f]\n   (with-meta obj (f (meta obj))))\n  ([obj f a]\n   (with-meta obj (f (meta obj) a)))\n  ([obj f a b]\n   (with-meta obj (f (meta obj) a b)))\n  ([obj f a b c]\n   (with-meta obj (f (meta obj) a b c)))\n  ([obj f a b c d]\n   (with-meta obj (f (meta obj) a b c d)))\n  ([obj f a b c d & args]\n   (with-meta obj (apply f (meta obj) a b c d args))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3195",
+          :tag "r3196",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3319 3333]},
  :examples [{:id "8cca62",
