@@ -31,7 +31,7 @@ but must occur inside a test function (deftest).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/test.clj#L191-L199):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/test.clj#L191-L199):
 
 ```clj
 (defmacro testing
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3123
+clojurescript @ r3126
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:191-199](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/test.clj#L191-L199)</ins>
+            └── <ins>[test.clj:191-199](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/test.clj#L191-L199)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defmacro testing\n  ([string & body]\n   `(do\n      (cljs.test/update-current-env! [:testing-contexts] conj ~string)\n      (let [ret# (do ~@body)]\n        (cljs.test/update-current-env! [:testing-contexts] rest)\n        ret#))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3123",
+          :tag "r3126",
           :filename "src/clj/cljs/test.clj",
           :lines [191 199]},
  :full-name "cljs.test/testing",
