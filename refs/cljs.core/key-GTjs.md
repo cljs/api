@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L8507-L8515):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L8507-L8515):
 
 ```clj
 (defn key->js [k]
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8507-8515](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L8507-L8515)</ins>
+            └── <ins>[core.cljs:8507-8515](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L8507-L8515)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn key->js [k]\n  (if (satisfies? IEncodeJS k)\n    (-clj->js k)\n    (if (or (string? k)\n            (number? k)\n            (keyword? k)\n            (symbol? k))\n      (clj->js k)\n      (pr-str k))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8507 8515]},
  :full-name "cljs.core/key->js",

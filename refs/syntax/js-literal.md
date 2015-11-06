@@ -62,7 +62,7 @@ For readability, it is sometimes preferable to use `clj->js` rather than nested
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/tagged_literals.clj#L35-L42):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/tagged_literals.clj#L35-L42):
 
 ```clj
 (defn read-js
@@ -79,16 +79,16 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:35-42](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/tagged_literals.clj#L35-L42)</ins>
+            └── <ins>[tagged_literals.clj:35-42](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/tagged_literals.clj#L35-L42)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/tagged_literals.clj#L44-L48):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -102,11 +102,11 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/tagged_literals.clj#L44-L48)</ins>
+            └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/tagged_literals.clj#L44-L48)</ins>
 </pre>
 -->
 
@@ -148,13 +148,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-js\n  [form]\n  (when-not (or (vector? form) (map? form))\n    (throw (RuntimeException. \"JavaScript literal must use map or vector notation\")))\n  (when-not (or (not (map? form))\n                (every? valid-js-literal-key? (keys form)))\n    (throw (RuntimeException. \"JavaScript literal keys must be strings or unqualified keywords\")))\n  (JSValue. form))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r2629",
+                  :tag "r2644",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [35 42]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r2629",
+                  :tag "r2644",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [44 48]}),
  :usage ["#js [...]" "#js {...}"],

@@ -32,7 +32,7 @@ only once.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L42-L68):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L42-L71):
 
 ```clj
 (defn load-namespace
@@ -47,29 +47,32 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
          sources  (cljsc/add-dependencies
                     (merge (env->opts repl-env) opts)
                     {:requires [(name sym)] :type :seed
-                     :url (:uri (cljsc/cljs-source-for-namespace sym))})
+                     :url (:uri (cljsc/source-for-namespace
+                                  sym env/*compiler*))})
          deps     (->> sources
                     (remove (comp #{["goog"]} :provides))
                     (remove (comp #{:seed} :type))
                     (map #(select-keys % [:provides :url])))]
-     ;; for now only do this for REPLs that rely on disk - David
-     (when (:output-dir opts)
+     (if (:output-dir opts)
+       ;; REPLs that read from :output-dir just need to add deps,
+       ;; environment will handle actual loading - David
        (doseq [source (map #(cljsc/source-on-disk opts %) sources)]
          (-evaluate repl-env "<cljs repl>" 1
-           (cljsc/add-dep-string opts source))))
-     (doseq [{:keys [url provides]} deps]
-       (-load repl-env provides url)))))
+           (cljsc/add-dep-string opts source)))
+       ;; REPLs that stream must manually load each dep - David
+       (doseq [{:keys [url provides]} deps]
+         (-load repl-env provides url))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:42-68](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L42-L68)</ins>
+            └── <ins>[repl.clj:42-71](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L42-L71)</ins>
 </pre>
 
 -->
@@ -114,12 +117,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl/load-namespace",
- :source {:code "(defn load-namespace\n  ([repl-env sym] (load-namespace repl-env sym nil))\n  ([repl-env sym opts]\n   (let [sym      (if (and (seq? sym)\n                        (= (first sym) 'quote))\n                    (second sym)\n                    sym)\n         ;; TODO: add pre-condition to source-on-disk, the\n         ;; source must supply at least :url - David\n         sources  (cljsc/add-dependencies\n                    (merge (env->opts repl-env) opts)\n                    {:requires [(name sym)] :type :seed\n                     :url (:uri (cljsc/cljs-source-for-namespace sym))})\n         deps     (->> sources\n                    (remove (comp #{[\"goog\"]} :provides))\n                    (remove (comp #{:seed} :type))\n                    (map #(select-keys % [:provides :url])))]\n     ;; for now only do this for REPLs that rely on disk - David\n     (when (:output-dir opts)\n       (doseq [source (map #(cljsc/source-on-disk opts %) sources)]\n         (-evaluate repl-env \"<cljs repl>\" 1\n           (cljsc/add-dep-string opts source))))\n     (doseq [{:keys [url provides]} deps]\n       (-load repl-env provides url)))))",
+ :source {:code "(defn load-namespace\n  ([repl-env sym] (load-namespace repl-env sym nil))\n  ([repl-env sym opts]\n   (let [sym      (if (and (seq? sym)\n                        (= (first sym) 'quote))\n                    (second sym)\n                    sym)\n         ;; TODO: add pre-condition to source-on-disk, the\n         ;; source must supply at least :url - David\n         sources  (cljsc/add-dependencies\n                    (merge (env->opts repl-env) opts)\n                    {:requires [(name sym)] :type :seed\n                     :url (:uri (cljsc/source-for-namespace\n                                  sym env/*compiler*))})\n         deps     (->> sources\n                    (remove (comp #{[\"goog\"]} :provides))\n                    (remove (comp #{:seed} :type))\n                    (map #(select-keys % [:provides :url])))]\n     (if (:output-dir opts)\n       ;; REPLs that read from :output-dir just need to add deps,\n       ;; environment will handle actual loading - David\n       (doseq [source (map #(cljsc/source-on-disk opts %) sources)]\n         (-evaluate repl-env \"<cljs repl>\" 1\n           (cljsc/add-dep-string opts source)))\n       ;; REPLs that stream must manually load each dep - David\n       (doseq [{:keys [url provides]} deps]\n         (-load repl-env provides url))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
-          :lines [42 68]},
+          :lines [42 71]},
  :full-name "cljs.repl/load-namespace",
  :docstring "Load a namespace and all of its dependencies into the evaluation environment.\nThe environment is responsible for ensuring that each namespace is loaded once and\nonly once."}
 

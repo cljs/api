@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L183-L184):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/server.clj#L183-L184):
 
 ```clj
 (defn stop []
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:183-184](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L183-L184)</ins>
+                └── <ins>[server.clj:183-184](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/server.clj#L183-L184)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn stop []\n  (.close (:socket @state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [183 184]},
  :full-name "cljs.repl.server/stop",

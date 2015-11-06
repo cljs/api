@@ -28,7 +28,7 @@ return an updated specification.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L223-L238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L226-L241):
 
 ```clj
 (defn update-require-spec
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:223-238](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L223-L238)</ins>
+            └── <ins>[repl.clj:226-241](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L226-L241)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn update-require-spec\n  [specs & additions]\n  (let [[before [requires & other-specs]]\n        (split-with\n          (fn [[x _]] (not= :require x))\n          specs)\n        requires'\n        `(:require\n           ~@(reduce\n               (fn [requires spec]\n                 (merge-require requires spec))\n               (rest requires)\n               additions))]\n    (concat before [requires'] other-specs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
-          :lines [223 238]},
+          :lines [226 241]},
  :full-name "cljs.repl/update-require-spec",
  :docstring "Given the specification portion of a ns form and require spec additions\nreturn an updated specification."}
 

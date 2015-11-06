@@ -27,7 +27,7 @@ Evaluate a JavaScript string in the Node REPL process.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/node.clj#L49-L55):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/node.clj#L49-L55):
 
 ```clj
 (defn node-eval
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:49-55](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/node.clj#L49-L55)</ins>
+                └── <ins>[node.clj:49-55](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/node.clj#L49-L55)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn node-eval\n  [repl-env js]\n  (let [{:keys [in out]} @(:socket repl-env)]\n    (write out js)\n    {:status :success\n     :value (read-response in)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [49 55]},
  :full-name "cljs.repl.node/node-eval",

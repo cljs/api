@@ -28,7 +28,7 @@ provided in the source.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L48-L53):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L48-L53):
 
 ```clj
 (defn ns-specs
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:48-53](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L48-L53)</ins>
+                └── <ins>[api.clj:48-53](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L48-L53)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn ns-specs\n  [ns]\n  {:pre [(symbol? ns)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :specs]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [48 53]},
  :full-name "cljs.analyzer.api/ns-specs",

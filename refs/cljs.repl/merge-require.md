@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L208-L221):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L211-L224):
 
 ```clj
 (defn merge-require [requires [lib :as spec]]
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:208-221](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L208-L221)</ins>
+            └── <ins>[repl.clj:211-224](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L211-L224)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn merge-require [requires [lib :as spec]]\n  (let [[before [match & after]]\n        (split-with\n          (fn [[lib' & _]]\n            (not= lib lib'))\n          requires)]\n    (if (nil? match)\n      ;; no match, append to end\n      (concat requires [spec])\n      (if (= match spec)\n        ;; dupe\n        requires\n        ;; merge\n        (concat before [(merge-spec match spec)] after)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
-          :lines [208 221]},
+          :lines [211 224]},
  :full-name "cljs.repl/merge-require",
  :full-name-encode "cljs.repl/merge-require",
  :history [["+" "0.0-2629"]]}

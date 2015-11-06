@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L3187-L3189):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L3187-L3189):
 
 ```clj
 (set! (.-create LazyTransformer)
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3187-3189](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L3187-L3189)</ins>
+            └── <ins>[core.cljs:3187-3189](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L3187-L3189)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(set! (.-create LazyTransformer)\n  (fn [xform coll]\n    (LazyTransformer. (stepper xform (iter coll)) nil nil nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3187 3189]},
  :full-name "cljs.core/LazyTransformer.create"}

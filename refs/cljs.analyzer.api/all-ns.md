@@ -31,7 +31,7 @@ returns analysis maps not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L21-L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L21-L25):
 
 ```clj
 (defn all-ns
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2629
+clojurescript @ r2644
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:21-25](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L21-L25)</ins>
+                └── <ins>[api.clj:21-25](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L21-L25)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2629",
+          :tag "r2644",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [21 25]},
  :full-name "cljs.analyzer.api/all-ns",
