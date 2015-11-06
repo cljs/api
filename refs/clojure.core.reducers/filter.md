@@ -34,7 +34,7 @@ Retains values in the reduction of coll for which (pred val)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/clojure/core/reducers.cljs#L108-L119):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/clojure/core/reducers.cljs#L108-L119):
 
 ```clj
 (defcurried filter
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1844
+clojurescript @ r1847
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:108-119](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/clojure/core/reducers.cljs#L108-L119)</ins>
+                └── <ins>[reducers.cljs:108-119](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/clojure/core/reducers.cljs#L108-L119)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defcurried filter\n  \"Retains values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1844",
+          :tag "r1847",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [108 119]},
  :full-name "clojure.core.reducers/filter",

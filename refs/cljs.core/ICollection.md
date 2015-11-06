@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/cljs/core.cljs#L201-L202):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L201-L202):
 
 ```clj
 (defprotocol ICollection
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1844
+clojurescript @ r1847
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:201-202](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/cljs/core.cljs#L201-L202)</ins>
+            └── <ins>[core.cljs:201-202](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L201-L202)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ICollection\n  (-conj [coll o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1844",
+          :tag "r1847",
           :filename "src/cljs/cljs/core.cljs",
           :lines [201 202]},
  :methods [{:name "-conj", :signature ["[coll o]"], :docstring nil}],

@@ -147,7 +147,7 @@ You can get the value at property `"foo"` with any of the following:
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/analyzer.clj#L798-L816):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/analyzer.clj#L798-L816):
 
 ```clj
 (defmethod parse '.
@@ -175,11 +175,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1844
+clojurescript @ r1847
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:798-816](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/analyzer.clj#L798-L816)</ins>
+            └── <ins>[analyzer.clj:798-816](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/analyzer.clj#L798-L816)</ins>
 </pre>
 
 -->
@@ -231,7 +231,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)]\n     (case dot-action\n           ::access {:env env :op :dot :form form\n                     :target targetexpr\n                     :field field\n                     :children [targetexpr]\n                     :tag (-> form meta :tag)}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :form form\n                       :target targetexpr\n                       :method method\n                       :args argexprs\n                       :children (into [targetexpr] argexprs)\n                       :tag (-> form meta :tag)})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1844",
+          :tag "r1847",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [798 816]},
  :usage ["(.-foo obj)" "(.foo obj)"],

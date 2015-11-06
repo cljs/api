@@ -2,12 +2,12 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1844__ [all](HISTORY.md)</td>
-<td>2013-07-19</td>
+<td>__0.0-1847__ [all](HISTORY.md)</td>
+<td>2013-07-23</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.5.1</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
-<kbd>Closure Lib 0.0-2029-2</kbd>](http://google.github.io/closure-library/api/)</td>
+<kbd>Closure Lib 0.0-20130212-95c19e7f0f5f</kbd>](http://google.github.io/closure-library/api/)</td>
 </tr>
 </table>
 
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-1844__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1847__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 

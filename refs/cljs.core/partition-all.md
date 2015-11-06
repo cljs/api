@@ -51,7 +51,7 @@ partitions with fewer than n items at the end.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/cljs/core.cljs#L6221-L6229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L6221-L6229):
 
 ```clj
 (defn partition-all
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1844
+clojurescript @ r1847
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6221-6229](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/cljs/core.cljs#L6221-L6229)</ins>
+            └── <ins>[core.cljs:6221-6229](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L6221-L6229)</ins>
 </pre>
 
 -->
@@ -124,7 +124,7 @@ The API data for this symbol:
  :source {:code "(defn partition-all\n  ([n coll]\n     (partition-all n n coll))\n  ([n step coll]\n     (lazy-seq\n      (when-let [s (seq coll)]\n        (cons (take n s) (partition-all n step (drop step s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1844",
+          :tag "r1847",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6221 6229]},
  :full-name "cljs.core/partition-all",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/clojure/browser/repl.cljs#L57-L58):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/clojure/browser/repl.cljs#L57-L58):
 
 ```clj
 (defn wrap-message [t data]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1844
+clojurescript @ r1847
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:57-58](https://github.com/clojure/clojurescript/blob/r1844/src/cljs/clojure/browser/repl.cljs#L57-L58)</ins>
+                └── <ins>[repl.cljs:57-58](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/clojure/browser/repl.cljs#L57-L58)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn wrap-message [t data]\n  (pr-str {:type t :content data :order (swap! order inc)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1844",
+          :tag "r1847",
           :filename "src/cljs/clojure/browser/repl.cljs",
           :lines [57 58]},
  :full-name "clojure.browser.repl/wrap-message",
