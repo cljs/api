@@ -30,7 +30,7 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/clj/cljs/core.clj#L1613-L1619):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/clj/cljs/core.clj#L1613-L1619):
 
 ```clj
 (defmacro time
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2341
+clojurescript @ r2342
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1613-1619](https://github.com/clojure/clojurescript/blob/r2341/src/clj/cljs/core.clj#L1613-L1619)</ins>
+            └── <ins>[core.clj:1613-1619](https://github.com/clojure/clojurescript/blob/r2342/src/clj/cljs/core.clj#L1613-L1619)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.))\n         ret# ~expr]\n     (prn (core/str \"Elapsed time: \" (- (.getTime (js/Date.)) start#) \" msecs\"))\n     ret#))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2341",
+          :tag "r2342",
           :filename "src/clj/cljs/core.clj",
           :lines [1613 1619]},
  :full-name "cljs.core/time",

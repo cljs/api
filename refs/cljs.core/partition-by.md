@@ -50,7 +50,7 @@ transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L7528-L7567):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L7528-L7567):
 
 ```clj
 (defn partition-by
@@ -96,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2341
+clojurescript @ r2342
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7528-7567](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L7528-L7567)</ins>
+            └── <ins>[core.cljs:7528-7567](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L7528-L7567)</ins>
 </pre>
 
 -->
@@ -155,7 +155,7 @@ The API data for this symbol:
  :source {:code "(defn partition-by\n  ([f]\n     (fn [f1]\n       (let [a (array-list)\n             pa (atom ::none)]\n         (fn\n           ([] (f1))\n           ([result]\n              (let [result (if (.isEmpty a)\n                             result\n                             (let [v (vec (.toArray a))]\n                               ;;clear first!\n                               (.clear a)\n                               (f1 result v)))]\n                (f1 result)))\n           ([result input]\n              (let [pval @pa\n                    val (f input)]\n                (reset! pa val)\n                (if (or (keyword-identical? pval ::none)\n                        (= val pval))\n                  (do\n                    (.add a input)\n                    result)\n                  (let [v (vec (.toArray a))]\n                    (.clear a)\n                    (let [ret (f1 result v)]\n                      (when-not (reduced? ret)\n                        (.add a input))\n                      ret)))))))))\n  ([f coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [fst (first s)\n               fv (f fst)\n               run (cons fst (take-while #(= fv (f %)) (next s)))]\n           (cons run (partition-by f (seq (drop (count run) s)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2341",
+          :tag "r2342",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7528 7567]},
  :full-name "cljs.core/partition-by",

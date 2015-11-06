@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/reader.cljs#L563-L567):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/reader.cljs#L563-L567):
 
 ```clj
 (def ^:dynamic *tag-table*
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2341
+clojurescript @ r2342
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:563-567](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/reader.cljs#L563-L567)</ins>
+            └── <ins>[reader.cljs:563-567](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/reader.cljs#L563-L567)</ins>
 </pre>
 
 -->
@@ -80,7 +80,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *tag-table*\n  (atom {\"inst\"  read-date\n         \"uuid\"  read-uuid\n         \"queue\" read-queue\n         \"js\"    read-js}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2341",
+          :tag "r2342",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [563 567]},
  :full-name "cljs.reader/*tag-table*",

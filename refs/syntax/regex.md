@@ -72,7 +72,7 @@ Case-insensitive matching:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader/impl/commons.clj#L129-L144):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader/impl/commons.clj#L129-L144):
 
 ```clj
 (defn read-regex
@@ -97,7 +97,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.4
+tools.reader @ tools.reader-0.8.9
 └── src
     └── main
         └── clojure
@@ -105,12 +105,12 @@ tools.reader @ tools.reader-0.8.4
                 └── tools
                     └── reader
                         └── impl
-                            └── <ins>[commons.clj:129-144](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader/impl/commons.clj#L129-L144)</ins>
+                            └── <ins>[commons.clj:129-144](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader/impl/commons.clj#L129-L144)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L610-L621):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L624-L635):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -131,13 +131,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.4
+tools.reader @ tools.reader-0.8.9
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:610-621](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L610-L621)</ins>
+                    └── <ins>[reader.clj:624-635](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L624-L635)</ins>
 </pre>
 -->
 
@@ -182,15 +182,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-regex\n  [rdr ch]\n  (let [sb (StringBuilder.)]\n    (loop [ch (read-char rdr)]\n      (if (identical? \\\" ch)\n        (Pattern/compile (str sb))\n        (if (nil? ch)\n          (reader-error rdr \"EOF while reading regex\")\n          (do\n            (.append sb ch )\n            (when (identical? \\\\ ch)\n              (let [ch (read-char rdr)]\n                (if (nil? ch)\n                  (reader-error rdr \"EOF while reading regex\"))\n                (.append sb ch)))\n            (recur (read-char rdr))))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.4",
+                  :tag "tools.reader-0.8.9",
                   :filename "src/main/clojure/clojure/tools/reader/impl/commons.clj",
                   :lines [129 144]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.4",
+                  :tag "tools.reader-0.8.9",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [610 621]}),
+                  :lines [624 635]}),
  :usage ["#\"...\""],
  :examples [{:id "dacf80",
              :content "```clj\n#\"foo\"\n;;=> #\"foo\"\n\n(re-seq #\"foo\" \"FOO BAR foo bar\")\n;;=> (\"foo\")\n```\n\nCase-insensitive matching:\n\n```clj\n#\"(?i)foo\"\n;;=> #\"foo\"\n\n(re-seq #\"(?i)foo\" \"FOO BAR foo bar\")\n;;=> (\"FOO\" \"foo\")\n```"}],

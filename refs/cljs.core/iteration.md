@@ -29,7 +29,7 @@ will be performed every time iterator/seq/reduce is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L8186-L8191):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L8186-L8191):
 
 ```clj
 (defn iteration
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2341
+clojurescript @ r2342
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8186-8191](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L8186-L8191)</ins>
+            └── <ins>[core.cljs:8186-8191](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L8186-L8191)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn iteration\n  [xform coll]\n  (Iteration. xform coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2341",
+          :tag "r2342",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8186 8191]},
  :full-name "cljs.core/iteration",

@@ -49,33 +49,34 @@ parent form.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L455-L460):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L455-L461):
 
 ```clj
 (defn- read-unquote
   [rdr comma]
-  (if-let [ch (peek-char rdr)]
-    (if (identical? \@ ch)
-      ((wrapping-reader 'clojure.core/unquote-splicing) (doto rdr read-char) \@)
-      ((wrapping-reader 'clojure.core/unquote) rdr \~))))
+  (binding [gensym-env nil]
+    (if-let [ch (peek-char rdr)]
+      (if (identical? \@ ch)
+        ((wrapping-reader 'clojure.core/unquote-splicing) (doto rdr read-char) \@)
+        ((wrapping-reader 'clojure.core/unquote) rdr \~)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.4
+tools.reader @ tools.reader-0.8.9
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:455-460](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L455-L460)</ins>
+                    └── <ins>[reader.clj:455-461](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L455-L461)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L589-L608):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L603-L622):
 
 ```clj
 (defn- macros [ch]
@@ -104,13 +105,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.4
+tools.reader @ tools.reader-0.8.9
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:589-608](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L589-L608)</ins>
+                    └── <ins>[reader.clj:603-622](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L603-L622)</ins>
 </pre>
 -->
 
@@ -149,18 +150,18 @@ The API data for this symbol:
  :type "syntax",
  :related ["syntax/syntax-quote" "syntax/unquote"],
  :full-name-encode "syntax/unquote-splicing",
- :extra-sources ({:code "(defn- read-unquote\n  [rdr comma]\n  (if-let [ch (peek-char rdr)]\n    (if (identical? \\@ ch)\n      ((wrapping-reader 'clojure.core/unquote-splicing) (doto rdr read-char) \\@)\n      ((wrapping-reader 'clojure.core/unquote) rdr \\~))))",
+ :extra-sources ({:code "(defn- read-unquote\n  [rdr comma]\n  (binding [gensym-env nil]\n    (if-let [ch (peek-char rdr)]\n      (if (identical? \\@ ch)\n        ((wrapping-reader 'clojure.core/unquote-splicing) (doto rdr read-char) \\@)\n        ((wrapping-reader 'clojure.core/unquote) rdr \\~)))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.4",
+                  :tag "tools.reader-0.8.9",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [455 460]}
+                  :lines [455 461]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.4",
+                  :tag "tools.reader-0.8.9",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [589 608]}),
+                  :lines [603 622]}),
  :examples [{:id "e6f73d",
              :content "```clj\n(def foo '[a b c])\n`(~@foo)\n;;=> (a b c)\n```"}],
  :full-name "syntax/unquote-splicing",
