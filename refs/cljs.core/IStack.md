@@ -20,23 +20,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L263-L265):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L263-L265):
 
 ```clj
 (defprotocol IStack
   (-peek [coll])
-  (-pop [coll]))
+  (^clj -pop [coll]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:263-265](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L263-L265)</ins>
+            └── <ins>[core.cljs:263-265](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L263-L265)</ins>
 </pre>
 
 -->
@@ -83,10 +83,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IStack",
- :source {:code "(defprotocol IStack\n  (-peek [coll])\n  (-pop [coll]))",
+ :source {:code "(defprotocol IStack\n  (-peek [coll])\n  (^clj -pop [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [263 265]},
  :methods [{:name "-peek", :signature ["[coll]"], :docstring nil}

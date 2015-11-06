@@ -103,7 +103,7 @@ the value of the last expr. (and) returns true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L204-L220):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L205-L221):
 
 ```clj
 (defmacro and
@@ -111,7 +111,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
   ([x] x)
   ([x & next]
     (let [forms (concat [x] next)]
-      (if (every? simple-test-expr?
+      (if (every? #(simple-test-expr? &env %)
             (map #(cljs.analyzer/analyze &env %) forms))
         (let [and-str (->> (repeat (count forms) "(~{})")
                         (interpose " && ")
@@ -125,11 +125,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:204-220](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L204-L220)</ins>
+            └── <ins>[core.clj:205-221](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L205-L221)</ins>
 </pre>
 
 -->
@@ -179,12 +179,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/or" "special/if"],
  :full-name-encode "cljs.core/and",
- :source {:code "(defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? simple-test-expr?\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [and-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" && \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~and-str ~@forms)))\n        `(let [and# ~x]\n           (if and# (and ~@next) and#))))))",
+ :source {:code "(defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? #(simple-test-expr? &env %)\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [and-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" && \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~and-str ~@forms)))\n        `(let [and# ~x]\n           (if and# (and ~@next) and#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/clj/cljs/core.clj",
-          :lines [204 220]},
+          :lines [205 221]},
  :examples [{:id "a39a73",
              :content "```clj\n(and)\n;;=> true\n\n(and false)\n;;=> false\n\n(and true)\n;;=> true\n\n(and true true)\n;;=> true\n\n(and true false)\n;;=> false\n\n(and false false)\n;;=> false\n```"}
             {:id "766638",

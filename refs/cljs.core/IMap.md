@@ -17,23 +17,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L252-L254):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L252-L254):
 
 ```clj
 (defprotocol IMap
   #_(-assoc-ex [coll k v])
-  (-dissoc [coll k]))
+  (^clj -dissoc [coll k]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:252-254](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L252-L254)</ins>
+            └── <ins>[core.cljs:252-254](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L252-L254)</ins>
 </pre>
 
 -->
@@ -76,10 +76,10 @@ The API data for this symbol:
  :name "IMap",
  :type "protocol",
  :full-name-encode "cljs.core/IMap",
- :source {:code "(defprotocol IMap\n  #_(-assoc-ex [coll k v])\n  (-dissoc [coll k]))",
+ :source {:code "(defprotocol IMap\n  #_(-assoc-ex [coll k v])\n  (^clj -dissoc [coll k]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [252 254]},
  :methods [{:name "-dissoc", :signature ["[coll k]"], :docstring nil}],

@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/analyzer.clj#L1055-L1085):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/analyzer.clj#L1133-L1178):
 
 ```clj
 (defmethod parse 'js*
@@ -36,9 +36,20 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
                            (seg (subs s (inc end)))))))))
            enve (assoc env :context :expr)
            argexprs (vec (map #(analyze enve %) args))]
+       (when (and (-> form meta :numeric)
+                  (:invalid-arithmetic *cljs-warnings*))
+         (let [types (map #(infer-tag env %) argexprs)]
+           (when-not (every? (fn [t] (or (nil? t) ('#{any number} t))) types)
+             (warning :invalid-arithmetic env
+               {:js-op (-> form meta :js-op)
+                :types (into [] types)}))))
        {:env env :op :js :segs (seg jsform) :args argexprs
-        :tag (-> form meta :tag) :form form :children argexprs
-        :js-op (-> form meta :js-op)}))
+        :tag (or (-> form meta :tag)
+                 (and (-> form meta :numeric) 'number)
+                 nil)
+        :form form :children argexprs
+        :js-op (-> form meta :js-op)
+        :numeric (-> form meta :numeric)}))
     (let [interp (fn interp [^String s]
                    (let [idx (.indexOf s "~{")]
                      (if (= -1 idx)
@@ -50,18 +61,22 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
                              (cons inner
                                (interp (subs s (inc end))))))))))]
       {:env env :op :js :form form :code (apply str (interp jsform))
-       :tag (-> form meta :tag) :js-op (-> form meta :js-op)})))
+       :tag (or (-> form meta :tag)
+                (and (-> form meta :numeric) 'number)
+                nil)
+       :js-op (-> form meta :js-op)
+       :numeric (-> form meta :numeric)})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1055-1085](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/analyzer.clj#L1055-L1085)</ins>
+            └── <ins>[analyzer.clj:1133-1178](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/analyzer.clj#L1133-L1178)</ins>
 </pre>
 
 -->
@@ -98,12 +113,12 @@ The API data for this symbol:
 {:ns "special",
  :name "js*",
  :type "special form",
- :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (lazy-seq\n                         (cons (subs s 0 idx)\n                           (seg (subs s (inc end)))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (-> form meta :tag) :form form :children argexprs\n        :js-op (-> form meta :js-op)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (lazy-seq\n                           (cons (subs s 0 idx)\n                             (cons inner\n                               (interp (subs s (inc end))))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (-> form meta :tag) :js-op (-> form meta :js-op)})))",
+ :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (lazy-seq\n                         (cons (subs s 0 idx)\n                           (seg (subs s (inc end)))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       (when (and (-> form meta :numeric)\n                  (:invalid-arithmetic *cljs-warnings*))\n         (let [types (map #(infer-tag env %) argexprs)]\n           (when-not (every? (fn [t] (or (nil? t) ('#{any number} t))) types)\n             (warning :invalid-arithmetic env\n               {:js-op (-> form meta :js-op)\n                :types (into [] types)}))))\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (or (-> form meta :tag)\n                 (and (-> form meta :numeric) 'number)\n                 nil)\n        :form form :children argexprs\n        :js-op (-> form meta :js-op)\n        :numeric (-> form meta :numeric)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (lazy-seq\n                           (cons (subs s 0 idx)\n                             (cons inner\n                               (interp (subs s (inc end))))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (or (-> form meta :tag)\n                (and (-> form meta :numeric) 'number)\n                nil)\n       :js-op (-> form meta :js-op)\n       :numeric (-> form meta :numeric)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1055 1085]},
+          :lines [1133 1178]},
  :full-name "special/js*",
  :full-name-encode "special/jsSTAR",
  :history [["+" "0.0-927"]]}

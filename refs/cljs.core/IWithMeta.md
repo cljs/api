@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L279-L280):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L279-L280):
 
 ```clj
 (defprotocol IWithMeta
-  (-with-meta [o meta]))
+  (^clj -with-meta [o meta]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:279-280](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L279-L280)</ins>
+            └── <ins>[core.cljs:279-280](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L279-L280)</ins>
 </pre>
 
 -->
@@ -75,10 +75,10 @@ The API data for this symbol:
  :name "IWithMeta",
  :type "protocol",
  :full-name-encode "cljs.core/IWithMeta",
- :source {:code "(defprotocol IWithMeta\n  (-with-meta [o meta]))",
+ :source {:code "(defprotocol IWithMeta\n  (^clj -with-meta [o meta]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [279 280]},
  :methods [{:name "-with-meta",

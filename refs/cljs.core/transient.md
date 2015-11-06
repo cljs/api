@@ -25,10 +25,10 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L2462-L2463):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L2462-L2463):
 
 ```clj
-(defn ^not-native transient [coll]
+(defn transient [coll]
   (-as-transient coll))
 ```
 
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2462-2463](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L2462-L2463)</ins>
+            └── <ins>[core.cljs:2462-2463](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L2462-L2463)</ins>
 </pre>
 
 -->
@@ -82,17 +82,16 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:return-type not-native,
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "transient",
  :signature ["[coll]"],
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/transient",
- :source {:code "(defn ^not-native transient [coll]\n  (-as-transient coll))",
+ :source {:code "(defn transient [coll]\n  (-as-transient coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2462 2463]},
  :full-name "cljs.core/transient",

@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L226-L227):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L226-L227):
 
 ```clj
 (defprotocol ICollection
-  (-conj [coll o]))
+  (^clj -conj [coll o]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:226-227](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L226-L227)</ins>
+            └── <ins>[core.cljs:226-227](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L226-L227)</ins>
 </pre>
 
 -->
@@ -75,10 +75,10 @@ The API data for this symbol:
  :name "ICollection",
  :type "protocol",
  :full-name-encode "cljs.core/ICollection",
- :source {:code "(defprotocol ICollection\n  (-conj [coll o]))",
+ :source {:code "(defprotocol ICollection\n  (^clj -conj [coll o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [226 227]},
  :methods [{:name "-conj", :signature ["[coll o]"], :docstring nil}],

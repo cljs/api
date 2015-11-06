@@ -77,7 +77,7 @@ js/console
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L580-L591):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L599-L610):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -98,13 +98,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.10
+tools.reader @ tools.reader-0.8.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:580-591](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L580-L591)</ins>
+                    └── <ins>[reader.clj:599-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L599-L610)</ins>
 </pre>
 -->
 
@@ -145,9 +145,9 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.10",
+                  :tag "tools.reader-0.8.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [580 591]}),
+                  :lines [599 610]}),
  :usage ["#<...>"],
  :examples [{:id "e0a6cd",
              :content "Unreadable forms will throw an exception when read:\n\n```clj\n#<foo>\n;; clojure.lang.ExceptionInfo: Unreadable form\n```\n\nYou can create an unreadable form for a custom type:\n\n```clj\n(deftype Foo [])\n(Foo.)\n;;=> #<[object Object]>\n\n(deftype Foo [x]\n  Object\n  (toString [_]\n    (str \"Foo: \" x)))\n(Foo. 1)\n;;=> #<Foo: 1>\n```\n\nSome examples of unreadable JavaScript values:\n\n```clj\nMath/sin\n;;=> #<function sin() { [native code] }>\n\njs/console\n;;=> #<[object Object]>\n```"}],

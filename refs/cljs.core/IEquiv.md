@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L288-L289):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L288-L289):
 
 ```clj
 (defprotocol IEquiv
-  (-equiv [o other]))
+  (^boolean -equiv [o other]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:288-289](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L288-L289)</ins>
+            └── <ins>[core.cljs:288-289](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L288-L289)</ins>
 </pre>
 
 -->
@@ -75,10 +75,10 @@ The API data for this symbol:
  :name "IEquiv",
  :type "protocol",
  :full-name-encode "cljs.core/IEquiv",
- :source {:code "(defprotocol IEquiv\n  (-equiv [o other]))",
+ :source {:code "(defprotocol IEquiv\n  (^boolean -equiv [o other]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [288 289]},
  :methods [{:name "-equiv", :signature ["[o other]"], :docstring nil}],

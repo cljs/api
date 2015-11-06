@@ -51,7 +51,7 @@ Only usable inside [`function`][doc:syntax/function].
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L372-L391):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L391-L410):
 
 ```clj
 (defn- read-arg
@@ -60,38 +60,38 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
     (read-symbol rdr pct)
     (let [ch (peek-char rdr)]
       (cond
-        (or (whitespace? ch)
-            (macro-terminating? ch)
-            (nil? ch))
-        (register-arg 1)
+       (or (whitespace? ch)
+           (macro-terminating? ch)
+           (nil? ch))
+       (register-arg 1)
 
-        (identical? ch \&)
-        (do (read-char rdr)
-            (register-arg -1))
+       (identical? ch \&)
+       (do (read-char rdr)
+           (register-arg -1))
 
-        :else
-        (let [n (read rdr true nil true)]
-          (if-not (integer? n)
-            (throw (IllegalStateException. "Arg literal must be %, %& or %integer"))
-            (register-arg n)))))))
+       :else
+       (let [n (read rdr true nil true)]
+         (if-not (integer? n)
+           (throw (IllegalStateException. "Arg literal must be %, %& or %integer"))
+           (register-arg n)))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.10
+tools.reader @ tools.reader-0.8.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:372-391](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L372-L391)</ins>
+                    └── <ins>[reader.clj:391-410](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L391-L410)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L559-L578):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L578-L597):
 
 ```clj
 (defn- macros [ch]
@@ -120,13 +120,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.10
+tools.reader @ tools.reader-0.8.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:559-578](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L559-L578)</ins>
+                    └── <ins>[reader.clj:578-597](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L578-L597)</ins>
 </pre>
 -->
 
@@ -165,18 +165,18 @@ The API data for this symbol:
  :type "syntax",
  :related ["syntax/function"],
  :full-name-encode "syntax/arg",
- :extra-sources ({:code "(defn- read-arg\n  [rdr pct]\n  (if-not (thread-bound? #'arg-env)\n    (read-symbol rdr pct)\n    (let [ch (peek-char rdr)]\n      (cond\n        (or (whitespace? ch)\n            (macro-terminating? ch)\n            (nil? ch))\n        (register-arg 1)\n\n        (identical? ch \\&)\n        (do (read-char rdr)\n            (register-arg -1))\n\n        :else\n        (let [n (read rdr true nil true)]\n          (if-not (integer? n)\n            (throw (IllegalStateException. \"Arg literal must be %, %& or %integer\"))\n            (register-arg n)))))))",
+ :extra-sources ({:code "(defn- read-arg\n  [rdr pct]\n  (if-not (thread-bound? #'arg-env)\n    (read-symbol rdr pct)\n    (let [ch (peek-char rdr)]\n      (cond\n       (or (whitespace? ch)\n           (macro-terminating? ch)\n           (nil? ch))\n       (register-arg 1)\n\n       (identical? ch \\&)\n       (do (read-char rdr)\n           (register-arg -1))\n\n       :else\n       (let [n (read rdr true nil true)]\n         (if-not (integer? n)\n           (throw (IllegalStateException. \"Arg literal must be %, %& or %integer\"))\n           (register-arg n)))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.10",
+                  :tag "tools.reader-0.8.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [372 391]}
+                  :lines [391 410]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.10",
+                  :tag "tools.reader-0.8.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [559 578]}),
+                  :lines [578 597]}),
  :examples [{:id "d17825",
              :content "```clj\n(map #(* 2 %) [1 2 3])\n;;=> (2 4 6)\n\n(def f #(println %1 %2 %&))\n(f 1 2 3 4 5)\n;; prints: 1 2 (3 4 5)\n```"}],
  :full-name "syntax/arg",

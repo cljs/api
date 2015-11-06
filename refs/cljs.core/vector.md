@@ -38,7 +38,7 @@ Creates a new vector containing `args`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L3389-L3392):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L3389-L3392):
 
 ```clj
 (defn vector [& args]
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3389-3392](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L3389-L3392)</ins>
+            └── <ins>[core.cljs:3389-3392](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L3389-L3392)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1298-L1305):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L1299-L1308):
 
 ```clj
 (defmacro vector
@@ -72,18 +72,20 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cl
       (if (core/< cnt 32)
         `(cljs.core.PersistentVector. nil ~cnt 5
            cljs.core.PersistentVector.EMPTY_NODE (array ~@xs) nil)
-        `(cljs.core.PersistentVector.fromArray (array ~@xs) true)))))
+        (vary-meta
+          `(cljs.core.PersistentVector.fromArray (array ~@xs) true)
+          assoc :tag 'cljs.core/PersistentVector)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1298-1305](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1298-L1305)</ins>
+            └── <ins>[core.clj:1299-1308](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L1299-L1308)</ins>
 </pre>
 -->
 
@@ -137,15 +139,15 @@ The API data for this symbol:
  :source {:code "(defn vector [& args]\n  (if (instance? IndexedSeq args)\n    (cljs.core.PersistentVector.fromArray (.-arr args) true)\n    (vec args)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3389 3392]},
- :extra-sources [{:code "(defmacro vector\n  ([] `cljs.core.PersistentVector.EMPTY)\n  ([& xs]\n    (let [cnt (count xs)]\n      (if (core/< cnt 32)\n        `(cljs.core.PersistentVector. nil ~cnt 5\n           cljs.core.PersistentVector.EMPTY_NODE (array ~@xs) nil)\n        `(cljs.core.PersistentVector.fromArray (array ~@xs) true)))))",
+ :extra-sources [{:code "(defmacro vector\n  ([] `cljs.core.PersistentVector.EMPTY)\n  ([& xs]\n    (let [cnt (count xs)]\n      (if (core/< cnt 32)\n        `(cljs.core.PersistentVector. nil ~cnt 5\n           cljs.core.PersistentVector.EMPTY_NODE (array ~@xs) nil)\n        (vary-meta\n          `(cljs.core.PersistentVector.fromArray (array ~@xs) true)\n          assoc :tag 'cljs.core/PersistentVector)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2060",
+                  :tag "r2067",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1298 1305]}],
+                  :lines [1299 1308]}],
  :full-name "cljs.core/vector",
  :clj-symbol "clojure.core/vector"}
 

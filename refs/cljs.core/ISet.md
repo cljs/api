@@ -20,22 +20,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L260-L261):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L260-L261):
 
 ```clj
 (defprotocol ISet
-  (-disjoin [coll v]))
+  (^clj -disjoin [coll v]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:260-261](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L260-L261)</ins>
+            └── <ins>[core.cljs:260-261](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L260-L261)</ins>
 </pre>
 
 -->
@@ -82,10 +82,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISet",
- :source {:code "(defprotocol ISet\n  (-disjoin [coll v]))",
+ :source {:code "(defprotocol ISet\n  (^clj -disjoin [coll v]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [260 261]},
  :methods [{:name "-disjoin", :signature ["[coll v]"], :docstring nil}],

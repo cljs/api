@@ -20,22 +20,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L294-L295):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L294-L295):
 
 ```clj
 (defprotocol ISeqable
-  (-seq [o]))
+  (^clj-or-nil -seq [o]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:294-295](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L294-L295)</ins>
+            └── <ins>[core.cljs:294-295](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L294-L295)</ins>
 </pre>
 
 -->
@@ -82,10 +82,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ISeqable",
- :source {:code "(defprotocol ISeqable\n  (-seq [o]))",
+ :source {:code "(defprotocol ISeqable\n  (^clj-or-nil -seq [o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [294 295]},
  :methods [{:name "-seq", :signature ["[o]"], :docstring nil}],

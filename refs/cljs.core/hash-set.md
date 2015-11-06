@@ -41,7 +41,7 @@ Any equal keys are handled as if by repeated uses of `conj`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L6259-L6261):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L6259-L6261):
 
 ```clj
 (defn hash-set
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6259-6261](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L6259-L6261)</ins>
+            └── <ins>[core.cljs:6259-6261](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L6259-L6261)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1331-L1340):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L1336-L1347):
 
 ```clj
 (defmacro hash-set
@@ -76,18 +76,20 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cl
       `(cljs.core.PersistentHashSet. nil
          (cljs.core.PersistentArrayMap. nil ~(count xs) (array ~@(interleave xs (repeat nil))) nil)
          nil)
-      `(cljs.core.PersistentHashSet.fromArray (array ~@xs) true))))
+      (vary-meta
+        `(cljs.core.PersistentHashSet.fromArray (array ~@xs) true)
+        assoc :tag 'cljs.core/PersistentHashSet))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1331-1340](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1331-L1340)</ins>
+            └── <ins>[core.clj:1336-1347](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L1336-L1347)</ins>
 </pre>
 -->
 
@@ -138,15 +140,15 @@ The API data for this symbol:
  :source {:code "(defn hash-set\n  ([] #{})\n  ([& keys] (set keys)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6259 6261]},
- :extra-sources [{:code "(defmacro hash-set\n  ([] `cljs.core.PersistentHashSet.EMPTY)\n  ([& xs]\n    (if (core/and (every? #(= (:op %) :constant)\n                    (map #(cljs.analyzer/analyze &env %) xs))\n                  (= (count (into #{} xs)) (count xs)))\n      `(cljs.core.PersistentHashSet. nil\n         (cljs.core.PersistentArrayMap. nil ~(count xs) (array ~@(interleave xs (repeat nil))) nil)\n         nil)\n      `(cljs.core.PersistentHashSet.fromArray (array ~@xs) true))))",
+ :extra-sources [{:code "(defmacro hash-set\n  ([] `cljs.core.PersistentHashSet.EMPTY)\n  ([& xs]\n    (if (core/and (every? #(= (:op %) :constant)\n                    (map #(cljs.analyzer/analyze &env %) xs))\n                  (= (count (into #{} xs)) (count xs)))\n      `(cljs.core.PersistentHashSet. nil\n         (cljs.core.PersistentArrayMap. nil ~(count xs) (array ~@(interleave xs (repeat nil))) nil)\n         nil)\n      (vary-meta\n        `(cljs.core.PersistentHashSet.fromArray (array ~@xs) true)\n        assoc :tag 'cljs.core/PersistentHashSet))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2060",
+                  :tag "r2067",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1331 1340]}],
+                  :lines [1336 1347]}],
  :full-name "cljs.core/hash-set",
  :clj-symbol "clojure.core/hash-set"}
 

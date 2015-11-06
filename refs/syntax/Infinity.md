@@ -77,7 +77,7 @@ js/-Infinity
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L247-L267):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L263-L285):
 
 ```clj
 (defn- read-symbol
@@ -99,7 +99,9 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
         (or (when-let [p (parse-symbol token)]
               (with-meta (symbol (p 0) (p 1))
                 (when line
-                  {:line line :column column})))
+                  {:line line :column column
+                   :end-line (get-line-number rdr)
+                   :end-column (int (get-column-number rdr))})))
             (reader-error rdr "Invalid token: " token))))))
 ```
 
@@ -107,13 +109,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.7.10
+tools.reader @ tools.reader-0.8.0
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:247-267](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.10/src/main/clojure/clojure/tools/reader.clj#L247-L267)</ins>
+                    └── <ins>[reader.clj:263-285](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L263-L285)</ins>
 </pre>
 -->
 
@@ -152,12 +154,12 @@ The API data for this symbol:
  :type "special symbol",
  :related ["syntax/number" "syntax/NaN"],
  :full-name-encode "syntax/Infinity",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  {:line line :column column})))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  {:line line :column column\n                   :end-line (get-line-number rdr)\n                   :end-column (int (get-column-number rdr))})))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.7.10",
+                  :tag "tools.reader-0.8.0",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [247 267]}],
+                  :lines [263 285]}],
  :usage ["Infinity" "-Infinity" "+Infinity"],
  :examples [{:id "463fd4",
              :content "```clj\nInfinity\n;;=> Infinity\n\n+Infinity\n;;=> Infinity\n\n-Infinity\n;;=> -Infinity\n```\n\nMath with infinities:\n\n```clj\n(/ 1 0)\n;;=> Infinity\n\n(Math/log 0)\n;;=> -Infinity\n\n(* 0 Infinity)\n;;=> NaN\n```\n\nThey are equivalent to the JavaScript symbols:\n\n```clj\njs/Infinity\n;;=> Infinity\n\njs/-Infinity\n;;=> -Infinity\n```"}],

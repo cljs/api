@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L355-L356):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L355-L356):
 
 ```clj
 (defprotocol IComparable
-  (-compare [x y]))
+  (^number -compare [x y]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:355-356](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L355-L356)</ins>
+            └── <ins>[core.cljs:355-356](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L355-L356)</ins>
 </pre>
 
 -->
@@ -75,10 +75,10 @@ The API data for this symbol:
  :name "IComparable",
  :type "protocol",
  :full-name-encode "cljs.core/IComparable",
- :source {:code "(defprotocol IComparable\n  (-compare [x y]))",
+ :source {:code "(defprotocol IComparable\n  (^number -compare [x y]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [355 356]},
  :methods [{:name "-compare", :signature ["[x y]"], :docstring nil}],

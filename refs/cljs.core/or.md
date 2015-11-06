@@ -103,7 +103,7 @@ value of the last expression. (or) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L222-L238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L223-L239):
 
 ```clj
 (defmacro or
@@ -111,7 +111,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
   ([x] x)
   ([x & next]
     (let [forms (concat [x] next)]
-      (if (every? simple-test-expr?
+      (if (every? #(simple-test-expr? &env %)
             (map #(cljs.analyzer/analyze &env %) forms))
         (let [or-str (->> (repeat (count forms) "(~{})")
                         (interpose " || ")
@@ -125,11 +125,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:222-238](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L222-L238)</ins>
+            └── <ins>[core.clj:223-239](https://github.com/clojure/clojurescript/blob/r2067/src/clj/cljs/core.clj#L223-L239)</ins>
 </pre>
 
 -->
@@ -179,12 +179,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/and" "special/if"],
  :full-name-encode "cljs.core/or",
- :source {:code "(defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? simple-test-expr?\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [or-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" || \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~or-str ~@forms)))\n        `(let [or# ~x]\n           (if or# or# (or ~@next)))))))",
+ :source {:code "(defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? #(simple-test-expr? &env %)\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [or-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" || \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~or-str ~@forms)))\n        `(let [or# ~x]\n           (if or# or# (or ~@next)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/clj/cljs/core.clj",
-          :lines [222 238]},
+          :lines [223 239]},
  :examples [{:id "d50433",
              :content "```clj\n(or)\n;;=> nil\n\n(or false)\n;;=> false\n\n(or true)\n;;=> true\n\n(or true true)\n;;=> true\n\n(or true false)\n;;=> true\n\n(or false false)\n;;=> false\n```"}
             {:id "62f291",

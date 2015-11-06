@@ -20,22 +20,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L327-L328):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L327-L328):
 
 ```clj
 (defprotocol IPending
-  (-realized? [d]))
+  (^boolean -realized? [d]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:327-328](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L327-L328)</ins>
+            └── <ins>[core.cljs:327-328](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L327-L328)</ins>
 </pre>
 
 -->
@@ -82,10 +82,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IPending",
- :source {:code "(defprotocol IPending\n  (-realized? [d]))",
+ :source {:code "(defprotocol IPending\n  (^boolean -realized? [d]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [327 328]},
  :methods [{:name "-realized?", :signature ["[d]"], :docstring nil}],

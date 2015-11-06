@@ -20,22 +20,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L342-L343):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L342-L343):
 
 ```clj
 (defprotocol ITransientAssociative
-  (-assoc! [tcoll key val]))
+  (^clj -assoc! [tcoll key val]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2060
+clojurescript @ r2067
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:342-343](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L342-L343)</ins>
+            └── <ins>[core.cljs:342-343](https://github.com/clojure/clojurescript/blob/r2067/src/cljs/cljs/core.cljs#L342-L343)</ins>
 </pre>
 
 -->
@@ -82,10 +82,10 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :full-name-encode "cljs.core/ITransientAssociative",
- :source {:code "(defprotocol ITransientAssociative\n  (-assoc! [tcoll key val]))",
+ :source {:code "(defprotocol ITransientAssociative\n  (^clj -assoc! [tcoll key val]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2060",
+          :tag "r2067",
           :filename "src/cljs/cljs/core.cljs",
           :lines [342 343]},
  :methods [{:name "-assoc!",
