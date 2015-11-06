@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L122-L132):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L122-L132):
 
 ```clj
 (defprotocol IGetError
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:122-132](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl.clj#L122-L132)</ins>
+            └── <ins>[repl.clj:122-132](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl.clj#L122-L132)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IGetError\n  (-get-error [repl-env name env build-options]\n    \"Given a symbol representing a var holding an error, an analysis\n     environment, and the REPL/compiler options return the canonical error\n     representation:\n\n     {:value <string>\n      :stacktrace <string>}\n\n    :value should be the host environment JavaScript error message string.\n    :stacktrace should be the host JavaScript environment stacktrace string.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/clj/cljs/repl.clj",
           :lines [122 132]},
  :methods [{:name "-get-error",

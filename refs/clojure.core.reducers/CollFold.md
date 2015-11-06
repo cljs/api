@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/core/reducers.cljs#L46-L47):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/clojure/core/reducers.cljs#L46-L47):
 
 ```clj
 (defprotocol CollFold
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:46-47](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/core/reducers.cljs#L46-L47)</ins>
+                └── <ins>[reducers.cljs:46-47](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/clojure/core/reducers.cljs#L46-L47)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol CollFold\n  (coll-fold [coll n combinef reducef]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [46 47]},
  :methods [{:name "coll-fold",

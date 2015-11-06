@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/server.clj#L8):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl/server.clj#L8):
 
 ```clj
 (def ^:dynamic state nil)
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:8](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/server.clj#L8)</ins>
+                └── <ins>[server.clj:8](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl/server.clj#L8)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [8]},
  :full-name "cljs.repl.server/state",

@@ -29,7 +29,7 @@ use.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/server.clj#L24-L37):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl/server.clj#L24-L37):
 
 ```clj
 (defn set-connection
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:24-37](https://github.com/clojure/clojurescript/blob/r3165/src/clj/cljs/repl/server.clj#L24-L37)</ins>
+                └── <ins>[server.clj:24-37](https://github.com/clojure/clojurescript/blob/r3169/src/clj/cljs/repl/server.clj#L24-L37)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn set-connection\n  [conn]\n  (if-let [promised-conn (:promised-conn @state)]\n    (do\n      (swap! state\n        (fn [old]\n          (-> old\n            (assoc :connection nil)\n            (assoc :promised-conn nil))))\n      (deliver promised-conn conn))\n    (swap! state (fn [old] (assoc old :connection conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [24 37]},
  :full-name "cljs.repl.server/set-connection",

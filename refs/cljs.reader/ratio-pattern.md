@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/reader.cljs#L99):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/reader.cljs#L99):
 
 ```clj
 (def ratio-pattern (re-pattern "^([-+]?[0-9]+)/([0-9]+)$"))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:99](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/cljs/reader.cljs#L99)</ins>
+            └── <ins>[reader.cljs:99](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/cljs/reader.cljs#L99)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def ratio-pattern (re-pattern \"^([-+]?[0-9]+)/([0-9]+)$\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [99]},
  :full-name "cljs.reader/ratio-pattern",

@@ -33,7 +33,7 @@ Ends the reduction of coll after consuming n values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/core/reducers.cljs#L164-L176):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/clojure/core/reducers.cljs#L164-L176):
 
 ```clj
 (defcurried take
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3165/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3165
+clojurescript @ r3169
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:164-176](https://github.com/clojure/clojurescript/blob/r3165/src/cljs/clojure/core/reducers.cljs#L164-L176)</ins>
+                └── <ins>[reducers.cljs:164-176](https://github.com/clojure/clojurescript/blob/r3169/src/cljs/clojure/core/reducers.cljs#L164-L176)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defcurried take\n  \"Ends the reduction of coll after consuming n values.\"\n  {}\n  [n coll]\n  (reducer coll\n   (fn [f1]\n     (let [cnt (atom n)]\n       (rfn [f1 k]\n         ([ret k v]\n            (swap! cnt dec)\n            (if (neg? @cnt)\n              (reduced ret)\n              (f1 ret k v))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3165",
+          :tag "r3169",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [164 176]},
  :full-name "clojure.core.reducers/take",
