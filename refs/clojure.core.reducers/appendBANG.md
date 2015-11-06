@@ -30,7 +30,7 @@ Source docstring:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/core/reducers.cljs#L226-L229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/clojure/core/reducers.cljs#L226-L229):
 
 ```clj
 (defn append!
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:226-229](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/clojure/core/reducers.cljs#L226-L229)</ins>
+                └── <ins>[reducers.cljs:226-229](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/clojure/core/reducers.cljs#L226-L229)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn append!\n  [acc x]\n  (doto acc (.push x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [226 229]},
  :full-name "clojure.core.reducers/append!",

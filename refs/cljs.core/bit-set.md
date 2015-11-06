@@ -60,7 +60,7 @@ Set bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1683-L1686):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1683-L1686):
 
 ```clj
 (defn bit-set
@@ -72,33 +72,33 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1683-1686](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1683-L1686)</ins>
+            └── <ins>[core.cljs:1683-1686](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1683-L1686)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L508-L509):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L508-L509):
 
 ```clj
 (defmacro bit-set [x n]
-  (list 'js* "(~{} | (1 << ~{}))" x n))
+  (core/list 'js* "(~{} | (1 << ~{}))" x n))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:508-509](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L508-L509)</ins>
+            └── <ins>[core.clj:508-509](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L508-L509)</ins>
 </pre>
 -->
 
@@ -149,13 +149,13 @@ The API data for this symbol:
  :source {:code "(defn bit-set\n  [x n]\n  (cljs.core/bit-set x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1683 1686]},
- :extra-sources [{:code "(defmacro bit-set [x n]\n  (list 'js* \"(~{} | (1 << ~{}))\" x n))",
+ :extra-sources [{:code "(defmacro bit-set [x n]\n  (core/list 'js* \"(~{} | (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2014",
+                  :tag "r2024",
                   :filename "src/clj/cljs/core.clj",
                   :lines [508 509]}],
  :examples [{:id "6a8a49",

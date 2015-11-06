@@ -61,7 +61,7 @@ Flip bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1674-L1677):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1674-L1677):
 
 ```clj
 (defn bit-flip
@@ -73,33 +73,33 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1674-1677](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L1674-L1677)</ins>
+            └── <ins>[core.cljs:1674-1677](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L1674-L1677)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L493-L494):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L493-L494):
 
 ```clj
 (defmacro bit-flip [x n]
-  (list 'js* "(~{} ^ (1 << ~{}))" x n))
+  (core/list 'js* "(~{} ^ (1 << ~{}))" x n))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:493-494](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L493-L494)</ins>
+            └── <ins>[core.clj:493-494](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L493-L494)</ins>
 </pre>
 -->
 
@@ -150,13 +150,13 @@ The API data for this symbol:
  :source {:code "(defn bit-flip\n  [x n]\n  (cljs.core/bit-flip x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1674 1677]},
- :extra-sources [{:code "(defmacro bit-flip [x n]\n  (list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
+ :extra-sources [{:code "(defmacro bit-flip [x n]\n  (core/list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2014",
+                  :tag "r2024",
                   :filename "src/clj/cljs/core.clj",
                   :lines [493 494]}],
  :examples [{:id "5d7ee0",

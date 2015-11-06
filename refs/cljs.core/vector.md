@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/vector</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vector)
@@ -38,27 +38,52 @@ Creates a new vector containing `args`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L3345):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L3345-L3348):
 
 ```clj
-(defn vector [& args] (vec args))
+(defn vector [& args]
+  (if (instance? IndexedSeq args)
+    (cljs.core.PersistentVector.fromArray (.-arr args) true)
+    (vec args)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3345](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L3345)</ins>
+            └── <ins>[core.cljs:3345-3348](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L3345-L3348)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1296-L1299):
+
+```clj
+(defmacro vector
+  ([] [])
+  ([& xs]
+    `[~@xs]))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r2024
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:1296-1299](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L1296-L1299)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -99,18 +124,24 @@ The API data for this symbol:
  :name "vector",
  :signature ["[& args]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/vec"
            "cljs.core/vector?"
            "cljs.core/pop"
            "cljs.core/into"],
  :full-name-encode "cljs.core/vector",
- :source {:code "(defn vector [& args] (vec args))",
-          :title "Source code",
+ :source {:code "(defn vector [& args]\n  (if (instance? IndexedSeq args)\n    (cljs.core.PersistentVector.fromArray (.-arr args) true)\n    (vec args)))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3345]},
+          :lines [3345 3348]},
+ :extra-sources [{:code "(defmacro vector\n  ([] [])\n  ([& xs]\n    `[~@xs]))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r2024",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [1296 1299]}],
  :full-name "cljs.core/vector",
  :clj-symbol "clojure.core/vector"}
 

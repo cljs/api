@@ -22,27 +22,27 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L5030-L5036):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L5033-L5039):
 
 ```clj
 (set! cljs.core.PersistentHashMap.fromArrays
-      (fn [ks vs]
-        (let [len (alength ks)]
-          (loop [i 0 out (transient cljs.core.PersistentHashMap.EMPTY)]
-            (if (< i len)
-              (recur (inc i) (assoc! out (aget ks i) (aget vs i)))
-              (persistent! out))))))
+  (fn [ks vs]
+    (let [len (alength ks)]
+      (loop [i 0 ^not-native out (transient cljs.core.PersistentHashMap.EMPTY)]
+        (if (< i len)
+          (recur (inc i) (-assoc! out (aget ks i) (aget vs i)))
+          (persistent! out))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5030-5036](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L5030-L5036)</ins>
+            └── <ins>[core.cljs:5033-5039](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L5033-L5039)</ins>
 </pre>
 
 -->
@@ -88,12 +88,12 @@ The API data for this symbol:
  :parent-type "PersistentHashMap",
  :type "function",
  :full-name-encode "cljs.core/PersistentHashMapDOTfromArrays",
- :source {:code "(set! cljs.core.PersistentHashMap.fromArrays\n      (fn [ks vs]\n        (let [len (alength ks)]\n          (loop [i 0 out (transient cljs.core.PersistentHashMap.EMPTY)]\n            (if (< i len)\n              (recur (inc i) (assoc! out (aget ks i) (aget vs i)))\n              (persistent! out))))))",
+ :source {:code "(set! cljs.core.PersistentHashMap.fromArrays\n  (fn [ks vs]\n    (let [len (alength ks)]\n      (loop [i 0 ^not-native out (transient cljs.core.PersistentHashMap.EMPTY)]\n        (if (< i len)\n          (recur (inc i) (-assoc! out (aget ks i) (aget vs i)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5030 5036]},
+          :lines [5033 5039]},
  :full-name "cljs.core/PersistentHashMap.fromArrays"}
 
 ```

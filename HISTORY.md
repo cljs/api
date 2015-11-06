@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2024](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2024)__</td>
+<td>2013-11-08</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.7.10</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002024syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002024library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002024compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2014](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2014)__</td>
 <td>2013-11-06</td>
 <td><kbd>1.5.1</kbd></td>
@@ -935,6 +958,23 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2024
+
+<a name="002024syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002024library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="002024compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2014
@@ -2352,7 +2392,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/hash-set](refs/cljs.core/hash-set.md)</samp></td>
 </tr>
@@ -3099,7 +3139,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/array-map](refs/cljs.core/array-map.md)</samp></td>
 </tr>
@@ -4954,7 +4994,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/hash-map](refs/cljs.core/hash-map.md)</samp></td>
 </tr>
@@ -5128,7 +5168,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/list](refs/cljs.core/list.md)</samp></td>
 </tr>
@@ -5866,7 +5906,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/vector](refs/cljs.core/vector.md)</samp></td>
 </tr>

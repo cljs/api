@@ -48,7 +48,7 @@ Returns true if `x` is a JavaScript array, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L74-L75):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L74-L75):
 
 ```clj
 (defn ^boolean array? [x]
@@ -59,33 +59,33 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:74-75](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L74-L75)</ins>
+            └── <ins>[core.cljs:74-75](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L74-L75)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L277-L278):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L277-L278):
 
 ```clj
 (defmacro array? [x]
-  (bool-expr (list 'js* "~{} instanceof Array" x)))
+  (bool-expr (core/list 'js* "~{} instanceof Array" x)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:277-278](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L277-L278)</ins>
+            └── <ins>[core.clj:277-278](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L277-L278)</ins>
 </pre>
 -->
 
@@ -134,13 +134,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean array? [x]\n  (cljs.core/array? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
           :lines [74 75]},
- :extra-sources [{:code "(defmacro array? [x]\n  (bool-expr (list 'js* \"~{} instanceof Array\" x)))",
+ :extra-sources [{:code "(defmacro array? [x]\n  (bool-expr (core/list 'js* \"~{} instanceof Array\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2014",
+                  :tag "r2024",
                   :filename "src/clj/cljs/core.clj",
                   :lines [277 278]}],
  :examples [{:id "39913c",

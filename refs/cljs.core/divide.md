@@ -28,12 +28,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L403-L406):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L403-L406):
 
 ```clj
 (defmacro divide
   ([x] `(/ 1 ~x))
-  ([x y] (list 'js* "(~{} / ~{})" x y))
+  ([x y] (core/list 'js* "(~{} / ~{})" x y))
   ([x y & more] `(/ (/ ~x ~y) ~@more)))
 ```
 
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:403-406](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L403-L406)</ins>
+            └── <ins>[core.clj:403-406](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L403-L406)</ins>
 </pre>
 
 -->
@@ -88,10 +88,10 @@ The API data for this symbol:
  :name "divide",
  :type "macro",
  :signature ["[x]" "[x y]" "[x y & more]"],
- :source {:code "(defmacro divide\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
+ :source {:code "(defmacro divide\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/clj/cljs/core.clj",
           :lines [403 406]},
  :full-name "cljs.core/divide",

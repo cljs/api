@@ -45,7 +45,7 @@ src:            The source directory containing user-defined cljs files. Used to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl/browser.clj#L225-L265):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/repl/browser.clj#L225-L265):
 
 ```clj
 (defn repl-env
@@ -76,12 +76,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:225-265](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/repl/browser.clj#L225-L265)</ins>
+                └── <ins>[browser.clj:225-265](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/repl/browser.clj#L225-L265)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as opts}]\n  (let [compiler-env (cljs.env/default-compiler-env)\n        opts (merge (BrowserEnv.)\n                    {:port          9000\n                     :optimizations :simple\n                     :working-dir   \".repl\"\n                     :serve-static  true\n                     :static-dir    [\".\" \"out/\"]\n                     :preloaded-libs   []\n                     :src           \"src/\"\n                     :cljs.env/compiler compiler-env}\n                    opts)]\n    (cljs.env/with-compiler-env compiler-env\n      (reset! preloaded-libs (set (concat (always-preload) (map str (:preloaded-libs opts)))))\n        (reset! loaded-libs @preloaded-libs)\n        (swap! browser-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [225 265]},
  :full-name "cljs.repl.browser/repl-env",

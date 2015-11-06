@@ -30,7 +30,7 @@ Returns true if `x` is a string, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L84-L85):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L84-L85):
 
 ```clj
 (defn ^boolean string? [x]
@@ -41,33 +41,33 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:84-85](https://github.com/clojure/clojurescript/blob/r2014/src/cljs/cljs/core.cljs#L84-L85)</ins>
+            └── <ins>[core.cljs:84-85](https://github.com/clojure/clojurescript/blob/r2024/src/cljs/cljs/core.cljs#L84-L85)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L280-L281):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L280-L281):
 
 ```clj
 (defmacro string? [x]
-  (bool-expr (list 'js* "typeof ~{} === 'string'" x)))
+  (bool-expr (core/list 'js* "typeof ~{} === 'string'" x)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2014
+clojurescript @ r2024
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:280-281](https://github.com/clojure/clojurescript/blob/r2014/src/clj/cljs/core.clj#L280-L281)</ins>
+            └── <ins>[core.clj:280-281](https://github.com/clojure/clojurescript/blob/r2024/src/clj/cljs/core.clj#L280-L281)</ins>
 </pre>
 -->
 
@@ -118,13 +118,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean string? [x]\n  (goog/isString x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2014",
+          :tag "r2024",
           :filename "src/cljs/cljs/core.cljs",
           :lines [84 85]},
- :extra-sources [{:code "(defmacro string? [x]\n  (bool-expr (list 'js* \"typeof ~{} === 'string'\" x)))",
+ :extra-sources [{:code "(defmacro string? [x]\n  (bool-expr (core/list 'js* \"typeof ~{} === 'string'\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2014",
+                  :tag "r2024",
                   :filename "src/clj/cljs/core.clj",
                   :lines [280 281]}],
  :full-name "cljs.core/string?",
