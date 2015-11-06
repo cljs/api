@@ -30,7 +30,7 @@ Prints formatted output, as per format
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6758-L6761):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6758-L6761):
 
 ```clj
 (defn printf
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6758-6761](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6758-L6761)</ins>
+            └── <ins>[core.cljs:6758-6761](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6758-L6761)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn printf\n  [fmt & args]\n  (print (apply format fmt args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6758 6761]},
  :full-name "cljs.core/printf",

@@ -68,7 +68,7 @@ set happened, else false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6933-L6940):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6933-L6940):
 
 ```clj
 (defn compare-and-set!
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6933-6940](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L6933-L6940)</ins>
+            └── <ins>[core.cljs:6933-6940](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6933-L6940)</ins>
 </pre>
 
 -->
@@ -139,7 +139,7 @@ The API data for this symbol:
  :source {:code "(defn compare-and-set!\n  [a oldval newval]\n  (if (= (.-state a) oldval)\n    (do (reset! a newval) true)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6933 6940]},
  :examples [{:id "1fa306",

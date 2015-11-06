@@ -30,7 +30,7 @@ Formats a string using goog.string.format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1771-L1774):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1771-L1774):
 
 ```clj
 (defn format
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1771-1774](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1771-L1774)</ins>
+            └── <ins>[core.cljs:1771-1774](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1771-L1774)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn format\n  [fmt & args]\n  (apply gstring/format fmt args))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1771 1774]},
  :full-name "cljs.core/format",

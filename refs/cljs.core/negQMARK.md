@@ -41,7 +41,7 @@ Returns true if num is less than zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1732-L1734):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1732-L1734):
 
 ```clj
 (defn ^boolean neg?
@@ -52,18 +52,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1732-1734](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L1732-L1734)</ins>
+            └── <ins>[core.cljs:1732-1734](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1732-L1734)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L396-L397):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/core.clj#L396-L397):
 
 ```clj
 (defmacro neg? [x]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:396-397](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L396-L397)</ins>
+            └── <ins>[core.clj:396-397](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/core.clj#L396-L397)</ins>
 </pre>
 -->
 
@@ -130,13 +130,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean neg?\n  [x] (cljs.core/neg? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1732 1734]},
  :extra-sources [{:code "(defmacro neg? [x]\n  `(< ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1877",
+                  :tag "r1878",
                   :filename "src/clj/cljs/core.clj",
                   :lines [396 397]}],
  :full-name "cljs.core/neg?",

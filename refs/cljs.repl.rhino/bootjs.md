@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/repl/rhino.clj#L21-L23):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/repl/rhino.clj#L21-L23):
 
 ```clj
 (def ^String bootjs (str "goog.require = function(rule){"
@@ -29,12 +29,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:21-23](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/repl/rhino.clj#L21-L23)</ins>
+                └── <ins>[rhino.clj:21-23](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/repl/rhino.clj#L21-L23)</ins>
 </pre>
 
 -->
@@ -80,7 +80,7 @@ The API data for this symbol:
  :source {:code "(def ^String bootjs (str \"goog.require = function(rule){\"\n                         \"Packages.clojure.lang.RT[\\\"var\\\"](\\\"cljs.repl.rhino\\\",\\\"goog-require\\\")\"\n                         \".invoke(___repl_env, rule);}\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [21 23]},
  :full-name "cljs.repl.rhino/bootjs",

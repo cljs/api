@@ -72,7 +72,7 @@ before the vars are bound to their new values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L916-L927):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/core.clj#L916-L927):
 
 ```clj
 (defmacro binding
@@ -86,11 +86,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:916-927](https://github.com/clojure/clojurescript/blob/r1877/src/clj/cljs/core.clj#L916-L927)</ins>
+            └── <ins>[core.clj:916-927](https://github.com/clojure/clojurescript/blob/r1878/src/clj/cljs/core.clj#L916-L927)</ins>
 </pre>
 
 -->
@@ -143,7 +143,7 @@ The API data for this symbol:
  :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(with-redefs ~bindings ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/clj/cljs/core.clj",
           :lines [916 927]},
  :examples [{:id "7dd17f",

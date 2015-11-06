@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L347-L348):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L347-L348):
 
 ```clj
 (defprotocol IChunkedNext
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:347-348](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L347-L348)</ins>
+            └── <ins>[core.cljs:347-348](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L347-L348)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IChunkedNext\n  (-chunked-next [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [347 348]},
  :methods [{:name "-chunked-next",

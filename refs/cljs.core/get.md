@@ -45,7 +45,7 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L945-L985):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L945-L985):
 
 ```clj
 (defn get
@@ -94,11 +94,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:945-985](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L945-L985)</ins>
+            └── <ins>[core.cljs:945-985](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L945-L985)</ins>
 </pre>
 
 -->
@@ -151,7 +151,7 @@ The API data for this symbol:
  :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o k))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o k))\n\n        (type_satisfies_ ILookup o)\n        (-lookup o k)\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (satisfies? ILookup o false)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        (type_satisfies_ ILookup o)\n        (-lookup o k not-found)\n\n        :else not-found)\n      not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [945 985]},
  :full-name "cljs.core/get",

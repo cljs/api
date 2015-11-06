@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/clojure/browser/event.cljs#L79-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/clojure/browser/event.cljs#L79-L80):
 
 ```clj
 (defn expose [e]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:79-80](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/clojure/browser/event.cljs#L79-L80)</ins>
+                └── <ins>[event.cljs:79-80](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/clojure/browser/event.cljs#L79-L80)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn expose [e]\n  (goog.events/expose e))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [79 80]},
  :full-name "clojure.browser.event/expose",

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L288-L289):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L288-L289):
 
 ```clj
 (defprotocol IReversible
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1877/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1877
+clojurescript @ r1878
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:288-289](https://github.com/clojure/clojurescript/blob/r1877/src/cljs/cljs/core.cljs#L288-L289)</ins>
+            └── <ins>[core.cljs:288-289](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L288-L289)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IReversible\n  (-rseq [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1877",
+          :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [288 289]},
  :methods [{:name "-rseq", :signature ["[coll]"], :docstring nil}],
