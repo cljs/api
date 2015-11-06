@@ -75,6 +75,11 @@ shadowed by your own vars.
 </tr>
 <tr>
 <td></td>
+<td><samp>[letfn\*](../special/letfnSTAR.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236"><img valign="middle" alt="[+] 0.0-1236" title="Added in 0.0-1236" src="https://img.shields.io/badge/+-0.0--1236-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[loop\*](../special/loopSTAR.md)</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>

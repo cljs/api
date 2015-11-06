@@ -51,6 +51,11 @@ The rest of the symbols are in the following namespaces:
 <td>evaluate compiled cljs in a browser. send results back to server</td>
 </tr>
 <tr>
+<td></td>
+<td>[clojure.core.reducers](library/clojure.core.reducers.md)</td>
+<td>a library for reduction and parallel folding (parallelism not supported)</td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.set-api.html)</td>
 <td>[clojure.set](library/clojure.set.md)</td>
 <td>set operations such as union/intersection</td>

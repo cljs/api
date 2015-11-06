@@ -4,12 +4,17 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 </table>
 
 
+ <samp>
+(__escape-char-map__ c)<br>
+</samp>
+
+---
 
 
 
@@ -17,27 +22,30 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L137-L143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L160-L169):
 
 ```clj
-(def escape-char-map {\t "\t"
-                      \r "\r"
-                      \n "\n"
-                      \\ \\
-                      \" \"
-                      \b "\b"
-                      \f "\f"})
+(defn escape-char-map [c]
+  (case c
+    \t "\t"
+    \r "\r"
+    \n "\n"
+    \\ \\
+    \" \"
+    \b "\b"
+    \f "\f"
+    nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:137-143](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L137-L143)</ins>
+            └── <ins>[reader.cljs:160-169](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L160-L169)</ins>
 </pre>
 
 -->
@@ -78,13 +86,14 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "escape-char-map",
- :type "var",
- :source {:code "(def escape-char-map {\\t \"\\t\"\n                      \\r \"\\r\"\n                      \\n \"\\n\"\n                      \\\\ \\\\\n                      \\\" \\\"\n                      \\b \"\\b\"\n                      \\f \"\\f\"})",
+ :type "function",
+ :signature ["[c]"],
+ :source {:code "(defn escape-char-map [c]\n  (case c\n    \\t \"\\t\"\n    \\r \"\\r\"\n    \\n \"\\n\"\n    \\\\ \\\\\n    \\\" \\\"\n    \\b \"\\b\"\n    \\f \"\\f\"\n    nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [137 143]},
+          :lines [160 169]},
  :full-name "cljs.reader/escape-char-map",
  :full-name-encode "cljs.reader/escape-char-map",
  :history [["+" "0.0-927"]]}

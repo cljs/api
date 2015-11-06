@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4351-L4391):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L4363-L4403):
 
 ```clj
 (deftype PersistentTreeMapSeq [meta stack ascending? cnt ^:mutable __hash]
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4351-4391](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4351-L4391)</ins>
+            └── <ins>[core.cljs:4363-4403](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L4363-L4403)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(deftype PersistentTreeMapSeq [meta stack ascending? cnt ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  ISeqable\n  (-seq [this] this)\n\n  ISequential\n  ISeq\n  (-first [this] (peek stack))\n\n  (-rest [this]\n    (let [t (peek stack)\n          next-stack (tree-map-seq-push (if ascending? (.-right t) (.-left t))\n                                        (pop stack)\n                                        ascending?)]\n      (if (coercive-not= next-stack nil)\n        (PersistentTreeMapSeq. nil next-stack ascending? (dec cnt) nil))))\n\n  ICounted\n  (-count [coll]\n    (if (neg? cnt)\n      (inc (count (next coll)))\n      cnt))\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IWithMeta\n  (-with-meta [coll meta]\n    (PersistentTreeMapSeq. meta stack ascending? cnt __hash)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4351 4391]},
+          :lines [4363 4403]},
  :full-name "cljs.core/PersistentTreeMapSeq",
  :full-name-encode "cljs.core/PersistentTreeMapSeq",
  :history [["+" "0.0-1211"]]}

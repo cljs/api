@@ -55,29 +55,32 @@ in O(n) time, for sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L636-L648):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L645-L660):
 
 ```clj
 (defn nth
   ([coll n]
-     (if (satisfies? IIndexed coll)
-       (-nth coll (.floor js/Math n))
-       (linear-traversal-nth coll (.floor js/Math n))))
+     (when (coercive-not= coll nil)
+       (if (satisfies? IIndexed coll)
+         (-nth coll (.floor js/Math n))
+         (linear-traversal-nth coll (.floor js/Math n)))))
   ([coll n not-found]
-     (if (satisfies? IIndexed coll)
-       (-nth coll (.floor js/Math n) not-found)
-       (linear-traversal-nth coll (.floor js/Math n) not-found))))
+     (if (coercive-not= coll nil)
+       (if (satisfies? IIndexed coll)
+         (-nth coll (.floor js/Math n) not-found)
+         (linear-traversal-nth coll (.floor js/Math n) not-found))
+       not-found)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:636-648](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L636-L648)</ins>
+            └── <ins>[core.cljs:645-660](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L645-L660)</ins>
 </pre>
 
 -->
@@ -130,12 +133,12 @@ The API data for this symbol:
            "cljs.core/nthnext"
            "cljs.core/get"],
  :full-name-encode "cljs.core/nth",
- :source {:code "(defn nth\n  ([coll n]\n     (if (satisfies? IIndexed coll)\n       (-nth coll (.floor js/Math n))\n       (linear-traversal-nth coll (.floor js/Math n))))\n  ([coll n not-found]\n     (if (satisfies? IIndexed coll)\n       (-nth coll (.floor js/Math n) not-found)\n       (linear-traversal-nth coll (.floor js/Math n) not-found))))",
+ :source {:code "(defn nth\n  ([coll n]\n     (when (coercive-not= coll nil)\n       (if (satisfies? IIndexed coll)\n         (-nth coll (.floor js/Math n))\n         (linear-traversal-nth coll (.floor js/Math n)))))\n  ([coll n not-found]\n     (if (coercive-not= coll nil)\n       (if (satisfies? IIndexed coll)\n         (-nth coll (.floor js/Math n) not-found)\n         (linear-traversal-nth coll (.floor js/Math n) not-found))\n       not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [636 648]},
+          :lines [645 660]},
  :full-name "cljs.core/nth",
  :clj-symbol "clojure.core/nth",
  :docstring "Returns the value at the index. get returns nil if index out of\nbounds, nth throws an exception unless not-found is supplied.  nth\nalso works for strings, arrays, regex Matchers and Lists, and,\nin O(n) time, for sequences."}

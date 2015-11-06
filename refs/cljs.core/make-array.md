@@ -36,7 +36,7 @@ Creates an empty JavaScript array of size `size`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L81-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L81-L85):
 
 ```clj
 (defn make-array
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:81-85](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L81-L85)</ins>
+            └── <ins>[core.cljs:81-85](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L81-L85)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn make-array\n  ([size]\n     (js* \"new Array(~{size})\"))\n  ([type size]\n     (make-array size)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
           :lines [81 85]},
  :full-name "cljs.core/make-array",

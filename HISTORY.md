@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1236](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1236)__</td>
+<td>2012-05-16</td>
+<td><kbd>1.4.0</kbd></td>
+<td></td>
+<td><kbd>20111110-r1376</kbd></td>
+<td>
+<a href="#user-content-001236syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001236library">
++23 
+</a>
+</td>
+<td>
+<a href="#user-content-001236compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1211](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211)__</td>
 <td>2012-05-09</td>
 <td><kbd>1.4.0</kbd></td>
@@ -153,6 +176,161 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1236
+
+<a name="001236syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001236library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-special form-brightgreen.svg">
+</td>
+<td><samp>[letfn\*](refs/special/letfnSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/simple-benchmark](refs/cljs.core/simple-benchmark.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/\*tag-table\*](refs/cljs.reader/STARtag-tableSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/maybe-read-tagged-type](refs/cljs.reader/maybe-read-tagged-type.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/read-string\*](refs/cljs.reader/read-stringSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/register-tag-parser!](refs/cljs.reader/register-tag-parserBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/Cat](refs/clojure.core.reducers/Cat.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/append!](refs/clojure.core.reducers/appendBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/cat](refs/clojure.core.reducers/cat.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/drop](refs/clojure.core.reducers/drop.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/filter](refs/clojure.core.reducers/filter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/flatten](refs/clojure.core.reducers/flatten.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/fold](refs/clojure.core.reducers/fold.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/foldcat](refs/clojure.core.reducers/foldcat.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/folder](refs/clojure.core.reducers/folder.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/map](refs/clojure.core.reducers/map.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/mapcat](refs/clojure.core.reducers/mapcat.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/monoid](refs/clojure.core.reducers/monoid.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/reduce](refs/clojure.core.reducers/reduce.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/reducer](refs/clojure.core.reducers/reducer.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/remove](refs/clojure.core.reducers/remove.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/take](refs/clojure.core.reducers/take.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.core.reducers/take-while](refs/clojure.core.reducers/take-while.md)</samp></td>
+</tr>
+</table>
+
+<a name="001236compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1211
@@ -3306,7 +3484,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.reader/dispatch-macros](refs/cljs.reader/dispatch-macros.md)</samp></td>
 </tr>
@@ -3318,7 +3496,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.reader/escape-char-map](refs/cljs.reader/escape-char-map.md)</samp></td>
 </tr>
@@ -3342,7 +3520,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.reader/macros](refs/cljs.reader/macros.md)</samp></td>
 </tr>

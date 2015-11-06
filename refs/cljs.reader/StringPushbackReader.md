@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L18-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L18-L28):
 
 ```clj
 (deftype StringPushbackReader [s index-atom buffer-atom]
@@ -31,7 +31,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
              (if (empty? @buffer-atom)
                (let [idx @index-atom]
                  (swap! index-atom inc)
-                 (nth s idx))
+                 (aget s idx))
                (let [buf @buffer-atom]
                  (swap! buffer-atom rest)
                  (first buf))))
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:18-28](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L18-L28)</ins>
+            └── <ins>[reader.cljs:18-28](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L18-L28)</ins>
 </pre>
 
 -->
@@ -89,10 +89,10 @@ The API data for this symbol:
  :name "StringPushbackReader",
  :type "type",
  :signature ["[s index-atom buffer-atom]"],
- :source {:code "(deftype StringPushbackReader [s index-atom buffer-atom]\n  PushbackReader\n  (read-char [reader]\n             (if (empty? @buffer-atom)\n               (let [idx @index-atom]\n                 (swap! index-atom inc)\n                 (nth s idx))\n               (let [buf @buffer-atom]\n                 (swap! buffer-atom rest)\n                 (first buf))))\n  (unread [reader ch] (swap! buffer-atom #(cons ch %))))",
+ :source {:code "(deftype StringPushbackReader [s index-atom buffer-atom]\n  PushbackReader\n  (read-char [reader]\n             (if (empty? @buffer-atom)\n               (let [idx @index-atom]\n                 (swap! index-atom inc)\n                 (aget s idx))\n               (let [buf @buffer-atom]\n                 (swap! buffer-atom rest)\n                 (first buf))))\n  (unread [reader ch] (swap! buffer-atom #(cons ch %))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [18 28]},
  :full-name "cljs.reader/StringPushbackReader",

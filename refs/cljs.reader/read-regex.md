@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L301-L303):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L334-L336):
 
 ```clj
 (defn read-regex
   [rdr ch]
-  (-> (read-string rdr ch) re-pattern))
+  (-> (read-string* rdr ch) re-pattern))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:301-303](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L301-L303)</ins>
+            └── <ins>[reader.cljs:334-336](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L334-L336)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "read-regex",
  :type "function",
  :signature ["[rdr ch]"],
- :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string rdr ch) re-pattern))",
+ :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string* rdr ch) re-pattern))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [301 303]},
+          :lines [334 336]},
  :full-name "cljs.reader/read-regex",
  :full-name-encode "cljs.reader/read-regex",
  :history [["+" "0.0-927"]]}

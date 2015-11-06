@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl.clj#L91-L100):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L91-L100):
 
 ```clj
 (defn load-stream [repl-env filename stream]
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:91-100](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl.clj#L91-L100)</ins>
+            └── <ins>[repl.clj:91-100](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L91-L100)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn load-stream [repl-env filename stream]\n  (with-open [r (io/reader stream)]\n    (let [env {:ns (@comp/namespaces comp/*cljs-ns*) :context :statement :locals {}}\n          pbr (clojure.lang.LineNumberingPushbackReader. r)\n          eof (Object.)]\n      (loop [r (read pbr false eof false)]\n        (let [env (assoc env :ns (@comp/namespaces comp/*cljs-ns*))]\n          (when-not (identical? eof r)\n            (evaluate-form repl-env env filename r)\n            (recur (read pbr false eof false))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/clj/cljs/repl.clj",
           :lines [91 100]},
  :full-name "cljs.repl/load-stream",

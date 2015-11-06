@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L847-L881):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L854-L888):
 
 ```clj
 (defmethod parse 'try*
@@ -61,11 +61,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:847-881](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L847-L881)</ins>
+            └── <ins>[compiler.clj:854-888](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L854-L888)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'try*\n  [op env [_ & body :as form] name]\n  (let [body (vec body)\n        catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        tail (peek body)\n        fblock (when (and (seq? tail) (= 'finally (first tail)))\n                  (rest tail))\n        finally (when fblock\n                  (analyze-block\n                   (assoc env :context :statement)\n                   fblock))\n        body (if finally (pop body) body)\n        tail (peek body)\n        cblock (when (and (seq? tail)\n                          (= 'catch (first tail)))\n                 (rest tail))\n        name (first cblock)\n        locals (:locals catchenv)\n        mname (when name (munge name))\n        locals (if name\n                 (assoc locals name {:name mname})\n                 locals)\n        catch (when cblock\n                (analyze-block (assoc catchenv :locals locals) (rest cblock)))\n        body (if name (pop body) body)\n        try (when body\n              (analyze-block (if (or name finally) catchenv env) body))]\n    (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n    {:env env :op :try* :form form\n     :try try\n     :finally finally\n     :name mname\n     :catch catch\n     :children (vec (mapcat block-children\n                            [try catch finally]))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [847 881]},
+          :lines [854 888]},
  :full-name "special/try*",
  :full-name-encode "special/trySTAR",
  :history [["+" "0.0-927"]]}

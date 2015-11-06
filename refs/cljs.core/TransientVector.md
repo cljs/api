@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2821-L2945):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2833-L2957):
 
 ```clj
 (deftype TransientVector [^:mutable cnt
@@ -159,11 +159,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2821-2945](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2821-L2945)</ins>
+            └── <ins>[core.cljs:2833-2957](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2833-L2957)</ins>
 </pre>
 
 -->
@@ -214,9 +214,9 @@ The API data for this symbol:
  :source {:code "(deftype TransientVector [^:mutable cnt\n                          ^:mutable shift\n                          ^:mutable root\n                          ^:mutable tail]\n  ITransientCollection\n  (-conj! [tcoll o]\n    (if (.-edit root)\n      (if (< (- cnt (tail-off tcoll)) 32)\n        (do (aset tail (bit-and cnt 0x01f) o)\n            (set! cnt (inc cnt))\n            tcoll)\n        (let [tail-node (VectorNode. (.-edit root) tail)\n              new-tail  (make-array 32)]\n          (aset new-tail 0 o)\n          (set! tail new-tail)\n          (if (> (bit-shift-right-zero-fill cnt 5)\n                 (bit-shift-left 1 shift))\n            (let [new-root-array (make-array 32)\n                  new-shift      (+ shift 5)]\n              (aset new-root-array 0 root)\n              (aset new-root-array 1 (new-path (.-edit root) shift tail-node))\n              (set! root  (VectorNode. (.-edit root) new-root-array))\n              (set! shift new-shift)\n              (set! cnt   (inc cnt))\n              tcoll)\n            (let [new-root (tv-push-tail tcoll shift root tail-node)]\n              (set! root new-root)\n              (set! cnt  (inc cnt))\n              tcoll))))\n      (throw (js/Error. \"conj! after persistent!\"))))\n\n  (-persistent! [tcoll]\n    (if (.-edit root)\n      (do (set! (.-edit root) nil)\n          (let [len (- cnt (tail-off tcoll))\n                trimmed-tail (make-array len)]\n            (array-copy tail 0 trimmed-tail 0 len)\n            (PersistentVector. nil cnt shift root trimmed-tail nil)))\n      (throw (js/Error. \"persistent! called twice\"))))\n\n  ITransientAssociative\n  (-assoc! [tcoll key val] (-assoc-n! tcoll key val))\n\n  ITransientVector\n  (-assoc-n! [tcoll n val]\n    (if (.-edit root)\n      (cond\n        (and (<= 0 n) (< n cnt))\n        (if (<= (tail-off tcoll) n)\n          (do (aset tail (bit-and n 0x01f) val)\n              tcoll)\n          (let [new-root\n                ((fn go [level node]\n                   (let [node (tv-ensure-editable (.-edit root) node)]\n                     (if (zero? level)\n                       (do (pv-aset node (bit-and n 0x01f) val)\n                           node)\n                       (let [subidx (bit-and (bit-shift-right-zero-fill n level)\n                                             0x01f)]\n                         (pv-aset node subidx\n                                  (go (- level 5) (pv-aget node subidx)))\n                         node))))\n                 shift root)]\n            (set! root new-root)\n            tcoll))\n        (== n cnt) (-conj! tcoll val)\n        :else\n        (throw\n         (js/Error.\n          (str \"Index \" n \" out of bounds for TransientVector of length\" cnt))))\n      (throw (js/Error. \"assoc! after persistent!\"))))\n\n  (-pop! [tcoll]\n    (if (.-edit root)\n      (cond\n        (zero? cnt) (throw (js/Error. \"Can't pop empty vector\"))\n        (== 1 cnt)                       (do (set! cnt 0) tcoll)\n        (pos? (bit-and (dec cnt) 0x01f)) (do (set! cnt (dec cnt)) tcoll)\n        :else\n        (let [new-tail (editable-array-for tcoll (- cnt 2))\n              new-root (let [nr (tv-pop-tail tcoll shift root)]\n                         (if (coercive-not= nr nil)\n                           nr\n                           (VectorNode. (.-edit root) (make-array 32))))]\n          (if (and (< 5 shift) (coercive-= (pv-aget new-root 1) nil))\n            (let [new-root (tv-ensure-editable (.-edit root) (pv-aget new-root 0))]\n              (set! root  new-root)\n              (set! shift (- shift 5))\n              (set! cnt   (dec cnt))\n              (set! tail  new-tail)\n              tcoll)\n            (do (set! root new-root)\n                (set! cnt  (dec cnt))\n                (set! tail new-tail)\n                tcoll))))\n      (throw (js/Error. \"pop! after persistent!\"))))\n\n  ICounted\n  (-count [coll]\n    (if (.-edit root)\n      cnt\n      (throw (js/Error. \"count after persistent!\"))))\n\n  IIndexed\n  (-nth [coll n]\n    (if (.-edit root)\n      (aget (array-for coll n) (bit-and n 0x01f))\n      (throw (js/Error. \"nth after persistent!\"))))\n\n  (-nth [coll n not-found]\n    (if (and (<= 0 n) (< n cnt))\n      (-nth coll n)\n      not-found))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2821 2945]},
+          :lines [2833 2957]},
  :full-name "cljs.core/TransientVector",
  :clj-symbol "clojure.lang/TransientVector"}
 

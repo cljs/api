@@ -22,17 +22,20 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L256-L267):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L286-L300):
 
 ```clj
 (defn read-keyword
   [reader initch]
   (let [token (read-token reader (read-char reader))
-        [token ns name] (re-matches symbol-pattern token)]
-    (if (or (and (not (undefined? ns))
+        a (re-matches* symbol-pattern token)
+        token (aget a 0)
+        ns (aget a 1)
+        name (aget a 2)]
+    (if (or (and (coercive-not (undefined? ns))
                  (identical? (. ns (substring (- (.-length ns) 2) (.-length ns))) ":/"))
             (identical? (aget name (dec (.-length name))) ":")
-            (not (== (.indexOf token "::" 1) -1)))
+            (coercive-not (== (.indexOf token "::" 1) -1)))
       (reader-error reader "Invalid token: " token)
       (if ns
         (keyword (.substring ns 0 (.indexOf ns "/")) name)
@@ -43,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:256-267](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L256-L267)</ins>
+            └── <ins>[reader.cljs:286-300](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L286-L300)</ins>
 </pre>
 
 -->
@@ -90,12 +93,12 @@ The API data for this symbol:
  :name "read-keyword",
  :type "function",
  :signature ["[reader initch]"],
- :source {:code "(defn read-keyword\n  [reader initch]\n  (let [token (read-token reader (read-char reader))\n        [token ns name] (re-matches symbol-pattern token)]\n    (if (or (and (not (undefined? ns))\n                 (identical? (. ns (substring (- (.-length ns) 2) (.-length ns))) \":/\"))\n            (identical? (aget name (dec (.-length name))) \":\")\n            (not (== (.indexOf token \"::\" 1) -1)))\n      (reader-error reader \"Invalid token: \" token)\n      (if ns\n        (keyword (.substring ns 0 (.indexOf ns \"/\")) name)\n        (keyword token)))))",
+ :source {:code "(defn read-keyword\n  [reader initch]\n  (let [token (read-token reader (read-char reader))\n        a (re-matches* symbol-pattern token)\n        token (aget a 0)\n        ns (aget a 1)\n        name (aget a 2)]\n    (if (or (and (coercive-not (undefined? ns))\n                 (identical? (. ns (substring (- (.-length ns) 2) (.-length ns))) \":/\"))\n            (identical? (aget name (dec (.-length name))) \":\")\n            (coercive-not (== (.indexOf token \"::\" 1) -1)))\n      (reader-error reader \"Invalid token: \" token)\n      (if ns\n        (keyword (.substring ns 0 (.indexOf ns \"/\")) name)\n        (keyword token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [256 267]},
+          :lines [286 300]},
  :full-name "cljs.reader/read-keyword",
  :full-name-encode "cljs.reader/read-keyword",
  :history [["+" "0.0-927"]]}

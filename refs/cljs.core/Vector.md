@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2333-L2418):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2345-L2430):
 
 ```clj
 (deftype Vector [meta array ^:mutable __hash]
@@ -117,11 +117,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2333-2418](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2333-L2418)</ins>
+            └── <ins>[core.cljs:2345-2430](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2345-L2430)</ins>
 </pre>
 
 -->
@@ -167,9 +167,9 @@ The API data for this symbol:
  :source {:code "(deftype Vector [meta array ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (Vector. meta array __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (let [count (.-length array)]\n      (when (> count 0)\n        (aget array (dec count)))))\n  (-pop [coll]\n    (if (> (.-length array) 0)\n      (let [new-array (aclone array)]\n        (. new-array (pop))\n        (Vector. meta new-array nil))\n      (throw (js/Error. \"Can't pop empty vector\"))))\n\n  ICollection\n  (-conj [coll o]\n    (let [new-array (aclone array)]\n      (.push new-array o)\n      (Vector. meta new-array nil)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Vector/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (when (> (.-length array) 0)\n      (let [vector-seq\n             (fn vector-seq [i]\n               (lazy-seq\n                 (when (< i (.-length array))\n                   (cons (aget array i) (vector-seq (inc i))))))]\n        (vector-seq 0))))\n\n  ICounted\n  (-count [coll] (.-length array))\n\n  IIndexed\n  (-nth [coll n]\n    (if (and (<= 0 n) (< n (.-length array)))\n      (aget array n)\n      #_(throw (js/Error. (str \"No item \" n \" in vector of length \" (.-length array))))))\n  (-nth [coll n not-found]\n    (if (and (<= 0 n) (< n (.-length array)))\n      (aget array n)\n      not-found))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (let [new-array (aclone array)]\n      (aset new-array k v)\n      (Vector. meta new-array nil)))\n\n  IVector\n  (-assoc-n [coll n val] (-assoc coll n val))\n\n  IReduce\n  (-reduce [v f]\n    (ci-reduce array f))\n  (-reduce [v f start]\n    (ci-reduce array f start))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2333 2418]},
+          :lines [2345 2430]},
  :full-name "cljs.core/Vector",
  :full-name-encode "cljs.core/Vector",
  :history [["+" "0.0-927"]]}

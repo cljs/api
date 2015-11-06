@@ -43,22 +43,25 @@ Creates a `seq` from a JavaScript array, starting at index `i` if given.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L466-L467):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L469-L473):
 
 ```clj
-(defn array-seq [array i]
-  (prim-seq array i))
+(defn array-seq
+  ([array]
+     (prim-seq array 0))
+  ([array i]
+     (prim-seq array i)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1211
+clojurescript @ r1236
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:466-467](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L466-L467)</ins>
+            └── <ins>[core.cljs:469-473](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L469-L473)</ins>
 </pre>
 
 -->
@@ -104,12 +107,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/array-seq",
- :source {:code "(defn array-seq [array i]\n  (prim-seq array i))",
+ :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1211",
+          :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [466 467]},
+          :lines [469 473]},
  :examples [{:id "9ef6de",
              :content "```clj\n(array-seq #js [1 2 3])\n;;=> (1 2 3)\n\n(array-seq #js [1 2 3] 1)\n;;=> (2 3)\n```"}],
  :full-name "cljs.core/array-seq"}
