@@ -38,7 +38,7 @@ facilitate code walking without knowing the details of the op set.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/analyzer/api.clj#L23-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L23-L32):
 
 ```clj
 (defn analyze
@@ -51,13 +51,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:23-32](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/analyzer/api.clj#L23-L32)</ins>
+                    └── <ins>[api.clj:23-32](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L23-L32)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn analyze\n  ([env form] (ana/analyze env form nil))\n  ([env form name] (ana/analyze env form name nil))\n  ([env form name opts] (ana/analyze env form name opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [23 32]},
  :full-name "cljs.analyzer.api/analyze",

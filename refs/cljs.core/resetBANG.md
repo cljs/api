@@ -45,7 +45,7 @@ current value. Returns newval.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L3834-L3847):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3834-L3847):
 
 ```clj
 (defn reset!
@@ -66,12 +66,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3834-3847](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L3834-L3847)</ins>
+                └── <ins>[core.cljs:3834-3847](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3834-L3847)</ins>
 </pre>
 
 -->
@@ -126,7 +126,7 @@ The API data for this symbol:
  :source {:code "(defn reset!\n  [a new-value]\n  (if (instance? Atom a)\n    (let [validate (.-validator a)]\n      (when-not (nil? validate)\n        (assert (validate new-value) \"Validator rejected reference state\"))\n      (let [old-value (.-state a)]\n        (set! (.-state a) new-value)\n        (when-not (nil? (.-watches a))\n          (-notify-watches a old-value new-value))\n        new-value))\n    (-reset! a new-value)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3834 3847]},
  :full-name "cljs.core/reset!",

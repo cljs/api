@@ -30,7 +30,7 @@ Returns true if v is of type cljs.core.Var
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L911-L914):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L911-L914):
 
 ```clj
 (defn var?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:911-914](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L911-L914)</ins>
+                └── <ins>[core.cljs:911-914](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L911-L914)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn var?\n  [v]\n  (instance? cljs.core.Var v))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [911 914]},
  :full-name "cljs.core/var?",

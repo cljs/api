@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L103-L104):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L103-L104):
 
 ```clj
 (defprotocol IReplEnvOptions
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:103-104](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L103-L104)</ins>
+                └── <ins>[repl.cljc:103-104](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L103-L104)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IReplEnvOptions\n  (-repl-options [repl-env] \"Return default REPL options for a REPL Env\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [103 104]},
  :methods [{:name "-repl-options",

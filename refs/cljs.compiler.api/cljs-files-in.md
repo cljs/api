@@ -27,7 +27,7 @@ Return a sequence of all .cljs and .cljc files in the given directory.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/compiler/api.clj#L62-L65):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/compiler/api.clj#L62-L65):
 
 ```clj
 (defn cljs-files-in
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:62-65](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/compiler/api.clj#L62-L65)</ins>
+                    └── <ins>[api.clj:62-65](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/compiler/api.clj#L62-L65)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn cljs-files-in\n  [dir]\n  (comp/cljs-files-in dir))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [62 65]},
  :full-name "cljs.compiler.api/cljs-files-in",

@@ -35,7 +35,7 @@ Output is sent to *out* which must be a pretty printing writer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/pprint.cljs#L842-L851):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L842-L851):
 
 ```clj
 (defn pprint-newline
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:842-851](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/pprint.cljs#L842-L851)</ins>
+                └── <ins>[pprint.cljs:842-851](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L842-L851)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn pprint-newline\n  [kind]\n  (check-enumerated-arg kind #{:linear :miser :fill :mandatory})\n  (nl *out* kind))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [842 851]},
  :full-name "cljs.pprint/pprint-newline",

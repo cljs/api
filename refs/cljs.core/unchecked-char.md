@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L2223):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L2223):
 
 ```clj
 (defn ^number unchecked-char [x] x)
@@ -35,19 +35,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2223](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L2223)</ins>
+                └── <ins>[core.cljs:2223](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L2223)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L434):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L434):
 
 ```clj
 (defmacro unchecked-char [x] x)
@@ -57,12 +57,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:434](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L434)</ins>
+                └── <ins>[core.clj:434](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L434)</ins>
 </pre>
 -->
 
@@ -112,13 +112,13 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-char [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2223]},
  :extra-sources [{:code "(defmacro unchecked-char [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3264",
+                  :tag "r3269",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [434]}],
  :full-name "cljs.core/unchecked-char",

@@ -77,7 +77,7 @@ will be defined, taking positional parameters for the fields
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L1024-L1092):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1024-L1092):
 
 ```clj
 (defmacro deftype
@@ -107,12 +107,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1024-1092](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L1024-L1092)</ins>
+                └── <ins>[core.clj:1024-1092](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1024-L1092)</ins>
 </pre>
 
 -->
@@ -163,7 +163,7 @@ The API data for this symbol:
  :source {:code "(defmacro deftype\n  [t fields & impls]\n  (validate-fields \"deftype\" t fields)\n  (let [env &env\n        r (:name (cljs.analyzer/resolve-var (dissoc env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks env impls)\n        protocols (collect-protocols impls env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    `(do\n       (deftype* ~t ~fields ~pmasks\n         ~(if (seq impls)\n            `(extend-type ~t ~@(dt->et t impls fields))))\n       (set! (.-getBasis ~t) (fn [] '[~@fields]))\n       (set! (.-cljs$lang$type ~t) true)\n       (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n       (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n\n       ~(build-positional-factory t r fields)\n       ~t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [1024 1092]},
  :full-name "cljs.core/deftype",

@@ -35,7 +35,7 @@ Returns true if x is a JavaScript string.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L180-L183):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L180-L183):
 
 ```clj
 (defn ^boolean string?
@@ -47,19 +47,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:180-183](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L180-L183)</ins>
+                └── <ins>[core.cljs:180-183](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L180-L183)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L369-L370):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L369-L370):
 
 ```clj
 (defmacro string? [x]
@@ -70,12 +70,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:369-370](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/core.clj#L369-L370)</ins>
+                └── <ins>[core.clj:369-370](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L369-L370)</ins>
 </pre>
 -->
 
@@ -126,13 +126,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean string?\n  [x]\n  (goog/isString x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [180 183]},
  :extra-sources [{:code "(defmacro string? [x]\n  (bool-expr (core/list 'js* \"typeof ~{} === 'string'\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3264",
+                  :tag "r3269",
                   :filename "src/main/clojure/cljs/core.clj",
                   :lines [369 370]}],
  :full-name "cljs.core/string?",

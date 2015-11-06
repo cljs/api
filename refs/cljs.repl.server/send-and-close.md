@@ -31,7 +31,7 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl/server.clj#L105-L126):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/server.clj#L105-L126):
 
 ```clj
 (defn send-and-close
@@ -60,13 +60,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:105-126](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl/server.clj#L105-L126)</ins>
+                    └── <ins>[server.clj:105-126](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/server.clj#L105-L126)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn send-and-close\n  ([conn status form]\n    (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n    (let [utf-8-form (.getBytes form \"UTF-8\")\n          content-length (count utf-8-form)\n          headers (map #(.getBytes (str % \"\\r\\n\"))\n                    [(status-line status)\n                     \"Server: ClojureScript REPL\"\n                     (str \"Content-Type: \"\n                       content-type\n                       \"; charset=utf-8\")\n                     (str \"Content-Length: \" content-length)\n                     \"\"])]\n      (with-open [os (.getOutputStream conn)]\n        (doseq [header headers]\n          (.write os header 0 (count header)))\n        (.write os utf-8-form 0 content-length)\n        (.flush os)\n        (.close conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [105 126]},
  :full-name "cljs.repl.server/send-and-close",

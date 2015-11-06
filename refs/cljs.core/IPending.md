@@ -26,7 +26,7 @@ Protocol for types which can have a deferred realization. Currently only
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L533-L537):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L533-L537):
 
 ```clj
 (defprotocol IPending
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:533-537](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L533-L537)</ins>
+                └── <ins>[core.cljs:533-537](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L533-L537)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IPending\n  \"Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay.\"\n  (^boolean -realized? [d]\n    \"Returns true if a value for d has been produced, false otherwise.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [533 537]},
  :methods [{:name "-realized?",

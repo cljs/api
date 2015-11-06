@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L3035-L3036):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3035-L3036):
 
 ```clj
 (defn chunk-first [s]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3035-3036](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L3035-L3036)</ins>
+                └── <ins>[core.cljs:3035-3036](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3035-L3036)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn chunk-first [s]\n  (-chunked-first s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3035 3036]},
  :full-name "cljs.core/chunk-first",

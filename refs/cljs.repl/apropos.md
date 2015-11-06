@@ -60,7 +60,7 @@ str-or-pattern.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L1155-L1170):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L1155-L1170):
 
 ```clj
 (defmacro apropos
@@ -82,12 +82,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1155-1170](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L1155-L1170)</ins>
+                └── <ins>[repl.cljc:1155-1170](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L1155-L1170)</ins>
 </pre>
 
 -->
@@ -140,7 +140,7 @@ The API data for this symbol:
  :source {:code "(defmacro apropos\n  [str-or-pattern]\n  (let [matches? (if (instance? Pattern str-or-pattern)\n                   #(re-find str-or-pattern (str %))\n                   #(.contains (str %) (str str-or-pattern)))]\n    `(quote\n       ~(sort\n          (mapcat\n            (fn [ns]\n              (let [ns-name (str ns)]\n                (map #(symbol ns-name (str %))\n                  (filter matches? (keys (ana-api/ns-publics ns))))))\n            (ana-api/all-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [1155 1170]},
  :examples [{:id "aceda4",

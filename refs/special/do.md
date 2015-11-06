@@ -31,7 +31,7 @@ the last. If no expressions are supplied, returns nil.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/analyzer.cljc#L1090-L1099):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer.cljc#L1090-L1099):
 
 ```clj
 (defmethod parse 'do
@@ -50,12 +50,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1090-1099](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/analyzer.cljc#L1090-L1099)</ins>
+                └── <ins>[analyzer.cljc:1090-1099](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer.cljc#L1090-L1099)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/analyzer.cljc",
           :lines [1090 1099]},
  :full-name "special/do",

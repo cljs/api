@@ -25,7 +25,7 @@ Marker protocol indicating an array sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L370-L371):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L370-L371):
 
 ```clj
 (defprotocol ASeq
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:370-371](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L370-L371)</ins>
+                └── <ins>[core.cljs:370-371](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L370-L371)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ASeq\n  \"Marker protocol indicating an array sequence.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [370 371]},
  :full-name "cljs.core/ASeq",

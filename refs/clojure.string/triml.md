@@ -35,7 +35,7 @@ Removes whitespace from the left side of string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/string.cljs#L152-L155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/string.cljs#L152-L155):
 
 ```clj
 (defn triml
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:152-155](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/string.cljs#L152-L155)</ins>
+                └── <ins>[string.cljs:152-155](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/string.cljs#L152-L155)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn triml\n    [s]\n    (gstring/trimLeft s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [152 155]},
  :full-name "clojure.string/triml",

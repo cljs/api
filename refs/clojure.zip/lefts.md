@@ -30,7 +30,7 @@ Returns a seq of the left siblings of this loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/zip.cljs#L87-L90):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/zip.cljs#L87-L90):
 
 ```clj
 (defn lefts
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:87-90](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/zip.cljs#L87-L90)</ins>
+                └── <ins>[zip.cljs:87-90](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/zip.cljs#L87-L90)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn lefts\n  [loc]\n    (seq (:l (loc 1))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [87 90]},
  :full-name "clojure.zip/lefts",

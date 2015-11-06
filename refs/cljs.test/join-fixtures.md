@@ -33,7 +33,7 @@ NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/test.cljs#L485-L491):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L485-L491):
 
 ```clj
 (defn join-fixtures
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:485-491](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/test.cljs#L485-L491)</ins>
+                └── <ins>[test.cljs:485-491](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L485-L491)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn join-fixtures\n  [fixtures]\n  (reduce compose-fixtures default-fixture fixtures))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [485 491]},
  :full-name "cljs.test/join-fixtures",

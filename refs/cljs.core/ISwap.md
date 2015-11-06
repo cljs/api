@@ -22,7 +22,7 @@ Protocol for adding swapping functionality.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L622-L625):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L622-L625):
 
 ```clj
 (defprotocol ISwap
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:622-625](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L622-L625)</ins>
+                └── <ins>[core.cljs:622-625](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L622-L625)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISwap\n  \"Protocol for adding swapping functionality.\"\n  (-swap! [o f] [o f a] [o f a b] [o f a b xs]\n    \"Swaps the value of o to be (apply f current-value-of-atom args).\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [622 625]},
  :methods [{:name "-swap!",

@@ -36,7 +36,7 @@ Example: (source-fn 'filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L1114-L1133):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L1114-L1133):
 
 ```clj
 (defn source-fn
@@ -58,12 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1114-1133](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl.cljc#L1114-L1133)</ins>
+                └── <ins>[repl.cljc:1114-1133](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl.cljc#L1114-L1133)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn source-fn\n  [env x]\n  (when-let [v (ana-api/resolve env x)]\n    (when-let [filepath (:file v)]\n      (let [f (io/file filepath)\n            f (if (.exists f)\n                f\n                (io/resource filepath))]\n        (when f\n          (with-open [pbr (PushbackReader. (io/reader f))]\n            (let [rdr (readers/source-logging-push-back-reader pbr)]\n              (dotimes [_ (dec (:line v))] (readers/read-line rdr))\n              (-> (reader/read rdr) meta :source))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [1114 1133]},
  :full-name "cljs.repl/source-fn",

@@ -33,7 +33,7 @@ Ensure that core.cljs has been loaded.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/compiler/api.clj#L29-L33):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/compiler/api.clj#L29-L33):
 
 ```clj
 (defn with-core-cljs
@@ -46,13 +46,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3264
+clojurescript @ r3269
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:29-33](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/compiler/api.clj#L29-L33)</ins>
+                    └── <ins>[api.clj:29-33](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/compiler/api.clj#L29-L33)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn with-core-cljs\n  ([] (comp/with-core-cljs nil))\n  ([opts] (comp/with-core-cljs opts (fn [])))\n  ([opts body] (comp/with-core-cljs opts body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3264",
+          :tag "r3269",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [29 33]},
  :full-name "cljs.compiler.api/with-core-cljs",
