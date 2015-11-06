@@ -29,7 +29,7 @@ meta information.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/reflect.cljs#L24-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/reflect.cljs#L24-L30):
 
 ```clj
 (defn meta
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2723
+clojurescript @ r2725
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:24-30](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/reflect.cljs#L24-L30)</ins>
+            └── <ins>[reflect.cljs:24-30](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/clojure/reflect.cljs#L24-L30)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn meta\n  [sym cb]\n  (query-reflection (str \"var=\" (js/encodeURIComponent (str sym)))\n                    #(cb (evaluate-javascript %))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2723",
+          :tag "r2725",
           :filename "src/cljs/clojure/reflect.cljs",
           :lines [24 30]},
  :full-name "clojure.reflect/meta",

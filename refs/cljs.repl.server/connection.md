@@ -28,7 +28,7 @@ connection is not available, store the promise in server/state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl/server.clj#L14-L26):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl/server.clj#L14-L26):
 
 ```clj
 (defn connection
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2723
+clojurescript @ r2725
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:14-26](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl/server.clj#L14-L26)</ins>
+                └── <ins>[server.clj:14-26](https://github.com/clojure/clojurescript/blob/r2725/src/clj/cljs/repl/server.clj#L14-L26)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn connection\n  []\n  (let [p    (promise)\n        conn (:connection @state)]\n    (if (and conn (not (.isClosed conn)))\n      (do\n        (deliver p conn)\n        p)\n      (do\n        (swap! state (fn [old] (assoc old :promised-conn p)))\n        p))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2723",
+          :tag "r2725",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [14 26]},
  :full-name "cljs.repl.server/connection",

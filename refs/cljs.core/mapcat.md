@@ -51,7 +51,7 @@ a transducer when no collections are provided
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L3947-L3955):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/core.cljs#L3947-L3955):
 
 ```clj
 (defn mapcat
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2723
+clojurescript @ r2725
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3947-3955](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L3947-L3955)</ins>
+            └── <ins>[core.cljs:3947-3955](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/core.cljs#L3947-L3955)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn mapcat\n  ([f] (comp (map f) cat))\n  ([f & colls]\n     (apply concat (apply map f colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2723",
+          :tag "r2725",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3947 3955]},
  :full-name "cljs.core/mapcat",

@@ -34,7 +34,7 @@ current value. Returns newval.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L3613-L3616):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/core.cljs#L3613-L3616):
 
 ```clj
 (defn vreset!
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2723
+clojurescript @ r2725
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3613-3616](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L3613-L3616)</ins>
+            └── <ins>[core.cljs:3613-3616](https://github.com/clojure/clojurescript/blob/r2725/src/cljs/cljs/core.cljs#L3613-L3616)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn vreset!\n  [vol newval]  (-vreset! vol newval))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2723",
+          :tag "r2725",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3613 3616]},
  :full-name "cljs.core/vreset!",
