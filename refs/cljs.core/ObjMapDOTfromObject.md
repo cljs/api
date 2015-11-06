@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L5457):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L5457):
 
 ```clj
 (set! (.-fromObject ObjMap) (fn [ks obj] (ObjMap. nil ks obj 0 nil)))
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5457](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L5457)</ins>
+            └── <ins>[core.cljs:5457](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L5457)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(set! (.-fromObject ObjMap) (fn [ks obj] (ObjMap. nil ks obj 0 nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/cljs/core.cljs",
           :lines [5457]},
  :full-name "cljs.core/ObjMap.fromObject"}

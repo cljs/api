@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L852-L893):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L852-L893):
 
 ```clj
 (def special-doc-map
@@ -68,11 +68,11 @@ itself (not its value) is returned. The reader macro #'x expands to (var x)."}})
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:852-893](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L852-L893)</ins>
+            └── <ins>[repl.clj:852-893](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L852-L893)</ins>
 </pre>
 
 -->
@@ -117,7 +117,7 @@ The API data for this symbol:
  :source {:code "(def special-doc-map\n  '{. {:forms [(.instanceMethod instance args*)\n               (.-instanceField instance)]\n       :doc \"The instance member form works for methods and fields.\n  They all expand into calls to the dot operator at macroexpansion time.\"}\n    def {:forms [(def symbol doc-string? init?)]\n         :doc \"Creates and interns a global var with the name\n  of symbol in the current namespace (*ns*) or locates such a var if\n  it already exists.  If init is supplied, it is evaluated, and the\n  root binding of the var is set to the resulting value.  If init is\n  not supplied, the root binding of the var is unaffected.\"}\n    do {:forms [(do exprs*)]\n        :doc \"Evaluates the expressions in order and returns the value of\n  the last. If no expressions are supplied, returns nil.\"}\n    if {:forms [(if test then else?)]\n        :doc \"Evaluates test. If not the singular values nil or false,\n  evaluates and yields then, otherwise, evaluates and yields else. If\n  else is not supplied it defaults to nil.\"}\n    new {:forms [(Constructor. args*) (new Constructor args*)]\n         :url \"java_interop#new\"\n         :doc \"The args, if any, are evaluated from left to right, and\n  passed to the JavaScript constructor. The constructed object is\n  returned.\"}\n    quote {:forms [(quote form)]\n           :doc \"Yields the unevaluated form.\"}\n    recur {:forms [(recur exprs*)]\n           :doc \"Evaluates the exprs in order, then, in parallel, rebinds\n  the bindings of the recursion point to the values of the exprs.\n  Execution then jumps back to the recursion point, a loop or fn method.\"}\n    set! {:forms[(set! var-symbol expr)\n                 (set! (.- instance-expr instanceFieldName-symbol) expr)]\n          :url \"vars#set\"\n          :doc \"Used to set vars and JavaScript object fields\"}\n    throw {:forms [(throw expr)]\n           :doc \"The expr is evaluated and thrown.\"}\n    try {:forms [(try expr* catch-clause* finally-clause?)]\n         :doc \"catch-clause => (catch classname name expr*)\n  finally-clause => (finally expr*)\n  Catches and handles JavaScript exceptions.\"}\n    var {:forms [(var symbol)]\n         :doc \"The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x).\"}})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/clj/cljs/repl.clj",
           :lines [852 893]},
  :full-name "cljs.repl/special-doc-map",

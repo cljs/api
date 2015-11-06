@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L2322):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L2322):
 
 ```clj
 (defn ints [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2322](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L2322)</ins>
+            └── <ins>[core.cljs:2322](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L2322)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn ints [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2322]},
  :full-name "cljs.core/ints",

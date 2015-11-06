@@ -22,7 +22,7 @@ Protocol for adding hashing functionality to a type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L477-L480):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L477-L480):
 
 ```clj
 (defprotocol IHash
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:477-480](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L477-L480)</ins>
+            └── <ins>[core.cljs:477-480](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L477-L480)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IHash\n  \"Protocol for adding hashing functionality to a type.\"\n  (-hash [o]\n    \"Returns the hash code of o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/cljs/core.cljs",
           :lines [477 480]},
  :methods [{:name "-hash",

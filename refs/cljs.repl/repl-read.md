@@ -39,7 +39,7 @@ supporting .unread and collapsing all of CR, LF, and CRLF into a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L73-L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L73-L94):
 
 ```clj
 (defn repl-read
@@ -60,11 +60,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:73-94](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L73-L94)</ins>
+            └── <ins>[repl.clj:73-94](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L73-L94)</ins>
 </pre>
 
 -->
@@ -113,7 +113,7 @@ The API data for this symbol:
  :source {:code "(defn repl-read\n  ([request-prompt request-exit]\n   (repl-read request-prompt request-exit *repl-opts*))\n  ([request-prompt request-exit opts]\n   (binding [*in* (if (true? (:source-map-inline opts))\n                    ((:reader opts))\n                    *in*)]\n     (or ({:line-start request-prompt :stream-end request-exit}\n          (skip-whitespace *in*))\n        (let [input (reader/read)]\n          (skip-if-eol *in*)\n          input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/clj/cljs/repl.clj",
           :lines [73 94]},
  :full-name "cljs.repl/repl-read",

@@ -41,7 +41,7 @@ Returns a lazy (infinite!) sequence of repetitions of the items in coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L4154-L4158):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L4154-L4158):
 
 ```clj
 (defn cycle
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4154-4158](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L4154-L4158)</ins>
+            └── <ins>[core.cljs:4154-4158](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L4154-L4158)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn cycle\n  [coll] (lazy-seq\n          (when-let [s (seq coll)]\n            (concat s (cycle s)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4154 4158]},
  :full-name "cljs.core/cycle",

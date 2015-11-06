@@ -28,7 +28,7 @@ documentation information at the repl.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/clojure/reflect.cljs#L45-L49):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/clojure/reflect.cljs#L45-L49):
 
 ```clj
 (defn doc
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── clojure
-            └── <ins>[reflect.cljs:45-49](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/clojure/reflect.cljs#L45-L49)</ins>
+            └── <ins>[reflect.cljs:45-49](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/clojure/reflect.cljs#L45-L49)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn doc\n  [sym]\n  (meta sym print-doc))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/clojure/reflect.cljs",
           :lines [45 49]},
  :full-name "clojure.reflect/doc",

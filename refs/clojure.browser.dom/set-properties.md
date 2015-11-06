@@ -27,7 +27,7 @@ Set properties on an element
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/clojure/browser/dom.cljs#L136-L140):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/clojure/browser/dom.cljs#L136-L140):
 
 ```clj
 (defn set-properties
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:136-140](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/clojure/browser/dom.cljs#L136-L140)</ins>
+                └── <ins>[dom.cljs:136-140](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/clojure/browser/dom.cljs#L136-L140)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn set-properties\n  [e m]\n  (gdom/setProperties (ensure-element e)\n                      (apply gobject/create (interleave (keys m) (vals m)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [136 140]},
  :full-name "clojure.browser.dom/set-properties",

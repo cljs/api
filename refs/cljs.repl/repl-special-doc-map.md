@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L900-L962):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L900-L962):
 
 ```clj
 (def repl-special-doc-map
@@ -89,11 +89,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:900-962](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/repl.clj#L900-L962)</ins>
+            └── <ins>[repl.clj:900-962](https://github.com/clojure/clojurescript/blob/r3123/src/clj/cljs/repl.clj#L900-L962)</ins>
 </pre>
 
 -->
@@ -138,7 +138,7 @@ The API data for this symbol:
  :source {:code "(def repl-special-doc-map\n  '{in-ns {:arglists ([name])\n           :doc \"Sets *cljs-ns* to the namespace named by the symbol, creating it if needed.\"}\n    require {:arglists ([& args])\n             :doc \"  Loads libs, skipping any that are already loaded. Each argument is\n  either a libspec that identifies a lib or a flag that modifies how all the identified\n  libs are loaded. Use :require in the ns macro in preference to calling this\n  directly.\n\n  Libs\n\n  A 'lib' is a named set of resources in classpath whose contents define a\n  library of ClojureScript code. Lib names are symbols and each lib is associated\n  with a ClojureScript namespace. A lib's name also locates its root directory\n  within classpath using Java's package name to classpath-relative path mapping.\n  All resources in a lib should be contained in the directory structure under its\n  root directory. All definitions a lib makes should be in its associated namespace.\n\n  'require loads a lib by loading its root resource. The root resource path\n  is derived from the lib name in the following manner:\n  Consider a lib named by the symbol 'x.y.z; it has the root directory\n  <classpath>/x/y/, and its root resource is <classpath>/x/y/z.clj. The root\n  resource should contain code to create the lib's namespace (usually by using\n  the ns macro) and load any additional lib resources.\n\n  Libspecs\n\n  A libspec is a lib name or a vector containing a lib name followed by\n  options expressed as sequential keywords and arguments.\n\n  Recognized options:\n  :as takes a symbol as its argument and makes that symbol an alias to the\n    lib's namespace in the current namespace.\n  :refer takes a list of symbols to refer from the namespace..\n  :refer-macros takes a list of macro symbols to refer from the namespace.\n  :include-macros takes a list of macro symbols to refer from the namespace.\n\n  Flags\n\n  A flag is a keyword.\n  Recognized flags: :reload, :reload-all, :verbose\n  :reload forces loading of all the identified libs even if they are\n    already loaded\n  :reload-all implies :reload and also forces loading of all libs that the\n    identified libs directly or indirectly load via require or use\n  :verbose triggers printing information about each load, alias, and refer\n\n  Example:\n\n  The following would load the library clojure.string :as string.\n\n  (require '[clojure/string :as string])\"}\n    require-macros {:arglists ([& args])\n                    :doc \"Similar to the require REPL special function but\n    only for macros.\"}\n    import {:arglists ([& import-symbols-or-lists])\n            :doc \"import-list => (closure-namespace constructor-name-symbols*)\n\n  For each name in constructor-name-symbols, adds a mapping from name to the\n  constructor named by closure-namespace to the current namespace. Use :import in the ns\n  macro in preference to calling this directly.\"}\n    load-file {:arglist ([name])\n               :doc \"Sequentially read and evaluate the set of forms contained in the file.\"}})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/clj/cljs/repl.clj",
           :lines [900 962]},
  :full-name "cljs.repl/repl-special-doc-map",

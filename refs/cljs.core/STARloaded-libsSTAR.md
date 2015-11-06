@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L99):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L99):
 
 ```clj
 (defonce ^:dynamic *loaded-libs* nil)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3119
+clojurescript @ r3123
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:99](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L99)</ins>
+            └── <ins>[core.cljs:99](https://github.com/clojure/clojurescript/blob/r3123/src/cljs/cljs/core.cljs#L99)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(defonce ^:dynamic *loaded-libs* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3119",
+          :tag "r3123",
           :filename "src/cljs/cljs/core.cljs",
           :lines [99]},
  :full-name "cljs.core/*loaded-libs*",
