@@ -32,7 +32,7 @@ call, any such use will throw an exception.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L3205-L3210):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L3205-L3210):
 
 ```clj
 (defn persistent!
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3205-3210](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L3205-L3210)</ins>
+            └── <ins>[core.cljs:3205-3210](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L3205-L3210)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn persistent!\n  [tcoll]\n  (-persistent! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3205 3210]},
  :full-name "cljs.core/persistent!",

@@ -30,7 +30,7 @@ Returns the loc of the rightmost sibling of the node at this loc, or self
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/zip.cljs#L142-L148):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/clojure/zip.cljs#L142-L148):
 
 ```clj
 (defn rightmost
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:142-148](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/zip.cljs#L142-L148)</ins>
+            └── <ins>[zip.cljs:142-148](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/clojure/zip.cljs#L142-L148)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn rightmost\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (if (and path r)\n        (with-meta [(last r) (assoc path :l (apply conj l node (butlast r)) :r nil)] (meta loc))\n        loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [142 148]},
  :full-name "clojure.zip/rightmost",

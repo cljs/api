@@ -33,7 +33,7 @@ Ends the reduction of coll when (pred val) returns logical false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/core/reducers.cljs#L152-L162):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/clojure/core/reducers.cljs#L152-L162):
 
 ```clj
 (defcurried take-while
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:152-162](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/clojure/core/reducers.cljs#L152-L162)</ins>
+                └── <ins>[reducers.cljs:152-162](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/clojure/core/reducers.cljs#L152-L162)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defcurried take-while\n  \"Ends the reduction of coll when (pred val) returns logical false.\"\n  {}\n  [pred coll]\n  (reducer coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               (reduced ret)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [152 162]},
  :full-name "clojure.core.reducers/take-while",

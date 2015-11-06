@@ -43,7 +43,7 @@ src:            The source directory containing user-defined cljs files. Used to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L554-L573):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L554-L573):
 
 ```clj
 (defn repl-env
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:554-573](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L554-L573)</ins>
+                └── <ins>[browser.clj:554-573](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L554-L573)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as opts}]\n  (repl-env* opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [554 573]},
  :full-name "cljs.repl.browser/repl-env",

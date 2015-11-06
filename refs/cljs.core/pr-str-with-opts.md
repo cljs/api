@@ -28,7 +28,7 @@ options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L8559-L8565):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L8559-L8565):
 
 ```clj
 (defn pr-str-with-opts
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8559-8565](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L8559-L8565)</ins>
+            └── <ins>[core.cljs:8559-8565](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L8559-L8565)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (if (empty? objs)\n    \"\"\n    (str (pr-sb-with-opts objs opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8559 8565]},
  :full-name "cljs.core/pr-str-with-opts",

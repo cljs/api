@@ -37,7 +37,7 @@ invoked once and from an async context after any assertions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/test.clj#L222-L239):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/test.clj#L222-L239):
 
 ```clj
 (defmacro async
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:222-239](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/test.clj#L222-L239)</ins>
+            └── <ins>[test.clj:222-239](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/test.clj#L222-L239)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defmacro async\n  [done & body]\n  `(reify\n     cljs.test/IAsyncTest\n     cljs.core/IFn\n     (~'-invoke [_# ~done]\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/test.clj",
           :lines [222 239]},
  :full-name "cljs.test/async",

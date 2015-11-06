@@ -62,7 +62,7 @@ Example: (source filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L1113-L1120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L1116-L1123):
 
 ```clj
 (defmacro source
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:1113-1120](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L1113-L1120)</ins>
+            └── <ins>[repl.clj:1116-1123](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L1116-L1123)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defmacro source\n  [n]\n  `(println ~(or (source-fn &env n) (str \"Source not found\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/repl.clj",
-          :lines [1113 1120]},
+          :lines [1116 1123]},
  :examples [{:id "94c94c",
              :content "```clj\n(source comment)\n;; Prints:\n;; (defmacro comment\n;;   \"Ignores body, yields nil\"\n;;   {:added \"1.0\"}\n;;   [& body])\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/source",

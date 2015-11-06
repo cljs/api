@@ -25,7 +25,7 @@ Protocol for adding vector functionality to transient collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L572-L577):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L572-L577):
 
 ```clj
 (defprotocol ITransientVector
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:572-577](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L572-L577)</ins>
+            └── <ins>[core.cljs:572-577](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L572-L577)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientVector\n  \"Protocol for adding vector functionality to transient collections.\"\n  (^clj -assoc-n! [tcoll n val]\n    \"Returns tcoll with value val added at position n.\")\n  (^clj -pop! [tcoll]\n    \"Returns tcoll with the last item removed from it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/cljs/core.cljs",
           :lines [572 577]},
  :methods [{:name "-assoc-n!",

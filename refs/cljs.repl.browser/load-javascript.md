@@ -31,7 +31,7 @@ ClojureScript REPL.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L178-L185):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L178-L185):
 
 ```clj
 (defn load-javascript
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:178-185](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl/browser.clj#L178-L185)</ins>
+                └── <ins>[browser.clj:178-185](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L178-L185)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (browser-eval (slurp url)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [178 185]},
  :full-name "cljs.repl.browser/load-javascript",

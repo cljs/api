@@ -63,7 +63,7 @@ Prints documentation for a var or special form given its name
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L1021-L1055):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L1024-L1058):
 
 ```clj
 (defmacro doc
@@ -106,11 +106,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:1021-1055](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L1021-L1055)</ins>
+            └── <ins>[repl.clj:1024-1058](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L1024-L1058)</ins>
 </pre>
 
 -->
@@ -163,9 +163,9 @@ The API data for this symbol:
  :source {:code "(defmacro doc\n  [name]\n  `(print\n     (binding [cljs.core/*print-newline* true]\n       (with-out-str\n         ~(if-let [special-name ('{& fn catch try finally try} name)]\n            `(cljs.repl/print-doc (quote ~(special-doc special-name)))\n            (cond\n              (special-doc-map name)\n              `(cljs.repl/print-doc (quote ~(special-doc name)))\n\n              (repl-special-doc-map name)\n              `(cljs.repl/print-doc (quote ~(repl-special-doc name)))\n\n              (ana-api/find-ns name)\n              `(cljs.repl/print-doc\n                 (quote ~(select-keys (ana-api/find-ns name) [:name :doc])))\n\n              (ana-api/resolve &env name)\n              `(cljs.repl/print-doc\n                 (quote ~(let [var (ana-api/resolve &env name)\n                               m (select-keys var\n                                   [:ns :name :doc :forms :arglists :macro :url])]\n                           (cond-> (update-in m [:name] clojure.core/name)\n                             (:protocol-symbol var)\n                             (assoc :protocol true\n                                    :methods\n                                    (->> (get-in var [:protocol-info :methods])\n                                      (map (fn [[fname sigs]]\n                                             [fname {:doc (:doc\n                                                            (ana-api/resolve &env\n                                                              (symbol (str (:ns var)) (str fname))))\n                                                     :arglists (seq sigs)}]))\n                                      (into {})))))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/repl.clj",
-          :lines [1021 1055]},
+          :lines [1024 1058]},
  :examples [{:id "4d2768",
              :content "```clj\n(doc map)\n;; Prints:\n;;  -------------------------\n;;  cljs.core/map\n;;  [f coll]\n;;    Returns a lazy sequence consisting of the result of applying f to\n;;    the set of first items of each coll, followed by applying f to the\n;;    set of second items in each coll, until any one of the colls is\n;;    exhausted.  Any remaining items in other colls are ignored. Function\n;;    f should accept number-of-colls arguments. Returns a transducer when\n;;    no collection is provided.\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/doc",

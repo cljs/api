@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L474-L495):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L474-L495):
 
 ```clj
 (defn load-file
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:474-495](https://github.com/clojure/clojurescript/blob/r3148/src/clj/cljs/repl.clj#L474-L495)</ins>
+            └── <ins>[repl.clj:474-495](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L474-L495)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f *repl-opts*))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (cond\n                  (util/url? f) f\n                  (.exists (io/file f)) (io/file f)\n                  :else (io/resource f))\n            compiled (cljsc/compile src\n                       (assoc opts\n                         :output-file\n                         (cljsc/src-file->target-file src)))]\n        ;; make sure it's been analyzed, this is because if it's already compiled\n        ;; cljs.compiler/compile-file won't do anything, good for builds,\n        ;; but a bit annoying here\n        (ana/analyze-file src opts)\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1 (cljsc/src-file->goog-require src)))\n      (binding [ana/*cljs-ns* ana/*cljs-ns*]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/clj/cljs/repl.clj",
           :lines [474 495]},
  :full-name "cljs.repl/load-file",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L7476-L7529):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L7476-L7529):
 
 ```clj
 (deftype KeySeq [^not-native mseq _meta]
@@ -88,11 +88,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3148/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3148
+clojurescript @ r3149
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7476-7529](https://github.com/clojure/clojurescript/blob/r3148/src/cljs/cljs/core.cljs#L7476-L7529)</ins>
+            └── <ins>[core.cljs:7476-7529](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L7476-L7529)</ins>
 </pre>
 
 -->
@@ -143,7 +143,7 @@ The API data for this symbol:
  :source {:code "(deftype KeySeq [^not-native mseq _meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n\n  IMeta\n  (-meta [coll] _meta)\n\n  IWithMeta\n  (-with-meta [coll new-meta] (KeySeq. mseq new-meta))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) _meta))\n\n  IHash\n  (-hash [coll] (hash-ordered-coll coll))\n  \n  ISeq\n  (-first [coll]\n    (let [^not-native me (-first mseq)]\n      (-key me)))\n\n  (-rest [coll]\n    (let [nseq (if (satisfies? INext mseq)\n                 (-next mseq)\n                 (next mseq))]\n      (if-not (nil? nseq)\n        (KeySeq. nseq _meta)\n        ())))\n\n  INext\n  (-next [coll]\n    (let [nseq (if (satisfies? INext mseq)\n                 (-next mseq)\n                 (next mseq))]\n      (when-not (nil? nseq)\n        (KeySeq. nseq _meta))))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3148",
+          :tag "r3149",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7476 7529]},
  :full-name "cljs.core/KeySeq",
