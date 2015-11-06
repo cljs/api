@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L217-L219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/core.cljs#L217-L219):
 
 ```clj
 (defprotocol ISeq
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1889
+clojurescript @ r1895
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:217-219](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L217-L219)</ins>
+            └── <ins>[core.cljs:217-219](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/core.cljs#L217-L219)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeq\n  (-first [coll])\n  (-rest [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1889",
+          :tag "r1895",
           :filename "src/cljs/cljs/core.cljs",
           :lines [217 219]},
  :methods [{:name "-first", :signature ["[coll]"], :docstring nil}

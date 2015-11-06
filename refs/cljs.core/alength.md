@@ -61,7 +61,7 @@ Returns the length of the array. Works on arrays of all types.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L158-L161):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/core.cljs#L158-L161):
 
 ```clj
 (defn alength
@@ -73,18 +73,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1889
+clojurescript @ r1895
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:158-161](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L158-L161)</ins>
+            └── <ins>[core.cljs:158-161](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/core.cljs#L158-L161)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L1209-L1210):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/clj/cljs/core.clj#L1209-L1210):
 
 ```clj
 (defmacro alength [a]
@@ -95,11 +95,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1889
+clojurescript @ r1895
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1209-1210](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L1209-L1210)</ins>
+            └── <ins>[core.clj:1209-1210](https://github.com/clojure/clojurescript/blob/r1895/src/clj/cljs/core.clj#L1209-L1210)</ins>
 </pre>
 -->
 
@@ -150,13 +150,13 @@ The API data for this symbol:
  :source {:code "(defn alength\n  [array]\n  (cljs.core/alength array))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1889",
+          :tag "r1895",
           :filename "src/cljs/cljs/core.cljs",
           :lines [158 161]},
  :extra-sources [{:code "(defmacro alength [a]\n  (list 'js* \"~{}.length\" a))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1889",
+                  :tag "r1895",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1209 1210]}],
  :examples [{:id "26f79f",

@@ -38,7 +38,7 @@ per the CrossPageChannel API.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/clojure/browser/net.cljs#L118-L140):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/clojure/browser/net.cljs#L118-L140):
 
 ```clj
 (defn xpc-connection
@@ -61,12 +61,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1889
+clojurescript @ r1895
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
+                └── <ins>[net.cljs:118-140](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/clojure/browser/net.cljs#L118-L140)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn xpc-connection\n  ([]\n     (when-let [config (.getParameterValue\n                        (goog.Uri. (.-href (.-location js/window)))\n                        \"xpc\")]\n       (goog.net.xpc.CrossPageChannel. (gjson/parse config))))\n  ([config]\n     (goog.net.xpc.CrossPageChannel.\n      (reduce (fn [sum [k v]]\n                (if-let [field (get xpc-config-fields k)]\n                  (doto sum (aset field v))\n                  sum))\n              (js-obj)\n              config))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1889",
+          :tag "r1895",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [118 140]},
  :full-name "clojure.browser.net/xpc-connection",
