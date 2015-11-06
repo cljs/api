@@ -31,7 +31,7 @@ strings in *testing-contexts* with spaces.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/test.cljs#L248-L252):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/test.cljs#L248-L252):
 
 ```clj
 (defn testing-contexts-str
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:248-252](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/test.cljs#L248-L252)</ins>
+            └── <ins>[test.cljs:248-252](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/test.cljs#L248-L252)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn testing-contexts-str\n  []\n  (apply str (interpose \" \" (reverse (:testing-contexts (get-current-env))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/cljs/cljs/test.cljs",
           :lines [248 252]},
  :full-name "cljs.test/testing-contexts-str",

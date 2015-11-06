@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L332-L333):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L332-L333):
 
 ```clj
 (defprotocol ISeqable
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:332-333](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L332-L333)</ins>
+            └── <ins>[core.cljs:332-333](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/cljs/core.cljs#L332-L333)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeqable\n  (^clj-or-nil -seq [o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/cljs/cljs/core.cljs",
           :lines [332 333]},
  :methods [{:name "-seq", :signature ["[o]"], :docstring nil}],

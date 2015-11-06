@@ -35,7 +35,7 @@ not be readable by the Clojure reader.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl.clj#L161-L221):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl.clj#L161-L221):
 
 ```clj
 (defn evaluate-form
@@ -102,11 +102,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:161-221](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl.clj#L161-L221)</ins>
+            └── <ins>[repl.clj:161-221](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl.clj#L161-L221)</ins>
 </pre>
 
 -->
@@ -156,7 +156,7 @@ The API data for this symbol:
  :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n    (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n    (evaluate-form repl-env env filename form wrap nil))\n  ([repl-env env filename form wrap opts]\n    (try\n      (binding [ana/*cljs-file* filename]\n        (let [ast (ana/analyze env form opts)\n              js (comp/emit-str ast)\n              wrap-js\n              ;; TODO: check opts as well - David\n              (if (:source-map repl-env)\n                (binding [comp/*source-map-data*\n                          (atom {:source-map (sorted-map)\n                                 :gen-col 0\n                                 :gen-line 0})]\n                  (let [js (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts)))\n                        t (System/currentTimeMillis)]\n                    (str js\n                      \"\\n//# sourceURL=repl-\" t \".js\"\n                      \"\\n//# sourceMappingURL=data:application/json;base64,\"\n                      (DatatypeConverter/printBase64Binary\n                        (.getBytes\n                          (sm/encode\n                            {(str \"repl-\" t \".cljs\")\n                             (:source-map @comp/*source-map-data*)}\n                            {:lines (+ (:gen-line @comp/*source-map-data*) 3)\n                             :file  (str \"repl-\" t \".js\")\n                             :sources-content\n                                    [(or (:source (meta form))\n                                       ;; handle strings / primitives without metadata\n                                       (with-out-str (pr form)))]})\n                          \"UTF-8\")))))\n                (comp/emit-str (ana/no-warn (ana/analyze env (wrap form) opts))))]\n          (when (= (:op ast) :ns)\n            (load-dependencies repl-env\n              (into (vals (:requires ast))\n                (distinct (vals (:uses ast))))\n              opts))\n          (when *cljs-verbose*\n            (print js))\n          (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n            (case (:status ret)\n              ;;we eat ns errors because we know goog.provide() will throw when reloaded\n              ;;TODO - file bug with google, this is bs error\n              ;;this is what you get when you try to 'teach new developers'\n              ;;via errors (goog/base.js 104)\n              :error (display-error ret form)\n              :exception (display-error ret form\n                           (if (:repl-verbose opts)\n                             #(prn \"Error evaluating:\" form :as js)\n                             (constantly nil)))\n              :success (:value ret)))))\n      (catch Throwable ex\n        (.printStackTrace ex)\n        (println (str ex))\n        (flush)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/clj/cljs/repl.clj",
           :lines [161 221]},
  :full-name "cljs.repl/evaluate-form",

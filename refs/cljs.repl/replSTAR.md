@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl.clj#L352-L429):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl.clj#L352-L429):
 
 ```clj
 (defn repl*
@@ -109,11 +109,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:352-429](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl.clj#L352-L429)</ins>
+            └── <ins>[repl.clj:352-429](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/repl.clj#L352-L429)</ins>
 </pre>
 
 -->
@@ -159,7 +159,7 @@ The API data for this symbol:
  :source {:code "(defn repl*\n  [repl-env opts]\n  (print \"To quit, type: \")\n  (prn :cljs/quit)\n  (let [ups-deps (cljsc/get-upstream-deps)\n        {:keys [analyze-path repl-verbose warn-on-undeclared special-fns static-fns] :as opts\n         :or   {warn-on-undeclared true}}\n        (assoc (merge (-repl-options repl-env) opts)\n          :ups-libs (:libs ups-deps)\n          :ups-foreign-libs (:foreign-libs ups-deps))]\n    (env/with-compiler-env\n     (or (::env/compiler repl-env) (env/default-compiler-env opts))\n     (binding [ana/*cljs-ns* 'cljs.user\n               *cljs-verbose* repl-verbose\n               ana/*cljs-warnings* (assoc ana/*cljs-warnings*\n                                     :unprovided warn-on-undeclared\n                                     :undeclared-var warn-on-undeclared\n                                     :undeclared-ns warn-on-undeclared\n                                     :undeclared-ns-form warn-on-undeclared)\n               ana/*cljs-static-fns* static-fns]\n       ;; TODO: the follow should become dead code when the REPL is\n       ;; sufficiently enhanced to understand :cache-analysis - David\n       (when analyze-path\n         (analyze-source analyze-path))\n       (let [env {:context :expr :locals {}}\n             special-fns (merge default-special-fns special-fns)\n             is-special-fn? (set (keys special-fns))\n             request-prompt (Object.)\n             request-exit (Object.)\n             read-error (Object.)]\n         (-setup repl-env opts)\n         (evaluate-form repl-env env \"<cljs repl>\"\n           (with-meta\n             '(ns cljs.user\n                (:require [cljs.repl :refer-macros [doc]]))\n             {:line 1 :column 1})\n           identity opts)\n         (loop []\n           ;; try to let things flush before printing prompt\n           (Thread/sleep 10)\n           (print (str \"ClojureScript:\" ana/*cljs-ns* \"> \"))\n           (flush)\n           (let [rdr (readers/source-logging-push-back-reader\n                       (PushbackReader. (io/reader *in*))\n                       1\n                       \"NO_SOURCE_FILE\")\n                 form (try\n                        (binding [*ns* (create-ns ana/*cljs-ns*)\n                                  reader/*data-readers* tags/*cljs-data-readers*\n                                  reader/*alias-map*\n                                  (apply merge\n                                    ((juxt :requires :require-macros)\n                                      (ana/get-namespace ana/*cljs-ns*)))]\n                          (reader/read rdr nil read-error))\n                        (catch Exception e\n                          (println (.getMessage e))\n                          read-error))]\n             ;; TODO: need to catch errors here too - David\n             (cond\n               (identical? form read-error) (recur)\n               (= form :cljs/quit) :quit\n\n               (and (seq? form) (is-special-fn? (first form)))\n               (do\n                 (try\n                   ((get special-fns (first form)) repl-env env form opts)\n                   (catch Throwable ex\n                     (println \"Failed to execute special function:\" (pr-str (first form)))\n                     (trace/print-cause-trace ex 12)))\n                 ;; flush output which could include stack traces\n                 (flush)\n                 (newline)\n                 (recur))\n\n               :else\n               (do (eval-and-print repl-env env form)\n                   (recur)))))\n         (-tear-down repl-env))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/clj/cljs/repl.clj",
           :lines [352 429]},
  :full-name "cljs.repl/repl*",

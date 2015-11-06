@@ -36,7 +36,7 @@ tested.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/test.clj#L265-L276):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/test.clj#L265-L276):
 
 ```clj
 (defmacro run-all-tests
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:265-276](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/test.clj#L265-L276)</ins>
+            └── <ins>[test.clj:265-276](https://github.com/clojure/clojurescript/blob/r2723/src/clj/cljs/test.clj#L265-L276)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defmacro run-all-tests\n  ([] `(cljs.test/run-all-tests nil))\n  ([re]\n   `(cljs.test/run-tests (cljs.test/empty-env)\n      ~@(map\n          (fn [ns] `(quote ~ns))\n          (cond->> (ana-api/all-ns)\n            re (filter #(re-matches re (name %))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/clj/cljs/test.clj",
           :lines [265 276]},
  :full-name "cljs.test/run-all-tests",

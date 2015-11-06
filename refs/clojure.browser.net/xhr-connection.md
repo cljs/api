@@ -27,7 +27,7 @@ Returns an XhrIo connection
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/clojure/browser/net.cljs#L81-L84):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/browser/net.cljs#L81-L84):
 
 ```clj
 (defn xhr-connection
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:81-84](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/clojure/browser/net.cljs#L81-L84)</ins>
+                └── <ins>[net.cljs:81-84](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/browser/net.cljs#L81-L84)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn xhr-connection\n  []\n  (XhrIo.))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [81 84]},
  :full-name "clojure.browser.net/xhr-connection",

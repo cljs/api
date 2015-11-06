@@ -30,7 +30,7 @@ Replaces the node at this loc, without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/clojure/zip.cljs#L183-L187):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/zip.cljs#L183-L187):
 
 ```clj
 (defn replace
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2719
+clojurescript @ r2723
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:183-187](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/clojure/zip.cljs#L183-L187)</ins>
+            └── <ins>[zip.cljs:183-187](https://github.com/clojure/clojurescript/blob/r2723/src/cljs/clojure/zip.cljs#L183-L187)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [loc node]\n    (let [[_ path] loc]\n      (with-meta [node (assoc path :changed? true)] (meta loc))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2719",
+          :tag "r2723",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [183 187]},
  :full-name "clojure.zip/replace",
