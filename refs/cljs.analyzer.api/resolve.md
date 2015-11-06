@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L14-L15):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer/api.clj#L14-L15):
 
 ```clj
 (defn resolve [env sym]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2498
+clojurescript @ r2505
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:14-15](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L14-L15)</ins>
+                └── <ins>[api.clj:14-15](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer/api.clj#L14-L15)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn resolve [env sym]\n  (ana/resolve-var env sym))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2498",
+          :tag "r2505",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [14 15]},
  :full-name "cljs.analyzer.api/resolve",

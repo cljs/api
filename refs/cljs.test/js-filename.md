@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L311-L312):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/test.cljs#L311-L312):
 
 ```clj
 (defn js-filename [stack-element]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2498
+clojurescript @ r2505
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:311-312](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/test.cljs#L311-L312)</ins>
+            └── <ins>[test.cljs:311-312](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/test.cljs#L311-L312)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn js-filename [stack-element]\n  (first (.split (last (.split stack-element \"/out/\")) \":\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2498",
+          :tag "r2505",
           :filename "src/cljs/cljs/test.cljs",
           :lines [311 312]},
  :full-name "cljs.test/js-filename",

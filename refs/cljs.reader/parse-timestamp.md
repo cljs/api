@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/reader.cljs#L517-L524):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/reader.cljs#L517-L524):
 
 ```clj
 (defn parse-timestamp
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2498
+clojurescript @ r2505
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:517-524](https://github.com/clojure/clojurescript/blob/r2498/src/cljs/cljs/reader.cljs#L517-L524)</ins>
+            └── <ins>[reader.cljs:517-524](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/reader.cljs#L517-L524)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(defn parse-timestamp\n  [ts]\n  (if-let [[years months days hours minutes seconds ms offset]\n           (parse-and-validate-timestamp ts)]\n    (js/Date.\n     (- (.UTC js/Date years (dec months) days hours minutes seconds ms)\n        (* offset 60 1000)))\n    (reader-error nil (str \"Unrecognized date/time syntax: \" ts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2498",
+          :tag "r2505",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [517 524]},
  :full-name "cljs.reader/parse-timestamp",

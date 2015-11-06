@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L23-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer/api.clj#L23-L24):
 
 ```clj
 (defn ns-interns [ns]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2498
+clojurescript @ r2505
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:23-24](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/analyzer/api.clj#L23-L24)</ins>
+                └── <ins>[api.clj:23-24](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer/api.clj#L23-L24)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn ns-interns [ns]\n  (get-in @env/*compiler* [::ana/namespaces ns :defs]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2498",
+          :tag "r2505",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [23 24]},
  :full-name "cljs.analyzer.api/ns-interns",

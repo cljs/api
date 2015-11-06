@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/repl/reflect.clj#L42):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/repl/reflect.clj#L42):
 
 ```clj
 (def read-url-string (comp read-string url-decode))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2498/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2498
+clojurescript @ r2505
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[reflect.clj:42](https://github.com/clojure/clojurescript/blob/r2498/src/clj/cljs/repl/reflect.clj#L42)</ins>
+                └── <ins>[reflect.clj:42](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/repl/reflect.clj#L42)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def read-url-string (comp read-string url-decode))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2498",
+          :tag "r2505",
           :filename "src/clj/cljs/repl/reflect.clj",
           :lines [42]},
  :full-name "cljs.repl.reflect/read-url-string",
