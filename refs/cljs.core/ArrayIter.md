@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L3365-L3372):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L3365-L3372):
 
 ```clj
 (deftype ArrayIter [arr ^:mutable i]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3365-3372](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L3365-L3372)</ins>
+            └── <ins>[core.cljs:3365-3372](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L3365-L3372)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(deftype ArrayIter [arr ^:mutable i]\n  Object\n  (hasNext [_] (< i (alength arr)))\n  (next [_]\n    (let [ret (aget arr i)]\n      (set! i (inc i))\n      ret))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3365 3372]},
  :full-name "cljs.core/ArrayIter",

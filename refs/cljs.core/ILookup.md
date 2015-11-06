@@ -25,7 +25,7 @@ Protocol for looking up a value in a data structure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L391-L395):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L391-L395):
 
 ```clj
 (defprotocol ILookup
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:391-395](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L391-L395)</ins>
+            └── <ins>[core.cljs:391-395](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L391-L395)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ILookup\n  \"Protocol for looking up a value in a data structure.\"\n  (-lookup [o k] [o k not-found]\n    \"Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/cljs/cljs/core.cljs",
           :lines [391 395]},
  :methods [{:name "-lookup",

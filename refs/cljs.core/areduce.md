@@ -55,7 +55,7 @@ evaluation of expr at each step, returning ret.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/core.clj#L1788-L1797):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/core.clj#L1788-L1797):
 
 ```clj
 (defmacro areduce
@@ -71,11 +71,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1788-1797](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/core.clj#L1788-L1797)</ins>
+            └── <ins>[core.clj:1788-1797](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/core.clj#L1788-L1797)</ins>
 </pre>
 
 -->
@@ -128,7 +128,7 @@ The API data for this symbol:
  :source {:code "(defmacro areduce\n  [a idx ret init expr]\n  `(let [a# ~a]\n     (loop  [~idx 0 ~ret ~init]\n       (if (< ~idx  (alength a#))\n         (recur (inc ~idx) ~expr)\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/clj/cljs/core.clj",
           :lines [1788 1797]},
  :examples [{:id "20a389",

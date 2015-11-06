@@ -31,7 +31,7 @@ add v to :testing-vars property of env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/test.cljs#L460-L464):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/test.cljs#L460-L464):
 
 ```clj
 (defn test-var
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:460-464](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/test.cljs#L460-L464)</ins>
+            └── <ins>[test.cljs:460-464](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/test.cljs#L460-L464)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn test-var\n  [v]\n  (run-block (test-var-block v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/cljs/cljs/test.cljs",
           :lines [460 464]},
  :full-name "cljs.test/test-var",

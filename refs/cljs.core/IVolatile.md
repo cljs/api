@@ -22,7 +22,7 @@ Protocol for adding volatile functionality.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L627-L631):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L627-L631):
 
 ```clj
 (defprotocol IVolatile
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:627-631](https://github.com/clojure/clojurescript/blob/r3149/src/cljs/cljs/core.cljs#L627-L631)</ins>
+            └── <ins>[core.cljs:627-631](https://github.com/clojure/clojurescript/blob/r3153/src/cljs/cljs/core.cljs#L627-L631)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IVolatile\n  \"Protocol for adding volatile functionality.\"\n  (-vreset! [o new-value]\n    \"Sets the value of volatile o to new-value without regard for the\n     current value. Returns new-value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/cljs/cljs/core.cljs",
           :lines [627 631]},
  :methods [{:name "-vreset!",

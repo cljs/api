@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl/browser.clj#L25):
 
 ```clj
 (def ^:dynamic es nil)
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:25](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl/browser.clj#L25)</ins>
+                └── <ins>[browser.clj:25](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl/browser.clj#L25)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic es nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [25]},
  :full-name "cljs.repl.browser/es",

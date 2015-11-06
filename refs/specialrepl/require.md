@@ -123,7 +123,7 @@ The following would load the library clojure.string :as string.
 ```
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L582-L655):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L591-L664):
 
 ```clj
 (def default-special-fns
@@ -206,11 +206,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r31
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3149
+clojurescript @ r3153
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:582-655](https://github.com/clojure/clojurescript/blob/r3149/src/clj/cljs/repl.clj#L582-L655)</ins>
+            └── <ins>[repl.clj:591-664](https://github.com/clojure/clojurescript/blob/r3153/src/clj/cljs/repl.clj#L591-L664)</ins>
 </pre>
 
 -->
@@ -262,9 +262,9 @@ The API data for this symbol:
  :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         ;; guard against craziness like '5 which wreaks havoc\n        (when-not (and (= quote 'quote) (symbol? ns-name))\n          (throw (IllegalArgumentException. \"Argument to in-ns must be a symbol.\")))\n        (when-not (ana/get-namespace ns-name)\n          (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n          (-evaluate repl-env \"<cljs repl>\" 1\n            (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n        (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (let [is-self-require? (self-require? specs)\n              [target-ns restore-ns]\n              (if-not is-self-require?\n                [ana/*cljs-ns* nil]\n                ['cljs.user ana/*cljs-ns*])]\n          (evaluate-form repl-env env \"<cljs repl>\"\n            (with-meta\n              `(~'ns ~target-ns\n                 (:require ~@(-> specs canonicalize-specs decorate-specs)))\n              {:merge true :line 1 :column 1})\n            identity opts)\n          (when is-self-require?\n            (set! ana/*cljs-ns* restore-ns)))))\n     'require-macros\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (evaluate-form repl-env env \"<cljs repl>\"\n          (with-meta\n            `(~'ns ~ana/*cljs-ns*\n               (:require-macros ~@(-> specs canonicalize-specs decorate-specs)))\n            {:merge true :line 1 :column 1})\n          identity opts)))\n     'import\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (evaluate-form repl-env env \"<cljs repl>\"\n          (with-meta\n            `(~'ns ~ana/*cljs-ns*\n               (:import\n                 ~@(map\n                     (fn [quoted-spec-or-kw]\n                       (if (keyword? quoted-spec-or-kw)\n                         quoted-spec-or-kw\n                         (second quoted-spec-or-kw)))\n                     specs)))\n            {:merge true :line 1 :column 1})\n          identity opts)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n        (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n        (load-namespace repl-env ns opts)))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r3149",
+          :tag "r3153",
           :filename "src/clj/cljs/repl.clj",
-          :lines [582 655]},
+          :lines [591 664]},
  :examples [{:id "ab0355",
              :content "```clj\n(require '[clojure/string :as string])\n```"}],
  :full-name "specialrepl/require",
