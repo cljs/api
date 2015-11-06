@@ -36,7 +36,7 @@ Creates an empty JavaScript array of size `size`.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L147-L151):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L147-L151):
 
 ```clj
 (defn ^array make-array
@@ -50,18 +50,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:147-151](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L147-L151)</ins>
+            └── <ins>[core.cljs:147-151](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L147-L151)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L1315-L1321):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/clj/cljs/core.clj#L1319-L1325):
 
 ```clj
 (defmacro make-array
@@ -77,11 +77,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1315-1321](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L1315-L1321)</ins>
+            └── <ins>[core.clj:1319-1325](https://github.com/clojure/clojurescript/blob/r2173/src/clj/cljs/core.clj#L1319-L1325)</ins>
 </pre>
 -->
 
@@ -133,15 +133,15 @@ The API data for this symbol:
  :source {:code "(defn ^array make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
           :lines [147 151]},
  :extra-sources [{:code "(defmacro make-array\n  [size]\n  (vary-meta\n    (if (core/number? size)\n      `(array ~@(take size (repeat nil)))\n      `(js/Array. ~size))\n    assoc :tag 'array))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2156",
+                  :tag "r2173",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1315 1321]}],
+                  :lines [1319 1325]}],
  :full-name "cljs.core/make-array",
  :clj-symbol "clojure.core/make-array"}
 

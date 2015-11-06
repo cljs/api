@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L3546-L3628):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L3566-L3654):
 
 ```clj
 (deftype Subvec [meta v start end ^:mutable __hash]
@@ -70,6 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
                                 (subvec-seq (inc i))))))]
       (subvec-seq start)))
 
+  IReversible
+  (-rseq [coll]
+    (if-not (== start end)
+      (RSeq. coll (dec (- end start)) nil)))
+
   ICounted
   (-count [coll] (- end start))
 
@@ -89,13 +94,14 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
 
   IAssociative
   (-assoc [coll key val]
-    (let [v-pos (+ start key)]
-      (build-subvec meta (assoc v v-pos val)
-               start (max end (inc v-pos))
-               nil)))
+    (if (number? key)
+      (-assoc-n coll key val)
+      (throw (js/Error. "Subvec's key for assoc must be a number."))))
 
   IVector
-  (-assoc-n [coll n val] (-assoc coll n val))
+  (-assoc-n [coll n val]
+    (let [v-pos (+ start n)]
+      (build-subvec meta (assoc v v-pos val) start (max end (inc v-pos)) nil)))
 
   IReduce
   (-reduce [coll f]
@@ -114,11 +120,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3546-3628](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L3546-L3628)</ins>
+            └── <ins>[core.cljs:3566-3654](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L3566-L3654)</ins>
 </pre>
 
 -->
@@ -161,12 +167,12 @@ The API data for this symbol:
  :name "Subvec",
  :type "type",
  :signature ["[meta v start end __hash]"],
- :source {:code "(deftype Subvec [meta v start end ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  ICloneable\n  (-clone [_] (Subvec. meta v start end __hash))\n\n  IWithMeta\n  (-with-meta [coll meta] (build-subvec meta v start end __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (-nth v (dec end)))\n  (-pop [coll]\n    (if (== start end)\n      (throw (js/Error. \"Can't pop empty vector\"))\n      (build-subvec meta v start (dec end) nil)))\n\n  ICollection\n  (-conj [coll o]\n    (build-subvec meta (-assoc-n v end o) start (inc end) nil))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.PersistentVector.EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (let [subvec-seq (fn subvec-seq [i]\n                       (when-not (== i end)\n                         (cons (-nth v i)\n                               (lazy-seq\n                                (subvec-seq (inc i))))))]\n      (subvec-seq start)))\n\n  ICounted\n  (-count [coll] (- end start))\n\n  IIndexed\n  (-nth [coll n]\n    (if (or (neg? n) (<= end (+ start n)))\n      (vector-index-out-of-bounds n (- end start))\n      (-nth v (+ start n))))\n  (-nth [coll n not-found]\n    (if (or (neg? n) (<= end (+ start n)))\n      not-found\n      (-nth v (+ start n) not-found)))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IAssociative\n  (-assoc [coll key val]\n    (let [v-pos (+ start key)]\n      (build-subvec meta (assoc v v-pos val)\n               start (max end (inc v-pos))\n               nil)))\n\n  IVector\n  (-assoc-n [coll n val] (-assoc coll n val))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce coll f))\n  (-reduce [coll f start]\n    (ci-reduce coll f start))\n\n  IFn\n  (-invoke [coll k]\n    (-nth coll k))\n  (-invoke [coll k not-found]\n    (-nth coll k not-found)))",
+ :source {:code "(deftype Subvec [meta v start end ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  ICloneable\n  (-clone [_] (Subvec. meta v start end __hash))\n\n  IWithMeta\n  (-with-meta [coll meta] (build-subvec meta v start end __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (-nth v (dec end)))\n  (-pop [coll]\n    (if (== start end)\n      (throw (js/Error. \"Can't pop empty vector\"))\n      (build-subvec meta v start (dec end) nil)))\n\n  ICollection\n  (-conj [coll o]\n    (build-subvec meta (-assoc-n v end o) start (inc end) nil))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.PersistentVector.EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (let [subvec-seq (fn subvec-seq [i]\n                       (when-not (== i end)\n                         (cons (-nth v i)\n                               (lazy-seq\n                                (subvec-seq (inc i))))))]\n      (subvec-seq start)))\n\n  IReversible\n  (-rseq [coll]\n    (if-not (== start end)\n      (RSeq. coll (dec (- end start)) nil)))\n\n  ICounted\n  (-count [coll] (- end start))\n\n  IIndexed\n  (-nth [coll n]\n    (if (or (neg? n) (<= end (+ start n)))\n      (vector-index-out-of-bounds n (- end start))\n      (-nth v (+ start n))))\n  (-nth [coll n not-found]\n    (if (or (neg? n) (<= end (+ start n)))\n      not-found\n      (-nth v (+ start n) not-found)))\n\n  ILookup\n  (-lookup [coll k] (-nth coll k nil))\n  (-lookup [coll k not-found] (-nth coll k not-found))\n\n  IAssociative\n  (-assoc [coll key val]\n    (if (number? key)\n      (-assoc-n coll key val)\n      (throw (js/Error. \"Subvec's key for assoc must be a number.\"))))\n\n  IVector\n  (-assoc-n [coll n val]\n    (let [v-pos (+ start n)]\n      (build-subvec meta (assoc v v-pos val) start (max end (inc v-pos)) nil)))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce coll f))\n  (-reduce [coll f start]\n    (ci-reduce coll f start))\n\n  IFn\n  (-invoke [coll k]\n    (-nth coll k))\n  (-invoke [coll k not-found]\n    (-nth coll k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3546 3628]},
+          :lines [3566 3654]},
  :full-name "cljs.core/Subvec",
  :full-name-encode "cljs.core/Subvec",
  :history [["+" "0.0-927"]]}

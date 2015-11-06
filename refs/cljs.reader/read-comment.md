@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/reader.cljs#L274):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/reader.cljs#L274):
 
 ```clj
 (def read-comment skip-line)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:274](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/reader.cljs#L274)</ins>
+            └── <ins>[reader.cljs:274](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/reader.cljs#L274)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def read-comment skip-line)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [274]},
  :full-name "cljs.reader/read-comment",

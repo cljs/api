@@ -67,30 +67,37 @@ tcoll
 ---
 
 
+Source docstring:
+
+```
+When applied to a transient map, adds mapping of key(s) to
+val(s). When applied to a transient vector, sets the val at index.
+Note - index must be <= (count vector). Returns coll.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2507-L2514):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2515-L2525):
 
 ```clj
 (defn assoc!
   ([tcoll key val]
-   (-assoc! tcoll key val))
+    (-assoc! tcoll key val))
   ([tcoll key val & kvs]
-   (let [ntcoll (-assoc! tcoll key val)]
-     (if kvs
-       (recur ntcoll (first kvs) (second kvs) (nnext kvs))
-       ntcoll))))
+    (let [ntcoll (-assoc! tcoll key val)]
+      (if kvs
+        (recur ntcoll (first kvs) (second kvs) (nnext kvs))
+        ntcoll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2507-2514](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2507-L2514)</ins>
+            └── <ins>[core.cljs:2515-2525](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2515-L2525)</ins>
 </pre>
 
 -->
@@ -140,16 +147,17 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/transient" "cljs.core/persistent!"],
  :full-name-encode "cljs.core/assocBANG",
- :source {:code "(defn assoc!\n  ([tcoll key val]\n   (-assoc! tcoll key val))\n  ([tcoll key val & kvs]\n   (let [ntcoll (-assoc! tcoll key val)]\n     (if kvs\n       (recur ntcoll (first kvs) (second kvs) (nnext kvs))\n       ntcoll))))",
+ :source {:code "(defn assoc!\n  ([tcoll key val]\n    (-assoc! tcoll key val))\n  ([tcoll key val & kvs]\n    (let [ntcoll (-assoc! tcoll key val)]\n      (if kvs\n        (recur ntcoll (first kvs) (second kvs) (nnext kvs))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2507 2514]},
+          :lines [2515 2525]},
  :examples [{:id "7d1e6b",
              :content "```clj\n(def tcoll (transient! {}))\n(assoc! tcoll :a 1)\n(assoc! tcoll :b 2)\n\ntcoll\n;;=> #<[object Object]> \n\n(:a tcoll)\n;;=> 1\n\n(:b tcoll)\n;;=> 2\n\n(def a (persistent! tcoll))\n;;=> {:a 1 :b 2}\n```"}],
  :full-name "cljs.core/assoc!",
- :clj-symbol "clojure.core/assoc!"}
+ :clj-symbol "clojure.core/assoc!",
+ :docstring "When applied to a transient map, adds mapping of key(s) to\nval(s). When applied to a transient vector, sets the val at index.\nNote - index must be <= (count vector). Returns coll."}
 
 ```
 

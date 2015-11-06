@@ -59,31 +59,37 @@ the value that was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7100-L7114):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7144-L7164):
 
 ```clj
 (defn swap!
   ([a f]
-     (reset! a (f (.-state a))))
+     (if (instance? Atom a)
+       (reset! a (f (.-state a)))
+       (-swap! a f)))
   ([a f x]
-     (reset! a (f (.-state a) x)))
+     (if (instance? Atom a)
+       (reset! a (f (.-state a) x))
+       (-swap! a f x)))
   ([a f x y]
-     (reset! a (f (.-state a) x y)))
-  ([a f x y z]
-     (reset! a (f (.-state a) x y z)))
-  ([a f x y z & more]
-     (reset! a (apply f (.-state a) x y z more))))
+     (if (instance? Atom a)
+       (reset! a (f (.-state a) x y))
+       (-swap! a f x y)))
+  ([a f x y & more]
+     (if (instance? Atom a)
+       (reset! a (apply f (.-state a) x y more))
+       (-swap! a f x y more))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7100-7114](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7100-L7114)</ins>
+            └── <ins>[core.cljs:7144-7164](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L7144-L7164)</ins>
 </pre>
 
 -->
@@ -133,12 +139,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/atom" "cljs.core/reset!"],
  :full-name-encode "cljs.core/swapBANG",
- :source {:code "(defn swap!\n  ([a f]\n     (reset! a (f (.-state a))))\n  ([a f x]\n     (reset! a (f (.-state a) x)))\n  ([a f x y]\n     (reset! a (f (.-state a) x y)))\n  ([a f x y z]\n     (reset! a (f (.-state a) x y z)))\n  ([a f x y z & more]\n     (reset! a (apply f (.-state a) x y z more))))",
+ :source {:code "(defn swap!\n  ([a f]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a)))\n       (-swap! a f)))\n  ([a f x]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x))\n       (-swap! a f x)))\n  ([a f x y]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x y))\n       (-swap! a f x y)))\n  ([a f x y & more]\n     (if (instance? Atom a)\n       (reset! a (apply f (.-state a) x y more))\n       (-swap! a f x y more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7100 7114]},
+          :lines [7144 7164]},
  :full-name "cljs.core/swap!",
  :clj-symbol "clojure.core/swap!",
  :docstring "Atomically swaps the value of atom to be:\n(apply f current-value-of-atom args). Note that f may be called\nmultiple times, and thus should be free of side effects.  Returns\nthe value that was swapped in."}

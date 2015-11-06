@@ -23,12 +23,19 @@
 
 
 
+Source docstring:
+
+```
+Removes the last item from a transient vector. If
+the collection is empty, throws an exception. Returns coll
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2525-L2526):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2537-L2541):
 
 ```clj
-(defn pop! [tcoll]
+(defn pop!
+  [tcoll]
   (-pop! tcoll))
 ```
 
@@ -36,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2525-2526](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2525-L2526)</ins>
+            └── <ins>[core.cljs:2537-2541](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2537-L2541)</ins>
 </pre>
 
 -->
@@ -88,14 +95,15 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/popBANG",
- :source {:code "(defn pop! [tcoll]\n  (-pop! tcoll))",
+ :source {:code "(defn pop!\n  [tcoll]\n  (-pop! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2525 2526]},
+          :lines [2537 2541]},
  :full-name "cljs.core/pop!",
- :clj-symbol "clojure.core/pop!"}
+ :clj-symbol "clojure.core/pop!",
+ :docstring "Removes the last item from a transient vector. If\nthe collection is empty, throws an exception. Returns coll"}
 
 ```
 

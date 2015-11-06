@@ -23,12 +23,18 @@
 
 
 
+Source docstring:
+
+```
+Returns a new, transient version of the collection, in constant time.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2492-L2493):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2492-L2495):
 
 ```clj
-(defn transient [coll]
+(defn transient
+  [coll]
   (-as-transient coll))
 ```
 
@@ -36,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2156
+clojurescript @ r2173
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2492-2493](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2492-L2493)</ins>
+            └── <ins>[core.cljs:2492-2495](https://github.com/clojure/clojurescript/blob/r2173/src/cljs/cljs/core.cljs#L2492-L2495)</ins>
 </pre>
 
 -->
@@ -88,14 +94,15 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/transient",
- :source {:code "(defn transient [coll]\n  (-as-transient coll))",
+ :source {:code "(defn transient\n  [coll]\n  (-as-transient coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2156",
+          :tag "r2173",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2492 2493]},
+          :lines [2492 2495]},
  :full-name "cljs.core/transient",
- :clj-symbol "clojure.core/transient"}
+ :clj-symbol "clojure.core/transient",
+ :docstring "Returns a new, transient version of the collection, in constant time."}
 
 ```
 
