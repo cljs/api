@@ -51,7 +51,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/core.cljs#L3957-L3984):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L3957-L3984):
 
 ```clj
 (defn filter
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2727
+clojurescript @ r2740
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3957-3984](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/core.cljs#L3957-L3984)</ins>
+            └── <ins>[core.cljs:3957-3984](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L3957-L3984)</ins>
 </pre>
 
 -->
@@ -142,7 +142,7 @@ The API data for this symbol:
  :source {:code "(defn filter\n  ([pred]\n    (fn [rf]\n      (fn\n        ([] (rf))\n        ([result] (rf result))\n        ([result input]\n           (if (pred input)\n             (rf result input)\n             result)))))\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2727",
+          :tag "r2740",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3957 3984]},
  :full-name "cljs.core/filter",

@@ -29,7 +29,7 @@ For non-Errors returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/core.cljs#L9208-L9214):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L9208-L9214):
 
 ```clj
 (defn ex-message
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2727
+clojurescript @ r2740
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9208-9214](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/cljs/core.cljs#L9208-L9214)</ins>
+            └── <ins>[core.cljs:9208-9214](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/cljs/core.cljs#L9208-L9214)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn ex-message\n  [ex]\n  (when (instance? js/Error ex)\n    (.-message ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2727",
+          :tag "r2740",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9208 9214]},
  :full-name "cljs.core/ex-message",

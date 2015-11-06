@@ -35,7 +35,7 @@ keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/set.cljs#L101-L129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/set.cljs#L101-L129):
 
 ```clj
 (defn join
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2727
+clojurescript @ r2740
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:101-129](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/set.cljs#L101-L129)</ins>
+            └── <ins>[set.cljs:101-129](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/set.cljs#L101-L129)</ins>
 </pre>
 
 -->
@@ -125,7 +125,7 @@ The API data for this symbol:
  :source {:code "(defn join\n  ([xrel yrel] ;natural join\n   (if (and (seq xrel) (seq yrel))\n     (let [ks (intersection (set (keys (first xrel))) (set (keys (first yrel))))\n           [r s] (if (<= (count xrel) (count yrel))\n                   [xrel yrel]\n                   [yrel xrel])\n           idx (index r ks)]\n       (reduce (fn [ret x]\n                 (let [found (idx (select-keys x ks))]\n                   (if found\n                     (reduce #(conj %1 (merge %2 x)) ret found)\n                     ret)))\n               #{} s))\n     #{}))\n  ([xrel yrel km] ;arbitrary key mapping\n   (let [[r s k] (if (<= (count xrel) (count yrel))\n                   [xrel yrel (map-invert km)]\n                   [yrel xrel km])\n         idx (index r (vals k))]\n     (reduce (fn [ret x]\n               (let [found (idx (rename-keys (select-keys x (keys k)) k))]\n                 (if found\n                   (reduce #(conj %1 (merge %2 x)) ret found)\n                   ret)))\n             #{} s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2727",
+          :tag "r2740",
           :filename "src/cljs/clojure/set.cljs",
           :lines [101 129]},
  :full-name "clojure.set/join",

@@ -31,7 +31,7 @@ it in a depth-first walk.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/zip.cljs#L237-L251):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/zip.cljs#L237-L251):
 
 ```clj
 (defn remove
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2727/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2727
+clojurescript @ r2740
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:237-251](https://github.com/clojure/clojurescript/blob/r2727/src/cljs/clojure/zip.cljs#L237-L251)</ins>
+            └── <ins>[zip.cljs:237-251](https://github.com/clojure/clojurescript/blob/r2740/src/cljs/clojure/zip.cljs#L237-L251)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn remove\n  [loc]\n    (let [[node {l :l, ppath :ppath, pnodes :pnodes, rs :r, :as path}] loc]\n      (if (nil? path)\n        (throw \"Remove at top\")\n        (if (pos? (count l))\n          (loop [loc (with-meta [(peek l) (assoc path :l (pop l) :changed? true)] (meta loc))]\n            (if-let [child (and (branch? loc) (down loc))]\n              (recur (rightmost child))\n              loc))\n          (with-meta [(make-node loc (peek pnodes) rs) \n                      (and ppath (assoc ppath :changed? true))]\n                     (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2727",
+          :tag "r2740",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [237 251]},
  :full-name "clojure.zip/remove",
