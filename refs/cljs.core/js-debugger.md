@@ -49,7 +49,7 @@ Emit JavaScript "debugger;" statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L866-L869):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L866-L869):
 
 ```clj
 (core/defmacro js-debugger
@@ -61,12 +61,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:866-869](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L866-L869)</ins>
+                └── <ins>[core.cljc:866-869](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L866-L869)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro js-debugger\n  []\n  (core/list 'js* \"debugger;\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [866 869]},
  :examples [{:id "87f2fa",

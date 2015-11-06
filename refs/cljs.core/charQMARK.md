@@ -30,7 +30,7 @@ Returns true if x is a JavaScript char.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L224-L227):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L224-L227):
 
 ```clj
 (defn ^boolean char?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:224-227](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L224-L227)</ins>
+                └── <ins>[core.cljs:224-227](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L224-L227)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean char?\n  [x]\n  (gstring/isUnicodeChar x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [224 227]},
  :full-name "cljs.core/char?",

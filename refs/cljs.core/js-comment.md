@@ -28,7 +28,7 @@ new comment line. Comment block will be preceded and followed by a newline
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L871-L883):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L871-L883):
 
 ```clj
 (core/defmacro js-comment
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:871-883](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/core.cljc#L871-L883)</ins>
+                └── <ins>[core.cljc:871-883](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L871-L883)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro js-comment\n  [comment]\n  (core/let [[x & ys] (string/split comment #\"\\n\")]\n    (core/list 'js*\n      (core/str\n        \"\\n/**\\n\"\n        (core/str \" * \" x \"\\n\")\n        (core/->> ys\n          (map #(core/str \" * \" (string/replace % #\"^   \" \"\") \"\\n\"))\n          (reduce core/str \"\"))\n        \" */\\n\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [871 883]},
  :full-name "cljs.core/js-comment",

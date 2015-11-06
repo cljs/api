@@ -22,12 +22,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L9862-L9873):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L9863-L9874):
 
 ```clj
 (defn random-uuid []
-  (letfn [(hex [] (.toString (rand-int 15) 16))]
-    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 14))) 16)]
+  (letfn [(hex [] (.toString (rand-int 16) 16))]
+    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 16))) 16)]
       (uuid
         (str (hex) (hex) (hex) (hex)
              (hex) (hex) (hex) (hex) "-"
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9862-9873](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/cljs/core.cljs#L9862-L9873)</ins>
+                └── <ins>[core.cljs:9863-9874](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L9863-L9874)</ins>
 </pre>
 
 -->
@@ -91,12 +91,12 @@ The API data for this symbol:
  :name "random-uuid",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn random-uuid []\n  (letfn [(hex [] (.toString (rand-int 15) 16))]\n    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 14))) 16)]\n      (uuid\n        (str (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex) \"-\"\n             \"4\"   (hex) (hex) (hex) \"-\"\n             rhex  (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex))))))",
+ :source {:code "(defn random-uuid []\n  (letfn [(hex [] (.toString (rand-int 16) 16))]\n    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 16))) 16)]\n      (uuid\n        (str (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex) \"-\"\n             \"4\"   (hex) (hex) (hex) \"-\"\n             rhex  (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9862 9873]},
+          :lines [9863 9874]},
  :full-name "cljs.core/random-uuid",
  :full-name-encode "cljs.core/random-uuid",
  :history [["+" "0.0-3308"]]}

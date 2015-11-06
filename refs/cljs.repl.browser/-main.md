@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl/browser.clj#L330-L331):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/repl/browser.clj#L330-L331):
 
 ```clj
 (defn -main []
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:330-331](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/repl/browser.clj#L330-L331)</ins>
+                    └── <ins>[browser.clj:330-331](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/repl/browser.clj#L330-L331)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn -main []\n  (repl/repl (repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [330 331]},
  :full-name "cljs.repl.browser/-main",

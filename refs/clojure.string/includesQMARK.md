@@ -27,7 +27,7 @@ True if s includes substr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L255-L258):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L255-L258):
 
 ```clj
 (defn ^boolean includes?
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:255-258](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L255-L258)</ins>
+                └── <ins>[string.cljs:255-258](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L255-L258)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean includes?\n  [s substr]\n  (gstring/contains s substr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [255 258]},
  :full-name "clojure.string/includes?",

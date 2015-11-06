@@ -153,7 +153,7 @@ They all expand into calls to the dot operator at macroexpansion time.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L2103-L2105):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/analyzer.cljc#L2103-L2105):
 
 ```clj
 (defmethod parse '.
@@ -165,12 +165,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:2103-2105](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/clojure/cljs/analyzer.cljc#L2103-L2105)</ins>
+                └── <ins>[analyzer.cljc:2103-2105](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/analyzer.cljc#L2103-L2105)</ins>
 </pre>
 
 -->
@@ -222,7 +222,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _ _]\n  (disallowing-recur (analyze-dot env target field member+ form)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/clojure/cljs/analyzer.cljc",
           :lines [2103 2105]},
  :usage ["(.-foo obj)" "(.foo obj)"],

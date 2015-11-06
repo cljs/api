@@ -54,7 +54,7 @@ pattern / (string or function of match).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L39-L55):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L39-L55):
 
 ```clj
 (defn replace
@@ -75,12 +75,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.166/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.166
+clojurescript @ r1.7.170
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:39-55](https://github.com/clojure/clojurescript/blob/r1.7.166/src/main/cljs/clojure/string.cljs#L39-L55)</ins>
+                └── <ins>[string.cljs:39-55](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L39-L55)</ins>
 </pre>
 
 -->
@@ -135,7 +135,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [s match replacement]\n  (cond\n    (string? match)\n    (.replace s (js/RegExp. (gstring/regExpEscape match) \"g\") replacement)\n\n    (instance? js/RegExp match)\n    (if (string? replacement)\n      (replace-all s match replacement)\n      (replace-all s match (replace-with replacement)))\n\n    :else (throw (str \"Invalid match arg: \" match))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.166",
+          :tag "r1.7.170",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [39 55]},
  :full-name "clojure.string/replace",
