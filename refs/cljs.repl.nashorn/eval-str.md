@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L45-L46):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/nashorn.clj#L45-L46):
 
 ```clj
 (defn eval-str [^ScriptEngine engine ^String s]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[nashorn.clj:45-46](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L45-L46)</ins>
+                    └── <ins>[nashorn.clj:45-46](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/nashorn.clj#L45-L46)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn eval-str [^ScriptEngine engine ^String s]\n      (.eval engine s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [45 46]},
  :full-name "cljs.repl.nashorn/eval-str",

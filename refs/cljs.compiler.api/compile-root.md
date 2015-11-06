@@ -40,7 +40,7 @@ in dependency order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L93-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/compiler/api.clj#L93-L110):
 
 ```clj
 (defn compile-root
@@ -62,13 +62,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:93-110](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L93-L110)</ins>
+                    └── <ins>[api.clj:93-110](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/compiler/api.clj#L93-L110)</ins>
 </pre>
 
 -->
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(defn compile-root\n  ([src-dir] (compile-root src-dir \"out\"))\n  ([src-dir target-dir] (compile-root src-dir target-dir nil))\n  ([src-dir target-dir opts]\n   (compile-root\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src-dir target-dir opts))\n  ([state src-dir target-dir opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/compile-root src-dir target-dir opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [93 110]},
  :full-name "cljs.compiler.api/compile-root",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/browser.clj#L92-L124):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/browser.clj#L92-L124):
 
 ```clj
 (defn send-static [{path :path :as request} conn opts]
@@ -64,13 +64,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:92-124](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/browser.clj#L92-L124)</ins>
+                    └── <ins>[browser.clj:92-124](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/browser.clj#L92-L124)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn send-static [{path :path :as request} conn opts]\n  (if (and (:static-dir opts)\n           (not= \"/favicon.ico\" path))\n    (let [path   (if (= \"/\" path) \"/index.html\" path)\n          st-dir (:static-dir opts)\n          local-path\n          (cond->\n            (seq (for [x (if (string? st-dir) [st-dir] st-dir)\n                       :when (.exists (io/file (str x path)))]\n                   (str x path)))\n            (complement nil?) first)\n          local-path\n          (if (nil? local-path)\n            (cond\n              (re-find #\".jar\" path)\n              (io/resource (second (string/split path #\".jar!/\")))\n              (re-find (Pattern/compile (System/getProperty \"user.dir\")) path)\n              (io/file (string/replace path (str (System/getProperty \"user.dir\") \"/\") \"\"))\n              :else nil)\n            local-path)]\n      (if local-path\n        (if-let [ext (some #(if (.endsWith path %) %) (keys ext->mime-type))]\n          (let [mime-type (ext->mime-type ext \"text/plain\")\n                encoding (mime-type->encoding mime-type \"UTF-8\")]\n            (server/send-and-close\n              conn\n              200\n              (slurp local-path :encoding encoding)\n              mime-type\n              encoding))\n          (server/send-and-close conn 200 (slurp local-path) \"text/plain\"))\n        (server/send-404 conn path)))\n    (server/send-404 conn path)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [92 124]},
  :full-name "cljs.repl.browser/send-static",

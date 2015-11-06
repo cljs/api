@@ -30,7 +30,7 @@ Replaces the node at this loc, without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/zip.cljs#L183-L187):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L183-L187):
 
 ```clj
 (defn replace
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:183-187](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/zip.cljs#L183-L187)</ins>
+                └── <ins>[zip.cljs:183-187](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L183-L187)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [loc node]\n    (let [[_ path] loc]\n      (with-meta [node (assoc path :changed? true)] (meta loc))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [183 187]},
  :full-name "clojure.zip/replace",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L33-L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/browser/repl.cljs#L33-L36):
 
 ```clj
 (defn flush-print-queue! [conn]
@@ -35,13 +35,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:33-36](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L33-L36)</ins>
+                    └── <ins>[repl.cljs:33-36](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/browser/repl.cljs#L33-L36)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn flush-print-queue! [conn]\n  (doseq [str print-queue]\n    (net/transmit conn :print str))\n  (garray/clear print-queue))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [33 36]},
  :full-name "clojure.browser.repl/flush-print-queue!",

@@ -47,7 +47,7 @@ If the file was not compiled returns only {:file ...}
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L62-L86):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/compiler/api.clj#L62-L86):
 
 ```clj
 (defn compile-file
@@ -69,13 +69,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:62-86](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L62-L86)</ins>
+                    └── <ins>[api.clj:62-86](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/compiler/api.clj#L62-L86)</ins>
 </pre>
 
 -->
@@ -126,7 +126,7 @@ The API data for this symbol:
  :source {:code "(defn compile-file\n  ([src] (compile-file src))\n  ([src dest] (compile-file src dest))\n  ([src dest opts]\n   (compile-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/compile-file src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [62 86]},
  :full-name "cljs.compiler.api/compile-file",

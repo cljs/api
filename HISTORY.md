@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.58](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.58)__</td>
+<td>2015-08-06</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150805</kbd></td>
+<td>
+<a href="#user-content-1758syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1758library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1758compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.48](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.48)__</td>
 <td>2015-08-05</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2913,6 +2936,23 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.58
+
+<a name="1758syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1758library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="1758compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.7.48

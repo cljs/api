@@ -31,7 +31,7 @@ given a root element
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/zip.cljs#L50-L58):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L50-L58):
 
 ```clj
 (defn xml-zip
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:50-58](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/zip.cljs#L50-L58)</ins>
+                └── <ins>[zip.cljs:50-58](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L50-L58)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn xml-zip\n  [root]\n    (zipper (complement string?) \n            (comp seq :content)\n            (fn [node children]\n              (assoc node :content (and children (apply vector children))))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [50 58]},
  :full-name "clojure.zip/xml-zip",

@@ -30,7 +30,7 @@ Backdates a cljs target file so that it the cljs compiler will recompile it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/build/api.clj#L41-L47):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L41-L47):
 
 ```clj
 (defn mark-cljs-ns-for-recompile!
@@ -45,13 +45,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:41-47](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/build/api.clj#L41-L47)</ins>
+                    └── <ins>[api.clj:41-47](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L41-L47)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn mark-cljs-ns-for-recompile!\n  ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))\n  ([ns-sym output-dir]\n    (let [s (target-file-for-cljs-ns output-dir ns-sym)]\n      (when (.exists s)\n        (.setLastModified s 5000)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [41 47]},
  :full-name "cljs.build.api/mark-cljs-ns-for-recompile!",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L218-L219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/rhino.clj#L218-L219):
 
 ```clj
 (defn -main []
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[rhino.clj:218-219](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L218-L219)</ins>
+                    └── <ins>[rhino.clj:218-219](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/rhino.clj#L218-L219)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn -main []\n  (repl/repl (repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [218 219]},
  :full-name "cljs.repl.rhino/-main",

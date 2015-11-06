@@ -46,7 +46,7 @@ Note: Performing operations in parallel is currently not implemented.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/core/reducers.cljs#L49-L64):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/core/reducers.cljs#L49-L64):
 
 ```clj
 (defn fold
@@ -60,13 +60,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── clojure
                 └── core
-                    └── <ins>[reducers.cljs:49-64](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/core/reducers.cljs#L49-L64)</ins>
+                    └── <ins>[reducers.cljs:49-64](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/core/reducers.cljs#L49-L64)</ins>
 </pre>
 
 -->
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(defn fold\n  ([reducef coll] (fold reducef reducef coll))\n  ([combinef reducef coll] (fold 512 combinef reducef coll))\n  ([n combinef reducef coll]\n     (coll-fold coll n combinef reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
           :lines [49 64]},
  :full-name "clojure.core.reducers/fold",

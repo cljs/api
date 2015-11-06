@@ -32,7 +32,7 @@ replacement at the leaves of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/walk.cljs#L92-L98):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/walk.cljs#L92-L98):
 
 ```clj
 (defn postwalk-replace
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:92-98](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/walk.cljs#L92-L98)</ins>
+                └── <ins>[walk.cljs:92-98](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/walk.cljs#L92-L98)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn postwalk-replace\n  [smap form]\n  (postwalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/clojure/walk.cljs",
           :lines [92 98]},
  :full-name "clojure.walk/postwalk-replace",

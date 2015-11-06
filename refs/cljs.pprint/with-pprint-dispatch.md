@@ -30,7 +30,7 @@ Execute body with the pretty print dispatch function bound to function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.clj#L147-L151):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.clj#L147-L151):
 
 ```clj
 (defmacro with-pprint-dispatch
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:147-151](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.clj#L147-L151)</ins>
+                └── <ins>[pprint.clj:147-151](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.clj#L147-L151)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defmacro with-pprint-dispatch\n  [function & body]\n  `(cljs.core/binding [cljs.pprint/*print-pprint-dispatch* ~function]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [147 151]},
  :full-name "cljs.pprint/with-pprint-dispatch",

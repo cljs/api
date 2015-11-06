@@ -31,7 +31,7 @@ not a pretty writer (which keeps track of columns), this function always outputs
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2093-L2100):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L2093-L2100):
 
 ```clj
 (defn fresh-line
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:2093-2100](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2093-L2100)</ins>
+                └── <ins>[pprint.cljs:2093-2100](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L2093-L2100)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn fresh-line\n  []\n  (if (satisfies? IDeref *out*)\n    (if (not (= 0 (get-column (:base @@*out*))))\n      (prn))\n    (prn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [2093 2100]},
  :full-name "cljs.pprint/fresh-line",

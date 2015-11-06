@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/server.clj#L85-L90):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/server.clj#L85-L90):
 
 ```clj
 (defn read-get [line rdr]
@@ -37,13 +37,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.48
+clojurescript @ r1.7.58
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:85-90](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/server.clj#L85-L90)</ins>
+                    └── <ins>[server.clj:85-90](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/server.clj#L85-L90)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(defn read-get [line rdr]\n  (let [[_ path _] (str/split line #\" \")\n        headers (parse-headers (read-headers rdr))]\n    {:method :get\n     :path path\n     :headers headers}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.48",
+          :tag "r1.7.58",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [85 90]},
  :full-name "cljs.repl.server/read-get",

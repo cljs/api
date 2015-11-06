@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__1.7.48__ [all](HISTORY.md)</td>
-<td>2015-08-05</td>
+<td>__1.7.58__ [all](HISTORY.md)</td>
+<td>2015-08-06</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.7.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __1.7.48__ ([See Full History](HISTORY.md)):
+Changes from __1.7.58__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,49 +34,7 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/goog-define](refs/cljs.core/goog-define.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.js/atom?~~](refs/cljs.js/atomQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.js/debug-prn~~](refs/cljs.js/debug-prn.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.js/valid-name?~~](refs/cljs.js/valid-nameQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.js/valid-opts?~~](refs/cljs.js/valid-optsQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[clojure.browser.repl/flush-print-queue!](refs/clojure.browser.repl/flush-print-queueBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
-</td>
-<td><samp>[clojure.browser.repl/print-queue](refs/clojure.browser.repl/print-queue.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__
