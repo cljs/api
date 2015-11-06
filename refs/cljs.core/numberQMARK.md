@@ -35,7 +35,7 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L861-L862):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L986-L987):
 
 ```clj
 (defn ^boolean number? [n]
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:861-862](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L861-L862)</ins>
+            └── <ins>[core.cljs:986-987](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L986-L987)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [861 862]},
+          :lines [986 987]},
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

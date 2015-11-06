@@ -84,28 +84,55 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/tagged_literals.clj#L18-L25):
 
 ```clj
-
+(defn read-inst
+  [form]
+  (assert (string? form) "Instance literal expects a string for its timestamp.")
+  (try
+    (let [^java.util.Date d (inst/read-instant-date form)]
+      (list (symbol "js/Date.") (.getTime d)))
+    (catch Throwable e
+      (throw (RuntimeException. (.getMessage e))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.4.0
+clojurescript @ r1424
 └── src
-    └── jvm
-        └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/jvm/clojure/lang/LispReader.java#L)</ins>
+    └── clj
+        └── cljs
+            └── <ins>[tagged_literals.clj:18-25](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/tagged_literals.clj#L18-L25)</ins>
 </pre>
-
 -->
 
 ---
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/tagged_literals.clj#L27-L30):
 
+```clj
+(def ^:dynamic *cljs-data-readers*
+  {'queue read-queue
+   'uuid  read-uuid
+   'inst  read-inst})
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r1424
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
+</pre>
+-->
+
+---
 
 
 
@@ -140,10 +167,18 @@ The API data for this symbol:
  :type "tagged literal",
  :related ["cljs.core/time" "syntax/tagged-literal"],
  :full-name-encode "syntax/inst-literal",
- :source {:repo "clojure",
-          :tag "clojure-1.4.0",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn read-inst\n  [form]\n  (assert (string? form) \"Instance literal expects a string for its timestamp.\")\n  (try\n    (let [^java.util.Date d (inst/read-instant-date form)]\n      (list (symbol \"js/Date.\") (.getTime d)))\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
+                  :title "Reader code",
+                  :repo "clojurescript",
+                  :tag "r1424",
+                  :filename "src/clj/cljs/tagged_literals.clj",
+                  :lines [18 25]}
+                 {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst})",
+                  :title "Reader table",
+                  :repo "clojurescript",
+                  :tag "r1424",
+                  :filename "src/clj/cljs/tagged_literals.clj",
+                  :lines [27 30]}),
  :usage ["#inst \"yyyy-mm-dd\""
          "#inst \"yyyy-mm-ddThh:mm:ss\""
          "#inst \"yyyy-mm-ddThh:mm:ssZ\""

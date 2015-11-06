@@ -40,16 +40,16 @@ and only once.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L138-L147):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl.clj#L141-L150):
 
 ```clj
 (def default-special-fns
   (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]
     {'in-ns (fn [_ quoted-ns]
               (let [ns-name (second quoted-ns)]
-                (when-not (@comp/namespaces ns-name)
-                  (swap! comp/namespaces assoc ns-name {:name ns-name}))
-                (set! comp/*cljs-ns* ns-name)))
+                (when-not (ana/get-namespace ns-name)
+                  (ana/set-namespace ns-name {:name ns-name}))
+                (set! ana/*cljs-ns* ns-name)))
      'load-file load-file-fn
      'clojure.core/load-file load-file-fn
      'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))
@@ -59,11 +59,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r12
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:138-147](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L138-L147)</ins>
+            └── <ins>[repl.clj:141-150](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl.clj#L141-L150)</ins>
 </pre>
 
 -->
@@ -104,12 +104,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form (repl)",
  :full-name-encode "specialrepl/load-namespace",
- :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (@comp/namespaces ns-name)\n                  (swap! comp/namespaces assoc ns-name {:name ns-name}))\n                (set! comp/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
+ :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (ana/set-namespace ns-name {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/repl.clj",
-          :lines [138 147]},
+          :lines [141 150]},
  :examples [{:id "0b1a1d",
              :content "```clj\n(load-namespace 'clojure.set)\n```"}],
  :full-name "specialrepl/load-namespace"}

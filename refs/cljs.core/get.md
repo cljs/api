@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/get</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/get)
@@ -45,7 +45,7 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L662-L667):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L761-L766):
 
 ```clj
 (defn get
@@ -59,17 +59,40 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:662-667](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L662-L667)</ins>
+            └── <ins>[core.cljs:761-766](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L761-L766)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L253-L257):
+
+```clj
+(defmacro get
+  ([coll k]
+     `(-lookup ~coll ~k nil))
+  ([coll k not-found]
+     `(-lookup ~coll ~k ~not-found)))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r1424
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:253-257](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L253-L257)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -110,15 +133,21 @@ The API data for this symbol:
  :name "get",
  :signature ["[o k]" "[o k not-found]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/get-in"],
  :full-name-encode "cljs.core/get",
  :source {:code "(defn get\n  ([o k]\n     (-lookup o k))\n  ([o k not-found]\n     (-lookup o k not-found)))",
-          :title "Source code",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [662 667]},
+          :lines [761 766]},
+ :extra-sources [{:code "(defmacro get\n  ([coll k]\n     `(-lookup ~coll ~k nil))\n  ([coll k not-found]\n     `(-lookup ~coll ~k ~not-found)))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r1424",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [253 257]}],
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

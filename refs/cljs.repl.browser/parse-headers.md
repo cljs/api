@@ -27,7 +27,7 @@ Parse the headers of an HTTP POST request.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L115-L123):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L116-L124):
 
 ```clj
 (defn parse-headers
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:115-123](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L115-L123)</ins>
+                └── <ins>[browser.clj:116-124](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L116-L124)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn parse-headers\n  [header-lines]\n  (apply hash-map\n   (mapcat\n    (fn [line]\n      (let [[k v] (str/split line #\":\" 2)]\n        [(keyword (str/lower-case k)) (str/triml v)]))\n    header-lines)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [115 123]},
+          :lines [116 124]},
  :full-name "cljs.repl.browser/parse-headers",
  :docstring "Parse the headers of an HTTP POST request."}
 

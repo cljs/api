@@ -60,7 +60,7 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1134-L1137):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289):
 
 ```clj
 (defn mod
@@ -72,18 +72,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1134-1137](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1134-L1137)</ins>
+            └── <ins>[core.cljs:1286-1289](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1286-L1289)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L188-L189):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189):
 
 ```clj
 (defmacro mod [num div]
@@ -94,11 +94,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:188-189](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L188-L189)</ins>
+            └── <ins>[core.clj:188-189](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L188-L189)</ins>
 </pre>
 -->
 
@@ -149,13 +149,13 @@ The API data for this symbol:
  :source {:code "(defn mod\n  [n d]\n  (cljs.core/mod n d))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1134 1137]},
+          :lines [1286 1289]},
  :extra-sources [{:code "(defmacro mod [num div]\n  (list 'js* \"(~{} % ~{})\" num div))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1236",
+                  :tag "r1424",
                   :filename "src/clj/cljs/core.clj",
                   :lines [188 189]}],
  :examples [{:id "8165e8",

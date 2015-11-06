@@ -68,12 +68,12 @@ set happened, else false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5939-L5946):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6416-L6423):
 
 ```clj
 (defn compare-and-set!
   [a oldval newval]
-  (if (= a.state oldval)
+  (if (= (.-state a) oldval)
     (do (reset! a newval) true)
     false))
 ```
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5939-5946](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5939-L5946)</ins>
+            └── <ins>[core.cljs:6416-6423](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6416-L6423)</ins>
 </pre>
 
 -->
@@ -136,12 +136,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/atom" "cljs.core/reset!" "cljs.core/swap!"],
  :full-name-encode "cljs.core/compare-and-setBANG",
- :source {:code "(defn compare-and-set!\n  [a oldval newval]\n  (if (= a.state oldval)\n    (do (reset! a newval) true)\n    false))",
+ :source {:code "(defn compare-and-set!\n  [a oldval newval]\n  (if (= (.-state a) oldval)\n    (do (reset! a newval) true)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5939 5946]},
+          :lines [6416 6423]},
  :examples [{:id "1fa306",
              :content "```clj\n(def a (atom \"abc\"))\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> true\n\n@a\n;;=> \"def\"\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> false\n\n@a\n;;=> \"def\"\n```"}],
  :full-name "cljs.core/compare-and-set!",

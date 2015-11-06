@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3306-L3311):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3726-L3731):
 
 ```clj
 (set! cljs.core.HashMap/fromArrays (fn [ks vs]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3306-3311](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L3306-L3311)</ins>
+            └── <ins>[core.cljs:3726-3731](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3726-L3731)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.HashMap/fromArrays (fn [ks vs]\n  (let [len (.-length ks)]\n    (loop [i 0, out cljs.core.HashMap/EMPTY]\n      (if (< i len)\n        (recur (inc i) (assoc out (aget ks i) (aget vs i)))\n        out)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3306 3311]},
+          :lines [3726 3731]},
  :full-name "cljs.core/HashMap.fromArrays"}
 
 ```

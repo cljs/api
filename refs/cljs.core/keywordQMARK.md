@@ -25,11 +25,11 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L853-L855):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L978-L980):
 
 ```clj
 (defn ^boolean keyword? [x]
-  (and (goog/isString x)
+  (and ^boolean (goog/isString x)
        (identical? (.charAt x 0) \uFDD0)))
 ```
 
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:853-855](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L853-L855)</ins>
+            └── <ins>[core.cljs:978-980](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L978-L980)</ins>
 </pre>
 
 -->
@@ -90,12 +90,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/keywordQMARK",
- :source {:code "(defn ^boolean keyword? [x]\n  (and (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
+ :source {:code "(defn ^boolean keyword? [x]\n  (and ^boolean (goog/isString x)\n       (identical? (.charAt x 0) \\uFDD0)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [853 855]},
+          :lines [978 980]},
  :full-name "cljs.core/keyword?",
  :clj-symbol "clojure.core/keyword?"}
 

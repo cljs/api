@@ -22,13 +22,13 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L73-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L74-L78):
 
 ```clj
 (defn ^boolean macro-terminating? [ch]
-  (and (coercive-not= ch "#")
-       (coercive-not= ch \')
-       (coercive-not= ch ":")
+  (and (not (identical? ch "#"))
+       (not (identical? ch \'))
+       (not (identical? ch ":"))
        (macros ch)))
 ```
 
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:73-77](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L73-L77)</ins>
+            └── <ins>[reader.cljs:74-78](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L74-L78)</ins>
 </pre>
 
 -->
@@ -86,12 +86,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader/macro-terminatingQMARK",
- :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (coercive-not= ch \"#\")\n       (coercive-not= ch \\')\n       (coercive-not= ch \":\")\n       (macros ch)))",
+ :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (not (identical? ch \"#\"))\n       (not (identical? ch \\'))\n       (not (identical? ch \":\"))\n       (macros ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [73 77]},
+          :lines [74 78]},
  :full-name "cljs.reader/macro-terminating?"}
 
 ```

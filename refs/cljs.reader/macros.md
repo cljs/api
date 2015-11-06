@@ -22,40 +22,40 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L343-L362):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L384-L403):
 
 ```clj
 (defn macros [c]
-  (case c
-    \" read-string*
-    \: read-keyword
-    \; not-implemented ;; never hit this
-    \' (wrapping-reader 'quote)
-    \@ (wrapping-reader 'deref)
-    \^ read-meta
-    \` not-implemented
-    \~ not-implemented
-    \( read-list
-    \) read-unmatched-delimiter
-    \[ read-vector
-    \] read-unmatched-delimiter
-    \{ read-map
-    \} read-unmatched-delimiter
-    \\ read-char
-    \% not-implemented
-    \# read-dispatch
-    nil))
+  (cond
+   (identical? c \") read-string*
+   (identical? c \:) read-keyword
+   (identical? c \;) not-implemented ;; never hit this
+   (identical? c \') (wrapping-reader 'quote)
+   (identical? c \@) (wrapping-reader 'deref)
+   (identical? c \^) read-meta
+   (identical? c \`) not-implemented
+   (identical? c \~) not-implemented
+   (identical? c \() read-list
+   (identical? c \)) read-unmatched-delimiter
+   (identical? c \[) read-vector
+   (identical? c \]) read-unmatched-delimiter
+   (identical? c \{) read-map
+   (identical? c \}) read-unmatched-delimiter
+   (identical? c \\) read-char
+   (identical? c \%) not-implemented
+   (identical? c \#) read-dispatch
+   :else nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:343-362](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L343-L362)</ins>
+            └── <ins>[reader.cljs:384-403](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L384-L403)</ins>
 </pre>
 
 -->
@@ -98,12 +98,12 @@ The API data for this symbol:
  :name "macros",
  :type "function",
  :signature ["[c]"],
- :source {:code "(defn macros [c]\n  (case c\n    \\\" read-string*\n    \\: read-keyword\n    \\; not-implemented ;; never hit this\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'deref)\n    \\^ read-meta\n    \\` not-implemented\n    \\~ not-implemented\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char\n    \\% not-implemented\n    \\# read-dispatch\n    nil))",
+ :source {:code "(defn macros [c]\n  (cond\n   (identical? c \\\") read-string*\n   (identical? c \\:) read-keyword\n   (identical? c \\;) not-implemented ;; never hit this\n   (identical? c \\') (wrapping-reader 'quote)\n   (identical? c \\@) (wrapping-reader 'deref)\n   (identical? c \\^) read-meta\n   (identical? c \\`) not-implemented\n   (identical? c \\~) not-implemented\n   (identical? c \\() read-list\n   (identical? c \\)) read-unmatched-delimiter\n   (identical? c \\[) read-vector\n   (identical? c \\]) read-unmatched-delimiter\n   (identical? c \\{) read-map\n   (identical? c \\}) read-unmatched-delimiter\n   (identical? c \\\\) read-char\n   (identical? c \\%) not-implemented\n   (identical? c \\#) read-dispatch\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [343 362]},
+          :lines [384 403]},
  :full-name "cljs.reader/macros",
  :full-name-encode "cljs.reader/macros",
  :history [["+" "0.0-927"]]}

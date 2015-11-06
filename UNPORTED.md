@@ -804,10 +804,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/shuffle](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shuffle)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/shutdown-agents](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shutdown-agents)</samp></td>
 </tr>
 <tr>
@@ -1277,10 +1273,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/ArrayChunk](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ArrayChunk.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/ArraySeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ArraySeq.java)</samp></td>
 </tr>
 <tr>
@@ -1290,22 +1282,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Binding](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Binding.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Box](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Box.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/ChunkBuffer](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ChunkBuffer.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/ChunkedCons](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ChunkedCons.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/ChunkedSeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1338,14 +1314,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/IBlockingDeref](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IBlockingDeref.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/IChunk](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IChunk.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/IChunkedSeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IChunkedSeq.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1405,10 +1373,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Keyword](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Keyword.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/KeywordLookupSite](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/KeywordLookupSite.java)</samp></td>
 </tr>
 <tr>
@@ -1462,10 +1426,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/ProxyHandler](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ProxyHandler.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/RSeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/APersistentVector.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

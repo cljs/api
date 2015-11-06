@@ -22,30 +22,30 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L160-L169):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L160-L169):
 
 ```clj
 (defn escape-char-map [c]
-  (case c
-    \t "\t"
-    \r "\r"
-    \n "\n"
-    \\ \\
-    \" \"
-    \b "\b"
-    \f "\f"
-    nil))
+  (cond
+   (identical? c \t) "\t"
+   (identical? c \r) "\r"
+   (identical? c \n) "\n"
+   (identical? c \\) \\
+   (identical? c \") \"
+   (identical? c \b) "\b"
+   (identical? c \f) "\f"
+   :else nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:160-169](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L160-L169)</ins>
+            └── <ins>[reader.cljs:160-169](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L160-L169)</ins>
 </pre>
 
 -->
@@ -88,10 +88,10 @@ The API data for this symbol:
  :name "escape-char-map",
  :type "function",
  :signature ["[c]"],
- :source {:code "(defn escape-char-map [c]\n  (case c\n    \\t \"\\t\"\n    \\r \"\\r\"\n    \\n \"\\n\"\n    \\\\ \\\\\n    \\\" \\\"\n    \\b \"\\b\"\n    \\f \"\\f\"\n    nil))",
+ :source {:code "(defn escape-char-map [c]\n  (cond\n   (identical? c \\t) \"\\t\"\n   (identical? c \\r) \"\\r\"\n   (identical? c \\n) \"\\n\"\n   (identical? c \\\\) \\\\\n   (identical? c \\\") \\\"\n   (identical? c \\b) \"\\b\"\n   (identical? c \\f) \"\\f\"\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [160 169]},
  :full-name "cljs.reader/escape-char-map",

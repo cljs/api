@@ -11,7 +11,7 @@
 
 
  <samp>
-(__PersistentVector.fromArray__ xs)<br>
+(__PersistentVector.fromArray__ xs no-clone)<br>
 </samp>
 
 ---
@@ -22,26 +22,32 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2676-L2681):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3012-L3023):
 
 ```clj
 (set! cljs.core.PersistentVector/fromArray
-      (fn [xs]
-        (loop [xs (seq xs) out (transient cljs.core.PersistentVector/EMPTY)]
-          (if xs
-            (recur (next xs) (conj! out (first xs)))
-            (persistent! out)))))
+      (fn [xs no-clone]
+        (let [l (alength xs)
+              xs (if (identical? no-clone true) xs (aclone xs))]
+          (if (< l 32)
+            (PersistentVector. nil l 5 cljs.core.PersistentVector/EMPTY_NODE xs nil)
+            (let [node (.slice xs 0 32)
+                  v (PersistentVector. nil 32 5 cljs.core.PersistentVector/EMPTY_NODE node nil)]
+             (loop [i 32 out (-as-transient v)]
+               (if (< i l)
+                 (recur (inc i) (conj! out (aget xs i)))
+                 (persistent! out))))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2676-2681](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2676-L2681)</ins>
+            └── <ins>[core.cljs:3012-3023](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L3012-L3023)</ins>
 </pre>
 
 -->
@@ -82,17 +88,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentVector.fromArray",
- :signature ["[xs]"],
+ :signature ["[xs no-clone]"],
  :history [["+" "0.0-1006"]],
  :parent-type "PersistentVector",
  :type "function",
  :full-name-encode "cljs.core/PersistentVectorDOTfromArray",
- :source {:code "(set! cljs.core.PersistentVector/fromArray\n      (fn [xs]\n        (loop [xs (seq xs) out (transient cljs.core.PersistentVector/EMPTY)]\n          (if xs\n            (recur (next xs) (conj! out (first xs)))\n            (persistent! out)))))",
+ :source {:code "(set! cljs.core.PersistentVector/fromArray\n      (fn [xs no-clone]\n        (let [l (alength xs)\n              xs (if (identical? no-clone true) xs (aclone xs))]\n          (if (< l 32)\n            (PersistentVector. nil l 5 cljs.core.PersistentVector/EMPTY_NODE xs nil)\n            (let [node (.slice xs 0 32)\n                  v (PersistentVector. nil 32 5 cljs.core.PersistentVector/EMPTY_NODE node nil)]\n             (loop [i 32 out (-as-transient v)]\n               (if (< i l)\n                 (recur (inc i) (conj! out (aget xs i)))\n                 (persistent! out))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2676 2681]},
+          :lines [3012 3023]},
  :full-name "cljs.core/PersistentVector.fromArray"}
 
 ```

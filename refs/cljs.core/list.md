@@ -36,22 +36,28 @@ Creates a new list containing `items`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1624-L1631):
 
 ```clj
-(defn list [& items]
-  (reduce conj () (reverse items)))
+(defn list
+  ([] ())
+  ([x] (conj () x))
+  ([x y] (conj (list y) x))
+  ([x y z] (conj (list y z) x))
+  ([x y z & items]
+     (conj (conj (conj (reduce conj () (reverse items))
+                       z) y) x)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1459-1460](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1459-L1460)</ins>
+            └── <ins>[core.cljs:1624-1631](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1624-L1631)</ins>
 </pre>
 
 -->
@@ -101,12 +107,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/vector" "cljs.core/list?"],
  :full-name-encode "cljs.core/list",
- :source {:code "(defn list [& items]\n  (reduce conj () (reverse items)))",
+ :source {:code "(defn list\n  ([] ())\n  ([x] (conj () x))\n  ([x y] (conj (list y) x))\n  ([x y z] (conj (list y z) x))\n  ([x y z & items]\n     (conj (conj (conj (reduce conj () (reverse items))\n                       z) y) x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1459 1460]},
+          :lines [1624 1631]},
  :full-name "cljs.core/list",
  :clj-symbol "clojure.core/list"}
 

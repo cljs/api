@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L278-L284):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L319-L325):
 
 ```clj
 (defn read-symbol
@@ -31,18 +31,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
     (if (gstring/contains token "/")
       (symbol (subs token 0 (.indexOf token "/"))
               (subs token (inc (.indexOf token "/")) (.-length token)))
-      (get special-symbols token (symbol token)))))
+      (special-symbols token (symbol token)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:278-284](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L278-L284)</ins>
+            └── <ins>[reader.cljs:319-325](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L319-L325)</ins>
 </pre>
 
 -->
@@ -85,12 +85,12 @@ The API data for this symbol:
  :name "read-symbol",
  :type "function",
  :signature ["[reader initch]"],
- :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (gstring/contains token \"/\")\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\")) (.-length token)))\n      (get special-symbols token (symbol token)))))",
+ :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (gstring/contains token \"/\")\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\")) (.-length token)))\n      (special-symbols token (symbol token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [278 284]},
+          :lines [319 325]},
  :full-name "cljs.reader/read-symbol",
  :full-name-encode "cljs.reader/read-symbol",
  :history [["+" "0.0-927"]]}

@@ -51,26 +51,25 @@ Counts the number of bits set in n
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1212-L1218):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1364-L1369):
 
 ```clj
 (defn bit-count
-  [n]
-  (loop [c 0 n n]
-    (if (zero? n)
-      c
-      (recur (inc c) (bit-and n (dec n))))))
+  [v]
+  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))
+        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]
+    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1212-1218](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L1212-L1218)</ins>
+            └── <ins>[core.cljs:1364-1369](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L1364-L1369)</ins>
 </pre>
 
 -->
@@ -116,12 +115,12 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/bit-count",
- :source {:code "(defn bit-count\n  [n]\n  (loop [c 0 n n]\n    (if (zero? n)\n      c\n      (recur (inc c) (bit-and n (dec n))))))",
+ :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1212 1218]},
+          :lines [1364 1369]},
  :examples [{:id "35c78c",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-count 2r1011)\n;;=> 3\n```\n\nSame number in decimal:\n\n```clj\n(bit-count 11)\n;;=> 3\n```"}],
  :full-name "cljs.core/bit-count",

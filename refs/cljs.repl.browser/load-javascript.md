@@ -11,7 +11,7 @@
 
 
  <samp>
-(__load-javascript__ repl-env ns url)<br>
+(__load-javascript__ repl-env ns-list url)<br>
 </samp>
 
 ---
@@ -20,18 +20,25 @@
 
 
 
+Source docstring:
+
+```
+Accepts a REPL environment, a list of namespaces, and a URL for a
+JavaScript file which contains the implementation for the list of
+namespaces. Will load the JavaScript file into the REPL environment
+if any of the namespaces have not already been loaded from the
+ClojureScript REPL.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L300-L307):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L293-L303):
 
 ```clj
-(defn load-javascript [repl-env ns url]
-  (let [missing (remove #(contains? @loaded-libs %) ns)]
+(defn load-javascript
+  [repl-env ns-list url]
+  (let [missing (remove #(contains? @loaded-libs %) ns-list)]
     (when (seq missing)
-      (let [ret (browser-eval (object-query-str ns))]
-        (when-not (and (= (:status ret) :success)
-                       (= (:value ret) "true"))
-          (browser-eval (slurp url))))
+      (browser-eval (slurp url))
       (swap! loaded-libs (partial apply conj) missing))))
 ```
 
@@ -39,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:300-307](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L300-L307)</ins>
+                └── <ins>[browser.clj:293-303](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L293-L303)</ins>
 </pre>
 
 -->
@@ -85,17 +92,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "load-javascript",
+ :signature ["[repl-env ns-list url]"],
+ :history [["+" "0.0-927"]],
  :type "function",
- :signature ["[repl-env ns url]"],
- :source {:code "(defn load-javascript [repl-env ns url]\n  (let [missing (remove #(contains? @loaded-libs %) ns)]\n    (when (seq missing)\n      (let [ret (browser-eval (object-query-str ns))]\n        (when-not (and (= (:status ret) :success)\n                       (= (:value ret) \"true\"))\n          (browser-eval (slurp url))))\n      (swap! loaded-libs (partial apply conj) missing))))",
+ :full-name-encode "cljs.repl.browser/load-javascript",
+ :source {:code "(defn load-javascript\n  [repl-env ns-list url]\n  (let [missing (remove #(contains? @loaded-libs %) ns-list)]\n    (when (seq missing)\n      (browser-eval (slurp url))\n      (swap! loaded-libs (partial apply conj) missing))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [300 307]},
+          :lines [293 303]},
  :full-name "cljs.repl.browser/load-javascript",
- :full-name-encode "cljs.repl.browser/load-javascript",
- :history [["+" "0.0-927"]]}
+ :docstring "Accepts a REPL environment, a list of namespaces, and a URL for a\nJavaScript file which contains the implementation for the list of\nnamespaces. Will load the JavaScript file into the REPL environment\nif any of the namespaces have not already been loaded from the\nClojureScript REPL."}
 
 ```
 

@@ -38,22 +38,22 @@ Returns a new lazy sequence.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L595-L596):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L631-L632):
 
 ```clj
 (defmacro lazy-seq [& body]
-  `(new cljs.core.LazySeq nil false (fn [] ~@body)))
+  `(new cljs.core/LazySeq nil false (fn [] ~@body) nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:595-596](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/core.clj#L595-L596)</ins>
+            └── <ins>[core.clj:631-632](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/core.clj#L631-L632)</ins>
 </pre>
 
 -->
@@ -106,12 +106,12 @@ The API data for this symbol:
            "cljs.core/doall"
            "cljs.core/iterate"],
  :full-name-encode "cljs.core/lazy-seq",
- :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core.LazySeq nil false (fn [] ~@body)))",
+ :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core/LazySeq nil false (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/core.clj",
-          :lines [595 596]},
+          :lines [631 632]},
  :full-name "cljs.core/lazy-seq",
  :clj-symbol "clojure.core/lazy-seq"}
 

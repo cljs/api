@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L1034-L1037):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L447-L450):
 
 ```clj
 (defmethod parse 'do
@@ -33,11 +33,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:1034-1037](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/compiler.clj#L1034-L1037)</ins>
+            └── <ins>[analyzer.clj:447-450](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/analyzer.clj#L447-L450)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [block (analyze-block env exprs)]\n    (merge {:env env :op :do :form form :children (block-children block)} block)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1236",
-          :filename "src/clj/cljs/compiler.clj",
-          :lines [1034 1037]},
+          :tag "r1424",
+          :filename "src/clj/cljs/analyzer.clj",
+          :lines [447 450]},
  :full-name "special/do",
  :full-name-encode "special/do",
  :clj-symbol "clojure.core/do",

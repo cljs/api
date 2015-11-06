@@ -22,28 +22,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L417-L424):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L530-L537):
 
 ```clj
 (defn maybe-read-tagged-type
   [rdr initch]
-  (let [tag  (read-symbol rdr initch)
-        form (read rdr true nil false)
-        pfn  (get @*tag-table* (name tag))]
-    (if pfn
-      (pfn form)
-      (reader-error rdr "Could not find tag parser for " (name tag) (pr-str @*tag-table*)))))
+  (let [tag  (read-symbol rdr initch)]
+    (if-let [pfn (get @*tag-table* (name tag))]
+      (pfn (read rdr true nil false))
+      (reader-error rdr
+                    "Could not find tag parser for " (name tag)
+                    " in " (pr-str (keys @*tag-table*))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:417-424](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L417-L424)</ins>
+            └── <ins>[reader.cljs:530-537](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L530-L537)</ins>
 </pre>
 
 -->
@@ -86,12 +86,12 @@ The API data for this symbol:
  :name "maybe-read-tagged-type",
  :type "function",
  :signature ["[rdr initch]"],
- :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag  (read-symbol rdr initch)\n        form (read rdr true nil false)\n        pfn  (get @*tag-table* (name tag))]\n    (if pfn\n      (pfn form)\n      (reader-error rdr \"Could not find tag parser for \" (name tag) (pr-str @*tag-table*)))))",
+ :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag  (read-symbol rdr initch)]\n    (if-let [pfn (get @*tag-table* (name tag))]\n      (pfn (read rdr true nil false))\n      (reader-error rdr\n                    \"Could not find tag parser for \" (name tag)\n                    \" in \" (pr-str (keys @*tag-table*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [417 424]},
+          :lines [530 537]},
  :full-name "cljs.reader/maybe-read-tagged-type",
  :full-name-encode "cljs.reader/maybe-read-tagged-type",
  :history [["+" "0.0-1236"]]}

@@ -22,16 +22,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L91-L100):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl.clj#L93-L102):
 
 ```clj
 (defn load-stream [repl-env filename stream]
   (with-open [r (io/reader stream)]
-    (let [env {:ns (@comp/namespaces comp/*cljs-ns*) :context :statement :locals {}}
+    (let [env (ana/empty-env)
           pbr (clojure.lang.LineNumberingPushbackReader. r)
           eof (Object.)]
       (loop [r (read pbr false eof false)]
-        (let [env (assoc env :ns (@comp/namespaces comp/*cljs-ns*))]
+        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]
           (when-not (identical? eof r)
             (evaluate-form repl-env env filename r)
             (recur (read pbr false eof false))))))))
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:91-100](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl.clj#L91-L100)</ins>
+            └── <ins>[repl.clj:93-102](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl.clj#L93-L102)</ins>
 </pre>
 
 -->
@@ -88,12 +88,12 @@ The API data for this symbol:
  :name "load-stream",
  :type "function",
  :signature ["[repl-env filename stream]"],
- :source {:code "(defn load-stream [repl-env filename stream]\n  (with-open [r (io/reader stream)]\n    (let [env {:ns (@comp/namespaces comp/*cljs-ns*) :context :statement :locals {}}\n          pbr (clojure.lang.LineNumberingPushbackReader. r)\n          eof (Object.)]\n      (loop [r (read pbr false eof false)]\n        (let [env (assoc env :ns (@comp/namespaces comp/*cljs-ns*))]\n          (when-not (identical? eof r)\n            (evaluate-form repl-env env filename r)\n            (recur (read pbr false eof false))))))))",
+ :source {:code "(defn load-stream [repl-env filename stream]\n  (with-open [r (io/reader stream)]\n    (let [env (ana/empty-env)\n          pbr (clojure.lang.LineNumberingPushbackReader. r)\n          eof (Object.)]\n      (loop [r (read pbr false eof false)]\n        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n          (when-not (identical? eof r)\n            (evaluate-form repl-env env filename r)\n            (recur (read pbr false eof false))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/repl.clj",
-          :lines [91 100]},
+          :lines [93 102]},
  :full-name "cljs.repl/load-stream",
  :full-name-encode "cljs.repl/load-stream",
  :history [["+" "0.0-927"]]}

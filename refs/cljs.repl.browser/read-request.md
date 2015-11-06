@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L160-L164):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L161-L165):
 
 ```clj
 (defn read-request [rdr]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:160-164](https://github.com/clojure/clojurescript/blob/r1236/src/clj/cljs/repl/browser.clj#L160-L164)</ins>
+                └── <ins>[browser.clj:161-165](https://github.com/clojure/clojurescript/blob/r1424/src/clj/cljs/repl/browser.clj#L161-L165)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn read-request [rdr]\n  (let [line (.readLine rdr)]\n    (cond (.startsWith line \"POST\") (read-post line rdr)\n          (.startsWith line \"GET\") (read-get line rdr)\n          :else {:method :unknown :content line})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [160 164]},
+          :lines [161 165]},
  :full-name "cljs.repl.browser/read-request",
  :full-name-encode "cljs.repl.browser/read-request",
  :history [["+" "0.0-927"]]}

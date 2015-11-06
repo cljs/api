@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5631-L5635):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6073-L6077):
 
 ```clj
 (defn pr-sequential [print-one begin sep end opts coll]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5631-5635](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L5631-L5635)</ins>
+            └── <ins>[core.cljs:6073-6077](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L6073-L6077)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential [print-one begin sep end opts coll]\n  (concat [begin]\n          (flatten1\n            (interpose [sep] (map #(print-one % opts) coll)))\n          [end]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5631 5635]},
+          :lines [6073 6077]},
  :full-name "cljs.core/pr-sequential",
  :full-name-encode "cljs.core/pr-sequential",
  :history [["+" "0.0-927"]]}

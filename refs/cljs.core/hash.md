@@ -16,6 +16,9 @@
  <samp>
 (__hash__ o)<br>
 </samp>
+ <samp>
+(__hash__ o check-cache)<br>
+</samp>
 
 ---
 
@@ -25,22 +28,26 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L731-L732):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L849-L854):
 
 ```clj
-(defn hash [o]
-  (-hash o))
+(defn hash
+  ([o] (hash o true))
+  ([o ^boolean check-cache]
+     (if (and ^boolean (goog/isString o) check-cache) 
+       (check-string-hash-cache o)
+       (-hash o))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:731-732](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L731-L732)</ins>
+            └── <ins>[core.cljs:849-854](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L849-L854)</ins>
 </pre>
 
 -->
@@ -84,16 +91,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "hash",
- :signature ["[o]"],
+ :signature ["[o]" "[o check-cache]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/hash",
- :source {:code "(defn hash [o]\n  (-hash o))",
+ :source {:code "(defn hash\n  ([o] (hash o true))\n  ([o ^boolean check-cache]\n     (if (and ^boolean (goog/isString o) check-cache) \n       (check-string-hash-cache o)\n       (-hash o))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [731 732]},
+          :lines [849 854]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash"}
 

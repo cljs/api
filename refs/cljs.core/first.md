@@ -61,16 +61,16 @@ argument. If coll is nil, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L514-L523):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L616-L625):
 
 ```clj
 (defn first
   [coll]
-  (when (coercive-not= coll nil)
+  (when-not (nil? coll)
     (if (satisfies? ISeq coll)
       (-first coll)
       (let [s (seq coll)]
-        (when (coercive-not= s nil)
+        (when-not (nil? s)
           (-first s))))))
 ```
 
@@ -78,11 +78,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:514-523](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L514-L523)</ins>
+            └── <ins>[core.cljs:616-625](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L616-L625)</ins>
 </pre>
 
 -->
@@ -137,12 +137,12 @@ The API data for this symbol:
            "cljs.core/take"
            "cljs.core/ffirst"],
  :full-name-encode "cljs.core/first",
- :source {:code "(defn first\n  [coll]\n  (when (coercive-not= coll nil)\n    (if (satisfies? ISeq coll)\n      (-first coll)\n      (let [s (seq coll)]\n        (when (coercive-not= s nil)\n          (-first s))))))",
+ :source {:code "(defn first\n  [coll]\n  (when-not (nil? coll)\n    (if (satisfies? ISeq coll)\n      (-first coll)\n      (let [s (seq coll)]\n        (when-not (nil? s)\n          (-first s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [514 523]},
+          :lines [616 625]},
  :examples [{:id "40e413",
              :content "```clj\n(first [1 2 3])\n;;=> 1\n\n(first [])\n;;=> nil\n```"}],
  :full-name "cljs.core/first",

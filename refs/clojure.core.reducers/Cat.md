@@ -22,15 +22,15 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/core/reducers.cljs#L182-L202):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L182-L202):
 
 ```clj
 (deftype Cat [cnt left right]
-  clojure.lang.Counted
-  (count [_] cnt)
+  cljs.core/ICounted
+  (-count [_] cnt)
 
-  clojure.lang.Seqable
-  (seq [_] (concat (seq left) (seq right)))
+  cljs.core/ISeqable
+  (-seq [_] (concat (seq left) (seq right)))
   
   cljs.core/IReduce
   (-reduce [this f1] (-reduce this f1 (f1)))
@@ -52,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:182-202](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/clojure/core/reducers.cljs#L182-L202)</ins>
+                └── <ins>[reducers.cljs:182-202](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/clojure/core/reducers.cljs#L182-L202)</ins>
 </pre>
 
 -->
@@ -100,10 +100,10 @@ The API data for this symbol:
  :name "Cat",
  :type "type",
  :signature ["[cnt left right]"],
- :source {:code "(deftype Cat [cnt left right]\n  clojure.lang.Counted\n  (count [_] cnt)\n\n  clojure.lang.Seqable\n  (seq [_] (concat (seq left) (seq right)))\n  \n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  #_\n  CollFold\n  #_\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
+ :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n  \n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  #_\n  CollFold\n  #_\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [182 202]},
  :full-name "clojure.core.reducers/Cat",

@@ -65,25 +65,26 @@ Return the last item in coll, in linear time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L576-L581):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680):
 
 ```clj
 (defn last
   [s]
-  (if (next s)
-    (recur (next s))
-    (first s)))
+  (let [sn (next s)]
+    (if-not (nil? sn)
+      (recur sn)
+      (first s))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:576-581](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L576-L581)</ins>
+            └── <ins>[core.cljs:674-680](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L674-L680)</ins>
 </pre>
 
 -->
@@ -137,12 +138,12 @@ The API data for this symbol:
            "cljs.core/butlast"
            "cljs.core/take-last"],
  :full-name-encode "cljs.core/last",
- :source {:code "(defn last\n  [s]\n  (if (next s)\n    (recur (next s))\n    (first s)))",
+ :source {:code "(defn last\n  [s]\n  (let [sn (next s)]\n    (if-not (nil? sn)\n      (recur sn)\n      (first s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [576 581]},
+          :lines [674 680]},
  :examples [{:id "eb0836",
              :content "```clj\n(last [1 2 3])\n;;=> 3\n\n(last [1 2])\n;;=> 2\n\n(last [1])\n;;=> 1\n\n(last [])\n;;=> nil\n```"}],
  :full-name "cljs.core/last",

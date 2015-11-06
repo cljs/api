@@ -65,16 +65,16 @@ argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L525-L536):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L627-L638):
 
 ```clj
-(defn rest
+(defn ^seq rest
   [coll]
-  (if (coercive-not= coll nil)
+  (if-not (nil? coll)
     (if (satisfies? ISeq coll)
       (-rest coll)
       (let [s (seq coll)]
-        (if (coercive-not= s nil)
+        (if-not (nil? s)
           (-rest s)
           ())))
     ()))
@@ -84,11 +84,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:525-536](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L525-L536)</ins>
+            └── <ins>[core.cljs:627-638](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L627-L638)</ins>
 </pre>
 
 -->
@@ -131,6 +131,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns a possibly empty sequence of the items after the first item.\n\nCalls `seq` on its argument.",
+ :return-type seq,
  :ns "cljs.core",
  :name "rest",
  :signature ["[coll]"],
@@ -141,12 +142,12 @@ The API data for this symbol:
            "cljs.core/drop"
            "cljs.core/pop"],
  :full-name-encode "cljs.core/rest",
- :source {:code "(defn rest\n  [coll]\n  (if (coercive-not= coll nil)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if (coercive-not= s nil)\n          (-rest s)\n          ())))\n    ()))",
+ :source {:code "(defn ^seq rest\n  [coll]\n  (if-not (nil? coll)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if-not (nil? s)\n          (-rest s)\n          ())))\n    ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [525 536]},
+          :lines [627 638]},
  :examples [{:id "0869af",
              :content "```clj\n(rest [1 2 3])\n;;=> (2 3)\n\n(rest [1 2])\n;;=> (2)\n\n(rest [1])\n;;=> ()\n\n(rest [])\n;;=> ()\n```"}],
  :full-name "cljs.core/rest",

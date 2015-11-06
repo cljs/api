@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L69-L71):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L70-L72):
 
 ```clj
 (defn reader-error
   [rdr & msg]
-  (throw (apply str msg)))
+  (throw (js/Error. (apply str msg))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:69-71](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L69-L71)</ins>
+            └── <ins>[reader.cljs:70-72](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L70-L72)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "reader-error",
  :type "function",
  :signature ["[rdr & msg]"],
- :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (apply str msg)))",
+ :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (js/Error. (apply str msg))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [69 71]},
+          :lines [70 72]},
  :full-name "cljs.reader/reader-error",
  :full-name-encode "cljs.reader/reader-error",
  :history [["+" "0.0-927"]]}

@@ -25,13 +25,13 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L4251-L4352):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L4678-L4779):
 
 ```clj
-(deftype TransientHashMap [^:mutable edit
+(deftype TransientHashMap [^:mutable ^boolean edit
                            ^:mutable root
                            ^:mutable count
-                           ^:mutable has-nil?
+                           ^:mutable ^boolean has-nil?
                            ^:mutable nil-val]
   Object
   (conj! [tcoll o]
@@ -56,7 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
               (do (set! count (inc count))
                   (set! has-nil? true)))
             tcoll)
-        (let [added-leaf? (array false)
+        (let [added-leaf? (Box. false)
               node        (-> (if (nil? root)
                                 cljs.core.BitmapIndexedNode/EMPTY
                                 root)
@@ -64,7 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
           (if (identical? node root)
             nil
             (set! root node))
-          (if (aget added-leaf? 0)
+          (if ^boolean (.-val added-leaf?)
             (set! count (inc count)))
           tcoll))
       (throw (js/Error. "assoc! after persistent!"))))
@@ -80,7 +80,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
           tcoll)
         (if (nil? root)
           tcoll
-          (let [removed-leaf? (array false)
+          (let [removed-leaf? (Box. false)
                 node (.inode-without! root edit 0 (hash k) k removed-leaf?)]
             (if (identical? node root)
               nil
@@ -109,7 +109,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
         nil-val)
       (if (nil? root)
         nil
-        (nth (.inode-find root 0 (hash k) k) 1))))
+        (.inode-lookup root 0 (hash k) k))))
 
   (-lookup [tcoll k not-found]
     (if (nil? k)
@@ -118,7 +118,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
         not-found)
       (if (nil? root)
         not-found
-        (nth (.inode-find root 0 (hash k) k (array nil not-found)) 1))))
+        (.inode-lookup root 0 (hash k) k not-found))))
 
   ITransientCollection
   (-conj! [tcoll val] (.conj! tcoll val))
@@ -136,11 +136,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4251-4352](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L4251-L4352)</ins>
+            └── <ins>[core.cljs:4678-4779](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/core.cljs#L4678-L4779)</ins>
 </pre>
 
 -->
@@ -188,12 +188,12 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "type",
  :full-name-encode "cljs.core/TransientHashMap",
- :source {:code "(deftype TransientHashMap [^:mutable edit\n                           ^:mutable root\n                           ^:mutable count\n                           ^:mutable has-nil?\n                           ^:mutable nil-val]\n  Object\n  (conj! [tcoll o]\n    (if edit\n      (if (satisfies? IMapEntry o)\n        (.assoc! tcoll (key o) (val o))\n        (loop [es (seq o) tcoll tcoll]\n          (if-let [e (first es)]\n            (recur (next es)\n                   (.assoc! tcoll (key e) (val e)))\n            tcoll)))\n      (throw (js/Error. \"conj! after persistent\"))))\n\n  (assoc! [tcoll k v]\n    (if edit\n      (if (nil? k)\n        (do (if (identical? nil-val v)\n              nil\n              (set! nil-val v))\n            (if has-nil?\n              nil\n              (do (set! count (inc count))\n                  (set! has-nil? true)))\n            tcoll)\n        (let [added-leaf? (array false)\n              node        (-> (if (nil? root)\n                                cljs.core.BitmapIndexedNode/EMPTY\n                                root)\n                              (.inode-assoc! edit 0 (hash k) k v added-leaf?))]\n          (if (identical? node root)\n            nil\n            (set! root node))\n          (if (aget added-leaf? 0)\n            (set! count (inc count)))\n          tcoll))\n      (throw (js/Error. \"assoc! after persistent!\"))))\n\n  (without! [tcoll k]\n    (if edit\n      (if (nil? k)\n        (if has-nil?\n          (do (set! has-nil? false)\n              (set! nil-val nil)\n              (set! count (dec count))\n              tcoll)\n          tcoll)\n        (if (nil? root)\n          tcoll\n          (let [removed-leaf? (array false)\n                node (.inode-without! root edit 0 (hash k) k removed-leaf?)]\n            (if (identical? node root)\n              nil\n              (set! root node))\n            (if (aget removed-leaf? 0)\n              (set! count (dec count)))\n            tcoll)))\n      (throw (js/Error. \"dissoc! after persistent!\"))))\n\n  (persistent! [tcoll]\n    (if edit\n      (do (set! edit nil)\n          (PersistentHashMap. nil count root has-nil? nil-val nil))\n      (throw (js/Error. \"persistent! called twice\"))))\n\n  ICounted\n  (-count [coll]\n    (if edit\n      count\n      (throw (js/Error. \"count after persistent!\"))))\n\n  ILookup\n  (-lookup [tcoll k]\n    (if (nil? k)\n      (if has-nil?\n        nil-val)\n      (if (nil? root)\n        nil\n        (nth (.inode-find root 0 (hash k) k) 1))))\n\n  (-lookup [tcoll k not-found]\n    (if (nil? k)\n      (if has-nil?\n        nil-val\n        not-found)\n      (if (nil? root)\n        not-found\n        (nth (.inode-find root 0 (hash k) k (array nil not-found)) 1))))\n\n  ITransientCollection\n  (-conj! [tcoll val] (.conj! tcoll val))\n\n  (-persistent! [tcoll] (.persistent! tcoll))\n\n  ITransientAssociative\n  (-assoc! [tcoll key val] (.assoc! tcoll key val))\n\n  ITransientMap\n  (-dissoc! [tcoll key] (.without! tcoll key)))",
+ :source {:code "(deftype TransientHashMap [^:mutable ^boolean edit\n                           ^:mutable root\n                           ^:mutable count\n                           ^:mutable ^boolean has-nil?\n                           ^:mutable nil-val]\n  Object\n  (conj! [tcoll o]\n    (if edit\n      (if (satisfies? IMapEntry o)\n        (.assoc! tcoll (key o) (val o))\n        (loop [es (seq o) tcoll tcoll]\n          (if-let [e (first es)]\n            (recur (next es)\n                   (.assoc! tcoll (key e) (val e)))\n            tcoll)))\n      (throw (js/Error. \"conj! after persistent\"))))\n\n  (assoc! [tcoll k v]\n    (if edit\n      (if (nil? k)\n        (do (if (identical? nil-val v)\n              nil\n              (set! nil-val v))\n            (if has-nil?\n              nil\n              (do (set! count (inc count))\n                  (set! has-nil? true)))\n            tcoll)\n        (let [added-leaf? (Box. false)\n              node        (-> (if (nil? root)\n                                cljs.core.BitmapIndexedNode/EMPTY\n                                root)\n                              (.inode-assoc! edit 0 (hash k) k v added-leaf?))]\n          (if (identical? node root)\n            nil\n            (set! root node))\n          (if ^boolean (.-val added-leaf?)\n            (set! count (inc count)))\n          tcoll))\n      (throw (js/Error. \"assoc! after persistent!\"))))\n\n  (without! [tcoll k]\n    (if edit\n      (if (nil? k)\n        (if has-nil?\n          (do (set! has-nil? false)\n              (set! nil-val nil)\n              (set! count (dec count))\n              tcoll)\n          tcoll)\n        (if (nil? root)\n          tcoll\n          (let [removed-leaf? (Box. false)\n                node (.inode-without! root edit 0 (hash k) k removed-leaf?)]\n            (if (identical? node root)\n              nil\n              (set! root node))\n            (if (aget removed-leaf? 0)\n              (set! count (dec count)))\n            tcoll)))\n      (throw (js/Error. \"dissoc! after persistent!\"))))\n\n  (persistent! [tcoll]\n    (if edit\n      (do (set! edit nil)\n          (PersistentHashMap. nil count root has-nil? nil-val nil))\n      (throw (js/Error. \"persistent! called twice\"))))\n\n  ICounted\n  (-count [coll]\n    (if edit\n      count\n      (throw (js/Error. \"count after persistent!\"))))\n\n  ILookup\n  (-lookup [tcoll k]\n    (if (nil? k)\n      (if has-nil?\n        nil-val)\n      (if (nil? root)\n        nil\n        (.inode-lookup root 0 (hash k) k))))\n\n  (-lookup [tcoll k not-found]\n    (if (nil? k)\n      (if has-nil?\n        nil-val\n        not-found)\n      (if (nil? root)\n        not-found\n        (.inode-lookup root 0 (hash k) k not-found))))\n\n  ITransientCollection\n  (-conj! [tcoll val] (.conj! tcoll val))\n\n  (-persistent! [tcoll] (.persistent! tcoll))\n\n  ITransientAssociative\n  (-assoc! [tcoll key val] (.assoc! tcoll key val))\n\n  ITransientMap\n  (-dissoc! [tcoll key] (.without! tcoll key)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4251 4352]},
+          :lines [4678 4779]},
  :full-name "cljs.core/TransientHashMap",
  :clj-symbol "clojure.lang/TransientHashMap"}
 

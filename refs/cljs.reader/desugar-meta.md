@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L302-L308):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L343-L349):
 
 ```clj
 (defn desugar-meta
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
+clojurescript @ r1424
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:302-308](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L302-L308)</ins>
+            └── <ins>[reader.cljs:343-349](https://github.com/clojure/clojurescript/blob/r1424/src/cljs/cljs/reader.cljs#L343-L349)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn desugar-meta\n  [f]\n  (cond\n   (symbol? f) {:tag f}\n   (string? f) {:tag f}\n   (keyword? f) {f true}\n   :else f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1236",
+          :tag "r1424",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [302 308]},
+          :lines [343 349]},
  :full-name "cljs.reader/desugar-meta",
  :full-name-encode "cljs.reader/desugar-meta",
  :history [["+" "0.0-927"]]}
