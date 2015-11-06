@@ -27,7 +27,7 @@ Evaluate a JavaScript string in the Node REPL process.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/repl/node.clj#L50-L65):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl/node.clj#L50-L65):
 
 ```clj
 (defn node-eval
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2755
+clojurescript @ r2758
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:50-65](https://github.com/clojure/clojurescript/blob/r2755/src/clj/cljs/repl/node.clj#L50-L65)</ins>
+                └── <ins>[node.clj:50-65](https://github.com/clojure/clojurescript/blob/r2758/src/clj/cljs/repl/node.clj#L50-L65)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn node-eval\n  [repl-env js]\n  (let [{:keys [in out]} @(:socket repl-env)]\n    ;; escape backslash for Node.js under Windows\n    (write out (string/replace js \"\\\\\" \"\\\\\\\\\"))\n    (let [result (json/read-str\n                   (read-response in) :key-fn keyword)]\n      (condp = (:status result)\n        \"success\"\n        {:status :success\n         :value (:value result)}\n\n        \"exception\"\n        {:status :exception\n         :value (:value result)}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2755",
+          :tag "r2758",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [50 65]},
  :full-name "cljs.repl.node/node-eval",

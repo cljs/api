@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/cljs/core.cljs#L699-L700):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/core.cljs#L699-L700):
 
 ```clj
 (defn cloneable? [value]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2755/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2755
+clojurescript @ r2758
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:699-700](https://github.com/clojure/clojurescript/blob/r2755/src/cljs/cljs/core.cljs#L699-L700)</ins>
+            └── <ins>[core.cljs:699-700](https://github.com/clojure/clojurescript/blob/r2758/src/cljs/cljs/core.cljs#L699-L700)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn cloneable? [value]\n  (satisfies? ICloneable value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2755",
+          :tag "r2758",
           :filename "src/cljs/cljs/core.cljs",
           :lines [699 700]},
  :full-name "cljs.core/cloneable?",
