@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1552__ [all](HISTORY.md)</td>
-<td>2012-12-03</td>
+<td>__0.0-1576__ [all](HISTORY.md)</td>
+<td>2013-01-27</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.4.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-1552__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1576__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -37,40 +37,64 @@ __Library API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/Fn](refs/cljs.core/Fn.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/IEncodeClojure](refs/cljs.core/IEncodeClojure.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/IEncodeJS](refs/cljs.core/IEncodeJS.md)</samp></td>
+<td><samp>[cljs.core/ExceptionInfo](refs/cljs.core/ExceptionInfo.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/clj->js](refs/cljs.core/clj-GTjs.md)</samp></td>
+<td><samp>[cljs.core/ex-cause](refs/cljs.core/ex-cause.md)</samp></td>
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/js-mod](refs/cljs.core/js-mod.md)</samp></td>
+<td><samp>[cljs.core/ex-data](refs/cljs.core/ex-data.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-info](refs/cljs.core/ex-info.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ex-message](refs/cljs.core/ex-message.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/\*default-data-reader-fn\*](refs/cljs.reader/STARdefault-data-reader-fnSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/deregister-default-tag-parser!](refs/cljs.reader/deregister-default-tag-parserBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/register-default-tag-parser!](refs/cljs.reader/register-default-tag-parserBANG.md)</samp></td>
 </tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
+</td>
+<td><samp>[~~cljs.repl.rhino/loaded-libs~~](refs/cljs.repl.rhino/loaded-libs.md)</samp></td>
+</tr>
 </table>
 
 

@@ -51,7 +51,7 @@ Return a set that is the union of the input sets
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L19-L29):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/set.cljs#L19-L29):
 
 ```clj
 (defn union
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:19-29](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/set.cljs#L19-L29)</ins>
+            └── <ins>[set.cljs:19-29](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/set.cljs#L19-L29)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn union\n  ([] #{})\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s1) (count s2))\n       (reduce conj s2 s1)\n       (reduce conj s1 s2)))\n  ([s1 s2 & sets]\n     (let [bubbled-sets (bubble-max-key count (conj sets s2 s1))]\n       (reduce into (first bubbled-sets) (rest bubbled-sets)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/clojure/set.cljs",
           :lines [19 29]},
  :full-name "clojure.set/union",

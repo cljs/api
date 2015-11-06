@@ -62,7 +62,7 @@ map m as its metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L863-L867):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L863-L867):
 
 ```clj
 (defn with-meta
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:863-867](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L863-L867)</ins>
+            └── <ins>[core.cljs:863-867](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L863-L867)</ins>
 </pre>
 
 -->
@@ -131,7 +131,7 @@ The API data for this symbol:
  :source {:code "(defn with-meta\n  [o meta]\n  (-with-meta o meta))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [863 867]},
  :examples [{:id "f189d4",

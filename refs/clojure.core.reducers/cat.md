@@ -38,7 +38,7 @@ with (zero? (count x)). See also foldcat.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L204-L221):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/core/reducers.cljs#L204-L221):
 
 ```clj
 (defn cat
@@ -59,12 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:204-221](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/clojure/core/reducers.cljs#L204-L221)</ins>
+                └── <ins>[reducers.cljs:204-221](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/clojure/core/reducers.cljs#L204-L221)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn cat\n  ([] (array))\n  ([ctor]\n     (fn\n       ([] (ctor))\n       ([left right] (cat left right))))\n  ([left right]\n     (cond\n       (zero? (count left)) right\n       (zero? (count right)) left\n       :else\n       (Cat. (+ (count left) (count right)) left right))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [204 221]},
  :full-name "clojure.core.reducers/cat",

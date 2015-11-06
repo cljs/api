@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl.clj#L21-L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl.clj#L21-L25):
 
 ```clj
 (defprotocol IJavaScriptEnv
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:21-25](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl.clj#L21-L25)</ins>
+            └── <ins>[repl.clj:21-25](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl.clj#L21-L25)</ins>
 </pre>
 
 -->
@@ -81,7 +81,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IJavaScriptEnv\n  (-setup [this] \"initialize the environment\")\n  (-evaluate [this filename line js] \"evaluate a javascript string\")\n  (-load [this ns url] \"load code at url into the environment\")\n  (-tear-down [this] \"dispose of the environment\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/clj/cljs/repl.clj",
           :lines [21 25]},
  :methods [{:name "-setup",

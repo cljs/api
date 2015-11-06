@@ -34,13 +34,13 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1518-L1524):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1518-L1524):
 
 ```clj
 (defn keyword
   ([name] (cond (keyword? name) name
-                (symbol? name) (str* "\uFDD0" "'" (subs name 2))
-                :else (str* "\uFDD0" "'" name)))
+                (symbol? name) (str* "\uFDD0" ":" (subs name 2))
+                :else (str* "\uFDD0" ":" name)))
   ([ns name] (keyword (str* ns "/" name))))
 ```
 
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1518-1524](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1518-L1524)</ins>
+            └── <ins>[core.cljs:1518-1524](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1518-L1524)</ins>
 </pre>
 
 -->
@@ -100,10 +100,10 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/keyword",
- :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \"'\" (subs name 2))\n                :else (str* \"\\uFDD0\" \"'\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
+ :source {:code "(defn keyword\n  ([name] (cond (keyword? name) name\n                (symbol? name) (str* \"\\uFDD0\" \":\" (subs name 2))\n                :else (str* \"\\uFDD0\" \":\" name)))\n  ([ns name] (keyword (str* ns \"/\" name))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1518 1524]},
  :full-name "cljs.core/keyword",

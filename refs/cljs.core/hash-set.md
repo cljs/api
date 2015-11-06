@@ -41,7 +41,7 @@ Any equal keys are handled as if by repeated uses of `conj`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5815-L5822):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5817-L5824):
 
 ```clj
 (defn hash-set
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5815-5822](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5815-L5822)</ins>
+            └── <ins>[core.cljs:5817-5824](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5817-L5824)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defn hash-set\n  ([] cljs.core.PersistentHashSet/EMPTY)\n  ([& keys]\n    (loop [in (seq keys)\n           out (transient cljs.core.PersistentHashSet/EMPTY)]\n      (if (seq in)\n        (recur (next in) (conj! out (first in)))\n        (persistent! out)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5815 5822]},
+          :lines [5817 5824]},
  :full-name "cljs.core/hash-set",
  :clj-symbol "clojure.core/hash-set"}
 

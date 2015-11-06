@@ -22,28 +22,31 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L530-L537):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/reader.cljs#L533-L543):
 
 ```clj
 (defn maybe-read-tagged-type
   [rdr initch]
-  (let [tag  (read-symbol rdr initch)]
-    (if-let [pfn (get @*tag-table* (name tag))]
-      (pfn (read rdr true nil false))
-      (reader-error rdr
-                    "Could not find tag parser for " (name tag)
-                    " in " (pr-str (keys @*tag-table*))))))
+  (let [tag (read-symbol rdr initch)
+        pfn (get @*tag-table* (str tag))
+        dfn @*default-data-reader-fn*]
+    (cond
+     pfn (pfn (read rdr true nil false))
+     dfn (dfn tag (read rdr true nil false))
+     :else (reader-error rdr
+                         "Could not find tag parser for " (str tag)
+                         " in " (pr-str (keys @*tag-table*))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:530-537](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/reader.cljs#L530-L537)</ins>
+            └── <ins>[reader.cljs:533-543](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/reader.cljs#L533-L543)</ins>
 </pre>
 
 -->
@@ -86,12 +89,12 @@ The API data for this symbol:
  :name "maybe-read-tagged-type",
  :type "function",
  :signature ["[rdr initch]"],
- :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag  (read-symbol rdr initch)]\n    (if-let [pfn (get @*tag-table* (name tag))]\n      (pfn (read rdr true nil false))\n      (reader-error rdr\n                    \"Could not find tag parser for \" (name tag)\n                    \" in \" (pr-str (keys @*tag-table*))))))",
+ :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag (read-symbol rdr initch)\n        pfn (get @*tag-table* (str tag))\n        dfn @*default-data-reader-fn*]\n    (cond\n     pfn (pfn (read rdr true nil false))\n     dfn (dfn tag (read rdr true nil false))\n     :else (reader-error rdr\n                         \"Could not find tag parser for \" (str tag)\n                         \" in \" (pr-str (keys @*tag-table*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [530 537]},
+          :lines [533 543]},
  :full-name "cljs.reader/maybe-read-tagged-type",
  :full-name-encode "cljs.reader/maybe-read-tagged-type",
  :history [["+" "0.0-1236"]]}

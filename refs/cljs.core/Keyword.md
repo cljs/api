@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1781-L1792):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1781-L1792):
 
 ```clj
 (deftype Keyword [k]
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1781-1792](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1781-L1792)</ins>
+            └── <ins>[core.cljs:1781-1792](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1781-L1792)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(deftype Keyword [k]\n  IFn\n  (invoke [_ coll]\n    (when-not (nil? coll)\n      (let [strobj (.-strobj coll)]\n        (if (nil? strobj)\n          (-lookup coll k nil)\n          (aget strobj k)))))\n  (invoke [_ coll not-found]\n    (if (nil? coll)\n      not-found\n      (-lookup coll k not-found))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1781 1792]},
  :full-name "cljs.core/Keyword",

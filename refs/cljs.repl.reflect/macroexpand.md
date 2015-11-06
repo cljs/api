@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/reflect.clj#L32-L37):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/reflect.clj#L32-L37):
 
 ```clj
 (defn macroexpand [form]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[reflect.clj:32-37](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/reflect.clj#L32-L37)</ins>
+                └── <ins>[reflect.clj:32-37](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/reflect.clj#L32-L37)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn macroexpand [form]\n  \"Fully expands a cljs macro form.\"\n  (let [mform (analyzer/macroexpand-1 {} form)]\n    (if (identical? form mform)\n      mform\n      (macroexpand mform))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/clj/cljs/repl/reflect.clj",
           :lines [32 37]},
  :full-name "cljs.repl.reflect/macroexpand",

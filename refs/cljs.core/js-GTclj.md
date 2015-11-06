@@ -75,7 +75,7 @@ strings to keywords.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6957-L6963):
 
 ```clj
 (defn js->clj
@@ -87,11 +87,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6955-6961](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6955-L6961)</ins>
+            └── <ins>[core.cljs:6957-6963](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6957-L6963)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(defn js->clj\n  [x & opts]\n  (-js->clj x (apply array-map opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6955 6961]},
+          :lines [6957 6963]},
  :examples [{:id "61d263",
              :content "Parse a JSON string:\n\n```clj\n(def json \"{\\\"foo\\\": 1, \\\"bar\\\": 2, \\\"baz\\\": [1,2,3]}\")\n(def a (.parse js/JSON json))\n;;=> #js {:foo 1, :bar 2, :baz #js [1 2 3]}\n```\n\nConvert JSON data `a` to ClojureScript data:\n\n```clj\n(js->clj a)\n;;=> {\"foo\" 1, \"bar\" 2, \"baz\" [1 2 3]}\n\n(js->clj a :keywordize-keys true)\n;;=> {:foo 1, :bar 2, :baz [1 2 3]}\n```"}],
  :full-name "cljs.core/js->clj",

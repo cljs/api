@@ -61,7 +61,7 @@ Clear bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1382-L1385):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1382-L1385):
 
 ```clj
 (defn bit-clear
@@ -73,18 +73,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1382-1385](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1382-L1385)</ins>
+            └── <ins>[core.cljs:1382-1385](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1382-L1385)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L320-L321):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L320-L321):
 
 ```clj
 (defmacro bit-clear [x n]
@@ -95,11 +95,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:320-321](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L320-L321)</ins>
+            └── <ins>[core.clj:320-321](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L320-L321)</ins>
 </pre>
 -->
 
@@ -150,13 +150,13 @@ The API data for this symbol:
  :source {:code "(defn bit-clear\n  [x n]\n  (cljs.core/bit-clear x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1382 1385]},
  :extra-sources [{:code "(defmacro bit-clear [x n]\n  (list 'js* \"(~{} & ~(1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1552",
+                  :tag "r1576",
                   :filename "src/clj/cljs/core.clj",
                   :lines [320 321]}],
  :examples [{:id "0f6748",

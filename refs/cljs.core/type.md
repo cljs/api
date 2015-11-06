@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L371-L373):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L371-L373):
 
 ```clj
 (defn type [x]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:371-373](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L371-L373)</ins>
+            └── <ins>[core.cljs:371-373](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L371-L373)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn type [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [371 373]},
  :full-name "cljs.core/type",

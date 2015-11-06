@@ -52,12 +52,12 @@ Catches and handles JavaScript exceptions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L856-L884):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L856-L884):
 
 ```clj
 (defmacro try
   [& forms]
-  (let [catch? #(and (list? %) (= (first %) 'catch))
+  (let [catch? #(and (seq? %) (= (first %) 'catch))
         [body catches] (split-with (complement catch?) forms)
         [catches fin] (split-with catch? catches)
         e (gensym "e")]
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:856-884](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L856-L884)</ins>
+            └── <ins>[core.clj:856-884](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L856-L884)</ins>
 </pre>
 
 -->
@@ -135,10 +135,10 @@ The API data for this symbol:
  :type "special form",
  :related ["special/try" "special/catch" "special/throw"],
  :full-name-encode "special/finally",
- :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (list? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
+ :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (seq? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/clj/cljs/core.clj",
           :lines [856 884]},
  :full-name "special/finally",

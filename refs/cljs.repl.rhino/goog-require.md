@@ -11,7 +11,7 @@
 
 
  <samp>
-(__goog-require__ rule)<br>
+(__goog-require__ repl-env rule)<br>
 </samp>
 
 ---
@@ -22,11 +22,11 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L69-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/rhino.clj#L67-L83):
 
 ```clj
-(defn goog-require [rule]
-  (when-not (contains? @loaded-libs rule)
+(defn goog-require [repl-env rule]
+  (when-not (contains? @(:loaded-libs repl-env) rule)
     (let [repl-env @current-repl-env
           path (string/replace (comp/munge rule) \. java.io.File/separatorChar)
           cljs-path (str path ".cljs")
@@ -41,19 +41,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
         (if-let [res (io/resource js-path)]
           (-eval (io/reader res) repl-env js-path 1)
           (throw (Exception. (str "Cannot find " cljs-path " or " js-path " in classpath")))))
-      (swap! loaded-libs conj rule))))
+      (swap! (:loaded-libs repl-env) conj rule))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:69-85](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L69-L85)</ins>
+                └── <ins>[rhino.clj:67-83](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/repl/rhino.clj#L67-L83)</ins>
 </pre>
 
 -->
@@ -95,13 +95,13 @@ The API data for this symbol:
 {:ns "cljs.repl.rhino",
  :name "goog-require",
  :type "function",
- :signature ["[rule]"],
- :source {:code "(defn goog-require [rule]\n  (when-not (contains? @loaded-libs rule)\n    (let [repl-env @current-repl-env\n          path (string/replace (comp/munge rule) \\. java.io.File/separatorChar)\n          cljs-path (str path \".cljs\")\n          js-path (str \"goog/\"\n                       (-eval (str \"goog.dependencies_.nameToPath['\" rule \"']\")\n                              repl-env\n                              \"<cljs repl>\"\n                              1))]\n      (if-let [res (io/resource cljs-path)]\n        (binding [ana/*cljs-ns* 'cljs.user]\n          (repl/load-stream repl-env res))\n        (if-let [res (io/resource js-path)]\n          (-eval (io/reader res) repl-env js-path 1)\n          (throw (Exception. (str \"Cannot find \" cljs-path \" or \" js-path \" in classpath\")))))\n      (swap! loaded-libs conj rule))))",
+ :signature ["[repl-env rule]"],
+ :source {:code "(defn goog-require [repl-env rule]\n  (when-not (contains? @(:loaded-libs repl-env) rule)\n    (let [repl-env @current-repl-env\n          path (string/replace (comp/munge rule) \\. java.io.File/separatorChar)\n          cljs-path (str path \".cljs\")\n          js-path (str \"goog/\"\n                       (-eval (str \"goog.dependencies_.nameToPath['\" rule \"']\")\n                              repl-env\n                              \"<cljs repl>\"\n                              1))]\n      (if-let [res (io/resource cljs-path)]\n        (binding [ana/*cljs-ns* 'cljs.user]\n          (repl/load-stream repl-env res))\n        (if-let [res (io/resource js-path)]\n          (-eval (io/reader res) repl-env js-path 1)\n          (throw (Exception. (str \"Cannot find \" cljs-path \" or \" js-path \" in classpath\")))))\n      (swap! (:loaded-libs repl-env) conj rule))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [69 85]},
+          :lines [67 83]},
  :full-name "cljs.repl.rhino/goog-require",
  :full-name-encode "cljs.repl.rhino/goog-require",
  :history [["+" "0.0-927"]]}

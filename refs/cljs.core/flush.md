@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6235-L6236):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6237-L6238):
 
 ```clj
 (defn flush [] ;stub
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6235-6236](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6235-L6236)</ins>
+            └── <ins>[core.cljs:6237-6238](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6237-L6238)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn flush [] ;stub\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6235 6236]},
+          :lines [6237 6238]},
  :full-name "cljs.core/flush",
  :clj-symbol "clojure.core/flush"}
 

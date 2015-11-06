@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6231-L6233):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6233-L6235):
 
 ```clj
 (defn string-print [x]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6231-6233](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6231-L6233)</ins>
+            └── <ins>[core.cljs:6233-6235](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6233-L6235)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn string-print [x]\n  (*print-fn* x)\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6231 6233]},
+          :lines [6233 6235]},
  :full-name "cljs.core/string-print",
  :full-name-encode "cljs.core/string-print",
  :history [["+" "0.0-927"]]}

@@ -54,7 +54,7 @@ Bitwise complement
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1392-L1394):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1392-L1394):
 
 ```clj
 (defn bit-not
@@ -65,18 +65,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1392-1394](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L1392-L1394)</ins>
+            └── <ins>[core.cljs:1392-1394](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L1392-L1394)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L296-L297):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L296-L297):
 
 ```clj
 (defmacro bit-not [x]
@@ -87,11 +87,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:296-297](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/core.clj#L296-L297)</ins>
+            └── <ins>[core.clj:296-297](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/core.clj#L296-L297)</ins>
 </pre>
 -->
 
@@ -141,13 +141,13 @@ The API data for this symbol:
  :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1392 1394]},
  :extra-sources [{:code "(defmacro bit-not [x]\n  (list 'js* \"(~ ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1552",
+                  :tag "r1576",
                   :filename "src/clj/cljs/core.clj",
                   :lines [296 297]}],
  :examples [{:id "d4c5e3",

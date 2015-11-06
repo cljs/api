@@ -54,7 +54,7 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5824-L5827):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5826-L5829):
 
 ```clj
 (defn set
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5824-5827](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L5824-L5827)</ins>
+            └── <ins>[core.cljs:5826-5829](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L5826-L5829)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defn set\n  [coll]\n  (apply hash-set coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5824 5827]},
+          :lines [5826 5829]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

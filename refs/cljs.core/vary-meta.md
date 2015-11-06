@@ -62,7 +62,7 @@ Returns an object of the same type and value as obj, with
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2194-L2198):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2194-L2198):
 
 ```clj
 (defn vary-meta
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2194-2198](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2194-L2198)</ins>
+            └── <ins>[core.cljs:2194-2198](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2194-L2198)</ins>
 </pre>
 
 -->
@@ -131,7 +131,7 @@ The API data for this symbol:
  :source {:code "(defn vary-meta\n [obj f & args]\n (with-meta obj (apply f (meta obj) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2194 2198]},
  :examples [{:id "8cca62",

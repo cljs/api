@@ -20,24 +20,30 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L456-L459):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L447-L456):
 
 ```clj
 (defmethod parse 'do
   [op env [_ & exprs :as form] _]
-  (let [block (analyze-block env exprs)]
-    (merge {:env env :op :do :form form :children (block-children block)} block)))
+  (let [statements (disallowing-recur
+                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))
+        ret (if (<= (count exprs) 1)
+              (analyze env (first exprs))
+              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]
+    {:env env :op :do :form form
+     :statements statements :ret ret
+     :children (conj (vec statements) ret)}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:456-459](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/analyzer.clj#L456-L459)</ins>
+            └── <ins>[analyzer.clj:447-456](https://github.com/clojure/clojurescript/blob/r1576/src/clj/cljs/analyzer.clj#L447-L456)</ins>
 </pre>
 
 -->
@@ -81,12 +87,12 @@ The API data for this symbol:
 {:ns "special",
  :name "do",
  :type "special form",
- :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [block (analyze-block env exprs)]\n    (merge {:env env :op :do :form form :children (block-children block)} block)))",
+ :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [456 459]},
+          :lines [447 456]},
  :full-name "special/do",
  :full-name-encode "special/do",
  :clj-symbol "clojure.core/do",

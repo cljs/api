@@ -53,12 +53,6 @@ Rhino REPL (JS on Java 6+)
 </tr>
 <tr>
 <td></td>
-<td><samp>[loaded-libs](../cljs.repl.rhino/loaded-libs.md)</samp></td>
-<td><samp>var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[repl-env](../cljs.repl.rhino/repl-env.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -89,6 +83,24 @@ Rhino REPL (JS on Java 6+)
 </tr>
 </table>
 
+---
+
+###### Symbols removed or no longer public:
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+<tr>
+<td></td>
+<td><samp>[~~loaded-libs~~](../cljs.repl.rhino/loaded-libs.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1576"><img valign="middle" alt="[×] 0.0-1576" title="Removed in 0.0-1576" src="https://img.shields.io/badge/×-0.0--1576-red.svg"></a> </td>
+</tr>
+</table>
 
 ---
 

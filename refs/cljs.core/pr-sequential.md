@@ -28,7 +28,7 @@ old IPrintable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6209-L6216):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6211-L6218):
 
 ```clj
 (defn ^:deprecated pr-sequential
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6209-6216](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6209-L6216)</ins>
+            └── <ins>[core.cljs:6211-6218](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6211-L6218)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn ^:deprecated pr-sequential\n  [print-one begin sep end opts coll]\n  (concat [begin]\n          (flatten1\n            (interpose [sep] (map #(print-one % opts) coll)))\n          [end]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6209 6216]},
+          :lines [6211 6218]},
  :full-name "cljs.core/pr-sequential",
  :docstring "Do not use this.  It is kept for backwards compatibility with the\nold IPrintable protocol."}
 

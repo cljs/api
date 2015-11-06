@@ -51,7 +51,7 @@ or the not-found value if supplied.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2727-L2744):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2727-L2746):
 
 ```clj
 (defn get-in
@@ -62,10 +62,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
             m m
             ks (seq ks)]
        (if ks
-         (let [m (get m (first ks) sentinel)]
-           (if (identical? sentinel m)
-             not-found
-             (recur sentinel m (next ks))))
+         (if (not (satisfies? ILookup m))
+           not-found
+           (let [m (get m (first ks) sentinel)]
+             (if (identical? sentinel m)
+               not-found
+               (recur sentinel m (next ks)))))
          m))))
 ```
 
@@ -73,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2727-2744](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L2727-L2744)</ins>
+            └── <ins>[core.cljs:2727-2746](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L2727-L2746)</ins>
 </pre>
 
 -->
@@ -130,12 +132,12 @@ The API data for this symbol:
            "cljs.core/find"
            "cljs.core/get"],
  :full-name-encode "cljs.core/get-in",
- :source {:code "(defn get-in\n  ([m ks]\n     (reduce get m ks))\n  ([m ks not-found]\n     (loop [sentinel lookup-sentinel\n            m m\n            ks (seq ks)]\n       (if ks\n         (let [m (get m (first ks) sentinel)]\n           (if (identical? sentinel m)\n             not-found\n             (recur sentinel m (next ks))))\n         m))))",
+ :source {:code "(defn get-in\n  ([m ks]\n     (reduce get m ks))\n  ([m ks not-found]\n     (loop [sentinel lookup-sentinel\n            m m\n            ks (seq ks)]\n       (if ks\n         (if (not (satisfies? ILookup m))\n           not-found\n           (let [m (get m (first ks) sentinel)]\n             (if (identical? sentinel m)\n               not-found\n               (recur sentinel m (next ks)))))\n         m))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2727 2744]},
+          :lines [2727 2746]},
  :full-name "cljs.core/get-in",
  :clj-symbol "clojure.core/get-in",
  :docstring "Returns the value in a nested associative structure,\nwhere ks is a sequence of keys. Returns nil if the key is not present,\nor the not-found value if supplied."}

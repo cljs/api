@@ -55,7 +55,7 @@ validator will not be changed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6789-L6797):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6791-L6799):
 
 ```clj
 (defn set-validator!
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
+clojurescript @ r1576
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6789-6797](https://github.com/clojure/clojurescript/blob/r1552/src/cljs/cljs/core.cljs#L6789-L6797)</ins>
+            └── <ins>[core.cljs:6791-6799](https://github.com/clojure/clojurescript/blob/r1576/src/cljs/cljs/core.cljs#L6791-L6799)</ins>
 </pre>
 
 -->
@@ -124,9 +124,9 @@ The API data for this symbol:
  :source {:code "(defn set-validator!\n  [iref val]\n  (set! (.-validator iref) val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1552",
+          :tag "r1576",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6789 6797]},
+          :lines [6791 6799]},
  :full-name "cljs.core/set-validator!",
  :clj-symbol "clojure.core/set-validator!",
  :docstring "Sets the validator-fn for an atom. validator-fn must be nil or a\nside-effect-free fn of one argument, which will be passed the intended\nnew state on any state change. If the new state is unacceptable, the\nvalidator-fn should return false or throw an Error. If the current state\nis not acceptable to the new validator, an Error will be thrown and the\nvalidator will not be changed."}
