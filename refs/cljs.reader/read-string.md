@@ -30,7 +30,7 @@ Reads one object from the string s
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/reader.cljs#L431-L435):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/reader.cljs#L431-L435):
 
 ```clj
 (defn read-string
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1895/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1895
+clojurescript @ r1896
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:431-435](https://github.com/clojure/clojurescript/blob/r1895/src/cljs/cljs/reader.cljs#L431-L435)</ins>
+            └── <ins>[reader.cljs:431-435](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/reader.cljs#L431-L435)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn read-string\n  [s]\n  (let [r (push-back-reader s)]\n    (read r true nil false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1895",
+          :tag "r1896",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [431 435]},
  :full-name "cljs.reader/read-string",
