@@ -88,28 +88,77 @@ To signify an unevaluated list, precede it with a quote:
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L157-L166):
 
 ```clj
-
+(defn- read-list
+  [rdr _]
+  (let [[line column] (when (indexing-reader? rdr)
+                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])
+        the-list (read-delimited \) rdr true)]
+    (if (empty? the-list)
+      '()
+      (with-meta (clojure.lang.PersistentList/create the-list)
+        (when line
+          {:line line :column column})))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:157-166](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L157-L166)</ins>
 </pre>
-
 -->
 
 ---
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L544-L563):
 
+```clj
+(defn- macros [ch]
+  (case ch
+    \" read-string*
+    \: read-keyword
+    \; read-comment
+    \' (wrapping-reader 'quote)
+    \@ (wrapping-reader 'clojure.core/deref)
+    \^ read-meta
+    \` read-syntax-quote ;;(wrapping-reader 'syntax-quote)
+    \~ read-unquote
+    \( read-list
+    \) read-unmatched-delimiter
+    \[ read-vector
+    \] read-unmatched-delimiter
+    \{ read-map
+    \} read-unmatched-delimiter
+    \\ read-char*
+    \% read-arg
+    \# read-dispatch
+    nil))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+tools.reader @ tools.reader-0.7.5
+└── src
+    └── main
+        └── clojure
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:544-563](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L544-L563)</ins>
+</pre>
+-->
+
+---
 
 
 
@@ -144,10 +193,18 @@ The API data for this symbol:
  :type "syntax",
  :related ["syntax/vector" "syntax/quote"],
  :full-name-encode "syntax/list",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn- read-list\n  [rdr _]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])\n        the-list (read-delimited \\) rdr true)]\n    (if (empty? the-list)\n      '()\n      (with-meta (clojure.lang.PersistentList/create the-list)\n        (when line\n          {:line line :column column})))))",
+                  :title "Reader code",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [157 166]}
+                 {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
+                  :title "Reader table",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [544 563]}),
  :usage ["(...)"],
  :examples [{:id "cd26b0",
              :content "The following is a list that is evaluated to create var `a`:\n\n```clj\n(def a 1)\n```\n\nAn empty list is unevaluated and left as an empty list:\n\n```clj\n()\n;;=> ()\n```\n\nTo signify an unevaluated list, precede it with a quote:\n\n```clj\n'(1 2 3)\n;;=> (1 2 3)\n```"}],

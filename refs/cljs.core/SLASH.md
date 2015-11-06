@@ -68,7 +68,7 @@ else returns numerator divided by all of the denominators.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L1407-L1412):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/core.cljs#L1410-L1415):
 
 ```clj
 (defn /
@@ -81,18 +81,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1407-1412](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L1407-L1412)</ins>
+            └── <ins>[core.cljs:1410-1415](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/core.cljs#L1410-L1415)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/core.clj#L346-L349):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/core.clj#L346-L349):
 
 ```clj
 (defmacro /
@@ -105,11 +105,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:346-349](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/core.clj#L346-L349)</ins>
+            └── <ins>[core.clj:346-349](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/core.clj#L346-L349)</ins>
 </pre>
 -->
 
@@ -160,13 +160,13 @@ The API data for this symbol:
  :source {:code "(defn /\n  ([x] (/ 1 x))\n  ([x y] (cljs.core/divide x y)) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce / (/ x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1407 1412]},
+          :lines [1410 1415]},
  :extra-sources [{:code "(defmacro /\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1847",
+                  :tag "r1853",
                   :filename "src/clj/cljs/core.clj",
                   :lines [346 349]}],
  :examples [{:id "824bb7",

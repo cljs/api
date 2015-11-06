@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L160-L169):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L158-L167):
 
 ```clj
 (defn escape-char-map [c]
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:160-169](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L160-L169)</ins>
+            └── <ins>[reader.cljs:158-167](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L158-L167)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn escape-char-map [c]\n  (cond\n   (identical? c \\t) \"\\t\"\n   (identical? c \\r) \"\\r\"\n   (identical? c \\n) \"\\n\"\n   (identical? c \\\\) \\\\\n   (identical? c \\\") \\\"\n   (identical? c \\b) \"\\b\"\n   (identical? c \\f) \"\\f\"\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [160 169]},
+          :lines [158 167]},
  :full-name "cljs.reader/escape-char-map",
  :full-name-encode "cljs.reader/escape-char-map",
  :history [["+" "0.0-927"]]}

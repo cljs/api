@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L371-L372):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/core.cljs#L371-L372):
 
 ```clj
 (defn ^boolean symbol? [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:371-372](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/core.cljs#L371-L372)</ins>
+            └── <ins>[core.cljs:371-372](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/core.cljs#L371-L372)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/core.clj#L258-L259):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/core.clj#L258-L259):
 
 ```clj
 (defmacro symbol? [x]
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:258-259](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/core.clj#L258-L259)</ins>
+            └── <ins>[core.clj:258-259](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/core.clj#L258-L259)</ins>
 </pre>
 -->
 
@@ -112,13 +112,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol? [x]\n  (instance? Symbol x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/core.cljs",
           :lines [371 372]},
  :extra-sources [{:code "(defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1847",
+                  :tag "r1853",
                   :filename "src/clj/cljs/core.clj",
                   :lines [258 259]}],
  :full-name "cljs.core/symbol?",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L375-L377):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L373-L375):
 
 ```clj
 (defn read-regex
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:375-377](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L375-L377)</ins>
+            └── <ins>[reader.cljs:373-375](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L373-L375)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-string* rdr ch) re-pattern))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [375 377]},
+          :lines [373 375]},
  :full-name "cljs.reader/read-regex",
  :full-name-encode "cljs.reader/read-regex",
  :history [["+" "0.0-927"]]}

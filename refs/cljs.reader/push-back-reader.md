@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L30-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L28-L30):
 
 ```clj
 (defn push-back-reader [s]
   "Creates a StringPushbackReader from a given string"
-  (StringPushbackReader. s (atom 0) (atom nil)))
+  (StringPushbackReader. s (array) -1))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L30-L32)</ins>
+            └── <ins>[reader.cljs:28-30](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L28-L30)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "push-back-reader",
  :type "function",
  :signature ["[s]"],
- :source {:code "(defn push-back-reader [s]\n  \"Creates a StringPushbackReader from a given string\"\n  (StringPushbackReader. s (atom 0) (atom nil)))",
+ :source {:code "(defn push-back-reader [s]\n  \"Creates a StringPushbackReader from a given string\"\n  (StringPushbackReader. s (array) -1))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [30 32]},
+          :lines [28 30]},
  :full-name "cljs.reader/push-back-reader",
  :full-name-encode "cljs.reader/push-back-reader",
  :history [["+" "0.0-927"]]}

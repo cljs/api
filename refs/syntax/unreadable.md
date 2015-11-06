@@ -76,28 +76,39 @@ js/console
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576):
 
 ```clj
-
+(defn- dispatch-macros [ch]
+  (case ch
+    \^ read-meta                ;deprecated
+    \' (wrapping-reader 'var)
+    \( read-fn
+    \= read-eval
+    \{ read-set
+    \< (throwing-reader "Unreadable form")
+    \" read-regex
+    \! read-comment
+    \_ read-discard
+    nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:565-576](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576)</ins>
 </pre>
-
 -->
 
 ---
-
 
 
 
@@ -131,10 +142,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "syntax",
  :full-name-encode "syntax/unreadable",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
+                  :title "Reader table",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [565 576]}),
  :usage ["#<...>"],
  :examples [{:id "e0a6cd",
              :content "Unreadable forms will throw an exception when read:\n\n```clj\n#<foo>\n;; clojure.lang.ExceptionInfo: Unreadable form\n```\n\nYou can create an unreadable form for a custom type:\n\n```clj\n(deftype Foo [])\n(Foo.)\n;;=> #<[object Object]>\n\n(deftype Foo [x]\n  Object\n  (toString [_]\n    (str \"Foo: \" x)))\n(Foo. 1)\n;;=> #<Foo: 1>\n```\n\nSome examples of unreadable JavaScript values:\n\n```clj\nMath/sin\n;;=> #<function sin() { [native code] }>\n\njs/console\n;;=> #<[object Object]>\n```"}],

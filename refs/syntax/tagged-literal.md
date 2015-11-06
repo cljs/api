@@ -111,28 +111,39 @@ literal UUID:
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L614-L625):
 
 ```clj
-
+(defn- read-tagged [rdr initch]
+  (let [tag (read rdr true nil false)]
+    (if-not (symbol? tag)
+      (reader-error rdr "Reader tag must be a symbol"))
+    (if-let [f (or (*data-readers* tag)
+                   (default-data-readers tag))]
+      (read-tagged* rdr tag f)
+      (if (.contains (name tag) ".")
+        (read-ctor rdr tag)
+        (if-let [f *default-data-reader-fn*]
+          (f tag (read rdr true nil true))
+          (reader-error rdr "No reader function for tag " (name tag)))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:614-625](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L614-L625)</ins>
 </pre>
-
 -->
 
 ---
-
 
 
 
@@ -167,10 +178,12 @@ The API data for this symbol:
  :type "syntax",
  :related ["syntax/dispatch"],
  :full-name-encode "syntax/tagged-literal",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources [{:code "(defn- read-tagged [rdr initch]\n  (let [tag (read rdr true nil false)]\n    (if-not (symbol? tag)\n      (reader-error rdr \"Reader tag must be a symbol\"))\n    (if-let [f (or (*data-readers* tag)\n                   (default-data-readers tag))]\n      (read-tagged* rdr tag f)\n      (if (.contains (name tag) \".\")\n        (read-ctor rdr tag)\n        (if-let [f *default-data-reader-fn*]\n          (f tag (read rdr true nil true))\n          (reader-error rdr \"No reader function for tag \" (name tag)))))))",
+                  :title "Reader code",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [614 625]}],
  :usage ["#foo ..."],
  :examples [{:id "e84f6a",
              :content "(Tagged literals are printed as themselves, just like core syntax literals.)\n\nliteral JavaScript object:\n\n```clj\n#js {:foo 1}\n;;=> #js {:foo 1}\n\n(def foo 1)\n#js {:foo foo}\n;;=> #js {:foo 1}\n```\n\nliteral queue:\n\n```clj\n#queue [1 2 3]\n;;=> #queue [1 2 3]\n\n(conj #queue [1 2 3] 4)\n;;=> #queue [1 2 3 4]\n```\n\nliteral instant of time (date):\n\n```clj\n#inst \"2014-10-13\"\n;;=> #inst \"2014-10-13T00:00:00.000-00:00\"\n```\n\nliteral UUID:\n\n```clj\n#uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n;;=> #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n```"}],

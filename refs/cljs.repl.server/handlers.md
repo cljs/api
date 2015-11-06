@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/repl/server.clj#L44):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/repl/server.clj#L44):
 
 ```clj
 (defonce handlers (atom {}))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:44](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/repl/server.clj#L44)</ins>
+                └── <ins>[server.clj:44](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/repl/server.clj#L44)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(defonce handlers (atom {}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [44]},
  :full-name "cljs.repl.server/handlers",

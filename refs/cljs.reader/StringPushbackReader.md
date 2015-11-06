@@ -11,7 +11,7 @@
 
 
  <samp>
-(__StringPushbackReader.__ s index-atom buffer-atom)<br>
+(__StringPushbackReader.__ s buffer idx)<br>
 </samp>
 
 ---
@@ -22,31 +22,30 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L18-L28):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L17-L26):
 
 ```clj
-(deftype StringPushbackReader [s index-atom buffer-atom]
+(deftype StringPushbackReader [s buffer ^:mutable idx]
   PushbackReader
   (read-char [reader]
-             (if (empty? @buffer-atom)
-               (let [idx @index-atom]
-                 (swap! index-atom inc)
-                 (aget s idx))
-               (let [buf @buffer-atom]
-                 (swap! buffer-atom rest)
-                 (first buf))))
-  (unread [reader ch] (swap! buffer-atom #(cons ch %))))
+    (if (zero? (alength buffer))
+      (do
+        (set! idx (inc idx))
+        (aget s idx))
+      (.pop buffer)))
+  (unread [reader ch]
+    (.push buffer ch)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:18-28](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L18-L28)</ins>
+            └── <ins>[reader.cljs:17-26](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L17-L26)</ins>
 </pre>
 
 -->
@@ -88,13 +87,13 @@ The API data for this symbol:
 {:ns "cljs.reader",
  :name "StringPushbackReader",
  :type "type",
- :signature ["[s index-atom buffer-atom]"],
- :source {:code "(deftype StringPushbackReader [s index-atom buffer-atom]\n  PushbackReader\n  (read-char [reader]\n             (if (empty? @buffer-atom)\n               (let [idx @index-atom]\n                 (swap! index-atom inc)\n                 (aget s idx))\n               (let [buf @buffer-atom]\n                 (swap! buffer-atom rest)\n                 (first buf))))\n  (unread [reader ch] (swap! buffer-atom #(cons ch %))))",
+ :signature ["[s buffer idx]"],
+ :source {:code "(deftype StringPushbackReader [s buffer ^:mutable idx]\n  PushbackReader\n  (read-char [reader]\n    (if (zero? (alength buffer))\n      (do\n        (set! idx (inc idx))\n        (aget s idx))\n      (.pop buffer)))\n  (unread [reader ch]\n    (.push buffer ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [18 28]},
+          :lines [17 26]},
  :full-name "cljs.reader/StringPushbackReader",
  :full-name-encode "cljs.reader/StringPushbackReader",
  :history [["+" "0.0-927"]]}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L258-L266):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L256-L264):
 
 ```clj
 (defn read-dispatch
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:258-266](https://github.com/clojure/clojurescript/blob/r1847/src/cljs/cljs/reader.cljs#L258-L266)</ins>
+            └── <ins>[reader.cljs:256-264](https://github.com/clojure/clojurescript/blob/r1853/src/cljs/cljs/reader.cljs#L256-L264)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn read-dispatch\n  [rdr _]\n  (let [ch (read-char rdr)\n        dm (dispatch-macros ch)]\n    (if dm\n      (dm rdr _)\n      (if-let [obj (maybe-read-tagged-type rdr ch)]\n        obj\n        (reader-error rdr \"No dispatch macro for \" ch)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [258 266]},
+          :lines [256 264]},
  :full-name "cljs.reader/read-dispatch",
  :full-name-encode "cljs.reader/read-dispatch",
  :history [["+" "0.0-927"]]}

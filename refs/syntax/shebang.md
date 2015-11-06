@@ -41,28 +41,64 @@ the first line of the file to have a [shebang line](https://en.wikipedia.org/wik
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader/impl/commons.clj#L112-L114):
 
 ```clj
-
+(defn read-comment
+  [rdr & _]
+  (skip-line rdr _))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── reader
+                        └── impl
+                            └── <ins>[commons.clj:112-114](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader/impl/commons.clj#L112-L114)</ins>
 </pre>
-
 -->
 
 ---
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576):
 
+```clj
+(defn- dispatch-macros [ch]
+  (case ch
+    \^ read-meta                ;deprecated
+    \' (wrapping-reader 'var)
+    \( read-fn
+    \= read-eval
+    \{ read-set
+    \< (throwing-reader "Unreadable form")
+    \" read-regex
+    \! read-comment
+    \_ read-discard
+    nil))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+tools.reader @ tools.reader-0.7.5
+└── src
+    └── main
+        └── clojure
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:565-576](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576)</ins>
+</pre>
+-->
+
+---
 
 
 
@@ -96,10 +132,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "syntax",
  :full-name-encode "syntax/shebang",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn read-comment\n  [rdr & _]\n  (skip-line rdr _))",
+                  :title "Reader code",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader/impl/commons.clj",
+                  :lines [112 114]}
+                 {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
+                  :title "Reader table",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [565 576]}),
  :examples [{:id "de569a",
              :content "```clj\n#!/bin/cljs\n;; waits for another form since #!/bin/cljs was ignored.\n\n123 #! this is ignored\n;;=> 123\n```"}],
  :full-name "syntax/shebang",

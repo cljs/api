@@ -113,6 +113,12 @@ a reader to parse text and produce data structures
 </tr>
 <tr>
 <td></td>
+<td><samp>[parse-and-validate-timestamp](../cljs.reader/parse-and-validate-timestamp.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1853"><img valign="middle" alt="[+] 0.0-1853" title="Added in 0.0-1853" src="https://img.shields.io/badge/+-0.0--1853-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[parse-timestamp](../cljs.reader/parse-timestamp.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>

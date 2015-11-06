@@ -58,28 +58,72 @@ See [`auto-gensym`][doc:syntax/auto-gensym].
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L538-L542):
 
 ```clj
-
+(defn- read-syntax-quote
+  [rdr backquote]
+  (binding [gensym-env {}]
+    (-> (read rdr true nil true)
+        syntax-quote*)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:538-542](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L538-L542)</ins>
 </pre>
-
 -->
 
 ---
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L544-L563):
 
+```clj
+(defn- macros [ch]
+  (case ch
+    \" read-string*
+    \: read-keyword
+    \; read-comment
+    \' (wrapping-reader 'quote)
+    \@ (wrapping-reader 'clojure.core/deref)
+    \^ read-meta
+    \` read-syntax-quote ;;(wrapping-reader 'syntax-quote)
+    \~ read-unquote
+    \( read-list
+    \) read-unmatched-delimiter
+    \[ read-vector
+    \] read-unmatched-delimiter
+    \{ read-map
+    \} read-unmatched-delimiter
+    \\ read-char*
+    \% read-arg
+    \# read-dispatch
+    nil))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+tools.reader @ tools.reader-0.7.5
+└── src
+    └── main
+        └── clojure
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:544-563](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L544-L563)</ins>
+</pre>
+-->
+
+---
 
 
 
@@ -117,10 +161,18 @@ The API data for this symbol:
            "syntax/unquote"
            "syntax/unquote-splicing"],
  :full-name-encode "syntax/syntax-quote",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn- read-syntax-quote\n  [rdr backquote]\n  (binding [gensym-env {}]\n    (-> (read rdr true nil true)\n        syntax-quote*)))",
+                  :title "Reader code",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [538 542]}
+                 {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
+                  :title "Reader table",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [544 563]}),
  :examples [{:id "bffbdf",
              :content "```clj\n`foo\n;;=> cljs.user/foo\n\n`foo#\n;;=> foo__20418__auto__\n\n`(def foo 1)\n;;=> (def cljs.user/foo 1)\n```"}],
  :full-name "syntax/syntax-quote",

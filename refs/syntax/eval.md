@@ -58,28 +58,88 @@ The following is the output for the ClojureScript compiler on the JVM:
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L):
+
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L378-L406):
 
 ```clj
+(defn- read-eval
+  [rdr _]
+  (when-not *read-eval*
+    (reader-error rdr "#= not allowed when *read-eval* is false"))
+  (let [o (read rdr true nil true)]
+    (if (symbol? o)
+      (RT/classForName (str ^Symbol o))
+      (if (list? o)
+        (let [fs (first o)
+              o (rest o)
+              fs-name (name fs)]
+          (cond
+           (= fs 'var) (let [vs (first o)]
+                         (RT/var (namespace vs) (name vs)))
+           (.endsWith fs-name ".")
+           (let [args (to-array o)]
+             (-> fs-name (subs 0 (dec (count fs-name)))
+                 RT/classForName (Reflector/invokeConstructor args)))
 
+           (Compiler/namesStaticMember fs)
+           (let [args (to-array o)]
+             (Reflector/invokeStaticMethod (namespace fs) fs-name args))
+
+           :else
+           (let [v (Compiler/maybeResolveIn *ns* fs)]
+             (if (var? v)
+               (apply v o)
+               (reader-error rdr "Can't resolve " fs)))))
+        (throw (IllegalArgumentException. "Unsupported #= form"))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+tools.reader @ tools.reader-0.7.5
 └── src
-    └── jvm
+    └── main
         └── clojure
-            └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/jvm/clojure/lang/LispReader.java#L)</ins>
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:378-406](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L378-L406)</ins>
 </pre>
-
 -->
 
 ---
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576):
 
+```clj
+(defn- dispatch-macros [ch]
+  (case ch
+    \^ read-meta                ;deprecated
+    \' (wrapping-reader 'var)
+    \( read-fn
+    \= read-eval
+    \{ read-set
+    \< (throwing-reader "Unreadable form")
+    \" read-regex
+    \! read-comment
+    \_ read-discard
+    nil))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+tools.reader @ tools.reader-0.7.5
+└── src
+    └── main
+        └── clojure
+            └── clojure
+                └── tools
+                    └── <ins>[reader.clj:565-576](https://github.com/clojure/tools.reader/blob/tools.reader-0.7.5/src/main/clojure/clojure/tools/reader.clj#L565-L576)</ins>
+</pre>
+-->
+
+---
 
 
 
@@ -113,10 +173,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "syntax",
  :full-name-encode "syntax/eval",
- :source {:repo "clojure",
-          :tag "clojure-1.5.1",
-          :filename "src/jvm/clojure/lang/LispReader.java",
-          :lines [nil]},
+ :extra-sources ({:code "(defn- read-eval\n  [rdr _]\n  (when-not *read-eval*\n    (reader-error rdr \"#= not allowed when *read-eval* is false\"))\n  (let [o (read rdr true nil true)]\n    (if (symbol? o)\n      (RT/classForName (str ^Symbol o))\n      (if (list? o)\n        (let [fs (first o)\n              o (rest o)\n              fs-name (name fs)]\n          (cond\n           (= fs 'var) (let [vs (first o)]\n                         (RT/var (namespace vs) (name vs)))\n           (.endsWith fs-name \".\")\n           (let [args (to-array o)]\n             (-> fs-name (subs 0 (dec (count fs-name)))\n                 RT/classForName (Reflector/invokeConstructor args)))\n\n           (Compiler/namesStaticMember fs)\n           (let [args (to-array o)]\n             (Reflector/invokeStaticMethod (namespace fs) fs-name args))\n\n           :else\n           (let [v (Compiler/maybeResolveIn *ns* fs)]\n             (if (var? v)\n               (apply v o)\n               (reader-error rdr \"Can't resolve \" fs)))))\n        (throw (IllegalArgumentException. \"Unsupported #= form\"))))))",
+                  :title "Reader code",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [378 406]}
+                 {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
+                  :title "Reader table",
+                  :repo "tools.reader",
+                  :tag "tools.reader-0.7.5",
+                  :filename "src/main/clojure/clojure/tools/reader.clj",
+                  :lines [565 576]}),
  :usage ["#=..."],
  :examples [{:id "ef1acd",
              :content "```clj\n#=123\n;;=> 123\n\n#=\"foo\"\n;;=> foo\n\n(def foo 1)\n#='foo\n;;=> 1\n```\n\nThe following is the output for the ClojureScript compiler on the JVM:\n\n```clj\n#=(+ 1 2)\n;; java.lang.RuntimeException: Unable to resolve symbol: + in this context\n\n#=(clojure.core/+ 1 2)\n;;=> 3\n```"}],

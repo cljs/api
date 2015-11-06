@@ -3444,6 +3444,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.reader/parse-and-validate-timestamp](refs/cljs.reader/parse-and-validate-timestamp.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/parse-and-validate-timestamp.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.reader/parse-timestamp](refs/cljs.reader/parse-timestamp.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/parse-timestamp.cljsdoc)</td>
 <td></td>

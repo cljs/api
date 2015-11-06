@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1853](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1853)__</td>
+<td>2013-08-05</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.7.5</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-001853syntax">
++2 
+</a>
+</td>
+<td>
+<a href="#user-content-001853library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-001853compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1847](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1847)__</td>
 <td>2013-07-23</td>
 <td><kbd>1.5.1</kbd></td>
@@ -590,6 +613,41 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1853
+
+<a name="001853syntax"></a> __Syntax Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-special symbol-brightgreen.svg">
+</td>
+<td><samp>[NaN](refs/syntax/NaN.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-special symbol-brightgreen.svg">
+</td>
+<td><samp>[Infinity](refs/syntax/Infinity.md)</samp></td>
+</tr>
+</table>
+
+<a name="001853library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/parse-and-validate-timestamp](refs/cljs.reader/parse-and-validate-timestamp.md)</samp></td>
+</tr>
+</table>
+
+<a name="001853compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1847

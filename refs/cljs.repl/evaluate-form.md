@@ -32,7 +32,7 @@ not be readable by the Clojure reader.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/repl.clj#L59-L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/repl.clj#L59-L94):
 
 ```clj
 (defn evaluate-form
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1847/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1847
+clojurescript @ r1853
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:59-94](https://github.com/clojure/clojurescript/blob/r1847/src/clj/cljs/repl.clj#L59-L94)</ins>
+            └── <ins>[repl.clj:59-94](https://github.com/clojure/clojurescript/blob/r1853/src/clj/cljs/repl.clj#L59-L94)</ins>
 </pre>
 
 -->
@@ -127,7 +127,7 @@ The API data for this symbol:
  :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n     (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n     (try\n       (let [ast (ana/analyze env form)\n             js (comp/emit-str ast)\n             wrap-js (comp/emit-str (binding [ana/*cljs-warnings*\n                                              (merge ana/*cljs-warnings*\n                                                {:undeclared false\n                                                 :redef false\n                                                 :dynamic false\n                                                 :fn-var false\n                                                 :fn-arity false})]\n                                   (ana/analyze env (wrap form))))]\n         (when (= (:op ast) :ns)\n           (load-dependencies repl-env (into (vals (:requires ast))\n                                             (distinct (vals (:uses ast))))))\n         (when *cljs-verbose*\n           (print js))\n         (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n           (case (:status ret)\n             ;;we eat ns errors because we know goog.provide() will throw when reloaded\n             ;;TODO - file bug with google, this is bs error\n             ;;this is what you get when you try to 'teach new developers'\n             ;;via errors (goog/base.js 104)\n             :error (display-error ret form)\n             :exception (display-error ret form\n                          #(prn \"Error evaluating:\" form :as js))\n             :success (:value ret))))\n       (catch Throwable ex\n         (.printStackTrace ex)\n         (println (str ex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1847",
+          :tag "r1853",
           :filename "src/clj/cljs/repl.clj",
           :lines [59 94]},
  :full-name "cljs.repl/evaluate-form",
