@@ -88,23 +88,24 @@ Note - not the same as next/butlast.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1059-L1064):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1039-L1045):
 
 ```clj
 (defn pop
   [coll]
-  (-pop coll))
+  (when-not (nil? coll)
+    (-pop coll)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1059-1064](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1059-L1064)</ins>
+            └── <ins>[core.cljs:1039-1045](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1039-L1045)</ins>
 </pre>
 
 -->
@@ -154,12 +155,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/peek" "cljs.core/rest" "cljs.core/conj"],
  :full-name-encode "cljs.core/pop",
- :source {:code "(defn pop\n  [coll]\n  (-pop coll))",
+ :source {:code "(defn pop\n  [coll]\n  (when-not (nil? coll)\n    (-pop coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1059 1064]},
+          :lines [1039 1045]},
  :examples [{:id "6bd9f7",
              :content "With vectors:\n\n```clj\n(pop [1 2 3])\n;;=> [1 2]\n\n(pop [1 2])\n;;=> [1]\n\n(pop [1])\n;;=> []\n\n(pop [])\n;; Error: Can't pop empty vector\n```"}
             {:id "81221f",

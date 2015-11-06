@@ -41,7 +41,7 @@ with (zero? (count x)). See also foldcat.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L207-L224):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L213-L230):
 
 ```clj
 (defn cat
@@ -62,12 +62,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:207-224](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L207-L224)</ins>
+                └── <ins>[reducers.cljs:213-230](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L213-L230)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn cat\n  ([] (array))\n  ([ctor]\n     (fn\n       ([] (ctor))\n       ([left right] (cat left right))))\n  ([left right]\n     (cond\n       (zero? (count left)) right\n       (zero? (count right)) left\n       :else\n       (Cat. (+ (count left) (count right)) left right))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [207 224]},
+          :lines [213 230]},
  :full-name "clojure.core.reducers/cat",
  :clj-symbol "clojure.core.reducers/cat",
  :docstring "A high-performance combining fn that yields the catenation of the\nreduced values. The result is reducible, foldable, seqable and\ncounted, providing the identity collections are reducible, seqable\nand counted. The single argument version will build a combining fn\nwith the supplied identity constructor. Tests for identity\nwith (zero? (count x)). See also foldcat."}

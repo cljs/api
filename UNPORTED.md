@@ -95,10 +95,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/\*print-level\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-level*)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/\*read-eval\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*read-eval*)</samp></td>
 </tr>
 <tr>
@@ -715,10 +711,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/sequence](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sequence)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/set-agent-send-executor!](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set-agent-send-executor!)</samp></td>
 </tr>
 <tr>
@@ -744,10 +736,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/slurp](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/slurp)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/sorted?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted?)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

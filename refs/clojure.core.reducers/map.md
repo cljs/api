@@ -33,7 +33,7 @@ Applies f to every value in the reduction of coll. Foldable.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L88-L96):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L96-L104):
 
 ```clj
 (defcurried map
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:88-96](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L88-L96)</ins>
+                └── <ins>[reducers.cljs:96-104](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L96-L104)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defcurried map\n  \"Applies f to every value in the reduction of coll. Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (f1 ret (f k v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [88 96]},
+          :lines [96 104]},
  :full-name "clojure.core.reducers/map",
  :clj-symbol "clojure.core.reducers/map",
  :docstring "Applies f to every value in the reduction of coll. Foldable."}

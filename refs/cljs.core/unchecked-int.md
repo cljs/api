@@ -30,10 +30,10 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1627-L1630):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1625-L1628):
 
 ```clj
-(defn ^number unchecked-int
+(defn unchecked-int
   [x]
   (fix x))
 ```
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1627-1630](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1627-L1630)</ins>
+            └── <ins>[core.cljs:1625-1628](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1625-L1628)</ins>
 </pre>
 
 -->
@@ -88,19 +88,18 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:return-type number,
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "unchecked-int",
  :signature ["[x]"],
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core/unchecked-int",
- :source {:code "(defn ^number unchecked-int\n  [x]\n  (fix x))",
+ :source {:code "(defn unchecked-int\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1627 1630]},
+          :lines [1625 1628]},
  :full-name "cljs.core/unchecked-int",
  :clj-symbol "clojure.core/unchecked-int",
  :docstring "Coerce to int by stripping decimal places."}

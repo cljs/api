@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/repl.clj#L105-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/repl.clj#L132-L137):
 
 ```clj
 (defn load-file
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:105-110](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/repl.clj#L105-L110)</ins>
+            └── <ins>[repl.clj:132-137](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/repl.clj#L132-L137)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn load-file\n  [repl-env f]\n  (binding [ana/*cljs-ns* 'cljs.user]\n    (let [res (if (= \\/ (first f)) f (io/resource f))]\n      (assert res (str \"Can't find \" f \" in classpath\"))\n      (load-stream repl-env f res))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/clj/cljs/repl.clj",
-          :lines [105 110]},
+          :lines [132 137]},
  :full-name "cljs.repl/load-file",
  :full-name-encode "cljs.repl/load-file",
  :history [["+" "0.0-927"]]}

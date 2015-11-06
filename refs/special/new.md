@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/analyzer.clj#L852-L875):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/analyzer.clj#L883-L906):
 
 ```clj
 (defmethod parse 'new
@@ -53,11 +53,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:852-875](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/analyzer.clj#L852-L875)</ins>
+            └── <ins>[analyzer.clj:883-906](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/analyzer.clj#L883-L906)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))\n         known-num-fields (:num-fields (resolve-existing-var env ctor))\n         argc (count args)]\n     (when (and (:fn-arity *cljs-warnings*)\n                (not (-> ctor meta :internal-ctor))\n                known-num-fields (not= known-num-fields argc))\n       (warning :fn-arity env {:argc argc :ctor ctor}))\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)\n      :tag (let [name (-> ctorexpr :info :name)]\n             (or ('{js/Object object\n                    js/String string\n                    js/Array  array\n                    js/Number number\n                    js/Function function\n                    js/Boolean boolean} name)\n                 name))})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [852 875]},
+          :lines [883 906]},
  :full-name "special/new",
  :full-name-encode "special/new",
  :clj-symbol "clojure.core/new",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L185-L205):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L193-L211):
 
 ```clj
 (deftype Cat [cnt left right]
@@ -34,7 +34,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 
   cljs.core/ISeqable
   (-seq [_] (concat (seq left) (seq right)))
-  
+
   cljs.core/IReduce
   (-reduce [this f1] (-reduce this f1 (f1)))
   (-reduce
@@ -43,9 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
      right f1
      (-reduce left f1 init)))
 
-  #_
   CollFold
-  #_
   (coll-fold
     [this n combinef reducef]
     (-reduce this reducef)))
@@ -55,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:185-205](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/clojure/core/reducers.cljs#L185-L205)</ins>
+                └── <ins>[reducers.cljs:193-211](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/clojure/core/reducers.cljs#L193-L211)</ins>
 </pre>
 
 -->
@@ -108,12 +106,12 @@ The API data for this symbol:
  :history [["+" "0.0-1236"]],
  :type "type",
  :full-name-encode "clojure.core.reducers/Cat",
- :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n  \n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  #_\n  CollFold\n  #_\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
+ :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n\n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  CollFold\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/clojure/core/reducers.cljs",
-          :lines [185 205]},
+          :lines [193 211]},
  :full-name "clojure.core.reducers/Cat",
  :clj-symbol "clojure.core.reducers/Cat"}
 

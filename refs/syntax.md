@@ -238,6 +238,12 @@ available in [edn]
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 </tr>
 <tr valign=top>
+<td></td>
+<td></td>
+<td><samp>[#js literal](syntax/js-literal.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2120"><img valign="middle" alt="[+] 0.0-2120" title="Added in 0.0-2120" src="https://img.shields.io/badge/+-0.0--2120-lightgrey.svg"></a> </td>
+</tr>
+<tr valign=top>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.org/special_forms#toc18)</td>
 <td></td>
 <td><samp>[destructure \[\]](syntax/destructure-vector.md)</samp></td>

@@ -133,13 +133,16 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L511-L524):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L515-L531):
 
 ```clj
 (defn ^boolean =
   ([x] true)
-  ([x y] (or (identical? x y)
-             ^boolean (-equiv x y)))
+  ([x y]
+    (if (nil? x)
+      (nil? y)
+      (or (identical? x y)
+        ^boolean (-equiv x y))))
   ([x y & more]
      (if (= x y)
        (if (next more)
@@ -152,11 +155,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:511-524](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L511-L524)</ins>
+            └── <ins>[core.cljs:515-531](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L515-L531)</ins>
 </pre>
 
 -->
@@ -207,12 +210,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/==" "cljs.core/not=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQ",
- :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y)\n             ^boolean (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
+ :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y]\n    (if (nil? x)\n      (nil? y)\n      (or (identical? x y)\n        ^boolean (-equiv x y))))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [511 524]},
+          :lines [515 531]},
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}
             {:id "a2d064",

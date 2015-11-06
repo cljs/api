@@ -60,10 +60,10 @@ Test bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1717-L1720):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1715-L1718):
 
 ```clj
-(defn ^number bit-test
+(defn bit-test
   [x n]
   (cljs.core/bit-test x n))
 ```
@@ -72,18 +72,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1717-1720](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1717-L1720)</ins>
+            └── <ins>[core.cljs:1715-1718](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1715-L1718)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/core.clj#L498-L499):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L501-L502):
 
 ```clj
 (defmacro ^::ana/numeric bit-test [x n]
@@ -94,11 +94,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:498-499](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/core.clj#L498-L499)</ins>
+            └── <ins>[core.clj:501-502](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/core.clj#L501-L502)</ins>
 </pre>
 -->
 
@@ -139,25 +139,24 @@ The API data for this symbol:
 
 ```clj
 {:description "Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.",
- :return-type number,
  :ns "cljs.core",
  :name "bit-test",
  :signature ["[x n]"],
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :full-name-encode "cljs.core/bit-test",
- :source {:code "(defn ^number bit-test\n  [x n]\n  (cljs.core/bit-test x n))",
+ :source {:code "(defn bit-test\n  [x n]\n  (cljs.core/bit-test x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1717 1720]},
+          :lines [1715 1718]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-test [x n]\n  (core/list 'js* \"((~{} & (1 << ~{})) != 0)\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2080",
+                  :tag "r2120",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [498 499]}],
+                  :lines [501 502]}],
  :examples [{:id "f64664",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-test 2r0100 2)\n;;=> true\n\n(bit-test 2r0100 1)\n;;=> false\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-test 4 2)\n;;=> true\n\n(bit-test 4 1)\n;;=> false\n```"}],
  :full-name "cljs.core/bit-test",

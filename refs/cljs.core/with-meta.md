@@ -62,7 +62,7 @@ map m as its metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1033-L1045):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1010-L1023):
 
 ```clj
 (defn with-meta
@@ -75,18 +75,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
         (-invoke [_ & args]
           (apply o args)))
       meta)
-    (-with-meta o meta)))
+    (when-not (nil? o)
+      (-with-meta o meta))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1033-1045](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1033-L1045)</ins>
+            └── <ins>[core.cljs:1010-1023](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1010-L1023)</ins>
 </pre>
 
 -->
@@ -136,12 +137,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/alter-meta!" "cljs.core/vary-meta"],
  :full-name-encode "cljs.core/with-meta",
- :source {:code "(defn with-meta\n  [o meta]\n  (if (and (fn? o) (not (satisfies? IWithMeta o)))\n    (with-meta\n      (reify\n        Fn\n        IFn\n        (-invoke [_ & args]\n          (apply o args)))\n      meta)\n    (-with-meta o meta)))",
+ :source {:code "(defn with-meta\n  [o meta]\n  (if (and (fn? o) (not (satisfies? IWithMeta o)))\n    (with-meta\n      (reify\n        Fn\n        IFn\n        (-invoke [_ & args]\n          (apply o args)))\n      meta)\n    (when-not (nil? o)\n      (-with-meta o meta))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1033 1045]},
+          :lines [1010 1023]},
  :examples [{:id "f189d4",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (with-meta a {:bar true}))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:bar true}\n```"}],
  :full-name "cljs.core/with-meta",

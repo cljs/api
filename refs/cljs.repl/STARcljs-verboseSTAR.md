@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/repl.clj#L20):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/repl.clj#L24):
 
 ```clj
 (def ^:dynamic *cljs-verbose* false)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:20](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/repl.clj#L20)</ins>
+            └── <ins>[repl.clj:24](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/repl.clj#L24)</ins>
 </pre>
 
 -->
@@ -76,9 +76,9 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *cljs-verbose* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/clj/cljs/repl.clj",
-          :lines [20]},
+          :lines [24]},
  :full-name "cljs.repl/*cljs-verbose*",
  :full-name-encode "cljs.repl/STARcljs-verboseSTAR",
  :history [["+" "0.0-927"]]}

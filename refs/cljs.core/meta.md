@@ -30,12 +30,13 @@ Returns the metadata of obj, returns nil if there is no metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1047-L1051):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1025-L1030):
 
 ```clj
 (defn meta
   [o]
-  (when (satisfies? IMeta o)
+  (when (and (not (nil? o))
+             (satisfies? IMeta o))
     (-meta o)))
 ```
 
@@ -43,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1047-1051](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1047-L1051)</ins>
+            └── <ins>[core.cljs:1025-1030](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L1025-L1030)</ins>
 </pre>
 
 -->
@@ -95,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/meta",
- :source {:code "(defn meta\n  [o]\n  (when (satisfies? IMeta o)\n    (-meta o)))",
+ :source {:code "(defn meta\n  [o]\n  (when (and (not (nil? o))\n             (satisfies? IMeta o))\n    (-meta o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1047 1051]},
+          :lines [1025 1030]},
  :full-name "cljs.core/meta",
  :clj-symbol "clojure.core/meta",
  :docstring "Returns the metadata of obj, returns nil if there is no metadata."}

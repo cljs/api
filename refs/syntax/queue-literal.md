@@ -68,12 +68,13 @@ Some operations:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/tagged_literals.clj#L4-L7):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/tagged_literals.clj#L4-L8):
 
 ```clj
 (defn read-queue
   [form]
-  (assert (vector? form) "Queue literal expects a vector for its elements.")
+  (when-not (vector? form)
+    (throw (RuntimeException. "Queue literal expects a vector for its elements.")))
   (list 'cljs.core/into 'cljs.core.PersistentQueue.EMPTY form))
 ```
 
@@ -81,33 +82,34 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:4-7](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/tagged_literals.clj#L4-L7)</ins>
+            └── <ins>[tagged_literals.clj:4-8](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/tagged_literals.clj#L4-L8)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/tagged_literals.clj#L27-L30):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/tagged_literals.clj#L44-L48):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
   {'queue read-queue
    'uuid  read-uuid
-   'inst  read-inst})
+   'inst  read-inst
+   'js    read-js})
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
+            └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/tagged_literals.clj#L44-L48)</ins>
 </pre>
 -->
 
@@ -146,18 +148,18 @@ The API data for this symbol:
  :type "tagged literal",
  :related ["syntax/list" "syntax/vector" "syntax/map" "syntax/set"],
  :full-name-encode "syntax/queue-literal",
- :extra-sources ({:code "(defn read-queue\n  [form]\n  (assert (vector? form) \"Queue literal expects a vector for its elements.\")\n  (list 'cljs.core/into 'cljs.core.PersistentQueue.EMPTY form))",
+ :extra-sources ({:code "(defn read-queue\n  [form]\n  (when-not (vector? form)\n    (throw (RuntimeException. \"Queue literal expects a vector for its elements.\")))\n  (list 'cljs.core/into 'cljs.core.PersistentQueue.EMPTY form))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r2080",
+                  :tag "r2120",
                   :filename "src/clj/cljs/tagged_literals.clj",
-                  :lines [4 7]}
-                 {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst})",
+                  :lines [4 8]}
+                 {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r2080",
+                  :tag "r2120",
                   :filename "src/clj/cljs/tagged_literals.clj",
-                  :lines [27 30]}),
+                  :lines [44 48]}),
  :usage ["#queue [...]"],
  :examples [{:id "f81c50",
              :content "```clj\n#queue []\n;;=> #queue []\n\n#queue [1 2 3]\n;;=> #queue [1 2 3]\n```\n\nSome operations:\n\n```clj\n(def q #queue [1 2 3])\n;;=> #queue [1 2 3]\n\n(conj q 4)\n;;=> #queue [1 2 3 4]\n\n(pop q)\n;;=> #queue [2 3]\n\n(peek q)\n;;=> 1\n```"}],

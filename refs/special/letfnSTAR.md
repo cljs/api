@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/analyzer.clj#L730-L755):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/analyzer.clj#L742-L786):
 
 ```clj
 (defmethod parse 'letfn*
@@ -27,22 +27,41 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
   (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))
         names    (keys n->fexpr)
         context  (:context env)
+        ;; first pass to collect information for recursive references
         [meth-env bes]
         (reduce (fn [[{:keys [locals] :as env} bes] n]
-                  (let [be {:name   n
-                            :line (get-line n env)
-                            :column (get-col n env)
-                            :ret-tag (-> n meta :tag)
-                            :local  true
-                            :shadow (locals n)}]
+                  (let [ret-tag (-> n meta :tag)
+                        fexpr (no-warn (analyze env (n->fexpr n)))
+                        be (cond->
+                             {:name n
+                              :fn-var true
+                              :line (get-line n env)
+                              :column (get-col n env)
+                              :local true
+                              :shadow (locals n)
+                              :variadic (:variadic fexpr)
+                              :max-fixed-arity (:max-fixed-arity fexpr)
+                              :method-params (map :params (:methods fexpr))
+                              :methods (:methods fexpr)}
+                             ret-tag (assoc :ret-tag ret-tag))]
                     [(assoc-in env [:locals n] be)
                      (conj bes be)]))
                 [env []] names)
         meth-env (assoc meth-env :context :expr)
-        bes (vec (map (fn [{:keys [name shadow] :as be}]
-                        (let [env (assoc-in meth-env [:locals name] shadow)]
-                          (assoc be :init (analyze env (n->fexpr name)))))
-                      bes))
+        ;; the real pass
+        [meth-env bes]
+        (reduce (fn [[meth-env bes] {:keys [name shadow] :as be}]
+                  (let [env (assoc-in meth-env [:locals name] shadow)
+                        fexpr (analyze env (n->fexpr name))
+                        be' (assoc be
+                              :init fexpr
+                              :variadic (:variadic fexpr)
+                              :max-fixed-arity (:max-fixed-arity fexpr)
+                              :method-params (map :params (:methods fexpr))
+                              :methods (:methods fexpr))]
+                    [(assoc-in env [:locals name] be')
+                     (conj bes be')]))
+          [meth-env []] bes)
         expr (analyze (assoc meth-env :context (if (= :expr context) :return context)) `(do ~@exprs))]
     {:env env :op :letfn :bindings bes :expr expr :form form
      :children (conj (vec (map :init bes)) expr)}))
@@ -52,11 +71,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:730-755](https://github.com/clojure/clojurescript/blob/r2080/src/clj/cljs/analyzer.clj#L730-L755)</ins>
+            └── <ins>[analyzer.clj:742-786](https://github.com/clojure/clojurescript/blob/r2120/src/clj/cljs/analyzer.clj#L742-L786)</ins>
 </pre>
 
 -->
@@ -93,12 +112,12 @@ The API data for this symbol:
 {:ns "special",
  :name "letfn*",
  :type "special form",
- :source {:code "(defmethod parse 'letfn*\n  [op env [_ bindings & exprs :as form] name]\n  (when-not (and (vector? bindings) (even? (count bindings))) \n    (throw (error env \"bindings must be vector of even number of elements\")))\n  (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))\n        names    (keys n->fexpr)\n        context  (:context env)\n        [meth-env bes]\n        (reduce (fn [[{:keys [locals] :as env} bes] n]\n                  (let [be {:name   n\n                            :line (get-line n env)\n                            :column (get-col n env)\n                            :ret-tag (-> n meta :tag)\n                            :local  true\n                            :shadow (locals n)}]\n                    [(assoc-in env [:locals n] be)\n                     (conj bes be)]))\n                [env []] names)\n        meth-env (assoc meth-env :context :expr)\n        bes (vec (map (fn [{:keys [name shadow] :as be}]\n                        (let [env (assoc-in meth-env [:locals name] shadow)]\n                          (assoc be :init (analyze env (n->fexpr name)))))\n                      bes))\n        expr (analyze (assoc meth-env :context (if (= :expr context) :return context)) `(do ~@exprs))]\n    {:env env :op :letfn :bindings bes :expr expr :form form\n     :children (conj (vec (map :init bes)) expr)}))",
+ :source {:code "(defmethod parse 'letfn*\n  [op env [_ bindings & exprs :as form] name]\n  (when-not (and (vector? bindings) (even? (count bindings))) \n    (throw (error env \"bindings must be vector of even number of elements\")))\n  (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))\n        names    (keys n->fexpr)\n        context  (:context env)\n        ;; first pass to collect information for recursive references\n        [meth-env bes]\n        (reduce (fn [[{:keys [locals] :as env} bes] n]\n                  (let [ret-tag (-> n meta :tag)\n                        fexpr (no-warn (analyze env (n->fexpr n)))\n                        be (cond->\n                             {:name n\n                              :fn-var true\n                              :line (get-line n env)\n                              :column (get-col n env)\n                              :local true\n                              :shadow (locals n)\n                              :variadic (:variadic fexpr)\n                              :max-fixed-arity (:max-fixed-arity fexpr)\n                              :method-params (map :params (:methods fexpr))\n                              :methods (:methods fexpr)}\n                             ret-tag (assoc :ret-tag ret-tag))]\n                    [(assoc-in env [:locals n] be)\n                     (conj bes be)]))\n                [env []] names)\n        meth-env (assoc meth-env :context :expr)\n        ;; the real pass\n        [meth-env bes]\n        (reduce (fn [[meth-env bes] {:keys [name shadow] :as be}]\n                  (let [env (assoc-in meth-env [:locals name] shadow)\n                        fexpr (analyze env (n->fexpr name))\n                        be' (assoc be\n                              :init fexpr\n                              :variadic (:variadic fexpr)\n                              :max-fixed-arity (:max-fixed-arity fexpr)\n                              :method-params (map :params (:methods fexpr))\n                              :methods (:methods fexpr))]\n                    [(assoc-in env [:locals name] be')\n                     (conj bes be')]))\n          [meth-env []] bes)\n        expr (analyze (assoc meth-env :context (if (= :expr context) :return context)) `(do ~@exprs))]\n    {:env env :op :letfn :bindings bes :expr expr :form form\n     :children (conj (vec (map :init bes)) expr)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [730 755]},
+          :lines [742 786]},
  :full-name "special/letfn*",
  :full-name-encode "special/letfnSTAR",
  :history [["+" "0.0-1236"]]}

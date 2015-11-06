@@ -54,7 +54,7 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L6246-L6261):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L6244-L6259):
 
 ```clj
 (defn set
@@ -63,7 +63,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
     (cond
       (nil? in) #{}
 
-      (instance? IndexedSeq in)
+      (and (instance? IndexedSeq in) (zero? (.-i in)))
       (set-from-indexed-seq in)
 
       :else
@@ -78,11 +78,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6246-6261](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L6246-L6261)</ins>
+            └── <ins>[core.cljs:6244-6259](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L6244-L6259)</ins>
 </pre>
 
 -->
@@ -146,12 +146,12 @@ The API data for this symbol:
            "clojure.set/rename-keys"
            "clojure.set/map-invert"],
  :full-name-encode "cljs.core/set",
- :source {:code "(defn set\n  [coll]\n  (let [^not-native in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (instance? IndexedSeq in)\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [in in\n              ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (-next in) (-conj! out (-first in)))\n          (-persistent! out))))))",
+ :source {:code "(defn set\n  [coll]\n  (let [^not-native in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (and (instance? IndexedSeq in) (zero? (.-i in)))\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [in in\n              ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (-next in) (-conj! out (-first in)))\n          (-persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6246 6261]},
+          :lines [6244 6259]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

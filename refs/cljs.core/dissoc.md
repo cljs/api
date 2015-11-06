@@ -63,7 +63,7 @@ that does not contain a mapping for key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1018-L1028):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L994-L1005):
 
 ```clj
 (defn dissoc
@@ -71,21 +71,22 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2080/src/c
   ([coll k]
      (-dissoc coll k))
   ([coll k & ks]
-     (let [ret (dissoc coll k)]
-       (if ks
-         (recur ret (first ks) (next ks))
-         ret))))
+    (when-not (nil? coll)
+      (let [ret (dissoc coll k)]
+        (if ks
+          (recur ret (first ks) (next ks))
+          ret)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2080
+clojurescript @ r2120
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1018-1028](https://github.com/clojure/clojurescript/blob/r2080/src/cljs/cljs/core.cljs#L1018-L1028)</ins>
+            └── <ins>[core.cljs:994-1005](https://github.com/clojure/clojurescript/blob/r2120/src/cljs/cljs/core.cljs#L994-L1005)</ins>
 </pre>
 
 -->
@@ -135,12 +136,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/assoc" "cljs.core/disj" "cljs.core/select-keys"],
  :full-name-encode "cljs.core/dissoc",
- :source {:code "(defn dissoc\n  ([coll] coll)\n  ([coll k]\n     (-dissoc coll k))\n  ([coll k & ks]\n     (let [ret (dissoc coll k)]\n       (if ks\n         (recur ret (first ks) (next ks))\n         ret))))",
+ :source {:code "(defn dissoc\n  ([coll] coll)\n  ([coll k]\n     (-dissoc coll k))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (dissoc coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2080",
+          :tag "r2120",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1018 1028]},
+          :lines [994 1005]},
  :examples [{:id "fd6ae9",
              :content "```clj\n(dissoc {:key \"value\" :key2 \"value2\"} :key)\n;;=> {:key2 \"value2\"}\n```"}],
  :full-name "cljs.core/dissoc",
