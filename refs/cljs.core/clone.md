@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L590-L591):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L591-L592):
 
 ```clj
 (defn clone [value]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2261
+clojurescript @ r2268
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:590-591](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L590-L591)</ins>
+            └── <ins>[core.cljs:591-592](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L591-L592)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn clone [value]\n  (-clone value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2261",
+          :tag "r2268",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [590 591]},
+          :lines [591 592]},
  :full-name "cljs.core/clone",
  :full-name-encode "cljs.core/clone",
  :history [["+" "0.0-2134"]]}

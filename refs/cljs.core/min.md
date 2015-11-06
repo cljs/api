@@ -64,7 +64,7 @@ Returns the least of the nums.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1719-L1724):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L1720-L1725):
 
 ```clj
 (defn ^number min
@@ -78,18 +78,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2261
+clojurescript @ r2268
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1719-1724](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1719-L1724)</ins>
+            └── <ins>[core.cljs:1720-1725](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L1720-L1725)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L495-L499):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/core.clj#L495-L499):
 
 ```clj
 (defmacro ^::ana/numeric min
@@ -103,11 +103,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2261
+clojurescript @ r2268
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:495-499](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L495-L499)</ins>
+            └── <ins>[core.clj:495-499](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/core.clj#L495-L499)</ins>
 </pre>
 -->
 
@@ -159,13 +159,13 @@ The API data for this symbol:
  :source {:code "(defn ^number min\n  ([x] x)\n  ([x y] (cljs.core/min x y))\n  ([x y & more]\n   (reduce min (cljs.core/min x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2261",
+          :tag "r2268",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1719 1724]},
+          :lines [1720 1725]},
  :extra-sources [{:code "(defmacro ^::ana/numeric min\n  ([x] x)\n  ([x y] `(let [x# ~x, y# ~y]\n            (~'js* \"((~{} < ~{}) ? ~{} : ~{})\" x# y# x# y#)))\n  ([x y & more] `(min (min ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2261",
+                  :tag "r2268",
                   :filename "src/clj/cljs/core.clj",
                   :lines [495 499]}],
  :examples [{:id "ab2de5",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2252-L2253):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L2253-L2254):
 
 ```clj
 (defn hash-keyword [k]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2261
+clojurescript @ r2268
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2252-2253](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2252-L2253)</ins>
+            └── <ins>[core.cljs:2253-2254](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L2253-L2254)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn hash-keyword [k]\n  (+ (hash-symbol k) 0x9e3779b9))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2261",
+          :tag "r2268",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2252 2253]},
+          :lines [2253 2254]},
  :full-name "cljs.core/hash-keyword",
  :full-name-encode "cljs.core/hash-keyword",
  :history [["+" "0.0-2261"]]}

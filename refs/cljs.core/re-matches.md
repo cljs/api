@@ -35,27 +35,29 @@ Returns the result of (re-find re s) if re fully matches s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6925-L6932):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L7038-L7047):
 
 ```clj
 (defn re-matches
   [re s]
-  (let [matches (.exec re s)]
-    (when (= (first matches) s)
-      (if (== (count matches) 1)
-        (first matches)
-        (vec matches)))))
+  (if (string? s)
+    (let [matches (.exec re s)]
+      (when (= (first matches) s)
+        (if (== (count matches) 1)
+          (first matches)
+          (vec matches))))
+    (throw (js/TypeError. "re-matches must match against a string."))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2261
+clojurescript @ r2268
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6925-6932](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6925-L6932)</ins>
+            └── <ins>[core.cljs:7038-7047](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L7038-L7047)</ins>
 </pre>
 
 -->
@@ -104,12 +106,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/re-matches",
- :source {:code "(defn re-matches\n  [re s]\n  (let [matches (.exec re s)]\n    (when (= (first matches) s)\n      (if (== (count matches) 1)\n        (first matches)\n        (vec matches)))))",
+ :source {:code "(defn re-matches\n  [re s]\n  (if (string? s)\n    (let [matches (.exec re s)]\n      (when (= (first matches) s)\n        (if (== (count matches) 1)\n          (first matches)\n          (vec matches))))\n    (throw (js/TypeError. \"re-matches must match against a string.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2261",
+          :tag "r2268",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6925 6932]},
+          :lines [7038 7047]},
  :full-name "cljs.core/re-matches",
  :clj-symbol "clojure.core/re-matches",
  :docstring "Returns the result of (re-find re s) if re fully matches s."}
