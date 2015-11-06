@@ -52,7 +52,7 @@ Prevent the evaluation of the following form.
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L578-L597):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L578-L597):
 
 ```clj
 (defn- macros [ch]
@@ -81,13 +81,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.0
+tools.reader @ tools.reader-0.8.3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:578-597](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L578-L597)</ins>
+                    └── <ins>[reader.clj:578-597](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L578-L597)</ins>
 </pre>
 -->
 
@@ -129,7 +129,7 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.0",
+                  :tag "tools.reader-0.8.3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [578 597]}),
  :examples [{:id "0d2c26",

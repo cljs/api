@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2108-L2109):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2106-L2107):
 
 ```clj
 (defn ^boolean keyword? [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2108-2109](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2108-L2109)</ins>
+            └── <ins>[core.cljs:2106-2107](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2106-L2107)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L312-L313):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L316-L317):
 
 ```clj
 (defmacro keyword? [x]
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:312-313](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L312-L313)</ins>
+            └── <ins>[core.clj:316-317](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L316-L317)</ins>
 </pre>
 -->
 
@@ -112,15 +112,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean keyword? [x]\n  (instance? Keyword x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2108 2109]},
+          :lines [2106 2107]},
  :extra-sources [{:code "(defmacro keyword? [x]\n  (bool-expr `(instance? Keyword ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2138",
+                  :tag "r2156",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [312 313]}],
+                  :lines [316 317]}],
  :full-name "cljs.core/keyword?",
  :clj-symbol "clojure.core/keyword?"}
 

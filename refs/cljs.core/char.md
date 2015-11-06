@@ -52,7 +52,7 @@ Coerce to char
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1543-L1549):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1544-L1550):
 
 ```clj
 (defn char
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1543-1549](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1543-L1549)</ins>
+            └── <ins>[core.cljs:1544-1550](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1544-L1550)</ins>
 </pre>
 
 -->
@@ -123,9 +123,9 @@ The API data for this symbol:
  :source {:code "(defn char\n  [x]\n  (cond\n    (number? x) (.fromCharCode js/String x)\n    (and (string? x) (== (.-length x) 1)) x\n    :else (throw (js/Error. \"Argument to char must be a character or number\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1543 1549]},
+          :lines [1544 1550]},
  :examples [{:id "4e1a56",
              :content "```clj\n(char 81)\n;;=> \"Q\"\n\n(char \"Q\")\n;;=> \"Q\"\n\n(char \"foo\")\n;; Error: Argument to char must be a character or number\n```"}],
  :full-name "cljs.core/char",

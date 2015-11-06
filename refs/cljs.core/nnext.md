@@ -40,7 +40,7 @@ Same as (next (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L813-L816):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L814-L817):
 
 ```clj
 (defn nnext
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:813-816](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L813-L816)</ins>
+            └── <ins>[core.cljs:814-817](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L814-L817)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn nnext\n  [coll]\n  (next (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [813 816]},
+          :lines [814 817]},
  :full-name "cljs.core/nnext",
  :clj-symbol "clojure.core/nnext",
  :docstring "Same as (next (next x))"}

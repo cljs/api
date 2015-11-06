@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2323-L2324):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2321-L2322):
 
 ```clj
 (defn chunk [b]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2323-2324](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2323-L2324)</ins>
+            └── <ins>[core.cljs:2321-2322](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2321-L2322)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn chunk [b]\n  (.chunk b))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2323 2324]},
+          :lines [2321 2322]},
  :full-name "cljs.core/chunk",
  :full-name-encode "cljs.core/chunk",
  :history [["+" "0.0-1424"]]}

@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L670-L741):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L670-L741):
 
 ```clj
 (defmethod parse 'fn*
@@ -98,11 +98,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:670-741](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L670-L741)</ins>
+            └── <ins>[analyzer.clj:670-741](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L670-L741)</ins>
 </pre>
 
 -->
@@ -142,7 +142,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'fn*\n  [op env [_ & args :as form] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        locals (:locals env)\n        name-var (if name\n                   (merge\n                     {:name name\n                      :info {:shadow (or (locals name)\n                                       (get-in env [:js-globals name]))}}\n                     (when-let [tag (-> name meta :tag)]\n                       {:ret-tag tag}))) \n        locals (if (and locals name) (assoc locals name name-var) locals)\n        type (-> form meta ::type)\n        fields (-> form meta ::fields)\n        protocol-impl (-> form meta :protocol-impl)\n        protocol-inline (-> form meta :protocol-inline)\n        locals (reduce (fn [m fld]\n                         (assoc m fld\n                                {:name fld\n                                 :line (get-line fld env)\n                                 :column (get-col fld env)\n                                 :field true\n                                 :mutable (-> fld meta :mutable)\n                                 :unsynchronized-mutable (-> fld meta :unsynchronized-mutable)\n                                 :volatile-mutable (-> fld meta :volatile-mutable)\n                                 :tag (-> fld meta :tag)\n                                 :shadow (m fld)}))\n                       locals fields)\n\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        menv (merge menv\n               {:protocol-impl protocol-impl\n                :protocol-inline protocol-inline})\n        methods (map #(analyze-fn-method menv locals % type) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))\n        locals (if name\n                 (update-in locals [name] assoc\n                   ;; TODO: can we simplify? - David\n                   :fn-var true\n                   :variadic variadic\n                   :max-fixed-arity max-fixed-arity\n                   :method-params (map :params methods)\n                   :methods methods)\n                 locals)\n        methods (if name\n                  ;; a second pass with knowledge of our function-ness/arity\n                  ;; lets us optimize self calls\n                  (no-warn (doall (map #(analyze-fn-method menv locals % type) meths)))\n                  methods)]\n    (let [variadic-methods (filter :variadic methods)\n          variadic-params (count (:params (first variadic-methods)))\n          param-counts (map (comp count :params) methods)]\n      (when (and (:multiple-variadic-overloads *cljs-warnings*) (< 1 (count variadic-methods)))\n        (warning :multiple-variadic-overloads env {:name name-var}))\n      (when (and (:variadic-max-arity *cljs-warnings*)\n                 (not (or (zero? variadic-params) (= variadic-params (+ 1 max-fixed-arity)))))\n        (warning :variadic-max-arity env {:name name-var}))\n      (when (and (:overload-arity *cljs-warnings*) (not= (distinct param-counts) param-counts))\n        (warning :overload-arity env {:name name-var})))\n    {:env env :op :fn :form form :name name-var :methods methods :variadic variadic\n     :tag 'function\n     :recur-frames *recur-frames* :loop-lets *loop-lets*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity\n     :protocol-impl protocol-impl\n     :protocol-inline protocol-inline\n     :children (mapv :expr methods)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [670 741]},
  :full-name "special/fn*",

@@ -59,7 +59,7 @@ Same as (next (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L803-L806):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L804-L807):
 
 ```clj
 (defn nfirst
@@ -71,11 +71,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:803-806](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L803-L806)</ins>
+            └── <ins>[core.cljs:804-807](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L804-L807)</ins>
 </pre>
 
 -->
@@ -128,9 +128,9 @@ The API data for this symbol:
  :source {:code "(defn nfirst\n  [coll]\n  (next (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [803 806]},
+          :lines [804 807]},
  :examples [{:id "60b8a4",
              :content "```clj\n(nfirst [[1 2 3] [4 5]])\n;;=> (2 3)\n\n(nfirst [[1 2] [3 4]])\n;;=> (2)\n\n(nfirst [[1] [2 3]])\n;;=> nil\n\n(nfirst [[] [1 2]])\n;;=> nil\n```"}],
  :full-name "cljs.core/nfirst",

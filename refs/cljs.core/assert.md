@@ -59,7 +59,7 @@ logical true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L1139-L1151):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L1149-L1161):
 
 ```clj
 (defmacro assert
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1139-1151](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L1139-L1151)</ins>
+            └── <ins>[core.clj:1149-1161](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L1149-L1161)</ins>
 </pre>
 
 -->
@@ -135,9 +135,9 @@ The API data for this symbol:
  :source {:code "(defmacro assert\n  ([x]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" (cljs.core/pr-str '~x)))))))\n  ([x message]\n     (when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" ~message \"\\n\" (cljs.core/pr-str '~x))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/core.clj",
-          :lines [1139 1151]},
+          :lines [1149 1161]},
  :examples [{:id "1dc16f",
              :content "```clj\n(assert true)\n;;=> nil\n\n(assert false)\n;;=> Uncaught Error: Assert failed: false\n\n(assert (= 1 2) \"1 is not 2\")\n;;=> Uncaught Error: Assert failed: 1 is not 2\n;;   (= 1 2)\n```"}],
  :full-name "cljs.core/assert",

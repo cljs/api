@@ -68,7 +68,7 @@ set happened, else false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7094-L7101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7116-L7123):
 
 ```clj
 (defn compare-and-set!
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7094-7101](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7094-L7101)</ins>
+            └── <ins>[core.cljs:7116-7123](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7116-L7123)</ins>
 </pre>
 
 -->
@@ -139,9 +139,9 @@ The API data for this symbol:
  :source {:code "(defn compare-and-set!\n  [a oldval newval]\n  (if (= (.-state a) oldval)\n    (do (reset! a newval) true)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7094 7101]},
+          :lines [7116 7123]},
  :examples [{:id "1fa306",
              :content "```clj\n(def a (atom \"abc\"))\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> true\n\n@a\n;;=> \"def\"\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> false\n\n@a\n;;=> \"def\"\n```"}],
  :full-name "cljs.core/compare-and-set!",

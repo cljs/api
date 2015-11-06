@@ -42,7 +42,7 @@ containing the contents of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2349-L2358):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2347-L2356):
 
 ```clj
 (defn to-array-2d
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2349-2358](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2349-L2358)</ins>
+            └── <ins>[core.cljs:2347-2356](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2347-L2356)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn to-array-2d\n  [coll]\n    (let [ret (make-array (count coll))]\n      (loop [i 0 xs (seq coll)]\n        (when xs\n          (aset ret i (to-array (first xs)))\n          (recur (inc i) (next xs))))\n      ret))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2349 2358]},
+          :lines [2347 2356]},
  :full-name "cljs.core/to-array-2d",
  :clj-symbol "clojure.core/to-array-2d",
  :docstring "Returns a (potentially-ragged) 2-dimensional array\ncontaining the contents of coll."}

@@ -40,7 +40,7 @@ Returns a lazy sequence of the elements of coll with duplicates removed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6354-L6365):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6376-L6387):
 
 ```clj
 (defn distinct
@@ -60,11 +60,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6354-6365](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6354-L6365)</ins>
+            └── <ins>[core.cljs:6376-6387](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6376-L6387)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defn distinct\n  [coll]\n  (let [step (fn step [xs seen]\n               (lazy-seq\n                ((fn [[f :as xs] seen]\n                   (when-let [s (seq xs)]\n                     (if (contains? seen f)\n                       (recur (rest s) seen)\n                       (cons f (step (rest s) (conj seen f))))))\n                 xs seen)))]\n    (step coll #{})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6354 6365]},
+          :lines [6376 6387]},
  :full-name "cljs.core/distinct",
  :clj-symbol "clojure.core/distinct",
  :docstring "Returns a lazy sequence of the elements of coll with duplicates removed"}

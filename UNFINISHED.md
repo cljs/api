@@ -1253,6 +1253,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/cloneable?](refs/cljs.core/cloneableQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cloneableQMARK.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/comparator](refs/cljs.core/comparator.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/comparator.cljsdoc)</td>
 <td></td>
@@ -1321,6 +1328,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/defonce](refs/cljs.core/defonce.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/defonce.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/defprotocol](refs/cljs.core/defprotocol.md)</td>
@@ -2933,6 +2947,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/specify!](refs/cljs.core/specifyBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/specifyBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/split-at](refs/cljs.core/split-at.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/split-at.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -3435,6 +3456,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.nodejs/enable-util-print!](refs/cljs.nodejs/enable-util-printBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/enable-util-printBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.nodejs/process](refs/cljs.nodejs/process.md)</td>

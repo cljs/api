@@ -339,10 +339,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/defonce](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defonce)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/defstruct](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defstruct)</samp></td>
 </tr>
 <tr>

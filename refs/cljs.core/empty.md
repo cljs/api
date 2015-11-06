@@ -42,7 +42,7 @@ Returns an empty collection of the same category as coll, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L843-L847):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L844-L848):
 
 ```clj
 (defn empty
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:843-847](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L843-L847)</ins>
+            └── <ins>[core.cljs:844-848](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L844-L848)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defn empty\n  [coll]\n  (when-not (nil? coll)\n    (-empty coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [843 847]},
+          :lines [844 848]},
  :full-name "cljs.core/empty",
  :clj-symbol "clojure.core/empty",
  :docstring "Returns an empty collection of the same category as coll, or nil"}

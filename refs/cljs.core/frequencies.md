@@ -44,7 +44,7 @@ they appear.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6571-L6578):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6593-L6600):
 
 ```clj
 (defn frequencies
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6571-6578](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6571-L6578)</ins>
+            └── <ins>[core.cljs:6593-6600](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6593-L6600)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6571 6578]},
+          :lines [6593 6600]},
  :full-name "cljs.core/frequencies",
  :clj-symbol "clojure.core/frequencies",
  :docstring "Returns a map from distinct items in coll to the number of times\nthey appear."}

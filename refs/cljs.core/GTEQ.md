@@ -67,7 +67,7 @@ otherwise false.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1511-L1521):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1512-L1522):
 
 ```clj
 (defn ^boolean >=
@@ -85,18 +85,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1511-1521](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1511-L1521)</ins>
+            └── <ins>[core.cljs:1512-1522](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1512-L1522)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L425-L428):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L429-L432):
 
 ```clj
 (defmacro ^::ana/numeric >=
@@ -109,11 +109,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:425-428](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L425-L428)</ins>
+            └── <ins>[core.clj:429-432](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L429-L432)</ins>
 </pre>
 -->
 
@@ -165,15 +165,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean >=\n  ([x] true)\n  ([x y] (cljs.core/>= x y))\n  ([x y & more]\n   (if (cljs.core/>= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/>= y (first more)))\n     false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1511 1521]},
+          :lines [1512 1522]},
  :extra-sources [{:code "(defmacro ^::ana/numeric >=\n  ([x] true)\n  ([x y] (bool-expr (core/list 'js* \"(~{} >= ~{})\" x y)))\n  ([x y & more] `(and (>= ~x ~y) (>= ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2138",
+                  :tag "r2156",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [425 428]}],
+                  :lines [429 432]}],
  :examples [{:id "de73d7",
              :content "```clj\n(>= 2 1)\n;;=> true\n\n(>= 2 2)\n;;=> true\n\n(>= 1 2)\n;;=> false\n\n(>= 6 5 4 3 2)\n;;=> true\n```"}],
  :full-name "cljs.core/>=",

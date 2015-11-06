@@ -42,7 +42,7 @@ else true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2621-L2624):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2643-L2646):
 
 ```clj
 (defn ^boolean not-any?
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2621-2624](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2621-L2624)</ins>
+            └── <ins>[core.cljs:2643-2646](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2643-L2646)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not-any?\n  [pred coll] (not (some pred coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2621 2624]},
+          :lines [2643 2646]},
  :full-name "cljs.core/not-any?",
  :clj-symbol "clojure.core/not-any?",
  :docstring "Returns false if (pred x) is logical true for any x in coll,\nelse true."}

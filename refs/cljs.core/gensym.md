@@ -35,7 +35,7 @@ prefix is not supplied, the prefix is 'G__'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7174-L7182):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7196-L7204):
 
 ```clj
 (defn gensym
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7174-7182](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7174-L7182)</ins>
+            └── <ins>[core.cljs:7196-7204](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7196-L7204)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn gensym\n  ([] (gensym \"G__\"))\n  ([prefix-string]\n     (when (nil? gensym_counter)\n       (set! gensym_counter (atom 0)))\n     (symbol (str prefix-string (swap! gensym_counter inc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7174 7182]},
+          :lines [7196 7204]},
  :full-name "cljs.core/gensym",
  :clj-symbol "clojure.core/gensym",
  :docstring "Returns a new symbol with a unique name. If a prefix string is\nsupplied, the name is prefix# where # is some unique number. If\nprefix is not supplied, the prefix is 'G__'."}

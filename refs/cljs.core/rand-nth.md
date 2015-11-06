@@ -44,7 +44,7 @@ collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7332-L7337):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7354-L7359):
 
 ```clj
 (defn rand-nth
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7332-7337](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7332-L7337)</ins>
+            └── <ins>[core.cljs:7354-7359](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7354-L7359)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defn rand-nth\n  [coll]\n  (nth coll (rand-int (count coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7332 7337]},
+          :lines [7354 7359]},
  :full-name "cljs.core/rand-nth",
  :clj-symbol "clojure.core/rand-nth",
  :docstring "Return a random element of the (sequential) collection. Will have\nthe same performance characteristics as nth for the given\ncollection."}

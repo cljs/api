@@ -28,7 +28,7 @@ Given a source directory, analyzes all .cljs files. Used to populate
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/repl.clj#L172-L179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/repl.clj#L172-L179):
 
 ```clj
 (defn analyze-source
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:172-179](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/repl.clj#L172-L179)</ins>
+            └── <ins>[repl.clj:172-179](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/repl.clj#L172-L179)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn analyze-source\n  [src-dir]\n  (if-let [src-dir (and (not (empty? src-dir))\n                     (File. src-dir))]\n    (doseq [file (comp/cljs-files-in src-dir)]\n      (ana/analyze-file (str \"file://\" (.getAbsolutePath file))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/repl.clj",
           :lines [172 179]},
  :full-name "cljs.repl/analyze-source",

@@ -113,7 +113,7 @@ literal UUID:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L649-L660):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L649-L660):
 
 ```clj
 (defn- read-tagged [rdr initch]
@@ -134,13 +134,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.0
+tools.reader @ tools.reader-0.8.3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:649-660](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L649-L660)</ins>
+                    └── <ins>[reader.clj:649-660](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L649-L660)</ins>
 </pre>
 -->
 
@@ -182,7 +182,7 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-tagged [rdr initch]\n  (let [tag (read rdr true nil false)]\n    (if-not (symbol? tag)\n      (reader-error rdr \"Reader tag must be a symbol\"))\n    (if-let [f (or (*data-readers* tag)\n                   (default-data-readers tag))]\n      (read-tagged* rdr tag f)\n      (if (.contains (name tag) \".\")\n        (read-ctor rdr tag)\n        (if-let [f *default-data-reader-fn*]\n          (f tag (read rdr true nil true))\n          (reader-error rdr \"No reader function for tag \" (name tag)))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.0",
+                  :tag "tools.reader-0.8.3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [649 660]}],
  :usage ["#foo ..."],

@@ -40,7 +40,7 @@ Returns a number one less than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1523-L1525):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1524-L1526):
 
 ```clj
 (defn dec
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1523-1525](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1523-L1525)</ins>
+            └── <ins>[core.cljs:1524-1526](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1524-L1526)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L435-L436):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L439-L440):
 
 ```clj
 (defmacro ^::ana/numeric dec [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:435-436](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L435-L436)</ins>
+            └── <ins>[core.clj:439-440](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L439-L440)</ins>
 </pre>
 -->
 
@@ -128,15 +128,15 @@ The API data for this symbol:
  :source {:code "(defn dec\n  [x] (- x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1523 1525]},
+          :lines [1524 1526]},
  :extra-sources [{:code "(defmacro ^::ana/numeric dec [x]\n  `(- ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2138",
+                  :tag "r2156",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [435 436]}],
+                  :lines [439 440]}],
  :full-name "cljs.core/dec",
  :clj-symbol "clojure.core/dec",
  :docstring "Returns a number one less than num."}

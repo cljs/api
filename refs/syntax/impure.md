@@ -26,11 +26,12 @@ Some impure functions which use this convention:
 - [`set!`][doc:special/set!]
 - [`swap!`][doc:cljs.core/swap!]
 - [`conj!`][doc:cljs.core/conj!]
-- [doc:cljs.core/specify!]
+- [`specify!`][doc:cljs.core/specify!]
 
 [doc:special/set!]:../special/setBANG.md
 [doc:cljs.core/swap!]:../cljs.core/swapBANG.md
 [doc:cljs.core/conj!]:../cljs.core/conjBANG.md
+[doc:cljs.core/specify!]:../cljs.core/specifyBANG.md
 
 ---
 

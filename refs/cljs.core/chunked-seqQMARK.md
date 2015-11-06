@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1166-L1167):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1167-L1168):
 
 ```clj
 (defn ^boolean chunked-seq?
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1166-1167](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1166-L1167)</ins>
+            └── <ins>[core.cljs:1167-1168](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1167-L1168)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean chunked-seq?\n  [x] (implements? IChunkedSeq x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1166 1167]},
+          :lines [1167 1168]},
  :full-name "cljs.core/chunked-seq?"}
 
 ```

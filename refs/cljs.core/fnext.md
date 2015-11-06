@@ -60,7 +60,7 @@ Same as (first (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L808-L811):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L809-L812):
 
 ```clj
 (defn fnext
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:808-811](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L808-L811)</ins>
+            └── <ins>[core.cljs:809-812](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L809-L812)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn fnext\n  [coll]\n  (first (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [808 811]},
+          :lines [809 812]},
  :examples [{:id "92383f",
              :content "```clj\n(fnext [1 2 3])\n;;=> 2\n\n(fnext [1 2])\n;;=> 2\n\n(fnext [1])\n;;=> nil\n\n(fnext [])\n;;=> nil\n```"}],
  :full-name "cljs.core/fnext",

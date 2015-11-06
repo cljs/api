@@ -16,6 +16,9 @@
  <samp>
 (__disj!__ tcoll val)<br>
 </samp>
+ <samp>
+(__disj!__ tcoll val & vals)<br>
+</samp>
 
 ---
 
@@ -25,22 +28,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2512-L2513):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2528-L2535):
 
 ```clj
-(defn disj! [tcoll val]
-  (-disjoin! tcoll val))
+(defn disj!
+  ([tcoll val]
+   (-disjoin! tcoll val))
+  ([tcoll val & vals]
+   (let [ntcoll (-disjoin! tcoll val)]
+     (if vals
+       (recur ntcoll (first vals) (next vals))
+       ntcoll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2512-2513](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2512-L2513)</ins>
+            └── <ins>[core.cljs:2528-2535](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2528-L2535)</ins>
 </pre>
 
 -->
@@ -84,16 +93,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "disj!",
- :signature ["[tcoll val]"],
+ :signature ["[tcoll val]" "[tcoll val & vals]"],
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/disjBANG",
- :source {:code "(defn disj! [tcoll val]\n  (-disjoin! tcoll val))",
+ :source {:code "(defn disj!\n  ([tcoll val]\n   (-disjoin! tcoll val))\n  ([tcoll val & vals]\n   (let [ntcoll (-disjoin! tcoll val)]\n     (if vals\n       (recur ntcoll (first vals) (next vals))\n       ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2512 2513]},
+          :lines [2528 2535]},
  :full-name "cljs.core/disj!",
  :clj-symbol "clojure.core/disj!"}
 

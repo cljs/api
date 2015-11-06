@@ -551,6 +551,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2134"><img valign="middle" alt="[+] 0.0-2134" title="Added in 0.0-2134" src="https://img.shields.io/badge/+-0.0--2134-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[cloneable?](../cljs.core/cloneableQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2156"><img valign="middle" alt="[+] 0.0-2156" title="Added in 0.0-2156" src="https://img.shields.io/badge/+-0.0--2156-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/coll?)</td>
 <td><samp>[coll?](../cljs.core/collQMARK.md)</samp></td>
 <td><samp>function</samp></td>
@@ -711,6 +717,12 @@ interop with JS, many predicates, etc.
 <td><samp>[defn-](../cljs.core/defn-.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defonce)</td>
+<td><samp>[defonce](../cljs.core/defonce.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2156"><img valign="middle" alt="[+] 0.0-2156" title="Added in 0.0-2156" src="https://img.shields.io/badge/+-0.0--2156-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defprotocol)</td>
@@ -2205,6 +2217,12 @@ interop with JS, many predicates, etc.
 <td><samp>[specify](../cljs.core/specify.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2138"><img valign="middle" alt="[+] 0.0-2138" title="Added in 0.0-2138" src="https://img.shields.io/badge/+-0.0--2138-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[specify!](../cljs.core/specifyBANG.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2156"><img valign="middle" alt="[+] 0.0-2156" title="Added in 0.0-2156" src="https://img.shields.io/badge/+-0.0--2156-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/split-at)</td>

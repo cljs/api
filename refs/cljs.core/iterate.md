@@ -44,7 +44,7 @@ Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effec
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2967-L2970):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2989-L2992):
 
 ```clj
 (defn iterate
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2967-2970](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2967-L2970)</ins>
+            └── <ins>[core.cljs:2989-2992](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2989-L2992)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn iterate\n  [f x] (cons x (lazy-seq (iterate f (f x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2967 2970]},
+          :lines [2989 2992]},
  :full-name "cljs.core/iterate",
  :clj-symbol "clojure.core/iterate",
  :docstring "Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effects"}

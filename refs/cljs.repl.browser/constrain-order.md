@@ -28,7 +28,7 @@ that they are printed in the correct order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/repl/browser.clj#L135-L140):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/repl/browser.clj#L135-L140):
 
 ```clj
 (defn constrain-order
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:135-140](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/repl/browser.clj#L135-L140)</ins>
+                └── <ins>[browser.clj:135-140](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/repl/browser.clj#L135-L140)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn constrain-order\n  [order f]\n  (send-off ordering add-in-order order f)\n  (send-off ordering run-in-order))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [135 140]},
  :full-name "cljs.repl.browser/constrain-order",

@@ -36,7 +36,7 @@ Returns true if `n` is 0, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1778-L1779):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1779-L1780):
 
 ```clj
 (defn ^boolean zero? [n]
@@ -47,18 +47,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1778-1779](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1778-L1779)</ins>
+            └── <ins>[core.cljs:1779-1780](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1779-L1780)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L441-L442):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L445-L446):
 
 ```clj
 (defmacro ^::ana/numeric zero? [x]
@@ -69,11 +69,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:441-442](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L441-L442)</ins>
+            └── <ins>[core.clj:445-446](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L445-L446)</ins>
 </pre>
 -->
 
@@ -125,15 +125,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean zero? [n]\n  (cljs.core/zero? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1778 1779]},
+          :lines [1779 1780]},
  :extra-sources [{:code "(defmacro ^::ana/numeric zero? [x]\n  `(== ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2138",
+                  :tag "r2156",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [441 442]}],
+                  :lines [445 446]}],
  :full-name "cljs.core/zero?",
  :clj-symbol "clojure.core/zero?"}
 

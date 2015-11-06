@@ -30,7 +30,7 @@ Same as print followed by (newline)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6890-L6895):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6912-L6917):
 
 ```clj
 (defn println
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6890-6895](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6890-L6895)</ins>
+            └── <ins>[core.cljs:6912-6917](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6912-L6917)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn println\n  [& objs]\n  (pr-with-opts objs (assoc (pr-opts) :readably false))\n  (when *print-newline*\n    (newline (pr-opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6890 6895]},
+          :lines [6912 6917]},
  :full-name "cljs.core/println",
  :clj-symbol "clojure.core/println",
  :docstring "Same as print followed by (newline)"}

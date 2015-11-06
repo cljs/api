@@ -69,22 +69,28 @@ tcoll
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2503-L2504):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2507-L2514):
 
 ```clj
-(defn assoc! [tcoll key val]
-  (-assoc! tcoll key val))
+(defn assoc!
+  ([tcoll key val]
+   (-assoc! tcoll key val))
+  ([tcoll key val & kvs]
+   (let [ntcoll (-assoc! tcoll key val)]
+     (if kvs
+       (recur ntcoll (first kvs) (second kvs) (nnext kvs))
+       ntcoll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2503-2504](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L2503-L2504)</ins>
+            └── <ins>[core.cljs:2507-2514](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L2507-L2514)</ins>
 </pre>
 
 -->
@@ -134,12 +140,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/transient" "cljs.core/persistent!"],
  :full-name-encode "cljs.core/assocBANG",
- :source {:code "(defn assoc! [tcoll key val]\n  (-assoc! tcoll key val))",
+ :source {:code "(defn assoc!\n  ([tcoll key val]\n   (-assoc! tcoll key val))\n  ([tcoll key val & kvs]\n   (let [ntcoll (-assoc! tcoll key val)]\n     (if kvs\n       (recur ntcoll (first kvs) (second kvs) (nnext kvs))\n       ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2503 2504]},
+          :lines [2507 2514]},
  :examples [{:id "7d1e6b",
              :content "```clj\n(def tcoll (transient! {}))\n(assoc! tcoll :a 1)\n(assoc! tcoll :b 2)\n\ntcoll\n;;=> #<[object Object]> \n\n(:a tcoll)\n;;=> 1\n\n(:b tcoll)\n;;=> 2\n\n(def a (persistent! tcoll))\n;;=> {:a 1 :b 2}\n```"}],
  :full-name "cljs.core/assoc!",

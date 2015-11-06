@@ -50,7 +50,7 @@ does not contain key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1064-L1076):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1065-L1077):
 
 ```clj
 (defn disj
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1064-1076](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1064-L1076)</ins>
+            └── <ins>[core.cljs:1065-1077](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1065-L1077)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn disj\n  ([coll] coll)\n  ([coll k]\n    (when-not (nil? coll)\n      (-disjoin coll k)))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (disj coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1064 1076]},
+          :lines [1065 1077]},
  :full-name "cljs.core/disj",
  :clj-symbol "clojure.core/disj",
  :docstring "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}

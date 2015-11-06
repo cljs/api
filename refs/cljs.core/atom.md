@@ -86,7 +86,7 @@ occur, then the value of the atom will not change.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7048-L7063):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7070-L7085):
 
 ```clj
 (defn atom
@@ -98,11 +98,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7048-7063](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7048-L7063)</ins>
+            └── <ins>[core.cljs:7070-7085](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7070-L7085)</ins>
 </pre>
 
 -->
@@ -159,9 +159,9 @@ The API data for this symbol:
  :source {:code "(defn atom\n  ([x] (Atom. x nil nil nil))\n  ([x & {:keys [meta validator]}] (Atom. x meta validator nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7048 7063]},
+          :lines [7070 7085]},
  :examples [{:id "e6a38a",
              :content "```clj\n(def a (atom 1))\n\n@a\n;;=> 1\n\n(reset! a 2)\n@a\n;;=> 2\n\n(swap! a inc)\n@a\n;;=> 3\n```"}],
  :full-name "cljs.core/atom",

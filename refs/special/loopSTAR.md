@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L861-L863):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L861-L863):
 
 ```clj
 (defmethod parse 'loop*
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:861-863](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L861-L863)</ins>
+            └── <ins>[analyzer.clj:861-863](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L861-L863)</ins>
 </pre>
 
 -->
@@ -73,7 +73,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'loop*\n  [op encl-env form _]\n  (analyze-let encl-env form true))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [861 863]},
  :full-name "special/loop*",

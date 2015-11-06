@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2156](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2156)__</td>
+<td>2014-01-29</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.8.3</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002156syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002156library">
++4 
+</a>
+</td>
+<td>
+<a href="#user-content-002156compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2138](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2138)__</td>
 <td>2013-12-31</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1211,6 +1234,47 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2156
+
+<a name="002156syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002156library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/cloneable?](refs/cljs.core/cloneableQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/defonce](refs/cljs.core/defonce.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/specify!](refs/cljs.core/specifyBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.nodejs/enable-util-print!](refs/cljs.nodejs/enable-util-printBANG.md)</samp></td>
+</tr>
+</table>
+
+<a name="002156compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2138

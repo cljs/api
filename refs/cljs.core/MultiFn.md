@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7534-L7581):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7556-L7603):
 
 ```clj
 (deftype MultiFn [name dispatch-fn default-dispatch-val hierarchy
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7534-7581](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L7534-L7581)</ins>
+            └── <ins>[core.cljs:7556-7603](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L7556-L7603)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(deftype MultiFn [name dispatch-fn default-dispatch-val hierarchy\n                  method-table prefer-table method-cache cached-hierarchy]\n  IMultiFn\n  (-reset [mf]\n    (swap! method-table (fn [mf] {}))\n    (swap! method-cache (fn [mf] {}))\n    (swap! prefer-table (fn [mf] {}))\n    (swap! cached-hierarchy (fn [mf] nil))\n    mf)\n\n  (-add-method [mf dispatch-val method]\n    (swap! method-table assoc dispatch-val method)\n    (reset-cache method-cache method-table cached-hierarchy hierarchy)\n    mf)\n\n  (-remove-method [mf dispatch-val]\n    (swap! method-table dissoc dispatch-val)\n    (reset-cache method-cache method-table cached-hierarchy hierarchy)\n    mf)\n\n  (-get-method [mf dispatch-val]\n    (when-not (= @cached-hierarchy @hierarchy)\n      (reset-cache method-cache method-table cached-hierarchy hierarchy))\n    (if-let [target-fn (@method-cache dispatch-val)]\n      target-fn\n      (if-let [target-fn (find-and-cache-best-method name dispatch-val hierarchy method-table\n                                                     prefer-table method-cache cached-hierarchy)]\n        target-fn\n        (@method-table default-dispatch-val))))\n\n  (-prefer-method [mf dispatch-val-x dispatch-val-y]\n    (when (prefers* dispatch-val-x dispatch-val-y prefer-table)\n      (throw (js/Error. (str \"Preference conflict in multimethod '\" name \"': \" dispatch-val-y\n                   \" is already preferred to \" dispatch-val-x))))\n    (swap! prefer-table\n           (fn [old]\n             (assoc old dispatch-val-x\n                    (conj (get old dispatch-val-x #{})\n                          dispatch-val-y))))\n    (reset-cache method-cache method-table cached-hierarchy hierarchy))\n\n  (-methods [mf] @method-table)\n  (-prefers [mf] @prefer-table)\n\n  (-dispatch [mf args] (do-dispatch mf name dispatch-fn args))\n\n  IHash\n  (-hash [this] (goog/getUid this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7534 7581]},
+          :lines [7556 7603]},
  :full-name "cljs.core/MultiFn",
  :clj-symbol "clojure.lang/MultiFn"}
 

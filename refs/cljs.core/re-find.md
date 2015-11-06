@@ -41,7 +41,7 @@ capturing groups.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6671-L6681):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6693-L6703):
 
 ```clj
 (defn re-find
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6671-6681](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6671-L6681)</ins>
+            └── <ins>[core.cljs:6693-6703](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6693-L6703)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defn re-find\n  [re s]\n  (let [matches (.exec re s)]\n    (when-not (nil? matches)\n      (if (== (count matches) 1)\n        (first matches)\n        (vec matches)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6671 6681]},
+          :lines [6693 6703]},
  :full-name "cljs.core/re-find",
  :clj-symbol "clojure.core/re-find",
  :docstring "Returns the first regex match, if any, of s to re, using\nre.exec(s). Returns a vector, containing first the matching\nsubstring, then any capturing groups if the regular expression contains\ncapturing groups."}

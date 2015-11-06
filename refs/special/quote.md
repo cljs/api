@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L880-L882):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L880-L882):
 
 ```clj
 (defmethod parse 'quote
@@ -32,11 +32,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:880-882](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/analyzer.clj#L880-L882)</ins>
+            └── <ins>[analyzer.clj:880-882](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/analyzer.clj#L880-L882)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _]\n  (analyze (assoc env :quoted? true) x))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [880 882]},
  :full-name "special/quote",

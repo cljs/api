@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L825-L847):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L833-L855):
 
 ```clj
 (defmacro deftype [t fields & impls]
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:825-847](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/core.clj#L825-L847)</ins>
+            └── <ins>[core.clj:833-855](https://github.com/clojure/clojurescript/blob/r2156/src/clj/cljs/core.clj#L833-L855)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defmacro deftype [t fields & impls]\n  (let [r (:name (cljs.analyzer/resolve-var (dissoc &env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks &env impls)\n        protocols (collect-protocols impls &env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n         (extend-type ~t ~@(dt->et t impls fields true))\n         ~(build-positional-factory t r fields)\n         ~t)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opts#] (-write writer# ~(core/str r))))\n         ~(build-positional-factory t r fields)\n         ~t))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/clj/cljs/core.clj",
-          :lines [825 847]},
+          :lines [833 855]},
  :full-name "cljs.core/deftype",
  :clj-symbol "clojure.core/deftype"}
 

@@ -30,7 +30,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1643-L1646):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1644-L1647):
 
 ```clj
 (defn unchecked-int
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1643-1646](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L1643-L1646)</ins>
+            └── <ins>[core.cljs:1644-1647](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L1644-L1647)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn unchecked-int\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1643 1646]},
+          :lines [1644 1647]},
  :full-name "cljs.core/unchecked-int",
  :clj-symbol "clojure.core/unchecked-int",
  :docstring "Coerce to int by stripping decimal places."}

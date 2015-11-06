@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L291-L292):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L291-L292):
 
 ```clj
 (defprotocol IReduce
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:291-292](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L291-L292)</ins>
+            └── <ins>[core.cljs:291-292](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L291-L292)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IReduce\n  (-reduce [coll f] [coll f start]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
           :lines [291 292]},
  :methods [{:name "-reduce",

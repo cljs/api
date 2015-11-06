@@ -40,7 +40,7 @@ Returns a sequence of the map's values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6057-L6061):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6079-L6083):
 
 ```clj
 (defn vals
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2138
+clojurescript @ r2156
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6057-6061](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L6057-L6061)</ins>
+            └── <ins>[core.cljs:6079-6083](https://github.com/clojure/clojurescript/blob/r2156/src/cljs/cljs/core.cljs#L6079-L6083)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn vals\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (ValSeq. mseq nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2138",
+          :tag "r2156",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6057 6061]},
+          :lines [6079 6083]},
  :full-name "cljs.core/vals",
  :clj-symbol "clojure.core/vals",
  :docstring "Returns a sequence of the map's values."}

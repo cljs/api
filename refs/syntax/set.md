@@ -56,7 +56,7 @@ Duplicate values will cause an error:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L344-L346):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L344-L346):
 
 ```clj
 (defn- read-set
@@ -68,18 +68,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.0
+tools.reader @ tools.reader-0.8.3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:344-346](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L344-L346)</ins>
+                    └── <ins>[reader.clj:344-346](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L344-L346)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L599-L610):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L599-L610):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -100,13 +100,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.0
+tools.reader @ tools.reader-0.8.3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:599-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.0/src/main/clojure/clojure/tools/reader.clj#L599-L610)</ins>
+                    └── <ins>[reader.clj:599-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L599-L610)</ins>
 </pre>
 -->
 
@@ -150,13 +150,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-set\n  [rdr _]\n  (PersistentHashSet/createWithCheck (read-delimited \\} rdr true)))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.0",
+                  :tag "tools.reader-0.8.3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [344 346]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.0",
+                  :tag "tools.reader-0.8.3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [599 610]}),
  :usage ["#{...}"],
