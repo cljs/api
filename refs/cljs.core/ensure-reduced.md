@@ -27,7 +27,7 @@ If x is already reduced?, returns it, else returns (reduced x)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L908-L911):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L908-L911):
 
 ```clj
 (defn ensure-reduced
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:908-911](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L908-L911)</ins>
+            └── <ins>[core.cljs:908-911](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L908-L911)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn ensure-reduced\n  [x]\n  (if (reduced? x) x (reduced x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2814",
+          :tag "r2816",
           :filename "src/cljs/cljs/core.cljs",
           :lines [908 911]},
  :full-name "cljs.core/ensure-reduced",

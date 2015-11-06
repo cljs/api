@@ -33,7 +33,7 @@ maps.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L197-L220):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl.clj#L197-L220):
 
 ```clj
 (defn print-mapped-stacktrace
@@ -62,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:197-220](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl.clj#L197-L220)</ins>
+            └── <ins>[repl.clj:197-220](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl.clj#L197-L220)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn print-mapped-stacktrace\n  ([stacktrace] (print-mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n    (let [read-source-map' (memoize read-source-map)\n          ns-info' (memoize ns-info)]\n      (doseq [{:keys [function file line column] :as frame} stacktrace]\n        (let [[sm {:keys [ns source-file] :as ns-info}] ((juxt read-source-map' ns-info') file)\n              [line' column'] (if ns-info\n                                (mapped-line-and-column sm line column)\n                                [line column])\n              name' (if (and ns-info function)\n                      (symbol (name ns) (cljrepl/demunge function))\n                      function)\n              file' (string/replace\n                      (.getCanonicalFile\n                        (if ns-info\n                          source-file\n                          (io/file file)))\n                      (str (System/getProperty \"user.dir\") File/separator) \"\")]\n          (println \"\\t\" (str name' \" (\" file' \":\" line' \":\" column' \")\")))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2814",
+          :tag "r2816",
           :filename "src/clj/cljs/repl.clj",
           :lines [197 220]},
  :full-name "cljs.repl/print-mapped-stacktrace",

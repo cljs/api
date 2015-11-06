@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L8110-L8131):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L8110-L8131):
 
 ```clj
 (defn pr-sequential-writer [writer print-one begin sep end opts coll]
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8110-8131](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L8110-L8131)</ins>
+            └── <ins>[core.cljs:8110-8131](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L8110-L8131)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (binding [*print-level* (when-not (nil? *print-level*) (dec *print-level*))]\n    (if (and (not (nil? *print-level*)) (neg? *print-level*))\n      (-write writer \"#\")\n      (do\n        (-write writer begin)\n        (if (zero? (:print-length opts))\n          (when (seq coll)\n            (-write writer \"...\"))\n          (do\n            (when (seq coll)\n              (print-one (first coll) writer opts))\n            (loop [coll (next coll) n (dec (:print-length opts))]\n              (if (and coll (or (nil? n) (not (zero? n))))\n                (do\n                  (-write writer sep)\n                  (print-one (first coll) writer opts)\n                  (recur (next coll) (dec n)))\n                (when (and (seq coll) (zero? n))\n                  (-write writer sep)\n                  (-write writer \"...\"))))))\n        (-write writer end)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2814",
+          :tag "r2816",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8110 8131]},
  :full-name "cljs.core/pr-sequential-writer",

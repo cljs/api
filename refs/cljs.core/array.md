@@ -73,7 +73,7 @@ Creates a new javascript array.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L182-L192):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L182-L192):
 
 ```clj
 (defn ^array array
@@ -91,18 +91,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:182-192](https://github.com/clojure/clojurescript/blob/r2814/src/cljs/cljs/core.cljs#L182-L192)</ins>
+            └── <ins>[core.cljs:182-192](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L182-L192)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/core.clj#L1397-L1404):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L1397-L1404):
 
 ```clj
 (defmacro array [& rest]
@@ -119,11 +119,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1397-1404](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/core.clj#L1397-L1404)</ins>
+            └── <ins>[core.clj:1397-1404](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L1397-L1404)</ins>
 </pre>
 -->
 
@@ -174,13 +174,13 @@ The API data for this symbol:
  :source {:code "(defn ^array array\n  [var-args]            ;; [& items]\n  (let [a (js/Array. (alength (cljs.core/js-arguments)))]\n    (loop [i 0]\n      (if (< i (alength a))\n        (do\n          (aset a i (aget (cljs.core/js-arguments) i))\n          (recur (inc i)))\n        a))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2814",
+          :tag "r2816",
           :filename "src/cljs/cljs/core.cljs",
           :lines [182 192]},
  :extra-sources [{:code "(defmacro array [& rest]\n  (let [xs-str (->> (repeat \"~{}\")\n                    (take (count rest))\n                    (interpose \",\")\n                    (apply core/str))]\n    (vary-meta\n      (list* 'js* (core/str \"[\" xs-str \"]\") rest)\n      assoc :tag 'array)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2814",
+                  :tag "r2816",
                   :filename "src/clj/cljs/core.clj",
                   :lines [1397 1404]}],
  :examples [{:id "3a546d",

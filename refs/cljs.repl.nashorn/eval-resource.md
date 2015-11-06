@@ -27,7 +27,7 @@ Evaluate a file on the classpath in the engine.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl/nashorn.clj#L76-L81):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl/nashorn.clj#L76-L81):
 
 ```clj
 (defn eval-resource 
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2814/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2814
+clojurescript @ r2816
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:76-81](https://github.com/clojure/clojurescript/blob/r2814/src/clj/cljs/repl/nashorn.clj#L76-L81)</ins>
+                └── <ins>[nashorn.clj:76-81](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl/nashorn.clj#L76-L81)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn eval-resource \n  [engine path debug]\n  (let [r (io/resource path)]\n    (eval-str engine (slurp r))\n    (when debug (println \"loaded: \" path))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2814",
+          :tag "r2816",
           :filename "src/clj/cljs/repl/nashorn.clj",
           :lines [76 81]},
  :full-name "cljs.repl.nashorn/eval-resource",
