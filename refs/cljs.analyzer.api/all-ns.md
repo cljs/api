@@ -23,12 +23,19 @@
 
 
 
+Source docstring:
+
+```
+Return all the namespace analysis maps. Analagous to clojure.core/all-ns but
+returns analysis maps not Namespace instances.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L17-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L21-L25):
 
 ```clj
-(defn all-ns []
+(defn all-ns
+  []
   (keys (get @env/*compiler* ::ana/namespaces)))
 ```
 
@@ -36,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:17-18](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L17-L18)</ins>
+                └── <ins>[api.clj:21-25](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L21-L25)</ins>
 </pre>
 
 -->
@@ -89,14 +96,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/all-ns",
- :source {:code "(defn all-ns []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
+ :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [17 18]},
+          :lines [21 25]},
  :full-name "cljs.analyzer.api/all-ns",
- :clj-symbol "clojure.core/all-ns"}
+ :clj-symbol "clojure.core/all-ns",
+ :docstring "Return all the namespace analysis maps. Analagous to clojure.core/all-ns but\nreturns analysis maps not Namespace instances."}
 
 ```
 

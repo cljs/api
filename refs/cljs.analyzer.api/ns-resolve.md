@@ -23,12 +23,20 @@
 
 
 
+Source docstring:
+
+```
+Given a namespace and a symbol return the corresponding var analysis map.
+Analagous to clojure.core/ns-resolve but returns var analysis map not Var.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L26-L27):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L41-L46):
 
 ```clj
-(defn ns-resolve [ns sym]
+(defn ns-resolve
+  [ns sym]
+  {:pre [(symbol? ns) (symbol? sym)]}
   (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))
 ```
 
@@ -36,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:26-27](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L26-L27)</ins>
+                └── <ins>[api.clj:41-46](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L41-L46)</ins>
 </pre>
 
 -->
@@ -89,14 +97,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/ns-resolve",
- :source {:code "(defn ns-resolve [ns sym]\n  (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))",
+ :source {:code "(defn ns-resolve\n  [ns sym]\n  {:pre [(symbol? ns) (symbol? sym)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [26 27]},
+          :lines [41 46]},
  :full-name "cljs.analyzer.api/ns-resolve",
- :clj-symbol "clojure.core/ns-resolve"}
+ :clj-symbol "clojure.core/ns-resolve",
+ :docstring "Given a namespace and a symbol return the corresponding var analysis map.\nAnalagous to clojure.core/ns-resolve but returns var analysis map not Var."}
 
 ```
 

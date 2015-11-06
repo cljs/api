@@ -17,24 +17,26 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L16-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L16-L20):
 
 ```clj
-(defonce state (atom {:socket nil
-                      :connection nil
-                      :promised-conn nil}))
+(defonce state
+  (atom
+    {:socket nil
+     :connection nil
+     :promised-conn nil}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:16-18](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L16-L18)</ins>
+                └── <ins>[server.clj:16-20](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L16-L20)</ins>
 </pre>
 
 -->
@@ -76,12 +78,12 @@ The API data for this symbol:
 {:ns "cljs.repl.server",
  :name "state",
  :type "var",
- :source {:code "(defonce state (atom {:socket nil\n                      :connection nil\n                      :promised-conn nil}))",
+ :source {:code "(defonce state\n  (atom\n    {:socket nil\n     :connection nil\n     :promised-conn nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [16 18]},
+          :lines [16 20]},
  :full-name "cljs.repl.server/state",
  :full-name-encode "cljs.repl.server/state",
  :history [["+" "0.0-1503"]]}

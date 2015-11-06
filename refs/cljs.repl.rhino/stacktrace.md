@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L44):
 
 ```clj
 (defmulti stacktrace class)
@@ -27,43 +27,46 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:39](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L39)</ins>
+                └── <ins>[rhino.clj:44](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L44)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L41-L42):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L46-L50):
 
 ```clj
 (defmethod stacktrace :default [e]
-  (apply str (interpose "\n" (map #(str "        " (.toString %)) (.getStackTrace e)))))
+  (apply str
+    (interpose "\n"
+      (map #(str "        " (.toString %))
+        (.getStackTrace e)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:41-42](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L41-L42)</ins>
+                └── <ins>[rhino.clj:46-50](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L46-L50)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L44-L45):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L52-L53):
 
 ```clj
-(defmethod stacktrace org.mozilla.javascript.RhinoException [e]
+(defmethod stacktrace RhinoException [^RhinoException e]
   (.getScriptStackTrace e))
 ```
 
@@ -71,12 +74,12 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:44-45](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L44-L45)</ins>
+                └── <ins>[rhino.clj:52-53](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L52-L53)</ins>
 </pre>
 -->
 
@@ -119,23 +122,23 @@ The API data for this symbol:
  :source {:code "(defmulti stacktrace class)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [39]},
+          :lines [44]},
  :full-name "cljs.repl.rhino/stacktrace",
  :full-name-encode "cljs.repl.rhino/stacktrace",
- :extra-sources ({:code "(defmethod stacktrace :default [e]\n  (apply str (interpose \"\\n\" (map #(str \"        \" (.toString %)) (.getStackTrace e)))))",
+ :extra-sources ({:code "(defmethod stacktrace :default [e]\n  (apply str\n    (interpose \"\\n\"\n      (map #(str \"        \" (.toString %))\n        (.getStackTrace e)))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2511",
+                  :tag "r2629",
                   :filename "src/clj/cljs/repl/rhino.clj",
-                  :lines [41 42]}
-                 {:code "(defmethod stacktrace org.mozilla.javascript.RhinoException [e]\n  (.getScriptStackTrace e))",
+                  :lines [46 50]}
+                 {:code "(defmethod stacktrace RhinoException [^RhinoException e]\n  (.getScriptStackTrace e))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2511",
+                  :tag "r2629",
                   :filename "src/clj/cljs/repl/rhino.clj",
-                  :lines [44 45]}),
+                  :lines [52 53]}),
  :history [["+" "0.0-927"]]}
 
 ```

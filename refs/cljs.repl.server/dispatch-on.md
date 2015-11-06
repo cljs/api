@@ -35,27 +35,28 @@ that request should be dispatched to the related handler.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L46-L57):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L53-L65):
 
 ```clj
 (defn dispatch-on
   ([method pred handler]
-     (dispatch-on method {:pred pred :handler handler}))
+    (dispatch-on method {:pred pred :handler handler}))
   ([method {:as m}]
-     (swap! handlers (fn [old]
-                       (update-in old [method] #(conj (vec %) m))))))
+    (swap! handlers
+      (fn [old]
+        (update-in old [method] #(conj (vec %) m))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:46-57](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L46-L57)</ins>
+                └── <ins>[server.clj:53-65](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L53-L65)</ins>
 </pre>
 
 -->
@@ -100,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/dispatch-on",
- :source {:code "(defn dispatch-on\n  ([method pred handler]\n     (dispatch-on method {:pred pred :handler handler}))\n  ([method {:as m}]\n     (swap! handlers (fn [old]\n                       (update-in old [method] #(conj (vec %) m))))))",
+ :source {:code "(defn dispatch-on\n  ([method pred handler]\n    (dispatch-on method {:pred pred :handler handler}))\n  ([method {:as m}]\n    (swap! handlers\n      (fn [old]\n        (update-in old [method] #(conj (vec %) m))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [46 57]},
+          :lines [53 65]},
  :full-name "cljs.repl.server/dispatch-on",
  :docstring "Registers a handler to be dispatched based on a request method and a\npredicate.\n\npred should be a function that accepts an options map, a connection,\nand a request map and returns a boolean value based on whether or not\nthat request should be dispatched to the related handler."}
 

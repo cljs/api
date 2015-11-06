@@ -41,9 +41,33 @@ This is intended to be a stable api for those who intend to create
 </tr>
 <tr>
 <td></td>
+<td><samp>[cljs-ns-dependents](../cljs.build.api/cljs-ns-dependents.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[mark-cljs-ns-for-recompile!](../cljs.build.api/mark-cljs-ns-for-recompileBANG.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[parse-js-ns](../cljs.build.api/parse-js-ns.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[src-file->goog-require](../cljs.build.api/src-file-GTgoog-require.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[src-file->target-file](../cljs.build.api/src-file-GTtarget-file.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

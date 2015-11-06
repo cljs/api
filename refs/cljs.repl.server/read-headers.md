@@ -22,27 +22,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L70-L75):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L78-L84):
 
 ```clj
 (defn read-headers [rdr]
-  (loop [next-line (.readLine rdr)
-         header-lines []]
+  (loop [next-line (.readLine rdr) header-lines []]
     (if (= "" next-line)
-      header-lines                      ;we're done reading headers
-      (recur (.readLine rdr) (conj header-lines next-line)))))
+      header-lines ;; we're done reading headers
+      (recur
+        (.readLine rdr)
+        (conj header-lines next-line)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:70-75](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L70-L75)</ins>
+                └── <ins>[server.clj:78-84](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L78-L84)</ins>
 </pre>
 
 -->
@@ -85,12 +86,12 @@ The API data for this symbol:
  :name "read-headers",
  :type "function",
  :signature ["[rdr]"],
- :source {:code "(defn read-headers [rdr]\n  (loop [next-line (.readLine rdr)\n         header-lines []]\n    (if (= \"\" next-line)\n      header-lines                      ;we're done reading headers\n      (recur (.readLine rdr) (conj header-lines next-line)))))",
+ :source {:code "(defn read-headers [rdr]\n  (loop [next-line (.readLine rdr) header-lines []]\n    (if (= \"\" next-line)\n      header-lines ;; we're done reading headers\n      (recur\n        (.readLine rdr)\n        (conj header-lines next-line)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [70 75]},
+          :lines [78 84]},
  :full-name "cljs.repl.server/read-headers",
  :full-name-encode "cljs.repl.server/read-headers",
  :history [["+" "0.0-1503"]]}

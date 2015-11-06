@@ -31,41 +31,41 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L107-L128):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L117-L138):
 
 ```clj
 (defn send-and-close
   ([conn status form]
-     (send-and-close conn status form "text/html"))
+    (send-and-close conn status form "text/html"))
   ([conn status form content-type]
-     (let [utf-8-form (.getBytes form "UTF-8")
-           content-length (count utf-8-form)
-           headers (map #(.getBytes (str % "\r\n"))
-                        [(status-line status)
-                         "Server: ClojureScript REPL"
-                         (str "Content-Type: "
-                              content-type
-                              "; charset=utf-8")
-                         (str "Content-Length: " content-length)
-                         ""])]
-       (with-open [os (.getOutputStream conn)]
-         (do (doseq [header headers]
-               (.write os header 0 (count header)))
-             (.write os utf-8-form 0 content-length)
-             (.flush os)
-             (.close conn))))))
+    (let [utf-8-form (.getBytes form "UTF-8")
+          content-length (count utf-8-form)
+          headers (map #(.getBytes (str % "\r\n"))
+                    [(status-line status)
+                     "Server: ClojureScript REPL"
+                     (str "Content-Type: "
+                       content-type
+                       "; charset=utf-8")
+                     (str "Content-Length: " content-length)
+                     ""])]
+      (with-open [os (.getOutputStream conn)]
+        (doseq [header headers]
+          (.write os header 0 (count header)))
+        (.write os utf-8-form 0 content-length)
+        (.flush os)
+        (.close conn)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:107-128](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L107-L128)</ins>
+                └── <ins>[server.clj:117-138](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L117-L138)</ins>
 </pre>
 
 -->
@@ -110,12 +110,12 @@ The API data for this symbol:
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/send-and-close",
- :source {:code "(defn send-and-close\n  ([conn status form]\n     (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n     (let [utf-8-form (.getBytes form \"UTF-8\")\n           content-length (count utf-8-form)\n           headers (map #(.getBytes (str % \"\\r\\n\"))\n                        [(status-line status)\n                         \"Server: ClojureScript REPL\"\n                         (str \"Content-Type: \"\n                              content-type\n                              \"; charset=utf-8\")\n                         (str \"Content-Length: \" content-length)\n                         \"\"])]\n       (with-open [os (.getOutputStream conn)]\n         (do (doseq [header headers]\n               (.write os header 0 (count header)))\n             (.write os utf-8-form 0 content-length)\n             (.flush os)\n             (.close conn))))))",
+ :source {:code "(defn send-and-close\n  ([conn status form]\n    (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n    (let [utf-8-form (.getBytes form \"UTF-8\")\n          content-length (count utf-8-form)\n          headers (map #(.getBytes (str % \"\\r\\n\"))\n                    [(status-line status)\n                     \"Server: ClojureScript REPL\"\n                     (str \"Content-Type: \"\n                       content-type\n                       \"; charset=utf-8\")\n                     (str \"Content-Length: \" content-length)\n                     \"\"])]\n      (with-open [os (.getOutputStream conn)]\n        (doseq [header headers]\n          (.write os header 0 (count header)))\n        (.write os utf-8-form 0 content-length)\n        (.flush os)\n        (.close conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [107 128]},
+          :lines [117 138]},
  :full-name "cljs.repl.server/send-and-close",
  :docstring "Use the passed connection to send a form to the browser. Send a\nproper HTTP response."}
 

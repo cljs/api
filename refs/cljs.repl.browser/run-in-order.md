@@ -22,15 +22,15 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L128-L134):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L137-L143):
 
 ```clj
 (defn run-in-order [{:keys [expecting fns]}]
-  (loop [order expecting
-         fns fns]
+  (loop [order expecting fns fns]
     (if-let [f (get fns order)]
-      (do (f)
-          (recur (inc order) (dissoc fns order)))
+      (do
+        (f)
+        (recur (inc order) (dissoc fns order)))
       {:expecting order :fns fns})))
 ```
 
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:128-134](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L128-L134)</ins>
+                └── <ins>[browser.clj:137-143](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L137-L143)</ins>
 </pre>
 
 -->
@@ -86,12 +86,12 @@ The API data for this symbol:
  :name "run-in-order",
  :type "function",
  :signature ["[{:keys [expecting fns]}]"],
- :source {:code "(defn run-in-order [{:keys [expecting fns]}]\n  (loop [order expecting\n         fns fns]\n    (if-let [f (get fns order)]\n      (do (f)\n          (recur (inc order) (dissoc fns order)))\n      {:expecting order :fns fns})))",
+ :source {:code "(defn run-in-order [{:keys [expecting fns]}]\n  (loop [order expecting fns fns]\n    (if-let [f (get fns order)]\n      (do\n        (f)\n        (recur (inc order) (dissoc fns order)))\n      {:expecting order :fns fns})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [128 134]},
+          :lines [137 143]},
  :full-name "cljs.repl.browser/run-in-order",
  :full-name-encode "cljs.repl.browser/run-in-order",
  :history [["+" "0.0-927"]]}

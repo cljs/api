@@ -38,7 +38,7 @@ summarizing test results.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L203-L238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L228-L263):
 
 ```clj
 (defmacro run-tests
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:203-238](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L203-L238)</ins>
+            └── <ins>[test.clj:228-263](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L228-L263)</ins>
 </pre>
 
 -->
@@ -135,9 +135,9 @@ The API data for this symbol:
  :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   (assert (every?\n             (fn [[quote ns]] (and (= quote 'quote) (symbol? ns)))\n             namespaces)\n     \"All arguments to run-tests must be quoted symbols\")\n   (let [is-ns (ns? env-or-ns)]\n     `(do\n        ~(if is-ns\n           `(cljs.test/set-env! (cljs.test/empty-env))\n           `(cljs.test/set-env! ~env-or-ns))\n        ;; TODO: support async - David\n        (let [summary# (assoc\n                         (reduce\n                           (fn [acc# res#]\n                             (merge-with +\n                               acc#\n                               (:report-counters res#)))\n                           {:test 0 :pass 0 :fail 0 :error 0}\n                           [~@(map\n                                (fn [ns]\n                                  `(cljs.test/test-ns ~ns))\n                                (if is-ns\n                                  (concat [env-or-ns] namespaces)\n                                  namespaces))])\n                         :type :summary)]\n          (do-report summary#)\n          summary#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/test.clj",
-          :lines [203 238]},
+          :lines [228 263]},
  :full-name "cljs.test/run-tests",
  :clj-symbol "clojure.test/run-tests",
  :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given.  Returns a map\nsummarizing test results."}

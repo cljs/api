@@ -23,12 +23,20 @@
 
 
 
+Source docstring:
+
+```
+Given a namespace return all the var analysis maps. Analagous to
+clojure.core/ns-interns but returns var analysis maps not vars.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L23-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L34-L39):
 
 ```clj
-(defn ns-interns [ns]
+(defn ns-interns
+  [ns]
+  {:pre [(symbol? ns)]}
   (get-in @env/*compiler* [::ana/namespaces ns :defs]))
 ```
 
@@ -36,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:23-24](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L23-L24)</ins>
+                └── <ins>[api.clj:34-39](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L34-L39)</ins>
 </pre>
 
 -->
@@ -89,14 +97,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/ns-interns",
- :source {:code "(defn ns-interns [ns]\n  (get-in @env/*compiler* [::ana/namespaces ns :defs]))",
+ :source {:code "(defn ns-interns\n  [ns]\n  {:pre [(symbol? ns)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :defs]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [23 24]},
+          :lines [34 39]},
  :full-name "cljs.analyzer.api/ns-interns",
- :clj-symbol "clojure.core/ns-interns"}
+ :clj-symbol "clojure.core/ns-interns",
+ :docstring "Given a namespace return all the var analysis maps. Analagous to\nclojure.core/ns-interns but returns var analysis maps not vars."}
 
 ```
 

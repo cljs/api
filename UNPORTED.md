@@ -671,10 +671,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/require](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/require)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/resolve](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/resolve)</samp></td>
 </tr>
 <tr>
@@ -1679,10 +1675,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/\*stack-trace-depth\*](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/*stack-trace-depth*)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/are](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/are)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

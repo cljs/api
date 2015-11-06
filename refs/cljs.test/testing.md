@@ -31,7 +31,7 @@ but must occur inside a test function (deftest).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L166-L174):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L191-L199):
 
 ```clj
 (defmacro testing
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:166-174](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L166-L174)</ins>
+            └── <ins>[test.clj:191-199](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L191-L199)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defmacro testing\n  ([string & body]\n   `(do\n      (cljs.test/update-current-env! [:testing-contexts] conj ~string)\n      (let [ret# (do ~@body)]\n        (cljs.test/update-current-env! [:testing-contexts] rest)\n        ret#))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/test.clj",
-          :lines [166 174]},
+          :lines [191 199]},
  :full-name "cljs.test/testing",
  :clj-symbol "clojure.test/testing",
  :docstring "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest)."}

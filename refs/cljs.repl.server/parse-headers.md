@@ -27,29 +27,29 @@ Parse the headers of an HTTP POST request.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L60-L68):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L68-L76):
 
 ```clj
 (defn parse-headers
   [header-lines]
   (apply hash-map
-   (mapcat
-    (fn [line]
-      (let [[k v] (str/split line #":" 2)]
-        [(keyword (str/lower-case k)) (str/triml v)]))
-    header-lines)))
+    (mapcat
+      (fn [line]
+        (let [[k v] (str/split line #":" 2)]
+          [(keyword (str/lower-case k)) (str/triml v)]))
+      header-lines)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:60-68](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L60-L68)</ins>
+                └── <ins>[server.clj:68-76](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L68-L76)</ins>
 </pre>
 
 -->
@@ -94,12 +94,12 @@ The API data for this symbol:
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/parse-headers",
- :source {:code "(defn parse-headers\n  [header-lines]\n  (apply hash-map\n   (mapcat\n    (fn [line]\n      (let [[k v] (str/split line #\":\" 2)]\n        [(keyword (str/lower-case k)) (str/triml v)]))\n    header-lines)))",
+ :source {:code "(defn parse-headers\n  [header-lines]\n  (apply hash-map\n    (mapcat\n      (fn [line]\n        (let [[k v] (str/split line #\":\" 2)]\n          [(keyword (str/lower-case k)) (str/triml v)]))\n      header-lines)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [60 68]},
+          :lines [68 76]},
  :full-name "cljs.repl.server/parse-headers",
  :docstring "Parse the headers of an HTTP POST request."}
 

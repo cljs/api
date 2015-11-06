@@ -29,12 +29,6 @@ Rhino REPL (JS on Java 6+)
 </tr>
 <tr>
 <td></td>
-<td><samp>[current-repl-env](../cljs.repl.rhino/current-repl-env.md)</samp></td>
-<td><samp>var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[eval-result](../cljs.repl.rhino/eval-result.md)</samp></td>
 <td><samp>multimethod</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -94,6 +88,12 @@ Rhino REPL (JS on Java 6+)
 <th>Type</th>
 <th>History</th>
 </tr></thead>
+<tr>
+<td></td>
+<td><samp>[~~current-repl-env~~](../cljs.repl.rhino/current-repl-env.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[×] 0.0-2629" title="Removed in 0.0-2629" src="https://img.shields.io/badge/×-0.0--2629-red.svg"></a> </td>
+</tr>
 <tr>
 <td></td>
 <td><samp>[~~loaded-libs~~](../cljs.repl.rhino/loaded-libs.md)</samp></td>

@@ -23,12 +23,20 @@
 
 
 
+Source docstring:
+
+```
+Given a namespace return the corresponding namespace analysis map. Analagous
+to clojure.core/find-ns.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L20-L21):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L27-L32):
 
 ```clj
-(defn find-ns [sym]
+(defn find-ns
+  [sym]
+  {:pre [(symbol? sym)]}
   (get-in @env/*compiler* [::ana/namespaces sym]))
 ```
 
@@ -36,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:20-21](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer/api.clj#L20-L21)</ins>
+                └── <ins>[api.clj:27-32](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/analyzer/api.clj#L27-L32)</ins>
 </pre>
 
 -->
@@ -89,14 +97,15 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/find-ns",
- :source {:code "(defn find-ns [sym]\n  (get-in @env/*compiler* [::ana/namespaces sym]))",
+ :source {:code "(defn find-ns\n  [sym]\n  {:pre [(symbol? sym)]}\n  (get-in @env/*compiler* [::ana/namespaces sym]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [20 21]},
+          :lines [27 32]},
  :full-name "cljs.analyzer.api/find-ns",
- :clj-symbol "clojure.core/find-ns"}
+ :clj-symbol "clojure.core/find-ns",
+ :docstring "Given a namespace return the corresponding namespace analysis map. Analagous\nto clojure.core/find-ns."}
 
 ```
 

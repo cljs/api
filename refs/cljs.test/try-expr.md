@@ -31,7 +31,7 @@ You don't call this.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L134-L143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L135-L144):
 
 ```clj
 (defmacro try-expr
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
-            └── <ins>[test.clj:134-143](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/test.clj#L134-L143)</ins>
+            └── <ins>[test.clj:135-144](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/test.clj#L135-L144)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defmacro try-expr\n  [msg form]\n  `(try\n     ~(cljs.test/assert-expr &env msg form)\n     (catch :default t#\n       (cljs.test/do-report \n         {:type :error, :message ~msg,\n          :expected '~form, :actual t#}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/test.clj",
-          :lines [134 143]},
+          :lines [135 144]},
  :full-name "cljs.test/try-expr",
  :clj-symbol "clojure.test/try-expr",
  :docstring "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this."}

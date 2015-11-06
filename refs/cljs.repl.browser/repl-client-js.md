@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L49-L50):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L52-L53):
 
 ```clj
 (defn repl-client-js []
-  (slurp @(:client-js @browser-state)))
+  (slurp (:client-js @browser-state)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:49-50](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L49-L50)</ins>
+                └── <ins>[browser.clj:52-53](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L52-L53)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "repl-client-js",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn repl-client-js []\n  (slurp @(:client-js @browser-state)))",
+ :source {:code "(defn repl-client-js []\n  (slurp (:client-js @browser-state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [49 50]},
+          :lines [52 53]},
  :full-name "cljs.repl.browser/repl-client-js",
  :full-name-encode "cljs.repl.browser/repl-client-js",
  :history [["+" "0.0-927"]]}

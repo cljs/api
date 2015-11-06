@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L6248-L6254):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L6231-L6237):
 
 ```clj
 (set! (.-fromArrays PersistentHashMap)
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6248-6254](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L6248-L6254)</ins>
+            └── <ins>[core.cljs:6231-6237](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L6231-L6237)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArrays PersistentHashMap)\n  (fn [ks vs]\n    (let [len (alength ks)]\n      (loop [i 0 ^not-native out (transient (.-EMPTY PersistentHashMap))]\n        (if (< i len)\n          (recur (inc i) (-assoc! out (aget ks i) (aget vs i)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6248 6254]},
+          :lines [6231 6237]},
  :full-name "cljs.core/PersistentHashMap.fromArrays"}
 
 ```

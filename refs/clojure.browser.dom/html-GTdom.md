@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/browser/dom.cljs#L101-L102):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/clojure/browser/dom.cljs#L101-L102):
 
 ```clj
 (defn html->dom [s]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:101-102](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/browser/dom.cljs#L101-L102)</ins>
+                └── <ins>[dom.cljs:101-102](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/clojure/browser/dom.cljs#L101-L102)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn html->dom [s]\n  (gdom/htmlToDocumentFragment s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [101 102]},
  :full-name "clojure.browser.dom/html->dom",

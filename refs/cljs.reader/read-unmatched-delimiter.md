@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/reader.cljs#L260-L262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/reader.cljs#L260-L262):
 
 ```clj
 (defn read-unmatched-delimiter
   [rdr ch]
-  (reader-error rdr "Unmached delimiter " ch))
+  (reader-error rdr "Unmatched delimiter " ch))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:260-262](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/reader.cljs#L260-L262)</ins>
+            └── <ins>[reader.cljs:260-262](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/reader.cljs#L260-L262)</ins>
 </pre>
 
 -->
@@ -81,10 +81,10 @@ The API data for this symbol:
  :name "read-unmatched-delimiter",
  :type "function",
  :signature ["[rdr ch]"],
- :source {:code "(defn read-unmatched-delimiter\n  [rdr ch]\n  (reader-error rdr \"Unmached delimiter \" ch))",
+ :source {:code "(defn read-unmatched-delimiter\n  [rdr ch]\n  (reader-error rdr \"Unmatched delimiter \" ch))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [260 262]},
  :full-name "cljs.reader/read-unmatched-delimiter",

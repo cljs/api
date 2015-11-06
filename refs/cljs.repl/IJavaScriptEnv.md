@@ -17,13 +17,13 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl.clj#L26-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L27-L31):
 
 ```clj
 (defprotocol IJavaScriptEnv
-  (-setup [this] "initialize the environment")
+  (-setup [this] [this opts] "initialize the environment")
   (-evaluate [this filename line js] "evaluate a javascript string")
-  (-load [this ns url] "load code at url into the environment")
+  (-load [this provides url] "load code at url into the environment")
   (-tear-down [this] "dispose of the environment"))
 ```
 
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:26-30](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl.clj#L26-L30)</ins>
+            └── <ins>[repl.clj:27-31](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl.clj#L27-L31)</ins>
 </pre>
 
 -->
@@ -78,20 +78,20 @@ The API data for this symbol:
  :name "IJavaScriptEnv",
  :type "protocol",
  :full-name-encode "cljs.repl/IJavaScriptEnv",
- :source {:code "(defprotocol IJavaScriptEnv\n  (-setup [this] \"initialize the environment\")\n  (-evaluate [this filename line js] \"evaluate a javascript string\")\n  (-load [this ns url] \"load code at url into the environment\")\n  (-tear-down [this] \"dispose of the environment\"))",
+ :source {:code "(defprotocol IJavaScriptEnv\n  (-setup [this] [this opts] \"initialize the environment\")\n  (-evaluate [this filename line js] \"evaluate a javascript string\")\n  (-load [this provides url] \"load code at url into the environment\")\n  (-tear-down [this] \"dispose of the environment\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl.clj",
-          :lines [26 30]},
+          :lines [27 31]},
  :methods [{:name "-setup",
-            :signature ["[this]"],
+            :signature ["[this]" "[this opts]"],
             :docstring "initialize the environment"}
            {:name "-evaluate",
             :signature ["[this filename line js]"],
             :docstring "evaluate a javascript string"}
            {:name "-load",
-            :signature ["[this ns url]"],
+            :signature ["[this provides url]"],
             :docstring "load code at url into the environment"}
            {:name "-tear-down",
             :signature ["[this]"],

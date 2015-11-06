@@ -17,24 +17,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L21-L23):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L20-L23):
 
 ```clj
-(def ^String bootjs (str "goog.require = function(rule){"
-                         "Packages.clojure.lang.RT[\"var\"](\"cljs.repl.rhino\",\"goog-require\")"
-                         ".invoke(___repl_env, rule);}"))
+(def ^String bootjs
+  (str "goog.require = function(rule){"
+       "Packages.clojure.lang.RT[\"var\"](\"cljs.repl.rhino\",\"goog-require\")"
+       ".invoke(___repl_env, __repl_opts, rule);}"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:21-23](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L21-L23)</ins>
+                └── <ins>[rhino.clj:20-23](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/rhino.clj#L20-L23)</ins>
 </pre>
 
 -->
@@ -77,12 +78,12 @@ The API data for this symbol:
  :name "bootjs",
  :type "var",
  :return-type String,
- :source {:code "(def ^String bootjs (str \"goog.require = function(rule){\"\n                         \"Packages.clojure.lang.RT[\\\"var\\\"](\\\"cljs.repl.rhino\\\",\\\"goog-require\\\")\"\n                         \".invoke(___repl_env, rule);}\"))",
+ :source {:code "(def ^String bootjs\n  (str \"goog.require = function(rule){\"\n       \"Packages.clojure.lang.RT[\\\"var\\\"](\\\"cljs.repl.rhino\\\",\\\"goog-require\\\")\"\n       \".invoke(___repl_env, __repl_opts, rule);}\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [21 23]},
+          :lines [20 23]},
  :full-name "cljs.repl.rhino/bootjs",
  :full-name-encode "cljs.repl.rhino/bootjs",
  :history [["+" "0.0-927"]]}

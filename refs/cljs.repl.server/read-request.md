@@ -22,26 +22,27 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L95-L99):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L104-L109):
 
 ```clj
 (defn read-request [rdr]
   (let [line (.readLine rdr)]
-    (cond (.startsWith line "POST") (read-post line rdr)
-          (.startsWith line "GET") (read-get line rdr)
-          :else {:method :unknown :content line})))
+    (cond
+      (.startsWith line "POST") (read-post line rdr)
+      (.startsWith line "GET") (read-get line rdr)
+      :else {:method :unknown :content line})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:95-99](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L95-L99)</ins>
+                └── <ins>[server.clj:104-109](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L104-L109)</ins>
 </pre>
 
 -->
@@ -84,12 +85,12 @@ The API data for this symbol:
  :name "read-request",
  :type "function",
  :signature ["[rdr]"],
- :source {:code "(defn read-request [rdr]\n  (let [line (.readLine rdr)]\n    (cond (.startsWith line \"POST\") (read-post line rdr)\n          (.startsWith line \"GET\") (read-get line rdr)\n          :else {:method :unknown :content line})))",
+ :source {:code "(defn read-request [rdr]\n  (let [line (.readLine rdr)]\n    (cond\n      (.startsWith line \"POST\") (read-post line rdr)\n      (.startsWith line \"GET\") (read-get line rdr)\n      :else {:method :unknown :content line})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [95 99]},
+          :lines [104 109]},
  :full-name "cljs.repl.server/read-request",
  :full-name-encode "cljs.repl.server/read-request",
  :history [["+" "0.0-1503"]]}

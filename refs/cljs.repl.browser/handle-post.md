@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L118):
 
 ```clj
 (defmulti handle-post (fn [m _ _ ] (:type m)))
@@ -32,86 +32,90 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:110](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L110)</ins>
+                └── <ins>[browser.clj:118](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L118)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L116-L123):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L124-L131):
 
 ```clj
 (defmethod handle-post :ready [_ conn _]
-  (do (reset! loaded-libs @preloaded-libs)
-      (send ordering (fn [_] {:expecting nil :fns {}}))
-      (send-for-eval conn
-                     (cljsc/-compile
-                      '[(ns cljs.user)
-                        (set! *print-fn* clojure.browser.repl/repl-print)] {})
-                     identity)))
+  (reset! loaded-libs @preloaded-libs)
+  (send ordering (fn [_] {:expecting nil :fns {}}))
+  (send-for-eval conn
+    (cljsc/-compile
+      '[(ns cljs.user)
+        (set! *print-fn* clojure.browser.repl/repl-print)] {})
+    identity))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:116-123](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L116-L123)</ins>
+                └── <ins>[browser.clj:124-131](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L124-L131)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L143-L146):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L152-L157):
 
 ```clj
 (defmethod handle-post :print [{:keys [content order]} conn _ ]
-  (do (constrain-order order (fn [] (do (print (read-string content))
-                                       (.flush *out*))))
-      (server/send-and-close conn 200 "ignore__")))
+  (constrain-order order
+    (fn []
+      (print (read-string content))
+      (.flush *out*)))
+  (server/send-and-close conn 200 "ignore__"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:143-146](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L143-L146)</ins>
+                └── <ins>[browser.clj:152-157](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L152-L157)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L148-L150):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L159-L163):
 
 ```clj
 (defmethod handle-post :result [{:keys [content order]} conn _ ]
-  (constrain-order order (fn [] (do (return-value content)
-                                   (server/set-connection conn)))))
+  (constrain-order order
+    (fn []
+      (return-value content)
+      (server/set-connection conn))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:148-150](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L148-L150)</ins>
+                └── <ins>[browser.clj:159-163](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L159-L163)</ins>
 </pre>
 -->
 
@@ -157,27 +161,27 @@ The API data for this symbol:
  :source {:code "(defmulti handle-post (fn [m _ _ ] (:type m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [110]},
- :extra-sources ({:code "(defmethod handle-post :ready [_ conn _]\n  (do (reset! loaded-libs @preloaded-libs)\n      (send ordering (fn [_] {:expecting nil :fns {}}))\n      (send-for-eval conn\n                     (cljsc/-compile\n                      '[(ns cljs.user)\n                        (set! *print-fn* clojure.browser.repl/repl-print)] {})\n                     identity)))",
+          :lines [118]},
+ :extra-sources ({:code "(defmethod handle-post :ready [_ conn _]\n  (reset! loaded-libs @preloaded-libs)\n  (send ordering (fn [_] {:expecting nil :fns {}}))\n  (send-for-eval conn\n    (cljsc/-compile\n      '[(ns cljs.user)\n        (set! *print-fn* clojure.browser.repl/repl-print)] {})\n    identity))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2511",
+                  :tag "r2629",
                   :filename "src/clj/cljs/repl/browser.clj",
-                  :lines [116 123]}
-                 {:code "(defmethod handle-post :print [{:keys [content order]} conn _ ]\n  (do (constrain-order order (fn [] (do (print (read-string content))\n                                       (.flush *out*))))\n      (server/send-and-close conn 200 \"ignore__\")))",
+                  :lines [124 131]}
+                 {:code "(defmethod handle-post :print [{:keys [content order]} conn _ ]\n  (constrain-order order\n    (fn []\n      (print (read-string content))\n      (.flush *out*)))\n  (server/send-and-close conn 200 \"ignore__\"))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2511",
+                  :tag "r2629",
                   :filename "src/clj/cljs/repl/browser.clj",
-                  :lines [143 146]}
-                 {:code "(defmethod handle-post :result [{:keys [content order]} conn _ ]\n  (constrain-order order (fn [] (do (return-value content)\n                                   (server/set-connection conn)))))",
+                  :lines [152 157]}
+                 {:code "(defmethod handle-post :result [{:keys [content order]} conn _ ]\n  (constrain-order order\n    (fn []\n      (return-value content)\n      (server/set-connection conn))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2511",
+                  :tag "r2629",
                   :filename "src/clj/cljs/repl/browser.clj",
-                  :lines [148 150]}),
+                  :lines [159 163]}),
  :full-name "cljs.repl.browser/handle-post"}
 
 ```

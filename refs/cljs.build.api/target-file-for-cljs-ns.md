@@ -11,7 +11,10 @@
 
 
  <samp>
-(__target-file-for-cljs-ns__ output-dir ns-sym)<br>
+(__target-file-for-cljs-ns__ ns-sym)<br>
+</samp>
+ <samp>
+(__target-file-for-cljs-ns__ ns-sym output-dir)<br>
 </samp>
 
 ---
@@ -32,25 +35,27 @@ For example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/build/api.clj#L20-L29):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/build/api.clj#L24-L35):
 
 ```clj
-(defn target-file-for-cljs-ns
-  [output-dir ns-sym]
-  (util/to-target-file (cljs.closure/output-directory { :output-dir output-dir })
-                       {:ns ns-sym }))
+(defn ^File target-file-for-cljs-ns
+  ([ns-sym] (target-file-for-cljs-ns ns-sym nil))
+  ([ns-sym output-dir]
+    (util/to-target-file
+      (util/output-directory {:output-dir output-dir})
+      {:ns ns-sym})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── build
-                └── <ins>[api.clj:20-29](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/build/api.clj#L20-L29)</ins>
+                └── <ins>[api.clj:24-35](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/build/api.clj#L24-L35)</ins>
 </pre>
 
 -->
@@ -89,18 +94,19 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.build.api",
+{:return-type File,
+ :ns "cljs.build.api",
  :name "target-file-for-cljs-ns",
- :signature ["[output-dir ns-sym]"],
+ :signature ["[ns-sym]" "[ns-sym output-dir]"],
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.build.api/target-file-for-cljs-ns",
- :source {:code "(defn target-file-for-cljs-ns\n  [output-dir ns-sym]\n  (util/to-target-file (cljs.closure/output-directory { :output-dir output-dir })\n                       {:ns ns-sym }))",
+ :source {:code "(defn ^File target-file-for-cljs-ns\n  ([ns-sym] (target-file-for-cljs-ns ns-sym nil))\n  ([ns-sym output-dir]\n    (util/to-target-file\n      (util/output-directory {:output-dir output-dir})\n      {:ns ns-sym})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/build/api.clj",
-          :lines [20 29]},
+          :lines [24 35]},
  :full-name "cljs.build.api/target-file-for-cljs-ns",
  :docstring "Given an output directory and a clojurescript namespace return the\ncompilation target file for that namespace.\n\nFor example:\n(target-file-from-cljs-ns \"resources/out\" 'example.core) ->\n<File: \"resources/out/example/core.js\">"}
 

@@ -28,30 +28,32 @@ connection is not available, store the promise in server/state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L20-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L22-L34):
 
 ```clj
 (defn connection
   []
-  (let [p (promise)
+  (let [p    (promise)
         conn (:connection @state)]
     (if (and conn (not (.isClosed conn)))
-      (do (deliver p conn)
-          p)
-      (do (swap! state (fn [old] (assoc old :promised-conn p)))
-          p))))
+      (do
+        (deliver p conn)
+        p)
+      (do
+        (swap! state (fn [old] (assoc old :promised-conn p)))
+        p))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:20-30](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/server.clj#L20-L30)</ins>
+                └── <ins>[server.clj:22-34](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/server.clj#L22-L34)</ins>
 </pre>
 
 -->
@@ -96,12 +98,12 @@ The API data for this symbol:
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/connection",
- :source {:code "(defn connection\n  []\n  (let [p (promise)\n        conn (:connection @state)]\n    (if (and conn (not (.isClosed conn)))\n      (do (deliver p conn)\n          p)\n      (do (swap! state (fn [old] (assoc old :promised-conn p)))\n          p))))",
+ :source {:code "(defn connection\n  []\n  (let [p    (promise)\n        conn (:connection @state)]\n    (if (and conn (not (.isClosed conn)))\n      (do\n        (deliver p conn)\n        p)\n      (do\n        (swap! state (fn [old] (assoc old :promised-conn p)))\n        p))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/server.clj",
-          :lines [20 30]},
+          :lines [22 34]},
  :full-name "cljs.repl.server/connection",
  :docstring "Promise to return a connection when one is available. If a\nconnection is not available, store the promise in server/state."}
 

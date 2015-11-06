@@ -40,7 +40,7 @@ Returns a set of the elements for which pred is true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/set.cljs#L61-L65):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/clojure/set.cljs#L61-L65):
 
 ```clj
 (defn select
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:61-65](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/set.cljs#L61-L65)</ins>
+            └── <ins>[set.cljs:61-65](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/clojure/set.cljs#L61-L65)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn select\n  [pred xset]\n    (reduce (fn [s k] (if (pred k) s (disj s k)))\n            xset xset))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/cljs/clojure/set.cljs",
           :lines [61 65]},
  :full-name "clojure.set/select",

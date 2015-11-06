@@ -32,27 +32,27 @@ when the return value is received.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L33-L41):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L36-L44):
 
 ```clj
 (defn send-for-eval
   ([form return-value-fn]
-     (send-for-eval @(server/connection) form return-value-fn))
+    (send-for-eval @(server/connection) form return-value-fn))
   ([conn form return-value-fn]
-     (do (set-return-value-fn return-value-fn)
-         (server/send-and-close conn 200 form "text/javascript"))))
+    (set-return-value-fn return-value-fn)
+    (server/send-and-close conn 200 form "text/javascript")))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:33-41](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L33-L41)</ins>
+                └── <ins>[browser.clj:36-44](https://github.com/clojure/clojurescript/blob/r2629/src/clj/cljs/repl/browser.clj#L36-L44)</ins>
 </pre>
 
 -->
@@ -97,12 +97,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/send-for-eval",
- :source {:code "(defn send-for-eval\n  ([form return-value-fn]\n     (send-for-eval @(server/connection) form return-value-fn))\n  ([conn form return-value-fn]\n     (do (set-return-value-fn return-value-fn)\n         (server/send-and-close conn 200 form \"text/javascript\"))))",
+ :source {:code "(defn send-for-eval\n  ([form return-value-fn]\n    (send-for-eval @(server/connection) form return-value-fn))\n  ([conn form return-value-fn]\n    (set-return-value-fn return-value-fn)\n    (server/send-and-close conn 200 form \"text/javascript\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [33 41]},
+          :lines [36 44]},
  :full-name "cljs.repl.browser/send-for-eval",
  :docstring "Given a form and a return value function, send the form to the\nbrowser for evaluation. The return value function will be called\nwhen the return value is received."}
 

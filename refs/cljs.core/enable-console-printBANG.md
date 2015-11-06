@@ -27,7 +27,7 @@ Set *print-fn* to console.log
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L49-L55):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L49-L55):
 
 ```clj
 (defn enable-console-print!
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
+clojurescript @ r2629
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:49-55](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L49-L55)</ins>
+            └── <ins>[core.cljs:49-55](https://github.com/clojure/clojurescript/blob/r2629/src/cljs/cljs/core.cljs#L49-L55)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn enable-console-print!\n  []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2511",
+          :tag "r2629",
           :filename "src/cljs/cljs/core.cljs",
           :lines [49 55]},
  :full-name "cljs.core/enable-console-print!",
