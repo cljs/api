@@ -52,7 +52,7 @@ It is common to use `;;` for comments that have their own line:
 
 
 
- @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/jvm/clojure/lang/LispReader.java#L):
+ @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/jvm/clojure/lang/LispReader.java#L):
 
 ```clj
 
@@ -62,12 +62,12 @@ It is common to use `;;` for comments that have their own line:
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── jvm
         └── clojure
             └── lang
-                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/jvm/clojure/lang/LispReader.java#L)</ins>
+                └── <ins>[LispReader.java:](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/jvm/clojure/lang/LispReader.java#L)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :related ["syntax/ignore" "cljs.core/comment" "syntax/shebang"],
  :full-name-encode "syntax/comment",
  :source {:repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/jvm/clojure/lang/LispReader.java",
           :lines [nil]},
  :examples [{:id "ab62d2",

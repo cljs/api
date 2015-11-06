@@ -27,7 +27,7 @@ Get the value of an element.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L129-L132):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L131-L134):
 
 ```clj
 (defn get-value
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:129-132](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/clojure/browser/dom.cljs#L129-L132)</ins>
+                └── <ins>[dom.cljs:131-134](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/clojure/browser/dom.cljs#L131-L134)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn get-value\n  [e]\n  (.-value (ensure-element e)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/clojure/browser/dom.cljs",
-          :lines [129 132]},
+          :lines [131 134]},
  :full-name "clojure.browser.dom/get-value",
  :docstring "Get the value of an element."}
 

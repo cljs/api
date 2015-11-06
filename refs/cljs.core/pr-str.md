@@ -30,7 +30,7 @@ pr to a string, returning it. Fundamental entrypoint to IPrintable.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3111-L3114):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5701-L5704):
 
 ```clj
 (defn pr-str
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3111-3114](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3111-L3114)</ins>
+            └── <ins>[core.cljs:5701-5704](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5701-L5704)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn pr-str\n  [& objs]\n  (pr-str-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3111 3114]},
+          :lines [5701 5704]},
  :full-name "cljs.core/pr-str",
  :clj-symbol "clojure.core/pr-str",
  :docstring "pr to a string, returning it. Fundamental entrypoint to IPrintable."}

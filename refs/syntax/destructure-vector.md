@@ -97,7 +97,7 @@ Destructure vectors can be nested:
 
 
 
-Parser code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3896-L3951):
+Parser code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3900-L3955):
 
 ```clj
 (defn destructure [bindings]
@@ -162,11 +162,11 @@ Parser code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3896-3951](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L3896-L3951)</ins>
+            └── <ins>[core.clj:3900-3955](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L3900-L3955)</ins>
 </pre>
 
 -->
@@ -210,9 +210,9 @@ The API data for this symbol:
  :source {:code "(defn destructure [bindings]\n  (let [bents (partition 2 bindings)\n        pb (fn pb [bvec b v]\n               (let [pvec\n                     (fn [bvec b val]\n                       (let [gvec (gensym \"vec__\")]\n                         (loop [ret (-> bvec (conj gvec) (conj val))\n                                n 0\n                                bs b\n                                seen-rest? false]\n                           (if (seq bs)\n                             (let [firstb (first bs)]\n                               (cond\n                                (= firstb '&) (recur (pb ret (second bs) (list `nthnext gvec n))\n                                                     n\n                                                     (nnext bs)\n                                                     true)\n                                (= firstb :as) (pb ret (second bs) gvec)\n                                :else (if seen-rest?\n                                        (throw (new Exception \"Unsupported binding form, only :as can follow & parameter\"))\n                                        (recur (pb ret firstb  (list `nth gvec n nil))\n                                               (inc n)\n                                               (next bs)\n                                               seen-rest?))))\n                             ret))))\n                     pmap\n                     (fn [bvec b v]\n                       (let [gmap (or (:as b) (gensym \"map__\"))\n                             defaults (:or b)]\n                         (loop [ret (-> bvec (conj gmap) (conj v)\n                                        (conj gmap) (conj `(if (seq? ~gmap) (apply hash-map ~gmap) ~gmap)))\n                                bes (reduce1\n                                     (fn [bes entry]\n                                       (reduce1 #(assoc %1 %2 ((val entry) %2))\n                                               (dissoc bes (key entry))\n                                               ((key entry) bes)))\n                                     (dissoc b :as :or)\n                                     {:keys #(keyword (str %)), :strs str, :syms #(list `quote %)})]\n                           (if (seq bes)\n                             (let [bb (key (first bes))\n                                   bk (val (first bes))\n                                   has-default (contains? defaults bb)]\n                               (recur (pb ret bb (if has-default\n                                                   (list `get gmap bk (defaults bb))\n                                                   (list `get gmap bk)))\n                                      (next bes)))\n                             ret))))]\n                 (cond\n                  (symbol? b) (-> bvec (conj b) (conj v))\n                  (vector? b) (pvec bvec b v)\n                  (map? b) (pmap bvec b v)\n                  :else (throw (new Exception (str \"Unsupported binding form: \" b))))))\n        process-entry (fn [bvec b] (pb bvec (first b) (second b)))]\n    (if (every? symbol? (map first bents))\n      bindings\n      (reduce1 process-entry [] bents))))",
           :title "Parser code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [3896 3951]},
+          :lines [3900 3955]},
  :usage ["[arg1 arg2 & args :as name]"],
  :examples [{:id "acab87",
              :content "Use destructure vectors in function parameters:\n\n```clj\n(defn foo [[a b] c]\n  (+ a b c))\n\n(foo [1 2] 3)\n;;=> 6\n```"}

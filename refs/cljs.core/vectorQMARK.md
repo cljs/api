@@ -41,10 +41,10 @@ Return true if x satisfies IVector
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L621-L623):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L768-L770):
 
 ```clj
-(defn vector?
+(defn ^boolean vector?
   [x] (satisfies? IVector x))
 ```
 
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:621-623](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L621-L623)</ins>
+            └── <ins>[core.cljs:768-770](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L768-L770)</ins>
 </pre>
 
 -->
@@ -99,6 +99,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` is a vector, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "vector?",
  :signature ["[x]"],
@@ -106,12 +107,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/vector" "cljs.core/vec"],
  :full-name-encode "cljs.core/vectorQMARK",
- :source {:code "(defn vector?\n  [x] (satisfies? IVector x))",
+ :source {:code "(defn ^boolean vector?\n  [x] (satisfies? IVector x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [621 623]},
+          :lines [768 770]},
  :full-name "cljs.core/vector?",
  :clj-symbol "clojure.core/vector?",
  :docstring "Return true if x satisfies IVector"}

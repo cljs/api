@@ -41,7 +41,7 @@ Supported metadata:
 
 - `^:private boolean` - make non-accessible from other namespaces
 - `^:dynamic boolean` - make [dynamically bindable][doc:cljs.core/binding] (usually named with [`earmuffs`][doc:syntax/earmuffs])
-- `^:const boolean` - prevents redef and allows it to be used in [doc:cljs.core/case].
+- `^:const boolean` - prevents redef and allows it to be used in [`case`][doc:cljs.core/case].
 - `^:jsdoc [""]` - vector of JSDoc Tags for [Google Closure][closure-jsdoc] or [standard][other-jsdoc].
 - `^:test (fn [] (assert ...))` - allows function to be tested with [doc:cljs.core/test].
 - `^:doc ""` - doc-string (prefer the use of the `(def symbol doc-string init)`)
@@ -61,6 +61,7 @@ Compiler will also add metadata:
 
 [doc:cljs.core/binding]:../cljs.core/binding.md
 [doc:syntax/earmuffs]:../syntax/earmuffs.md
+[doc:cljs.core/case]:../cljs.core/case.md
 
 ---
 
@@ -96,46 +97,79 @@ c
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L689-L714):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L883-L941):
 
 ```clj
 (defmethod parse 'def
   [op env form name]
-  (let [pfn (fn ([_ sym] {:sym sym})
+  (let [pfn (fn
+              ([_ sym] {:sym sym})
               ([_ sym init] {:sym sym :init init})
               ([_ sym doc init] {:sym sym :doc doc :init init}))
         args (apply pfn form)
-        sym (:sym args)]
+        sym (:sym args)
+        tag (-> sym meta :tag)
+        dynamic (-> sym meta :dynamic)
+        ns-name (-> env :ns :name)]
     (assert (not (namespace sym)) "Can't def ns-qualified name")
-    (let [name (munge (:name (resolve-var (dissoc env :locals) sym)))
-          init-expr (when (contains? args :init) (disallowing-recur
-                                                  (analyze (assoc env :context :expr) (:init args) sym)))
+    (let [env (if (or (and (not= ns-name 'cljs.core)
+                           (core-name? env sym))
+                      (get-in @namespaces [ns-name :uses sym]))
+                (let [ev (resolve-existing-var (dissoc env :locals) sym)]
+                  (when *cljs-warn-on-redef*
+                    (warning env
+                      (str "WARNING: " sym " already refers to: " (symbol (str (:ns ev)) (str sym))
+                           " being replaced by: " (symbol (str ns-name) (str sym)))))
+                  (swap! namespaces update-in [ns-name :excludes] conj sym)
+                  (update-in env [:ns :excludes] conj sym))
+                env)
+          name (munge (:name (resolve-var (dissoc env :locals) sym)))
+          init-expr (when (contains? args :init)
+                      (disallowing-recur
+                       (analyze (assoc env :context :expr) (:init args) sym)))
+          fn-var? (and init-expr (= (:op init-expr) :fn))
           export-as (when-let [export-val (-> sym meta :export)]
                       (if (= true export-val) name export-val))
           doc (or (:doc args) (-> sym meta :doc))]
-      (swap! namespaces update-in [(-> env :ns :name) :defs sym]
+      (when-let [v (get-in @namespaces [ns-name :defs sym])]
+        (when (and *cljs-warn-on-fn-var*
+                   (not (-> sym meta :declared))
+                   (and (:fn-var v) (not fn-var?)))
+          (warning env
+            (str "WARNING: " (symbol (str ns-name) (str sym))
+                 " no longer fn, references are stale"))))
+      (swap! namespaces update-in [ns-name :defs sym]
              (fn [m]
                (let [m (assoc (or m {}) :name name)]
-                 (if-let [line (:line env)]
-                   (-> m
-                       (assoc :file *cljs-file*)
-                       (assoc :line line))
-                   m))))
+                 (merge m
+                   (when tag {:tag tag})
+                   (when dynamic {:dynamic true})
+                   (when-let [line (:line env)]
+                     {:file *cljs-file* :line line})
+                   (when fn-var?
+                     {:fn-var true
+                      :variadic (:variadic init-expr)
+                      :max-fixed-arity (:max-fixed-arity init-expr)
+                      :method-params (map (fn [m]
+                                            (:params m))
+                                          (:methods init-expr))})))))
       (merge {:env env :op :def :form form
               :name name :doc doc :init init-expr}
-             (when init-expr {:children [init-expr]})
-             (when export-as {:export export-as})))))
+             (when tag {:tag tag})
+             (when dynamic {:dynamic true})
+             (when export-as {:export export-as})
+             (when init-expr {:children [init-expr]})))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:689-714](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L689-L714)</ins>
+            └── <ins>[compiler.clj:883-941](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L883-L941)</ins>
 </pre>
 
 -->
@@ -187,12 +221,12 @@ The API data for this symbol:
            "cljs.core/defmacro"
            "cljs.core/defmulti"],
  :full-name-encode "special/def",
- :source {:code "(defmethod parse 'def\n  [op env form name]\n  (let [pfn (fn ([_ sym] {:sym sym})\n              ([_ sym init] {:sym sym :init init})\n              ([_ sym doc init] {:sym sym :doc doc :init init}))\n        args (apply pfn form)\n        sym (:sym args)]\n    (assert (not (namespace sym)) \"Can't def ns-qualified name\")\n    (let [name (munge (:name (resolve-var (dissoc env :locals) sym)))\n          init-expr (when (contains? args :init) (disallowing-recur\n                                                  (analyze (assoc env :context :expr) (:init args) sym)))\n          export-as (when-let [export-val (-> sym meta :export)]\n                      (if (= true export-val) name export-val))\n          doc (or (:doc args) (-> sym meta :doc))]\n      (swap! namespaces update-in [(-> env :ns :name) :defs sym]\n             (fn [m]\n               (let [m (assoc (or m {}) :name name)]\n                 (if-let [line (:line env)]\n                   (-> m\n                       (assoc :file *cljs-file*)\n                       (assoc :line line))\n                   m))))\n      (merge {:env env :op :def :form form\n              :name name :doc doc :init init-expr}\n             (when init-expr {:children [init-expr]})\n             (when export-as {:export export-as})))))",
+ :source {:code "(defmethod parse 'def\n  [op env form name]\n  (let [pfn (fn\n              ([_ sym] {:sym sym})\n              ([_ sym init] {:sym sym :init init})\n              ([_ sym doc init] {:sym sym :doc doc :init init}))\n        args (apply pfn form)\n        sym (:sym args)\n        tag (-> sym meta :tag)\n        dynamic (-> sym meta :dynamic)\n        ns-name (-> env :ns :name)]\n    (assert (not (namespace sym)) \"Can't def ns-qualified name\")\n    (let [env (if (or (and (not= ns-name 'cljs.core)\n                           (core-name? env sym))\n                      (get-in @namespaces [ns-name :uses sym]))\n                (let [ev (resolve-existing-var (dissoc env :locals) sym)]\n                  (when *cljs-warn-on-redef*\n                    (warning env\n                      (str \"WARNING: \" sym \" already refers to: \" (symbol (str (:ns ev)) (str sym))\n                           \" being replaced by: \" (symbol (str ns-name) (str sym)))))\n                  (swap! namespaces update-in [ns-name :excludes] conj sym)\n                  (update-in env [:ns :excludes] conj sym))\n                env)\n          name (munge (:name (resolve-var (dissoc env :locals) sym)))\n          init-expr (when (contains? args :init)\n                      (disallowing-recur\n                       (analyze (assoc env :context :expr) (:init args) sym)))\n          fn-var? (and init-expr (= (:op init-expr) :fn))\n          export-as (when-let [export-val (-> sym meta :export)]\n                      (if (= true export-val) name export-val))\n          doc (or (:doc args) (-> sym meta :doc))]\n      (when-let [v (get-in @namespaces [ns-name :defs sym])]\n        (when (and *cljs-warn-on-fn-var*\n                   (not (-> sym meta :declared))\n                   (and (:fn-var v) (not fn-var?)))\n          (warning env\n            (str \"WARNING: \" (symbol (str ns-name) (str sym))\n                 \" no longer fn, references are stale\"))))\n      (swap! namespaces update-in [ns-name :defs sym]\n             (fn [m]\n               (let [m (assoc (or m {}) :name name)]\n                 (merge m\n                   (when tag {:tag tag})\n                   (when dynamic {:dynamic true})\n                   (when-let [line (:line env)]\n                     {:file *cljs-file* :line line})\n                   (when fn-var?\n                     {:fn-var true\n                      :variadic (:variadic init-expr)\n                      :max-fixed-arity (:max-fixed-arity init-expr)\n                      :method-params (map (fn [m]\n                                            (:params m))\n                                          (:methods init-expr))})))))\n      (merge {:env env :op :def :form form\n              :name name :doc doc :init init-expr}\n             (when tag {:tag tag})\n             (when dynamic {:dynamic true})\n             (when export-as {:export export-as})\n             (when init-expr {:children [init-expr]})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [689 714]},
+          :lines [883 941]},
  :examples [{:id "a5f898",
              :content "```clj\n(def a)\na\n;;=> nil\n\n(def b 42)\nb\n;;=> 42\n\n(def c \"an optional docstring\" 42)\nc\n;;=> 42\n```"}],
  :known-as "define",

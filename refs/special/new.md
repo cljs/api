@@ -20,27 +20,28 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L816-L822):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1055-L1062):
 
 ```clj
 (defmethod parse 'new
-  [_ env [_ ctor & args] _]
+  [_ env [_ ctor & args :as form] _]
   (disallowing-recur
    (let [enve (assoc env :context :expr)
          ctorexpr (analyze enve ctor)
          argexprs (vec (map #(analyze enve %) args))]
-     {:env env :op :new :ctor ctorexpr :args argexprs :children (conj argexprs ctorexpr)})))
+     {:env env :op :new :form form :ctor ctorexpr :args argexprs
+      :children (into [ctorexpr] argexprs)})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:816-822](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L816-L822)</ins>
+            └── <ins>[compiler.clj:1055-1062](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1055-L1062)</ins>
 </pre>
 
 -->
@@ -84,12 +85,12 @@ The API data for this symbol:
 {:ns "special",
  :name "new",
  :type "special form",
- :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))]\n     {:env env :op :new :ctor ctorexpr :args argexprs :children (conj argexprs ctorexpr)})))",
+ :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _]\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         argexprs (vec (map #(analyze enve %) args))]\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [816 822]},
+          :lines [1055 1062]},
  :full-name "special/new",
  :full-name-encode "special/new",
  :clj-symbol "clojure.core/new",

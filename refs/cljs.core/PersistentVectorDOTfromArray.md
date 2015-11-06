@@ -22,21 +22,26 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2201):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2664-L2669):
 
 ```clj
-(set! cljs.core.PersistentVector/fromArray (fn [xs] (into cljs.core.PersistentVector/EMPTY xs)))
+(set! cljs.core.PersistentVector/fromArray
+      (fn [xs]
+        (loop [xs (seq xs) out (transient cljs.core.PersistentVector/EMPTY)]
+          (if xs
+            (recur (next xs) (conj! out (first xs)))
+            (persistent! out)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2201](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2201)</ins>
+            └── <ins>[core.cljs:2664-2669](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2664-L2669)</ins>
 </pre>
 
 -->
@@ -82,12 +87,12 @@ The API data for this symbol:
  :parent-type "PersistentVector",
  :type "function",
  :full-name-encode "cljs.core/PersistentVectorDOTfromArray",
- :source {:code "(set! cljs.core.PersistentVector/fromArray (fn [xs] (into cljs.core.PersistentVector/EMPTY xs)))",
+ :source {:code "(set! cljs.core.PersistentVector/fromArray\n      (fn [xs]\n        (loop [xs (seq xs) out (transient cljs.core.PersistentVector/EMPTY)]\n          (if xs\n            (recur (next xs) (conj! out (first xs)))\n            (persistent! out)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2201]},
+          :lines [2664 2669]},
  :full-name "cljs.core/PersistentVector.fromArray"}
 
 ```

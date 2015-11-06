@@ -42,10 +42,10 @@ Returns true if n is even, throws an exception if n is not an integer
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1474-L1478):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1841-L1845):
 
 ```clj
-(defn even?
+(defn ^boolean even?
    [n] (if (integer? n)
         (zero? (bit-and n 1))
         (throw (js/Error. (str "Argument must be an integer: " n)))))
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1474-1478](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1474-L1478)</ins>
+            └── <ins>[core.cljs:1841-1845](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1841-L1845)</ins>
 </pre>
 
 -->
@@ -102,6 +102,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `n` is an even number.\n\nThrows an exception if `n` is not an integer.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "even?",
  :signature ["[n]"],
@@ -109,12 +110,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/odd?"],
  :full-name-encode "cljs.core/evenQMARK",
- :source {:code "(defn even?\n   [n] (if (integer? n)\n        (zero? (bit-and n 1))\n        (throw (js/Error. (str \"Argument must be an integer: \" n)))))",
+ :source {:code "(defn ^boolean even?\n   [n] (if (integer? n)\n        (zero? (bit-and n 1))\n        (throw (js/Error. (str \"Argument must be an integer: \" n)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1474 1478]},
+          :lines [1841 1845]},
  :full-name "cljs.core/even?",
  :clj-symbol "clojure.core/even?",
  :docstring "Returns true if n is even, throws an exception if n is not an integer"}

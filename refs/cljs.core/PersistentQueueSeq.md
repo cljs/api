@@ -11,7 +11,7 @@
 
 
  <samp>
-(__PersistentQueueSeq.__ meta front rear)<br>
+(__PersistentQueueSeq.__ meta front rear __hash)<br>
 </samp>
 
 ---
@@ -22,12 +22,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2293-L2323):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2949-L2983):
 
 ```clj
-(deftype PersistentQueueSeq [meta front rear]
+(deftype PersistentQueueSeq [meta front rear ^:mutable __hash]
+  Object
+  (toString [this]
+    (pr-str this))
+  
   IWithMeta
-  (-with-meta [coll meta] (PersistentQueueSeq. meta front rear))
+  (-with-meta [coll meta] (PersistentQueueSeq. meta front rear __hash))
 
   IMeta
   (-meta [coll] meta)
@@ -36,10 +40,10 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-first [coll] (-first front))
   (-rest  [coll]
     (if-let [f1 (next front)]
-      (PersistentQueueSeq. meta f1 rear)
+      (PersistentQueueSeq. meta f1 rear nil)
       (if (nil? rear)
         (-empty coll)
-        (PersistentQueueSeq. meta rear nil))))
+        (PersistentQueueSeq. meta rear nil nil))))
 
   ICollection
   (-conj [coll o] (cons o coll))
@@ -52,7 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-equiv [coll other] (equiv-sequential coll other))
 
   IHash
-  (-hash [coll] (hash-coll coll))
+  (-hash [coll] (caching-hash coll hash-coll __hash))
 
   ISeqable
   (-seq [coll] coll))
@@ -62,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2293-2323](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2293-L2323)</ins>
+            └── <ins>[core.cljs:2949-2983](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2949-L2983)</ins>
 </pre>
 
 -->
@@ -108,13 +112,13 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentQueueSeq",
  :type "type",
- :signature ["[meta front rear]"],
- :source {:code "(deftype PersistentQueueSeq [meta front rear]\n  IWithMeta\n  (-with-meta [coll meta] (PersistentQueueSeq. meta front rear))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (-first front))\n  (-rest  [coll]\n    (if-let [f1 (next front)]\n      (PersistentQueueSeq. meta f1 rear)\n      (if (nil? rear)\n        (-empty coll)\n        (PersistentQueueSeq. meta rear nil))))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] coll))",
+ :signature ["[meta front rear __hash]"],
+ :source {:code "(deftype PersistentQueueSeq [meta front rear ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n  \n  IWithMeta\n  (-with-meta [coll meta] (PersistentQueueSeq. meta front rear __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (-first front))\n  (-rest  [coll]\n    (if-let [f1 (next front)]\n      (PersistentQueueSeq. meta f1 rear nil)\n      (if (nil? rear)\n        (-empty coll)\n        (PersistentQueueSeq. meta rear nil nil))))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2293 2323]},
+          :lines [2949 2983]},
  :full-name "cljs.core/PersistentQueueSeq",
  :full-name-encode "cljs.core/PersistentQueueSeq",
  :history [["+" "0.0-927"]]}

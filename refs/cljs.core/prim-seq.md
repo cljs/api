@@ -22,11 +22,11 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L368-L370):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L462-L464):
 
 ```clj
 (defn prim-seq [prim i]
-  (when-not (= 0 (.-length prim))
+  (when-not (zero? (.-length prim))
     (IndexedSeq. prim i)))
 ```
 
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:368-370](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L368-L370)</ins>
+            └── <ins>[core.cljs:462-464](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L462-L464)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "prim-seq",
  :type "function",
  :signature ["[prim i]"],
- :source {:code "(defn prim-seq [prim i]\n  (when-not (= 0 (.-length prim))\n    (IndexedSeq. prim i)))",
+ :source {:code "(defn prim-seq [prim i]\n  (when-not (zero? (.-length prim))\n    (IndexedSeq. prim i)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [368 370]},
+          :lines [462 464]},
  :full-name "cljs.core/prim-seq",
  :full-name-encode "cljs.core/prim-seq",
  :history [["+" "0.0-927"]]}

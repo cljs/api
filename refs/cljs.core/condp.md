@@ -77,7 +77,7 @@ IllegalArgumentException is thrown.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L469-L509):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L597-L637):
 
 ```clj
 (defmacro condp
@@ -89,7 +89,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
                        (split-at (if (= :>> (second args)) 3 2) args)
                        n (count clause)]
                  (cond
-                  (= 0 n) `(throw (js/Error. (str "No matching clause: " ~expr)))
+                  (= 0 n) `(throw (js/Error. (core/str "No matching clause: " ~expr)))
                   (= 1 n) a
                   (= 2 n) `(if (~pred ~a ~expr)
                              ~b
@@ -107,11 +107,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:469-509](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L469-L509)</ins>
+            └── <ins>[core.clj:597-637](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L597-L637)</ins>
 </pre>
 
 -->
@@ -161,12 +161,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/cond" "special/if"],
  :full-name-encode "cljs.core/condp",
- :source {:code "(defmacro condp\n  [pred expr & clauses]\n  (let [gpred (gensym \"pred__\")\n        gexpr (gensym \"expr__\")\n        emit (fn emit [pred expr args]\n               (let [[[a b c :as clause] more]\n                       (split-at (if (= :>> (second args)) 3 2) args)\n                       n (count clause)]\n                 (cond\n                  (= 0 n) `(throw (js/Error. (str \"No matching clause: \" ~expr)))\n                  (= 1 n) a\n                  (= 2 n) `(if (~pred ~a ~expr)\n                             ~b\n                             ~(emit pred expr more))\n                  :else `(if-let [p# (~pred ~a ~expr)]\n                           (~c p#)\n                           ~(emit pred expr more)))))\n        gres (gensym \"res__\")]\n    `(let [~gpred ~pred\n           ~gexpr ~expr]\n       ~(emit gpred gexpr clauses))))",
+ :source {:code "(defmacro condp\n  [pred expr & clauses]\n  (let [gpred (gensym \"pred__\")\n        gexpr (gensym \"expr__\")\n        emit (fn emit [pred expr args]\n               (let [[[a b c :as clause] more]\n                       (split-at (if (= :>> (second args)) 3 2) args)\n                       n (count clause)]\n                 (cond\n                  (= 0 n) `(throw (js/Error. (core/str \"No matching clause: \" ~expr)))\n                  (= 1 n) a\n                  (= 2 n) `(if (~pred ~a ~expr)\n                             ~b\n                             ~(emit pred expr more))\n                  :else `(if-let [p# (~pred ~a ~expr)]\n                           (~c p#)\n                           ~(emit pred expr more)))))\n        gres (gensym \"res__\")]\n    `(let [~gpred ~pred\n           ~gexpr ~expr]\n       ~(emit gpred gexpr clauses))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/core.clj",
-          :lines [469 509]},
+          :lines [597 637]},
  :full-name "cljs.core/condp",
  :clj-symbol "clojure.core/condp",
  :docstring "Takes a binary predicate, an expression, and a set of clauses.\nEach clause can take the form of either:\n\ntest-expr result-expr\n\ntest-expr :>> result-fn\n\nNote :>> is an ordinary keyword.\n\nFor each clause, (pred test-expr expr) is evaluated. If it returns\nlogical true, the clause is a match. If a binary clause matches, the\nresult-expr is returned, if a ternary clause matches, its result-fn,\nwhich must be a unary function, is called with the result of the\npredicate as its argument, the result of that call being the return\nvalue of condp. A single default expression can follow the clauses,\nand its value will be returned if no clause matches. If no default\nexpression is provided and no clause matches, an\nIllegalArgumentException is thrown."}

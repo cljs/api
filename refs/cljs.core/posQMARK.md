@@ -41,10 +41,10 @@ Returns true if num is greater than zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L995-L997):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1221-L1223):
 
 ```clj
-(defn pos?
+(defn ^boolean pos?
   [n] (cljs.core/pos? n))
 ```
 
@@ -52,18 +52,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:995-997](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L995-L997)</ins>
+            └── <ins>[core.cljs:1221-1223](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1221-L1223)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L122-L123):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L171-L172):
 
 ```clj
 (defmacro pos? [x]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:122-123](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L122-L123)</ins>
+            └── <ins>[core.clj:171-172](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L171-L172)</ins>
 </pre>
 -->
 
@@ -119,6 +119,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `n` is greater than 0, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "pos?",
  :signature ["[n]"],
@@ -126,18 +127,18 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/neg?" "cljs.core/zero?"],
  :full-name-encode "cljs.core/posQMARK",
- :source {:code "(defn pos?\n  [n] (cljs.core/pos? n))",
+ :source {:code "(defn ^boolean pos?\n  [n] (cljs.core/pos? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [995 997]},
+          :lines [1221 1223]},
  :extra-sources [{:code "(defmacro pos? [x]\n  `(> ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1011",
+                  :tag "r1211",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [122 123]}],
+                  :lines [171 172]}],
  :full-name "cljs.core/pos?",
  :clj-symbol "clojure.core/pos?",
  :docstring "Returns true if num is greater than zero, else false"}

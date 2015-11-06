@@ -17,11 +17,11 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L901-L912):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1175-L1186):
 
 ```clj
 (defmethod parse 'defrecord*
-  [_ env [_ tsym fields] _]
+  [_ env [_ tsym fields pmasks :as form] _]
   (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]
     (swap! namespaces update-in [(-> env :ns :name) :defs tsym]
            (fn [m]
@@ -31,18 +31,18 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
                      (assoc :file *cljs-file*)
                      (assoc :line line))
                  m))))
-    {:env env :op :defrecord* :t t :fields fields}))
+    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:901-912](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L901-L912)</ins>
+            └── <ins>[compiler.clj:1175-1186](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1175-L1186)</ins>
 </pre>
 
 -->
@@ -79,12 +79,12 @@ The API data for this symbol:
 {:ns "special",
  :name "defrecord*",
  :type "special form",
- :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :defrecord* :t t :fields fields}))",
+ :source {:code "(defmethod parse 'defrecord*\n  [_ env [_ tsym fields pmasks :as form] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :defrecord* :form form :t t :fields fields :pmasks pmasks}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [901 912]},
+          :lines [1175 1186]},
  :full-name "special/defrecord*",
  :full-name-encode "special/defrecordSTAR",
  :history [["+" "0.0-927"]]}

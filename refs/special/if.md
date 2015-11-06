@@ -60,7 +60,7 @@ false or nil).
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L638-L645):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L827-L835):
 
 ```clj
 (defmethod parse 'if
@@ -70,6 +70,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
         else-expr (analyze env else)]
     {:env env :op :if :form form
      :test test-expr :then then-expr :else else-expr
+     :unchecked @*unchecked-if*
      :children [test-expr then-expr else-expr]}))
 ```
 
@@ -77,11 +78,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:638-645](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L638-L645)</ins>
+            └── <ins>[compiler.clj:827-835](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L827-L835)</ins>
 </pre>
 
 -->
@@ -133,12 +134,12 @@ The API data for this symbol:
            "cljs.core/if-let"
            "cljs.core/if-not"],
  :full-name-encode "special/if",
- :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :children [test-expr then-expr else-expr]}))",
+ :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [638 645]},
+          :lines [827 835]},
  :examples [{:id "e591ff",
              :content "```clj\n(def v [1 2])\n\n(if (empty? v) \"empty!\" \"filled!\")\n;;=> \"filled!\"\n\n(str \"This vector is \"\n  (if (empty? v) \"empty!\" \"filled!\"))\n;;=> \"This vector is filled!\"\n```"}],
  :full-name "special/if",

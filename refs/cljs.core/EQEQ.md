@@ -63,14 +63,15 @@ Source docstring:
 
 ```
 Returns non-nil if nums all have the equivalent
-value (type-independent), otherwise false
+value, otherwise false. Behavior on non nums is
+undefined.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L983-L993):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1208-L1219):
 
 ```clj
-(defn ==
+(defn ^boolean ==
   ([x] true)
   ([x y] (-equiv x y))
   ([x y & more]
@@ -85,23 +86,23 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:983-993](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L983-L993)</ins>
+            └── <ins>[core.cljs:1208-1219](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1208-L1219)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L108-L111):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L157-L160):
 
 ```clj
 (defmacro ==
   ([x] true)
-  ([x y] (list 'js* "(~{} === ~{})" x y))
+  ([x y] (bool-expr (list 'js* "(~{} === ~{})" x y)))
   ([x y & more] `(and (== ~x ~y) (== ~y ~@more))))
 ```
 
@@ -109,11 +110,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:108-111](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L108-L111)</ins>
+            └── <ins>[core.clj:157-160](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L157-L160)</ins>
 </pre>
 -->
 
@@ -154,6 +155,7 @@ The API data for this symbol:
 
 ```clj
 {:description "This is an equality check for numbers of different types that was carried over from Clojure,\nto allow compatibility when converting code to ClojureScript.\n\nSince there is only a single number type in JavaScript, 64-bit floating point, there is no\nreason to use the `==` operator in ClojureScript.\n\nBehavior on non-number arguments is undefined.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "==",
  :signature ["[x]" "[x y]" "[x y & more]"],
@@ -161,23 +163,23 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQEQ",
- :source {:code "(defn ==\n  ([x] true)\n  ([x y] (-equiv x y))\n  ([x y & more]\n   (if (== x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (== y (first more)))\n     false)))",
+ :source {:code "(defn ^boolean ==\n  ([x] true)\n  ([x y] (-equiv x y))\n  ([x y & more]\n   (if (== x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (== y (first more)))\n     false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [983 993]},
- :extra-sources [{:code "(defmacro ==\n  ([x] true)\n  ([x y] (list 'js* \"(~{} === ~{})\" x y))\n  ([x y & more] `(and (== ~x ~y) (== ~y ~@more))))",
+          :lines [1208 1219]},
+ :extra-sources [{:code "(defmacro ==\n  ([x] true)\n  ([x y] (bool-expr (list 'js* \"(~{} === ~{})\" x y)))\n  ([x y & more] `(and (== ~x ~y) (== ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1011",
+                  :tag "r1211",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [108 111]}],
+                  :lines [157 160]}],
  :examples [{:id "5ac342",
              :content "```clj\n(== 1 1)\n;;=> true\n\n(== 1 2)\n;;=> false\n```"}],
  :full-name "cljs.core/==",
  :clj-symbol "clojure.core/==",
- :docstring "Returns non-nil if nums all have the equivalent\nvalue (type-independent), otherwise false"}
+ :docstring "Returns non-nil if nums all have the equivalent\nvalue, otherwise false. Behavior on non nums is\nundefined."}
 
 ```
 

@@ -65,23 +65,30 @@ argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L419-L423):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L519-L530):
 
 ```clj
 (defn rest
   [coll]
-  (-rest (seq coll)))
+  (if (coercive-not= coll nil)
+    (if (satisfies? ISeq coll)
+      (-rest coll)
+      (let [s (seq coll)]
+        (if (coercive-not= s nil)
+          (-rest s)
+          ())))
+    ()))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:419-423](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L419-L423)</ins>
+            └── <ins>[core.cljs:519-530](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L519-L530)</ins>
 </pre>
 
 -->
@@ -134,12 +141,12 @@ The API data for this symbol:
            "cljs.core/drop"
            "cljs.core/pop"],
  :full-name-encode "cljs.core/rest",
- :source {:code "(defn rest\n  [coll]\n  (-rest (seq coll)))",
+ :source {:code "(defn rest\n  [coll]\n  (if (coercive-not= coll nil)\n    (if (satisfies? ISeq coll)\n      (-rest coll)\n      (let [s (seq coll)]\n        (if (coercive-not= s nil)\n          (-rest s)\n          ())))\n    ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [419 423]},
+          :lines [519 530]},
  :examples [{:id "0869af",
              :content "```clj\n(rest [1 2 3])\n;;=> (2 3)\n\n(rest [1 2])\n;;=> (2)\n\n(rest [1])\n;;=> ()\n\n(rest [])\n;;=> ()\n```"}],
  :full-name "cljs.core/rest",

@@ -41,10 +41,10 @@ Returns true if x is logical false, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L475-L477):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L581-L583):
 
 ```clj
-(defn not
+(defn ^boolean not
   [x] (if x false true))
 ```
 
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:475-477](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L475-L477)</ins>
+            └── <ins>[core.cljs:581-583](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L581-L583)</ins>
 </pre>
 
 -->
@@ -99,6 +99,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` is logical false, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "not",
  :signature ["[x]"],
@@ -106,12 +107,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/complement" "cljs.core/false?"],
  :full-name-encode "cljs.core/not",
- :source {:code "(defn not\n  [x] (if x false true))",
+ :source {:code "(defn ^boolean not\n  [x] (if x false true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [475 477]},
+          :lines [581 583]},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",
  :docstring "Returns true if x is logical false, false otherwise."}

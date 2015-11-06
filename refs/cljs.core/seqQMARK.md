@@ -34,7 +34,7 @@ All collections can be converted into a sequence using `seq`.
 [`cljs.core/sequential?`](../cljs.core/sequentialQMARK.md)<br>
 [`cljs.core/vector?`](../cljs.core/vectorQMARK.md)<br>
 [`cljs.core/coll?`](../cljs.core/collQMARK.md)<br>
-[``](../cljs.core/listQMARK.md)<br>
+[`cljs.core/list?`](../cljs.core/listQMARK.md)<br>
 [`cljs.core/map?`](../cljs.core/mapQMARK.md)<br>
 [`cljs.core/set?`](../cljs.core/setQMARK.md)<br>
 
@@ -48,10 +48,10 @@ Return true if s satisfies ISeq
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L655-L660):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L821-L826):
 
 ```clj
-(defn seq?
+(defn ^boolean seq?
   [s]
   (if (nil? s)
     false
@@ -62,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:655-660](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L655-L660)</ins>
+            └── <ins>[core.cljs:821-826](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L821-L826)</ins>
 </pre>
 
 -->
@@ -109,6 +109,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` is a sequence, false otherwise.\n\nAll collections can be converted into a sequence using `seq`.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "seq?",
  :signature ["[x]"],
@@ -122,12 +123,12 @@ The API data for this symbol:
            "cljs.core/map?"
            "cljs.core/set?"],
  :full-name-encode "cljs.core/seqQMARK",
- :source {:code "(defn seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
+ :source {:code "(defn ^boolean seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [655 660]},
+          :lines [821 826]},
  :full-name "cljs.core/seq?",
  :clj-symbol "clojure.core/seq?",
  :docstring "Return true if s satisfies ISeq"}

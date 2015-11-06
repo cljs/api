@@ -43,10 +43,10 @@ Returns true if coll satisfies ISequential
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L606-L608):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L745-L747):
 
 ```clj
-(defn sequential?
+(defn ^boolean sequential?
   [x] (satisfies? ISequential x))
 ```
 
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:606-608](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L606-L608)</ins>
+            └── <ins>[core.cljs:745-747](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L745-L747)</ins>
 </pre>
 
 -->
@@ -101,6 +101,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `coll` implements the `ISequential` protocol, false otherwise.\n\nLists and vectors are sequential.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "sequential?",
  :signature ["[coll]"],
@@ -108,12 +109,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/seq?" "cljs.core/coll?"],
  :full-name-encode "cljs.core/sequentialQMARK",
- :source {:code "(defn sequential?\n  [x] (satisfies? ISequential x))",
+ :source {:code "(defn ^boolean sequential?\n  [x] (satisfies? ISequential x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [606 608]},
+          :lines [745 747]},
  :full-name "cljs.core/sequential?",
  :clj-symbol "clojure.core/sequential?",
  :docstring "Returns true if coll satisfies ISequential"}

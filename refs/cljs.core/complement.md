@@ -53,10 +53,10 @@ has the same effects, if any, and returns the opposite truth value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1486-L1494):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1853-L1861):
 
 ```clj
-(defn complement
+(defn ^boolean complement
   [f]
   (fn
     ([] (not (f)))
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1486-1494](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1486-L1494)</ins>
+            └── <ins>[core.cljs:1853-1861](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1853-L1861)</ins>
 </pre>
 
 -->
@@ -116,6 +116,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Takes a function `f` and returns a function that takes the same arguments as\n`f`, has the same effects, if any, and returns the opposite truth value.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "complement",
  :signature ["[f]"],
@@ -123,12 +124,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/not"],
  :full-name-encode "cljs.core/complement",
- :source {:code "(defn complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
+ :source {:code "(defn ^boolean complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1486 1494]},
+          :lines [1853 1861]},
  :examples [{:id "69e359",
              :content "```clj\n(def a 10)\n((complement #(= a %)) 12)\n;;=> true\n```"}],
  :full-name "cljs.core/complement",

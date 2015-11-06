@@ -40,7 +40,7 @@ Returns a number one greater than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L302-L304):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L375-L377):
 
 ```clj
 (defn inc
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:302-304](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L302-L304)</ins>
+            └── <ins>[core.cljs:375-377](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L375-L377)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L116-L117):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L165-L166):
 
 ```clj
 (defmacro inc [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:116-117](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L116-L117)</ins>
+            └── <ins>[core.clj:165-166](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L165-L166)</ins>
 </pre>
 -->
 
@@ -128,15 +128,15 @@ The API data for this symbol:
  :source {:code "(defn inc\n  [x] (cljs.core/+ x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [302 304]},
+          :lines [375 377]},
  :extra-sources [{:code "(defmacro inc [x]\n  `(+ ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1011",
+                  :tag "r1211",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [116 117]}],
+                  :lines [165 166]}],
  :full-name "cljs.core/inc",
  :clj-symbol "clojure.core/inc",
  :docstring "Returns a number one greater than num."}

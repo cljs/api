@@ -30,7 +30,7 @@ If x is a Delay, returns the (possibly cached) value of its expression, else ret
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3417-L3422):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6040-L6045):
 
 ```clj
 (defn force
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3417-3422](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3417-L3422)</ins>
+            └── <ins>[core.cljs:6040-6045](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6040-L6045)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn force\n  [x]\n  (if (delay? x)\n    (deref x)\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3417 3422]},
+          :lines [6040 6045]},
  :full-name "cljs.core/force",
  :clj-symbol "clojure.core/force",
  :docstring "If x is a Delay, returns the (possibly cached) value of its expression, else returns x"}

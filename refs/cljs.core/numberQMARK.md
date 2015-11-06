@@ -35,10 +35,10 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L849-L850):
 
 ```clj
-(defn number? [n]
+(defn ^boolean number? [n]
   (goog/isNumber n))
 ```
 
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679)</ins>
+            └── <ins>[core.cljs:849-850](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L849-L850)</ins>
 </pre>
 
 -->
@@ -93,6 +93,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `n` is a number, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "number?",
  :signature ["[n]"],
@@ -100,12 +101,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/integer?"],
  :full-name-encode "cljs.core/numberQMARK",
- :source {:code "(defn number? [n]\n  (goog/isNumber n))",
+ :source {:code "(defn ^boolean number? [n]\n  (goog/isNumber n))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [678 679]},
+          :lines [849 850]},
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

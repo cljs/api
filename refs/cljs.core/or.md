@@ -103,7 +103,7 @@ value of the last expression. (or) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L789-L799):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L790-L800):
 
 ```clj
 (defmacro or
@@ -118,11 +118,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:789-799](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L789-L799)</ins>
+            └── <ins>[core.clj:790-800](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L790-L800)</ins>
 </pre>
 
 -->
@@ -175,9 +175,9 @@ The API data for this symbol:
  :source {:code "(defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n      `(let [or# ~x]\n         (if or# or# (or ~@next)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [789 799]},
+          :lines [790 800]},
  :examples [{:id "d50433",
              :content "```clj\n(or)\n;;=> nil\n\n(or false)\n;;=> false\n\n(or true)\n;;=> true\n\n(or true true)\n;;=> true\n\n(or true false)\n;;=> true\n\n(or false false)\n;;=> false\n```"}
             {:id "62f291",

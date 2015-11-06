@@ -14,7 +14,7 @@
 
 
  <samp>
-(__PersistentQueue.__ meta count front rear)<br>
+(__PersistentQueue.__ meta count front rear __hash)<br>
 </samp>
 
 ---
@@ -25,12 +25,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2325-L2369):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2985-L3033):
 
 ```clj
-(deftype PersistentQueue [meta count front rear]
+(deftype PersistentQueue [meta count front rear ^:mutable __hash]
+  Object
+  (toString [this]
+    (pr-str this))
+  
   IWithMeta
-  (-with-meta [coll meta] (PersistentQueue. meta count front rear))
+  (-with-meta [coll meta] (PersistentQueue. meta count front rear __hash))
 
   IMeta
   (-meta [coll] meta)
@@ -44,15 +48,15 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-pop [coll]
     (if front
       (if-let [f1 (next front)]
-        (PersistentQueue. meta (dec count) f1 rear)
-        (PersistentQueue. meta (dec count) (seq rear) []))
+        (PersistentQueue. meta (dec count) f1 rear nil)
+        (PersistentQueue. meta (dec count) (seq rear) [] nil))
       coll))
 
   ICollection
   (-conj [coll o]
     (if front
-      (PersistentQueue. meta (inc count) front (conj (or rear []) o))
-      (PersistentQueue. meta (inc count) (conj front o) [])))
+      (PersistentQueue. meta (inc count) front (conj (or rear []) o) nil)
+      (PersistentQueue. meta (inc count) (conj front o) [] nil)))
 
   IEmptyableCollection
   (-empty [coll] cljs.core.PersistentQueue/EMPTY)
@@ -62,13 +66,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-equiv [coll other] (equiv-sequential coll other))
 
   IHash
-  (-hash [coll] (hash-coll coll))
+  (-hash [coll] (caching-hash coll hash-coll __hash))
 
   ISeqable
   (-seq [coll]
     (let [rear (seq rear)]
       (if (or front rear)
-        (PersistentQueueSeq. nil front (seq rear))
+        (PersistentQueueSeq. nil front (seq rear) nil nil)
         cljs.core.List/EMPTY)))
 
   ICounted
@@ -79,11 +83,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2325-2369](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2325-L2369)</ins>
+            └── <ins>[core.cljs:2985-3033](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2985-L3033)</ins>
 </pre>
 
 -->
@@ -127,16 +131,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentQueue",
- :signature ["[meta count front rear]"],
+ :signature ["[meta count front rear __hash]"],
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/PersistentQueue",
- :source {:code "(deftype PersistentQueue [meta count front rear]\n  IWithMeta\n  (-with-meta [coll meta] (PersistentQueue. meta count front rear))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first front))\n  (-rest [coll] (rest (seq coll)))\n\n  IStack\n  (-peek [coll] (-first front))\n  (-pop [coll]\n    (if front\n      (if-let [f1 (next front)]\n        (PersistentQueue. meta (dec count) f1 rear)\n        (PersistentQueue. meta (dec count) (seq rear) []))\n      coll))\n\n  ICollection\n  (-conj [coll o]\n    (if front\n      (PersistentQueue. meta (inc count) front (conj (or rear []) o))\n      (PersistentQueue. meta (inc count) (conj front o) [])))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.PersistentQueue/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (let [rear (seq rear)]\n      (if (or front rear)\n        (PersistentQueueSeq. nil front (seq rear))\n        cljs.core.List/EMPTY)))\n\n  ICounted\n  (-count [coll] count))",
+ :source {:code "(deftype PersistentQueue [meta count front rear ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n  \n  IWithMeta\n  (-with-meta [coll meta] (PersistentQueue. meta count front rear __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first front))\n  (-rest [coll] (rest (seq coll)))\n\n  IStack\n  (-peek [coll] (-first front))\n  (-pop [coll]\n    (if front\n      (if-let [f1 (next front)]\n        (PersistentQueue. meta (dec count) f1 rear nil)\n        (PersistentQueue. meta (dec count) (seq rear) [] nil))\n      coll))\n\n  ICollection\n  (-conj [coll o]\n    (if front\n      (PersistentQueue. meta (inc count) front (conj (or rear []) o) nil)\n      (PersistentQueue. meta (inc count) (conj front o) [] nil)))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.PersistentQueue/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (let [rear (seq rear)]\n      (if (or front rear)\n        (PersistentQueueSeq. nil front (seq rear) nil nil)\n        cljs.core.List/EMPTY)))\n\n  ICounted\n  (-count [coll] count))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2325 2369]},
+          :lines [2985 3033]},
  :full-name "cljs.core/PersistentQueue",
  :clj-symbol "clojure.lang/PersistentQueue"}
 

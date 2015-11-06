@@ -17,12 +17,12 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L994-L1015):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1276-L1299):
 
 ```clj
 (defmethod parse 'js*
-  [op env [_ form & args] _]
-  (assert (string? form))
+  [op env [_ jsform & args :as form] _]
+  (assert (string? jsform))
   (if args
     (disallowing-recur
      (let [seg (fn seg [^String s]
@@ -33,7 +33,8 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
                        (cons (subs s 0 idx) (seg (subs s (inc end))))))))
            enve (assoc env :context :expr)
            argexprs (vec (map #(analyze enve %) args))]
-       {:env env :op :js :segs (seg form) :args argexprs :children argexprs}))
+       {:env env :op :js :segs (seg jsform) :args argexprs
+        :tag (-> form meta :tag) :form form :children argexprs}))
     (let [interp (fn interp [^String s]
                    (let [idx (.indexOf s "~{")]
                      (if (= -1 idx)
@@ -41,18 +42,19 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
                        (let [end (.indexOf s "}" idx)
                              inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]
                          (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]
-      {:env env :op :js :code (apply str (interp form))})))
+      {:env env :op :js :form form :code (apply str (interp jsform))
+       :tag (-> form meta :tag)})))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:994-1015](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L994-L1015)</ins>
+            └── <ins>[compiler.clj:1276-1299](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1276-L1299)</ins>
 </pre>
 
 -->
@@ -89,12 +91,12 @@ The API data for this symbol:
 {:ns "special",
  :name "js*",
  :type "special form",
- :source {:code "(defmethod parse 'js*\n  [op env [_ form & args] _]\n  (assert (string? form))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg form) :args argexprs :children argexprs}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :code (apply str (interp form))})))",
+ :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _]\n  (assert (string? jsform))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (-> form meta :tag) :form form :children argexprs}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (-> form meta :tag)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [994 1015]},
+          :lines [1276 1299]},
  :full-name "special/js*",
  :full-name-encode "special/jsSTAR",
  :history [["+" "0.0-927"]]}

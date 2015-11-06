@@ -56,10 +56,10 @@ Returns true if coll implements Associative
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L602-L604):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743):
 
 ```clj
-(defn associative?
+(defn ^boolean associative?
   [x] (satisfies? IAssociative x))
 ```
 
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:602-604](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L602-L604)</ins>
+            └── <ins>[core.cljs:741-743](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L741-L743)</ins>
 </pre>
 
 -->
@@ -114,18 +114,19 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `coll` implements the `IAssociative` protocol, false otherwise.\n\nMaps and vectors are associative.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "associative?",
  :signature ["[coll]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/associativeQMARK",
- :source {:code "(defn associative?\n  [x] (satisfies? IAssociative x))",
+ :source {:code "(defn ^boolean associative?\n  [x] (satisfies? IAssociative x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [602 604]},
+          :lines [741 743]},
  :examples [{:id "29a37f",
              :content "```clj\n(associative? [1 2 3])\n;;=> true\n\n(associative? {:a 1 :b 2})\n;;=> true\n\n(associative? #{1 2 3})\n;;=> false\n\n(associative? '(1 2 3))\n;;=> false\n```"}],
  :full-name "cljs.core/associative?",

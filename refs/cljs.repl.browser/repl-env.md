@@ -22,11 +22,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L320-L327):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L337-L349):
 
 ```clj
 (defn repl-env [& {:as opts}]
-  (let [opts (merge {:port 9000 :optimizations :simple :working-dir ".repl"} opts)]
+  (let [opts (merge {:port          9000
+                     :optimizations :simple
+                     :working-dir   ".repl"
+                     :serve-static  true
+                     :static-dir    ["." "out/"]}
+                    opts)]
     (do (swap! server-state
                (fn [old] (assoc old :client-js
                                (future (create-client-js-file
@@ -39,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:320-327](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L320-L327)</ins>
+                └── <ins>[browser.clj:337-349](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L337-L349)</ins>
 </pre>
 
 -->
@@ -87,12 +92,12 @@ The API data for this symbol:
  :name "repl-env",
  :type "function",
  :signature ["[& {:as opts}]"],
- :source {:code "(defn repl-env [& {:as opts}]\n  (let [opts (merge {:port 9000 :optimizations :simple :working-dir \".repl\"} opts)]\n    (do (swap! server-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
+ :source {:code "(defn repl-env [& {:as opts}]\n  (let [opts (merge {:port          9000\n                     :optimizations :simple\n                     :working-dir   \".repl\"\n                     :serve-static  true\n                     :static-dir    [\".\" \"out/\"]}\n                    opts)]\n    (do (swap! server-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [320 327]},
+          :lines [337 349]},
  :full-name "cljs.repl.browser/repl-env",
  :full-name-encode "cljs.repl.browser/repl-env",
  :history [["+" "0.0-927"]]}

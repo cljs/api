@@ -182,8 +182,57 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/\*unchecked-if\*](refs/cljs.core/STARunchecked-ifSTAR.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARunchecked-ifSTAR.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ASeq](refs/cljs.core/ASeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ASeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ArrayNode](refs/cljs.core/ArrayNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ArrayNode.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ArrayNodeSeq](refs/cljs.core/ArrayNodeSeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ArrayNodeSeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/Atom](refs/cljs.core/Atom.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Atom.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/BitmapIndexedNode](refs/cljs.core/BitmapIndexedNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/BitmapIndexedNode.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/BitmapIndexedNode.EMPTY](refs/cljs.core/BitmapIndexedNodeDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/BitmapIndexedNodeDOTEMPTY.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/BlackNode](refs/cljs.core/BlackNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/BlackNode.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -205,6 +254,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/EmptyList](refs/cljs.core/EmptyList.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/EmptyList.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/HashCollisionNode](refs/cljs.core/HashCollisionNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/HashCollisionNode.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -266,6 +322,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/IEditableCollection](refs/cljs.core/IEditableCollection.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IEditableCollection.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/IEmptyableCollection](refs/cljs.core/IEmptyableCollection.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IEmptyableCollection.cljsdoc)</td>
 <td></td>
@@ -301,6 +364,20 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/IKVReduce](refs/cljs.core/IKVReduce.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IKVReduce.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/IList](refs/cljs.core/IList.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IList.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/ILookup](refs/cljs.core/ILookup.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ILookup.cljsdoc)</td>
 <td></td>
@@ -310,6 +387,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/IMap](refs/cljs.core/IMap.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/IMapEntry](refs/cljs.core/IMapEntry.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IMapEntry.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -357,6 +441,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/IReversible](refs/cljs.core/IReversible.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IReversible.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/ISeq](refs/cljs.core/ISeq.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISeq.cljsdoc)</td>
 <td></td>
@@ -385,8 +476,50 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/ISorted](refs/cljs.core/ISorted.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISorted.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/IStack](refs/cljs.core/IStack.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IStack.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ITransientAssociative](refs/cljs.core/ITransientAssociative.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientAssociative.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ITransientCollection](refs/cljs.core/ITransientCollection.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientCollection.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ITransientMap](refs/cljs.core/ITransientMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ITransientSet](refs/cljs.core/ITransientSet.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientSet.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/ITransientVector](refs/cljs.core/ITransientVector.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientVector.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -455,6 +588,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/NodeSeq](refs/cljs.core/NodeSeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/NodeSeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/ObjMap](refs/cljs.core/ObjMap.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ObjMap.cljsdoc)</td>
 <td></td>
@@ -469,8 +609,78 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/ObjMap.HASHMAP_THRESHOLD](refs/cljs.core/ObjMapDOTHASHMAP_THRESHOLD.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ObjMapDOTHASHMAP_THRESHOLD.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/ObjMap.fromObject](refs/cljs.core/ObjMapDOTfromObject.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ObjMapDOTfromObject.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentArrayMap](refs/cljs.core/PersistentArrayMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentArrayMap.EMPTY](refs/cljs.core/PersistentArrayMapDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTEMPTY.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentArrayMap.HASHMAP_THRESHOLD](refs/cljs.core/PersistentArrayMapDOTHASHMAP_THRESHOLD.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTHASHMAP_THRESHOLD.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentArrayMap.fromArrays](refs/cljs.core/PersistentArrayMapDOTfromArrays.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTfromArrays.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentHashMap](refs/cljs.core/PersistentHashMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentHashMap.EMPTY](refs/cljs.core/PersistentHashMapDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTEMPTY.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentHashMap.fromArrays](refs/cljs.core/PersistentHashMapDOTfromArrays.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTfromArrays.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentHashSet](refs/cljs.core/PersistentHashSet.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSet.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentHashSet.EMPTY](refs/cljs.core/PersistentHashSetDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSetDOTEMPTY.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -492,6 +702,41 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/PersistentQueueSeq](refs/cljs.core/PersistentQueueSeq.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentQueueSeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentTreeMap](refs/cljs.core/PersistentTreeMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentTreeMap.EMPTY](refs/cljs.core/PersistentTreeMapDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeMapDOTEMPTY.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentTreeMapSeq](refs/cljs.core/PersistentTreeMapSeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeMapSeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentTreeSet](refs/cljs.core/PersistentTreeSet.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeSet.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentTreeSet.EMPTY](refs/cljs.core/PersistentTreeSetDOTEMPTY.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeSetDOTEMPTY.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -532,6 +777,20 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/RedNode](refs/cljs.core/RedNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/RedNode.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/Reduced](refs/cljs.core/Reduced.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Reduced.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/Set](refs/cljs.core/Set.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Set.cljsdoc)</td>
 <td></td>
@@ -548,6 +807,34 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/Subvec](refs/cljs.core/Subvec.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Subvec.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/TransientArrayMap](refs/cljs.core/TransientArrayMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TransientArrayMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/TransientHashMap](refs/cljs.core/TransientHashMap.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TransientHashMap.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/TransientHashSet](refs/cljs.core/TransientHashSet.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TransientHashSet.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/TransientVector](refs/cljs.core/TransientVector.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TransientVector.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -574,6 +861,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/VectorNode](refs/cljs.core/VectorNode.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/VectorNode.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/aget](refs/cljs.core/aget.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/aget.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -595,11 +889,25 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/bit-shift-right-zero-fill](refs/cljs.core/bit-shift-right-zero-fill.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bit-shift-right-zero-fill.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/condp](refs/cljs.core/condp.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/condp.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/conj!](refs/cljs.core/conjBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/conjBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/counted?](refs/cljs.core/countedQMARK.md)</td>
@@ -714,6 +1022,20 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/disj!](refs/cljs.core/disjBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/disjBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/dissoc!](refs/cljs.core/dissocBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dissocBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/distinct](refs/cljs.core/distinct.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/distinct.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -751,6 +1073,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/doto](refs/cljs.core/doto.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/doto.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/double-array](refs/cljs.core/double-array.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/double-array.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -840,6 +1169,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/filterv](refs/cljs.core/filterv.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/filterv.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/find](refs/cljs.core/find.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -901,6 +1237,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/gen-apply-to](refs/cljs.core/gen-apply-to.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/gen-apply-to.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/gensym](refs/cljs.core/gensym.md)</td>
@@ -994,6 +1337,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/ifn?](refs/cljs.core/ifnQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ifnQMARK.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/import-macros](refs/cljs.core/import-macros.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/import-macros.cljsdoc)</td>
 <td></td>
@@ -1008,8 +1358,22 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/indexed?](refs/cljs.core/indexedQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/indexedQMARK.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/instance?](refs/cljs.core/instanceQMARK.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/instanceQMARK.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/int](refs/cljs.core/int.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/int.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1038,6 +1402,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/into](refs/cljs.core/into.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/into.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/into-array](refs/cljs.core/into-array.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/into-array.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1080,6 +1451,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/keep-indexed](refs/cljs.core/keep-indexed.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/keep-indexed.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/key](refs/cljs.core/key.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/key.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1141,6 +1519,34 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/list?](refs/cljs.core/listQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/listQMARK.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/long](refs/cljs.core/long.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/long.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/long-array](refs/cljs.core/long-array.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/long-array.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/make-array](refs/cljs.core/make-array.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/make-array.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/make-hierarchy](refs/cljs.core/make-hierarchy.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/make-hierarchy.cljsdoc)</td>
 <td></td>
@@ -1171,6 +1577,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/mapcat](refs/cljs.core/mapcat.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/mapcat.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/mapv](refs/cljs.core/mapv.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/mapv.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1234,6 +1647,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/missing-protocol](refs/cljs.core/missing-protocol.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/missing-protocol.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/mk-bound-fn](refs/cljs.core/mk-bound-fn.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/mk-bound-fn.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1323,6 +1743,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/object-array](refs/cljs.core/object-array.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/object-array.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/odd?](refs/cljs.core/oddQMARK.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/oddQMARK.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1363,6 +1790,20 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/persistent!](refs/cljs.core/persistentBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/persistentBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/pop!](refs/cljs.core/popBANG.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/popBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/pos?](refs/cljs.core/posQMARK.md)</td>
@@ -1554,6 +1995,34 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/reduce-kv](refs/cljs.core/reduce-kv.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduce-kv.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/reduceable?](refs/cljs.core/reduceableQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduceableQMARK.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/reduced](refs/cljs.core/reduced.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduced.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/reduced?](refs/cljs.core/reducedQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reducedQMARK.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/reductions](refs/cljs.core/reductions.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reductions.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1645,6 +2114,27 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/reversible?](refs/cljs.core/reversibleQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reversibleQMARK.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/rseq](refs/cljs.core/rseq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rseq.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/rsubseq](refs/cljs.core/rsubseq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rsubseq.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/satisfies?](refs/cljs.core/satisfiesQMARK.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/satisfiesQMARK.cljsdoc)</td>
 <td></td>
@@ -1678,6 +2168,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/seqable?](refs/cljs.core/seqableQMARK.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/seqableQMARK.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/sequential?](refs/cljs.core/sequentialQMARK.md)</td>
@@ -1736,6 +2233,34 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/sorted-map](refs/cljs.core/sorted-map.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-map.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/sorted-map-by](refs/cljs.core/sorted-map-by.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-map-by.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/sorted-set](refs/cljs.core/sorted-set.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-set.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/sorted-set-by](refs/cljs.core/sorted-set-by.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-set-by.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/split-at](refs/cljs.core/split-at.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/split-at.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1783,6 +2308,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>[cljs.core/subseq](refs/cljs.core/subseq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/subseq.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
 <td>[cljs.core/subvec](refs/cljs.core/subvec.md)</td>
@@ -1862,8 +2394,22 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/to-array-2d](refs/cljs.core/to-array-2d.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/to-array-2d.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/trampoline](refs/cljs.core/trampoline.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/trampoline.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/transient](refs/cljs.core/transient.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/transient.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1918,6 +2464,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 </tr>
 <tr>
+<td>[cljs.core/val](refs/cljs.core/val.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/val.cljsdoc)</td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+<td></td>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
 <td>[cljs.core/vals](refs/cljs.core/vals.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vals.cljsdoc)</td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
@@ -1937,6 +2490,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/vector-seq](refs/cljs.core/vector-seq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vector-seq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/vector?](refs/cljs.core/vectorQMARK.md)</td>
@@ -2487,6 +3047,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.repl.browser/send-repl-client-page](refs/cljs.repl.browser/send-repl-client-page.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/send-repl-client-page.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.repl.browser/send-static](refs/cljs.repl.browser/send-static.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/send-static.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

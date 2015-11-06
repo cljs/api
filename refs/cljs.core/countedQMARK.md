@@ -37,10 +37,10 @@ Returns true if coll implements count in constant time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L610-L612):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L749-L751):
 
 ```clj
-(defn counted?
+(defn ^boolean counted?
   [x] (satisfies? ICounted x))
 ```
 
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:610-612](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L610-L612)</ins>
+            └── <ins>[core.cljs:749-751](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L749-L751)</ins>
 </pre>
 
 -->
@@ -95,18 +95,19 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` executes `count` in constant time, false otherwise.\n\nLists, maps, sets, strings, and vectors can be counted in constant time.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "counted?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/countedQMARK",
- :source {:code "(defn counted?\n  [x] (satisfies? ICounted x))",
+ :source {:code "(defn ^boolean counted?\n  [x] (satisfies? ICounted x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [610 612]},
+          :lines [749 751]},
  :full-name "cljs.core/counted?",
  :clj-symbol "clojure.core/counted?",
  :docstring "Returns true if coll implements count in constant time"}

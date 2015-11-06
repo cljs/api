@@ -58,8 +58,8 @@ other object.
 ###### See Also:
 
 [`cljs.core/sort-by`](../cljs.core/sort-by.md)<br>
-[``](../cljs.core/sorted-set-by.md)<br>
-[``](../cljs.core/sorted-map-by.md)<br>
+[`cljs.core/sorted-set-by`](../cljs.core/sorted-set-by.md)<br>
+[`cljs.core/sorted-map-by`](../cljs.core/sorted-map-by.md)<br>
 
 ---
 
@@ -69,26 +69,32 @@ Source docstring:
 ```
 Comparator. Returns a negative number, zero, or a positive number
 when x is logically 'less than', 'equal to', or 'greater than'
-y. Uses google.array.defaultCompare.
+y. Uses google.array.defaultCompare for objects of the same type
+and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L901-L911):
 
 ```clj
 (defn compare
-  [x y] (garray/defaultCompare x y))
+  [x y]
+  (cond
+    (identical? (type x) (type y)) (garray/defaultCompare x y)
+    (nil? x) -1
+    (nil? y) 1
+    :else (throw (js/Error. "compare on non-nil objects of different types"))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:727-731](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L727-L731)</ins>
+            └── <ins>[core.cljs:901-911](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L901-L911)</ins>
 </pre>
 
 -->
@@ -140,17 +146,17 @@ The API data for this symbol:
            "cljs.core/sorted-set-by"
            "cljs.core/sorted-map-by"],
  :full-name-encode "cljs.core/compare",
- :source {:code "(defn compare\n  [x y] (garray/defaultCompare x y))",
+ :source {:code "(defn compare\n  [x y]\n  (cond\n    (identical? (type x) (type y)) (garray/defaultCompare x y)\n    (nil? x) -1\n    (nil? y) 1\n    :else (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [727 731]},
+          :lines [901 911]},
  :examples [{:id "e13fa0",
              :content "```clj\n(compare 10 12)\n;;=> -1\n\n(compare 12 10)\n;;=> 1\n\n(compare 10 10)\n;;=> 0\n\n(compare 10 nil)\n;;=>  1\n\n(compare 10 (list 1 2 3))\n;; Error: compare on non-nil objects of different types\n```"}],
  :full-name "cljs.core/compare",
  :clj-symbol "clojure.core/compare",
- :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare."}
+ :docstring "Comparator. Returns a negative number, zero, or a positive number\nwhen x is logically 'less than', 'equal to', or 'greater than'\ny. Uses google.array.defaultCompare for objects of the same type\nand special-cases nil to be less than any other object."}
 
 ```
 

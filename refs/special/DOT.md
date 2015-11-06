@@ -147,36 +147,39 @@ You can get the value at property `"foo"` with any of the following:
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L977-L992):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1256-L1274):
 
 ```clj
 (defmethod parse '.
-  [_ env [_ target & [field & member+]] _]
+  [_ env [_ target & [field & member+] :as form] _]
   (disallowing-recur
    (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])
          enve        (assoc env :context :expr)
-         targetexpr  (analyze enve target)
-         children    [enve]]
+         targetexpr  (analyze enve target)]
      (case dot-action
-           ::access {:env env :op :dot :children children
+           ::access {:env env :op :dot :form form
                      :target targetexpr
-                     :field field}
+                     :field field
+                     :children [targetexpr]
+                     :tag (-> form meta :tag)}
            ::call   (let [argexprs (map #(analyze enve %) args)]
-                      {:env env :op :dot :children (into children argexprs)
+                      {:env env :op :dot :form form
                        :target targetexpr
                        :method method
-                       :args argexprs})))))
+                       :args argexprs
+                       :children (into [targetexpr] argexprs)
+                       :tag (-> form meta :tag)})))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:977-992](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/compiler.clj#L977-L992)</ins>
+            └── <ins>[compiler.clj:1256-1274](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/compiler.clj#L1256-L1274)</ins>
 </pre>
 
 -->
@@ -225,12 +228,12 @@ The API data for this symbol:
  :type "special form",
  :related ["cljs.core/.." "cljs.core/aget"],
  :full-name-encode "special/DOT",
- :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+]] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)\n         children    [enve]]\n     (case dot-action\n           ::access {:env env :op :dot :children children\n                     :target targetexpr\n                     :field field}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :children (into children argexprs)\n                       :target targetexpr\n                       :method method\n                       :args argexprs})))))",
+ :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _]\n  (disallowing-recur\n   (let [{:keys [dot-action target method field args]} (build-dot-form [target field member+])\n         enve        (assoc env :context :expr)\n         targetexpr  (analyze enve target)]\n     (case dot-action\n           ::access {:env env :op :dot :form form\n                     :target targetexpr\n                     :field field\n                     :children [targetexpr]\n                     :tag (-> form meta :tag)}\n           ::call   (let [argexprs (map #(analyze enve %) args)]\n                      {:env env :op :dot :form form\n                       :target targetexpr\n                       :method method\n                       :args argexprs\n                       :children (into [targetexpr] argexprs)\n                       :tag (-> form meta :tag)})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [977 992]},
+          :lines [1256 1274]},
  :usage ["(.-foo obj)" "(.foo obj)"],
  :examples [{:id "22ccbb",
              :content "We can access the JavaScript properties of a string:\n\n```js\n// JavaScript\nvar m = \"Hello World\";\nm.length;\n//=> 11\n```\n\n```clj\n;; ClojureScript\n(def m \"Hello World\")\n(.-length m)\n;;=> 11\n```\n\nWe can also call member functions on the string:\n\n```js\n// JavaScript\nm.toUpperCase();\n//=> \"HELLO WORLD\"\n\nm.replace(\"H\", \"\");\n//=> \"ello World\";\n```\n\n```clj\n;; ClojureScript\n(.toUpperCase m)\n;;=> \"HELLO WORLD\"\n\n(.replace m \"H\" \"\")\n;;=> \"ello World\"\n```"}

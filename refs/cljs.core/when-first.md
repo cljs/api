@@ -38,12 +38,12 @@ Same as (when (seq xs) (let [x (first xs)] body))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L4050-L4062):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4054-L4066):
 
 ```clj
 (defmacro when-first
   [bindings & body]
-  (assert-args when-first
+  (assert-args
      (vector? bindings) "a vector for its binding"
      (= 2 (count bindings)) "exactly 2 forms in binding vector")
   (let [[x xs] bindings]
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4050-4062](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L4050-L4062)</ins>
+            └── <ins>[core.clj:4054-4066](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L4054-L4066)</ins>
 </pre>
 
 -->
@@ -109,12 +109,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/when-first",
- :source {:code "(defmacro when-first\n  [bindings & body]\n  (assert-args when-first\n     (vector? bindings) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n  (let [[x xs] bindings]\n    `(when (seq ~xs)\n       (let [~x (first ~xs)]\n         ~@body))))",
+ :source {:code "(defmacro when-first\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n  (let [[x xs] bindings]\n    `(when (seq ~xs)\n       (let [~x (first ~xs)]\n         ~@body))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [4050 4062]},
+          :lines [4054 4066]},
  :full-name "cljs.core/when-first",
  :clj-symbol "clojure.core/when-first",
  :docstring "bindings => x xs\n\nSame as (when (seq xs) (let [x (first xs)] body))"}

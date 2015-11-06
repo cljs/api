@@ -59,7 +59,7 @@ When creating nested JavaScript arrays, you can opt to use `clj->js` instead:
 ###### See Also:
 
 [`cljs.core/aclone`](../cljs.core/aclone.md)<br>
-[``](../cljs.core/make-array.md)<br>
+[`cljs.core/make-array`](../cljs.core/make-array.md)<br>
 [``](../cljs.core/clj-GTjs.md)<br>
 
 ---
@@ -73,7 +73,7 @@ Creates a new javascript array.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L71-L75):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L75-L79):
 
 ```clj
 (defn array
@@ -85,27 +85,27 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-75](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L71-L75)</ins>
+            └── <ins>[core.cljs:75-79](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L75-L79)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L649-L656):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L786-L793):
 
 ```clj
 (defmacro array [& rest]
   (let [xs-str (->> (repeat "~{}")
                     (take (count rest))
                     (interpose ",")
-                    (apply str))]
+                    (apply core/str))]
    (concat
-    (list 'js* (str "[" xs-str "]"))
+    (list 'js* (core/str "[" xs-str "]"))
     rest)))
 ```
 
@@ -113,11 +113,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:649-656](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L649-L656)</ins>
+            └── <ins>[core.clj:786-793](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L786-L793)</ins>
 </pre>
 -->
 
@@ -167,15 +167,15 @@ The API data for this symbol:
  :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (js* \"Array.prototype.slice.call(arguments)\"))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [71 75]},
- :extra-sources [{:code "(defmacro array [& rest]\n  (let [xs-str (->> (repeat \"~{}\")\n                    (take (count rest))\n                    (interpose \",\")\n                    (apply str))]\n   (concat\n    (list 'js* (str \"[\" xs-str \"]\"))\n    rest)))",
+          :lines [75 79]},
+ :extra-sources [{:code "(defmacro array [& rest]\n  (let [xs-str (->> (repeat \"~{}\")\n                    (take (count rest))\n                    (interpose \",\")\n                    (apply core/str))]\n   (concat\n    (list 'js* (core/str \"[\" xs-str \"]\"))\n    rest)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1011",
+                  :tag "r1211",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [649 656]}],
+                  :lines [786 793]}],
  :examples [{:id "3a546d",
              :content "```clj\n(array 1 2 3)\n;;=> #js [1 2 3]\n\n(apply array [1 2 3])\n;;=> #js [1 2 3]\n\n#js [1 2 3]\n;;=> #js [1 2 3]\n```"}
             {:id "cca945",

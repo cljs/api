@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L133-L135):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L157-L159):
 
 ```clj
 (defprotocol ISeq
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:133-135](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L133-L135)</ins>
+            └── <ins>[core.cljs:157-159](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L157-L159)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeq\n  (-first [coll])\n  (-rest [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [133 135]},
+          :lines [157 159]},
  :methods [{:name "-first", :signature ["[coll]"], :docstring nil}
            {:name "-rest", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/ISeq",

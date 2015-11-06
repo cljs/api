@@ -25,22 +25,24 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L219-L220):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L290-L293):
 
 ```clj
 (defn type [x]
-  (js* "(~{x}).constructor"))
+  (if (or (nil? x) (undefined? x))
+    nil
+    (js* "(~{x}).constructor")))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:219-220](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L219-L220)</ins>
+            └── <ins>[core.cljs:290-293](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L290-L293)</ins>
 </pre>
 
 -->
@@ -88,12 +90,12 @@ The API data for this symbol:
  :history [["+" "0.0-971"]],
  :type "function",
  :full-name-encode "cljs.core/type",
- :source {:code "(defn type [x]\n  (js* \"(~{x}).constructor\"))",
+ :source {:code "(defn type [x]\n  (if (or (nil? x) (undefined? x))\n    nil\n    (js* \"(~{x}).constructor\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [219 220]},
+          :lines [290 293]},
  :full-name "cljs.core/type",
  :clj-symbol "clojure.core/type"}
 

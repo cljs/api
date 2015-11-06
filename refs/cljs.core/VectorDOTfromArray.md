@@ -22,21 +22,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2024):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2422):
 
 ```clj
-(set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs)))
+(set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs nil)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2024](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2024)</ins>
+            └── <ins>[core.cljs:2422](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2422)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :parent-type "Vector",
  :type "function",
  :full-name-encode "cljs.core/VectorDOTfromArray",
- :source {:code "(set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs)))",
+ :source {:code "(set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2024]},
+          :lines [2422]},
  :full-name "cljs.core/Vector.fromArray"}
 
 ```

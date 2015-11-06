@@ -40,10 +40,10 @@ Returns true if x satisfies ISet
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L595-L600):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L734-L739):
 
 ```clj
-(defn set?
+(defn ^boolean set?
   [x]
   (if (nil? x)
     false
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:595-600](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L595-L600)</ins>
+            └── <ins>[core.cljs:734-739](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L734-L739)</ins>
 </pre>
 
 -->
@@ -101,6 +101,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` is a set, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "set?",
  :signature ["[x]"],
@@ -108,12 +109,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/set"],
  :full-name-encode "cljs.core/setQMARK",
- :source {:code "(defn set?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ISet x)))",
+ :source {:code "(defn ^boolean set?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ISet x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [595 600]},
+          :lines [734 739]},
  :full-name "cljs.core/set?",
  :clj-symbol "clojure.core/set?",
  :docstring "Returns true if x satisfies ISet"}

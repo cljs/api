@@ -27,7 +27,7 @@ Defines a scope where JavaScript's implicit "this" is bound to the name provided
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L205-L209):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L282-L286):
 
 ```clj
 (defmacro this-as
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:205-209](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L205-L209)</ins>
+            └── <ins>[core.clj:282-286](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L282-L286)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defmacro this-as\n  [name & body]\n  `(let [~name (~'js* \"this\")]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/core.clj",
-          :lines [205 209]},
+          :lines [282 286]},
  :full-name "cljs.core/this-as",
  :docstring "Defines a scope where JavaScript's implicit \"this\" is bound to the name provided."}
 

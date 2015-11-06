@@ -52,10 +52,10 @@ truthiness condition used by `if` expressions.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L662-L663):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L833-L834):
 
 ```clj
-(defn boolean [x]
+(defn ^boolean boolean [x]
   (if x true false))
 ```
 
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:662-663](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L662-L663)</ins>
+            └── <ins>[core.cljs:833-834](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L833-L834)</ins>
 </pre>
 
 -->
@@ -110,6 +110,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Return `false` if `x` is false or nil.  Otherwise return `true`.  This is the\ntruthiness condition used by `if` expressions.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "boolean",
  :signature ["[x]"],
@@ -117,12 +118,12 @@ The API data for this symbol:
  :type "function",
  :related ["special/if"],
  :full-name-encode "cljs.core/boolean",
- :source {:code "(defn boolean [x]\n  (if x true false))",
+ :source {:code "(defn ^boolean boolean [x]\n  (if x true false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [662 663]},
+          :lines [833 834]},
  :examples [{:id "9edf3a",
              :content "```clj\n(boolean 1)\n;;=> true\n\n(boolean 0)\n;;=> true\n\n(boolean nil)\n;;=> false\n```"}],
  :full-name "cljs.core/boolean",

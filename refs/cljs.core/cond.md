@@ -52,7 +52,7 @@ keyword `:else` (a keyword always evaluates to logical true).
 ###### See Also:
 
 [`cljs.core/condp`](../cljs.core/condp.md)<br>
-[``](../cljs.core/case.md)<br>
+[`cljs.core/case`](../cljs.core/case.md)<br>
 [`if`](../special/if.md)<br>
 
 ---
@@ -68,7 +68,7 @@ other tests or exprs. (cond) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L534-L547):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L535-L548):
 
 ```clj
 (defmacro cond
@@ -86,11 +86,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:534-547](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L534-L547)</ins>
+            └── <ins>[core.clj:535-548](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L535-L548)</ins>
 </pre>
 
 -->
@@ -143,9 +143,9 @@ The API data for this symbol:
  :source {:code "(defmacro cond\n  [& clauses]\n    (when clauses\n      (list 'if (first clauses)\n            (if (next clauses)\n                (second clauses)\n                (throw (IllegalArgumentException.\n                         \"cond requires an even number of forms\")))\n            (cons 'clojure.core/cond (next (next clauses))))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [534 547]},
+          :lines [535 548]},
  :examples [{:id "0cc9ac",
              :content "```\n(def a 42)\n(cond\n  (< a 10) \"a is less than 10\"\n  (= a 10) \"a is 10\"\n  (> a 10) \"a is bigger than 10\"\n  :else \"a is not a number!\")\n;;=> \"a is bigger than 10\"\n```"}],
  :full-name "cljs.core/cond",

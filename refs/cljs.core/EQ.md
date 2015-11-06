@@ -133,23 +133,29 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L271-L283):
 
 ```clj
-(defn =
-  [x y]
-  (-equiv x y))
+(defn ^boolean =
+  ([x] true)
+  ([x y] (or (identical? x y) (-equiv x y)))
+  ([x y & more]
+     (if (= x y)
+       (if (next more)
+         (recur y (first more) (next more))
+         (= y (first more)))
+       false)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212)</ins>
+            └── <ins>[core.cljs:271-283](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L271-L283)</ins>
 </pre>
 
 -->
@@ -192,6 +198,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if the value of `x` equals the value of `y`, false otherwise.\n\n`=` is a value comparison, not an identity comparison.\n\nAll collections can be tested for value, regardless of \"depth\".",
+ :return-type boolean,
  :ns "cljs.core",
  :name "=",
  :signature ["[x]" "[x y]" "[x y & more]"],
@@ -199,12 +206,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/==" "cljs.core/not=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQ",
- :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
+ :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y] (or (identical? x y) (-equiv x y)))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [206 212]},
+          :lines [271 283]},
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}
             {:id "a2d064",

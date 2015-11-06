@@ -52,7 +52,7 @@ Same as (first (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L437-L440):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L550-L553):
 
 ```clj
 (defn ffirst
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:437-440](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L437-L440)</ins>
+            └── <ins>[core.cljs:550-553](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L550-L553)</ins>
 </pre>
 
 -->
@@ -121,9 +121,9 @@ The API data for this symbol:
  :source {:code "(defn ffirst\n  [coll]\n  (first (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [437 440]},
+          :lines [550 553]},
  :examples [{:id "575ba2",
              :content "```clj\n(ffirst [[1 2] [3 4] [5 6]])\n;;=> 1\n```"}],
  :full-name "cljs.core/ffirst",

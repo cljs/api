@@ -29,14 +29,14 @@
 Source docstring:
 
 ```
-Returns the immediate parents of tag, either via a Java type
+Returns the immediate parents of tag, either via a JavaScript type
 inheritance relationship or a relationship established via derive. h
 must be a hierarchy obtained from make-hierarchy, if not supplied
 defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6157-L6163):
 
 ```clj
 (defn parents
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3534-3540](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3534-L3540)</ins>
+            └── <ins>[core.cljs:6157-6163](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6157-L6163)</ins>
 </pre>
 
 -->
@@ -103,12 +103,12 @@ The API data for this symbol:
  :source {:code "(defn parents\n  ([tag] (parents @global-hierarchy tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3534 3540]},
+          :lines [6157 6163]},
  :full-name "cljs.core/parents",
  :clj-symbol "clojure.core/parents",
- :docstring "Returns the immediate parents of tag, either via a Java type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
+ :docstring "Returns the immediate parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
 
 ```
 

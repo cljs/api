@@ -103,7 +103,7 @@ the value of the last expr. (and) returns true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L777-L787):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L778-L788):
 
 ```clj
 (defmacro and
@@ -118,11 +118,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:777-787](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L777-L787)</ins>
+            └── <ins>[core.clj:778-788](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L778-L788)</ins>
 </pre>
 
 -->
@@ -175,9 +175,9 @@ The API data for this symbol:
  :source {:code "(defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n   `(let [and# ~x]\n      (if and# (and ~@next) and#))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [777 787]},
+          :lines [778 788]},
  :examples [{:id "a39a73",
              :content "```clj\n(and)\n;;=> true\n\n(and false)\n;;=> false\n\n(and true)\n;;=> true\n\n(and true true)\n;;=> true\n\n(and true false)\n;;=> false\n\n(and false false)\n;;=> false\n```"}
             {:id "766638",

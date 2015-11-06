@@ -17,21 +17,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2591):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L3292):
 
 ```clj
-(set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj)))
+(set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj) 0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2591](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2591)</ins>
+            └── <ins>[core.cljs:3292](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L3292)</ins>
 </pre>
 
 -->
@@ -74,12 +74,12 @@ The API data for this symbol:
  :name "HashMap.EMPTY",
  :type "var",
  :parent-type "HashMap",
- :source {:code "(set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj)))",
+ :source {:code "(set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj) 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2591]},
+          :lines [3292]},
  :full-name "cljs.core/HashMap.EMPTY",
  :full-name-encode "cljs.core/HashMapDOTEMPTY",
  :history [["+" "0.0-927"]]}

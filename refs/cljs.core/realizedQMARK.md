@@ -40,10 +40,10 @@ Returns true if a value has been produced for a promise, delay, future or lazy s
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6047-L6050):
 
 ```clj
-(defn realized?
+(defn ^boolean realized?
   [d]
   (-realized? d))
 ```
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3424-3427](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3424-L3427)</ins>
+            └── <ins>[core.cljs:6047-6050](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6047-L6050)</ins>
 </pre>
 
 -->
@@ -99,6 +99,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if a value has been produced for a lazy sequence.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "realized?",
  :signature ["[x]"],
@@ -106,12 +107,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/lazy-seq"],
  :full-name-encode "cljs.core/realizedQMARK",
- :source {:code "(defn realized?\n  [d]\n  (-realized? d))",
+ :source {:code "(defn ^boolean realized?\n  [d]\n  (-realized? d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3424 3427]},
+          :lines [6047 6050]},
  :full-name "cljs.core/realized?",
  :clj-symbol "clojure.core/realized?",
  :docstring "Returns true if a value has been produced for a promise, delay, future or lazy sequence."}

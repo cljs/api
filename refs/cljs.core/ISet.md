@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L149-L150):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L177-L178):
 
 ```clj
 (defprotocol ISet
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:149-150](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L149-L150)</ins>
+            └── <ins>[core.cljs:177-178](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L177-L178)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISet\n  (-disjoin [coll v]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [149 150]},
+          :lines [177 178]},
  :methods [{:name "-disjoin", :signature ["[coll v]"], :docstring nil}],
  :full-name "cljs.core/ISet",
  :clj-symbol "clojure.lang/IPersistentSet"}

@@ -41,14 +41,14 @@ capturing groups.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3006-L3016):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5590-L5600):
 
 ```clj
 (defn re-find
   [re s]
   (let [matches (.exec re s)]
     (when-not (nil? matches)
-      (if (= (count matches) 1)
+      (if (== (count matches) 1)
         (first matches)
         (vec matches)))))
 ```
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3006-3016](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3006-L3016)</ins>
+            └── <ins>[core.cljs:5590-5600](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5590-L5600)</ins>
 </pre>
 
 -->
@@ -110,12 +110,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/re-find",
- :source {:code "(defn re-find\n  [re s]\n  (let [matches (.exec re s)]\n    (when-not (nil? matches)\n      (if (= (count matches) 1)\n        (first matches)\n        (vec matches)))))",
+ :source {:code "(defn re-find\n  [re s]\n  (let [matches (.exec re s)]\n    (when-not (nil? matches)\n      (if (== (count matches) 1)\n        (first matches)\n        (vec matches)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3006 3016]},
+          :lines [5590 5600]},
  :full-name "cljs.core/re-find",
  :clj-symbol "clojure.core/re-find",
  :docstring "Returns the first regex match, if any, of s to re, using\nre.exec(s). Returns a vector, containing first the matching\nsubstring, then any capturing groups if the regular expression contains\ncapturing groups."}

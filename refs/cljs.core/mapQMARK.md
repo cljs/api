@@ -29,7 +29,7 @@ Returns true if `x` is a map, false otherwise.
 ###### See Also:
 
 [`cljs.core/hash-map`](../cljs.core/hash-map.md)<br>
-[``](../cljs.core/sorted-map.md)<br>
+[`cljs.core/sorted-map`](../cljs.core/sorted-map.md)<br>
 
 ---
 
@@ -41,10 +41,10 @@ Return true if x satisfies IMap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L614-L619):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L761-L766):
 
 ```clj
-(defn map?
+(defn ^boolean map?
   [x]
   (if (nil? x)
     false
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:614-619](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L614-L619)</ins>
+            └── <ins>[core.cljs:761-766](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L761-L766)</ins>
 </pre>
 
 -->
@@ -102,6 +102,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `x` is a map, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "map?",
  :signature ["[x]"],
@@ -109,12 +110,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/hash-map" "cljs.core/sorted-map"],
  :full-name-encode "cljs.core/mapQMARK",
- :source {:code "(defn map?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? IMap x)))",
+ :source {:code "(defn ^boolean map?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? IMap x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [614 619]},
+          :lines [761 766]},
  :full-name "cljs.core/map?",
  :clj-symbol "clojure.core/map?",
  :docstring "Return true if x satisfies IMap"}

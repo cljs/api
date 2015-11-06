@@ -48,7 +48,7 @@ Returns a lazy sequence of successive items from coll while
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2810-L2817):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5355-L5362):
 
 ```clj
 (defn take-while
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2810-2817](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2810-L2817)</ins>
+            └── <ins>[core.cljs:5355-5362](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5355-L5362)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn take-while\n  [pred coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (when (pred (first s))\n       (cons (first s) (take-while pred (rest s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2810 2817]},
+          :lines [5355 5362]},
  :full-name "cljs.core/take-while",
  :clj-symbol "clojure.core/take-while",
  :docstring "Returns a lazy sequence of successive items from coll while\n(pred item) returns true. pred must be free of side-effects."}

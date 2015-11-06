@@ -29,14 +29,14 @@ Creates a new list containing `items`.
 ###### See Also:
 
 [`cljs.core/vector`](../cljs.core/vector.md)<br>
-[``](../cljs.core/listQMARK.md)<br>
+[`cljs.core/list?`](../cljs.core/listQMARK.md)<br>
 
 ---
 
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1198-L1199):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1447-L1448):
 
 ```clj
 (defn list [& items]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1198-1199](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1198-L1199)</ins>
+            └── <ins>[core.cljs:1447-1448](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1447-L1448)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn list [& items]\n  (reduce conj () (reverse items)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1198 1199]},
+          :lines [1447 1448]},
  :full-name "cljs.core/list",
  :clj-symbol "clojure.core/list"}
 

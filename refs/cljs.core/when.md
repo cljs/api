@@ -44,7 +44,7 @@ Evaluates test. If logical true, evaluates body in an implicit do.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L454-L458):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L455-L459):
 
 ```clj
 (defmacro when
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.3.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.3.0
+clojure @ clojure-1.4.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:454-458](https://github.com/clojure/clojure/blob/clojure-1.3.0/src/clj/clojure/core.clj#L454-L458)</ins>
+            └── <ins>[core.clj:455-459](https://github.com/clojure/clojure/blob/clojure-1.4.0/src/clj/clojure/core.clj#L455-L459)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defmacro when\n  [test & body]\n  (list 'if test (cons 'do body)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.3.0",
+          :tag "clojure-1.4.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [454 458]},
+          :lines [455 459]},
  :full-name "cljs.core/when",
  :clj-symbol "clojure.core/when",
  :docstring "Evaluates test. If logical true, evaluates body in an implicit do."}

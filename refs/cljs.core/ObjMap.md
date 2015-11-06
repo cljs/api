@@ -11,7 +11,7 @@
 
 
  <samp>
-(__ObjMap.__ meta keys strobj)<br>
+(__ObjMap.__ meta keys strobj update-count __hash)<br>
 </samp>
 
 ---
@@ -22,12 +22,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2423-L2491):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L3101-L3182):
 
 ```clj
-(deftype ObjMap [meta keys strobj]
+(deftype ObjMap [meta keys strobj update-count ^:mutable __hash]
+  Object
+  (toString [this]
+    (pr-str this))
+  
   IWithMeta
-  (-with-meta [coll meta] (ObjMap. meta keys strobj))
+  (-with-meta [coll meta] (ObjMap. meta keys strobj update-count __hash))
 
   IMeta
   (-meta [coll] meta)
@@ -47,7 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-equiv [coll other] (equiv-map coll other))
 
   IHash
-  (-hash [coll] (hash-coll coll))
+  (-hash [coll] (caching-hash coll hash-imap __hash))
 
   ISeqable
   (-seq [coll]
@@ -66,16 +70,21 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   IAssociative
   (-assoc [coll k v]
     (if (goog/isString k)
-      (let [new-strobj (goog.object/clone strobj)
-            overwrite? (.hasOwnProperty new-strobj k)]
-        (aset new-strobj k v)
+      (let [overwrite? (.hasOwnProperty strobj k)]
         (if overwrite?
-          (ObjMap. meta keys new-strobj)     ; overwrite
-          (let [new-keys (aclone keys)] ; append
-            (.push new-keys k)
-            (ObjMap. meta new-keys new-strobj))))
+          (let [new-strobj (goog.object/clone strobj)]
+            (aset new-strobj k v)
+            (ObjMap. meta keys new-strobj (inc update-count) nil)) ; overwrite
+          (if (< update-count cljs.core.ObjMap/HASHMAP_THRESHOLD) #_(< (.-length keys) cljs.core.ObjMap/HASHMAP_THRESHOLD)
+            (let [new-strobj (goog.object/clone strobj) ; append
+                  new-keys (aclone keys)]
+              (aset new-strobj k v)
+              (.push new-keys k)
+              (ObjMap. meta new-keys new-strobj (inc update-count) nil))
+            ;; too many keys, switching to PersistentHashMap
+            (obj-map->hash-map coll k v))))
       ; non-string key. game over.
-      (with-meta (into (hash-map k v) (seq coll)) meta)))
+      (obj-map->hash-map coll k v)))
   (-contains-key? [coll k]
     (obj-map-contains-key? k strobj))
 
@@ -86,25 +95,29 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
             new-strobj (goog.object/clone strobj)]
         (.splice new-keys (scan-array 1 k new-keys) 1)
         (js-delete new-strobj k)
-        (ObjMap. meta new-keys new-strobj))
+        (ObjMap. meta new-keys new-strobj (inc update-count) nil))
       coll)) ; key not found, return coll unchanged
 
   IFn
   (-invoke [coll k]
     (-lookup coll k))
   (-invoke [coll k not-found]
-    (-lookup coll k not-found)))
+    (-lookup coll k not-found))
+
+  IEditableCollection
+  (-as-transient [coll]
+    (transient (into (hash-map) coll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2423-2491](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2423-L2491)</ins>
+            └── <ins>[core.cljs:3101-3182](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L3101-L3182)</ins>
 </pre>
 
 -->
@@ -146,13 +159,13 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ObjMap",
  :type "type",
- :signature ["[meta keys strobj]"],
- :source {:code "(deftype ObjMap [meta keys strobj]\n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (.-length keys))\n      (map #(vector % (aget strobj %))\n           (.sort keys obj-map-compare-keys))))\n\n  ICounted\n  (-count [coll] (.-length keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (obj-map-contains-key? k strobj (aget strobj k) not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if (goog/isString k)\n      (let [new-strobj (goog.object/clone strobj)\n            overwrite? (.hasOwnProperty new-strobj k)]\n        (aset new-strobj k v)\n        (if overwrite?\n          (ObjMap. meta keys new-strobj)     ; overwrite\n          (let [new-keys (aclone keys)] ; append\n            (.push new-keys k)\n            (ObjMap. meta new-keys new-strobj))))\n      ; non-string key. game over.\n      (with-meta (into (hash-map k v) (seq coll)) meta)))\n  (-contains-key? [coll k]\n    (obj-map-contains-key? k strobj))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and (goog/isString k) (.hasOwnProperty strobj k))\n      (let [new-keys (aclone keys)\n            new-strobj (goog.object/clone strobj)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj))\n      coll)) ; key not found, return coll unchanged\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
+ :signature ["[meta keys strobj update-count __hash]"],
+ :source {:code "(deftype ObjMap [meta keys strobj update-count ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n  \n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj update-count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-imap __hash))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (.-length keys))\n      (map #(vector % (aget strobj %))\n           (.sort keys obj-map-compare-keys))))\n\n  ICounted\n  (-count [coll] (.-length keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (obj-map-contains-key? k strobj (aget strobj k) not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if (goog/isString k)\n      (let [overwrite? (.hasOwnProperty strobj k)]\n        (if overwrite?\n          (let [new-strobj (goog.object/clone strobj)]\n            (aset new-strobj k v)\n            (ObjMap. meta keys new-strobj (inc update-count) nil)) ; overwrite\n          (if (< update-count cljs.core.ObjMap/HASHMAP_THRESHOLD) #_(< (.-length keys) cljs.core.ObjMap/HASHMAP_THRESHOLD)\n            (let [new-strobj (goog.object/clone strobj) ; append\n                  new-keys (aclone keys)]\n              (aset new-strobj k v)\n              (.push new-keys k)\n              (ObjMap. meta new-keys new-strobj (inc update-count) nil))\n            ;; too many keys, switching to PersistentHashMap\n            (obj-map->hash-map coll k v))))\n      ; non-string key. game over.\n      (obj-map->hash-map coll k v)))\n  (-contains-key? [coll k]\n    (obj-map-contains-key? k strobj))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and (goog/isString k) (.hasOwnProperty strobj k))\n      (let [new-keys (aclone keys)\n            new-strobj (goog.object/clone strobj)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj (inc update-count) nil))\n      coll)) ; key not found, return coll unchanged\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  IEditableCollection\n  (-as-transient [coll]\n    (transient (into (hash-map) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2423 2491]},
+          :lines [3101 3182]},
  :full-name "cljs.core/ObjMap",
  :full-name-encode "cljs.core/ObjMap",
  :history [["+" "0.0-927"]]}

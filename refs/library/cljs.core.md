@@ -101,6 +101,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[\*unchecked-if\*](../cljs.core/STARunchecked-ifSTAR.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/+)</td>
 <td><samp>[+](../cljs.core/PLUS.md)</samp></td>
 <td><samp>function/macro</samp></td>
@@ -239,6 +245,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/array-map)</td>
+<td><samp>[array-map](../cljs.core/array-map.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td></td>
 <td><samp>[array-seq](../cljs.core/array-seq.md)</samp></td>
 <td><samp>function</samp></td>
@@ -261,6 +273,12 @@ interop with JS, many predicates, etc.
 <td><samp>[assoc](../cljs.core/assoc.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/assoc!)</td>
+<td><samp>[assoc!](../cljs.core/assocBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/assoc-in)</td>
@@ -305,6 +323,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[bit-count](../cljs.core/bit-count.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bit-flip)</td>
 <td><samp>[bit-flip](../cljs.core/bit-flip.md)</samp></td>
 <td><samp>function/macro</samp></td>
@@ -341,6 +365,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[bit-shift-right-zero-fill](../cljs.core/bit-shift-right-zero-fill.md)</samp></td>
+<td><samp>function/macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bit-test)</td>
 <td><samp>[bit-test](../cljs.core/bit-test.md)</samp></td>
 <td><samp>function/macro</samp></td>
@@ -363,6 +393,12 @@ interop with JS, many predicates, etc.
 <td><samp>[butlast](../cljs.core/butlast.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/case)</td>
+<td><samp>[case](../cljs.core/case.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/coll?)</td>
@@ -423,6 +459,12 @@ interop with JS, many predicates, etc.
 <td><samp>[conj](../cljs.core/conj.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/conj!)</td>
+<td><samp>[conj!](../cljs.core/conjBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cons)</td>
@@ -557,10 +599,22 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/disj!)</td>
+<td><samp>[disj!](../cljs.core/disjBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dissoc)</td>
 <td><samp>[dissoc](../cljs.core/dissoc.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dissoc!)</td>
+<td><samp>[dissoc!](../cljs.core/dissocBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/distinct)</td>
@@ -603,6 +657,12 @@ interop with JS, many predicates, etc.
 <td><samp>[doto](../cljs.core/doto.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/double-array)</td>
+<td><samp>[double-array](../cljs.core/double-array.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/drop)</td>
@@ -683,6 +743,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/filterv)</td>
+<td><samp>[filterv](../cljs.core/filterv.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/find)</td>
 <td><samp>[find](../cljs.core/find.md)</samp></td>
 <td><samp>function</samp></td>
@@ -747,6 +813,12 @@ interop with JS, many predicates, etc.
 <td><samp>[frequencies](../cljs.core/frequencies.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[gen-apply-to](../cljs.core/gen-apply-to.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/gensym)</td>
@@ -827,6 +899,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ifn?)</td>
+<td><samp>[ifn?](../cljs.core/ifnQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td></td>
 <td><samp>[import-macros](../cljs.core/import-macros.md)</samp></td>
 <td><samp>macro</samp></td>
@@ -839,10 +917,22 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[indexed?](../cljs.core/indexedQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/instance?)</td>
 <td><samp>[instance?](../cljs.core/instanceQMARK.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/int)</td>
+<td><samp>[int](../cljs.core/int.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/integer?)</td>
@@ -867,6 +957,12 @@ interop with JS, many predicates, etc.
 <td><samp>[into](../cljs.core/into.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/into-array)</td>
+<td><samp>[into-array](../cljs.core/into-array.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -907,7 +1003,7 @@ interop with JS, many predicates, etc.
 <tr>
 <td></td>
 <td><samp>[js-obj](../cljs.core/js-obj.md)</samp></td>
-<td><samp>function</samp></td>
+<td><samp>function/macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
@@ -927,6 +1023,12 @@ interop with JS, many predicates, etc.
 <td><samp>[keep-indexed](../cljs.core/keep-indexed.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/key)</td>
+<td><samp>[key](../cljs.core/key.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/keys)</td>
@@ -983,10 +1085,34 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/list?)</td>
+<td><samp>[list?](../cljs.core/listQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/long)</td>
+<td><samp>[long](../cljs.core/long.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/long-array)</td>
+<td><samp>[long-array](../cljs.core/long-array.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/loop) <samp>→</samp></td>
 <td><samp>[loop](../cljs.core/loop.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/make-array)</td>
+<td><samp>[make-array](../cljs.core/make-array.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/make-hierarchy)</td>
@@ -1017,6 +1143,12 @@ interop with JS, many predicates, etc.
 <td><samp>[mapcat](../cljs.core/mapcat.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/mapv)</td>
+<td><samp>[mapv](../cljs.core/mapv.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/max)</td>
@@ -1077,6 +1209,12 @@ interop with JS, many predicates, etc.
 <td><samp>[missing-protocol](../cljs.core/missing-protocol.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[mk-bound-fn](../cljs.core/mk-bound-fn.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/mod)</td>
@@ -1181,6 +1319,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/object-array)</td>
+<td><samp>[object-array](../cljs.core/object-array.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/odd?)</td>
 <td><samp>[odd?](../cljs.core/oddQMARK.md)</samp></td>
 <td><samp>function</samp></td>
@@ -1229,10 +1373,22 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/persistent!)</td>
+<td><samp>[persistent!](../cljs.core/persistentBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pop)</td>
 <td><samp>[pop](../cljs.core/pop.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pop!)</td>
+<td><samp>[pop!](../cljs.core/popBANG.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pos?)</td>
@@ -1397,6 +1553,30 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reduce-kv)</td>
+<td><samp>[reduce-kv](../cljs.core/reduce-kv.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[reduceable?](../cljs.core/reduceableQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[reduced](../cljs.core/reduced.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[reduced?](../cljs.core/reducedQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reductions)</td>
 <td><samp>[reductions](../cljs.core/reductions.md)</samp></td>
 <td><samp>function</samp></td>
@@ -1487,6 +1667,24 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reversible?)</td>
+<td><samp>[reversible?](../cljs.core/reversibleQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rseq)</td>
+<td><samp>[rseq](../cljs.core/rseq.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rsubseq)</td>
+<td><samp>[rsubseq](../cljs.core/rsubseq.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/satisfies?)</td>
 <td><samp>[satisfies?](../cljs.core/satisfiesQMARK.md)</samp></td>
 <td><samp>macro</samp></td>
@@ -1515,6 +1713,12 @@ interop with JS, many predicates, etc.
 <td><samp>[seq?](../cljs.core/seqQMARK.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[seqable?](../cljs.core/seqableQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sequential?)</td>
@@ -1565,6 +1769,30 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-map)</td>
+<td><samp>[sorted-map](../cljs.core/sorted-map.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-map-by)</td>
+<td><samp>[sorted-map-by](../cljs.core/sorted-map-by.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-set)</td>
+<td><samp>[sorted-set](../cljs.core/sorted-set.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-set-by)</td>
+<td><samp>[sorted-set-by](../cljs.core/sorted-set-by.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/split-at)</td>
 <td><samp>[split-at](../cljs.core/split-at.md)</samp></td>
 <td><samp>function</samp></td>
@@ -1585,7 +1813,7 @@ interop with JS, many predicates, etc.
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/str)</td>
 <td><samp>[str](../cljs.core/str.md)</samp></td>
-<td><samp>function</samp></td>
+<td><samp>function/macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
@@ -1605,6 +1833,12 @@ interop with JS, many predicates, etc.
 <td><samp>[subs](../cljs.core/subs.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/subseq)</td>
+<td><samp>[subseq](../cljs.core/subseq.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/subvec)</td>
@@ -1673,10 +1907,22 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/to-array-2d)</td>
+<td><samp>[to-array-2d](../cljs.core/to-array-2d.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/trampoline)</td>
 <td><samp>[trampoline](../cljs.core/trampoline.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/transient)</td>
+<td><samp>[transient](../cljs.core/transient.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tree-seq)</td>
@@ -1721,6 +1967,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/val)</td>
+<td><samp>[val](../cljs.core/val.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vals)</td>
 <td><samp>[vals](../cljs.core/vals.md)</samp></td>
 <td><samp>function</samp></td>
@@ -1743,6 +1995,12 @@ interop with JS, many predicates, etc.
 <td><samp>[vector](../cljs.core/vector.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[vector-seq](../cljs.core/vector-seq.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vector?)</td>
@@ -1799,6 +2057,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ASeq.java)</td>
+<td><samp>[ASeq](../cljs.core/ASeq.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Associative.java)</td>
 <td><samp>[IAssociative](../cljs.core/IAssociative.md)</samp></td>
 <td><samp>protocol</samp></td>
@@ -1827,6 +2091,12 @@ interop with JS, many predicates, etc.
 <td><samp>[IDerefWithTimeout](../cljs.core/IDerefWithTimeout.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IEditableCollection.java)</td>
+<td><samp>[IEditableCollection](../cljs.core/IEditableCollection.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -1859,6 +2129,18 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[IKVReduce](../cljs.core/IKVReduce.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IPersistentList.java)</td>
+<td><samp>[IList](../cljs.core/IList.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ILookup.java)</td>
 <td><samp>[ILookup](../cljs.core/ILookup.md)</samp></td>
 <td><samp>protocol</samp></td>
@@ -1869,6 +2151,12 @@ interop with JS, many predicates, etc.
 <td><samp>[IMap](../cljs.core/IMap.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IMapEntry.java)</td>
+<td><samp>[IMapEntry](../cljs.core/IMapEntry.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IMeta.java)</td>
@@ -1907,6 +2195,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Reversible.java)</td>
+<td><samp>[IReversible](../cljs.core/IReversible.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ISeq.java)</td>
 <td><samp>[ISeq](../cljs.core/ISeq.md)</samp></td>
 <td><samp>protocol</samp></td>
@@ -1931,10 +2225,46 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Sorted.java)</td>
+<td><samp>[ISorted](../cljs.core/ISorted.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IPersistentStack.java)</td>
 <td><samp>[IStack](../cljs.core/IStack.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientAssociative.java)</td>
+<td><samp>[ITransientAssociative](../cljs.core/ITransientAssociative.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientCollection.java)</td>
+<td><samp>[ITransientCollection](../cljs.core/ITransientCollection.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientMap.java)</td>
+<td><samp>[ITransientMap](../cljs.core/ITransientMap.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientSet.java)</td>
+<td><samp>[ITransientSet](../cljs.core/ITransientSet.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientVector.java)</td>
+<td><samp>[ITransientVector](../cljs.core/ITransientVector.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IPersistentVector.java)</td>
@@ -1955,10 +2285,40 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp>[ArrayNode](../cljs.core/ArrayNode.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[ArrayNodeSeq](../cljs.core/ArrayNodeSeq.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Atom.java)</td>
 <td><samp>[Atom](../cljs.core/Atom.md)</samp></td>
 <td><samp>type</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp>[BitmapIndexedNode](../cljs.core/BitmapIndexedNode.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/BitmapIndexedNodeDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[BlackNode](../cljs.core/BlackNode.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Cons.java)</td>
@@ -1977,6 +2337,12 @@ interop with JS, many predicates, etc.
 <td><samp>[EmptyList](../cljs.core/EmptyList.md)</samp></td>
 <td><samp>type</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashmap.java)</td>
+<td><samp>[HashCollisionNode](../cljs.core/HashCollisionNode.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -2033,6 +2399,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp>[NodeSeq](../cljs.core/NodeSeq.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td></td>
 <td><samp>[ObjMap](../cljs.core/ObjMap.md)</samp></td>
 <td><samp>type</samp></td>
@@ -2046,9 +2418,69 @@ interop with JS, many predicates, etc.
 </tr>
 <tr>
 <td></td>
+<td><samp> └── [HASHMAP_THRESHOLD](../cljs.core/ObjMapDOTHASHMAP_THRESHOLD.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp> └── [fromObject](../cljs.core/ObjMapDOTfromObject.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentArrayMap.java)</td>
+<td><samp>[PersistentArrayMap](../cljs.core/PersistentArrayMap.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentArrayMap.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/PersistentArrayMapDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp> └── [HASHMAP_THRESHOLD](../cljs.core/PersistentArrayMapDOTHASHMAP_THRESHOLD.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp> └── [fromArrays](../cljs.core/PersistentArrayMapDOTfromArrays.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp>[PersistentHashMap](../cljs.core/PersistentHashMap.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/PersistentHashMapDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp> └── [fromArrays](../cljs.core/PersistentHashMapDOTfromArrays.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashSet.java)</td>
+<td><samp>[PersistentHashSet](../cljs.core/PersistentHashSet.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashSet.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/PersistentHashSetDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentQueue.java)</td>
@@ -2067,6 +2499,36 @@ interop with JS, many predicates, etc.
 <td><samp>[PersistentQueueSeq](../cljs.core/PersistentQueueSeq.md)</samp></td>
 <td><samp>type</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentTreeMap.java)</td>
+<td><samp>[PersistentTreeMap](../cljs.core/PersistentTreeMap.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentTreeMap.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/PersistentTreeMapDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[PersistentTreeMapSeq](../cljs.core/PersistentTreeMapSeq.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentTreeSet.java)</td>
+<td><samp>[PersistentTreeSet](../cljs.core/PersistentTreeSet.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentTreeSet.java)</td>
+<td><samp> └── [EMPTY](../cljs.core/PersistentTreeSetDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)</td>
@@ -2100,21 +2562,45 @@ interop with JS, many predicates, etc.
 </tr>
 <tr>
 <td></td>
-<td><samp>[Set](../cljs.core/Set.md)</samp></td>
+<td><samp>[RedNode](../cljs.core/RedNode.md)</samp></td>
 <td><samp>type</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
-<td><samp> └── [EMPTY](../cljs.core/SetDOTEMPTY.md)</samp></td>
-<td><samp>var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><samp>[Reduced](../cljs.core/Reduced.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
 <td><samp>[Subvec](../cljs.core/Subvec.md)</samp></td>
 <td><samp>type</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentArrayMap.java)</td>
+<td><samp>[TransientArrayMap](../cljs.core/TransientArrayMap.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashMap.java)</td>
+<td><samp>[TransientHashMap](../cljs.core/TransientHashMap.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashSet.java)</td>
+<td><samp>[TransientHashSet](../cljs.core/TransientHashSet.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)</td>
+<td><samp>[TransientVector](../cljs.core/TransientVector.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -2134,8 +2620,38 @@ interop with JS, many predicates, etc.
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
+<tr>
+<td></td>
+<td><samp>[VectorNode](../cljs.core/VectorNode.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
 </table>
 
+---
+
+###### Symbols removed or no longer public:
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+<tr>
+<td></td>
+<td><samp>[~~Set~~](../cljs.core/Set.md)</samp></td>
+<td><samp>type</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[×] 0.0-1211" title="Removed in 0.0-1211" src="https://img.shields.io/badge/×-0.0--1211-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp> └── [~~EMPTY~~](../cljs.core/SetDOTEMPTY.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[×] 0.0-1211" title="Removed in 0.0-1211" src="https://img.shields.io/badge/×-0.0--1211-red.svg"></a> </td>
+</tr>
+</table>
 
 ---
 

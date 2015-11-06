@@ -67,10 +67,10 @@ otherwise false.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L850-L860):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1053-L1063):
 
 ```clj
-(defn <=
+(defn ^boolean <=
   ([x] true)
   ([x y] (cljs.core/<= x y))
   ([x y & more]
@@ -85,23 +85,23 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:850-860](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L850-L860)</ins>
+            └── <ins>[core.cljs:1053-1063](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1053-L1063)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L93-L96):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L142-L145):
 
 ```clj
 (defmacro <=
   ([x] true)
-  ([x y] (list 'js* "(~{} <= ~{})" x y))
+  ([x y] (bool-expr (list 'js* "(~{} <= ~{})" x y)))
   ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))
 ```
 
@@ -109,11 +109,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:93-96](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L93-L96)</ins>
+            └── <ins>[core.clj:142-145](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L142-L145)</ins>
 </pre>
 -->
 
@@ -154,6 +154,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if each successive number argument is greater than or equal to the\nprevious one, false otherwise.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "<=",
  :signature ["[x]" "[x y]" "[x y & more]"],
@@ -161,18 +162,18 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/<"],
  :full-name-encode "cljs.core/LTEQ",
- :source {:code "(defn <=\n  ([x] true)\n  ([x y] (cljs.core/<= x y))\n  ([x y & more]\n   (if (cljs.core/<= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/<= y (first more)))\n     false)))",
+ :source {:code "(defn ^boolean <=\n  ([x] true)\n  ([x y] (cljs.core/<= x y))\n  ([x y & more]\n   (if (cljs.core/<= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/<= y (first more)))\n     false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [850 860]},
- :extra-sources [{:code "(defmacro <=\n  ([x] true)\n  ([x y] (list 'js* \"(~{} <= ~{})\" x y))\n  ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))",
+          :lines [1053 1063]},
+ :extra-sources [{:code "(defmacro <=\n  ([x] true)\n  ([x y] (bool-expr (list 'js* \"(~{} <= ~{})\" x y)))\n  ([x y & more] `(and (<= ~x ~y) (<= ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1011",
+                  :tag "r1211",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [93 96]}],
+                  :lines [142 145]}],
  :examples [{:id "adb3fd",
              :content "```clj\n(<= 1 2)\n;;=> true\n\n(<= 2 2)\n;;=> true\n\n(<= 3 2)\n;;=> false\n\n(<= 2 3 4 5 6)\n;;=> true\n```"}],
  :full-name "cljs.core/<=",

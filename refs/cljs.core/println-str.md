@@ -30,7 +30,7 @@ println to a string, returning it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3147-L3150):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5737-L5740):
 
 ```clj
 (defn println-str
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3147-3150](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3147-L3150)</ins>
+            └── <ins>[core.cljs:5737-5740](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5737-L5740)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn println-str\n  [& objs]\n  (prn-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3147 3150]},
+          :lines [5737 5740]},
  :full-name "cljs.core/println-str",
  :clj-symbol "clojure.core/println-str",
  :docstring "println to a string, returning it"}

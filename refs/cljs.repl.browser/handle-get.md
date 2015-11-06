@@ -22,26 +22,27 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L182-L186):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L198-L203):
 
 ```clj
 (defn handle-get [opts conn request]
   (let [path (:path request)]
-    (if (.startsWith path "/repl")
-      (send-repl-client-page opts conn request)
-      (send-404 conn (:path request)))))
+    (cond
+     (.startsWith path "/repl") (send-repl-client-page opts conn request)
+     (:serve-static opts) (send-static opts conn request)
+     :else (send-404 conn (:path request)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:182-186](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L182-L186)</ins>
+                └── <ins>[browser.clj:198-203](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L198-L203)</ins>
 </pre>
 
 -->
@@ -84,12 +85,12 @@ The API data for this symbol:
  :name "handle-get",
  :type "function",
  :signature ["[opts conn request]"],
- :source {:code "(defn handle-get [opts conn request]\n  (let [path (:path request)]\n    (if (.startsWith path \"/repl\")\n      (send-repl-client-page opts conn request)\n      (send-404 conn (:path request)))))",
+ :source {:code "(defn handle-get [opts conn request]\n  (let [path (:path request)]\n    (cond\n     (.startsWith path \"/repl\") (send-repl-client-page opts conn request)\n     (:serve-static opts) (send-static opts conn request)\n     :else (send-404 conn (:path request)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [182 186]},
+          :lines [198 203]},
  :full-name "cljs.repl.browser/handle-get",
  :full-name-encode "cljs.repl.browser/handle-get",
  :history [["+" "0.0-927"]]}

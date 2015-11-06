@@ -59,23 +59,26 @@ Returns a new seq where x is the first element and seq is the rest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1228-L1231):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1484-L1490):
 
 ```clj
 (defn cons
-  [x seq]
-  (Cons. nil x seq))
+  [x coll]
+  (if (or (coercive-= coll nil)
+          (satisfies? ISeq coll))
+    (Cons. nil x coll nil)
+    (Cons. nil x (seq coll) nil)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1228-1231](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1228-L1231)</ins>
+            └── <ins>[core.cljs:1484-1490](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1484-L1490)</ins>
 </pre>
 
 -->
@@ -125,12 +128,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/conj"],
  :full-name-encode "cljs.core/cons",
- :source {:code "(defn cons\n  [x seq]\n  (Cons. nil x seq))",
+ :source {:code "(defn cons\n  [x coll]\n  (if (or (coercive-= coll nil)\n          (satisfies? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1228 1231]},
+          :lines [1484 1490]},
  :examples [{:id "68c769",
              :content "```clj\n(cons 1 (list 1 2 3))\n;;=> (1 1 2 3)\n\n(cons 1 [1 2 3])\n;;=> (1 1 2 3)\n\n(cons 1 nil)\n;;=> (1)\n\n(cons nil nil)\n;;=> (nil)\n```"}],
  :full-name "cljs.core/cons",

@@ -73,7 +73,7 @@ If any levels do not exist, hash-maps will be created.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1915-L1922):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2309-L2316):
 
 ```clj
 (defn assoc-in
@@ -87,11 +87,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1915-1922](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1915-L1922)</ins>
+            └── <ins>[core.cljs:2309-2316](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L2309-L2316)</ins>
 </pre>
 
 -->
@@ -144,9 +144,9 @@ The API data for this symbol:
  :source {:code "(defn assoc-in\n  [m [k & ks] v]\n  (if ks\n    (assoc m k (assoc-in (get m k) ks v))\n    (assoc m k v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1915 1922]},
+          :lines [2309 2316]},
  :examples [{:id "e76f20",
              :content "```clj\n(def users [{:name \"James\" :age 26}\n            {:name \"John\" :age 43}])\n```\n\nUpdate the age of the second (index 1) user:\n\n```clj\n(assoc-in users [1 :age] 44)\n;;=> [{:name \"James\", :age 26}\n;;    {:name \"John\", :age 44}]\n```\n\nInsert the password of the second (index 1) user:\n\n```clj\n(assoc-in users [1 :password] \"nhoJ\")\n;;=> [{:name \"James\", :age 26}\n;;    {:password \"nhoJ\", :name \"John\", :age 43}]\n```"}],
  :full-name "cljs.core/assoc-in",

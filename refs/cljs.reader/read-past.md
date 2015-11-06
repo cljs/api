@@ -28,7 +28,7 @@ char.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L159-L166):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L159-L166):
 
 ```clj
 (defn read-past
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:159-166](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/reader.cljs#L159-L166)</ins>
+            └── <ins>[reader.cljs:159-166](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/reader.cljs#L159-L166)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn read-past\n  [pred rdr]\n  (loop [ch (read-char rdr)]\n    (if (pred ch)\n      (recur (read-char rdr))\n      ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [159 166]},
  :full-name "cljs.reader/read-past",

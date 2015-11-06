@@ -25,10 +25,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1157-L1189):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1394-L1432):
 
 ```clj
 (deftype EmptyList [meta]
+  IList
+  
+  Object
+  (toString [this]
+    (pr-str this))
+
   IWithMeta
   (-with-meta [coll meta] (EmptyList. meta))
 
@@ -44,7 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-pop [coll] #_(throw (js/Error. "Can't pop empty list")))
 
   ICollection
-  (-conj [coll o] (List. meta o nil 1))
+  (-conj [coll o] (List. meta o nil 1 nil))
 
   IEmptyableCollection
   (-empty [coll] coll)
@@ -54,7 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-equiv [coll other] (equiv-sequential coll other))
 
   IHash
-  (-hash [coll] (hash-coll coll))
+  (-hash [coll] 0)
 
   ISeqable
   (-seq [coll] nil)
@@ -67,11 +73,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1157-1189](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1157-L1189)</ins>
+            └── <ins>[core.cljs:1394-1432](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1394-L1432)</ins>
 </pre>
 
 -->
@@ -119,12 +125,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/EmptyList",
- :source {:code "(deftype EmptyList [meta]\n  IWithMeta\n  (-with-meta [coll meta] (EmptyList. meta))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] nil)\n  (-rest [coll] nil)\n\n  IStack\n  (-peek [coll] nil)\n  (-pop [coll] #_(throw (js/Error. \"Can't pop empty list\")))\n\n  ICollection\n  (-conj [coll o] (List. meta o nil 1))\n\n  IEmptyableCollection\n  (-empty [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] nil)\n\n  ICounted\n  (-count [coll] 0))",
+ :source {:code "(deftype EmptyList [meta]\n  IList\n  \n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (EmptyList. meta))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] nil)\n  (-rest [coll] nil)\n\n  IStack\n  (-peek [coll] nil)\n  (-pop [coll] #_(throw (js/Error. \"Can't pop empty list\")))\n\n  ICollection\n  (-conj [coll o] (List. meta o nil 1 nil))\n\n  IEmptyableCollection\n  (-empty [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] 0)\n\n  ISeqable\n  (-seq [coll] nil)\n\n  ICounted\n  (-count [coll] 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1157 1189]},
+          :lines [1394 1432]},
  :full-name "cljs.core/EmptyList",
  :clj-symbol "clojure.lang/EmptyList"}
 

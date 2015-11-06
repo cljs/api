@@ -25,12 +25,18 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L329-L366):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L413-L460):
 
 ```clj
 (deftype IndexedSeq [a i]
+  Object
+  (toString [this]
+    (pr-str this))
+  
   ISeqable
   (-seq [this] this)
+
+  ASeq
   ISeq
   (-first [_] (aget a i))
   (-rest [_] (if (< (inc i) (.-length a))
@@ -59,10 +65,14 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-conj [coll o] (cons o coll))
 
   IReduce
-  (-reduce [_ f]
-    (ci-reduce a f (aget a i) (inc i)))
-  (-reduce [_ f start]
-    (ci-reduce a f start i))
+  (-reduce [coll f]
+    (if (counted? a)
+      (ci-reduce a f (aget a i) (inc i))
+      (ci-reduce coll f (aget a i) 0)))
+  (-reduce [coll f start]
+    (if (counted? a)
+      (ci-reduce a f start i)
+      (ci-reduce coll f start 0)))
 
   IHash
   (-hash [coll] (hash-coll coll)))
@@ -72,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:329-366](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L329-L366)</ins>
+            └── <ins>[core.cljs:413-460](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L413-L460)</ins>
 </pre>
 
 -->
@@ -124,12 +134,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/IndexedSeq",
- :source {:code "(deftype IndexedSeq [a i]\n  ISeqable\n  (-seq [this] this)\n  ISeq\n  (-first [_] (aget a i))\n  (-rest [_] (if (< (inc i) (.-length a))\n               (IndexedSeq. a (inc i))\n               (list)))\n\n  ICounted\n  (-count [_] (- (.-length a) i))\n\n  IIndexed\n  (-nth [coll n]\n    (let [i (+ n i)]\n      (when (< i (.-length a))\n        (aget a i))))\n  (-nth [coll n not-found]\n    (let [i (+ n i)]\n      (if (< i (.-length a))\n        (aget a i)\n        not-found)))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IReduce\n  (-reduce [_ f]\n    (ci-reduce a f (aget a i) (inc i)))\n  (-reduce [_ f start]\n    (ci-reduce a f start i))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
+ :source {:code "(deftype IndexedSeq [a i]\n  Object\n  (toString [this]\n    (pr-str this))\n  \n  ISeqable\n  (-seq [this] this)\n\n  ASeq\n  ISeq\n  (-first [_] (aget a i))\n  (-rest [_] (if (< (inc i) (.-length a))\n               (IndexedSeq. a (inc i))\n               (list)))\n\n  ICounted\n  (-count [_] (- (.-length a) i))\n\n  IIndexed\n  (-nth [coll n]\n    (let [i (+ n i)]\n      (when (< i (.-length a))\n        (aget a i))))\n  (-nth [coll n not-found]\n    (let [i (+ n i)]\n      (if (< i (.-length a))\n        (aget a i)\n        not-found)))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IReduce\n  (-reduce [coll f]\n    (if (counted? a)\n      (ci-reduce a f (aget a i) (inc i))\n      (ci-reduce coll f (aget a i) 0)))\n  (-reduce [coll f start]\n    (if (counted? a)\n      (ci-reduce a f start i)\n      (ci-reduce coll f start 0)))\n\n  IHash\n  (-hash [coll] (hash-coll coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [329 366]},
+          :lines [413 460]},
  :full-name "cljs.core/IndexedSeq",
  :clj-symbol "clojure.lang/IndexedSeq"}
 

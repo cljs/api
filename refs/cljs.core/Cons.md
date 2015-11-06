@@ -14,7 +14,7 @@
 
 
  <samp>
-(__Cons.__ meta first rest)<br>
+(__Cons.__ meta first rest __hash)<br>
 </samp>
 
 ---
@@ -25,22 +25,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1201-L1226):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1450-L1482):
 
 ```clj
-(deftype Cons [meta first rest]
+(deftype Cons [meta first rest ^:mutable __hash]
+  IList
+  
+  Object
+  (toString [this]
+    (pr-str this))
+
   IWithMeta
-  (-with-meta [coll meta] (Cons. meta first rest))
+  (-with-meta [coll meta] (Cons. meta first rest __hash))
 
   IMeta
   (-meta [coll] meta)
 
+  ASeq
   ISeq
   (-first [coll] first)
   (-rest [coll] (if (nil? rest) () rest))
 
   ICollection
-  (-conj [coll o] (Cons. nil o coll))
+  (-conj [coll o] (Cons. nil o coll __hash))
 
   IEmptyableCollection
   (-empty [coll] (with-meta cljs.core.List/EMPTY meta))
@@ -50,7 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
   (-equiv [coll other] (equiv-sequential coll other))
 
   IHash
-  (-hash [coll] (hash-coll coll))
+  (-hash [coll] (caching-hash coll hash-coll __hash))
 
   ISeqable
   (-seq [coll] coll))
@@ -60,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1201-1226](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1201-L1226)</ins>
+            └── <ins>[core.cljs:1450-1482](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L1450-L1482)</ins>
 </pre>
 
 -->
@@ -108,16 +115,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Cons",
- :signature ["[meta first rest]"],
+ :signature ["[meta first rest __hash]"],
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/Cons",
- :source {:code "(deftype Cons [meta first rest]\n  IWithMeta\n  (-with-meta [coll meta] (Cons. meta first rest))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] (if (nil? rest) () rest))\n\n  ICollection\n  (-conj [coll o] (Cons. nil o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] coll))",
+ :source {:code "(deftype Cons [meta first rest ^:mutable __hash]\n  IList\n  \n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (Cons. meta first rest __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] (if (nil? rest) () rest))\n\n  ICollection\n  (-conj [coll o] (Cons. nil o coll __hash))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1201 1226]},
+          :lines [1450 1482]},
  :full-name "cljs.core/Cons",
  :clj-symbol "clojure.lang/Cons"}
 

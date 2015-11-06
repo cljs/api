@@ -35,14 +35,14 @@ Returns the result of (re-find re s) if re fully matches s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2997-L3004):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5581-L5588):
 
 ```clj
 (defn re-matches
   [re s]
   (let [matches (.exec re s)]
     (when (= (first matches) s)
-      (if (= (count matches) 1)
+      (if (== (count matches) 1)
         (first matches)
         (vec matches)))))
 ```
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2997-3004](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2997-L3004)</ins>
+            └── <ins>[core.cljs:5581-5588](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L5581-L5588)</ins>
 </pre>
 
 -->
@@ -104,12 +104,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/re-matches",
- :source {:code "(defn re-matches\n  [re s]\n  (let [matches (.exec re s)]\n    (when (= (first matches) s)\n      (if (= (count matches) 1)\n        (first matches)\n        (vec matches)))))",
+ :source {:code "(defn re-matches\n  [re s]\n  (let [matches (.exec re s)]\n    (when (= (first matches) s)\n      (if (== (count matches) 1)\n        (first matches)\n        (vec matches)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2997 3004]},
+          :lines [5581 5588]},
  :full-name "cljs.core/re-matches",
  :clj-symbol "clojure.core/re-matches",
  :docstring "Returns the result of (re-find re s) if re fully matches s."}

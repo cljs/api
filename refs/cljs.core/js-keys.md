@@ -42,7 +42,7 @@ Returns the keys for the JavaScript object `obj`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L629-L632):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L779-L782):
 
 ```clj
 (defn js-keys [obj]
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:629-632](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L629-L632)</ins>
+            └── <ins>[core.cljs:779-782](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L779-L782)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn js-keys [obj]\n  (let [keys (array)]\n    (goog.object/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [629 632]},
+          :lines [779 782]},
  :examples [{:id "5dd933",
              :content "```clj\n(js-keys #js {:foo 1 :bar 2})\n;;=> #js [\"foo\" \"bar\"]\n```"}],
  :full-name "cljs.core/js-keys"}

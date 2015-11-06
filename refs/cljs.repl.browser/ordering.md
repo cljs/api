@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L190):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L207):
 
 ```clj
 (def ordering (agent {:expecting nil :fns {}}))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:190](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/browser.clj#L190)</ins>
+                └── <ins>[browser.clj:207](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/repl/browser.clj#L207)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(def ordering (agent {:expecting nil :fns {}}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [190]},
+          :lines [207]},
  :full-name "cljs.repl.browser/ordering",
  :full-name-encode "cljs.repl.browser/ordering",
  :history [["+" "0.0-927"]]}

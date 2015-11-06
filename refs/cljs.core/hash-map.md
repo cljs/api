@@ -30,8 +30,8 @@ Returns a new hash map with supplied mappings.
 
 ###### See Also:
 
-[``](../cljs.core/array-map.md)<br>
-[``](../cljs.core/sorted-map.md)<br>
+[`cljs.core/array-map`](../cljs.core/array-map.md)<br>
+[`cljs.core/sorted-map`](../cljs.core/sorted-map.md)<br>
 
 ---
 
@@ -44,26 +44,26 @@ Returns a new hash map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2600-L2607):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4982-L4989):
 
 ```clj
 (defn hash-map
   [& keyvals]
-  (loop [in (seq keyvals), out cljs.core.HashMap/EMPTY]
+  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]
     (if in
-      (recur (nnext in) (assoc out (first in) (second in)))
-      out)))
+      (recur (nnext in) (assoc! out (first in) (second in)))
+      (persistent! out))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2600-2607](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2600-L2607)</ins>
+            └── <ins>[core.cljs:4982-4989](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L4982-L4989)</ins>
 </pre>
 
 -->
@@ -113,12 +113,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/array-map" "cljs.core/sorted-map"],
  :full-name-encode "cljs.core/hash-map",
- :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out cljs.core.HashMap/EMPTY]\n    (if in\n      (recur (nnext in) (assoc out (first in) (second in)))\n      out)))",
+ :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2600 2607]},
+          :lines [4982 4989]},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

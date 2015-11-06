@@ -43,10 +43,10 @@ Please use the idiom (seq x) rather than (not (empty? x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L583-L586):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L722-L725):
 
 ```clj
-(defn empty?
+(defn ^boolean empty?
   [coll] (not (seq coll)))
 ```
 
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:583-586](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L583-L586)</ins>
+            └── <ins>[core.cljs:722-725](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L722-L725)</ins>
 </pre>
 
 -->
@@ -101,6 +101,7 @@ The API data for this symbol:
 
 ```clj
 {:description "Returns true if `coll` has no items - same as `(not (seq coll))`.\n\nPlease use the idiom `(seq x)` rather than `(not (empty? x))`.",
+ :return-type boolean,
  :ns "cljs.core",
  :name "empty?",
  :signature ["[coll]"],
@@ -108,12 +109,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/seq"],
  :full-name-encode "cljs.core/emptyQMARK",
- :source {:code "(defn empty?\n  [coll] (not (seq coll)))",
+ :source {:code "(defn ^boolean empty?\n  [coll] (not (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [583 586]},
+          :lines [722 725]},
  :full-name "cljs.core/empty?",
  :clj-symbol "clojure.core/empty?",
  :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))"}

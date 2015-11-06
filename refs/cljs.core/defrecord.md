@@ -25,14 +25,15 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L389-L396):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L503-L511):
 
 ```clj
 (defmacro defrecord [rsym fields & impls]
   (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]
     `(let []
-       ~(emit-defrecord rsym r fields impls)
-       (set! (.-cljs$core$IPrintable$_pr_seq ~r) (fn [this#] (list ~(str r))))
+       ~(emit-defrecord &env rsym r fields impls)
+       (set! (.-cljs$lang$type ~r) true)
+       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))
        ~(build-positional-factory rsym r fields)
        ~(build-map-factory rsym r fields)
        ~r)))
@@ -42,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:389-396](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L389-L396)</ins>
+            └── <ins>[core.clj:503-511](https://github.com/clojure/clojurescript/blob/r1211/src/clj/cljs/core.clj#L503-L511)</ins>
 </pre>
 
 -->
@@ -94,12 +95,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/defrecord",
- :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord rsym r fields impls)\n       (set! (.-cljs$core$IPrintable$_pr_seq ~r) (fn [this#] (list ~(str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
+ :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [r (:name (cljs.compiler/resolve-var (dissoc &env :locals) rsym))]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (list ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/clj/cljs/core.clj",
-          :lines [389 396]},
+          :lines [503 511]},
  :full-name "cljs.core/defrecord",
  :clj-symbol "clojure.core/defrecord"}
 

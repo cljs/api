@@ -1,11 +1,11 @@
-## cljs.core/Set
+## ~~cljs.core/Set~~
 
 
 
  <table border="1">
 <tr>
 <td>type</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[×] 0.0-1211" title="Removed in 0.0-1211" src="https://img.shields.io/badge/×-0.0--1211-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -124,8 +124,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Set",
- :type "type",
  :signature ["[meta hash-map]"],
+ :history [["+" "0.0-927"] ["-" "0.0-1211"]],
+ :type "type",
+ :full-name-encode "cljs.core/Set",
  :source {:code "(deftype Set [meta hash-map]\n  IWithMeta\n  (-with-meta [coll meta] (Set. meta hash-map))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll o]\n    (Set. meta (assoc hash-map o nil)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.Set/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other]\n    (and\n     (set? other)\n     (= (count coll) (count other))\n     (every? #(contains? coll %)\n             other)))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] (keys hash-map))\n\n  ICounted\n  (-count [coll] (count (seq coll)))\n\n  ILookup\n  (-lookup [coll v]\n    (-lookup coll v nil))\n  (-lookup [coll v not-found]\n    (if (-contains-key? hash-map v)\n      v\n      not-found))\n\n  ISet\n  (-disjoin [coll v]\n    (Set. meta (dissoc hash-map v)))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found)))",
           :title "Source code",
           :repo "clojurescript",
@@ -133,8 +135,7 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [2659 2706]},
  :full-name "cljs.core/Set",
- :full-name-encode "cljs.core/Set",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-1211", :last-seen "0.0-1011"}}
 
 ```
 

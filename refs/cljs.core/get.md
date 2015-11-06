@@ -45,7 +45,7 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L511-L516):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L650-L655):
 
 ```clj
 (defn get
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:511-516](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L511-L516)</ins>
+            └── <ins>[core.cljs:650-655](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L650-L655)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn get\n  ([o k]\n     (-lookup o k))\n  ([o k not-found]\n     (-lookup o k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [511 516]},
+          :lines [650 655]},
  :full-name "cljs.core/get",
  :clj-symbol "clojure.core/get",
  :docstring "Returns the value mapped to key, not-found or nil if key not present."}

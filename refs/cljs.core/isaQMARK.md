@@ -38,17 +38,17 @@ Source docstring:
 
 ```
 Returns true if (= child parent), or child is directly or indirectly derived from
-parent, either via a Java type inheritance relationship or a
+parent, either via a JavaScript type inheritance relationship or a
 relationship established via derive. h must be a hierarchy obtained
 from make-hierarchy, if not supplied defaults to the global
 hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3514-L3532):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6137-L6155):
 
 ```clj
-(defn isa?
+(defn ^boolean isa?
   ([child parent] (isa? @global-hierarchy child parent))
   ([h child parent]
      (or (= child parent)
@@ -57,9 +57,9 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
          (contains? ((:ancestors h) child) parent)
          ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))
          (and (vector? parent) (vector? child)
-              (= (count parent) (count child))
+              (== (count parent) (count child))
               (loop [ret true i 0]
-                (if (or (not ret) (= i (count parent)))
+                (if (or (not ret) (== i (count parent)))
                   ret
                   (recur (isa? h (child i) (parent i)) (inc i))))))))
 ```
@@ -68,11 +68,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3514-3532](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3514-L3532)</ins>
+            └── <ins>[core.cljs:6137-6155](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L6137-L6155)</ins>
 </pre>
 
 -->
@@ -114,7 +114,8 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "isa?",
  :signature ["[child parent]" "[h child parent]"],
  :history [["+" "0.0-927"]],
@@ -124,15 +125,15 @@ The API data for this symbol:
            "cljs.core/make-hierarchy"
            "cljs.core/derive"],
  :full-name-encode "cljs.core/isaQMARK",
- :source {:code "(defn isa?\n  ([child parent] (isa? @global-hierarchy child parent))\n  ([h child parent]\n     (or (= child parent)\n         ;; (and (class? parent) (class? child)\n         ;;    (. ^Class parent isAssignableFrom child))\n         (contains? ((:ancestors h) child) parent)\n         ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))\n         (and (vector? parent) (vector? child)\n              (= (count parent) (count child))\n              (loop [ret true i 0]\n                (if (or (not ret) (= i (count parent)))\n                  ret\n                  (recur (isa? h (child i) (parent i)) (inc i))))))))",
+ :source {:code "(defn ^boolean isa?\n  ([child parent] (isa? @global-hierarchy child parent))\n  ([h child parent]\n     (or (= child parent)\n         ;; (and (class? parent) (class? child)\n         ;;    (. ^Class parent isAssignableFrom child))\n         (contains? ((:ancestors h) child) parent)\n         ;;(and (class? child) (some #(contains? ((:ancestors h) %) parent) (supers child)))\n         (and (vector? parent) (vector? child)\n              (== (count parent) (count child))\n              (loop [ret true i 0]\n                (if (or (not ret) (== i (count parent)))\n                  ret\n                  (recur (isa? h (child i) (parent i)) (inc i))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3514 3532]},
+          :lines [6137 6155]},
  :full-name "cljs.core/isa?",
  :clj-symbol "clojure.core/isa?",
- :docstring "Returns true if (= child parent), or child is directly or indirectly derived from\nparent, either via a Java type inheritance relationship or a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy"}
+ :docstring "Returns true if (= child parent), or child is directly or indirectly derived from\nparent, either via a JavaScript type inheritance relationship or a\nrelationship established via derive. h must be a hierarchy obtained\nfrom make-hierarchy, if not supplied defaults to the global\nhierarchy"}
 
 ```
 

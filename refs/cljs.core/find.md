@@ -41,7 +41,7 @@ Returns the map entry for key, or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L701-L707):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L875-L881):
 
 ```clj
 (defn find
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
+clojurescript @ r1211
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:701-707](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L701-L707)</ins>
+            └── <ins>[core.cljs:875-881](https://github.com/clojure/clojurescript/blob/r1211/src/cljs/cljs/core.cljs#L875-L881)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defn find\n  [coll k]\n  (when (and coll\n             (associative? coll)\n             (contains? coll k))\n    [k (-lookup coll k)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1011",
+          :tag "r1211",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [701 707]},
+          :lines [875 881]},
  :full-name "cljs.core/find",
  :clj-symbol "clojure.core/find",
  :docstring "Returns the map entry for key, or nil if key not present."}
