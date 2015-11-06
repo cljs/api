@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L373-L374):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L387-L388):
 
 ```clj
 (defprotocol IPending
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:373-374](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L373-L374)</ins>
+            └── <ins>[core.cljs:387-388](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L387-L388)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IPending\n  (^boolean -realized? [d]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [373 374]},
+          :lines [387 388]},
  :methods [{:name "-realized?", :signature ["[d]"], :docstring nil}],
  :full-name "cljs.core/IPending",
  :clj-symbol "clojure.lang/IPending"}

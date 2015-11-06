@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3603-L3609):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3688-L3694):
 
 ```clj
 (deftype Volatile [^:mutable state]
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3603-3609](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3603-L3609)</ins>
+            └── <ins>[core.cljs:3688-3694](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3688-L3694)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(deftype Volatile [^:mutable state]\n  IVolatile\n  (-vreset! [_ new-state]\n    (set! state new-state))\n\n  IDeref\n  (-deref [_] state))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3603 3609]},
+          :lines [3688 3694]},
  :full-name "cljs.core/Volatile",
  :full-name-encode "cljs.core/Volatile",
  :history [["+" "0.0-2496"]],

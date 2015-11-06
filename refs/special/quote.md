@@ -30,7 +30,7 @@ Yields the unevaluated form.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L1026-L1028):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/analyzer.clj#L1099-L1101):
 
 ```clj
 (defmethod parse 'quote
@@ -42,11 +42,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1026-1028](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/analyzer.clj#L1026-L1028)</ins>
+            └── <ins>[analyzer.clj:1099-1101](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/analyzer.clj#L1099-L1101)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _ _]\n  (analyze (assoc env :quoted? true) x))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1026 1028]},
+          :lines [1099 1101]},
  :full-name "special/quote",
  :clj-symbol "clojure.core/quote",
  :docstring "Yields the unevaluated form."}

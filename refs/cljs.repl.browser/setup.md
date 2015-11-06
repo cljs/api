@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L195-L199):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/browser.clj#L195-L199):
 
 ```clj
 (defn setup [repl-env opts]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:195-199](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/browser.clj#L195-L199)</ins>
+                └── <ins>[browser.clj:195-199](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/browser.clj#L195-L199)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn setup [repl-env opts]\n  (when (:src repl-env)\n    (repl/analyze-source (:src repl-env)))\n  (comp/with-core-cljs nil\n    (fn [] (server/start repl-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [195 199]},
  :full-name "cljs.repl.browser/setup",

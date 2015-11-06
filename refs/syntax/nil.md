@@ -58,13 +58,12 @@ nil
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L275-L301):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L270-L296):
 
 ```clj
 (defn- read-symbol
   [rdr initch]
-  (let [[line column] (when (indexing-reader? rdr)
-                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]
+  (let [[line column] (starting-line-col-info rdr)]
     (when-let [token (read-token rdr initch)]
       (case token
 
@@ -83,10 +82,11 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
                   (merge
                    (when-let [file (get-file-name rdr)]
                      {:file file})
-                   {:line line
-                    :column column
-                    :end-line (get-line-number rdr)
-                    :end-column (int (inc (get-column-number rdr)))}))))
+                   (let [[end-line end-column] (ending-line-col-info rdr)]
+                     {:line line
+                      :column column
+                      :end-line end-line
+                      :end-column end-column})))))
             (reader-error rdr "Invalid token: " token))))))
 ```
 
@@ -94,13 +94,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:275-301](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L275-L301)</ins>
+                    └── <ins>[reader.clj:270-296](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L270-L296)</ins>
 </pre>
 -->
 
@@ -138,12 +138,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special symbol",
  :full-name-encode "syntax/nil",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   {:line line\n                    :column column\n                    :end-line (get-line-number rdr)\n                    :end-column (int (inc (get-column-number rdr)))}))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [275 301]}],
+                  :lines [270 296]}],
  :examples [{:id "17b92a",
              :content "```clj\nnil\n;;=> nil\n```\n\n`nil` can sometimes mean \"not found\":\n\n```clj\n(:foo {})\n;;=> nil\n```\n\n`nil` can also mean that the operation didn't make sense:\n\n```clj\n(:foo nil)\n;;=> nil\n```"}],
  :edn-doc "https://github.com/edn-format/edn#nil",

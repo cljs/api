@@ -27,7 +27,7 @@ If x is reduced?, returns (deref x), else returns x
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L917-L920):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L949-L952):
 
 ```clj
 (defn unreduced
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:917-920](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L917-L920)</ins>
+            └── <ins>[core.cljs:949-952](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L949-L952)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn unreduced\n  [x]\n  (if (reduced? x) (deref x) x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [917 920]},
+          :lines [949 952]},
  :full-name "cljs.core/unreduced",
  :docstring "If x is reduced?, returns (deref x), else returns x"}
 

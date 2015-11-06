@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L20-L22):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L20-L22):
 
 ```clj
 (def ^{:dynamic true
@@ -29,11 +29,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:20-22](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L20-L22)</ins>
+            └── <ins>[core.cljs:20-22](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L20-L22)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(def ^{:dynamic true\n       :jsdoc [\"@define {string}\"]}\n  *target* \"default\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
           :lines [20 22]},
  :full-name "cljs.core/*target*",

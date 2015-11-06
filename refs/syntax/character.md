@@ -74,7 +74,7 @@ compatibility.  They are represented as single character JavaScript strings.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L107-L148):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L108-L146):
 
 ```clj
 (defn- read-char*
@@ -105,9 +105,6 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
              (reader-error rdr "Invalid character constant: \\u" (Integer/toString ic 16))
              c))
 
-         (.startsWith token "x")
-         (read-unicode-char token 1 2 16)
-
          (.startsWith token "o")
          (let [len (dec token-len)]
            (if (> len 3)
@@ -125,18 +122,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:107-148](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L107-L148)</ins>
+                    └── <ins>[reader.clj:108-146](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L108-L146)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607):
 
 ```clj
 (defn- macros [ch]
@@ -165,13 +162,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:591-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610)</ins>
+                    └── <ins>[reader.clj:588-607](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607)</ins>
 </pre>
 -->
 
@@ -210,18 +207,18 @@ The API data for this symbol:
  :type "syntax",
  :related ["syntax/string" "cljs.core/str"],
  :full-name-encode "syntax/character",
- :extra-sources ({:code "(defn- read-char*\n  [rdr backslash]\n  (let [ch (read-char rdr)]\n    (if-not (nil? ch)\n      (let [token (if (or (macro-terminating? ch)\n                          (whitespace? ch))\n                    (str ch)\n                    (read-token rdr ch))\n            token-len (count token)]\n        (cond\n\n         (== 1 token-len)  (Character/valueOf (nth token 0))\n\n         (= token \"newline\") \\newline\n         (= token \"space\") \\space\n         (= token \"tab\") \\tab\n         (= token \"backspace\") \\backspace\n         (= token \"formfeed\") \\formfeed\n         (= token \"return\") \\return\n\n         (.startsWith token \"u\")\n         (let [c (read-unicode-char token 1 4 16)\n               ic (int c)]\n           (if (and (> ic upper-limit)\n                    (< ic lower-limit))\n             (reader-error rdr \"Invalid character constant: \\\\u\" (Integer/toString ic 16))\n             c))\n\n         (.startsWith token \"x\")\n         (read-unicode-char token 1 2 16)\n\n         (.startsWith token \"o\")\n         (let [len (dec token-len)]\n           (if (> len 3)\n             (reader-error rdr \"Invalid octal escape sequence length: \" len)\n             (let [uc (read-unicode-char token 1 len 8)]\n               (if (> (int uc) 0377)\n                 (reader-error rdr \"Octal escape sequence must be in range [0, 377]\")\n                 uc))))\n\n         :else (reader-error rdr \"Unsupported character: \\\\\" token)))\n      (reader-error rdr \"EOF while reading character\"))))",
+ :extra-sources ({:code "(defn- read-char*\n  [rdr backslash]\n  (let [ch (read-char rdr)]\n    (if-not (nil? ch)\n      (let [token (if (or (macro-terminating? ch)\n                          (whitespace? ch))\n                    (str ch)\n                    (read-token rdr ch))\n            token-len (count token)]\n        (cond\n\n         (== 1 token-len)  (Character/valueOf (nth token 0))\n\n         (= token \"newline\") \\newline\n         (= token \"space\") \\space\n         (= token \"tab\") \\tab\n         (= token \"backspace\") \\backspace\n         (= token \"formfeed\") \\formfeed\n         (= token \"return\") \\return\n\n         (.startsWith token \"u\")\n         (let [c (read-unicode-char token 1 4 16)\n               ic (int c)]\n           (if (and (> ic upper-limit)\n                    (< ic lower-limit))\n             (reader-error rdr \"Invalid character constant: \\\\u\" (Integer/toString ic 16))\n             c))\n\n         (.startsWith token \"o\")\n         (let [len (dec token-len)]\n           (if (> len 3)\n             (reader-error rdr \"Invalid octal escape sequence length: \" len)\n             (let [uc (read-unicode-char token 1 len 8)]\n               (if (> (int uc) 0377)\n                 (reader-error rdr \"Octal escape sequence must be in range [0, 377]\")\n                 uc))))\n\n         :else (reader-error rdr \"Unsupported character: \\\\\" token)))\n      (reader-error rdr \"EOF while reading character\"))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [107 148]}
+                  :lines [108 146]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [591 610]}),
+                  :lines [588 607]}),
  :examples [{:id "495a47",
              :content "```clj\n\\c\n;;=> \"c\"\n\n\\A\n;;=> \"A\"\n\n\\newline\n;;=> \"\\n\"\n\n\\u00a1\n;;=> \"¡\"\n\n\\o256\n;;=> \"®\"\n```"}],
  :edn-doc "https://github.com/edn-format/edn#characters",

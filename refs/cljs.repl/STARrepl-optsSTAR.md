@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L34):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L34):
 
 ```clj
 (def ^:dynamic *repl-opts* nil)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:34](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L34)</ins>
+            └── <ins>[repl.clj:34](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L34)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *repl-opts* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl.clj",
           :lines [34]},
  :full-name "cljs.repl/*repl-opts*",

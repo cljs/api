@@ -71,6 +71,12 @@ Nashorn REPL (JS on Java 8)
 </tr>
 <tr>
 <td></td>
+<td><samp>[repl-env\*](../cljs.repl.nashorn/repl-envSTAR.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3030"><img valign="middle" alt="[+] 0.0-3030" title="Added in 0.0-3030" src="https://img.shields.io/badge/+-0.0--3030-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[repl-filename](../cljs.repl.nashorn/repl-filename.md)</samp></td>
 <td><samp>var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2814"><img valign="middle" alt="[+] 0.0-2814" title="Added in 0.0-2814" src="https://img.shields.io/badge/+-0.0--2814-lightgrey.svg"></a> </td>

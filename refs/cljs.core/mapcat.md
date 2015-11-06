@@ -51,7 +51,7 @@ a transducer when no collections are provided
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3954-L3962):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L4039-L4047):
 
 ```clj
 (defn mapcat
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3954-3962](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3954-L3962)</ins>
+            └── <ins>[core.cljs:4039-4047](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L4039-L4047)</ins>
 </pre>
 
 -->
@@ -121,9 +121,9 @@ The API data for this symbol:
  :source {:code "(defn mapcat\n  ([f] (comp (map f) cat))\n  ([f & colls]\n     (apply concat (apply map f colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3954 3962]},
+          :lines [4039 4047]},
  :full-name "cljs.core/mapcat",
  :clj-symbol "clojure.core/mapcat",
  :docstring "Returns the result of applying concat to the result of applying map\nto f and colls.  Thus function f should return a collection. Returns\na transducer when no collections are provided"}

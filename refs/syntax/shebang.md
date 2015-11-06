@@ -42,7 +42,7 @@ the first line of the file to have a [shebang line](https://en.wikipedia.org/wik
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122):
 
 ```clj
 (defn read-comment
@@ -54,7 +54,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
@@ -62,12 +62,12 @@ tools.reader @ tools.reader-0.8.10
                 └── tools
                     └── reader
                         └── impl
-                            └── <ins>[commons.clj:120-122](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122)</ins>
+                            └── <ins>[commons.clj:120-122](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L609-L620):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -88,13 +88,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:612-623](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623)</ins>
+                    └── <ins>[reader.clj:609-620](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L609-L620)</ins>
 </pre>
 -->
 
@@ -135,15 +135,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-comment\n  [rdr & _]\n  (skip-line rdr))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader/impl/commons.clj",
                   :lines [120 122]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [612 623]}),
+                  :lines [609 620]}),
  :examples [{:id "de569a",
              :content "```clj\n#!/bin/cljs\n;; waits for another form since #!/bin/cljs was ignored.\n\n123 #! this is ignored\n;;=> 123\n```"}],
  :full-name "syntax/shebang",

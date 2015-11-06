@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1959):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2017):
 
 ```clj
 (defn ^number unchecked-short [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1959](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1959)</ins>
+            └── <ins>[core.cljs:2017](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2017)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L368):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L375):
 
 ```clj
 (defmacro unchecked-short [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:368](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L368)</ins>
+            └── <ins>[core.clj:375](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L375)</ins>
 </pre>
 -->
 
@@ -110,15 +110,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1959]},
+          :lines [2017]},
  :extra-sources [{:code "(defmacro unchecked-short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [368]}],
+                  :lines [375]}],
  :full-name "cljs.core/unchecked-short",
  :clj-symbol "clojure.core/unchecked-short"}
 

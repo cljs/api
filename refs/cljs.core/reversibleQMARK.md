@@ -30,12 +30,18 @@ Vectors, sorted maps, and sorted sets implement `IReversible`.
 
 
 
+Source docstring:
+
+```
+Returns true if coll satisfies? IReversible.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2395-L2396):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2459-L2462):
 
 ```clj
-(defn ^boolean reversible? [coll]
+(defn ^boolean reversible?
+  [coll]
   (satisfies? IReversible coll))
 ```
 
@@ -43,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2395-2396](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2395-L2396)</ins>
+            └── <ins>[core.cljs:2459-2462](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2459-L2462)</ins>
 </pre>
 
 -->
@@ -97,14 +103,15 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/reversibleQMARK",
- :source {:code "(defn ^boolean reversible? [coll]\n  (satisfies? IReversible coll))",
+ :source {:code "(defn ^boolean reversible?\n  [coll]\n  (satisfies? IReversible coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2395 2396]},
+          :lines [2459 2462]},
  :full-name "cljs.core/reversible?",
- :clj-symbol "clojure.core/reversible?"}
+ :clj-symbol "clojure.core/reversible?",
+ :docstring "Returns true if coll satisfies? IReversible."}
 
 ```
 

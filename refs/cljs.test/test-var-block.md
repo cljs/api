@@ -28,7 +28,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/test.cljs#L437-L459):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/test.cljs#L437-L459):
 
 ```clj
 (defn test-var-block
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:437-459](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/test.cljs#L437-L459)</ins>
+            └── <ins>[test.cljs:437-459](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/test.cljs#L437-L459)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn test-var-block\n  [v]\n  {:pre [(instance? Var v)]}\n  (if-let [t (:test (meta v))]\n    [(fn []\n       (update-current-env! [:testing-vars] conj v)\n       (update-current-env! [:report-counters :test] inc)\n       (do-report {:type :begin-test-var :var v})\n       (let [{:keys [async-disabled]} (get-current-env)]\n         (cond-> (try\n                   (t)\n                   (catch :default e\n                     (do-report\n                      {:type :error\n                       :message \"Uncaught exception, not in assertion.\"\n                       :expected nil\n                       :actual e})))\n           async-disabled (-> async? not (assert async-disabled)))))\n     (fn []\n       (do-report {:type :end-test-var :var v})\n       (update-current-env! [:testing-vars] rest))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/test.cljs",
           :lines [437 459]},
  :full-name "cljs.test/test-var-block",

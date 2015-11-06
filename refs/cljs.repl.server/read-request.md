@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/server.clj#L96-L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/server.clj#L96-L101):
 
 ```clj
 (defn read-request [rdr]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:96-101](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/server.clj#L96-L101)</ins>
+                └── <ins>[server.clj:96-101](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/server.clj#L96-L101)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn read-request [rdr]\n  (let [line (.readLine rdr)]\n    (cond\n      (.startsWith line \"POST\") (read-post line rdr)\n      (.startsWith line \"GET\") (read-get line rdr)\n      :else {:method :unknown :content line})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [96 101]},
  :full-name "cljs.repl.server/read-request",

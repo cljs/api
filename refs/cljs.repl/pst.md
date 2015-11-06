@@ -31,7 +31,7 @@ exception, stored implicitly by [`*e`][doc:cljs.core/*e].
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L992-L1013):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L994-L1011):
 
 ```clj
 (defmacro pst
@@ -39,7 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
   ([e]
    (let [{:keys [repl-env] :as env} &env]
      (when (and e repl-env)
-       (let [ret (if (satisfies? IGetError repl-env)
+       (when-let [ret (if (satisfies? IGetError repl-env)
                    (-get-error repl-env e env *repl-opts*)
                    (edn/read-string
                      (evaluate-form repl-env env "<cljs repl>"
@@ -47,26 +47,22 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
                           (pr-str
                             {:value (.-message ~e)
                              :stacktrace (.-stack ~e)})))))]
-         (when ret
-           (let [ret (update-in ret [:value]
-                       (fn [msg]
-                         ;; give REPL environments a chance to fix or
-                         ;; or elide redundant information
-                         (if (satisfies? IParseErrorMessage repl-env)
-                           (-parse-error-message repl-env msg ret *repl-opts*)
-                           msg)))]
-             (display-error repl-env ret nil *repl-opts*))))))))
+         (display-error repl-env
+           (if (satisfies? IParseError repl-env)
+             (-parse-error repl-env ret *repl-opts*)
+             ret)
+           nil *repl-opts*))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:992-1013](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L992-L1013)</ins>
+            └── <ins>[repl.clj:994-1011](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L994-L1011)</ins>
 </pre>
 
 -->
@@ -115,12 +111,12 @@ The API data for this symbol:
  :history [["+" "0.0-2985"]],
  :type "macro",
  :full-name-encode "cljs.repl/pst",
- :source {:code "(defmacro pst\n  ([] `(pst *e))\n  ([e]\n   (let [{:keys [repl-env] :as env} &env]\n     (when (and e repl-env)\n       (let [ret (if (satisfies? IGetError repl-env)\n                   (-get-error repl-env e env *repl-opts*)\n                   (edn/read-string\n                     (evaluate-form repl-env env \"<cljs repl>\"\n                       `(when ~e\n                          (pr-str\n                            {:value (.-message ~e)\n                             :stacktrace (.-stack ~e)})))))]\n         (when ret\n           (let [ret (update-in ret [:value]\n                       (fn [msg]\n                         ;; give REPL environments a chance to fix or\n                         ;; or elide redundant information\n                         (if (satisfies? IParseErrorMessage repl-env)\n                           (-parse-error-message repl-env msg ret *repl-opts*)\n                           msg)))]\n             (display-error repl-env ret nil *repl-opts*))))))))",
+ :source {:code "(defmacro pst\n  ([] `(pst *e))\n  ([e]\n   (let [{:keys [repl-env] :as env} &env]\n     (when (and e repl-env)\n       (when-let [ret (if (satisfies? IGetError repl-env)\n                   (-get-error repl-env e env *repl-opts*)\n                   (edn/read-string\n                     (evaluate-form repl-env env \"<cljs repl>\"\n                       `(when ~e\n                          (pr-str\n                            {:value (.-message ~e)\n                             :stacktrace (.-stack ~e)})))))]\n         (display-error repl-env\n           (if (satisfies? IParseError repl-env)\n             (-parse-error repl-env ret *repl-opts*)\n             ret)\n           nil *repl-opts*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl.clj",
-          :lines [992 1013]},
+          :lines [994 1011]},
  :full-name "cljs.repl/pst",
  :clj-symbol "clojure.repl/pst"}
 

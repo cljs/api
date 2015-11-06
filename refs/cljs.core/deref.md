@@ -36,9 +36,17 @@ as `(deref foo)`.
 ---
 
 
+Source docstring:
+
+```
+Also reader macro: @var/@atom/@delay. Returns the
+most-recently-committed value of ref. When applied to a var
+or atom, returns its current state. When applied to a delay, forces
+it if not already forced. See also - realized?.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L924-L926):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L956-L962):
 
 ```clj
 (defn deref
@@ -50,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:924-926](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L924-L926)</ins>
+            └── <ins>[core.cljs:956-962](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L956-L962)</ins>
 </pre>
 
 -->
@@ -107,11 +115,12 @@ The API data for this symbol:
  :source {:code "(defn deref\n  [o]\n  (-deref o))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [924 926]},
+          :lines [956 962]},
  :full-name "cljs.core/deref",
- :clj-symbol "clojure.core/deref"}
+ :clj-symbol "clojure.core/deref",
+ :docstring "Also reader macro: @var/@atom/@delay. Returns the\nmost-recently-committed value of ref. When applied to a var\nor atom, returns its current state. When applied to a delay, forces\nit if not already forced. See also - realized?."}
 
 ```
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L426-L427):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L440-L441):
 
 ```clj
 (defprotocol IVolatile
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:426-427](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L426-L427)</ins>
+            └── <ins>[core.cljs:440-441](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L440-L441)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IVolatile\n  (-vreset! [o new-value]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [426 427]},
+          :lines [440 441]},
  :methods [{:name "-vreset!",
             :signature ["[o new-value]"],
             :docstring nil}],

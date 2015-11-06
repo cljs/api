@@ -34,9 +34,15 @@ Returns a new JavaScript array from the elements of `aseq`.
 ---
 
 
+Source docstring:
+
+```
+Returns an array with components set to the values in aseq. Optional type
+argument accepted for compatibility with Clojure.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L221-L225):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L233-L239):
 
 ```clj
 (defn ^array into-array
@@ -50,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:221-225](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L221-L225)</ins>
+            └── <ins>[core.cljs:233-239](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L233-L239)</ins>
 </pre>
 
 -->
@@ -108,11 +114,12 @@ The API data for this symbol:
  :source {:code "(defn ^array into-array\n  ([aseq]\n     (into-array nil aseq))\n  ([type aseq]\n     (reduce (fn [a x] (.push a x) a) (array) aseq)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [221 225]},
+          :lines [233 239]},
  :full-name "cljs.core/into-array",
- :clj-symbol "clojure.core/into-array"}
+ :clj-symbol "clojure.core/into-array",
+ :docstring "Returns an array with components set to the values in aseq. Optional type\nargument accepted for compatibility with Clojure."}
 
 ```
 

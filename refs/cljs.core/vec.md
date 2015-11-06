@@ -34,12 +34,19 @@ Creates a new vector containing the contents of `coll`
 ---
 
 
+Source docstring:
+
+```
+Creates a new vector containing the contents of coll. JavaScript arrays
+will be aliased and should not be modified.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L4481-L4487):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L4566-L4575):
 
 ```clj
-(defn vec [coll]
+(defn vec
+  [coll]
   (if (array? coll)
     (.fromArray PersistentVector coll true)
     (-persistent!
@@ -52,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4481-4487](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L4481-L4487)</ins>
+            └── <ins>[core.cljs:4566-4575](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L4566-L4575)</ins>
 </pre>
 
 -->
@@ -106,14 +113,15 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/vector" "cljs.core/vector?"],
  :full-name-encode "cljs.core/vec",
- :source {:code "(defn vec [coll]\n  (if (array? coll)\n    (.fromArray PersistentVector coll true)\n    (-persistent!\n      (reduce -conj!\n        (-as-transient (.-EMPTY PersistentVector))\n        coll))))",
+ :source {:code "(defn vec\n  [coll]\n  (if (array? coll)\n    (.fromArray PersistentVector coll true)\n    (-persistent!\n      (reduce -conj!\n        (-as-transient (.-EMPTY PersistentVector))\n        coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4481 4487]},
+          :lines [4566 4575]},
  :full-name "cljs.core/vec",
- :clj-symbol "clojure.core/vec"}
+ :clj-symbol "clojure.core/vec",
+ :docstring "Creates a new vector containing the contents of coll. JavaScript arrays\nwill be aliased and should not be modified."}
 
 ```
 

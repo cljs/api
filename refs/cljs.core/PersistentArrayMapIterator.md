@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L5327-L5334):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L5417-L5424):
 
 ```clj
 (deftype PersistentArrayMapIterator [arr ^:mutable i cnt]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5327-5334](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L5327-L5334)</ins>
+            └── <ins>[core.cljs:5417-5424](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L5417-L5424)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(deftype PersistentArrayMapIterator [arr ^:mutable i cnt]\n  Object\n  (hasNext [_]\n    (< i cnt))\n  (next [_]\n    (let [ret [(aget arr i) (aget arr (inc i))]]\n      (set! i (+ i 2))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5327 5334]},
+          :lines [5417 5424]},
  :full-name "cljs.core/PersistentArrayMapIterator",
  :full-name-encode "cljs.core/PersistentArrayMapIterator",
  :history [["+" "0.0-2371"]]}

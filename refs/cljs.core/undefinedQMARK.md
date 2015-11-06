@@ -20,12 +20,18 @@
 
 
 
+Source docstring:
+
+```
+Returns true if x identical to the JavaScript undefined value.
+```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1597-L1598):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1644-L1647):
 
 ```clj
-(defn ^boolean undefined? [x]
+(defn ^boolean undefined?
+  [x]
   (cljs.core/undefined? x))
 ```
 
@@ -33,21 +39,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1597-1598](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1597-L1598)</ins>
+            └── <ins>[core.cljs:1644-1647](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1644-L1647)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L316-L317):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L321-L324):
 
 ```clj
-(defmacro undefined? [x]
+(defmacro undefined?
+  [x]
   (bool-expr (core/list 'js* "(void 0 === ~{})" x)))
 ```
 
@@ -55,11 +62,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:316-317](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L316-L317)</ins>
+            └── <ins>[core.clj:321-324](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L321-L324)</ins>
 </pre>
 -->
 
@@ -103,19 +110,20 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :full-name-encode "cljs.core/undefinedQMARK",
- :source {:code "(defn ^boolean undefined? [x]\n  (cljs.core/undefined? x))",
+ :source {:code "(defn ^boolean undefined?\n  [x]\n  (cljs.core/undefined? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1597 1598]},
- :extra-sources [{:code "(defmacro undefined? [x]\n  (bool-expr (core/list 'js* \"(void 0 === ~{})\" x)))",
+          :lines [1644 1647]},
+ :extra-sources [{:code "(defmacro undefined?\n  [x]\n  (bool-expr (core/list 'js* \"(void 0 === ~{})\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [316 317]}],
- :full-name "cljs.core/undefined?"}
+                  :lines [321 324]}],
+ :full-name "cljs.core/undefined?",
+ :docstring "Returns true if x identical to the JavaScript undefined value."}
 
 ```
 

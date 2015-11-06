@@ -35,7 +35,7 @@ not be readable by the Clojure reader.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L373-L438):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L372-L437):
 
 ```clj
 (defn evaluate-form
@@ -107,11 +107,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:373-438](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L373-L438)</ins>
+            └── <ins>[repl.clj:372-437](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L372-L437)</ins>
 </pre>
 
 -->
@@ -161,9 +161,9 @@ The API data for this symbol:
  :source {:code "(defn evaluate-form\n  ([repl-env env filename form]\n    (evaluate-form repl-env env filename form identity))\n  ([repl-env env filename form wrap]\n    (evaluate-form repl-env env filename form wrap *repl-opts*))\n  ([repl-env env filename form wrap opts]\n   (binding [ana/*cljs-file* filename]\n     (let [ast (ana/analyze env form opts)\n           js (comp/emit-str ast)\n           wrap-js\n           ;; TODO: check opts as well - David\n           (if (:source-map repl-env)\n             (binding [comp/*source-map-data*\n                       (atom {:source-map (sorted-map)\n                              :gen-col 0\n                              :gen-line 0})]\n               (let [js (comp/emit-str\n                          (ana/no-warn\n                            (ana/analyze (assoc env :repl-env repl-env)\n                              (wrap form) opts)))\n                     t (System/currentTimeMillis)]\n                 (str js\n                   \"\\n//# sourceURL=repl-\" t \".js\"\n                   \"\\n//# sourceMappingURL=data:application/json;base64,\"\n                   (DatatypeConverter/printBase64Binary\n                     (.getBytes\n                       (sm/encode\n                         {(str \"repl-\" t \".cljs\")\n                          (:source-map @comp/*source-map-data*)}\n                         {:lines (+ (:gen-line @comp/*source-map-data*) 3)\n                          :file (str \"repl-\" t \".js\")\n                          :sources-content\n                          [(or (:source (meta form))\n                             ;; handle strings / primitives without metadata\n                             (with-out-str (pr form)))]})\n                       \"UTF-8\")))))\n             (comp/emit-str\n               (ana/no-warn\n                 (ana/analyze (assoc env :repl-env repl-env)\n                   (wrap form) opts))))]\n       (when (= (:op ast) :ns)\n         (load-dependencies repl-env\n           (into (vals (:requires ast))\n             (distinct (vals (:uses ast))))\n           opts))\n       (when *cljs-verbose*\n         ((:print opts) js))\n       (let [ret (-evaluate repl-env filename (:line (meta form)) wrap-js)]\n         (case (:status ret)\n           :error (throw\n                    (ex-info (:value ret)\n                      {:type :js-eval-error\n                       :error ret\n                       :repl-env repl-env\n                       :form form}))\n           :exception (throw\n                        (ex-info (:value ret)\n                          {:type :js-eval-exception\n                           :error ret\n                           :repl-env repl-env\n                           :form form\n                           :js js}))\n           :success (:value ret)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl.clj",
-          :lines [373 438]},
+          :lines [372 437]},
  :full-name "cljs.repl/evaluate-form",
  :docstring "Evaluate a ClojureScript form in the JavaScript environment. Returns a\nstring which is the ClojureScript return value. This string may or may\nnot be readable by the Clojure reader."}
 

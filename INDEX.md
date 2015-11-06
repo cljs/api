@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2985__ [all](HISTORY.md)</td>
-<td>2015-03-04</td>
+<td>__0.0-3030__ [all](HISTORY.md)</td>
+<td>2015-03-07</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2985__ ([See Full History](HISTORY.md)):
+Changes from __0.0-3030__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,49 +34,7 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-special form (repl)-brightgreen.svg">
-</td>
-<td><samp>[import (repl)](refs/specialrepl/import.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/\*target\*](refs/cljs.core/STARtargetSTAR.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/apropos](refs/cljs.repl/apropos.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/dir](refs/cljs.repl/dir.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/find-doc](refs/cljs.repl/find-doc.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/pst](refs/cljs.repl/pst.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/source](refs/cljs.repl/source.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__
@@ -85,81 +43,33 @@ __Compiler API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.analyzer.api/ns-publics](refs/cljs.analyzer.api/ns-publics.md)</samp></td>
-</tr>
-<tr>
-<td>
 <img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl/IGetError](refs/cljs.repl/IGetError.md)</samp></td>
+<td><samp>[cljs.repl/IParseError](refs/cljs.repl/IParseError.md)</samp></td>
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/×-protocol-red.svg">
 </td>
-<td><samp>[cljs.repl/IParseErrorMessage](refs/cljs.repl/IParseErrorMessage.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/apropos](refs/cljs.repl/apropos.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/dir](refs/cljs.repl/dir.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/find-doc](refs/cljs.repl/find-doc.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/pst](refs/cljs.repl/pst.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/source](refs/cljs.repl/source.md)</samp></td>
+<td><samp>[~~cljs.repl/IParseErrorMessage~~](refs/cljs.repl/IParseErrorMessage.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl/source-fn](refs/cljs.repl/source-fn.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/special-doc-map](refs/cljs.repl/special-doc-map.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.repl.rhino/goog-require~~](refs/cljs.repl.rhino/goog-require.md)</samp></td>
+<td><samp>[cljs.repl.browser/repl-env\*](refs/cljs.repl.browser/repl-envSTAR.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.rhino/load-file](refs/cljs.repl.rhino/load-file.md)</samp></td>
+<td><samp>[cljs.repl.nashorn/repl-env\*](refs/cljs.repl.nashorn/repl-envSTAR.md)</samp></td>
 </tr>
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.rhino/wrap-fn](refs/cljs.repl.rhino/wrap-fn.md)</samp></td>
+<td><samp>[cljs.repl.rhino/repl-env\*](refs/cljs.repl.rhino/repl-envSTAR.md)</samp></td>
 </tr>
 </table>
 

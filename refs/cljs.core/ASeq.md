@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L281):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L295):
 
 ```clj
 (defprotocol ASeq)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:281](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L281)</ins>
+            └── <ins>[core.cljs:295](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L295)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ASeq)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [281]},
+          :lines [295]},
  :full-name "cljs.core/ASeq",
  :clj-symbol "clojure.lang/ASeq",
  :history [["+" "0.0-1211"]]}

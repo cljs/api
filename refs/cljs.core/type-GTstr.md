@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L154-L157):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L164-L167):
 
 ```clj
 (defn type->str [ty]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:154-157](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L154-L157)</ins>
+            └── <ins>[core.cljs:164-167](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L164-L167)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn type->str [ty]\n  (if-let [s (.-cljs$lang$ctorStr ty)]\n    s\n    (str ty)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [154 157]},
+          :lines [164 167]},
  :full-name "cljs.core/type->str",
  :full-name-encode "cljs.core/type-GTstr",
  :history [["+" "0.0-1859"]]}

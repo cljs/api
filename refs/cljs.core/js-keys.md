@@ -40,12 +40,18 @@ Returns the keys for the JavaScript object `obj`.
 ---
 
 
+Source docstring:
+
+```
+Return the JavaScript keys for an object.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1561-L1564):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1604-L1609):
 
 ```clj
-(defn js-keys [obj]
+(defn js-keys
+  [obj]
   (let [keys (array)]
     (goog.object/forEach obj (fn [val key obj] (.push keys key)))
     keys))
@@ -55,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1561-1564](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1561-L1564)</ins>
+            └── <ins>[core.cljs:1604-1609](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1604-L1609)</ins>
 </pre>
 
 -->
@@ -106,15 +112,16 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/keys"],
  :full-name-encode "cljs.core/js-keys",
- :source {:code "(defn js-keys [obj]\n  (let [keys (array)]\n    (goog.object/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
+ :source {:code "(defn js-keys\n  [obj]\n  (let [keys (array)]\n    (goog.object/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1561 1564]},
+          :lines [1604 1609]},
  :examples [{:id "5dd933",
              :content "```clj\n(js-keys #js {:foo 1 :bar 2})\n;;=> #js [\"foo\" \"bar\"]\n```"}],
- :full-name "cljs.core/js-keys"}
+ :full-name "cljs.core/js-keys",
+ :docstring "Return the JavaScript keys for an object."}
 
 ```
 

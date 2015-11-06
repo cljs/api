@@ -20,12 +20,19 @@
 
 
 
+Source docstring:
+
+```
+Identical to specify but does not mutate its first argument. The first
+argument must be an ICloneable instance.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L637-L639):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L684-L689):
 
 ```clj
-(defmacro specify [expr & impls]
+(defmacro specify
+  [expr & impls]
   `(cljs.core/specify! (cljs.core/clone ~expr)
      ~@impls))
 ```
@@ -34,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:637-639](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L637-L639)</ins>
+            └── <ins>[core.clj:684-689](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L684-L689)</ins>
 </pre>
 
 -->
@@ -79,17 +86,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "specify",
- :type "macro",
  :signature ["[expr & impls]"],
- :source {:code "(defmacro specify [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
+ :history [["+" "0.0-2138"]],
+ :type "macro",
+ :full-name-encode "cljs.core/specify",
+ :source {:code "(defmacro specify\n  [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [637 639]},
+          :lines [684 689]},
  :full-name "cljs.core/specify",
- :full-name-encode "cljs.core/specify",
- :history [["+" "0.0-2138"]]}
+ :docstring "Identical to specify but does not mutate its first argument. The first\nargument must be an ICloneable instance."}
 
 ```
 

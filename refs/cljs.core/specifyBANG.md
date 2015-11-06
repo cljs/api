@@ -20,12 +20,18 @@
 
 
 
+Source docstring:
+
+```
+Identical to reify but mutates its first argument.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L631-L635):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L676-L682):
 
 ```clj
-(defmacro specify! [expr & impls]
+(defmacro specify!
+  [expr & impls]
   (let [x (with-meta (gensym "x") {:extend :instance})]
     `(let [~x ~expr]
        (extend-type ~x ~@impls)
@@ -36,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:631-635](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L631-L635)</ins>
+            └── <ins>[core.clj:676-682](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L676-L682)</ins>
 </pre>
 
 -->
@@ -81,17 +87,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "specify!",
- :type "macro",
  :signature ["[expr & impls]"],
- :source {:code "(defmacro specify! [expr & impls]\n  (let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
+ :history [["+" "0.0-2156"]],
+ :type "macro",
+ :full-name-encode "cljs.core/specifyBANG",
+ :source {:code "(defmacro specify!\n  [expr & impls]\n  (let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [631 635]},
+          :lines [676 682]},
  :full-name "cljs.core/specify!",
- :full-name-encode "cljs.core/specifyBANG",
- :history [["+" "0.0-2156"]]}
+ :docstring "Identical to reify but mutates its first argument."}
 
 ```
 

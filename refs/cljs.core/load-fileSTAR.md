@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1694-L1699):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1925-L1930):
 
 ```clj
 (defmacro load-file* [f]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1694-1699](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1694-L1699)</ins>
+            └── <ins>[core.clj:1925-1930](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1925-L1930)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defmacro load-file* [f]\n  (core/let [{:keys [target output-dir]} (:options @env/*compiler*)]\n    (core/condp = target\n      ;; under Node.js, always relative to JVM working directory\n      :nodejs `(. js/goog (~'nodeGlobalRequire (str ~output-dir ~File/separator ~f)))\n      `(. js/goog (~'importScript_ ~f)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [1694 1699]},
+          :lines [1925 1930]},
  :full-name "cljs.core/load-file*",
  :full-name-encode "cljs.core/load-fileSTAR",
  :history [["+" "0.0-2719"]]}

@@ -53,7 +53,7 @@ It is common to use `;;` for comments that have their own line:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122):
 
 ```clj
 (defn read-comment
@@ -65,7 +65,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
@@ -73,12 +73,12 @@ tools.reader @ tools.reader-0.8.10
                 └── tools
                     └── reader
                         └── impl
-                            └── <ins>[commons.clj:120-122](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122)</ins>
+                            └── <ins>[commons.clj:120-122](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader/impl/commons.clj#L120-L122)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607):
 
 ```clj
 (defn- macros [ch]
@@ -107,13 +107,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:591-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610)</ins>
+                    └── <ins>[reader.clj:588-607](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L588-L607)</ins>
 </pre>
 -->
 
@@ -155,15 +155,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-comment\n  [rdr & _]\n  (skip-line rdr))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader/impl/commons.clj",
                   :lines [120 122]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [591 610]}),
+                  :lines [588 607]}),
  :examples [{:id "ab62d2",
              :content "Add comments to code:\n\n```clj\n(def a 1) ; this is a comment\n```\n\nIt is common to use `;;` for comments that have their own line:\n\n```clj\n;; this comment is on its own line\n```"}],
  :edn-doc "https://github.com/edn-format/edn#comments",

@@ -56,16 +56,16 @@ Duplicate values will cause an error:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L358-L373):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L352-L367):
 
 ```clj
 (defn- read-set
   [rdr _]
-  (let [[start-line start-column] (when (indexing-reader? rdr)
-                                    [(get-line-number rdr) (int (dec (get-column-number rdr)))])
+  (let [[start-line start-column] (starting-line-col-info rdr)
+        ;; subtract 1 from start-column so it includes the # in the leading #{
+        start-column (if start-column (dec start-column))
         the-set (PersistentHashSet/createWithCheck (read-delimited \} rdr true))
-        [end-line end-column] (when (indexing-reader? rdr)
-                                [(get-line-number rdr) (int (get-column-number rdr))])]
+        [end-line end-column] (ending-line-col-info rdr)]
     (with-meta the-set
       (when start-line
         (merge
@@ -81,18 +81,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:358-373](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L358-L373)</ins>
+                    └── <ins>[reader.clj:352-367](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L352-L367)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L609-L620):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -113,13 +113,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:612-623](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623)</ins>
+                    └── <ins>[reader.clj:609-620](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L609-L620)</ins>
 </pre>
 -->
 
@@ -160,18 +160,18 @@ The API data for this symbol:
            "cljs.core/sorted-set"
            "cljs.core/sorted-set-by"],
  :full-name-encode "syntax/set",
- :extra-sources ({:code "(defn- read-set\n  [rdr _]\n  (let [[start-line start-column] (when (indexing-reader? rdr)\n                                    [(get-line-number rdr) (int (dec (get-column-number rdr)))])\n        the-set (PersistentHashSet/createWithCheck (read-delimited \\} rdr true))\n        [end-line end-column] (when (indexing-reader? rdr)\n                                [(get-line-number rdr) (int (get-column-number rdr))])]\n    (with-meta the-set\n      (when start-line\n        (merge\n         (when-let [file (get-file-name rdr)]\n           {:file file})\n         {:line start-line\n          :column start-column\n          :end-line end-line\n          :end-column end-column})))))",
+ :extra-sources ({:code "(defn- read-set\n  [rdr _]\n  (let [[start-line start-column] (starting-line-col-info rdr)\n        ;; subtract 1 from start-column so it includes the # in the leading #{\n        start-column (if start-column (dec start-column))\n        the-set (PersistentHashSet/createWithCheck (read-delimited \\} rdr true))\n        [end-line end-column] (ending-line-col-info rdr)]\n    (with-meta the-set\n      (when start-line\n        (merge\n         (when-let [file (get-file-name rdr)]\n           {:file file})\n         {:line start-line\n          :column start-column\n          :end-line end-line\n          :end-column end-column})))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [358 373]}
+                  :lines [352 367]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [612 623]}),
+                  :lines [609 620]}),
  :usage ["#{...}"],
  :examples [{:id "f11ab6",
              :content "```clj\n#{1 2 3}\n;;=> #{1 2 3}\n```\n\nDuplicate values will cause an error:\n\n```clj\n#{1 1 2 3}\n;; Error: Duplicate key: 1\n```"}],

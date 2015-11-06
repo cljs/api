@@ -32,7 +32,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L829-L838):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L861-L870):
 
 ```clj
 (defn ^number hash-ordered-coll
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:829-838](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L829-L838)</ins>
+            └── <ins>[core.cljs:861-870](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L861-L870)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn ^number hash-ordered-coll\n  [coll]\n  (loop [n 0 hash-code 1 coll (seq coll)]\n    (if-not (nil? coll)\n      (recur (inc n) (bit-or (+ (imul 31 hash-code) (hash (first coll))) 0)\n        (next coll))\n      (mix-collection-hash hash-code n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [829 838]},
+          :lines [861 870]},
  :full-name "cljs.core/hash-ordered-coll",
  :clj-symbol "clojure.core/hash-ordered-coll",
  :docstring "Returns the hash code, consistent with =, for an external ordered\ncollection implementing Iterable.\nSee http://clojure.org/data_structures#hash for full algorithms."}

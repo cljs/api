@@ -54,7 +54,7 @@ last of which will be treated as a sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2906-L2914):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2991-L2999):
 
 ```clj
 (defn list*
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2906-2914](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2906-L2914)</ins>
+            └── <ins>[core.cljs:2991-2999](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2991-L2999)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defn list*\n  ([args] (seq args))\n  ([a args] (cons a args))\n  ([a b args] (cons a (cons b args)))\n  ([a b c args] (cons a (cons b (cons c args))))\n  ([a b c d & more]\n     (cons a (cons b (cons c (cons d (spread more)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2906 2914]},
+          :lines [2991 2999]},
  :full-name "cljs.core/list*",
  :clj-symbol "clojure.core/list*",
  :docstring "Creates a new list containing the items prepended to the rest, the\nlast of which will be treated as a sequence."}

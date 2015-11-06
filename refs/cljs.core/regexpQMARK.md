@@ -11,7 +11,7 @@
 
 
  <samp>
-(__regexp?__ o)<br>
+(__regexp?__ x)<br>
 </samp>
 
 ---
@@ -20,24 +20,30 @@
 
 
 
+Source docstring:
+
+```
+Returns true if x is a JavaScript RegExp instance.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L8065-L8066):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L8159-L8162):
 
 ```clj
-(defn regexp? [o]
-  (instance? js/RegExp o))
+(defn regexp?
+  [x]
+  (instance? js/RegExp x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8065-8066](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L8065-L8066)</ins>
+            └── <ins>[core.cljs:8159-8162](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L8159-L8162)</ins>
 </pre>
 
 -->
@@ -78,17 +84,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "regexp?",
+ :signature ["[x]"],
+ :history [["+" "0.0-1424"]],
  :type "function",
- :signature ["[o]"],
- :source {:code "(defn regexp? [o]\n  (instance? js/RegExp o))",
+ :full-name-encode "cljs.core/regexpQMARK",
+ :source {:code "(defn regexp?\n  [x]\n  (instance? js/RegExp x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8065 8066]},
+          :lines [8159 8162]},
  :full-name "cljs.core/regexp?",
- :full-name-encode "cljs.core/regexpQMARK",
- :history [["+" "0.0-1424"]]}
+ :docstring "Returns true if x is a JavaScript RegExp instance."}
 
 ```
 

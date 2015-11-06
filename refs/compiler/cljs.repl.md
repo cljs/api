@@ -218,9 +218,9 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 </tr>
 <tr>
 <td></td>
-<td><samp>[IParseErrorMessage](../cljs.repl/IParseErrorMessage.md)</samp></td>
+<td><samp>[IParseError](../cljs.repl/IParseError.md)</samp></td>
 <td><samp>protocol</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2985"><img valign="middle" alt="[+] 0.0-2985" title="Added in 0.0-2985" src="https://img.shields.io/badge/+-0.0--2985-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3030"><img valign="middle" alt="[+] 0.0-3030" title="Added in 0.0-3030" src="https://img.shields.io/badge/+-0.0--3030-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -282,6 +282,12 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 <td><samp>[~~with-read-known~~](../cljs.repl/with-read-known.md)</samp></td>
 <td><samp>macro</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2911"><img valign="middle" alt="[×] 0.0-2911" title="Removed in 0.0-2911" src="https://img.shields.io/badge/×-0.0--2911-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~IParseErrorMessage~~](../cljs.repl/IParseErrorMessage.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2985"><img valign="middle" alt="[+] 0.0-2985" title="Added in 0.0-2985" src="https://img.shields.io/badge/+-0.0--2985-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3030"><img valign="middle" alt="[×] 0.0-3030" title="Removed in 0.0-3030" src="https://img.shields.io/badge/×-0.0--3030-red.svg"></a> </td>
 </tr>
 </table>
 

@@ -20,12 +20,18 @@
 
 
 
+Source docstring:
+
+```
+Efficient test to determine that two keywords are identical.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2529-L2535):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2604-L2612):
 
 ```clj
-(defn ^boolean keyword-identical? [x y]
+(defn ^boolean keyword-identical?
+  [x y]
   (if (identical? x y)
     true
     (if (and (keyword? x)
@@ -38,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2529-2535](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2529-L2535)</ins>
+            └── <ins>[core.cljs:2604-2612](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2604-L2612)</ins>
 </pre>
 
 -->
@@ -88,13 +94,14 @@ The API data for this symbol:
  :history [["+" "0.0-1877"]],
  :type "function",
  :full-name-encode "cljs.core/keyword-identicalQMARK",
- :source {:code "(defn ^boolean keyword-identical? [x y]\n  (if (identical? x y)\n    true\n    (if (and (keyword? x)\n             (keyword? y))\n      (identical? (.-fqn x) (.-fqn y))\n      false)))",
+ :source {:code "(defn ^boolean keyword-identical?\n  [x y]\n  (if (identical? x y)\n    true\n    (if (and (keyword? x)\n             (keyword? y))\n      (identical? (.-fqn x) (.-fqn y))\n      false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2529 2535]},
- :full-name "cljs.core/keyword-identical?"}
+          :lines [2604 2612]},
+ :full-name "cljs.core/keyword-identical?",
+ :docstring "Efficient test to determine that two keywords are identical."}
 
 ```
 

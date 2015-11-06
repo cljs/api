@@ -26,9 +26,15 @@
 
 
 
+Source docstring:
+
+```
+Creates an array of objects. Does not coerce array, provided for compatibility
+with Clojure.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2845-L2863):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2928-L2948):
 
 ```clj
 (defn object-array
@@ -56,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2845-2863](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2845-L2863)</ins>
+            └── <ins>[core.cljs:2928-2948](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2928-L2948)</ins>
 </pre>
 
 -->
@@ -111,11 +117,12 @@ The API data for this symbol:
  :source {:code "(defn object-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (object-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2845 2863]},
+          :lines [2928 2948]},
  :full-name "cljs.core/object-array",
- :clj-symbol "clojure.core/object-array"}
+ :clj-symbol "clojure.core/object-array",
+ :docstring "Creates an array of objects. Does not coerce array, provided for compatibility\nwith Clojure."}
 
 ```
 

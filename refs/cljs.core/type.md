@@ -23,12 +23,18 @@
 
 
 
+Source docstring:
+
+```
+Return x's constructor.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L141-L143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L149-L153):
 
 ```clj
-(defn type [x]
+(defn type
+  [x]
   (when-not (nil? x)
     (.-constructor x)))
 ```
@@ -37,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:141-143](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L141-L143)</ins>
+            └── <ins>[core.cljs:149-153](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L149-L153)</ins>
 </pre>
 
 -->
@@ -89,14 +95,15 @@ The API data for this symbol:
  :history [["+" "0.0-971"]],
  :type "function",
  :full-name-encode "cljs.core/type",
- :source {:code "(defn type [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
+ :source {:code "(defn type\n  [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [141 143]},
+          :lines [149 153]},
  :full-name "cljs.core/type",
- :clj-symbol "clojure.core/type"}
+ :clj-symbol "clojure.core/type",
+ :docstring "Return x's constructor."}
 
 ```
 

@@ -20,9 +20,14 @@
 
 
 
+Source docstring:
+
+```
+Return true if x is satisfies IChunkedSeq.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1551-L1552):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1591-L1593):
 
 ```clj
 (defn ^boolean chunked-seq?
@@ -33,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1551-1552](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1551-L1552)</ins>
+            └── <ins>[core.cljs:1591-1593](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1591-L1593)</ins>
 </pre>
 
 -->
@@ -86,10 +91,11 @@ The API data for this symbol:
  :source {:code "(defn ^boolean chunked-seq?\n  [x] (implements? IChunkedSeq x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1551 1552]},
- :full-name "cljs.core/chunked-seq?"}
+          :lines [1591 1593]},
+ :full-name "cljs.core/chunked-seq?",
+ :docstring "Return true if x is satisfies IChunkedSeq."}
 
 ```
 

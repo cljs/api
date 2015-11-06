@@ -53,6 +53,12 @@ Rhino REPL (JS on Java 6+)
 </tr>
 <tr>
 <td></td>
+<td><samp>[repl-env\*](../cljs.repl.rhino/repl-envSTAR.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3030"><img valign="middle" alt="[+] 0.0-3030" title="Added in 0.0-3030" src="https://img.shields.io/badge/+-0.0--3030-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[rhino-eval](../cljs.repl.rhino/rhino-eval.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

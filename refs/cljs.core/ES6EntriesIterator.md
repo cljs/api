@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L5164-L5171):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L5254-L5261):
 
 ```clj
 (deftype ES6EntriesIterator [^:mutable s]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5164-5171](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L5164-L5171)</ins>
+            └── <ins>[core.cljs:5254-5261](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L5254-L5261)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(deftype ES6EntriesIterator [^:mutable s]\n  Object\n  (next [_]\n    (if-not (nil? s)\n      (let [[k v] (first s)]\n        (set! s (next s))\n        #js {:value #js [k v] :done false})\n      #js {:value nil :done true})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5164 5171]},
+          :lines [5254 5261]},
  :full-name "cljs.core/ES6EntriesIterator",
  :full-name-encode "cljs.core/ES6EntriesIterator",
  :history [["+" "0.0-2371"]]}

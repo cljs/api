@@ -79,12 +79,39 @@ The test-constants need not be all of the same type.
 ---
 
 
+Source docstring:
+
+```
+Takes an expression, and a set of clauses.
+
+Each clause can take the form of either:
+
+test-constant result-expr
+
+(test-constant1 ... test-constantN)  result-expr
+
+The test-constants are not evaluated. They must be compile-time
+literals, and need not be quoted.  If the expression is equal to a
+test-constant, the corresponding result-expr is returned. A single
+default expression can follow the clauses, and its value will be
+returned if no clause matches. If no default expression is provided
+and no clause matches, an Error is thrown.
+
+Unlike cond and condp, case does a constant-time dispatch, the
+clauses are not considered sequentially.  All manner of constant
+expressions are acceptable in case, including numbers, strings,
+symbols, keywords, and (ClojureScript) composites thereof. Note that since
+lists are used to group multiple constants that map to the same
+expression, a vector can be used to match a list if needed. The
+test-constants need not be all of the same type.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1192-L1238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1400-L1469):
 
 ```clj
-(defmacro case [e & clauses]
+(defmacro case
+  [e & clauses]
   (core/let [default (if (odd? (count clauses))
                        (last clauses)
                        `(throw
@@ -137,11 +164,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1192-1238](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1192-L1238)</ins>
+            └── <ins>[core.clj:1400-1469](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1400-L1469)</ins>
 </pre>
 
 -->
@@ -191,16 +218,17 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/cond" "cljs.core/condp"],
  :full-name-encode "cljs.core/case",
- :source {:code "(defmacro case [e & clauses]\n  (core/let [default (if (odd? (count clauses))\n                       (last clauses)\n                       `(throw\n                          (js/Error.\n                            (core/str \"No matching clause: \" ~e))))\n             env     &env\n             pairs   (reduce\n                       (fn [m [test expr]]\n                         (core/cond\n                           (seq? test)\n                           (reduce\n                             (fn [m test]\n                               (let [test (if (core/symbol? test)\n                                            (core/list 'quote test)\n                                            test)]\n                                 (assoc-test m test expr env)))\n                             m test)\n                           (core/symbol? test)\n                           (assoc-test m (core/list 'quote test) expr env)\n                           :else\n                           (assoc-test m test expr env)))\n                     {} (partition 2 clauses))\n             esym    (gensym)\n             tests   (keys pairs)]\n    (cond\n      (every? (some-fn core/number? core/string? core/char?) tests)\n      (core/let [no-default (if (odd? (count clauses)) (butlast clauses) clauses)\n                 tests      (mapv #(if (seq? %) (vec %) [%]) (take-nth 2 no-default))\n                 thens      (vec (take-nth 2 (drop 1 no-default)))]\n        `(let [~esym ~e] (case* ~esym ~tests ~thens ~default)))\n\n      (every? core/keyword? tests)\n      (let [tests (->> tests\n                       (map #(.substring (core/str %) 1))\n                       vec\n                       (mapv #(if (seq? %) (vec %) [%])))\n            thens (vec (vals pairs))]\n        `(let [~esym (if (keyword? ~e) (.-fqn ~e) nil)]\n           (case* ~esym ~tests ~thens ~default)))\n      \n      ;; equality\n      :else\n      `(let [~esym ~e]\n         (cond\n           ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n           :else ~default)))))",
+ :source {:code "(defmacro case\n  [e & clauses]\n  (core/let [default (if (odd? (count clauses))\n                       (last clauses)\n                       `(throw\n                          (js/Error.\n                            (core/str \"No matching clause: \" ~e))))\n             env     &env\n             pairs   (reduce\n                       (fn [m [test expr]]\n                         (core/cond\n                           (seq? test)\n                           (reduce\n                             (fn [m test]\n                               (let [test (if (core/symbol? test)\n                                            (core/list 'quote test)\n                                            test)]\n                                 (assoc-test m test expr env)))\n                             m test)\n                           (core/symbol? test)\n                           (assoc-test m (core/list 'quote test) expr env)\n                           :else\n                           (assoc-test m test expr env)))\n                     {} (partition 2 clauses))\n             esym    (gensym)\n             tests   (keys pairs)]\n    (cond\n      (every? (some-fn core/number? core/string? core/char?) tests)\n      (core/let [no-default (if (odd? (count clauses)) (butlast clauses) clauses)\n                 tests      (mapv #(if (seq? %) (vec %) [%]) (take-nth 2 no-default))\n                 thens      (vec (take-nth 2 (drop 1 no-default)))]\n        `(let [~esym ~e] (case* ~esym ~tests ~thens ~default)))\n\n      (every? core/keyword? tests)\n      (let [tests (->> tests\n                       (map #(.substring (core/str %) 1))\n                       vec\n                       (mapv #(if (seq? %) (vec %) [%])))\n            thens (vec (vals pairs))]\n        `(let [~esym (if (keyword? ~e) (.-fqn ~e) nil)]\n           (case* ~esym ~tests ~thens ~default)))\n      \n      ;; equality\n      :else\n      `(let [~esym ~e]\n         (cond\n           ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n           :else ~default)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [1192 1238]},
+          :lines [1400 1469]},
  :examples [{:id "09a90c",
              :content "```clj\n(def a 1)\n(def b 2)\n\n(case a\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"one\"\n\n(case b\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"default\"\n\n(case b\n  0 \"zero\"\n  1 \"one\")\n;; Error: No matching clause: 2\n```"}],
  :full-name "cljs.core/case",
- :clj-symbol "clojure.core/case"}
+ :clj-symbol "clojure.core/case",
+ :docstring "Takes an expression, and a set of clauses.\n\nEach clause can take the form of either:\n\ntest-constant result-expr\n\n(test-constant1 ... test-constantN)  result-expr\n\nThe test-constants are not evaluated. They must be compile-time\nliterals, and need not be quoted.  If the expression is equal to a\ntest-constant, the corresponding result-expr is returned. A single\ndefault expression can follow the clauses, and its value will be\nreturned if no clause matches. If no default expression is provided\nand no clause matches, an Error is thrown.\n\nUnlike cond and condp, case does a constant-time dispatch, the\nclauses are not considered sequentially.  All manner of constant\nexpressions are acceptable in case, including numbers, strings,\nsymbols, keywords, and (ClojureScript) composites thereof. Note that since\nlists are used to group multiple constants that map to the same\nexpression, a vector can be used to match a list if needed. The\ntest-constants need not be all of the same type."}
 
 ```
 

@@ -27,7 +27,7 @@ Set *print-fn* to f.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L32-L34):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L32-L34):
 
 ```clj
 (defn set-print-fn!
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:32-34](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L32-L34)</ins>
+            └── <ins>[core.cljs:32-34](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L32-L34)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn set-print-fn!\n  [f] (set! *print-fn* f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
           :lines [32 34]},
  :full-name "cljs.core/set-print-fn!",

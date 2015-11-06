@@ -35,12 +35,18 @@ Functions, keywords, map, sets, and vectors can be called as functions.
 ---
 
 
+Source docstring:
+
+```
+Returns true if f returns true for fn? or satisfies IFn.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1615-L1616):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1666-L1669):
 
 ```clj
-(defn ^boolean ifn? [f]
+(defn ^boolean ifn?
+  [f]
   (or (fn? f) (satisfies? IFn f)))
 ```
 
@@ -48,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1615-1616](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1615-L1616)</ins>
+            └── <ins>[core.cljs:1666-1669](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1666-L1669)</ins>
 </pre>
 
 -->
@@ -103,14 +109,15 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/fn?"],
  :full-name-encode "cljs.core/ifnQMARK",
- :source {:code "(defn ^boolean ifn? [f]\n  (or (fn? f) (satisfies? IFn f)))",
+ :source {:code "(defn ^boolean ifn?\n  [f]\n  (or (fn? f) (satisfies? IFn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1615 1616]},
+          :lines [1666 1669]},
  :full-name "cljs.core/ifn?",
- :clj-symbol "clojure.core/ifn?"}
+ :clj-symbol "clojure.core/ifn?",
+ :docstring "Returns true if f returns true for fn? or satisfies IFn."}
 
 ```
 

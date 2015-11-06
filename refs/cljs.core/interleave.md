@@ -45,7 +45,7 @@ Returns a lazy seq of the first item in each coll, then the second etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3905-L3917):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3990-L4002):
 
 ```clj
 (defn interleave
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3905-3917](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3905-L3917)</ins>
+            └── <ins>[core.cljs:3990-4002](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3990-L4002)</ins>
 </pre>
 
 -->
@@ -123,9 +123,9 @@ The API data for this symbol:
  :source {:code "(defn interleave\n  ([c1 c2]\n     (lazy-seq\n      (let [s1 (seq c1) s2 (seq c2)]\n        (when (and s1 s2)\n          (cons (first s1) (cons (first s2)\n                                 (interleave (rest s1) (rest s2))))))))\n  ([c1 c2 & colls]\n     (lazy-seq\n      (let [ss (map seq (conj colls c2 c1))]\n        (when (every? identity ss)\n          (concat (map first ss) (apply interleave (map rest ss))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3905 3917]},
+          :lines [3990 4002]},
  :full-name "cljs.core/interleave",
  :clj-symbol "clojure.core/interleave",
  :docstring "Returns a lazy seq of the first item in each coll, then the second etc."}

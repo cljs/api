@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L7705-L7711):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L7799-L7805):
 
 ```clj
 (deftype ArrayList [^:mutable arr]
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7705-7711](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L7705-L7711)</ins>
+            └── <ins>[core.cljs:7799-7805](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L7799-L7805)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(deftype ArrayList [^:mutable arr]\n  Object\n  (add [_ x] (.push arr x))\n  (size [_] (alength arr))\n  (clear [_] (set! arr (array)))\n  (isEmpty [_] (zero? (alength arr)))\n  (toArray [_] arr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7705 7711]},
+          :lines [7799 7805]},
  :full-name "cljs.core/ArrayList",
  :full-name-encode "cljs.core/ArrayList",
  :history [["+" "0.0-2301"]]}

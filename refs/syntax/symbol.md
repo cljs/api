@@ -92,13 +92,12 @@ To signify an unevaluated symbol, precede it with a quote:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L275-L301):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L270-L296):
 
 ```clj
 (defn- read-symbol
   [rdr initch]
-  (let [[line column] (when (indexing-reader? rdr)
-                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]
+  (let [[line column] (starting-line-col-info rdr)]
     (when-let [token (read-token rdr initch)]
       (case token
 
@@ -117,10 +116,11 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
                   (merge
                    (when-let [file (get-file-name rdr)]
                      {:file file})
-                   {:line line
-                    :column column
-                    :end-line (get-line-number rdr)
-                    :end-column (int (inc (get-column-number rdr)))}))))
+                   (let [[end-line end-column] (ending-line-col-info rdr)]
+                     {:line line
+                      :column column
+                      :end-line end-line
+                      :end-column end-column})))))
             (reader-error rdr "Invalid token: " token))))))
 ```
 
@@ -128,13 +128,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.10
+tools.reader @ tools.reader-0.8.16
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:275-301](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L275-L301)</ins>
+                    └── <ins>[reader.clj:270-296](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.16/src/main/clojure/clojure/tools/reader.clj#L270-L296)</ins>
 </pre>
 -->
 
@@ -173,12 +173,12 @@ The API data for this symbol:
  :type "syntax",
  :related ["cljs.core/symbol" "cljs.core/symbol?"],
  :full-name-encode "syntax/symbol",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (when (indexing-reader? rdr)\n                        [(get-line-number rdr) (int (dec (get-column-number rdr)))])]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   {:line line\n                    :column column\n                    :end-line (get-line-number rdr)\n                    :end-column (int (inc (get-column-number rdr)))}))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.10",
+                  :tag "tools.reader-0.8.16",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [275 301]}],
+                  :lines [270 296]}],
  :usage ["foo" "foo/bar"],
  :examples [{:id "cd60a5",
              :content "The following has two symbols, `def` and `a`:\n\n```clj\n(def a 1)\n```\n\nThe evaluation of the symbols is controlled by the evaluation of the list `(def\na 1)`.  `def` evaluates to a special form, which suppresses the evaluation of\n`a` since it is just being used as a name for the bound value `1`.\n\nWhen a symbol is by itself, it will evaluated to 1:\n\n```clj\na\n;;=> 1\n```\n\nTo signify an unevaluated symbol, precede it with a quote:\n\n```clj\n'a\n;;=> a\n```"}],

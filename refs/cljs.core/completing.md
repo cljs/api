@@ -23,9 +23,16 @@
 
 
 
+Source docstring:
+
+```
+Takes a reducing function f of 2 args and returns a fn suitable for
+transduce by adding an arity-1 signature that calls cf (default -
+identity) on the result argument.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1820-L1826):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1875-L1884):
 
 ```clj
 (defn completing
@@ -41,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1820-1826](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1820-L1826)</ins>
+            └── <ins>[core.cljs:1875-1884](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1875-L1884)</ins>
 </pre>
 
 -->
@@ -86,17 +93,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "completing",
- :type "function",
  :signature ["[f]" "[f cf]"],
+ :history [["+" "0.0-2341"]],
+ :type "function",
+ :full-name-encode "cljs.core/completing",
  :source {:code "(defn completing\n  ([f] (completing f identity))\n  ([f cf]\n    (fn\n      ([] (f))\n      ([x] (cf x))\n      ([x y] (f x y)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1820 1826]},
+          :lines [1875 1884]},
  :full-name "cljs.core/completing",
- :full-name-encode "cljs.core/completing",
- :history [["+" "0.0-2341"]]}
+ :docstring "Takes a reducing function f of 2 args and returns a fn suitable for\ntransduce by adding an arity-1 signature that calls cf (default -\nidentity) on the result argument."}
 
 ```
 

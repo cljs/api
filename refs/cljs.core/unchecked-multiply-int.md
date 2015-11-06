@@ -39,7 +39,7 @@ Returns the product of nums. (*) returns 1.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2003-L2008):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2065-L2070):
 
 ```clj
 (defn ^number unchecked-multiply-int
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2003-2008](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2003-L2008)</ins>
+            └── <ins>[core.cljs:2065-2070](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2065-L2070)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L396-L397):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L403-L404):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-multiply-int
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:396-397](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L396-L397)</ins>
+            └── <ins>[core.clj:403-404](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L403-L404)</ins>
 </pre>
 -->
 
@@ -129,15 +129,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-multiply-int\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-multiply-int x y))\n  ([x y & more] (reduce unchecked-multiply-int (cljs.core/unchecked-multiply-int x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2003 2008]},
+          :lines [2065 2070]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-multiply-int\n  ([& xs] `(* ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [396 397]}],
+                  :lines [403 404]}],
  :full-name "cljs.core/unchecked-multiply-int",
  :clj-symbol "clojure.core/unchecked-multiply-int",
  :docstring "Returns the product of nums. (*) returns 1."}

@@ -20,12 +20,19 @@
 
 
 
+Source docstring:
+
+```
+Return true if argument exists, analogous to usage of typeof operator
+in JavaScript.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L311-L314):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L313-L319):
 
 ```clj
-(defmacro exists? [x]
+(defmacro exists?
+  [x]
   (bool-expr
     (core/list 'js* "typeof ~{} !== 'undefined'"
       (vary-meta x assoc :cljs.analyzer/no-resolve true))))
@@ -35,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:311-314](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L311-L314)</ins>
+            └── <ins>[core.clj:313-319](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L313-L319)</ins>
 </pre>
 
 -->
@@ -80,17 +87,18 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "exists?",
- :type "macro",
  :signature ["[x]"],
- :source {:code "(defmacro exists? [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
+ :history [["+" "0.0-1798"]],
+ :type "macro",
+ :full-name-encode "cljs.core/existsQMARK",
+ :source {:code "(defmacro exists?\n  [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [311 314]},
+          :lines [313 319]},
  :full-name "cljs.core/exists?",
- :full-name-encode "cljs.core/existsQMARK",
- :history [["+" "0.0-1798"]]}
+ :docstring "Return true if argument exists, analogous to usage of typeof operator\nin JavaScript."}
 
 ```
 

@@ -41,7 +41,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2040-L2043):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2102-L2105):
 
 ```clj
 (defn int
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2040-2043](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2040-L2043)</ins>
+            └── <ins>[core.cljs:2102-2105](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2102-L2105)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L506-L507):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L513-L514):
 
 ```clj
 (defmacro ^::ana/numeric int [x]
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:506-507](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L506-L507)</ins>
+            └── <ins>[core.clj:513-514](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L513-L514)</ins>
 </pre>
 -->
 
@@ -130,15 +130,15 @@ The API data for this symbol:
  :source {:code "(defn int\n  [x]\n  (bit-or x 0))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2040 2043]},
+          :lines [2102 2105]},
  :extra-sources [{:code "(defmacro ^::ana/numeric int [x]\n  `(bit-or ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [506 507]}],
+                  :lines [513 514]}],
  :full-name "cljs.core/int",
  :clj-symbol "clojure.core/int",
  :docstring "Coerce to int by stripping decimal places."}

@@ -36,15 +36,18 @@ Example: (source-fn 'filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L931-L947):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L930-L949):
 
 ```clj
 (defn source-fn
   [env x]
-  (when-let [v (ana/resolve-var env x)]
+  (when-let [v (ana-api/resolve env x)]
     (when-let [filepath (:file v)]
-      (let [f (io/file filepath)]
-        (when (.exists f)
+      (let [f (io/file filepath)
+            f (if (.exists f)
+                f
+                (io/resource filepath))]
+        (when f
           (with-open [pbr (PushbackReader. (io/reader f))]
             (let [rdr (readers/source-logging-push-back-reader pbr)]
               (dotimes [_ (dec (:line v))] (readers/read-line rdr))
@@ -55,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:931-947](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L931-L947)</ins>
+            └── <ins>[repl.clj:930-949](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl.clj#L930-L949)</ins>
 </pre>
 
 -->
@@ -107,12 +110,12 @@ The API data for this symbol:
  :history [["+" "0.0-2985"]],
  :type "function",
  :full-name-encode "cljs.repl/source-fn",
- :source {:code "(defn source-fn\n  [env x]\n  (when-let [v (ana/resolve-var env x)]\n    (when-let [filepath (:file v)]\n      (let [f (io/file filepath)]\n        (when (.exists f)\n          (with-open [pbr (PushbackReader. (io/reader f))]\n            (let [rdr (readers/source-logging-push-back-reader pbr)]\n              (dotimes [_ (dec (:line v))] (readers/read-line rdr))\n              (-> (reader/read rdr) meta :source))))))))",
+ :source {:code "(defn source-fn\n  [env x]\n  (when-let [v (ana-api/resolve env x)]\n    (when-let [filepath (:file v)]\n      (let [f (io/file filepath)\n            f (if (.exists f)\n                f\n                (io/resource filepath))]\n        (when f\n          (with-open [pbr (PushbackReader. (io/reader f))]\n            (let [rdr (readers/source-logging-push-back-reader pbr)]\n              (dotimes [_ (dec (:line v))] (readers/read-line rdr))\n              (-> (reader/read rdr) meta :source))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl.clj",
-          :lines [931 947]},
+          :lines [930 949]},
  :full-name "cljs.repl/source-fn",
  :clj-symbol "clojure.repl/source-fn",
  :docstring "Returns a string of the source code for the given symbol, if it can\nfind it.  This requires that the symbol resolve to a Var defined in\na namespace for which the .clj is in the classpath.  Returns nil if\nit can't find the source.  For most REPL usage, 'source' is more\nconvenient.\n\nExample: (source-fn 'filter)"}

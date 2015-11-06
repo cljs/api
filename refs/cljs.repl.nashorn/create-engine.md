@@ -13,6 +13,9 @@
  <samp>
 (__create-engine__)<br>
 </samp>
+ <samp>
+(__create-engine__ {:keys \[code-cache\], :or {code-cache true}})<br>
+</samp>
 
 ---
 
@@ -22,29 +25,36 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/nashorn.clj#L66-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/nashorn.clj#L67-L81):
 
 ```clj
-(defn create-engine []
-  (if-let [engine (.getEngineByName (ScriptEngineManager.) "nashorn")]
-    (let [context (.getContext engine)]
-      (.setWriter context *out*)
-      (.setErrorWriter context *err*)
-      engine)
-    (throw (IllegalArgumentException.
-            "Cannot find the Nashorn script engine, use a JDK version 8 or higher."))))
+(defn create-engine
+  ([] (create-engine nil))
+  ([{:keys [code-cache] :or {code-cache true}}]
+   (let [args (when code-cache ["-pcc"])
+         factories (.getEngineFactories (ScriptEngineManager.))
+         factory (get (zipmap (map #(.getEngineName %) factories) factories) "Oracle Nashorn")]
+     (if-let [engine (if-not (empty? args)
+                       (.getScriptEngine ^ScriptEngineFactory factory (into-array args))
+                       (.getScriptEngine ^ScriptEngineFactory factory))]
+       (let [context (.getContext engine)]
+         (.setWriter context *out*)
+         (.setErrorWriter context *err*)
+         engine)
+       (throw (IllegalArgumentException.
+                "Cannot find the Nashorn script engine, use a JDK version 8 or higher."))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:66-73](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl/nashorn.clj#L66-L73)</ins>
+                └── <ins>[nashorn.clj:67-81](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/repl/nashorn.clj#L67-L81)</ins>
 </pre>
 
 -->
@@ -86,13 +96,13 @@ The API data for this symbol:
 {:ns "cljs.repl.nashorn",
  :name "create-engine",
  :type "function",
- :signature ["[]"],
- :source {:code "(defn create-engine []\n  (if-let [engine (.getEngineByName (ScriptEngineManager.) \"nashorn\")]\n    (let [context (.getContext engine)]\n      (.setWriter context *out*)\n      (.setErrorWriter context *err*)\n      engine)\n    (throw (IllegalArgumentException.\n            \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))",
+ :signature ["[]" "[{:keys [code-cache], :or {code-cache true}}]"],
+ :source {:code "(defn create-engine\n  ([] (create-engine nil))\n  ([{:keys [code-cache] :or {code-cache true}}]\n   (let [args (when code-cache [\"-pcc\"])\n         factories (.getEngineFactories (ScriptEngineManager.))\n         factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n     (if-let [engine (if-not (empty? args)\n                       (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                       (.getScriptEngine ^ScriptEngineFactory factory))]\n       (let [context (.getContext engine)]\n         (.setWriter context *out*)\n         (.setErrorWriter context *err*)\n         engine)\n       (throw (IllegalArgumentException.\n                \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/repl/nashorn.clj",
-          :lines [66 73]},
+          :lines [67 81]},
  :full-name "cljs.repl.nashorn/create-engine",
  :full-name-encode "cljs.repl.nashorn/create-engine",
  :history [["+" "0.0-2814"]]}

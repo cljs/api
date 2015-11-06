@@ -48,7 +48,7 @@ one arg, returns the concatenation of the str values of the args.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2198-L2210):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2262-L2274):
 
 ```clj
 (defn str
@@ -67,18 +67,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2198-2210](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2198-L2210)</ins>
+            └── <ins>[core.cljs:2262-2274](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2262-L2274)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L208-L212):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L208-L212):
 
 ```clj
 (defmacro str [& xs]
@@ -92,11 +92,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:208-212](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L208-L212)</ins>
+            └── <ins>[core.clj:208-212](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L208-L212)</ins>
 </pre>
 -->
 
@@ -146,13 +146,13 @@ The API data for this symbol:
  :source {:code "(defn str\n  ([] \"\")\n  ([x] (if (nil? x)\n         \"\"\n         (gstring/buildString x)))\n  ([x & ys]\n    (loop [sb (StringBuffer. (str x)) more ys]\n      (if more\n        (recur (. sb  (append (str (first more)))) (next more))\n        (.toString sb)))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2198 2210]},
+          :lines [2262 2274]},
  :extra-sources [{:code "(defmacro str [& xs]\n  (let [strs (->> (repeat (count xs) \"cljs.core.str(~{})\")\n               (interpose \",\")\n               (apply core/str))]\n    (list* 'js* (core/str \"[\" strs \"].join('')\") xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
                   :lines [208 212]}],
  :full-name "cljs.core/str",

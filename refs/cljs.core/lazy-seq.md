@@ -36,12 +36,21 @@ Returns a new lazy sequence.
 ---
 
 
+Source docstring:
+
+```
+Takes a body of expressions that returns an ISeq or nil, and yields
+a ISeqable object that will invoke the body only the first time seq
+is called, and will cache the result and return it on all subsequent
+seq calls.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1094-L1095):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1297-L1303):
 
 ```clj
-(defmacro lazy-seq [& body]
+(defmacro lazy-seq
+  [& body]
   `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))
 ```
 
@@ -49,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1094-1095](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L1094-L1095)</ins>
+            └── <ins>[core.clj:1297-1303](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L1297-L1303)</ins>
 </pre>
 
 -->
@@ -106,14 +115,15 @@ The API data for this symbol:
            "cljs.core/doall"
            "cljs.core/iterate"],
  :full-name-encode "cljs.core/lazy-seq",
- :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
+ :source {:code "(defmacro lazy-seq\n  [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [1094 1095]},
+          :lines [1297 1303]},
  :full-name "cljs.core/lazy-seq",
- :clj-symbol "clojure.core/lazy-seq"}
+ :clj-symbol "clojure.core/lazy-seq",
+ :docstring "Takes a body of expressions that returns an ISeq or nil, and yields\na ISeqable object that will invoke the body only the first time seq\nis called, and will cache the result and return it on all subsequent\nseq calls."}
 
 ```
 

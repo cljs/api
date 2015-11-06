@@ -50,12 +50,18 @@ truthiness condition used by `if` expressions.
 ---
 
 
+Source docstring:
+
+```
+Coerce to boolean
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1612-L1613):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1661-L1664):
 
 ```clj
-(defn ^boolean boolean [x]
+(defn ^boolean boolean
+  [x]
   (if x true false))
 ```
 
@@ -63,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1612-1613](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1612-L1613)</ins>
+            └── <ins>[core.cljs:1661-1664](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L1661-L1664)</ins>
 </pre>
 
 -->
@@ -118,16 +124,17 @@ The API data for this symbol:
  :type "function",
  :related ["special/if"],
  :full-name-encode "cljs.core/boolean",
- :source {:code "(defn ^boolean boolean [x]\n  (if x true false))",
+ :source {:code "(defn ^boolean boolean\n  [x]\n  (if x true false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1612 1613]},
+          :lines [1661 1664]},
  :examples [{:id "9edf3a",
              :content "```clj\n(boolean 1)\n;;=> true\n\n(boolean 0)\n;;=> true\n\n(boolean nil)\n;;=> false\n```"}],
  :full-name "cljs.core/boolean",
- :clj-symbol "clojure.core/boolean"}
+ :clj-symbol "clojure.core/boolean",
+ :docstring "Coerce to boolean"}
 
 ```
 

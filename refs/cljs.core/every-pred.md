@@ -58,7 +58,7 @@ argument that triggers a logical false result against the original predicates.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3661-L3698):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3746-L3783):
 
 ```clj
 (defn every-pred
@@ -101,11 +101,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3661-3698](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L3661-L3698)</ins>
+            └── <ins>[core.cljs:3746-3783](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L3746-L3783)</ins>
 </pre>
 
 -->
@@ -158,9 +158,9 @@ The API data for this symbol:
  :source {:code "(defn every-pred\n  ([p]\n     (fn ep1\n       ([] true)\n       ([x] (boolean (p x)))\n       ([x y] (boolean (and (p x) (p y))))\n       ([x y z] (boolean (and (p x) (p y) (p z))))\n       ([x y z & args] (boolean (and (ep1 x y z)\n                                     (every? p args))))))\n  ([p1 p2]\n     (fn ep2\n       ([] true)\n       ([x] (boolean (and (p1 x) (p2 x))))\n       ([x y] (boolean (and (p1 x) (p1 y) (p2 x) (p2 y))))\n       ([x y z] (boolean (and (p1 x) (p1 y) (p1 z) (p2 x) (p2 y) (p2 z))))\n       ([x y z & args] (boolean (and (ep2 x y z)\n                                     (every? #(and (p1 %) (p2 %)) args))))))\n  ([p1 p2 p3]\n     (fn ep3\n       ([] true)\n       ([x] (boolean (and (p1 x) (p2 x) (p3 x))))\n       ([x y] (boolean (and (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y))))\n       ([x y z] (boolean (and (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y) (p1 z) (p2 z) (p3 z))))\n       ([x y z & args] (boolean (and (ep3 x y z)\n                                     (every? #(and (p1 %) (p2 %) (p3 %)) args))))))\n  ([p1 p2 p3 & ps]\n     (let [ps (list* p1 p2 p3 ps)]\n       (fn epn\n         ([] true)\n         ([x] (every? #(% x) ps))\n         ([x y] (every? #(and (% x) (% y)) ps))\n         ([x y z] (every? #(and (% x) (% y) (% z)) ps))\n         ([x y z & args] (boolean (and (epn x y z)\n                                       (every? #(every? % args) ps))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3661 3698]},
+          :lines [3746 3783]},
  :full-name "cljs.core/every-pred",
  :clj-symbol "clojure.core/every-pred",
  :docstring "Takes a set of predicates and returns a function f that returns true if all of its\ncomposing predicates return a logical true value against all of its arguments, else it returns\nfalse. Note that f is short-circuiting in that it will stop execution on the first\nargument that triggers a logical false result against the original predicates."}

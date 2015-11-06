@@ -37,7 +37,7 @@ else returns numerator divided by all of the denominators.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1983-L1988):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2045-L2050):
 
 ```clj
 (defn ^number unchecked-divide-int
@@ -50,18 +50,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1983-1988](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L1983-L1988)</ins>
+            └── <ins>[core.cljs:2045-2050](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2045-L2050)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L384-L385):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L391-L392):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-divide-int
@@ -72,11 +72,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:384-385](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L384-L385)</ins>
+            └── <ins>[core.clj:391-392](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L391-L392)</ins>
 </pre>
 -->
 
@@ -126,15 +126,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-divide-int\n  ([x] (unchecked-divide-int 1 x))\n  ([x y] (cljs.core/divide x y)) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce unchecked-divide-int (unchecked-divide-int x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1983 1988]},
+          :lines [2045 2050]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-divide-int\n  ([& xs] `(/ ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2985",
+                  :tag "r3030",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [384 385]}],
+                  :lines [391 392]}],
  :full-name "cljs.core/unchecked-divide-int",
  :clj-symbol "clojure.core/unchecked-divide-int",
  :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}

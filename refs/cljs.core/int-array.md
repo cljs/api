@@ -26,9 +26,15 @@
 
 
 
+Source docstring:
+
+```
+Creates an array of ints. Does not coerce array, provided for compatibility
+with Clojure.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2785-L2803):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2862-L2882):
 
 ```clj
 (defn int-array
@@ -56,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2785-2803](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L2785-L2803)</ins>
+            └── <ins>[core.cljs:2862-2882](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L2862-L2882)</ins>
 </pre>
 
 -->
@@ -111,11 +117,12 @@ The API data for this symbol:
  :source {:code "(defn int-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (int-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2785 2803]},
+          :lines [2862 2882]},
  :full-name "cljs.core/int-array",
- :clj-symbol "clojure.core/int-array"}
+ :clj-symbol "clojure.core/int-array",
+ :docstring "Creates an array of ints. Does not coerce array, provided for compatibility\nwith Clojure."}
 
 ```
 

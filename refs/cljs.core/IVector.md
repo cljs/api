@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L313-L314):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L327-L328):
 
 ```clj
 (defprotocol IVector
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:313-314](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L313-L314)</ins>
+            └── <ins>[core.cljs:327-328](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L327-L328)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IVector\n  (^clj -assoc-n [coll n val]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [313 314]},
+          :lines [327 328]},
  :methods [{:name "-assoc-n",
             :signature ["[coll n val]"],
             :docstring nil}],

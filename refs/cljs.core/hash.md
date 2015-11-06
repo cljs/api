@@ -23,12 +23,19 @@
 
 
 
+Source docstring:
+
+```
+Returns the hash code of its argument. Note this is the hash code
+consistent with =.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L547-L568):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L561-L585):
 
 ```clj
-(defn hash [o]
+(defn hash
+  [o]
   (cond
     (implements? IHash o)
     (-hash ^not-native o)
@@ -56,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:547-568](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L547-L568)</ins>
+            └── <ins>[core.cljs:561-585](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L561-L585)</ins>
 </pre>
 
 -->
@@ -108,14 +115,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/hash",
- :source {:code "(defn hash [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (Math/floor o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (instance? js/Date o)\n    (.valueOf o)\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
+ :source {:code "(defn hash\n  [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (Math/floor o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (instance? js/Date o)\n    (.valueOf o)\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [547 568]},
+          :lines [561 585]},
  :full-name "cljs.core/hash",
- :clj-symbol "clojure.core/hash"}
+ :clj-symbol "clojure.core/hash",
+ :docstring "Returns the hash code of its argument. Note this is the hash code\nconsistent with =."}
 
 ```
 

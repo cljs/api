@@ -42,12 +42,18 @@ open.  Equivalent to `debugger;` in JavaScript.
 
 
 
+Source docstring:
+
+```
+Emit JavaScript "debugger;" statement.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L293-L294):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L293-L296):
 
 ```clj
-(defmacro js-debugger []
+(defmacro js-debugger
+  []
   (core/list 'js* "debugger;"))
 ```
 
@@ -55,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:293-294](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/core.clj#L293-L294)</ins>
+            └── <ins>[core.clj:293-296](https://github.com/clojure/clojurescript/blob/r3030/src/clj/cljs/core.clj#L293-L296)</ins>
 </pre>
 
 -->
@@ -105,15 +111,16 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.core/js-debugger",
- :source {:code "(defmacro js-debugger []\n  (core/list 'js* \"debugger;\"))",
+ :source {:code "(defmacro js-debugger\n  []\n  (core/list 'js* \"debugger;\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/clj/cljs/core.clj",
-          :lines [293 294]},
+          :lines [293 296]},
  :examples [{:id "87f2fa",
              :content "```clj\n(defn foo []\n  (println \"HI\")\n  (js-debugger)\n  (println \"WORLD\"))\n\n(foo)\n;; will print \"HI\" then pause JS inside this function\n;; if browser devtools are open.\n```"}],
- :full-name "cljs.core/js-debugger"}
+ :full-name "cljs.core/js-debugger",
+ :docstring "Emit JavaScript \"debugger;\" statement."}
 
 ```
 

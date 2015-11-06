@@ -59,12 +59,18 @@ Returns a sequence of all but the last item in `s`.
 ---
 
 
+Source docstring:
+
+```
+Return a seq of all but the last item in coll, in linear time
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L7664-L7668):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L7756-L7762):
 
 ```clj
-(defn butlast [s]
+(defn butlast
+  [s]
   (loop [ret [] s s]
     (if (next s)
       (recur (conj ret (first s)) (next s))
@@ -75,11 +81,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
+clojurescript @ r3030
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7664-7668](https://github.com/clojure/clojurescript/blob/r2985/src/cljs/cljs/core.cljs#L7664-L7668)</ins>
+            └── <ins>[core.cljs:7756-7762](https://github.com/clojure/clojurescript/blob/r3030/src/cljs/cljs/core.cljs#L7756-L7762)</ins>
 </pre>
 
 -->
@@ -134,16 +140,17 @@ The API data for this symbol:
            "cljs.core/drop-last"
            "cljs.core/take-last"],
  :full-name-encode "cljs.core/butlast",
- :source {:code "(defn butlast [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
+ :source {:code "(defn butlast\n  [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2985",
+          :tag "r3030",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7664 7668]},
+          :lines [7756 7762]},
  :examples [{:id "7a4676",
              :content "```clj\n(butlast [1 2 3])\n;;=> (1 2)\n\n(butlast [1 2])\n;;=> (1)\n\n(butlast [1])\n;;=> nil\n\n(butlast [])\n;;=> nil\n```"}],
  :full-name "cljs.core/butlast",
- :clj-symbol "clojure.core/butlast"}
+ :clj-symbol "clojure.core/butlast",
+ :docstring "Return a seq of all but the last item in coll, in linear time"}
 
 ```
 
