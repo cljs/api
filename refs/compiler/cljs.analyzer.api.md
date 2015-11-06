@@ -64,6 +64,12 @@ programmatic access to the analyzer (producing AST)
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[no-warn](../cljs.analyzer.api/no-warn.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3291"><img valign="middle" alt="[+] 0.0-3291" title="Added in 0.0-3291" src="https://img.shields.io/badge/+-0.0--3291-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-interns)</td>
 <td><samp>[ns-interns](../cljs.analyzer.api/ns-interns.md)</samp></td>
 <td><samp>function</samp></td>

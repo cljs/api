@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L20):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L20):
 
 ```clj
 (def ^:dynamic *out* nil)
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:20](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L20)</ins>
+                └── <ins>[pprint.cljs:20](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L20)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *out* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [20]},
  :full-name "cljs.pprint/*out*",

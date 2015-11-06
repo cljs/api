@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L388-L393):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L389-L394):
 
 ```clj
 (defn do-report [m]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:388-393](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L388-L393)</ins>
+                └── <ins>[test.cljs:389-394](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L389-L394)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defn do-report [m]\n  (let [m (case (:type m)\n            :fail (merge (file-and-line (js/Error.) 4) m)\n            :error (merge (file-and-line (:actual m) 0) m)\n            m)]\n    (report m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [388 393]},
+          :lines [389 394]},
  :full-name "cljs.test/do-report",
  :clj-symbol "clojure.test/do-report"}
 

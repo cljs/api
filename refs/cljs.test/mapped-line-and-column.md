@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L356-L372):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L357-L373):
 
 ```clj
 (defn mapped-line-and-column [filename line column]
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:356-372](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L356-L372)</ins>
+                └── <ins>[test.cljs:357-373](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L357-L373)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn mapped-line-and-column [filename line column]\n  (let [default [filename line column]]\n    (if-let [source-map (:source-map (get-current-env))]\n      ;; source maps are 0 indexed for lines\n      (if-let [columns (get-in source-map [filename (dec line)])]\n        (vec\n          (map\n            ;; source maps are 0 indexed for columns\n            ;; multiple segments may exist at column\n            ;; just take first\n            (first\n              (if-let [mapping (get columns (dec column))]\n                mapping\n                (second (first columns))))\n            [:source :line :col]))\n        default)\n      default)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [356 372]},
+          :lines [357 373]},
  :full-name "cljs.test/mapped-line-and-column",
  :full-name-encode "cljs.test/mapped-line-and-column",
  :history [["+" "0.0-2496"]]}

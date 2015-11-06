@@ -35,7 +35,7 @@ Returns true if x is a volatile.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3908-L3910):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3908-L3910):
 
 ```clj
 (defn volatile?
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3908-3910](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3908-L3910)</ins>
+                └── <ins>[core.cljs:3908-3910](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3908-L3910)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn volatile?\n  [x] (instance? Volatile x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3908 3910]},
  :full-name "cljs.core/volatile?",

@@ -31,7 +31,7 @@ clojure.core/ns-publics but returns var analysis maps not vars.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L102-L111):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer/api.clj#L109-L118):
 
 ```clj
 (defn ns-publics
@@ -48,13 +48,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:102-111](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L102-L111)</ins>
+                    └── <ins>[api.clj:109-118](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer/api.clj#L109-L118)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn ns-publics\n  [ns]\n  {:pre [(symbol? ns)]}\n  (->> (merge\n         (get-in @env/*compiler* [::ana/namespaces ns :macros])\n         (get-in @env/*compiler* [::ana/namespaces ns :defs]))\n       (remove (fn [[k v]] (:private v)))\n       (into {})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [102 111]},
+          :lines [109 118]},
  :full-name "cljs.analyzer.api/ns-publics",
  :clj-symbol "clojure.core/ns-publics",
  :docstring "Given a namespace return all the public var analysis maps. Analagous to\nclojure.core/ns-publics but returns var analysis maps not vars."}

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/browser.clj#L23):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/browser.clj#L23):
 
 ```clj
 (def ^:dynamic browser-state nil)
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:23](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/browser.clj#L23)</ins>
+                    └── <ins>[browser.clj:23](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/browser.clj#L23)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic browser-state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [23]},
  :full-name "cljs.repl.browser/browser-state",

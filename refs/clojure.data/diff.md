@@ -40,7 +40,7 @@ Comparison rules:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/data.cljs#L144-L161):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/data.cljs#L144-L161):
 
 ```clj
 (defn diff
@@ -56,12 +56,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[data.cljs:144-161](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/data.cljs#L144-L161)</ins>
+                └── <ins>[data.cljs:144-161](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/data.cljs#L144-L161)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn diff\n  [a b]\n  (if (= a b)\n    [nil nil a]\n    (if (= (equality-partition a) (equality-partition b))\n      (diff-similar a b)\n      (atom-diff a b))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/clojure/data.cljs",
           :lines [144 161]},
  :full-name "clojure.data/diff",

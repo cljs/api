@@ -94,7 +94,7 @@ contains val at index.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L1611-L1624):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L1611-L1624):
 
 ```clj
 (defn assoc
@@ -113,12 +113,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1611-1624](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L1611-L1624)</ins>
+                └── <ins>[core.cljs:1611-1624](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L1611-L1624)</ins>
 </pre>
 
 -->
@@ -171,7 +171,7 @@ The API data for this symbol:
  :source {:code "(defn assoc\n  ([coll k v]\n    (if-not (nil? coll)\n      (-assoc coll k v)\n      (hash-map k v)))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1611 1624]},
  :examples [{:id "2fa7e0",

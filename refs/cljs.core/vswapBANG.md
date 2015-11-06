@@ -38,7 +38,7 @@ was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L2025-L2030):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L2026-L2031):
 
 ```clj
 (defmacro vswap!
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:2025-2030](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L2025-L2030)</ins>
+                └── <ins>[core.clj:2026-2031](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L2026-L2031)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defmacro vswap!\n  [vol f & args]\n  `(-vreset! ~vol (~f (-deref ~vol) ~@args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/core.clj",
-          :lines [2025 2030]},
+          :lines [2026 2031]},
  :full-name "cljs.core/vswap!",
  :clj-symbol "clojure.core/vswap!",
  :docstring "Non-atomically swaps the value of the volatile as if:\n(apply f current-value-of-vol args). Returns the value that\nwas swapped in."}

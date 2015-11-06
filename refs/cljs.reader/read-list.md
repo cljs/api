@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/reader.cljs#L264-L266):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/reader.cljs#L264-L266):
 
 ```clj
 (defn read-list
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[reader.cljs:264-266](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/reader.cljs#L264-L266)</ins>
+                └── <ins>[reader.cljs:264-266](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/reader.cljs#L264-L266)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn read-list\n  [rdr _]\n  (apply list (read-delimited-list \")\" rdr true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [264 266]},
  :full-name "cljs.reader/read-list",

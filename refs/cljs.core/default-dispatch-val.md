@@ -27,7 +27,7 @@ Given a multimethod, return it's default-dispatch-val.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L9494-L9496):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L9495-L9497):
 
 ```clj
 (defn default-dispatch-val
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9494-9496](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L9494-L9496)</ins>
+                └── <ins>[core.cljs:9495-9497](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L9495-L9497)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn default-dispatch-val\n  [multifn] (-default-dispatch-val multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9494 9496]},
+          :lines [9495 9497]},
  :full-name "cljs.core/default-dispatch-val",
  :docstring "Given a multimethod, return it's default-dispatch-val."}
 

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L859-L909):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L859-L909):
 
 ```clj
 (deftype Var [val sym _meta]
@@ -85,12 +85,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:859-909](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L859-L909)</ins>
+                └── <ins>[core.cljs:859-909](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L859-L909)</ins>
 </pre>
 
 -->
@@ -141,7 +141,7 @@ The API data for this symbol:
  :source {:code "(deftype Var [val sym _meta]\n  IDeref\n  (-deref [_] (val))\n  IMeta\n  (-meta [_] _meta)\n  Fn\n  IFn\n  (-invoke [_]\n    ((val)))\n  (-invoke [_ a]\n    ((val) a))\n  (-invoke [_ a b]\n    ((val) a b))\n  (-invoke [_ a b c]\n    ((val) a b c))\n  (-invoke [_ a b c d]\n    ((val) a b c d))\n  (-invoke [_ a b c d e]\n    ((val) a b c d e))\n  (-invoke [_ a b c d e f]\n    ((val) a b c d e f))\n  (-invoke [_ a b c d e f g]\n    ((val) a b c d e f g))\n  (-invoke [_ a b c d e f g h]\n    ((val) a b c d e f g h))\n  (-invoke [_ a b c d e f g h i]\n    ((val) a b c d e f g h i))\n  (-invoke [_ a b c d e f g h i j]\n    ((val) a b c d e f g h i j))\n  (-invoke [_ a b c d e f g h i j k]\n    ((val) a b c d e f g h i j k))\n  (-invoke [_ a b c d e f g h i j k l]\n    ((val) a b c d e f g h i j k l))\n  (-invoke [_ a b c d e f g h i j k l m]\n    ((val) a b c d e f g h i j k l m))\n  (-invoke [_ a b c d e f g h i j k l m n]\n    ((val) a b c d e f g h i j k l m n))\n  (-invoke [_ a b c d e f g h i j k l m n o]\n    ((val) a b c d e f g h i j k l m n o))\n  (-invoke [_ a b c d e f g h i j k l m n o p]\n    ((val) a b c d e f g h i j k l m n o p))\n  (-invoke [_ a b c d e f g h i j k l m n o p q]\n    ((val) a b c d e f g h i j k l m n o p q))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r]\n    ((val) a b c d e f g h i j k l m n o p q r))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s]\n    ((val) a b c d e f g h i j k l m n o p q r s))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t]\n    ((val) a b c d e f g h i j k l m n o p q r s t))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t rest]\n    (apply (val) a b c d e f g h i j k l m n o p q r s t rest)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [859 909]},
  :full-name "cljs.core/Var",

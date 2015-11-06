@@ -77,6 +77,12 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
+<td><samp>[ext->mime-type](../cljs.repl.browser/ext-GTmime-type.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3291"><img valign="middle" alt="[+] 0.0-3291" title="Added in 0.0-3291" src="https://img.shields.io/badge/+-0.0--3291-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[firefox-clean-function](../cljs.repl.browser/firefox-clean-function.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>

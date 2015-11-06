@@ -36,7 +36,7 @@ old values. Useful for mocking out functions during testing.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1404-L1424):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1405-L1425):
 
 ```clj
 (defmacro with-redefs
@@ -59,12 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1404-1424](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1404-L1424)</ins>
+                └── <ins>[core.clj:1405-1425](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1405-L1425)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defmacro with-redefs\n  [bindings & body]\n  (let [names (take-nth 2 bindings)\n        vals (take-nth 2 (drop 1 bindings))\n        tempnames (map (comp gensym name) names)\n        binds (map core/vector names vals)\n        resets (reverse (map core/vector names tempnames))\n        bind-value (fn [[k v]] (core/list 'set! k v))]\n    `(let [~@(interleave tempnames names)]\n       ~@(map bind-value binds)\n       (try\n         ~@body\n        (finally\n          ~@(map bind-value resets))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/core.clj",
-          :lines [1404 1424]},
+          :lines [1405 1425]},
  :full-name "cljs.core/with-redefs",
  :clj-symbol "clojure.core/with-redefs",
  :docstring "binding => var-symbol temp-value-expr\n\nTemporarily redefines vars while executing the body.  The\ntemp-value-exprs will be evaluated and each resulting value will\nreplace in parallel the root value of its var.  After the body is\nexecuted, the root values of all the vars will be set back to their\nold values. Useful for mocking out functions during testing."}

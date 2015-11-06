@@ -28,7 +28,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L457-L462):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L458-L463):
 
 ```clj
 (defn test-var-block
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:457-462](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/test.cljs#L457-L462)</ins>
+                └── <ins>[test.cljs:458-463](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.cljs#L458-L463)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn test-var-block\n  [v]\n  (if-let [t (:test (meta v))]\n    (test-var-block* v t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [457 462]},
+          :lines [458 463]},
  :full-name "cljs.test/test-var-block",
  :docstring "Like test-var, but returns a block for further composition and\nlater execution."}
 

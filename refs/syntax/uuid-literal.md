@@ -29,11 +29,12 @@ Representing UUIDs with `#uuid` rather than just a plain string has the followin
 - the reader will throw an exception on malformed UUIDs
 - its UUID type is preserved and shown when serialized to [edn].
 
-To create a UUID from an evaluated expression, use [doc:cljs.core/uuid].
+To create a UUID from an evaluated expression, use [`uuid`][doc:cljs.core/uuid].
 
 [edn]:https://github.com/edn-format/edn
 
 [doc:cljs.core/UUID]:../cljs.core/UUID.md
+[doc:cljs.core/uuid]:../cljs.core/uuid.md
 
 ---
 
@@ -64,7 +65,7 @@ Get as a string:
 
 ###### See Also:
 
-[``](../cljs.core/uuid.md)<br>
+[`cljs.core/uuid`](../cljs.core/uuid.md)<br>
 [``](../cljs.core/random-uuid.md)<br>
 
 ---
@@ -73,7 +74,7 @@ Get as a string:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/tagged_literals.clj#L10-L17):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L10-L17):
 
 ```clj
 (defn read-uuid
@@ -90,17 +91,17 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:10-17](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/tagged_literals.clj#L10-L17)</ins>
+                └── <ins>[tagged_literals.clj:10-17](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L10-L17)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -114,12 +115,12 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
+                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
 </pre>
 -->
 
@@ -161,13 +162,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-uuid\n  [form]\n  (when-not (string? form)\n    (throw (RuntimeException. \"UUID literal expects a string as its representation.\")))\n  (try\n    (java.util.UUID/fromString form)\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r3269",
+                  :tag "r3291",
                   :filename "src/main/clojure/cljs/tagged_literals.clj",
                   :lines [10 17]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r3269",
+                  :tag "r3291",
                   :filename "src/main/clojure/cljs/tagged_literals.clj",
                   :lines [44 48]}),
  :usage ["#uuid \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""],

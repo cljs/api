@@ -52,7 +52,7 @@ provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3917-L3951):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3917-L3951):
 
 ```clj
 (defn keep-indexed
@@ -92,12 +92,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3917-3951](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L3917-L3951)</ins>
+                └── <ins>[core.cljs:3917-3951](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3917-L3951)</ins>
 </pre>
 
 -->
@@ -150,7 +150,7 @@ The API data for this symbol:
  :source {:code "(defn keep-indexed\n  ([f]\n   (fn [rf]\n     (let [ia (volatile! -1)]\n       (fn\n         ([] (rf))\n         ([result] (rf result))\n         ([result input]\n            (let [i (vswap! ia inc)\n                  v (f i input)]\n              (if (nil? v)\n                result\n                (rf result v))))))))\n  ([f coll]\n     (letfn [(keepi [idx coll]\n               (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (let [x (f (+ idx i) (-nth c i))]\n                          (when-not (nil? x)\n                            (chunk-append b x))))\n                      (chunk-cons (chunk b) (keepi (+ idx size) (chunk-rest s))))\n                    (let [x (f idx (first s))]\n                      (if (nil? x)\n                        (keepi (inc idx) (rest s))\n                        (cons x (keepi (inc idx) (rest s)))))))))]\n       (keepi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3917 3951]},
  :full-name "cljs.core/keep-indexed",

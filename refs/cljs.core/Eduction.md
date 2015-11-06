@@ -22,33 +22,34 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L8936-L8947):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L8936-L8948):
 
 ```clj
 (deftype Eduction [xform coll]
-   ISequential
-   
-   ISeqable
-   (-seq [_] (seq (sequence xform coll)))
+  ISequential
 
-   IReduce
-   (-reduce [_ f init] (transduce xform f init coll))
+  ISeqable
+  (-seq [_] (seq (sequence xform coll)))
 
-   IPrintWithWriter
-   (-pr-writer [coll writer opts]
-     (pr-sequential-writer writer pr-writer "(" " " ")" opts coll)))
+  IReduce
+  (-reduce [_ f] (transduce xform (completing f) coll))
+  (-reduce [_ f init] (transduce xform (completing f) init coll))
+
+  IPrintWithWriter
+  (-pr-writer [coll writer opts]
+    (pr-sequential-writer writer pr-writer "(" " " ")" opts coll)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8936-8947](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L8936-L8947)</ins>
+                └── <ins>[core.cljs:8936-8948](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L8936-L8948)</ins>
 </pre>
 
 -->
@@ -91,12 +92,12 @@ The API data for this symbol:
  :name "Eduction",
  :type "type",
  :signature ["[xform coll]"],
- :source {:code "(deftype Eduction [xform coll]\n   ISequential\n   \n   ISeqable\n   (-seq [_] (seq (sequence xform coll)))\n\n   IReduce\n   (-reduce [_ f init] (transduce xform f init coll))\n\n   IPrintWithWriter\n   (-pr-writer [coll writer opts]\n     (pr-sequential-writer writer pr-writer \"(\" \" \" \")\" opts coll)))",
+ :source {:code "(deftype Eduction [xform coll]\n  ISequential\n\n  ISeqable\n  (-seq [_] (seq (sequence xform coll)))\n\n  IReduce\n  (-reduce [_ f] (transduce xform (completing f) coll))\n  (-reduce [_ f init] (transduce xform (completing f) init coll))\n\n  IPrintWithWriter\n  (-pr-writer [coll writer opts]\n    (pr-sequential-writer writer pr-writer \"(\" \" \" \")\" opts coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8936 8947]},
+          :lines [8936 8948]},
  :full-name "cljs.core/Eduction",
  :full-name-encode "cljs.core/Eduction",
  :history [["+" "0.0-2371"]]}

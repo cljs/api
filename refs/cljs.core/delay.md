@@ -23,16 +23,21 @@
 
 
 
+Source docstring:
+
+```
+Takes a body of expressions and yields a Delay object that will
+invoke the body only the first time it is forced (with force or deref/@), and
+will cache the result and return it on all subsequent force
+calls.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1397-L1402):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1397-L1403):
 
 ```clj
-(defmacro delay [& body]
-  "Takes a body of expressions and yields a Delay object that will
-  invoke the body only the first time it is forced (with force or deref/@), and
-  will cache the result and return it on all subsequent force
-  calls."
+(defmacro delay
+  [& body]
   `(new cljs.core/Delay (fn [] ~@body) nil))
 ```
 
@@ -40,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1397-1402](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1397-L1402)</ins>
+                └── <ins>[core.clj:1397-1403](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1397-L1403)</ins>
 </pre>
 
 -->
@@ -93,14 +98,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/delay",
- :source {:code "(defmacro delay [& body]\n  \"Takes a body of expressions and yields a Delay object that will\n  invoke the body only the first time it is forced (with force or deref/@), and\n  will cache the result and return it on all subsequent force\n  calls.\"\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
+ :source {:code "(defmacro delay\n  [& body]\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/core.clj",
-          :lines [1397 1402]},
+          :lines [1397 1403]},
  :full-name "cljs.core/delay",
- :clj-symbol "clojure.core/delay"}
+ :clj-symbol "clojure.core/delay",
+ :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}
 
 ```
 

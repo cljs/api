@@ -37,7 +37,7 @@ invoked once and from an async context after any assertions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/test.clj#L222-L239):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.clj#L222-L239):
 
 ```clj
 (defmacro async
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
-        └── clojure
+        └── cljs
             └── cljs
-                └── <ins>[test.clj:222-239](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/test.clj#L222-L239)</ins>
+                └── <ins>[test.clj:222-239](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/test.clj#L222-L239)</ins>
 </pre>
 
 -->
@@ -106,8 +106,8 @@ The API data for this symbol:
  :source {:code "(defmacro async\n  [done & body]\n  `(reify\n     cljs.test/IAsyncTest\n     cljs.core/IFn\n     (~'-invoke [_# ~done]\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
-          :filename "src/main/clojure/cljs/test.clj",
+          :tag "r3291",
+          :filename "src/main/cljs/cljs/test.clj",
           :lines [222 239]},
  :full-name "cljs.test/async",
  :docstring "Wraps body as a CPS function that can be returned from a test to\ncontinue asynchronously.  Binds done to a function that must be\ninvoked once and from an async context after any assertions.\n\n(deftest example-with-timeout\n  (async done\n    (js/setTimeout (fn []\n                     ;; make assertions in async context...\n                     (done) ;; ...then call done\n                     )\n                   0)))"}

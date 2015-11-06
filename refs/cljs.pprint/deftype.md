@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.clj#L39-L48):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.clj#L39-L48):
 
 ```clj
 (defmacro deftype
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:39-48](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.clj#L39-L48)</ins>
+                └── <ins>[pprint.clj:39-48](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.clj#L39-L48)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defmacro deftype\n  [type-name & fields]\n  (let [name-str (name type-name)\n        fields (map (comp symbol name) fields)]\n    `(do\n       (defrecord ~type-name [~'type-tag ~@fields])\n       (defn- ~(symbol (str \"make-\" name-str))\n         ~(vec fields)\n         (~(symbol (str type-name \".\")) ~(keyword name-str) ~@fields))\n       (defn- ~(symbol (str name-str \"?\")) [x#] (= (:type-tag x#) ~(keyword name-str))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [39 48]},
  :full-name "cljs.pprint/deftype",

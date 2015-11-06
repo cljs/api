@@ -26,7 +26,7 @@ pretty printing the results of macro expansions
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L658-L662):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L658-L662):
 
 ```clj
 (def ^:dynamic
@@ -40,12 +40,12 @@ pretty printing the results of macro expansions"
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:658-662](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/pprint.cljs#L658-L662)</ins>
+                └── <ins>[pprint.cljs:658-662](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L658-L662)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n^{:doc \"Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions\"\n  :added \"1.2\"}\n*print-suppress-namespaces* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [658 662]},
  :full-name "cljs.pprint/*print-suppress-namespaces*",

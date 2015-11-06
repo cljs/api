@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/browser.clj#L216-L229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/browser.clj#L214-L227):
 
 ```clj
 (defn parse-file [{:keys [host port] :as repl-env} file {:keys [asset-path] :as opts}]
@@ -45,13 +45,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:216-229](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/repl/browser.clj#L216-L229)</ins>
+                    └── <ins>[browser.clj:214-227](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/browser.clj#L214-L227)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn parse-file [{:keys [host port] :as repl-env} file {:keys [asset-path] :as opts}]\n  (let [base-url-pattern (Pattern/compile (str \"http://\" host \":\" port \"/\"))]\n    (if (re-find base-url-pattern file)\n      (-> file\n        (string/replace base-url-pattern \"\")\n        (string/replace\n          (Pattern/compile\n            (str \"^\" (or asset-path (util/output-directory opts)) \"/\")) \"\"))\n      (if-let [asset-root (:asset-root opts)]\n        (string/replace file asset-root \"\")\n        (throw\n          (ex-info (str \"Could not relativize URL \" file)\n            {:type :parse-stacktrace\n             :reason :relativize-url}))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [216 229]},
+          :lines [214 227]},
  :full-name "cljs.repl.browser/parse-file",
  :full-name-encode "cljs.repl.browser/parse-file",
  :history [["+" "0.0-3053"]]}

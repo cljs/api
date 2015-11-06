@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1999-L2003):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L2000-L2004):
 
 ```clj
 (defmacro es6-iterable [ty]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1999-2003](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/core.clj#L1999-L2003)</ins>
+                └── <ins>[core.clj:2000-2004](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L2000-L2004)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defmacro es6-iterable [ty]\n  `(aset (.-prototype ~ty) cljs.core/ITER_SYMBOL\n     (fn []\n       (this-as this#\n         (cljs.core/es6-iterator this#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/core.clj",
-          :lines [1999 2003]},
+          :lines [2000 2004]},
  :full-name "cljs.core/es6-iterable",
  :full-name-encode "cljs.core/es6-iterable",
  :history [["+" "0.0-2411"]]}

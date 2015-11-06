@@ -37,7 +37,7 @@ meaningful value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L54-L64):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer/api.clj#L61-L71):
 
 ```clj
 (defn analyze-file
@@ -49,13 +49,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:54-64](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/analyzer/api.clj#L54-L64)</ins>
+                    └── <ins>[api.clj:61-71](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer/api.clj#L61-L71)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn analyze-file\n  ([f] (ana/analyze-file f nil))\n  ([f opts] (ana/analyze-file f opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [54 64]},
+          :lines [61 71]},
  :full-name "cljs.analyzer.api/analyze-file",
  :docstring "Given a java.io.File, java.net.URL or a string identifying a resource on the\nclasspath attempt to analyze it.\n\nThis function side-effects the ambient compilation environment\n`cljs.env/*compiler*` to aggregate analysis information. opts argument is\ncompiler options, if :cache-analysis true will cache analysis to\n\":output-dir/some/ns/foo.cljs.cache.edn\". This function does not return a\nmeaningful value."}
 

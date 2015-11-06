@@ -35,7 +35,7 @@ For example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/build/api.clj#L27-L38):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L28-L39):
 
 ```clj
 (defn ^File target-file-for-cljs-ns
@@ -50,13 +50,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:27-38](https://github.com/clojure/clojurescript/blob/r3269/src/main/clojure/cljs/build/api.clj#L27-L38)</ins>
+                    └── <ins>[api.clj:28-39](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L28-L39)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn ^File target-file-for-cljs-ns\n  ([ns-sym] (target-file-for-cljs-ns ns-sym nil))\n  ([ns-sym output-dir]\n    (util/to-target-file\n      (util/output-directory {:output-dir output-dir})\n      {:ns ns-sym})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [27 38]},
+          :lines [28 39]},
  :full-name "cljs.build.api/target-file-for-cljs-ns",
  :docstring "Given an output directory and a clojurescript namespace return the\ncompilation target file for that namespace.\n\nFor example:\n(target-file-from-cljs-ns \"resources/out\" 'example.core) ->\n<File: \"resources/out/example/core.js\">"}
 

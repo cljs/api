@@ -33,7 +33,7 @@ reducing fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/core/reducers.cljs#L79-L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/core/reducers.cljs#L79-L94):
 
 ```clj
 (defn folder
@@ -54,13 +54,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── clojure
                 └── core
-                    └── <ins>[reducers.cljs:79-94](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/core/reducers.cljs#L79-L94)</ins>
+                    └── <ins>[reducers.cljs:79-94](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/core/reducers.cljs#L79-L94)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn folder\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [_ f1]\n         (-reduce coll (xf f1) (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init))\n\n       CollFold\n       (coll-fold [_ n combinef reducef]\n         (coll-fold coll n combinef (xf reducef))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
           :lines [79 94]},
  :full-name "clojure.core.reducers/folder",

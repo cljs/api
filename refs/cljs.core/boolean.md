@@ -57,7 +57,7 @@ Coerce to boolean
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L1867-L1870):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L1867-L1870):
 
 ```clj
 (defn ^boolean boolean
@@ -69,12 +69,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1867-1870](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/cljs/core.cljs#L1867-L1870)</ins>
+                └── <ins>[core.cljs:1867-1870](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L1867-L1870)</ins>
 </pre>
 
 -->
@@ -128,7 +128,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean boolean\n  [x]\n  (if x true false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1867 1870]},
  :examples [{:id "9edf3a",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/browser/repl.cljs#L112):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/browser/repl.cljs#L110):
 
 ```clj
 (def load-queue nil)
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3269/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3269
+clojurescript @ r3291
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:112](https://github.com/clojure/clojurescript/blob/r3269/src/main/cljs/clojure/browser/repl.cljs#L112)</ins>
+                    └── <ins>[repl.cljs:110](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/browser/repl.cljs#L110)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(def load-queue nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3269",
+          :tag "r3291",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [112]},
+          :lines [110]},
  :full-name "clojure.browser.repl/load-queue",
  :full-name-encode "clojure.browser.repl/load-queue",
  :history [["+" "0.0-3115"]]}
