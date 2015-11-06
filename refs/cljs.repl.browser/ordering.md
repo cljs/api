@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/repl/browser.clj#L113):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl/browser.clj#L113):
 
 ```clj
 (def ordering (agent {:expecting nil :fns {}}))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1909
+clojurescript @ r1913
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:113](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/repl/browser.clj#L113)</ins>
+                └── <ins>[browser.clj:113](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/repl/browser.clj#L113)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def ordering (agent {:expecting nil :fns {}}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1909",
+          :tag "r1913",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [113]},
  :full-name "cljs.repl.browser/ordering",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2065-L2127):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L2066-L2127):
 
 ```clj
 (deftype LazySeq [meta ^:mutable fn ^:mutable s ^:mutable __hash]
@@ -51,18 +51,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/c
   (-first [coll]
     (-seq coll)
     (when-not (nil? s)
-      (-first ^not-native s)))
+      (first s)))
   (-rest [coll]
     (-seq coll)
     (if-not (nil? s)
-      (-rest ^not-native s)
+      (rest s)
       ()))
 
   INext
   (-next [coll]
     (-seq coll)
     (when-not (nil? s)
-      (-next ^not-native s)))
+      (next s)))
 
   ICollection
   (-conj [coll o] (cons o coll))
@@ -85,8 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/c
         (if (instance? LazySeq ls)
           (recur (.sval ls))
           (do (set! s ls)
-            (when-not (nil? s)
-              (-seq ^not-native s)))))))
+            (seq s))))))
 
   IReduce
   (-reduce [coll f] (seq-reduce f coll))
@@ -97,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1909
+clojurescript @ r1913
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2065-2127](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2065-L2127)</ins>
+            └── <ins>[core.cljs:2066-2127](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L2066-L2127)</ins>
 </pre>
 
 -->
@@ -149,12 +148,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/LazySeq",
- :source {:code "(deftype LazySeq [meta ^:mutable fn ^:mutable s ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  (sval [coll]\n    (if (nil? fn)\n      s\n      (do\n        (set! s (fn))\n        (set! fn nil)\n        s)))\n\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta fn s __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (-first ^not-native s)))\n  (-rest [coll]\n    (-seq coll)\n    (if-not (nil? s)\n      (-rest ^not-native s)\n      ()))\n\n  INext\n  (-next [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (-next ^not-native s)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (.sval coll)\n    (when-not (nil? s)\n      (loop [ls s]\n        (if (instance? LazySeq ls)\n          (recur (.sval ls))\n          (do (set! s ls)\n            (when-not (nil? s)\n              (-seq ^not-native s)))))))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
+ :source {:code "(deftype LazySeq [meta ^:mutable fn ^:mutable s ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  (sval [coll]\n    (if (nil? fn)\n      s\n      (do\n        (set! s (fn))\n        (set! fn nil)\n        s)))\n\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta fn s __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (first s)))\n  (-rest [coll]\n    (-seq coll)\n    (if-not (nil? s)\n      (rest s)\n      ()))\n\n  INext\n  (-next [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (next s)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (.sval coll)\n    (when-not (nil? s)\n      (loop [ls s]\n        (if (instance? LazySeq ls)\n          (recur (.sval ls))\n          (do (set! s ls)\n            (seq s))))))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1909",
+          :tag "r1913",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2065 2127]},
+          :lines [2066 2127]},
  :full-name "cljs.core/LazySeq",
  :clj-symbol "clojure.lang/LazySeq"}
 

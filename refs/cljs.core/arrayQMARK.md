@@ -48,7 +48,7 @@ Returns true if `x` is a JavaScript array, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L71-L72):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L71-L72):
 
 ```clj
 (defn ^boolean array? [x]
@@ -59,18 +59,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1909
+clojurescript @ r1913
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-72](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L71-L72)</ins>
+            └── <ins>[core.cljs:71-72](https://github.com/clojure/clojurescript/blob/r1913/src/cljs/cljs/core.cljs#L71-L72)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/core.clj#L234-L235):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L234-L235):
 
 ```clj
 (defmacro array? [x]
@@ -81,11 +81,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1909
+clojurescript @ r1913
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:234-235](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/core.clj#L234-L235)</ins>
+            └── <ins>[core.clj:234-235](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L234-L235)</ins>
 </pre>
 -->
 
@@ -134,13 +134,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean array? [x]\n  (cljs.core/array? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1909",
+          :tag "r1913",
           :filename "src/cljs/cljs/core.cljs",
           :lines [71 72]},
  :extra-sources [{:code "(defmacro array? [x]\n  (bool-expr (list 'js* \"~{} instanceof Array\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1909",
+                  :tag "r1913",
                   :filename "src/clj/cljs/core.clj",
                   :lines [234 235]}],
  :examples [{:id "39913c",
