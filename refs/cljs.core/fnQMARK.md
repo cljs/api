@@ -35,7 +35,7 @@ Returns true if `f` is a function, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1232-L1233):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1232-L1233):
 
 ```clj
 (defn ^boolean fn? [f]
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1232-1233](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1232-L1233)</ins>
+            └── <ins>[core.cljs:1232-1233](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1232-L1233)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean fn? [f]\n  (or ^boolean (goog/isFunction f) (satisfies? Fn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1232 1233]},
  :full-name "cljs.core/fn?",

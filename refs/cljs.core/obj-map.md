@@ -28,7 +28,7 @@ Returns a new object map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L6767-L6778):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6783-L6794):
 
 ```clj
 (defn obj-map
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6767-6778](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L6767-L6778)</ins>
+            └── <ins>[core.cljs:6783-6794](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6783-L6794)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn obj-map\n  [& keyvals]\n  (let [ks  (array)\n        obj (js-obj)]\n    (loop [kvs (seq keyvals)]\n      (if kvs\n        (do (.push ks (first kvs))\n            (aset obj (first kvs) (second kvs))\n            (recur (nnext kvs)))\n        (.fromObject ObjMap ks obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6767 6778]},
+          :lines [6783 6794]},
  :full-name "cljs.core/obj-map",
  :docstring "keyval => key val\nReturns a new object map with supplied mappings."}
 

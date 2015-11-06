@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L651-L653):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L651-L653):
 
 ```clj
 (defmacro specify [expr & impls]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:651-653](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L651-L653)</ins>
+            └── <ins>[core.clj:651-653](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L651-L653)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defmacro specify [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/clj/cljs/core.clj",
           :lines [651 653]},
  :full-name "cljs.core/specify",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2928-L2929):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2940-L2941):
 
 ```clj
 (defn lazy-transformer [stepper]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2928-2929](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2928-L2929)</ins>
+            └── <ins>[core.cljs:2940-2941](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2940-L2941)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn lazy-transformer [stepper]\n  (LazyTransformer. stepper nil nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2928 2929]},
+          :lines [2940 2941]},
  :full-name "cljs.core/lazy-transformer",
  :full-name-encode "cljs.core/lazy-transformer",
  :history [["+" "0.0-2301"]]}

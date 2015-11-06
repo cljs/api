@@ -69,7 +69,7 @@ no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3485-L3530):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3501-L3546):
 
 ```clj
 (defn map
@@ -118,11 +118,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3485-3530](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3485-L3530)</ins>
+            └── <ins>[core.cljs:3501-3546](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3501-L3546)</ins>
 </pre>
 
 -->
@@ -183,9 +183,9 @@ The API data for this symbol:
  :source {:code "(defn map\n  ([f]\n    (fn [f1]\n      (fn\n        ([] (f1))\n        ([result] (f1 result))\n        ([result input]\n           (f1 result (f input)))\n        ([result input & inputs]\n           (f1 result (apply f input inputs))))))\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (chunk-append b (f (-nth c i))))\n          (chunk-cons (chunk b) (map f (chunk-rest s))))\n        (cons (f (first s)) (map f (rest s)))))))\n  ([f c1 c2]\n   (lazy-seq\n    (let [s1 (seq c1) s2 (seq c2)]\n      (when (and s1 s2)\n        (cons (f (first s1) (first s2))\n              (map f (rest s1) (rest s2)))))))\n  ([f c1 c2 c3]\n   (lazy-seq\n    (let [s1 (seq c1) s2 (seq c2) s3 (seq c3)]\n      (when (and  s1 s2 s3)\n        (cons (f (first s1) (first s2) (first s3))\n              (map f (rest s1) (rest s2) (rest s3)))))))\n  ([f c1 c2 c3 & colls]\n   (let [step (fn step [cs]\n                 (lazy-seq\n                  (let [ss (map seq cs)]\n                    (when (every? identity ss)\n                      (cons (map first ss) (step (map rest ss)))))))]\n     (map #(apply f %) (step (conj colls c3 c2 c1))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3485 3530]},
+          :lines [3501 3546]},
  :full-name "cljs.core/map",
  :clj-symbol "clojure.core/map",
  :docstring "Returns a lazy sequence consisting of the result of applying f to\nthe set of first items of each coll, followed by applying f to the\nset of second items in each coll, until any one of the colls is\nexhausted.  Any remaining items in other colls are ignored. Function\nf should accept number-of-colls arguments. Returns a transducer when\nno collection is provided."}

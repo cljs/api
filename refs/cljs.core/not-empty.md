@@ -40,7 +40,7 @@ If coll is empty, returns nil, else coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2872-L2874):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2872-L2874):
 
 ```clj
 (defn not-empty
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2872-2874](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2872-L2874)</ins>
+            └── <ins>[core.cljs:2872-2874](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2872-L2874)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn not-empty\n  [coll] (when (seq coll) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2872 2874]},
  :full-name "cljs.core/not-empty",

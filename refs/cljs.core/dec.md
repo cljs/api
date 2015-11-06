@@ -40,7 +40,7 @@ Returns a number one less than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1759-L1761):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1759-L1761):
 
 ```clj
 (defn dec
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1759-1761](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1759-L1761)</ins>
+            └── <ins>[core.cljs:1759-1761](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1759-L1761)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L474-L475):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L474-L475):
 
 ```clj
 (defmacro ^::ana/numeric dec [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:474-475](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L474-L475)</ins>
+            └── <ins>[core.clj:474-475](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L474-L475)</ins>
 </pre>
 -->
 
@@ -128,13 +128,13 @@ The API data for this symbol:
  :source {:code "(defn dec\n  [x] (- x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1759 1761]},
  :extra-sources [{:code "(defmacro ^::ana/numeric dec [x]\n  `(- ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2307",
+                  :tag "r2311",
                   :filename "src/clj/cljs/core.clj",
                   :lines [474 475]}],
  :full-name "cljs.core/dec",

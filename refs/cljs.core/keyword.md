@@ -34,7 +34,7 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2358-L2370):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2358-L2370):
 
 ```clj
 (defn keyword
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2358-2370](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2358-L2370)</ins>
+            └── <ins>[core.cljs:2358-2370](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2358-L2370)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword.\n                             (cljs.core/namespace name)\n                             (cljs.core/name name) (.-str name) nil)\n            (string? name) (let [parts (.split name \"/\")]\n                             (if (== (alength parts) 2)\n                               (Keyword. (aget parts 0) (aget parts 1) name nil)\n                               (Keyword. nil (aget parts 0) name nil)))))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2358 2370]},
  :full-name "cljs.core/keyword",

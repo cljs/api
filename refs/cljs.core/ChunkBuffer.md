@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2439-L2451):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2439-L2451):
 
 ```clj
 (deftype ChunkBuffer [^:mutable buf ^:mutable end]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2439-2451](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2439-L2451)</ins>
+            └── <ins>[core.cljs:2439-2451](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2439-L2451)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(deftype ChunkBuffer [^:mutable buf ^:mutable end]\n  Object\n  (add [_ o]\n    (aset buf end o)\n    (set! end (inc end)))\n\n  (chunk [_ o]\n    (let [ret (ArrayChunk. buf 0 end)]\n      (set! buf nil)\n      ret))\n\n  ICounted\n  (-count [_] end))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2439 2451]},
  :full-name "cljs.core/ChunkBuffer",

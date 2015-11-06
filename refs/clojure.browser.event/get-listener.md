@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/clojure/browser/event.cljs#L88):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/event.cljs#L88):
 
 ```clj
 (defn get-listener [src type listener opt_capt opt_handler])
@@ -32,12 +32,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:88](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/clojure/browser/event.cljs#L88)</ins>
+                └── <ins>[event.cljs:88](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/event.cljs#L88)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn get-listener [src type listener opt_capt opt_handler])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [88]},
  :full-name "clojure.browser.event/get-listener",

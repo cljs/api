@@ -59,7 +59,7 @@ the value that was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3325-L3345):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3341-L3361):
 
 ```clj
 (defn swap!
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3325-3345](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3325-L3345)</ins>
+            └── <ins>[core.cljs:3341-3361](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3341-L3361)</ins>
 </pre>
 
 -->
@@ -142,9 +142,9 @@ The API data for this symbol:
  :source {:code "(defn swap!\n  ([a f]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a)))\n       (-swap! a f)))\n  ([a f x]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x))\n       (-swap! a f x)))\n  ([a f x y]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x y))\n       (-swap! a f x y)))\n  ([a f x y & more]\n     (if (instance? Atom a)\n       (reset! a (apply f (.-state a) x y more))\n       (-swap! a f x y more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3325 3345]},
+          :lines [3341 3361]},
  :full-name "cljs.core/swap!",
  :clj-symbol "clojure.core/swap!",
  :docstring "Atomically swaps the value of atom to be:\n(apply f current-value-of-atom args). Note that f may be called\nmultiple times, and thus should be free of side effects.  Returns\nthe value that was swapped in."}

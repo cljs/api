@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3871):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3887):
 
 ```clj
 (deftype VectorNode [edit arr])
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3871](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3871)</ins>
+            └── <ins>[core.cljs:3887](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L3887)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(deftype VectorNode [edit arr])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3871]},
+          :lines [3887]},
  :full-name "cljs.core/VectorNode",
  :full-name-encode "cljs.core/VectorNode",
  :history [["+" "0.0-1211"]]}

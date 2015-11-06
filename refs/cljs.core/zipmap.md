@@ -43,7 +43,7 @@ Returns a map with the keys mapped to the corresponding vals.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7279-L7289):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7295-L7305):
 
 ```clj
 (defn zipmap
@@ -62,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7279-7289](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7279-L7289)</ins>
+            └── <ins>[core.cljs:7295-7305](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7295-L7305)</ins>
 </pre>
 
 -->
@@ -119,9 +119,9 @@ The API data for this symbol:
  :source {:code "(defn zipmap\n  [keys vals]\n    (loop [map (transient {})\n           ks (seq keys)\n           vs (seq vals)]\n      (if (and ks vs)\n        (recur (assoc! map (first ks) (first vs))\n               (next ks)\n               (next vs))\n        (persistent! map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7279 7289]},
+          :lines [7295 7305]},
  :full-name "cljs.core/zipmap",
  :clj-symbol "clojure.core/zipmap",
  :docstring "Returns a map with the keys mapped to the corresponding vals."}

@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1811-L1812):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1811-L1812):
 
 ```clj
 (defn unchecked-dec [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1811-1812](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1811-L1812)</ins>
+            └── <ins>[core.cljs:1811-1812](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L1811-L1812)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L392-L393):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L392-L393):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-dec
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:392-393](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L392-L393)</ins>
+            └── <ins>[core.clj:392-393](https://github.com/clojure/clojurescript/blob/r2311/src/clj/cljs/core.clj#L392-L393)</ins>
 </pre>
 -->
 
@@ -111,13 +111,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-dec [x]\n  (cljs.core/unchecked-dec x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1811 1812]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-dec\n  ([x] `(dec ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2307",
+                  :tag "r2311",
                   :filename "src/clj/cljs/core.clj",
                   :lines [392 393]}],
  :full-name "cljs.core/unchecked-dec",

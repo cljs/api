@@ -74,7 +74,7 @@ Returns the namespace String of a symbol or keyword, or nil if not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2351-L2356):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2351-L2356):
 
 ```clj
 (defn namespace
@@ -88,11 +88,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2351-2356](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2351-L2356)</ins>
+            └── <ins>[core.cljs:2351-2356](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2351-L2356)</ins>
 </pre>
 
 -->
@@ -145,7 +145,7 @@ The API data for this symbol:
  :source {:code "(defn namespace\n  [x]\n  (if (implements? INamed x)\n    (-namespace ^not-native x)\n    (throw (js/Error. (str \"Doesn't support namespace: \" x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2351 2356]},
  :examples [{:id "5bd3b4",

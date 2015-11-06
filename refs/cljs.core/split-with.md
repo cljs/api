@@ -43,7 +43,7 @@ Returns a vector of [(take-while pred coll) (drop-while pred coll)]
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7508-L7511):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7524-L7527):
 
 ```clj
 (defn split-with
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7508-7511](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7508-L7511)</ins>
+            └── <ins>[core.cljs:7524-7527](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7524-L7527)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defn split-with\n  [pred coll]\n  [(take-while pred coll) (drop-while pred coll)])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7508 7511]},
+          :lines [7524 7527]},
  :full-name "cljs.core/split-with",
  :clj-symbol "clojure.core/split-with",
  :docstring "Returns a vector of [(take-while pred coll) (drop-while pred coll)]"}

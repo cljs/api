@@ -47,7 +47,7 @@ n (default 1) (exclusive).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8288-L8292):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8304-L8308):
 
 ```clj
 (defn rand
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8288-8292](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8288-L8292)</ins>
+            └── <ins>[core.cljs:8304-8308](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L8304-L8308)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (* (Math/random) n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8288 8292]},
+          :lines [8304 8308]},
  :full-name "cljs.core/rand",
  :clj-symbol "clojure.core/rand",
  :docstring "Returns a random floating point number between 0 (inclusive) and\nn (default 1) (exclusive)."}

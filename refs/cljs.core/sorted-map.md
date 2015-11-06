@@ -48,7 +48,7 @@ Returns a new sorted map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L6780-L6787):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6796-L6803):
 
 ```clj
 (defn sorted-map
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6780-6787](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L6780-L6787)</ins>
+            └── <ins>[core.cljs:6796-6803](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L6796-L6803)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out (.-EMPTY PersistentTreeMap)]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6780 6787]},
+          :lines [6796 6803]},
  :full-name "cljs.core/sorted-map",
  :clj-symbol "clojure.core/sorted-map",
  :docstring "keyval => key val\nReturns a new sorted map with supplied mappings."}

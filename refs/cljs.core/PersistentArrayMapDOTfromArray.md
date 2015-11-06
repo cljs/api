@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L5131-L5143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L5147-L5159):
 
 ```clj
 (set! (.-fromArray PersistentArrayMap)
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5131-5143](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L5131-L5143)</ins>
+            └── <ins>[core.cljs:5147-5159](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L5147-L5159)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentArrayMap)\n  (fn [arr ^boolean no-clone ^boolean no-check]\n    (let [arr (if no-clone arr (aclone arr))]\n      (if no-check\n        (let [cnt (/ (alength arr) 2)]\n          (PersistentArrayMap. nil cnt arr nil))\n        (let [len (alength arr)]\n          (loop [i 0\n                 ret (transient (.-EMPTY PersistentArrayMap))]\n            (if (< i len)\n              (recur (+ i 2)\n                (-assoc! ret (aget arr i) (aget arr (inc i))))\n              (-persistent! ret))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5131 5143]},
+          :lines [5147 5159]},
  :full-name "cljs.core/PersistentArrayMap.fromArray"}
 
 ```

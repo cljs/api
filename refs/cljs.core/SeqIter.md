@@ -14,7 +14,7 @@
 
 
  <samp>
-(__SeqIter.__ seq)<br>
+(__SeqIter.__ _seq _next)<br>
 </samp>
 
 ---
@@ -25,16 +25,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2907-L2914):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2910-L2926):
 
 ```clj
-(deftype SeqIter [^:mutable seq]
+(deftype SeqIter [^:mutable _seq ^:mutable _next]
   Object
-  (hasNext [_] (not (nil? seq)))
-  (next [_]
-    (let [first (first seq)]
-      (set! seq (next seq))
-      first))
+  (hasNext [_]
+    (if (identical? _seq INIT)
+      (do
+        (set! _seq START)
+        (set! _next (seq _next)))
+      (if (identical? _seq _next)
+        (set! _next (next _seq))))
+    (not (nil? _next)))
+  (next [this]
+    (if-not (.hasNext this)
+      (throw (js/Error. "No such element"))
+      (do
+        (set! _seq _next)
+        (first _next))))
   (remove [_] (js/Error. "Unsupported operation")))
 ```
 
@@ -42,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2907-2914](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2907-L2914)</ins>
+            └── <ins>[core.cljs:2910-2926](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2910-L2926)</ins>
 </pre>
 
 -->
@@ -90,16 +99,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "SeqIter",
- :signature ["[seq]"],
+ :signature ["[_seq _next]"],
  :history [["+" "0.0-2301"]],
  :type "type",
  :full-name-encode "cljs.core/SeqIter",
- :source {:code "(deftype SeqIter [^:mutable seq]\n  Object\n  (hasNext [_] (not (nil? seq)))\n  (next [_]\n    (let [first (first seq)]\n      (set! seq (next seq))\n      first))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
+ :source {:code "(deftype SeqIter [^:mutable _seq ^:mutable _next]\n  Object\n  (hasNext [_]\n    (if (identical? _seq INIT)\n      (do\n        (set! _seq START)\n        (set! _next (seq _next)))\n      (if (identical? _seq _next)\n        (set! _next (next _seq))))\n    (not (nil? _next)))\n  (next [this]\n    (if-not (.hasNext this)\n      (throw (js/Error. \"No such element\"))\n      (do\n        (set! _seq _next)\n        (first _next))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2907 2914]},
+          :lines [2910 2926]},
  :full-name "cljs.core/SeqIter",
  :clj-symbol "clojure.lang/SeqIterator"}
 

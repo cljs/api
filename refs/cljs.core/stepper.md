@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2942-L2956):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2956-L2970):
 
 ```clj
 (defn stepper [xform iter]
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2942-2956](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2942-L2956)</ins>
+            └── <ins>[core.cljs:2956-2970](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2956-L2970)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defn stepper [xform iter]\n  (letfn [(stepfn\n            ([result]\n               (let [lt (if (reduced? result)\n                          @result\n                          result)]\n                 (set! (.-stepper lt) nil)\n                 result))\n            ([result input]\n               (let [lt result]\n                 (set! (.-first lt) input)\n                 (set! (.-rest lt) (lazy-transformer (.-stepper lt)))\n                 (set! (.-stepper lt) nil)\n                 (.-rest lt))))]\n   (Stepper. (xform stepfn) iter)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2942 2956]},
+          :lines [2956 2970]},
  :full-name "cljs.core/stepper",
  :full-name-encode "cljs.core/stepper",
  :history [["+" "0.0-2301"]]}

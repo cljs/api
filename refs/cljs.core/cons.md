@@ -59,7 +59,7 @@ Returns a new seq where x is the first element and seq is the rest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2298-L2304):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2298-L2304):
 
 ```clj
 (defn cons
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2298-2304](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2298-L2304)</ins>
+            └── <ins>[core.cljs:2298-2304](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L2298-L2304)</ins>
 </pre>
 
 -->
@@ -131,7 +131,7 @@ The API data for this symbol:
  :source {:code "(defn cons\n  [x coll]\n  (if (or (nil? coll)\n          (implements? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2298 2304]},
  :examples [{:id "68c769",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/clojure/browser/net.cljs#L19):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/net.cljs#L19):
 
 ```clj
 (def *timeout* 10000)
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:19](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/clojure/browser/net.cljs#L19)</ins>
+                └── <ins>[net.cljs:19](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/clojure/browser/net.cljs#L19)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def *timeout* 10000)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [19]},
  :full-name "clojure.browser.net/*timeout*",

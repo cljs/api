@@ -49,7 +49,7 @@ Returns the x for which (k x), a number, is greatest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7291-L7296):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7307-L7312):
 
 ```clj
 (defn max-key
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2307
+clojurescript @ r2311
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7291-7296](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7291-L7296)</ins>
+            └── <ins>[core.cljs:7307-7312](https://github.com/clojure/clojurescript/blob/r2311/src/cljs/cljs/core.cljs#L7307-L7312)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn max-key\n  ([k x] x)\n  ([k x y] (if (> (k x) (k y)) x y))\n  ([k x y & more]\n   (reduce #(max-key k %1 %2) (max-key k x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2307",
+          :tag "r2311",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7291 7296]},
+          :lines [7307 7312]},
  :full-name "cljs.core/max-key",
  :clj-symbol "clojure.core/max-key",
  :docstring "Returns the x for which (k x), a number, is greatest."}
