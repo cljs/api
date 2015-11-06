@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/core.clj#L351-L354):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/core.clj#L351-L354):
 
 ```clj
 (defmacro divide
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1843
+clojurescript @ r1844
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:351-354](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/core.clj#L351-L354)</ins>
+            └── <ins>[core.clj:351-354](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/core.clj#L351-L354)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defmacro divide\n  ([x] `(/ 1 ~x))\n  ([x y] (list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1843",
+          :tag "r1844",
           :filename "src/clj/cljs/core.clj",
           :lines [351 354]},
  :full-name "cljs.core/divide",

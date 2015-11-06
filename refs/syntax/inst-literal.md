@@ -85,7 +85,7 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/tagged_literals.clj#L18-L25):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/tagged_literals.clj#L18-L25):
 
 ```clj
 (defn read-inst
@@ -102,16 +102,16 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1843
+clojurescript @ r1844
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:18-25](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/tagged_literals.clj#L18-L25)</ins>
+            └── <ins>[tagged_literals.clj:18-25](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/tagged_literals.clj#L18-L25)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/tagged_literals.clj#L27-L30):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/tagged_literals.clj#L27-L30):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -124,11 +124,11 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1843
+clojurescript @ r1844
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
+            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
 </pre>
 -->
 
@@ -170,13 +170,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-inst\n  [form]\n  (assert (string? form) \"Instance literal expects a string for its timestamp.\")\n  (try\n    (let [^java.util.Date d (inst/read-instant-date form)]\n      (list (symbol \"js/Date.\") (.getTime d)))\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1843",
+                  :tag "r1844",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [18 25]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1843",
+                  :tag "r1844",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [27 30]}),
  :usage ["#inst \"yyyy-mm-dd\""

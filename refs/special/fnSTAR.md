@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/analyzer.clj#L378-L430):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/analyzer.clj#L378-L432):
 
 ```clj
 (defmethod parse 'fn*
@@ -28,7 +28,9 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/c
         ;;turn (fn [] ...) into (fn ([]...))
         meths (if (vector? (first meths)) (list meths) meths)
         locals (:locals env)
-        locals (if (and locals name) (assoc locals name {:name name :shadow (locals name)}) locals)
+        name-var (if name
+                   {:name name :shadow (locals name)}) 
+        locals (if (and locals name) (assoc locals name name-var) locals)
         type (-> form meta ::type)
         fields (-> form meta ::fields)
         protocol-impl (-> form meta :protocol-impl)
@@ -66,7 +68,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/c
                   (no-warn (doall (map #(analyze-fn-method menv locals % type) meths)))
                   methods)]
     ;;todo - validate unique arities, at most one variadic, variadic takes max required args
-    {:env env :op :fn :form form :name name :methods methods :variadic variadic
+    {:env env :op :fn :form form :name name-var :methods methods :variadic variadic
      :recur-frames *recur-frames* :loop-lets *loop-lets*
      :jsdoc [(when variadic "@param {...*} var_args")]
      :max-fixed-arity max-fixed-arity
@@ -79,11 +81,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1843
+clojurescript @ r1844
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:378-430](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/analyzer.clj#L378-L430)</ins>
+            └── <ins>[analyzer.clj:378-432](https://github.com/clojure/clojurescript/blob/r1844/src/clj/cljs/analyzer.clj#L378-L432)</ins>
 </pre>
 
 -->
@@ -120,12 +122,12 @@ The API data for this symbol:
 {:ns "special",
  :name "fn*",
  :type "special form",
- :source {:code "(defmethod parse 'fn*\n  [op env [_ & args :as form] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        locals (:locals env)\n        locals (if (and locals name) (assoc locals name {:name name :shadow (locals name)}) locals)\n        type (-> form meta ::type)\n        fields (-> form meta ::fields)\n        protocol-impl (-> form meta :protocol-impl)\n        protocol-inline (-> form meta :protocol-inline)\n        locals (reduce (fn [m fld]\n                         (assoc m fld\n                                {:name fld\n                                 :line (get-line fld env)\n                                 :column (get-col fld env)\n                                 :field true\n                                 :mutable (-> fld meta :mutable)\n                                 :unsynchronized-mutable (-> fld meta :unsynchronized-mutable)\n                                 :volatile-mutable (-> fld meta :volatile-mutable)\n                                 :tag (-> fld meta :tag)\n                                 :shadow (m fld)}))\n                       locals fields)\n\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        menv (merge menv\n               {:protocol-impl protocol-impl\n                :protocol-inline protocol-inline})\n        methods (map #(analyze-fn-method menv locals % type) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))\n        locals (if name\n                 (update-in locals [name] assoc\n                            :fn-var true\n                            :variadic variadic\n                            :max-fixed-arity max-fixed-arity\n                            :method-params (map :params methods))\n                 locals)\n        methods (if name\n                  ;; a second pass with knowledge of our function-ness/arity\n                  ;; lets us optimize self calls\n                  (no-warn (doall (map #(analyze-fn-method menv locals % type) meths)))\n                  methods)]\n    ;;todo - validate unique arities, at most one variadic, variadic takes max required args\n    {:env env :op :fn :form form :name name :methods methods :variadic variadic\n     :recur-frames *recur-frames* :loop-lets *loop-lets*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity\n     :protocol-impl protocol-impl\n     :protocol-inline protocol-inline\n     :children (mapv :expr methods)}))",
+ :source {:code "(defmethod parse 'fn*\n  [op env [_ & args :as form] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        locals (:locals env)\n        name-var (if name\n                   {:name name :shadow (locals name)}) \n        locals (if (and locals name) (assoc locals name name-var) locals)\n        type (-> form meta ::type)\n        fields (-> form meta ::fields)\n        protocol-impl (-> form meta :protocol-impl)\n        protocol-inline (-> form meta :protocol-inline)\n        locals (reduce (fn [m fld]\n                         (assoc m fld\n                                {:name fld\n                                 :line (get-line fld env)\n                                 :column (get-col fld env)\n                                 :field true\n                                 :mutable (-> fld meta :mutable)\n                                 :unsynchronized-mutable (-> fld meta :unsynchronized-mutable)\n                                 :volatile-mutable (-> fld meta :volatile-mutable)\n                                 :tag (-> fld meta :tag)\n                                 :shadow (m fld)}))\n                       locals fields)\n\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        menv (merge menv\n               {:protocol-impl protocol-impl\n                :protocol-inline protocol-inline})\n        methods (map #(analyze-fn-method menv locals % type) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))\n        locals (if name\n                 (update-in locals [name] assoc\n                            :fn-var true\n                            :variadic variadic\n                            :max-fixed-arity max-fixed-arity\n                            :method-params (map :params methods))\n                 locals)\n        methods (if name\n                  ;; a second pass with knowledge of our function-ness/arity\n                  ;; lets us optimize self calls\n                  (no-warn (doall (map #(analyze-fn-method menv locals % type) meths)))\n                  methods)]\n    ;;todo - validate unique arities, at most one variadic, variadic takes max required args\n    {:env env :op :fn :form form :name name-var :methods methods :variadic variadic\n     :recur-frames *recur-frames* :loop-lets *loop-lets*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity\n     :protocol-impl protocol-impl\n     :protocol-inline protocol-inline\n     :children (mapv :expr methods)}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1843",
+          :tag "r1844",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [378 430]},
+          :lines [378 432]},
  :full-name "special/fn*",
  :full-name-encode "special/fnSTAR",
  :history [["+" "0.0-927"]]}
