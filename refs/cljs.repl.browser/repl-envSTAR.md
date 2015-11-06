@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl/browser.clj#L534-L554):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/browser.clj#L534-L554):
 
 ```clj
 (defn repl-env*
@@ -52,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3191
+clojurescript @ r3195
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:534-554](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl/browser.clj#L534-L554)</ins>
+                └── <ins>[browser.clj:534-554](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/browser.clj#L534-L554)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env*\n  [{:keys [output-dir] :as opts}]\n  (merge (BrowserEnv.)\n    {:port 9000\n     :working-dir (->> [\".repl\" (util/clojurescript-version)]\n                       (remove empty?) (string/join \"-\"))\n     :serve-static true\n     :static-dir (cond-> [\".\" \"out/\"] output-dir (conj output-dir))\n     :preloaded-libs []\n     :optimizations :simple\n     :src \"src/\"\n     :browser-state (atom {:return-value-fn nil\n                          :client-js nil})\n     :ordering (agent {:expecting nil :fns {}})\n     :es (Executors/newFixedThreadPool 16)\n     :server-state\n     (atom\n       {:socket nil\n        :connection nil\n        :promised-conn nil})}\n    opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3191",
+          :tag "r3195",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [534 554]},
  :full-name "cljs.repl.browser/repl-env*",

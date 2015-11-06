@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl/nashorn.clj#L92-L106):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/nashorn.clj#L92-L106):
 
 ```clj
 (defn bootstrap-repl [engine output-dir opts]
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3191
+clojurescript @ r3195
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[nashorn.clj:92-106](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl/nashorn.clj#L92-L106)</ins>
+                └── <ins>[nashorn.clj:92-106](https://github.com/clojure/clojurescript/blob/r3195/src/clj/cljs/repl/nashorn.clj#L92-L106)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn bootstrap-repl [engine output-dir opts]\n  (env/ensure\n    (let [deps-file \".nashorn_repl_deps.js\"\n          core (io/resource \"cljs/core.cljs\")\n          core-js (closure/compile core\n                    (assoc opts\n                      :output-file (closure/src-file->target-file core)))\n          deps (closure/add-dependencies opts core-js)]\n      ;; output unoptimized code and the deps file\n      ;; for all compiled namespaces\n      (apply closure/output-unoptimized\n        (assoc opts :output-to (.getPath (io/file output-dir deps-file)))\n        deps)\n      ;; load the deps file so we can goog.require cljs.core etc.\n      (load-js-file engine deps-file))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3191",
+          :tag "r3195",
           :filename "src/clj/cljs/repl/nashorn.clj",
           :lines [92 106]},
  :full-name "cljs.repl.nashorn/bootstrap-repl",
