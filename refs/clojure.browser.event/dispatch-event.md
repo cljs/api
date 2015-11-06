@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/browser/event.cljs#L75-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/clojure/browser/event.cljs#L75-L77):
 
 ```clj
 (defn dispatch-event
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2134
+clojurescript @ r2138
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:75-77](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/browser/event.cljs#L75-L77)</ins>
+                └── <ins>[event.cljs:75-77](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/clojure/browser/event.cljs#L75-L77)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn dispatch-event\n  [src event]\n  (goog.events/dispatchEvent src event))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2134",
+          :tag "r2138",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [75 77]},
  :full-name "clojure.browser.event/dispatch-event",

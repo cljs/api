@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2138](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2138)__</td>
+<td>2013-12-31</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.8.0</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002138syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002138library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-002138compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2134](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2134)__</td>
 <td>2013-12-30</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1188,6 +1211,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2138
+
+<a name="002138syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002138library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/specify](refs/cljs.core/specify.md)</samp></td>
+</tr>
+</table>
+
+<a name="002138compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2134

@@ -68,7 +68,7 @@ Some operations:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/tagged_literals.clj#L4-L8):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/tagged_literals.clj#L4-L8):
 
 ```clj
 (defn read-queue
@@ -82,16 +82,16 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2134
+clojurescript @ r2138
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:4-8](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/tagged_literals.clj#L4-L8)</ins>
+            └── <ins>[tagged_literals.clj:4-8](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/tagged_literals.clj#L4-L8)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/tagged_literals.clj#L44-L48):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -105,11 +105,11 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2134
+clojurescript @ r2138
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/tagged_literals.clj#L44-L48)</ins>
+            └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r2138/src/clj/cljs/tagged_literals.clj#L44-L48)</ins>
 </pre>
 -->
 
@@ -151,13 +151,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-queue\n  [form]\n  (when-not (vector? form)\n    (throw (RuntimeException. \"Queue literal expects a vector for its elements.\")))\n  (list 'cljs.core/into 'cljs.core.PersistentQueue.EMPTY form))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r2134",
+                  :tag "r2138",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [4 8]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r2134",
+                  :tag "r2138",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [44 48]}),
  :usage ["#queue [...]"],

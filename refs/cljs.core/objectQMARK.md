@@ -32,7 +32,7 @@ Returns true if `x` is a JavaScript object, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L98-L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L98-L101):
 
 ```clj
 (defn ^boolean object? [x]
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2134
+clojurescript @ r2138
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:98-101](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L98-L101)</ins>
+            └── <ins>[core.cljs:98-101](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/cljs/core.cljs#L98-L101)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean object? [x]\n  (if-not (nil? x)\n    (identical? (.-constructor x) js/Object)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2134",
+          :tag "r2138",
           :filename "src/cljs/cljs/core.cljs",
           :lines [98 101]},
  :full-name "cljs.core/object?"}

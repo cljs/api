@@ -30,7 +30,7 @@ Returns a zipper for nested sequences, given a root sequence
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/zip.cljs#L34-L40):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/clojure/zip.cljs#L34-L40):
 
 ```clj
 (defn seq-zip
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2134
+clojurescript @ r2138
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:34-40](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/zip.cljs#L34-L40)</ins>
+            └── <ins>[zip.cljs:34-40](https://github.com/clojure/clojurescript/blob/r2138/src/cljs/clojure/zip.cljs#L34-L40)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn seq-zip\n  [root]\n    (zipper seq?\n            identity\n            (fn [node children] (with-meta children (meta node)))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2134",
+          :tag "r2138",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [34 40]},
  :full-name "clojure.zip/seq-zip",
