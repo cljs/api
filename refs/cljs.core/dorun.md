@@ -50,7 +50,7 @@ the seq, does not retain the head and returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L7910-L7921):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L7910-L7921):
 
 ```clj
 (defn dorun
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7910-7921](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L7910-L7921)</ins>
+            └── <ins>[core.cljs:7910-7921](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L7910-L7921)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(defn dorun\n  ([coll]\n   (when (seq coll)\n     (recur (next coll))))\n  ([n coll]\n   (when (and (seq coll) (pos? n))\n     (recur (dec n) (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7910 7921]},
  :full-name "cljs.core/dorun",

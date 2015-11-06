@@ -31,7 +31,7 @@ the collection is empty, throws an exception. Returns coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2887-L2891):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2887-L2891):
 
 ```clj
 (defn pop!
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2887-2891](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2887-L2891)</ins>
+            └── <ins>[core.cljs:2887-2891](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2887-L2891)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn pop!\n  [tcoll]\n  (-pop! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2887 2891]},
  :full-name "cljs.core/pop!",

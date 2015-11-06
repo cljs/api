@@ -63,7 +63,7 @@ Prints documentation for a var or special form given its name
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl.clj#L317-L320):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl.clj#L334-L337):
 
 ```clj
 (defmacro doc
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:317-320](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl.clj#L317-L320)</ins>
+            └── <ins>[repl.clj:334-337](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl.clj#L334-L337)</ins>
 </pre>
 
 -->
@@ -132,9 +132,9 @@ The API data for this symbol:
  :source {:code "(defmacro doc\n  [sym]\n  `(cljs.repl/print-doc (meta (var ~sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/clj/cljs/repl.clj",
-          :lines [317 320]},
+          :lines [334 337]},
  :examples [{:id "4d2768",
              :content "```clj\n(doc map)\n;; Prints:\n;;  -------------------------\n;;  cljs.core/map\n;;  [f coll]\n;;    Returns a lazy sequence consisting of the result of applying f to\n;;    the set of first items of each coll, followed by applying f to the\n;;    set of second items in each coll, until any one of the colls is\n;;    exhausted.  Any remaining items in other colls are ignored. Function\n;;    f should accept number-of-colls arguments. Returns a transducer when\n;;    no collection is provided.\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/doc",

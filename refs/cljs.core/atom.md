@@ -86,7 +86,7 @@ occur, then the value of the atom will not change.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3435-L3450):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3435-L3450):
 
 ```clj
 (defn atom
@@ -98,11 +98,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3435-3450](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3435-L3450)</ins>
+            └── <ins>[core.cljs:3435-3450](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3435-L3450)</ins>
 </pre>
 
 -->
@@ -159,7 +159,7 @@ The API data for this symbol:
  :source {:code "(defn atom\n  ([x] (Atom. x nil nil nil))\n  ([x & {:keys [meta validator]}] (Atom. x meta validator nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3435 3450]},
  :examples [{:id "e6a38a",

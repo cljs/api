@@ -60,7 +60,7 @@ not enough padding elements, return a partition with less than n items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3960-L3980):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3960-L3980):
 
 ```clj
 (defn partition
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3960-3980](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3960-L3980)</ins>
+            └── <ins>[core.cljs:3960-3980](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3960-L3980)</ins>
 </pre>
 
 -->
@@ -144,7 +144,7 @@ The API data for this symbol:
  :source {:code "(defn partition\n  ([n coll]\n     (partition n n coll))\n  ([n step coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (when (== n (count p))\n             (cons p (partition n step (drop step s))))))))\n  ([n step pad coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (if (== n (count p))\n             (cons p (partition n step pad (drop step s)))\n             (list (take n (concat p pad)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3960 3980]},
  :full-name "cljs.core/partition",

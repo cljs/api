@@ -39,7 +39,7 @@ after trampoline returns.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L8588-L8602):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L8588-L8602):
 
 ```clj
 (defn trampoline
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8588-8602](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L8588-L8602)</ins>
+            └── <ins>[core.cljs:8588-8602](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L8588-L8602)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn trampoline\n  ([f]\n     (let [ret (f)]\n       (if (fn? ret)\n         (recur ret)\n         ret)))\n  ([f & args]\n     (trampoline #(apply f args))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8588 8602]},
  :full-name "cljs.core/trampoline",

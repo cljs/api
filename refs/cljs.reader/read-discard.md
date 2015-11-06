@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/reader.cljs#L389-L392):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/reader.cljs#L389-L392):
 
 ```clj
 (defn read-discard
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:389-392](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/reader.cljs#L389-L392)</ins>
+            └── <ins>[reader.cljs:389-392](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/reader.cljs#L389-L392)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn read-discard\n  [rdr _]\n  (read rdr true nil true)\n  rdr)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [389 392]},
  :full-name "cljs.reader/read-discard",

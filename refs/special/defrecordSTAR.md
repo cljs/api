@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer.clj#L1356-L1358):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/analyzer.clj#L1356-L1358):
 
 ```clj
 (defmethod parse 'defrecord*
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1356-1358](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer.clj#L1356-L1358)</ins>
+            └── <ins>[analyzer.clj:1356-1358](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/analyzer.clj#L1356-L1358)</ins>
 </pre>
 
 -->
@@ -73,7 +73,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'defrecord*\n  [_ env form _ _]\n  (parse-type :defrecord* env form) )",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1356 1358]},
  :full-name "special/defrecord*",

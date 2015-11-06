@@ -54,7 +54,7 @@ trimming is done.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L4582-L4591):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L4582-L4591):
 
 ```clj
 (defn subvec
@@ -68,11 +68,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4582-4591](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L4582-L4591)</ins>
+            └── <ins>[core.cljs:4582-4591](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L4582-L4591)</ins>
 </pre>
 
 -->
@@ -125,7 +125,7 @@ The API data for this symbol:
  :source {:code "(defn subvec\n  ([v start]\n     (subvec v start (count v)))\n  ([v start end]\n     (build-subvec nil v start end nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4582 4591]},
  :full-name "cljs.core/subvec",

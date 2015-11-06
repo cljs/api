@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl/rhino.clj#L77-L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/rhino.clj#L77-L101):
 
 ```clj
 (defn goog-require [repl-env opts rule]
@@ -56,12 +56,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:77-101](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl/rhino.clj#L77-L101)</ins>
+                └── <ins>[rhino.clj:77-101](https://github.com/clojure/clojurescript/blob/r2657/src/clj/cljs/repl/rhino.clj#L77-L101)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn goog-require [repl-env opts rule]\n  (let [path (string/replace (comp/munge rule) \\. File/separatorChar)\n        cljsc-path (str (util/output-directory opts)\n                     File/separator (str path \".js\"))\n        cljs-path (str path \".cljs\")\n        js-path (str \"goog/\"\n                  (-eval (str \"goog.dependencies_.nameToPath['\" rule \"']\")\n                    repl-env \"<cljs repl>\" 1))]\n    (let [compiled (io/file cljsc-path)]\n      (if (.exists compiled)\n        ;; TODO: only take this path if analysis cache is available\n        ;; - David\n        (do\n          (with-open [reader (io/reader compiled)]\n            (-eval reader repl-env cljsc-path 1)))\n        (if-let [res (io/resource cljs-path)]\n          (binding [ana/*cljs-ns* 'cljs.user]\n            (repl/load-stream repl-env cljs-path res))\n          (if-let [res (io/resource js-path)]\n            (with-open [reader (io/reader res)]\n              (-eval reader repl-env js-path 1))\n            (throw\n              (Exception.\n                (str \"Cannot find \" cljs-path\n                  \" or \" js-path \" in classpath\")))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [77 101]},
  :full-name "cljs.repl.rhino/goog-require",

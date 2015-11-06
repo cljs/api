@@ -54,7 +54,7 @@ last of which will be treated as a sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2827-L2835):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2827-L2835):
 
 ```clj
 (defn list*
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2827-2835](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2827-L2835)</ins>
+            └── <ins>[core.cljs:2827-2835](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2827-L2835)</ins>
 </pre>
 
 -->
@@ -131,7 +131,7 @@ The API data for this symbol:
  :source {:code "(defn list*\n  ([args] (seq args))\n  ([a args] (cons a args))\n  ([a b args] (cons a (cons b args)))\n  ([a b c args] (cons a (cons b (cons c args))))\n  ([a b c d & more]\n     (cons a (cons b (cons c (cons d (spread more)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2827 2835]},
  :full-name "cljs.core/list*",

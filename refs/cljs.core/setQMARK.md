@@ -40,7 +40,7 @@ Returns true if x satisfies ISet
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1444-L1449):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1444-L1449):
 
 ```clj
 (defn ^boolean set?
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1444-1449](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1444-L1449)</ins>
+            └── <ins>[core.cljs:1444-1449](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1444-L1449)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean set?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ISet x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1444 1449]},
  :full-name "cljs.core/set?",

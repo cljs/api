@@ -40,6 +40,11 @@ code from the REPL.
 <td><samp>[require](../specialrepl/require.md)</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
 </tr>
+<tr>
+<td></td>
+<td><samp>[require-macros](../specialrepl/require-macros.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2657"><img valign="middle" alt="[+] 0.0-2657" title="Added in 0.0-2657" src="https://img.shields.io/badge/+-0.0--2657-lightgrey.svg"></a> </td>
+</tr>
 </table>
 
 

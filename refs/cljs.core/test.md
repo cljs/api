@@ -31,7 +31,7 @@ presuming failure will throw exception
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9099-L9106):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9099-L9106):
 
 ```clj
 (defn test
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9099-9106](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9099-L9106)</ins>
+            └── <ins>[core.cljs:9099-9106](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9099-L9106)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn test\n  [v]\n  (let [f (.-cljs$lang$test v)]\n    (if f\n      (do (f) :ok)\n      :no-test)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9099 9106]},
  :full-name "cljs.core/test",

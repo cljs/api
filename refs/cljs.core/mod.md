@@ -60,7 +60,7 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2003-L2006):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2003-L2006):
 
 ```clj
 (defn mod
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2003-2006](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2003-L2006)</ins>
+            └── <ins>[core.cljs:2003-2006](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2003-L2006)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2003 2006]},
  :examples [{:id "8165e8",

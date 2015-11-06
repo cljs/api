@@ -31,7 +31,7 @@ that combines their behavior.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/test.cljs#L383-L387):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/test.cljs#L383-L387):
 
 ```clj
 (defn compose-fixtures
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:383-387](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/test.cljs#L383-L387)</ins>
+            └── <ins>[test.cljs:383-387](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/test.cljs#L383-L387)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn compose-fixtures\n  [f1 f2]\n  (fn [g] (f1 (fn [] (f2 g)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/test.cljs",
           :lines [383 387]},
  :full-name "cljs.test/compose-fixtures",

@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2657](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2657)__</td>
+<td>2015-01-03</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002657syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002657library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-002657compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2655](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655)__</td>
 <td>2015-01-03</td>
 <td><kbd>1.6.0</kbd></td>
@@ -1832,6 +1855,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2657
+
+<a name="002657syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002657library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-special form (repl)-brightgreen.svg">
+</td>
+<td><samp>[require-macros (repl)](refs/specialrepl/require-macros.md)</samp></td>
+</tr>
+</table>
+
+<a name="002657compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2655

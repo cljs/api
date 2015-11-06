@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L455):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L455):
 
 ```clj
 (def m3-C2 0x1b873593)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:455](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L455)</ins>
+            └── <ins>[core.cljs:455](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L455)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def m3-C2 0x1b873593)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [455]},
  :full-name "cljs.core/m3-C2",

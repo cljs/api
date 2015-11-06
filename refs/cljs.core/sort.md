@@ -49,7 +49,7 @@ Comp defaults to compare.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1644-L1656):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1644-L1656):
 
 ```clj
 (defn sort
@@ -68,11 +68,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1644-1656](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1644-L1656)</ins>
+            └── <ins>[core.cljs:1644-1656](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1644-L1656)</ins>
 </pre>
 
 -->
@@ -125,7 +125,7 @@ The API data for this symbol:
  :source {:code "(defn sort\n  ([coll]\n   (sort compare coll))\n  ([comp coll]\n   (if (seq coll)\n     (let [a (to-array coll)]\n       ;; matching Clojure's stable sort, though docs don't promise it\n       (garray/stableSort a (fn->comparator comp))\n       (seq a))\n     ())))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1644 1656]},
  :full-name "cljs.core/sort",

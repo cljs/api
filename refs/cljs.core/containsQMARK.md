@@ -97,7 +97,7 @@ it will not perform a linear search for a value.  See also 'some'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1555-L1564):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1555-L1564):
 
 ```clj
 (defn ^boolean contains?
@@ -111,11 +111,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1555-1564](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1555-L1564)</ins>
+            └── <ins>[core.cljs:1555-1564](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1555-L1564)</ins>
 </pre>
 
 -->
@@ -169,7 +169,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean contains?\n  [coll v]\n  (if (identical? (get coll v lookup-sentinel) lookup-sentinel)\n    false\n    true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1555 1564]},
  :examples [{:id "2991f0",

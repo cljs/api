@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L472-L477):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L472-L477):
 
 ```clj
 (defn ^number m3-hash-int [in]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:472-477](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L472-L477)</ins>
+            └── <ins>[core.cljs:472-477](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L472-L477)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-hash-int [in]\n  (if (zero? in)\n    in\n    (let [k1 (m3-mix-K1 in)\n          h1 (m3-mix-H1 m3-seed k1)]\n      (m3-fmix h1 4))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [472 477]},
  :full-name "cljs.core/m3-hash-int"}

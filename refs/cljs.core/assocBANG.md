@@ -76,7 +76,7 @@ Note - index must be <= (count vector). Returns coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2865-L2875):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2865-L2875):
 
 ```clj
 (defn assoc!
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2865-2875](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2865-L2875)</ins>
+            └── <ins>[core.cljs:2865-2875](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L2865-L2875)</ins>
 </pre>
 
 -->
@@ -150,7 +150,7 @@ The API data for this symbol:
  :source {:code "(defn assoc!\n  ([tcoll key val]\n    (-assoc! tcoll key val))\n  ([tcoll key val & kvs]\n    (let [ntcoll (-assoc! tcoll key val)]\n      (if kvs\n        (recur ntcoll (first kvs) (second kvs) (nnext kvs))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2865 2875]},
  :examples [{:id "7d1e6b",

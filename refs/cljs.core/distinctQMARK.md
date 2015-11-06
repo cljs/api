@@ -78,7 +78,7 @@ Returns true if no two of the arguments are =
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1574-L1588):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1574-L1588):
 
 ```clj
 (defn ^boolean distinct?
@@ -101,11 +101,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1574-1588](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1574-L1588)</ins>
+            └── <ins>[core.cljs:1574-1588](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1574-L1588)</ins>
 </pre>
 
 -->
@@ -159,7 +159,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean distinct?\n  ([x] true)\n  ([x y] (not (= x y)))\n  ([x y & more]\n     (if (not (= x y))\n     (loop [s #{x y} xs more]\n       (let [x (first xs)\n             etc (next xs)]\n         (if xs\n           (if (contains? s x)\n             false\n             (recur (conj s x) etc))\n           true)))\n     false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1574 1588]},
  :examples [{:id "b32799",

@@ -27,7 +27,7 @@ Returns true if coll satisfies IReduce
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1463-L1465):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1463-L1465):
 
 ```clj
 (defn ^boolean reduceable?
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1463-1465](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1463-L1465)</ins>
+            └── <ins>[core.cljs:1463-1465](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1463-L1465)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean reduceable?\n  [x] (satisfies? IReduce x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1463 1465]},
  :full-name "cljs.core/reduceable?",

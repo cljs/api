@@ -30,7 +30,7 @@ Given a multimethod, returns a map of preferred value -> set of other values
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9021-L9023):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9021-L9023):
 
 ```clj
 (defn prefers
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9021-9023](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9021-L9023)</ins>
+            └── <ins>[core.cljs:9021-9023](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9021-L9023)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn prefers\n  [multifn] (-prefers multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9021 9023]},
  :full-name "cljs.core/prefers",

@@ -50,7 +50,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3890-L3896):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3890-L3896):
 
 ```clj
 (defn remove
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3890-3896](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3890-L3896)</ins>
+            └── <ins>[core.cljs:3890-3896](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L3890-L3896)</ins>
 </pre>
 
 -->
@@ -120,7 +120,7 @@ The API data for this symbol:
  :source {:code "(defn remove\n  ([pred] (filter (complement pred)))\n  ([pred coll]\n     (filter (complement pred) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3890 3896]},
  :full-name "cljs.core/remove",

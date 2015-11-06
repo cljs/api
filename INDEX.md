@@ -2,7 +2,7 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2655__ [all](HISTORY.md)</td>
+<td>__0.0-2657__ [all](HISTORY.md)</td>
 <td>2015-01-03</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2655__ ([See Full History](HISTORY.md)):
+Changes from __0.0-2657__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -37,46 +37,16 @@ __Library API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-special form (repl)-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/\*loaded-libs\*](refs/cljs.core/STARloaded-libsSTAR.md)</samp></td>
+<td><samp>[require-macros (repl)](refs/specialrepl/require-macros.md)</samp></td>
 </tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.analyzer.api/ns-specs~~](refs/cljs.analyzer.api/ns-specs.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.repl/merge-require~~](refs/cljs.repl/merge-require.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.repl/merge-spec~~](refs/cljs.repl/merge-spec.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
-</td>
-<td><samp>[~~cljs.repl/spec-sort~~](refs/cljs.repl/spec-sort.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
-</td>
-<td><samp>[~~cljs.repl/update-require-spec~~](refs/cljs.repl/update-require-spec.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 

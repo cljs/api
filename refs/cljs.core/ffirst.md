@@ -52,7 +52,7 @@ Same as (first (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1085-L1088):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1085-L1088):
 
 ```clj
 (defn ffirst
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1085-1088](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1085-L1088)</ins>
+            └── <ins>[core.cljs:1085-1088](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L1085-L1088)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn ffirst\n  [coll]\n  (first (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1085 1088]},
  :examples [{:id "575ba2",

@@ -32,7 +32,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9062-L9068):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9062-L9068):
 
 ```clj
 (defn ex-data
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2655
+clojurescript @ r2657
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9062-9068](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L9062-L9068)</ins>
+            └── <ins>[core.cljs:9062-9068](https://github.com/clojure/clojurescript/blob/r2657/src/cljs/cljs/core.cljs#L9062-L9068)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn ex-data\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-data ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2655",
+          :tag "r2657",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9062 9068]},
  :full-name "cljs.core/ex-data",
