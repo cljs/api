@@ -29,7 +29,7 @@ true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L133-L138):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L133-L138):
 
 ```clj
 (defn add-implicit-options
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:133-138](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L133-L138)</ins>
+                    └── <ins>[api.clj:133-138](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L133-L138)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn add-implicit-options\n  [opts]\n  (closure/add-implicit-options opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [133 138]},
  :full-name "cljs.build.api/add-implicit-options",

@@ -49,7 +49,7 @@ Same as (not (= obj1 obj2))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3346-L3351):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L3349-L3354):
 
 ```clj
 (defn ^boolean not=
@@ -63,12 +63,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3346-3351](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L3346-L3351)</ins>
+                └── <ins>[core.cljs:3349-3354](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L3349-L3354)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean not=\n  ([x] false)\n  ([x y] (not (= x y)))\n  ([x y & more]\n   (not (apply = x y more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3346 3351]},
+          :lines [3349 3354]},
  :full-name "cljs.core/not=",
  :clj-symbol "clojure.core/not=",
  :docstring "Same as (not (= obj1 obj2))"}

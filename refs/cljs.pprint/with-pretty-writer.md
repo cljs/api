@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.clj#L17-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.clj#L17-L24):
 
 ```clj
 (defmacro with-pretty-writer [base-writer & body]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:17-24](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.clj#L17-L24)</ins>
+                └── <ins>[pprint.clj:17-24](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.clj#L17-L24)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defmacro with-pretty-writer [base-writer & body]\n  `(let [base-writer# ~base-writer\n         new-writer# (not (pretty-writer? base-writer#))]\n     (cljs.core/binding [~'*out* (if new-writer#\n                         (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)\n                         base-writer#)]\n       ~@body\n       (-ppflush ~'*out*))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [17 24]},
  :full-name "cljs.pprint/with-pretty-writer",

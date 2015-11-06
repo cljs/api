@@ -27,7 +27,7 @@ Given a namespace as a symbol return the corresponding resource if it exists.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L112-L115):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L112-L115):
 
 ```clj
 (defn ns->source
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:112-115](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L112-L115)</ins>
+                    └── <ins>[api.clj:112-115](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L112-L115)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn ns->source\n  [ns]\n  (util/ns->source ns))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [112 115]},
  :full-name "cljs.build.api/ns->source",

@@ -74,7 +74,7 @@ Get as a string:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L10-L17):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/tagged_literals.clj#L10-L17):
 
 ```clj
 (defn read-uuid
@@ -91,17 +91,17 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:10-17](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L10-L17)</ins>
+                └── <ins>[tagged_literals.clj:10-17](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/tagged_literals.clj#L10-L17)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -115,12 +115,12 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
+                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
 </pre>
 -->
 
@@ -162,13 +162,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-uuid\n  [form]\n  (when-not (string? form)\n    (throw (RuntimeException. \"UUID literal expects a string as its representation.\")))\n  (try\n    (java.util.UUID/fromString form)\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r3291",
+                  :tag "r3297",
                   :filename "src/main/clojure/cljs/tagged_literals.clj",
                   :lines [10 17]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r3291",
+                  :tag "r3297",
                   :filename "src/main/clojure/cljs/tagged_literals.clj",
                   :lines [44 48]}),
  :usage ["#uuid \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""],

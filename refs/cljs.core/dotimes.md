@@ -46,7 +46,7 @@ bound to integers from 0 through n-1.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1851-L1863):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1851-L1863):
 
 ```clj
 (defmacro dotimes
@@ -64,12 +64,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1851-1863](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1851-L1863)</ins>
+                └── <ins>[core.clj:1851-1863](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1851-L1863)</ins>
 </pre>
 
 -->
@@ -122,7 +122,7 @@ The API data for this symbol:
  :source {:code "(defmacro dotimes\n  [bindings & body]\n  (let [i (first bindings)\n        n (second bindings)]\n    `(let [n# ~n]\n       (loop [~i 0]\n         (when (< ~i n#)\n           ~@body\n           (recur (inc ~i)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [1851 1863]},
  :full-name "cljs.core/dotimes",

@@ -33,7 +33,7 @@ Given a source which can be compiled, watch it for changes to produce.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L179-L186):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L179-L186):
 
 ```clj
 (defn watch
@@ -49,13 +49,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:179-186](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L179-L186)</ins>
+                    └── <ins>[api.clj:179-186](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L179-L186)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn watch\n  ([source opts]\n   (closure/watch source opts))\n  ([source opts compiler-env]\n   (closure/watch source opts compiler-env))\n  ([source opts compiler-env stop]\n   (closure/watch source opts compiler-env stop)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [179 186]},
  :full-name "cljs.build.api/watch",

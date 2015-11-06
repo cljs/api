@@ -31,7 +31,7 @@ itself (not its value) is returned. The reader macro #'x expands to (var x).
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer.cljc#L690-L713):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/analyzer.cljc#L690-L713):
 
 ```clj
 (defmethod parse 'var
@@ -64,12 +64,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:690-713](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer.cljc#L690-L713)</ins>
+                └── <ins>[analyzer.cljc:690-713](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/analyzer.cljc#L690-L713)</ins>
 </pre>
 
 -->
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym (confirm-var-exists-throw))\n        expr-env (assoc env :context :expr)]\n    {:env env :op :var-special :form form\n     :var (analyze expr-env sym)\n     :sym (analyze expr-env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :doc :file :line :column]\n                 m (merge\n                     (let [user-meta (:meta var)\n                           uks (keys user-meta)]\n                       (zipmap uks\n                         (map #(list 'quote (get user-meta %)) uks)))\n                     (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                       :name `(quote ~(symbol (name (:name var))))\n                       :test `(when ~sym (.-cljs$lang$test ~sym))\n                       :arglists (let [arglists (:arglists var)\n                                       arglists' (if (= 'quote (first arglists))\n                                                   (second arglists)\n                                                   arglists)]\n                                   (list 'quote\n                                     (doall (map with-meta arglists'\n                                              (:arglists-meta var)))))))]\n             (analyze expr-env m))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/analyzer.cljc",
           :lines [690 713]},
  :full-name "special/var",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/node.clj#L78-L79):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/node.clj#L78-L79):
 
 ```clj
 (defn platform-path [v]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:78-79](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/repl/node.clj#L78-L79)</ins>
+                    └── <ins>[node.clj:78-79](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/repl/node.clj#L78-L79)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn platform-path [v]\n  (str \"path.join.apply(null, \" (seq->js-array v) \")\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [78 79]},
  :full-name "cljs.repl.node/platform-path",

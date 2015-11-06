@@ -14,6 +14,9 @@
 
 
  <samp>
+(__newline__)<br>
+</samp>
+ <samp>
 (__newline__ opts)<br>
 </samp>
 
@@ -25,25 +28,27 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L8605-L8608):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L8608-L8613):
 
 ```clj
-(defn newline [opts]
-  (string-print "\n")
-  (when (get opts :flush-on-newline)
-    (flush)))
+(defn newline
+  ([] (newline nil))
+  ([opts]
+   (string-print "\n")
+   (when (get opts :flush-on-newline)
+     (flush))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8605-8608](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L8605-L8608)</ins>
+                └── <ins>[core.cljs:8608-8613](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L8608-L8613)</ins>
 </pre>
 
 -->
@@ -87,16 +92,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "newline",
- :signature ["[opts]"],
+ :signature ["[]" "[opts]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/newline",
- :source {:code "(defn newline [opts]\n  (string-print \"\\n\")\n  (when (get opts :flush-on-newline)\n    (flush)))",
+ :source {:code "(defn newline\n  ([] (newline nil))\n  ([opts]\n   (string-print \"\\n\")\n   (when (get opts :flush-on-newline)\n     (flush))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8605 8608]},
+          :lines [8608 8613]},
  :full-name "cljs.core/newline",
  :clj-symbol "clojure.core/newline"}
 

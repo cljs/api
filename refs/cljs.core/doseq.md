@@ -48,7 +48,7 @@ the head of the sequence. Returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1670-L1724):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1670-L1724):
 
 ```clj
 (defmacro doseq
@@ -109,12 +109,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1670-1724](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1670-L1724)</ins>
+                └── <ins>[core.clj:1670-1724](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1670-L1724)</ins>
 </pre>
 
 -->
@@ -170,7 +170,7 @@ The API data for this symbol:
  :source {:code "(defmacro doseq\n  [seq-exprs & body]\n  (assert-args doseq\n     (vector? seq-exprs) \"a vector for its binding\"\n     (even? (count seq-exprs)) \"an even number of forms in binding vector\")\n  (let [err (fn [& msg] (throw (ex-info (apply core/str msg) {})))\n        step (fn step [recform exprs]\n               (if-not exprs\n                 [true `(do ~@body)]\n                 (let [k (first exprs)\n                       v (second exprs)\n\n                       seqsym (gensym \"seq__\")\n                       recform (if (core/keyword? k) recform `(recur (next ~seqsym) nil 0 0))\n                       steppair (step recform (nnext exprs))\n                       needrec (steppair 0)\n                       subform (steppair 1)]\n                   (core/cond\n                     (= k :let) [needrec `(let ~v ~subform)]\n                     (= k :while) [false `(when ~v\n                                            ~subform\n                                            ~@(when needrec [recform]))]\n                     (= k :when) [false `(if ~v\n                                           (do\n                                             ~subform\n                                             ~@(when needrec [recform]))\n                                           ~recform)]\n                     (core/keyword? k) (err \"Invalid 'doseq' keyword\" k)\n                     :else (let [chunksym (with-meta (gensym \"chunk__\")\n                                            {:tag 'not-native})\n                                 countsym (gensym \"count__\")\n                                 isym     (gensym \"i__\")\n                                 recform-chunk  `(recur ~seqsym ~chunksym ~countsym (unchecked-inc ~isym))\n                                 steppair-chunk (step recform-chunk (nnext exprs))\n                                 subform-chunk  (steppair-chunk 1)]\n                             [true `(loop [~seqsym   (seq ~v)\n                                           ~chunksym nil\n                                           ~countsym 0\n                                           ~isym     0]\n                                      (if (coercive-boolean (< ~isym ~countsym))\n                                        (let [~k (-nth ~chunksym ~isym)]\n                                          ~subform-chunk\n                                          ~@(when needrec [recform-chunk]))\n                                        (when-let [~seqsym (seq ~seqsym)]\n                                          (if (chunked-seq? ~seqsym)\n                                            (let [c# (chunk-first ~seqsym)]\n                                              (recur (chunk-rest ~seqsym) c#\n                                                     (count c#) 0))\n                                            (let [~k (first ~seqsym)]\n                                              ~subform\n                                              ~@(when needrec [recform]))))))])))))]\n    (nth (step nil (seq seq-exprs)) 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [1670 1724]},
  :full-name "cljs.core/doseq",

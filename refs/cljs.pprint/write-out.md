@@ -39,7 +39,7 @@ Normal library clients should use the standard "write" interface.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L725-L747):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L725-L747):
 
 ```clj
 (defn write-out
@@ -61,12 +61,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:725-747](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/pprint.cljs#L725-L747)</ins>
+                └── <ins>[pprint.cljs:725-747](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/pprint.cljs#L725-L747)</ins>
 </pre>
 
 -->
@@ -117,7 +117,7 @@ The API data for this symbol:
  :source {:code "(defn write-out\n  [object]\n  (let [length-reached (and *current-length*\n                            *print-length*\n                            (>= *current-length* *print-length*))]\n    (if-not *print-pretty*\n      (pr object)\n      (if length-reached\n        (-write *out* \"...\") ;;TODO could this (incorrectly) print ... on the next line?\n        (do\n          (if *current-length* (set! *current-length* (inc *current-length*)))\n          (*print-pprint-dispatch* object))))\n    length-reached))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [725 747]},
  :full-name "cljs.pprint/write-out",

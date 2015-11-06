@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L6291-L6387):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L6294-L6390):
 
 ```clj
 (deftype HashCollisionNode [edit
@@ -131,12 +131,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:6291-6387](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/cljs/core.cljs#L6291-L6387)</ins>
+                └── <ins>[core.cljs:6294-6390](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/cljs/core.cljs#L6294-L6390)</ins>
 </pre>
 
 -->
@@ -187,9 +187,9 @@ The API data for this symbol:
  :source {:code "(deftype HashCollisionNode [edit\n                            ^:mutable collision-hash\n                            ^:mutable cnt\n                            ^:mutable arr]\n  Object\n  (inode-assoc [inode shift hash key val added-leaf?]\n    (if (== hash collision-hash)\n      (let [idx (hash-collision-node-find-index arr cnt key)]\n        (if (== idx -1)\n          (let [len     (* 2 cnt)\n                new-arr (make-array (+ len 2))]\n            (array-copy arr 0 new-arr 0 len)\n            (aset new-arr len key)\n            (aset new-arr (inc len) val)\n            (set! (.-val added-leaf?) true)\n            (HashCollisionNode. nil collision-hash (inc cnt) new-arr))\n          (if (= (aget arr idx) val)\n            inode\n            (HashCollisionNode. nil collision-hash cnt (clone-and-set arr (inc idx) val)))))\n      (.inode-assoc (BitmapIndexedNode. nil (bitpos collision-hash shift) (array nil inode))\n                    shift hash key val added-leaf?)))\n\n  (inode-without [inode shift hash key]\n    (let [idx (hash-collision-node-find-index arr cnt key)]\n      (cond (== idx -1) inode\n            (== cnt 1)  nil\n            :else (HashCollisionNode. nil collision-hash (dec cnt) (remove-pair arr (quot idx 2))))))\n\n  (inode-lookup [inode shift hash key not-found]\n    (let [idx (hash-collision-node-find-index arr cnt key)]\n      (cond (< idx 0)              not-found\n            (key-test key (aget arr idx)) (aget arr (inc idx))\n            :else                  not-found)))\n\n  (inode-find [inode shift hash key not-found]\n    (let [idx (hash-collision-node-find-index arr cnt key)]\n      (cond (< idx 0)              not-found\n            (key-test key (aget arr idx)) [(aget arr idx) (aget arr (inc idx))]\n            :else                  not-found)))\n\n  (inode-seq [inode]\n    (create-inode-seq arr))\n\n  (ensure-editable [inode e]\n    (if (identical? e edit)\n      inode\n      (let [new-arr (make-array (* 2 (inc cnt)))]\n        (array-copy arr 0 new-arr 0 (* 2 cnt))\n        (HashCollisionNode. e collision-hash cnt new-arr))))\n\n  (ensure-editable-array [inode e count array]\n    (if (identical? e edit)\n      (do (set! arr array)\n          (set! cnt count)\n          inode)\n      (HashCollisionNode. edit collision-hash count array)))\n\n  (inode-assoc! [inode edit shift hash key val added-leaf?]\n    (if (== hash collision-hash)\n      (let [idx (hash-collision-node-find-index arr cnt key)]\n        (if (== idx -1)\n          (if (> (alength arr) (* 2 cnt))\n            (let [editable (edit-and-set inode edit (* 2 cnt) key (inc (* 2 cnt)) val)]\n              (set! (.-val added-leaf?) true)\n              (set! (.-cnt editable) (inc (.-cnt editable)))\n              editable)\n            (let [len     (alength arr)\n                  new-arr (make-array (+ len 2))]\n              (array-copy arr 0 new-arr 0 len)\n              (aset new-arr len key)\n              (aset new-arr (inc len) val)\n              (set! (.-val added-leaf?) true)\n              (.ensure-editable-array inode edit (inc cnt) new-arr)))\n          (if (identical? (aget arr (inc idx)) val)\n            inode\n            (edit-and-set inode edit (inc idx) val))))\n      (.inode-assoc! (BitmapIndexedNode. edit (bitpos collision-hash shift) (array nil inode nil nil))\n                     edit shift hash key val added-leaf?)))\n\n  (inode-without! [inode edit shift hash key removed-leaf?]\n    (let [idx (hash-collision-node-find-index arr cnt key)]\n      (if (== idx -1)\n        inode\n        (do (aset removed-leaf? 0 true)\n            (if (== cnt 1)\n              nil\n              (let [editable (.ensure-editable inode edit)\n                    earr     (.-arr editable)]\n                (aset earr idx (aget earr (- (* 2 cnt) 2)))\n                (aset earr (inc idx) (aget earr (dec (* 2 cnt))))\n                (aset earr (dec (* 2 cnt)) nil)\n                (aset earr (- (* 2 cnt) 2) nil)\n                (set! (.-cnt editable) (dec (.-cnt editable)))\n                editable))))))\n\n  (kv-reduce [inode f init]\n    (inode-kv-reduce arr f init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6291 6387]},
+          :lines [6294 6390]},
  :full-name "cljs.core/HashCollisionNode",
  :clj-symbol "clojure.lang/HashCollisionNode"}
 

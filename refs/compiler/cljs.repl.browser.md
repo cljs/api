@@ -107,6 +107,12 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
+<td><samp>[mime-type->encoding](../cljs.repl.browser/mime-type-GTencoding.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3297"><img valign="middle" alt="[+] 0.0-3297" title="Added in 0.0-3297" src="https://img.shields.io/badge/+-0.0--3297-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[ordering](../cljs.repl.browser/ordering.md)</samp></td>
 <td><samp>dynamic var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

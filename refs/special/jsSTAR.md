@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer.cljc#L1717-L1774):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/analyzer.cljc#L1717-L1774):
 
 ```clj
 (defmethod parse 'js*
@@ -84,12 +84,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1717-1774](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/analyzer.cljc#L1717-L1774)</ins>
+                └── <ins>[analyzer.cljc:1717-1774](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/analyzer.cljc#L1717-L1774)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _ _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (lazy-seq\n                         (cons (subs s 0 idx)\n                           (seg (subs s (inc end)))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       (when (-> form meta :numeric)\n         (let [types (map #(infer-tag env %) argexprs)]\n           (when-not (every?\n                       (fn [t]\n                         (or (nil? t)\n                             (and (symbol? t) ('#{any number long double} t))\n                             ;; TODO: type inference is not strong enough to detect that\n                             ;; when functions like first won't return nil, so variadic\n                             ;; numeric functions like cljs.core/< would produce a spurious\n                             ;; warning without this - David\n                             (and (set? t)\n                                  (or (contains? t 'number)\n                                      (contains? t 'long)\n                                      (contains? t 'double)\n                                      (contains? t 'any)))))\n                       types)\n             (warning :invalid-arithmetic env\n               {:js-op (-> form meta :js-op)\n                :types (into [] types)}))))\n       {:env env :op :js :segs (seg jsform) :args argexprs\n        :tag (or (-> form meta :tag)\n                 (and (-> form meta :numeric) 'number)\n                 nil)\n        :form form :children argexprs\n        :js-op (-> form meta :js-op)\n        :numeric (-> form meta :numeric)}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (lazy-seq\n                           (cons (subs s 0 idx)\n                             (cons inner\n                               (interp (subs s (inc end))))))))))]\n      {:env env :op :js :form form :code (apply str (interp jsform))\n       :tag (or (-> form meta :tag)\n                (and (-> form meta :numeric) 'number)\n                nil)\n       :js-op (-> form meta :js-op)\n       :numeric (-> form meta :numeric)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/analyzer.cljc",
           :lines [1717 1774]},
  :full-name "special/js*",

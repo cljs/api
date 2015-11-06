@@ -33,7 +33,7 @@ uri of the corresponding source regardless of the source language extension:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L117-L124):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L117-L124):
 
 ```clj
 (defn ns->location
@@ -46,13 +46,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:117-124](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/build/api.clj#L117-L124)</ins>
+                    └── <ins>[api.clj:117-124](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/build/api.clj#L117-L124)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn ns->location\n  ([ns] (ns->location ns env/*compiler*))\n  ([ns compiler-env]\n   (closure/source-for-namespace ns compiler-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [117 124]},
  :full-name "cljs.build.api/ns->location",

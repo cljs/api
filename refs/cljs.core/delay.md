@@ -33,7 +33,7 @@ calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1397-L1403):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1397-L1403):
 
 ```clj
 (defmacro delay
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1397-1403](https://github.com/clojure/clojurescript/blob/r3291/src/main/clojure/cljs/core.clj#L1397-L1403)</ins>
+                └── <ins>[core.clj:1397-1403](https://github.com/clojure/clojurescript/blob/r3297/src/main/clojure/cljs/core.clj#L1397-L1403)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defmacro delay\n  [& body]\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/clojure/cljs/core.clj",
           :lines [1397 1403]},
  :full-name "cljs.core/delay",

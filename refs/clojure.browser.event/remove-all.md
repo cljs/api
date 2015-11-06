@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/browser/event.cljs#L100):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/event.cljs#L100):
 
 ```clj
 (defn remove-all [opt_obj opt_type opt_capt])
@@ -32,13 +32,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3291/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3291
+clojurescript @ r3297
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[event.cljs:100](https://github.com/clojure/clojurescript/blob/r3291/src/main/cljs/clojure/browser/event.cljs#L100)</ins>
+                    └── <ins>[event.cljs:100](https://github.com/clojure/clojurescript/blob/r3297/src/main/cljs/clojure/browser/event.cljs#L100)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn remove-all [opt_obj opt_type opt_capt])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3291",
+          :tag "r3297",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [100]},
  :full-name "clojure.browser.event/remove-all",
