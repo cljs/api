@@ -35,7 +35,7 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L77-L78):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L90-L91):
 
 ```clj
 (defn ^boolean number? [n]
@@ -46,18 +46,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:77-78](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L77-L78)</ins>
+            └── <ins>[core.cljs:90-91](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L90-L91)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L304-L305):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L305-L306):
 
 ```clj
 (defmacro number? [x]
@@ -68,11 +68,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:304-305](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L304-L305)</ins>
+            └── <ins>[core.clj:305-306](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L305-L306)</ins>
 </pre>
 -->
 
@@ -124,15 +124,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean number? [n]\n  (cljs.core/number? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2030",
+          :tag "r2060",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [77 78]},
+          :lines [90 91]},
  :extra-sources [{:code "(defmacro number? [x]\n  (bool-expr (core/list 'js* \"typeof ~{} === 'number'\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2030",
+                  :tag "r2060",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [304 305]}],
+                  :lines [305 306]}],
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

@@ -25,10 +25,10 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2436-L2437):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L2465-L2466):
 
 ```clj
-(defn persistent! [tcoll]
+(defn ^not-native persistent! [tcoll]
   (-persistent! tcoll))
 ```
 
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2436-2437](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L2436-L2437)</ins>
+            └── <ins>[core.cljs:2465-2466](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L2465-L2466)</ins>
 </pre>
 
 -->
@@ -82,18 +82,19 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type not-native,
+ :ns "cljs.core",
  :name "persistent!",
  :signature ["[tcoll]"],
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/persistentBANG",
- :source {:code "(defn persistent! [tcoll]\n  (-persistent! tcoll))",
+ :source {:code "(defn ^not-native persistent! [tcoll]\n  (-persistent! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2030",
+          :tag "r2060",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2436 2437]},
+          :lines [2465 2466]},
  :full-name "cljs.core/persistent!",
  :clj-symbol "clojure.core/persistent!"}
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/clojure/browser/event.cljs#L92):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/clojure/browser/event.cljs#L92):
 
 ```clj
 (defn unique-event-id [event-type])
@@ -32,12 +32,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:92](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/clojure/browser/event.cljs#L92)</ins>
+                └── <ins>[event.cljs:92](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/clojure/browser/event.cljs#L92)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn unique-event-id [event-type])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2030",
+          :tag "r2060",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [92]},
  :full-name "clojure.browser.event/unique-event-id",

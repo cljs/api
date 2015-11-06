@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2060](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2060)__</td>
+<td>2013-11-21</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.7.10</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002060syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002060library">
++3 
+</a>
+</td>
+<td>
+<a href="#user-content-002060compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2030](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2030)__</td>
 <td>2013-11-08</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1004,6 +1027,41 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2060
+
+<a name="002060syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002060library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*print-length\*](refs/cljs.core/STARprint-lengthSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*print-newline\*](refs/cljs.core/STARprint-newlineSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/enable-console-print!](refs/cljs.core/enable-console-printBANG.md)</samp></td>
+</tr>
+</table>
+
+<a name="002060compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2030
@@ -4450,7 +4508,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/aclone](refs/cljs.core/aclone.md)</samp></td>
 </tr>

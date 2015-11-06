@@ -44,7 +44,7 @@ Returns a new hash map with supplied mappings.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L5794-L5801):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L5834-L5841):
 
 ```clj
 (defn hash-map
@@ -59,26 +59,26 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5794-5801](https://github.com/clojure/clojurescript/blob/r2030/src/cljs/cljs/core.cljs#L5794-L5801)</ins>
+            └── <ins>[core.cljs:5834-5841](https://github.com/clojure/clojurescript/blob/r2060/src/cljs/cljs/core.cljs#L5834-L5841)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L1308-L1314):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1323-L1329):
 
 ```clj
 (defmacro hash-map
   ([] `cljs.core.PersistentHashMap.EMPTY)
   ([& kvs]
     (let [pairs (partition 2 kvs)
-           ks    (map first pairs)
-           vs    (map second pairs)]
+          ks    (map first pairs)
+          vs    (map second pairs)]
       `(cljs.core.PersistentHashMap.fromArrays (array ~@ks) (array ~@vs)))))
 ```
 
@@ -86,11 +86,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2030/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2030
+clojurescript @ r2060
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1308-1314](https://github.com/clojure/clojurescript/blob/r2030/src/clj/cljs/core.clj#L1308-L1314)</ins>
+            └── <ins>[core.clj:1323-1329](https://github.com/clojure/clojurescript/blob/r2060/src/clj/cljs/core.clj#L1323-L1329)</ins>
 </pre>
 -->
 
@@ -141,15 +141,15 @@ The API data for this symbol:
  :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap.EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2030",
+          :tag "r2060",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5794 5801]},
- :extra-sources [{:code "(defmacro hash-map\n  ([] `cljs.core.PersistentHashMap.EMPTY)\n  ([& kvs]\n    (let [pairs (partition 2 kvs)\n           ks    (map first pairs)\n           vs    (map second pairs)]\n      `(cljs.core.PersistentHashMap.fromArrays (array ~@ks) (array ~@vs)))))",
+          :lines [5834 5841]},
+ :extra-sources [{:code "(defmacro hash-map\n  ([] `cljs.core.PersistentHashMap.EMPTY)\n  ([& kvs]\n    (let [pairs (partition 2 kvs)\n          ks    (map first pairs)\n          vs    (map second pairs)]\n      `(cljs.core.PersistentHashMap.fromArrays (array ~@ks) (array ~@vs)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2030",
+                  :tag "r2060",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1308 1314]}],
+                  :lines [1323 1329]}],
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

@@ -95,10 +95,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/\*print-length\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-length*)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/\*print-level\*](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-level*)</samp></td>
 </tr>
 <tr>
