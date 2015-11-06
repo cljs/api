@@ -27,7 +27,7 @@ Defines a scope where JavaScript's implicit "this" is bound to the name provided
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/core.clj#L658-L662):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L658-L662):
 
 ```clj
 (defmacro this-as
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2268
+clojurescript @ r2277
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:658-662](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/core.clj#L658-L662)</ins>
+            └── <ins>[core.clj:658-662](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L658-L662)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defmacro this-as\n  [name & body]\n  `(let [~name (js-this)]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2268",
+          :tag "r2277",
           :filename "src/clj/cljs/core.clj",
           :lines [658 662]},
  :full-name "cljs.core/this-as",

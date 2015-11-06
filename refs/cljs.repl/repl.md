@@ -27,7 +27,7 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/repl.clj#L182-L235):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/repl.clj#L182-L235):
 
 ```clj
 (defn repl
@@ -89,11 +89,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2268
+clojurescript @ r2277
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:182-235](https://github.com/clojure/clojurescript/blob/r2268/src/clj/cljs/repl.clj#L182-L235)</ins>
+            └── <ins>[repl.clj:182-235](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/repl.clj#L182-L235)</ins>
 </pre>
 
 -->
@@ -141,7 +141,7 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & {:keys [analyze-path verbose warn-on-undeclared special-fns static-fns] :as opts\n               :or {warn-on-undeclared true}}]\n  (print \"To quit, type: \")\n  (prn :cljs/quit)\n  (env/with-compiler-env\n    (or (::env/compiler repl-env) (env/default-compiler-env opts))\n    (binding [ana/*cljs-ns* 'cljs.user\n              *cljs-verbose* verbose\n              ana/*cljs-warnings* (assoc ana/*cljs-warnings*\n                                    :unprovided warn-on-undeclared\n                                    :undeclared-var warn-on-undeclared\n                                    :undeclared-ns warn-on-undeclared\n                                    :undeclared-ns-form warn-on-undeclared)\n              ana/*cljs-static-fns* static-fns]\n      (when analyze-path\n        (analyze-source analyze-path))\n      (let [env {:context :expr :locals {}}\n            special-fns (merge default-special-fns special-fns)\n            is-special-fn? (set (keys special-fns))\n            read-error (Object.)]\n        (-setup repl-env)\n        (loop []\n          (print (str \"ClojureScript:\" ana/*cljs-ns* \"> \"))\n          (flush)\n          (let [rdr (readers/source-logging-push-back-reader\n                     (java.io.PushbackReader. (io/reader *in*))\n                     1\n                     \"NO_SOURCE_FILE\")\n                form (try\n                       (binding [*ns* (create-ns ana/*cljs-ns*)\n                                 reader/*data-readers* tags/*cljs-data-readers*\n                                 reader/*alias-map*\n                                 (apply merge\n                                        ((juxt :requires :require-macros)\n                                         (ana/get-namespace ana/*cljs-ns*)))]\n                         (reader/read rdr nil read-error))\n                       (catch Exception e\n                         (println (.getMessage e))\n                         read-error))]\n            (cond\n             (identical? form read-error) (recur)\n             (= form :cljs/quit) :quit\n\n             (and (seq? form) (is-special-fn? (first form)))\n             (do (apply (get special-fns (first form)) repl-env (rest form))\n                 (newline)\n                 (recur))\n\n             :else\n             (do (eval-and-print repl-env env form)\n                 (recur)))))\n        (-tear-down repl-env)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2268",
+          :tag "r2277",
           :filename "src/clj/cljs/repl.clj",
           :lines [182 235]},
  :full-name "cljs.repl/repl",

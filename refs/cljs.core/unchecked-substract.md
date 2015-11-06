@@ -1,11 +1,12 @@
-## cljs.core/unchecked-substract
+## ~~cljs.core/unchecked-substract~~
 
 
+> __MOVED__, please see [`cljs.core/unchecked-subtract`](../cljs.core/unchecked-subtract.md)
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" title="Added in 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" title="Added in 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2277"><img valign="middle" alt="[×] 0.0-2277" title="Removed in 0.0-2277" src="https://img.shields.io/badge/×-0.0--2277-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -90,11 +91,12 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:return-type number,
+{:moved "cljs.core/unchecked-subtract",
+ :return-type number,
  :ns "cljs.core",
  :name "unchecked-substract",
  :signature ["[x]" "[x y]" "[x y & more]"],
- :history [["+" "0.0-1798"]],
+ :history [["+" "0.0-1798"] ["-" "0.0-2277"]],
  :type "function",
  :full-name-encode "cljs.core/unchecked-substract",
  :source {:code "(defn ^number unchecked-substract\n  ([x] (cljs.core/unchecked-subtract x))\n  ([x y] (cljs.core/unchecked-subtract x y))\n  ([x y & more] (reduce unchecked-substract (cljs.core/unchecked-subtract x y) more)))",
@@ -104,7 +106,8 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [1805 1810]},
  :full-name "cljs.core/unchecked-substract",
- :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}
+ :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result.",
+ :removed {:in "0.0-2277", :last-seen "0.0-2268"}}
 
 ```
 

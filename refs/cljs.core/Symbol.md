@@ -25,32 +25,40 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L550-L574):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L550-L582):
 
 ```clj
 (deftype Symbol [ns name str ^:mutable _hash _meta]
   Object
   (toString [_] str)
+  (equiv [this other] (-equiv this other))
+
   IEquiv
   (-equiv [_ other]
     (if (instance? Symbol other)
       (identical? str (.-str other))
       false))
+
   IFn
   (-invoke [sym coll]
     (-lookup coll sym nil))
   (-invoke [sym coll not-found]
     (-lookup coll sym not-found))
+
   IMeta
   (-meta [_] _meta)
+
   IWithMeta
   (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))
+
   IHash
   (-hash [sym]
     (caching-hash sym hash-symbol _hash))
+
   INamed
   (-name [_] name)
   (-namespace [_] ns)
+
   IPrintWithWriter
   (-pr-writer [o writer _] (-write writer str)))
 ```
@@ -59,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2268
+clojurescript @ r2277
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:550-574](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L550-L574)</ins>
+            └── <ins>[core.cljs:550-582](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L550-L582)</ins>
 </pre>
 
 -->
@@ -111,12 +119,12 @@ The API data for this symbol:
  :history [["+" "0.0-1798"]],
  :type "type",
  :full-name-encode "cljs.core/Symbol",
- :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n  IFn\n  (-invoke [sym coll]\n    (-lookup coll sym nil))\n  (-invoke [sym coll not-found]\n    (-lookup coll sym not-found))\n  IMeta\n  (-meta [_] _meta)\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
+ :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  (equiv [this other] (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n\n  IFn\n  (-invoke [sym coll]\n    (-lookup coll sym nil))\n  (-invoke [sym coll not-found]\n    (-lookup coll sym not-found))\n\n  IMeta\n  (-meta [_] _meta)\n\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2268",
+          :tag "r2277",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [550 574]},
+          :lines [550 582]},
  :full-name "cljs.core/Symbol",
  :clj-symbol "clojure.lang/Symbol"}
 
