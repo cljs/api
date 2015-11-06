@@ -30,7 +30,7 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1985-L1988):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2042-L2045):
 
 ```clj
 (defn long
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1985-1988](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1985-L1988)</ins>
+            └── <ins>[core.cljs:2042-2045](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2042-L2045)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn long\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1985 1988]},
+          :lines [2042 2045]},
  :full-name "cljs.core/long",
  :clj-symbol "clojure.core/long",
  :docstring "Coerce to long by stripping decimal places. Identical to `int'."}

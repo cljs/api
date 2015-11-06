@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L265-L266):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L270-L271):
 
 ```clj
 (defprotocol IIndexed
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:265-266](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L265-L266)</ins>
+            └── <ins>[core.cljs:270-271](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L270-L271)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IIndexed\n  (-nth [coll n] [coll n not-found]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [265 266]},
+          :lines [270 271]},
  :methods [{:name "-nth",
             :signature ["[coll n]" "[coll n not-found]"],
             :docstring nil}],

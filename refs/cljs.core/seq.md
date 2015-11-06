@@ -47,7 +47,7 @@ Strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L651-L672):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L702-L723):
 
 ```clj
 (defn ^seq seq
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:651-672](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L651-L672)</ins>
+            └── <ins>[core.cljs:702-723](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L702-L723)</ins>
 </pre>
 
 -->
@@ -133,9 +133,9 @@ The API data for this symbol:
  :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (implements? ISeqable coll)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (string? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0))\n\n      (native-satisfies? ISeqable coll)\n      (-seq coll)\n\n      :else (throw (js/Error. (str coll \" is not ISeqable\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [651 672]},
+          :lines [702 723]},
  :full-name "cljs.core/seq",
  :clj-symbol "clojure.core/seq",
  :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}

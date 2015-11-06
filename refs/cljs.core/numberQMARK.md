@@ -35,7 +35,7 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L93-L94):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L93-L94):
 
 ```clj
 (defn ^boolean number? [n]
@@ -46,18 +46,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:93-94](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L93-L94)</ins>
+            └── <ins>[core.cljs:93-94](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L93-L94)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L330-L331):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L331-L332):
 
 ```clj
 (defmacro number? [x]
@@ -68,11 +68,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:330-331](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L330-L331)</ins>
+            └── <ins>[core.clj:331-332](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L331-L332)</ins>
 </pre>
 -->
 
@@ -124,15 +124,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean number? [n]\n  (cljs.core/number? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
           :lines [93 94]},
  :extra-sources [{:code "(defmacro number? [x]\n  (bool-expr (core/list 'js* \"typeof ~{} === 'number'\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [330 331]}],
+                  :lines [331 332]}],
  :full-name "cljs.core/number?",
  :clj-symbol "clojure.core/number?"}
 

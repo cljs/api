@@ -27,7 +27,7 @@ Return true if s satisfies ISeqable
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1542-L1545):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1599-L1602):
 
 ```clj
 (defn ^boolean seqable?
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1542-1545](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1542-L1545)</ins>
+            └── <ins>[core.cljs:1599-1602](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1599-L1602)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean seqable?\n  [s]\n  (satisfies? ISeqable s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1542 1545]},
+          :lines [1599 1602]},
  :full-name "cljs.core/seqable?",
  :docstring "Return true if s satisfies ISeqable"}
 

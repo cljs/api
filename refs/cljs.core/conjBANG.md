@@ -40,7 +40,7 @@ may happen at different 'places' depending on the concrete type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2858-L2869):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2923-L2934):
 
 ```clj
 (defn conj!
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2858-2869](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2858-L2869)</ins>
+            └── <ins>[core.cljs:2923-2934](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2923-L2934)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn conj!\n  ([] (transient []))\n  ([coll] coll)\n  ([tcoll val]\n    (-conj! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-conj! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2858 2869]},
+          :lines [2923 2934]},
  :full-name "cljs.core/conj!",
  :clj-symbol "clojure.core/conj!",
  :docstring "Adds x to the transient collection, and return coll. The 'addition'\nmay happen at different 'places' depending on the concrete type."}

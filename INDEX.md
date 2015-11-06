@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2665__ [all](HISTORY.md)</td>
-<td>2015-01-04</td>
+<td>__0.0-2719__ [all](HISTORY.md)</td>
+<td>2015-01-24</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2665__ ([See Full History](HISTORY.md)):
+Changes from __0.0-2719__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,7 +34,25 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentHashMap.fromArray](refs/cljs.core/PersistentHashMapDOTfromArray.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/load-file\*](refs/cljs.core/load-fileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/with-read-known](refs/cljs.repl/with-read-known.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__
@@ -43,9 +61,33 @@ __Compiler API Changes__
 
 <tr>
 <td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/IReplEnvOptions](refs/cljs.repl/IReplEnvOptions.md)</samp></td>
+</tr>
+<tr>
+<td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.repl.browser/setup](refs/cljs.repl.browser/setup.md)</samp></td>
+<td><samp>[cljs.repl/repl-read](refs/cljs.repl/repl-read.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/skip-if-eol](refs/cljs.repl/skip-if-eol.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/skip-whitespace](refs/cljs.repl/skip-whitespace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/with-read-known](refs/cljs.repl/with-read-known.md)</samp></td>
 </tr>
 </table>
 

@@ -42,7 +42,7 @@ Returns true if x is nil, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L85-L88):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L85-L88):
 
 ```clj
 (defn ^boolean nil?
@@ -54,18 +54,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:85-88](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L85-L88)</ins>
+            └── <ins>[core.cljs:85-88](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L85-L88)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L257-L258):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L258-L259):
 
 ```clj
 (defmacro nil? [x]
@@ -76,11 +76,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:257-258](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L257-L258)</ins>
+            └── <ins>[core.clj:258-259](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L258-L259)</ins>
 </pre>
 -->
 
@@ -132,15 +132,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean nil?\n  [x]\n  (coercive-= x nil))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
           :lines [85 88]},
  :extra-sources [{:code "(defmacro nil? [x]\n  `(coercive-= ~x nil))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [257 258]}],
+                  :lines [258 259]}],
  :full-name "cljs.core/nil?",
  :clj-symbol "clojure.core/nil?",
  :docstring "Returns true if x is nil, false otherwise."}

@@ -40,7 +40,7 @@ Bitwise shift right with zero fill
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2078-L2080):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2143-L2145):
 
 ```clj
 (defn unsigned-bit-shift-right
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2078-2080](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2078-L2080)</ins>
+            └── <ins>[core.cljs:2143-2145](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2143-L2145)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L534-L535):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L535-L536):
 
 ```clj
 (defmacro ^::ana/numeric unsigned-bit-shift-right [x n]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:534-535](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L534-L535)</ins>
+            └── <ins>[core.clj:535-536](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L535-L536)</ins>
 </pre>
 -->
 
@@ -128,15 +128,15 @@ The API data for this symbol:
  :source {:code "(defn unsigned-bit-shift-right\n  [x n] (cljs.core/unsigned-bit-shift-right x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2078 2080]},
+          :lines [2143 2145]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unsigned-bit-shift-right [x n]\n  (core/list 'js* \"(~{} >>> ~{})\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [534 535]}],
+                  :lines [535 536]}],
  :full-name "cljs.core/unsigned-bit-shift-right",
  :clj-symbol "clojure.core/unsigned-bit-shift-right",
  :docstring "Bitwise shift right with zero fill"}

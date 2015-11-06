@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1896):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1953):
 
 ```clj
 (defn ^number unchecked-double [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1896](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1896)</ins>
+            └── <ins>[core.cljs:1953](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1953)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L369):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L370):
 
 ```clj
 (defmacro unchecked-double [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:369](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L369)</ins>
+            └── <ins>[core.clj:370](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L370)</ins>
 </pre>
 -->
 
@@ -110,15 +110,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-double [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1896]},
+          :lines [1953]},
  :extra-sources [{:code "(defmacro unchecked-double [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [369]}],
+                  :lines [370]}],
  :full-name "cljs.core/unchecked-double",
  :clj-symbol "clojure.core/unchecked-double"}
 

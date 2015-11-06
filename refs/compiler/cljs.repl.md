@@ -86,9 +86,39 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 </tr>
 <tr>
 <td></td>
+<td><samp>[repl-read](../cljs.repl/repl-read.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[skip-if-eol](../cljs.repl/skip-if-eol.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[skip-whitespace](../cljs.repl/skip-whitespace.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[with-read-known](../cljs.repl/with-read-known.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[IJavaScriptEnv](../cljs.repl/IJavaScriptEnv.md)</samp></td>
 <td><samp>protocol</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[IReplEnvOptions](../cljs.repl/IReplEnvOptions.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
 </tr>
 </table>
 

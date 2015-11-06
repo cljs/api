@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L60):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L60):
 
 ```clj
 (defmulti handle-reflect-query (fn [[param _] & _] param))
@@ -32,19 +32,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[reflect.clj:60](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L60)</ins>
+                └── <ins>[reflect.clj:60](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L60)</ins>
 </pre>
 
 -->
 
 ---
 
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L62-L65):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L62-L65):
 
 ```clj
 (defmethod handle-reflect-query "var"
@@ -57,17 +57,17 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2665/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[reflect.clj:62-65](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L62-L65)</ins>
+                └── <ins>[reflect.clj:62-65](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L62-L65)</ins>
 </pre>
 -->
 
 ---
-Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L67-L70):
+Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L67-L70):
 
 ```clj
 (defmethod handle-reflect-query "macroform"
@@ -80,12 +80,12 @@ Dispatch method @ [github](https://github.com/clojure/clojurescript/blob/r2665/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[reflect.clj:67-70](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/repl/reflect.clj#L67-L70)</ins>
+                └── <ins>[reflect.clj:67-70](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/repl/reflect.clj#L67-L70)</ins>
 </pre>
 -->
 
@@ -131,19 +131,19 @@ The API data for this symbol:
  :source {:code "(defmulti handle-reflect-query (fn [[param _] & _] param))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/clj/cljs/repl/reflect.clj",
           :lines [60]},
  :extra-sources ({:code "(defmethod handle-reflect-query \"var\"\n  [[_ sym] req conn opts]\n  (let [sym (read-url-string sym)]\n    (compile-and-return conn (get-meta sym))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/repl/reflect.clj",
                   :lines [62 65]}
                  {:code "(defmethod handle-reflect-query \"macroform\"\n  [[_ mform] req conn opts]\n  (let [mform (-> mform read-url-string macroexpand)]\n    (server/send-and-close conn 200 (with-out-str (pprint/pprint mform)))))",
                   :title "Dispatch method",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/repl/reflect.clj",
                   :lines [67 70]}),
  :full-name "cljs.repl.reflect/handle-reflect-query"}

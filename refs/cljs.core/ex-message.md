@@ -29,7 +29,7 @@ For non-Errors returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9076-L9082):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9189-L9195):
 
 ```clj
 (defn ex-message
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9076-9082](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9076-L9082)</ins>
+            └── <ins>[core.cljs:9189-9195](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9189-L9195)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn ex-message\n  [ex]\n  (when (instance? js/Error ex)\n    (.-message ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9076 9082]},
+          :lines [9189 9195]},
  :full-name "cljs.core/ex-message",
  :docstring "Alpha - subject to change.\nReturns the message attached to the given Error / ExceptionInfo object.\nFor non-Errors returns nil."}
 

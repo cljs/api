@@ -61,7 +61,7 @@ Returns a sequence of all but the last item in `s`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7544-L7548):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L7657-L7661):
 
 ```clj
 (defn butlast [s]
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7544-7548](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7544-L7548)</ins>
+            └── <ins>[core.cljs:7657-7661](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L7657-L7661)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defn butlast [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7544 7548]},
+          :lines [7657 7661]},
  :examples [{:id "7a4676",
              :content "```clj\n(butlast [1 2 3])\n;;=> (1 2)\n\n(butlast [1 2])\n;;=> (1)\n\n(butlast [1])\n;;=> nil\n\n(butlast [])\n;;=> nil\n```"}],
  :full-name "cljs.core/butlast",

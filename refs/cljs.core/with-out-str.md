@@ -32,7 +32,7 @@ printing calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L1647-L1655):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L1648-L1656):
 
 ```clj
 (defmacro with-out-str
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1647-1655](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L1647-L1655)</ins>
+            └── <ins>[core.clj:1648-1656](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L1648-L1656)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/clj/cljs/core.clj",
-          :lines [1647 1655]},
+          :lines [1648 1656]},
  :full-name "cljs.core/with-out-str",
  :clj-symbol "clojure.core/with-out-str",
  :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}

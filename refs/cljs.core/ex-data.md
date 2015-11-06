@@ -32,7 +32,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9068-L9074):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9181-L9187):
 
 ```clj
 (defn ex-data
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9068-9074](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9068-L9074)</ins>
+            └── <ins>[core.cljs:9181-9187](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9181-L9187)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn ex-data\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-data ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9068 9074]},
+          :lines [9181 9187]},
  :full-name "cljs.core/ex-data",
  :clj-symbol "clojure.core/ex-data",
  :docstring "Alpha - subject to change.\nReturns exception data (a map) if ex is an ExceptionInfo.\nOtherwise returns nil."}

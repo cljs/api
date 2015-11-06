@@ -35,7 +35,7 @@ Returns the result of (re-find re s) if re fully matches s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7948-L7957):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L8061-L8070):
 
 ```clj
 (defn re-matches
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7948-7957](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7948-L7957)</ins>
+            └── <ins>[core.cljs:8061-8070](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L8061-L8070)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn re-matches\n  [re s]\n  (if (string? s)\n    (let [matches (.exec re s)]\n      (when (= (first matches) s)\n        (if (== (count matches) 1)\n          (first matches)\n          (vec matches))))\n    (throw (js/TypeError. \"re-matches must match against a string.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7948 7957]},
+          :lines [8061 8070]},
  :full-name "cljs.core/re-matches",
  :clj-symbol "clojure.core/re-matches",
  :docstring "Returns the result of (re-find re s) if re fully matches s."}

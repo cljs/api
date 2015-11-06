@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L277-L278):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L282-L283):
 
 ```clj
 (defprotocol ILookup
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:277-278](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L277-L278)</ins>
+            └── <ins>[core.cljs:282-283](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L282-L283)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ILookup\n  (-lookup [o k] [o k not-found]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [277 278]},
+          :lines [282 283]},
  :methods [{:name "-lookup",
             :signature ["[o k]" "[o k not-found]"],
             :docstring nil}],

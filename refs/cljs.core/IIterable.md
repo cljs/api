@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L416-L417):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L421-L422):
 
 ```clj
 (defprotocol IIterable
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:416-417](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L416-L417)</ins>
+            └── <ins>[core.cljs:421-422](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L421-L422)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IIterable\n  (-iterator [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [416 417]},
+          :lines [421 422]},
  :methods [{:name "-iterator", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IIterable",
  :history [["+" "0.0-2356"]]}

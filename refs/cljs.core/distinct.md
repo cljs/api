@@ -40,31 +40,42 @@ Returns a lazy sequence of the elements of coll with duplicates removed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7530-L7541):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L7632-L7654):
 
 ```clj
 (defn distinct
-  [coll]
-  (let [step (fn step [xs seen]
-               (lazy-seq
-                ((fn [[f :as xs] seen]
-                   (when-let [s (seq xs)]
-                     (if (contains? seen f)
-                       (recur (rest s) seen)
-                       (cons f (step (rest s) (conj seen f))))))
-                 xs seen)))]
-    (step coll #{})))
+  ([]
+    (fn [rf]
+      (let [seen (volatile! #{})]
+        (fn
+          ([] (rf))
+          ([result] (rf result))
+          ([result input]
+            (if (contains? @seen input)
+              result
+              (do (vswap! seen conj input)
+                  (rf result input))))))))
+  ([coll]
+    (let [step (fn step [xs seen]
+                 (lazy-seq
+                   ((fn [[f :as xs] seen]
+                      (when-let [s (seq xs)]
+                        (if (contains? seen f)
+                          (recur (rest s) seen)
+                          (cons f (step (rest s) (conj seen f))))))
+                     xs seen)))]
+      (step coll #{}))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7530-7541](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L7530-L7541)</ins>
+            └── <ins>[core.cljs:7632-7654](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L7632-L7654)</ins>
 </pre>
 
 -->
@@ -114,12 +125,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/distinct?"],
  :full-name-encode "cljs.core/distinct",
- :source {:code "(defn distinct\n  [coll]\n  (let [step (fn step [xs seen]\n               (lazy-seq\n                ((fn [[f :as xs] seen]\n                   (when-let [s (seq xs)]\n                     (if (contains? seen f)\n                       (recur (rest s) seen)\n                       (cons f (step (rest s) (conj seen f))))))\n                 xs seen)))]\n    (step coll #{})))",
+ :source {:code "(defn distinct\n  ([]\n    (fn [rf]\n      (let [seen (volatile! #{})]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if (contains? @seen input)\n              result\n              (do (vswap! seen conj input)\n                  (rf result input))))))))\n  ([coll]\n    (let [step (fn step [xs seen]\n                 (lazy-seq\n                   ((fn [[f :as xs] seen]\n                      (when-let [s (seq xs)]\n                        (if (contains? seen f)\n                          (recur (rest s) seen)\n                          (cons f (step (rest s) (conj seen f))))))\n                     xs seen)))]\n      (step coll #{}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7530 7541]},
+          :lines [7632 7654]},
  :full-name "cljs.core/distinct",
  :clj-symbol "clojure.core/distinct",
  :docstring "Returns a lazy sequence of the elements of coll with duplicates removed"}

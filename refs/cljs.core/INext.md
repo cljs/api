@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L274-L275):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L279-L280):
 
 ```clj
 (defprotocol INext
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:274-275](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L274-L275)</ins>
+            └── <ins>[core.cljs:279-280](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L279-L280)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol INext\n  (^clj-or-nil -next [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [274 275]},
+          :lines [279 280]},
  :methods [{:name "-next", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/INext",
  :history [["+" "0.0-1424"]]}

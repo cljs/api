@@ -1547,6 +1547,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td></td>
+<td><samp>[load-file\*](../cljs.core/load-fileSTAR.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/long)</td>
 <td><samp>[long](../cljs.core/long.md)</samp></td>
 <td><samp>function</samp></td>
@@ -3597,6 +3603,12 @@ interop with JS, many predicates, etc.
 <td><samp> └── [EMPTY](../cljs.core/PersistentHashMapDOTEMPTY.md)</samp></td>
 <td><samp>var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp> └── [fromArray](../cljs.core/PersistentHashMapDOTfromArray.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719"><img valign="middle" alt="[+] 0.0-2719" title="Added in 0.0-2719" src="https://img.shields.io/badge/+-0.0--2719-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

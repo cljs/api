@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L348-L350):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L353-L355):
 
 ```clj
 (defprotocol IWriter
@@ -29,11 +29,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:348-350](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L348-L350)</ins>
+            └── <ins>[core.cljs:353-355](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L353-L355)</ins>
 </pre>
 
 -->
@@ -79,9 +79,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWriter\n  (-write [writer s])\n  (-flush [writer]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [348 350]},
+          :lines [353 355]},
  :methods [{:name "-write", :signature ["[writer s]"], :docstring nil}
            {:name "-flush", :signature ["[writer]"], :docstring nil}],
  :full-name "cljs.core/IWriter",

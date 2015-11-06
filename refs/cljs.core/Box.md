@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L5496):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L5588):
 
 ```clj
 (deftype Box [^:mutable val])
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5496](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L5496)</ins>
+            └── <ins>[core.cljs:5588](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L5588)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(deftype Box [^:mutable val])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5496]},
+          :lines [5588]},
  :full-name "cljs.core/Box",
  :clj-symbol "clojure.lang/Box"}
 

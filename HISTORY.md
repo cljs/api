@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2719](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2719)__</td>
+<td>2015-01-24</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002719syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002719library">
++3 
+</a>
+</td>
+<td>
+<a href="#user-content-002719compiler">
++5 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2665](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2665)__</td>
 <td>2015-01-04</td>
 <td><kbd>1.6.0</kbd></td>
@@ -1878,6 +1901,71 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2719
+
+<a name="002719syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002719library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentHashMap.fromArray](refs/cljs.core/PersistentHashMapDOTfromArray.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/load-file\*](refs/cljs.core/load-fileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/with-read-known](refs/cljs.repl/with-read-known.md)</samp></td>
+</tr>
+</table>
+
+<a name="002719compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/IReplEnvOptions](refs/cljs.repl/IReplEnvOptions.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/repl-read](refs/cljs.repl/repl-read.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/skip-if-eol](refs/cljs.repl/skip-if-eol.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/skip-whitespace](refs/cljs.repl/skip-whitespace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/with-read-known](refs/cljs.repl/with-read-known.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-2665

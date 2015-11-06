@@ -48,7 +48,7 @@ Returns a lazy (infinite!, or length n if supplied) sequence of xs.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3802-L3805):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3877-L3880):
 
 ```clj
 (defn repeat
@@ -60,11 +60,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3802-3805](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3802-L3805)</ins>
+            └── <ins>[core.cljs:3877-3880](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3877-L3880)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn repeat\n  ([x] (lazy-seq (cons x (repeat x))))\n  ([n x] (take n (repeat x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3802 3805]},
+          :lines [3877 3880]},
  :full-name "cljs.core/repeat",
  :clj-symbol "clojure.core/repeat",
  :docstring "Returns a lazy (infinite!, or length n if supplied) sequence of xs."}

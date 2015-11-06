@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/reader.cljs#L573-L574):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/reader.cljs#L573-L574):
 
 ```clj
 (def ^:dynamic *default-data-reader-fn*
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:573-574](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/reader.cljs#L573-L574)</ins>
+            └── <ins>[reader.cljs:573-574](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/reader.cljs#L573-L574)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *default-data-reader-fn*\n  (atom nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [573 574]},
  :full-name "cljs.reader/*default-data-reader-fn*",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L250-L251):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L255-L256):
 
 ```clj
 (defprotocol ICloneable
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:250-251](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L250-L251)</ins>
+            └── <ins>[core.cljs:255-256](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L255-L256)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ICloneable\n  (^clj -clone [value]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [250 251]},
+          :lines [255 256]},
  :methods [{:name "-clone", :signature ["[value]"], :docstring nil}],
  :full-name "cljs.core/ICloneable",
  :history [["+" "0.0-2134"]]}

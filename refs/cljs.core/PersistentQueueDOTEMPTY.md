@@ -20,21 +20,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L4881):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L4973):
 
 ```clj
-(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] 0))
+(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] empty-ordered-hash))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4881](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L4881)</ins>
+            └── <ins>[core.cljs:4973](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L4973)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :parent-type "PersistentQueue",
  :type "var",
  :full-name-encode "cljs.core/PersistentQueueDOTEMPTY",
- :source {:code "(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] 0))",
+ :source {:code "(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] empty-ordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4881]},
+          :lines [4973]},
  :full-name "cljs.core/PersistentQueue.EMPTY",
  :clj-symbol "clojure.lang/PersistentQueue.EMPTY"}
 

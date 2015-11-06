@@ -53,7 +53,7 @@ has the same effects, if any, and returns the opposite truth value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3264-L3272):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3329-L3337):
 
 ```clj
 (defn ^boolean complement
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3264-3272](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3264-L3272)</ins>
+            └── <ins>[core.cljs:3329-3337](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3329-L3337)</ins>
 </pre>
 
 -->
@@ -127,9 +127,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3264 3272]},
+          :lines [3329 3337]},
  :examples [{:id "69e359",
              :content "```clj\n(def a 10)\n((complement #(= a %)) 12)\n;;=> true\n```"}],
  :full-name "cljs.core/complement",

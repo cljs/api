@@ -48,34 +48,42 @@ accept 2 arguments, index and item.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3359-L3376):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3426-L3451):
 
 ```clj
 (defn map-indexed
-  [f coll]
-  (letfn [(mapi [idx coll]
-            (lazy-seq
-             (when-let [s (seq coll)]
-               (if (chunked-seq? s)
-                 (let [c (chunk-first s)
-                       size (count c)
-                       b (chunk-buffer size)]
-                   (dotimes [i size]
-                     (chunk-append b (f (+ idx i) (-nth c i))))
-                   (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))
-                 (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]
-    (mapi 0 coll)))
+  ([f]
+    (fn [rf]
+      (let [i (volatile! -1)]
+        (fn
+          ([] (rf))
+          ([result] (rf result))
+          ([result input]
+            (rf result (f (vswap! i inc) input)))))))
+  ([f coll]
+    (letfn [(mapi [idx coll]
+              (lazy-seq
+                (when-let [s (seq coll)]
+                  (if (chunked-seq? s)
+                    (let [c (chunk-first s)
+                          size (count c)
+                          b (chunk-buffer size)]
+                      (dotimes [i size]
+                        (chunk-append b (f (+ idx i) (-nth c i))))
+                      (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))
+                    (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]
+      (mapi 0 coll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3359-3376](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L3359-L3376)</ins>
+            └── <ins>[core.cljs:3426-3451](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L3426-L3451)</ins>
 </pre>
 
 -->
@@ -125,12 +133,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/map" "cljs.core/keep-indexed"],
  :full-name-encode "cljs.core/map-indexed",
- :source {:code "(defn map-indexed\n  [f coll]\n  (letfn [(mapi [idx coll]\n            (lazy-seq\n             (when-let [s (seq coll)]\n               (if (chunked-seq? s)\n                 (let [c (chunk-first s)\n                       size (count c)\n                       b (chunk-buffer size)]\n                   (dotimes [i size]\n                     (chunk-append b (f (+ idx i) (-nth c i))))\n                   (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                 (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n    (mapi 0 coll)))",
+ :source {:code "(defn map-indexed\n  ([f]\n    (fn [rf]\n      (let [i (volatile! -1)]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (rf result (f (vswap! i inc) input)))))))\n  ([f coll]\n    (letfn [(mapi [idx coll]\n              (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (chunk-append b (f (+ idx i) (-nth c i))))\n                      (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                    (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n      (mapi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3359 3376]},
+          :lines [3426 3451]},
  :full-name "cljs.core/map-indexed",
  :clj-symbol "clojure.core/map-indexed",
  :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item."}

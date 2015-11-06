@@ -31,7 +31,7 @@ that would apply to that value, or nil if none apply and no default
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9022-L9025):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9135-L9138):
 
 ```clj
 (defn get-method
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9022-9025](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9022-L9025)</ins>
+            └── <ins>[core.cljs:9135-9138](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9135-L9138)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn get-method\n  [multifn dispatch-val] (-get-method multifn dispatch-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9022 9025]},
+          :lines [9135 9138]},
  :full-name "cljs.core/get-method",
  :clj-symbol "clojure.core/get-method",
  :docstring "Given a multimethod and a dispatch value, returns the dispatch fn\nthat would apply to that value, or nil if none apply and no default"}

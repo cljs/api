@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9053):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9166):
 
 ```clj
 (deftype ExceptionInfo [message data cause])
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9053](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L9053)</ins>
+            └── <ins>[core.cljs:9166](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L9166)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(deftype ExceptionInfo [message data cause])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [9053]},
+          :lines [9166]},
  :full-name "cljs.core/ExceptionInfo",
  :clj-symbol "clojure.lang/ExceptionInfo"}
 

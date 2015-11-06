@@ -43,7 +43,7 @@ Please use the idiom (seq x) rather than (not (empty? x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1437-L1441):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1494-L1498):
 
 ```clj
 (defn ^boolean empty?
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1437-1441](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L1437-L1441)</ins>
+            └── <ins>[core.cljs:1494-1498](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L1494-L1498)</ins>
 </pre>
 
 -->
@@ -113,9 +113,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean empty?\n  [coll] (or (nil? coll)\n             (not (seq coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1437 1441]},
+          :lines [1494 1498]},
  :full-name "cljs.core/empty?",
  :clj-symbol "clojure.core/empty?",
  :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))"}

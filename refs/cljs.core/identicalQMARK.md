@@ -41,7 +41,7 @@ Tests if 2 arguments are the same object
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L80-L83):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L80-L83):
 
 ```clj
 (defn ^boolean identical?
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:80-83](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L80-L83)</ins>
+            └── <ins>[core.cljs:80-83](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L80-L83)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L318-L319):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L319-L320):
 
 ```clj
 (defmacro identical? [a b]
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:318-319](https://github.com/clojure/clojurescript/blob/r2665/src/clj/cljs/core.clj#L318-L319)</ins>
+            └── <ins>[core.clj:319-320](https://github.com/clojure/clojurescript/blob/r2719/src/clj/cljs/core.clj#L319-L320)</ins>
 </pre>
 -->
 
@@ -131,15 +131,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean identical?\n  [x y]\n  (cljs.core/identical? x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
           :lines [80 83]},
  :extra-sources [{:code "(defmacro identical? [a b]\n  (bool-expr (core/list 'js* \"(~{} === ~{})\" a b)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2665",
+                  :tag "r2719",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [318 319]}],
+                  :lines [319 320]}],
  :full-name "cljs.core/identical?",
  :clj-symbol "clojure.core/identical?",
  :docstring "Tests if 2 arguments are the same object"}

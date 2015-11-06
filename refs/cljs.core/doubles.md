@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2001):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2058):
 
 ```clj
 (defn doubles [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2665/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2665
+clojurescript @ r2719
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2001](https://github.com/clojure/clojurescript/blob/r2665/src/cljs/cljs/core.cljs#L2001)</ins>
+            └── <ins>[core.cljs:2058](https://github.com/clojure/clojurescript/blob/r2719/src/cljs/cljs/core.cljs#L2058)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn doubles [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2665",
+          :tag "r2719",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2001]},
+          :lines [2058]},
  :full-name "cljs.core/doubles",
  :clj-symbol "clojure.core/doubles"}
 
