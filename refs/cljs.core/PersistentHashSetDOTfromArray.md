@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L7277-L7291):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L7335-L7349):
 
 ```clj
 (set! (.-fromArray PersistentHashSet)
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7277-7291](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L7277-L7291)</ins>
+            └── <ins>[core.cljs:7335-7349](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L7335-L7349)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentHashSet)\n  (fn [items ^boolean no-clone]\n    (let [len (alength items)]\n      (if (<= len (.-HASHMAP-THRESHOLD PersistentArrayMap))\n        (let [arr (if no-clone items (aclone items))]\n          (loop [i 0\n                 out (transient (.-EMPTY PersistentArrayMap))]\n            (if (< i len)\n              (recur (inc i) (-assoc! out (aget items i) nil))\n              (PersistentHashSet. nil (-persistent! out) nil))))\n       (loop [i 0\n              out (transient (.-EMPTY PersistentHashSet))]\n         (if (< i len)\n           (recur (inc i) (-conj! out (aget items i)))\n           (-persistent! out)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7277 7291]},
+          :lines [7335 7349]},
  :full-name "cljs.core/PersistentHashSet.fromArray"}
 
 ```

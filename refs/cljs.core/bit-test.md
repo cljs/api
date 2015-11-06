@@ -60,7 +60,7 @@ Test bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2061-L2064):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2070-L2073):
 
 ```clj
 (defn bit-test
@@ -72,18 +72,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2061-2064](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2061-L2064)</ins>
+            └── <ins>[core.cljs:2070-2073](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2070-L2073)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L519-L520):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L522-L523):
 
 ```clj
 (defmacro ^::ana/numeric bit-test [x n]
@@ -94,11 +94,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:519-520](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L519-L520)</ins>
+            └── <ins>[core.clj:522-523](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L522-L523)</ins>
 </pre>
 -->
 
@@ -148,15 +148,15 @@ The API data for this symbol:
  :source {:code "(defn bit-test\n  [x n]\n  (cljs.core/bit-test x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2061 2064]},
+          :lines [2070 2073]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-test [x n]\n  (core/list 'js* \"((~{} & (1 << ~{})) != 0)\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2411",
+                  :tag "r2496",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [519 520]}],
+                  :lines [522 523]}],
  :examples [{:id "f64664",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-test 2r0100 2)\n;;=> true\n\n(bit-test 2r0100 1)\n;;=> false\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-test 4 2)\n;;=> true\n\n(bit-test 4 1)\n;;=> false\n```"}],
  :full-name "cljs.core/bit-test",

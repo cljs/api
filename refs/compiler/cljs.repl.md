@@ -43,6 +43,12 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-993"><img valign="middle" alt="[+] 0.0-993" title="Added in 0.0-993" src="https://img.shields.io/badge/+-0.0--993-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/doc)</td>
+<td><samp>[doc](../cljs.repl/doc.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td></td>
 <td><samp>[evaluate-form](../cljs.repl/evaluate-form.md)</samp></td>
 <td><samp>function</samp></td>

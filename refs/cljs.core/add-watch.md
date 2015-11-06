@@ -85,7 +85,7 @@ atom's value will change.  Example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8293-L8315):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L8361-L8383):
 
 ```clj
 (defn add-watch
@@ -97,11 +97,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8293-8315](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8293-L8315)</ins>
+            └── <ins>[core.cljs:8361-8383](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L8361-L8383)</ins>
 </pre>
 
 -->
@@ -154,9 +154,9 @@ The API data for this symbol:
  :source {:code "(defn add-watch\n  [iref key f]\n  (-add-watch iref key f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8293 8315]},
+          :lines [8361 8383]},
  :examples [{:id "2f2fe0",
              :content "```clj\n(def a (atom {}))\n\n(add-watch a :logger\n  (fn [_key _atom old-state new-state]\n    (println \"old:\" old-state)\n    (println \"new:\" new-state)))\n\n(swap! a assoc :foo \"bar\")\n;;=> will print the following:\n;; old: {}\n;; new: {:foo \"bar\"}\n```"}],
  :full-name "cljs.core/add-watch",

@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/analyzer.clj#L1234-L1236):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/analyzer.clj#L1259-L1261):
 
 ```clj
 (defmethod parse 'deftype*
@@ -29,11 +29,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1234-1236](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/analyzer.clj#L1234-L1236)</ins>
+            └── <ins>[analyzer.clj:1259-1261](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/analyzer.clj#L1259-L1261)</ins>
 </pre>
 
 -->
@@ -73,9 +73,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'deftype*\n  [_ env form _ _]\n  (parse-type :deftype* env form))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1234 1236]},
+          :lines [1259 1261]},
  :full-name "special/deftype*",
  :full-name-encode "special/deftypeSTAR",
  :history [["+" "0.0-927"]]}

@@ -123,6 +123,11 @@ shadowed by your own vars.
 <td><samp>[try](../special/try.md)</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[+] 0.0-1933" title="Added in 0.0-1933" src="https://img.shields.io/badge/+-0.0--1933-lightgrey.svg"></a> </td>
 </tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/var)</td>
+<td><samp>[var](../special/var.md)</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
+</tr>
 </table>
 
 

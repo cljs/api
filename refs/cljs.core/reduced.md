@@ -30,7 +30,7 @@ Wraps x in a way such that a reduce will terminate with the value x
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L820-L823):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L829-L832):
 
 ```clj
 (defn reduced
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:820-823](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L820-L823)</ins>
+            └── <ins>[core.cljs:829-832](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L829-L832)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn reduced\n  [x]\n  (Reduced. x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [820 823]},
+          :lines [829 832]},
  :full-name "cljs.core/reduced",
  :clj-symbol "clojure.core/reduced",
  :docstring "Wraps x in a way such that a reduce will terminate with the value x"}

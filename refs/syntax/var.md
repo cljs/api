@@ -22,7 +22,7 @@
 
 Accesses the var attached to the given symbol.
 
-
+[doc:special/var]:../special/var.md
 
 ---
 
@@ -42,7 +42,7 @@ Access the metadata of a var:
 
 ###### See Also:
 
-[``](../special/var.md)<br>
+[`var`](../special/var.md)<br>
 
 ---
 

@@ -27,7 +27,7 @@ If x is already reduced?, returns it, else returns (reduced x)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L830-L833):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L839-L842):
 
 ```clj
 (defn ensure-reduced
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:830-833](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L830-L833)</ins>
+            └── <ins>[core.cljs:839-842](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L839-L842)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn ensure-reduced\n  [x]\n  (if (reduced? x) x (reduced x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [830 833]},
+          :lines [839 842]},
  :full-name "cljs.core/ensure-reduced",
  :docstring "If x is already reduced?, returns it, else returns (reduced x)"}
 

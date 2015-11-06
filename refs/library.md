@@ -26,9 +26,24 @@ The rest of the symbols are in the following namespaces:
 <td>nodejs support functions</td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html)</td>
+<td>[cljs.pprint](library/cljs.pprint.md)</td>
+<td>a pretty-printer for printing data structures</td>
+</tr>
+<tr>
 <td></td>
 <td>[cljs.reader](library/cljs.reader.md)</td>
 <td>a reader to parse text and produce data structures</td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html)</td>
+<td>[cljs.repl](library/cljs.repl.md)</td>
+<td>macros auto-imported into a ClojureScript REPL</td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html)</td>
+<td>[cljs.test](library/cljs.test.md)</td>
+<td>a unit-testing framework</td>
 </tr>
 <tr>
 <td></td>

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L633-L635):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L636-L638):
 
 ```clj
 (defmacro specify [expr & impls]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:633-635](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L633-L635)</ins>
+            └── <ins>[core.clj:636-638](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L636-L638)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defmacro specify [expr & impls]\n  `(cljs.core/specify! (cljs.core/clone ~expr)\n     ~@impls))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/clj/cljs/core.clj",
-          :lines [633 635]},
+          :lines [636 638]},
  :full-name "cljs.core/specify",
  :full-name-encode "cljs.core/specify",
  :history [["+" "0.0-2138"]]}

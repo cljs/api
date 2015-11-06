@@ -12,6 +12,7 @@ You can also use the [`cljs.repl` macros][doc:library/cljs.repl] for exploring
 code from the REPL.
 
 [doc:special/ns]:../special/ns
+[doc:library/cljs.repl]:../library/cljs.repl
 
  <table>
 <thead><tr>

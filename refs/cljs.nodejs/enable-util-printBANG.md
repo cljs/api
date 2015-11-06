@@ -22,22 +22,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/nodejs.cljs#L11-L12):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/nodejs.cljs#L19-L20):
 
 ```clj
 (defn enable-util-print! []
-  (set! cljs.core/string-print (.-print (require "util"))))
+  (set! *print-fn* (.-print (require "util"))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:11-12](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/nodejs.cljs#L11-L12)</ins>
+            └── <ins>[nodejs.cljs:19-20](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/nodejs.cljs#L19-L20)</ins>
 </pre>
 
 -->
@@ -80,12 +80,12 @@ The API data for this symbol:
  :name "enable-util-print!",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn enable-util-print! []\n  (set! cljs.core/string-print (.-print (require \"util\"))))",
+ :source {:code "(defn enable-util-print! []\n  (set! *print-fn* (.-print (require \"util\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/nodejs.cljs",
-          :lines [11 12]},
+          :lines [19 20]},
  :full-name "cljs.nodejs/enable-util-print!",
  :full-name-encode "cljs.nodejs/enable-util-printBANG",
  :history [["+" "0.0-2156"]]}

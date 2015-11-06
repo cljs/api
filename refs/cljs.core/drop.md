@@ -50,19 +50,19 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3680-L3701):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L3738-L3759):
 
 ```clj
 (defn drop
   ([n]
      (fn [rf]
-       (let [na (atom n)]
+       (let [na (volatile! n)]
          (fn
            ([] (rf))
            ([result] (rf result))
            ([result input]
               (let [n @na]
-                (swap! na dec)
+                (vswap! na dec)
                 (if (pos? n)
                   result
                   (rf result input))))))))
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3680-3701](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3680-L3701)</ins>
+            └── <ins>[core.cljs:3738-3759](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L3738-L3759)</ins>
 </pre>
 
 -->
@@ -137,12 +137,12 @@ The API data for this symbol:
            "cljs.core/nthnext"
            "cljs.core/nthrest"],
  :full-name-encode "cljs.core/drop",
- :source {:code "(defn drop\n  ([n]\n     (fn [rf]\n       (let [na (atom n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na]\n                (swap! na dec)\n                (if (pos? n)\n                  result\n                  (rf result input))))))))\n  ([n coll]\n     (let [step (fn [n coll]\n                  (let [s (seq coll)]\n                    (if (and (pos? n) s)\n                      (recur (dec n) (rest s))\n                      s)))]\n       (lazy-seq (step n coll)))))",
+ :source {:code "(defn drop\n  ([n]\n     (fn [rf]\n       (let [na (volatile! n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na]\n                (vswap! na dec)\n                (if (pos? n)\n                  result\n                  (rf result input))))))))\n  ([n coll]\n     (let [step (fn [n coll]\n                  (let [s (seq coll)]\n                    (if (and (pos? n) s)\n                      (recur (dec n) (rest s))\n                      s)))]\n       (lazy-seq (step n coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3680 3701]},
+          :lines [3738 3759]},
  :full-name "cljs.core/drop",
  :clj-symbol "clojure.core/drop",
  :docstring "Returns a lazy sequence of all but the first n items in coll.\nReturns a stateful transducer when no collection is provided."}

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1991):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2000):
 
 ```clj
 (defn floats [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1991](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1991)</ins>
+            └── <ins>[core.cljs:2000](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2000)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn floats [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1991]},
+          :lines [2000]},
  :full-name "cljs.core/floats",
  :clj-symbol "clojure.core/floats"}
 

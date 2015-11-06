@@ -48,14 +48,14 @@ one arg, returns the concatenation of the str values of the args.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2125-L2137):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2134-L2146):
 
 ```clj
 (defn str
   ([] "")
   ([x] (if (nil? x)
          ""
-         (cljs.core/js-str x)))
+         (gstring/buildString x)))
   ([x & ys]
     (loop [sb (StringBuffer. (str x)) more ys]
       (if more
@@ -67,18 +67,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2125-2137](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2125-L2137)</ins>
+            └── <ins>[core.cljs:2134-2146](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L2134-L2146)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L207-L211):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L207-L211):
 
 ```clj
 (defmacro str [& xs]
@@ -92,11 +92,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:207-211](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L207-L211)</ins>
+            └── <ins>[core.clj:207-211](https://github.com/clojure/clojurescript/blob/r2496/src/clj/cljs/core.clj#L207-L211)</ins>
 </pre>
 -->
 
@@ -143,16 +143,16 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :full-name-encode "cljs.core/str",
- :source {:code "(defn str\n  ([] \"\")\n  ([x] (if (nil? x)\n         \"\"\n         (cljs.core/js-str x)))\n  ([x & ys]\n    (loop [sb (StringBuffer. (str x)) more ys]\n      (if more\n        (recur (. sb  (append (str (first more)))) (next more))\n        (.toString sb)))))",
+ :source {:code "(defn str\n  ([] \"\")\n  ([x] (if (nil? x)\n         \"\"\n         (gstring/buildString x)))\n  ([x & ys]\n    (loop [sb (StringBuffer. (str x)) more ys]\n      (if more\n        (recur (. sb  (append (str (first more)))) (next more))\n        (.toString sb)))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2125 2137]},
+          :lines [2134 2146]},
  :extra-sources [{:code "(defmacro str [& xs]\n  (let [strs (->> (repeat (count xs) \"cljs.core.str(~{})\")\n               (interpose \",\")\n               (apply core/str))]\n    (list* 'js* (core/str \"[\" strs \"].join('')\") xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2411",
+                  :tag "r2496",
                   :filename "src/clj/cljs/core.clj",
                   :lines [207 211]}],
  :full-name "cljs.core/str",

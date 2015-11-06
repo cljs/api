@@ -531,10 +531,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/ns-interns](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-interns)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/ns-map](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-map)</samp></td>
 </tr>
 <tr>
@@ -755,10 +751,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/test](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/test)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/the-ns](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/the-ns)</samp></td>
 </tr>
 <tr>
@@ -772,10 +764,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/use](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/use)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/var](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/var)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1306,10 +1294,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/Var](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Var.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/XMLHandler](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/XMLHandler.java)</samp></td>
 </tr>
 </table>
@@ -1602,10 +1586,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.repl/doc](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/doc)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.repl/find-doc](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/find-doc)</samp></td>
 </tr>
 <tr>
@@ -1714,19 +1694,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/compose-fixtures](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/compose-fixtures)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/deftest](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/deftest)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/deftest-](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/deftest-)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/do-report](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/do-report)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1746,63 +1714,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/is](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/is)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/join-fixtures](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/join-fixtures)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/report](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/report)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/run-all-tests](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/run-all-tests)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/run-tests](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/run-tests)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/set-test](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/set-test)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/successful?](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/successful?)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/test-all-vars](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-all-vars)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/test-ns](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-ns)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/test-var](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-var)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/test-vars](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-vars)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/testing](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/testing-contexts-str](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing-contexts-str)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/testing-vars-str](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing-vars-str)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/try-expr](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/try-expr)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

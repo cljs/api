@@ -67,7 +67,7 @@ Removes a watch (set by add-watch) from a reference
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8317-L8322):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L8385-L8390):
 
 ```clj
 (defn remove-watch
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8317-8322](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8317-L8322)</ins>
+            └── <ins>[core.cljs:8385-8390](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/core.cljs#L8385-L8390)</ins>
 </pre>
 
 -->
@@ -136,9 +136,9 @@ The API data for this symbol:
  :source {:code "(defn remove-watch\n  [iref key]\n  (-remove-watch iref key))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8317 8322]},
+          :lines [8385 8390]},
  :examples [{:id "70044a",
              :content "```clj\n(def a (atom {}))\n\n(add-watch a :logger\n  (fn [_key _atom old-state new-state]\n    (println \"old:\" old-state)\n    (println \"new:\" new-state)))\n\n(swap! a assoc :foo \"bar\")\n;;=> will print the following:\n;; old: {}\n;; new: {:foo \"bar\"}\n\n(remove-watch a :logger)\n\n(swap! a assoc :foo 3)\n;;=> nothing will be printed...\n```"}],
  :full-name "cljs.core/remove-watch",

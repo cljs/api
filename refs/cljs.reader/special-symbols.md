@@ -22,26 +22,27 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/reader.cljs#L319-L324):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/reader.cljs#L319-L325):
 
 ```clj
 (defn special-symbols [t not-found]
   (cond
-   (identical? t "nil") nil
-   (identical? t "true") true
-   (identical? t "false") false
-   :else not-found))
+    (identical? t "nil") nil
+    (identical? t "true") true
+    (identical? t "false") false
+    (identical? t "/") '/
+    :else not-found))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2411
+clojurescript @ r2496
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:319-324](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/reader.cljs#L319-L324)</ins>
+            └── <ins>[reader.cljs:319-325](https://github.com/clojure/clojurescript/blob/r2496/src/cljs/cljs/reader.cljs#L319-L325)</ins>
 </pre>
 
 -->
@@ -84,12 +85,12 @@ The API data for this symbol:
  :name "special-symbols",
  :type "function",
  :signature ["[t not-found]"],
- :source {:code "(defn special-symbols [t not-found]\n  (cond\n   (identical? t \"nil\") nil\n   (identical? t \"true\") true\n   (identical? t \"false\") false\n   :else not-found))",
+ :source {:code "(defn special-symbols [t not-found]\n  (cond\n    (identical? t \"nil\") nil\n    (identical? t \"true\") true\n    (identical? t \"false\") false\n    (identical? t \"/\") '/\n    :else not-found))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2411",
+          :tag "r2496",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [319 324]},
+          :lines [319 325]},
  :full-name "cljs.reader/special-symbols",
  :full-name-encode "cljs.reader/special-symbols",
  :history [["+" "0.0-927"]]}
