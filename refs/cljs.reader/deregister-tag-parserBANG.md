@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/reader.cljs#L611-L616):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/reader.cljs#L611-L616):
 
 ```clj
 (defn deregister-tag-parser!
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[reader.cljs:611-616](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/reader.cljs#L611-L616)</ins>
+                └── <ins>[reader.cljs:611-616](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/reader.cljs#L611-L616)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn deregister-tag-parser!\n  [tag]\n  (let [tag (str tag)\n        old-parser (get @*tag-table* tag)]\n    (swap! *tag-table* dissoc tag)\n    old-parser))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [611 616]},
  :full-name "cljs.reader/deregister-tag-parser!",

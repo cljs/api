@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L9872-L9888):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L9871-L9887):
 
 ```clj
 (defn ^{:jsdoc ["@constructor"]}
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9872-9888](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L9872-L9888)</ins>
+                └── <ins>[core.cljs:9871-9887](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L9871-L9887)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn ^{:jsdoc [\"@constructor\"]}\n  ExceptionInfo [message data cause]\n  (let [e (js/Error. message)]\n    (this-as this\n      (set! (.-message this) message)\n      (set! (.-data this) data)\n      (set! (.-cause this) cause)\n      (do\n        (set! (.-name this) (.-name e))\n        ;; non-standard\n        (set! (.-description this) (.-description e))\n        (set! (.-number this) (.-number e))\n        (set! (.-fileName this) (.-fileName e))\n        (set! (.-lineNumber this) (.-lineNumber e))\n        (set! (.-columnNumber this) (.-columnNumber e))\n        (set! (.-stack this) (.-stack e)))\n      this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9872 9888]},
+          :lines [9871 9887]},
  :full-name "cljs.core/ExceptionInfo",
  :clj-symbol "clojure.lang/ExceptionInfo"}
 

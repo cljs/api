@@ -30,7 +30,7 @@ Return true if the value is the data representation of a tagged literal
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L9986-L9989):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L9985-L9988):
 
 ```clj
 (defn tagged-literal?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9986-9989](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L9986-L9989)</ins>
+                └── <ins>[core.cljs:9985-9988](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L9985-L9988)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn tagged-literal?\n  [value]\n  (instance? TaggedLiteral value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9986 9989]},
+          :lines [9985 9988]},
  :full-name "cljs.core/tagged-literal?",
  :clj-symbol "clojure.core/tagged-literal?",
  :docstring "Return true if the value is the data representation of a tagged literal"}

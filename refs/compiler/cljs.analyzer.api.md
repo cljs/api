@@ -80,6 +80,12 @@ This is intended to be a stable api for those who need programmatic access
 </tr>
 <tr>
 <td></td>
+<td><samp>[get-js-index](../cljs.analyzer.api/get-js-index.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.122"><img valign="middle" alt="[+] 1.7.122" title="Added in 1.7.122" src="https://img.shields.io/badge/+-1.7.122-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[get-options](../cljs.analyzer.api/get-options.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>

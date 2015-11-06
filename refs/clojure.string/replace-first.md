@@ -47,7 +47,7 @@ pattern / (string or function of match).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L43-L50):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L57-L64):
 
 ```clj
 (defn replace-first
@@ -59,12 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:43-50](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L43-L50)</ins>
+                └── <ins>[string.cljs:57-64](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L57-L64)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn replace-first\n  [s match replacement]\n  (.replace s match replacement))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [43 50]},
+          :lines [57 64]},
  :full-name "clojure.string/replace-first",
  :clj-symbol "clojure.string/replace-first",
  :docstring "Replaces the first instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match)."}

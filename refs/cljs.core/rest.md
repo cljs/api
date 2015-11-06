@@ -65,7 +65,7 @@ argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L1086-L1097):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L1086-L1097):
 
 ```clj
 (defn ^seq rest
@@ -84,12 +84,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1086-1097](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L1086-L1097)</ins>
+                └── <ins>[core.cljs:1086-1097](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L1086-L1097)</ins>
 </pre>
 
 -->
@@ -146,7 +146,7 @@ The API data for this symbol:
  :source {:code "(defn ^seq rest\n  [coll]\n  (if-not (nil? coll)\n    (if (implements? ISeq coll)\n      (-rest ^not-native coll)\n      (let [s (seq coll)]\n        (if s\n          (-rest ^not-native s)\n          ())))\n    ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1086 1097]},
  :examples [{:id "0869af",

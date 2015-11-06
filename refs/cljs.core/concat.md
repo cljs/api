@@ -67,7 +67,7 @@ Returns a lazy seq representing the concatenation of the elements in the supplie
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L3315-L3338):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L3315-L3338):
 
 ```clj
 (defn concat
@@ -99,12 +99,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3315-3338](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L3315-L3338)</ins>
+                └── <ins>[core.cljs:3315-3338](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L3315-L3338)</ins>
 </pre>
 
 -->
@@ -157,7 +157,7 @@ The API data for this symbol:
  :source {:code "(defn concat\n  ([] (lazy-seq nil))\n  ([x] (lazy-seq x))\n  ([x y]\n    (lazy-seq\n      (let [s (seq x)]\n        (if s\n          (if (chunked-seq? s)\n            (chunk-cons (chunk-first s) (concat (chunk-rest s) y))\n            (cons (first s) (concat (rest s) y)))\n          y))))\n  ([x y & zs]\n     (let [cat (fn cat [xys zs]\n                 (lazy-seq\n                   (let [xys (seq xys)]\n                     (if xys\n                       (if (chunked-seq? xys)\n                         (chunk-cons (chunk-first xys)\n                                     (cat (chunk-rest xys) zs))\n                         (cons (first xys) (cat (rest xys) zs)))\n                       (when zs\n                         (cat (first zs) (next zs)))))))]\n       (cat (concat x y) zs))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3315 3338]},
  :examples [{:id "dcc019",

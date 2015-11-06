@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L2680-L2685):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L2680-L2685):
 
 ```clj
 (core/defmacro copy-arguments [dest]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2680-2685](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L2680-L2685)</ins>
+                └── <ins>[core.cljc:2680-2685](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L2680-L2685)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro copy-arguments [dest]\n  `(let [len# (alength (js-arguments))]\n     (loop [i# 0]\n       (when (< i# len#)\n         (.push ~dest (aget (js-arguments) i#))\n         (recur (inc i#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [2680 2685]},
  :full-name "cljs.core/copy-arguments",

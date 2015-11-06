@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.122](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.122)__</td>
+<td>2015-08-29</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150805</kbd></td>
+<td>
+<a href="#user-content-17122syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17122library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17122compiler">
++1 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.107](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.107)__</td>
 <td>2015-08-11</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2959,6 +2982,29 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.122
+
+<a name="17122syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="17122library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="17122compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/get-js-index](refs/cljs.analyzer.api/get-js-index.md)</samp></td>
+</tr>
 </table>
 
 ### 1.7.107

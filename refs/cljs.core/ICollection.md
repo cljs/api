@@ -22,7 +22,7 @@ Protocol for adding to a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L453-L459):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L453-L459):
 
 ```clj
 (defprotocol ICollection
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:453-459](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L453-L459)</ins>
+                └── <ins>[core.cljs:453-459](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L453-L459)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ICollection\n  \"Protocol for adding to a collection.\"\n  (^clj -conj [coll o]\n    \"Returns a new collection of coll with o added to it. The new item\n     should be added to the most efficient place, e.g.\n     (conj [1 2 3 4] 5) => [1 2 3 4 5]\n     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [453 459]},
  :methods [{:name "-conj",

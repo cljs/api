@@ -52,7 +52,7 @@ is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L8222-L8237):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L8222-L8237):
 
 ```clj
 (defn replace
@@ -73,12 +73,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8222-8237](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L8222-L8237)</ins>
+                └── <ins>[core.cljs:8222-8237](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L8222-L8237)</ins>
 </pre>
 
 -->
@@ -133,7 +133,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  ([smap]\n     (map #(if-let [e (find smap %)] (val e) %)))\n  ([smap coll]\n     (if (vector? coll)\n       (let [n (count coll)]\n         (reduce (fn [v i]\n                   (if-let [e (find smap (nth v i))]\n                     (assoc v i (second e))\n                     v))\n           coll (take n (iterate inc 0))))\n       (map #(if-let [e (find smap %)] (second e) %) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [8222 8237]},
  :full-name "cljs.core/replace",

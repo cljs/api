@@ -46,7 +46,7 @@ seq calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L1960-L1966):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1960-L1966):
 
 ```clj
 (core/defmacro lazy-seq
@@ -58,12 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1960-1966](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L1960-L1966)</ins>
+                └── <ins>[core.cljc:1960-1966](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1960-L1966)</ins>
 </pre>
 
 -->
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro lazy-seq\n  [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1960 1966]},
  :full-name "cljs.core/lazy-seq",

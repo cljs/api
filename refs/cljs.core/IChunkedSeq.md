@@ -25,7 +25,7 @@ Protocol for accessing a collection as sequential chunks.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L695-L700):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L695-L700):
 
 ```clj
 (defprotocol IChunkedSeq
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:695-700](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L695-L700)</ins>
+                └── <ins>[core.cljs:695-700](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L695-L700)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IChunkedSeq\n  \"Protocol for accessing a collection as sequential chunks.\"\n  (-chunked-first [coll]\n    \"Returns the first chunk in coll.\")\n  (-chunked-rest [coll]\n    \"Return a new collection of coll with the first chunk removed.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [695 700]},
  :methods [{:name "-chunked-first",

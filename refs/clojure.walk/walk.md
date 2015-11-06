@@ -33,31 +33,29 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/walk.cljs#L37-L52):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/walk.cljs#L37-L50):
 
 ```clj
 (defn walk
   [inner outer form]
   (cond
-    (list? form) (outer (apply list (map inner form)))
-    (satisfies? IMapEntry form) (outer (vec (map inner form)))
-    (seq? form) (outer (doall (map inner form)))
-    (satisfies? IRecord form)
-    (outer (reduce (fn [r x] (conj r (inner x))) form form))
-    (coll? form) (outer (into (empty form) (map inner form)))
-    :else (outer form)))
+    (list? form)   (outer (apply list (map inner form)))
+    (seq? form)    (outer (doall (map inner form)))
+    (record? form) (outer (reduce (fn [r x] (conj r (inner x))) form form))
+    (coll? form)   (outer (into (empty form) (map inner form)))
+    :else          (outer form)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:37-52](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/walk.cljs#L37-L52)</ins>
+                └── <ins>[walk.cljs:37-50](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/walk.cljs#L37-L50)</ins>
 </pre>
 
 -->
@@ -105,12 +103,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.walk/walk",
- :source {:code "(defn walk\n  [inner outer form]\n  (cond\n    (list? form) (outer (apply list (map inner form)))\n    (satisfies? IMapEntry form) (outer (vec (map inner form)))\n    (seq? form) (outer (doall (map inner form)))\n    (satisfies? IRecord form)\n    (outer (reduce (fn [r x] (conj r (inner x))) form form))\n    (coll? form) (outer (into (empty form) (map inner form)))\n    :else (outer form)))",
+ :source {:code "(defn walk\n  [inner outer form]\n  (cond\n    (list? form)   (outer (apply list (map inner form)))\n    (seq? form)    (outer (doall (map inner form)))\n    (record? form) (outer (reduce (fn [r x] (conj r (inner x))) form form))\n    (coll? form)   (outer (into (empty form) (map inner form)))\n    :else          (outer form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [37 52]},
+          :lines [37 50]},
  :full-name "clojure.walk/walk",
  :clj-symbol "clojure.walk/walk",
  :docstring "Traverses form, an arbitrary data structure.  inner and outer are\nfunctions.  Applies inner to each element of form, building up a\ndata structure of the same type, then applies outer to the result.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}

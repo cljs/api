@@ -38,7 +38,7 @@ string.  Similar to Perl's chomp.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L166-L177):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L180-L191):
 
 ```clj
 (defn trim-newline
@@ -57,12 +57,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:166-177](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L166-L177)</ins>
+                └── <ins>[string.cljs:180-191](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L180-L191)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn trim-newline\n  [s]\n  (loop [index (.-length s)]\n    (if (zero? index)\n      \"\"\n      (let [ch (get s (dec index))]\n        (if (or (identical? \\newline ch)\n                (identical? \\return ch))\n          (recur (dec index))\n          (.substring s 0 index))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [166 177]},
+          :lines [180 191]},
  :full-name "clojure.string/trim-newline",
  :clj-symbol "clojure.string/trim-newline",
  :docstring "Removes all trailing newline \\n or return \\r characters from\nstring.  Similar to Perl's chomp."}

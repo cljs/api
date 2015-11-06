@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10160-L10174):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10159-L10173):
 
 ```clj
 (defn find-macros-ns [ns]
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10160-10174](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10160-L10174)</ins>
+                └── <ins>[core.cljs:10159-10173](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10159-L10173)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn find-macros-ns [ns]\n  (when (nil? NS_CACHE)\n    (set! NS_CACHE (atom {})))\n  (let [the-ns (get @NS_CACHE ns)]\n    (if-not (nil? the-ns)\n      the-ns\n      (let [ns-str (str ns)\n           ns (if (not ^boolean (gstring/contains ns-str \"$macros\"))\n                (symbol (str ns-str \"$macros\"))\n                ns)\n           ns-obj (find-ns-obj ns)]\n       (when-not (nil? ns-obj)\n         (let [new-ns (create-ns ns ns-obj)]\n           (swap! NS_CACHE assoc ns new-ns)\n           new-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10160 10174]},
+          :lines [10159 10173]},
  :full-name "cljs.core/find-macros-ns",
  :full-name-encode "cljs.core/find-macros-ns",
  :history [["+" "1.7.10"]]}

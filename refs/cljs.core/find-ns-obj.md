@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10122-L10130):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10121-L10129):
 
 ```clj
 (defn find-ns-obj [ns]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10122-10130](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10122-L10130)</ins>
+                └── <ins>[core.cljs:10121-10129](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10121-L10129)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  (js/eval munged-ns)\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* js/window segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10122 10130]},
+          :lines [10121 10129]},
  :full-name "cljs.core/find-ns-obj",
  :full-name-encode "cljs.core/find-ns-obj",
  :history [["+" "1.7.10"]]}

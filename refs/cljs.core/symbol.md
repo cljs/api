@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L950-L963):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L950-L963):
 
 ```clj
 (defn symbol
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:950-963](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L950-L963)</ins>
+                └── <ins>[core.cljs:950-963](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L950-L963)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn symbol\n  ([name]\n   (if (symbol? name)\n     name\n     (let [idx (.indexOf name \"/\")]\n       (if (== idx -1)\n         (symbol nil name)\n         (symbol (.substring name 0 idx)\n                 (.substring name (inc idx) (. name -length)))))))\n  ([ns name]\n   (let [sym-str (if-not (nil? ns)\n                   (str ns \"/\" name)\n                   name)]\n     (Symbol. ns name sym-str nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [950 963]},
  :full-name "cljs.core/symbol",

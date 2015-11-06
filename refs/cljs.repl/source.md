@@ -62,7 +62,7 @@ Example: (source filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl.cljc#L1214-L1221):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/repl.cljc#L1214-L1221):
 
 ```clj
 (defmacro source
@@ -74,12 +74,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1214-1221](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl.cljc#L1214-L1221)</ins>
+                └── <ins>[repl.cljc:1214-1221](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/repl.cljc#L1214-L1221)</ins>
 </pre>
 
 -->
@@ -132,7 +132,7 @@ The API data for this symbol:
  :source {:code "(defmacro source\n  [n]\n  `(println ~(or (source-fn &env n) (str \"Source not found\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [1214 1221]},
  :examples [{:id "94c94c",

@@ -32,7 +32,7 @@ replacement at the leaves of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/walk.cljs#L92-L98):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/walk.cljs#L90-L96):
 
 ```clj
 (defn postwalk-replace
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:92-98](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/walk.cljs#L92-L98)</ins>
+                └── <ins>[walk.cljs:90-96](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/walk.cljs#L90-L96)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn postwalk-replace\n  [smap form]\n  (postwalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [92 98]},
+          :lines [90 96]},
  :full-name "clojure.walk/postwalk-replace",
  :clj-symbol "clojure.walk/postwalk-replace",
  :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the leaves of the tree first."}

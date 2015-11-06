@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/analyzer.cljc#L1993-L1995):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/analyzer.cljc#L1999-L2001):
 
 ```clj
 (defmethod parse 'defrecord*
@@ -29,12 +29,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.107
+clojurescript @ r1.7.122
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1993-1995](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/analyzer.cljc#L1993-L1995)</ins>
+                └── <ins>[analyzer.cljc:1999-2001](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/analyzer.cljc#L1999-L2001)</ins>
 </pre>
 
 -->
@@ -74,9 +74,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'defrecord*\n  [_ env form _ _]\n  (parse-type :defrecord* env form) )",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.107",
+          :tag "r1.7.122",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1993 1995]},
+          :lines [1999 2001]},
  :full-name "special/defrecord*",
  :full-name-encode "special/defrecordSTAR",
  :history [["+" "0.0-927"]]}
