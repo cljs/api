@@ -679,6 +679,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/KeySeq](refs/cljs.core/KeySeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/KeySeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/Keyword](refs/cljs.core/Keyword.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Keyword.cljsdoc)</td>
 <td></td>
@@ -786,6 +793,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/PersistentArrayMap.fromArrays](refs/cljs.core/PersistentArrayMapDOTfromArrays.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTfromArrays.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/PersistentArrayMapSeq](refs/cljs.core/PersistentArrayMapSeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapSeq.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1013,6 +1027,13 @@ __Rows are removed when their columns are filled (done).__
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
 <td></td>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/JfULGnn.png"></td>
+</tr>
+<tr>
+<td>[cljs.core/ValSeq](refs/cljs.core/ValSeq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ValSeq.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>[cljs.core/Vector](refs/cljs.core/Vector.md)</td>
@@ -2235,6 +2256,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/persistent!](refs/cljs.core/persistentBANG.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/persistentBANG.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/persistent-array-map-seq](refs/cljs.core/persistent-array-map-seq.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/persistent-array-map-seq.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

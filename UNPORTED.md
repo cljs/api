@@ -1218,10 +1218,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/KeySeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/APersistentMap.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/KeywordLookupSite](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/KeywordLookupSite.java)</samp></td>
 </tr>
 <tr>
@@ -1323,10 +1319,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Util](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Util.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/ValSeq](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/APersistentMap.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

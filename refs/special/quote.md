@@ -20,23 +20,23 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/analyzer.clj#L547-L549):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L547-L549):
 
 ```clj
 (defmethod parse 'quote
   [_ env [_ x] _]
-  {:op :constant :env env :form x})
+  (analyze (assoc env :quoted? true) x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1806
+clojurescript @ r1820
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:547-549](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/analyzer.clj#L547-L549)</ins>
+            └── <ins>[analyzer.clj:547-549](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/analyzer.clj#L547-L549)</ins>
 </pre>
 
 -->
@@ -80,10 +80,10 @@ The API data for this symbol:
 {:ns "special",
  :name "quote",
  :type "special form",
- :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _]\n  {:op :constant :env env :form x})",
+ :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _]\n  (analyze (assoc env :quoted? true) x))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1806",
+          :tag "r1820",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [547 549]},
  :full-name "special/quote",
