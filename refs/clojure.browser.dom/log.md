@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/browser/dom.cljs#L20-L21):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/browser/dom.cljs#L20-L21):
 
 ```clj
 (defn log [& args]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[dom.cljs:20-21](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/browser/dom.cljs#L20-L21)</ins>
+                    └── <ins>[dom.cljs:20-21](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/browser/dom.cljs#L20-L21)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn log [& args]\n  (.log js/console (apply pr-str args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [20 21]},
  :full-name "clojure.browser.dom/log",

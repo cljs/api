@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__1.7.122__ [all](HISTORY.md)</td>
-<td>2015-08-29</td>
+<td>__1.7.145__ [all](HISTORY.md)</td>
+<td>2015-10-13</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.7.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __1.7.122__ ([See Full History](HISTORY.md)):
+Changes from __1.7.145__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,19 +34,49 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
-</table>
-
-__Compiler API Changes__
-
- <table>
 
 <tr>
 <td>
 <img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.analyzer.api/get-js-index](refs/cljs.analyzer.api/get-js-index.md)</samp></td>
+<td><samp>[cljs.core/system-time](refs/cljs.core/system-time.md)</samp></td>
 </tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/ends-with?](refs/clojure.string/ends-withQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/includes?](refs/clojure.string/includesQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/index-of](refs/clojure.string/index-of.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/last-index-of](refs/clojure.string/last-index-of.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/starts-with?](refs/clojure.string/starts-withQMARK.md)</samp></td>
+</tr>
+</table>
+
+__Compiler API Changes__
+
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 

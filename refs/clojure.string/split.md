@@ -47,7 +47,7 @@ the maximum number of splits. Not lazy. Returns vector of the splits.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L136-L158):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/string.cljs#L136-L158):
 
 ```clj
 (defn split
@@ -77,12 +77,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:136-158](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/clojure/string.cljs#L136-L158)</ins>
+                └── <ins>[string.cljs:136-158](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/clojure/string.cljs#L136-L158)</ins>
 </pre>
 
 -->
@@ -137,7 +137,7 @@ The API data for this symbol:
  :source {:code "(defn split\n  ([s re]\n     (split s re 0))\n    ([s re limit]\n     (discard-trailing-if-needed limit\n       (if (identical? \"/(?:)/\" (str re))\n         (split-with-empty-regex s limit)\n         (if (< limit 1)\n           (vec (.split (str s) re))\n           (loop [s s\n                  limit limit\n                  parts []]\n             (if (== 1 limit)\n               (conj parts s)\n               (let [m (re-find re s)]\n                 (if-not (nil? m)\n                   (let [index (.indexOf s m)]\n                     (recur (.substring s (+ index (count m)))\n                       (dec limit)\n                       (conj parts (.substring s 0 index))))\n                   (conj parts s))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [136 158]},
  :full-name "clojure.string/split",

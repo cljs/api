@@ -25,7 +25,7 @@ to "nodejs". *target* is a Google Closure define and can be set by compiler
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L20-L26):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L20-L26):
 
 ```clj
 (goog-define
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:20-26](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L20-L26)</ins>
+                └── <ins>[core.cljs:20-26](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L20-L26)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(goog-define\n  ^{:dynamic true\n    :doc \"Var bound to the name value of the compiler build :target option.\n  For example, if the compiler build :target is :nodejs, *target* will be bound\n  to \\\"nodejs\\\". *target* is a Google Closure define and can be set by compiler\n  :closure-defines option.\"}\n  *target* \"default\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [20 26]},
  :full-name "cljs.core/*target*",

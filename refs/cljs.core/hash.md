@@ -31,7 +31,7 @@ consistent with =.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L853-L877):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L862-L886):
 
 ```clj
 (defn hash
@@ -63,12 +63,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:853-877](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L853-L877)</ins>
+                └── <ins>[core.cljs:862-886](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L862-L886)</ins>
 </pre>
 
 -->
@@ -119,9 +119,9 @@ The API data for this symbol:
  :source {:code "(defn hash\n  [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (Math/floor o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (instance? js/Date o)\n    (.valueOf o)\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [853 877]},
+          :lines [862 886]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash",
  :docstring "Returns the hash code of its argument. Note this is the hash code\nconsistent with =."}

@@ -60,7 +60,7 @@ Test bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L2533-L2536):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2542-L2545):
 
 ```clj
 (defn ^boolean bit-test
@@ -72,19 +72,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2533-2536](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L2533-L2536)</ins>
+                └── <ins>[core.cljs:2542-2545](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L2542-L2545)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1123-L1124):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1123-L1124):
 
 ```clj
 (core/defmacro bit-test [x n]
@@ -95,12 +95,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1123-1124](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1123-L1124)</ins>
+                └── <ins>[core.cljc:1123-1124](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1123-L1124)</ins>
 </pre>
 -->
 
@@ -151,13 +151,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean bit-test\n  [x n]\n  (cljs.core/bit-test x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2533 2536]},
+          :lines [2542 2545]},
  :extra-sources [{:code "(core/defmacro bit-test [x n]\n  (bool-expr (core/list 'js* \"((~{} & (1 << ~{})) != 0)\" x n)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.122",
+                  :tag "r1.7.145",
                   :filename "src/main/clojure/cljs/core.cljc",
                   :lines [1123 1124]}],
  :examples [{:id "f64664",

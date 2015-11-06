@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10121-L10129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10133-L10141):
 
 ```clj
 (defn find-ns-obj [ns]
@@ -32,7 +32,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
       "nodejs"  (if ^boolean js/COMPILED
                   (js/eval munged-ns)
                   (find-ns-obj* js/global segs))
-      "default" (find-ns-obj* js/window segs)
+      "default" (find-ns-obj* goog/global segs)
       (throw (js/Error. (str "find-ns-obj not supported for target " *target*))))))
 ```
 
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10121-10129](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10121-L10129)</ins>
+                └── <ins>[core.cljs:10133-10141](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10133-L10141)</ins>
 </pre>
 
 -->
@@ -88,12 +88,12 @@ The API data for this symbol:
  :name "find-ns-obj",
  :type "function",
  :signature ["[ns]"],
- :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  (js/eval munged-ns)\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* js/window segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
+ :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  (js/eval munged-ns)\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10121 10129]},
+          :lines [10133 10141]},
  :full-name "cljs.core/find-ns-obj",
  :full-name-encode "cljs.core/find-ns-obj",
  :history [["+" "1.7.10"]]}

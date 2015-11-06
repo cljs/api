@@ -30,14 +30,16 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L2505-L2511):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L2505-L2513):
 
 ```clj
 (core/defmacro time
   [expr]
-  `(let [start# (.getTime (js/Date.))
+  `(let [start# (system-time)
          ret# ~expr]
-     (prn (cljs.core/str "Elapsed time: " (- (.getTime (js/Date.)) start#) " msecs"))
+     (prn (cljs.core/str "Elapsed time: "
+            (.toFixed (- (system-time) start#) 6)
+            " msecs"))
      ret#))
 ```
 
@@ -45,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2505-2511](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L2505-L2511)</ins>
+                └── <ins>[core.cljc:2505-2513](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L2505-L2513)</ins>
 </pre>
 
 -->
@@ -98,12 +100,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/time",
- :source {:code "(core/defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.))\n         ret# ~expr]\n     (prn (cljs.core/str \"Elapsed time: \" (- (.getTime (js/Date.)) start#) \" msecs\"))\n     ret#))",
+ :source {:code "(core/defmacro time\n  [expr]\n  `(let [start# (system-time)\n         ret# ~expr]\n     (prn (cljs.core/str \"Elapsed time: \"\n            (.toFixed (- (system-time) start#) 6)\n            \" msecs\"))\n     ret#))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2505 2511]},
+          :lines [2505 2513]},
  :full-name "cljs.core/time",
  :clj-symbol "clojure.core/time",
  :docstring "Evaluates expr and prints the time it took. Returns the value of expr."}

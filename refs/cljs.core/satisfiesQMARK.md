@@ -30,7 +30,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1930-L1958):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1930-L1958):
 
 ```clj
 (core/defmacro satisfies?
@@ -67,12 +67,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1930-1958](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1930-L1958)</ins>
+                └── <ins>[core.cljc:1930-1958](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1930-L1958)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro satisfies?\n  [psym x]\n  (core/let [p          (:name\n                          (cljs.analyzer/resolve-var\n                            (dissoc &env :locals) psym))\n             prefix     (protocol-prefix p)\n             xsym       (bool-expr (gensym))\n             [part bit] (fast-path-protocols p)\n             msym       (symbol\n                          (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    (core/if-not (core/symbol? x)\n      `(let [~xsym ~x]\n         (if-not (nil? ~xsym)\n           (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit) false)\n                   ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             (if (coercive-not (. ~xsym ~msym))\n               (cljs.core/native-satisfies? ~psym ~xsym)\n               false))\n           (cljs.core/native-satisfies? ~psym ~xsym)))\n      `(if-not (nil? ~x)\n         (if (or ~(if bit `(unsafe-bit-and (. ~x ~msym) ~bit) false)\n                 ~(bool-expr `(. ~x ~(symbol (core/str \"-\" prefix)))))\n           true\n           (if (coercive-not (. ~x ~msym))\n             (cljs.core/native-satisfies? ~psym ~x)\n             false))\n         (cljs.core/native-satisfies? ~psym ~x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1930 1958]},
  :full-name "cljs.core/satisfies?",

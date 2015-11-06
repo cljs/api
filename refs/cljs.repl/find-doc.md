@@ -66,7 +66,7 @@ contains a match for re-string-or-pattern
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/repl.cljc#L1157-L1179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl.cljc#L1178-L1200):
 
 ```clj
 (defmacro find-doc
@@ -96,12 +96,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1157-1179](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/repl.cljc#L1157-L1179)</ins>
+                └── <ins>[repl.cljc:1178-1200](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/repl.cljc#L1178-L1200)</ins>
 </pre>
 
 -->
@@ -154,9 +154,9 @@ The API data for this symbol:
  :source {:code "(defmacro find-doc\n  [re-string-or-pattern]\n  (let [re (re-pattern re-string-or-pattern)\n        ms (concat\n             (mapcat\n               (fn [ns]\n                 (map\n                   (fn [m]\n                     (update-in (select-keys m [:ns :name :doc :forms :arglists :macro :url])\n                       [:name] #(if-not (nil? %) (clojure.core/name %) %)))\n                   (sort-by :name (vals (ana-api/ns-interns ns)))))\n               (ana-api/all-ns))\n             (map #(select-keys (ana-api/find-ns %) [:name :doc]) (ana-api/all-ns))\n             (map special-doc (keys special-doc-map)))\n        ms (for [m ms\n                 :when (and (:doc m)\n                            (or (re-find (re-matcher re (:doc m)))\n                                (re-find (re-matcher re (str (:name m))))))]\n             m)]\n    `(doseq [m# (quote ~ms)]\n       (cljs.repl/print-doc m#))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1157 1179]},
+          :lines [1178 1200]},
  :examples [{:id "50ec43",
              :content "```clj\n(find-doc \"some\")\n;; Prints: (docs truncated)\n;; - IPrintWriter (docstring match)\n;; - contains? (docstring match)\n;; - gensym (docstring match)\n;; - cljs.core/if-some\n;; - some\n;; - cljs.core/some->\n;; - cljs.core/some->>\n;; - some-fn\n;; - some?\n;; - trampoline (docstring match)\n;; - cljs.core/when-some\n;; - cljs.core/while (docstring match)\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/find-doc",

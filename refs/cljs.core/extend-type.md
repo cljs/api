@@ -69,7 +69,7 @@ Extend a type to a series of protocols. Useful when you are
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1472-L1495):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1472-L1495):
 
 ```clj
 (core/defmacro extend-type
@@ -92,12 +92,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1472-1495](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1472-L1495)</ins>
+                └── <ins>[core.cljc:1472-1495](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1472-L1495)</ins>
 </pre>
 
 -->
@@ -150,7 +150,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro extend-type\n  [type-sym & impls]\n  (core/let [env &env\n             _ (validate-impls env impls)\n             resolve (partial resolve-var env)\n             impl-map (->impl-map impls)\n             [type assign-impls] (core/if-let [type (base-type type-sym)]\n                                   [type base-assign-impls]\n                                   [(resolve type-sym) proto-assign-impls])]\n    (core/when (core/and (:extending-base-js-type cljs.analyzer/*cljs-warnings*)\n            (js-base-type type-sym))\n      (cljs.analyzer/warning :extending-base-js-type env\n        {:current-symbol type-sym :suggested-symbol (js-base-type type-sym)}))\n    `(do ~@(mapcat #(assign-impls env resolve type-sym type %) impl-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1472 1495]},
  :full-name "cljs.core/extend-type",

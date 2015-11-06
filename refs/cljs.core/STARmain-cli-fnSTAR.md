@@ -18,18 +18,18 @@
 Source docstring:
 
 ```
-When compiled for a command-line target, whatever
-function *main-fn* is set to will be called with the command-line
+When compiled for a command-line target, whatever function
+*main-cli-fn* is set to will be called with the command-line
 argv as arguments
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L244-L248):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L244-L248):
 
 ```clj
 (def
-  ^{:doc "When compiled for a command-line target, whatever
-  function *main-fn* is set to will be called with the command-line
+  ^{:doc "When compiled for a command-line target, whatever function
+  *main-cli-fn* is set to will be called with the command-line
   argv as arguments"}
   *main-cli-fn* nil)
 ```
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:244-248](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L244-L248)</ins>
+                └── <ins>[core.cljs:244-248](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L244-L248)</ins>
 </pre>
 
 -->
@@ -84,12 +84,12 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*main-cli-fn*",
- :docstring "When compiled for a command-line target, whatever\nfunction *main-fn* is set to will be called with the command-line\nargv as arguments",
+ :docstring "When compiled for a command-line target, whatever function\n*main-cli-fn* is set to will be called with the command-line\nargv as arguments",
  :type "var",
- :source {:code "(def\n  ^{:doc \"When compiled for a command-line target, whatever\n  function *main-fn* is set to will be called with the command-line\n  argv as arguments\"}\n  *main-cli-fn* nil)",
+ :source {:code "(def\n  ^{:doc \"When compiled for a command-line target, whatever function\n  *main-cli-fn* is set to will be called with the command-line\n  argv as arguments\"}\n  *main-cli-fn* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [244 248]},
  :full-name "cljs.core/*main-cli-fn*",

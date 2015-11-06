@@ -31,7 +31,7 @@ itself (not its value) is returned. The reader macro #'x expands to (var x).
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/analyzer.cljc#L950-L956):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L969-L975):
 
 ```clj
 (defmethod parse 'var
@@ -47,12 +47,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:950-956](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/analyzer.cljc#L950-L956)</ins>
+                └── <ins>[analyzer.cljc:969-975](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/analyzer.cljc#L969-L975)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (merge\n    {:env env\n     :op :var-special\n     :form form}\n    (var-ast env sym)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [950 956]},
+          :lines [969 975]},
  :full-name "special/var",
  :clj-symbol "clojure.core/var",
  :docstring "The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x)."}

@@ -31,7 +31,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/js.cljs#L161-L234):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/js.cljs#L204-L285):
 
 ```clj
 (defn require
@@ -77,23 +77,31 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
                                 (do
                                   (swap! *loaded* conj name)
                                   (cb {:value true})))))
-                     :js  (let [res (try
-                                      ((:*eval-fn* bound-vars) resource)
-                                      (when cache
-                                        (load-analysis-cache!
-                                          (:*compiler* bound-vars) name cache))
-                                      (when source-map
-                                        (load-source-map!
-                                          (:*compiler* bound-vars) name source-map))
-                                      (catch :default cause
-                                        (wrap-error
-                                          (ana/error env
-                                            (str "Could not require " name) cause))))]
-                            (if (:error res)
-                              (cb res)
-                              (do
-                                (swap! *loaded* conj name)
-                                (cb {:value true}))))
+                     :js (process-macros-deps bound-vars cache opts
+                           (fn [res]
+                             (if (:error res)
+                               (cb res)
+                               (process-libs-deps bound-vars cache opts
+                                 (fn [res]
+                                   (if (:error res)
+                                     (cb res)
+                                     (let [res (try
+                                                 ((:*eval-fn* bound-vars) resource)
+                                                 (when cache
+                                                   (load-analysis-cache!
+                                                     (:*compiler* bound-vars) name cache))
+                                                 (when source-map
+                                                   (load-source-map!
+                                                     (:*compiler* bound-vars) name source-map))
+                                                 (catch :default cause
+                                                   (wrap-error
+                                                     (ana/error env
+                                                       (str "Could not require " name) cause))))]
+                                       (if (:error res)
+                                         (cb res)
+                                         (do
+                                           (swap! *loaded* conj name)
+                                           (cb {:value true}))))))))))
                      (cb (wrap-error
                            (ana/error env
                              (str "Invalid :lang specified " lang ", only :clj or :js allowed"))))))
@@ -114,12 +122,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:161-234](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/js.cljs#L161-L234)</ins>
+                └── <ins>[js.cljs:204-285](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/js.cljs#L204-L285)</ins>
 </pre>
 
 -->
@@ -165,12 +173,12 @@ The API data for this symbol:
              "[name opts cb]"
              "[bound-vars name opts cb]"
              "[bound-vars name reload opts cb]"],
- :source {:code "(defn require\n  ([name cb]\n    (require name nil cb))\n  ([name opts cb]\n    (require nil name opts cb))\n  ([bound-vars name opts cb]\n   (require bound-vars name nil opts cb))\n  ([bound-vars name reload opts cb]\n   (let [bound-vars (merge\n                      {:*compiler*     (env/default-compiler-env)\n                       :*data-readers* tags/*cljs-data-readers*\n                       :*load-macros*  (or (:load-macros opts) true)\n                       :*analyze-deps* (or (:analyze-deps opts) true)\n                       :*load-fn*      (or (:load opts) *load-fn*)\n                       :*eval-fn*      (or (:eval opts) *eval-fn*)}\n                      bound-vars)\n         name (cond-> name (:macro-ns opts) ana/macro-ns-name)]\n     (when (= :reload reload)\n       (swap! *loaded* disj name))\n     (when (= :reload-all reload)\n       (reset! *loaded* #{}))\n     (when (:verbose opts)\n       (debug-prn (str \"Loading \" name (when (:macros-ns opts) \" macros\") \" namespace\")))\n     (if-not (contains? @*loaded* name)\n       (let [env (:*env* bound-vars)]\n         (try\n           ((:*load-fn* bound-vars)\n             {:name name\n              :macros (:macros-ns opts)\n              :path (ns->relpath name)}\n             (fn [resource]\n               (assert (or (map? resource) (nil? resource))\n                 \"*load-fn* may only return a map or nil\")\n               (if resource\n                 (let [{:keys [lang source cache source-map]} resource]\n                   (condp = lang\n                     :clj (eval-str* bound-vars source name opts\n                            (fn [res]\n                              (if (:error res)\n                                (cb res)\n                                (do\n                                  (swap! *loaded* conj name)\n                                  (cb {:value true})))))\n                     :js  (let [res (try\n                                      ((:*eval-fn* bound-vars) resource)\n                                      (when cache\n                                        (load-analysis-cache!\n                                          (:*compiler* bound-vars) name cache))\n                                      (when source-map\n                                        (load-source-map!\n                                          (:*compiler* bound-vars) name source-map))\n                                      (catch :default cause\n                                        (wrap-error\n                                          (ana/error env\n                                            (str \"Could not require \" name) cause))))]\n                            (if (:error res)\n                              (cb res)\n                              (do\n                                (swap! *loaded* conj name)\n                                (cb {:value true}))))\n                     (cb (wrap-error\n                           (ana/error env\n                             (str \"Invalid :lang specified \" lang \", only :clj or :js allowed\"))))))\n                 (cb (wrap-error\n                       (ana/error env\n                         (ana/error-message (if (:macros-ns opts)\n                                              :undeclared-macros-ns\n                                              :undeclared-ns)\n                           {:ns-sym name :js-provide (cljs.core/name name)})))))))\n           (catch :default cause\n             (cb (wrap-error\n                   (ana/error env\n                     (str \"Could not require \" name) cause))))))\n       (cb {:value true})))))",
+ :source {:code "(defn require\n  ([name cb]\n    (require name nil cb))\n  ([name opts cb]\n    (require nil name opts cb))\n  ([bound-vars name opts cb]\n   (require bound-vars name nil opts cb))\n  ([bound-vars name reload opts cb]\n   (let [bound-vars (merge\n                      {:*compiler*     (env/default-compiler-env)\n                       :*data-readers* tags/*cljs-data-readers*\n                       :*load-macros*  (or (:load-macros opts) true)\n                       :*analyze-deps* (or (:analyze-deps opts) true)\n                       :*load-fn*      (or (:load opts) *load-fn*)\n                       :*eval-fn*      (or (:eval opts) *eval-fn*)}\n                      bound-vars)\n         name (cond-> name (:macro-ns opts) ana/macro-ns-name)]\n     (when (= :reload reload)\n       (swap! *loaded* disj name))\n     (when (= :reload-all reload)\n       (reset! *loaded* #{}))\n     (when (:verbose opts)\n       (debug-prn (str \"Loading \" name (when (:macros-ns opts) \" macros\") \" namespace\")))\n     (if-not (contains? @*loaded* name)\n       (let [env (:*env* bound-vars)]\n         (try\n           ((:*load-fn* bound-vars)\n             {:name name\n              :macros (:macros-ns opts)\n              :path (ns->relpath name)}\n             (fn [resource]\n               (assert (or (map? resource) (nil? resource))\n                 \"*load-fn* may only return a map or nil\")\n               (if resource\n                 (let [{:keys [lang source cache source-map]} resource]\n                   (condp = lang\n                     :clj (eval-str* bound-vars source name opts\n                            (fn [res]\n                              (if (:error res)\n                                (cb res)\n                                (do\n                                  (swap! *loaded* conj name)\n                                  (cb {:value true})))))\n                     :js (process-macros-deps bound-vars cache opts\n                           (fn [res]\n                             (if (:error res)\n                               (cb res)\n                               (process-libs-deps bound-vars cache opts\n                                 (fn [res]\n                                   (if (:error res)\n                                     (cb res)\n                                     (let [res (try\n                                                 ((:*eval-fn* bound-vars) resource)\n                                                 (when cache\n                                                   (load-analysis-cache!\n                                                     (:*compiler* bound-vars) name cache))\n                                                 (when source-map\n                                                   (load-source-map!\n                                                     (:*compiler* bound-vars) name source-map))\n                                                 (catch :default cause\n                                                   (wrap-error\n                                                     (ana/error env\n                                                       (str \"Could not require \" name) cause))))]\n                                       (if (:error res)\n                                         (cb res)\n                                         (do\n                                           (swap! *loaded* conj name)\n                                           (cb {:value true}))))))))))\n                     (cb (wrap-error\n                           (ana/error env\n                             (str \"Invalid :lang specified \" lang \", only :clj or :js allowed\"))))))\n                 (cb (wrap-error\n                       (ana/error env\n                         (ana/error-message (if (:macros-ns opts)\n                                              :undeclared-macros-ns\n                                              :undeclared-ns)\n                           {:ns-sym name :js-provide (cljs.core/name name)})))))))\n           (catch :default cause\n             (cb (wrap-error\n                   (ana/error env\n                     (str \"Could not require \" name) cause))))))\n       (cb {:value true})))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [161 234]},
+          :lines [204 285]},
  :full-name "cljs.js/require",
  :full-name-encode "cljs.js/require",
  :history [["+" "1.7.10"]]}

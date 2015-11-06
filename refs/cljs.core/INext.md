@@ -22,7 +22,7 @@ Protocol for accessing the next items of a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L483-L489):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L492-L498):
 
 ```clj
 (defprotocol INext
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:483-489](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L483-L489)</ins>
+                └── <ins>[core.cljs:492-498](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L492-L498)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defprotocol INext\n  \"Protocol for accessing the next items of a collection.\"\n  (^clj-or-nil -next [coll]\n    \"Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [483 489]},
+          :lines [492 498]},
  :methods [{:name "-next",
             :signature ["[coll]"],
             :docstring "Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil"}],

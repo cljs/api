@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.145](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.145)__</td>
+<td>2015-10-13</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150805</kbd></td>
+<td>
+<a href="#user-content-17145syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17145library">
++6 
+</a>
+</td>
+<td>
+<a href="#user-content-17145compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.122](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.122)__</td>
 <td>2015-08-29</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2982,6 +3005,59 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.145
+
+<a name="17145syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="17145library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/system-time](refs/cljs.core/system-time.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/ends-with?](refs/clojure.string/ends-withQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/includes?](refs/clojure.string/includesQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/index-of](refs/clojure.string/index-of.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/last-index-of](refs/clojure.string/last-index-of.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.string/starts-with?](refs/clojure.string/starts-withQMARK.md)</samp></td>
+</tr>
+</table>
+
+<a name="17145compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.7.122

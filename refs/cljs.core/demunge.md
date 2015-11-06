@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10081-L10086):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10093-L10098):
 
 ```clj
 (defn demunge [name]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10081-10086](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L10081-L10086)</ins>
+                └── <ins>[core.cljs:10093-10098](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L10093-L10098)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn demunge [name]\n  ((if (symbol? name) symbol str)\n    (let [name' (str name)]\n      (if (identical? name' \"_DOT__DOT_\")\n        \"..\"\n        (demunge-str (str name))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10081 10086]},
+          :lines [10093 10098]},
  :full-name "cljs.core/demunge",
  :full-name-encode "cljs.core/demunge",
  :history [["+" "1.7.10"]]}

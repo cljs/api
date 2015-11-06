@@ -77,7 +77,7 @@ will be defined, taking positional parameters for the fields
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1563-L1631):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1563-L1631):
 
 ```clj
 (core/defmacro deftype
@@ -107,12 +107,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1563-1631](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/clojure/cljs/core.cljc#L1563-L1631)</ins>
+                └── <ins>[core.cljc:1563-1631](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/core.cljc#L1563-L1631)</ins>
 </pre>
 
 -->
@@ -163,7 +163,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro deftype\n  [t fields & impls]\n  (validate-fields \"deftype\" t fields)\n  (core/let [env &env\n             r (:name (cljs.analyzer/resolve-var (dissoc env :locals) t))\n             [fpps pmasks] (prepare-protocol-masks env impls)\n             protocols (collect-protocols impls env)\n             t (vary-meta t assoc\n                 :protocols protocols\n                 :skip-protocol-flag fpps) ]\n    `(do\n       (deftype* ~t ~fields ~pmasks\n         ~(if (seq impls)\n            `(extend-type ~t ~@(dt->et t impls fields))))\n       (set! (.-getBasis ~t) (fn [] '[~@fields]))\n       (set! (.-cljs$lang$type ~t) true)\n       (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n       (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n\n       ~(build-positional-factory t r fields)\n       ~t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1563 1631]},
  :full-name "cljs.core/deftype",

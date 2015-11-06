@@ -36,11 +36,12 @@ Returns a lazy sequence of the elements of `coll` with duplicates removed.
 Source docstring:
 
 ```
-Returns a lazy sequence of the elements of coll with duplicates removed
+Returns a lazy sequence of the elements of coll with duplicates removed.
+Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L8239-L8261):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L8250-L8273):
 
 ```clj
 (defn distinct
@@ -71,12 +72,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.122/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.122
+clojurescript @ r1.7.145
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8239-8261](https://github.com/clojure/clojurescript/blob/r1.7.122/src/main/cljs/cljs/core.cljs#L8239-L8261)</ins>
+                └── <ins>[core.cljs:8250-8273](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/cljs/cljs/core.cljs#L8250-L8273)</ins>
 </pre>
 
 -->
@@ -129,12 +130,12 @@ The API data for this symbol:
  :source {:code "(defn distinct\n  ([]\n    (fn [rf]\n      (let [seen (volatile! #{})]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if (contains? @seen input)\n              result\n              (do (vswap! seen conj input)\n                  (rf result input))))))))\n  ([coll]\n    (let [step (fn step [xs seen]\n                 (lazy-seq\n                   ((fn [[f :as xs] seen]\n                      (when-let [s (seq xs)]\n                        (if (contains? seen f)\n                          (recur (rest s) seen)\n                          (cons f (step (rest s) (conj seen f))))))\n                     xs seen)))]\n      (step coll #{}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.122",
+          :tag "r1.7.145",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8239 8261]},
+          :lines [8250 8273]},
  :full-name "cljs.core/distinct",
  :clj-symbol "clojure.core/distinct",
- :docstring "Returns a lazy sequence of the elements of coll with duplicates removed"}
+ :docstring "Returns a lazy sequence of the elements of coll with duplicates removed.\nReturns a stateful transducer when no collection is provided."}
 
 ```
 
