@@ -60,7 +60,7 @@ Same as (first (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L815-L818):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L815-L818):
 
 ```clj
 (defn fnext
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:815-818](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L815-L818)</ins>
+            └── <ins>[core.cljs:815-818](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L815-L818)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn fnext\n  [coll]\n  (first (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [815 818]},
  :examples [{:id "92383f",

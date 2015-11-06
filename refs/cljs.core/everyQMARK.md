@@ -42,7 +42,7 @@ false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2650-L2657):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2650-L2657):
 
 ```clj
 (defn ^boolean every?
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2650-2657](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2650-L2657)</ins>
+            └── <ins>[core.cljs:2650-2657](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2650-L2657)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean every?\n  [pred coll]\n  (cond\n   (nil? (seq coll)) true\n   (pred (first coll)) (recur pred (next coll))\n   :else false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2650 2657]},
  :full-name "cljs.core/every?",

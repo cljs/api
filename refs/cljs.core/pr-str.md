@@ -30,7 +30,7 @@ pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6936-L6939):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6936-L6939):
 
 ```clj
 (defn pr-str
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6936-6939](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6936-L6939)</ins>
+            └── <ins>[core.cljs:6936-6939](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6936-L6939)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn pr-str\n  [& objs]\n  (pr-str-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6936 6939]},
  :full-name "cljs.core/pr-str",

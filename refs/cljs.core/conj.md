@@ -98,7 +98,7 @@ happen at different 'places' depending on the concrete type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L837-L848):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L837-L848):
 
 ```clj
 (defn conj
@@ -116,11 +116,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:837-848](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L837-L848)</ins>
+            └── <ins>[core.cljs:837-848](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L837-L848)</ins>
 </pre>
 
 -->
@@ -176,7 +176,7 @@ The API data for this symbol:
  :source {:code "(defn conj\n  ([coll x]\n    (if-not (nil? coll)\n      (-conj coll x)\n      (list x)))\n  ([coll x & xs]\n    (if xs\n      (recur (conj coll x) (first xs) (next xs))\n      (conj coll x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [837 848]},
  :examples [{:id "8c2a84",

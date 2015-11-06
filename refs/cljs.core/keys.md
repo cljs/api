@@ -40,7 +40,7 @@ Returns a sequence of the map's keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6069-L6073):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6069-L6073):
 
 ```clj
 (defn keys
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6069-6073](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6069-L6073)</ins>
+            └── <ins>[core.cljs:6069-6073](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6069-L6073)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn keys\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (KeySeq. mseq nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6069 6073]},
  :full-name "cljs.core/keys",

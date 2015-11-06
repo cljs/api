@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L1674):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1674):
 
 ```clj
 (defn chars [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1674](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L1674)</ins>
+            └── <ins>[core.cljs:1674](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1674)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn chars [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1674]},
  :full-name "cljs.core/chars",

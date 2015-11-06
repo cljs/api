@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/clj/cljs/core.clj#L953-L965):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/core.clj#L953-L965):
 
 ```clj
 (defmacro defrecord [rsym fields & impls]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:953-965](https://github.com/clojure/clojurescript/blob/r2199/src/clj/cljs/core.clj#L953-L965)</ins>
+            └── <ins>[core.clj:953-965](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/core.clj#L953-L965)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defmacro defrecord [rsym fields & impls]\n  (let [rsym (vary-meta rsym assoc :internal-ctor true)\n        r    (vary-meta\n               (:name (cljs.analyzer/resolve-var (dissoc &env :locals) rsym))\n               assoc :internal-ctor true)]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (core/list ~(core/str r))))\n       (set! (.-cljs$lang$ctorPrWriter ~r) (fn [this# writer#] (-write writer# ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/clj/cljs/core.clj",
           :lines [953 965]},
  :full-name "cljs.core/defrecord",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2087-L2117):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2087-L2117):
 
 ```clj
 (deftype Keyword [ns name fqn ^:mutable _hash]
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2087-2117](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2087-L2117)</ins>
+            └── <ins>[core.cljs:2087-2117](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2087-L2117)</ins>
 </pre>
 
 -->
@@ -120,7 +120,7 @@ The API data for this symbol:
  :source {:code "(deftype Keyword [ns name fqn ^:mutable _hash]\n  Object\n  (toString [_] (str \":\" fqn))\n  \n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Keyword other)\n      (identical? fqn (.-fqn other))\n      false))\n  IFn\n  (-invoke [kw coll]\n    (get coll kw))\n  (-invoke [kw coll not-found]\n    (get coll kw not-found))\n\n  IHash\n  (-hash [_]\n    ; This was checking if _hash == -1, should it stay that way?\n    (if (nil? _hash)\n      (do\n        (set! _hash (+ (hash-combine (hash ns) (hash name))\n                        0x9e3779b9))\n        _hash)\n      _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer (str \":\" fqn))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2087 2117]},
  :full-name "cljs.core/Keyword",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L7609-L7617):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L7609-L7617):
 
 ```clj
 (defprotocol IMultiFn
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7609-7617](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L7609-L7617)</ins>
+            └── <ins>[core.cljs:7609-7617](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L7609-L7617)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf])\n  (-dispatch [mf args]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7609 7617]},
  :methods [{:name "-reset", :signature ["[mf]"], :docstring nil}

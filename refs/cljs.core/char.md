@@ -52,7 +52,7 @@ Coerce to char
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L1557-L1563):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1557-L1563):
 
 ```clj
 (defn char
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1557-1563](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L1557-L1563)</ins>
+            └── <ins>[core.cljs:1557-1563](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L1557-L1563)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(defn char\n  [x]\n  (cond\n    (number? x) (.fromCharCode js/String x)\n    (and (string? x) (== (.-length x) 1)) x\n    :else (throw (js/Error. \"Argument to char must be a character or number\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1557 1563]},
  :examples [{:id "4e1a56",

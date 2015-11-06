@@ -81,7 +81,7 @@ The test-constants need not be all of the same type.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/clj/cljs/core.clj#L1129-L1157):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/core.clj#L1129-L1157):
 
 ```clj
 (defmacro case [e & clauses]
@@ -119,11 +119,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1129-1157](https://github.com/clojure/clojurescript/blob/r2199/src/clj/cljs/core.clj#L1129-L1157)</ins>
+            └── <ins>[core.clj:1129-1157](https://github.com/clojure/clojurescript/blob/r2202/src/clj/cljs/core.clj#L1129-L1157)</ins>
 </pre>
 
 -->
@@ -176,7 +176,7 @@ The API data for this symbol:
  :source {:code "(defmacro case [e & clauses]\n  (let [default (if (odd? (count clauses))\n                  (last clauses)\n                  `(throw (js/Error. (core/str \"No matching clause: \" ~e))))\n        assoc-test (fn assoc-test [m test expr]\n                         (if (contains? m test)\n                           (throw (clojure.core/IllegalArgumentException.\n                                   (core/str \"Duplicate case test constant '\"\n                                             test \"'\"\n                                             (when (:line &env)\n                                               (core/str \" on line \" (:line &env) \" \"\n                                                         cljs.analyzer/*cljs-file*)))))\n                           (assoc m test expr)))\n        pairs (reduce (fn [m [test expr]]\n                        (core/cond\n                         (seq? test) (reduce (fn [m test]\n                                               (let [test (if (core/symbol? test)\n                                                            (core/list 'quote test)\n                                                            test)]\n                                                 (assoc-test m test expr)))\n                                             m test)\n                         (core/symbol? test) (assoc-test m (core/list 'quote test) expr)\n                         :else (assoc-test m test expr)))\n                      {} (partition 2 clauses))\n        esym (gensym)]\n   `(let [~esym ~e]\n      (cond\n        ~@(mapcat (fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n        :else ~default))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/clj/cljs/core.clj",
           :lines [1129 1157]},
  :examples [{:id "09a90c",

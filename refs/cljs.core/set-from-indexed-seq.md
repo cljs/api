@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6377-L6381):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6377-L6381):
 
 ```clj
 (defn set-from-indexed-seq [iseq]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6377-6381](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6377-L6381)</ins>
+            └── <ins>[core.cljs:6377-6381](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6377-L6381)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defn set-from-indexed-seq [iseq]\n  (let [arr (.-arr iseq)\n        ret (areduce arr i ^not-native res (-as-transient #{})\n              (-conj! res (aget arr i)))]\n    (-persistent! ^not-native ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6377 6381]},
  :full-name "cljs.core/set-from-indexed-seq",

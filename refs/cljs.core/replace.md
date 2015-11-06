@@ -51,7 +51,7 @@ corresponding val in smap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6416-L6428):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6416-L6428):
 
 ```clj
 (defn replace
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6416-6428](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L6416-L6428)</ins>
+            └── <ins>[core.cljs:6416-6428](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L6416-L6428)</ins>
 </pre>
 
 -->
@@ -129,7 +129,7 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [smap coll]\n  (if (vector? coll)\n    (let [n (count coll)]\n      (reduce (fn [v i]\n                (if-let [e (find smap (nth v i))]\n                  (assoc v i (second e))\n                  v))\n              coll (take n (iterate inc 0))))\n    (map #(if-let [e (find smap %)] (second e) %) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6416 6428]},
  :full-name "cljs.core/replace",

@@ -50,7 +50,7 @@ to f and colls.  Thus function f should return a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L3056-L3062):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L3056-L3062):
 
 ```clj
 (defn mapcat
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3056-3062](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L3056-L3062)</ins>
+            └── <ins>[core.cljs:3056-3062](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L3056-L3062)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn mapcat\n  ([f coll]\n    (flatten1 (map f coll)))\n  ([f coll & colls]\n    (flatten1 (apply map f coll colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3056 3062]},
  :full-name "cljs.core/mapcat",

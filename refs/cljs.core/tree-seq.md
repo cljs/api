@@ -49,7 +49,7 @@ tree.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L3089-L3102):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L3089-L3102):
 
 ```clj
 (defn tree-seq
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3089-3102](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L3089-L3102)</ins>
+            └── <ins>[core.cljs:3089-3102](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L3089-L3102)</ins>
 </pre>
 
 -->
@@ -122,7 +122,7 @@ The API data for this symbol:
  :source {:code "(defn tree-seq\n   [branch? children root]\n   (let [walk (fn walk [node]\n                (lazy-seq\n                 (cons node\n                  (when (branch? node)\n                    (mapcat walk (children node))))))]\n     (walk root)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3089 3102]},
  :full-name "cljs.core/tree-seq",

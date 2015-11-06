@@ -51,7 +51,7 @@ this will return :fred if :fred is in the sequence, otherwise nil:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2664-L2671):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2664-L2671):
 
 ```clj
 (defn some
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2199/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2199
+clojurescript @ r2202
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2664-2671](https://github.com/clojure/clojurescript/blob/r2199/src/cljs/cljs/core.cljs#L2664-L2671)</ins>
+            └── <ins>[core.cljs:2664-2671](https://github.com/clojure/clojurescript/blob/r2202/src/cljs/cljs/core.cljs#L2664-L2671)</ins>
 </pre>
 
 -->
@@ -125,7 +125,7 @@ The API data for this symbol:
  :source {:code "(defn some\n  [pred coll]\n    (when (seq coll)\n      (or (pred (first coll)) (recur pred (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2199",
+          :tag "r2202",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2664 2671]},
  :full-name "cljs.core/some",
