@@ -28,7 +28,7 @@ loading all the printing machinery.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L400-L408):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L400-L408):
 
 ```clj
 (defn pr-str*
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:400-408](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L400-L408)</ins>
+            └── <ins>[core.cljs:400-408](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L400-L408)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn pr-str*\n  [^not-native obj]\n  (let [sb (StringBuffer.)\n        writer (StringBufferWriter. sb)]\n    (-pr-writer obj writer (pr-opts))\n    (-flush writer)\n    (str sb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [400 408]},
  :full-name "cljs.core/pr-str*",

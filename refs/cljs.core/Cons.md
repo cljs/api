@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2245-L2290):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2251-L2296):
 
 ```clj
 (deftype Cons [meta first rest ^:mutable __hash]
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2245-2290](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2245-L2290)</ins>
+            └── <ins>[core.cljs:2251-2296](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2251-L2296)</ins>
 </pre>
 
 -->
@@ -135,9 +135,9 @@ The API data for this symbol:
  :source {:code "(deftype Cons [meta first rest ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n\n  IList\n\n  ICloneable\n  (-clone [_] (Cons. meta first rest __hash))\n\n  IWithMeta\n  (-with-meta [coll meta] (Cons. meta first rest __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ASeq\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] (if (nil? rest) () rest))\n\n  INext\n  (-next [coll]\n    (if (nil? rest) nil (seq rest)))\n\n  ICollection\n  (-conj [coll o] (Cons. nil o coll __hash))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  ISeqable\n  (-seq [coll] coll)\n  \n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2245 2290]},
+          :lines [2251 2296]},
  :full-name "cljs.core/Cons",
  :clj-symbol "clojure.lang/Cons"}
 

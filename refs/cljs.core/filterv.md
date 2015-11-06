@@ -38,7 +38,7 @@ Returns a vector of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3781-L3788):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3781-L3788):
 
 ```clj
 (defn filterv
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3781-3788](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3781-L3788)</ins>
+            └── <ins>[core.cljs:3781-3788](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3781-L3788)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defn filterv\n  [pred coll]\n  (-> (reduce (fn [v o] (if (pred o) (conj! v o) v))\n              (transient [])\n              coll)\n      persistent!))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3781 3788]},
  :full-name "cljs.core/filterv",

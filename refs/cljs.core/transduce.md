@@ -35,7 +35,7 @@ certain transforms may inject or skip items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1657-L1669):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1663-L1675):
 
 ```clj
 (defn transduce
@@ -51,11 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1657-1669](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1657-L1669)</ins>
+            └── <ins>[core.cljs:1663-1675](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1663-L1675)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn transduce\n  ([xform f coll] (transduce xform f (f) coll))\n  ([xform f init coll]\n     (let [f (xform (completing f))\n           ret (reduce f init coll)\n           ret (f (if (reduced? ret) @ret ret))]\n       (if (reduced? ret) @ret ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1657 1669]},
+          :lines [1663 1675]},
  :full-name "cljs.core/transduce",
  :docstring "reduce with a transformation of f (xf). If init is not\nsupplied, (f) will be called to produce it. Returns the result of\napplying (the transformed) xf to init and the first item in coll,\nthen applying xf to that result and the 2nd item, etc. If coll\ncontains no items, returns init and f is not called. Note that\ncertain transforms may inject or skip items."}
 

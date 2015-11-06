@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7641-L7642):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7641-L7642):
 
 ```clj
 (defn regexp? [o]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7641-7642](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7641-L7642)</ins>
+            └── <ins>[core.cljs:7641-7642](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7641-L7642)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn regexp? [o]\n  (instance? js/RegExp o))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7641 7642]},
  :full-name "cljs.core/regexp?",

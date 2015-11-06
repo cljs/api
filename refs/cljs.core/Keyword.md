@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2306-L2332):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2312-L2338):
 
 ```clj
 (deftype Keyword [ns name fqn ^:mutable _hash]
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2306-2332](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2306-L2332)</ins>
+            └── <ins>[core.cljs:2312-2338](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2312-L2338)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(deftype Keyword [ns name fqn ^:mutable _hash]\n  Object\n  (toString [_] (str \":\" fqn))\n  (equiv [this other]\n    (-equiv this other))\n  \n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Keyword other)\n      (identical? fqn (.-fqn other))\n      false))\n  IFn\n  (-invoke [kw coll]\n    (get coll kw))\n  (-invoke [kw coll not-found]\n    (get coll kw not-found))\n\n  IHash\n  (-hash [this]\n    (caching-hash this hash-keyword _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer (str \":\" fqn))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2306 2332]},
+          :lines [2312 2338]},
  :full-name "cljs.core/Keyword",
  :clj-symbol "clojure.lang/Keyword"}
 

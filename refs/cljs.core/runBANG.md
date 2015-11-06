@@ -28,7 +28,7 @@ effects, on successive items in the collection. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8178-L8182):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8178-L8182):
 
 ```clj
 (defn run!
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8178-8182](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8178-L8182)</ins>
+            └── <ins>[core.cljs:8178-8182](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8178-L8182)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn run!\n  [proc coll]\n  (reduce #(proc %2) nil coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8178 8182]},
  :full-name "cljs.core/run!",

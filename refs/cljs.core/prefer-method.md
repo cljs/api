@@ -31,7 +31,7 @@ when there is a conflict
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8679-L8683):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8679-L8683):
 
 ```clj
 (defn prefer-method
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8679-8683](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8679-L8683)</ins>
+            └── <ins>[core.cljs:8679-8683](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8679-L8683)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn prefer-method\n  [multifn dispatch-val-x dispatch-val-y]\n  (-prefer-method multifn dispatch-val-x dispatch-val-y))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8679 8683]},
  :full-name "cljs.core/prefer-method",

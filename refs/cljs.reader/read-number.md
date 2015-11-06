@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L280-L290):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/reader.cljs#L280-L290):
 
 ```clj
 (defn read-number
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:280-290](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L280-L290)</ins>
+            └── <ins>[reader.cljs:280-290](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/reader.cljs#L280-L290)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn read-number\n  [reader initch]\n  (loop [buffer (gstring/StringBuffer. initch)\n         ch (read-char reader)]\n    (if (or (nil? ch) (whitespace? ch) (macros ch))\n      (do\n        (unread reader ch)\n        (let [s (.toString buffer)]\n          (or (match-number s)\n              (reader-error reader \"Invalid number format [\" s \"]\"))))\n      (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [280 290]},
  :full-name "cljs.reader/read-number",

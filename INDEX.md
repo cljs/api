@@ -2,7 +2,7 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2301__ [all](HISTORY.md)</td>
+<td>__0.0-2307__ [all](HISTORY.md)</td>
 <td>2014-08-07</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2301__ ([See Full History](HISTORY.md)):
+Changes from __0.0-2307__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,193 +34,7 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/ArrayIter](refs/cljs.core/ArrayIter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/ArrayList](refs/cljs.core/ArrayList.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/Iteration](refs/cljs.core/Iteration.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/LazyTransformer](refs/cljs.core/LazyTransformer.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/LazyTransformer.create](refs/cljs.core/LazyTransformerDOTcreate.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/LazyTransformer.createMulti](refs/cljs.core/LazyTransformerDOTcreateMulti.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/MultiStepper](refs/cljs.core/MultiStepper.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/PersistentArrayMap.HASHMAP-THRESHOLD](refs/cljs.core/PersistentArrayMapDOTHASHMAP-THRESHOLD.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
-</td>
-<td><samp>[~~cljs.core/PersistentArrayMap.HASHMAP_THRESHOLD~~](refs/cljs.core/PersistentArrayMapDOTHASHMAP_THRESHOLD.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/PersistentVector.EMPTY-NODE](refs/cljs.core/PersistentVectorDOTEMPTY-NODE.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
-</td>
-<td><samp>[~~cljs.core/PersistentVector.EMPTY_NODE~~](refs/cljs.core/PersistentVectorDOTEMPTY_NODE.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/SeqIter](refs/cljs.core/SeqIter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/Stepper](refs/cljs.core/Stepper.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/StringIter](refs/cljs.core/StringIter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/array-iter](refs/cljs.core/array-iter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/array-list](refs/cljs.core/array-list.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/dedupe](refs/cljs.core/dedupe.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/flatmap](refs/cljs.core/flatmap.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/iter](refs/cljs.core/iter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/iteration](refs/cljs.core/iteration.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/lazy-transformer](refs/cljs.core/lazy-transformer.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/multi-stepper](refs/cljs.core/multi-stepper.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/nil-iter](refs/cljs.core/nil-iter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/random-sample](refs/cljs.core/random-sample.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/run!](refs/cljs.core/runBANG.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/seq-iter](refs/cljs.core/seq-iter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/stepper](refs/cljs.core/stepper.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/string-iter](refs/cljs.core/string-iter.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/transduce](refs/cljs.core/transduce.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-protocol-red.svg">
-</td>
-<td><samp>[~~clojure.browser.event/EventType~~](refs/clojure.browser.event/EventType.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[clojure.browser.event/IEventType](refs/clojure.browser.event/IEventType.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__

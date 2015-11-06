@@ -31,7 +31,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8133-L8148):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8133-L8148):
 
 ```clj
 (defn dedupe
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8133-8148](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8133-L8148)</ins>
+            └── <ins>[core.cljs:8133-8148](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8133-L8148)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn dedupe\n  ([]\n   (fn [f1]\n     (let [pa (atom ::none)]\n       (fn\n         ([] (f1))\n         ([result] (f1 result))\n         ([result input]\n            (let [prior @pa]\n              (reset! pa input)\n              (if (= prior input)\n                result\n                (f1 result input))))))))\n  ([coll] (sequence (dedupe) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8133 8148]},
  :full-name "cljs.core/dedupe",

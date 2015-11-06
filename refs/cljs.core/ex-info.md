@@ -35,7 +35,7 @@ map of additional data.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8726-L8733):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8726-L8733):
 
 ```clj
 (defn ex-info
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8726-8733](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8726-L8733)</ins>
+            └── <ins>[core.cljs:8726-8733](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8726-L8733)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn ex-info\n  ([msg map]\n     (ExceptionInfo. msg map nil))\n  ([msg map cause]\n     (ExceptionInfo. msg map cause)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8726 8733]},
  :full-name "cljs.core/ex-info",

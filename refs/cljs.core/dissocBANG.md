@@ -33,7 +33,7 @@ Returns a transient map that doesn't contain a mapping for key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2760-L2768):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2766-L2774):
 
 ```clj
 (defn dissoc!
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2760-2768](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2760-L2768)</ins>
+            └── <ins>[core.cljs:2766-2774](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2766-L2774)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn dissoc!\n  ([tcoll key]\n    (-dissoc! tcoll key))\n  ([tcoll key & ks]\n    (let [ntcoll (-dissoc! tcoll key)]\n      (if ks\n        (recur ntcoll (first ks) (next ks))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2760 2768]},
+          :lines [2766 2774]},
  :full-name "cljs.core/dissoc!",
  :clj-symbol "clojure.core/dissoc!",
  :docstring "Returns a transient map that doesn't contain a mapping for key(s)."}

@@ -74,7 +74,7 @@ array ret.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/core.clj#L1475-L1488):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L1475-L1488):
 
 ```clj
 (defmacro amap
@@ -93,11 +93,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1475-1488](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/core.clj#L1475-L1488)</ins>
+            └── <ins>[core.clj:1475-1488](https://github.com/clojure/clojurescript/blob/r2307/src/clj/cljs/core.clj#L1475-L1488)</ins>
 </pre>
 
 -->
@@ -150,7 +150,7 @@ The API data for this symbol:
  :source {:code "(defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/clj/cljs/core.clj",
           :lines [1475 1488]},
  :examples [{:id "3a7471",

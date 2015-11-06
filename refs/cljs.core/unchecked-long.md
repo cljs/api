@@ -30,7 +30,7 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1883-L1886):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1889-L1892):
 
 ```clj
 (defn unchecked-long
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1883-1886](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1883-L1886)</ins>
+            └── <ins>[core.cljs:1889-1892](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1889-L1892)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn unchecked-long\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1883 1886]},
+          :lines [1889 1892]},
  :full-name "cljs.core/unchecked-long",
  :clj-symbol "clojure.core/unchecked-long",
  :docstring "Coerce to long by stripping decimal places. Identical to `int'."}

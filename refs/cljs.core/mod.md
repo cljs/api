@@ -60,7 +60,7 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1902-L1905):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1908-L1911):
 
 ```clj
 (defn mod
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1902-1905](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1902-L1905)</ins>
+            └── <ins>[core.cljs:1908-1911](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1908-L1911)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1902 1905]},
+          :lines [1908 1911]},
  :examples [{:id "8165e8",
              :content "```clj\n(mod -5 3)\n;;=> 1\n\n(mod 5 3)\n;;=> 2\n\n(mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/mod",

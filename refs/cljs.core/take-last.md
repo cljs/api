@@ -46,7 +46,7 @@ of coll may be no better than linear time.  For vectors, see also subvec.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3585-L3592):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3585-L3592):
 
 ```clj
 (defn take-last
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3585-3592](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3585-L3592)</ins>
+            └── <ins>[core.cljs:3585-3592](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3585-L3592)</ins>
 </pre>
 
 -->
@@ -118,7 +118,7 @@ The API data for this symbol:
  :source {:code "(defn take-last\n  [n coll]\n  (loop [s (seq coll), lead (seq (drop n coll))]\n    (if lead\n      (recur (next s) (next lead))\n      s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3585 3592]},
  :full-name "cljs.core/take-last",

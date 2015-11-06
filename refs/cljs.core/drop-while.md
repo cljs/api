@@ -49,7 +49,7 @@ stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3594-L3617):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3594-L3617):
 
 ```clj
 (defn drop-while
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3594-3617](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3594-L3617)</ins>
+            └── <ins>[core.cljs:3594-3617](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3594-L3617)</ins>
 </pre>
 
 -->
@@ -136,7 +136,7 @@ The API data for this symbol:
  :source {:code "(defn drop-while\n  ([pred]\n     (fn [f1]\n       (let [da (atom true)]\n         (fn\n           ([] (f1))\n           ([result] (f1 result))\n           ([result input]\n              (let [drop? @da]\n                (if (and drop? (pred input))\n                  result\n                  (do\n                    (reset! da nil)\n                    (f1 result input)))))))))\n  ([pred coll]\n     (let [step (fn [pred coll]\n                  (let [s (seq coll)]\n                    (if (and s (pred (first s)))\n                      (recur pred (rest s))\n                      s)))]\n       (lazy-seq (step pred coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3594 3617]},
  :full-name "cljs.core/drop-while",

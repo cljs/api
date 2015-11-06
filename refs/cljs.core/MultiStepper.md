@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2949-L2970):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2958-L2979):
 
 ```clj
 (deftype MultiStepper [xform iters nexts]
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2949-2970](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2949-L2970)</ins>
+            └── <ins>[core.cljs:2958-2979](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2958-L2979)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(deftype MultiStepper [xform iters nexts]\n  Object\n  (hasNext [_]\n    (loop [iters (seq iters)]\n      (if-not (nil? iters)\n        (let [iter (first iters)]\n          (if-not (.hasNext iter)\n            false\n            (recur (next iters))))\n        true)))\n  (next [_]\n    (dotimes [i (alength iters)]\n      (aset next i (.next (aget iters i))))\n    (prim-seq nexts 0))\n  (step [_ lt]\n    (loop []\n      (if (and (not (nil? (.-stepper lt)))\n               (.hasNext iter))\n        (when-not (reduced? (xform lt (.next iter)))\n          (recur))))\n    (when-not (nil? (.-stepper lt))\n      (xform lt))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2949 2970]},
+          :lines [2958 2979]},
  :full-name "cljs.core/MultiStepper",
  :full-name-encode "cljs.core/MultiStepper",
  :history [["+" "0.0-2301"]]}

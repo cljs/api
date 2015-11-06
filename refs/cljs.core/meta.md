@@ -30,7 +30,7 @@ Returns the metadata of obj, returns nil if there is no metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1291-L1296):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1297-L1302):
 
 ```clj
 (defn meta
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1291-1296](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1291-L1296)</ins>
+            └── <ins>[core.cljs:1297-1302](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L1297-L1302)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn meta\n  [o]\n  (when (and (not (nil? o))\n             (satisfies? IMeta o))\n    (-meta o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1291 1296]},
+          :lines [1297 1302]},
  :full-name "cljs.core/meta",
  :clj-symbol "clojure.core/meta",
  :docstring "Returns the metadata of obj, returns nil if there is no metadata."}

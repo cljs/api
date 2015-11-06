@@ -41,7 +41,7 @@ capturing groups.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7656-L7668):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7656-L7668):
 
 ```clj
 (defn re-find
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7656-7668](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7656-L7668)</ins>
+            └── <ins>[core.cljs:7656-7668](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7656-L7668)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn re-find\n  [re s]\n  (if (string? s)\n    (let [matches (.exec re s)]\n      (when-not (nil? matches)\n        (if (== (count matches) 1)\n          (first matches)\n          (vec matches))))\n    (throw (js/TypeError. \"re-find must match against a string.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7656 7668]},
  :full-name "cljs.core/re-find",

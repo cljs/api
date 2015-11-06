@@ -30,7 +30,7 @@ returns true if x is a Delay created with delay
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8097-L8099):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8097-L8099):
 
 ```clj
 (defn ^boolean delay?
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8097-8099](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8097-L8099)</ins>
+            └── <ins>[core.cljs:8097-8099](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L8097-L8099)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean delay?\n  [x] (instance? Delay x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8097 8099]},
  :full-name "cljs.core/delay?",

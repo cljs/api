@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2215):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2221):
 
 ```clj
 (set! (.-EMPTY List) (EmptyList. nil))
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2215](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2215)</ins>
+            └── <ins>[core.cljs:2221](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2221)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY List) (EmptyList. nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2215]},
+          :lines [2221]},
  :full-name "cljs.core/List.EMPTY",
  :clj-symbol "clojure.lang/PersistentList.EMPTY"}
 

@@ -32,7 +32,7 @@ call, any such use will throw an exception.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2728-L2733):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2734-L2739):
 
 ```clj
 (defn persistent!
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2728-2733](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2728-L2733)</ins>
+            └── <ins>[core.cljs:2734-2739](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2734-L2739)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn persistent!\n  [tcoll]\n  (-persistent! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2728 2733]},
+          :lines [2734 2739]},
  :full-name "cljs.core/persistent!",
  :clj-symbol "clojure.core/persistent!",
  :docstring "Returns a new, persistent version of the transient collection, in\nconstant time. The transient collection cannot be used after this\ncall, any such use will throw an exception."}

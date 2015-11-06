@@ -61,7 +61,7 @@ Returns a sequence of all but the last item in `s`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7264-L7268):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7264-L7268):
 
 ```clj
 (defn butlast [s]
@@ -75,11 +75,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7264-7268](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7264-L7268)</ins>
+            └── <ins>[core.cljs:7264-7268](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L7264-L7268)</ins>
 </pre>
 
 -->
@@ -137,7 +137,7 @@ The API data for this symbol:
  :source {:code "(defn butlast [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7264 7268]},
  :examples [{:id "7a4676",

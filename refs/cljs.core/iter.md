@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2913-L2918):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2919-L2924):
 
 ```clj
 (defn iter [coll]
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2913-2918](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2913-L2918)</ins>
+            └── <ins>[core.cljs:2919-2924](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2919-L2924)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn iter [coll]\n  (cond\n    (nil? coll) (nil-iter)\n    (string? coll) (string-iter coll)\n    (array? coll) (array-iter coll)\n    :else (seq-iter (seq coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2913 2918]},
+          :lines [2919 2924]},
  :full-name "cljs.core/iter",
  :full-name-encode "cljs.core/iter",
  :history [["+" "0.0-2301"]]}

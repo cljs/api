@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2992-L3047):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3001-L3056):
 
 ```clj
 (deftype LazyTransformer [^:mutable stepper ^:mutable first ^:mutable rest meta]
@@ -87,11 +87,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2992-3047](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2992-L3047)</ins>
+            └── <ins>[core.cljs:3001-3056](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L3001-L3056)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(deftype LazyTransformer [^:mutable stepper ^:mutable first ^:mutable rest meta]\n  IWithMeta\n  (-with-meta [this new-meta]\n    (LazyTransformer. stepper first rest new-meta))\n\n  ICollection\n  (-conj [this o]\n    (cons o (-seq this)))\n\n  IEmptyableCollection\n  (-empty [this]\n    ())\n\n  ISequential\n  IEquiv\n  (-equiv [this other]\n    (let [s (-seq this)]\n      (if-not (nil? s)\n        (equiv-sequential this other)\n        (and (sequential? other)\n             (nil? (seq other))))))\n\n  IHash\n  (-hash [this]\n    (hash-ordered-coll this))\n\n  ISeqable\n  (-seq [this]\n    (when-not (nil? stepper)\n      (.step stepper this))\n    (if (nil? rest)\n      nil\n      this))\n\n  ISeq\n  (-first [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      nil\n      first))\n\n  (-rest [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      ()\n      rest))\n\n  INext\n  (-next [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      nil\n      (-seq rest))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2992 3047]},
+          :lines [3001 3056]},
  :full-name "cljs.core/LazyTransformer",
  :full-name-encode "cljs.core/LazyTransformer",
  :history [["+" "0.0-2301"]]}

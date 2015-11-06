@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2337-L2343):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2343-L2349):
 
 ```clj
 (defn ^boolean keyword-identical? [x y]
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2301
+clojurescript @ r2307
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2337-2343](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L2337-L2343)</ins>
+            └── <ins>[core.cljs:2343-2349](https://github.com/clojure/clojurescript/blob/r2307/src/cljs/cljs/core.cljs#L2343-L2349)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean keyword-identical? [x y]\n  (if (identical? x y)\n    true\n    (if (and (keyword? x)\n             (keyword? y))\n      (identical? (.-fqn x) (.-fqn y))\n      false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2301",
+          :tag "r2307",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2337 2343]},
+          :lines [2343 2349]},
  :full-name "cljs.core/keyword-identical?"}
 
 ```
