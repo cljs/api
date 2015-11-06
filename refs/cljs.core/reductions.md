@@ -45,7 +45,7 @@ per reduce) of coll by f, starting with init.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6726-L6738):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6843-L6855):
 
 ```clj
 (defn reductions
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6726-6738](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6726-L6738)</ins>
+            └── <ins>[core.cljs:6843-6855](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6843-L6855)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defn reductions\n  ([f coll]\n     (lazy-seq\n      (if-let [s (seq coll)]\n        (reductions f (first s) (rest s))\n        (list (f)))))\n  ([f init coll]\n     (cons init\n           (lazy-seq\n            (when-let [s (seq coll)]\n              (reductions f (f init (first s)) (rest s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6726 6738]},
+          :lines [6843 6855]},
  :full-name "cljs.core/reductions",
  :clj-symbol "clojure.core/reductions",
  :docstring "Returns a lazy seq of the intermediate values of the reduction (as\nper reduce) of coll by f, starting with init."}

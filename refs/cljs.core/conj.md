@@ -98,7 +98,7 @@ happen at different 'places' depending on the concrete type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L837-L848):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1000-L1011):
 
 ```clj
 (defn conj
@@ -116,11 +116,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:837-848](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L837-L848)</ins>
+            └── <ins>[core.cljs:1000-1011](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1000-L1011)</ins>
 </pre>
 
 -->
@@ -176,9 +176,9 @@ The API data for this symbol:
  :source {:code "(defn conj\n  ([coll x]\n    (if-not (nil? coll)\n      (-conj coll x)\n      (list x)))\n  ([coll x & xs]\n    (if xs\n      (recur (conj coll x) (first xs) (next xs))\n      (conj coll x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [837 848]},
+          :lines [1000 1011]},
  :examples [{:id "8c2a84",
              :content "Append a vector:\n\n```clj\n(conj [1 2 3] 4)\n;;=> [1 2 3 4]\n```\n\nPrepend a list:\n\n```clj\n(conj (list 1 2 3) 0)\n;;=> (0 1 2 3)\n```\n\nPrepend a sequence:\n\n```clj\n(def x (range 1 4))\n;;=> (1 2 3)\n\n(conj x 0)\n;;=> (0 1 2 3)\n```\n\nAdd to set:\n\n```clj\n(conj #{\"a\" \"b\" \"c\"} \"d\")\n;;=> #{\"a\" \"b\" \"c\" \"d\"}\n```"}],
  :known-as "conjoin",

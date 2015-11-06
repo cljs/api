@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L582-L586):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L597-L601):
 
 ```clj
 (defn register-default-tag-parser!
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:582-586](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L582-L586)</ins>
+            └── <ins>[reader.cljs:597-601](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L597-L601)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn register-default-tag-parser!\n  [f]\n  (let [old-parser @*default-data-reader-fn*]\n    (swap! *default-data-reader-fn* (fn [_] f))\n    old-parser))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [582 586]},
+          :lines [597 601]},
  :full-name "cljs.reader/register-default-tag-parser!",
  :full-name-encode "cljs.reader/register-default-tag-parserBANG",
  :history [["+" "0.0-1576"]]}

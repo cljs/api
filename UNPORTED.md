@@ -639,6 +639,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/record?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/record?)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/ref](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ref)</samp></td>
 </tr>
 <tr>
@@ -1234,6 +1238,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/Murmur3](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Murmur3.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Namespace](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Namespace.java)</samp></td>
 </tr>
 <tr>
@@ -1783,6 +1791,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/test-var](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-var)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.test/test-vars](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-vars)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

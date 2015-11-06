@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L341-L344):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L356-L359):
 
 ```clj
 (defn wrapping-reader
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:341-344](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L341-L344)</ins>
+            └── <ins>[reader.cljs:356-359](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L356-L359)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn wrapping-reader\n  [sym]\n  (fn [rdr _]\n    (list sym (read rdr true nil true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [341 344]},
+          :lines [356 359]},
  :full-name "cljs.reader/wrapping-reader",
  :full-name-encode "cljs.reader/wrapping-reader",
  :history [["+" "0.0-927"]]}

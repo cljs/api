@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7178-L7207):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7295-L7324):
 
 ```clj
 (deftype Atom [state meta validator watches]
@@ -64,11 +64,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7178-7207](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7178-L7207)</ins>
+            └── <ins>[core.cljs:7295-7324](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7295-L7324)</ins>
 </pre>
 
 -->
@@ -119,9 +119,9 @@ The API data for this symbol:
  :source {:code "(deftype Atom [state meta validator watches]\n  IAtom\n  \n  IEquiv\n  (-equiv [o other] (identical? o other))\n\n  IDeref\n  (-deref [_] state)\n\n  IMeta\n  (-meta [_] meta)\n\n  IPrintWithWriter\n  (-pr-writer [a writer opts]\n    (-write writer \"#<Atom: \")\n    (pr-writer state writer opts)\n    (-write writer \">\"))\n\n  IWatchable\n  (-notify-watches [this oldval newval]\n    (doseq [[key f] watches]\n      (f key this oldval newval)))\n  (-add-watch [this key f]\n    (set! (.-watches this) (assoc watches key f))\n    this)\n  (-remove-watch [this key]\n    (set! (.-watches this) (dissoc watches key)))\n\n  IHash\n  (-hash [this] (goog/getUid this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7178 7207]},
+          :lines [7295 7324]},
  :full-name "cljs.core/Atom",
  :clj-symbol "clojure.lang/Atom"}
 

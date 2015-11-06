@@ -24,7 +24,7 @@ argv as arguments
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L121-L125):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L125-L129):
 
 ```clj
 (def
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:121-125](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L121-L125)</ins>
+            └── <ins>[core.cljs:125-129](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L125-L129)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"When compiled for a command-line target, whatever\n  function *main-fn* is set to will be called with the command-line\n  argv as arguments\"}\n  *main-cli-fn* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [121 125]},
+          :lines [125 129]},
  :full-name "cljs.core/*main-cli-fn*",
  :full-name-encode "cljs.core/STARmain-cli-fnSTAR",
  :history [["+" "0.0-927"]]}

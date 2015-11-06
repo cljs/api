@@ -50,7 +50,7 @@ test, if not, yields else
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1684-L1702):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L1721-L1739):
 
 ```clj
 (defmacro if-let
@@ -73,11 +73,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+clojure @ clojure-1.6.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1684-1702](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L1684-L1702)</ins>
+            └── <ins>[core.clj:1721-1739](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L1721-L1739)</ins>
 </pre>
 
 -->
@@ -130,9 +130,9 @@ The API data for this symbol:
  :source {:code "(defmacro if-let\n  ([bindings then]\n   `(if-let ~bindings ~then nil))\n  ([bindings then else & oldform]\n   (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (nil? oldform) \"1 or 2 forms after binding vector\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n     `(let [temp# ~tst]\n        (if temp#\n          (let [~form temp#]\n            ~then)\n          ~else)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.5.1",
+          :tag "clojure-1.6.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1684 1702]},
+          :lines [1721 1739]},
  :full-name "cljs.core/if-let",
  :clj-symbol "clojure.core/if-let",
  :docstring "bindings => binding-form test\n\nIf test is true, evaluates then with binding-form bound to the value of \ntest, if not, yields else"}

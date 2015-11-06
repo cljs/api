@@ -1,11 +1,11 @@
-## cljs.core/check-string-hash-cache
+## ~~cljs.core/check-string-hash-cache~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2261"><img valign="middle" alt="[×] 0.0-2261" title="Removed in 0.0-2261" src="https://img.shields.io/badge/×-0.0--2261-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -84,8 +84,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "check-string-hash-cache",
- :type "function",
  :signature ["[k]"],
+ :history [["+" "0.0-1424"] ["-" "0.0-2261"]],
+ :type "function",
+ :full-name-encode "cljs.core/check-string-hash-cache",
  :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
           :title "Source code",
           :repo "clojurescript",
@@ -93,8 +95,7 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [1147 1154]},
  :full-name "cljs.core/check-string-hash-cache",
- :full-name-encode "cljs.core/check-string-hash-cache",
- :history [["+" "0.0-1424"]]}
+ :removed {:in "0.0-2261", :last-seen "0.0-2234"}}
 
 ```
 

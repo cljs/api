@@ -44,7 +44,7 @@ Is set1 a subset of set2?
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L132-L136):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L131-L135):
 
 ```clj
 (defn subset? 
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:132-136](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L132-L136)</ins>
+            └── <ins>[set.cljs:131-135](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L131-L135)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn subset? \n  [set1 set2]\n  (and (<= (count set1) (count set2))\n       (every? #(contains? set2 %) set1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/clojure/set.cljs",
-          :lines [132 136]},
+          :lines [131 135]},
  :full-name "clojure.set/subset?",
  :clj-symbol "clojure.set/subset?",
  :docstring "Is set1 a subset of set2?"}

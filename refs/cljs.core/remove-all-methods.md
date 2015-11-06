@@ -30,7 +30,7 @@ Removes all of the methods of multimethod.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7872-L7875):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7989-L7992):
 
 ```clj
 (defn remove-all-methods
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7872-7875](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7872-L7875)</ins>
+            └── <ins>[core.cljs:7989-7992](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7989-L7992)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn remove-all-methods\n [multifn]\n (-reset multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7872 7875]},
+          :lines [7989 7992]},
  :full-name "cljs.core/remove-all-methods",
  :clj-symbol "clojure.core/remove-all-methods",
  :docstring "Removes all of the methods of multimethod."}

@@ -215,6 +215,12 @@ a reader to parse text and produce data structures
 </tr>
 <tr>
 <td></td>
+<td><samp>[read-raw-string\*](../cljs.reader/read-raw-stringSTAR.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2261"><img valign="middle" alt="[+] 0.0-2261" title="Added in 0.0-2261" src="https://img.shields.io/badge/+-0.0--2261-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[read-regex](../cljs.reader/read-regex.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4812):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4929):
 
 ```clj
 (set! cljs.core.BitmapIndexedNode.EMPTY (BitmapIndexedNode. nil 0 (make-array 0)))
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4812](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4812)</ins>
+            └── <ins>[core.cljs:4929](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4929)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.BitmapIndexedNode.EMPTY (BitmapIndexedNode. nil 0 (make-array 0)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4812]},
+          :lines [4929]},
  :full-name "cljs.core/BitmapIndexedNode.EMPTY",
  :clj-symbol "clojure.lang/BitmapIndexedNode.EMPTY"}
 

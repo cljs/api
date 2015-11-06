@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1615):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1741):
 
 ```clj
 (defn ^number unchecked-char [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1615](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1615)</ins>
+            └── <ins>[core.cljs:1741](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1741)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L377):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L381):
 
 ```clj
 (defmacro unchecked-char [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:377](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L377)</ins>
+            └── <ins>[core.clj:381](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L381)</ins>
 </pre>
 -->
 
@@ -110,15 +110,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-char [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1615]},
+          :lines [1741]},
  :extra-sources [{:code "(defmacro unchecked-char [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2234",
+                  :tag "r2261",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [377]}],
+                  :lines [381]}],
  :full-name "cljs.core/unchecked-char",
  :clj-symbol "clojure.core/unchecked-char"}
 

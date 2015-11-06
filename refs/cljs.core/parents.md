@@ -36,7 +36,7 @@ defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7553-L7559):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7670-L7676):
 
 ```clj
 (defn parents
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7553-7559](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7553-L7559)</ins>
+            └── <ins>[core.cljs:7670-7676](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7670-L7676)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn parents\n  ([tag] (parents @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7553 7559]},
+          :lines [7670 7676]},
  :full-name "cljs.core/parents",
  :clj-symbol "clojure.core/parents",
  :docstring "Returns the immediate parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}

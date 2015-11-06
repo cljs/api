@@ -30,29 +30,28 @@ Returns the map with the keys in kmap renamed to the vals in kmap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L72-L81):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L72-L80):
 
 ```clj
 (defn rename-keys
   [map kmap]
-    (reduce 
+    (reduce
      (fn [m [old new]]
-       (if (and (not= old new)
-                (contains? m old))
-         (-> m (assoc new (get m old)) (dissoc old))
-         m)) 
-     map kmap))
+       (if (contains? map old)
+         (assoc m new (get map old))
+         m))
+     (apply dissoc map (keys kmap)) kmap))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:72-81](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L72-L81)</ins>
+            └── <ins>[set.cljs:72-80](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L72-L80)</ins>
 </pre>
 
 -->
@@ -100,12 +99,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.set/rename-keys",
- :source {:code "(defn rename-keys\n  [map kmap]\n    (reduce \n     (fn [m [old new]]\n       (if (and (not= old new)\n                (contains? m old))\n         (-> m (assoc new (get m old)) (dissoc old))\n         m)) \n     map kmap))",
+ :source {:code "(defn rename-keys\n  [map kmap]\n    (reduce\n     (fn [m [old new]]\n       (if (contains? map old)\n         (assoc m new (get map old))\n         m))\n     (apply dissoc map (keys kmap)) kmap))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/clojure/set.cljs",
-          :lines [72 81]},
+          :lines [72 80]},
  :full-name "clojure.set/rename-keys",
  :clj-symbol "clojure.set/rename-keys",
  :docstring "Returns the map with the keys in kmap renamed to the vals in kmap"}

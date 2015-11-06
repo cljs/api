@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L1066-L1071):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L1070-L1075):
 
 ```clj
 (defmacro delay [& body]
@@ -33,18 +33,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
   invoke the body only the first time it is forced (with force or deref/@), and
   will cache the result and return it on all subsequent force
   calls."
-  `(new cljs.core/Delay (atom {:done false, :value nil}) (fn [] ~@body)))
+  `(new cljs.core/Delay (fn [] ~@body) nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1066-1071](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L1066-L1071)</ins>
+            └── <ins>[core.clj:1070-1075](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L1070-L1075)</ins>
 </pre>
 
 -->
@@ -92,12 +92,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/delay",
- :source {:code "(defmacro delay [& body]\n  \"Takes a body of expressions and yields a Delay object that will\n  invoke the body only the first time it is forced (with force or deref/@), and\n  will cache the result and return it on all subsequent force\n  calls.\"\n  `(new cljs.core/Delay (atom {:done false, :value nil}) (fn [] ~@body)))",
+ :source {:code "(defmacro delay [& body]\n  \"Takes a body of expressions and yields a Delay object that will\n  invoke the body only the first time it is forced (with force or deref/@), and\n  will cache the result and return it on all subsequent force\n  calls.\"\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/clj/cljs/core.clj",
-          :lines [1066 1071]},
+          :lines [1070 1075]},
  :full-name "cljs.core/delay",
  :clj-symbol "clojure.core/delay"}
 

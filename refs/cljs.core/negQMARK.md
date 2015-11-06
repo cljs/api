@@ -41,7 +41,7 @@ Returns true if num is less than zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1840-L1842):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1966-L1968):
 
 ```clj
 (defn ^boolean neg?
@@ -52,18 +52,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1840-1842](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1840-L1842)</ins>
+            └── <ins>[core.cljs:1966-1968](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1966-L1968)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L482-L483):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L486-L487):
 
 ```clj
 (defmacro ^::ana/numeric neg? [x]
@@ -74,11 +74,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:482-483](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L482-L483)</ins>
+            └── <ins>[core.clj:486-487](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L486-L487)</ins>
 </pre>
 -->
 
@@ -130,15 +130,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean neg?\n  [x] (cljs.core/neg? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1840 1842]},
+          :lines [1966 1968]},
  :extra-sources [{:code "(defmacro ^::ana/numeric neg? [x]\n  `(< ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2234",
+                  :tag "r2261",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [482 483]}],
+                  :lines [486 487]}],
  :full-name "cljs.core/neg?",
  :clj-symbol "clojure.core/neg?",
  :docstring "Returns true if num is less than zero, else false"}

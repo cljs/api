@@ -51,7 +51,7 @@ Forces evaluation of the following form.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L444-L449):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L455-L460):
 
 ```clj
 (defn- read-unquote
@@ -66,18 +66,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.3
+tools.reader @ tools.reader-0.8.4
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:444-449](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L444-L449)</ins>
+                    └── <ins>[reader.clj:455-460](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L455-L460)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L578-L597):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L589-L608):
 
 ```clj
 (defn- macros [ch]
@@ -106,13 +106,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.3
+tools.reader @ tools.reader-0.8.4
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:578-597](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L578-L597)</ins>
+                    └── <ins>[reader.clj:589-608](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L589-L608)</ins>
 </pre>
 -->
 
@@ -154,15 +154,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-unquote\n  [rdr comma]\n  (if-let [ch (peek-char rdr)]\n    (if (identical? \\@ ch)\n      ((wrapping-reader 'clojure.core/unquote-splicing) (doto rdr read-char) \\@)\n      ((wrapping-reader 'clojure.core/unquote) rdr \\~))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.3",
+                  :tag "tools.reader-0.8.4",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [444 449]}
+                  :lines [455 460]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.3",
+                  :tag "tools.reader-0.8.4",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [578 597]}),
+                  :lines [589 608]}),
  :examples [{:id "1ff51e",
              :content "```clj\n(def foo 1)\n`~foo\n;;=> 1\n\n`(def foo ~foo)\n;;=> (def cljs.user/foo 1)\n```"}],
  :full-name "syntax/unquote",

@@ -58,7 +58,7 @@ Returns a function that takes any number of arguments and returns x.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L2745-L2747):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2862-L2864):
 
 ```clj
 (defn constantly
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2745-2747](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L2745-L2747)</ins>
+            └── <ins>[core.cljs:2862-2864](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2862-L2864)</ins>
 </pre>
 
 -->
@@ -126,9 +126,9 @@ The API data for this symbol:
  :source {:code "(defn constantly\n  [x] (fn [& args] x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2745 2747]},
+          :lines [2862 2864]},
  :examples [{:id "9d5c25",
              :content "```clj\n(def ten (constantly 10))\n\n(ten \"hi\")\n;;=> 10\n\n(ten 123)\n;;=> 10\n\n(ten :whatever)\n;;=> 10\n```"}],
  :full-name "cljs.core/constantly",

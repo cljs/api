@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L339-L342):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L343-L346):
 
 ```clj
 (defprotocol IWatchable
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:339-342](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L339-L342)</ins>
+            └── <ins>[core.cljs:343-346](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L343-L346)</ins>
 </pre>
 
 -->
@@ -80,9 +80,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWatchable\n  (-notify-watches [this oldval newval])\n  (-add-watch [this key f])\n  (-remove-watch [this key]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [339 342]},
+          :lines [343 346]},
  :methods [{:name "-notify-watches",
             :signature ["[this oldval newval]"],
             :docstring nil}

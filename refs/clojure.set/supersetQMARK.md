@@ -44,7 +44,7 @@ Is set1 a superset of set2?
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L138-L142):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L137-L141):
 
 ```clj
 (defn superset? 
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:138-142](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/clojure/set.cljs#L138-L142)</ins>
+            └── <ins>[set.cljs:137-141](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/clojure/set.cljs#L137-L141)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn superset? \n  [set1 set2]\n  (and (>= (count set1) (count set2))\n       (every? #(contains? set1 %) set2)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/clojure/set.cljs",
-          :lines [138 142]},
+          :lines [137 141]},
  :full-name "clojure.set/superset?",
  :clj-symbol "clojure.set/superset?",
  :docstring "Is set1 a superset of set2?"}

@@ -26,7 +26,7 @@ print and println produce output for human consumption.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7025-L7030):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7142-L7147):
 
 ```clj
 (def ^{:doc
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7025-7030](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7025-L7030)</ins>
+            └── <ins>[core.cljs:7142-7147](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7142-L7147)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(def ^{:doc\n  \"Prints the object(s) using string-print.\n  print and println produce output for human consumption.\"}\n  print\n  (fn cljs-core-print [& objs]\n    (pr-with-opts objs (assoc (pr-opts) :readably false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7025 7030]},
+          :lines [7142 7147]},
  :full-name "cljs.core/print",
  :clj-symbol "clojure.core/print",
  :docstring "Prints the object(s) using string-print.\nprint and println produce output for human consumption."}

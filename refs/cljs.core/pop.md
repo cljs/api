@@ -88,7 +88,7 @@ Note - not the same as next/butlast.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1115-L1121):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1280-L1286):
 
 ```clj
 (defn pop
@@ -101,11 +101,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1115-1121](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1115-L1121)</ins>
+            └── <ins>[core.cljs:1280-1286](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1280-L1286)</ins>
 </pre>
 
 -->
@@ -158,9 +158,9 @@ The API data for this symbol:
  :source {:code "(defn pop\n  [coll]\n  (when-not (nil? coll)\n    (-pop coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1115 1121]},
+          :lines [1280 1286]},
  :examples [{:id "6bd9f7",
              :content "With vectors:\n\n```clj\n(pop [1 2 3])\n;;=> [1 2]\n\n(pop [1 2])\n;;=> [1]\n\n(pop [1])\n;;=> []\n\n(pop [])\n;; Error: Can't pop empty vector\n```"}
             {:id "81221f",

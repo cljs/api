@@ -40,7 +40,7 @@ etc.) and returns their contents as a single, flat sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L3149-L3155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L3266-L3272):
 
 ```clj
 (defn flatten
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3149-3155](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L3149-L3155)</ins>
+            └── <ins>[core.cljs:3266-3272](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L3266-L3272)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn flatten\n  [x]\n  (filter #(not (sequential? %))\n          (rest (tree-seq sequential? seq x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3149 3155]},
+          :lines [3266 3272]},
  :full-name "cljs.core/flatten",
  :clj-symbol "clojure.core/flatten",
  :docstring "Takes any nested combination of sequential things (lists, vectors,\netc.) and returns their contents as a single, flat sequence.\n(flatten nil) returns nil."}

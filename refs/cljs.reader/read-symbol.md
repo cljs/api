@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L309-L315):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L324-L330):
 
 ```clj
 (defn read-symbol
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:309-315](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/reader.cljs#L309-L315)</ins>
+            └── <ins>[reader.cljs:324-330](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/reader.cljs#L324-L330)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (gstring/contains token \"/\")\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\")) (.-length token)))\n      (special-symbols token (symbol token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [309 315]},
+          :lines [324 330]},
  :full-name "cljs.reader/read-symbol",
  :full-name-encode "cljs.reader/read-symbol",
  :history [["+" "0.0-927"]]}

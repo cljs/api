@@ -22,7 +22,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1271-L1272):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1397-L1398):
 
 ```clj
 (defn ^boolean undefined? [x]
@@ -33,18 +33,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1271-1272](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1271-L1272)</ins>
+            └── <ins>[core.cljs:1397-1398](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1397-L1398)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L326-L327):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L330-L331):
 
 ```clj
 (defmacro undefined? [x]
@@ -55,11 +55,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:326-327](https://github.com/clojure/clojurescript/blob/r2234/src/clj/cljs/core.clj#L326-L327)</ins>
+            └── <ins>[core.clj:330-331](https://github.com/clojure/clojurescript/blob/r2261/src/clj/cljs/core.clj#L330-L331)</ins>
 </pre>
 -->
 
@@ -106,15 +106,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean undefined? [x]\n  (cljs.core/undefined? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1271 1272]},
+          :lines [1397 1398]},
  :extra-sources [{:code "(defmacro undefined? [x]\n  (bool-expr (core/list 'js* \"(void 0 === ~{})\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2234",
+                  :tag "r2261",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [326 327]}],
+                  :lines [330 331]}],
  :full-name "cljs.core/undefined?"}
 
 ```

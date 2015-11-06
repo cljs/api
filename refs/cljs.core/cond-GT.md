@@ -63,7 +63,7 @@ not short circuit after the first true test expression.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L6775-L6787):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6885-L6897):
 
 ```clj
 (defmacro cond->
@@ -80,11 +80,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.5.1/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.5.1
+clojure @ clojure-1.6.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:6775-6787](https://github.com/clojure/clojure/blob/clojure-1.5.1/src/clj/clojure/core.clj#L6775-L6787)</ins>
+            └── <ins>[core.clj:6885-6897](https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6885-L6897)</ins>
 </pre>
 
 -->
@@ -140,9 +140,9 @@ The API data for this symbol:
  :source {:code "(defmacro cond->\n  [expr & clauses]\n  (assert (even? (count clauses)))\n  (let [g (gensym)\n        pstep (fn [[test step]] `(if ~test (-> ~g ~step) ~g))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep (partition 2 clauses)))]\n       ~g)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.5.1",
+          :tag "clojure-1.6.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [6775 6787]},
+          :lines [6885 6897]},
  :examples [{:id "f08338",
              :content "```clj\n(def a 12)\n(cond-> a\n  (> a 10) (str \" is greater than 10\")\n  (< a 20) (str \" and less than 20\"))\n;;=> \"12 is greater than 10 and less than 20\"\n```"}],
  :full-name "cljs.core/cond->",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7172-L7173):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7289-L7290):
 
 ```clj
 (defprotocol IReset
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7172-7173](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7172-L7173)</ins>
+            └── <ins>[core.cljs:7289-7290](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7289-L7290)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IReset\n  (-reset! [o new-value]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7172 7173]},
+          :lines [7289 7290]},
  :methods [{:name "-reset!",
             :signature ["[o new-value]"],
             :docstring nil}],

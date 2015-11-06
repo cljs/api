@@ -40,7 +40,7 @@ Returns a lazy seq of every nth item in coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6694-L6699):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6811-L6816):
 
 ```clj
 (defn take-nth
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6694-6699](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L6694-L6699)</ins>
+            └── <ins>[core.cljs:6811-6816](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L6811-L6816)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn take-nth\n  [n coll]\n  (lazy-seq\n   (when-let [s (seq coll)]\n     (cons (first s) (take-nth n (drop n s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6694 6699]},
+          :lines [6811 6816]},
  :full-name "cljs.core/take-nth",
  :clj-symbol "clojure.core/take-nth",
  :docstring "Returns a lazy seq of every nth item in coll."}

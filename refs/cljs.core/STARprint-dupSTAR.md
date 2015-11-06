@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L36):
 
 ```clj
 (def ^:dynamic *print-dup* false)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:36](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L36)</ins>
+            └── <ins>[core.cljs:36](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L36)</ins>
 </pre>
 
 -->
@@ -82,7 +82,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *print-dup* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
           :lines [36]},
  :full-name "cljs.core/*print-dup*",

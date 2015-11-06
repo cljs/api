@@ -76,7 +76,7 @@ Returns true if x satisfies ICollection
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1182-L1187):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1308-L1313):
 
 ```clj
 (defn ^boolean coll?
@@ -90,11 +90,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1182-1187](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1182-L1187)</ins>
+            └── <ins>[core.cljs:1308-1313](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L1308-L1313)</ins>
 </pre>
 
 -->
@@ -148,9 +148,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean coll?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ICollection x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1182 1187]},
+          :lines [1308 1313]},
  :examples [{:id "d30884",
              :content "```clj\n(coll? [1 2 3])\n;;=> true\n\n(coll? '(1 2 3))\n;;=> true\n\n(coll? #{1 2 3})\n;;=> true\n\n(coll? {:foo 1 :bar 2})\n;;=> true\n```\n\nNot collections:\n\n```clj\n(coll? \"foo\")\n;;=> false\n\n(coll? 123)\n;;=> false\n\n(coll? nil)\n;;=> false\n```"}],
  :full-name "cljs.core/coll?",

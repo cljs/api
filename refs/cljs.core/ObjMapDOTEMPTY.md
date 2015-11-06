@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4194):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4311):
 
 ```clj
 (set! cljs.core.ObjMap.EMPTY (ObjMap. nil (array) (js-obj) 0 0))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4194](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4194)</ins>
+            └── <ins>[core.cljs:4311](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4311)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.ObjMap.EMPTY (ObjMap. nil (array) (js-obj) 0 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4194]},
+          :lines [4311]},
  :full-name "cljs.core/ObjMap.EMPTY",
  :full-name-encode "cljs.core/ObjMapDOTEMPTY",
  :history [["+" "0.0-927"]]}

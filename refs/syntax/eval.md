@@ -59,7 +59,7 @@ The following is the output for the ClojureScript compiler on the JVM:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L412-L440):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L423-L451):
 
 ```clj
 (defn- read-eval
@@ -97,18 +97,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.3
+tools.reader @ tools.reader-0.8.4
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:412-440](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L412-L440)</ins>
+                    └── <ins>[reader.clj:423-451](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L423-L451)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L599-L610):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L610-L621):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -129,13 +129,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.3
+tools.reader @ tools.reader-0.8.4
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:599-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.3/src/main/clojure/clojure/tools/reader.clj#L599-L610)</ins>
+                    └── <ins>[reader.clj:610-621](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.4/src/main/clojure/clojure/tools/reader.clj#L610-L621)</ins>
 </pre>
 -->
 
@@ -176,15 +176,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-eval\n  [rdr _]\n  (when-not *read-eval*\n    (reader-error rdr \"#= not allowed when *read-eval* is false\"))\n  (let [o (read rdr true nil true)]\n    (if (symbol? o)\n      (RT/classForName (str ^Symbol o))\n      (if (list? o)\n        (let [fs (first o)\n              o (rest o)\n              fs-name (name fs)]\n          (cond\n           (= fs 'var) (let [vs (first o)]\n                         (RT/var (namespace vs) (name vs)))\n           (.endsWith fs-name \".\")\n           (let [args (to-array o)]\n             (-> fs-name (subs 0 (dec (count fs-name)))\n                RT/classForName (Reflector/invokeConstructor args)))\n\n           (Compiler/namesStaticMember fs)\n           (let [args (to-array o)]\n             (Reflector/invokeStaticMethod (namespace fs) fs-name args))\n\n           :else\n           (let [v (Compiler/maybeResolveIn *ns* fs)]\n             (if (var? v)\n               (apply v o)\n               (reader-error rdr \"Can't resolve \" fs)))))\n        (throw (IllegalArgumentException. \"Unsupported #= form\"))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.3",
+                  :tag "tools.reader-0.8.4",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [412 440]}
+                  :lines [423 451]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.3",
+                  :tag "tools.reader-0.8.4",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [599 610]}),
+                  :lines [610 621]}),
  :usage ["#=..."],
  :examples [{:id "ef1acd",
              :content "```clj\n#=123\n;;=> 123\n\n#=\"foo\"\n;;=> foo\n\n(def foo 1)\n#='foo\n;;=> 1\n```\n\nThe following is the output for the ClojureScript compiler on the JVM:\n\n```clj\n#=(+ 1 2)\n;; java.lang.RuntimeException: Unable to resolve symbol: + in this context\n\n#=(clojure.core/+ 1 2)\n;;=> 3\n```"}],

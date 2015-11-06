@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4092-L4192):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4209-L4309):
 
 ```clj
 (deftype ObjMap [meta keys strobj update-count ^:mutable __hash]
@@ -51,7 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
   (-equiv [coll other] (equiv-map coll other))
 
   IHash
-  (-hash [coll] (caching-hash coll hash-imap __hash))
+  (-hash [coll] (caching-hash coll hash-unordered-coll __hash))
 
   ISeqable
   (-seq [coll]
@@ -132,11 +132,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4092-4192](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L4092-L4192)</ins>
+            └── <ins>[core.cljs:4209-4309](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L4209-L4309)</ins>
 </pre>
 
 -->
@@ -179,12 +179,12 @@ The API data for this symbol:
  :name "ObjMap",
  :type "type",
  :signature ["[meta keys strobj update-count __hash]"],
- :source {:code "(deftype ObjMap [meta keys strobj update-count ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj update-count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap.EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-imap __hash))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (alength keys))\n      (map #(vector % (aget strobj %))\n           (.sort keys obj-map-compare-keys))))\n\n  ICounted\n  (-count [coll] (alength keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      (aget strobj k)\n      not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if ^boolean (goog/isString k)\n        (if (or (> update-count cljs.core.ObjMap.HASHMAP_THRESHOLD)\n                (>= (alength keys) cljs.core.ObjMap.HASHMAP_THRESHOLD))\n          (obj-map->hash-map coll k v)\n          (if-not (nil? (scan-array 1 k keys))\n            (let [new-strobj (obj-clone strobj keys)]\n              (aset new-strobj k v)\n              (ObjMap. meta keys new-strobj (inc update-count) nil)) ; overwrite\n            (let [new-strobj (obj-clone strobj keys) ; append\n                  new-keys (aclone keys)]\n              (aset new-strobj k v)\n              (.push new-keys k)\n              (ObjMap. meta new-keys new-strobj (inc update-count) nil))))\n        ;; non-string key. game over.\n        (obj-map->hash-map coll k v)))\n  (-contains-key? [coll k]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      true\n      false))\n\n  IKVReduce\n  (-kv-reduce [coll f init]\n    (let [len (alength keys)]\n      (loop [keys (.sort keys obj-map-compare-keys)\n             init init]\n        (if (seq keys)\n          (let [k (first keys)\n                init (f init k (aget strobj k))]\n            (if (reduced? init)\n              @init\n              (recur (rest keys) init)))\n          init))))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      (let [new-keys (aclone keys)\n            new-strobj (obj-clone strobj keys)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj (inc update-count) nil))\n      coll)) ; key not found, return coll unchanged\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  IEditableCollection\n  (-as-transient [coll]\n    (transient (into (hash-map) coll))))",
+ :source {:code "(deftype ObjMap [meta keys strobj update-count ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IWithMeta\n  (-with-meta [coll meta] (ObjMap. meta keys strobj update-count __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.ObjMap.EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-unordered-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? (alength keys))\n      (map #(vector % (aget strobj %))\n           (.sort keys obj-map-compare-keys))))\n\n  ICounted\n  (-count [coll] (alength keys))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      (aget strobj k)\n      not-found))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if ^boolean (goog/isString k)\n        (if (or (> update-count cljs.core.ObjMap.HASHMAP_THRESHOLD)\n                (>= (alength keys) cljs.core.ObjMap.HASHMAP_THRESHOLD))\n          (obj-map->hash-map coll k v)\n          (if-not (nil? (scan-array 1 k keys))\n            (let [new-strobj (obj-clone strobj keys)]\n              (aset new-strobj k v)\n              (ObjMap. meta keys new-strobj (inc update-count) nil)) ; overwrite\n            (let [new-strobj (obj-clone strobj keys) ; append\n                  new-keys (aclone keys)]\n              (aset new-strobj k v)\n              (.push new-keys k)\n              (ObjMap. meta new-keys new-strobj (inc update-count) nil))))\n        ;; non-string key. game over.\n        (obj-map->hash-map coll k v)))\n  (-contains-key? [coll k]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      true\n      false))\n\n  IKVReduce\n  (-kv-reduce [coll f init]\n    (let [len (alength keys)]\n      (loop [keys (.sort keys obj-map-compare-keys)\n             init init]\n        (if (seq keys)\n          (let [k (first keys)\n                init (f init k (aget strobj k))]\n            (if (reduced? init)\n              @init\n              (recur (rest keys) init)))\n          init))))\n\n  IMap\n  (-dissoc [coll k]\n    (if (and ^boolean (goog/isString k)\n             (not (nil? (scan-array 1 k keys))))\n      (let [new-keys (aclone keys)\n            new-strobj (obj-clone strobj keys)]\n        (.splice new-keys (scan-array 1 k new-keys) 1)\n        (js-delete new-strobj k)\n        (ObjMap. meta new-keys new-strobj (inc update-count) nil))\n      coll)) ; key not found, return coll unchanged\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  IEditableCollection\n  (-as-transient [coll]\n    (transient (into (hash-map) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4092 4192]},
+          :lines [4209 4309]},
  :full-name "cljs.core/ObjMap",
  :full-name-encode "cljs.core/ObjMap",
  :history [["+" "0.0-927"]]}

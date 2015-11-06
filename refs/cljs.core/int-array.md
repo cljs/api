@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L2416-L2434):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2533-L2551):
 
 ```clj
 (defn int-array
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2416-2434](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L2416-L2434)</ins>
+            └── <ins>[core.cljs:2533-2551](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L2533-L2551)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn int-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (int-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2416 2434]},
+          :lines [2533 2551]},
  :full-name "cljs.core/int-array",
  :clj-symbol "clojure.core/int-array"}
 

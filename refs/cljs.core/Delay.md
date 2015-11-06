@@ -14,7 +14,7 @@
 
 
  <samp>
-(__Delay.__ state f)<br>
+(__Delay.__ f value)<br>
 </samp>
 
 ---
@@ -25,31 +25,31 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7359-L7369):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7476-L7486):
 
 ```clj
-(deftype Delay [state f]
+(deftype Delay [^:mutable f ^:mutable value]
   IDeref
   (-deref [_]
-    (:value (swap! state (fn [{:keys [done] :as curr-state}]
-                           (if done
-                             curr-state,
-                             {:done true :value (f)})))))
+    (when f
+      (set! value (f))
+      (set! f nil))
+    value)
 
   IPending
   (-realized? [d]
-    (:done @state)))
+    (not f)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
+clojurescript @ r2261
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7359-7369](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L7359-L7369)</ins>
+            └── <ins>[core.cljs:7476-7486](https://github.com/clojure/clojurescript/blob/r2261/src/cljs/cljs/core.cljs#L7476-L7486)</ins>
 </pre>
 
 -->
@@ -93,16 +93,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Delay",
- :signature ["[state f]"],
+ :signature ["[f value]"],
  :history [["+" "0.0-927"]],
  :type "type",
  :full-name-encode "cljs.core/Delay",
- :source {:code "(deftype Delay [state f]\n  IDeref\n  (-deref [_]\n    (:value (swap! state (fn [{:keys [done] :as curr-state}]\n                           (if done\n                             curr-state,\n                             {:done true :value (f)})))))\n\n  IPending\n  (-realized? [d]\n    (:done @state)))",
+ :source {:code "(deftype Delay [^:mutable f ^:mutable value]\n  IDeref\n  (-deref [_]\n    (when f\n      (set! value (f))\n      (set! f nil))\n    value)\n\n  IPending\n  (-realized? [d]\n    (not f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2234",
+          :tag "r2261",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7359 7369]},
+          :lines [7476 7486]},
  :full-name "cljs.core/Delay",
  :clj-symbol "clojure.lang/Delay"}
 
