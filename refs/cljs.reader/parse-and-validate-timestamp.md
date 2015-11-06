@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L480-L503):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/reader.cljs#L480-L503):
 
 ```clj
 (defn parse-and-validate-timestamp [s]
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:480-503](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L480-L503)</ins>
+            └── <ins>[reader.cljs:480-503](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/reader.cljs#L480-L503)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn parse-and-validate-timestamp [s]\n  (let [[_ years months days hours minutes seconds fraction offset-sign offset-hours offset-minutes :as v] \n        (re-matches timestamp-regex s)]\n    (if-not v\n      (reader-error nil (str \"Unrecognized date/time syntax: \" s))\n      (let [years (parse-int years)\n            months (or (parse-int months) 1)\n            days (or (parse-int days) 1)\n            hours (or (parse-int hours) 0)\n            minutes (or (parse-int minutes) 0)\n            seconds (or (parse-int seconds) 0)\n            fraction (or (parse-int (zero-fill-right-and-truncate fraction 3)) 0)\n            offset-sign (if (= offset-sign \"-\") -1 1)\n            offset-hours (or (parse-int offset-hours) 0)\n            offset-minutes (or (parse-int offset-minutes) 0)\n            offset (* offset-sign (+ (* offset-hours 60) offset-minutes))]\n        [years\n         (check 1 months 12 \"timestamp month field must be in range 1..12\")\n         (check 1 days (days-in-month months (leap-year? years)) \"timestamp day field must be in range 1..last day in month\")\n         (check 0 hours 23 \"timestamp hour field must be in range 0..23\")\n         (check 0 minutes 59 \"timestamp minute field must be in range 0..59\")\n         (check 0 seconds (if (= minutes 59) 60 59) \"timestamp second field must be in range 0..60\")\n         (check 0 fraction 999 \"timestamp millisecond field must be in range 0..999\")\n         offset]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [480 503]},
  :full-name "cljs.reader/parse-and-validate-timestamp",

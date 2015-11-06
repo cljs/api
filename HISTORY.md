@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2134](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2134)__</td>
+<td>2013-12-30</td>
+<td><kbd>1.5.1</kbd></td>
+<td><kbd>0.8.0</kbd></td>
+<td><kbd>0.0-20130212</kbd></td>
+<td>
+<a href="#user-content-002134syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002134library">
++2 
+</a>
+</td>
+<td>
+<a href="#user-content-002134compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2127](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2127)__</td>
 <td>2013-12-20</td>
 <td><kbd>1.5.1</kbd></td>
@@ -1167,6 +1190,35 @@
 
 </table>
 
+### 0.0-2134
+
+<a name="002134syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002134library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ICloneable](refs/cljs.core/ICloneable.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/clone](refs/cljs.core/clone.md)</samp></td>
+</tr>
+</table>
+
+<a name="002134compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
 ### 0.0-2127
 
 <a name="002127syntax"></a> __Syntax Changes__
@@ -1208,7 +1260,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/object?](refs/cljs.core/objectQMARK.md)</samp></td>
 </tr>

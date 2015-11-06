@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L129-L136):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L131-L138):
 
 ```clj
 (defn missing-protocol [proto obj]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:129-136](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L129-L136)</ins>
+            └── <ins>[core.cljs:131-138](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L131-L138)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defn missing-protocol [proto obj]\n  (let [ty (type obj)\n        ty (if (and ty (.-cljs$lang$type ty))\n             (.-cljs$lang$ctorStr ty)\n             (goog/typeOf obj))]\n   (js/Error.\n     (.join (array \"No protocol method \" proto\n                   \" defined for type \" ty \": \" obj) \"\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [129 136]},
+          :lines [131 138]},
  :full-name "cljs.core/missing-protocol",
  :full-name-encode "cljs.core/missing-protocol",
  :history [["+" "0.0-927"]]}

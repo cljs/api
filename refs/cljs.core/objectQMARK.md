@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function/macro</td>
+<td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2120"><img valign="middle" alt="[+] 0.0-2120" title="Added in 0.0-2120" src="https://img.shields.io/badge/+-0.0--2120-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -32,48 +32,30 @@ Returns true if `x` is a JavaScript object, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L91-L92):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L98-L101):
 
 ```clj
 (defn ^boolean object? [x]
-  (cljs.core/object? x))
+  (if-not (nil? x)
+    (identical? (.-constructor x) js/Object)
+    false))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:91-92](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L91-L92)</ins>
+            └── <ins>[core.cljs:98-101](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L98-L101)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L282-L283):
-
-```clj
-(defmacro object? [x]
-  (bool-expr (core/list 'js* "~{}.constructor === Object" x)))
-```
-
-<!--
-Repo - tag - source tree - lines:
-
- <pre>
-clojurescript @ r2127
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:282-283](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/core.clj#L282-L283)</ins>
-</pre>
--->
-
----
 
 
 ###### External doc links:
@@ -112,21 +94,15 @@ The API data for this symbol:
  :name "object?",
  :signature ["[x]"],
  :history [["+" "0.0-2120"]],
- :type "function/macro",
+ :type "function",
  :related ["cljs.core/array?"],
  :full-name-encode "cljs.core/objectQMARK",
- :source {:code "(defn ^boolean object? [x]\n  (cljs.core/object? x))",
-          :title "Function code",
+ :source {:code "(defn ^boolean object? [x]\n  (if-not (nil? x)\n    (identical? (.-constructor x) js/Object)\n    false))",
+          :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [91 92]},
- :extra-sources [{:code "(defmacro object? [x]\n  (bool-expr (core/list 'js* \"~{}.constructor === Object\" x)))",
-                  :title "Macro code",
-                  :repo "clojurescript",
-                  :tag "r2127",
-                  :filename "src/clj/cljs/core.clj",
-                  :lines [282 283]}],
+          :lines [98 101]},
  :full-name "cljs.core/object?"}
 
 ```

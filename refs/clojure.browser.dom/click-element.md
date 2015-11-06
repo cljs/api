@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/clojure/browser/dom.cljs#L147-L149):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/browser/dom.cljs#L147-L149):
 
 ```clj
 (defn click-element
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:147-149](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/clojure/browser/dom.cljs#L147-L149)</ins>
+                └── <ins>[dom.cljs:147-149](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/clojure/browser/dom.cljs#L147-L149)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn click-element\n  [e]\n  (.click (ensure-element e) ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [147 149]},
  :full-name "clojure.browser.dom/click-element",

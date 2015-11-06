@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L299-L308):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/reader.cljs#L299-L308):
 
 ```clj
 (defn read-string*
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:299-308](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/reader.cljs#L299-L308)</ins>
+            └── <ins>[reader.cljs:299-308](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/reader.cljs#L299-L308)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn read-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [299 308]},
  :full-name "cljs.reader/read-string*",

@@ -32,7 +32,7 @@ contain the error message. :error means that some other error has occured.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/repl/browser.clj#L151-L166):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/repl/browser.clj#L151-L166):
 
 ```clj
 (defn browser-eval
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:151-166](https://github.com/clojure/clojurescript/blob/r2127/src/clj/cljs/repl/browser.clj#L151-L166)</ins>
+                └── <ins>[browser.clj:151-166](https://github.com/clojure/clojurescript/blob/r2134/src/clj/cljs/repl/browser.clj#L151-L166)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn browser-eval\n  [form]\n  (let [return-value (promise)]\n    (send-for-eval form\n                   (fn [val] (deliver return-value val)))\n    (let [ret @return-value]\n      (try (read-string ret)\n           (catch Exception e\n             {:status :error\n              :value (str \"Could not read return value: \" ret)})))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [151 166]},
  :full-name "cljs.repl.browser/browser-eval",

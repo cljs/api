@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L2472-L2473):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L2500-L2501):
 
 ```clj
 (defn conj! [tcoll val]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2472-2473](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L2472-L2473)</ins>
+            └── <ins>[core.cljs:2500-2501](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L2500-L2501)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn conj! [tcoll val]\n  (-conj! tcoll val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2472 2473]},
+          :lines [2500 2501]},
  :full-name "cljs.core/conj!",
  :clj-symbol "clojure.core/conj!"}
 

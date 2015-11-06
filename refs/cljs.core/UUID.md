@@ -38,10 +38,13 @@ Use [doc:cljs.core/uuid] or [`uuid-literal`][doc:syntax/uuid-literal] to create 
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L7570-L7581):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L7624-L7638):
 
 ```clj
 (deftype UUID [uuid]
+  ICloneable
+  (-clone [_] (UUID. uuid))
+
   IEquiv
   (-equiv [_ other]
     (and (instance? UUID other) (identical? uuid (.-uuid other))))
@@ -59,11 +62,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2127/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2127
+clojurescript @ r2134
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7570-7581](https://github.com/clojure/clojurescript/blob/r2127/src/cljs/cljs/core.cljs#L7570-L7581)</ins>
+            └── <ins>[core.cljs:7624-7638](https://github.com/clojure/clojurescript/blob/r2134/src/cljs/cljs/core.cljs#L7624-L7638)</ins>
 </pre>
 
 -->
@@ -112,12 +115,12 @@ The API data for this symbol:
            "cljs.core/random-uuid"
            "cljs.core/uuid"],
  :full-name-encode "cljs.core/UUID",
- :source {:code "(deftype UUID [uuid]\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
+ :source {:code "(deftype UUID [uuid]\n  ICloneable\n  (-clone [_] (UUID. uuid))\n\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (goog.string/hashCode (pr-str this))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2127",
+          :tag "r2134",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7570 7581]},
+          :lines [7624 7638]},
  :full-name "cljs.core/UUID"}
 
 ```
