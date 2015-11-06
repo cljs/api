@@ -1,0 +1,113 @@
+## recur
+
+
+
+ <table border="1">
+<tr>
+<td>special form</td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/recur</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/recur)
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L758-L767):
+
+```clj
+(defmethod parse 'recur
+  [op env [_ & exprs] _]
+  (let [context (:context env)
+        frame (first *recur-frames*)]
+    (assert frame "Can't recur here")
+    (assert (= (count exprs) (count (:names frame))) "recur argument count mismatch")
+    (reset! (:flag frame) true)
+    (assoc {:env env :op :recur}
+      :frame frame
+      :exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs))))))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r927
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[compiler.clj:758-767](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L758-L767)</ins>
+</pre>
+
+-->
+
+---
+
+
+
+###### External doc links:
+
+[`clojure.core/recur` @ clojuredocs](http://clojuredocs.org/clojure.core/recur)<br>
+[`clojure.core/recur` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/recur/)<br>
+[`clojure.core/recur` @ crossclj](http://crossclj.info/fun/clojure.core/recur.html)<br>
+
+---
+
+ <table>
+<tr><td>
+<img valign="middle" align="right" width="48px" src="http://i.imgur.com/Hi20huC.png">
+</td><td>
+Created for the upcoming ClojureScript website.<br>
+[edit here] | [learn how]
+</td></tr></table>
+
+[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/recur.cljsdoc
+[learn how]:https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files
+
+<!--
+
+This information was too distracting to show to readers, but I'll leave it
+commented here since it is helpful to:
+
+- pretty-print the data used to generate this document
+- and show how to retrieve that data
+
+
+
+The API data for this symbol:
+
+```clj
+{:ns "special",
+ :name "recur",
+ :type "special form",
+ :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs] _]\n  (let [context (:context env)\n        frame (first *recur-frames*)]\n    (assert frame \"Can't recur here\")\n    (assert (= (count exprs) (count (:names frame))) \"recur argument count mismatch\")\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur}\n      :frame frame\n      :exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs))))))",
+          :title "Parser code",
+          :repo "clojurescript",
+          :tag "r927",
+          :filename "src/clj/cljs/compiler.clj",
+          :lines [758 767]},
+ :full-name "special/recur",
+ :full-name-encode "special/recur",
+ :clj-symbol "clojure.core/recur",
+ :history [["+" "0.0-927"]]}
+
+```
+
+Retrieve the API data for this symbol:
+
+```clj
+;; from Clojure REPL
+(require '[clojure.edn :as edn])
+(-> (slurp "https://raw.githubusercontent.com/cljsinfo/cljs-api-docs/catalog/cljs-api.edn")
+    (edn/read-string)
+    (get-in [:symbols "special/recur"]))
+```
+
+-->
