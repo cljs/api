@@ -66,7 +66,7 @@ A flag is a keyword. Recognized flags:
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L243-L284):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl.clj#L190-L231):
 
 ```clj
 (def default-special-fns
@@ -91,18 +91,18 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r26
        ([repl-env env form]
          (self repl-env env form nil))
        ([repl-env env [_ & specs :as form] opts]
-         (let [new-specs
-               (reduce
-                 (fn [requires [quote spec]]
-                   (update-require-spec requires
-                     (if (symbol? spec) [spec] spec)))
-                 (ana-api/ns-specs ana/*cljs-ns*) specs)]
-           (evaluate-form repl-env env "<cljs repl>"
-             (with-meta
-               `(~'ns ~ana/*cljs-ns*
-                  ~@new-specs)
-               {:line 1 :column 1})
-             identity opts))))
+         (evaluate-form repl-env env "<cljs repl>"
+           (with-meta
+             `(~'ns ~ana/*cljs-ns*
+                (:require
+                  ~@(map
+                      (fn [quoted-spec-or-kw]
+                        (if (keyword? quoted-spec-or-kw)
+                          quoted-spec-or-kw
+                          (second quoted-spec-or-kw)))
+                      specs)))
+             {:merge true :line 1 :column 1})
+           identity opts)))
      'load-file load-file-fn
      'clojure.core/load-file load-file-fn
      'load-namespace
@@ -117,11 +117,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r26
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:243-284](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L243-L284)</ins>
+            └── <ins>[repl.clj:190-231](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl.clj#L190-L231)</ins>
 </pre>
 
 -->
@@ -169,12 +169,12 @@ The API data for this symbol:
  :type "special form (repl)",
  :related ["specialrepl/require-macros"],
  :full-name-encode "specialrepl/require",
- :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         (when-not (ana/get-namespace ns-name)\n           (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n           (-evaluate repl-env \"<cljs repl>\" 1\n             (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n         (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n         (let [new-specs\n               (reduce\n                 (fn [requires [quote spec]]\n                   (update-require-spec requires\n                     (if (symbol? spec) [spec] spec)))\n                 (ana-api/ns-specs ana/*cljs-ns*) specs)]\n           (evaluate-form repl-env env \"<cljs repl>\"\n             (with-meta\n               `(~'ns ~ana/*cljs-ns*\n                  ~@new-specs)\n               {:line 1 :column 1})\n             identity opts))))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n         (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n         (load-namespace repl-env ns opts)))}))",
+ :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         (when-not (ana/get-namespace ns-name)\n           (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n           (-evaluate repl-env \"<cljs repl>\" 1\n             (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n         (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n         (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n         (evaluate-form repl-env env \"<cljs repl>\"\n           (with-meta\n             `(~'ns ~ana/*cljs-ns*\n                (:require\n                  ~@(map\n                      (fn [quoted-spec-or-kw]\n                        (if (keyword? quoted-spec-or-kw)\n                          quoted-spec-or-kw\n                          (second quoted-spec-or-kw)))\n                      specs)))\n             {:merge true :line 1 :column 1})\n           identity opts)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n         (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n         (load-namespace repl-env ns opts)))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/clj/cljs/repl.clj",
-          :lines [243 284]},
+          :lines [190 231]},
  :examples [{:id "ab0355",
              :content "```clj\n(require '[clojure/string :as string])\n```"}],
  :full-name "specialrepl/require",

@@ -31,25 +31,28 @@ clojure.core/resolve
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L14-L19):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer/api.clj#L14-L22):
 
 ```clj
 (defn resolve
   [env sym]
   {:pre [(map? env) (symbol? sym)]}
-  (ana/resolve-var env sym))
+  (try
+    (ana/resolve-var env sym
+      (ana/confirm-var-exists-throw))
+    (catch Exception e)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── clj
         └── cljs
             └── analyzer
-                └── <ins>[api.clj:14-19](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L14-L19)</ins>
+                └── <ins>[api.clj:14-22](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer/api.clj#L14-L22)</ins>
 </pre>
 
 -->
@@ -97,12 +100,12 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/resolve",
- :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (ana/resolve-var env sym))",
+ :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (try\n    (ana/resolve-var env sym\n      (ana/confirm-var-exists-throw))\n    (catch Exception e)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/clj/cljs/analyzer/api.clj",
-          :lines [14 19]},
+          :lines [14 22]},
  :full-name "cljs.analyzer.api/resolve",
  :clj-symbol "clojure.core/resolve",
  :docstring "Given an analysis environment resolve a var. Analogous to\nclojure.core/resolve"}

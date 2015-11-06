@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/browser.clj#L68-L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl/browser.clj#L68-L101):
 
 ```clj
 (defn send-static [{path :path :as request} conn opts]
@@ -65,12 +65,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:68-101](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl/browser.clj#L68-L101)</ins>
+                └── <ins>[browser.clj:68-101](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/repl/browser.clj#L68-L101)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn send-static [{path :path :as request} conn opts]\n  (if (and (:static-dir opts)\n           (not= \"/favicon.ico\" path))\n    (let [path   (if (= \"/\" path) \"/index.html\" path)\n          st-dir (:static-dir opts)\n          local-path\n          (cond->\n            (seq (for [x (if (string? st-dir) [st-dir] st-dir)\n                       :when (.exists (io/file (str x path)))]\n                   (str x path)))\n            (complement nil?) first)\n          local-path\n          (if (nil? local-path)\n            (cond\n              (re-find #\".jar\" path)\n              (io/resource (second (string/split path #\".jar!/\")))\n              (re-find (Pattern/compile (System/getProperty \"user.dir\")) path)\n              (io/file (string/replace path (str (System/getProperty \"user.dir\") \"/\") \"\"))\n              :else nil)\n            local-path)]\n      (if local-path\n        (server/send-and-close conn 200 (slurp local-path)\n          (condp #(.endsWith %2 %1) path\n            \".html\" \"text/html\"\n            \".css\" \"text/css\"\n            \".html\" \"text/html\"\n            \".jpg\" \"image/jpeg\"\n            \".js\" \"text/javascript\"\n            \".cljs\" \"text/x-clojure\"\n            \".map\" \"application/json\"\n            \".png\" \"image/png\"\n            \"text/plain\"))\n        (server/send-404 conn path)))\n    (server/send-404 conn path)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [68 101]},
  :full-name "cljs.repl.browser/send-static",

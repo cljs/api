@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L2985-L2990):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2987-L2992):
 
 ```clj
 (defn nil-iter []
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2985-2990](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L2985-L2990)</ins>
+            └── <ins>[core.cljs:2987-2992](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L2987-L2992)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn nil-iter []\n  (reify\n    Object\n    (hasNext [_] false)\n    (next [_] (js/Error. \"No such element\"))\n    (remove [_] (js/Error. \"Unsupported operation\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2985 2990]},
+          :lines [2987 2992]},
  :full-name "cljs.core/nil-iter",
  :full-name-encode "cljs.core/nil-iter",
  :history [["+" "0.0-2301"]]}

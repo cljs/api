@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L1886):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1888):
 
 ```clj
 (defn ^number unchecked-short [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1886](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L1886)</ins>
+            └── <ins>[core.cljs:1888](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L1888)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/core.clj#L367):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/core.clj#L367):
 
 ```clj
 (defmacro unchecked-short [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:367](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/core.clj#L367)</ins>
+            └── <ins>[core.clj:367](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/core.clj#L367)</ins>
 </pre>
 -->
 
@@ -110,13 +110,13 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1886]},
+          :lines [1888]},
  :extra-sources [{:code "(defmacro unchecked-short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2644",
+                  :tag "r2655",
                   :filename "src/clj/cljs/core.clj",
                   :lines [367]}],
  :full-name "cljs.core/unchecked-short",

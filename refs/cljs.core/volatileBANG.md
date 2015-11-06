@@ -35,7 +35,7 @@ Creates and returns a Volatile with an initial value of val.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L3521-L3524):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3523-L3526):
 
 ```clj
 (defn volatile!
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3521-3524](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L3521-L3524)</ins>
+            └── <ins>[core.cljs:3523-3526](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L3523-L3526)</ins>
 </pre>
 
 -->
@@ -103,9 +103,9 @@ The API data for this symbol:
  :source {:code "(defn volatile!\n  [val]\n  (Volatile. val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3521 3524]},
+          :lines [3523 3526]},
  :full-name "cljs.core/volatile!",
  :docstring "Creates and returns a Volatile with an initial value of val."}
 

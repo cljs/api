@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L272-L275):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L274-L277):
 
 ```clj
 (defprotocol IAssociative
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:272-275](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L272-L275)</ins>
+            └── <ins>[core.cljs:274-277](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L274-L277)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IAssociative\n  (^boolean -contains-key? [coll k])\n  #_(-entry-at [coll k])\n  (^clj -assoc [coll k v]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [272 275]},
+          :lines [274 277]},
  :methods [{:name "-contains-key?",
             :signature ["[coll k]"],
             :docstring nil}

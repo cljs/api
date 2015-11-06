@@ -1,11 +1,11 @@
-## cljs.analyzer.api/ns-specs
+## ~~cljs.analyzer.api/ns-specs~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655"><img valign="middle" alt="[×] 0.0-2655" title="Removed in 0.0-2655" src="https://img.shields.io/badge/×-0.0--2655-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -88,7 +88,7 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "ns-specs",
  :signature ["[ns]"],
- :history [["+" "0.0-2629"]],
+ :history [["+" "0.0-2629"] ["-" "0.0-2655"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/ns-specs",
  :source {:code "(defn ns-specs\n  [ns]\n  {:pre [(symbol? ns)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :specs]))",
@@ -98,7 +98,8 @@ The API data for this symbol:
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [48 53]},
  :full-name "cljs.analyzer.api/ns-specs",
- :docstring "Given a namespace return all the original specs for a namspace as originally\nprovided in the source."}
+ :docstring "Given a namespace return all the original specs for a namspace as originally\nprovided in the source.",
+ :removed {:in "0.0-2655", :last-seen "0.0-2644"}}
 
 ```
 

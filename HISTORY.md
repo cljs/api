@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2655](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655)__</td>
+<td>2015-01-03</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002655syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002655library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-002655compiler">
+ -5
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2644](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2644)__</td>
 <td>2015-01-02</td>
 <td><kbd>1.6.0</kbd></td>
@@ -1809,6 +1832,59 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2655
+
+<a name="002655syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002655library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*loaded-libs\*](refs/cljs.core/STARloaded-libsSTAR.md)</samp></td>
+</tr>
+</table>
+
+<a name="002655compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.analyzer.api/ns-specs~~](refs/cljs.analyzer.api/ns-specs.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl/merge-require~~](refs/cljs.repl/merge-require.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl/merge-spec~~](refs/cljs.repl/merge-spec.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-var-red.svg">
+</td>
+<td><samp>[~~cljs.repl/spec-sort~~](refs/cljs.repl/spec-sort.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl/update-require-spec~~](refs/cljs.repl/update-require-spec.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-2644

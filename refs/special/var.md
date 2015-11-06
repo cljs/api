@@ -20,12 +20,12 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer.clj#L535-L546):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer.clj#L546-L557):
 
 ```clj
 (defmethod parse 'var
   [op env [_ sym :as form] _ _]
-  (let [var (resolve-var env sym)]
+  (let [var (resolve-var env sym (confirm-var-exists-throw))]
     {:env env :op :var-special :form form
      :var (analyze env sym)
      :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))
@@ -41,11 +41,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:535-546](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer.clj#L535-L546)</ins>
+            └── <ins>[analyzer.clj:546-557](https://github.com/clojure/clojurescript/blob/r2655/src/clj/cljs/analyzer.clj#L546-L557)</ins>
 </pre>
 
 -->
@@ -89,12 +89,12 @@ The API data for this symbol:
 {:ns "special",
  :name "var",
  :type "special form",
- :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym)]\n    {:env env :op :var-special :form form\n     :var (analyze env sym)\n     :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :doc :file :line :column]\n                 m (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                     :name `(quote ~(symbol (name (:name var))))\n                     :test `(when ~sym (.-cljs$lang$test ~sym))\n                     :arglists (map with-meta (:arglists var) (:arglists-meta var)))]\n            (analyze env m))}))",
+ :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym (confirm-var-exists-throw))]\n    {:env env :op :var-special :form form\n     :var (analyze env sym)\n     :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :doc :file :line :column]\n                 m (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                     :name `(quote ~(symbol (name (:name var))))\n                     :test `(when ~sym (.-cljs$lang$test ~sym))\n                     :arglists (map with-meta (:arglists var) (:arglists-meta var)))]\n            (analyze env m))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [535 546]},
+          :lines [546 557]},
  :full-name "special/var",
  :full-name-encode "special/var",
  :clj-symbol "clojure.core/var",

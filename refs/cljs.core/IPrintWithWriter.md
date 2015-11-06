@@ -26,7 +26,7 @@ The old IPrintable protocol's implementation consisted of building a giant
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L344-L350):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L346-L352):
 
 ```clj
 (defprotocol IPrintWithWriter
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:344-350](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L344-L350)</ins>
+            └── <ins>[core.cljs:346-352](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L346-L352)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IPrintWithWriter\n  \"The old IPrintable protocol's implementation consisted of building a giant\n   list of strings to concatenate.  This involved lots of concat calls,\n   intermediate vectors, and lazy-seqs, and was very slow in some older JS\n   engines.  IPrintWithWriter implements printing via the IWriter protocol, so it\n   be implemented efficiently in terms of e.g. a StringBuffer append.\"\n  (-pr-writer [o writer opts]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [344 350]},
+          :lines [346 352]},
  :methods [{:name "-pr-writer",
             :signature ["[o writer opts]"],
             :docstring nil}],

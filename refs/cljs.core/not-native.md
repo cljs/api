@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L74):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L76):
 
 ```clj
 (def not-native nil)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:74](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/core.cljs#L74)</ins>
+            └── <ins>[core.cljs:76](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L76)</ins>
 </pre>
 
 -->
@@ -76,9 +76,9 @@ The API data for this symbol:
  :source {:code "(def not-native nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [74]},
+          :lines [76]},
  :full-name "cljs.core/not-native",
  :full-name-encode "cljs.core/not-native",
  :history [["+" "0.0-1798"]]}

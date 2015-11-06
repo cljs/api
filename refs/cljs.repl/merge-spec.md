@@ -1,11 +1,11 @@
-## cljs.repl/merge-spec
+## ~~cljs.repl/merge-spec~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655"><img valign="middle" alt="[×] 0.0-2655" title="Removed in 0.0-2655" src="https://img.shields.io/badge/×-0.0--2655-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -90,8 +90,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "merge-spec",
- :type "function",
  :signature ["[[lib & {:as aindex}] [_ & {:as bindex}]]"],
+ :history [["+" "0.0-2629"] ["-" "0.0-2655"]],
+ :type "function",
+ :full-name-encode "cljs.repl/merge-spec",
  :source {:code "(defn merge-spec [[lib & {:as aindex}] [_ & {:as bindex}]]\n  (let [merged-map\n        (merge-with\n          (fn [x y]\n            (if (vector? x)\n              (vec (distinct (into x y)))\n              y))\n          aindex bindex)]\n    (apply vector lib\n      (apply concat\n        (sort\n          (fn [[sa] [sb]]\n            (compare (spec-sort sa) (spec-sort sb)))\n          merged-map)))))",
           :title "Source code",
           :repo "clojurescript",
@@ -99,8 +101,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl.clj",
           :lines [196 209]},
  :full-name "cljs.repl/merge-spec",
- :full-name-encode "cljs.repl/merge-spec",
- :history [["+" "0.0-2629"]]}
+ :removed {:in "0.0-2655", :last-seen "0.0-2644"}}
 
 ```
 

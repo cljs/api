@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/pprint.cljs#L120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/pprint.cljs#L120):
 
 ```clj
 (defprotocol PrettyFlush (ppflush [this]))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
+clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[pprint.cljs:120](https://github.com/clojure/clojurescript/blob/r2644/src/cljs/cljs/pprint.cljs#L120)</ins>
+            └── <ins>[pprint.cljs:120](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/pprint.cljs#L120)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(defprotocol PrettyFlush (ppflush [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2644",
+          :tag "r2655",
           :filename "src/cljs/cljs/pprint.cljs",
           :lines [120]},
  :methods [{:name "ppflush", :signature ["[this]"], :docstring nil}],

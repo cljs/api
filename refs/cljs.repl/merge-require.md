@@ -1,11 +1,11 @@
-## cljs.repl/merge-require
+## ~~cljs.repl/merge-require~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2629"><img valign="middle" alt="[+] 0.0-2629" title="Added in 0.0-2629" src="https://img.shields.io/badge/+-0.0--2629-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655"><img valign="middle" alt="[×] 0.0-2655" title="Removed in 0.0-2655" src="https://img.shields.io/badge/×-0.0--2655-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -90,8 +90,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "merge-require",
- :type "function",
  :signature ["[requires [lib :as spec]]"],
+ :history [["+" "0.0-2629"] ["-" "0.0-2655"]],
+ :type "function",
+ :full-name-encode "cljs.repl/merge-require",
  :source {:code "(defn merge-require [requires [lib :as spec]]\n  (let [[before [match & after]]\n        (split-with\n          (fn [[lib' & _]]\n            (not= lib lib'))\n          requires)]\n    (if (nil? match)\n      ;; no match, append to end\n      (concat requires [spec])\n      (if (= match spec)\n        ;; dupe\n        requires\n        ;; merge\n        (concat before [(merge-spec match spec)] after)))))",
           :title "Source code",
           :repo "clojurescript",
@@ -99,8 +101,7 @@ The API data for this symbol:
           :filename "src/clj/cljs/repl.clj",
           :lines [211 224]},
  :full-name "cljs.repl/merge-require",
- :full-name-encode "cljs.repl/merge-require",
- :history [["+" "0.0-2629"]]}
+ :removed {:in "0.0-2655", :last-seen "0.0-2644"}}
 
 ```
 

@@ -1,11 +1,11 @@
-## cljs.core/\*print-newline\*
+## cljs.core/\*loaded-libs\*
 
 
 
  <table border="1">
 <tr>
 <td>dynamic var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2060"><img valign="middle" alt="[+] 0.0-2060" title="Added in 0.0-2060" src="https://img.shields.io/badge/+-0.0--2060-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655"><img valign="middle" alt="[+] 0.0-2655" title="Added in 0.0-2655" src="https://img.shields.io/badge/+-0.0--2655-lightgrey.svg"></a> </td>
 </tr>
 </table>
 
@@ -17,10 +17,10 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L33):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L40):
 
 ```clj
-(def ^:dynamic *print-newline* true)
+(defonce ^:dynamic *loaded-libs* nil)
 ```
 
 <!--
@@ -31,7 +31,7 @@ clojurescript @ r2655
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:33](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L33)</ins>
+            └── <ins>[core.cljs:40](https://github.com/clojure/clojurescript/blob/r2655/src/cljs/cljs/core.cljs#L40)</ins>
 </pre>
 
 -->
@@ -42,7 +42,7 @@ clojurescript @ r2655
 
 ###### External doc links:
 
-[`cljs.core/*print-newline*` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/*print-newline*.html)<br>
+[`cljs.core/*loaded-libs*` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/*loaded-libs*.html)<br>
 
 ---
 
@@ -54,7 +54,7 @@ Created for the upcoming ClojureScript website.<br>
 [edit here] | [learn how]
 </td></tr></table>
 
-[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-newlineSTAR.cljsdoc
+[edit here]:https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARloaded-libsSTAR.cljsdoc
 [learn how]:https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files
 
 <!--
@@ -71,17 +71,17 @@ The API data for this symbol:
 
 ```clj
 {:ns "cljs.core",
- :name "*print-newline*",
+ :name "*loaded-libs*",
  :type "dynamic var",
- :source {:code "(def ^:dynamic *print-newline* true)",
+ :source {:code "(defonce ^:dynamic *loaded-libs* nil)",
           :title "Source code",
           :repo "clojurescript",
           :tag "r2655",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [33]},
- :full-name "cljs.core/*print-newline*",
- :full-name-encode "cljs.core/STARprint-newlineSTAR",
- :history [["+" "0.0-2060"]]}
+          :lines [40]},
+ :full-name "cljs.core/*loaded-libs*",
+ :full-name-encode "cljs.core/STARloaded-libsSTAR",
+ :history [["+" "0.0-2655"]]}
 
 ```
 
@@ -92,7 +92,7 @@ Retrieve the API data for this symbol:
 (require '[clojure.edn :as edn])
 (-> (slurp "https://raw.githubusercontent.com/cljsinfo/cljs-api-docs/catalog/cljs-api.edn")
     (edn/read-string)
-    (get-in [:symbols "cljs.core/*print-newline*"]))
+    (get-in [:symbols "cljs.core/*loaded-libs*"]))
 ```
 
 -->

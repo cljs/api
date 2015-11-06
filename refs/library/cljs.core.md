@@ -78,6 +78,12 @@ interop with JS, many predicates, etc.
 </tr>
 <tr>
 <td></td>
+<td><samp>[\*loaded-libs\*](../cljs.core/STARloaded-libsSTAR.md)</samp></td>
+<td><samp>dynamic var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2655"><img valign="middle" alt="[+] 0.0-2655" title="Added in 0.0-2655" src="https://img.shields.io/badge/+-0.0--2655-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[\*main-cli-fn\*](../cljs.core/STARmain-cli-fnSTAR.md)</samp></td>
 <td><samp>var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
