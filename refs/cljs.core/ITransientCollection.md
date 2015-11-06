@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L295-L297):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L300-L302):
 
 ```clj
 (defprotocol ITransientCollection
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:295-297](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L295-L297)</ins>
+            └── <ins>[core.cljs:300-302](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L300-L302)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientCollection\n  (-conj! [tcoll val])\n  (-persistent! [tcoll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [295 297]},
+          :lines [300 302]},
  :methods [{:name "-conj!",
             :signature ["[tcoll val]"],
             :docstring nil}

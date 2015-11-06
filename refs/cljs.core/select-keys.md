@@ -35,7 +35,7 @@ Returns a map containing only those entries in map whose key is in keys
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5606-L5618):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5615-L5627):
 
 ```clj
 (defn select-keys
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5606-5618](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5606-L5618)</ins>
+            └── <ins>[core.cljs:5615-5627](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5615-L5627)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defn select-keys\n  [map keyseq]\n    (loop [ret {} keys (seq keyseq)]\n      (if keys\n        (let [key   (first keys)\n              entry (get map key ::not-found)]\n          (recur\n           (if (not= entry ::not-found)\n             (assoc ret key entry)\n             ret)\n           (next keys)))\n        ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5606 5618]},
+          :lines [5615 5627]},
  :full-name "cljs.core/select-keys",
  :clj-symbol "clojure.core/select-keys",
  :docstring "Returns a map containing only those entries in map whose key is in keys"}

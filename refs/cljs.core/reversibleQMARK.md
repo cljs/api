@@ -32,7 +32,7 @@ Vectors, sorted maps, and sorted sets implement `IReversible`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1861-L1862):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1870-L1871):
 
 ```clj
 (defn ^boolean reversible? [coll]
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1861-1862](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1861-L1862)</ins>
+            └── <ins>[core.cljs:1870-1871](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1870-L1871)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean reversible? [coll]\n  (satisfies? IReversible coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1861 1862]},
+          :lines [1870 1871]},
  :full-name "cljs.core/reversible?",
  :clj-symbol "clojure.core/reversible?"}
 

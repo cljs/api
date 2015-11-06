@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L220-L222):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L225-L227):
 
 ```clj
 (defprotocol IStack
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:220-222](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L220-L222)</ins>
+            └── <ins>[core.cljs:225-227](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L225-L227)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IStack\n  (-peek [coll])\n  (-pop [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [220 222]},
+          :lines [225 227]},
  :methods [{:name "-peek", :signature ["[coll]"], :docstring nil}
            {:name "-pop", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IStack",

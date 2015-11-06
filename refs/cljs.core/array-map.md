@@ -58,7 +58,7 @@ Returns a new array map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5524-L5528):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5533-L5537):
 
 ```clj
 (defn array-map
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5524-5528](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5524-L5528)</ins>
+            └── <ins>[core.cljs:5533-5537](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5533-L5537)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn array-map\n  [& keyvals]\n  (PersistentArrayMap. nil (quot (count keyvals) 2) (apply array keyvals) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5524 5528]},
+          :lines [5533 5537]},
  :examples [{:id "198026",
              :content "```clj\n(array-map :a 10)\n;;=> {:a 10}\n\n(array-map :a 10 :b 20)\n;;=> {:a 10 :b 20}\n```"}],
  :full-name "cljs.core/array-map",

@@ -62,7 +62,7 @@ Returns an object of the same type and value as obj, with
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2371-L2375):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2380-L2384):
 
 ```clj
 (defn vary-meta
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2371-2375](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2371-L2375)</ins>
+            └── <ins>[core.cljs:2380-2384](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2380-L2384)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defn vary-meta\n [obj f & args]\n (with-meta obj (apply f (meta obj) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2371 2375]},
+          :lines [2380 2384]},
  :examples [{:id "8cca62",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (vary-meta a assoc :bar true))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:foo true, :bar true}\n```"}],
  :full-name "cljs.core/vary-meta",

@@ -31,7 +31,7 @@ If EOF, throws if eof-is-error is true. Otherwise returns sentinel.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L415-L432):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L415-L432):
 
 ```clj
 (defn read
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:415-432](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/reader.cljs#L415-L432)</ins>
+            └── <ins>[reader.cljs:415-432](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/reader.cljs#L415-L432)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn read\n  [reader eof-is-error sentinel is-recursive]\n  (let [ch (read-char reader)]\n    (cond\n     (nil? ch) (if eof-is-error (reader-error reader \"EOF while reading\") sentinel)\n     (whitespace? ch) (recur reader eof-is-error sentinel is-recursive)\n     (comment-prefix? ch) (recur (read-comment reader ch) eof-is-error sentinel is-recursive)\n     :else (let [f (macros ch)\n                 res\n                 (cond\n                  f (f reader ch)\n                  (number-literal? reader ch) (read-number reader ch)\n                  :else (read-symbol reader ch))]\n     (if (identical? res reader)\n       (recur reader eof-is-error sentinel is-recursive)\n       res)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [415 432]},
  :full-name "cljs.reader/read",

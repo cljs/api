@@ -35,7 +35,7 @@ map of additional data.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7132-L7139):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7141-L7148):
 
 ```clj
 (defn ex-info
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7132-7139](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L7132-L7139)</ins>
+            └── <ins>[core.cljs:7141-7148](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L7141-L7148)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn ex-info\n  ([msg map]\n     (ExceptionInfo. msg map nil))\n  ([msg map cause]\n     (ExceptionInfo. msg map cause)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7132 7139]},
+          :lines [7141 7148]},
  :full-name "cljs.core/ex-info",
  :clj-symbol "clojure.core/ex-info",
  :docstring "Alpha - subject to change.\nCreate an instance of ExceptionInfo, an Error type that carries a\nmap of additional data."}

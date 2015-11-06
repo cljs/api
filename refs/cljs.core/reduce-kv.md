@@ -54,7 +54,7 @@ where the keys will be the ordinals.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1301-L1309):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1310-L1318):
 
 ```clj
 (defn reduce-kv
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1301-1309](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1301-L1309)</ins>
+            └── <ins>[core.cljs:1310-1318](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1310-L1318)</ins>
 </pre>
 
 -->
@@ -123,9 +123,9 @@ The API data for this symbol:
  :source {:code "(defn reduce-kv\n  ([f init coll]\n     (-kv-reduce coll f init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1301 1309]},
+          :lines [1310 1318]},
  :full-name "cljs.core/reduce-kv",
  :clj-symbol "clojure.core/reduce-kv",
  :docstring "Reduces an associative collection. f should be a function of 3\narguments. Returns the result of applying f to init, the first key\nand the first value in coll, then applying f to that result and the\n2nd key and value, etc. If coll contains no entries, returns init\nand f is not called. Note that reduce-kv is supported on vectors,\nwhere the keys will be the ordinals."}

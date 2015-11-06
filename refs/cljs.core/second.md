@@ -45,7 +45,7 @@ Same as (first (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L724-L727):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L731-L734):
 
 ```clj
 (defn second
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:724-727](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L724-L727)</ins>
+            └── <ins>[core.cljs:731-734](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L731-L734)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defn second\n  [coll]\n  (first (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [724 727]},
+          :lines [731 734]},
  :full-name "cljs.core/second",
  :clj-symbol "clojure.core/second",
  :docstring "Same as (first (next x))"}

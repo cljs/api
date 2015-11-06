@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L213-L215):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L218-L220):
 
 ```clj
 (defprotocol IMapEntry
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:213-215](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L213-L215)</ins>
+            └── <ins>[core.cljs:218-220](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L218-L220)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IMapEntry\n  (-key [coll])\n  (-val [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [213 215]},
+          :lines [218 220]},
  :methods [{:name "-key", :signature ["[coll]"], :docstring nil}
            {:name "-val", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IMapEntry",

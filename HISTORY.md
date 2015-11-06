@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1803](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1803)__</td>
+<td>2013-05-06</td>
+<td><kbd>1.5.1</kbd></td>
+<td></td>
+<td><kbd>0.0-2029</kbd></td>
+<td>
+<a href="#user-content-001803syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001803library">
++2 
+</a>
+</td>
+<td>
+<a href="#user-content-001803compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1798](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798)__</td>
 <td>2013-05-03</td>
 <td><kbd>1.5.1</kbd></td>
@@ -429,6 +452,35 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1803
+
+<a name="001803syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001803library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/lazy-cat](refs/cljs.core/lazy-cat.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/special-symbol?](refs/cljs.core/special-symbolQMARK.md)</samp></td>
+</tr>
+</table>
+
+<a name="001803compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1798

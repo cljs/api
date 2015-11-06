@@ -53,7 +53,7 @@ seq to reside in memory at one time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6147-L6159):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6156-L6168):
 
 ```clj
 (defn doall
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6147-6159](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6147-L6159)</ins>
+            └── <ins>[core.cljs:6156-6168](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6156-L6168)</ins>
 </pre>
 
 -->
@@ -126,9 +126,9 @@ The API data for this symbol:
  :source {:code "(defn doall\n  ([coll]\n   (dorun coll)\n   coll)\n  ([n coll]\n   (dorun n coll)\n   coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6147 6159]},
+          :lines [6156 6168]},
  :full-name "cljs.core/doall",
  :clj-symbol "clojure.core/doall",
  :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. doall can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, retains the head and returns it, thus causing the entire\nseq to reside in memory at one time."}

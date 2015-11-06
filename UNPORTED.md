@@ -491,10 +491,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/lazy-cat](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/lazy-cat)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/line-seq](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/line-seq)</samp></td>
 </tr>
 <tr>
@@ -752,10 +748,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/sorted?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted?)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/special-symbol?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/special-symbol?)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

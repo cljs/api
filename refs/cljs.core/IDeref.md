@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L227-L228):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L232-L233):
 
 ```clj
 (defprotocol IDeref
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:227-228](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L227-L228)</ins>
+            └── <ins>[core.cljs:232-233](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L232-L233)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IDeref\n (-deref [o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [227 228]},
+          :lines [232 233]},
  :methods [{:name "-deref", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IDeref",
  :clj-symbol "clojure.lang/IDeref"}

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L309-L310):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L314-L315):
 
 ```clj
 (defprotocol ITransientSet
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:309-310](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L309-L310)</ins>
+            └── <ins>[core.cljs:314-315](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L314-L315)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientSet\n  (-disjoin! [tcoll v]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [309 310]},
+          :lines [314 315]},
  :methods [{:name "-disjoin!",
             :signature ["[tcoll v]"],
             :docstring nil}],

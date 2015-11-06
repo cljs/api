@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1820-L1857):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1829-L1866):
 
 ```clj
 (deftype EmptyList [meta]
@@ -72,11 +72,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1820-1857](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1820-L1857)</ins>
+            └── <ins>[core.cljs:1829-1866](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1829-L1866)</ins>
 </pre>
 
 -->
@@ -127,9 +127,9 @@ The API data for this symbol:
  :source {:code "(deftype EmptyList [meta]\n  IList\n\n  IWithMeta\n  (-with-meta [coll meta] (EmptyList. meta))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] nil)\n  (-rest [coll] ())\n\n  INext\n  (-next [coll] nil)\n\n  IStack\n  (-peek [coll] nil)\n  (-pop [coll] (throw (js/Error. \"Can't pop empty list\")))\n\n  ICollection\n  (-conj [coll o] (List. meta o nil 1 nil))\n\n  IEmptyableCollection\n  (-empty [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] 0)\n\n  ISeqable\n  (-seq [coll] nil)\n\n  ICounted\n  (-count [coll] 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1820 1857]},
+          :lines [1829 1866]},
  :full-name "cljs.core/EmptyList",
  :clj-symbol "clojure.lang/EmptyList"}
 

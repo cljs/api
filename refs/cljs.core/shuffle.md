@@ -35,7 +35,7 @@ Return a random permutation of coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1257-L1262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1260-L1265):
 
 ```clj
 (defn shuffle
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1257-1262](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1257-L1262)</ins>
+            └── <ins>[core.cljs:1260-1265](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1260-L1265)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn shuffle\n  [coll]\n  (let [a (to-array coll)]\n    (garray/shuffle a)\n    (vec a)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1257 1262]},
+          :lines [1260 1265]},
  :full-name "cljs.core/shuffle",
  :clj-symbol "clojure.core/shuffle",
  :docstring "Return a random permutation of coll"}

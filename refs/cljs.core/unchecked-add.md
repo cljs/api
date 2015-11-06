@@ -39,7 +39,7 @@ Returns the sum of nums. (+) returns 0.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1429-L1434):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1438-L1443):
 
 ```clj
 (defn unchecked-add
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1429-1434](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1429-L1434)</ins>
+            └── <ins>[core.cljs:1438-1443](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1438-L1443)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L281-L282):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L281-L282):
 
 ```clj
 (defmacro unchecked-add
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:281-282](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L281-L282)</ins>
+            └── <ins>[core.clj:281-282](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L281-L282)</ins>
 </pre>
 -->
 
@@ -128,13 +128,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-add\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-add x y))\n  ([x y & more] (reduce unchecked-add (cljs.core/unchecked-add x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1429 1434]},
+          :lines [1438 1443]},
  :extra-sources [{:code "(defmacro unchecked-add\n  ([& xs] `(+ ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1798",
+                  :tag "r1803",
                   :filename "src/clj/cljs/core.clj",
                   :lines [281 282]}],
  :full-name "cljs.core/unchecked-add",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L670-L675):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L677-L682):
 
 ```clj
 (defn prim-seq
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:670-675](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L670-L675)</ins>
+            └── <ins>[core.cljs:677-682](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L677-L682)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when (< i (alength prim))\n       (IndexedSeq. prim i))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [670 675]},
+          :lines [677 682]},
  :full-name "cljs.core/prim-seq",
  :full-name-encode "cljs.core/prim-seq",
  :history [["+" "0.0-927"]]}

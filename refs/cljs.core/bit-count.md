@@ -51,7 +51,7 @@ Counts the number of bits set in n
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1618-L1623):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1627-L1632):
 
 ```clj
 (defn bit-count
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1618-1623](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1618-L1623)</ins>
+            └── <ins>[core.cljs:1627-1632](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1627-L1632)</ins>
 </pre>
 
 -->
@@ -118,9 +118,9 @@ The API data for this symbol:
  :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1618 1623]},
+          :lines [1627 1632]},
  :examples [{:id "35c78c",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-count 2r1011)\n;;=> 3\n```\n\nSame number in decimal:\n\n```clj\n(bit-count 11)\n;;=> 3\n```"}],
  :full-name "cljs.core/bit-count",

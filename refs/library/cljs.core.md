@@ -1295,6 +1295,12 @@ interop with JS, many predicates, etc.
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/lazy-cat)</td>
+<td><samp>[lazy-cat](../cljs.core/lazy-cat.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1803"><img valign="middle" alt="[+] 0.0-1803" title="Added in 0.0-1803" src="https://img.shields.io/badge/+-0.0--1803-lightgrey.svg"></a> </td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/lazy-seq)</td>
 <td><samp>[lazy-seq](../cljs.core/lazy-seq.md)</samp></td>
 <td><samp>macro</samp></td>
@@ -2109,6 +2115,12 @@ interop with JS, many predicates, etc.
 <td><samp>[sorted-set-by](../cljs.core/sorted-set-by.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/special-symbol?)</td>
+<td><samp>[special-symbol?](../cljs.core/special-symbolQMARK.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1803"><img valign="middle" alt="[+] 0.0-1803" title="Added in 0.0-1803" src="https://img.shields.io/badge/+-0.0--1803-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/split-at)</td>

@@ -74,7 +74,7 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1164-L1183):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1167-L1186):
 
 ```clj
 (defn compare
@@ -99,11 +99,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1164-1183](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1164-L1183)</ins>
+            └── <ins>[core.cljs:1167-1186](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1167-L1186)</ins>
 </pre>
 
 -->
@@ -158,9 +158,9 @@ The API data for this symbol:
  :source {:code "(defn compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (identical? (type x) (type y))\n   (if (satisfies? IComparable x false)\n     (-compare ^not-native x y)\n     (garray/defaultCompare x y))\n\n   :else\n   (throw (js/Error. \"compare on non-nil objects of different types\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1164 1183]},
+          :lines [1167 1186]},
  :examples [{:id "e13fa0",
              :content "```clj\n(compare 10 12)\n;;=> -1\n\n(compare 12 10)\n;;=> 1\n\n(compare 10 10)\n;;=> 0\n\n(compare 10 nil)\n;;=>  1\n\n(compare 10 (list 1 2 3))\n;; Error: compare on non-nil objects of different types\n```"}],
  :full-name "cljs.core/compare",

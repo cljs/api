@@ -44,7 +44,7 @@ Returns a new hash map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5515-L5522):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5524-L5531):
 
 ```clj
 (defn hash-map
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5515-5522](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L5515-L5522)</ins>
+            └── <ins>[core.cljs:5524-5531](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5524-L5531)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn hash-map\n  [& keyvals]\n  (loop [in (seq keyvals), out (transient cljs.core.PersistentHashMap/EMPTY)]\n    (if in\n      (recur (nnext in) (assoc! out (first in) (second in)))\n      (persistent! out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5515 5522]},
+          :lines [5524 5531]},
  :full-name "cljs.core/hash-map",
  :clj-symbol "clojure.core/hash-map",
  :docstring "keyval => key val\nReturns a new hash map with supplied mappings."}

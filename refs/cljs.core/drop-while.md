@@ -48,7 +48,7 @@ item for which (pred item) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2718-L2727):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2727-L2736):
 
 ```clj
 (defn drop-while
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2718-2727](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2718-L2727)</ins>
+            └── <ins>[core.cljs:2727-2736](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2727-L2736)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defn drop-while\n  [pred coll]\n  (let [step (fn [pred coll]\n               (let [s (seq coll)]\n                 (if (and s (pred (first s)))\n                   (recur pred (rest s))\n                   s)))]\n    (lazy-seq (step pred coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2718 2727]},
+          :lines [2727 2736]},
  :full-name "cljs.core/drop-while",
  :clj-symbol "clojure.core/drop-while",
  :docstring "Returns a lazy sequence of the items in coll starting from the first\nitem for which (pred item) returns nil."}

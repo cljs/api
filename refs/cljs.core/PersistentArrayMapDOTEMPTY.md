@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L3988):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L3997):
 
 ```clj
 (set! cljs.core.PersistentArrayMap/EMPTY (PersistentArrayMap. nil 0 (array) nil))
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3988](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L3988)</ins>
+            └── <ins>[core.cljs:3997](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L3997)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.PersistentArrayMap/EMPTY (PersistentArrayMap. nil 0 (array) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3988]},
+          :lines [3997]},
  :full-name "cljs.core/PersistentArrayMap.EMPTY",
  :clj-symbol "clojure.lang/PersistentArrayMap.EMPTY"}
 

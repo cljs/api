@@ -39,7 +39,7 @@ Returns the product of nums. (*) returns 1.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1462-L1467):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1471-L1476):
 
 ```clj
 (defn unchecked-multiply
@@ -53,18 +53,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1462-1467](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1462-L1467)</ins>
+            └── <ins>[core.cljs:1471-1476](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1471-L1476)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L302-L303):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L302-L303):
 
 ```clj
 (defmacro unchecked-multiply
@@ -75,11 +75,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:302-303](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L302-L303)</ins>
+            └── <ins>[core.clj:302-303](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L302-L303)</ins>
 </pre>
 -->
 
@@ -128,13 +128,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-multiply\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-multiply x y))\n  ([x y & more] (reduce unchecked-multiply (cljs.core/unchecked-multiply x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1462 1467]},
+          :lines [1471 1476]},
  :extra-sources [{:code "(defmacro unchecked-multiply\n  ([& xs] `(* ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1798",
+                  :tag "r1803",
                   :filename "src/clj/cljs/core.clj",
                   :lines [302 303]}],
  :full-name "cljs.core/unchecked-multiply",

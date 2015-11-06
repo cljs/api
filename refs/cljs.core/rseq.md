@@ -39,7 +39,7 @@ Returns nil if `coll` is empty.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1864-L1865):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1873-L1874):
 
 ```clj
 (defn rseq [coll]
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1864-1865](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1864-L1865)</ins>
+            └── <ins>[core.cljs:1873-1874](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1873-L1874)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn rseq [coll]\n  (-rseq coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1864 1865]},
+          :lines [1873 1874]},
  :full-name "cljs.core/rseq",
  :clj-symbol "clojure.core/rseq"}
 

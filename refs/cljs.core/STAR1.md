@@ -78,7 +78,7 @@ bound in a repl thread to the most recent value printed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L30-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L30-L32):
 
 ```clj
 (def
@@ -90,11 +90,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L30-L32)</ins>
+            └── <ins>[core.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L30-L32)</ins>
 </pre>
 
 -->
@@ -146,7 +146,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent value printed\"}\n  *1)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
           :lines [30 32]},
  :examples [{:id "30a861",

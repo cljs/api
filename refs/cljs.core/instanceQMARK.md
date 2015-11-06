@@ -35,7 +35,7 @@ Returns true if `o` is an instance of type `t`, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L447-L448):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L338-L339):
 
 ```clj
 (defn ^boolean instance? [t o]
@@ -46,18 +46,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:447-448](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L447-L448)</ins>
+            └── <ins>[core.cljs:338-339](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L338-L339)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L245-L246):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L245-L246):
 
 ```clj
 (defmacro instance? [t o]
@@ -68,11 +68,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:245-246](https://github.com/clojure/clojurescript/blob/r1798/src/clj/cljs/core.clj#L245-L246)</ins>
+            └── <ins>[core.clj:245-246](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L245-L246)</ins>
 </pre>
 -->
 
@@ -124,13 +124,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean instance? [t o]\n  (cljs.core/instance? t o))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [447 448]},
+          :lines [338 339]},
  :extra-sources [{:code "(defmacro instance? [t o]\n  (bool-expr (list 'js* \"(~{} instanceof ~{})\" o t)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1798",
+                  :tag "r1803",
                   :filename "src/clj/cljs/core.clj",
                   :lines [245 246]}],
  :full-name "cljs.core/instance?",

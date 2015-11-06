@@ -50,7 +50,7 @@ there are fewer than n.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2685-L2692):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2694-L2701):
 
 ```clj
 (defn take
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2685-2692](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2685-L2692)</ins>
+            └── <ins>[core.cljs:2694-2701](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2694-L2701)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defn take\n  [n coll]\n  (lazy-seq\n   (when (pos? n)\n     (when-let [s (seq coll)]\n      (cons (first s) (take (dec n) (rest s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2685 2692]},
+          :lines [2694 2701]},
  :full-name "cljs.core/take",
  :clj-symbol "clojure.core/take",
  :docstring "Returns a lazy sequence of the first n items in coll, or all items if\nthere are fewer than n."}

@@ -43,7 +43,7 @@ Creates a `seq` from a JavaScript array, starting at index `i` if given.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L677-L681):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L684-L688):
 
 ```clj
 (defn array-seq
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:677-681](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L677-L681)</ins>
+            └── <ins>[core.cljs:684-688](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L684-L688)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [677 681]},
+          :lines [684 688]},
  :examples [{:id "9ef6de",
              :content "```clj\n(array-seq #js [1 2 3])\n;;=> (1 2 3)\n\n(array-seq #js [1 2 3] 1)\n;;=> (2 3)\n```"}],
  :full-name "cljs.core/array-seq"}

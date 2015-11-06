@@ -34,7 +34,7 @@ the ys from x and returns the result.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1487-L1492):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1496-L1501):
 
 ```clj
 (defn unchecked-substract
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1487-1492](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1487-L1492)</ins>
+            └── <ins>[core.cljs:1496-1501](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1496-L1501)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn unchecked-substract\n  ([x] (cljs.core/unchecked-subtract x))\n  ([x y] (cljs.core/unchecked-subtract x y))\n  ([x y & more] (reduce unchecked-substract (cljs.core/unchecked-subtract x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1487 1492]},
+          :lines [1496 1501]},
  :full-name "cljs.core/unchecked-substract",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}
 

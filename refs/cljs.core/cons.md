@@ -59,7 +59,7 @@ Returns a new seq where x is the first element and seq is the rest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1922-L1928):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1931-L1937):
 
 ```clj
 (defn cons
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1922-1928](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L1922-L1928)</ins>
+            └── <ins>[core.cljs:1931-1937](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1931-L1937)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defn cons\n  [x coll]\n  (if (or (nil? coll)\n          (satisfies? ISeq coll false))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1922 1928]},
+          :lines [1931 1937]},
  :examples [{:id "68c769",
              :content "```clj\n(cons 1 (list 1 2 3))\n;;=> (1 1 2 3)\n\n(cons 1 [1 2 3])\n;;=> (1 1 2 3)\n\n(cons 1 nil)\n;;=> (1)\n\n(cons nil nil)\n;;=> (nil)\n```"}],
  :full-name "cljs.core/cons",

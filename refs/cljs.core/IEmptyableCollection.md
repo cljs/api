@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L180-L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L185-L186):
 
 ```clj
 (defprotocol IEmptyableCollection
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:180-181](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L180-L181)</ins>
+            └── <ins>[core.cljs:185-186](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L185-L186)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEmptyableCollection\n  (-empty [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [180 181]},
+          :lines [185 186]},
  :methods [{:name "-empty", :signature ["[coll]"], :docstring nil}],
  :full-name "cljs.core/IEmptyableCollection",
  :history [["+" "0.0-927"]]}

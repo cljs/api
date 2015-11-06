@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6361):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6370):
 
 ```clj
 (def *print-readably* true)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6361](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6361)</ins>
+            └── <ins>[core.cljs:6370](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6370)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(def *print-readably* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6361]},
+          :lines [6370]},
  :full-name "cljs.core/*print-readably*",
  :full-name-encode "cljs.core/STARprint-readablySTAR",
  :clj-symbol "clojure.core/*print-readably*",

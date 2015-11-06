@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2014-L2026):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2023-L2035):
 
 ```clj
 (deftype ChunkBuffer [^:mutable buf ^:mutable end]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2014-2026](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L2014-L2026)</ins>
+            └── <ins>[core.cljs:2023-2035](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2023-L2035)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(deftype ChunkBuffer [^:mutable buf ^:mutable end]\n  Object\n  (add [_ o]\n    (aset buf end o)\n    (set! end (inc end)))\n\n  (chunk [_ o]\n    (let [ret (ArrayChunk. buf 0 end)]\n      (set! buf nil)\n      ret))\n\n  ICounted\n  (-count [_] end))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2014 2026]},
+          :lines [2023 2035]},
  :full-name "cljs.core/ChunkBuffer",
  :clj-symbol "clojure.lang/ChunkBuffer"}
 

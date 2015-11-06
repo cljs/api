@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6360):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6369):
 
 ```clj
 (def *flush-on-newline* true)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6360](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6360)</ins>
+            └── <ins>[core.cljs:6369](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6369)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(def *flush-on-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6360]},
+          :lines [6369]},
  :full-name "cljs.core/*flush-on-newline*",
  :full-name-encode "cljs.core/STARflush-on-newlineSTAR",
  :clj-symbol "clojure.core/*flush-on-newline*",

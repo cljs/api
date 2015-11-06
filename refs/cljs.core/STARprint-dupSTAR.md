@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6363):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6372):
 
 ```clj
 (def *print-dup* false)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1798/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1798
+clojurescript @ r1803
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6363](https://github.com/clojure/clojurescript/blob/r1798/src/cljs/cljs/core.cljs#L6363)</ins>
+            └── <ins>[core.cljs:6372](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6372)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(def *print-dup* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1798",
+          :tag "r1803",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6363]},
+          :lines [6372]},
  :full-name "cljs.core/*print-dup*",
  :full-name-encode "cljs.core/STARprint-dupSTAR",
  :clj-symbol "clojure.core/*print-dup*",
