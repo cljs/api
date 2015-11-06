@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4842-L4843):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L4851-L4852):
 
 ```clj
 (defn iterator [coll]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2322
+clojurescript @ r2341
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4842-4843](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L4842-L4843)</ins>
+            └── <ins>[core.cljs:4851-4852](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L4851-L4852)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn iterator [coll]\n  (Iterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2322",
+          :tag "r2341",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4842 4843]},
+          :lines [4851 4852]},
  :full-name "cljs.core/iterator",
  :full-name-encode "cljs.core/iterator",
  :history [["+" "0.0-2268"]]}

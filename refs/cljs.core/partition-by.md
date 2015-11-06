@@ -50,7 +50,7 @@ transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L7532-L7570):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L7528-L7567):
 
 ```clj
 (defn partition-by
@@ -64,8 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
               (let [result (if (.isEmpty a)
                              result
                              (let [v (vec (.toArray a))]
-                               ;;flushing ops must clear before invoking possibly
-                               ;;failing nested op, else infinite loop
+                               ;;clear first!
                                (.clear a)
                                (f1 result v)))]
                 (f1 result)))
@@ -80,8 +79,10 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
                     result)
                   (let [v (vec (.toArray a))]
                     (.clear a)
-                    (.add a input)
-                    (f1 result v)))))))))
+                    (let [ret (f1 result v)]
+                      (when-not (reduced? ret)
+                        (.add a input))
+                      ret)))))))))
   ([f coll]
      (lazy-seq
        (when-let [s (seq coll)]
@@ -95,11 +96,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2322
+clojurescript @ r2341
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7532-7570](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L7532-L7570)</ins>
+            └── <ins>[core.cljs:7528-7567](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L7528-L7567)</ins>
 </pre>
 
 -->
@@ -151,12 +152,12 @@ The API data for this symbol:
            "cljs.core/partition-all"
            "cljs.core/group-by"],
  :full-name-encode "cljs.core/partition-by",
- :source {:code "(defn partition-by\n  ([f]\n     (fn [f1]\n       (let [a (array-list)\n             pa (atom ::none)]\n         (fn\n           ([] (f1))\n           ([result]\n              (let [result (if (.isEmpty a)\n                             result\n                             (let [v (vec (.toArray a))]\n                               ;;flushing ops must clear before invoking possibly\n                               ;;failing nested op, else infinite loop\n                               (.clear a)\n                               (f1 result v)))]\n                (f1 result)))\n           ([result input]\n              (let [pval @pa\n                    val (f input)]\n                (reset! pa val)\n                (if (or (keyword-identical? pval ::none)\n                        (= val pval))\n                  (do\n                    (.add a input)\n                    result)\n                  (let [v (vec (.toArray a))]\n                    (.clear a)\n                    (.add a input)\n                    (f1 result v)))))))))\n  ([f coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [fst (first s)\n               fv (f fst)\n               run (cons fst (take-while #(= fv (f %)) (next s)))]\n           (cons run (partition-by f (seq (drop (count run) s)))))))))",
+ :source {:code "(defn partition-by\n  ([f]\n     (fn [f1]\n       (let [a (array-list)\n             pa (atom ::none)]\n         (fn\n           ([] (f1))\n           ([result]\n              (let [result (if (.isEmpty a)\n                             result\n                             (let [v (vec (.toArray a))]\n                               ;;clear first!\n                               (.clear a)\n                               (f1 result v)))]\n                (f1 result)))\n           ([result input]\n              (let [pval @pa\n                    val (f input)]\n                (reset! pa val)\n                (if (or (keyword-identical? pval ::none)\n                        (= val pval))\n                  (do\n                    (.add a input)\n                    result)\n                  (let [v (vec (.toArray a))]\n                    (.clear a)\n                    (let [ret (f1 result v)]\n                      (when-not (reduced? ret)\n                        (.add a input))\n                      ret)))))))))\n  ([f coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [fst (first s)\n               fv (f fst)\n               run (cons fst (take-while #(= fv (f %)) (next s)))]\n           (cons run (partition-by f (seq (drop (count run) s)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2322",
+          :tag "r2341",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7532 7570]},
+          :lines [7528 7567]},
  :full-name "cljs.core/partition-by",
  :clj-symbol "clojure.core/partition-by",
  :docstring "Applies f to each value in coll, splitting it each time f returns a\nnew value.  Returns a lazy seq of partitions.  Returns a stateful\ntransducer when no collection is provided."}

@@ -1323,6 +1323,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/cat](refs/cljs.core/cat.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cat.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/chars](refs/cljs.core/chars.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chars.cljsdoc)</td>
 <td></td>
@@ -1416,6 +1423,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/comparator](refs/cljs.core/comparator.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/comparator.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/completing](refs/cljs.core/completing.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/completing.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

@@ -29,7 +29,7 @@ will be performed every time iterator/seq/reduce is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8190-L8195):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L8186-L8191):
 
 ```clj
 (defn iteration
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2322
+clojurescript @ r2341
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8190-8195](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8190-L8195)</ins>
+            └── <ins>[core.cljs:8186-8191](https://github.com/clojure/clojurescript/blob/r2341/src/cljs/cljs/core.cljs#L8186-L8191)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn iteration\n  [xform coll]\n  (Iteration. xform coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2322",
+          :tag "r2341",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8190 8195]},
+          :lines [8186 8191]},
  :full-name "cljs.core/iteration",
  :docstring "Returns an iterable/seqable/reducible sequence of applications of\nthe transducer to the items in coll. Note that these applications\nwill be performed every time iterator/seq/reduce is called."}
 

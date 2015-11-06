@@ -1,11 +1,11 @@
-## cljs.core/flatmap
+## ~~cljs.core/flatmap~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2341"><img valign="middle" alt="[×] 0.0-2341" title="Removed in 0.0-2341" src="https://img.shields.io/badge/×-0.0--2341-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -96,7 +96,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "flatmap",
  :signature ["[f]" "[f coll]"],
- :history [["+" "0.0-2301"]],
+ :history [["+" "0.0-2301"] ["-" "0.0-2341"]],
  :type "function",
  :full-name-encode "cljs.core/flatmap",
  :source {:code "(defn flatmap\n  ([f]\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([result] (f1 result))\n       ([result input]\n          (reduce (preserving-reduced f1) result (f input))))))\n  ([f coll] (sequence (flatmap f) coll)))",
@@ -106,7 +106,8 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [8139 8150]},
  :full-name "cljs.core/flatmap",
- :docstring "maps f over coll and concatenates the results.  Thus function f\nshould return a collection.  Returns a transducer when no collection\nis provided."}
+ :docstring "maps f over coll and concatenates the results.  Thus function f\nshould return a collection.  Returns a transducer when no collection\nis provided.",
+ :removed {:in "0.0-2341", :last-seen "0.0-2322"}}
 
 ```
 
