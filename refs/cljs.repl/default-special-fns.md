@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/repl.clj#L142-L151):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/clj/cljs/repl.clj#L144-L153):
 
 ```clj
 (def default-special-fns
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1835
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:142-151](https://github.com/clojure/clojurescript/blob/r1820/src/clj/cljs/repl.clj#L142-L151)</ins>
+            └── <ins>[repl.clj:144-153](https://github.com/clojure/clojurescript/blob/r1835/src/clj/cljs/repl.clj#L144-L153)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(def default-special-fns\n  (let [load-file-fn (fn [repl-env file] (load-file repl-env file))]\n    {'in-ns (fn [_ quoted-ns]\n              (let [ns-name (second quoted-ns)]\n                (when-not (ana/get-namespace ns-name)\n                  (ana/set-namespace ns-name {:name ns-name}))\n                (set! ana/*cljs-ns* ns-name)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace (fn [repl-env ns] (load-namespace repl-env ns))}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1820",
+          :tag "r1835",
           :filename "src/clj/cljs/repl.clj",
-          :lines [142 151]},
+          :lines [144 153]},
  :full-name "cljs.repl/default-special-fns",
  :full-name-encode "cljs.repl/default-special-fns",
  :history [["+" "0.0-993"]]}

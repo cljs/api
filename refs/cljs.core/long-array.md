@@ -28,15 +28,14 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2254-L2273):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L2254-L2272):
 
 ```clj
 (defn long-array
   ([size-or-seq]
-     (cond
-      (number? size-or-seq) (long-array size-or-seq nil)
-      (seq? size-or-seq) (into-array size-or-seq)
-      :else (throw (js/Error. "long-array called with something other than size or ISeq"))))
+     (if (number? size-or-seq)
+       (long-array size-or-seq nil)
+       (into-array size-or-seq)))
   ([size init-val-or-seq]
      (let [a (make-array size)]
        (if (seq? init-val-or-seq)
@@ -57,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1835
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2254-2273](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L2254-L2273)</ins>
+            └── <ins>[core.cljs:2254-2272](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L2254-L2272)</ins>
 </pre>
 
 -->
@@ -109,12 +108,12 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/long-array",
- :source {:code "(defn long-array\n  ([size-or-seq]\n     (cond\n      (number? size-or-seq) (long-array size-or-seq nil)\n      (seq? size-or-seq) (into-array size-or-seq)\n      :else (throw (js/Error. \"long-array called with something other than size or ISeq\"))))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
+ :source {:code "(defn long-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (long-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1820",
+          :tag "r1835",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2254 2273]},
+          :lines [2254 2272]},
  :full-name "cljs.core/long-array",
  :clj-symbol "clojure.core/long-array"}
 

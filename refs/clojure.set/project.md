@@ -30,7 +30,7 @@ Returns a rel of the elements of xrel with only the keys in ks
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/set.cljs#L67-L70):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/clojure/set.cljs#L67-L70):
 
 ```clj
 (defn project
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1835
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:67-70](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/clojure/set.cljs#L67-L70)</ins>
+            └── <ins>[set.cljs:67-70](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/clojure/set.cljs#L67-L70)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn project\n  [xrel ks]\n    (set (map #(select-keys % ks) xrel)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1820",
+          :tag "r1835",
           :filename "src/cljs/clojure/set.cljs",
           :lines [67 70]},
  :full-name "clojure.set/project",

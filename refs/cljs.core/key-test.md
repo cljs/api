@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L4238-L4241):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L4235-L4238):
 
 ```clj
 (defn ^boolean key-test [key other]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1835
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4238-4241](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/core.cljs#L4238-L4241)</ins>
+            └── <ins>[core.cljs:4235-4238](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L4235-L4238)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean key-test [key other]\n  (if ^boolean (goog/isString key)\n    (identical? key other)\n    (= key other)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1820",
+          :tag "r1835",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4238 4241]},
+          :lines [4235 4238]},
  :full-name "cljs.core/key-test"}
 
 ```

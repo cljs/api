@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L30-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/reader.cljs#L30-L32):
 
 ```clj
 (defn push-back-reader [s]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1820/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1820
+clojurescript @ r1835
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1820/src/cljs/cljs/reader.cljs#L30-L32)</ins>
+            └── <ins>[reader.cljs:30-32](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/reader.cljs#L30-L32)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn push-back-reader [s]\n  \"Creates a StringPushbackReader from a given string\"\n  (StringPushbackReader. s (atom 0) (atom nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1820",
+          :tag "r1835",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [30 32]},
  :full-name "cljs.reader/push-back-reader",
