@@ -47,7 +47,7 @@ n (default 1) (exclusive).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/cljs/cljs/core.cljs#L8737-L8741):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L8737-L8741):
 
 ```clj
 (defn rand
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2911
+clojurescript @ r2913
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8737-8741](https://github.com/clojure/clojurescript/blob/r2911/src/cljs/cljs/core.cljs#L8737-L8741)</ins>
+            └── <ins>[core.cljs:8737-8741](https://github.com/clojure/clojurescript/blob/r2913/src/cljs/cljs/core.cljs#L8737-L8741)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn rand\n  ([] (rand 1))\n  ([n] (* (Math/random) n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2911",
+          :tag "r2913",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8737 8741]},
  :full-name "cljs.core/rand",

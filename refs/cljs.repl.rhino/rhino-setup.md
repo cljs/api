@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl/rhino.clj#L118-L130):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L118-L130):
 
 ```clj
 (defn rhino-setup [repl-env opts]
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2911
+clojurescript @ r2913
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:118-130](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl/rhino.clj#L118-L130)</ins>
+                └── <ins>[rhino.clj:118-130](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L118-L130)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn rhino-setup [repl-env opts]\n  (let [env   (ana/empty-env)\n        scope (:scope repl-env)]\n    (ScriptableObject/putProperty scope \"__repl_opts\"\n      (Context/javaToJS opts scope))\n    (repl/load-file repl-env \"cljs/core.cljs\" opts)\n    (ScriptableObject/putProperty scope\n      \"out\" (Context/javaToJS *out* scope))\n    (binding [ana/*cljs-ns* 'cljs.core]\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(do\n           (set! (.-isProvided_ js/goog) (fn [_] false))\n           (set! *print-fn* (fn [x] (.write js/out x))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2911",
+          :tag "r2913",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [118 130]},
  :full-name "cljs.repl.rhino/rhino-setup",

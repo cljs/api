@@ -2,7 +2,7 @@
 
  <table border="1">
 <tr>
-<td>__0.0-2911__ [all](HISTORY.md)</td>
+<td>__0.0-2913__ [all](HISTORY.md)</td>
 <td>2015-02-21</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.6.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-2911__ ([See Full History](HISTORY.md)):
+Changes from __0.0-2913__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,61 +34,13 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-macro-red.svg">
-</td>
-<td><samp>[~~cljs.repl/with-read-known~~](refs/cljs.repl/with-read-known.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[clojure.browser.net/IWebSocket](refs/clojure.browser.net/IWebSocket.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[clojure.browser.net/websocket-connection](refs/clojure.browser.net/websocket-connection.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/\*repl-opts\*](refs/cljs.repl/STARrepl-optsSTAR.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/repl-caught](refs/cljs.repl/repl-caught.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/repl-prompt](refs/cljs.repl/repl-prompt.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.repl/self-require?](refs/cljs.repl/self-requireQMARK.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/×-macro-red.svg">
-</td>
-<td><samp>[~~cljs.repl/with-read-known~~](refs/cljs.repl/with-read-known.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 

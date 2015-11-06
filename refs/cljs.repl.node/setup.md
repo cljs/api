@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl/node.clj#L80-L169):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/node.clj#L80-L169):
 
 ```clj
 (defn setup
@@ -124,12 +124,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2911
+clojurescript @ r2913
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:80-169](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl/node.clj#L80-L169)</ins>
+                └── <ins>[node.clj:80-169](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/node.clj#L80-L169)</ins>
 </pre>
 
 -->
@@ -175,7 +175,7 @@ The API data for this symbol:
  :source {:code "(defn setup\n  ([repl-env] (setup repl-env nil))\n  ([repl-env opts]\n    (let [output-dir (io/file (:output-dir opts))\n          _    (.mkdirs output-dir)\n          of   (io/file output-dir \"node_repl.js\")\n          _   (spit of\n                (string/replace (slurp (io/resource \"cljs/repl/node_repl.js\"))\n                  \"var PORT = 5001;\"\n                  (str \"var PORT = \" (:port repl-env) \";\")))\n          bldr (ProcessBuilder. (into-array [(get opts :node-command \"node\")]))\n          _    (-> bldr\n                 (.redirectInput of)\n                 (.redirectOutput ProcessBuilder$Redirect/INHERIT)\n                 (.redirectError ProcessBuilder$Redirect/INHERIT))\n          proc (.start bldr)\n          env  (ana/empty-env)\n          core (io/resource \"cljs/core.cljs\")\n          ;; represent paths as vectors so we can emit JS arrays, this is to\n          ;; paper over Windows issues with minimum hassle - David\n          path (.getPath (.getCanonicalFile output-dir))\n          [fc & cs] (rest (util/path-seq path)) ;; remove leading empty string\n          root (.substring path 0 (+ (.indexOf path fc) (count fc)))\n          root-path (vec (cons root cs))\n          rewrite-path (conj root-path \"goog\")]\n      (reset! (:proc repl-env) proc)\n      (loop [r nil]\n        (when-not (= r \"ready\")\n          (Thread/sleep 50)\n          (try\n            (reset! (:socket repl-env) (socket (:host repl-env) (:port repl-env)))\n            (catch Exception e))\n          (if @(:socket repl-env)\n            (recur (read-response (:in @(:socket repl-env))))\n            (recur nil))))\n      ;; compile cljs.core & its dependencies, goog/base.js must be available\n      ;; for bootstrap to load, use new closure/compile as it can handle\n      ;; resources in JARs\n      (let [core-js (closure/compile core\n                      (assoc opts\n                        :output-file\n                        (closure/src-file->target-file core)))\n            deps    (closure/add-dependencies opts core-js)]\n        ;; output unoptimized code and the deps file\n        ;; for all compiled namespaces\n        (apply closure/output-unoptimized\n          (assoc opts\n            :output-to (.getPath (io/file output-dir \"node_repl_deps.js\")))\n          deps))\n      ;; bootstrap, replace __dirname as __dirname won't be set\n      ;; properly due to how we are running it - David\n      (node-eval repl-env\n        (-> (slurp (io/resource \"cljs/bootstrap_node.js\"))\n          (string/replace \"path.resolve(__dirname, '..', 'base.js')\"\n            (platform-path (conj rewrite-path \"bootstrap\" \"..\" \"base.js\")))\n          (string/replace\n            \"path.join(\\\".\\\", \\\"..\\\", src)\"\n            (str \"path.join(\" (platform-path rewrite-path) \", src)\"))\n          (string/replace\n            \"var CLJS_ROOT = \\\".\\\";\"\n            (str \"var CLJS_ROOT = \" (platform-path root-path) \";\"))))\n      ;; load the deps file so we can goog.require cljs.core etc.\n      (node-eval repl-env\n        (str \"require(\"\n             (platform-path (conj root-path \"node_repl_deps.js\"))\n             \")\"))\n      ;; monkey-patch isProvided_ to avoid useless warnings - David\n      (node-eval repl-env\n        (str \"goog.isProvided_ = function(x) { return false; };\"))\n      ;; monkey-patch goog.require, skip all the loaded checks\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(set! (.-require js/goog)\n           (fn [name]\n             (js/CLOSURE_IMPORT_SCRIPT\n               (aget (.. js/goog -dependencies_ -nameToPath) name)))))\n      ;; load cljs.core, setup printing\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(do\n           (.require js/goog \"cljs.core\")\n           (enable-console-print!)))\n      ;; redef goog.require to track loaded libs\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(do\n           (set! *loaded-libs* #{\"cljs.core\"})\n           (set! (.-require js/goog)\n             (fn [name reload]\n               (when (or (not (contains? *loaded-libs* name)) reload)\n                 (set! *loaded-libs* (conj (or *loaded-libs* #{}) name))\n                 (js/CLOSURE_IMPORT_SCRIPT\n                   (aget (.. js/goog -dependencies_ -nameToPath) name))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2911",
+          :tag "r2913",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [80 169]},
  :full-name "cljs.repl.node/setup",

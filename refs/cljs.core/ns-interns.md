@@ -30,7 +30,7 @@ Returns a map of the intern mappings for the namespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/core.clj#L1676-L1685):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/core.clj#L1676-L1685):
 
 ```clj
 (defmacro ns-interns
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2911
+clojurescript @ r2913
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1676-1685](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/core.clj#L1676-L1685)</ins>
+            └── <ins>[core.clj:1676-1685](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/core.clj#L1676-L1685)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defmacro ns-interns\n  [[quote ns]]\n  (core/assert (core/and (= quote 'quote) (core/symbol? ns))\n    \"Argument to ns-interns must be a quoted symbol\")\n  `(into {}\n     [~@(map\n          (fn [[sym _]]\n            `[(symbol ~(name sym)) (var ~(symbol (name ns) (name sym)))])\n          (get-in @env/*compiler* [:cljs.analyzer/namespaces ns :defs]))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2911",
+          :tag "r2913",
           :filename "src/clj/cljs/core.clj",
           :lines [1676 1685]},
  :full-name "cljs.core/ns-interns",

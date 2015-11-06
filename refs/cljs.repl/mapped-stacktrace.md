@@ -41,7 +41,7 @@ sources if it can be determined from the classpath.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L217-L260):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L217-L260):
 
 ```clj
 (defn mapped-stacktrace
@@ -82,11 +82,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2911/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2911
+clojurescript @ r2913
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:217-260](https://github.com/clojure/clojurescript/blob/r2911/src/clj/cljs/repl.clj#L217-L260)</ins>
+            └── <ins>[repl.clj:217-260](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl.clj#L217-L260)</ins>
 </pre>
 
 -->
@@ -134,7 +134,7 @@ The API data for this symbol:
  :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n    (let [read-source-map' (memoize read-source-map)\n          ns-info' (memoize ns-info)]\n      (vec\n        (for [{:keys [function file line column] :as frame} stacktrace]\n          ;; need to convert file, a relative URL style path, to host-specific file\n          (let [rfile (io/file (URL. (.toURL (io/file (util/output-directory opts))) file))\n                [sm {:keys [ns source-file] :as ns-info}]\n                ((juxt read-source-map' ns-info') rfile)\n                [line' column'] (if ns-info\n                                  (mapped-line-and-column sm line column)\n                                  [line column])\n                name' (if (and ns-info function)\n                        (symbol (name ns) (cljrepl/demunge function))\n                        function)\n                file' (string/replace\n                        (.getCanonicalFile\n                          (if ns-info\n                            source-file\n                            (io/file rfile)))\n                        (str (System/getProperty \"user.dir\") File/separator) \"\")\n                url   (or (and ns-info (io/resource (util/ns->relpath ns)))\n                          (io/resource file))]\n            (merge\n              {:function name'\n               :file     (io/file file')\n               :line     line'\n               :column   column'}\n              (when url\n                {:url url}))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2911",
+          :tag "r2913",
           :filename "src/clj/cljs/repl.clj",
           :lines [217 260]},
  :full-name "cljs.repl/mapped-stacktrace",
