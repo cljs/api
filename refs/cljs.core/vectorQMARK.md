@@ -41,7 +41,7 @@ Return true if x satisfies IVector
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1781-L1783):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L1781-L1783):
 
 ```clj
 (defn ^boolean vector?
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1781-1783](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1781-L1783)</ins>
+            └── <ins>[core.cljs:1781-1783](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L1781-L1783)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean vector?\n  [x] (satisfies? IVector x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3117",
+          :tag "r3119",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1781 1783]},
  :full-name "cljs.core/vector?",

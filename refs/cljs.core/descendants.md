@@ -45,7 +45,7 @@ relationships.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L9122-L9129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L9122-L9129):
 
 ```clj
 (defn descendants
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9122-9129](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L9122-L9129)</ins>
+            └── <ins>[core.cljs:9122-9129](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L9122-L9129)</ins>
 </pre>
 
 -->
@@ -116,7 +116,7 @@ The API data for this symbol:
  :source {:code "(defn descendants\n  ([tag] (descendants @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:descendants h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3117",
+          :tag "r3119",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9122 9129]},
  :full-name "cljs.core/descendants",

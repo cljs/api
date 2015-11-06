@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/reader.cljs#L184-L187):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/reader.cljs#L184-L187):
 
 ```clj
 (defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:184-187](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/reader.cljs#L184-L187)</ins>
+            └── <ins>[reader.cljs:184-187](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/reader.cljs#L184-L187)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]\n  (if (re-matches unicode-pattern unicode-str)\n    unicode-str\n    (reader-error reader \"Unexpected unicode escape \\\\\" escape-char unicode-str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3117",
+          :tag "r3119",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [184 187]},
  :full-name "cljs.reader/validate-unicode-escape",

@@ -27,7 +27,7 @@ Return true if x implements ICloneable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L925-L928):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L925-L928):
 
 ```clj
 (defn cloneable?
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:925-928](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L925-L928)</ins>
+            └── <ins>[core.cljs:925-928](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L925-L928)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn cloneable?\n  [value]\n  (satisfies? ICloneable value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3117",
+          :tag "r3119",
           :filename "src/cljs/cljs/core.cljs",
           :lines [925 928]},
  :full-name "cljs.core/cloneable?",

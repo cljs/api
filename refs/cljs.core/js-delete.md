@@ -52,7 +52,7 @@ Delete a property from a JavaScript object.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1807-L1810):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L1807-L1810):
 
 ```clj
 (defn js-delete
@@ -64,18 +64,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1807-1810](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1807-L1810)</ins>
+            └── <ins>[core.cljs:1807-1810](https://github.com/clojure/clojurescript/blob/r3119/src/cljs/cljs/core.cljs#L1807-L1810)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/core.clj#L303-L304):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/core.clj#L303-L304):
 
 ```clj
 (defmacro js-delete [obj key]
@@ -86,11 +86,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3117
+clojurescript @ r3119
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:303-304](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/core.clj#L303-L304)</ins>
+            └── <ins>[core.clj:303-304](https://github.com/clojure/clojurescript/blob/r3119/src/clj/cljs/core.clj#L303-L304)</ins>
 </pre>
 -->
 
@@ -138,13 +138,13 @@ The API data for this symbol:
  :source {:code "(defn js-delete\n  [obj key]\n  (cljs.core/js-delete obj key))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3117",
+          :tag "r3119",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1807 1810]},
  :extra-sources [{:code "(defmacro js-delete [obj key]\n  (core/list 'js* \"delete ~{}[~{}]\" obj key))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3117",
+                  :tag "r3119",
                   :filename "src/clj/cljs/core.clj",
                   :lines [303 304]}],
  :examples [{:id "5b24ea",
