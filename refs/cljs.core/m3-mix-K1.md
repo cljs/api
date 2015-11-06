@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L776-L777):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L782-L783):
 
 ```clj
 (defn ^number m3-mix-K1 [k1]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:776-777](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L776-L777)</ins>
+                └── <ins>[core.cljs:782-783](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L782-L783)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-mix-K1 [k1]\n  (-> (int k1) (imul m3-C1) (int-rotate-left 15) (imul m3-C2)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [776 777]},
+          :lines [782 783]},
  :full-name "cljs.core/m3-mix-K1"}
 
 ```

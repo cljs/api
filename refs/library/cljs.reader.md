@@ -191,6 +191,12 @@ a reader to parse text and produce data structures
 </tr>
 <tr>
 <td></td>
+<td><samp>[read-literal](../cljs.reader/read-literal.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.107"><img valign="middle" alt="[+] 1.7.107" title="Added in 1.7.107" src="https://img.shields.io/badge/+-1.7.107-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[read-map](../cljs.reader/read-map.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

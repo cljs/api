@@ -55,7 +55,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.cljs#L424-L463):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.cljs#L426-L465):
 
 ```clj
 (defn analyze-str
@@ -81,12 +81,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:424-463](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.cljs#L424-L463)</ins>
+                └── <ins>[js.cljs:426-465](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.cljs#L426-L465)</ins>
 </pre>
 
 -->
@@ -136,9 +136,9 @@ The API data for this symbol:
  :source {:code "(defn analyze-str\n  ([state source cb]\n   (analyze-str state source nil cb))\n  ([state source name cb]\n   (analyze-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (analyze-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*passes*       (or (:passes opts) ana/*passes*)\n      :*analyze-deps* (or (:analyze-deps opts) true)\n      :*load-macros*  (or (:load-macros opts) true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [424 463]},
+          :lines [426 465]},
  :full-name "cljs.js/analyze-str",
  :docstring "Analyze ClojureScript source. The compiler state will be populated with\nthe results of analyzes. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n:eval - the eval function to invoke, see *eval-fn*\n:load - library resolution function, see *load-fn*\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value, the actual value is not meaningful. If unsuccessful the\n  map will contain a key :error with an ex-info instance describing the cause\n  of failure."}
 

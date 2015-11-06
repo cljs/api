@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/node.clj#L75-L76):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl/node.clj#L75-L76):
 
 ```clj
 (defn seq->js-array [v]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:75-76](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/node.clj#L75-L76)</ins>
+                    └── <ins>[node.clj:75-76](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl/node.clj#L75-L76)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn seq->js-array [v]\n  (str \"[\" (apply str (interpose \", \" (map pr-str v))) \"]\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [75 76]},
  :full-name "cljs.repl.node/seq->js-array",

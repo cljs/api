@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L5630-L5640):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L5636-L5646):
 
 ```clj
 (deftype RecordIter [^:mutable i record base-count fields ext-map-iter]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:5630-5640](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L5630-L5640)</ins>
+                └── <ins>[core.cljs:5636-5646](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L5636-L5646)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(deftype RecordIter [^:mutable i record base-count fields ext-map-iter]\n  Object\n  (hasNext [_]\n    (or (< i base-count) (.hasNext ext-map-iter)))\n  (next [_]\n    (if (< i base-count)\n      (let [k (nth fields i)]\n        (set! i (inc i))\n        [k (-lookup record k)])\n      (.next ext-map-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5630 5640]},
+          :lines [5636 5646]},
  :full-name "cljs.core/RecordIter",
  :full-name-encode "cljs.core/RecordIter",
  :history [["+" "1.7.28"]]}

@@ -20,11 +20,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L34-L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L34-L37):
 
 ```clj
 (def
-  ^{:dynamic true}
+  ^{:dynamic true
+    :jsdoc ["@type {*}"]}
   *out* nil)
 ```
 
@@ -32,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:34-36](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L34-L36)</ins>
+                └── <ins>[core.cljs:34-37](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L34-L37)</ins>
 </pre>
 
 -->
@@ -82,12 +83,12 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "*out*",
  :type "dynamic var",
- :source {:code "(def\n  ^{:dynamic true}\n  *out* nil)",
+ :source {:code "(def\n  ^{:dynamic true\n    :jsdoc [\"@type {*}\"]}\n  *out* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [34 36]},
+          :lines [34 37]},
  :full-name "cljs.core/*out*",
  :full-name-encode "cljs.core/STARoutSTAR",
  :clj-symbol "clojure.core/*out*",

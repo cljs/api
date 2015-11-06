@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.clj#L15-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.clj#L15-L18):
 
 ```clj
 (defmacro with-state
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.clj:15-18](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.clj#L15-L18)</ins>
+                └── <ins>[js.clj:15-18](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.clj#L15-L18)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defmacro with-state\n  [state & body]\n  `(menv/with-compiler-env ~state\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/js.clj",
           :lines [15 18]},
  :full-name "cljs.js/with-state",

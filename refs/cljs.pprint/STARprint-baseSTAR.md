@@ -25,7 +25,7 @@ The base to use for printing integers and rationals.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L672-L675):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.cljs#L672-L675):
 
 ```clj
 (def ^:dynamic
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:672-675](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L672-L675)</ins>
+                └── <ins>[pprint.cljs:672-675](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.cljs#L672-L675)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n^{:doc \"The base to use for printing integers and rationals.\"\n  :added \"1.2\"}\n*print-base* 10)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [672 675]},
  :full-name "cljs.pprint/*print-base*",

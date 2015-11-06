@@ -32,7 +32,7 @@ libraries.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L200-L208):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/build/api.clj#L200-L208):
 
 ```clj
 (defn output-unoptimized
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:200-208](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L200-L208)</ins>
+                    └── <ins>[api.clj:200-208](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/build/api.clj#L200-L208)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn output-unoptimized\n  [opts & sources]\n  (apply closure/output-unoptimized opts sources))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [200 208]},
  :full-name "cljs.build.api/output-unoptimized",

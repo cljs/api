@@ -25,12 +25,13 @@ Var bound to the current namespace. Only used for bootstrapping.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L29-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L28-L32):
 
 ```clj
 (def
   ^{:dynamic true
-    :doc "Var bound to the current namespace. Only used for bootstrapping."}
+    :doc "Var bound to the current namespace. Only used for bootstrapping."
+    :jsdoc ["@type {*}"]}
   *ns* nil)
 ```
 
@@ -38,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:29-32](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L29-L32)</ins>
+                └── <ins>[core.cljs:28-32](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L28-L32)</ins>
 </pre>
 
 -->
@@ -90,12 +91,12 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "dynamic var",
  :full-name-encode "cljs.core/STARnsSTAR",
- :source {:code "(def\n  ^{:dynamic true\n    :doc \"Var bound to the current namespace. Only used for bootstrapping.\"}\n  *ns* nil)",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"Var bound to the current namespace. Only used for bootstrapping.\"\n    :jsdoc [\"@type {*}\"]}\n  *ns* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [29 32]},
+          :lines [28 32]},
  :full-name "cljs.core/*ns*",
  :clj-symbol "clojure.core/*ns*",
  :docstring "Var bound to the current namespace. Only used for bootstrapping."}

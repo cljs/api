@@ -28,7 +28,7 @@ Defaults to false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L104-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L105-L112):
 
 ```clj
 (def
@@ -36,7 +36,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
     :doc "When set to logical true, objects will be printed in a way that preserves
   their type when read in later.
 
-  Defaults to false."}
+  Defaults to false."
+    :jsdoc ["@type {null|number}"]}
   *print-length* nil)
 ```
 
@@ -44,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:104-110](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L104-L110)</ins>
+                └── <ins>[core.cljs:105-112](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L105-L112)</ins>
 </pre>
 
 -->
@@ -96,12 +97,12 @@ The API data for this symbol:
  :history [["+" "0.0-2060"]],
  :type "dynamic var",
  :full-name-encode "cljs.core/STARprint-lengthSTAR",
- :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical true, objects will be printed in a way that preserves\n  their type when read in later.\n\n  Defaults to false.\"}\n  *print-length* nil)",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical true, objects will be printed in a way that preserves\n  their type when read in later.\n\n  Defaults to false.\"\n    :jsdoc [\"@type {null|number}\"]}\n  *print-length* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [104 110]},
+          :lines [105 112]},
  :full-name "cljs.core/*print-length*",
  :clj-symbol "clojure.core/*print-length*",
  :docstring "When set to logical true, objects will be printed in a way that preserves\ntheir type when read in later.\n\nDefaults to false."}

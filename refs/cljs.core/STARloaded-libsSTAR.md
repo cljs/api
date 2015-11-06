@@ -17,22 +17,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L124):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L127-L130):
 
 ```clj
-(defonce ^:dynamic *loaded-libs* nil)
+(defonce
+  ^{:dynamic true
+    :jsdoc ["@type {*}"]}
+  *loaded-libs* nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:124](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L124)</ins>
+                └── <ins>[core.cljs:127-130](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L127-L130)</ins>
 </pre>
 
 -->
@@ -74,12 +77,12 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "*loaded-libs*",
  :type "dynamic var",
- :source {:code "(defonce ^:dynamic *loaded-libs* nil)",
+ :source {:code "(defonce\n  ^{:dynamic true\n    :jsdoc [\"@type {*}\"]}\n  *loaded-libs* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [124]},
+          :lines [127 130]},
  :full-name "cljs.core/*loaded-libs*",
  :full-name-encode "cljs.core/STARloaded-libsSTAR",
  :history [["+" "0.0-2655"]]}

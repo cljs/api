@@ -30,13 +30,13 @@ Backdates a cljs target file so that it the cljs compiler will recompile it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L41-L47):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/build/api.clj#L41-L47):
 
 ```clj
 (defn mark-cljs-ns-for-recompile!
   ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))
   ([ns-sym output-dir]
-    (let [s (target-file-for-cljs-ns output-dir ns-sym)]
+    (let [s (target-file-for-cljs-ns ns-sym output-dir)]
       (when (.exists s)
         (.setLastModified s 5000)))))
 ```
@@ -45,13 +45,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:41-47](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/build/api.clj#L41-L47)</ins>
+                    └── <ins>[api.clj:41-47](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/build/api.clj#L41-L47)</ins>
 </pre>
 
 -->
@@ -96,10 +96,10 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.build.api/mark-cljs-ns-for-recompileBANG",
- :source {:code "(defn mark-cljs-ns-for-recompile!\n  ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))\n  ([ns-sym output-dir]\n    (let [s (target-file-for-cljs-ns output-dir ns-sym)]\n      (when (.exists s)\n        (.setLastModified s 5000)))))",
+ :source {:code "(defn mark-cljs-ns-for-recompile!\n  ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))\n  ([ns-sym output-dir]\n    (let [s (target-file-for-cljs-ns ns-sym output-dir)]\n      (when (.exists s)\n        (.setLastModified s 5000)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [41 47]},
  :full-name "cljs.build.api/mark-cljs-ns-for-recompile!",

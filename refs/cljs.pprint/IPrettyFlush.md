@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L144-L145):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.cljs#L144-L145):
 
 ```clj
 (defprotocol IPrettyFlush
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:144-145](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.cljs#L144-L145)</ins>
+                └── <ins>[pprint.cljs:144-145](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.cljs#L144-L145)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IPrettyFlush\n  (-ppflush [pp]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [144 145]},
  :methods [{:name "-ppflush", :signature ["[pp]"], :docstring nil}],

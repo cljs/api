@@ -22,29 +22,30 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/node.clj#L208-L214):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl/node.clj#L210-L217):
 
 ```clj
 (defn repl-env* [options]
-  (let [{:keys [host port]}
+  (let [{:keys [host port debug-port]}
         (merge
           {:host "localhost"
            :port (+ 49000 (rand-int 10000))}
           options)]
-    (NodeEnv. host port (atom nil) (atom nil))))
+    (assoc (NodeEnv. host port (atom nil) (atom nil))
+      :debug-port debug-port)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:208-214](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/repl/node.clj#L208-L214)</ins>
+                    └── <ins>[node.clj:210-217](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/repl/node.clj#L210-L217)</ins>
 </pre>
 
 -->
@@ -87,12 +88,12 @@ The API data for this symbol:
  :name "repl-env*",
  :type "function",
  :signature ["[options]"],
- :source {:code "(defn repl-env* [options]\n  (let [{:keys [host port]}\n        (merge\n          {:host \"localhost\"\n           :port (+ 49000 (rand-int 10000))}\n          options)]\n    (NodeEnv. host port (atom nil) (atom nil))))",
+ :source {:code "(defn repl-env* [options]\n  (let [{:keys [host port debug-port]}\n        (merge\n          {:host \"localhost\"\n           :port (+ 49000 (rand-int 10000))}\n          options)]\n    (assoc (NodeEnv. host port (atom nil) (atom nil))\n      :debug-port debug-port)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [208 214]},
+          :lines [210 217]},
  :full-name "cljs.repl.node/repl-env*",
  :full-name-encode "cljs.repl.node/repl-envSTAR",
  :history [["+" "0.0-2629"]]}

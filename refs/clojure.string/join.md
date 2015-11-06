@@ -40,7 +40,7 @@ separated by an optional separator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/string.cljs#L52-L69):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L52-L69):
 
 ```clj
 (defn join
@@ -65,12 +65,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:52-69](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/string.cljs#L52-L69)</ins>
+                └── <ins>[string.cljs:52-69](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/string.cljs#L52-L69)</ins>
 </pre>
 
 -->
@@ -122,7 +122,7 @@ The API data for this symbol:
  :source {:code "(defn join\n  ([coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (recur (. sb (append (str (first coll)))) (next coll))\n       (.toString sb))))\n  ([separator coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (do\n         (. sb (append (str (first coll))))\n         (let [coll (next coll)]\n           (when-not (nil? coll)\n             (. sb (append separator)))\n           (recur sb coll)))\n       (.toString sb)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [52 69]},
  :full-name "clojure.string/join",

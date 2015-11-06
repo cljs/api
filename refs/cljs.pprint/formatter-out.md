@@ -35,7 +35,7 @@ format-in can be either a control string or a previously compiled format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.clj#L133-L145):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.clj#L133-L145):
 
 ```clj
 (defmacro formatter-out
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:133-145](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/pprint.clj#L133-L145)</ins>
+                └── <ins>[pprint.clj:133-145](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/pprint.clj#L133-L145)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defmacro formatter-out\n  [format-in]\n  `(let [format-in# ~format-in\n         cf# (if (string? format-in#) (cljs.pprint/cached-compile format-in#) format-in#)]\n     (fn [& args#]\n       (let [navigator# (cljs.pprint/init-navigator args#)]\n         (cljs.pprint/execute-format cf# navigator#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [133 145]},
  :full-name "cljs.pprint/formatter-out",

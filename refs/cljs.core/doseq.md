@@ -48,7 +48,7 @@ the head of the sequence. Returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/core.cljc#L2216-L2270):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L2247-L2301):
 
 ```clj
 (core/defmacro doseq
@@ -109,12 +109,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2216-2270](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/core.cljc#L2216-L2270)</ins>
+                └── <ins>[core.cljc:2247-2301](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L2247-L2301)</ins>
 </pre>
 
 -->
@@ -170,9 +170,9 @@ The API data for this symbol:
  :source {:code "(core/defmacro doseq\n  [seq-exprs & body]\n  (assert-args doseq\n    (vector? seq-exprs) \"a vector for its binding\"\n    (even? (count seq-exprs)) \"an even number of forms in binding vector\")\n  (core/let [err (core/fn [& msg] (throw (ex-info (apply core/str msg) {})))\n             step (core/fn step [recform exprs]\n                    (core/if-not exprs\n                      [true `(do ~@body)]\n                      (core/let [k (first exprs)\n                                 v (second exprs)\n\n                                 seqsym (gensym \"seq__\")\n                                 recform (if (core/keyword? k) recform `(recur (next ~seqsym) nil 0 0))\n                                 steppair (step recform (nnext exprs))\n                                 needrec (steppair 0)\n                                 subform (steppair 1)]\n                        (core/cond\n                          (= k :let) [needrec `(let ~v ~subform)]\n                          (= k :while) [false `(when ~v\n                                                 ~subform\n                                                 ~@(core/when needrec [recform]))]\n                          (= k :when) [false `(if ~v\n                                                (do\n                                                  ~subform\n                                                  ~@(core/when needrec [recform]))\n                                                ~recform)]\n                          (core/keyword? k) (err \"Invalid 'doseq' keyword\" k)\n                          :else (core/let [chunksym (with-meta (gensym \"chunk__\")\n                                                      {:tag 'not-native})\n                                           countsym (gensym \"count__\")\n                                           isym     (gensym \"i__\")\n                                           recform-chunk  `(recur ~seqsym ~chunksym ~countsym (unchecked-inc ~isym))\n                                           steppair-chunk (step recform-chunk (nnext exprs))\n                                           subform-chunk  (steppair-chunk 1)]\n                                  [true `(loop [~seqsym   (seq ~v)\n                                                ~chunksym nil\n                                                ~countsym 0\n                                                ~isym     0]\n                                           (if (coercive-boolean (< ~isym ~countsym))\n                                             (let [~k (-nth ~chunksym ~isym)]\n                                               ~subform-chunk\n                                               ~@(core/when needrec [recform-chunk]))\n                                             (when-let [~seqsym (seq ~seqsym)]\n                                               (if (chunked-seq? ~seqsym)\n                                                 (let [c# (chunk-first ~seqsym)]\n                                                   (recur (chunk-rest ~seqsym) c#\n                                                     (count c#) 0))\n                                                 (let [~k (first ~seqsym)]\n                                                   ~subform\n                                                   ~@(core/when needrec [recform]))))))])))))]\n    (nth (step nil (seq seq-exprs)) 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2216 2270]},
+          :lines [2247 2301]},
  :full-name "cljs.core/doseq",
  :clj-symbol "clojure.core/doseq",
  :docstring "Repeatedly executes body (presumably for side-effects) with\nbindings and filtering as provided by \"for\".  Does not retain\nthe head of the sequence. Returns nil."}

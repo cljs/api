@@ -31,7 +31,7 @@ changes.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L124-L133):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/zip.cljs#L124-L133):
 
 ```clj
 (defn root
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:124-133](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/zip.cljs#L124-L133)</ins>
+                └── <ins>[zip.cljs:124-133](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/zip.cljs#L124-L133)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn root\n  [loc]\n    (if (= :end (loc 1))\n      (node loc)\n      (let [p (up loc)]\n        (if p\n          (recur p)\n          (node loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [124 133]},
  :full-name "clojure.zip/root",

@@ -32,7 +32,7 @@ is nil indicating no limit.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L112-L122):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L114-L125):
 
 ```clj
 (def
@@ -44,7 +44,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
   collection, its items are at level 1; and so on. If an object is a
   collection and is at a level greater than or equal to the value bound to
   *print-level*, the printer prints '#' to represent it. The root binding
-  is nil indicating no limit."}
+  is nil indicating no limit."
+    :jsdoc ["@type {null|number}"]}
   *print-level* nil)
 ```
 
@@ -52,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:112-122](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L112-L122)</ins>
+                └── <ins>[core.cljs:114-125](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L114-L125)</ins>
 </pre>
 
 -->
@@ -104,12 +105,12 @@ The API data for this symbol:
  :history [["+" "0.0-2120"]],
  :type "dynamic var",
  :full-name-encode "cljs.core/STARprint-levelSTAR",
- :source {:code "(def\n  ^{:dynamic true\n    :doc \"*print-level* controls how many levels deep the printer will\n  print nested objects. If it is bound to logical false, there is no\n  limit. Otherwise, it must be bound to an integer indicating the maximum\n  level to print. Each argument to print is at level 0; if an argument is a\n  collection, its items are at level 1; and so on. If an object is a\n  collection and is at a level greater than or equal to the value bound to\n  *print-level*, the printer prints '#' to represent it. The root binding\n  is nil indicating no limit.\"}\n  *print-level* nil)",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"*print-level* controls how many levels deep the printer will\n  print nested objects. If it is bound to logical false, there is no\n  limit. Otherwise, it must be bound to an integer indicating the maximum\n  level to print. Each argument to print is at level 0; if an argument is a\n  collection, its items are at level 1; and so on. If an object is a\n  collection and is at a level greater than or equal to the value bound to\n  *print-level*, the printer prints '#' to represent it. The root binding\n  is nil indicating no limit.\"\n    :jsdoc [\"@type {null|number}\"]}\n  *print-level* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [112 122]},
+          :lines [114 125]},
  :full-name "cljs.core/*print-level*",
  :clj-symbol "clojure.core/*print-level*",
  :docstring "*print-level* controls how many levels deep the printer will\nprint nested objects. If it is bound to logical false, there is no\nlimit. Otherwise, it must be bound to an integer indicating the maximum\nlevel to print. Each argument to print is at level 0; if an argument is a\ncollection, its items are at level 1; and so on. If an object is a\ncollection and is at a level greater than or equal to the value bound to\n*print-level*, the printer prints '#' to represent it. The root binding\nis nil indicating no limit."}

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/browser/repl.cljs#L31):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/browser/repl.cljs#L31):
 
 ```clj
 (def print-queue (array))
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:31](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/clojure/browser/repl.cljs#L31)</ins>
+                    └── <ins>[repl.cljs:31](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/clojure/browser/repl.cljs#L31)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(def print-queue (array))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [31]},
  :full-name "clojure.browser.repl/print-queue",

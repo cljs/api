@@ -31,7 +31,7 @@ the last. If no expressions are supplied, returns nil.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/analyzer.cljc#L1385-L1406):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/analyzer.cljc#L1391-L1412):
 
 ```clj
 (defmethod parse 'do
@@ -62,12 +62,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1385-1406](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/analyzer.cljc#L1385-L1406)</ins>
+                └── <ins>[analyzer.cljc:1391-1412](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/analyzer.cljc#L1391-L1412)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (analyze-do-statements env exprs)]\n    (if (<= (count exprs) 1)\n      (let [ret      (analyze env (first exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements :ret ret\n         :children children})\n      (let [ret-env  (if (= :statement (:context env))\n                       (assoc env :context :statement)\n                       (assoc env :context :return))\n            ret      (analyze ret-env (last exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements\n         :ret ret\n         :children children}))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1385 1406]},
+          :lines [1391 1412]},
  :full-name "special/do",
  :clj-symbol "clojure.core/do",
  :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil."}

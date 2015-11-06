@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.107](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.107)__</td>
+<td>2015-08-11</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150805</kbd></td>
+<td>
+<a href="#user-content-17107syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-17107library">
++4 
+</a>
+</td>
+<td>
+<a href="#user-content-17107compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.58](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.58)__</td>
 <td>2015-08-06</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2936,6 +2959,47 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.107
+
+<a name="17107syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="17107library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-comment](refs/cljs.core/js-comment.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-inline-comment](refs/cljs.core/js-inline-comment.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/unsafe-cast](refs/cljs.core/unsafe-cast.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.reader/read-literal](refs/cljs.reader/read-literal.md)</samp></td>
+</tr>
+</table>
+
+<a name="17107compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.7.58

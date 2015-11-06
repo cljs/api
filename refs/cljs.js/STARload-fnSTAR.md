@@ -44,7 +44,7 @@ nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.cljs#L50-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.cljs#L50-L77):
 
 ```clj
 (defonce
@@ -81,12 +81,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:50-77](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/js.cljs#L50-L77)</ins>
+                └── <ins>[js.cljs:50-77](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/js.cljs#L50-L77)</ins>
 </pre>
 
 -->
@@ -132,7 +132,7 @@ The API data for this symbol:
  :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to load a library.\n  Whatever function *load-fn* is bound to will be passed two arguments - a\n  map and a callback function: The map will have the following keys:\n\n  :name   - the name of the library (a symbol)\n  :macros - modifier signaling a macros namespace load\n  :path   - munged relative library path (a string)\n\n  It is up to the implementor to correctly resolve the corresponding .cljs,\n  .cljc, or .js resource (the order must be respected). If :macros is true\n  resolution should only consider .clj or .cljc resources (the order must be\n  respected). Upon resolution the callback should be invoked with a map\n  containing the following keys:\n\n  :lang       - the language, :clj or :js\n  :source     - the source of the library (a string)\n  :cache      - optional, if a :clj namespace has been precompiled to :js, can\n                give an analysis cache for faster loads.\n  :source-map - optional, if a :clj namespace has been precompiled to :js, can\n                give a V3 source map JSON\n\n  If the resource could not be resolved, the callback should be invoked with\n  nil.\"\n    :dynamic true}\n  *load-fn*\n  (fn [name cb]\n    (throw (js/Error. \"No *load-fn* set\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [50 77]},
  :full-name "cljs.js/*load-fn*",

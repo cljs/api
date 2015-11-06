@@ -33,11 +33,13 @@ Example:
   (ns your-app.core)
   (goog-define DEBUG! false)
   ;; can be overridden with
-  :closure-defines {"your-app.core.DEBUG!" true}
+  :closure-defines {"your-app.core.DEBUG_BANG_" true}
+  or
+  :closure-defines {'your-app.core/DEBUG! true}
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/core.cljc#L689-L715):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L690-L718):
 
 ```clj
 (core/defmacro goog-define
@@ -47,7 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
             (core/number? default)
             (core/true? default)
             (core/false? default)) "a string, number or boolean as default value")
-  (core/let [defname (cljs.compiler/munge (core/str *ns* "/" sym))
+  (core/let [defname (comp/munge (core/str *ns* "/" sym))
              type    (core/cond
                        (core/string? default) "string"
                        (core/number? default) "number"
@@ -62,12 +64,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:689-715](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/clojure/cljs/core.cljc#L689-L715)</ins>
+                └── <ins>[core.cljc:690-718](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/clojure/cljs/core.cljc#L690-L718)</ins>
 </pre>
 
 -->
@@ -112,14 +114,14 @@ The API data for this symbol:
  :history [["+" "1.7.48"]],
  :type "macro",
  :full-name-encode "cljs.core/goog-define",
- :source {:code "(core/defmacro goog-define\n  [sym default]\n  (assert-args goog-define\n   (core/or (core/string? default)\n            (core/number? default)\n            (core/true? default)\n            (core/false? default)) \"a string, number or boolean as default value\")\n  (core/let [defname (cljs.compiler/munge (core/str *ns* \"/\" sym))\n             type    (core/cond\n                       (core/string? default) \"string\"\n                       (core/number? default) \"number\"\n                       (core/or (core/true? default) (core/false? default)) \"boolean\")]\n    `(do\n       (declare ~(symbol sym))\n       (~'js* ~(core/str \"/** @define {\" type \"} */\"))\n       (goog/define ~defname ~default))))",
+ :source {:code "(core/defmacro goog-define\n  [sym default]\n  (assert-args goog-define\n   (core/or (core/string? default)\n            (core/number? default)\n            (core/true? default)\n            (core/false? default)) \"a string, number or boolean as default value\")\n  (core/let [defname (comp/munge (core/str *ns* \"/\" sym))\n             type    (core/cond\n                       (core/string? default) \"string\"\n                       (core/number? default) \"number\"\n                       (core/or (core/true? default) (core/false? default)) \"boolean\")]\n    `(do\n       (declare ~(symbol sym))\n       (~'js* ~(core/str \"/** @define {\" type \"} */\"))\n       (goog/define ~defname ~default))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [689 715]},
+          :lines [690 718]},
  :full-name "cljs.core/goog-define",
- :docstring "Defines a var using `goog.define`. Passed default value must be\nstring, number or boolean.\n\nDefault value can be overridden at compile time using the\ncompiler option `:closure-defines`.\n\nExample:\n  (ns your-app.core)\n  (goog-define DEBUG! false)\n  ;; can be overridden with\n  :closure-defines {\"your-app.core.DEBUG!\" true}"}
+ :docstring "Defines a var using `goog.define`. Passed default value must be\nstring, number or boolean.\n\nDefault value can be overridden at compile time using the\ncompiler option `:closure-defines`.\n\nExample:\n  (ns your-app.core)\n  (goog-define DEBUG! false)\n  ;; can be overridden with\n  :closure-defines {\"your-app.core.DEBUG_BANG_\" true}\n  or\n  :closure-defines {'your-app.core/DEBUG! true}"}
 
 ```
 

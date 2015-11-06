@@ -17,22 +17,24 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L10096):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10112-L10114):
 
 ```clj
-(def NS_CACHE nil)
+(def
+  ^{:jsdoc ["@type {*}"]}
+  NS_CACHE nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.58
+clojurescript @ r1.7.107
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10096](https://github.com/clojure/clojurescript/blob/r1.7.58/src/main/cljs/cljs/core.cljs#L10096)</ins>
+                └── <ins>[core.cljs:10112-10114](https://github.com/clojure/clojurescript/blob/r1.7.107/src/main/cljs/cljs/core.cljs#L10112-L10114)</ins>
 </pre>
 
 -->
@@ -74,12 +76,12 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "NS_CACHE",
  :type "var",
- :source {:code "(def NS_CACHE nil)",
+ :source {:code "(def\n  ^{:jsdoc [\"@type {*}\"]}\n  NS_CACHE nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.58",
+          :tag "r1.7.107",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10096]},
+          :lines [10112 10114]},
  :full-name "cljs.core/NS_CACHE",
  :full-name-encode "cljs.core/NS_CACHE",
  :history [["+" "1.7.10"]]}
