@@ -28,7 +28,7 @@ the options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6171-L6180):
 
 ```clj
 (defn pr-with-opts
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6171-6180](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/core.cljs#L6171-L6180)</ins>
+            └── <ins>[core.cljs:6171-6180](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6171-L6180)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn pr-with-opts\n  [objs opts]\n  (doseq [string (pr-seq (first objs) opts)]\n    (string-print string))\n  (doseq [obj (next objs)]\n    (string-print \" \")\n    (doseq [string (pr-seq obj opts)]\n      (string-print string))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1443",
+          :tag "r1449",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6171 6180]},
  :full-name "cljs.core/pr-with-opts",

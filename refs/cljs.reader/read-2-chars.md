@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/reader.cljs#L175-L179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/reader.cljs#L175-L179):
 
 ```clj
 (defn read-2-chars [reader]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:175-179](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/reader.cljs#L175-L179)</ins>
+            └── <ins>[reader.cljs:175-179](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/reader.cljs#L175-L179)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defn read-2-chars [reader]\n  (.toString\n    (gstring/StringBuffer.\n      (read-char reader)\n      (read-char reader))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1443",
+          :tag "r1449",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [175 179]},
  :full-name "cljs.reader/read-2-chars",

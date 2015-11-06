@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/repl/browser.clj#L272-L274):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/repl/browser.clj#L272-L274):
 
 ```clj
 (defn stop-server
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:272-274](https://github.com/clojure/clojurescript/blob/r1443/src/clj/cljs/repl/browser.clj#L272-L274)</ins>
+                └── <ins>[browser.clj:272-274](https://github.com/clojure/clojurescript/blob/r1449/src/clj/cljs/repl/browser.clj#L272-L274)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn stop-server\n  []\n  (.close (:socket @server-state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1443",
+          :tag "r1449",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [272 274]},
  :full-name "cljs.repl.browser/stop-server",

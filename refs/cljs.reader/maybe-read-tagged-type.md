@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/reader.cljs#L530-L537):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/reader.cljs#L530-L537):
 
 ```clj
 (defn maybe-read-tagged-type
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1443/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1443
+clojurescript @ r1449
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:530-537](https://github.com/clojure/clojurescript/blob/r1443/src/cljs/cljs/reader.cljs#L530-L537)</ins>
+            └── <ins>[reader.cljs:530-537](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/reader.cljs#L530-L537)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag  (read-symbol rdr initch)]\n    (if-let [pfn (get @*tag-table* (name tag))]\n      (pfn (read rdr true nil false))\n      (reader-error rdr\n                    \"Could not find tag parser for \" (name tag)\n                    \" in \" (pr-str (keys @*tag-table*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1443",
+          :tag "r1449",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [530 537]},
  :full-name "cljs.reader/maybe-read-tagged-type",
