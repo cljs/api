@@ -22,12 +22,12 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L165-L169):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L166-L170):
 
 ```clj
 (defn read-2-chars [reader]
   (.toString
-    (gstring/StringBuffer.
+    (StringBuffer.
       (read-char reader)
       (read-char reader))))
 ```
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:165-169](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L165-L169)</ins>
+            └── <ins>[reader.cljs:166-170](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L166-L170)</ins>
 </pre>
 
 -->
@@ -83,12 +83,12 @@ The API data for this symbol:
  :name "read-2-chars",
  :type "function",
  :signature ["[reader]"],
- :source {:code "(defn read-2-chars [reader]\n  (.toString\n    (gstring/StringBuffer.\n      (read-char reader)\n      (read-char reader))))",
+ :source {:code "(defn read-2-chars [reader]\n  (.toString\n    (StringBuffer.\n      (read-char reader)\n      (read-char reader))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [165 169]},
+          :lines [166 170]},
  :full-name "cljs.reader/read-2-chars",
  :full-name-encode "cljs.reader/read-2-chars",
  :history [["+" "0.0-1424"]]}

@@ -16,6 +16,12 @@
  <samp>
 (__sequence__ coll)<br>
 </samp>
+ <samp>
+(__sequence__ xform coll)<br>
+</samp>
+ <samp>
+(__sequence__ xform coll & colls)<br>
+</samp>
 
 ---
 
@@ -27,29 +33,39 @@ Source docstring:
 
 ```
 Coerces coll to a (possibly empty) sequence, if it is not already
-one. Will not force a lazy seq. (sequence nil) yields ()
+one. Will not force a lazy seq. (sequence nil) yields (), When a
+transducer is supplied, returns a lazy sequence of applications of
+the transform to the items in coll(s), i.e. to the set of first
+items of each coll, followed by the set of second
+items in each coll, until any one of the colls is exhausted.  Any
+remaining items in other colls are ignored. The transform should accept
+number-of-colls arguments
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1476-L1482):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3065-L3081):
 
 ```clj
-(defn ^seq sequence
-  [coll]
-   (if (seq? coll)
-     coll
-     (or (seq coll) ())))
+(defn sequence
+  ([coll]
+     (if (seq? coll)
+       coll
+       (or (seq coll) ())))
+  ([xform coll]
+     (.create LazyTransformer xform coll))
+  ([xform coll & colls]
+     (.createMulti LazyTransformer xform (to-array (cons coll colls)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1476-1482](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1476-L1482)</ins>
+            └── <ins>[core.cljs:3065-3081](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3065-L3081)</ins>
 </pre>
 
 -->
@@ -91,22 +107,21 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:return-type seq,
- :ns "cljs.core",
+{:ns "cljs.core",
  :name "sequence",
- :signature ["[coll]"],
+ :signature ["[coll]" "[xform coll]" "[xform coll & colls]"],
  :history [["+" "0.0-2120"]],
  :type "function",
  :full-name-encode "cljs.core/sequence",
- :source {:code "(defn ^seq sequence\n  [coll]\n   (if (seq? coll)\n     coll\n     (or (seq coll) ())))",
+ :source {:code "(defn sequence\n  ([coll]\n     (if (seq? coll)\n       coll\n       (or (seq coll) ())))\n  ([xform coll]\n     (.create LazyTransformer xform coll))\n  ([xform coll & colls]\n     (.createMulti LazyTransformer xform (to-array (cons coll colls)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1476 1482]},
+          :lines [3065 3081]},
  :full-name "cljs.core/sequence",
  :clj-symbol "clojure.core/sequence",
- :docstring "Coerces coll to a (possibly empty) sequence, if it is not already\none. Will not force a lazy seq. (sequence nil) yields ()"}
+ :docstring "Coerces coll to a (possibly empty) sequence, if it is not already\none. Will not force a lazy seq. (sequence nil) yields (), When a\ntransducer is supplied, returns a lazy sequence of applications of\nthe transform to the items in coll(s), i.e. to the set of first\nitems of each coll, followed by the set of second\nitems in each coll, until any one of the colls is exhausted.  Any\nremaining items in other colls are ignored. The transform should accept\nnumber-of-colls arguments"}
 
 ```
 

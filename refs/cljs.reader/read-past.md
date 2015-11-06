@@ -28,7 +28,7 @@ char.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L214-L221):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L215-L222):
 
 ```clj
 (defn read-past
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:214-221](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L214-L221)</ins>
+            └── <ins>[reader.cljs:215-222](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L215-L222)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn read-past\n  [pred rdr]\n  (loop [ch (read-char rdr)]\n    (if (pred ch)\n      (recur (read-char rdr))\n      ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [214 221]},
+          :lines [215 222]},
  :full-name "cljs.reader/read-past",
  :docstring "Read until first character that doesn't match pred, returning\nchar."}
 

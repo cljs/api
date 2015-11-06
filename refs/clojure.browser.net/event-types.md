@@ -17,29 +17,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L23-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L21-L28):
 
 ```clj
 (def event-types
   (into {}
         (map
          (fn [[k v]]
-           [(keyword (. k (toLowerCase)))
+           [(keyword (.toLowerCase k))
             v])
          (merge
-          (js->clj goog.net.EventType)))))
+          (js->clj EventType)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:23-30](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L23-L30)</ins>
+                └── <ins>[net.cljs:21-28](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L21-L28)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
 {:ns "clojure.browser.net",
  :name "event-types",
  :type "var",
- :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (. k (toLowerCase)))\n            v])\n         (merge\n          (js->clj goog.net.EventType)))))",
+ :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (merge\n          (js->clj EventType)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/net.cljs",
-          :lines [23 30]},
+          :lines [21 28]},
  :full-name "clojure.browser.net/event-types",
  :full-name-encode "clojure.browser.net/event-types",
  :history [["+" "0.0-927"]]}

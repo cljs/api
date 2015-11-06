@@ -17,28 +17,28 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L75-L81):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L73-L79):
 
 ```clj
 (def xpc-config-fields
   (into {}
         (map
          (fn [[k v]]
-           [(keyword (. k (toLowerCase)))
+           [(keyword (.toLowerCase k))
             v])
-         (js->clj goog.net.xpc.CfgFields))))
+         (js->clj CfgFields))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:75-81](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L75-L81)</ins>
+                └── <ins>[net.cljs:73-79](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L73-L79)</ins>
 </pre>
 
 -->
@@ -80,12 +80,12 @@ The API data for this symbol:
 {:ns "clojure.browser.net",
  :name "xpc-config-fields",
  :type "var",
- :source {:code "(def xpc-config-fields\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (. k (toLowerCase)))\n            v])\n         (js->clj goog.net.xpc.CfgFields))))",
+ :source {:code "(def xpc-config-fields\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (js->clj CfgFields))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/net.cljs",
-          :lines [75 81]},
+          :lines [73 79]},
  :full-name "clojure.browser.net/xpc-config-fields",
  :full-name-encode "clojure.browser.net/xpc-config-fields",
  :history [["+" "0.0-927"]]}

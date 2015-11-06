@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L93):
 
 ```clj
 (defn has-listener [obj opt_type opt_capture])
@@ -32,12 +32,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:94](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L94)</ins>
+                └── <ins>[event.cljs:93](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L93)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn has-listener [obj opt_type opt_capture])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/event.cljs",
-          :lines [94]},
+          :lines [93]},
  :full-name "clojure.browser.event/has-listener",
  :full-name-encode "clojure.browser.event/has-listener",
  :history [["+" "0.0-927"]]}

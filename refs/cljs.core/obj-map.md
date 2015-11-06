@@ -28,7 +28,7 @@ Returns a new object map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6310-L6321):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L6767-L6778):
 
 ```clj
 (defn obj-map
@@ -40,18 +40,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
         (do (.push ks (first kvs))
             (aset obj (first kvs) (second kvs))
             (recur (nnext kvs)))
-        (cljs.core.ObjMap.fromObject ks obj)))))
+        (.fromObject ObjMap ks obj)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6310-6321](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6310-L6321)</ins>
+            └── <ins>[core.cljs:6767-6778](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L6767-L6778)</ins>
 </pre>
 
 -->
@@ -96,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-1443"]],
  :type "function",
  :full-name-encode "cljs.core/obj-map",
- :source {:code "(defn obj-map\n  [& keyvals]\n  (let [ks  (array)\n        obj (js-obj)]\n    (loop [kvs (seq keyvals)]\n      (if kvs\n        (do (.push ks (first kvs))\n            (aset obj (first kvs) (second kvs))\n            (recur (nnext kvs)))\n        (cljs.core.ObjMap.fromObject ks obj)))))",
+ :source {:code "(defn obj-map\n  [& keyvals]\n  (let [ks  (array)\n        obj (js-obj)]\n    (loop [kvs (seq keyvals)]\n      (if kvs\n        (do (.push ks (first kvs))\n            (aset obj (first kvs) (second kvs))\n            (recur (nnext kvs)))\n        (.fromObject ObjMap ks obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6310 6321]},
+          :lines [6767 6778]},
  :full-name "cljs.core/obj-map",
  :docstring "keyval => key val\nReturns a new object map with supplied mappings."}
 

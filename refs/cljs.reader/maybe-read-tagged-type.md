@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L571-L581):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L572-L582):
 
 ```clj
 (defn maybe-read-tagged-type
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:571-581](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L571-L581)</ins>
+            └── <ins>[reader.cljs:572-582](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L572-L582)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defn maybe-read-tagged-type\n  [rdr initch]\n  (let [tag (read-symbol rdr initch)\n        pfn (get @*tag-table* (str tag))\n        dfn @*default-data-reader-fn*]\n    (cond\n     pfn (pfn (read rdr true nil false))\n     dfn (dfn tag (read rdr true nil false))\n     :else (reader-error rdr\n                         \"Could not find tag parser for \" (str tag)\n                         \" in \" (pr-str (keys @*tag-table*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [571 581]},
+          :lines [572 582]},
  :full-name "cljs.reader/maybe-read-tagged-type",
  :full-name-encode "cljs.reader/maybe-read-tagged-type",
  :history [["+" "0.0-1236"]]}

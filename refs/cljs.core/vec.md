@@ -36,13 +36,13 @@ Creates a new vector containing the contents of `coll`
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3685-L3689):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L4142-L4146):
 
 ```clj
 (defn vec [coll]
   (-persistent!
    (reduce -conj!
-           (-as-transient cljs.core.PersistentVector.EMPTY)
+           (-as-transient (.-EMPTY PersistentVector))
            coll)))
 ```
 
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3685-3689](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3685-L3689)</ins>
+            └── <ins>[core.cljs:4142-4146](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L4142-L4146)</ins>
 </pre>
 
 -->
@@ -104,12 +104,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/vector" "cljs.core/vector?"],
  :full-name-encode "cljs.core/vec",
- :source {:code "(defn vec [coll]\n  (-persistent!\n   (reduce -conj!\n           (-as-transient cljs.core.PersistentVector.EMPTY)\n           coll)))",
+ :source {:code "(defn vec [coll]\n  (-persistent!\n   (reduce -conj!\n           (-as-transient (.-EMPTY PersistentVector))\n           coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3685 3689]},
+          :lines [4142 4146]},
  :full-name "cljs.core/vec",
  :clj-symbol "clojure.core/vec"}
 

@@ -28,12 +28,12 @@ loading all the printing machinery.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L392-L400):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L400-L408):
 
 ```clj
 (defn pr-str*
   [^not-native obj]
-  (let [sb (gstring/StringBuffer.)
+  (let [sb (StringBuffer.)
         writer (StringBufferWriter. sb)]
     (-pr-writer obj writer (pr-opts))
     (-flush writer)
@@ -44,11 +44,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:392-400](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L392-L400)</ins>
+            └── <ins>[core.cljs:400-408](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L400-L408)</ins>
 </pre>
 
 -->
@@ -93,12 +93,12 @@ The API data for this symbol:
  :history [["+" "0.0-1806"]],
  :type "function",
  :full-name-encode "cljs.core/pr-strSTAR",
- :source {:code "(defn pr-str*\n  [^not-native obj]\n  (let [sb (gstring/StringBuffer.)\n        writer (StringBufferWriter. sb)]\n    (-pr-writer obj writer (pr-opts))\n    (-flush writer)\n    (str sb)))",
+ :source {:code "(defn pr-str*\n  [^not-native obj]\n  (let [sb (StringBuffer.)\n        writer (StringBufferWriter. sb)]\n    (-pr-writer obj writer (pr-opts))\n    (-flush writer)\n    (str sb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [392 400]},
+          :lines [400 408]},
  :full-name "cljs.core/pr-str*",
  :docstring "Support so that collections can implement toString without\nloading all the printing machinery."}
 

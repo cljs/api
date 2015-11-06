@@ -43,31 +43,35 @@ Source docstring:
 
 ```
 Returns a new coll consisting of to-coll with all of the items of
-from-coll conjoined.
+from-coll conjoined. A transducer may be supplied.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3298-L3306):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3751-L3763):
 
 ```clj
 (defn into
-  [to from]
-  (if-not (nil? to)
-    (if (implements? IEditableCollection to)
-      (persistent! (reduce -conj! (transient to) from))
-      (reduce -conj to from))
-    (reduce conj () from)))
+  ([to from]
+     (if-not (nil? to)
+       (if (implements? IEditableCollection to)
+         (with-meta (persistent! (reduce -conj! (transient to) from)) (meta to))
+         (reduce -conj to from))
+       (reduce conj () from)))
+  ([to xform from]
+     (if (implements? IEditableCollection to)
+       (with-meta (persistent! (transduce xform -conj! (transient to) from)) (meta to))
+       (transduce xform conj to from))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3298-3306](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3298-L3306)</ins>
+            └── <ins>[core.cljs:3751-3763](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3751-L3763)</ins>
 </pre>
 
 -->
@@ -117,15 +121,15 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/conj"],
  :full-name-encode "cljs.core/into",
- :source {:code "(defn into\n  [to from]\n  (if-not (nil? to)\n    (if (implements? IEditableCollection to)\n      (persistent! (reduce -conj! (transient to) from))\n      (reduce -conj to from))\n    (reduce conj () from)))",
+ :source {:code "(defn into\n  ([to from]\n     (if-not (nil? to)\n       (if (implements? IEditableCollection to)\n         (with-meta (persistent! (reduce -conj! (transient to) from)) (meta to))\n         (reduce -conj to from))\n       (reduce conj () from)))\n  ([to xform from]\n     (if (implements? IEditableCollection to)\n       (with-meta (persistent! (transduce xform -conj! (transient to) from)) (meta to))\n       (transduce xform conj to from))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3298 3306]},
+          :lines [3751 3763]},
  :full-name "cljs.core/into",
  :clj-symbol "clojure.core/into",
- :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined."}
+ :docstring "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined. A transducer may be supplied."}
 
 ```
 

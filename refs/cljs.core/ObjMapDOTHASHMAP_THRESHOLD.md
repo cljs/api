@@ -17,21 +17,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L4352):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L4809):
 
 ```clj
-(set! cljs.core.ObjMap.HASHMAP_THRESHOLD 8)
+(set! (.-HASHMAP_THRESHOLD ObjMap) 8)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4352](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L4352)</ins>
+            └── <ins>[core.cljs:4809](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L4809)</ins>
 </pre>
 
 -->
@@ -74,12 +74,12 @@ The API data for this symbol:
  :name "ObjMap.HASHMAP_THRESHOLD",
  :type "var",
  :parent-type "ObjMap",
- :source {:code "(set! cljs.core.ObjMap.HASHMAP_THRESHOLD 8)",
+ :source {:code "(set! (.-HASHMAP_THRESHOLD ObjMap) 8)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4352]},
+          :lines [4809]},
  :full-name "cljs.core/ObjMap.HASHMAP_THRESHOLD",
  :full-name-encode "cljs.core/ObjMapDOTHASHMAP_THRESHOLD",
  :history [["+" "0.0-1211"]]}

@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1776-L1777):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1808-L1809):
 
 ```clj
 (defn unchecked-dec-int [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1776-1777](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1776-L1777)</ins>
+            └── <ins>[core.cljs:1808-1809](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1808-L1809)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L395-L396):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/core.clj#L395-L396):
 
 ```clj
 (defmacro ^::ana/numeric unchecked-dec-int
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:395-396](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L395-L396)</ins>
+            └── <ins>[core.clj:395-396](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/core.clj#L395-L396)</ins>
 </pre>
 -->
 
@@ -111,13 +111,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-dec-int [x]\n  (cljs.core/unchecked-dec-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1776 1777]},
+          :lines [1808 1809]},
  :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-dec-int\n  ([x] `(dec ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2280",
+                  :tag "r2301",
                   :filename "src/clj/cljs/core.clj",
                   :lines [395 396]}],
  :full-name "cljs.core/unchecked-dec-int",

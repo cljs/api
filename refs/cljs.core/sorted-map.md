@@ -48,12 +48,12 @@ Returns a new sorted map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6323-L6330):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L6780-L6787):
 
 ```clj
 (defn sorted-map
   ([& keyvals]
-     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap.EMPTY]
+     (loop [in (seq keyvals) out (.-EMPTY PersistentTreeMap)]
        (if in
          (recur (nnext in) (assoc out (first in) (second in)))
          out))))
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6323-6330](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6323-L6330)</ins>
+            └── <ins>[core.cljs:6780-6787](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L6780-L6787)</ins>
 </pre>
 
 -->
@@ -122,12 +122,12 @@ The API data for this symbol:
            "cljs.core/array-map"
            "cljs.core/hash-map"],
  :full-name-encode "cljs.core/sorted-map",
- :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out cljs.core.PersistentTreeMap.EMPTY]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
+ :source {:code "(defn sorted-map\n  ([& keyvals]\n     (loop [in (seq keyvals) out (.-EMPTY PersistentTreeMap)]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6323 6330]},
+          :lines [6780 6787]},
  :full-name "cljs.core/sorted-map",
  :clj-symbol "clojure.core/sorted-map",
  :docstring "keyval => key val\nReturns a new sorted map with supplied mappings."}

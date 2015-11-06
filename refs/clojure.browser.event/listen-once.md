@@ -25,29 +25,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L53-L60):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L52-L59):
 
 ```clj
 (defn listen-once
   ([src type fn]
      (listen-once src type fn false))
   ([src type fn capture?]
-     (goog.events/listenOnce src
-                             (get (event-types src) type type)
-                             fn
-                             capture?)))
+     (events/listenOnce src
+                        (get (event-types src) type type)
+                        fn
+                        capture?)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:53-60](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L53-L60)</ins>
+                └── <ins>[event.cljs:52-59](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L52-L59)</ins>
 </pre>
 
 -->
@@ -90,12 +90,12 @@ The API data for this symbol:
  :name "listen-once",
  :type "function",
  :signature ["[src type fn]" "[src type fn capture?]"],
- :source {:code "(defn listen-once\n  ([src type fn]\n     (listen-once src type fn false))\n  ([src type fn capture?]\n     (goog.events/listenOnce src\n                             (get (event-types src) type type)\n                             fn\n                             capture?)))",
+ :source {:code "(defn listen-once\n  ([src type fn]\n     (listen-once src type fn false))\n  ([src type fn capture?]\n     (events/listenOnce src\n                        (get (event-types src) type type)\n                        fn\n                        capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/event.cljs",
-          :lines [53 60]},
+          :lines [52 59]},
  :full-name "clojure.browser.event/listen-once",
  :full-name-encode "clojure.browser.event/listen-once",
  :history [["+" "0.0-927"]]}

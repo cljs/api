@@ -1,11 +1,12 @@
-## clojure.browser.event/EventType
+## ~~clojure.browser.event/EventType~~
 
 
+> __MOVED__, please see [`clojure.browser.event/IEventType`](../clojure.browser.event/IEventType.md)
 
  <table border="1">
 <tr>
 <td>protocol</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[×] 0.0-2301" title="Removed in 0.0-2301" src="https://img.shields.io/badge/×-0.0--2301-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -72,8 +73,10 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "clojure.browser.event",
+{:moved "clojure.browser.event/IEventType",
+ :ns "clojure.browser.event",
  :name "EventType",
+ :history [["+" "0.0-927"] ["-" "0.0-2301"]],
  :type "protocol",
  :full-name-encode "clojure.browser.event/EventType",
  :source {:code "(defprotocol EventType\n  (event-types [this]))",
@@ -86,7 +89,7 @@ The API data for this symbol:
             :signature ["[this]"],
             :docstring nil}],
  :full-name "clojure.browser.event/EventType",
- :history [["+" "0.0-927"]]}
+ :removed {:in "0.0-2301", :last-seen "0.0-2280"}}
 
 ```
 

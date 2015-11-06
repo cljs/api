@@ -1294,10 +1294,6 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.lang/SeqIterator](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/SeqIterator.java)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/Settable](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Settable.java)</samp></td>
 </tr>
 <tr>

@@ -22,24 +22,24 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L75-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L74-L76):
 
 ```clj
 (defn dispatch-event
   [src event]
-  (goog.events/dispatchEvent src event))
+  (events/dispatchEvent src event))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:75-77](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L75-L77)</ins>
+                └── <ins>[event.cljs:74-76](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L74-L76)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :name "dispatch-event",
  :type "function",
  :signature ["[src event]"],
- :source {:code "(defn dispatch-event\n  [src event]\n  (goog.events/dispatchEvent src event))",
+ :source {:code "(defn dispatch-event\n  [src event]\n  (events/dispatchEvent src event))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/event.cljs",
-          :lines [75 77]},
+          :lines [74 76]},
  :full-name "clojure.browser.event/dispatch-event",
  :full-name-encode "clojure.browser.event/dispatch-event",
  :history [["+" "0.0-927"]]}

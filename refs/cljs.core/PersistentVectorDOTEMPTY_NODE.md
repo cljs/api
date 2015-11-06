@@ -1,11 +1,12 @@
-## cljs.core/PersistentVector.EMPTY_NODE
+## ~~cljs.core/PersistentVector.EMPTY_NODE~~
 
 
+> __MOVED__, please see [`cljs.core/PersistentVector.EMPTY-NODE`](../cljs.core/PersistentVectorDOTEMPTY-NODE.md)
 
  <table border="1">
 <tr>
 <td>var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1006"><img valign="middle" alt="[+] 0.0-1006" title="Added in 0.0-1006" src="https://img.shields.io/badge/+-0.0--1006-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1006"><img valign="middle" alt="[+] 0.0-1006" title="Added in 0.0-1006" src="https://img.shields.io/badge/+-0.0--1006-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[×] 0.0-2301" title="Removed in 0.0-2301" src="https://img.shields.io/badge/×-0.0--2301-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -70,10 +71,13 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:moved "cljs.core/PersistentVector.EMPTY-NODE",
+ :ns "cljs.core",
  :name "PersistentVector.EMPTY_NODE",
- :type "var",
+ :history [["+" "0.0-1006"] ["-" "0.0-2301"]],
  :parent-type "PersistentVector",
+ :type "var",
+ :full-name-encode "cljs.core/PersistentVectorDOTEMPTY_NODE",
  :source {:code "(set! cljs.core.PersistentVector.EMPTY_NODE (VectorNode. nil (make-array 32)))",
           :title "Source code",
           :repo "clojurescript",
@@ -81,8 +85,7 @@ The API data for this symbol:
           :filename "src/cljs/cljs/core.cljs",
           :lines [3667]},
  :full-name "cljs.core/PersistentVector.EMPTY_NODE",
- :full-name-encode "cljs.core/PersistentVectorDOTEMPTY_NODE",
- :history [["+" "0.0-1006"]]}
+ :removed {:in "0.0-2301", :last-seen "0.0-2280"}}
 
 ```
 

@@ -22,23 +22,23 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L79-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L78-L79):
 
 ```clj
 (defn expose [e]
-  (goog.events/expose e))
+  (events/expose e))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:79-80](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L79-L80)</ins>
+                └── <ins>[event.cljs:78-79](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L78-L79)</ins>
 </pre>
 
 -->
@@ -81,12 +81,12 @@ The API data for this symbol:
  :name "expose",
  :type "function",
  :signature ["[e]"],
- :source {:code "(defn expose [e]\n  (goog.events/expose e))",
+ :source {:code "(defn expose [e]\n  (events/expose e))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/event.cljs",
-          :lines [79 80]},
+          :lines [78 79]},
  :full-name "clojure.browser.event/expose",
  :full-name-encode "clojure.browser.event/expose",
  :history [["+" "0.0-927"]]}

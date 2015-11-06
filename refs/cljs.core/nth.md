@@ -55,7 +55,7 @@ in O(n) time, for sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1079-L1141):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1089-L1151):
 
 ```clj
 (defn nth
@@ -123,11 +123,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1079-1141](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1079-L1141)</ins>
+            └── <ins>[core.cljs:1089-1151](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1089-L1151)</ins>
 </pre>
 
 -->
@@ -183,9 +183,9 @@ The API data for this symbol:
  :source {:code "(defn nth\n  ([coll n]\n    (cond\n      (not (number? n))\n      (throw (js/Error. \"index argument to nth must be a number\"))\n\n      (nil? coll)\n      coll\n\n      (implements? IIndexed coll)\n      (-nth ^not-native coll n)\n\n      (array? coll)\n      (when (< n (.-length coll))\n        (aget coll n))\n\n      (string? coll)\n      (when (< n (.-length coll))\n        (aget coll n))\n\n      (native-satisfies? IIndexed coll)\n      (-nth coll n)\n\n      (satisfies? ISeq coll)\n      (linear-traversal-nth coll n)\n\n      :else\n      (throw (js/Error. (str \"nth not supported on this type \"\n                          (type->str (type coll)))))))\n  ([coll n not-found]\n    (cond\n      (not (number? n))\n      (throw (js/Error. \"index argument to nth must be a number.\"))\n\n      (nil? coll)\n      not-found\n\n      (implements? IIndexed coll)\n      (-nth ^not-native coll n not-found)\n\n      (array? coll)\n      (if (< n (.-length coll))\n        (aget coll n)\n        not-found)\n\n      (string? coll)\n      (if (< n (.-length coll))\n        (aget coll n)\n        not-found)\n\n      (native-satisfies? IIndexed coll)\n      (-nth coll n)\n\n      (satisfies? ISeq coll)\n      (linear-traversal-nth coll n not-found)\n\n      :else\n      (throw (js/Error. (str \"nth not supported on this type \"\n                          (type->str (type coll))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1079 1141]},
+          :lines [1089 1151]},
  :full-name "cljs.core/nth",
  :clj-symbol "clojure.core/nth",
  :docstring "Returns the value at the index. get returns nil if index out of\nbounds, nth throws an exception unless not-found is supplied.  nth\nalso works for strings, arrays, regex Matchers and Lists, and,\nin O(n) time, for sequences."}

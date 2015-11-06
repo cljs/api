@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/dom.cljs#L98-L99):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/dom.cljs#L98-L99):
 
 ```clj
 (defn get-element [id]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:98-99](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/dom.cljs#L98-L99)</ins>
+                └── <ins>[dom.cljs:98-99](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/dom.cljs#L98-L99)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn get-element [id]\n  (gdom/getElement (name id)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [98 99]},
  :full-name "clojure.browser.dom/get-element",

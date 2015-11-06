@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L7660-L7670):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8085-L8095):
 
 ```clj
 (deftype Delay [^:mutable f ^:mutable value]
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7660-7670](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L7660-L7670)</ins>
+            └── <ins>[core.cljs:8085-8095](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L8085-L8095)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(deftype Delay [^:mutable f ^:mutable value]\n  IDeref\n  (-deref [_]\n    (when f\n      (set! value (f))\n      (set! f nil))\n    value)\n\n  IPending\n  (-realized? [d]\n    (not f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [7660 7670]},
+          :lines [8085 8095]},
  :full-name "cljs.core/Delay",
  :clj-symbol "clojure.lang/Delay"}
 

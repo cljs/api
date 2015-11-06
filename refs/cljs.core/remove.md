@@ -46,26 +46,28 @@ Source docstring:
 ```
 Returns a lazy sequence of the items in coll for which
 (pred item) returns false. pred must be free of side-effects.
+Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3269-L3273):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3720-L3726):
 
 ```clj
 (defn remove
-  [pred coll]
-  (filter (complement pred) coll))
+  ([pred] (filter (complement pred)))
+  ([pred coll]
+     (filter (complement pred) coll)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3269-3273](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3269-L3273)</ins>
+            └── <ins>[core.cljs:3720-3726](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3720-L3726)</ins>
 </pre>
 
 -->
@@ -115,15 +117,15 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/filter"],
  :full-name-encode "cljs.core/remove",
- :source {:code "(defn remove\n  [pred coll]\n  (filter (complement pred) coll))",
+ :source {:code "(defn remove\n  ([pred] (filter (complement pred)))\n  ([pred coll]\n     (filter (complement pred) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3269 3273]},
+          :lines [3720 3726]},
  :full-name "cljs.core/remove",
  :clj-symbol "clojure.core/remove",
- :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects."}
+ :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}
 
 ```
 

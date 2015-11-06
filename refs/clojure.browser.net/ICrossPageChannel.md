@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L88-L89):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L86-L87):
 
 ```clj
 (defprotocol ICrossPageChannel
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:88-89](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L88-L89)</ins>
+                └── <ins>[net.cljs:86-87](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L86-L87)</ins>
 </pre>
 
 -->
@@ -79,9 +79,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ICrossPageChannel\n  (register-service [this service-name fn] [this service-name fn encode-json?]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/net.cljs",
-          :lines [88 89]},
+          :lines [86 87]},
  :methods [{:name "register-service",
             :signature ["[this service-name fn]"
                         "[this service-name fn encode-json?]"],

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L358-L359):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L358-L359):
 
 ```clj
 (defprotocol ITransientMap
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:358-359](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L358-L359)</ins>
+            └── <ins>[core.cljs:358-359](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L358-L359)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientMap\n  (^clj -dissoc! [tcoll key]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
           :lines [358 359]},
  :methods [{:name "-dissoc!",

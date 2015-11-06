@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/repl/rhino.clj#L67-L84):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/repl/rhino.clj#L67-L84):
 
 ```clj
 (defn goog-require [repl-env rule]
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:67-84](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/repl/rhino.clj#L67-L84)</ins>
+                └── <ins>[rhino.clj:67-84](https://github.com/clojure/clojurescript/blob/r2301/src/clj/cljs/repl/rhino.clj#L67-L84)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn goog-require [repl-env rule]\n  (when-not (contains? @(:loaded-libs repl-env) rule)\n    (let [repl-env @current-repl-env\n          path (string/replace (comp/munge rule) \\. java.io.File/separatorChar)\n          cljs-path (str path \".cljs\")\n          js-path (str \"goog/\"\n                       (-eval (str \"goog.dependencies_.nameToPath['\" rule \"']\")\n                              repl-env\n                              \"<cljs repl>\"\n                              1))]\n      (if-let [res (io/resource cljs-path)]\n        (binding [ana/*cljs-ns* 'cljs.user]\n          (repl/load-stream repl-env cljs-path res))\n        (if-let [res (io/resource js-path)]\n          (with-open [reader (io/reader res)]\n            (-eval reader repl-env js-path 1))\n          (throw (Exception. (str \"Cannot find \" cljs-path \" or \" js-path \" in classpath\")))))\n      (swap! (:loaded-libs repl-env) conj rule))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [67 84]},
  :full-name "cljs.repl.rhino/goog-require",

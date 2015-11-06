@@ -47,13 +47,23 @@ Source docstring:
 ```
 Returns a lazy sequence of the items in coll for which
 (pred item) returns true. pred must be free of side-effects.
+Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3250-L3267):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3691-L3718):
 
 ```clj
 (defn filter
+  ([pred]
+    (fn [f1]
+      (fn
+        ([] (f1))
+        ([result] (f1 result))
+        ([result input]
+           (if (pred input)
+             (f1 result input)
+             result)))))
   ([pred coll]
    (lazy-seq
     (when-let [s (seq coll)]
@@ -75,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3250-3267](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3250-L3267)</ins>
+            └── <ins>[core.cljs:3691-3718](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3691-L3718)</ins>
 </pre>
 
 -->
@@ -129,15 +139,15 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/remove" "cljs.core/keep"],
  :full-name-encode "cljs.core/filter",
- :source {:code "(defn filter\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
+ :source {:code "(defn filter\n  ([pred]\n    (fn [f1]\n      (fn\n        ([] (f1))\n        ([result] (f1 result))\n        ([result input]\n           (if (pred input)\n             (f1 result input)\n             result)))))\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3250 3267]},
+          :lines [3691 3718]},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
- :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}
+ :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}
 
 ```
 

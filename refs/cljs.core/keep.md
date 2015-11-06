@@ -48,14 +48,24 @@ Source docstring:
 ```
 Returns a lazy sequence of the non-nil results of (f item). Note,
 this means false return values will be included.  f must be free of
-side-effects.
+side-effects.  Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L2975-L2994):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3222-L3251):
 
 ```clj
 (defn keep
+  ([f]
+   (fn [f1]
+     (fn
+       ([] (f1))
+       ([result] (f1 result))
+       ([result input]
+          (let [v (f input)]
+            (if (nil? v)
+              result
+              (f1 result v)))))))
   ([f coll]
    (lazy-seq
     (when-let [s (seq coll)]
@@ -78,11 +88,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2975-2994](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L2975-L2994)</ins>
+            └── <ins>[core.cljs:3222-3251](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L3222-L3251)</ins>
 </pre>
 
 -->
@@ -134,15 +144,15 @@ The API data for this symbol:
            "cljs.core/map"
            "cljs.core/filter"],
  :full-name-encode "cljs.core/keep",
- :source {:code "(defn keep\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n            (let [x (f (-nth c i))]\n              (when-not (nil? x)\n                (chunk-append b x))))\n          (chunk-cons (chunk b) (keep f (chunk-rest s))))\n        (let [x (f (first s))]\n          (if (nil? x)\n            (keep f (rest s))\n            (cons x (keep f (rest s))))))))))",
+ :source {:code "(defn keep\n  ([f]\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([result] (f1 result))\n       ([result input]\n          (let [v (f input)]\n            (if (nil? v)\n              result\n              (f1 result v)))))))\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n            (let [x (f (-nth c i))]\n              (when-not (nil? x)\n                (chunk-append b x))))\n          (chunk-cons (chunk b) (keep f (chunk-rest s))))\n        (let [x (f (first s))]\n          (if (nil? x)\n            (keep f (rest s))\n            (cons x (keep f (rest s))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2975 2994]},
+          :lines [3222 3251]},
  :full-name "cljs.core/keep",
  :clj-symbol "clojure.core/keep",
- :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}
+ :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects.  Returns a transducer when no collection is provided."}
 
 ```
 

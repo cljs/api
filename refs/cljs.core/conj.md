@@ -98,10 +98,12 @@ happen at different 'places' depending on the concrete type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1013-L1024):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1021-L1034):
 
 ```clj
 (defn conj
+  ([] [])
+  ([coll] coll)
   ([coll x]
     (if-not (nil? coll)
       (-conj coll x)
@@ -116,11 +118,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1013-1024](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L1013-L1024)</ins>
+            └── <ins>[core.cljs:1021-1034](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L1021-L1034)</ins>
 </pre>
 
 -->
@@ -173,12 +175,12 @@ The API data for this symbol:
            "cljs.core/peek"
            "cljs.core/pop"],
  :full-name-encode "cljs.core/conj",
- :source {:code "(defn conj\n  ([coll x]\n    (if-not (nil? coll)\n      (-conj coll x)\n      (list x)))\n  ([coll x & xs]\n    (if xs\n      (recur (conj coll x) (first xs) (next xs))\n      (conj coll x))))",
+ :source {:code "(defn conj\n  ([] [])\n  ([coll] coll)\n  ([coll x]\n    (if-not (nil? coll)\n      (-conj coll x)\n      (list x)))\n  ([coll x & xs]\n    (if xs\n      (recur (conj coll x) (first xs) (next xs))\n      (conj coll x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1013 1024]},
+          :lines [1021 1034]},
  :examples [{:id "8c2a84",
              :content "Append a vector:\n\n```clj\n(conj [1 2 3] 4)\n;;=> [1 2 3 4]\n```\n\nPrepend a list:\n\n```clj\n(conj (list 1 2 3) 0)\n;;=> (0 1 2 3)\n```\n\nPrepend a sequence:\n\n```clj\n(def x (range 1 4))\n;;=> (1 2 3)\n\n(conj x 0)\n;;=> (0 1 2 3)\n```\n\nAdd to set:\n\n```clj\n(conj #{\"a\" \"b\" \"c\"} \"d\")\n;;=> #{\"a\" \"b\" \"c\" \"d\"}\n```"}],
  :known-as "conjoin",

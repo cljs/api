@@ -25,29 +25,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L44-L51):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L43-L50):
 
 ```clj
 (defn listen
   ([src type fn]
      (listen src type fn false))
   ([src type fn capture?]
-     (goog.events/listen src
-                         (get (event-types src) type type)
-                         fn
-                         capture?)))
+     (events/listen src
+                    (get (event-types src) type type)
+                    fn
+                    capture?)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:44-51](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L44-L51)</ins>
+                └── <ins>[event.cljs:43-50](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/event.cljs#L43-L50)</ins>
 </pre>
 
 -->
@@ -90,12 +90,12 @@ The API data for this symbol:
  :name "listen",
  :type "function",
  :signature ["[src type fn]" "[src type fn capture?]"],
- :source {:code "(defn listen\n  ([src type fn]\n     (listen src type fn false))\n  ([src type fn capture?]\n     (goog.events/listen src\n                         (get (event-types src) type type)\n                         fn\n                         capture?)))",
+ :source {:code "(defn listen\n  ([src type fn]\n     (listen src type fn false))\n  ([src type fn capture?]\n     (events/listen src\n                    (get (event-types src) type type)\n                    fn\n                    capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/event.cljs",
-          :lines [44 51]},
+          :lines [43 50]},
  :full-name "clojure.browser.event/listen",
  :full-name-encode "clojure.browser.event/listen",
  :history [["+" "0.0-927"]]}

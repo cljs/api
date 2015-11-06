@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L32-L44):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L30-L42):
 
 ```clj
 (defprotocol IConnection
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:32-44](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/net.cljs#L32-L44)</ins>
+                └── <ins>[net.cljs:30-42](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/clojure/browser/net.cljs#L30-L42)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IConnection\n  (connect\n    [this]\n    [this opt1]\n    [this opt1 opt2]\n    [this opt1 opt2 opt3])\n  (transmit\n    [this opt]\n    [this opt opt2]\n    [this opt opt2 opt3]\n    [this opt opt2 opt3 opt4]\n    [this opt opt2 opt3 opt4 opt5])\n  (close [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/clojure/browser/net.cljs",
-          :lines [32 44]},
+          :lines [30 42]},
  :methods [{:name "connect",
             :signature ["[this]"
                         "[this opt1]"

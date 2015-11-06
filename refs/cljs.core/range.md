@@ -52,11 +52,11 @@ and end to infinity.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6977-L6984):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7480-L7487):
 
 ```clj
 (defn range
-  ([] (range 0 js/Number.MAX_VALUE 1))
+  ([] (range 0 (.-MAX-VALUE js/Number) 1))
   ([end] (range 0 end 1))
   ([start end] (range start end 1))
   ([start end step] (Range. nil start end step nil)))
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6977-6984](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6977-L6984)</ins>
+            └── <ins>[core.cljs:7480-7487](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7480-L7487)</ins>
 </pre>
 
 -->
@@ -120,12 +120,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/repeat"],
  :full-name-encode "cljs.core/range",
- :source {:code "(defn range\n  ([] (range 0 js/Number.MAX_VALUE 1))\n  ([end] (range 0 end 1))\n  ([start end] (range start end 1))\n  ([start end step] (Range. nil start end step nil)))",
+ :source {:code "(defn range\n  ([] (range 0 (.-MAX-VALUE js/Number) 1))\n  ([end] (range 0 end 1))\n  ([start end] (range start end 1))\n  ([start end step] (Range. nil start end step nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6977 6984]},
+          :lines [7480 7487]},
  :full-name "cljs.core/range",
  :clj-symbol "clojure.core/range",
  :docstring "Returns a lazy seq of nums from start (inclusive) to end\n(exclusive), by step, where start defaults to 0, step to 1,\nand end to infinity."}

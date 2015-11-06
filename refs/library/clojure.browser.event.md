@@ -110,12 +110,30 @@ events.  It is based on the Google Closure Library event system.
 </tr>
 <tr>
 <td></td>
-<td><samp>[EventType](../clojure.browser.event/EventType.md)</samp></td>
+<td><samp>[IEventType](../clojure.browser.event/IEventType.md)</samp></td>
 <td><samp>protocol</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
 </tr>
 </table>
 
+---
+
+###### Symbols removed or no longer public:
+
+ <table>
+<thead><tr>
+<th>=</th>
+<th>Name</th>
+<th>Type</th>
+<th>History</th>
+</tr></thead>
+<tr>
+<td></td>
+<td><samp>[~~EventType~~](../clojure.browser.event/EventType.md)</samp></td>
+<td><samp>protocol</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[×] 0.0-2301" title="Removed in 0.0-2301" src="https://img.shields.io/badge/×-0.0--2301-red.svg"></a> </td>
+</tr>
+</table>
 
 ---
 

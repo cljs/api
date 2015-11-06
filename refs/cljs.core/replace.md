@@ -47,34 +47,37 @@ Source docstring:
 ```
 Given a map of replacement pairs and a vector/collection, returns a
 vector/seq with any elements = a key in smap replaced with the
-corresponding val in smap
+corresponding val in smap.  Returns a transducer when no collection
+is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6776-L6788):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7233-L7248):
 
 ```clj
 (defn replace
-  [smap coll]
-  (if (vector? coll)
-    (let [n (count coll)]
-      (reduce (fn [v i]
-                (if-let [e (find smap (nth v i))]
-                  (assoc v i (second e))
-                  v))
-              coll (take n (iterate inc 0))))
-    (map #(if-let [e (find smap %)] (second e) %) coll)))
+  ([smap]
+     (map #(if-let [e (find smap %)] (val e) %)))
+  ([smap coll]
+     (if (vector? coll)
+       (let [n (count coll)]
+         (reduce (fn [v i]
+                   (if-let [e (find smap (nth v i))]
+                     (assoc v i (second e))
+                     v))
+           coll (take n (iterate inc 0))))
+       (map #(if-let [e (find smap %)] (second e) %) coll))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6776-6788](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L6776-L6788)</ins>
+            └── <ins>[core.cljs:7233-7248](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L7233-L7248)</ins>
 </pre>
 
 -->
@@ -126,15 +129,15 @@ The API data for this symbol:
            "clojure.walk/prewalk-replace"
            "clojure.walk/postwalk-replace"],
  :full-name-encode "cljs.core/replace",
- :source {:code "(defn replace\n  [smap coll]\n  (if (vector? coll)\n    (let [n (count coll)]\n      (reduce (fn [v i]\n                (if-let [e (find smap (nth v i))]\n                  (assoc v i (second e))\n                  v))\n              coll (take n (iterate inc 0))))\n    (map #(if-let [e (find smap %)] (second e) %) coll)))",
+ :source {:code "(defn replace\n  ([smap]\n     (map #(if-let [e (find smap %)] (val e) %)))\n  ([smap coll]\n     (if (vector? coll)\n       (let [n (count coll)]\n         (reduce (fn [v i]\n                   (if-let [e (find smap (nth v i))]\n                     (assoc v i (second e))\n                     v))\n           coll (take n (iterate inc 0))))\n       (map #(if-let [e (find smap %)] (second e) %) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6776 6788]},
+          :lines [7233 7248]},
  :full-name "cljs.core/replace",
  :clj-symbol "clojure.core/replace",
- :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap"}
+ :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap.  Returns a transducer when no collection\nis provided."}
 
 ```
 

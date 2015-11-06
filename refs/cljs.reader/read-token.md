@@ -22,17 +22,17 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L78-L86):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L79-L87):
 
 ```clj
 (defn read-token
   [rdr initch]
-  (loop [sb (gstring/StringBuffer. initch)
+  (loop [sb (StringBuffer. initch)
          ch (read-char rdr)]
     (if (or (nil? ch)
             (whitespace? ch)
             (macro-terminating? ch))
-      (do (unread rdr ch) (. sb (toString)))
+      (do (unread rdr ch) (.toString sb))
       (recur (do (.append sb ch) sb) (read-char rdr)))))
 ```
 
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:78-86](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/reader.cljs#L78-L86)</ins>
+            └── <ins>[reader.cljs:79-87](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/reader.cljs#L79-L87)</ins>
 </pre>
 
 -->
@@ -87,12 +87,12 @@ The API data for this symbol:
  :name "read-token",
  :type "function",
  :signature ["[rdr initch]"],
- :source {:code "(defn read-token\n  [rdr initch]\n  (loop [sb (gstring/StringBuffer. initch)\n         ch (read-char rdr)]\n    (if (or (nil? ch)\n            (whitespace? ch)\n            (macro-terminating? ch))\n      (do (unread rdr ch) (. sb (toString)))\n      (recur (do (.append sb ch) sb) (read-char rdr)))))",
+ :source {:code "(defn read-token\n  [rdr initch]\n  (loop [sb (StringBuffer. initch)\n         ch (read-char rdr)]\n    (if (or (nil? ch)\n            (whitespace? ch)\n            (macro-terminating? ch))\n      (do (unread rdr ch) (.toString sb))\n      (recur (do (.append sb ch) sb) (read-char rdr)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [78 86]},
+          :lines [79 87]},
  :full-name "cljs.reader/read-token",
  :full-name-encode "cljs.reader/read-token",
  :history [["+" "0.0-927"]]}

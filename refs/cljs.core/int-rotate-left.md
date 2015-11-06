@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L405-L408):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L413-L416):
 
 ```clj
 (defn ^number int-rotate-left [x n]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
+clojurescript @ r2301
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:405-408](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L405-L408)</ins>
+            └── <ins>[core.cljs:413-416](https://github.com/clojure/clojurescript/blob/r2301/src/cljs/cljs/core.cljs#L413-L416)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defn ^number int-rotate-left [x n]\n  (bit-or\n    (bit-shift-left x n)\n    (unsigned-bit-shift-right x (- n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2280",
+          :tag "r2301",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [405 408]},
+          :lines [413 416]},
  :full-name "cljs.core/int-rotate-left"}
 
 ```
