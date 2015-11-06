@@ -35,7 +35,7 @@ Returns an instance of RegExp which has compiled the provided string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L7135-L7139):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L7135-L7139):
 
 ```clj
 (defn re-pattern
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2277
+clojurescript @ r2280
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:7135-7139](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L7135-L7139)</ins>
+            └── <ins>[core.cljs:7135-7139](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L7135-L7139)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn re-pattern\n  [s]\n  (let [[_ flags pattern] (re-find #\"^(?:\\(\\?([idmsux]*)\\))?(.*)\" s)]\n    (js/RegExp. pattern flags)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2277",
+          :tag "r2280",
           :filename "src/cljs/cljs/core.cljs",
           :lines [7135 7139]},
  :full-name "cljs.core/re-pattern",

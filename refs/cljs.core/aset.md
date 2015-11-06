@@ -74,7 +74,7 @@ Sets the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L181-L186):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L181-L186):
 
 ```clj
 (defn aset
@@ -88,18 +88,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2277
+clojurescript @ r2280
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:181-186](https://github.com/clojure/clojurescript/blob/r2277/src/cljs/cljs/core.cljs#L181-L186)</ins>
+            └── <ins>[core.cljs:181-186](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L181-L186)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L361-L367):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L361-L367):
 
 ```clj
 (defmacro aset
@@ -115,11 +115,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2277
+clojurescript @ r2280
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:361-367](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L361-L367)</ins>
+            └── <ins>[core.clj:361-367](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L361-L367)</ins>
 </pre>
 -->
 
@@ -170,13 +170,13 @@ The API data for this symbol:
  :source {:code "(defn aset\n  ([array i val]\n    (cljs.core/aset array i val))\n  ([array idx idx2 & idxv]\n    (apply aset (aget array idx) idx2 idxv)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2277",
+          :tag "r2280",
           :filename "src/cljs/cljs/core.cljs",
           :lines [181 186]},
  :extra-sources [{:code "(defmacro aset\n  ([a i v]\n    (core/list 'js* \"(~{}[~{}] = ~{})\" a i v))\n  ([a idx idx2 & idxv]\n    (let [n    (core/dec (count idxv))\n          astr (apply core/str (repeat n \"[~{}]\"))]\n      `(~'js* ~(core/str \"(~{}[~{}][~{}]\" astr \" = ~{})\") ~a ~idx ~idx2 ~@idxv))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2277",
+                  :tag "r2280",
                   :filename "src/clj/cljs/core.clj",
                   :lines [361 367]}],
  :full-name "cljs.core/aset",

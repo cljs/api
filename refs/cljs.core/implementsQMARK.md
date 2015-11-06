@@ -27,7 +27,7 @@ EXPERIMENTAL
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L1025-L1043):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L1025-L1043):
 
 ```clj
 (defmacro implements?
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2277/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2277
+clojurescript @ r2280
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1025-1043](https://github.com/clojure/clojurescript/blob/r2277/src/clj/cljs/core.clj#L1025-L1043)</ins>
+            └── <ins>[core.clj:1025-1043](https://github.com/clojure/clojurescript/blob/r2280/src/clj/cljs/core.clj#L1025-L1043)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defmacro implements?\n  [psym x]\n  (let [p          (:name\n                    (cljs.analyzer/resolve-var\n                      (dissoc &env :locals) psym))\n        prefix     (protocol-prefix p)\n        xsym       (bool-expr (gensym))\n        [part bit] (fast-path-protocols p)\n        msym       (symbol\n                      (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    `(let [~xsym ~x]\n       (if ~xsym\n         (let [bit# ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit))]\n           (if (or bit#\n                 ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             false))\n         false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2277",
+          :tag "r2280",
           :filename "src/clj/cljs/core.clj",
           :lines [1025 1043]},
  :full-name "cljs.core/implements?",
