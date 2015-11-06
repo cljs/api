@@ -280,6 +280,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/IFn](refs/cljs.core/IFn.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IFn.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/IHash](refs/cljs.core/IHash.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IHash.cljsdoc)</td>
 <td></td>
@@ -1822,6 +1829,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/try](refs/cljs.core/try.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/try.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/type](refs/cljs.core/type.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/type.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

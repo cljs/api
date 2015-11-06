@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L73-L74):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L73-L74):
 
 ```clj
 (defn macro-terminating? [ch]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:73-74](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L73-L74)</ins>
+            └── <ins>[reader.cljs:73-74](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L73-L74)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn macro-terminating? [ch]\n  (and (not= ch \"#\") (not= ch \\') (not= ch \":\") (contains? macros ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [73 74]},
  :full-name "cljs.reader/macro-terminating?",

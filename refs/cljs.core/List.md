@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1079-L1111):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1118-L1150):
 
 ```clj
 (deftype List [meta first rest count]
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1079-1111](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1079-L1111)</ins>
+            └── <ins>[core.cljs:1118-1150](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1118-L1150)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(deftype List [meta first rest count]\n  IWithMeta\n  (-with-meta [coll meta] (List. meta first rest count))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] first)\n  (-rest [coll] rest)\n\n  IStack\n  (-peek [coll] first)\n  (-pop [coll] (-rest coll))\n\n  ICollection\n  (-conj [coll o] (List. meta o coll (inc count)))\n\n  IEmptyableCollection\n  (-empty [coll] cljs.core.List/EMPTY)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ICounted\n  (-count [coll] count))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1079 1111]},
+          :lines [1118 1150]},
  :full-name "cljs.core/List",
  :clj-symbol "clojure.lang/PersistentList"}
 

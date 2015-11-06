@@ -40,7 +40,7 @@ and only once.
 
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl.clj#L132-L161):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162):
 
 ```clj
 (defn repl
@@ -79,11 +79,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r92
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:132-161](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl.clj#L132-L161)</ins>
+            └── <ins>[repl.clj:133-162](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162)</ins>
 </pre>
 
 -->
@@ -127,9 +127,9 @@ The API data for this symbol:
  :source {:code "(defn repl\n  \"Note - repl will reload core.cljs every time, even if supplied old repl-env\"\n  [repl-env & {:keys [verbose warn-on-undeclared]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [comp/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            comp/*cljs-warn-on-undeclared* warn-on-undeclared]\n    (let [env {:context :statement :locals {}}]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" comp/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n           \n           (= status :error) (recur)\n           \n           (and (seq? form) (= (first form) 'in-ns))\n           (do (set! comp/*cljs-ns* (second (second form))) (newline) (recur))\n           \n           (and (seq? form) ('#{load-file clojure.core/load-file} (first form)))\n           (do (load-file repl-env (second form)) (newline) (recur))\n           \n           (and (seq? form) ('#{load-namespace} (first form)))\n           (do (load-namespace repl-env (second form)) (newline) (recur))\n           \n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl.clj",
-          :lines [132 161]},
+          :lines [133 162]},
  :examples [{:id "0b1a1d",
              :content "```clj\n(load-namespace 'clojure.set)\n```"}],
  :full-name "specialrepl/load-namespace"}

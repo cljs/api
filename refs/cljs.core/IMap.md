@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L120-L122):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L145-L147):
 
 ```clj
 (defprotocol IMap
@@ -29,11 +29,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:120-122](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L120-L122)</ins>
+            └── <ins>[core.cljs:145-147](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L145-L147)</ins>
 </pre>
 
 -->
@@ -79,9 +79,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IMap\n  #_(-assoc-ex [coll k v])\n  (-dissoc [coll k]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [120 122]},
+          :lines [145 147]},
  :methods [{:name "-dissoc", :signature ["[coll k]"], :docstring nil}],
  :full-name "cljs.core/IMap",
  :history [["+" "0.0-927"]]}

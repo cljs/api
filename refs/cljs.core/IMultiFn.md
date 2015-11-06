@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3408-L3416):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3453-L3461):
 
 ```clj
 (defprotocol IMultiFn
@@ -28,18 +28,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
   (-get-method [mf dispatch-val])
   (-methods [mf])
   (-prefers [mf])
-  (-invoke [mf args]))
+  (-dispatch [mf args]))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3408-3416](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L3408-L3416)</ins>
+            └── <ins>[core.cljs:3453-3461](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L3453-L3461)</ins>
 </pre>
 
 -->
@@ -82,12 +82,12 @@ The API data for this symbol:
  :name "IMultiFn",
  :type "protocol",
  :full-name-encode "cljs.core/IMultiFn",
- :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf])\n  (-invoke [mf args]))",
+ :source {:code "(defprotocol IMultiFn\n  (-reset [mf])\n  (-add-method [mf dispatch-val method])\n  (-remove-method [mf dispatch-val])\n  (-prefer-method [mf dispatch-val dispatch-val-y])\n  (-get-method [mf dispatch-val])\n  (-methods [mf])\n  (-prefers [mf])\n  (-dispatch [mf args]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3408 3416]},
+          :lines [3453 3461]},
  :methods [{:name "-reset", :signature ["[mf]"], :docstring nil}
            {:name "-add-method",
             :signature ["[mf dispatch-val method]"],
@@ -103,7 +103,9 @@ The API data for this symbol:
             :docstring nil}
            {:name "-methods", :signature ["[mf]"], :docstring nil}
            {:name "-prefers", :signature ["[mf]"], :docstring nil}
-           {:name "-invoke", :signature ["[mf args]"], :docstring nil}],
+           {:name "-dispatch",
+            :signature ["[mf args]"],
+            :docstring nil}],
  :full-name "cljs.core/IMultiFn",
  :history [["+" "0.0-927"]]}
 

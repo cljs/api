@@ -37,7 +37,7 @@ Catches and handles JavaScript exceptions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L470-L498):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L501-L529):
 
 ```clj
 (defmacro try
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:470-498](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L470-L498)</ins>
+            └── <ins>[core.clj:501-529](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L501-L529)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (list? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/core.clj",
-          :lines [470 498]},
+          :lines [501 529]},
  :full-name "cljs.core/try",
  :clj-symbol "clojure.core/try",
  :docstring "(try expr* catch-clause* finally-clause?)\n\n Special Form\n\n catch-clause => (catch protoname name expr*)\n finally-clause => (finally expr*)\n\nCatches and handles JavaScript exceptions."}

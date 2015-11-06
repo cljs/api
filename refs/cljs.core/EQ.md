@@ -123,12 +123,21 @@ ClojureScript collections:
 ---
 
 
+Source docstring:
+
+```
+Equality. Returns true if x equals y, false if not. Compares
+numbers and collections in a type-independent manner.  Clojure's immutable data
+structures define -equiv (and thus =) as a value, not an identity,
+comparison.
+```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L180-L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L206-L212):
 
 ```clj
-(defn = [x y]
+(defn =
+  [x y]
   (-equiv x y))
 ```
 
@@ -136,11 +145,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:180-181](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L180-L181)</ins>
+            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L206-L212)</ins>
 </pre>
 
 -->
@@ -190,12 +199,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/==" "cljs.core/not=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQ",
- :source {:code "(defn = [x y]\n  (-equiv x y))",
+ :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [180 181]},
+          :lines [206 212]},
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}
             {:id "a2d064",
@@ -203,7 +212,8 @@ The API data for this symbol:
             {:id "6c8424",
              :content "It is natural to compare deeply nested collections since value equality checks\nare cheap in ClojureScript:\n\n```clj\n(def a {:foo {:bar \"baz\"}})\n(def b {:foo {:bar \"baz\"}})\n(= a b)\n;;=> true\n\n(= [a b] [a b])\n;=> true\n```\n\nJavaScript objects cannot be compared in this way until they are converted to\nClojureScript collections:\n\n```clj\n(def a #js {:foo #js {:bar \"baz\"}})\n(def b #js {:foo #js {:bar \"baz\"}})\n(= a b)\n;;=> false\n\n(= (js->clj a)\n   (js->clj b))\n;;=> true\n```"}],
  :full-name "cljs.core/=",
- :clj-symbol "clojure.core/="}
+ :clj-symbol "clojure.core/=",
+ :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}
 
 ```
 

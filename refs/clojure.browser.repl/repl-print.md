@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/repl.cljs#L23-L25):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/repl.cljs#L23-L25):
 
 ```clj
 (defn repl-print [data]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:23-25](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/repl.cljs#L23-L25)</ins>
+                └── <ins>[repl.cljs:23-25](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/repl.cljs#L23-L25)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn repl-print [data]\n  (if-let [conn @xpc-connection]\n    (net/transmit conn :print (pr-str data))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/clojure/browser/repl.cljs",
           :lines [23 25]},
  :full-name "clojure.browser.repl/repl-print",

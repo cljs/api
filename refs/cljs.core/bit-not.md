@@ -54,29 +54,29 @@ Bitwise complement
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L924-L926):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L964-L966):
 
 ```clj
 (defn bit-not
-  [x] (js* "(~~{x})"))
+  [x] (cljs.core/bit-not x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:924-926](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L924-L926)</ins>
+            └── <ins>[core.cljs:964-966](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L964-L966)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L131-L132):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L140-L141):
 
 ```clj
 (defmacro bit-not [x]
@@ -87,11 +87,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:131-132](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L131-L132)</ins>
+            └── <ins>[core.clj:140-141](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L140-L141)</ins>
 </pre>
 -->
 
@@ -138,18 +138,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :full-name-encode "cljs.core/bit-not",
- :source {:code "(defn bit-not\n  [x] (js* \"(~~{x})\"))",
+ :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [924 926]},
+          :lines [964 966]},
  :extra-sources [{:code "(defmacro bit-not [x]\n  (list 'js* \"(~ ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r927",
+                  :tag "r971",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [131 132]}],
+                  :lines [140 141]}],
  :examples [{:id "d4c5e3",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-not 2r1100)\n;;=> -13\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-not 12)\n;;=> -13\n```"}],
  :full-name "cljs.core/bit-not",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L543-L544):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L583-L584):
 
 ```clj
 (defn hash [o]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:543-544](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L543-L544)</ins>
+            └── <ins>[core.cljs:583-584](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L583-L584)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn hash [o]\n  (-hash o))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [543 544]},
+          :lines [583 584]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash"}
 

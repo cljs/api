@@ -40,7 +40,7 @@ Returns a number one less than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L849-L851):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L889-L891):
 
 ```clj
 (defn dec
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:849-851](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L849-L851)</ins>
+            └── <ins>[core.cljs:889-891](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L889-L891)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L103-L104):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L112-L113):
 
 ```clj
 (defmacro dec [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:103-104](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L103-L104)</ins>
+            └── <ins>[core.clj:112-113](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L112-L113)</ins>
 </pre>
 -->
 
@@ -128,15 +128,15 @@ The API data for this symbol:
  :source {:code "(defn dec\n  [x] (- x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [849 851]},
+          :lines [889 891]},
  :extra-sources [{:code "(defmacro dec [x]\n  `(- ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r927",
+                  :tag "r971",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [103 104]}],
+                  :lines [112 113]}],
  :full-name "cljs.core/dec",
  :clj-symbol "clojure.core/dec",
  :docstring "Returns a number one less than num."}

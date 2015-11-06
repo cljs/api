@@ -55,7 +55,7 @@ in O(n) time, for sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L464-L472):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L504-L512):
 
 ```clj
 (defn nth
@@ -69,11 +69,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:464-472](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L464-L472)</ins>
+            └── <ins>[core.cljs:504-512](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L504-L512)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn nth\n  ([coll n]\n     (-nth coll (.floor js/Math n)))\n  ([coll n not-found]\n     (-nth coll (.floor js/Math n) not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [464 472]},
+          :lines [504 512]},
  :full-name "cljs.core/nth",
  :clj-symbol "clojure.core/nth",
  :docstring "Returns the value at the index. get returns nil if index out of\nbounds, nth throws an exception unless not-found is supplied.  nth\nalso works for strings, arrays, regex Matchers and Lists, and,\nin O(n) time, for sequences."}

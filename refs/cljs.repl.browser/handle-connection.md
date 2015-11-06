@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L230-L238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L230-L238):
 
 ```clj
 (defn handle-connection
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:230-238](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L230-L238)</ins>
+                └── <ins>[browser.clj:230-238](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L230-L238)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn handle-connection\n  [opts conn]\n  (let [rdr (BufferedReader. (InputStreamReader. (.getInputStream conn)))]\n    (if-let [request (read-request rdr)]\n      (case (:method request)\n        :get (handle-get opts conn request)\n        :post (handle-post conn (read-string (:content request)))\n        (.close conn))\n      (.close conn))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [230 238]},
  :full-name "cljs.repl.browser/handle-connection",

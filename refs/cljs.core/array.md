@@ -73,7 +73,7 @@ Creates a new javascript array.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L71-L75):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L71-L75):
 
 ```clj
 (defn array
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:71-75](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L71-L75)</ins>
+            └── <ins>[core.cljs:71-75](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L71-L75)</ins>
 </pre>
 
 -->
@@ -141,7 +141,7 @@ The API data for this symbol:
  :source {:code "(defn array\n  [var-args]            ;; [& items]\n  (js* \"Array.prototype.slice.call(arguments)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
           :lines [71 75]},
  :examples [{:id "3a546d",

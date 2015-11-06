@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L98):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L98):
 
 ```clj
 (def symbol-pattern (re-pattern "[:]?([^0-9/].*/)?([^0-9/][^/]*)"))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:98](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/reader.cljs#L98)</ins>
+            └── <ins>[reader.cljs:98](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L98)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def symbol-pattern (re-pattern \"[:]?([^0-9/].*/)?([^0-9/][^/]*)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [98]},
  :full-name "cljs.reader/symbol-pattern",

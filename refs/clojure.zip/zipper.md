@@ -40,7 +40,7 @@ root is the root node.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L18-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L18-L32):
 
 ```clj
 (defn zipper
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
-            └── <ins>[zip.cljs:18-32](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/zip.cljs#L18-L32)</ins>
+            └── <ins>[zip.cljs:18-32](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/zip.cljs#L18-L32)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn zipper\n  [branch? children make-node root]\n    ^{:zip/branch? branch? :zip/children children :zip/make-node make-node}\n    [root nil])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/clojure/zip.cljs",
           :lines [18 32]},
  :full-name "clojure.zip/zipper",

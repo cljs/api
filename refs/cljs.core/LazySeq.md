@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1250-L1275):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1290-L1315):
 
 ```clj
 (deftype LazySeq [meta realized x]
@@ -60,11 +60,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1250-1275](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1250-L1275)</ins>
+            └── <ins>[core.cljs:1290-1315](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1290-L1315)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(deftype LazySeq [meta realized x]\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta realized x))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll] (first (lazy-seq-value coll)))\n  (-rest [coll] (rest (lazy-seq-value coll)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.List/EMPTY meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (hash-coll coll))\n\n  ISeqable\n  (-seq [coll] (seq (lazy-seq-value coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1250 1275]},
+          :lines [1290 1315]},
  :full-name "cljs.core/LazySeq",
  :clj-symbol "clojure.lang/LazySeq"}
 

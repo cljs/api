@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L842-L853):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L849-L860):
 
 ```clj
 (defmethod parse 'deftype*
@@ -38,11 +38,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:842-853](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L842-L853)</ins>
+            └── <ins>[compiler.clj:849-860](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L849-L860)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields] _]\n  (let [t (munge (:name (resolve-var (dissoc env :locals) tsym)))]\n    (swap! namespaces update-in [(-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {}) :name t)]\n               (if-let [line (:line env)]\n                 (-> m\n                     (assoc :file *cljs-file*)\n                     (assoc :line line))\n                 m))))\n    {:env env :op :deftype* :t t :fields fields}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [842 853]},
+          :lines [849 860]},
  :full-name "special/deftype*",
  :full-name-encode "special/deftypeSTAR",
  :history [["+" "0.0-927"]]}

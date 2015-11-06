@@ -27,7 +27,7 @@ Start the server on the specified port.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L247-L252):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L247-L252):
 
 ```clj
 (defn start-server
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:247-252](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L247-L252)</ins>
+                └── <ins>[browser.clj:247-252](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L247-L252)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn start-server\n  [opts]\n  (let [ss (ServerSocket. (:port opts))]\n    (future (server-loop opts ss))\n    (swap! server-state (fn [old] (assoc old :socket ss :port (:port opts))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [247 252]},
  :full-name "cljs.repl.browser/start-server",

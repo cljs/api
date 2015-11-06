@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/true?</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/true?)
@@ -40,28 +40,48 @@ Returns true if x is the value true, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L608-L610):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L648-L650):
 
 ```clj
 (defn true?
-  [x] (js* "~{x} === true"))
+  [x] (cljs.core/true? x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:608-610](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L608-L610)</ins>
+            └── <ins>[core.cljs:648-650](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L648-L650)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L45-L46):
+
+```clj
+(defmacro true? [x]
+  (list 'js* "~{} === true" x))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r971
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:45-46](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L45-L46)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -102,15 +122,21 @@ The API data for this symbol:
  :name "true?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/false?"],
  :full-name-encode "cljs.core/trueQMARK",
- :source {:code "(defn true?\n  [x] (js* \"~{x} === true\"))",
-          :title "Source code",
+ :source {:code "(defn true?\n  [x] (cljs.core/true? x))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [608 610]},
+          :lines [648 650]},
+ :extra-sources [{:code "(defmacro true? [x]\n  (list 'js* \"~{} === true\" x))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r971",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [45 46]}],
  :full-name "cljs.core/true?",
  :clj-symbol "clojure.core/true?",
  :docstring "Returns true if x is the value true, false otherwise."}

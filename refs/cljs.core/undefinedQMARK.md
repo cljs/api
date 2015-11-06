@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -22,28 +22,48 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L612-L613):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653):
 
 ```clj
 (defn undefined? [x]
-  (js* "(void 0 === ~{x})"))
+  (cljs.core/undefined? x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:612-613](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L612-L613)</ins>
+            └── <ins>[core.cljs:652-653](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52):
+
+```clj
+(defmacro undefined? [x]
+  (list 'js* "(void 0 === ~{})" x))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r971
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -78,17 +98,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "undefined?",
- :type "function",
  :signature ["[x]"],
- :source {:code "(defn undefined? [x]\n  (js* \"(void 0 === ~{x})\"))",
-          :title "Source code",
-          :repo "clojurescript",
-          :tag "r927",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [612 613]},
- :full-name "cljs.core/undefined?",
+ :history [["+" "0.0-927"]],
+ :type "function/macro",
  :full-name-encode "cljs.core/undefinedQMARK",
- :history [["+" "0.0-927"]]}
+ :source {:code "(defn undefined? [x]\n  (cljs.core/undefined? x))",
+          :title "Function code",
+          :repo "clojurescript",
+          :tag "r971",
+          :filename "src/cljs/cljs/core.cljs",
+          :lines [652 653]},
+ :extra-sources [{:code "(defmacro undefined? [x]\n  (list 'js* \"(void 0 === ~{})\" x))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r971",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [51 52]}],
+ :full-name "cljs.core/undefined?"}
 
 ```
 

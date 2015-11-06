@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/event.cljs#L17-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/event.cljs#L17-L18):
 
 ```clj
 (defprotocol EventType
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[event.cljs:17-18](https://github.com/clojure/clojurescript/blob/r927/src/cljs/clojure/browser/event.cljs#L17-L18)</ins>
+                └── <ins>[event.cljs:17-18](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/event.cljs#L17-L18)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defprotocol EventType\n  (event-types [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/clojure/browser/event.cljs",
           :lines [17 18]},
  :methods [{:name "event-types",

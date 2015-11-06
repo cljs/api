@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L701-L719):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L706-L723):
 
 ```clj
 (defmethod parse 'fn*
@@ -34,7 +34,6 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
         methods (map #(analyze-fn-method menv locals %) meths)
         max-fixed-arity (apply max (map :max-fixed-arity methods))
         variadic (boolean (some :variadic methods))]
-    ;;(assert (= 1 (count methods)) "Arity overloading not yet supported")
     ;;todo - validate unique arities, at most one variadic, variadic takes max required args
     {:env env :op :fn :name mname :methods methods :variadic variadic :recur-frames *recur-frames*
      :jsdoc [(when variadic "@param {...*} var_args")]
@@ -45,11 +44,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:701-719](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L701-L719)</ins>
+            └── <ins>[compiler.clj:706-723](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L706-L723)</ins>
 </pre>
 
 -->
@@ -86,12 +85,12 @@ The API data for this symbol:
 {:ns "special",
  :name "fn*",
  :type "special form",
- :source {:code "(defmethod parse 'fn*\n  [op env [_ & args] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        mname (when name (munge name))\n        locals (:locals env)\n        locals (if name (assoc locals name {:name mname}) locals)\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        methods (map #(analyze-fn-method menv locals %) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))]\n    ;;(assert (= 1 (count methods)) \"Arity overloading not yet supported\")\n    ;;todo - validate unique arities, at most one variadic, variadic takes max required args\n    {:env env :op :fn :name mname :methods methods :variadic variadic :recur-frames *recur-frames*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity}))",
+ :source {:code "(defmethod parse 'fn*\n  [op env [_ & args] name]\n  (let [[name meths] (if (symbol? (first args))\n                       [(first args) (next args)]\n                       [name (seq args)])\n        ;;turn (fn [] ...) into (fn ([]...))\n        meths (if (vector? (first meths)) (list meths) meths)\n        mname (when name (munge name))\n        locals (:locals env)\n        locals (if name (assoc locals name {:name mname}) locals)\n        menv (if (> (count meths) 1) (assoc env :context :expr) env)\n        methods (map #(analyze-fn-method menv locals %) meths)\n        max-fixed-arity (apply max (map :max-fixed-arity methods))\n        variadic (boolean (some :variadic methods))]\n    ;;todo - validate unique arities, at most one variadic, variadic takes max required args\n    {:env env :op :fn :name mname :methods methods :variadic variadic :recur-frames *recur-frames*\n     :jsdoc [(when variadic \"@param {...*} var_args\")]\n     :max-fixed-arity max-fixed-arity}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [701 719]},
+          :lines [706 723]},
  :full-name "special/fn*",
  :full-name-encode "special/fnSTAR",
  :history [["+" "0.0-927"]]}

@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/false?</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/false?)
@@ -41,28 +41,48 @@ Returns true if x is the value false, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L604-L606):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L644-L646):
 
 ```clj
 (defn false?
-  [x] (js* "~{x} === false"))
+  [x] (cljs.core/false? x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:604-606](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L604-L606)</ins>
+            └── <ins>[core.cljs:644-646](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L644-L646)</ins>
 </pre>
 
 -->
 
 ---
 
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L48-L49):
+
+```clj
+(defmacro false? [x]
+  (list 'js* "~{} === false" x))
+```
+
+<!--
+Repo - tag - source tree - lines:
+
+ <pre>
+clojurescript @ r971
+└── src
+    └── clj
+        └── cljs
+            └── <ins>[core.clj:48-49](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L48-L49)</ins>
+</pre>
+-->
+
+---
 
 
 ###### External doc links:
@@ -103,15 +123,21 @@ The API data for this symbol:
  :name "false?",
  :signature ["[x]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "function/macro",
  :related ["cljs.core/true?" "cljs.core/not"],
  :full-name-encode "cljs.core/falseQMARK",
- :source {:code "(defn false?\n  [x] (js* \"~{x} === false\"))",
-          :title "Source code",
+ :source {:code "(defn false?\n  [x] (cljs.core/false? x))",
+          :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [604 606]},
+          :lines [644 646]},
+ :extra-sources [{:code "(defmacro false? [x]\n  (list 'js* \"~{} === false\" x))",
+                  :title "Macro code",
+                  :repo "clojurescript",
+                  :tag "r971",
+                  :filename "src/clj/cljs/core.clj",
+                  :lines [48 49]}],
  :full-name "cljs.core/false?",
  :clj-symbol "clojure.core/false?",
  :docstring "Returns true if x is the value false, false otherwise."}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L91-L97):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L91-L97):
 
 ```clj
 (defn send-404 [conn path]
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:91-97](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L91-L97)</ins>
+                └── <ins>[browser.clj:91-97](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L91-L97)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(defn send-404 [conn path]\n  (send-and-close conn 404\n                  (str \"<html><body>\"\n                       \"<h2>Page not found</h2>\"\n                       \"No page \" path \" found on this server.\"\n                       \"</body></html>\")\n                  \"text/html\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [91 97]},
  :full-name "cljs.repl.browser/send-404",

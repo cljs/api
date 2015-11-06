@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L182-L186):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L182-L186):
 
 ```clj
 (defn handle-get [opts conn request]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:182-186](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L182-L186)</ins>
+                └── <ins>[browser.clj:182-186](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L182-L186)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn handle-get [opts conn request]\n  (let [path (:path request)]\n    (if (.startsWith path \"/repl\")\n      (send-repl-client-page opts conn request)\n      (send-404 conn (:path request)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [182 186]},
  :full-name "cljs.repl.browser/handle-get",

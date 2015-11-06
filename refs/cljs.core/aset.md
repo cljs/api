@@ -74,30 +74,30 @@ Sets the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L82-L85):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L82-L85):
 
 ```clj
 (defn aset
   [array i val]
-  (js* "(~{array}[~{i}] = ~{val})"))
+  (cljs.core/aset array i val))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:82-85](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L82-L85)</ins>
+            └── <ins>[core.cljs:82-85](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L82-L85)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L51-L52):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L60-L61):
 
 ```clj
 (defmacro aset [a i v]
@@ -108,11 +108,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L51-L52)</ins>
+            └── <ins>[core.clj:60-61](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L60-L61)</ins>
 </pre>
 -->
 
@@ -160,18 +160,18 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/aget" "special/set!" "cljs.core/assoc-in"],
  :full-name-encode "cljs.core/aset",
- :source {:code "(defn aset\n  [array i val]\n  (js* \"(~{array}[~{i}] = ~{val})\"))",
+ :source {:code "(defn aset\n  [array i val]\n  (cljs.core/aset array i val))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
           :lines [82 85]},
  :extra-sources [{:code "(defmacro aset [a i v]\n  (list 'js* \"(~{}[~{}] = ~{})\" a i v))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r927",
+                  :tag "r971",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [51 52]}],
+                  :lines [60 61]}],
  :full-name "cljs.core/aset",
  :clj-symbol "clojure.core/aset",
  :docstring "Sets the value at the index."}

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L364-L386):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L395-L417):
 
 ```clj
 (defmacro defprotocol [psym & doc+methods]
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:364-386](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L364-L386)</ins>
+            └── <ins>[core.clj:395-417](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L395-L417)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defmacro defprotocol [psym & doc+methods]\n  (let [p (:name (cljs.compiler/resolve-var (dissoc &env :locals) psym))\n        ns-name (-> &env :ns :name)\n        fqn (fn [n] (symbol (str ns-name \".\" n)))\n        prefix (protocol-prefix p)\n        methods (if (string? (first doc+methods)) (next doc+methods) doc+methods)\n        expand-sig (fn [fname slot sig]\n                     `(~sig\n                       (if (and ~(first sig) (. ~(first sig) ~(symbol (str \"-\" slot)))) ;; Property access needed here.\n                         (. ~(first sig) ~slot ~@sig)\n                         ((or\n                           (aget ~(fqn fname) (goog.typeOf ~(first sig)))\n                           (aget ~(fqn fname) \"_\")\n                           (throw (missing-protocol\n                                    ~(str psym \".\" fname) ~(first sig))))\n                          ~@sig))))\n        method (fn [[fname & sigs]]\n                 (let [sigs (take-while vector? sigs)\n                       slot (symbol (str prefix (name fname)))]\n                   `(defn ~fname ~@(map #(expand-sig fname slot %) sigs))))]\n    `(do\n       (def ~psym (~'js* \"{}\"))\n       ~@(map method methods))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/core.clj",
-          :lines [364 386]},
+          :lines [395 417]},
  :full-name "cljs.core/defprotocol",
  :clj-symbol "clojure.core/defprotocol"}
 

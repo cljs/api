@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L951-L972):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L958-L979):
 
 ```clj
 (defmethod parse 'js*
@@ -48,11 +48,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[compiler.clj:951-972](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/compiler.clj#L951-L972)</ins>
+            └── <ins>[compiler.clj:958-979](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/compiler.clj#L958-L979)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'js*\n  [op env [_ form & args] _]\n  (assert (string? form))\n  (if args\n    (disallowing-recur\n     (let [seg (fn seg [^String s]\n                 (let [idx (.indexOf s \"~{\")]\n                   (if (= -1 idx)\n                     (list s)\n                     (let [end (.indexOf s \"}\" idx)]\n                       (cons (subs s 0 idx) (seg (subs s (inc end))))))))\n           enve (assoc env :context :expr)\n           argexprs (vec (map #(analyze enve %) args))]\n       {:env env :op :js :segs (seg form) :args argexprs :children argexprs}))\n    (let [interp (fn interp [^String s]\n                   (let [idx (.indexOf s \"~{\")]\n                     (if (= -1 idx)\n                       (list s)\n                       (let [end (.indexOf s \"}\" idx)\n                             inner (:name (resolve-existing-var env (symbol (subs s (+ 2 idx) end))))]\n                         (cons (subs s 0 idx) (cons inner (interp (subs s (inc end)))))))))]\n      {:env env :op :js :code (apply str (interp form))})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/compiler.clj",
-          :lines [951 972]},
+          :lines [958 979]},
  :full-name "special/js*",
  :full-name-encode "special/jsSTAR",
  :history [["+" "0.0-927"]]}

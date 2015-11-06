@@ -51,7 +51,7 @@ side-effects.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1547-L1559):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1587-L1599):
 
 ```clj
 (defn keep-indexed
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1547-1559](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1547-L1559)</ins>
+            └── <ins>[core.cljs:1587-1599](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1587-L1599)</ins>
 </pre>
 
 -->
@@ -127,9 +127,9 @@ The API data for this symbol:
  :source {:code "(defn keep-indexed\n  ([f coll]\n     (let [keepi (fn kpi [idx coll]\n                   (lazy-seq\n                    (when-let [s (seq coll)]\n                      (let [x (f idx (first s))]\n                        (if (nil? x)\n                          (kpi (inc idx) (rest s))\n                          (cons x (kpi (inc idx) (rest s))))))))]\n       (keepi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1547 1559]},
+          :lines [1587 1599]},
  :full-name "cljs.core/keep-indexed",
  :clj-symbol "clojure.core/keep-indexed",
  :docstring "Returns a lazy sequence of the non-nil results of (f index item). Note,\nthis means false return values will be included.  f must be free of\nside-effects."}

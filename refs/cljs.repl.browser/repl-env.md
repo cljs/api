@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L320-L327):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L320-L327):
 
 ```clj
 (defn repl-env [& {:as opts}]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:320-327](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/repl/browser.clj#L320-L327)</ins>
+                └── <ins>[browser.clj:320-327](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/browser.clj#L320-L327)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env [& {:as opts}]\n  (let [opts (merge {:port 9000 :optimizations :simple :working-dir \".repl\"} opts)]\n    (do (swap! server-state\n               (fn [old] (assoc old :client-js\n                               (future (create-client-js-file\n                                        opts\n                                        (io/file (:working-dir opts) \"client.js\"))))))\n        opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [320 327]},
  :full-name "cljs.repl.browser/repl-env",

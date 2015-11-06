@@ -67,17 +67,17 @@ otherwise false.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L837-L847):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L877-L887):
 
 ```clj
 (defn >=
   ([x] true)
-  ([x y] (js* "(~{x} >= ~{y})"))
+  ([x y] (cljs.core/>= x y))
   ([x y & more]
-   (if (>= x y)
+   (if (cljs.core/>= x y)
      (if (next more)
        (recur y (first more) (next more))
-       (>= y (first more)))
+       (cljs.core/>= y (first more)))
      false)))
 ```
 
@@ -85,18 +85,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:837-847](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L837-L847)</ins>
+            └── <ins>[core.cljs:877-887](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L877-L887)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L93-L96):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L102-L105):
 
 ```clj
 (defmacro >=
@@ -109,11 +109,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:93-96](https://github.com/clojure/clojurescript/blob/r927/src/clj/cljs/core.clj#L93-L96)</ins>
+            └── <ins>[core.clj:102-105](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L102-L105)</ins>
 </pre>
 -->
 
@@ -161,18 +161,18 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/>"],
  :full-name-encode "cljs.core/GTEQ",
- :source {:code "(defn >=\n  ([x] true)\n  ([x y] (js* \"(~{x} >= ~{y})\"))\n  ([x y & more]\n   (if (>= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (>= y (first more)))\n     false)))",
+ :source {:code "(defn >=\n  ([x] true)\n  ([x y] (cljs.core/>= x y))\n  ([x y & more]\n   (if (cljs.core/>= x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/>= y (first more)))\n     false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [837 847]},
+          :lines [877 887]},
  :extra-sources [{:code "(defmacro >=\n  ([x] true)\n  ([x y] (list 'js* \"(~{} >= ~{})\" x y))\n  ([x y & more] `(and (>= ~x ~y) (>= ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r927",
+                  :tag "r971",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [93 96]}],
+                  :lines [102 105]}],
  :examples [{:id "de73d7",
              :content "```clj\n(>= 2 1)\n;;=> true\n\n(>= 2 2)\n;;=> true\n\n(>= 1 2)\n;;=> false\n\n(>= 6 5 4 3 2)\n;;=> true\n```"}],
  :full-name "cljs.core/>=",

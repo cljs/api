@@ -36,7 +36,7 @@ Creates a new list containing `items`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1154-L1155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1193-L1194):
 
 ```clj
 (defn list [& items]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1154-1155](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1154-L1155)</ins>
+            └── <ins>[core.cljs:1193-1194](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1193-L1194)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn list [& items]\n  (reduce conj () (reverse items)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1154 1155]},
+          :lines [1193 1194]},
  :full-name "cljs.core/list",
  :clj-symbol "clojure.core/list"}
 

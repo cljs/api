@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1972):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2018):
 
 ```clj
 (set! cljs.core.Vector/EMPTY (Vector. nil (array)))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r927/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r927
+clojurescript @ r971
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1972](https://github.com/clojure/clojurescript/blob/r927/src/cljs/cljs/core.cljs#L1972)</ins>
+            └── <ins>[core.cljs:2018](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2018)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.Vector/EMPTY (Vector. nil (array)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r927",
+          :tag "r971",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1972]},
+          :lines [2018]},
  :full-name "cljs.core/Vector.EMPTY",
  :full-name-encode "cljs.core/VectorDOTEMPTY",
  :history [["+" "0.0-927"]]}
