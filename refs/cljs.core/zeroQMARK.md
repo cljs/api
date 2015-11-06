@@ -36,7 +36,7 @@ Returns true if `n` is 0, false otherwise.
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1416-L1417):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1416-L1417):
 
 ```clj
 (defn ^boolean zero? [n]
@@ -47,18 +47,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1416-1417](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1416-L1417)</ins>
+            └── <ins>[core.cljs:1416-1417](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1416-L1417)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L274-L275):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L274-L275):
 
 ```clj
 (defmacro zero? [x]
@@ -69,11 +69,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:274-275](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L274-L275)</ins>
+            └── <ins>[core.clj:274-275](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L274-L275)</ins>
 </pre>
 -->
 
@@ -125,13 +125,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean zero? [n]\n  (cljs.core/zero? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1416 1417]},
  :extra-sources [{:code "(defmacro zero? [x]\n  `(== ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1513",
+                  :tag "r1535",
                   :filename "src/clj/cljs/core.clj",
                   :lines [274 275]}],
  :full-name "cljs.core/zero?",

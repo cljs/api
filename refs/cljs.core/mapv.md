@@ -58,7 +58,7 @@ f should accept number-of-colls arguments.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2654-L2668):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2654-L2668):
 
 ```clj
 (defn mapv
@@ -77,11 +77,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2654-2668](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2654-L2668)</ins>
+            └── <ins>[core.cljs:2654-2668](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L2654-L2668)</ins>
 </pre>
 
 -->
@@ -137,7 +137,7 @@ The API data for this symbol:
  :source {:code "(defn mapv\n  ([f coll]\n     (-> (reduce (fn [v o] (conj! v (f o))) (transient []) coll)\n         persistent!))\n  ([f c1 c2]\n     (into [] (map f c1 c2)))\n  ([f c1 c2 c3]\n     (into [] (map f c1 c2 c3)))\n  ([f c1 c2 c3 & colls]\n     (into [] (apply map f c1 c2 c3 colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2654 2668]},
  :full-name "cljs.core/mapv",

@@ -2,12 +2,12 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1513__ [all](HISTORY.md)</td>
-<td>2012-10-19</td>
+<td>__0.0-1535__ [all](HISTORY.md)</td>
+<td>2012-11-08</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.4.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
-<kbd>Closure Lib 20111110-r1376</kbd>](http://google.github.io/closure-library/api/)</td>
+<kbd>Closure Lib 20120710-r2029</kbd>](http://google.github.io/closure-library/api/)</td>
 </tr>
 </table>
 
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-1513__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1535__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,7 +34,13 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/with-out-str](refs/cljs.core/with-out-str.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__

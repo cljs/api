@@ -24,7 +24,7 @@ Do not use this.  It is kept for backwards compatibility with existing
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L250-L254):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L250-L254):
 
 ```clj
 (defprotocol ^:deprecated IPrintable
@@ -38,11 +38,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:250-254](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L250-L254)</ins>
+            └── <ins>[core.cljs:250-254](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L250-L254)</ins>
 </pre>
 
 -->
@@ -89,7 +89,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ^:deprecated IPrintable\n  \"Do not use this.  It is kept for backwards compatibility with existing\n   user code that depends on it, but it has been superceded by IPrintWithWriter\n   User code that depends on this should be changed to use -pr-writer instead.\"\n  (-pr-seq [o opts]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [250 254]},
  :methods [{:name "-pr-seq", :signature ["[o opts]"], :docstring nil}],

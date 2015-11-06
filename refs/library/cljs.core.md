@@ -85,7 +85,7 @@ interop with JS, many predicates, etc.
 <tr>
 <td></td>
 <td><samp>[\*print-fn\*](../cljs.core/STARprint-fnSTAR.md)</samp></td>
-<td><samp>function</samp></td>
+<td><samp>dynamic var</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 <tr>
@@ -2181,6 +2181,12 @@ interop with JS, many predicates, etc.
 <td><samp>[with-meta](../cljs.core/with-meta.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/with-out-str)</td>
+<td><samp>[with-out-str](../cljs.core/with-out-str.md)</samp></td>
+<td><samp>macro</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1535"><img valign="middle" alt="[+] 0.0-1535" title="Added in 0.0-1535" src="https://img.shields.io/badge/+-0.0--1535-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

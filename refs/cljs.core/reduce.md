@@ -65,7 +65,7 @@ items, returns val and f is not called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1173-L1190):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1173-L1190):
 
 ```clj
 (defn reduce
@@ -83,11 +83,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1173-1190](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1173-L1190)</ins>
+            └── <ins>[core.cljs:1173-1190](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1173-L1190)</ins>
 </pre>
 
 -->
@@ -142,7 +142,7 @@ The API data for this symbol:
  :source {:code "(defn reduce\n  ([f coll]\n     (if (satisfies? IReduce coll)\n       (-reduce coll f)\n       (seq-reduce f coll)))\n  ([f val coll]\n     (if (satisfies? IReduce coll)\n       (-reduce coll f val)\n       (seq-reduce f val coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1173 1190]},
  :full-name "cljs.core/reduce",

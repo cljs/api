@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1535](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1535)__</td>
+<td>2012-11-08</td>
+<td><kbd>1.4.0</kbd></td>
+<td></td>
+<td><kbd>20120710-r2029</kbd></td>
+<td>
+<a href="#user-content-001535syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001535library">
++1 
+</a>
+</td>
+<td>
+<a href="#user-content-001535compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1513](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1513)__</td>
 <td>2012-10-19</td>
 <td><kbd>1.4.0</kbd></td>
@@ -314,6 +337,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1535
+
+<a name="001535syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001535library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/with-out-str](refs/cljs.core/with-out-str.md)</samp></td>
+</tr>
+</table>
+
+<a name="001535compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1513
@@ -2272,7 +2318,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/\*print-fn\*](refs/cljs.core/STARprint-fnSTAR.md)</samp></td>
 </tr>

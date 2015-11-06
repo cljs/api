@@ -48,7 +48,7 @@ the head of the sequence. Returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L949-L983):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L949-L983):
 
 ```clj
 (defmacro doseq
@@ -89,11 +89,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:949-983](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L949-L983)</ins>
+            └── <ins>[core.clj:949-983](https://github.com/clojure/clojurescript/blob/r1535/src/clj/cljs/core.clj#L949-L983)</ins>
 </pre>
 
 -->
@@ -149,7 +149,7 @@ The API data for this symbol:
  :source {:code "(defmacro doseq\n  [seq-exprs & body]\n  (assert-args doseq\n     (vector? seq-exprs) \"a vector for its binding\"\n     (even? (count seq-exprs)) \"an even number of forms in binding vector\")\n  (let [step (fn step [recform exprs]\n               (if-not exprs\n                 [true `(do ~@body)]\n                 (let [k (first exprs)\n                       v (second exprs)\n\n                       seqsym (when-not (keyword? k) (gensym))\n                       recform (if (keyword? k) recform `(recur (next ~seqsym)))\n                       steppair (step recform (nnext exprs))\n                       needrec (steppair 0)\n                       subform (steppair 1)]\n                   (cond\n                     (= k :let) [needrec `(let ~v ~subform)]\n                     (= k :while) [false `(when ~v\n                                            ~subform\n                                            ~@(when needrec [recform]))]\n                     (= k :when) [false `(if ~v\n                                           (do\n                                             ~subform\n                                             ~@(when needrec [recform]))\n                                           ~recform)]\n                     :else [true `(loop [~seqsym (seq ~v)]\n                                    (when ~seqsym\n                                      (let [~k (first ~seqsym)]\n                                        ~subform\n                                        ~@(when needrec [recform]))))]))))]\n    (nth (step nil (seq seq-exprs)) 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/clj/cljs/core.clj",
           :lines [949 983]},
  :full-name "cljs.core/doseq",

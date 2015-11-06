@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 </tr>
 </table>
@@ -24,13 +24,13 @@ Strings which should be printed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L18-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L18-L24):
 
 ```clj
 (def
   ^{:doc "Each runtime environment provides a diffenent way to print output.
   Whatever function *print-fn* is bound to will be passed any
-  Strings which should be printed."}
+  Strings which should be printed." :dynamic true}
   *print-fn*
   (fn [_]
     (throw (js/Error. "No *print-fn* fn set for evaluation environment"))))
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:18-24](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L18-L24)</ins>
+            └── <ins>[core.cljs:18-24](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L18-L24)</ins>
 </pre>
 
 -->
@@ -86,11 +86,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "*print-fn*",
  :docstring "Each runtime environment provides a diffenent way to print output.\nWhatever function *print-fn* is bound to will be passed any\nStrings which should be printed.",
- :type "function",
- :source {:code "(def\n  ^{:doc \"Each runtime environment provides a diffenent way to print output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\"}\n  *print-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-fn* fn set for evaluation environment\"))))",
+ :type "dynamic var",
+ :source {:code "(def\n  ^{:doc \"Each runtime environment provides a diffenent way to print output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\" :dynamic true}\n  *print-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-fn* fn set for evaluation environment\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [18 24]},
  :full-name "cljs.core/*print-fn*",

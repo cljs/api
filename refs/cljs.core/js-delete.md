@@ -47,7 +47,7 @@ a
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L963-L964):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L963-L964):
 
 ```clj
 (defn js-delete [obj key]
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:963-964](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L963-L964)</ins>
+            └── <ins>[core.cljs:963-964](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L963-L964)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn js-delete [obj key]\n  (js* \"delete ~{obj}[~{key}]\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [963 964]},
  :examples [{:id "5b24ea",

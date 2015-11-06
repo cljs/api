@@ -30,7 +30,7 @@ Formats a string using goog.string.format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1473-L1481):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1473-L1481):
 
 ```clj
 (defn format
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1513
+clojurescript @ r1535
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1473-1481](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1473-L1481)</ins>
+            └── <ins>[core.cljs:1473-1481](https://github.com/clojure/clojurescript/blob/r1535/src/cljs/cljs/core.cljs#L1473-L1481)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn format\n  [fmt & args]\n  (let [args (map (fn [x]\n                    (if (or (keyword? x) (symbol? x))\n                      (str x)\n                      x))\n                args)]\n    (apply gstring/format fmt args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1513",
+          :tag "r1535",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1473 1481]},
  :full-name "cljs.core/format",
