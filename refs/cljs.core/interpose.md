@@ -41,7 +41,7 @@ Returns a lazy seq of the elements of coll separated by sep
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L3688-L3690):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L3696-L3698):
 
 ```clj
 (defn interpose
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3688-3690](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L3688-L3690)</ins>
+            └── <ins>[core.cljs:3696-3698](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L3696-L3698)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn interpose\n  [sep coll] (drop 1 (interleave (repeat sep) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3688 3690]},
+          :lines [3696 3698]},
  :full-name "cljs.core/interpose",
  :clj-symbol "clojure.core/interpose",
  :docstring "Returns a lazy seq of the elements of coll separated by sep"}

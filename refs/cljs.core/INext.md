@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L255-L256):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L255-L256):
 
 ```clj
 (defprotocol INext
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:255-256](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L255-L256)</ins>
+            └── <ins>[core.cljs:255-256](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L255-L256)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol INext\n  (^clj-or-nil -next [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [255 256]},
  :methods [{:name "-next", :signature ["[coll]"], :docstring nil}],

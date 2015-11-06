@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L396-L399):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L399-L402):
 
 ```clj
 (deftype StringBufferWriter [sb]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:396-399](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L396-L399)</ins>
+            └── <ins>[core.cljs:399-402](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L399-L402)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(deftype StringBufferWriter [sb]\n  IWriter\n  (-write [_ s] (.append sb s))\n  (-flush [_] nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [396 399]},
+          :lines [399 402]},
  :full-name "cljs.core/StringBufferWriter",
  :full-name-encode "cljs.core/StringBufferWriter",
  :history [["+" "0.0-1503"]]}

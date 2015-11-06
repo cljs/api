@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L441-L442):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L444-L445):
 
 ```clj
 (defn ^number m3-mix-H1 [h1 k1]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:441-442](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/core.cljs#L441-L442)</ins>
+            └── <ins>[core.cljs:444-445](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L444-L445)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-mix-H1 [h1 k1]\n  (-> h1 (bit-xor k1) (int-rotate-left 13) (imul 5) (+ 0xe6546b64)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [441 442]},
+          :lines [444 445]},
  :full-name "cljs.core/m3-mix-H1"}
 
 ```

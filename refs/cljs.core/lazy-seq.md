@@ -38,7 +38,7 @@ Returns a new lazy sequence.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/clj/cljs/core.clj#L1107-L1108):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/clj/cljs/core.clj#L1107-L1108):
 
 ```clj
 (defmacro lazy-seq [& body]
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1107-1108](https://github.com/clojure/clojurescript/blob/r2342/src/clj/cljs/core.clj#L1107-L1108)</ins>
+            └── <ins>[core.clj:1107-1108](https://github.com/clojure/clojurescript/blob/r2356/src/clj/cljs/core.clj#L1107-L1108)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defmacro lazy-seq [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/clj/cljs/core.clj",
           :lines [1107 1108]},
  :full-name "cljs.core/lazy-seq",

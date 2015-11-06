@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/reader.cljs#L362-L365):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/reader.cljs#L363-L366):
 
 ```clj
 (defn throwing-reader
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2342/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2342
+clojurescript @ r2356
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:362-365](https://github.com/clojure/clojurescript/blob/r2342/src/cljs/cljs/reader.cljs#L362-L365)</ins>
+            └── <ins>[reader.cljs:363-366](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/reader.cljs#L363-L366)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn throwing-reader\n  [msg]\n  (fn [rdr _]\n    (reader-error rdr msg)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2342",
+          :tag "r2356",
           :filename "src/cljs/cljs/reader.cljs",
-          :lines [362 365]},
+          :lines [363 366]},
  :full-name "cljs.reader/throwing-reader",
  :full-name-encode "cljs.reader/throwing-reader",
  :history [["+" "0.0-927"]]}
