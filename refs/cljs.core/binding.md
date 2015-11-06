@@ -72,38 +72,25 @@ before the vars are bound to their new values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L865-L889):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L887-L898):
 
 ```clj
 (defmacro binding
   [bindings & body]
-  (let [names (take-nth 2 bindings)
-        vals (take-nth 2 (drop 1 bindings))
-        tempnames (map (comp gensym name) names)
-        binds (map vector names vals)
-        resets (reverse (map vector names tempnames))]
+  (let [names (take-nth 2 bindings)]
     (cljs.analyzer/confirm-bindings &env names)
-    `(let [~@(interleave tempnames names)]
-       (try
-        ~@(map
-           (fn [[k v]] (list 'set! k v))
-           binds)
-        ~@body
-        (finally
-         ~@(map
-            (fn [[k v]] (list 'set! k v))
-            resets))))))
+    `(with-redefs ~bindings ~@body)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:865-889](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L865-L889)</ins>
+            └── <ins>[core.clj:887-898](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L887-L898)</ins>
 </pre>
 
 -->
@@ -153,12 +140,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/let"],
  :full-name-encode "cljs.core/binding",
- :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)\n        vals (take-nth 2 (drop 1 bindings))\n        tempnames (map (comp gensym name) names)\n        binds (map vector names vals)\n        resets (reverse (map vector names tempnames))]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(let [~@(interleave tempnames names)]\n       (try\n        ~@(map\n           (fn [[k v]] (list 'set! k v))\n           binds)\n        ~@body\n        (finally\n         ~@(map\n            (fn [[k v]] (list 'set! k v))\n            resets))))))",
+ :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(with-redefs ~bindings ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/clj/cljs/core.clj",
-          :lines [865 889]},
+          :lines [887 898]},
  :examples [{:id "7dd17f",
              :content "```clj\n(def ^:dynamic *foo* 1)\n\n(defn do-something []\n  (println *foo*))\n\n(binding [*foo* 2]\n  (do-something))\n;;=> prints 2\n\n*foo*\n;;=> 1\n```"}],
  :full-name "cljs.core/binding",

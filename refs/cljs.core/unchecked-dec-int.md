@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1455-L1456):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1493-L1494):
 
 ```clj
 (defn unchecked-dec-int [x]
@@ -36,18 +36,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1455-1456](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L1455-L1456)</ins>
+            └── <ins>[core.cljs:1493-1494](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1493-L1494)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L290-L291):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L290-L291):
 
 ```clj
 (defmacro unchecked-dec-int
@@ -58,11 +58,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:290-291](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/core.clj#L290-L291)</ins>
+            └── <ins>[core.clj:290-291](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/core.clj#L290-L291)</ins>
 </pre>
 -->
 
@@ -111,13 +111,13 @@ The API data for this symbol:
  :source {:code "(defn unchecked-dec-int [x]\n  (cljs.core/unchecked-dec-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1455 1456]},
+          :lines [1493 1494]},
  :extra-sources [{:code "(defmacro unchecked-dec-int\n  ([x] `(dec ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1803",
+                  :tag "r1806",
                   :filename "src/clj/cljs/core.clj",
                   :lines [290 291]}],
  :full-name "cljs.core/unchecked-dec-int",

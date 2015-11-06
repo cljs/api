@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/repl/browser.clj#L62-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/repl/browser.clj#L62-L80):
 
 ```clj
 (defn send-static [{path :path :as request} conn opts]
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:62-80](https://github.com/clojure/clojurescript/blob/r1803/src/clj/cljs/repl/browser.clj#L62-L80)</ins>
+                └── <ins>[browser.clj:62-80](https://github.com/clojure/clojurescript/blob/r1806/src/clj/cljs/repl/browser.clj#L62-L80)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn send-static [{path :path :as request} conn opts]\n  (if (and (:static-dir opts)\n           (not= \"/favicon.ico\" path))\n    (let [path   (if (= \"/\" path) \"/index.html\" path)\n          st-dir (:static-dir opts)]\n      (if-let [local-path (seq (for [x (if (string? st-dir) [st-dir] st-dir)\n                                     :when (.exists (io/file (str x path)))]\n                                 (str x path)))]\n        (server/send-and-close conn 200 (slurp (first local-path))\n                        (condp #(.endsWith %2 %1) path\n                          \".html\" \"text/html\"\n                          \".css\" \"text/css\"\n                          \".html\" \"text/html\"\n                          \".jpg\" \"image/jpeg\"\n                          \".js\" \"text/javascript\"\n                          \".png\" \"image/png\"\n                          \"text/plain\"))\n        (server/send-404 conn path)))\n    (server/send-404 conn path)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [62 80]},
  :full-name "cljs.repl.browser/send-static",

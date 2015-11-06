@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L241-L242):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L252-L253):
 
 ```clj
 (defprotocol IWithMeta
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:241-242](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L241-L242)</ins>
+            └── <ins>[core.cljs:252-253](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L252-L253)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWithMeta\n  (-with-meta [o meta]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [241 242]},
+          :lines [252 253]},
  :methods [{:name "-with-meta",
             :signature ["[o meta]"],
             :docstring nil}],

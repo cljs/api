@@ -2289,6 +2289,13 @@ __Rows are removed when their columns are filled (done).__
 <td></td>
 </tr>
 <tr>
+<td>[cljs.core/pr-str\*](refs/cljs.core/pr-strSTAR.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr-strSTAR.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>[cljs.core/pr-str-with-opts](refs/cljs.core/pr-str-with-opts.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr-str-with-opts.cljsdoc)</td>
 <td></td>
@@ -3243,6 +3250,13 @@ __Rows are removed when their columns are filled (done).__
 <tr>
 <td>[cljs.core/with-out-str](refs/cljs.core/with-out-str.md)</td>
 <td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/with-out-str.cljsdoc)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[cljs.core/with-redefs](refs/cljs.core/with-redefs.md)</td>
+<td>[cljsdoc](https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/with-redefs.cljsdoc)</td>
 <td></td>
 <td></td>
 <td></td>

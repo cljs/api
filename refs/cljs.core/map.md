@@ -68,7 +68,7 @@ f should accept number-of-colls arguments.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2657-L2692):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2715-L2750):
 
 ```clj
 (defn map
@@ -108,11 +108,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2657-2692](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L2657-L2692)</ins>
+            └── <ins>[core.cljs:2715-2750](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L2715-L2750)</ins>
 </pre>
 
 -->
@@ -173,9 +173,9 @@ The API data for this symbol:
  :source {:code "(defn map\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (chunk-append b (f (-nth c i))))\n          (chunk-cons (chunk b) (map f (chunk-rest s))))\n        (cons (f (first s)) (map f (rest s)))))))\n  ([f c1 c2]\n   (lazy-seq\n    (let [s1 (seq c1) s2 (seq c2)]\n      (when (and s1 s2)\n        (cons (f (first s1) (first s2))\n              (map f (rest s1) (rest s2)))))))\n  ([f c1 c2 c3]\n   (lazy-seq\n    (let [s1 (seq c1) s2 (seq c2) s3 (seq c3)]\n      (when (and  s1 s2 s3)\n        (cons (f (first s1) (first s2) (first s3))\n              (map f (rest s1) (rest s2) (rest s3)))))))\n  ([f c1 c2 c3 & colls]\n   (let [step (fn step [cs]\n                 (lazy-seq\n                  (let [ss (map seq cs)]\n                    (when (every? identity ss)\n                      (cons (map first ss) (step (map rest ss)))))))]\n     (map #(apply f %) (step (conj colls c3 c2 c1))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2657 2692]},
+          :lines [2715 2750]},
  :full-name "cljs.core/map",
  :clj-symbol "clojure.core/map",
  :docstring "Returns a lazy sequence consisting of the result of applying f to the\nset of first items of each coll, followed by applying f to the set\nof second items in each coll, until any one of the colls is\nexhausted.  Any remaining items in other colls are ignored. Function\nf should accept number-of-colls arguments."}

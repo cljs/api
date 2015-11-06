@@ -38,7 +38,7 @@ as `(deref foo)`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6605-L6607):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6707-L6709):
 
 ```clj
 (defn deref
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6605-6607](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6605-L6607)</ins>
+            └── <ins>[core.cljs:6707-6709](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L6707-L6709)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn deref\n  [o]\n  (-deref o))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6605 6607]},
+          :lines [6707 6709]},
  :full-name "cljs.core/deref",
  :clj-symbol "clojure.core/deref"}
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L988-L995):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1026-L1033):
 
 ```clj
 (defn check-string-hash-cache [k]
@@ -39,11 +39,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:988-995](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L988-L995)</ins>
+            └── <ins>[core.cljs:1026-1033](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L1026-L1033)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defn check-string-hash-cache [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [988 995]},
+          :lines [1026 1033]},
  :full-name "cljs.core/check-string-hash-cache",
  :full-name-encode "cljs.core/check-string-hash-cache",
  :history [["+" "0.0-1424"]]}

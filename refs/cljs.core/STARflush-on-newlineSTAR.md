@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/\*flush-on-newline\*</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*flush-on-newline*)
@@ -20,21 +20,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6369):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L30):
 
 ```clj
-(def *flush-on-newline* true)
+(def ^:dynamic *flush-on-newline* true)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6369](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6369)</ins>
+            └── <ins>[core.cljs:30](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L30)</ins>
 </pre>
 
 -->
@@ -78,13 +78,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*flush-on-newline*",
- :type "var",
- :source {:code "(def *flush-on-newline* true)",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic *flush-on-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6369]},
+          :lines [30]},
  :full-name "cljs.core/*flush-on-newline*",
  :full-name-encode "cljs.core/STARflush-on-newlineSTAR",
  :clj-symbol "clojure.core/*flush-on-newline*",

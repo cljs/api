@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>var</td>
+<td>dynamic var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/\*print-dup\*</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-dup*)
@@ -20,21 +20,21 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6372):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L33):
 
 ```clj
-(def *print-dup* false)
+(def ^:dynamic *print-dup* false)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6372](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L6372)</ins>
+            └── <ins>[core.cljs:33](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L33)</ins>
 </pre>
 
 -->
@@ -78,13 +78,13 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-dup*",
- :type "var",
- :source {:code "(def *print-dup* false)",
+ :type "dynamic var",
+ :source {:code "(def ^:dynamic *print-dup* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6372]},
+          :lines [33]},
  :full-name "cljs.core/*print-dup*",
  :full-name-encode "cljs.core/STARprint-dupSTAR",
  :clj-symbol "clojure.core/*print-dup*",

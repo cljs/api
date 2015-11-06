@@ -25,10 +25,14 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5404-L5520):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5506-L5626):
 
 ```clj
 (deftype PersistentTreeMap [comp tree cnt meta ^:mutable __hash]
+  Object
+  (toString [coll]
+    (pr-str* coll))
+
   Object
   (entry-at [coll k]
     (loop [t tree]
@@ -151,11 +155,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1803/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1803
+clojurescript @ r1806
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5404-5520](https://github.com/clojure/clojurescript/blob/r1803/src/cljs/cljs/core.cljs#L5404-L5520)</ins>
+            └── <ins>[core.cljs:5506-5626](https://github.com/clojure/clojurescript/blob/r1806/src/cljs/cljs/core.cljs#L5506-L5626)</ins>
 </pre>
 
 -->
@@ -203,12 +207,12 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "type",
  :full-name-encode "cljs.core/PersistentTreeMap",
- :source {:code "(deftype PersistentTreeMap [comp tree cnt meta ^:mutable __hash]\n  Object\n  (entry-at [coll k]\n    (loop [t tree]\n      (if-not (nil? t)\n        (let [c (comp k (.-key t))]\n          (cond (zero? c) t\n                (neg? c)  (recur (.-left t))\n                :else     (recur (.-right t)))))))\n\n  IWithMeta\n  (-with-meta [coll meta] (PersistentTreeMap. comp tree cnt meta __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.PersistentTreeMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-imap __hash))\n\n  ICounted\n  (-count [coll] cnt)\n\n  IKVReduce\n  (-kv-reduce [coll f init]\n    (if-not (nil? tree)\n      (tree-map-kv-reduce tree f init)\n      init))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  ISeqable\n  (-seq [coll]\n    (if (pos? cnt)\n      (create-tree-map-seq tree true cnt)))\n\n  IReversible\n  (-rseq [coll]\n    (if (pos? cnt)\n      (create-tree-map-seq tree false cnt)))\n\n  ILookup\n  (-lookup [coll k]\n    (-lookup coll k nil))\n\n  (-lookup [coll k not-found]\n    (let [n (.entry-at coll k)]\n      (if-not (nil? n)\n        (.-val n)\n        not-found)))\n\n  IAssociative\n  (-assoc [coll k v]\n    (let [found (array nil)\n          t     (tree-map-add comp tree k v found)]\n      (if (nil? t)\n        (let [found-node (nth found 0)]\n          (if (= v (.-val found-node))\n            coll\n            (PersistentTreeMap. comp (tree-map-replace comp tree k v) cnt meta nil)))\n        (PersistentTreeMap. comp (.blacken t) (inc cnt) meta nil))))\n\n  (-contains-key? [coll k]\n    (not (nil? (.entry-at coll k))))\n\n  IMap\n  (-dissoc [coll k]\n    (let [found (array nil)\n          t     (tree-map-remove comp tree k found)]\n      (if (nil? t)\n        (if (nil? (nth found 0))\n          coll\n          (PersistentTreeMap. comp nil 0 meta nil))\n        (PersistentTreeMap. comp (.blacken t) (dec cnt) meta nil))))\n\n  ISorted\n  (-sorted-seq [coll ascending?]\n    (if (pos? cnt)\n      (create-tree-map-seq tree ascending? cnt)))\n\n  (-sorted-seq-from [coll k ascending?]\n    (if (pos? cnt)\n      (loop [stack nil t tree]\n        (if-not (nil? t)\n          (let [c (comp k (.-key t))]\n            (cond\n              (zero? c)  (PersistentTreeMapSeq. nil (conj stack t) ascending? -1 nil)\n              ascending? (if (neg? c)\n                           (recur (conj stack t) (.-left t))\n                           (recur stack          (.-right t)))\n              :else      (if (pos? c)\n                           (recur (conj stack t) (.-right t))\n                           (recur stack          (.-left t)))))\n          (when-not (nil? stack)\n            (PersistentTreeMapSeq. nil stack ascending? -1 nil))))))\n\n  (-entry-key [coll entry] (key entry))\n\n  (-comparator [coll] comp))",
+ :source {:code "(deftype PersistentTreeMap [comp tree cnt meta ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  Object\n  (entry-at [coll k]\n    (loop [t tree]\n      (if-not (nil? t)\n        (let [c (comp k (.-key t))]\n          (cond (zero? c) t\n                (neg? c)  (recur (.-left t))\n                :else     (recur (.-right t)))))))\n\n  IWithMeta\n  (-with-meta [coll meta] (PersistentTreeMap. comp tree cnt meta __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj\n              coll\n              entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta cljs.core.PersistentTreeMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-imap __hash))\n\n  ICounted\n  (-count [coll] cnt)\n\n  IKVReduce\n  (-kv-reduce [coll f init]\n    (if-not (nil? tree)\n      (tree-map-kv-reduce tree f init)\n      init))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  ISeqable\n  (-seq [coll]\n    (if (pos? cnt)\n      (create-tree-map-seq tree true cnt)))\n\n  IReversible\n  (-rseq [coll]\n    (if (pos? cnt)\n      (create-tree-map-seq tree false cnt)))\n\n  ILookup\n  (-lookup [coll k]\n    (-lookup coll k nil))\n\n  (-lookup [coll k not-found]\n    (let [n (.entry-at coll k)]\n      (if-not (nil? n)\n        (.-val n)\n        not-found)))\n\n  IAssociative\n  (-assoc [coll k v]\n    (let [found (array nil)\n          t     (tree-map-add comp tree k v found)]\n      (if (nil? t)\n        (let [found-node (nth found 0)]\n          (if (= v (.-val found-node))\n            coll\n            (PersistentTreeMap. comp (tree-map-replace comp tree k v) cnt meta nil)))\n        (PersistentTreeMap. comp (.blacken t) (inc cnt) meta nil))))\n\n  (-contains-key? [coll k]\n    (not (nil? (.entry-at coll k))))\n\n  IMap\n  (-dissoc [coll k]\n    (let [found (array nil)\n          t     (tree-map-remove comp tree k found)]\n      (if (nil? t)\n        (if (nil? (nth found 0))\n          coll\n          (PersistentTreeMap. comp nil 0 meta nil))\n        (PersistentTreeMap. comp (.blacken t) (dec cnt) meta nil))))\n\n  ISorted\n  (-sorted-seq [coll ascending?]\n    (if (pos? cnt)\n      (create-tree-map-seq tree ascending? cnt)))\n\n  (-sorted-seq-from [coll k ascending?]\n    (if (pos? cnt)\n      (loop [stack nil t tree]\n        (if-not (nil? t)\n          (let [c (comp k (.-key t))]\n            (cond\n              (zero? c)  (PersistentTreeMapSeq. nil (conj stack t) ascending? -1 nil)\n              ascending? (if (neg? c)\n                           (recur (conj stack t) (.-left t))\n                           (recur stack          (.-right t)))\n              :else      (if (pos? c)\n                           (recur (conj stack t) (.-right t))\n                           (recur stack          (.-left t)))))\n          (when-not (nil? stack)\n            (PersistentTreeMapSeq. nil stack ascending? -1 nil))))))\n\n  (-entry-key [coll entry] (key entry))\n\n  (-comparator [coll] comp))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1803",
+          :tag "r1806",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5404 5520]},
+          :lines [5506 5626]},
  :full-name "cljs.core/PersistentTreeMap",
  :clj-symbol "clojure.lang/PersistentTreeMap"}
 

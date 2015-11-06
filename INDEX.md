@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-1803__ [all](HISTORY.md)</td>
-<td>2013-05-06</td>
+<td>__0.0-1806__ [all](HISTORY.md)</td>
+<td>2013-05-10</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.5.1</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-1803__ ([See Full History](HISTORY.md)):
+Changes from __0.0-1806__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -37,15 +37,15 @@ __Library API Changes__
 
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/lazy-cat](refs/cljs.core/lazy-cat.md)</samp></td>
+<td><samp>[cljs.core/pr-str\*](refs/cljs.core/pr-strSTAR.md)</samp></td>
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
 </td>
-<td><samp>[cljs.core/special-symbol?](refs/cljs.core/special-symbolQMARK.md)</samp></td>
+<td><samp>[cljs.core/with-redefs](refs/cljs.core/with-redefs.md)</samp></td>
 </tr>
 </table>
 
