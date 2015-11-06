@@ -61,7 +61,7 @@ args (left-to-right).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6008-L6042):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6008-L6042):
 
 ```clj
 (defn juxt
@@ -100,11 +100,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6008-6042](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L6008-L6042)</ins>
+            └── <ins>[core.cljs:6008-6042](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6008-L6042)</ins>
 </pre>
 
 -->
@@ -157,7 +157,7 @@ The API data for this symbol:
  :source {:code "(defn juxt\n  ([f]\n     (fn\n       ([] (vector (f)))\n       ([x] (vector (f x)))\n       ([x y] (vector (f x y)))\n       ([x y z] (vector (f x y z)))\n       ([x y z & args] (vector (apply f x y z args)))))\n  ([f g]\n     (fn\n       ([] (vector (f) (g)))\n       ([x] (vector (f x) (g x)))\n       ([x y] (vector (f x y) (g x y)))\n       ([x y z] (vector (f x y z) (g x y z)))\n       ([x y z & args] (vector (apply f x y z args) (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (vector (f) (g) (h)))\n       ([x] (vector (f x) (g x) (h x)))\n       ([x y] (vector (f x y) (g x y) (h x y)))\n       ([x y z] (vector (f x y z) (g x y z) (h x y z)))\n       ([x y z & args] (vector (apply f x y z args) (apply g x y z args) (apply h x y z args)))))\n  ([f g h & fs]\n     (let [fs (list* f g h fs)]\n       (fn\n         ([] (reduce #(conj %1 (%2)) [] fs))\n         ([x] (reduce #(conj %1 (%2 x)) [] fs))\n         ([x y] (reduce #(conj %1 (%2 x y)) [] fs))\n         ([x y z] (reduce #(conj %1 (%2 x y z)) [] fs))\n         ([x y z & args] (reduce #(conj %1 (apply %2 x y z args)) [] fs))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1449",
+          :tag "r1450",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6008 6042]},
  :full-name "cljs.core/juxt",

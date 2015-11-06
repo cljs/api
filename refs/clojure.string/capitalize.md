@@ -37,7 +37,7 @@ characters to lower-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/string.cljs#L63-L70):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/string.cljs#L63-L70):
 
 ```clj
 (defn capitalize
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:63-70](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/clojure/string.cljs#L63-L70)</ins>
+            └── <ins>[string.cljs:63-70](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/clojure/string.cljs#L63-L70)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn capitalize\n  [s]\n  (if (< (count s) 2)\n    (upper-case s)\n    (str (upper-case (subs s 0 1))\n         (lower-case (subs s 1)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1449",
+          :tag "r1450",
           :filename "src/cljs/clojure/string.cljs",
           :lines [63 70]},
  :full-name "clojure.string/capitalize",

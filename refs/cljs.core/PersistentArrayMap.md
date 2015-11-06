@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L3760-L3878):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L3760-L3878):
 
 ```clj
 (deftype PersistentArrayMap [meta cnt arr ^:mutable __hash]
@@ -153,11 +153,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1449/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1449
+clojurescript @ r1450
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3760-3878](https://github.com/clojure/clojurescript/blob/r1449/src/cljs/cljs/core.cljs#L3760-L3878)</ins>
+            └── <ins>[core.cljs:3760-3878](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L3760-L3878)</ins>
 </pre>
 
 -->
@@ -208,7 +208,7 @@ The API data for this symbol:
  :source {:code "(deftype PersistentArrayMap [meta cnt arr ^:mutable __hash]\n  Object\n  (toString [this]\n    (pr-str this))\n\n  IWithMeta\n  (-with-meta [coll meta] (PersistentArrayMap. meta cnt arr __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ICollection\n  (-conj [coll entry]\n    (if (vector? entry)\n      (-assoc coll (-nth entry 0) (-nth entry 1))\n      (reduce -conj coll entry)))\n\n  IEmptyableCollection\n  (-empty [coll] (-with-meta cljs.core.PersistentArrayMap/EMPTY meta))\n\n  IEquiv\n  (-equiv [coll other] (equiv-map coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-imap __hash))\n\n  ISeqable\n  (-seq [coll]\n    (when (pos? cnt)\n      (let [len (.-length arr)\n            array-map-seq\n            (fn array-map-seq [i]\n              (lazy-seq\n               (when (< i len)\n                 (cons [(aget arr i) (aget arr (inc i))]\n                       (array-map-seq (+ i 2))))))]\n        (array-map-seq 0))))\n\n  ICounted\n  (-count [coll] cnt)\n\n  ILookup\n  (-lookup [coll k]\n    (-lookup coll k nil))\n\n  (-lookup [coll k not-found]\n    (let [idx (array-map-index-of coll k)]\n      (if (== idx -1)\n        not-found\n        (aget arr (inc idx)))))\n\n  IAssociative\n  (-assoc [coll k v]\n    (let [idx (array-map-index-of coll k)]\n      (cond\n        (== idx -1)\n        (if (< cnt cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD)\n          (PersistentArrayMap. meta\n                               (inc cnt)\n                               (doto (aclone arr)\n                                 (.push k)\n                                 (.push v))\n                               nil)\n          (persistent!\n           (assoc!\n            (transient (into cljs.core.PersistentHashMap/EMPTY coll))\n            k v)))\n\n        (identical? v (aget arr (inc idx)))\n        coll\n\n        :else\n        (PersistentArrayMap. meta\n                             cnt\n                             (doto (aclone arr)\n                               (aset (inc idx) v))\n                             nil))))\n\n  (-contains-key? [coll k]\n    (not (== (array-map-index-of coll k) -1)))\n\n  IMap\n  (-dissoc [coll k]\n    (let [idx (array-map-index-of coll k)]\n      (if (>= idx 0)\n        (let [len     (.-length arr)\n              new-len (- len 2)]\n          (if (zero? new-len)\n            (-empty coll)\n            (let [new-arr (make-array new-len)]\n              (loop [s 0 d 0]\n                (cond\n                  (>= s len) (PersistentArrayMap. meta (dec cnt) new-arr nil)\n                  (= k (aget arr s)) (recur (+ s 2) d)\n                  :else (do (aset new-arr d (aget arr s))\n                            (aset new-arr (inc d) (aget arr (inc s)))\n                            (recur (+ s 2) (+ d 2))))))))\n        coll)))\n\n  IKVReduce\n  (-kv-reduce [coll f init]\n    (let [len (.-length arr)]\n      (loop [i 0 init init]\n        (if (< i len)\n          (let [init (f init (aget arr i) (aget arr (inc i)))]\n            (if (reduced? init)\n              @init\n              (recur (+ i 2) init)))))))\n\n  IFn\n  (-invoke [coll k]\n    (-lookup coll k))\n\n  (-invoke [coll k not-found]\n    (-lookup coll k not-found))\n\n  IEditableCollection\n  (-as-transient [coll]\n    (TransientArrayMap. (js-obj) (.-length arr) (aclone arr))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1449",
+          :tag "r1450",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3760 3878]},
  :full-name "cljs.core/PersistentArrayMap",
