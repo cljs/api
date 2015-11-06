@@ -76,7 +76,7 @@ Returns the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L77-L80):
 
 ```clj
 (defn aget
@@ -88,18 +88,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L77-L80)</ins>
+            └── <ins>[core.cljs:77-80](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L77-L80)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L60-L61):
 
 ```clj
 (defmacro aget [a i]
@@ -110,11 +110,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:57-58](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L57-L58)</ins>
+            └── <ins>[core.clj:60-61](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L60-L61)</ins>
 </pre>
 -->
 
@@ -168,15 +168,15 @@ The API data for this symbol:
  :source {:code "(defn aget\n  [array i]\n  (cljs.core/aget array i))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/core.cljs",
           :lines [77 80]},
  :extra-sources [{:code "(defmacro aget [a i]\n  (list 'js* \"(~{}[~{}])\" a i))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r971",
+                  :tag "r993",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [57 58]}],
+                  :lines [60 61]}],
  :full-name "cljs.core/aget",
  :clj-symbol "clojure.core/aget",
  :docstring "Returns the value at the index."}

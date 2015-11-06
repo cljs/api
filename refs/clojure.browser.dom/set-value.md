@@ -27,7 +27,7 @@ Set the value property for an element.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L140-L143):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L140-L143):
 
 ```clj
 (defn set-value
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[dom.cljs:140-143](https://github.com/clojure/clojurescript/blob/r971/src/cljs/clojure/browser/dom.cljs#L140-L143)</ins>
+                └── <ins>[dom.cljs:140-143](https://github.com/clojure/clojurescript/blob/r993/src/cljs/clojure/browser/dom.cljs#L140-L143)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn set-value\n  [e v]\n  (set-properties e {\"value\" v}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/clojure/browser/dom.cljs",
           :lines [140 143]},
  :full-name "clojure.browser.dom/set-value",

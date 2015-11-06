@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L190-L202):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L191-L203):
 
 ```clj
 (defmacro reify [& impls]
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:190-202](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L190-L202)</ins>
+            └── <ins>[core.clj:191-203](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L191-L203)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defmacro reify [& impls]\n  (let [t (gensym \"t\")\n        locals (keys (:locals &env))]\n   `(do\n      (when (undefined? ~t)\n        (deftype ~t [~@locals ~'__meta]\n          cljs.core.IWithMeta\n          (~'-with-meta [~'_ ~'__meta]\n            (new ~t ~@locals ~'__meta))\n          cljs.core.IMeta\n          (~'-meta [~'_] ~'__meta)\n          ~@impls))\n      (new ~t ~@locals nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/clj/cljs/core.clj",
-          :lines [190 202]},
+          :lines [191 203]},
  :full-name "cljs.core/reify",
  :clj-symbol "clojure.core/reify"}
 

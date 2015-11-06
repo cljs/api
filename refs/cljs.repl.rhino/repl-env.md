@@ -28,7 +28,7 @@ Hang on to return for use across repl calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/rhino.clj#L122-L140):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L122-L140):
 
 ```clj
 (defn repl-env
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:122-140](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl/rhino.clj#L122-L140)</ins>
+                └── <ins>[rhino.clj:122-140](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl/rhino.clj#L122-L140)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  []\n  (let [cx (Context/enter)\n        scope (.initStandardObjects cx)\n        base (io/resource \"goog/base.js\")\n        deps (io/resource \"goog/deps.js\")\n        new-repl-env {:cx cx :scope scope}]\n    (assert base \"Can't find goog/base.js in classpath\")\n    (assert deps \"Can't find goog/deps.js in classpath\")\n    (swap! current-repl-env (fn [old] new-repl-env))\n    (with-open [r (io/reader base)]\n      (-eval r new-repl-env \"goog/base.js\" 1))\n    (-eval bootjs new-repl-env \"bootjs\" 1)\n    ;; Load deps.js line-by-line to avoid 64K method limit\n    (doseq [^String line (line-seq (io/reader deps))]\n      (-eval line new-repl-env \"goog/deps.js\" 1))\n    new-repl-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [122 140]},
  :full-name "cljs.repl.rhino/repl-env",

@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__0.0-971__ [all](HISTORY.md)</td>
-<td>2012-01-27</td>
+<td>__0.0-993__ [all](HISTORY.md)</td>
+<td>2012-02-27</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.3.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __0.0-971__ ([See Full History](HISTORY.md)):
+Changes from __0.0-993__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,25 +34,19 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/IFn](refs/cljs.core/IFn.md)</samp></td>
-</tr>
-<tr>
-<td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
-</td>
-<td><samp>[cljs.core/type](refs/cljs.core/type.md)</samp></td>
-</tr>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 __Compiler API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/default-special-fns](refs/cljs.repl/default-special-fns.md)</samp></td>
+</tr>
 </table>
 
 

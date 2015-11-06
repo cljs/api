@@ -11,7 +11,7 @@
 
 
  <samp>
-(__repl__ repl-env & {:keys \[verbose warn-on-undeclared\]})<br>
+(__repl__ repl-env & {:keys \[verbose warn-on-undeclared special-fns\]})<br>
 </samp>
 
 ---
@@ -27,16 +27,18 @@ Note - repl will reload core.cljs every time, even if supplied old repl-env
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl.clj#L141-L166):
 
 ```clj
 (defn repl
-  [repl-env & {:keys [verbose warn-on-undeclared]}]
+  [repl-env & {:keys [verbose warn-on-undeclared special-fns]}]
   (prn "Type: " :cljs/quit " to quit")
   (binding [comp/*cljs-ns* 'cljs.user
             *cljs-verbose* verbose
             comp/*cljs-warn-on-undeclared* warn-on-undeclared]
-    (let [env {:context :statement :locals {}}]
+    (let [env {:context :statement :locals {}}
+          special-fns (merge default-special-fns special-fns)
+          is-special-fn? (set (keys special-fns))]
       (-setup repl-env)
       (loop []
         (print (str "ClojureScript:" comp/*cljs-ns* "> "))
@@ -47,14 +49,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
            
            (= status :error) (recur)
            
-           (and (seq? form) (= (first form) 'in-ns))
-           (do (set! comp/*cljs-ns* (second (second form))) (newline) (recur))
-           
-           (and (seq? form) ('#{load-file clojure.core/load-file} (first form)))
-           (do (load-file repl-env (second form)) (newline) (recur))
-           
-           (and (seq? form) ('#{load-namespace} (first form)))
-           (do (load-namespace repl-env (second form)) (newline) (recur))
+           (and (seq? form) (is-special-fn? (first form)))
+           (do (apply (get special-fns (first form)) repl-env (rest form)) (newline) (recur))
            
            :else
            (do (eval-and-print repl-env env form) (recur)))))
@@ -65,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:133-162](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/repl.clj#L133-L162)</ins>
+            └── <ins>[repl.clj:141-166](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/repl.clj#L141-L166)</ins>
 </pre>
 
 -->
@@ -110,16 +106,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "repl",
- :signature ["[repl-env & {:keys [verbose warn-on-undeclared]}]"],
+ :signature ["[repl-env & {:keys [verbose warn-on-undeclared special-fns]}]"],
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl/repl",
- :source {:code "(defn repl\n  [repl-env & {:keys [verbose warn-on-undeclared]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [comp/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            comp/*cljs-warn-on-undeclared* warn-on-undeclared]\n    (let [env {:context :statement :locals {}}]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" comp/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n           \n           (= status :error) (recur)\n           \n           (and (seq? form) (= (first form) 'in-ns))\n           (do (set! comp/*cljs-ns* (second (second form))) (newline) (recur))\n           \n           (and (seq? form) ('#{load-file clojure.core/load-file} (first form)))\n           (do (load-file repl-env (second form)) (newline) (recur))\n           \n           (and (seq? form) ('#{load-namespace} (first form)))\n           (do (load-namespace repl-env (second form)) (newline) (recur))\n           \n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
+ :source {:code "(defn repl\n  [repl-env & {:keys [verbose warn-on-undeclared special-fns]}]\n  (prn \"Type: \" :cljs/quit \" to quit\")\n  (binding [comp/*cljs-ns* 'cljs.user\n            *cljs-verbose* verbose\n            comp/*cljs-warn-on-undeclared* warn-on-undeclared]\n    (let [env {:context :statement :locals {}}\n          special-fns (merge default-special-fns special-fns)\n          is-special-fn? (set (keys special-fns))]\n      (-setup repl-env)\n      (loop []\n        (print (str \"ClojureScript:\" comp/*cljs-ns* \"> \"))\n        (flush)\n        (let [{:keys [status form]} (read-next-form)]\n          (cond\n           (= form :cljs/quit) :quit\n           \n           (= status :error) (recur)\n           \n           (and (seq? form) (is-special-fn? (first form)))\n           (do (apply (get special-fns (first form)) repl-env (rest form)) (newline) (recur))\n           \n           :else\n           (do (eval-and-print repl-env env form) (recur)))))\n      (-tear-down repl-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/clj/cljs/repl.clj",
-          :lines [133 162]},
+          :lines [141 166]},
  :full-name "cljs.repl/repl",
  :docstring "Note - repl will reload core.cljs every time, even if supplied old repl-env"}
 

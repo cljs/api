@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2020):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2019):
 
 ```clj
 (set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs)))
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2020](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2020)</ins>
+            └── <ins>[core.cljs:2019](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2019)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2020]},
+          :lines [2019]},
  :full-name "cljs.core/Vector.fromArray"}
 
 ```

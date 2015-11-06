@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-993](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-993)__</td>
+<td>2012-02-27</td>
+<td><kbd>1.3.0</kbd></td>
+<td></td>
+<td><kbd>20110323-r790</kbd></td>
+<td>
+<a href="#user-content-00993syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-00993library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-00993compiler">
++1 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-971](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-971)__</td>
 <td>2012-01-27</td>
 <td><kbd>1.3.0</kbd></td>
@@ -61,6 +84,29 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-993
+
+<a name="00993syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="00993library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="00993compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/default-special-fns](refs/cljs.repl/default-special-fns.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-971
@@ -1874,7 +1920,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-function/macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/nil?](refs/cljs.core/nilQMARK.md)</samp></td>
 </tr>

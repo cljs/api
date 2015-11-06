@@ -22,7 +22,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L649-L650):
 
 ```clj
 (defn undefined? [x]
@@ -33,18 +33,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:652-653](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L652-L653)</ins>
+            └── <ins>[core.cljs:649-650](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L649-L650)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L54-L55):
 
 ```clj
 (defmacro undefined? [x]
@@ -55,11 +55,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/clj
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:51-52](https://github.com/clojure/clojurescript/blob/r971/src/clj/cljs/core.clj#L51-L52)</ins>
+            └── <ins>[core.clj:54-55](https://github.com/clojure/clojurescript/blob/r993/src/clj/cljs/core.clj#L54-L55)</ins>
 </pre>
 -->
 
@@ -105,15 +105,15 @@ The API data for this symbol:
  :source {:code "(defn undefined? [x]\n  (cljs.core/undefined? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [652 653]},
+          :lines [649 650]},
  :extra-sources [{:code "(defmacro undefined? [x]\n  (list 'js* \"(void 0 === ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r971",
+                  :tag "r993",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [51 52]}],
+                  :lines [54 55]}],
  :full-name "cljs.core/undefined?"}
 
 ```

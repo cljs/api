@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L331-L336):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L331-L336):
 
 ```clj
 (def dispatch-macros
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:331-336](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/reader.cljs#L331-L336)</ins>
+            └── <ins>[reader.cljs:331-336](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/reader.cljs#L331-L336)</ins>
 </pre>
 
 -->
@@ -81,7 +81,7 @@ The API data for this symbol:
  :source {:code "(def dispatch-macros\n  {\"{\" read-set\n   \"<\" (throwing-reader \"Unreadable form\")\n   \"\\\"\" read-regex\n   \"!\" read-comment\n   \"_\" read-discard})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [331 336]},
  :full-name "cljs.reader/dispatch-macros",

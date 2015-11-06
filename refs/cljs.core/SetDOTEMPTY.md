@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2519):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2526):
 
 ```clj
 (set! cljs.core.Set/EMPTY (Set. nil (hash-map)))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2519](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L2519)</ins>
+            └── <ins>[core.cljs:2526](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L2526)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.Set/EMPTY (Set. nil (hash-map)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2519]},
+          :lines [2526]},
  :full-name "cljs.core/Set.EMPTY",
  :full-name-encode "cljs.core/SetDOTEMPTY",
  :history [["+" "0.0-927"]]}

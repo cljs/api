@@ -70,7 +70,7 @@ First cut.  Not lazy.  Needs to use emitted toApply.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1378-L1424):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1377-L1423):
 
 ```clj
 (defn apply
@@ -124,11 +124,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r971/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r971
+clojurescript @ r993
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1378-1424](https://github.com/clojure/clojurescript/blob/r971/src/cljs/cljs/core.cljs#L1378-L1424)</ins>
+            └── <ins>[core.cljs:1377-1423](https://github.com/clojure/clojurescript/blob/r993/src/cljs/cljs/core.cljs#L1377-L1423)</ins>
 </pre>
 
 -->
@@ -185,9 +185,9 @@ The API data for this symbol:
  :source {:code "(defn apply\n  ([f args]\n     (let [fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count args (inc fixed-arity))\n                 fixed-arity)\n           (.apply f f (to-array args))\n           (.cljs$lang$applyTo f args))\n         (.apply f f (to-array args)))))\n  ([f x args]\n     (let [arglist (list* x args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f x y args]\n     (let [arglist (list* x y args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f x y z args]\n     (let [arglist (list* x y z args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist)))))\n  ([f a b c d & args]\n     (let [arglist (cons a (cons b (cons c (cons d (spread args)))))\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (if (<= (bounded-count arglist fixed-arity)\n                 fixed-arity)\n           (.apply f f (to-array arglist))\n           (.cljs$lang$applyTo f arglist))\n         (.apply f f (to-array arglist))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r971",
+          :tag "r993",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1378 1424]},
+          :lines [1377 1423]},
  :examples [{:id "174052",
              :content "```clj\n(max 1 2 3)\n;;=> 3\n\n(apply max [1 2 3])\n;;=> 3\n\n(apply max 1 [2 3])\n;;=> 3\n```"}],
  :full-name "cljs.core/apply",
