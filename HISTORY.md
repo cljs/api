@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2843](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2843)__</td>
+<td>2015-02-12</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002843syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002843library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002843compiler">
++3 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2816](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2816)__</td>
 <td>2015-02-10</td>
 <td><kbd>1.6.0</kbd></td>
@@ -2108,6 +2131,41 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2843
+
+<a name="002843syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002843library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="002843compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/IParseStacktrace](refs/cljs.repl/IParseStacktrace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-protocol-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/IPrintStacktrace](refs/cljs.repl/IPrintStacktrace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/mapped-stacktrace](refs/cljs.repl/mapped-stacktrace.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-2816

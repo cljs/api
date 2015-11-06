@@ -103,7 +103,7 @@ the value of the last expr. (and) returns true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L222-L238):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/core.clj#L222-L238):
 
 ```clj
 (defmacro and
@@ -125,11 +125,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:222-238](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L222-L238)</ins>
+            └── <ins>[core.clj:222-238](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/core.clj#L222-L238)</ins>
 </pre>
 
 -->
@@ -182,7 +182,7 @@ The API data for this symbol:
  :source {:code "(defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? #(simple-test-expr? &env %)\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [and-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" && \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~and-str ~@forms)))\n        `(let [and# ~x]\n           (if and# (and ~@next) and#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/clj/cljs/core.clj",
           :lines [222 238]},
  :examples [{:id "a39a73",

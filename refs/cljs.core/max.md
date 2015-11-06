@@ -47,7 +47,7 @@ Returns the greatest of the nums.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L1925-L1930):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L1925-L1930):
 
 ```clj
 (defn ^number max
@@ -61,18 +61,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1925-1930](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/core.cljs#L1925-L1930)</ins>
+            └── <ins>[core.cljs:1925-1930](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/core.cljs#L1925-L1930)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L475-L479):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/core.clj#L475-L479):
 
 ```clj
 (defmacro ^::ana/numeric max
@@ -86,11 +86,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:475-479](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/core.clj#L475-L479)</ins>
+            └── <ins>[core.clj:475-479](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/core.clj#L475-L479)</ins>
 </pre>
 -->
 
@@ -142,13 +142,13 @@ The API data for this symbol:
  :source {:code "(defn ^number max\n  ([x] x)\n  ([x y] (cljs.core/max x y))\n  ([x y & more]\n   (reduce max (cljs.core/max x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1925 1930]},
  :extra-sources [{:code "(defmacro ^::ana/numeric max\n  ([x] x)\n  ([x y] `(let [x# ~x, y# ~y]\n            (~'js* \"((~{} > ~{}) ? ~{} : ~{})\" x# y# x# y#)))\n  ([x y & more] `(max (max ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2816",
+                  :tag "r2843",
                   :filename "src/clj/cljs/core.clj",
                   :lines [475 479]}],
  :full-name "cljs.core/max",

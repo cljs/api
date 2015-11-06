@@ -31,7 +31,7 @@ add v to :testing-vars property of env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L446-L450):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L461-L465):
 
 ```clj
 (defn test-var
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:446-450](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L446-L450)</ins>
+            └── <ins>[test.cljs:461-465](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L461-L465)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn test-var\n  [v]\n  (run-block (test-var-block v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [446 450]},
+          :lines [461 465]},
  :full-name "cljs.test/test-var",
  :clj-symbol "clojure.test/test-var",
  :docstring "If v has a function in its :test metadata, calls that function,\nadd v to :testing-vars property of env."}

@@ -32,7 +32,7 @@ a seq of fns tagged per block - are invoked immediately after fn
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L393-L410):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L408-L425):
 
 ```clj
 (defn run-block
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:393-410](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L393-L410)</ins>
+            └── <ins>[test.cljs:408-425](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L408-L425)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn run-block\n  [fns]\n  (when-first [f fns]\n    (let [obj (f)]\n      (if (async? obj)\n        (obj (let [d (delay (run-block (rest fns)))]\n               (fn []\n                 (if (realized? d)\n                   (println \"WARNING: Async test called done more than one time.\")\n                   @d))))\n        (recur (cond->> (rest fns)\n                 (::block? (meta obj)) (concat obj)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [393 410]},
+          :lines [408 425]},
  :full-name "cljs.test/run-block",
  :docstring "Invoke all functions in fns with no arguments. A fn can optionally\nreturn\n\nan async test - is invoked with a continuation running left fns\n\na seq of fns tagged per block - are invoked immediately after fn"}
 

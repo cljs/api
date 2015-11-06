@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L258-L262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L273-L277):
 
 ```clj
 (defn get-and-clear-env! []
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[test.cljs:258-262](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/test.cljs#L258-L262)</ins>
+            └── <ins>[test.cljs:273-277](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/test.cljs#L273-L277)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defn get-and-clear-env! []\n  \"Like get-current-env, but cleans env before returning.\"\n  (let [env (cljs.test/get-current-env)]\n    (clear-env!)\n    env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/cljs/cljs/test.cljs",
-          :lines [258 262]},
+          :lines [273 277]},
  :full-name "cljs.test/get-and-clear-env!",
  :full-name-encode "cljs.test/get-and-clear-envBANG",
  :history [["+" "0.0-2814"]]}

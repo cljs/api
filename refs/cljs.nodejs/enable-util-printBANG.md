@@ -22,22 +22,25 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/nodejs.cljs#L19-L20):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/nodejs.cljs#L18-L22):
 
 ```clj
 (defn enable-util-print! []
-  (set! *print-fn* (.-print (require "util"))))
+  (set! *print-newline* false)
+  (set! *print-fn*
+    (fn [& args]
+      (.apply (.-log js/console) js/console (into-array args)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:19-20](https://github.com/clojure/clojurescript/blob/r2816/src/cljs/cljs/nodejs.cljs#L19-L20)</ins>
+            └── <ins>[nodejs.cljs:18-22](https://github.com/clojure/clojurescript/blob/r2843/src/cljs/cljs/nodejs.cljs#L18-L22)</ins>
 </pre>
 
 -->
@@ -80,12 +83,12 @@ The API data for this symbol:
  :name "enable-util-print!",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn enable-util-print! []\n  (set! *print-fn* (.-print (require \"util\"))))",
+ :source {:code "(defn enable-util-print! []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/cljs/cljs/nodejs.cljs",
-          :lines [19 20]},
+          :lines [18 22]},
  :full-name "cljs.nodejs/enable-util-print!",
  :full-name-encode "cljs.nodejs/enable-util-printBANG",
  :history [["+" "0.0-2156"]]}

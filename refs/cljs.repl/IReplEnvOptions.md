@@ -17,22 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl.clj#L93-L94):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L94-L95):
 
 ```clj
 (defprotocol IReplEnvOptions
-  (-repl-options [this] "Return default REPL options for a REPL Env"))
+  (-repl-options [repl-env] "Return default REPL options for a REPL Env"))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:93-94](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl.clj#L93-L94)</ins>
+            └── <ins>[repl.clj:94-95](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl.clj#L94-L95)</ins>
 </pre>
 
 -->
@@ -75,14 +75,14 @@ The API data for this symbol:
  :name "IReplEnvOptions",
  :type "protocol",
  :full-name-encode "cljs.repl/IReplEnvOptions",
- :source {:code "(defprotocol IReplEnvOptions\n  (-repl-options [this] \"Return default REPL options for a REPL Env\"))",
+ :source {:code "(defprotocol IReplEnvOptions\n  (-repl-options [repl-env] \"Return default REPL options for a REPL Env\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/clj/cljs/repl.clj",
-          :lines [93 94]},
+          :lines [94 95]},
  :methods [{:name "-repl-options",
-            :signature ["[this]"],
+            :signature ["[repl-env]"],
             :docstring "Return default REPL options for a REPL Env"}],
  :full-name "cljs.repl/IReplEnvOptions",
  :history [["+" "0.0-2719"]]}

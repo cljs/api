@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/analyzer.clj#L1013-L1039):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/analyzer.clj#L1013-L1039):
 
 ```clj
 (defmethod parse 'new
@@ -56,11 +56,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1013-1039](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/analyzer.clj#L1013-L1039)</ins>
+            └── <ins>[analyzer.clj:1013-1039](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/analyzer.clj#L1013-L1039)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'new\n  [_ env [_ ctor & args :as form] _ _]\n  (when-not (symbol? ctor) \n    (throw (error env \"First arg to new must be a symbol\")))\n  (disallowing-recur\n   (let [enve (assoc env :context :expr)\n         ctorexpr (analyze enve ctor)\n         ctor-var (resolve-existing-var env ctor)\n         record-args\n         (when (and (:record ctor-var) (not (-> ctor meta :internal-ctor)))\n           (repeat 3 (analyze enve nil)))\n         argexprs (into (vec (map #(analyze enve %) args)) record-args)\n         known-num-fields (:num-fields ctor-var)\n         argc (count args)]\n     (when (and (not (-> ctor meta :internal-ctor))\n                known-num-fields (not= known-num-fields argc))\n       (warning :fn-arity env {:argc argc :ctor ctor}))\n     {:env env :op :new :form form :ctor ctorexpr :args argexprs\n      :children (into [ctorexpr] argexprs)\n      :tag (let [name (-> ctorexpr :info :name)]\n             (or ('{js/Object object\n                    js/String string\n                    js/Array  array\n                    js/Number number\n                    js/Function function\n                    js/Boolean boolean} name)\n                 name))})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1013 1039]},
  :full-name "special/new",

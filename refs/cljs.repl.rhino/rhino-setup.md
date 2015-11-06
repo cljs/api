@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl/rhino.clj#L118-L132):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl/rhino.clj#L118-L130):
 
 ```clj
 (defn rhino-setup [repl-env opts]
@@ -31,8 +31,6 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
     (ScriptableObject/putProperty scope "__repl_opts"
       (Context/javaToJS opts scope))
     (repl/load-file repl-env "cljs/core.cljs" opts)
-    (repl/evaluate-form repl-env env "<cljs repl>"
-      '(ns cljs.user))
     (ScriptableObject/putProperty scope
       "out" (Context/javaToJS *out* scope))
     (binding [ana/*cljs-ns* 'cljs.core]
@@ -46,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2816/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2816
+clojurescript @ r2843
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:118-132](https://github.com/clojure/clojurescript/blob/r2816/src/clj/cljs/repl/rhino.clj#L118-L132)</ins>
+                └── <ins>[rhino.clj:118-130](https://github.com/clojure/clojurescript/blob/r2843/src/clj/cljs/repl/rhino.clj#L118-L130)</ins>
 </pre>
 
 -->
@@ -94,12 +92,12 @@ The API data for this symbol:
  :name "rhino-setup",
  :type "function",
  :signature ["[repl-env opts]"],
- :source {:code "(defn rhino-setup [repl-env opts]\n  (let [env   (ana/empty-env)\n        scope (:scope repl-env)]\n    (ScriptableObject/putProperty scope \"__repl_opts\"\n      (Context/javaToJS opts scope))\n    (repl/load-file repl-env \"cljs/core.cljs\" opts)\n    (repl/evaluate-form repl-env env \"<cljs repl>\"\n      '(ns cljs.user))\n    (ScriptableObject/putProperty scope\n      \"out\" (Context/javaToJS *out* scope))\n    (binding [ana/*cljs-ns* 'cljs.core]\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(do\n           (set! (.-isProvided_ js/goog) (fn [_] false))\n           (set! *print-fn* (fn [x] (.write js/out x))))))))",
+ :source {:code "(defn rhino-setup [repl-env opts]\n  (let [env   (ana/empty-env)\n        scope (:scope repl-env)]\n    (ScriptableObject/putProperty scope \"__repl_opts\"\n      (Context/javaToJS opts scope))\n    (repl/load-file repl-env \"cljs/core.cljs\" opts)\n    (ScriptableObject/putProperty scope\n      \"out\" (Context/javaToJS *out* scope))\n    (binding [ana/*cljs-ns* 'cljs.core]\n      (repl/evaluate-form repl-env env \"<cljs repl>\"\n        '(do\n           (set! (.-isProvided_ js/goog) (fn [_] false))\n           (set! *print-fn* (fn [x] (.write js/out x))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2816",
+          :tag "r2843",
           :filename "src/clj/cljs/repl/rhino.clj",
-          :lines [118 132]},
+          :lines [118 130]},
  :full-name "cljs.repl.rhino/rhino-setup",
  :full-name-encode "cljs.repl.rhino/rhino-setup",
  :history [["+" "0.0-927"]]}
