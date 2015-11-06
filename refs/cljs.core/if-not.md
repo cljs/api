@@ -46,7 +46,7 @@ otherwise else expr, if supplied, else nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L730-L736):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L732-L738):
 
 ```clj
 (defmacro if-not
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-RC1
+clojure @ clojure-1.7.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:730-736](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L730-L736)</ins>
+            └── <ins>[core.clj:732-738](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L732-L738)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defmacro if-not\n  ([test then] `(if-not ~test ~then nil))\n  ([test then else]\n   `(if (not ~test) ~then ~else)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-RC1",
+          :tag "clojure-1.7.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [730 736]},
+          :lines [732 738]},
  :full-name "cljs.core/if-not",
  :clj-symbol "clojure.core/if-not",
  :docstring "Evaluates test. If logical false, evaluates and returns then expr, \notherwise else expr, if supplied, else nil."}

@@ -46,13 +46,13 @@ bound to integers from 0 through n-1.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1851-L1863):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2363-L2375):
 
 ```clj
-(defmacro dotimes
+(core/defmacro dotimes
   [bindings & body]
-  (let [i (first bindings)
-        n (second bindings)]
+  (core/let [i (first bindings)
+             n (second bindings)]
     `(let [n# ~n]
        (loop [~i 0]
          (when (< ~i n#)
@@ -64,12 +64,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1851-1863](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1851-L1863)</ins>
+                └── <ins>[core.cljc:2363-2375](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2363-L2375)</ins>
 </pre>
 
 -->
@@ -119,12 +119,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/repeat" "cljs.core/for" "cljs.core/doseq"],
  :full-name-encode "cljs.core/dotimes",
- :source {:code "(defmacro dotimes\n  [bindings & body]\n  (let [i (first bindings)\n        n (second bindings)]\n    `(let [n# ~n]\n       (loop [~i 0]\n         (when (< ~i n#)\n           ~@body\n           (recur (inc ~i)))))))",
+ :source {:code "(core/defmacro dotimes\n  [bindings & body]\n  (core/let [i (first bindings)\n             n (second bindings)]\n    `(let [n# ~n]\n       (loop [~i 0]\n         (when (< ~i n#)\n           ~@body\n           (recur (inc ~i)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1851 1863]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2363 2375]},
  :full-name "cljs.core/dotimes",
  :clj-symbol "clojure.core/dotimes",
  :docstring "bindings => name n\n\nRepeatedly executes body (presumably for side-effects) with name\nbound to integers from 0 through n-1."}

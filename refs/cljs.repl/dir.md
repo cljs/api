@@ -67,7 +67,7 @@ Prints a sorted directory of public vars in a namespace
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L1181-L1185):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L1240-L1244):
 
 ```clj
 (defmacro dir
@@ -80,12 +80,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:1181-1185](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L1181-L1185)</ins>
+                └── <ins>[repl.cljc:1240-1244](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L1240-L1244)</ins>
 </pre>
 
 -->
@@ -138,9 +138,9 @@ The API data for this symbol:
  :source {:code "(defmacro dir\n  [ns]\n  `(doseq [sym# (quote ~(sort (keys (ana-api/ns-publics ns))))]\n     (println sym#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1181 1185]},
+          :lines [1240 1244]},
  :examples [{:id "9bf2b0",
              :content "```clj\n(require 'clojure.set)\n\n(dir clojure.set)\n;; Prints:\n;;  difference\n;;  index\n;;  intersection\n;;  join\n;;  map-invert\n;;  project\n;;  rename\n;;  rename-keys\n;;  select\n;;  subset?\n;;  superset?\n;;  union\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/dir",

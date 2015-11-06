@@ -28,7 +28,7 @@ Return updated IJavaScript with the new location if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L106-L110):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L133-L137):
 
 ```clj
 (defn source-on-disk
@@ -40,13 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:106-110](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L106-L110)</ins>
+                    └── <ins>[api.clj:133-137](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L133-L137)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn source-on-disk\n  [opts ijs]\n  (closure/source-on-disk opts ijs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [106 110]},
+          :lines [133 137]},
  :full-name "cljs.build.api/source-on-disk",
  :docstring "Ensure that the given IJavaScript exists on disk in the output directory.\nReturn updated IJavaScript with the new location if necessary."}
 

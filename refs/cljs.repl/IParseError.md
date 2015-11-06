@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L117-L120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L117-L120):
 
 ```clj
 (defprotocol IParseError
@@ -30,12 +30,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:117-120](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L117-L120)</ins>
+                └── <ins>[repl.cljc:117-120](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L117-L120)</ins>
 </pre>
 
 -->
@@ -81,7 +81,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IParseError\n  (-parse-error [repl-env error build-options]\n    \"Given the original JavaScript error return the error to actually\n     use.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [117 120]},
  :methods [{:name "-parse-error",

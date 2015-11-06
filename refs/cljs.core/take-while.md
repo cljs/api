@@ -49,7 +49,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8080-L8097):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8208-L8225):
 
 ```clj
 (defn take-while
@@ -73,12 +73,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8080-8097](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8080-L8097)</ins>
+                └── <ins>[core.cljs:8208-8225](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8208-L8225)</ins>
 </pre>
 
 -->
@@ -131,9 +131,9 @@ The API data for this symbol:
  :source {:code "(defn take-while\n  ([pred]\n     (fn [rf]\n       (fn\n         ([] (rf))\n         ([result] (rf result))\n         ([result input]\n            (if (pred input)\n              (rf result input)\n              (reduced result))))))\n  ([pred coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (when (pred (first s))\n           (cons (first s) (take-while pred (rest s))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8080 8097]},
+          :lines [8208 8225]},
  :full-name "cljs.core/take-while",
  :clj-symbol "clojure.core/take-while",
  :docstring "Returns a lazy sequence of successive items from coll while\n(pred item) returns true. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}

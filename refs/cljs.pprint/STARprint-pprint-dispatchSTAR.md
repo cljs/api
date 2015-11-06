@@ -26,7 +26,7 @@ set-pprint-dispatch to modify.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L621-L625):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L619-L623):
 
 ```clj
 (defonce ^:dynamic
@@ -40,12 +40,12 @@ set-pprint-dispatch to modify."
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:621-625](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L621-L625)</ins>
+                └── <ins>[pprint.cljs:619-623](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L619-L623)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defonce ^:dynamic\n ^{:doc \"The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.\"\n   :added \"1.2\"}\n *print-pprint-dispatch* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [621 625]},
+          :lines [619 623]},
  :full-name "cljs.pprint/*print-pprint-dispatch*",
  :clj-symbol "clojure.pprint/*print-pprint-dispatch*",
  :docstring "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify."}

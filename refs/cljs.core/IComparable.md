@@ -22,7 +22,7 @@ Protocol for values that can be compared.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L584-L588):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L678-L682):
 
 ```clj
 (defprotocol IComparable
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:584-588](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L584-L588)</ins>
+                └── <ins>[core.cljs:678-682](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L678-L682)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IComparable\n  \"Protocol for values that can be compared.\"\n  (^number -compare [x y]\n    \"Returns a negative number, zero, or a positive number when x is logically\n     'less than', 'equal to', or 'greater than' y.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [584 588]},
+          :lines [678 682]},
  :methods [{:name "-compare",
             :signature ["[x y]"],
             :docstring "Returns a negative number, zero, or a positive number when x is logically\n     'less than', 'equal to', or 'greater than' y."}],

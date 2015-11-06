@@ -60,7 +60,7 @@ not enough padding elements, return a partition with less than n items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L4365-L4385):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L4495-L4515):
 
 ```clj
 (defn partition
@@ -85,12 +85,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4365-4385](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L4365-L4385)</ins>
+                └── <ins>[core.cljs:4495-4515](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L4495-L4515)</ins>
 </pre>
 
 -->
@@ -145,9 +145,9 @@ The API data for this symbol:
  :source {:code "(defn partition\n  ([n coll]\n     (partition n n coll))\n  ([n step coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (when (== n (count p))\n             (cons p (partition n step (drop step s))))))))\n  ([n step pad coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (if (== n (count p))\n             (cons p (partition n step pad (drop step s)))\n             (list (take n (concat p pad)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4365 4385]},
+          :lines [4495 4515]},
  :full-name "cljs.core/partition",
  :clj-symbol "clojure.core/partition",
  :docstring "Returns a lazy sequence of lists of n items each, at offsets step\napart. If step is not supplied, defaults to n, i.e. the partitions\ndo not overlap. If a pad collection is supplied, use its elements as\nnecessary to complete last partition up to n items. In case there are\nnot enough padding elements, return a partition with less than n items."}

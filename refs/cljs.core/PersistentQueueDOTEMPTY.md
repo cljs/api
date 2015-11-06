@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L5297):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L5427):
 
 ```clj
 (set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] empty-ordered-hash))
@@ -30,12 +30,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:5297](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L5297)</ins>
+                └── <ins>[core.cljs:5427](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L5427)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] empty-ordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5297]},
+          :lines [5427]},
  :full-name "cljs.core/PersistentQueue.EMPTY",
  :clj-symbol "clojure.lang/PersistentQueue.EMPTY"}
 

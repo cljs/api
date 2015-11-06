@@ -31,7 +31,7 @@ not a pretty writer (which keeps track of columns), this function always outputs
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L2095-L2102):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L2093-L2100):
 
 ```clj
 (defn fresh-line
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:2095-2102](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L2095-L2102)</ins>
+                └── <ins>[pprint.cljs:2093-2100](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L2093-L2100)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn fresh-line\n  []\n  (if (satisfies? IDeref *out*)\n    (if (not (= 0 (get-column (:base @@*out*))))\n      (prn))\n    (prn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [2095 2102]},
+          :lines [2093 2100]},
  :full-name "cljs.pprint/fresh-line",
  :clj-symbol "clojure.pprint/fresh-line",
  :docstring "Make a newline if *out* is not already at the beginning of the line. If *out* is\nnot a pretty writer (which keeps track of columns), this function always outputs a newline."}

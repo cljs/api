@@ -25,7 +25,7 @@ Protocol for adding mapping functionality to transient collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L567-L570):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L661-L664):
 
 ```clj
 (defprotocol ITransientMap
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:567-570](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L567-L570)</ins>
+                └── <ins>[core.cljs:661-664](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L661-L664)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientMap\n  \"Protocol for adding mapping functionality to transient collections.\"\n  (^clj -dissoc! [tcoll key]\n    \"Returns a new transient collection of tcoll without the mapping for key.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [567 570]},
+          :lines [661 664]},
  :methods [{:name "-dissoc!",
             :signature ["[tcoll key]"],
             :docstring "Returns a new transient collection of tcoll without the mapping for key."}],

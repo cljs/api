@@ -40,7 +40,7 @@ Returns true if n is an integer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1882-L1888):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1996-L2002):
 
 ```clj
 (defn ^boolean integer?
@@ -55,12 +55,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1882-1888](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1882-L1888)</ins>
+                └── <ins>[core.cljs:1996-2002](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1996-L2002)</ins>
 </pre>
 
 -->
@@ -114,9 +114,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (not ^boolean (js/isNaN n))\n       (not (identical? n js/Infinity))\n       (== (js/parseFloat n) (js/parseInt n 10))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1882 1888]},
+          :lines [1996 2002]},
  :full-name "cljs.core/integer?",
  :clj-symbol "clojure.core/integer?",
  :docstring "Returns true if n is an integer."}

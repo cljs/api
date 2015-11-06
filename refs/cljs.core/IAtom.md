@@ -25,7 +25,7 @@ Marker protocol indicating an atom.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L614-L615):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L708-L709):
 
 ```clj
 (defprotocol IAtom
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:614-615](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L614-L615)</ins>
+                └── <ins>[core.cljs:708-709](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L708-L709)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IAtom\n  \"Marker protocol indicating an atom.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [614 615]},
+          :lines [708 709]},
  :full-name "cljs.core/IAtom",
  :clj-symbol "clojure.lang/IAtom",
  :docstring "Marker protocol indicating an atom."}

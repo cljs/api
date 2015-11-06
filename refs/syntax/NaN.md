@@ -62,7 +62,7 @@ js/NaN
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.2/src/main/clojure/clojure/tools/reader.clj#L297-L323):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329):
 
 ```clj
 (defn- read-symbol
@@ -98,13 +98,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.9.2
+tools.reader @ tools.reader-0.10.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:297-323](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.2/src/main/clojure/clojure/tools/reader.clj#L297-L323)</ins>
+                    └── <ins>[reader.clj:303-329](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329)</ins>
 </pre>
 -->
 
@@ -146,9 +146,9 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.9.2",
+                  :tag "tools.reader-0.10.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [297 323]}],
+                  :lines [303 329]}],
  :examples [{:id "9661ba",
              :content "```clj\nNaN\n;;=> NaN\n```\n\nTesting for NaN:\n\n```clj\n(js/Number.isNaN (/ 0 0))\n;;=> true\n\n(js/Number.isNaN 1)\n;;=> false\n```\n\nEquivalent to the JavaScript symbol:\n\n```clj\njs/NaN\n;;=> NaN\n```"}],
  :full-name "syntax/NaN",

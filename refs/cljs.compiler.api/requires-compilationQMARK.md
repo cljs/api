@@ -16,6 +16,9 @@
  <samp>
 (__requires-compilation?__ src dest opts)<br>
 </samp>
+ <samp>
+(__requires-compilation?__ state src dest opts)<br>
+</samp>
 
 ---
 
@@ -30,27 +33,34 @@ Return true if the src file requires compilation.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L35-L40):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/compiler/api.clj#L48-L60):
 
 ```clj
 (defn requires-compilation?
-  ([src dest]
-   (comp/requires-compilation? src dest nil))
+  ([src dest] (requires-compilation? src dest nil))
   ([src dest opts]
-   (comp/requires-compilation? src dest opts)))
+   (requires-compilation?
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))
+     src dest opts))
+  ([state src dest opts]
+   (env/with-compiler-env state
+     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+       (comp/requires-compilation? src dest opts)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:35-40](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L35-L40)</ins>
+                    └── <ins>[api.clj:48-60](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/compiler/api.clj#L48-L60)</ins>
 </pre>
 
 -->
@@ -91,16 +101,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.compiler.api",
  :name "requires-compilation?",
- :signature ["[src dest]" "[src dest opts]"],
+ :signature ["[src dest]" "[src dest opts]" "[state src dest opts]"],
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.compiler.api/requires-compilationQMARK",
- :source {:code "(defn requires-compilation?\n  ([src dest]\n   (comp/requires-compilation? src dest nil))\n  ([src dest opts]\n   (comp/requires-compilation? src dest opts)))",
+ :source {:code "(defn requires-compilation?\n  ([src dest] (requires-compilation? src dest nil))\n  ([src dest opts]\n   (requires-compilation?\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/requires-compilation? src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/compiler/api.clj",
-          :lines [35 40]},
+          :lines [48 60]},
  :full-name "cljs.compiler.api/requires-compilation?",
  :docstring "Return true if the src file requires compilation."}
 

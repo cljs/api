@@ -22,6 +22,11 @@ The rest of the symbols are in the following namespaces:
 </tr>
 <tr>
 <td></td>
+<td>[cljs.js](library/cljs.js.md)</td>
+<td>compile/analyze ClojureScript code at runtime.</td>
+</tr>
+<tr>
+<td></td>
 <td>[cljs.nodejs](library/cljs.nodejs.md)</td>
 <td>nodejs support functions</td>
 </tr>

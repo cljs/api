@@ -85,34 +85,34 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L19-L26):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L36-L43):
 
 ```clj
-(defn read-inst
-  [form]
-  (when-not (string? form)
-    (throw (RuntimeException. "Instance literal expects a string for its timestamp.")))
-  (try
-    (inst/read-instant-date form)
-    (catch Throwable e
-      (throw (RuntimeException. (.getMessage e))))))
+   (defn read-inst
+     [form]
+     (when-not (string? form)
+       (throw (RuntimeException. "Instance literal expects a string for its timestamp.")))
+     (try
+       (inst/read-instant-date form)
+       (catch Throwable e
+         (throw (RuntimeException. (.getMessage e)))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:19-26](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L19-L26)</ins>
+                └── <ins>[tagged_literals.cljc:36-43](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L36-L43)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L79-L83):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -126,12 +126,12 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
+                └── <ins>[tagged_literals.cljc:79-83](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L79-L83)</ins>
 </pre>
 -->
 
@@ -170,18 +170,18 @@ The API data for this symbol:
  :type "tagged literal",
  :related ["cljs.core/time" "syntax/tagged-literal"],
  :full-name-encode "syntax/inst-literal",
- :extra-sources ({:code "(defn read-inst\n  [form]\n  (when-not (string? form)\n    (throw (RuntimeException. \"Instance literal expects a string for its timestamp.\")))\n  (try\n    (inst/read-instant-date form)\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
+ :extra-sources ({:code "   (defn read-inst\n     [form]\n     (when-not (string? form)\n       (throw (RuntimeException. \"Instance literal expects a string for its timestamp.\")))\n     (try\n       (inst/read-instant-date form)\n       (catch Throwable e\n         (throw (RuntimeException. (.getMessage e)))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/tagged_literals.clj",
-                  :lines [19 26]}
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/tagged_literals.cljc",
+                  :lines [36 43]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/tagged_literals.clj",
-                  :lines [44 48]}),
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/tagged_literals.cljc",
+                  :lines [79 83]}),
  :usage ["#inst \"yyyy-mm-dd\""
          "#inst \"yyyy-mm-ddThh:mm:ss\""
          "#inst \"yyyy-mm-ddThh:mm:ssZ\""

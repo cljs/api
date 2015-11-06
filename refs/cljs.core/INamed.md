@@ -25,7 +25,7 @@ Protocol for adding a name.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L607-L612):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L701-L706):
 
 ```clj
 (defprotocol INamed
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:607-612](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L607-L612)</ins>
+                └── <ins>[core.cljs:701-706](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L701-L706)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defprotocol INamed\n  \"Protocol for adding a name.\"\n  (^string -name [x]\n    \"Returns the name String of x.\")\n  (^string -namespace [x]\n    \"Returns the namespace String of x.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [607 612]},
+          :lines [701 706]},
  :methods [{:name "-name",
             :signature ["[x]"],
             :docstring "Returns the name String of x."}

@@ -54,7 +54,7 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L7918-L7933):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8046-L8061):
 
 ```clj
 (defn set
@@ -78,12 +78,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:7918-7933](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L7918-L7933)</ins>
+                └── <ins>[core.cljs:8046-8061](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8046-L8061)</ins>
 </pre>
 
 -->
@@ -150,9 +150,9 @@ The API data for this symbol:
  :source {:code "(defn set\n  [coll]\n  (let [in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (and (instance? IndexedSeq in) (zero? (.-i in)))\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [^not-native in in\n             ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (next in) (-conj! out (-first in)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7918 7933]},
+          :lines [8046 8061]},
  :full-name "cljs.core/set",
  :clj-symbol "clojure.core/set",
  :docstring "Returns a set of the distinct elements of coll."}

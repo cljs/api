@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L261-L262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L271-L272):
 
 ```clj
 (defn get-current-env []
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:261-262](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L261-L262)</ins>
+                └── <ins>[test.cljs:271-272](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L271-L272)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn get-current-env []\n  (or *current-env* (empty-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [261 262]},
+          :lines [271 272]},
  :full-name "cljs.test/get-current-env",
  :full-name-encode "cljs.test/get-current-env",
  :history [["+" "0.0-2496"]]}

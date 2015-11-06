@@ -47,12 +47,6 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
-<td><samp>[chrome-st-el->frame](../cljs.repl.browser/chrome-st-el-GTframe.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[compile-client-js](../cljs.repl.browser/compile-client-js.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -83,18 +77,6 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
-<td><samp>[firefox-clean-function](../cljs.repl.browser/firefox-clean-function.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
-<td><samp>[firefox-st-el->frame](../cljs.repl.browser/firefox-st-el-GTframe.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[handle-post](../cljs.repl.browser/handle-post.md)</samp></td>
 <td><samp>multimethod</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -119,24 +101,6 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
-<td><samp>[parse-file](../cljs.repl.browser/parse-file.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
-<td><samp>[parse-file-line-column](../cljs.repl.browser/parse-file-line-column.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
-<td><samp>[parse-stacktrace](../cljs.repl.browser/parse-stacktrace.md)</samp></td>
-<td><samp>multimethod</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
 <td><samp>[repl-client-js](../cljs.repl.browser/repl-client-js.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
@@ -158,12 +122,6 @@ browser-connected REPL
 <td><samp>[run-in-order](../cljs.repl.browser/run-in-order.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
-</tr>
-<tr>
-<td></td>
-<td><samp>[safari-st-el->frame](../cljs.repl.browser/safari-st-el-GTframe.md)</samp></td>
-<td><samp>function</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -204,6 +162,24 @@ browser-connected REPL
 </tr></thead>
 <tr>
 <td></td>
+<td><samp>[~~chrome-st-el->frame~~](../cljs.repl.browser/chrome-st-el-GTframe.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~firefox-clean-function~~](../cljs.repl.browser/firefox-clean-function.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~firefox-st-el->frame~~](../cljs.repl.browser/firefox-st-el-GTframe.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[~~handle-connection~~](../cljs.repl.browser/handle-connection.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
@@ -222,9 +198,27 @@ browser-connected REPL
 </tr>
 <tr>
 <td></td>
+<td><samp>[~~parse-file~~](../cljs.repl.browser/parse-file.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~parse-file-line-column~~](../cljs.repl.browser/parse-file-line-column.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[~~parse-headers~~](../cljs.repl.browser/parse-headers.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~parse-stacktrace~~](../cljs.repl.browser/parse-stacktrace.md)</samp></td>
+<td><samp>multimethod</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 <tr>
 <td></td>
@@ -255,6 +249,12 @@ browser-connected REPL
 <td><samp>[~~read-request~~](../cljs.repl.browser/read-request.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1503"><img valign="middle" alt="[×] 0.0-1503" title="Removed in 0.0-1503" src="https://img.shields.io/badge/×-0.0--1503-red.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
+<td><samp>[~~safari-st-el->frame~~](../cljs.repl.browser/safari-st-el-GTframe.md)</samp></td>
+<td><samp>function</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 <tr>
 <td></td>

@@ -28,7 +28,7 @@ environment atom and runs body.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L133-L139):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L203-L209):
 
 ```clj
 (defmacro in-cljs-user
@@ -42,13 +42,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:133-139](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L133-L139)</ins>
+                    └── <ins>[api.clj:203-209](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L203-L209)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defmacro in-cljs-user\n  [env & body]\n  `(binding [cljs.analyzer/*cljs-ns* 'cljs.user]\n     (cljs.env/with-compiler-env ~env\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [133 139]},
+          :lines [203 209]},
  :full-name "cljs.analyzer.api/in-cljs-user",
  :docstring "Binds cljs.analyzer/*cljs-ns* to 'cljs.user and uses the given compilation\nenvironment atom and runs body."}
 

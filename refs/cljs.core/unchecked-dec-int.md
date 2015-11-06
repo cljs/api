@@ -30,7 +30,7 @@ Returns a number one less than x, an int.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2257-L2260):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2371-L2374):
 
 ```clj
 (defn unchecked-dec-int
@@ -42,22 +42,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2257-2260](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2257-L2260)</ins>
+                └── <ins>[core.cljs:2371-2374](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2371-L2374)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L448-L449):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L924-L925):
 
 ```clj
-(defmacro ^::ana/numeric unchecked-dec-int
+(core/defmacro ^::ana/numeric unchecked-dec-int
   ([x] `(dec ~x)))
 ```
 
@@ -65,12 +65,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:448-449](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L448-L449)</ins>
+                └── <ins>[core.cljc:924-925](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L924-L925)</ins>
 </pre>
 -->
 
@@ -119,15 +119,15 @@ The API data for this symbol:
  :source {:code "(defn unchecked-dec-int\n  [x]\n  (cljs.core/unchecked-dec-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2257 2260]},
- :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-dec-int\n  ([x] `(dec ~x)))",
+          :lines [2371 2374]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-dec-int\n  ([x] `(dec ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [448 449]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [924 925]}],
  :full-name "cljs.core/unchecked-dec-int",
  :clj-symbol "clojure.core/unchecked-dec-int",
  :docstring "Returns a number one less than x, an int."}

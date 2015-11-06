@@ -38,7 +38,7 @@ Creates a hierarchy object for use with derive, isa? etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9123-L9125):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9257-L9259):
 
 ```clj
 (defn make-hierarchy
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9123-9125](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9123-L9125)</ins>
+                └── <ins>[core.cljs:9257-9259](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9257-L9259)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn make-hierarchy\n  [] {:parents {} :descendants {} :ancestors {}})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9123 9125]},
+          :lines [9257 9259]},
  :full-name "cljs.core/make-hierarchy",
  :clj-symbol "clojure.core/make-hierarchy",
  :docstring "Creates a hierarchy object for use with derive, isa? etc."}

@@ -30,7 +30,7 @@ Returns true if loc represents the end of a depth-first walk
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L232-L235):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L232-L235):
 
 ```clj
 (defn end?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:232-235](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/zip.cljs#L232-L235)</ins>
+                └── <ins>[zip.cljs:232-235](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L232-L235)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn end?\n  [loc]\n    (= :end (loc 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [232 235]},
  :full-name "clojure.zip/end?",

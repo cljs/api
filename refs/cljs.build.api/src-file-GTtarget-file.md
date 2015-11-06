@@ -16,6 +16,9 @@
  <samp>
 (__src-file->target-file__ src opts)<br>
 </samp>
+ <samp>
+(__src-file->target-file__ state src opts)<br>
+</samp>
 
 ---
 
@@ -31,25 +34,34 @@ provide build options with :output-dir specified.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L84-L88):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L94-L107):
 
 ```clj
 (defn ^File src-file->target-file
-  ([src] (closure/src-file->target-file src))
-  ([src opts] (closure/src-file->target-file src opts)))
+  ([src] (src-file->target-file src nil))
+  ([src opts]
+   (src-file->target-file
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))
+     src opts))
+  ([state src opts]
+   (env/with-compiler-env state
+     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+       (closure/src-file->target-file src opts)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:84-88](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L84-L88)</ins>
+                    └── <ins>[api.clj:94-107](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L94-L107)</ins>
 </pre>
 
 -->
@@ -91,16 +103,16 @@ The API data for this symbol:
 {:return-type File,
  :ns "cljs.build.api",
  :name "src-file->target-file",
- :signature ["[src]" "[src opts]"],
+ :signature ["[src]" "[src opts]" "[state src opts]"],
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.build.api/src-file-GTtarget-file",
- :source {:code "(defn ^File src-file->target-file\n  ([src] (closure/src-file->target-file src))\n  ([src opts] (closure/src-file->target-file src opts)))",
+ :source {:code "(defn ^File src-file->target-file\n  ([src] (src-file->target-file src nil))\n  ([src opts]\n   (src-file->target-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src opts))\n  ([state src opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (closure/src-file->target-file src opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [84 88]},
+          :lines [94 107]},
  :full-name "cljs.build.api/src-file->target-file",
  :docstring "Given a ClojureScript source file return the target file. May optionally\nprovide build options with :output-dir specified."}
 

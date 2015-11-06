@@ -28,31 +28,35 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L848-L857):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L944-L957):
 
 ```clj
 (defn symbol
   ([name]
-     (if (symbol? name)
-       name
-       (symbol nil name)))
+   (if (symbol? name)
+     name
+     (let [idx (.indexOf name "/")]
+       (if (== idx -1)
+         (symbol nil name)
+         (symbol (.substring name 0 idx)
+                 (.substring name (inc idx) (. name -length)))))))
   ([ns name]
-     (let [sym-str (if-not (nil? ns)
-                     (str ns "/" name)
-                     name)]
-       (Symbol. ns name sym-str nil nil))))
+   (let [sym-str (if-not (nil? ns)
+                   (str ns "/" name)
+                   name)]
+     (Symbol. ns name sym-str nil nil))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:848-857](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L848-L857)</ins>
+                └── <ins>[core.cljs:944-957](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L944-L957)</ins>
 </pre>
 
 -->
@@ -100,12 +104,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/symbol",
- :source {:code "(defn symbol\n  ([name]\n     (if (symbol? name)\n       name\n       (symbol nil name)))\n  ([ns name]\n     (let [sym-str (if-not (nil? ns)\n                     (str ns \"/\" name)\n                     name)]\n       (Symbol. ns name sym-str nil nil))))",
+ :source {:code "(defn symbol\n  ([name]\n   (if (symbol? name)\n     name\n     (let [idx (.indexOf name \"/\")]\n       (if (== idx -1)\n         (symbol nil name)\n         (symbol (.substring name 0 idx)\n                 (.substring name (inc idx) (. name -length)))))))\n  ([ns name]\n   (let [sym-str (if-not (nil? ns)\n                   (str ns \"/\" name)\n                   name)]\n     (Symbol. ns name sym-str nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [848 857]},
+          :lines [944 957]},
  :full-name "cljs.core/symbol",
  :clj-symbol "clojure.core/symbol"}
 

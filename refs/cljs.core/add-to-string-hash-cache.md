@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L738-L742):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L832-L836):
 
 ```clj
 (defn add-to-string-hash-cache [k]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:738-742](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L738-L742)</ins>
+                └── <ins>[core.cljs:832-836](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L832-L836)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defn add-to-string-hash-cache [k]\n  (let [h (hash-string* k)]\n    (aset string-hash-cache k h)\n    (set! string-hash-cache-count (inc string-hash-cache-count))\n    h))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [738 742]},
+          :lines [832 836]},
  :full-name "cljs.core/add-to-string-hash-cache",
  :full-name-encode "cljs.core/add-to-string-hash-cache",
  :history [["+" "0.0-1424"]]}

@@ -42,7 +42,7 @@ false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3600-L3607):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3726-L3733):
 
 ```clj
 (defn ^boolean every?
@@ -57,12 +57,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3600-3607](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3600-L3607)</ins>
+                └── <ins>[core.cljs:3726-3733](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3726-L3733)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean every?\n  [pred coll]\n  (cond\n   (nil? (seq coll)) true\n   (pred (first coll)) (recur pred (next coll))\n   :else false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3600 3607]},
+          :lines [3726 3733]},
  :full-name "cljs.core/every?",
  :clj-symbol "clojure.core/every?",
  :docstring "Returns true if (pred x) is logical true for every x in coll, else\nfalse."}

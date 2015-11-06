@@ -15,11 +15,8 @@ programmatic access to the compiler (emitting JS)
 Source Docstring:
 
 ```
-This is intended to be a stable api for those who intend to create
-  tools that use compiler data.
-
-  For example: a build script may need to how to invalidate compiled
-  files so that they will be recompiled.
+This is intended to be a stable api for those who need programmatic access
+  to the compiler.
 ```
 
 ---

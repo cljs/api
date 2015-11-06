@@ -68,7 +68,7 @@ else returns numerator divided by all of the denominators.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2145-L2150):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2259-L2264):
 
 ```clj
 (defn ^number /
@@ -81,22 +81,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2145-2150](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2145-L2150)</ins>
+                └── <ins>[core.cljs:2259-2264](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2259-L2264)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L492-L495):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L968-L971):
 
 ```clj
-(defmacro ^::ana/numeric /
+(core/defmacro ^::ana/numeric /
   ([x] `(/ 1 ~x))
   ([x y] (core/list 'js* "(~{} / ~{})" x y))
   ([x y & more] `(/ (/ ~x ~y) ~@more)))
@@ -106,12 +106,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:492-495](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L492-L495)</ins>
+                └── <ins>[core.cljc:968-971](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L968-L971)</ins>
 </pre>
 -->
 
@@ -163,15 +163,15 @@ The API data for this symbol:
  :source {:code "(defn ^number /\n  ([x] (/ 1 x))\n  ([x y] (cljs.core/divide x y)) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce / (/ x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2145 2150]},
- :extra-sources [{:code "(defmacro ^::ana/numeric /\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
+          :lines [2259 2264]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric /\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [492 495]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [968 971]}],
  :examples [{:id "824bb7",
              :content "```clj\n(/ 6 3)\n;;=> 2\n\n(/ 6 3 2)\n;;=> 1\n\n(/ 10)\n;;=> 0.1\n\n(/ 1 3)\n;;=> 0.3333333333333333\n```"}],
  :full-name "cljs.core//",

@@ -32,24 +32,26 @@ testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L558-L563):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L576-L583):
 
 ```clj
 (defn test-vars
   [vars]
-  (run-block (test-vars-block vars)))
+  (run-block (concat (test-vars-block vars)
+                     [(fn []
+                        (report {:type :end-test-vars :vars vars}))])))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:558-563](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L558-L563)</ins>
+                └── <ins>[test.cljs:576-583](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L576-L583)</ins>
 </pre>
 
 -->
@@ -97,12 +99,12 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/test-vars",
- :source {:code "(defn test-vars\n  [vars]\n  (run-block (test-vars-block vars)))",
+ :source {:code "(defn test-vars\n  [vars]\n  (run-block (concat (test-vars-block vars)\n                     [(fn []\n                        (report {:type :end-test-vars :vars vars}))])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [558 563]},
+          :lines [576 583]},
  :full-name "cljs.test/test-vars",
  :clj-symbol "clojure.test/test-vars",
  :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures assuming they are present in the current\ntesting environment."}

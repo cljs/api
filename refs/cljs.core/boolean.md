@@ -57,24 +57,27 @@ Coerce to boolean
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1872-L1875):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1983-L1989):
 
 ```clj
 (defn ^boolean boolean
   [x]
-  (if x true false))
+  (cond
+    (nil? x) false
+    (false? x) false
+    :else true))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1872-1875](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1872-L1875)</ins>
+                └── <ins>[core.cljs:1983-1989](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1983-L1989)</ins>
 </pre>
 
 -->
@@ -125,12 +128,12 @@ The API data for this symbol:
  :type "function",
  :related ["special/if"],
  :full-name-encode "cljs.core/boolean",
- :source {:code "(defn ^boolean boolean\n  [x]\n  (if x true false))",
+ :source {:code "(defn ^boolean boolean\n  [x]\n  (cond\n    (nil? x) false\n    (false? x) false\n    :else true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1872 1875]},
+          :lines [1983 1989]},
  :examples [{:id "9edf3a",
              :content "```clj\n(boolean 1)\n;;=> true\n\n(boolean 0)\n;;=> true\n\n(boolean nil)\n;;=> false\n```"}],
  :full-name "cljs.core/boolean",

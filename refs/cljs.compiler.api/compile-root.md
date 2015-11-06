@@ -19,6 +19,9 @@
  <samp>
 (__compile-root__ src-dir target-dir opts)<br>
 </samp>
+ <samp>
+(__compile-root__ state src-dir target-dir opts)<br>
+</samp>
 
 ---
 
@@ -37,29 +40,35 @@ in dependency order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L67-L78):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/compiler/api.clj#L93-L110):
 
 ```clj
 (defn compile-root
-  ([src-dir]
-   (comp/compile-root src-dir "out"))
-  ([src-dir target-dir]
-   (comp/compile-root src-dir target-dir nil))
+  ([src-dir] (compile-root src-dir "out"))
+  ([src-dir target-dir] (compile-root src-dir target-dir nil))
   ([src-dir target-dir opts]
-   (comp/compile-root src-dir target-dir opts)))
+   (compile-root
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))
+     src-dir target-dir opts))
+  ([state src-dir target-dir opts]
+   (env/with-compiler-env state
+     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+       (comp/compile-root src-dir target-dir opts)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:67-78](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/compiler/api.clj#L67-L78)</ins>
+                    └── <ins>[api.clj:93-110](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/compiler/api.clj#L93-L110)</ins>
 </pre>
 
 -->
@@ -102,16 +111,17 @@ The API data for this symbol:
  :name "compile-root",
  :signature ["[src-dir]"
              "[src-dir target-dir]"
-             "[src-dir target-dir opts]"],
+             "[src-dir target-dir opts]"
+             "[state src-dir target-dir opts]"],
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.compiler.api/compile-root",
- :source {:code "(defn compile-root\n  ([src-dir]\n   (comp/compile-root src-dir \"out\"))\n  ([src-dir target-dir]\n   (comp/compile-root src-dir target-dir nil))\n  ([src-dir target-dir opts]\n   (comp/compile-root src-dir target-dir opts)))",
+ :source {:code "(defn compile-root\n  ([src-dir] (compile-root src-dir \"out\"))\n  ([src-dir target-dir] (compile-root src-dir target-dir nil))\n  ([src-dir target-dir opts]\n   (compile-root\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src-dir target-dir opts))\n  ([state src-dir target-dir opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/compile-root src-dir target-dir opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/compiler/api.clj",
-          :lines [67 78]},
+          :lines [93 110]},
  :full-name "cljs.compiler.api/compile-root",
  :docstring "Looks recursively in src-dir for .cljs files and compiles them to\n.js files. If target-dir is provided, output will go into this\ndirectory mirroring the source directory structure. Returns a list\nof maps containing information about each file which was compiled\nin dependency order."}
 

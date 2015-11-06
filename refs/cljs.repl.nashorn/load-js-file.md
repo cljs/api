@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/nashorn.clj#L74-L75):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/nashorn.clj#L75-L76):
 
 ```clj
 (defn load-js-file [engine file]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[nashorn.clj:74-75](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/nashorn.clj#L74-L75)</ins>
+                    └── <ins>[nashorn.clj:75-76](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/nashorn.clj#L75-L76)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn load-js-file [engine file]\n      (eval-str engine (format \"nashorn_load(\\\"%s\\\");\" file)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
-          :lines [74 75]},
+          :lines [75 76]},
  :full-name "cljs.repl.nashorn/load-js-file",
  :full-name-encode "cljs.repl.nashorn/load-js-file",
  :history [["+" "0.0-2814"]]}

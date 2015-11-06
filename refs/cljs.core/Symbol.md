@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L814-L846):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L910-L942):
 
 ```clj
 (deftype Symbol [ns name str ^:mutable _hash _meta]
@@ -41,9 +41,9 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 
   IFn
   (-invoke [sym coll]
-    (-lookup coll sym nil))
+    (get coll sym))
   (-invoke [sym coll not-found]
-    (-lookup coll sym not-found))
+    (get coll sym not-found))
 
   IMeta
   (-meta [_] _meta)
@@ -67,12 +67,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:814-846](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L814-L846)</ins>
+                └── <ins>[core.cljs:910-942](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L910-L942)</ins>
 </pre>
 
 -->
@@ -120,12 +120,12 @@ The API data for this symbol:
  :history [["+" "0.0-1798"]],
  :type "type",
  :full-name-encode "cljs.core/Symbol",
- :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  (equiv [this other] (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n\n  IFn\n  (-invoke [sym coll]\n    (-lookup coll sym nil))\n  (-invoke [sym coll not-found]\n    (-lookup coll sym not-found))\n\n  IMeta\n  (-meta [_] _meta)\n\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
+ :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  (equiv [this other] (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n\n  IFn\n  (-invoke [sym coll]\n    (get coll sym))\n  (-invoke [sym coll not-found]\n    (get coll sym not-found))\n\n  IMeta\n  (-meta [_] _meta)\n\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [814 846]},
+          :lines [910 942]},
  :full-name "cljs.core/Symbol",
  :clj-symbol "clojure.lang/Symbol"}
 

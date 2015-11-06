@@ -30,7 +30,7 @@ Returns true if v is of type cljs.core.Var
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L911-L914):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1022-L1025):
 
 ```clj
 (defn var?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:911-914](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L911-L914)</ins>
+                └── <ins>[core.cljs:1022-1025](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1022-L1025)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn var?\n  [v]\n  (instance? cljs.core.Var v))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [911 914]},
+          :lines [1022 1025]},
  :full-name "cljs.core/var?",
  :clj-symbol "clojure.core/var?",
  :docstring "Returns true if v is of type cljs.core.Var"}

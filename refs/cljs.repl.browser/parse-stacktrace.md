@@ -1,11 +1,11 @@
-## cljs.repl.browser/parse-stacktrace
+## ~~cljs.repl.browser/parse-stacktrace~~
 
 
 
  <table border="1">
 <tr>
 <td>multimethod</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -191,7 +191,7 @@ The API data for this symbol:
 {:ns "cljs.repl.browser",
  :name "parse-stacktrace",
  :signature ["[repl-env st err opts]"],
- :history [["+" "0.0-3053"]],
+ :history [["+" "0.0-3053"] ["-" "1.7.10"]],
  :type "multimethod",
  :full-name-encode "cljs.repl.browser/parse-stacktrace",
  :source {:code "(defmulti parse-stacktrace (fn [repl-env st err opts] (:ua-product err)))",
@@ -224,7 +224,8 @@ The API data for this symbol:
                   :tag "r3308",
                   :filename "src/main/clojure/cljs/repl/browser.clj",
                   :lines [438 447]}),
- :full-name "cljs.repl.browser/parse-stacktrace"}
+ :full-name "cljs.repl.browser/parse-stacktrace",
+ :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 
 ```
 

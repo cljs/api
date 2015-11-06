@@ -42,7 +42,7 @@ from the classpath.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L309-L337):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L311-L339):
 
 ```clj
 (defn mapped-stacktrace
@@ -67,12 +67,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:309-337](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L309-L337)</ins>
+                └── <ins>[repl.cljc:311-339](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L311-L339)</ins>
 </pre>
 
 -->
@@ -120,9 +120,9 @@ The API data for this symbol:
  :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n   (vec\n     (let [mapped-frames (map (memoize #(mapped-frame % opts)) stacktrace)]\n       ;; take each non-nil :call and optionally merge it into :function one-level up\n       ;; to avoid replacing with local symbols, we only replace munged name if we can munge call symbol back to it\n       (map #(merge-with (fn [munged-fn-name unmunged-call-name]\n                           (if (= munged-fn-name (string/replace (cljs.compiler/munge unmunged-call-name) \".\" \"$\"))\n                             unmunged-call-name\n                             munged-fn-name)) %1 %2)\n         (map #(dissoc % :call) mapped-frames)\n         (concat (rest (map #(if (:call %)\n                              (hash-map :function (:call %))\n                              {})\n                         mapped-frames)) [{}]))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [309 337]},
+          :lines [311 339]},
  :full-name "cljs.repl/mapped-stacktrace",
  :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nreturn the ClojureScript stacktrace. The canonical stacktrace must be\nin the form:\n\n [{:file <string>\n   :function <string>\n   :line <integer>\n   :column <integer>}*]\n\n:file must be a URL path (without protocol) relative to :output-dir or a\nidentifier delimited by angle brackets. The returned mapped stacktrace will\nalso contain :url entries to the original sources if it can be determined\nfrom the classpath."}
 

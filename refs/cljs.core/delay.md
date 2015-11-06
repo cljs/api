@@ -33,10 +33,10 @@ calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1397-L1403):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1901-L1907):
 
 ```clj
-(defmacro delay
+(core/defmacro delay
   [& body]
   `(new cljs.core/Delay (fn [] ~@body) nil))
 ```
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1397-1403](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1397-L1403)</ins>
+                └── <ins>[core.cljc:1901-1907](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1901-L1907)</ins>
 </pre>
 
 -->
@@ -98,12 +98,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/delay",
- :source {:code "(defmacro delay\n  [& body]\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
+ :source {:code "(core/defmacro delay\n  [& body]\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1397 1403]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [1901 1907]},
  :full-name "cljs.core/delay",
  :clj-symbol "clojure.core/delay",
  :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}

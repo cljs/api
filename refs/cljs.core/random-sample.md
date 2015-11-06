@@ -34,7 +34,7 @@ Returns items from coll with random probability of prob (0.0 -
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8952-L8958):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9086-L9092):
 
 ```clj
 (defn random-sample
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8952-8958](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8952-L8958)</ins>
+                └── <ins>[core.cljs:9086-9092](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9086-L9092)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn random-sample\n  ([prob]\n     (filter (fn [_] (< (rand) prob))))\n  ([prob coll]\n     (filter (fn [_] (< (rand) prob)) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8952 8958]},
+          :lines [9086 9092]},
  :full-name "cljs.core/random-sample",
  :clj-symbol "clojure.core/random-sample",
  :docstring "Returns items from coll with random probability of prob (0.0 -\n1.0).  Returns a transducer when no collection is provided."}

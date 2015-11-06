@@ -22,7 +22,7 @@ Protocol for adding value comparison functionality to a type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L472-L475):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L566-L569):
 
 ```clj
 (defprotocol IEquiv
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:472-475](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L472-L475)</ins>
+                └── <ins>[core.cljs:566-569](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L566-L569)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEquiv\n  \"Protocol for adding value comparison functionality to a type.\"\n  (^boolean -equiv [o other]\n    \"Returns true if o and other are equal, false otherwise.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [472 475]},
+          :lines [566 569]},
  :methods [{:name "-equiv",
             :signature ["[o other]"],
             :docstring "Returns true if o and other are equal, false otherwise."}],

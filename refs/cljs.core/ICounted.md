@@ -25,7 +25,7 @@ Protocol for adding the ability to count a collection in constant time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L342-L345):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L436-L439):
 
 ```clj
 (defprotocol ICounted
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:342-345](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L342-L345)</ins>
+                └── <ins>[core.cljs:436-439](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L436-L439)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ICounted\n  \"Protocol for adding the ability to count a collection in constant time.\"\n  (^number -count [coll]\n    \"Calculates the count of coll in constant time. Used by cljs.core/count.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [342 345]},
+          :lines [436 439]},
  :methods [{:name "-count",
             :signature ["[coll]"],
             :docstring "Calculates the count of coll in constant time. Used by cljs.core/count."}],

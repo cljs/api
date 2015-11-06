@@ -22,7 +22,7 @@ Protocol for creating an empty collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L347-L351):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L441-L445):
 
 ```clj
 (defprotocol IEmptyableCollection
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:347-351](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L347-L351)</ins>
+                └── <ins>[core.cljs:441-445](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L441-L445)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEmptyableCollection\n  \"Protocol for creating an empty collection.\"\n  (-empty [coll]\n    \"Returns an empty collection of the same category as coll. Used\n     by cljs.core/count.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [347 351]},
+          :lines [441 445]},
  :methods [{:name "-empty",
             :signature ["[coll]"],
             :docstring "Returns an empty collection of the same category as coll. Used\n     by cljs.core/count."}],

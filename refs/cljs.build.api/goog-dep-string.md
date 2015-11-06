@@ -28,7 +28,7 @@ goog.addDependency string
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L100-L104):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L127-L131):
 
 ```clj
 (defn goog-dep-string
@@ -40,13 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:100-104](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L100-L104)</ins>
+                    └── <ins>[api.clj:127-131](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L127-L131)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn goog-dep-string\n  [opts ijs]\n  (closure/add-dep-string opts ijs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [100 104]},
+          :lines [127 131]},
  :full-name "cljs.build.api/goog-dep-string",
  :docstring "Given compiler options and a IJavaScript instance return the corresponding\ngoog.addDependency string"}
 

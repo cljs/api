@@ -22,34 +22,38 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L487-L498):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L212-L227):
 
 ```clj
 (defn compile-client-js [opts]
-  (cljsc/build
-    '[(ns clojure.browser.repl.client
-        (:require [goog.events :as event]
-                  [clojure.browser.repl :as repl]))
-      (defn start [url]
-        (event/listen js/window
-          "load"
-          (fn []
-            (repl/start-evaluator url))))]
-    {:optimizations (:optimizations opts)
-     :output-dir (:working-dir opts)}))
+  (let [copts {:optimizations (:optimizations opts)
+               :output-dir (:working-dir opts)}]
+    ;; we're inside the REPL process where cljs.env/*compiler* is already
+    ;; established, need to construct a new one to avoid mutating the one
+    ;; the REPL uses
+    (cljsc/build
+      '[(ns clojure.browser.repl.client
+          (:require [goog.events :as event]
+                    [clojure.browser.repl :as repl]))
+        (defn start [url]
+          (event/listen js/window
+            "load"
+            (fn []
+              (repl/start-evaluator url))))]
+      copts (env/default-compiler-env copts))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:487-498](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L487-L498)</ins>
+                    └── <ins>[browser.clj:212-227](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L212-L227)</ins>
 </pre>
 
 -->
@@ -92,12 +96,12 @@ The API data for this symbol:
  :name "compile-client-js",
  :type "function",
  :signature ["[opts]"],
- :source {:code "(defn compile-client-js [opts]\n  (cljsc/build\n    '[(ns clojure.browser.repl.client\n        (:require [goog.events :as event]\n                  [clojure.browser.repl :as repl]))\n      (defn start [url]\n        (event/listen js/window\n          \"load\"\n          (fn []\n            (repl/start-evaluator url))))]\n    {:optimizations (:optimizations opts)\n     :output-dir (:working-dir opts)}))",
+ :source {:code "(defn compile-client-js [opts]\n  (let [copts {:optimizations (:optimizations opts)\n               :output-dir (:working-dir opts)}]\n    ;; we're inside the REPL process where cljs.env/*compiler* is already\n    ;; established, need to construct a new one to avoid mutating the one\n    ;; the REPL uses\n    (cljsc/build\n      '[(ns clojure.browser.repl.client\n          (:require [goog.events :as event]\n                    [clojure.browser.repl :as repl]))\n        (defn start [url]\n          (event/listen js/window\n            \"load\"\n            (fn []\n              (repl/start-evaluator url))))]\n      copts (env/default-compiler-env copts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [487 498]},
+          :lines [212 227]},
  :full-name "cljs.repl.browser/compile-client-js",
  :full-name-encode "cljs.repl.browser/compile-client-js",
  :history [["+" "0.0-927"]]}

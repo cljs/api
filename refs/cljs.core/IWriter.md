@@ -22,7 +22,7 @@ Protocol for writing. Currently only implemented by StringBufferWriter.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L518-L523):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L612-L617):
 
 ```clj
 (defprotocol IWriter
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:518-523](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L518-L523)</ins>
+                └── <ins>[core.cljs:612-617](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L612-L617)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWriter\n  \"Protocol for writing. Currently only implemented by StringBufferWriter.\"\n  (-write [writer s]\n    \"Writes s with writer and returns the result.\")\n  (-flush [writer]\n    \"Flush writer.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [518 523]},
+          :lines [612 617]},
  :methods [{:name "-write",
             :signature ["[writer s]"],
             :docstring "Writes s with writer and returns the result."}

@@ -31,31 +31,43 @@ the last. If no expressions are supplied, returns nil.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer.cljc#L1090-L1099):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer.cljc#L1375-L1396):
 
 ```clj
 (defmethod parse 'do
   [op env [_ & exprs :as form] _ _]
-  (let [statements (disallowing-recur
-                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))
-        ret (if (<= (count exprs) 1)
-              (analyze env (first exprs))
-              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]
-    {:env env :op :do :form form
-     :statements statements :ret ret
-     :children (conj (vec statements) ret)}))
+  (let [statements (analyze-do-statements env exprs)]
+    (if (<= (count exprs) 1)
+      (let [ret      (analyze env (first exprs))
+            children (conj (vec statements) ret)]
+        {:op :do
+         :env env
+         :form form
+         :statements statements :ret ret
+         :children children})
+      (let [ret-env  (if (= :statement (:context env))
+                       (assoc env :context :statement)
+                       (assoc env :context :return))
+            ret      (analyze ret-env (last exprs))
+            children (conj (vec statements) ret)]
+        {:op :do
+         :env env
+         :form form
+         :statements statements
+         :ret ret
+         :children children}))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1090-1099](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer.cljc#L1090-L1099)</ins>
+                └── <ins>[analyzer.cljc:1375-1396](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer.cljc#L1375-L1396)</ins>
 </pre>
 
 -->
@@ -102,12 +114,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "special form",
  :full-name-encode "special/do",
- :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (disallowing-recur\n                     (seq (map #(analyze (assoc env :context :statement) %) (butlast exprs))))\n        ret (if (<= (count exprs) 1)\n              (analyze env (first exprs))\n              (analyze (assoc env :context (if (= :statement (:context env)) :statement :return)) (last exprs)))]\n    {:env env :op :do :form form\n     :statements statements :ret ret\n     :children (conj (vec statements) ret)}))",
+ :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (analyze-do-statements env exprs)]\n    (if (<= (count exprs) 1)\n      (let [ret      (analyze env (first exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements :ret ret\n         :children children})\n      (let [ret-env  (if (= :statement (:context env))\n                       (assoc env :context :statement)\n                       (assoc env :context :return))\n            ret      (analyze ret-env (last exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements\n         :ret ret\n         :children children}))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1090 1099]},
+          :lines [1375 1396]},
  :full-name "special/do",
  :clj-symbol "clojure.core/do",
  :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil."}

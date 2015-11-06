@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L134-L147):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L134-L147):
 
 ```clj
 (defprotocol IParseStacktrace
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:134-147](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L134-L147)</ins>
+                └── <ins>[repl.cljc:134-147](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L134-L147)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IParseStacktrace\n  (-parse-stacktrace [repl-env stacktrace error build-options]\n    \"Given the original JavaScript stacktrace string, the entire original error\n     value and current compiler build options, parse the stacktrace into the\n     canonical form:\n\n     [{:file <string>\n       :function <string>\n       :line <integer>\n       :column <integer>}*]\n\n     :file must be a URL path (without protocol) relative to :output-dir. If\n     no source file can be supplied (such as REPL defs), :file may be a custom\n     identifier string surrounded by angle brackets, i.e. \\\"<cljs repl>\\\".\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [134 147]},
  :methods [{:name "-parse-stacktrace",

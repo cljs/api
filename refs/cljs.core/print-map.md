@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8671-L8679):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8805-L8813):
 
 ```clj
 (defn print-map [m print-one writer opts]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8671-8679](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8671-L8679)</ins>
+                └── <ins>[core.cljs:8805-8813](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8805-L8813)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn print-map [m print-one writer opts]\n  (pr-sequential-writer\n    writer\n    (fn [e w opts]\n      (do (print-one (key e) w opts)\n          (-write w \\space)\n          (print-one (val e) w opts)))\n    \"{\" \", \" \"}\"\n    opts (seq m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8671 8679]},
+          :lines [8805 8813]},
  :full-name "cljs.core/print-map",
  :full-name-encode "cljs.core/print-map",
  :history [["+" "0.0-2120"]]}

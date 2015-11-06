@@ -30,10 +30,10 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1924-L1930):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2438-L2444):
 
 ```clj
-(defmacro time
+(core/defmacro time
   [expr]
   `(let [start# (.getTime (js/Date.))
          ret# ~expr]
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1924-1930](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1924-L1930)</ins>
+                └── <ins>[core.cljc:2438-2444](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2438-L2444)</ins>
 </pre>
 
 -->
@@ -98,12 +98,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/time",
- :source {:code "(defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.))\n         ret# ~expr]\n     (prn (core/str \"Elapsed time: \" (- (.getTime (js/Date.)) start#) \" msecs\"))\n     ret#))",
+ :source {:code "(core/defmacro time\n  [expr]\n  `(let [start# (.getTime (js/Date.))\n         ret# ~expr]\n     (prn (core/str \"Elapsed time: \" (- (.getTime (js/Date.)) start#) \" msecs\"))\n     ret#))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1924 1930]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2438 2444]},
  :full-name "cljs.core/time",
  :clj-symbol "clojure.core/time",
  :docstring "Evaluates expr and prints the time it took. Returns the value of expr."}

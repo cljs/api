@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L6417-L6459):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L6545-L6587):
 
 ```clj
 (deftype NodeSeq [meta nodes i s ^:mutable __hash]
@@ -77,12 +77,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:6417-6459](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L6417-L6459)</ins>
+                └── <ins>[core.cljs:6545-6587](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L6545-L6587)</ins>
 </pre>
 
 -->
@@ -133,9 +133,9 @@ The API data for this symbol:
  :source {:code "(deftype NodeSeq [meta nodes i s ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IWithMeta\n  (-with-meta [coll meta] (NodeSeq. meta nodes i s __hash))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  ISequential\n  ISeq\n  (-first [coll]\n    (if (nil? s)\n      [(aget nodes i) (aget nodes (inc i))]\n      (first s)))\n\n  (-rest [coll]\n    (if (nil? s)\n      (create-inode-seq nodes (+ i 2) nil)\n      (create-inode-seq nodes i (next s))))\n\n  ISeqable\n  (-seq [this] this)\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6417 6459]},
+          :lines [6545 6587]},
  :full-name "cljs.core/NodeSeq",
  :clj-symbol "clojure.lang/NodeSeq"}
 

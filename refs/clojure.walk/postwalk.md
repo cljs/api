@@ -32,7 +32,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L50-L56):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L54-L60):
 
 ```clj
 (defn postwalk
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:50-56](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L50-L56)</ins>
+                └── <ins>[walk.cljs:54-60](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L54-L60)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn postwalk\n  [f form]\n  (walk (partial postwalk f) f form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [50 56]},
+          :lines [54 60]},
  :full-name "clojure.walk/postwalk",
  :clj-symbol "clojure.walk/postwalk",
  :docstring "Performs a depth-first, post-order traversal of form.  Calls f on\neach sub-form, uses f's return value in place of the original.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}

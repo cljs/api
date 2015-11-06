@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.10](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10)__</td>
+<td>2015-07-29</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150505</kbd></td>
+<td>
+<a href="#user-content-1710syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1710library">
++55 -1
+</a>
+</td>
+<td>
+<a href="#user-content-1710compiler">
++5 -7
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-3308](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3308)__</td>
 <td>2015-06-01</td>
 <td><kbd>1.7.0-RC1</kbd></td>
@@ -2844,6 +2867,431 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.10
+
+<a name="1710syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1710library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*assert\*](refs/cljs.core/STARassertSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*ns\*](refs/cljs.core/STARnsSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*out\*](refs/cljs.core/STARoutSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/\*print-err-fn\*](refs/cljs.core/STARprint-err-fnSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/CHAR_MAP](refs/cljs.core/CHAR_MAP.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/DEMUNGE_MAP](refs/cljs.core/DEMUNGE_MAP.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/DEMUNGE_PATTERN](refs/cljs.core/DEMUNGE_PATTERN.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/NS_CACHE](refs/cljs.core/NS_CACHE.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/Namespace](refs/cljs.core/Namespace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/char?](refs/cljs.core/charQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/copy-arguments](refs/cljs.core/copy-arguments.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/create-ns](refs/cljs.core/create-ns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/demunge](refs/cljs.core/demunge.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/find-macros-ns](refs/cljs.core/find-macros-ns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/find-ns](refs/cljs.core/find-ns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/find-ns-obj](refs/cljs.core/find-ns-obj.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-reserved](refs/cljs.core/js-reserved.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/munge](refs/cljs.core/munge.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ns-interns\*](refs/cljs.core/ns-internsSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ns-name](refs/cljs.core/ns-name.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/print-meta?](refs/cljs.core/print-metaQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/set-print-err-fn!](refs/cljs.core/set-print-err-fnBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/symbol-identical?](refs/cljs.core/symbol-identicalQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/\*eval-fn\*](refs/cljs.js/STAReval-fnSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-dynamic var-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/\*load-fn\*](refs/cljs.js/STARload-fnSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/\*loaded\*](refs/cljs.js/STARloadedSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/analyze](refs/cljs.js/analyze.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/analyze\*](refs/cljs.js/analyzeSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/analyze-deps](refs/cljs.js/analyze-deps.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/append-source-map](refs/cljs.js/append-source-map.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/atom?](refs/cljs.js/atomQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/compile](refs/cljs.js/compile.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/compile\*](refs/cljs.js/compileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/debug-prn](refs/cljs.js/debug-prn.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/dump-core](refs/cljs.js/dump-core.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/empty-state](refs/cljs.js/empty-state.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/eval](refs/cljs.js/eval.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/eval\*](refs/cljs.js/evalSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/eval-str](refs/cljs.js/eval-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/eval-str\*](refs/cljs.js/eval-strSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/file->ns](refs/cljs.js/file-GTns.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/js-eval](refs/cljs.js/js-eval.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/load-analysis-cache!](refs/cljs.js/load-analysis-cacheBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/load-deps](refs/cljs.js/load-deps.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/load-macros](refs/cljs.js/load-macros.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/load-source-map!](refs/cljs.js/load-source-mapBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/ns->relpath](refs/cljs.js/ns-GTrelpath.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/ns-side-effects](refs/cljs.js/ns-side-effects.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/prefix](refs/cljs.js/prefix.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/require](refs/cljs.js/require.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/sm-data](refs/cljs.js/sm-data.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/valid-name?](refs/cljs.js/valid-nameQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/valid-opts?](refs/cljs.js/valid-optsQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/with-state](refs/cljs.js/with-state.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/wrap-error](refs/cljs.js/wrap-error.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-dynamic var-red.svg">
+</td>
+<td><samp>[~~cljs.pprint/\*out\*~~](refs/cljs.pprint/STARoutSTAR.md)</samp></td>
+</tr>
+</table>
+
+<a name="1710compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/default-warning-handler](refs/cljs.analyzer.api/default-warning-handler.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/empty-state](refs/cljs.analyzer.api/empty-state.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/get-options](refs/cljs.analyzer.api/get-options.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/warning-enabled?](refs/cljs.analyzer.api/warning-enabledQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.analyzer.api/with-state](refs/cljs.analyzer.api/with-state.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/chrome-st-el->frame~~](refs/cljs.repl.browser/chrome-st-el-GTframe.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/firefox-clean-function~~](refs/cljs.repl.browser/firefox-clean-function.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/firefox-st-el->frame~~](refs/cljs.repl.browser/firefox-st-el-GTframe.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/parse-file~~](refs/cljs.repl.browser/parse-file.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/parse-file-line-column~~](refs/cljs.repl.browser/parse-file-line-column.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-multimethod-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/parse-stacktrace~~](refs/cljs.repl.browser/parse-stacktrace.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.repl.browser/safari-st-el->frame~~](refs/cljs.repl.browser/safari-st-el-GTframe.md)</samp></td>
+</tr>
 </table>
 
 ### 0.0-3308

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9556-L9567):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9690-L9701):
 
 ```clj
 (defn random-uuid []
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9556-9567](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9556-L9567)</ins>
+                └── <ins>[core.cljs:9690-9701](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9690-L9701)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defn random-uuid []\n  (letfn [(hex [] (.toString (rand-int 15) 16))]\n    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 14))) 16)]\n      (uuid\n        (str (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex) \"-\"\n             \"4\"   (hex) (hex) (hex) \"-\"\n             rhex  (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9556 9567]},
+          :lines [9690 9701]},
  :full-name "cljs.core/random-uuid",
  :full-name-encode "cljs.core/random-uuid",
  :history [["+" "0.0-3308"]]}

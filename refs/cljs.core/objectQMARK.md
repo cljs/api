@@ -37,7 +37,7 @@ Returns true if x's constructor is Object
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L173-L178):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L206-L211):
 
 ```clj
 (defn ^boolean object?
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:173-178](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L173-L178)</ins>
+                └── <ins>[core.cljs:206-211](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L206-L211)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean object?\n  [x]\n  (if-not (nil? x)\n    (identical? (.-constructor x) js/Object)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [173 178]},
+          :lines [206 211]},
  :full-name "cljs.core/object?",
  :docstring "Returns true if x's constructor is Object"}
 

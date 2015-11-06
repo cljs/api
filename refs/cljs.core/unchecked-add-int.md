@@ -39,7 +39,7 @@ Returns the sum of nums. (+) returns 0.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2245-L2250):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2359-L2364):
 
 ```clj
 (defn ^number unchecked-add-int
@@ -53,22 +53,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2245-2250](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2245-L2250)</ins>
+                └── <ins>[core.cljs:2359-2364](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2359-L2364)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L442-L443):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L918-L919):
 
 ```clj
-(defmacro ^::ana/numeric unchecked-add-int
+(core/defmacro ^::ana/numeric unchecked-add-int
   ([& xs] `(+ ~@xs)))
 ```
 
@@ -76,12 +76,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:442-443](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L442-L443)</ins>
+                └── <ins>[core.cljc:918-919](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L918-L919)</ins>
 </pre>
 -->
 
@@ -131,15 +131,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-add-int\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-add-int x y))\n  ([x y & more] (reduce unchecked-add-int (cljs.core/unchecked-add-int x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2245 2250]},
- :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-add-int\n  ([& xs] `(+ ~@xs)))",
+          :lines [2359 2364]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-add-int\n  ([& xs] `(+ ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [442 443]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [918 919]}],
  :full-name "cljs.core/unchecked-add-int",
  :clj-symbol "clojure.core/unchecked-add-int",
  :docstring "Returns the sum of nums. (+) returns 0."}

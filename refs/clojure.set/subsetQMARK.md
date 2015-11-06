@@ -44,7 +44,7 @@ Is set1 a subset of set2?
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/set.cljs#L131-L135):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/set.cljs#L131-L135):
 
 ```clj
 (defn subset? 
@@ -57,12 +57,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[set.cljs:131-135](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/set.cljs#L131-L135)</ins>
+                └── <ins>[set.cljs:131-135](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/set.cljs#L131-L135)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn subset? \n  [set1 set2]\n  (and (<= (count set1) (count set2))\n       (every? #(contains? set2 %) set1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/set.cljs",
           :lines [131 135]},
  :full-name "clojure.set/subset?",

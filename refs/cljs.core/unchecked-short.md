@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2234):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2348):
 
 ```clj
 (defn ^number unchecked-short [x] x)
@@ -35,34 +35,34 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2234](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2234)</ins>
+                └── <ins>[core.cljs:2348](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2348)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L435):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L911):
 
 ```clj
-(defmacro unchecked-short [x] x)
+(core/defmacro unchecked-short [x] x)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:435](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L435)</ins>
+                └── <ins>[core.cljc:911](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L911)</ins>
 </pre>
 -->
 
@@ -112,15 +112,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2234]},
- :extra-sources [{:code "(defmacro unchecked-short [x] x)",
+          :lines [2348]},
+ :extra-sources [{:code "(core/defmacro unchecked-short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [435]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [911]}],
  :full-name "cljs.core/unchecked-short",
  :clj-symbol "clojure.core/unchecked-short"}
 

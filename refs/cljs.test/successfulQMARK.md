@@ -31,7 +31,7 @@ were successful, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L568-L573):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L588-L593):
 
 ```clj
 (defn successful?
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:568-573](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L568-L573)</ins>
+                └── <ins>[test.cljs:588-593](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L588-L593)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn successful?\n  [summary]\n  (and (zero? (:fail summary 0))\n       (zero? (:error summary 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [568 573]},
+          :lines [588 593]},
  :full-name "cljs.test/successful?",
  :clj-symbol "clojure.test/successful?",
  :docstring "Returns true if the given test summary indicates all tests\nwere successful, false otherwise."}

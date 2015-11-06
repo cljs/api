@@ -27,7 +27,7 @@ Given a multimethod, return it's dispatch-fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9523-L9525):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9657-L9659):
 
 ```clj
 (defn dispatch-fn
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9523-9525](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9523-L9525)</ins>
+                └── <ins>[core.cljs:9657-9659](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9657-L9659)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn dispatch-fn\n  [multifn] (-dispatch-fn multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9523 9525]},
+          :lines [9657 9659]},
  :full-name "cljs.core/dispatch-fn",
  :docstring "Given a multimethod, return it's dispatch-fn."}
 

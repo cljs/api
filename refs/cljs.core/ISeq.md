@@ -25,7 +25,7 @@ Protocol for collections to provide access to their items as sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L373-L381):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L467-L475):
 
 ```clj
 (defprotocol ISeq
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:373-381](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L373-L381)</ins>
+                └── <ins>[core.cljs:467-475](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L467-L475)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeq\n  \"Protocol for collections to provide access to their items as sequences.\"\n  (-first [coll]\n    \"Returns the first item in the collection coll. Used by cljs.core/first.\")\n  (^clj -rest [coll]\n    \"Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [373 381]},
+          :lines [467 475]},
  :methods [{:name "-first",
             :signature ["[coll]"],
             :docstring "Returns the first item in the collection coll. Used by cljs.core/first."}

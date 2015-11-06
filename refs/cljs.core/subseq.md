@@ -54,7 +54,7 @@ which (test (.. sc comparator (compare ek key)) 0) is true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8105-L8118):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8233-L8246):
 
 ```clj
 (defn subseq
@@ -74,12 +74,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8105-8118](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8105-L8118)</ins>
+                └── <ins>[core.cljs:8233-8246](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8233-L8246)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defn subseq\n  ([sc test key]\n     (let [include (mk-bound-fn sc test key)]\n       (if (#{> >=} test)\n         (when-let [[e :as s] (-sorted-seq-from sc key true)]\n           (if (include e) s (next s)))\n         (take-while include (-sorted-seq sc true)))))\n  ([sc start-test start-key end-test end-key]\n     (when-let [[e :as s] (-sorted-seq-from sc start-key true)]\n       (take-while (mk-bound-fn sc end-test end-key)\n                   (if ((mk-bound-fn sc start-test start-key) e) s (next s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8105 8118]},
+          :lines [8233 8246]},
  :full-name "cljs.core/subseq",
  :clj-symbol "clojure.core/subseq",
  :docstring "sc must be a sorted collection, test(s) one of <, <=, > or\n>=. Returns a seq of those entries with keys ek for\nwhich (test (.. sc comparator (compare ek key)) 0) is true"}

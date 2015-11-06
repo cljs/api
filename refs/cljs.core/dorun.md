@@ -50,7 +50,7 @@ the seq, does not retain the head and returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8369-L8380):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8499-L8510):
 
 ```clj
 (defn dorun
@@ -66,12 +66,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8369-8380](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8369-L8380)</ins>
+                └── <ins>[core.cljs:8499-8510](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8499-L8510)</ins>
 </pre>
 
 -->
@@ -124,9 +124,9 @@ The API data for this symbol:
  :source {:code "(defn dorun\n  ([coll]\n   (when (seq coll)\n     (recur (next coll))))\n  ([n coll]\n   (when (and (seq coll) (pos? n))\n     (recur (dec n) (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8369 8380]},
+          :lines [8499 8510]},
  :full-name "cljs.core/dorun",
  :clj-symbol "clojure.core/dorun",
  :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. dorun can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, does not retain the head and returns nil."}

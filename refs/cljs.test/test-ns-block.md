@@ -28,7 +28,7 @@ later execution.  Does not clear the current env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L340-L355):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.clj#L342-L357):
 
 ```clj
 (defmacro test-ns-block
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.clj:340-355](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.clj#L340-L355)</ins>
+                └── <ins>[test.clj:342-357](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.clj#L342-L357)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defmacro test-ns-block\n  ([env [quote ns :as form]]\n   (assert (and (= quote 'quote) (symbol? ns)) \"Argument to test-ns must be a quoted symbol\")\n   (assert (ana-api/find-ns ns) (str \"Namespace \" ns \" does not exist\"))\n   `[(fn []\n       (cljs.test/set-env! ~env)\n       (cljs.test/do-report {:type :begin-test-ns, :ns ~form})\n       ;; If the namespace has a test-ns-hook function, call that:\n       ~(if-let [v (ana-api/ns-resolve ns 'test-ns-hook)]\n          `(~(symbol (name ns) \"test-ns-hook\"))\n          ;; Otherwise, just test every var in the namespace.\n          `(cljs.test/block (cljs.test/test-all-vars-block ~form))))\n     (fn []\n       (cljs.test/do-report {:type :end-test-ns, :ns ~form}))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [340 355]},
+          :lines [342 357]},
  :full-name "cljs.test/test-ns-block",
  :docstring "Like test-ns, but returns a block for further composition and\nlater execution.  Does not clear the current env."}
 

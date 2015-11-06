@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L72-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L76-L77):
 
 ```clj
 (defn repl-client-js []
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:72-73](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L72-L73)</ins>
+                    └── <ins>[browser.clj:76-77](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L76-L77)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn repl-client-js []\n  (slurp (:client-js @browser-state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [72 73]},
+          :lines [76 77]},
  :full-name "cljs.repl.browser/repl-client-js",
  :full-name-encode "cljs.repl.browser/repl-client-js",
  :history [["+" "0.0-927"]]}

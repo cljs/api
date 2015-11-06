@@ -22,7 +22,7 @@ Protocol for iterating over a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L633-L636):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L727-L730):
 
 ```clj
 (defprotocol IIterable
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:633-636](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L633-L636)</ins>
+                └── <ins>[core.cljs:727-730](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L727-L730)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IIterable\n  \"Protocol for iterating over a collection.\"\n  (-iterator [coll]\n    \"Returns an iterator for coll.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [633 636]},
+          :lines [727 730]},
  :methods [{:name "-iterator",
             :signature ["[coll]"],
             :docstring "Returns an iterator for coll."}],

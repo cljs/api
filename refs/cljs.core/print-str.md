@@ -30,7 +30,7 @@ print to a string, returning it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8647-L8650):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8781-L8784):
 
 ```clj
 (defn print-str
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8647-8650](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8647-L8650)</ins>
+                └── <ins>[core.cljs:8781-8784](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8781-L8784)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn print-str\n  [& objs]\n  (pr-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8647 8650]},
+          :lines [8781 8784]},
  :full-name "cljs.core/print-str",
  :clj-symbol "clojure.core/print-str",
  :docstring "print to a string, returning it"}

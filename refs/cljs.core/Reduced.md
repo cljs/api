@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1133-L1135):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1244-L1246):
 
 ```clj
 (deftype Reduced [val]
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1133-1135](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1133-L1135)</ins>
+                └── <ins>[core.cljs:1244-1246](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1244-L1246)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(deftype Reduced [val]\n  IDeref\n  (-deref [o] val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1133 1135]},
+          :lines [1244 1246]},
  :full-name "cljs.core/Reduced",
  :clj-symbol "clojure.lang/Reduced"}
 

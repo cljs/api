@@ -43,7 +43,7 @@ same as defn, yielding non-public def
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L4717-L4721):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L4719-L4723):
 
 ```clj
 (defmacro defn-
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-RC1
+clojure @ clojure-1.7.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:4717-4721](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L4717-L4721)</ins>
+            └── <ins>[core.clj:4719-4723](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L4719-L4723)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defmacro defn-\n  [name & decls]\n    (list* `defn (with-meta name (assoc (meta name) :private true)) decls))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-RC1",
+          :tag "clojure-1.7.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [4717 4721]},
+          :lines [4719 4723]},
  :full-name "cljs.core/defn-",
  :clj-symbol "clojure.core/defn-",
  :docstring "same as defn, yielding non-public def"}

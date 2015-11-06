@@ -37,23 +37,23 @@ and :suffix.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.clj#L57-L79):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.clj#L57-L79):
 
 ```clj
 (defmacro pprint-logical-block
   [& args]
   (let [[options body] (parse-lb-options #{:prefix :per-line-prefix :suffix} args)]
     `(do (if (cljs.pprint/level-exceeded)
-           (~'-write cljs.pprint/*out* "#")
+           (~'-write cljs.core/*out* "#")
            (do
              (cljs.core/binding [cljs.pprint/*current-level* (inc cljs.pprint/*current-level*)
                        cljs.pprint/*current-length* 0]
-               (cljs.pprint/start-block cljs.pprint/*out*
+               (cljs.pprint/start-block cljs.core/*out*
                                         ~(:prefix options)
                                         ~(:per-line-prefix options)
                                         ~(:suffix options))
                ~@body
-               (cljs.pprint/end-block cljs.pprint/*out*))))
+               (cljs.pprint/end-block cljs.core/*out*))))
          nil)))
 ```
 
@@ -61,12 +61,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:57-79](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.clj#L57-L79)</ins>
+                └── <ins>[pprint.clj:57-79](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.clj#L57-L79)</ins>
 </pre>
 
 -->
@@ -114,10 +114,10 @@ The API data for this symbol:
  :history [["+" "0.0-3255"]],
  :type "macro",
  :full-name-encode "cljs.pprint/pprint-logical-block",
- :source {:code "(defmacro pprint-logical-block\n  [& args]\n  (let [[options body] (parse-lb-options #{:prefix :per-line-prefix :suffix} args)]\n    `(do (if (cljs.pprint/level-exceeded)\n           (~'-write cljs.pprint/*out* \"#\")\n           (do\n             (cljs.core/binding [cljs.pprint/*current-level* (inc cljs.pprint/*current-level*)\n                       cljs.pprint/*current-length* 0]\n               (cljs.pprint/start-block cljs.pprint/*out*\n                                        ~(:prefix options)\n                                        ~(:per-line-prefix options)\n                                        ~(:suffix options))\n               ~@body\n               (cljs.pprint/end-block cljs.pprint/*out*))))\n         nil)))",
+ :source {:code "(defmacro pprint-logical-block\n  [& args]\n  (let [[options body] (parse-lb-options #{:prefix :per-line-prefix :suffix} args)]\n    `(do (if (cljs.pprint/level-exceeded)\n           (~'-write cljs.core/*out* \"#\")\n           (do\n             (cljs.core/binding [cljs.pprint/*current-level* (inc cljs.pprint/*current-level*)\n                       cljs.pprint/*current-length* 0]\n               (cljs.pprint/start-block cljs.core/*out*\n                                        ~(:prefix options)\n                                        ~(:per-line-prefix options)\n                                        ~(:suffix options))\n               ~@body\n               (cljs.pprint/end-block cljs.core/*out*))))\n         nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [57 79]},
  :full-name "cljs.pprint/pprint-logical-block",

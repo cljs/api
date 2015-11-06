@@ -34,7 +34,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1046-L1056):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1157-L1167):
 
 ```clj
 (defn ^number mix-collection-hash
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1046-1056](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1046-L1056)</ins>
+                └── <ins>[core.cljs:1157-1167](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1157-L1167)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(defn ^number mix-collection-hash\n  [hash-basis count]\n  (let [h1 m3-seed\n        k1 (m3-mix-K1 hash-basis)\n        h1 (m3-mix-H1 h1 k1)]\n    (m3-fmix h1 count)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1046 1056]},
+          :lines [1157 1167]},
  :full-name "cljs.core/mix-collection-hash",
  :clj-symbol "clojure.core/mix-collection-hash",
  :docstring "Mix final collection hash for ordered or unordered collections.\nhash-basis is the combined collection hash, count is the number\nof elements included in the basis. Note this is the hash code\nconsistent with =, different from .hashCode.\nSee http://clojure.org/data_structures#hash for full algorithms."}

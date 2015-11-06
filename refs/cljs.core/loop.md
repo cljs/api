@@ -64,41 +64,41 @@ therein. Acts as a recur target.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L224-L246):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L700-L722):
 
 ```clj
-(defmacro loop
+(core/defmacro loop
   [bindings & body]
-    (assert-args
-      (vector? bindings) "a vector for its binding"
-      (even? (count bindings)) "an even number of forms in binding vector")
-    (let [db (destructure bindings)]
-      (if (= db bindings)
-        `(loop* ~bindings ~@body)
-        (let [vs (take-nth 2 (drop 1 bindings))
-              bs (take-nth 2 bindings)
-              gs (map (fn [b] (if (core/symbol? b) b (gensym))) bs)
-              bfs (reduce (fn [ret [b v g]]
-                            (if (core/symbol? b)
-                              (conj ret g v)
-                              (conj ret g v b g)))
-                          [] (map core/vector bs vs gs))]
-          `(let ~bfs
-             (loop* ~(vec (interleave gs gs))
-               (let ~(vec (interleave bs gs))
-                 ~@body)))))))
+  (assert-args
+    (vector? bindings) "a vector for its binding"
+    (even? (count bindings)) "an even number of forms in binding vector")
+  (core/let [db (destructure bindings)]
+    (if (= db bindings)
+      `(loop* ~bindings ~@body)
+      (core/let [vs (take-nth 2 (drop 1 bindings))
+                 bs (take-nth 2 bindings)
+                 gs (map (core/fn [b] (if (core/symbol? b) b (gensym))) bs)
+                 bfs (reduce (core/fn [ret [b v g]]
+                               (if (core/symbol? b)
+                                 (conj ret g v)
+                                 (conj ret g v b g)))
+                       [] (map core/vector bs vs gs))]
+        `(let ~bfs
+           (loop* ~(vec (interleave gs gs))
+             (let ~(vec (interleave bs gs))
+               ~@body)))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:224-246](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L224-L246)</ins>
+                └── <ins>[core.cljc:700-722](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L700-L722)</ins>
 </pre>
 
 -->
@@ -148,12 +148,12 @@ The API data for this symbol:
  :type "macro",
  :related ["special/recur"],
  :full-name-encode "cljs.core/loop",
- :source {:code "(defmacro loop\n  [bindings & body]\n    (assert-args\n      (vector? bindings) \"a vector for its binding\"\n      (even? (count bindings)) \"an even number of forms in binding vector\")\n    (let [db (destructure bindings)]\n      (if (= db bindings)\n        `(loop* ~bindings ~@body)\n        (let [vs (take-nth 2 (drop 1 bindings))\n              bs (take-nth 2 bindings)\n              gs (map (fn [b] (if (core/symbol? b) b (gensym))) bs)\n              bfs (reduce (fn [ret [b v g]]\n                            (if (core/symbol? b)\n                              (conj ret g v)\n                              (conj ret g v b g)))\n                          [] (map core/vector bs vs gs))]\n          `(let ~bfs\n             (loop* ~(vec (interleave gs gs))\n               (let ~(vec (interleave bs gs))\n                 ~@body)))))))",
+ :source {:code "(core/defmacro loop\n  [bindings & body]\n  (assert-args\n    (vector? bindings) \"a vector for its binding\"\n    (even? (count bindings)) \"an even number of forms in binding vector\")\n  (core/let [db (destructure bindings)]\n    (if (= db bindings)\n      `(loop* ~bindings ~@body)\n      (core/let [vs (take-nth 2 (drop 1 bindings))\n                 bs (take-nth 2 bindings)\n                 gs (map (core/fn [b] (if (core/symbol? b) b (gensym))) bs)\n                 bfs (reduce (core/fn [ret [b v g]]\n                               (if (core/symbol? b)\n                                 (conj ret g v)\n                                 (conj ret g v b g)))\n                       [] (map core/vector bs vs gs))]\n        `(let ~bfs\n           (loop* ~(vec (interleave gs gs))\n             (let ~(vec (interleave bs gs))\n               ~@body)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [224 246]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [700 722]},
  :examples [{:id "60291e",
              :content "```clj\n(loop [x 0]\n  (when (< x 10)\n    (println x)\n    (recur (+ x 2))))\n;; Prints:\n;; 0\n;; 2\n;; 4\n;; 6\n;; 8\n;;\n;;=> nil\n```"}],
  :full-name "cljs.core/loop",

@@ -40,18 +40,18 @@ separated by an optional separator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L49-L66):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L52-L69):
 
 ```clj
 (defn join
   ([coll]
    (loop [sb (StringBuffer.) coll (seq coll)]
-     (if coll
+     (if-not (nil? coll)
        (recur (. sb (append (str (first coll)))) (next coll))
        (.toString sb))))
   ([separator coll]
    (loop [sb (StringBuffer.) coll (seq coll)]
-     (if coll
+     (if-not (nil? coll)
        (do
          (. sb (append (str (first coll))))
          (let [coll (next coll)]
@@ -65,12 +65,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:49-66](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L49-L66)</ins>
+                └── <ins>[string.cljs:52-69](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L52-L69)</ins>
 </pre>
 
 -->
@@ -119,12 +119,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.string/join",
- :source {:code "(defn join\n  ([coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if coll\n       (recur (. sb (append (str (first coll)))) (next coll))\n       (.toString sb))))\n  ([separator coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if coll\n       (do\n         (. sb (append (str (first coll))))\n         (let [coll (next coll)]\n           (when-not (nil? coll)\n             (. sb (append separator)))\n           (recur sb coll)))\n       (.toString sb)))))",
+ :source {:code "(defn join\n  ([coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (recur (. sb (append (str (first coll)))) (next coll))\n       (.toString sb))))\n  ([separator coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (do\n         (. sb (append (str (first coll))))\n         (let [coll (next coll)]\n           (when-not (nil? coll)\n             (. sb (append separator)))\n           (recur sb coll)))\n       (.toString sb)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [49 66]},
+          :lines [52 69]},
  :full-name "clojure.string/join",
  :clj-symbol "clojure.string/join",
  :docstring "Returns a string of all elements in coll, as returned by (seq coll),\nseparated by an optional separator."}

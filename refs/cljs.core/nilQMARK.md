@@ -42,7 +42,7 @@ Returns true if x is nil, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L148-L151):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L177-L180):
 
 ```clj
 (defn ^boolean nil?
@@ -54,22 +54,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:148-151](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L148-L151)</ins>
+                └── <ins>[core.cljs:177-180](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L177-L180)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L323-L324):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L799-L800):
 
 ```clj
-(defmacro nil? [x]
+(core/defmacro nil? [x]
   `(coercive-= ~x nil))
 ```
 
@@ -77,12 +77,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:323-324](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L323-L324)</ins>
+                └── <ins>[core.cljc:799-800](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L799-L800)</ins>
 </pre>
 -->
 
@@ -134,15 +134,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean nil?\n  [x]\n  (coercive-= x nil))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [148 151]},
- :extra-sources [{:code "(defmacro nil? [x]\n  `(coercive-= ~x nil))",
+          :lines [177 180]},
+ :extra-sources [{:code "(core/defmacro nil? [x]\n  `(coercive-= ~x nil))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [323 324]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [799 800]}],
  :full-name "cljs.core/nil?",
  :clj-symbol "clojure.core/nil?",
  :docstring "Returns true if x is nil, false otherwise."}

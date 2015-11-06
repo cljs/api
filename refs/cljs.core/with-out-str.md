@@ -32,10 +32,10 @@ printing calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1977-L1986):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2491-L2500):
 
 ```clj
-(defmacro with-out-str
+(core/defmacro with-out-str
   [& body]
   `(let [sb# (goog.string.StringBuffer.)]
      (binding [cljs.core/*print-newline* true
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1977-1986](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1977-L1986)</ins>
+                └── <ins>[core.cljc:2491-2500](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2491-L2500)</ins>
 </pre>
 
 -->
@@ -101,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-1535"]],
  :type "macro",
  :full-name-encode "cljs.core/with-out-str",
- :source {:code "(defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-newline* true\n               cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
+ :source {:code "(core/defmacro with-out-str\n  [& body]\n  `(let [sb# (goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-newline* true\n               cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1977 1986]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2491 2500]},
  :full-name "cljs.core/with-out-str",
  :clj-symbol "clojure.core/with-out-str",
  :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}

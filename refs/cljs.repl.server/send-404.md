@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/server.clj#L131-L138):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/server.clj#L131-L138):
 
 ```clj
 (defn send-404 [conn path]
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:131-138](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/server.clj#L131-L138)</ins>
+                    └── <ins>[server.clj:131-138](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/server.clj#L131-L138)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn send-404 [conn path]\n  (send-and-close conn 404\n    (str\n      \"<html><body>\"\n      \"<h2>Page not found</h2>\"\n      \"No page \" path \" found on this server.\"\n      \"</body></html>\")\n    \"text/html\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [131 138]},
  :full-name "cljs.repl.server/send-404",

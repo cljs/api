@@ -45,7 +45,7 @@ and when that result is not nil, through the next etc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L7278-L7287):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7282-L7291):
 
 ```clj
 (defmacro some->>
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-RC1
+clojure @ clojure-1.7.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7278-7287](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L7278-L7287)</ins>
+            └── <ins>[core.clj:7282-7291](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7282-L7291)</ins>
 </pre>
 
 -->
@@ -121,9 +121,9 @@ The API data for this symbol:
  :source {:code "(defmacro some->>\n  [expr & forms]\n  (let [g (gensym)\n        pstep (fn [step] `(if (nil? ~g) nil (->> ~g ~step)))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep forms))]\n       ~g)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-RC1",
+          :tag "clojure-1.7.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [7278 7287]},
+          :lines [7282 7291]},
  :full-name "cljs.core/some->>",
  :clj-symbol "clojure.core/some->>",
  :docstring "When expr is not nil, threads it into the first form (via ->>),\nand when that result is not nil, through the next etc"}

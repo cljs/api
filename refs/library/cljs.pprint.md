@@ -28,12 +28,6 @@ use case is to properly indent data for readable logging.
 <th>History</th>
 </tr></thead>
 <tr>
-<td></td>
-<td><samp>[\*out\*](../cljs.pprint/STARoutSTAR.md)</samp></td>
-<td><samp>dynamic var</samp></td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> </td>
-</tr>
-<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-base*)</td>
 <td><samp>[\*print-base\*](../cljs.pprint/STARprint-baseSTAR.md)</samp></td>
 <td><samp>dynamic var</samp></td>
@@ -250,6 +244,12 @@ use case is to properly indent data for readable logging.
 <th>Type</th>
 <th>History</th>
 </tr></thead>
+<tr>
+<td></td>
+<td><samp>[~~\*out\*~~](../cljs.pprint/STARoutSTAR.md)</samp></td>
+<td><samp>dynamic var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
+</tr>
 <tr>
 <td></td>
 <td><samp>[~~PrettyFlush~~](../cljs.pprint/PrettyFlush.md)</samp></td>

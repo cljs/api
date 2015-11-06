@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2236):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2350):
 
 ```clj
 (defn ^number unchecked-double [x] x)
@@ -35,34 +35,34 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2236](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2236)</ins>
+                └── <ins>[core.cljs:2350](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2350)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L437):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L913):
 
 ```clj
-(defmacro unchecked-double [x] x)
+(core/defmacro unchecked-double [x] x)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:437](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L437)</ins>
+                └── <ins>[core.cljc:913](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L913)</ins>
 </pre>
 -->
 
@@ -112,15 +112,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-double [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2236]},
- :extra-sources [{:code "(defmacro unchecked-double [x] x)",
+          :lines [2350]},
+ :extra-sources [{:code "(core/defmacro unchecked-double [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [437]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [913]}],
  :full-name "cljs.core/unchecked-double",
  :clj-symbol "clojure.core/unchecked-double"}
 

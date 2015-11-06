@@ -22,7 +22,7 @@ Protocol for cloning a value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L337-L340):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L431-L434):
 
 ```clj
 (defprotocol ICloneable
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:337-340](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L337-L340)</ins>
+                └── <ins>[core.cljs:431-434](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L431-L434)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ICloneable\n  \"Protocol for cloning a value.\"\n  (^clj -clone [value]\n    \"Creates a clone of value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [337 340]},
+          :lines [431 434]},
  :methods [{:name "-clone",
             :signature ["[value]"],
             :docstring "Creates a clone of value."}],

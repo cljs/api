@@ -32,7 +32,7 @@ replacement at the root of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L80-L86):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L84-L90):
 
 ```clj
 (defn prewalk-replace
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:80-86](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L80-L86)</ins>
+                └── <ins>[walk.cljs:84-90](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L84-L90)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn prewalk-replace\n  [smap form]\n  (prewalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [80 86]},
+          :lines [84 90]},
  :full-name "clojure.walk/prewalk-replace",
  :clj-symbol "clojure.walk/prewalk-replace",
  :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the root of the tree first."}

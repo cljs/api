@@ -19,6 +19,9 @@
  <samp>
 (__analyze__ env form name opts)<br>
 </samp>
+ <samp>
+(__analyze__ state env form name opts)<br>
+</samp>
 
 ---
 
@@ -38,26 +41,35 @@ facilitate code walking without knowing the details of the op set.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L30-L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L61-L79):
 
 ```clj
 (defn analyze
-  ([env form] (ana/analyze env form nil))
-  ([env form name] (ana/analyze env form name nil))
-  ([env form name opts] (ana/analyze env form name opts)))
+  ([env form] (analyze env form nil))
+  ([env form name] (analyze env form name nil))
+  ([env form name opts]
+   (analyze
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))
+     env form name opts))
+  ([state env form name opts]
+   (env/with-compiler-env state
+     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+       (ana/analyze env form name opts)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:30-39](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L30-L39)</ins>
+                    └── <ins>[api.clj:61-79](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L61-L79)</ins>
 </pre>
 
 -->
@@ -98,16 +110,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.analyzer.api",
  :name "analyze",
- :signature ["[env form]" "[env form name]" "[env form name opts]"],
+ :signature ["[env form]"
+             "[env form name]"
+             "[env form name opts]"
+             "[state env form name opts]"],
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/analyze",
- :source {:code "(defn analyze\n  ([env form] (ana/analyze env form nil))\n  ([env form name] (ana/analyze env form name nil))\n  ([env form name opts] (ana/analyze env form name opts)))",
+ :source {:code "(defn analyze\n  ([env form] (analyze env form nil))\n  ([env form name] (analyze env form name nil))\n  ([env form name opts]\n   (analyze\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     env form name opts))\n  ([state env form name opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (ana/analyze env form name opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [30 39]},
+          :lines [61 79]},
  :full-name "cljs.analyzer.api/analyze",
  :docstring "Given an environment, a map containing {:locals (mapping of names to bindings), :context\n(one of :statement, :expr, :return), :ns (a symbol naming the\ncompilation ns)}, and form, returns an expression object (a map\ncontaining at least :form, :op and :env keys). If expr has any (immediately)\nnested exprs, must have :children [exprs...] entry. This will\nfacilitate code walking without knowing the details of the op set."}
 

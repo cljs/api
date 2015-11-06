@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L444-L445):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L538-L539):
 
 ```clj
 (defprotocol IDerefWithTimeout
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:444-445](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L444-L445)</ins>
+                └── <ins>[core.cljs:538-539](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L538-L539)</ins>
 </pre>
 
 -->
@@ -79,9 +79,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IDerefWithTimeout\n  (-deref-with-timeout [o msec timeout-val]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [444 445]},
+          :lines [538 539]},
  :methods [{:name "-deref-with-timeout",
             :signature ["[o msec timeout-val]"],
             :docstring nil}],

@@ -37,7 +37,7 @@ the ys from x and returns the result.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2300-L2305):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2414-L2419):
 
 ```clj
 (defn ^number unchecked-subtract
@@ -50,22 +50,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2300-2305](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2300-L2305)</ins>
+                └── <ins>[core.cljs:2414-2419](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2414-L2419)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L475-L476):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L951-L952):
 
 ```clj
-(defmacro ^::ana/numeric unchecked-subtract
+(core/defmacro ^::ana/numeric unchecked-subtract
   ([& xs] `(- ~@xs)))
 ```
 
@@ -73,12 +73,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:475-476](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L475-L476)</ins>
+                └── <ins>[core.cljc:951-952](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L951-L952)</ins>
 </pre>
 -->
 
@@ -128,15 +128,15 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-subtract\n  ([x] (cljs.core/unchecked-subtract x))\n  ([x y] (cljs.core/unchecked-subtract x y))\n  ([x y & more] (reduce unchecked-subtract (cljs.core/unchecked-subtract x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2300 2305]},
- :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-subtract\n  ([& xs] `(- ~@xs)))",
+          :lines [2414 2419]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-subtract\n  ([& xs] `(- ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [475 476]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [951 952]}],
  :full-name "cljs.core/unchecked-subtract",
  :clj-symbol "clojure.core/unchecked-subtract",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."}

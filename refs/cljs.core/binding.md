@@ -72,12 +72,12 @@ before the vars are bound to their new values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1427-L1438):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1931-L1942):
 
 ```clj
-(defmacro binding
+(core/defmacro binding
   [bindings & body]
-  (let [names (take-nth 2 bindings)]
+  (core/let [names (take-nth 2 bindings)]
     (cljs.analyzer/confirm-bindings &env names)
     `(with-redefs ~bindings ~@body)))
 ```
@@ -86,12 +86,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1427-1438](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1427-L1438)</ins>
+                └── <ins>[core.cljc:1931-1942](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1931-L1942)</ins>
 </pre>
 
 -->
@@ -141,12 +141,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/let"],
  :full-name-encode "cljs.core/binding",
- :source {:code "(defmacro binding\n  [bindings & body]\n  (let [names (take-nth 2 bindings)]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(with-redefs ~bindings ~@body)))",
+ :source {:code "(core/defmacro binding\n  [bindings & body]\n  (core/let [names (take-nth 2 bindings)]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(with-redefs ~bindings ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1427 1438]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [1931 1942]},
  :examples [{:id "7dd17f",
              :content "```clj\n(def ^:dynamic *foo* 1)\n\n(defn do-something []\n  (println *foo*))\n\n(binding [*foo* 2]\n  (do-something))\n;;=> prints 2\n\n*foo*\n;;=> 1\n```"}],
  :full-name "cljs.core/binding",

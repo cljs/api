@@ -30,7 +30,7 @@ Atomically resets the metadata for an atom
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8827-L8830):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8961-L8964):
 
 ```clj
 (defn reset-meta!
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8827-8830](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8827-L8830)</ins>
+                └── <ins>[core.cljs:8961-8964](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8961-L8964)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn reset-meta!\n  [iref m]\n  (set! (.-meta iref) m))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8827 8830]},
+          :lines [8961 8964]},
  :full-name "cljs.core/reset-meta!",
  :clj-symbol "clojure.core/reset-meta!",
  :docstring "Atomically resets the metadata for an atom"}

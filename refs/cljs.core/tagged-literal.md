@@ -36,25 +36,25 @@ tag symbol and a form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9701-L9706):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9835-L9840):
 
 ```clj
 (defn tagged-literal
   [tag form]
   {:pre [(symbol? tag)]}
-  (cljs.core.TaggedLiteral. tag form))
+  (TaggedLiteral. tag form))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9701-9706](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9701-L9706)</ins>
+                └── <ins>[core.cljs:9835-9840](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9835-L9840)</ins>
 </pre>
 
 -->
@@ -103,12 +103,12 @@ The API data for this symbol:
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.core/tagged-literal",
- :source {:code "(defn tagged-literal\n  [tag form]\n  {:pre [(symbol? tag)]}\n  (cljs.core.TaggedLiteral. tag form))",
+ :source {:code "(defn tagged-literal\n  [tag form]\n  {:pre [(symbol? tag)]}\n  (TaggedLiteral. tag form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9701 9706]},
+          :lines [9835 9840]},
  :full-name "cljs.core/tagged-literal",
  :clj-symbol "clojure.core/tagged-literal",
  :docstring "Construct a data representation of a tagged literal from a\ntag symbol and a form."}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8472-L8474):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8602-L8604):
 
 ```clj
 (defn write-all [writer & ss]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8472-8474](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8472-L8474)</ins>
+                └── <ins>[core.cljs:8602-8604](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8602-L8604)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn write-all [writer & ss]\n  (doseq [s ss]\n    (-write writer s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8472 8474]},
+          :lines [8602 8604]},
  :full-name "cljs.core/write-all",
  :full-name-encode "cljs.core/write-all",
  :history [["+" "0.0-1503"]]}

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1241-L1248):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1352-L1359):
 
 ```clj
 (deftype IndexedSeqIterator [arr ^:mutable i]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1241-1248](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1241-L1248)</ins>
+                └── <ins>[core.cljs:1352-1359](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1352-L1359)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(deftype IndexedSeqIterator [arr ^:mutable i]\n  Object\n  (hasNext [_]\n    (< i (alength arr)))\n  (next [_]\n    (let [ret (aget arr i)]\n      (set! i (inc i))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1241 1248]},
+          :lines [1352 1359]},
  :full-name "cljs.core/IndexedSeqIterator",
  :full-name-encode "cljs.core/IndexedSeqIterator",
  :history [["+" "0.0-2371"]]}

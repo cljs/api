@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2292-L2293):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2406-L2407):
 
 ```clj
 (defn unchecked-negate-int [x]
@@ -36,22 +36,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2292-2293](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2292-L2293)</ins>
+                └── <ins>[core.cljs:2406-2407](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2406-L2407)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L469-L470):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L945-L946):
 
 ```clj
-(defmacro ^::ana/numeric unchecked-negate-int
+(core/defmacro ^::ana/numeric unchecked-negate-int
   ([x] `(- ~x)))
 ```
 
@@ -59,12 +59,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:469-470](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L469-L470)</ins>
+                └── <ins>[core.cljc:945-946](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L945-L946)</ins>
 </pre>
 -->
 
@@ -113,15 +113,15 @@ The API data for this symbol:
  :source {:code "(defn unchecked-negate-int [x]\n  (cljs.core/unchecked-negate-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2292 2293]},
- :extra-sources [{:code "(defmacro ^::ana/numeric unchecked-negate-int\n  ([x] `(- ~x)))",
+          :lines [2406 2407]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-negate-int\n  ([x] `(- ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [469 470]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [945 946]}],
  :full-name "cljs.core/unchecked-negate-int",
  :clj-symbol "clojure.core/unchecked-negate-int"}
 

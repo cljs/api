@@ -37,7 +37,7 @@ characters to lower-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L78-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L81-L88):
 
 ```clj
 (defn capitalize
@@ -52,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:78-85](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L78-L85)</ins>
+                └── <ins>[string.cljs:81-88](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L81-L88)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn capitalize\n  [s]\n  (if (< (count s) 2)\n    (upper-case s)\n    (str (upper-case (subs s 0 1))\n         (lower-case (subs s 1)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [78 85]},
+          :lines [81 88]},
  :full-name "clojure.string/capitalize",
  :clj-symbol "clojure.string/capitalize",
  :docstring "Converts first character of the string to upper-case, all other\ncharacters to lower-case."}

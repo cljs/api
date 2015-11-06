@@ -1,11 +1,11 @@
-## cljs.repl.browser/firefox-clean-function
+## ~~cljs.repl.browser/firefox-clean-function~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -89,8 +89,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "firefox-clean-function",
- :type "function",
  :signature ["[f]"],
+ :history [["+" "0.0-3053"] ["-" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/firefox-clean-function",
  :source {:code "(defn firefox-clean-function [f]\n  (as-> f f\n    (cond\n      (string/blank? f) nil\n      (not= (.indexOf f \"</\") -1)\n      (let [idx (.indexOf f \"</\")]\n        (.substring f (+ idx 2)))\n      :else f)\n    (-> f\n      (string/replace #\"<\" \"\")\n      (string/replace #\"\\/\" \"\"))))",
           :title "Source code",
           :repo "clojurescript",
@@ -98,8 +100,7 @@ The API data for this symbol:
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [392 402]},
  :full-name "cljs.repl.browser/firefox-clean-function",
- :full-name-encode "cljs.repl.browser/firefox-clean-function",
- :history [["+" "0.0-3053"]]}
+ :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 
 ```
 

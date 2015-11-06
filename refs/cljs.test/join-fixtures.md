@@ -33,7 +33,7 @@ NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L486-L492):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L504-L510):
 
 ```clj
 (defn join-fixtures
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:486-492](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L486-L492)</ins>
+                └── <ins>[test.cljs:504-510](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L504-L510)</ins>
 </pre>
 
 -->
@@ -101,9 +101,9 @@ The API data for this symbol:
  :source {:code "(defn join-fixtures\n  [fixtures]\n  (reduce compose-fixtures default-fixture fixtures))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [486 492]},
+          :lines [504 510]},
  :full-name "cljs.test/join-fixtures",
  :clj-symbol "clojure.test/join-fixtures",
  :docstring "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty.\n\nNOTE: Incompatible with map fixtures."}

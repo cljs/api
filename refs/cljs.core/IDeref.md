@@ -25,7 +25,7 @@ Protocol for adding dereference functionality to a reference.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L439-L442):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L533-L536):
 
 ```clj
 (defprotocol IDeref
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:439-442](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L439-L442)</ins>
+                └── <ins>[core.cljs:533-536](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L533-L536)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IDeref\n  \"Protocol for adding dereference functionality to a reference.\"\n  (-deref [o]\n    \"Returns the value of the reference o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [439 442]},
+          :lines [533 536]},
  :methods [{:name "-deref",
             :signature ["[o]"],
             :docstring "Returns the value of the reference o."}],

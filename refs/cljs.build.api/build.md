@@ -30,27 +30,31 @@ Given a source which can be compiled, produce runnable JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L172-L177):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L210-L219):
 
 ```clj
 (defn build
   ([source opts]
-   (closure/build source opts))
+   (build source opts
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))))
   ([source opts compiler-env]
-   (closure/build source opts compiler-env)))
+   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+     (closure/build source opts compiler-env))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:172-177](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L172-L177)</ins>
+                    └── <ins>[api.clj:210-219](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L210-L219)</ins>
 </pre>
 
 -->
@@ -95,12 +99,12 @@ The API data for this symbol:
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.build.api/build",
- :source {:code "(defn build\n  ([source opts]\n   (closure/build source opts))\n  ([source opts compiler-env]\n   (closure/build source opts compiler-env)))",
+ :source {:code "(defn build\n  ([source opts]\n   (build source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/build source opts compiler-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [172 177]},
+          :lines [210 219]},
  :full-name "cljs.build.api/build",
  :docstring "Given a source which can be compiled, produce runnable JavaScript."}
 

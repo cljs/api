@@ -60,7 +60,7 @@ called, the returned function calls f with args + additional args.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3681-L3708):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3807-L3834):
 
 ```clj
 (defn partial
@@ -94,12 +94,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3681-3708](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3681-L3708)</ins>
+                └── <ins>[core.cljs:3807-3834](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3807-L3834)</ins>
 </pre>
 
 -->
@@ -156,9 +156,9 @@ The API data for this symbol:
  :source {:code "(defn partial\n  ([f] f)\n  ([f arg1]\n   (fn\n     ([] (f arg1))\n     ([x] (f arg1 x))\n     ([x y] (f arg1 x y))\n     ([x y z] (f arg1 x y z))\n     ([x y z & args] (apply f arg1 x y z args))))\n  ([f arg1 arg2]\n   (fn\n     ([] (f arg1 arg2))\n     ([x] (f arg1 arg2 x))\n     ([x y] (f arg1 arg2 x y))\n     ([x y z] (f arg1 arg2 x y z))\n     ([x y z & args] (apply f arg1 arg2 x y z args))))\n  ([f arg1 arg2 arg3]\n   (fn\n     ([] (f arg1 arg2 arg3))\n     ([x] (f arg1 arg2 arg3 x))\n     ([x y] (f arg1 arg2 arg3 x y))\n     ([x y z] (f arg1 arg2 arg3 x y z))\n     ([x y z & args] (apply f arg1 arg2 arg3 x y z args))))\n  ([f arg1 arg2 arg3 & more]\n   (fn [& args] (apply f arg1 arg2 arg3 (concat more args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3681 3708]},
+          :lines [3807 3834]},
  :full-name "cljs.core/partial",
  :clj-symbol "clojure.core/partial",
  :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args."}

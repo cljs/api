@@ -31,7 +31,7 @@ effects, on successive items in the collection. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8985-L8989):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9119-L9123):
 
 ```clj
 (defn run!
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8985-8989](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8985-L8989)</ins>
+                └── <ins>[core.cljs:9119-9123](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9119-L9123)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn run!\n  [proc coll]\n  (reduce #(proc %2) nil coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8985 8989]},
+          :lines [9119 9123]},
  :full-name "cljs.core/run!",
  :clj-symbol "clojure.core/run!",
  :docstring "Runs the supplied procedure (via reduce), for purposes of side\neffects, on successive items in the collection. Returns nil"}

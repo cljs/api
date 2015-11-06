@@ -47,10 +47,10 @@ Equivalent to `''+s` in JavaScript.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1997-L1998):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2511-L2512):
 
 ```clj
-(defmacro js-str [s]
+(core/defmacro js-str [s]
   (core/list 'js* "''+~{}" s))
 ```
 
@@ -58,12 +58,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1997-1998](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1997-L1998)</ins>
+                └── <ins>[core.cljc:2511-2512](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2511-L2512)</ins>
 </pre>
 
 -->
@@ -110,12 +110,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/str"],
  :full-name-encode "cljs.core/js-str",
- :source {:code "(defmacro js-str [s]\n  (core/list 'js* \"''+~{}\" s))",
+ :source {:code "(core/defmacro js-str [s]\n  (core/list 'js* \"''+~{}\" s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1997 1998]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2511 2512]},
  :examples [{:id "e92009",
              :content "```clj\n(js-str 23)\n;;=> \"23\"\n\n(js-str #js {:foo 1})\n;;=> \"[Object object]\"\n```"}],
  :full-name "cljs.core/js-str"}

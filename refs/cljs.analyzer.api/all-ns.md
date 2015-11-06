@@ -16,6 +16,9 @@
  <samp>
 (__all-ns__)<br>
 </samp>
+ <samp>
+(__all-ns__ state)<br>
+</samp>
 
 ---
 
@@ -31,25 +34,27 @@ returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L87-L91):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L145-L151):
 
 ```clj
 (defn all-ns
-  []
-  (keys (get @env/*compiler* ::ana/namespaces)))
+  ([]
+   (all-ns env/*compiler*))
+  ([state]
+   (keys (get @state ::ana/namespaces))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:87-91](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L87-L91)</ins>
+                    └── <ins>[api.clj:145-151](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L145-L151)</ins>
 </pre>
 
 -->
@@ -93,16 +98,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.analyzer.api",
  :name "all-ns",
- :signature ["[]"],
+ :signature ["[]" "[state]"],
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/all-ns",
- :source {:code "(defn all-ns\n  []\n  (keys (get @env/*compiler* ::ana/namespaces)))",
+ :source {:code "(defn all-ns\n  ([]\n   (all-ns env/*compiler*))\n  ([state]\n   (keys (get @state ::ana/namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [87 91]},
+          :lines [145 151]},
  :full-name "cljs.analyzer.api/all-ns",
  :clj-symbol "clojure.core/all-ns",
  :docstring "Return all namespaces. Analagous to clojure.core/all-ns but\nreturns symbols identifying namespaces not Namespace instances."}

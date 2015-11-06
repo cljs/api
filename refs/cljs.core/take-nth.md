@@ -41,11 +41,12 @@ transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8245-L8262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8373-L8392):
 
 ```clj
 (defn take-nth
   ([n]
+   {:pre [(number? n)]}
      (fn [rf]
        (let [ia (volatile! -1)]
          (fn
@@ -57,6 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
                   (rf result input)
                   result)))))))
   ([n coll]
+   {:pre [(number? n)]}
      (lazy-seq
        (when-let [s (seq coll)]
          (cons (first s) (take-nth n (drop n s)))))))
@@ -66,12 +68,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8245-8262](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8245-L8262)</ins>
+                └── <ins>[core.cljs:8373-8392](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8373-L8392)</ins>
 </pre>
 
 -->
@@ -120,12 +122,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/take-nth",
- :source {:code "(defn take-nth\n  ([n]\n     (fn [rf]\n       (let [ia (volatile! -1)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [i (vswap! ia inc)]\n                (if (zero? (rem i n))\n                  (rf result input)\n                  result)))))))\n  ([n coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (cons (first s) (take-nth n (drop n s)))))))",
+ :source {:code "(defn take-nth\n  ([n]\n   {:pre [(number? n)]}\n     (fn [rf]\n       (let [ia (volatile! -1)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [i (vswap! ia inc)]\n                (if (zero? (rem i n))\n                  (rf result input)\n                  result)))))))\n  ([n coll]\n   {:pre [(number? n)]}\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (cons (first s) (take-nth n (drop n s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8245 8262]},
+          :lines [8373 8392]},
  :full-name "cljs.core/take-nth",
  :clj-symbol "clojure.core/take-nth",
  :docstring "Returns a lazy seq of every nth item in coll.  Returns a stateful\ntransducer when no collection is provided."}

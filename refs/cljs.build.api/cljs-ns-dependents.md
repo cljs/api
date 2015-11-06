@@ -13,6 +13,9 @@
  <samp>
 (__cljs-ns-dependents__ ns)<br>
 </samp>
+ <samp>
+(__cljs-ns-dependents__ state ns)<br>
+</samp>
 
 ---
 
@@ -29,25 +32,32 @@ transient dependents.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L70-L75):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L73-L85):
 
 ```clj
 (defn cljs-ns-dependents
-  [ns]
-  (ana/ns-dependents ns))
+  ([ns]
+   (cljs-ns-dependents
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env))
+     ns))
+  ([state ns]
+   (env/with-compiler-env state
+     (ana/ns-dependents ns))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:70-75](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L70-L75)</ins>
+                    └── <ins>[api.clj:73-85](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L73-L85)</ins>
 </pre>
 
 -->
@@ -88,16 +98,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.build.api",
  :name "cljs-ns-dependents",
- :signature ["[ns]"],
+ :signature ["[ns]" "[state ns]"],
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.build.api/cljs-ns-dependents",
- :source {:code "(defn cljs-ns-dependents\n  [ns]\n  (ana/ns-dependents ns))",
+ :source {:code "(defn cljs-ns-dependents\n  ([ns]\n   (cljs-ns-dependents\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     ns))\n  ([state ns]\n   (env/with-compiler-env state\n     (ana/ns-dependents ns))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [70 75]},
+          :lines [73 85]},
  :full-name "cljs.build.api/cljs-ns-dependents",
  :docstring "Given a namespace symbol return a seq of all dependent\nnamespaces sorted in dependency order. Will include\ntransient dependents."}
 

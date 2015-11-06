@@ -34,7 +34,7 @@ does not contain key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3274-L3283):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3400-L3409):
 
 ```clj
 (defn disj!
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3274-3283](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3274-L3283)</ins>
+                └── <ins>[core.cljs:3400-3409](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3400-L3409)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn disj!\n  ([tcoll val]\n    (-disjoin! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-disjoin! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3274 3283]},
+          :lines [3400 3409]},
  :full-name "cljs.core/disj!",
  :clj-symbol "clojure.core/disj!",
  :docstring "disj[oin]. Returns a transient set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}

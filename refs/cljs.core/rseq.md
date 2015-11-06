@@ -45,7 +45,7 @@ can be a vector or sorted-map), in reverse order. If rev is empty returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2681-L2685):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2804-L2808):
 
 ```clj
 (defn ^seq rseq
@@ -57,12 +57,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2681-2685](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2681-L2685)</ins>
+                └── <ins>[core.cljs:2804-2808](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2804-L2808)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn ^seq rseq\n  [coll]\n  (-rseq coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2681 2685]},
+          :lines [2804 2808]},
  :full-name "cljs.core/rseq",
  :clj-symbol "clojure.core/rseq",
  :docstring "Returns, in constant time, a seq of the items in rev (which\ncan be a vector or sorted-map), in reverse order. If rev is empty returns nil"}

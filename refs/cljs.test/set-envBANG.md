@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L267-L268):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L277-L278):
 
 ```clj
 (defn set-env! [new-env]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:267-268](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/test.cljs#L267-L268)</ins>
+                └── <ins>[test.cljs:277-278](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/test.cljs#L277-L278)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn set-env! [new-env]\n  (set! *current-env* new-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [267 268]},
+          :lines [277 278]},
  :full-name "cljs.test/set-env!",
  :full-name-encode "cljs.test/set-envBANG",
  :history [["+" "0.0-2496"]]}

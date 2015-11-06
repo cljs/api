@@ -92,7 +92,7 @@ Available clojure.main/repl style options and their defaults:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L870-L940):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L885-L955):
 
 ```clj
 (defn repl
@@ -106,12 +106,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:870-940](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L870-L940)</ins>
+                └── <ins>[repl.cljc:885-955](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L885-L955)</ins>
 </pre>
 
 -->
@@ -159,9 +159,9 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & opts]\n  (assert (even? (count opts))\n    \"Arguments after repl-env must be interleaved key value pairs\")\n  (repl* repl-env (apply hash-map opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [870 940]},
+          :lines [885 955]},
  :full-name "cljs.repl/repl",
  :docstring "Generic, reusable, read-eval-print loop. By default, reads from *in* using\na c.t.r.reader-types/source-logging-push-back-reader,\nwrites to *out*, and prints exception summaries to *err*. If you use the\ndefault :read hook, *in* must either be an instance of\nc.t.r.reader-types/PushbackReader or duplicate its behavior of both supporting\nunread and collapsing CR, LF, and CRLF into a single \\newline. Options\nare sequential keyword-value pairs. The first argument is the JavaScript\nevaluation environment, the second argument is an extended version of the\nstandard ClojureScript compiler options. In addition to ClojureScript compiler\nbuild options it also take a set of options similar to clojure.main/repl with\nadjustments for ClojureScript evalution and compilation model:\n\nAvailable clojure.main/repl style options and their defaults:\n\n   - :init, function of no arguments, initialization hook called with\n     bindings for set!-able vars in place.\n     default: #()\n\n   - :need-prompt, function of no arguments, called before each\n     read-eval-print except the first, the user will be prompted if it\n     returns true.\n     default: #(if (c.t.r.readers-types/indexing-reader? *in*)\n                 (== (c.t.r.reader-types/get-column-number *in*) 1)\n                 (identity true))\n\n   - :prompt, function of no arguments, prompts for more input.\n     default: repl-prompt\n\n   - :flush, function of no arguments, flushes output\n     default: flush\n\n   - :read, function of two arguments, reads from *in*:\n       - returns its first argument to request a fresh prompt\n         - depending on need-prompt, this may cause the repl to prompt\n           before reading again\n       - returns its second argument to request an exit from the repl\n       - else returns the next object read from the input stream\n     default: repl-read\n\n   - :eval, function of one argument, returns the evaluation of its\n     argument. The eval function must take repl-env, the JavaScript evaluation\n     environment, env, the ClojureScript analysis environment, the form\n     and opts, the standard ClojureScript REPL/compiler options.\n     default: eval\n\n   - :print, function of one argument, prints its argument to the output\n     default: println\n\n   - :caught, function of three arguments, a throwable, called when\n     read, eval, or print throws an exception or error default. The second\n     argument is the JavaScript evaluation environment this permits context\n     sensitive handling if necessary. The third argument is opts, the standard\n     ClojureScript REPL/compiler options. In the case of errors or exception\n     in the JavaScript target, these will be thrown as\n     clojure.lang.IExceptionInfo instances.\n     default: repl-caught\n\n   - :reader, the c.t.r reader to use.\n     default: c.t.r.reader-types/source-logging-push-back-reader\n\n   - :print-no-newline, print without a newline.\n     default: print\n\n   - :source-map-inline, whether inline source maps should be enabled. Most\n     useful in browser context. Implies using a fresh reader for each form.\n     default: true"}
 

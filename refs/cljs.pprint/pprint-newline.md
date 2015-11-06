@@ -35,7 +35,7 @@ Output is sent to *out* which must be a pretty printing writer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L843-L852):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L841-L850):
 
 ```clj
 (defn pprint-newline
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:843-852](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L843-L852)</ins>
+                └── <ins>[pprint.cljs:841-850](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L841-L850)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn pprint-newline\n  [kind]\n  (check-enumerated-arg kind #{:linear :miser :fill :mandatory})\n  (nl *out* kind))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [843 852]},
+          :lines [841 850]},
  :full-name "cljs.pprint/pprint-newline",
  :clj-symbol "clojure.pprint/pprint-newline",
  :docstring "Print a conditional newline to a pretty printing stream. kind specifies if the\nnewline is :linear, :miser, :fill, or :mandatory.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer."}

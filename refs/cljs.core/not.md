@@ -41,23 +41,27 @@ Returns true if x is logical false, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L165-L167):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L194-L200):
 
 ```clj
 (defn ^boolean not
-  [x] (if x false true))
+  [x]
+  (cond
+    (nil? x) true
+    (false? x) true
+    :else false))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:165-167](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L165-L167)</ins>
+                └── <ins>[core.cljs:194-200](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L194-L200)</ins>
 </pre>
 
 -->
@@ -108,12 +112,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/complement" "cljs.core/false?"],
  :full-name-encode "cljs.core/not",
- :source {:code "(defn ^boolean not\n  [x] (if x false true))",
+ :source {:code "(defn ^boolean not\n  [x]\n  (cond\n    (nil? x) true\n    (false? x) true\n    :else false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [165 167]},
+          :lines [194 200]},
  :full-name "cljs.core/not",
  :clj-symbol "clojure.core/not",
  :docstring "Returns true if x is logical false, false otherwise."}

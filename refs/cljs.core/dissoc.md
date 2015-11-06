@@ -63,7 +63,7 @@ that does not contain a mapping for key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1631-L1643):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1742-L1754):
 
 ```clj
 (defn dissoc
@@ -83,12 +83,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1631-1643](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1631-L1643)</ins>
+                └── <ins>[core.cljs:1742-1754](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1742-L1754)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(defn dissoc\n  ([coll] coll)\n  ([coll k]\n    (when-not (nil? coll)\n      (-dissoc coll k)))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (dissoc coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1631 1643]},
+          :lines [1742 1754]},
  :examples [{:id "fd6ae9",
              :content "```clj\n(dissoc {:key \"value\" :key2 \"value2\"} :key)\n;;=> {:key2 \"value2\"}\n```"}],
  :full-name "cljs.core/dissoc",

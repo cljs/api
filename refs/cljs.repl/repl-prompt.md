@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L698-L699):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L710-L711):
 
 ```clj
 (defn repl-prompt []
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:698-699](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl.cljc#L698-L699)</ins>
+                └── <ins>[repl.cljc:710-711](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl.cljc#L710-L711)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn repl-prompt []\n  (print (str ana/*cljs-ns* \"=> \")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [698 699]},
+          :lines [710 711]},
  :full-name "cljs.repl/repl-prompt",
  :full-name-encode "cljs.repl/repl-prompt",
  :history [["+" "0.0-2911"]]}

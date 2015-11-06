@@ -27,7 +27,7 @@ Set *print-fn* to console.log
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L110-L116):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L135-L145):
 
 ```clj
 (defn enable-console-print!
@@ -35,19 +35,23 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
   (set! *print-newline* false)
   (set! *print-fn*
     (fn [& args]
-      (.apply (.-log js/console) js/console (into-array args)))))
+      (.apply (.-log js/console) js/console (into-array args))))
+  (set! *print-err-fn*
+    (fn [& args]
+      (.apply (.-error js/console) js/console (into-array args))))
+  nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:110-116](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L110-L116)</ins>
+                └── <ins>[core.cljs:135-145](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L135-L145)</ins>
 </pre>
 
 -->
@@ -92,12 +96,12 @@ The API data for this symbol:
  :history [["+" "0.0-2060"]],
  :type "function",
  :full-name-encode "cljs.core/enable-console-printBANG",
- :source {:code "(defn enable-console-print!\n  []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args)))))",
+ :source {:code "(defn enable-console-print!\n  []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args))))\n  (set! *print-err-fn*\n    (fn [& args]\n      (.apply (.-error js/console) js/console (into-array args))))\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [110 116]},
+          :lines [135 145]},
  :full-name "cljs.core/enable-console-print!",
  :docstring "Set *print-fn* to console.log"}
 

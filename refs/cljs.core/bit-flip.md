@@ -61,7 +61,7 @@ Flip bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2399-L2402):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2513-L2516):
 
 ```clj
 (defn bit-flip
@@ -73,22 +73,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2399-2402](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2399-L2402)</ins>
+                └── <ins>[core.cljs:2513-2516](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2513-L2516)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L587-L588):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1063-L1064):
 
 ```clj
-(defmacro ^::ana/numeric bit-flip [x n]
+(core/defmacro ^::ana/numeric bit-flip [x n]
   (core/list 'js* "(~{} ^ (1 << ~{}))" x n))
 ```
 
@@ -96,12 +96,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:587-588](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L587-L588)</ins>
+                └── <ins>[core.cljc:1063-1064](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1063-L1064)</ins>
 </pre>
 -->
 
@@ -152,15 +152,15 @@ The API data for this symbol:
  :source {:code "(defn bit-flip\n  [x n]\n  (cljs.core/bit-flip x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2399 2402]},
- :extra-sources [{:code "(defmacro ^::ana/numeric bit-flip [x n]\n  (core/list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
+          :lines [2513 2516]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric bit-flip [x n]\n  (core/list 'js* \"(~{} ^ (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [587 588]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [1063 1064]}],
  :examples [{:id "5d7ee0",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-flip 2r1111 2)\n;;=> 11\n;; 11 = 2r1011\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-flip 15 2)\n;;=> 11\n```"}],
  :full-name "cljs.core/bit-flip",

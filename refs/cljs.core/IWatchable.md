@@ -22,7 +22,7 @@ Protocol for types that can be watched. Currently only implemented by Atom.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L539-L547):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L633-L641):
 
 ```clj
 (defprotocol IWatchable
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:539-547](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L539-L547)</ins>
+                └── <ins>[core.cljs:633-641](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L633-L641)</ins>
 </pre>
 
 -->
@@ -92,9 +92,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWatchable\n  \"Protocol for types that can be watched. Currently only implemented by Atom.\"\n  (-notify-watches [this oldval newval]\n    \"Calls all watchers with this, oldval and newval.\")\n  (-add-watch [this key f]\n    \"Adds a watcher function f to this. Keys must be unique per reference,\n     and can be used to remove the watch with -remove-watch.\")\n  (-remove-watch [this key]\n    \"Removes watcher that corresponds to key from this.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [539 547]},
+          :lines [633 641]},
  :methods [{:name "-notify-watches",
             :signature ["[this oldval newval]"],
             :docstring "Calls all watchers with this, oldval and newval."}

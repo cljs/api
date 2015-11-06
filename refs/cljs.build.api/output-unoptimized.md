@@ -32,7 +32,7 @@ libraries.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L162-L170):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L200-L208):
 
 ```clj
 (defn output-unoptimized
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:162-170](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L162-L170)</ins>
+                    └── <ins>[api.clj:200-208](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L200-L208)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn output-unoptimized\n  [opts & sources]\n  (apply closure/output-unoptimized opts sources))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [162 170]},
+          :lines [200 208]},
  :full-name "cljs.build.api/output-unoptimized",
  :docstring "Ensure that all JavaScript source files are on disk (not in jars),\nwrite the goog deps file including only the libraries that are being\nused and write the deps file for the current project.\n\nThe deps file for the current project will include third-party\nlibraries."}
 

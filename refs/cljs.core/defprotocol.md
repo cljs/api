@@ -68,61 +68,69 @@ effect, and defines no new types.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1250-L1345):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1732-L1835):
 
 ```clj
-(defmacro defprotocol
+(core/defmacro defprotocol
   [psym & doc+methods]
-  (let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))
-        [doc methods] (if (core/string? (first doc+methods))
-                        [(first doc+methods) (next doc+methods)]
-                        [nil doc+methods])
-        psym (vary-meta psym assoc
-               :doc doc
-               :protocol-symbol true)
-        ns-name (-> &env :ns :name)
-        fqn (fn [n] (symbol (core/str ns-name "." n)))
-        prefix (protocol-prefix p)
-        _ (core/doseq [[mname & arities] methods]
-            (when (some #{0} (map count (filter vector? arities)))
-              (throw (Exception.
-                       (core/str "Invalid protocol, " psym
-                                 " defines method " mname " with arity 0")))))
-        expand-sig (fn [fname slot sig]
-                     `(~sig
-                       (if (and ~(first sig) (. ~(first sig) ~(symbol (core/str "-" slot)))) ;; Property access needed here.
-                         (. ~(first sig) ~slot ~@sig)
-                         (let [x# (if (nil? ~(first sig)) nil ~(first sig))]
-                           ((or
-                             (aget ~(fqn fname) (goog/typeOf x#))
-                             (aget ~(fqn fname) "_")
-                             (throw (missing-protocol
-                                     ~(core/str psym "." fname) ~(first sig))))
-                            ~@sig)))))
-        psym   (vary-meta psym assoc-in [:protocol-info :methods]
-                 (into {}
-                   (map
-                     (fn [[fname & sigs]]
-                       (let [doc (as-> (last sigs) doc
-                                   (when (core/string? doc) doc))
-                             sigs (take-while vector? sigs)]
-                         [(vary-meta fname assoc :doc doc)
-                          (vec sigs)]))
-                     methods)))
-        method (fn [[fname & sigs]]
-                 (let [doc (as-> (last sigs) doc
-                             (when (core/string? doc) doc))
-                       sigs (take-while vector? sigs)
-                       slot (symbol (core/str prefix (name fname)))
-                       fname (vary-meta fname assoc
-                               :protocol p
-                               :doc doc)]
-                   `(defn ~fname
-                      ~@(map (fn [sig]
-                               (expand-sig fname
-                                 (symbol (core/str slot "$arity$" (count sig)))
-                                 sig))
-                          sigs))))]
+  (core/let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))
+             [doc methods] (if (core/string? (first doc+methods))
+                             [(first doc+methods) (next doc+methods)]
+                             [nil doc+methods])
+             psym (vary-meta psym assoc
+                    :doc doc
+                    :protocol-symbol true)
+             ns-name (core/-> &env :ns :name)
+             fqn (core/fn [n] (symbol (core/str ns-name "." n)))
+             prefix (protocol-prefix p)
+             _ (core/doseq [[mname & arities] methods]
+                 (core/when (some #{0} (map count (filter vector? arities)))
+                   (throw
+                     #?(:clj (Exception.
+                               (core/str "Invalid protocol, " psym
+                                 " defines method " mname " with arity 0"))
+                        :cljs (js/Error.
+                                (core/str "Invalid protocol, " psym
+                                  " defines method " mname " with arity 0"))))))
+             expand-sig (core/fn [fname slot sig]
+                          `(~sig
+                             (if (and (not (nil? ~(first sig)))
+                                      (not (nil? (. ~(first sig) ~(symbol (core/str "-" slot)))))) ;; Property access needed here.
+                               (. ~(first sig) ~slot ~@sig)
+                               (let [x# (if (nil? ~(first sig)) nil ~(first sig))
+                                     m# (aget ~(fqn fname) (goog/typeOf x#))]
+                                 (if-not (nil? m#)
+                                   (m# ~@sig)
+                                   (let [m# (aget ~(fqn fname) "_")]
+                                     (if-not (nil? m#)
+                                       (m# ~@sig)
+                                       (throw
+                                         (missing-protocol
+                                           ~(core/str psym "." fname) ~(first sig))))))))))
+             psym   (vary-meta psym assoc-in [:protocol-info :methods]
+                      (into {}
+                        (map
+                          (core/fn [[fname & sigs]]
+                            (core/let [doc (core/as-> (last sigs) doc
+                                             (core/when (core/string? doc) doc))
+                                       sigs (take-while vector? sigs)]
+                              [(vary-meta fname assoc :doc doc)
+                               (vec sigs)]))
+                          methods)))
+             method (core/fn [[fname & sigs]]
+                      (core/let [doc (core/as-> (last sigs) doc
+                                       (core/when (core/string? doc) doc))
+                                 sigs (take-while vector? sigs)
+                                 slot (symbol (core/str prefix (name fname)))
+                                 fname (vary-meta fname assoc
+                                         :protocol p
+                                         :doc doc)]
+                        `(defn ~fname
+                           ~@(map (core/fn [sig]
+                                    (expand-sig fname
+                                      (symbol (core/str slot "$arity$" (count sig)))
+                                      sig))
+                               sigs))))]
     `(do
        (set! ~'*unchecked-if* true)
        (def ~psym (js-obj))
@@ -134,12 +142,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1250-1345](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1250-L1345)</ins>
+                └── <ins>[core.cljc:1732-1835](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1732-L1835)</ins>
 </pre>
 
 -->
@@ -187,12 +195,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/defprotocol",
- :source {:code "(defmacro defprotocol\n  [psym & doc+methods]\n  (let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))\n        [doc methods] (if (core/string? (first doc+methods))\n                        [(first doc+methods) (next doc+methods)]\n                        [nil doc+methods])\n        psym (vary-meta psym assoc\n               :doc doc\n               :protocol-symbol true)\n        ns-name (-> &env :ns :name)\n        fqn (fn [n] (symbol (core/str ns-name \".\" n)))\n        prefix (protocol-prefix p)\n        _ (core/doseq [[mname & arities] methods]\n            (when (some #{0} (map count (filter vector? arities)))\n              (throw (Exception.\n                       (core/str \"Invalid protocol, \" psym\n                                 \" defines method \" mname \" with arity 0\")))))\n        expand-sig (fn [fname slot sig]\n                     `(~sig\n                       (if (and ~(first sig) (. ~(first sig) ~(symbol (core/str \"-\" slot)))) ;; Property access needed here.\n                         (. ~(first sig) ~slot ~@sig)\n                         (let [x# (if (nil? ~(first sig)) nil ~(first sig))]\n                           ((or\n                             (aget ~(fqn fname) (goog/typeOf x#))\n                             (aget ~(fqn fname) \"_\")\n                             (throw (missing-protocol\n                                     ~(core/str psym \".\" fname) ~(first sig))))\n                            ~@sig)))))\n        psym   (vary-meta psym assoc-in [:protocol-info :methods]\n                 (into {}\n                   (map\n                     (fn [[fname & sigs]]\n                       (let [doc (as-> (last sigs) doc\n                                   (when (core/string? doc) doc))\n                             sigs (take-while vector? sigs)]\n                         [(vary-meta fname assoc :doc doc)\n                          (vec sigs)]))\n                     methods)))\n        method (fn [[fname & sigs]]\n                 (let [doc (as-> (last sigs) doc\n                             (when (core/string? doc) doc))\n                       sigs (take-while vector? sigs)\n                       slot (symbol (core/str prefix (name fname)))\n                       fname (vary-meta fname assoc\n                               :protocol p\n                               :doc doc)]\n                   `(defn ~fname\n                      ~@(map (fn [sig]\n                               (expand-sig fname\n                                 (symbol (core/str slot \"$arity$\" (count sig)))\n                                 sig))\n                          sigs))))]\n    `(do\n       (set! ~'*unchecked-if* true)\n       (def ~psym (js-obj))\n       ~@(map method methods)\n       (set! ~'*unchecked-if* false))))",
+ :source {:code "(core/defmacro defprotocol\n  [psym & doc+methods]\n  (core/let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))\n             [doc methods] (if (core/string? (first doc+methods))\n                             [(first doc+methods) (next doc+methods)]\n                             [nil doc+methods])\n             psym (vary-meta psym assoc\n                    :doc doc\n                    :protocol-symbol true)\n             ns-name (core/-> &env :ns :name)\n             fqn (core/fn [n] (symbol (core/str ns-name \".\" n)))\n             prefix (protocol-prefix p)\n             _ (core/doseq [[mname & arities] methods]\n                 (core/when (some #{0} (map count (filter vector? arities)))\n                   (throw\n                     #?(:clj (Exception.\n                               (core/str \"Invalid protocol, \" psym\n                                 \" defines method \" mname \" with arity 0\"))\n                        :cljs (js/Error.\n                                (core/str \"Invalid protocol, \" psym\n                                  \" defines method \" mname \" with arity 0\"))))))\n             expand-sig (core/fn [fname slot sig]\n                          `(~sig\n                             (if (and (not (nil? ~(first sig)))\n                                      (not (nil? (. ~(first sig) ~(symbol (core/str \"-\" slot)))))) ;; Property access needed here.\n                               (. ~(first sig) ~slot ~@sig)\n                               (let [x# (if (nil? ~(first sig)) nil ~(first sig))\n                                     m# (aget ~(fqn fname) (goog/typeOf x#))]\n                                 (if-not (nil? m#)\n                                   (m# ~@sig)\n                                   (let [m# (aget ~(fqn fname) \"_\")]\n                                     (if-not (nil? m#)\n                                       (m# ~@sig)\n                                       (throw\n                                         (missing-protocol\n                                           ~(core/str psym \".\" fname) ~(first sig))))))))))\n             psym   (vary-meta psym assoc-in [:protocol-info :methods]\n                      (into {}\n                        (map\n                          (core/fn [[fname & sigs]]\n                            (core/let [doc (core/as-> (last sigs) doc\n                                             (core/when (core/string? doc) doc))\n                                       sigs (take-while vector? sigs)]\n                              [(vary-meta fname assoc :doc doc)\n                               (vec sigs)]))\n                          methods)))\n             method (core/fn [[fname & sigs]]\n                      (core/let [doc (core/as-> (last sigs) doc\n                                       (core/when (core/string? doc) doc))\n                                 sigs (take-while vector? sigs)\n                                 slot (symbol (core/str prefix (name fname)))\n                                 fname (vary-meta fname assoc\n                                         :protocol p\n                                         :doc doc)]\n                        `(defn ~fname\n                           ~@(map (core/fn [sig]\n                                    (expand-sig fname\n                                      (symbol (core/str slot \"$arity$\" (count sig)))\n                                      sig))\n                               sigs))))]\n    `(do\n       (set! ~'*unchecked-if* true)\n       (def ~psym (js-obj))\n       ~@(map method methods)\n       (set! ~'*unchecked-if* false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1250 1345]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [1732 1835]},
  :full-name "cljs.core/defprotocol",
  :clj-symbol "clojure.core/defprotocol",
  :docstring "A protocol is a named set of named methods and their signatures:\n\n(defprotocol AProtocolName\n  ;optional doc string\n  \"A doc string for AProtocol abstraction\"\n\n;method signatures\n  (bar [this a b] \"bar docs\")\n  (baz [this a] [this a b] [this a b c] \"baz docs\"))\n\nNo implementations are provided. Docs can be specified for the\nprotocol overall and for each method. The above yields a set of\npolymorphic functions and a protocol object. All are\nnamespace-qualified by the ns enclosing the definition The resulting\nfunctions dispatch on the type of their first argument, which is\nrequired and corresponds to the implicit target object ('this' in\nJavaScript parlance). defprotocol is dynamic, has no special compile-time\neffect, and defines no new types.\n\n(defprotocol P\n  (foo [this])\n  (bar-me [this] [this y]))\n\n(deftype Foo [a b c]\n  P\n  (foo [this] a)\n  (bar-me [this] b)\n  (bar-me [this y] (+ c y)))\n\n(bar-me (Foo. 1 2 3) 42)\n=> 45\n\n(foo\n  (let [x 42]\n    (reify P\n      (foo [this] 17)\n      (bar-me [this] x)\n      (bar-me [this y] x))))\n=> 17"}

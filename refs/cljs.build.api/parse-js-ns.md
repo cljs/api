@@ -29,7 +29,7 @@ first provide statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L77-L82):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L87-L92):
 
 ```clj
 (defn parse-js-ns
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:77-82](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L77-L82)</ins>
+                    └── <ins>[api.clj:87-92](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L87-L92)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(defn parse-js-ns\n  [f]\n  (closure/parse-js-ns f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [77 82]},
+          :lines [87 92]},
  :full-name "cljs.build.api/parse-js-ns",
  :docstring "Given a Google Closure style JavaScript file or resource return the namespace\ninformation for the given file. Only returns the value extracted from the\nfirst provide statement."}
 

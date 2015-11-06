@@ -62,12 +62,12 @@ map m as its metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1703-L1710):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1814-L1821):
 
 ```clj
 (defn with-meta
   [o meta]
-  (if (and (fn? o) (not (satisfies? IWithMeta o)))
+  (if ^boolean (goog/isFunction o)
     (MetaFn. o meta)
     (when-not (nil? o)
       (-with-meta o meta))))
@@ -77,12 +77,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1703-1710](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1703-L1710)</ins>
+                └── <ins>[core.cljs:1814-1821](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1814-L1821)</ins>
 </pre>
 
 -->
@@ -132,12 +132,12 @@ The API data for this symbol:
  :type "function",
  :related ["cljs.core/alter-meta!" "cljs.core/vary-meta"],
  :full-name-encode "cljs.core/with-meta",
- :source {:code "(defn with-meta\n  [o meta]\n  (if (and (fn? o) (not (satisfies? IWithMeta o)))\n    (MetaFn. o meta)\n    (when-not (nil? o)\n      (-with-meta o meta))))",
+ :source {:code "(defn with-meta\n  [o meta]\n  (if ^boolean (goog/isFunction o)\n    (MetaFn. o meta)\n    (when-not (nil? o)\n      (-with-meta o meta))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1703 1710]},
+          :lines [1814 1821]},
  :examples [{:id "f189d4",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (with-meta a {:bar true}))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:bar true}\n```"}],
  :full-name "cljs.core/with-meta",

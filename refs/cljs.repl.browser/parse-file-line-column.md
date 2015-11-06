@@ -1,11 +1,11 @@
-## cljs.repl.browser/parse-file-line-column
+## ~~cljs.repl.browser/parse-file-line-column~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -96,8 +96,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "parse-file-line-column",
- :type "function",
  :signature ["[flc]"],
+ :history [["+" "0.0-3053"] ["-" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/parse-file-line-column",
  :source {:code "(defn parse-file-line-column [flc]\n  (let [xs (string/split flc #\":\")\n        [pre [line column]]\n        (reduce\n          (fn [[pre post] [x i]]\n            (if (<= i 2)\n              [pre (conj post x)]\n              [(conj pre x) post]))\n          [[] []] (map vector xs (range (count xs) 0 -1)))\n        file (string/join \":\" pre)]\n    [(cond-> file\n       (.startsWith file \"(\") (string/replace \"(\" \"\"))\n     (Long/parseLong\n       (cond-> line\n         (.endsWith line \")\") (string/replace \")\" \"\")))\n     (Long/parseLong\n       (cond-> column\n         (.endsWith column \")\") (string/replace \")\" \"\")))]))",
           :title "Source code",
           :repo "clojurescript",
@@ -105,8 +107,7 @@ The API data for this symbol:
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [211 228]},
  :full-name "cljs.repl.browser/parse-file-line-column",
- :full-name-encode "cljs.repl.browser/parse-file-line-column",
- :history [["+" "0.0-3053"]]}
+ :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 
 ```
 

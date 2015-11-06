@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/reflect.cljs#L39-L43):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/reflect.cljs#L39-L43):
 
 ```clj
 (defn print-doc [{:keys [name method-params doc]}]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[reflect.cljs:39-43](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/reflect.cljs#L39-L43)</ins>
+                └── <ins>[reflect.cljs:39-43](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/reflect.cljs#L39-L43)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn print-doc [{:keys [name method-params doc]}]\n  (when-not (empty? name)\n    (println name)\n    (println method-params)\n    (println doc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/reflect.cljs",
           :lines [39 43]},
  :full-name "clojure.reflect/print-doc",

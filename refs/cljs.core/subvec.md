@@ -54,7 +54,7 @@ trimming is done.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L5004-L5013):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L5134-L5143):
 
 ```clj
 (defn subvec
@@ -68,12 +68,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:5004-5013](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L5004-L5013)</ins>
+                └── <ins>[core.cljs:5134-5143](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L5134-L5143)</ins>
 </pre>
 
 -->
@@ -126,9 +126,9 @@ The API data for this symbol:
  :source {:code "(defn subvec\n  ([v start]\n     (subvec v start (count v)))\n  ([v start end]\n     (build-subvec nil v start end nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5004 5013]},
+          :lines [5134 5143]},
  :full-name "cljs.core/subvec",
  :clj-symbol "clojure.core/subvec",
  :docstring "Returns a persistent vector of the items in vector from\nstart (inclusive) to end (exclusive).  If end is not supplied,\ndefaults to (count vector). This operation is O(1) and very fast, as\nthe resulting vector shares structure with the original and no\ntrimming is done."}

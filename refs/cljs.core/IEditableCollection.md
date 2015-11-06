@@ -25,7 +25,7 @@ Protocol for collections which can transformed to transients.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L549-L552):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L643-L646):
 
 ```clj
 (defprotocol IEditableCollection
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:549-552](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L549-L552)</ins>
+                └── <ins>[core.cljs:643-646](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L643-L646)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IEditableCollection\n  \"Protocol for collections which can transformed to transients.\"\n  (^clj -as-transient [coll]\n    \"Returns a new, transient version of the collection, in constant time.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [549 552]},
+          :lines [643 646]},
  :methods [{:name "-as-transient",
             :signature ["[coll]"],
             :docstring "Returns a new, transient version of the collection, in constant time."}],

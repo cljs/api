@@ -35,24 +35,24 @@ Removes whitespace from the left side of string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L152-L155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L156-L159):
 
 ```clj
 (defn triml
-    [s]
-    (gstring/trimLeft s))
+  [s]
+  (gstring/trimLeft s))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:152-155](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L152-L155)</ins>
+                └── <ins>[string.cljs:156-159](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L156-L159)</ins>
 </pre>
 
 -->
@@ -101,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.string/triml",
- :source {:code "(defn triml\n    [s]\n    (gstring/trimLeft s))",
+ :source {:code "(defn triml\n  [s]\n  (gstring/trimLeft s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [152 155]},
+          :lines [156 159]},
  :full-name "clojure.string/triml",
  :clj-symbol "clojure.string/triml",
  :docstring "Removes whitespace from the left side of string."}

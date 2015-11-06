@@ -22,7 +22,7 @@ Protocol for adding hashing functionality to a type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L477-L480):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L571-L574):
 
 ```clj
 (defprotocol IHash
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:477-480](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L477-L480)</ins>
+                └── <ins>[core.cljs:571-574](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L571-L574)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IHash\n  \"Protocol for adding hashing functionality to a type.\"\n  (-hash [o]\n    \"Returns the hash code of o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [477 480]},
+          :lines [571 574]},
  :methods [{:name "-hash",
             :signature ["[o]"],
             :docstring "Returns the hash code of o."}],

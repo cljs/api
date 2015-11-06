@@ -61,7 +61,7 @@ Clear bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2394-L2397):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2508-L2511):
 
 ```clj
 (defn bit-clear
@@ -73,22 +73,22 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2394-2397](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2394-L2397)</ins>
+                └── <ins>[core.cljs:2508-2511](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2508-L2511)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L584-L585):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1060-L1061):
 
 ```clj
-(defmacro ^::ana/numeric bit-clear [x n]
+(core/defmacro ^::ana/numeric bit-clear [x n]
   (core/list 'js* "(~{} & ~(1 << ~{}))" x n))
 ```
 
@@ -96,12 +96,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/ma
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:584-585](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L584-L585)</ins>
+                └── <ins>[core.cljc:1060-1061](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1060-L1061)</ins>
 </pre>
 -->
 
@@ -152,15 +152,15 @@ The API data for this symbol:
  :source {:code "(defn bit-clear\n  [x n]\n  (cljs.core/bit-clear x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2394 2397]},
- :extra-sources [{:code "(defmacro ^::ana/numeric bit-clear [x n]\n  (core/list 'js* \"(~{} & ~(1 << ~{}))\" x n))",
+          :lines [2508 2511]},
+ :extra-sources [{:code "(core/defmacro ^::ana/numeric bit-clear [x n]\n  (core/list 'js* \"(~{} & ~(1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/core.clj",
-                  :lines [584 585]}],
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/core.cljc",
+                  :lines [1060 1061]}],
  :examples [{:id "0f6748",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-clear 2r1111 2)\n;;=> 11\n;; 11 = 2r1011\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-clear 15 2)\n;;=> 11\n```"}],
  :full-name "cljs.core/bit-clear",

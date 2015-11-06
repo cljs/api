@@ -34,7 +34,7 @@ type in order to avoid reflective calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L3715-L3726):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L3717-L3728):
 
 ```clj
 (defmacro memfn
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0-RC1
+clojure @ clojure-1.7.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:3715-3726](https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/clj/clojure/core.clj#L3715-L3726)</ins>
+            └── <ins>[core.clj:3717-3728](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L3717-L3728)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defmacro memfn\n  [name & args]\n  (let [t (with-meta (gensym \"target\")\n            (meta name))]\n    `(fn [~t ~@args]\n       (. ~t (~name ~@args)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0-RC1",
+          :tag "clojure-1.7.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [3715 3726]},
+          :lines [3717 3728]},
  :full-name "cljs.core/memfn",
  :clj-symbol "clojure.core/memfn",
  :docstring "Expands into code that creates a fn that expects to be passed an\nobject and any args and calls the named instance method on the\nobject passing the args. Use when you want to treat a Java method as\na first-class fn. name may be type-hinted with the method receiver's\ntype in order to avoid reflective calls."}

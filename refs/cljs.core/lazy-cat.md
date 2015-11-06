@@ -60,10 +60,10 @@ needed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1988-L1995):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2502-L2509):
 
 ```clj
-(defmacro lazy-cat
+(core/defmacro lazy-cat
   [& colls]
   `(concat ~@(map #(core/list `lazy-seq %) colls)))
 ```
@@ -72,12 +72,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1988-1995](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1988-L1995)</ins>
+                └── <ins>[core.cljc:2502-2509](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2502-L2509)</ins>
 </pre>
 
 -->
@@ -127,12 +127,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/lazy-seq" "cljs.core/concat"],
  :full-name-encode "cljs.core/lazy-cat",
- :source {:code "(defmacro lazy-cat\n  [& colls]\n  `(concat ~@(map #(core/list `lazy-seq %) colls)))",
+ :source {:code "(core/defmacro lazy-cat\n  [& colls]\n  `(concat ~@(map #(core/list `lazy-seq %) colls)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1988 1995]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2502 2509]},
  :full-name "cljs.core/lazy-cat",
  :clj-symbol "clojure.core/lazy-cat",
  :docstring "Expands to code which yields a lazy sequence of the concatenation\nof the supplied colls.  Each coll expr is not evaluated until it is\nneeded. \n\n(lazy-cat xs ys zs) === (concat (lazy-seq xs) (lazy-seq ys) (lazy-seq zs))"}

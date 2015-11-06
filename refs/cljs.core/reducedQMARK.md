@@ -30,7 +30,7 @@ Returns true if x is the result of a call to reduced
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1142-L1145):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1253-L1256):
 
 ```clj
 (defn ^boolean reduced?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1142-1145](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1142-L1145)</ins>
+                └── <ins>[core.cljs:1253-1256](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1253-L1256)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean reduced?\n  [r]\n  (instance? Reduced r))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1142 1145]},
+          :lines [1253 1256]},
  :full-name "cljs.core/reduced?",
  :clj-symbol "clojure.core/reduced?",
  :docstring "Returns true if x is the result of a call to reduced"}

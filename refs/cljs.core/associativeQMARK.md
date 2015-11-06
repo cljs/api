@@ -56,7 +56,7 @@ Returns true if coll implements Associative
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1768-L1770):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1879-L1881):
 
 ```clj
 (defn ^boolean associative?
@@ -67,12 +67,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1768-1770](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1768-L1770)</ins>
+                └── <ins>[core.cljs:1879-1881](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1879-L1881)</ins>
 </pre>
 
 -->
@@ -125,9 +125,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean associative?\n  [x] (satisfies? IAssociative x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1768 1770]},
+          :lines [1879 1881]},
  :examples [{:id "29a37f",
              :content "```clj\n(associative? [1 2 3])\n;;=> true\n\n(associative? {:a 1 :b 2})\n;;=> true\n\n(associative? #{1 2 3})\n;;=> false\n\n(associative? '(1 2 3))\n;;=> false\n```"}],
  :full-name "cljs.core/associative?",

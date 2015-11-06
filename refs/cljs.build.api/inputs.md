@@ -28,7 +28,7 @@ be passed to build or watch.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L140-L155):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L171-L186):
 
 ```clj
 (defn inputs
@@ -51,13 +51,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:140-155](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L140-L155)</ins>
+                    └── <ins>[api.clj:171-186](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L171-L186)</ins>
 </pre>
 
 -->
@@ -105,9 +105,9 @@ The API data for this symbol:
  :source {:code "(defn inputs\n  [& xs]\n  (reify\n    closure/Inputs\n    (-paths [_]\n      (map io/file xs))\n    closure/Compilable\n    (-compile [_ opts]\n      (letfn [(compile-input [x]\n                (let [compiled (closure/-compile x opts)]\n                  (if (sequential? compiled)\n                    compiled\n                    [compiled])))]\n        (mapcat compile-input xs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [140 155]},
+          :lines [171 186]},
  :full-name "cljs.build.api/inputs",
  :docstring "Given a list of directories and files, return a compilable object that may\nbe passed to build or watch."}
 

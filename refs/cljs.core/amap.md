@@ -74,10 +74,10 @@ array ret.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1825-L1838):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2337-L2350):
 
 ```clj
-(defmacro amap
+(core/defmacro amap
   [a idx ret expr]
   `(let [a# ~a
          ~ret (aclone a#)]
@@ -93,12 +93,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1825-1838](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1825-L1838)</ins>
+                └── <ins>[core.cljc:2337-2350](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2337-L2350)</ins>
 </pre>
 
 -->
@@ -148,12 +148,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/map"],
  :full-name-encode "cljs.core/amap",
- :source {:code "(defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
+ :source {:code "(core/defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1825 1838]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2337 2350]},
  :examples [{:id "3a7471",
              :content "```clj\n(def a #js [1 2 3])\n(amap a i ret (* 10 (aget a i)))\n;;=> #js [10 20 30]\n```"}
             {:id "0f57af",

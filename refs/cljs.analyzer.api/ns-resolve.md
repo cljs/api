@@ -16,6 +16,9 @@
  <samp>
 (__ns-resolve__ ns sym)<br>
 </samp>
+ <samp>
+(__ns-resolve__ state ns sym)<br>
+</samp>
 
 ---
 
@@ -31,26 +34,28 @@ Analagous to clojure.core/ns-resolve but returns var analysis map not Var.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L120-L125):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L186-L193):
 
 ```clj
 (defn ns-resolve
-  [ns sym]
-  {:pre [(symbol? ns) (symbol? sym)]}
-  (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))
+  ([ns sym]
+   (ns-resolve env/*compiler* ns sym))
+  ([state ns sym]
+   {:pre [(symbol? ns) (symbol? sym)]}
+   (get-in @state [::ana/namespaces ns :defs sym])))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:120-125](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/analyzer/api.clj#L120-L125)</ins>
+                    └── <ins>[api.clj:186-193](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L186-L193)</ins>
 </pre>
 
 -->
@@ -94,16 +99,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.analyzer.api",
  :name "ns-resolve",
- :signature ["[ns sym]"],
+ :signature ["[ns sym]" "[state ns sym]"],
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/ns-resolve",
- :source {:code "(defn ns-resolve\n  [ns sym]\n  {:pre [(symbol? ns) (symbol? sym)]}\n  (get-in @env/*compiler* [::ana/namespaces ns :defs sym]))",
+ :source {:code "(defn ns-resolve\n  ([ns sym]\n   (ns-resolve env/*compiler* ns sym))\n  ([state ns sym]\n   {:pre [(symbol? ns) (symbol? sym)]}\n   (get-in @state [::ana/namespaces ns :defs sym])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [120 125]},
+          :lines [186 193]},
  :full-name "cljs.analyzer.api/ns-resolve",
  :clj-symbol "clojure.core/ns-resolve",
  :docstring "Given a namespace and a symbol return the corresponding var analysis map.\nAnalagous to clojure.core/ns-resolve but returns var analysis map not Var."}

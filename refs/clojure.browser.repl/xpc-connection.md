@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L29):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L29):
 
 ```clj
 (def xpc-connection (atom nil))
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:29](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L29)</ins>
+                    └── <ins>[repl.cljs:29](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L29)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(def xpc-connection (atom nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [29]},
  :full-name "clojure.browser.repl/xpc-connection",

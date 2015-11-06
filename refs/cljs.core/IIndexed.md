@@ -25,7 +25,7 @@ Protocol for collections to provide idexed-based access to their items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L364-L368):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L458-L462):
 
 ```clj
 (defprotocol IIndexed
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:364-368](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L364-L368)</ins>
+                └── <ins>[core.cljs:458-462](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L458-L462)</ins>
 </pre>
 
 -->
@@ -94,9 +94,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IIndexed\n  \"Protocol for collections to provide idexed-based access to their items.\"\n  (-nth [coll n] [coll n not-found]\n    \"Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [364 368]},
+          :lines [458 462]},
  :methods [{:name "-nth",
             :signature ["[coll n]" "[coll n not-found]"],
             :docstring "Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied."}],

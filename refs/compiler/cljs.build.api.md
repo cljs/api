@@ -15,8 +15,8 @@ programmatic access to project-building facilities
 Source Docstring:
 
 ```
-This is intended to be a stable api for those who intend to create
-  tools that use compiler data.
+This is intended to be a stable api for those who need programmatic access
+  to ClojureScript's project building facilities.
 
   For example: a build script may need to how to invalidate compiled
   files so that they will be recompiled.

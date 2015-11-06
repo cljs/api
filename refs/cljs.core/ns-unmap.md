@@ -30,10 +30,10 @@ Removes the mappings for the symbol from the namespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2017-L2024):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2531-L2538):
 
 ```clj
-(defmacro ns-unmap
+(core/defmacro ns-unmap
   [[quote0 ns] [quote1 sym]]
   (core/assert (core/and (= quote0 'quote) (core/symbol? ns)
                          (= quote1 'quote) (core/symbol? sym))
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:2017-2024](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2017-L2024)</ins>
+                └── <ins>[core.cljc:2531-2538](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2531-L2538)</ins>
 </pre>
 
 -->
@@ -99,12 +99,12 @@ The API data for this symbol:
  :history [["+" "0.0-3169"]],
  :type "macro",
  :full-name-encode "cljs.core/ns-unmap",
- :source {:code "(defmacro ns-unmap\n  [[quote0 ns] [quote1 sym]]\n  (core/assert (core/and (= quote0 'quote) (core/symbol? ns)\n                         (= quote1 'quote) (core/symbol? sym))\n    \"Arguments to ns-unmap must be quoted symbols\")\n  (swap! env/*compiler* update-in [::ana/namespaces ns :defs] dissoc sym)\n  `(js-delete ~(cljs.compiler/munge ns) ~(cljs.compiler/munge (core/str sym))))",
+ :source {:code "(core/defmacro ns-unmap\n  [[quote0 ns] [quote1 sym]]\n  (core/assert (core/and (= quote0 'quote) (core/symbol? ns)\n                         (= quote1 'quote) (core/symbol? sym))\n    \"Arguments to ns-unmap must be quoted symbols\")\n  (swap! env/*compiler* update-in [::ana/namespaces ns :defs] dissoc sym)\n  `(js-delete ~(cljs.compiler/munge ns) ~(cljs.compiler/munge (core/str sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [2017 2024]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2531 2538]},
  :full-name "cljs.core/ns-unmap",
  :clj-symbol "clojure.core/ns-unmap",
  :docstring "Removes the mappings for the symbol from the namespace."}

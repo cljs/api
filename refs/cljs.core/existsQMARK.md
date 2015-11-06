@@ -28,10 +28,10 @@ in JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L373-L379):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L849-L855):
 
 ```clj
-(defmacro exists?
+(core/defmacro exists?
   [x]
   (bool-expr
     (core/list 'js* "typeof ~{} !== 'undefined'"
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:373-379](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L373-L379)</ins>
+                └── <ins>[core.cljc:849-855](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L849-L855)</ins>
 </pre>
 
 -->
@@ -92,12 +92,12 @@ The API data for this symbol:
  :history [["+" "0.0-1798"]],
  :type "macro",
  :full-name-encode "cljs.core/existsQMARK",
- :source {:code "(defmacro exists?\n  [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
+ :source {:code "(core/defmacro exists?\n  [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [373 379]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [849 855]},
  :full-name "cljs.core/exists?",
  :docstring "Return true if argument exists, analogous to usage of typeof operator\nin JavaScript."}
 

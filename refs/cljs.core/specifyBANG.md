@@ -27,12 +27,12 @@ Identical to reify but mutates its first argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L736-L742):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1212-L1218):
 
 ```clj
-(defmacro specify!
+(core/defmacro specify!
   [expr & impls]
-  (let [x (with-meta (gensym "x") {:extend :instance})]
+  (core/let [x (with-meta (gensym "x") {:extend :instance})]
     `(let [~x ~expr]
        (extend-type ~x ~@impls)
        ~x)))
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:736-742](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L736-L742)</ins>
+                └── <ins>[core.cljc:1212-1218](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L1212-L1218)</ins>
 </pre>
 
 -->
@@ -92,12 +92,12 @@ The API data for this symbol:
  :history [["+" "0.0-2156"]],
  :type "macro",
  :full-name-encode "cljs.core/specifyBANG",
- :source {:code "(defmacro specify!\n  [expr & impls]\n  (let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
+ :source {:code "(core/defmacro specify!\n  [expr & impls]\n  (core/let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [736 742]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [1212 1218]},
  :full-name "cljs.core/specify!",
  :docstring "Identical to reify but mutates its first argument."}
 

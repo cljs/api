@@ -30,7 +30,7 @@ Return true if x satisfies IRecord
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1791-L1794):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1902-L1905):
 
 ```clj
 (defn ^boolean record?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1791-1794](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1791-L1794)</ins>
+                └── <ins>[core.cljs:1902-1905](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1902-L1905)</ins>
 </pre>
 
 -->
@@ -99,9 +99,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean record?\n  [x]\n  (satisfies? IRecord x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1791 1794]},
+          :lines [1902 1905]},
  :full-name "cljs.core/record?",
  :clj-symbol "clojure.core/record?",
  :docstring "Return true if x satisfies IRecord"}

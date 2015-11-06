@@ -52,7 +52,7 @@ Comp defaults to compare.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1999-L2007):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2113-L2121):
 
 ```clj
 (defn sort-by
@@ -66,12 +66,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1999-2007](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1999-L2007)</ins>
+                └── <ins>[core.cljs:2113-2121](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2113-L2121)</ins>
 </pre>
 
 -->
@@ -124,9 +124,9 @@ The API data for this symbol:
  :source {:code "(defn sort-by\n  ([keyfn coll]\n   (sort-by keyfn compare coll))\n  ([keyfn comp coll]\n     (sort (fn [x y] ((fn->comparator comp) (keyfn x) (keyfn y))) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1999 2007]},
+          :lines [2113 2121]},
  :full-name "cljs.core/sort-by",
  :clj-symbol "clojure.core/sort-by",
  :docstring "Returns a sorted sequence of the items in coll, where the sort\norder is determined by comparing (keyfn item).  Comp can be\nboolean-valued comparison funcion, or a -/0/+ valued comparator.\nComp defaults to compare."}

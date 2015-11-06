@@ -66,28 +66,30 @@ for the function.
 Source docstring:
 
 ```
-Same as (def name (fn [params* ] exprs*)) or (def
- name (fn ([params* ] exprs*)+)) with any doc-string or attrs added
+Same as (def name (core/fn [params* ] exprs*)) or (def
+ name (core/fn ([params* ] exprs*)+)) with any doc-string or attrs added
  to the var metadata. prepost-map defines a map with optional keys
  :pre and :post that contain collections of pre or post conditions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2195-L2251):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2719-L2783):
 
 ```clj
 (def
-  ^{:doc "Same as (def name (fn [params* ] exprs*)) or (def
-    name (fn ([params* ] exprs*)+)) with any doc-string or attrs added
+  ^{:doc "Same as (def name (core/fn [params* ] exprs*)) or (def
+    name (core/fn ([params* ] exprs*)+)) with any doc-string or attrs added
     to the var metadata. prepost-map defines a map with optional keys
     :pre and :post that contain collections of pre or post conditions."
     :arglists '([name doc-string? attr-map? [params*] prepost-map? body]
                  [name doc-string? attr-map? ([params*] prepost-map? body)+ attr-map?])}
-  defn (fn defn [&form &env name & fdecl]
+  defn (core/fn defn [&form &env name & fdecl]
          ;; Note: Cannot delegate this check to def because of the call to (with-meta name ..)
-         (if (core/instance? clojure.lang.Symbol name)
+         (if (core/instance? #?(:clj clojure.lang.Symbol :cljs Symbol) name)
            nil
-           (throw (IllegalArgumentException. "First argument to defn must be a symbol")))
+           (throw
+             #?(:clj (IllegalArgumentException. "First argument to defn must be a symbol")
+                :cljs (js/Error. "First argument to defn must be a symbol"))))
          (core/let [m (if (core/string? (first fdecl))
                         {:doc (first fdecl)}
                         {})
@@ -110,18 +112,24 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
                             (butlast fdecl)
                             fdecl)
                     m (conj {:arglists (core/list 'quote (sigs fdecl))} m)
-                    m (core/let [inline (:inline m)
-                                 ifn (first inline)
-                                 iname (second inline)]
-                        ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)
-                        (if (if (clojure.lang.Util/equiv 'fn ifn)
-                              (if (core/instance? clojure.lang.Symbol iname) false true))
-                          ;; inserts the same fn name to the inline fn if it does not have one
-                          (assoc m :inline (cons ifn (cons (clojure.lang.Symbol/intern (.concat (.getName ^clojure.lang.Symbol name) "__inliner"))
-                                                       (next inline))))
-                          m))
+                    ;; no support for :inline
+                    ;m (core/let [inline (:inline m)
+                    ;             ifn (first inline)
+                    ;             iname (second inline)]
+                    ;    ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)
+                    ;    (if (if #?(:clj (clojure.lang.Util/equiv 'fn ifn)
+                    ;               :cljs (= 'fn ifn))
+                    ;          (if #?(:clj (core/instance? clojure.lang.Symbol iname)
+                    ;                 :cljs (core/instance? Symbol iname)) false true))
+                    ;      ;; inserts the same fn name to the inline fn if it does not have one
+                    ;      (assoc m
+                    ;        :inline (cons ifn
+                    ;                  (cons (clojure.lang.Symbol/intern
+                    ;                          (.concat (.getName ^clojure.lang.Symbol name) "__inliner"))
+                    ;                    (next inline))))
+                    ;      m))
                     m (conj (if (meta name) (meta name) {}) m)]
-           (cond
+           (core/cond
              (multi-arity-fn? fdecl)
              (multi-arity-fn name m fdecl)
 
@@ -139,12 +147,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:2195-2251](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L2195-L2251)</ins>
+                └── <ins>[core.cljc:2719-2783](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2719-L2783)</ins>
 </pre>
 
 -->
@@ -198,15 +206,15 @@ The API data for this symbol:
            "cljs.core/defmacro"
            "cljs.core/fn"],
  :full-name-encode "cljs.core/defn",
- :source {:code "(def\n  ^{:doc \"Same as (def name (fn [params* ] exprs*)) or (def\n    name (fn ([params* ] exprs*)+)) with any doc-string or attrs added\n    to the var metadata. prepost-map defines a map with optional keys\n    :pre and :post that contain collections of pre or post conditions.\"\n    :arglists '([name doc-string? attr-map? [params*] prepost-map? body]\n                 [name doc-string? attr-map? ([params*] prepost-map? body)+ attr-map?])}\n  defn (fn defn [&form &env name & fdecl]\n         ;; Note: Cannot delegate this check to def because of the call to (with-meta name ..)\n         (if (core/instance? clojure.lang.Symbol name)\n           nil\n           (throw (IllegalArgumentException. \"First argument to defn must be a symbol\")))\n         (core/let [m (if (core/string? (first fdecl))\n                        {:doc (first fdecl)}\n                        {})\n                    fdecl (if (core/string? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    m (if (map? (first fdecl))\n                        (conj m (first fdecl))\n                        m)\n                    fdecl (if (map? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    fdecl (if (vector? (first fdecl))\n                            (core/list fdecl)\n                            fdecl)\n                    m (if (map? (last fdecl))\n                        (conj m (last fdecl))\n                        m)\n                    fdecl (if (map? (last fdecl))\n                            (butlast fdecl)\n                            fdecl)\n                    m (conj {:arglists (core/list 'quote (sigs fdecl))} m)\n                    m (core/let [inline (:inline m)\n                                 ifn (first inline)\n                                 iname (second inline)]\n                        ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)\n                        (if (if (clojure.lang.Util/equiv 'fn ifn)\n                              (if (core/instance? clojure.lang.Symbol iname) false true))\n                          ;; inserts the same fn name to the inline fn if it does not have one\n                          (assoc m :inline (cons ifn (cons (clojure.lang.Symbol/intern (.concat (.getName ^clojure.lang.Symbol name) \"__inliner\"))\n                                                       (next inline))))\n                          m))\n                    m (conj (if (meta name) (meta name) {}) m)]\n           (cond\n             (multi-arity-fn? fdecl)\n             (multi-arity-fn name m fdecl)\n\n             (variadic-fn? fdecl)\n             (variadic-fn name m fdecl)\n\n             :else\n             (core/list 'def (with-meta name m)\n              ;;todo - restore propagation of fn name\n              ;;must figure out how to convey primitive hints to self calls first\n              (cons `fn fdecl))))))",
+ :source {:code "(def\n  ^{:doc \"Same as (def name (core/fn [params* ] exprs*)) or (def\n    name (core/fn ([params* ] exprs*)+)) with any doc-string or attrs added\n    to the var metadata. prepost-map defines a map with optional keys\n    :pre and :post that contain collections of pre or post conditions.\"\n    :arglists '([name doc-string? attr-map? [params*] prepost-map? body]\n                 [name doc-string? attr-map? ([params*] prepost-map? body)+ attr-map?])}\n  defn (core/fn defn [&form &env name & fdecl]\n         ;; Note: Cannot delegate this check to def because of the call to (with-meta name ..)\n         (if (core/instance? #?(:clj clojure.lang.Symbol :cljs Symbol) name)\n           nil\n           (throw\n             #?(:clj (IllegalArgumentException. \"First argument to defn must be a symbol\")\n                :cljs (js/Error. \"First argument to defn must be a symbol\"))))\n         (core/let [m (if (core/string? (first fdecl))\n                        {:doc (first fdecl)}\n                        {})\n                    fdecl (if (core/string? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    m (if (map? (first fdecl))\n                        (conj m (first fdecl))\n                        m)\n                    fdecl (if (map? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    fdecl (if (vector? (first fdecl))\n                            (core/list fdecl)\n                            fdecl)\n                    m (if (map? (last fdecl))\n                        (conj m (last fdecl))\n                        m)\n                    fdecl (if (map? (last fdecl))\n                            (butlast fdecl)\n                            fdecl)\n                    m (conj {:arglists (core/list 'quote (sigs fdecl))} m)\n                    ;; no support for :inline\n                    ;m (core/let [inline (:inline m)\n                    ;             ifn (first inline)\n                    ;             iname (second inline)]\n                    ;    ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)\n                    ;    (if (if #?(:clj (clojure.lang.Util/equiv 'fn ifn)\n                    ;               :cljs (= 'fn ifn))\n                    ;          (if #?(:clj (core/instance? clojure.lang.Symbol iname)\n                    ;                 :cljs (core/instance? Symbol iname)) false true))\n                    ;      ;; inserts the same fn name to the inline fn if it does not have one\n                    ;      (assoc m\n                    ;        :inline (cons ifn\n                    ;                  (cons (clojure.lang.Symbol/intern\n                    ;                          (.concat (.getName ^clojure.lang.Symbol name) \"__inliner\"))\n                    ;                    (next inline))))\n                    ;      m))\n                    m (conj (if (meta name) (meta name) {}) m)]\n           (core/cond\n             (multi-arity-fn? fdecl)\n             (multi-arity-fn name m fdecl)\n\n             (variadic-fn? fdecl)\n             (variadic-fn name m fdecl)\n\n             :else\n             (core/list 'def (with-meta name m)\n              ;;todo - restore propagation of fn name\n              ;;must figure out how to convey primitive hints to self calls first\n              (cons `fn fdecl))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [2195 2251]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2719 2783]},
  :full-name "cljs.core/defn",
  :clj-symbol "clojure.core/defn",
- :docstring "Same as (def name (fn [params* ] exprs*)) or (def\n name (fn ([params* ] exprs*)+)) with any doc-string or attrs added\n to the var metadata. prepost-map defines a map with optional keys\n :pre and :post that contain collections of pre or post conditions."}
+ :docstring "Same as (def name (core/fn [params* ] exprs*)) or (def\n name (core/fn ([params* ] exprs*)+)) with any doc-string or attrs added\n to the var metadata. prepost-map defines a map with optional keys\n :pre and :post that contain collections of pre or post conditions."}
 
 ```
 

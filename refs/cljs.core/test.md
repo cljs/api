@@ -31,7 +31,7 @@ presuming failure will throw exception
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9656-L9663):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9790-L9797):
 
 ```clj
 (defn test
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9656-9663](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9656-L9663)</ins>
+                └── <ins>[core.cljs:9790-9797](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9790-L9797)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn test\n  [v]\n  (let [f (.-cljs$lang$test v)]\n    (if f\n      (do (f) :ok)\n      :no-test)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9656 9663]},
+          :lines [9790 9797]},
  :full-name "cljs.core/test",
  :clj-symbol "clojure.core/test",
  :docstring "test [v] finds fn at key :test in var metadata and calls it,\npresuming failure will throw exception"}

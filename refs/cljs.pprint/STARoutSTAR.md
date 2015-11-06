@@ -1,11 +1,11 @@
-## cljs.pprint/\*out\*
+## ~~cljs.pprint/\*out\*~~
 
 
 
  <table border="1">
 <tr>
 <td>dynamic var</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -82,7 +82,8 @@ The API data for this symbol:
           :lines [21]},
  :full-name "cljs.pprint/*out*",
  :full-name-encode "cljs.pprint/STARoutSTAR",
- :history [["+" "0.0-3255"]]}
+ :history [["+" "0.0-3255"] ["-" "1.7.10"]],
+ :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 
 ```
 

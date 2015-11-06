@@ -44,7 +44,7 @@ Returns a lazy sequence of successive matches of re in s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8429-L8436):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8559-L8566):
 
 ```clj
 (defn re-seq
@@ -60,12 +60,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8429-8436](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8429-L8436)</ins>
+                └── <ins>[core.cljs:8559-8566](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8559-L8566)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defn re-seq\n  [re s]\n  (let [match-data (re-find re s)\n        match-idx (.search s re)\n        match-str (if (coll? match-data) (first match-data) match-data)\n        post-match (subs s (+ match-idx (count match-str)))]\n    (when match-data (lazy-seq (cons match-data (when (seq post-match) (re-seq re post-match)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8429 8436]},
+          :lines [8559 8566]},
  :full-name "cljs.core/re-seq",
  :clj-symbol "clojure.core/re-seq",
  :docstring "Returns a lazy sequence of successive matches of re in s."}

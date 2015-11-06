@@ -30,7 +30,7 @@ returns true if x is a Delay created with delay
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8898-L8900):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9032-L9034):
 
 ```clj
 (defn ^boolean delay?
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8898-8900](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8898-L8900)</ins>
+                └── <ins>[core.cljs:9032-9034](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9032-L9034)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean delay?\n  [x] (instance? Delay x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8898 8900]},
+          :lines [9032 9034]},
  :full-name "cljs.core/delay?",
  :clj-symbol "clojure.core/delay?",
  :docstring "returns true if x is a Delay created with delay"}

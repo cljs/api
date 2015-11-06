@@ -22,29 +22,29 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.clj#L17-L24):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.clj#L17-L24):
 
 ```clj
 (defmacro with-pretty-writer [base-writer & body]
   `(let [base-writer# ~base-writer
          new-writer# (not (pretty-writer? base-writer#))]
-     (cljs.core/binding [~'*out* (if new-writer#
+     (cljs.core/binding [cljs.core/*out* (if new-writer#
                          (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)
                          base-writer#)]
        ~@body
-       (-ppflush ~'*out*))))
+       (-ppflush cljs.core/*out*))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:17-24](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.clj#L17-L24)</ins>
+                └── <ins>[pprint.clj:17-24](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.clj#L17-L24)</ins>
 </pre>
 
 -->
@@ -87,10 +87,10 @@ The API data for this symbol:
  :name "with-pretty-writer",
  :type "macro",
  :signature ["[base-writer & body]"],
- :source {:code "(defmacro with-pretty-writer [base-writer & body]\n  `(let [base-writer# ~base-writer\n         new-writer# (not (pretty-writer? base-writer#))]\n     (cljs.core/binding [~'*out* (if new-writer#\n                         (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)\n                         base-writer#)]\n       ~@body\n       (-ppflush ~'*out*))))",
+ :source {:code "(defmacro with-pretty-writer [base-writer & body]\n  `(let [base-writer# ~base-writer\n         new-writer# (not (pretty-writer? base-writer#))]\n     (cljs.core/binding [cljs.core/*out* (if new-writer#\n                         (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)\n                         base-writer#)]\n       ~@body\n       (-ppflush cljs.core/*out*))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [17 24]},
  :full-name "cljs.pprint/with-pretty-writer",

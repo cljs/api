@@ -22,10 +22,10 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1967-L1975):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2481-L2489):
 
 ```clj
-(defmacro gen-apply-to []
+(core/defmacro gen-apply-to []
   `(do
      (set! ~'*unchecked-if* true)
      (defn ~'apply-to [~'f ~'argc ~'args]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.clj:1967-1975](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/core.clj#L1967-L1975)</ins>
+                └── <ins>[core.cljc:2481-2489](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2481-L2489)</ins>
 </pre>
 
 -->
@@ -88,12 +88,12 @@ The API data for this symbol:
  :name "gen-apply-to",
  :type "macro",
  :signature ["[]"],
- :source {:code "(defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
+ :source {:code "(core/defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
-          :filename "src/main/clojure/cljs/core.clj",
-          :lines [1967 1975]},
+          :tag "r1.7.10",
+          :filename "src/main/clojure/cljs/core.cljc",
+          :lines [2481 2489]},
  :full-name "cljs.core/gen-apply-to",
  :full-name-encode "cljs.core/gen-apply-to",
  :history [["+" "0.0-1211"]]}

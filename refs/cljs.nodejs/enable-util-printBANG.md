@@ -22,26 +22,30 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/nodejs.cljs#L18-L22):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/nodejs.cljs#L18-L26):
 
 ```clj
 (defn enable-util-print! []
   (set! *print-newline* false)
   (set! *print-fn*
     (fn [& args]
-      (.apply (.-log js/console) js/console (into-array args)))))
+      (.apply (.-log js/console) js/console (into-array args))))
+  (set! *print-err-fn*
+    (fn [& args]
+      (.apply (.-error js/console) js/console (into-array args))))
+  nil)
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[nodejs.cljs:18-22](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/nodejs.cljs#L18-L22)</ins>
+                └── <ins>[nodejs.cljs:18-26](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/nodejs.cljs#L18-L26)</ins>
 </pre>
 
 -->
@@ -84,12 +88,12 @@ The API data for this symbol:
  :name "enable-util-print!",
  :type "function",
  :signature ["[]"],
- :source {:code "(defn enable-util-print! []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args)))))",
+ :source {:code "(defn enable-util-print! []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args))))\n  (set! *print-err-fn*\n    (fn [& args]\n      (.apply (.-error js/console) js/console (into-array args))))\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/nodejs.cljs",
-          :lines [18 22]},
+          :lines [18 26]},
  :full-name "cljs.nodejs/enable-util-print!",
  :full-name-encode "cljs.nodejs/enable-util-printBANG",
  :history [["+" "0.0-2156"]]}

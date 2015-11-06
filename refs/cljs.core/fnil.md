@@ -50,7 +50,7 @@ arguments, not just the one(s) being nil-patched.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3710-L3731):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3836-L3857):
 
 ```clj
 (defn fnil
@@ -76,12 +76,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:3710-3731](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L3710-L3731)</ins>
+                └── <ins>[core.cljs:3836-3857](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L3836-L3857)</ins>
 </pre>
 
 -->
@@ -133,9 +133,9 @@ The API data for this symbol:
  :source {:code "(defn fnil\n  ([f x]\n   (fn\n     ([a] (f (if (nil? a) x a)))\n     ([a b] (f (if (nil? a) x a) b))\n     ([a b c] (f (if (nil? a) x a) b c))\n     ([a b c & ds] (apply f (if (nil? a) x a) b c ds))))\n  ([f x y]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) c))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) c ds))))\n  ([f x y z]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c)))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c) ds)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3710 3731]},
+          :lines [3836 3857]},
  :full-name "cljs.core/fnil",
  :clj-symbol "clojure.core/fnil",
  :docstring "Takes a function f, and returns a function that calls f, replacing\na nil first argument to f with the supplied value x. Higher arity\nversions can replace arguments in the second and third\npositions (y, z). Note that the function f can take any number of\narguments, not just the one(s) being nil-patched."}

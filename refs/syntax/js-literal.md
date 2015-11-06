@@ -62,16 +62,24 @@ For readability, it is sometimes preferable to use `clj->js` rather than nested
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L35-L42):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L62-L77):
 
 ```clj
 (defn read-js
   [form]
   (when-not (or (vector? form) (map? form))
-    (throw (RuntimeException. "JavaScript literal must use map or vector notation")))
+    (throw
+      #?(:clj  (RuntimeException.
+                 "JavaScript literal must use map or vector notation")
+         :cljs (js/Error.
+                 "JavaScript literal must use map or vector notation"))))
   (when-not (or (not (map? form))
                 (every? valid-js-literal-key? (keys form)))
-    (throw (RuntimeException. "JavaScript literal keys must be strings or unqualified keywords")))
+    (throw
+      #?(:clj  (RuntimeException.
+                 "JavaScript literal keys must be strings or unqualified keywords")
+         :cljs (js/Error.
+                 "JavaScript literal keys must be strings or unqualified keywords"))))
   (JSValue. form))
 ```
 
@@ -79,17 +87,17 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:35-42](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L35-L42)</ins>
+                └── <ins>[tagged_literals.cljc:62-77](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L62-L77)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L44-L48):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L79-L83):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -103,12 +111,12 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[tagged_literals.clj:44-48](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/tagged_literals.clj#L44-L48)</ins>
+                └── <ins>[tagged_literals.cljc:79-83](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/tagged_literals.cljc#L79-L83)</ins>
 </pre>
 -->
 
@@ -147,18 +155,18 @@ The API data for this symbol:
  :type "tagged literal",
  :related ["cljs.core/js-obj" "cljs.core/array" "cljs.core/clj->js"],
  :full-name-encode "syntax/js-literal",
- :extra-sources ({:code "(defn read-js\n  [form]\n  (when-not (or (vector? form) (map? form))\n    (throw (RuntimeException. \"JavaScript literal must use map or vector notation\")))\n  (when-not (or (not (map? form))\n                (every? valid-js-literal-key? (keys form)))\n    (throw (RuntimeException. \"JavaScript literal keys must be strings or unqualified keywords\")))\n  (JSValue. form))",
+ :extra-sources ({:code "(defn read-js\n  [form]\n  (when-not (or (vector? form) (map? form))\n    (throw\n      #?(:clj  (RuntimeException.\n                 \"JavaScript literal must use map or vector notation\")\n         :cljs (js/Error.\n                 \"JavaScript literal must use map or vector notation\"))))\n  (when-not (or (not (map? form))\n                (every? valid-js-literal-key? (keys form)))\n    (throw\n      #?(:clj  (RuntimeException.\n                 \"JavaScript literal keys must be strings or unqualified keywords\")\n         :cljs (js/Error.\n                 \"JavaScript literal keys must be strings or unqualified keywords\"))))\n  (JSValue. form))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/tagged_literals.clj",
-                  :lines [35 42]}
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/tagged_literals.cljc",
+                  :lines [62 77]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r3308",
-                  :filename "src/main/clojure/cljs/tagged_literals.clj",
-                  :lines [44 48]}),
+                  :tag "r1.7.10",
+                  :filename "src/main/clojure/cljs/tagged_literals.cljc",
+                  :lines [79 83]}),
  :usage ["#js [...]" "#js {...}"],
  :examples [{:id "05e121",
              :content "```clj\n#js {:foo 1 bar 2}\n;;=> #js {:foo 1, :bar 2}\n\n#js [1 2 3]\n;;=> #js [1 2 3]\n```\n\nFor readability, it is sometimes preferable to use `clj->js` rather than nested\n`#js` tags.\n\n```clj\n#js {:foo #js {:bar 1}}\n;;=> #js {:foo #js {:bar 1}}\n\n(clj->js {:foo {:bar 1}})\n;;=> #js {:foo #js {:bar 1}}\n```"}],

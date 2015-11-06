@@ -25,7 +25,7 @@ Protocol for accessing the metadata of an object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L447-L450):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L541-L544):
 
 ```clj
 (defprotocol IMeta
@@ -38,12 +38,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:447-450](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L447-L450)</ins>
+                └── <ins>[core.cljs:541-544](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L541-L544)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IMeta\n  \"Protocol for accessing the metadata of an object.\"\n  (^clj-or-nil -meta [o]\n    \"Returns the metadata of object o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [447 450]},
+          :lines [541 544]},
  :methods [{:name "-meta",
             :signature ["[o]"],
             :docstring "Returns the metadata of object o."}],

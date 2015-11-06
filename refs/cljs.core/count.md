@@ -62,7 +62,7 @@ Returns the number of items in the collection. (count nil) returns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1459-L1478):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1570-L1589):
 
 ```clj
 (defn count
@@ -78,10 +78,10 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
       (string? coll)
       (alength coll)
 
-      (native-satisfies? ICounted coll)
-      (-count coll)
+      (implements? ISeqable coll)
+      (accumulating-seq-count coll)
 
-      :else (accumulating-seq-count coll))
+      :else (-count coll))
     0))
 ```
 
@@ -89,12 +89,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1459-1478](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1459-L1478)</ins>
+                └── <ins>[core.cljs:1570-1589](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1570-L1589)</ins>
 </pre>
 
 -->
@@ -143,12 +143,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/count",
- :source {:code "(defn count\n  [coll]\n  (if-not (nil? coll)\n    (cond\n      (implements? ICounted coll)\n      (-count ^not-native coll)\n\n      (array? coll)\n      (alength coll)\n    \n      (string? coll)\n      (alength coll)\n\n      (native-satisfies? ICounted coll)\n      (-count coll)\n\n      :else (accumulating-seq-count coll))\n    0))",
+ :source {:code "(defn count\n  [coll]\n  (if-not (nil? coll)\n    (cond\n      (implements? ICounted coll)\n      (-count ^not-native coll)\n\n      (array? coll)\n      (alength coll)\n    \n      (string? coll)\n      (alength coll)\n\n      (implements? ISeqable coll)\n      (accumulating-seq-count coll)\n\n      :else (-count coll))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1459 1478]},
+          :lines [1570 1589]},
  :examples [{:id "96e470",
              :content "```clj\n(count [1 2 3])\n;;=> 3\n\n(count [])\n;;=> 0\n\n(count nil)\n;;=> 0\n\n(count #{:a :b})\n;;=> 2\n\n(count {:key \"value\" :key2 \"value2\"})\n;;=> 2\n```"}],
  :full-name "cljs.core/count",

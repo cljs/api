@@ -35,7 +35,7 @@ Converts string to all lower-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L73-L76):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L76-L79):
 
 ```clj
 (defn lower-case
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:73-76](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L73-L76)</ins>
+                └── <ins>[string.cljs:76-79](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L76-L79)</ins>
 </pre>
 
 -->
@@ -104,9 +104,9 @@ The API data for this symbol:
  :source {:code "(defn lower-case\n  [s]\n  (.toLowerCase s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [73 76]},
+          :lines [76 79]},
  :full-name "clojure.string/lower-case",
  :clj-symbol "clojure.string/lower-case",
  :docstring "Converts string to all lower-case."}

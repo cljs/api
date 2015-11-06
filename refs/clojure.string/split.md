@@ -47,7 +47,7 @@ the maximum number of splits. Not lazy. Returns vector of the splits.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L119-L140):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L122-L144):
 
 ```clj
 (defn split
@@ -55,33 +55,34 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
      (split s re 0))
     ([s re limit]
      (discard-trailing-if-needed limit
-       (if (= (str re) "/(?:)/")
+       (if (identical? "/(?:)/" (str re))
          (split-with-empty-regex s limit)
          (if (< limit 1)
            (vec (.split (str s) re))
            (loop [s s
                   limit limit
                   parts []]
-             (if (= limit 1)
+             (if (== 1 limit)
                (conj parts s)
-               (if-let [m (re-find re s)]
-                 (let [index (.indexOf s m)]
-                   (recur (.substring s (+ index (count m)))
-                          (dec limit)
-                          (conj parts (.substring s 0 index))))
-                 (conj parts s)))))))))
+               (let [m (re-find re s)]
+                 (if-not (nil? m)
+                   (let [index (.indexOf s m)]
+                     (recur (.substring s (+ index (count m)))
+                       (dec limit)
+                       (conj parts (.substring s 0 index))))
+                   (conj parts s))))))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:119-140](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L119-L140)</ins>
+                └── <ins>[string.cljs:122-144](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L122-L144)</ins>
 </pre>
 
 -->
@@ -133,12 +134,12 @@ The API data for this symbol:
            "clojure.string/replace"
            "clojure.string/split-lines"],
  :full-name-encode "clojure.string/split",
- :source {:code "(defn split\n  ([s re]\n     (split s re 0))\n    ([s re limit]\n     (discard-trailing-if-needed limit\n       (if (= (str re) \"/(?:)/\")\n         (split-with-empty-regex s limit)\n         (if (< limit 1)\n           (vec (.split (str s) re))\n           (loop [s s\n                  limit limit\n                  parts []]\n             (if (= limit 1)\n               (conj parts s)\n               (if-let [m (re-find re s)]\n                 (let [index (.indexOf s m)]\n                   (recur (.substring s (+ index (count m)))\n                          (dec limit)\n                          (conj parts (.substring s 0 index))))\n                 (conj parts s)))))))))",
+ :source {:code "(defn split\n  ([s re]\n     (split s re 0))\n    ([s re limit]\n     (discard-trailing-if-needed limit\n       (if (identical? \"/(?:)/\" (str re))\n         (split-with-empty-regex s limit)\n         (if (< limit 1)\n           (vec (.split (str s) re))\n           (loop [s s\n                  limit limit\n                  parts []]\n             (if (== 1 limit)\n               (conj parts s)\n               (let [m (re-find re s)]\n                 (if-not (nil? m)\n                   (let [index (.indexOf s m)]\n                     (recur (.substring s (+ index (count m)))\n                       (dec limit)\n                       (conj parts (.substring s 0 index))))\n                   (conj parts s))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [119 140]},
+          :lines [122 144]},
  :full-name "clojure.string/split",
  :clj-symbol "clojure.string/split",
  :docstring "Splits string on a regular expression. Optional argument limit is\nthe maximum number of splits. Not lazy. Returns vector of the splits."}

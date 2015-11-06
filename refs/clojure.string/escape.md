@@ -43,7 +43,7 @@ If (cmap ch) is non-nil, append (str (cmap ch)) instead.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L179-L195):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L184-L201):
 
 ```clj
 (defn escape
@@ -51,10 +51,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
   (let [buffer (StringBuffer.)
         length (.-length s)]
     (loop [index 0]
-      (if (= length index)
+      (if (== length index)
         (. buffer (toString))
-        (let [ch (.charAt s index)]
-          (if-let [replacement (get cmap ch)]
+        (let [ch (.charAt s index)
+              replacement (get cmap ch)]
+          (if-not (nil? replacement)
             (.append buffer (str replacement))
             (.append buffer ch))
           (recur (inc index)))))))
@@ -64,12 +65,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:179-195](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/string.cljs#L179-L195)</ins>
+                └── <ins>[string.cljs:184-201](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/string.cljs#L184-L201)</ins>
 </pre>
 
 -->
@@ -118,12 +119,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.string/escape",
- :source {:code "(defn escape\n  [s cmap]\n  (let [buffer (StringBuffer.)\n        length (.-length s)]\n    (loop [index 0]\n      (if (= length index)\n        (. buffer (toString))\n        (let [ch (.charAt s index)]\n          (if-let [replacement (get cmap ch)]\n            (.append buffer (str replacement))\n            (.append buffer ch))\n          (recur (inc index)))))))",
+ :source {:code "(defn escape\n  [s cmap]\n  (let [buffer (StringBuffer.)\n        length (.-length s)]\n    (loop [index 0]\n      (if (== length index)\n        (. buffer (toString))\n        (let [ch (.charAt s index)\n              replacement (get cmap ch)]\n          (if-not (nil? replacement)\n            (.append buffer (str replacement))\n            (.append buffer ch))\n          (recur (inc index)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [179 195]},
+          :lines [184 201]},
  :full-name "clojure.string/escape",
  :clj-symbol "clojure.string/escape",
  :docstring "Return a new string, using cmap to escape each character ch\nfrom s as follows:\n\nIf (cmap ch) is nil, append ch to the new string.\nIf (cmap ch) is non-nil, append (str (cmap ch)) instead."}

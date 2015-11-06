@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L148-L154):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L153-L159):
 
 ```clj
 (defn run-in-order [{:keys [expecting fns]}]
@@ -38,13 +38,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:148-154](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L148-L154)</ins>
+                    └── <ins>[browser.clj:153-159](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L153-L159)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn run-in-order [{:keys [expecting fns]}]\n  (loop [order expecting fns fns]\n    (if-let [f (get fns order)]\n      (do\n        (f)\n        (recur (inc order) (dissoc fns order)))\n      {:expecting order :fns fns})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [148 154]},
+          :lines [153 159]},
  :full-name "cljs.repl.browser/run-in-order",
  :full-name-encode "cljs.repl.browser/run-in-order",
  :history [["+" "0.0-927"]]}

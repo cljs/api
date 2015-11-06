@@ -29,7 +29,7 @@ the document that called this function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L170-L192):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L172-L194):
 
 ```clj
 (defn connect
@@ -58,13 +58,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:170-192](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L170-L192)</ins>
+                    └── <ins>[repl.cljs:172-194](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L172-L194)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection\n        (net/xpc-connection\n          {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n      :evaluate-javascript\n      (fn [js]\n        (net/transmit\n          repl-connection\n          :send-result\n          (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n      (constantly nil)\n      (fn [iframe]\n        (set! (.-display (.-style iframe))\n          \"none\")))\n    (bootstrap)\n    repl-connection))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [170 192]},
+          :lines [172 194]},
  :full-name "clojure.browser.repl/connect",
  :docstring "Connects to a REPL server from an HTML document. After the\nconnection is made, the REPL will evaluate forms in the context of\nthe document that called this function."}
 

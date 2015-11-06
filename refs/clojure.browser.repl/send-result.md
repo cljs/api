@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L59-L60):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L59-L60):
 
 ```clj
 (defn send-result [connection url data]
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:59-60](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/browser/repl.cljs#L59-L60)</ins>
+                    └── <ins>[repl.cljs:59-60](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L59-L60)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn send-result [connection url data]\n  (net/transmit connection url \"POST\" data nil 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [59 60]},
  :full-name "clojure.browser.repl/send-result",

@@ -28,7 +28,7 @@ loading all the printing machinery.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L645-L653):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L739-L747):
 
 ```clj
 (defn pr-str*
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:645-653](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L645-L653)</ins>
+                └── <ins>[core.cljs:739-747](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L739-L747)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn pr-str*\n  [^not-native obj]\n  (let [sb (StringBuffer.)\n        writer (StringBufferWriter. sb)]\n    (-pr-writer obj writer (pr-opts))\n    (-flush writer)\n    (str sb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [645 653]},
+          :lines [739 747]},
  :full-name "cljs.core/pr-str*",
  :docstring "Support so that collections can implement toString without\nloading all the printing machinery."}
 

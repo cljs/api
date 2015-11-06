@@ -13,6 +13,9 @@
  <samp>
 (__compile__ opts compilable)<br>
 </samp>
+ <samp>
+(__compile__ state opts compilable)<br>
+</samp>
 
 ---
 
@@ -27,25 +30,32 @@ Given a Compilable, compile it and return an IJavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L157-L160):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L188-L198):
 
 ```clj
 (defn compile
-  [opts compilable]
-  (closure/compile compilable opts))
+  ([opts compilable]
+   (compile
+     (if-not (nil? env/*compiler*)
+       env/*compiler*
+       (env/default-compiler-env opts))
+     opts compilable))
+  ([state opts compilable]
+   (env/with-compiler-env state
+     (closure/compile compilable opts))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:157-160](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/build/api.clj#L157-L160)</ins>
+                    └── <ins>[api.clj:188-198](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L188-L198)</ins>
 </pre>
 
 -->
@@ -86,16 +96,16 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.build.api",
  :name "compile",
- :signature ["[opts compilable]"],
+ :signature ["[opts compilable]" "[state opts compilable]"],
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/compile",
- :source {:code "(defn compile\n  [opts compilable]\n  (closure/compile compilable opts))",
+ :source {:code "(defn compile\n  ([opts compilable]\n   (compile\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     opts compilable))\n  ([state opts compilable]\n   (env/with-compiler-env state\n     (closure/compile compilable opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [157 160]},
+          :lines [188 198]},
  :full-name "cljs.build.api/compile",
  :docstring "Given a Compilable, compile it and return an IJavaScript."}
 

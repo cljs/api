@@ -37,7 +37,7 @@ Returns true if coll implements count in constant time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1233-L1235):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1344-L1346):
 
 ```clj
 (defn ^boolean counted?
@@ -48,12 +48,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1233-1235](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L1233-L1235)</ins>
+                └── <ins>[core.cljs:1344-1346](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1344-L1346)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean counted?\n  [x] (satisfies? ICounted x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1233 1235]},
+          :lines [1344 1346]},
  :full-name "cljs.core/counted?",
  :clj-symbol "clojure.core/counted?",
  :docstring "Returns true if coll implements count in constant time"}

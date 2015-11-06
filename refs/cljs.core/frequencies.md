@@ -44,7 +44,7 @@ they appear.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8310-L8317):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8440-L8447):
 
 ```clj
 (defn frequencies
@@ -59,12 +59,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8310-8317](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8310-L8317)</ins>
+                └── <ins>[core.cljs:8440-8447](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8440-L8447)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8310 8317]},
+          :lines [8440 8447]},
  :full-name "cljs.core/frequencies",
  :clj-symbol "clojure.core/frequencies",
  :docstring "Returns a map from distinct items in coll to the number of times\nthey appear."}

@@ -40,7 +40,7 @@ Returns its argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2088-L2090):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2202-L2204):
 
 ```clj
 (defn identity
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2088-2090](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L2088-L2090)</ins>
+                └── <ins>[core.cljs:2202-2204](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2202-L2204)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(defn identity\n  [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2088 2090]},
+          :lines [2202 2204]},
  :full-name "cljs.core/identity",
  :clj-symbol "clojure.core/identity",
  :docstring "Returns its argument."}

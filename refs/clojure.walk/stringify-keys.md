@@ -30,7 +30,7 @@ Recursively transforms all map keys from keywords to strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L72-L78):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L76-L82):
 
 ```clj
 (defn stringify-keys
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:72-78](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/clojure/walk.cljs#L72-L78)</ins>
+                └── <ins>[walk.cljs:76-82](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L76-L82)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn stringify-keys\n  [m]\n  (let [f (fn [[k v]] (if (keyword? k) [(name k) v] [k v]))]\n    ;; only apply to maps\n    (postwalk (fn [x] (if (map? x) (into {} (map f x)) x)) m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [72 78]},
+          :lines [76 82]},
  :full-name "clojure.walk/stringify-keys",
  :clj-symbol "clojure.walk/stringify-keys",
  :docstring "Recursively transforms all map keys from keywords to strings."}

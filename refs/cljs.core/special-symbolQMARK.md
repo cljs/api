@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9650-L9654):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9784-L9788):
 
 ```clj
 (defn ^boolean special-symbol? [x]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9650-9654](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L9650-L9654)</ins>
+                └── <ins>[core.cljs:9784-9788](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9784-L9788)</ins>
 </pre>
 
 -->
@@ -96,9 +96,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try\n       recur new set! ns deftype* defrecord* . js* & quote}\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9650 9654]},
+          :lines [9784 9788]},
  :full-name "cljs.core/special-symbol?",
  :clj-symbol "clojure.core/special-symbol?"}
 

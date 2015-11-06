@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8960-L8972):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9094-L9106):
 
 ```clj
 (deftype Eduction [xform coll]
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
+clojurescript @ r1.7.10
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8960-8972](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/core.cljs#L8960-L8972)</ins>
+                └── <ins>[core.cljs:9094-9106](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L9094-L9106)</ins>
 </pre>
 
 -->
@@ -95,9 +95,9 @@ The API data for this symbol:
  :source {:code "(deftype Eduction [xform coll]\n  ISequential\n\n  ISeqable\n  (-seq [_] (seq (sequence xform coll)))\n\n  IReduce\n  (-reduce [_ f] (transduce xform (completing f) coll))\n  (-reduce [_ f init] (transduce xform (completing f) init coll))\n\n  IPrintWithWriter\n  (-pr-writer [coll writer opts]\n    (pr-sequential-writer writer pr-writer \"(\" \" \" \")\" opts coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3308",
+          :tag "r1.7.10",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8960 8972]},
+          :lines [9094 9106]},
  :full-name "cljs.core/Eduction",
  :full-name-encode "cljs.core/Eduction",
  :history [["+" "0.0-2371"]]}

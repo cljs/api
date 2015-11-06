@@ -1,11 +1,11 @@
-## cljs.repl.browser/parse-file
+## ~~cljs.repl.browser/parse-file~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3053"><img valign="middle" alt="[+] 0.0-3053" title="Added in 0.0-3053" src="https://img.shields.io/badge/+-0.0--3053-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[×] 1.7.10" title="Removed in 1.7.10" src="https://img.shields.io/badge/×-1.7.10-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -92,8 +92,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "parse-file",
- :type "function",
  :signature ["[{:keys [host host-port port], :as repl-env} file {:keys [asset-path], :as opts}]"],
+ :history [["+" "0.0-3053"] ["-" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/parse-file",
  :source {:code "(defn parse-file [{:keys [host host-port port] :as repl-env} file {:keys [asset-path] :as opts}]\n  (let [base-url-pattern (Pattern/compile (str \"http://\" host \":\" (or host-port port) \"/\"))]\n    (if (re-find base-url-pattern file)\n      (-> file\n        (string/replace base-url-pattern \"\")\n        (string/replace\n          (Pattern/compile\n            (str \"^\" (or asset-path (util/output-directory opts)) \"/\")) \"\"))\n      (if-let [asset-root (:asset-root opts)]\n        (string/replace file asset-root \"\")\n        (throw\n          (ex-info (str \"Could not relativize URL \" file)\n            {:type :parse-stacktrace\n             :reason :relativize-url}))))))",
           :title "Source code",
           :repo "clojurescript",
@@ -101,8 +103,7 @@ The API data for this symbol:
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [230 243]},
  :full-name "cljs.repl.browser/parse-file",
- :full-name-encode "cljs.repl.browser/parse-file",
- :history [["+" "0.0-3053"]]}
+ :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 
 ```
 
