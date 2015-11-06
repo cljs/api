@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L957-L1008):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1014-L1065):
 
 ```clj
 (deftype RSeq [ci i meta]
@@ -86,11 +86,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:957-1008](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L957-L1008)</ins>
+            └── <ins>[core.cljs:1014-1065](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1014-L1065)</ins>
 </pre>
 
 -->
@@ -141,9 +141,9 @@ The API data for this symbol:
  :source {:code "(deftype RSeq [ci i meta]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n\n  ICloneable\n  (-clone [_] (RSeq. ci i meta))\n\n  IMeta\n  (-meta [coll] meta)\n  IWithMeta\n  (-with-meta [coll new-meta]\n    (RSeq. ci i new-meta))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ISeq\n  (-first [coll]\n    (-nth ci i))\n  (-rest [coll]\n    (if (pos? i)\n      (RSeq. ci (dec i) nil)\n      ()))\n  \n  INext\n  (-next [coll]\n    (when (pos? i)\n      (RSeq. ci (dec i) nil)))\n\n  ICounted\n  (-count [coll] (inc i))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  IHash\n  (-hash [coll] (hash-ordered-coll coll))\n\n  IReduce\n  (-reduce [col f] (seq-reduce f col))\n  (-reduce [col f start] (seq-reduce f start col)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [957 1008]},
+          :lines [1014 1065]},
  :full-name "cljs.core/RSeq",
  :clj-symbol "clojure.lang/RSeq"}
 

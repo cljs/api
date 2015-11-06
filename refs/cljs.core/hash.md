@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L512-L530):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L523-L544):
 
 ```clj
 (defn hash [o]
@@ -43,6 +43,9 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
     (string? o)
     (m3-hash-int (hash-string o))
 
+    (instance? js/Date o)
+    (.valueOf o)
+
     (nil? o) 0
 
     :else
@@ -53,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:512-530](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L512-L530)</ins>
+            └── <ins>[core.cljs:523-544](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L523-L544)</ins>
 </pre>
 
 -->
@@ -105,12 +108,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/hash",
- :source {:code "(defn hash [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (Math/floor o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
+ :source {:code "(defn hash [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (js-mod (Math/floor o) 2147483647)\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (instance? js/Date o)\n    (.valueOf o)\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [512 530]},
+          :lines [523 544]},
  :full-name "cljs.core/hash",
  :clj-symbol "clojure.core/hash"}
 

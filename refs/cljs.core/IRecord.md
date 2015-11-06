@@ -25,7 +25,7 @@ Marker interface indicating a record object
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L317-L318):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L328-L329):
 
 ```clj
 (defprotocol IRecord
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:317-318](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L317-L318)</ins>
+            └── <ins>[core.cljs:328-329](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L328-L329)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IRecord\n  \"Marker interface indicating a record object\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [317 318]},
+          :lines [328 329]},
  :full-name "cljs.core/IRecord",
  :clj-symbol "clojure.lang/IRecord",
  :docstring "Marker interface indicating a record object"}

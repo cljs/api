@@ -40,7 +40,7 @@ Returns true if x is the value true, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1444-L1446):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1511-L1513):
 
 ```clj
 (defn ^boolean true?
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1444-1446](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1444-L1446)</ins>
+            └── <ins>[core.cljs:1511-1513](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1511-L1513)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L310-L311):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L292-L293):
 
 ```clj
 (defmacro true? [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:310-311](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L310-L311)</ins>
+            └── <ins>[core.clj:292-293](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L292-L293)</ins>
 </pre>
 -->
 
@@ -129,15 +129,15 @@ The API data for this symbol:
  :source {:code "(defn ^boolean true?\n  [x] (cljs.core/true? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1444 1446]},
+          :lines [1511 1513]},
  :extra-sources [{:code "(defmacro true? [x]\n  (bool-expr (core/list 'js* \"~{} === true\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2371",
+                  :tag "r2411",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [310 311]}],
+                  :lines [292 293]}],
  :full-name "cljs.core/true?",
  :clj-symbol "clojure.core/true?",
  :docstring "Returns true if x is the value true, false otherwise."}

@@ -37,7 +37,7 @@ Functions, keywords, map, sets, and vectors can be called as functions.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1466-L1467):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1533-L1534):
 
 ```clj
 (defn ^boolean ifn? [f]
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1466-1467](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1466-L1467)</ins>
+            └── <ins>[core.cljs:1533-1534](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L1533-L1534)</ins>
 </pre>
 
 -->
@@ -106,9 +106,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean ifn? [f]\n  (or (fn? f) (satisfies? IFn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1466 1467]},
+          :lines [1533 1534]},
  :full-name "cljs.core/ifn?",
  :clj-symbol "clojure.core/ifn?"}
 

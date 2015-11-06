@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2481-L2482):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2556-L2557):
 
 ```clj
 (defn chunk-buffer [capacity]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2481-2482](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2481-L2482)</ins>
+            └── <ins>[core.cljs:2556-2557](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2556-L2557)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn chunk-buffer [capacity]\n  (ChunkBuffer. (make-array capacity) 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2481 2482]},
+          :lines [2556 2557]},
  :full-name "cljs.core/chunk-buffer",
  :full-name-encode "cljs.core/chunk-buffer",
  :history [["+" "0.0-1424"]]}

@@ -40,7 +40,7 @@ separated by an optional separator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/string.cljs#L45-L51):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/string.cljs#L49-L55):
 
 ```clj
 (defn join
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:45-51](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/string.cljs#L45-L51)</ins>
+            └── <ins>[string.cljs:49-55](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/string.cljs#L49-L55)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn join\n  ([coll]\n     (apply str coll))\n  ([separator coll]\n     (apply str (interpose separator coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/clojure/string.cljs",
-          :lines [45 51]},
+          :lines [49 55]},
  :full-name "clojure.string/join",
  :clj-symbol "clojure.string/join",
  :docstring "Returns a string of all elements in coll, as returned by (seq coll),\nseparated by an optional separator."}

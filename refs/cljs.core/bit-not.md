@@ -54,7 +54,7 @@ Bitwise complement
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1985-L1987):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2052-L2054):
 
 ```clj
 (defn bit-not
@@ -65,18 +65,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1985-1987](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1985-L1987)</ins>
+            └── <ins>[core.cljs:2052-2054](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2052-L2054)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L504-L505):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L486-L487):
 
 ```clj
 (defmacro ^::ana/numeric bit-not [x]
@@ -87,11 +87,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:504-505](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L504-L505)</ins>
+            └── <ins>[core.clj:486-487](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L486-L487)</ins>
 </pre>
 -->
 
@@ -141,15 +141,15 @@ The API data for this symbol:
  :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1985 1987]},
+          :lines [2052 2054]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-not [x]\n  (core/list 'js* \"(~ ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2371",
+                  :tag "r2411",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [504 505]}],
+                  :lines [486 487]}],
  :examples [{:id "d4c5e3",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-not 2r1100)\n;;=> -13\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-not 12)\n;;=> -13\n```"}],
  :full-name "cljs.core/bit-not",

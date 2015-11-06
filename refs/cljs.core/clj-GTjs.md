@@ -64,7 +64,7 @@ Maps become Objects. Arbitrary keys are encoded to by key->js.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L8337-L8356):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8462-L8481):
 
 ```clj
 (defn clj->js
@@ -90,11 +90,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8337-8356](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L8337-L8356)</ins>
+            └── <ins>[core.cljs:8462-8481](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L8462-L8481)</ins>
 </pre>
 
 -->
@@ -144,9 +144,9 @@ The API data for this symbol:
  :source {:code "(defn clj->js\n   [x]\n   (when-not (nil? x)\n     (if (satisfies? IEncodeJS x)\n       (-clj->js x)\n       (cond\n         (keyword? x) (name x)\n         (symbol? x) (str x)\n         (map? x) (let [m (js-obj)]\n                    (doseq [[k v] x]\n                      (aset m (key->js k) (clj->js v)))\n                    m)\n         (coll? x) (let [arr (array)]\n                     (doseq [x (map clj->js x)]\n                       (.push arr x))\n                     arr)\n         :else x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [8337 8356]},
+          :lines [8462 8481]},
  :examples [{:id "2b1057",
              :content "```clj\n(clj->js {:foo 1 :bar 2})\n;;=> #js {:foo 1, :bar 2}\n\n(clj->js [:foo \"bar\" 'baz])\n;;=> #js [\"foo\" \"bar\" \"baz\"]\n\n(clj->js [1 {:foo \"bar\"} 4])\n;;=> #js [1 #js {:foo \"bar\"} 4]\n```"}],
  :full-name "cljs.core/clj->js",

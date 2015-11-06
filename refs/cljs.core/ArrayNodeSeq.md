@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L5908-L5943):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L6006-L6041):
 
 ```clj
 (deftype ArrayNodeSeq [meta nodes i s ^:mutable __hash]
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5908-5943](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L5908-L5943)</ins>
+            └── <ins>[core.cljs:6006-6041](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L6006-L6041)</ins>
 </pre>
 
 -->
@@ -117,9 +117,9 @@ The API data for this symbol:
  :source {:code "(deftype ArrayNodeSeq [meta nodes i s ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IWithMeta\n  (-with-meta [coll meta] (ArrayNodeSeq. meta nodes i s __hash))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  ISequential\n  ISeq\n  (-first [coll] (first s))\n  (-rest  [coll] (create-array-node-seq nil nodes i (next s)))\n\n  ISeqable\n  (-seq [this] this)\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5908 5943]},
+          :lines [6006 6041]},
  :full-name "cljs.core/ArrayNodeSeq",
  :full-name-encode "cljs.core/ArrayNodeSeq",
  :history [["+" "0.0-1211"]]}

@@ -25,16 +25,16 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L627-L643):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L609-L625):
 
 ```clj
 (defmacro reify [& impls]
-  (let [t      (gensym "t")
+  (let [t        (with-meta (gensym "t") {:anonymous true})
         meta-sym (gensym "meta")
         this-sym (gensym "_")
-        locals (keys (:locals &env))
-        ns     (-> &env :ns :name)
-        munge  cljs.compiler/munge]
+        locals   (keys (:locals &env))
+        ns       (-> &env :ns :name)
+        munge    cljs.compiler/munge]
     `(do
        (when-not (exists? ~(symbol (core/str ns) (core/str t)))
          (deftype ~t [~@locals ~meta-sym]
@@ -44,18 +44,18 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
            IMeta
            (~'-meta [~this-sym] ~meta-sym)
            ~@impls))
-       (new ~t ~@locals nil))))
+       (new ~t ~@locals ~(meta &form)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:627-643](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L627-L643)</ins>
+            └── <ins>[core.clj:609-625](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L609-L625)</ins>
 </pre>
 
 -->
@@ -103,12 +103,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/reify",
- :source {:code "(defmacro reify [& impls]\n  (let [t      (gensym \"t\")\n        meta-sym (gensym \"meta\")\n        this-sym (gensym \"_\")\n        locals (keys (:locals &env))\n        ns     (-> &env :ns :name)\n        munge  cljs.compiler/munge]\n    `(do\n       (when-not (exists? ~(symbol (core/str ns) (core/str t)))\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals nil))))",
+ :source {:code "(defmacro reify [& impls]\n  (let [t        (with-meta (gensym \"t\") {:anonymous true})\n        meta-sym (gensym \"meta\")\n        this-sym (gensym \"_\")\n        locals   (keys (:locals &env))\n        ns       (-> &env :ns :name)\n        munge    cljs.compiler/munge]\n    `(do\n       (when-not (exists? ~(symbol (core/str ns) (core/str t)))\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals ~(meta &form)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/clj/cljs/core.clj",
-          :lines [627 643]},
+          :lines [609 625]},
  :full-name "cljs.core/reify",
  :clj-symbol "clojure.core/reify"}
 

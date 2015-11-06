@@ -17,34 +17,23 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/analyzer.clj#L1213-L1226):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/analyzer.clj#L1234-L1236):
 
 ```clj
 (defmethod parse 'deftype*
-  [_ env [_ tsym fields pmasks :as form] _ _]
-  (let [t (:name (resolve-var (dissoc env :locals) tsym))]
-    (swap! env/*compiler* update-in [::namespaces (-> env :ns :name) :defs tsym]
-           (fn [m]
-             (let [m (assoc (or m {})
-                       :name t
-                       :type true
-                       :num-fields (count fields))]
-               (merge m
-                 (dissoc (meta tsym) :protocols)
-                 {:protocols (-> tsym meta :protocols)}
-                 (source-info tsym env)))))
-    {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))
+  [_ env form _ _]
+  (parse-type :deftype* env form))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1213-1226](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/analyzer.clj#L1213-L1226)</ins>
+            └── <ins>[analyzer.clj:1234-1236](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/analyzer.clj#L1234-L1236)</ins>
 </pre>
 
 -->
@@ -81,12 +70,12 @@ The API data for this symbol:
 {:ns "special",
  :name "deftype*",
  :type "special form",
- :source {:code "(defmethod parse 'deftype*\n  [_ env [_ tsym fields pmasks :as form] _ _]\n  (let [t (:name (resolve-var (dissoc env :locals) tsym))]\n    (swap! env/*compiler* update-in [::namespaces (-> env :ns :name) :defs tsym]\n           (fn [m]\n             (let [m (assoc (or m {})\n                       :name t\n                       :type true\n                       :num-fields (count fields))]\n               (merge m\n                 (dissoc (meta tsym) :protocols)\n                 {:protocols (-> tsym meta :protocols)}\n                 (source-info tsym env)))))\n    {:env env :op :deftype* :form form :t t :fields fields :pmasks pmasks}))",
+ :source {:code "(defmethod parse 'deftype*\n  [_ env form _ _]\n  (parse-type :deftype* env form))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [1213 1226]},
+          :lines [1234 1236]},
  :full-name "special/deftype*",
  :full-name-encode "special/deftypeSTAR",
  :history [["+" "0.0-927"]]}

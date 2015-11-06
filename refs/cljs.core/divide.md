@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L444-L447):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L426-L429):
 
 ```clj
 (defmacro ^::ana/numeric divide
@@ -41,11 +41,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:444-447](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L444-L447)</ins>
+            └── <ins>[core.clj:426-429](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L426-L429)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defmacro ^::ana/numeric divide\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/clj/cljs/core.clj",
-          :lines [444 447]},
+          :lines [426 429]},
  :full-name "cljs.core/divide",
  :full-name-encode "cljs.core/divide",
  :history [["+" "0.0-1798"]]}

@@ -64,7 +64,7 @@ Bitwise or
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1967-L1969):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2034-L2036):
 
 ```clj
 (defn bit-or
@@ -75,18 +75,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1967-1969](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L1967-L1969)</ins>
+            └── <ins>[core.cljs:2034-2036](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2034-L2036)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L516-L518):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L498-L500):
 
 ```clj
 (defmacro ^::ana/numeric bit-or
@@ -98,11 +98,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:516-518](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L516-L518)</ins>
+            └── <ins>[core.clj:498-500](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L498-L500)</ins>
 </pre>
 -->
 
@@ -153,15 +153,15 @@ The API data for this symbol:
  :source {:code "(defn bit-or\n  [x y] (cljs.core/bit-or x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1967 1969]},
+          :lines [2034 2036]},
  :extra-sources [{:code "(defmacro ^::ana/numeric bit-or\n  ([x y] (core/list 'js* \"(~{} | ~{})\" x y))\n  ([x y & more] `(bit-or (bit-or ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r2371",
+                  :tag "r2411",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [516 518]}],
+                  :lines [498 500]}],
  :examples [{:id "ecea10",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-or 2r1100 2r1010)\n;;=> 14\n;; 14 = 2r1110\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-or 12 10)\n;;=> 14\n```"}],
  :full-name "cljs.core/bit-or",

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/browser/net.cljs#L73-L79):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/browser/net.cljs#L73-L79):
 
 ```clj
 (def xpc-config-fields
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[net.cljs:73-79](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/browser/net.cljs#L73-L79)</ins>
+                └── <ins>[net.cljs:73-79](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/browser/net.cljs#L73-L79)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(def xpc-config-fields\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (js->clj CfgFields))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/clojure/browser/net.cljs",
           :lines [73 79]},
  :full-name "clojure.browser.net/xpc-config-fields",

@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L5272-L5338):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L5368-L5434):
 
 ```clj
 (deftype TransientArrayMap [^:mutable editable?
@@ -101,11 +101,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5272-5338](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L5272-L5338)</ins>
+            └── <ins>[core.cljs:5368-5434](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L5368-L5434)</ins>
 </pre>
 
 -->
@@ -156,9 +156,9 @@ The API data for this symbol:
  :source {:code "(deftype TransientArrayMap [^:mutable editable?\n                            ^:mutable len\n                            arr]\n  ICounted\n  (-count [tcoll]\n    (if editable?\n      (quot len 2)\n      (throw (js/Error. \"count after persistent!\"))))\n\n  ILookup\n  (-lookup [tcoll k]\n    (-lookup tcoll k nil))\n\n  (-lookup [tcoll k not-found]\n    (if editable?\n      (let [idx (array-map-index-of tcoll k)]\n        (if (== idx -1)\n          not-found\n          (aget arr (inc idx))))\n      (throw (js/Error. \"lookup after persistent!\"))))\n\n  ITransientCollection\n  (-conj! [tcoll o]\n    (if editable?\n      (if (satisfies? IMapEntry o)\n        (-assoc! tcoll (key o) (val o))\n        (loop [es (seq o) tcoll tcoll]\n          (if-let [e (first es)]\n            (recur (next es)\n                   (-assoc! tcoll (key e) (val e)))\n            tcoll)))\n      (throw (js/Error. \"conj! after persistent!\"))))\n\n  (-persistent! [tcoll]\n    (if editable?\n      (do (set! editable? false)\n          (PersistentArrayMap. nil (quot len 2) arr nil))\n      (throw (js/Error. \"persistent! called twice\"))))\n\n  ITransientAssociative\n  (-assoc! [tcoll key val]\n    (if editable?\n      (let [idx (array-map-index-of tcoll key)]\n        (if (== idx -1)\n          (if (<= (+ len 2) (* 2 (.-HASHMAP-THRESHOLD PersistentArrayMap)))\n            (do (set! len (+ len 2))\n                (.push arr key)\n                (.push arr val)\n                tcoll)\n            (assoc! (array->transient-hash-map len arr) key val))\n          (if (identical? val (aget arr (inc idx)))\n            tcoll\n            (do (aset arr (inc idx) val)\n                tcoll))))\n      (throw (js/Error. \"assoc! after persistent!\"))))\n\n  ITransientMap\n  (-dissoc! [tcoll key]\n    (if editable?\n      (let [idx (array-map-index-of tcoll key)]\n        (when (>= idx 0)\n          (aset arr idx (aget arr (- len 2)))\n          (aset arr (inc idx) (aget arr (dec len)))\n          (doto arr .pop .pop)\n          (set! len (- len 2)))\n        tcoll)\n      (throw (js/Error. \"dissoc! after persistent!\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5272 5338]},
+          :lines [5368 5434]},
  :full-name "cljs.core/TransientArrayMap",
  :clj-symbol "clojure.lang/TransientArrayMap"}
 

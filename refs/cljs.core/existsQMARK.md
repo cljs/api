@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L325-L328):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L307-L310):
 
 ```clj
 (defmacro exists? [x]
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:325-328](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L325-L328)</ins>
+            └── <ins>[core.clj:307-310](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L307-L310)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defmacro exists? [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/clj/cljs/core.clj",
-          :lines [325 328]},
+          :lines [307 310]},
  :full-name "cljs.core/exists?",
  :full-name-encode "cljs.core/existsQMARK",
  :history [["+" "0.0-1798"]]}

@@ -51,7 +51,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3739-L3766):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3818-L3845):
 
 ```clj
 (defn filter
@@ -85,11 +85,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3739-3766](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3739-L3766)</ins>
+            └── <ins>[core.cljs:3818-3845](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3818-L3845)</ins>
 </pre>
 
 -->
@@ -142,9 +142,9 @@ The API data for this symbol:
  :source {:code "(defn filter\n  ([pred]\n    (fn [rf]\n      (fn\n        ([] (rf))\n        ([result] (rf result))\n        ([result input]\n           (if (pred input)\n             (rf result input)\n             result)))))\n  ([pred coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n              (when (pred (-nth c i))\n                (chunk-append b (-nth c i))))\n          (chunk-cons (chunk b) (filter pred (chunk-rest s))))\n        (let [f (first s) r (rest s)]\n          (if (pred f)\n            (cons f (filter pred r))\n            (filter pred r))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3739 3766]},
+          :lines [3818 3845]},
  :full-name "cljs.core/filter",
  :clj-symbol "clojure.core/filter",
  :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns true. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}

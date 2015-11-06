@@ -37,7 +37,7 @@ Returns a stateful transducer when no collection is provided.
 [`cljs.core/drop-last`](../cljs.core/drop-last.md)<br>
 [`cljs.core/drop-while`](../cljs.core/drop-while.md)<br>
 [`cljs.core/nthnext`](../cljs.core/nthnext.md)<br>
-[``](../cljs.core/nthrest.md)<br>
+[`cljs.core/nthrest`](../cljs.core/nthrest.md)<br>
 
 ---
 
@@ -50,7 +50,7 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3601-L3622):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3680-L3701):
 
 ```clj
 (defn drop
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3601-3622](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L3601-L3622)</ins>
+            └── <ins>[core.cljs:3680-3701](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L3680-L3701)</ins>
 </pre>
 
 -->
@@ -140,9 +140,9 @@ The API data for this symbol:
  :source {:code "(defn drop\n  ([n]\n     (fn [rf]\n       (let [na (atom n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na]\n                (swap! na dec)\n                (if (pos? n)\n                  result\n                  (rf result input))))))))\n  ([n coll]\n     (let [step (fn [n coll]\n                  (let [s (seq coll)]\n                    (if (and (pos? n) s)\n                      (recur (dec n) (rest s))\n                      s)))]\n       (lazy-seq (step n coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3601 3622]},
+          :lines [3680 3701]},
  :full-name "cljs.core/drop",
  :clj-symbol "clojure.core/drop",
  :docstring "Returns a lazy sequence of all but the first n items in coll.\nReturns a stateful transducer when no collection is provided."}

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L290-L291):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L301-L302):
 
 ```clj
 (defprotocol IMeta
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:290-291](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L290-L291)</ins>
+            └── <ins>[core.cljs:301-302](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L301-L302)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IMeta\n  (^clj-or-nil -meta [o]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [290 291]},
+          :lines [301 302]},
  :methods [{:name "-meta", :signature ["[o]"], :docstring nil}],
  :full-name "cljs.core/IMeta",
  :clj-symbol "clojure.lang/IMeta"}

@@ -58,7 +58,7 @@ Use any value as a key:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L205-L231):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L205-L226):
 
 ```clj
 (defn- read-map
@@ -69,17 +69,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
         map-count (count the-map)
         [end-line end-column] (when (indexing-reader? rdr)
                                 [(get-line-number rdr) (int (get-column-number rdr))])]
-    (when (and (odd? map-count)
-               (or (not gensym-env)
-                   (not-any? #(= 'clojure.core/unquote-splicing (first %))
-                           (filter seq? the-map))))
+    (when (odd? map-count)
       (reader-error rdr "Map literal must contain an even number of forms"))
     (with-meta
       (if (zero? map-count)
         {}
-        (if gensym-env
-          (SyntaxQuotedMap. the-map)
-          (RT/map (to-array the-map))))
+        (RT/map (to-array the-map)))
       (when start-line
         (merge
          (when-let [file (get-file-name rdr)]
@@ -94,18 +89,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.9
+tools.reader @ tools.reader-0.8.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:205-231](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L205-L231)</ins>
+                    └── <ins>[reader.clj:205-226](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L205-L226)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L603-L622):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610):
 
 ```clj
 (defn- macros [ch]
@@ -134,13 +129,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.9
+tools.reader @ tools.reader-0.8.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:603-622](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L603-L622)</ins>
+                    └── <ins>[reader.clj:591-610](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L591-L610)</ins>
 </pre>
 -->
 
@@ -182,18 +177,18 @@ The API data for this symbol:
            "cljs.core/sorted-map"
            "cljs.core/sorted-map-by"],
  :full-name-encode "syntax/map",
- :extra-sources ({:code "(defn- read-map\n  [rdr _]\n  (let [[start-line start-column] (when (indexing-reader? rdr)\n                                    [(get-line-number rdr) (int (dec (get-column-number rdr)))])\n        the-map (read-delimited \\} rdr true)\n        map-count (count the-map)\n        [end-line end-column] (when (indexing-reader? rdr)\n                                [(get-line-number rdr) (int (get-column-number rdr))])]\n    (when (and (odd? map-count)\n               (or (not gensym-env)\n                   (not-any? #(= 'clojure.core/unquote-splicing (first %))\n                           (filter seq? the-map))))\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (with-meta\n      (if (zero? map-count)\n        {}\n        (if gensym-env\n          (SyntaxQuotedMap. the-map)\n          (RT/map (to-array the-map))))\n      (when start-line\n        (merge\n         (when-let [file (get-file-name rdr)]\n           {:file file})\n         {:line start-line\n          :column start-column\n          :end-line end-line\n          :end-column end-column})))))",
+ :extra-sources ({:code "(defn- read-map\n  [rdr _]\n  (let [[start-line start-column] (when (indexing-reader? rdr)\n                                    [(get-line-number rdr) (int (dec (get-column-number rdr)))])\n        the-map (read-delimited \\} rdr true)\n        map-count (count the-map)\n        [end-line end-column] (when (indexing-reader? rdr)\n                                [(get-line-number rdr) (int (get-column-number rdr))])]\n    (when (odd? map-count)\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (with-meta\n      (if (zero? map-count)\n        {}\n        (RT/map (to-array the-map)))\n      (when start-line\n        (merge\n         (when-let [file (get-file-name rdr)]\n           {:file file})\n         {:line start-line\n          :column start-column\n          :end-line end-line\n          :end-column end-column})))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.9",
+                  :tag "tools.reader-0.8.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [205 231]}
+                  :lines [205 226]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.9",
+                  :tag "tools.reader-0.8.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [603 622]}),
+                  :lines [591 610]}),
  :usage ["{...}"],
  :examples [{:id "4696ad",
              :content "```clj\n{:foo 1 :bar 2}\n;;=> {:foo 1, :bar 2}\n```\n\nUse any value as a key:\n\n```clj\n(def m {[1 2] 3})\n(get m [1 2])\n;;=> 3\n```"}],

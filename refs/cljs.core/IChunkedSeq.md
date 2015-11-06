@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L375-L377):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L386-L388):
 
 ```clj
 (defprotocol IChunkedSeq
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:375-377](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L375-L377)</ins>
+            └── <ins>[core.cljs:386-388](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L386-L388)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IChunkedSeq\n  (-chunked-first [coll])\n  (-chunked-rest [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [375 377]},
+          :lines [386 388]},
  :methods [{:name "-chunked-first",
             :signature ["[coll]"],
             :docstring nil}

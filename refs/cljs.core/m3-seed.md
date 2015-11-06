@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L437):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L448):
 
 ```clj
 (def m3-seed 0)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:437](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L437)</ins>
+            └── <ins>[core.cljs:448](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L448)</ins>
 </pre>
 
 -->
@@ -76,9 +76,9 @@ The API data for this symbol:
  :source {:code "(def m3-seed 0)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [437]},
+          :lines [448]},
  :full-name "cljs.core/m3-seed",
  :full-name-encode "cljs.core/m3-seed",
  :history [["+" "0.0-2261"]]}

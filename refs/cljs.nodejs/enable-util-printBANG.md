@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/nodejs.cljs#L11-L12):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/nodejs.cljs#L11-L12):
 
 ```clj
 (defn enable-util-print! []
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[nodejs.cljs:11-12](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/nodejs.cljs#L11-L12)</ins>
+            └── <ins>[nodejs.cljs:11-12](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/nodejs.cljs#L11-L12)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn enable-util-print! []\n  (set! cljs.core/string-print (.-print (require \"util\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/nodejs.cljs",
           :lines [11 12]},
  :full-name "cljs.nodejs/enable-util-print!",

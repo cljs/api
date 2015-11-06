@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/reader.cljs#L378-L380):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/reader.cljs#L378-L380):
 
 ```clj
 (defn read-set
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:378-380](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/reader.cljs#L378-L380)</ins>
+            └── <ins>[reader.cljs:378-380](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/reader.cljs#L378-L380)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn read-set\n  [rdr _]\n  (set (read-delimited-list \"}\" rdr true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [378 380]},
  :full-name "cljs.reader/read-set",

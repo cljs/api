@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-2411](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2411)__</td>
+<td>2014-12-05</td>
+<td><kbd>1.6.0</kbd></td>
+<td><kbd>0.8.10</kbd></td>
+<td><kbd>0.0-20140718</kbd></td>
+<td>
+<a href="#user-content-002411syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-002411library">
++9 
+</a>
+</td>
+<td>
+<a href="#user-content-002411compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-2371](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2371)__</td>
 <td>2014-10-10</td>
 <td><kbd>1.6.0</kbd></td>
@@ -1648,6 +1671,77 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-2411
+
+<a name="002411syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="002411library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ES6IteratorSeq](refs/cljs.core/ES6IteratorSeq.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ensure-reduced](refs/cljs.core/ensure-reduced.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/es6-iterable](refs/cljs.core/es6-iterable.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/es6-iterator-seq](refs/cljs.core/es6-iterator-seq.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-in](refs/cljs.core/js-in.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/js-invoke](refs/cljs.core/js-invoke.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/nthrest](refs/cljs.core/nthrest.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/unreduced](refs/cljs.core/unreduced.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/update](refs/cljs.core/update.md)</samp></td>
+</tr>
+</table>
+
+<a name="002411compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-2371

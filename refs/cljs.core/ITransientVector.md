@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L362-L364):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L373-L375):
 
 ```clj
 (defprotocol ITransientVector
@@ -32,11 +32,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:362-364](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L362-L364)</ins>
+            └── <ins>[core.cljs:373-375](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L373-L375)</ins>
 </pre>
 
 -->
@@ -86,9 +86,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientVector\n  (^clj -assoc-n! [tcoll n val])\n  (^clj -pop! [tcoll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [362 364]},
+          :lines [373 375]},
  :methods [{:name "-assoc-n!",
             :signature ["[tcoll n val]"],
             :docstring nil}

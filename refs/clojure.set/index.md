@@ -31,7 +31,7 @@ set of the maps in xrel with the corresponding values of ks.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/set.cljs#L87-L95):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/set.cljs#L87-L95):
 
 ```clj
 (defn index
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:87-95](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/clojure/set.cljs#L87-L95)</ins>
+            └── <ins>[set.cljs:87-95](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/clojure/set.cljs#L87-L95)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn index\n  [xrel ks]\n    (reduce\n     (fn [m x]\n       (let [ik (select-keys x ks)]\n         (assoc m ik (conj (get m ik #{}) x))))\n     {} xrel))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/clojure/set.cljs",
           :lines [87 95]},
  :full-name "clojure.set/index",

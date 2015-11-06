@@ -50,7 +50,7 @@ Access the metadata of a var:
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L624-L635):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -71,13 +71,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.8.9
+tools.reader @ tools.reader-0.8.10
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:624-635](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.9/src/main/clojure/clojure/tools/reader.clj#L624-L635)</ins>
+                    └── <ins>[reader.clj:612-623](https://github.com/clojure/tools.reader/blob/tools.reader-0.8.10/src/main/clojure/clojure/tools/reader.clj#L612-L623)</ins>
 </pre>
 -->
 
@@ -119,9 +119,9 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.8.9",
+                  :tag "tools.reader-0.8.10",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [624 635]}),
+                  :lines [612 623]}),
  :usage ["#'foo" "#'foo/bar"],
  :examples [{:id "673ef6",
              :content "Access the metadata of a var:\n\n```clj\n(def x 123)\n(meta #'x)\n;;=> {:arglists (), :test nil, :name x, :column 1, :line 1, :file \"<cljs repl>\", :doc nil, :ns cljs.user}\n```"}],

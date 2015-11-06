@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2920-L2921):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2997-L2998):
 
 ```clj
 (defn string-iter [x]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2920-2921](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2920-L2921)</ins>
+            └── <ins>[core.cljs:2997-2998](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2997-L2998)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn string-iter [x]\n  (StringIter. x 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2920 2921]},
+          :lines [2997 2998]},
  :full-name "cljs.core/string-iter",
  :full-name-encode "cljs.core/string-iter",
  :history [["+" "0.0-2301"]]}

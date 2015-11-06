@@ -36,7 +36,7 @@ Creates a new vector containing the contents of `coll`
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L4238-L4242):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L4335-L4339):
 
 ```clj
 (defn vec [coll]
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4238-4242](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L4238-L4242)</ins>
+            └── <ins>[core.cljs:4335-4339](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L4335-L4339)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn vec [coll]\n  (-persistent!\n   (reduce -conj!\n           (-as-transient (.-EMPTY PersistentVector))\n           coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4238 4242]},
+          :lines [4335 4339]},
  :full-name "cljs.core/vec",
  :clj-symbol "clojure.core/vec"}
 

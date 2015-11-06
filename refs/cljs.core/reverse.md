@@ -40,7 +40,7 @@ Returns a seq of the items in coll in reverse order. Not lazy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2257-L2262):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2328-L2333):
 
 ```clj
 (defn reverse
@@ -54,11 +54,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2257-2262](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L2257-L2262)</ins>
+            └── <ins>[core.cljs:2328-2333](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L2328-L2333)</ins>
 </pre>
 
 -->
@@ -111,9 +111,9 @@ The API data for this symbol:
  :source {:code "(defn reverse\n  [coll]\n  (if (reversible? coll)\n    (rseq coll)\n    (reduce conj () coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2257 2262]},
+          :lines [2328 2333]},
  :full-name "cljs.core/reverse",
  :clj-symbol "clojure.core/reverse",
  :docstring "Returns a seq of the items in coll in reverse order. Not lazy."}

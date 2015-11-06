@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L902-L925):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L884-L901):
 
 ```clj
 (defmacro deftype [t fields & impls]
@@ -36,33 +36,27 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
         t (vary-meta t assoc
             :protocols protocols
             :skip-protocol-flag fpps) ]
-    (if (seq impls)
-      `(do
-         (deftype* ~t ~fields ~pmasks)
-         (set! (.-cljs$lang$type ~t) true)
-         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))
-         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))
-         (extend-type ~t ~@(dt->et t impls fields true))
-         ~(build-positional-factory t r fields)
-         ~t)
-      `(do
-         (deftype* ~t ~fields ~pmasks)
-         (set! (.-cljs$lang$type ~t) true)
-         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))
-         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opts#] (-write writer# ~(core/str r))))
-         ~(build-positional-factory t r fields)
-         ~t))))
+    `(do
+       (deftype* ~t ~fields ~pmasks
+         ~(if (seq impls)
+            `(extend-type ~t ~@(dt->et t impls fields))))
+       (set! (.-cljs$lang$type ~t) true)
+       (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))
+       (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))
+
+       ~(build-positional-factory t r fields)
+       ~t)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:902-925](https://github.com/clojure/clojurescript/blob/r2371/src/clj/cljs/core.clj#L902-L925)</ins>
+            └── <ins>[core.clj:884-901](https://github.com/clojure/clojurescript/blob/r2411/src/clj/cljs/core.clj#L884-L901)</ins>
 </pre>
 
 -->
@@ -110,12 +104,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "macro",
  :full-name-encode "cljs.core/deftype",
- :source {:code "(defmacro deftype [t fields & impls]\n  (let [env &env\n        r (:name (cljs.analyzer/resolve-var (dissoc env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks env impls)\n        protocols (collect-protocols impls env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    (if (seq impls)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n         (extend-type ~t ~@(dt->et t impls fields true))\n         ~(build-positional-factory t r fields)\n         ~t)\n      `(do\n         (deftype* ~t ~fields ~pmasks)\n         (set! (.-cljs$lang$type ~t) true)\n         (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n         (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opts#] (-write writer# ~(core/str r))))\n         ~(build-positional-factory t r fields)\n         ~t))))",
+ :source {:code "(defmacro deftype [t fields & impls]\n  (let [env &env\n        r (:name (cljs.analyzer/resolve-var (dissoc env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks env impls)\n        protocols (collect-protocols impls env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    `(do\n       (deftype* ~t ~fields ~pmasks\n         ~(if (seq impls)\n            `(extend-type ~t ~@(dt->et t impls fields))))\n       (set! (.-cljs$lang$type ~t) true)\n       (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n       (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n\n       ~(build-positional-factory t r fields)\n       ~t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/clj/cljs/core.clj",
-          :lines [902 925]},
+          :lines [884 901]},
  :full-name "cljs.core/deftype",
  :clj-symbol "clojure.core/deftype"}
 

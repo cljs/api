@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L611-L612):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L625-L626):
 
 ```clj
 (defn iterable? [x]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:611-612](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L611-L612)</ins>
+            └── <ins>[core.cljs:625-626](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L625-L626)</ins>
 </pre>
 
 -->
@@ -83,9 +83,9 @@ The API data for this symbol:
  :source {:code "(defn iterable? [x]\n  (satisfies? IIterable x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [611 612]},
+          :lines [625 626]},
  :full-name "cljs.core/iterable?",
  :full-name-encode "cljs.core/iterableQMARK",
  :history [["+" "0.0-2356"]]}

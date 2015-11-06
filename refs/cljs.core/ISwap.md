@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L391-L392):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L402-L403):
 
 ```clj
 (defprotocol ISwap
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2371/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2371
+clojurescript @ r2411
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:391-392](https://github.com/clojure/clojurescript/blob/r2371/src/cljs/cljs/core.cljs#L391-L392)</ins>
+            └── <ins>[core.cljs:402-403](https://github.com/clojure/clojurescript/blob/r2411/src/cljs/cljs/core.cljs#L402-L403)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISwap\n  (-swap! [o f] [o f a] [o f a b] [o f a b xs]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2371",
+          :tag "r2411",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [391 392]},
+          :lines [402 403]},
  :methods [{:name "-swap!",
             :signature ["[o f]" "[o f a]" "[o f a b]" "[o f a b xs]"],
             :docstring nil}],
