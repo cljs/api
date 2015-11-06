@@ -170,6 +170,12 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 </tr>
 <tr>
 <td></td>
+<td><samp>[repl-special-doc-map](../cljs.repl/repl-special-doc-map.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3058"><img valign="middle" alt="[+] 0.0-3058" title="Added in 0.0-3058" src="https://img.shields.io/badge/+-0.0--3058-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[self-require?](../cljs.repl/self-requireQMARK.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2911"><img valign="middle" alt="[+] 0.0-2911" title="Added in 0.0-2911" src="https://img.shields.io/badge/+-0.0--2911-lightgrey.svg"></a> </td>

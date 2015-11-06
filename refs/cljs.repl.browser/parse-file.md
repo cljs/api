@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L224-L234):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L225-L235):
 
 ```clj
 (defn parse-file [file opts]
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:224-234](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L224-L234)</ins>
+                └── <ins>[browser.clj:225-235](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L225-L235)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn parse-file [file opts]\n  (if (re-find #\"http://localhost:9000/\" file)\n    (-> file\n      (string/replace #\"http://localhost:9000/\" \"\")\n      (string/replace (Pattern/compile (str \"^\" (util/output-directory opts) \"/\")) \"\"))\n    (if-let [asset-root (:asset-root opts)]\n      (string/replace file asset-root \"\")\n      (throw\n        (ex-info (str \"Could not relativize URL \" file)\n          {:type :parse-stacktrace\n           :reason :relativize-url})))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [224 234]},
+          :lines [225 235]},
  :full-name "cljs.repl.browser/parse-file",
  :full-name-encode "cljs.repl.browser/parse-file",
  :history [["+" "0.0-3053"]]}

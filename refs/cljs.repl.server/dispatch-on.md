@@ -35,7 +35,7 @@ that request should be dispatched to the related handler.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/server.clj#L45-L57):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/server.clj#L45-L57):
 
 ```clj
 (defn dispatch-on
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:45-57](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/server.clj#L45-L57)</ins>
+                └── <ins>[server.clj:45-57](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/server.clj#L45-L57)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn dispatch-on\n  ([method pred handler]\n    (dispatch-on method {:pred pred :handler handler}))\n  ([method {:as m}]\n    (swap! handlers\n      (fn [old]\n        (update-in old [method] #(conj (vec %) m))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [45 57]},
  :full-name "cljs.repl.server/dispatch-on",

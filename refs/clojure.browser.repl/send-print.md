@@ -31,32 +31,32 @@ up to 10 times.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/clojure/browser/repl.cljs#L61-L73):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/browser/repl.cljs#L63-L75):
 
 ```clj
 (defn send-print
   ([url data]
-     (send-print url data 0))
+   (send-print url data 0))
   ([url data n]
-     (let [conn (net/xhr-connection)]
-       (event/listen conn :error
-                     (fn [_]
-                       (if (< n 10)
-                         (send-print url data (inc n))
-                         (.log js/console (str "Could not send " data " after " n " attempts.")))))
-       (net/transmit conn url "POST" data nil 0))))
+   (let [conn (net/xhr-connection)]
+     (event/listen conn :error
+       (fn [_]
+         (if (< n 10)
+           (send-print url data (inc n))
+           (.log js/console (str "Could not send " data " after " n " attempts.")))))
+     (net/transmit conn url "POST" data nil 0))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── cljs
         └── clojure
             └── browser
-                └── <ins>[repl.cljs:61-73](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/clojure/browser/repl.cljs#L61-L73)</ins>
+                └── <ins>[repl.cljs:63-75](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/clojure/browser/repl.cljs#L63-L75)</ins>
 </pre>
 
 -->
@@ -101,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.repl/send-print",
- :source {:code "(defn send-print\n  ([url data]\n     (send-print url data 0))\n  ([url data n]\n     (let [conn (net/xhr-connection)]\n       (event/listen conn :error\n                     (fn [_]\n                       (if (< n 10)\n                         (send-print url data (inc n))\n                         (.log js/console (str \"Could not send \" data \" after \" n \" attempts.\")))))\n       (net/transmit conn url \"POST\" data nil 0))))",
+ :source {:code "(defn send-print\n  ([url data]\n   (send-print url data 0))\n  ([url data n]\n   (let [conn (net/xhr-connection)]\n     (event/listen conn :error\n       (fn [_]\n         (if (< n 10)\n           (send-print url data (inc n))\n           (.log js/console (str \"Could not send \" data \" after \" n \" attempts.\")))))\n     (net/transmit conn url \"POST\" data nil 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/cljs/clojure/browser/repl.cljs",
-          :lines [61 73]},
+          :lines [63 75]},
  :full-name "clojure.browser.repl/send-print",
  :docstring "Send data to be printed in the REPL. If there is an error, try again\nup to 10 times."}
 

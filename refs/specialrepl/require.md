@@ -13,6 +13,11 @@
 </table>
 
 
+ <samp>
+(__require__ & args)<br>
+</samp>
+
+---
 
 Only usable from a REPL.
 
@@ -64,9 +69,61 @@ A flag is a keyword. Recognized flags:
 ---
 
 
+Source docstring:
+
+```
+  Loads libs, skipping any that are already loaded. Each argument is
+either a libspec that identifies a lib or a flag that modifies how all the identified
+libs are loaded. Use :require in the ns macro in preference to calling this
+directly.
+
+Libs
+
+A 'lib' is a named set of resources in classpath whose contents define a
+library of ClojureScript code. Lib names are symbols and each lib is associated
+with a ClojureScript namespace. A lib's name also locates its root directory
+within classpath using Java's package name to classpath-relative path mapping.
+All resources in a lib should be contained in the directory structure under its
+root directory. All definitions a lib makes should be in its associated namespace.
+
+'require loads a lib by loading its root resource. The root resource path
+is derived from the lib name in the following manner:
+Consider a lib named by the symbol 'x.y.z; it has the root directory
+<classpath>/x/y/, and its root resource is <classpath>/x/y/z.clj. The root
+resource should contain code to create the lib's namespace (usually by using
+the ns macro) and load any additional lib resources.
+
+Libspecs
+
+A libspec is a lib name or a vector containing a lib name followed by
+options expressed as sequential keywords and arguments.
+
+Recognized options:
+:as takes a symbol as its argument and makes that symbol an alias to the
+  lib's namespace in the current namespace.
+:refer takes a list of symbols to refer from the namespace..
+:refer-macros takes a list of macro symbols to refer from the namespace.
+:include-macros takes a list of macro symbols to refer from the namespace.
+
+Flags
+
+A flag is a keyword.
+Recognized flags: :reload, :reload-all, :verbose
+:reload forces loading of all the identified libs even if they are
+  already loaded
+:reload-all implies :reload and also forces loading of all libs that the
+  identified libs directly or indirectly load via require or use
+:verbose triggers printing information about each load, alias, and refer
+
+Example:
+
+The following would load the library clojure.string :as string.
+
+(require '[clojure/string :as string])
+```
 
 
-repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl.clj#L529-L614):
+repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl.clj#L529-L614):
 
 ```clj
 (def default-special-fns
@@ -161,11 +218,11 @@ repl specials table @ [github](https://github.com/clojure/clojurescript/blob/r30
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:529-614](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl.clj#L529-L614)</ins>
+            └── <ins>[repl.clj:529-614](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl.clj#L529-L614)</ins>
 </pre>
 
 -->
@@ -209,6 +266,7 @@ The API data for this symbol:
 {:description "Only usable from a REPL.\n\nLoads libs, skipping any that are already loaded. Each argument is\neither a libspec that identifies a lib or a flag that modifies how all the identified\nlibs are loaded.\n\n## Libspecs\n\nA libspec is a lib name or a vector containing a lib name followed by\noptions expressed as sequential keywords and arguments.\n\nRecognized options:\n\n- `:as` takes a symbol as its argument and makes that symbol an alias to the\n  lib's namespace in the current namespace.\n- `:refer` takes a list of symbols to refer from the namespace..\n- `:refer-macros` takes a list of macro symbols to refer from the namespace.\n- `:include-macros` takes a list of macro symbols to refer from the namespace.\n\n## Flags\n\nA flag is a keyword. Recognized flags:\n\n- `:reload` forces loading of all the identified libs even if they are\n  already loaded\n- `:reload-all` implies :reload and also forces loading of all libs that the\n  identified libs directly or indirectly load via require or use\n- `:verbose` triggers printing information about each load, alias, and refer",
  :ns "specialrepl",
  :name "require",
+ :signature ["[& args]"],
  :history [["+" "0.0-2629"]],
  :type "special form (repl)",
  :related ["specialrepl/require-macros"],
@@ -216,13 +274,14 @@ The API data for this symbol:
  :source {:code "(def default-special-fns\n  (let [load-file-fn\n        (fn self\n          ([repl-env env form]\n            (self repl-env env form nil))\n          ([repl-env env [_ file :as form] opts]\n            (load-file repl-env file opts)))]\n    {'in-ns\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ [quote ns-name] :as form] _]\n         ;; guard against craziness like '5 which wreaks havoc\n        (when-not (and (= quote 'quote) (symbol? ns-name))\n          (throw (IllegalArgumentException. \"Argument to in-ns must be a symbol.\")))\n        (when-not (ana/get-namespace ns-name)\n          (swap! env/*compiler* assoc-in [::ana/namespaces ns-name] {:name ns-name})\n          (-evaluate repl-env \"<cljs repl>\" 1\n            (str \"goog.provide('\" (comp/munge ns-name) \"');\")))\n        (set! ana/*cljs-ns* ns-name)))\n     'require\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (let [is-self-require? (self-require? specs)\n              [target-ns restore-ns]\n              (if-not is-self-require?\n                [ana/*cljs-ns* nil]\n                ['cljs.user ana/*cljs-ns*])]\n          (evaluate-form repl-env env \"<cljs repl>\"\n            (with-meta\n              `(~'ns ~target-ns\n                 (:require\n                   ~@(map\n                       (fn [quoted-spec-or-kw]\n                         (if (keyword? quoted-spec-or-kw)\n                           quoted-spec-or-kw\n                           (second quoted-spec-or-kw)))\n                       specs)))\n              {:merge true :line 1 :column 1})\n            identity opts)\n          (when is-self-require?\n            (set! ana/*cljs-ns* restore-ns)))))\n     'import\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (evaluate-form repl-env env \"<cljs repl>\"\n          (with-meta\n            `(~'ns ~ana/*cljs-ns*\n               (:import\n                 ~@(map\n                     (fn [quoted-spec-or-kw]\n                       (if (keyword? quoted-spec-or-kw)\n                         quoted-spec-or-kw\n                         (second quoted-spec-or-kw)))\n                     specs)))\n            {:merge true :line 1 :column 1})\n          identity opts)))\n     'require-macros\n     (fn self\n       ([repl-env env form]\n        (self repl-env env form nil))\n       ([repl-env env [_ & specs :as form] opts]\n        (evaluate-form repl-env env \"<cljs repl>\"\n          (with-meta\n            `(~'ns ~ana/*cljs-ns*\n               (:require-macros\n                 ~@(map\n                     (fn [quoted-spec-or-kw]\n                       (if (keyword? quoted-spec-or-kw)\n                         quoted-spec-or-kw\n                         (second quoted-spec-or-kw)))\n                     specs)))\n            {:merge true :line 1 :column 1})\n          identity opts)))\n     'load-file load-file-fn\n     'clojure.core/load-file load-file-fn\n     'load-namespace\n     (fn self\n       ([repl-env env form]\n        (self env repl-env form nil))\n       ([repl-env env [_ ns :as form] opts]\n        (load-namespace repl-env ns opts)))}))",
           :title "repl specials table",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/repl.clj",
           :lines [529 614]},
  :examples [{:id "ab0355",
              :content "```clj\n(require '[clojure/string :as string])\n```"}],
  :full-name "specialrepl/require",
- :clj-symbol "clojure.core/require"}
+ :clj-symbol "clojure.core/require",
+ :docstring "  Loads libs, skipping any that are already loaded. Each argument is\neither a libspec that identifies a lib or a flag that modifies how all the identified\nlibs are loaded. Use :require in the ns macro in preference to calling this\ndirectly.\n\nLibs\n\nA 'lib' is a named set of resources in classpath whose contents define a\nlibrary of ClojureScript code. Lib names are symbols and each lib is associated\nwith a ClojureScript namespace. A lib's name also locates its root directory\nwithin classpath using Java's package name to classpath-relative path mapping.\nAll resources in a lib should be contained in the directory structure under its\nroot directory. All definitions a lib makes should be in its associated namespace.\n\n'require loads a lib by loading its root resource. The root resource path\nis derived from the lib name in the following manner:\nConsider a lib named by the symbol 'x.y.z; it has the root directory\n<classpath>/x/y/, and its root resource is <classpath>/x/y/z.clj. The root\nresource should contain code to create the lib's namespace (usually by using\nthe ns macro) and load any additional lib resources.\n\nLibspecs\n\nA libspec is a lib name or a vector containing a lib name followed by\noptions expressed as sequential keywords and arguments.\n\nRecognized options:\n:as takes a symbol as its argument and makes that symbol an alias to the\n  lib's namespace in the current namespace.\n:refer takes a list of symbols to refer from the namespace..\n:refer-macros takes a list of macro symbols to refer from the namespace.\n:include-macros takes a list of macro symbols to refer from the namespace.\n\nFlags\n\nA flag is a keyword.\nRecognized flags: :reload, :reload-all, :verbose\n:reload forces loading of all the identified libs even if they are\n  already loaded\n:reload-all implies :reload and also forces loading of all libs that the\n  identified libs directly or indirectly load via require or use\n:verbose triggers printing information about each load, alias, and refer\n\nExample:\n\nThe following would load the library clojure.string :as string.\n\n(require '[clojure/string :as string])"}
 
 ```
 

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L4548-L4549):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4548-L4549):
 
 ```clj
 (set! (.-EMPTY PersistentVector)
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4548-4549](https://github.com/clojure/clojurescript/blob/r3053/src/cljs/cljs/core.cljs#L4548-L4549)</ins>
+            └── <ins>[core.cljs:4548-4549](https://github.com/clojure/clojurescript/blob/r3058/src/cljs/cljs/core.cljs#L4548-L4549)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY PersistentVector)\n  (PersistentVector. nil 0 5 (.-EMPTY-NODE PersistentVector) (array) empty-ordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4548 4549]},
  :full-name "cljs.core/PersistentVector.EMPTY",

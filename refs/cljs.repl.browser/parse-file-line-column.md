@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L205-L222):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L206-L223):
 
 ```clj
 (defn parse-file-line-column [flc]
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:205-222](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L205-L222)</ins>
+                └── <ins>[browser.clj:206-223](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L206-L223)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn parse-file-line-column [flc]\n  (let [xs (string/split flc #\":\")\n        [pre [line column]]\n        (reduce\n          (fn [[pre post] [x i]]\n            (if (<= i 2)\n              [pre (conj post x)]\n              [(conj pre x) post]))\n          [[] []] (map vector xs (range (count xs) 0 -1)))\n        file (string/join \":\" pre)]\n    [(cond-> file\n       (.startsWith file \"(\") (string/replace \"(\" \"\"))\n     (Long/parseLong\n       (cond-> line\n         (.endsWith line \")\") (string/replace \")\" \"\")))\n     (Long/parseLong\n       (cond-> column\n         (.endsWith column \")\") (string/replace \")\" \"\")))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [205 222]},
+          :lines [206 223]},
  :full-name "cljs.repl.browser/parse-file-line-column",
  :full-name-encode "cljs.repl.browser/parse-file-line-column",
  :history [["+" "0.0-3053"]]}

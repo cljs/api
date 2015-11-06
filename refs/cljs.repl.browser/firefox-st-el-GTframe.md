@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L374-L389):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L393-L408):
 
 ```clj
 (defn firefox-st-el->frame
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:374-389](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/repl/browser.clj#L374-L389)</ins>
+                └── <ins>[browser.clj:393-408](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L393-L408)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defn firefox-st-el->frame\n  [st-el opts]\n  (let [[function flc] (if (re-find #\"@\" st-el)\n                         (string/split st-el #\"@\")\n                         [nil st-el])\n        [file line column] (parse-file-line-column flc)]\n    (if (and file function line column)\n      {:file (parse-file file opts)\n       :function (firefox-clean-function function)\n       :line line\n       :column column}\n      (when-not (string/blank? function)\n        {:file nil\n         :function (firefox-clean-function function)\n         :line nil\n         :column nil}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [374 389]},
+          :lines [393 408]},
  :full-name "cljs.repl.browser/firefox-st-el->frame",
  :full-name-encode "cljs.repl.browser/firefox-st-el-GTframe",
  :history [["+" "0.0-3053"]]}

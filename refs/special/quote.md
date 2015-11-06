@@ -30,7 +30,7 @@ Yields the unevaluated form.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/analyzer.clj#L1099-L1101):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L1099-L1101):
 
 ```clj
 (defmethod parse 'quote
@@ -42,11 +42,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3053/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3053
+clojurescript @ r3058
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1099-1101](https://github.com/clojure/clojurescript/blob/r3053/src/clj/cljs/analyzer.clj#L1099-L1101)</ins>
+            └── <ins>[analyzer.clj:1099-1101](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/analyzer.clj#L1099-L1101)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _ _]\n  (analyze (assoc env :quoted? true) x))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3053",
+          :tag "r3058",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1099 1101]},
  :full-name "special/quote",
