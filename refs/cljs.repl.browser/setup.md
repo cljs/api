@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L485-L494):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/browser.clj#L485-L494):
 
 ```clj
 (defn setup [{:keys [working-dir] :as repl-env} opts]
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:485-494](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L485-L494)</ins>
+                └── <ins>[browser.clj:485-494](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/browser.clj#L485-L494)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn setup [{:keys [working-dir] :as repl-env} opts]\n  (println \"Compiling client js ...\")\n  (swap! browser-state\n    (fn [old]\n      (assoc old :client-js\n        (create-client-js-file\n          repl-env (io/file working-dir \"client.js\")))))\n  (println \"Waiting for browser to connect ...\")\n  opts\n  (server/start repl-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [485 494]},
  :full-name "cljs.repl.browser/setup",

@@ -31,7 +31,7 @@ itself (not its value) is returned. The reader macro #'x expands to (var x).
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L654-L670):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L654-L670):
 
 ```clj
 (defmethod parse 'var
@@ -57,11 +57,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:654-670](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L654-L670)</ins>
+            └── <ins>[analyzer.clj:654-670](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L654-L670)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym (confirm-var-exists-throw))]\n    {:env env :op :var-special :form form\n     :var (analyze env sym)\n     :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :doc :file :line :column]\n                 m (merge\n                     (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                       :name `(quote ~(symbol (name (:name var))))\n                       :test `(when ~sym (.-cljs$lang$test ~sym))\n                       :arglists (map with-meta (:arglists var) (:arglists-meta var)))\n                     (let [user-meta (:meta var)\n                           uks (keys user-meta)]\n                       (zipmap uks\n                         (map #(list 'quote (get user-meta %)) uks))))]\n             (analyze env m))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [654 670]},
  :full-name "special/var",

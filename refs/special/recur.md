@@ -32,7 +32,7 @@ Execution then jumps back to the recursion point, a loop or fn method.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L1128-L1141):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L1128-L1141):
 
 ```clj
 (defmethod parse 'recur
@@ -55,11 +55,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:1128-1141](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L1128-L1141)</ins>
+            └── <ins>[analyzer.clj:1128-1141](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L1128-L1141)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _ _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (when-not frame \n      (throw (error env \"Can't recur here\")))\n    (when-not (= (count exprs) (count (:params frame))) \n      (throw (error env \"recur argument count mismatch\")))\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [1128 1141]},
  :full-name "special/recur",

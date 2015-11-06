@@ -22,7 +22,7 @@ Protocol for adding resetting functionality.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L617-L620):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L617-L620):
 
 ```clj
 (defprotocol IReset
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:617-620](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L617-L620)</ins>
+            └── <ins>[core.cljs:617-620](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L617-L620)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IReset\n  \"Protocol for adding resetting functionality.\"\n  (-reset! [o new-value]\n    \"Sets the value of o to new-value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/cljs/cljs/core.cljs",
           :lines [617 620]},
  :methods [{:name "-reset!",

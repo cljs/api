@@ -32,7 +32,7 @@ CRLF to a single \newline.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl.clj#L40-L52):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl.clj#L40-L52):
 
 ```clj
 (defn skip-if-eol
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:40-52](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl.clj#L40-L52)</ins>
+            └── <ins>[repl.clj:40-52](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl.clj#L40-L52)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn skip-if-eol\n  [s]\n  (let [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      (do (readers/unread s c) :body))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/repl.clj",
           :lines [40 52]},
  :full-name "cljs.repl/skip-if-eol",

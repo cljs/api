@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L939-L1004):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L939-L1004):
 
 ```clj
 (defmethod parse 'fn*
@@ -92,11 +92,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:939-1004](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/analyzer.clj#L939-L1004)</ins>
+            └── <ins>[analyzer.clj:939-1004](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/analyzer.clj#L939-L1004)</ins>
 </pre>
 
 -->
@@ -136,7 +136,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'fn*\n  [op env [_ & args :as form] name _]\n  (analyze-wrap-meta\n   (let [[name meths] (if (symbol? (first args))\n                        [(first args) (next args)]\n                        [name (seq args)])\n         ;;turn (fn [] ...) into (fn ([]...))\n         meths (if (vector? (first meths)) (list meths) meths)\n         locals (:locals env)\n         name-var (if name\n                    (merge\n                      {:name name\n                       :info {:fn-self-name true\n                              :fn-scope (:fn-scope env)\n                              :ns (-> env :ns :name)\n                              :shadow (or (locals name)\n                                          (get-in env [:js-globals name]))}}\n                     (when-let [tag (-> name meta :tag)]\n                       {:ret-tag tag})))\n         env (if name\n               (update-in env [:fn-scope] conj name-var)\n               env)\n         locals (if (and locals name) (assoc locals name name-var) locals)\n         type (-> form meta ::type)\n         protocol-impl (-> form meta ::protocol-impl)\n         protocol-inline (-> form meta ::protocol-inline)\n         menv (if (> (count meths) 1) (assoc env :context :expr) env)\n         menv (merge menv\n                     {:protocol-impl protocol-impl\n                      :protocol-inline protocol-inline})\n         methods (map #(analyze-fn-method menv locals % type) meths)\n         max-fixed-arity (apply max (map :max-fixed-arity methods))\n         variadic (boolean (some :variadic methods))\n         locals (if name\n                  (update-in locals [name] assoc\n                             ;; TODO: can we simplify? - David\n                             :fn-var true\n                             :variadic variadic\n                             :max-fixed-arity max-fixed-arity\n                             :method-params (map :params methods)\n                             :methods methods)\n                  locals)\n         methods (if name\n                   ;; a second pass with knowledge of our function-ness/arity\n                   ;; lets us optimize self calls\n                   (no-warn (doall (map #(analyze-fn-method menv locals % type) meths)))\n                   methods)\n         form (vary-meta form dissoc ::protocol-impl ::protocol-inline ::type)]\n     (let [variadic-methods (filter :variadic methods)\n           variadic-params (count (:params (first variadic-methods)))\n           param-counts (map (comp count :params) methods)]\n       (when (< 1 (count variadic-methods))\n         (warning :multiple-variadic-overloads env {:name name-var}))\n       (when (not (or (zero? variadic-params) (= variadic-params (+ 1 max-fixed-arity))))\n         (warning :variadic-max-arity env {:name name-var}))\n       (when (not= (distinct param-counts) param-counts)\n         (warning :overload-arity env {:name name-var})))\n     {:env env\n      :op :fn :form form :name name-var :methods methods :variadic variadic\n      :tag 'function\n      :recur-frames *recur-frames* :loop-lets *loop-lets*\n      :jsdoc [(when variadic \"@param {...*} var_args\")]\n      :max-fixed-arity max-fixed-arity\n      :protocol-impl protocol-impl\n      :protocol-inline protocol-inline\n      :children (mapv :expr methods)})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/analyzer.clj",
           :lines [939 1004]},
  :full-name "special/fn*",

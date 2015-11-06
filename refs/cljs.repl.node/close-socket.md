@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/node.clj#L29-L32):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/node.clj#L29-L32):
 
 ```clj
 (defn close-socket [s]
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[node.clj:29-32](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/node.clj#L29-L32)</ins>
+                └── <ins>[node.clj:29-32](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/node.clj#L29-L32)</ins>
 </pre>
 
 -->
@@ -86,7 +86,7 @@ The API data for this symbol:
  :source {:code "(defn close-socket [s]\n  (.close (:in s))\n  (.close (:out s))\n  (.close (:socket s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/repl/node.clj",
           :lines [29 32]},
  :full-name "cljs.repl.node/close-socket",

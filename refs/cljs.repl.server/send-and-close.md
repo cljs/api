@@ -31,7 +31,7 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/server.clj#L109-L130):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/server.clj#L109-L130):
 
 ```clj
 (defn send-and-close
@@ -60,12 +60,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:109-130](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/server.clj#L109-L130)</ins>
+                └── <ins>[server.clj:109-130](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/server.clj#L109-L130)</ins>
 </pre>
 
 -->
@@ -113,7 +113,7 @@ The API data for this symbol:
  :source {:code "(defn send-and-close\n  ([conn status form]\n    (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n    (let [utf-8-form (.getBytes form \"UTF-8\")\n          content-length (count utf-8-form)\n          headers (map #(.getBytes (str % \"\\r\\n\"))\n                    [(status-line status)\n                     \"Server: ClojureScript REPL\"\n                     (str \"Content-Type: \"\n                       content-type\n                       \"; charset=utf-8\")\n                     (str \"Content-Length: \" content-length)\n                     \"\"])]\n      (with-open [os (.getOutputStream conn)]\n        (doseq [header headers]\n          (.write os header 0 (count header)))\n        (.write os utf-8-form 0 content-length)\n        (.flush os)\n        (.close conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [109 130]},
  :full-name "cljs.repl.server/send-and-close",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L479-L483):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/browser.clj#L479-L483):
 
 ```clj
 (defn create-client-js-file [opts file-path]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:479-483](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/repl/browser.clj#L479-L483)</ins>
+                └── <ins>[browser.clj:479-483](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/repl/browser.clj#L479-L483)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn create-client-js-file [opts file-path]\n  (let [file (io/file file-path)]\n    (when (not (.exists file))\n      (spit file (compile-client-js opts)))\n    file))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [479 483]},
  :full-name "cljs.repl.browser/create-client-js-file",

@@ -47,7 +47,7 @@ Return the JavaScript keys for an object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1800-L1805):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1800-L1805):
 
 ```clj
 (defn js-keys
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1800-1805](https://github.com/clojure/clojurescript/blob/r3115/src/cljs/cljs/core.cljs#L1800-L1805)</ins>
+            └── <ins>[core.cljs:1800-1805](https://github.com/clojure/clojurescript/blob/r3117/src/cljs/cljs/core.cljs#L1800-L1805)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn js-keys\n  [obj]\n  (let [keys (array)]\n    (goog.object/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1800 1805]},
  :examples [{:id "5dd933",

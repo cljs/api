@@ -103,7 +103,7 @@ value of the last expression. (or) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L256-L272):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/core.clj#L256-L272):
 
 ```clj
 (defmacro or
@@ -125,11 +125,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3115/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3115
+clojurescript @ r3117
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:256-272](https://github.com/clojure/clojurescript/blob/r3115/src/clj/cljs/core.clj#L256-L272)</ins>
+            └── <ins>[core.clj:256-272](https://github.com/clojure/clojurescript/blob/r3117/src/clj/cljs/core.clj#L256-L272)</ins>
 </pre>
 
 -->
@@ -182,7 +182,7 @@ The API data for this symbol:
  :source {:code "(defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n    (let [forms (concat [x] next)]\n      (if (every? #(simple-test-expr? &env %)\n            (map #(cljs.analyzer/analyze &env %) forms))\n        (let [or-str (->> (repeat (count forms) \"(~{})\")\n                        (interpose \" || \")\n                        (apply core/str))]\n          (bool-expr `(~'js* ~or-str ~@forms)))\n        `(let [or# ~x]\n           (if or# or# (or ~@next)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3115",
+          :tag "r3117",
           :filename "src/clj/cljs/core.clj",
           :lines [256 272]},
  :examples [{:id "d50433",
