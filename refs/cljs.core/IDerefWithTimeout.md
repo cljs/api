@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L248-L249):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/core.cljs#L248-L249):
 
 ```clj
 (defprotocol IDerefWithTimeout
@@ -28,11 +28,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1835
+clojurescript @ r1843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:248-249](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L248-L249)</ins>
+            └── <ins>[core.cljs:248-249](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/core.cljs#L248-L249)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IDerefWithTimeout\n  (-deref-with-timeout [o msec timeout-val]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1835",
+          :tag "r1843",
           :filename "src/cljs/cljs/core.cljs",
           :lines [248 249]},
  :methods [{:name "-deref-with-timeout",

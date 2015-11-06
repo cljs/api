@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/reader.cljs#L101):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/reader.cljs#L101):
 
 ```clj
 (def float-pattern (re-pattern "([-+]?[0-9]+(\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?"))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1835
+clojurescript @ r1843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:101](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/reader.cljs#L101)</ins>
+            └── <ins>[reader.cljs:101](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/reader.cljs#L101)</ins>
 </pre>
 
 -->
@@ -76,7 +76,7 @@ The API data for this symbol:
  :source {:code "(def float-pattern (re-pattern \"([-+]?[0-9]+(\\\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1835",
+          :tag "r1843",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [101]},
  :full-name "cljs.reader/float-pattern",

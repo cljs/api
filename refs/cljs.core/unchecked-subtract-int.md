@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/clj/cljs/core.clj#L325-L326):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/core.clj#L332-L333):
 
 ```clj
 (defmacro unchecked-subtract-int
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1835
+clojurescript @ r1843
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:325-326](https://github.com/clojure/clojurescript/blob/r1835/src/clj/cljs/core.clj#L325-L326)</ins>
+            └── <ins>[core.clj:332-333](https://github.com/clojure/clojurescript/blob/r1843/src/clj/cljs/core.clj#L332-L333)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defmacro unchecked-subtract-int\n  ([& xs] `(- ~@xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1835",
+          :tag "r1843",
           :filename "src/clj/cljs/core.clj",
-          :lines [325 326]},
+          :lines [332 333]},
  :full-name "cljs.core/unchecked-subtract-int",
  :clj-symbol "clojure.core/unchecked-subtract-int"}
 

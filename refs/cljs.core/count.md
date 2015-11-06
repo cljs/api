@@ -62,25 +62,38 @@ Returns the number of items in the collection. (count nil) returns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L840-L846):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/core.cljs#L837-L856):
 
 ```clj
 (defn count
   [coll]
-  (if (counted? coll)
-    (-count coll)
-    (accumulating-seq-count coll)))
+  (if-not (nil? coll)
+    (cond
+      (satisfies? ICounted coll false)
+      (-count ^not-native coll)
+
+      (array? coll)
+      (alength coll)
+    
+      (string? coll)
+      (alength coll)
+
+      (type_satisfies_ ICounted coll)
+      (-count coll)
+
+      :else (accumulating-seq-count coll))
+    0))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1835
+clojurescript @ r1843
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:840-846](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/cljs/core.cljs#L840-L846)</ins>
+            └── <ins>[core.cljs:837-856](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/cljs/core.cljs#L837-L856)</ins>
 </pre>
 
 -->
@@ -129,12 +142,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/count",
- :source {:code "(defn count\n  [coll]\n  (if (counted? coll)\n    (-count coll)\n    (accumulating-seq-count coll)))",
+ :source {:code "(defn count\n  [coll]\n  (if-not (nil? coll)\n    (cond\n      (satisfies? ICounted coll false)\n      (-count ^not-native coll)\n\n      (array? coll)\n      (alength coll)\n    \n      (string? coll)\n      (alength coll)\n\n      (type_satisfies_ ICounted coll)\n      (-count coll)\n\n      :else (accumulating-seq-count coll))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1835",
+          :tag "r1843",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [840 846]},
+          :lines [837 856]},
  :examples [{:id "96e470",
              :content "```clj\n(count [1 2 3])\n;;=> 3\n\n(count [])\n;;=> 0\n\n(count nil)\n;;=> 0\n\n(count #{:a :b})\n;;=> 2\n\n(count {:key \"value\" :key2 \"value2\"})\n;;=> 2\n```"}],
  :full-name "cljs.core/count",

@@ -35,7 +35,7 @@ True is s is nil, empty, or contains only whitespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/clojure/string.cljs#L133-L136):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/clojure/string.cljs#L133-L136):
 
 ```clj
 (defn blank?
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1835/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1835
+clojurescript @ r1843
 └── src
     └── cljs
         └── clojure
-            └── <ins>[string.cljs:133-136](https://github.com/clojure/clojurescript/blob/r1835/src/cljs/clojure/string.cljs#L133-L136)</ins>
+            └── <ins>[string.cljs:133-136](https://github.com/clojure/clojurescript/blob/r1843/src/cljs/clojure/string.cljs#L133-L136)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn blank?\n  [s]\n  (gstring/isEmptySafe s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1835",
+          :tag "r1843",
           :filename "src/cljs/clojure/string.cljs",
           :lines [133 136]},
  :full-name "clojure.string/blank?",
