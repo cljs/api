@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L3299):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L3319):
 
 ```clj
 (set! cljs.core.PersistentVector/EMPTY_NODE (VectorNode. nil (make-array 32)))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3299](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L3299)</ins>
+            └── <ins>[core.cljs:3319](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L3319)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.PersistentVector/EMPTY_NODE (VectorNode. nil (make-array 32)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3299]},
+          :lines [3319]},
  :full-name "cljs.core/PersistentVector.EMPTY_NODE",
  :full-name-encode "cljs.core/PersistentVectorDOTEMPTY_NODE",
  :history [["+" "0.0-1006"]]}

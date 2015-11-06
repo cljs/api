@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/reader.cljs#L280-L285):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/reader.cljs#L280-L285):
 
 ```clj
 (defn read-map
@@ -37,11 +37,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:280-285](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/reader.cljs#L280-L285)</ins>
+            └── <ins>[reader.cljs:280-285](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/reader.cljs#L280-L285)</ins>
 </pre>
 
 -->
@@ -87,7 +87,7 @@ The API data for this symbol:
  :source {:code "(defn read-map\n  [rdr _]\n  (let [l (read-delimited-list \"}\" rdr true)]\n    (when (odd? (count l))\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (apply hash-map l)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [280 285]},
  :full-name "cljs.reader/read-map",

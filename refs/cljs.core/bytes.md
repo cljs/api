@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L1607):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L1609):
 
 ```clj
 (defn bytes [x] x)
@@ -35,11 +35,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1607](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L1607)</ins>
+            └── <ins>[core.cljs:1609](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L1609)</ins>
 </pre>
 
 -->
@@ -90,9 +90,9 @@ The API data for this symbol:
  :source {:code "(defn bytes [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1607]},
+          :lines [1609]},
  :full-name "cljs.core/bytes",
  :clj-symbol "clojure.core/bytes"}
 

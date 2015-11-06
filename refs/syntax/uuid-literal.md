@@ -73,7 +73,7 @@ Get as a string:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/clj/cljs/tagged_literals.clj#L9-L16):
+Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/tagged_literals.clj#L9-L16):
 
 ```clj
 (defn read-uuid
@@ -90,16 +90,16 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:9-16](https://github.com/clojure/clojurescript/blob/r1896/src/clj/cljs/tagged_literals.clj#L9-L16)</ins>
+            └── <ins>[tagged_literals.clj:9-16](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/tagged_literals.clj#L9-L16)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/clj/cljs/tagged_literals.clj#L27-L30):
+Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/tagged_literals.clj#L27-L30):
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -112,11 +112,11 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── clj
         └── cljs
-            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r1896/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
+            └── <ins>[tagged_literals.clj:27-30](https://github.com/clojure/clojurescript/blob/r1909/src/clj/cljs/tagged_literals.clj#L27-L30)</ins>
 </pre>
 -->
 
@@ -158,13 +158,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-uuid\n  [form]\n  (assert (string? form) \"UUID literal expects a string as its representation.\")\n  (try\n    (let [uuid (java.util.UUID/fromString form)]\n      (list (symbol \"UUID.\") form))\n    (catch Throwable e\n      (throw (RuntimeException. (.getMessage e))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1896",
+                  :tag "r1909",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [9 16]}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1896",
+                  :tag "r1909",
                   :filename "src/clj/cljs/tagged_literals.clj",
                   :lines [27 30]}),
  :usage ["#uuid \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""],

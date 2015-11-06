@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L2414-L2415):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2434-L2435):
 
 ```clj
 (defn pop! [tcoll]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2414-2415](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L2414-L2415)</ins>
+            └── <ins>[core.cljs:2434-2435](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2434-L2435)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn pop! [tcoll]\n  (-pop! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2414 2415]},
+          :lines [2434 2435]},
  :full-name "cljs.core/pop!",
  :clj-symbol "clojure.core/pop!"}
 

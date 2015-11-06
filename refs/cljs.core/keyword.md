@@ -34,12 +34,12 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L2052-L2059):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2055-L2062):
 
 ```clj
 (defn keyword
   ([name] (cond
-            (keyword? name)(Keyword. nil name name nil)
+            (keyword? name) name
             (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)
             :else (Keyword. nil name name nil)))
   ([ns name] (Keyword. ns name (str (when ns (str ns "/")) name) nil)))
@@ -49,11 +49,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2052-2059](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L2052-L2059)</ins>
+            └── <ins>[core.cljs:2055-2062](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L2055-L2062)</ins>
 </pre>
 
 -->
@@ -101,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/keyword",
- :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name)(Keyword. nil name name nil)\n            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)\n            :else (Keyword. nil name name nil)))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
+ :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword. nil (cljs.core/name name) (cljs.core/name name) nil)\n            :else (Keyword. nil name name nil)))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2052 2059]},
+          :lines [2055 2062]},
  :full-name "cljs.core/keyword",
  :clj-symbol "clojure.core/keyword",
  :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}

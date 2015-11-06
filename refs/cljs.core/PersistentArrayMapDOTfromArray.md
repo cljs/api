@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L4201-L4205):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L4221-L4225):
 
 ```clj
 (set! cljs.core.PersistentArrayMap/fromArray
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1896/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1896
+clojurescript @ r1909
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4201-4205](https://github.com/clojure/clojurescript/blob/r1896/src/cljs/cljs/core.cljs#L4201-L4205)</ins>
+            └── <ins>[core.cljs:4221-4225](https://github.com/clojure/clojurescript/blob/r1909/src/cljs/cljs/core.cljs#L4221-L4225)</ins>
 </pre>
 
 -->
@@ -89,9 +89,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.PersistentArrayMap/fromArray\n  (fn [arr ^boolean no-clone]\n    (let [arr (if no-clone arr (aclone arr))] \n      (let [cnt (/ (alength arr) 2)]\n        (PersistentArrayMap. nil cnt arr nil)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1896",
+          :tag "r1909",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [4201 4205]},
+          :lines [4221 4225]},
  :full-name "cljs.core/PersistentArrayMap.fromArray"}
 
 ```
