@@ -20,7 +20,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer.clj#L505-L515):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer.clj#L507-L517):
 
 ```clj
 (defmethod parse 'var
@@ -40,11 +40,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:505-515](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/analyzer.clj#L505-L515)</ins>
+            └── <ins>[analyzer.clj:507-517](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/analyzer.clj#L507-L517)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (let [var (resolve-var env sym)]\n    {:env env :op :var-special :form form\n     :var (analyze env sym)\n     :sym (analyze env `(quote ~(symbol (name (:ns var)) (name (:name var)))))\n     :meta (let [ks [:ns :name :doc :file :line :column]\n                 m (assoc (zipmap ks (map #(list 'quote (get var %)) ks))\n                     :test `(when ~sym (.-cljs$lang$test ~sym))\n                     :arglists (:arglists var))]\n            (analyze env m))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [505 515]},
+          :lines [507 517]},
  :full-name "special/var",
  :full-name-encode "special/var",
  :clj-symbol "clojure.core/var",

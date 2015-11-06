@@ -30,7 +30,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L9089-L9096):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L9089-L9096):
 
 ```clj
 (defn ex-cause
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:9089-9096](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L9089-L9096)</ins>
+            └── <ins>[core.cljs:9089-9096](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L9089-L9096)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn ex-cause\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-cause ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [9089 9096]},
  :full-name "cljs.core/ex-cause",

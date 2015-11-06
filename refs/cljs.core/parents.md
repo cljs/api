@@ -36,7 +36,7 @@ defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8678-L8684):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8678-L8684):
 
 ```clj
 (defn parents
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8678-8684](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8678-L8684)</ins>
+            └── <ins>[core.cljs:8678-8684](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8678-L8684)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn parents\n  ([tag] (parents @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8678 8684]},
  :full-name "cljs.core/parents",

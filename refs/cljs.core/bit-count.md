@@ -51,7 +51,7 @@ Counts the number of bits set in n
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L2091-L2096):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L2091-L2096):
 
 ```clj
 (defn bit-count
@@ -65,11 +65,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2091-2096](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L2091-L2096)</ins>
+            └── <ins>[core.cljs:2091-2096](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L2091-L2096)</ins>
 </pre>
 
 -->
@@ -118,7 +118,7 @@ The API data for this symbol:
  :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2091 2096]},
  :examples [{:id "35c78c",

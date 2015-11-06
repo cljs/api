@@ -33,7 +33,7 @@ read by the reader
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8173-L8179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8173-L8179):
 
 ```clj
 (defn pr
@@ -45,11 +45,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8173-8179](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8173-L8179)</ins>
+            └── <ins>[core.cljs:8173-8179](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8173-L8179)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn pr\n  [& objs]\n  (pr-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8173 8179]},
  :full-name "cljs.core/pr",

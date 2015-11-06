@@ -35,7 +35,7 @@ prefix is not supplied, the prefix is 'G__'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8396-L8404):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8396-L8404):
 
 ```clj
 (defn gensym
@@ -50,11 +50,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8396-8404](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8396-L8404)</ins>
+            └── <ins>[core.cljs:8396-8404](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8396-L8404)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn gensym\n  ([] (gensym \"G__\"))\n  ([prefix-string]\n     (when (nil? gensym_counter)\n       (set! gensym_counter (atom 0)))\n     (symbol (str prefix-string (swap! gensym_counter inc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8396 8404]},
  :full-name "cljs.core/gensym",

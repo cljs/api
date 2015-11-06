@@ -30,7 +30,7 @@ println to a string, returning it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8200-L8203):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8200-L8203):
 
 ```clj
 (defn println-str
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:8200-8203](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L8200-L8203)</ins>
+            └── <ins>[core.cljs:8200-8203](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L8200-L8203)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn println-str\n  [& objs]\n  (prn-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8200 8203]},
  :full-name "cljs.core/println-str",

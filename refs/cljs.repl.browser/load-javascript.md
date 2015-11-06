@@ -31,7 +31,7 @@ ClojureScript REPL.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/repl/browser.clj#L169-L179):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L169-L179):
 
 ```clj
 (defn load-javascript
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:169-179](https://github.com/clojure/clojurescript/blob/r2505/src/clj/cljs/repl/browser.clj#L169-L179)</ins>
+                └── <ins>[browser.clj:169-179](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/browser.clj#L169-L179)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn load-javascript\n  [repl-env ns-list url]\n  (let [missing (remove #(contains? @loaded-libs %) ns-list)]\n    (when (seq missing)\n      (browser-eval (slurp url))\n      (swap! loaded-libs (partial apply conj) missing))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [169 179]},
  :full-name "cljs.repl.browser/load-javascript",

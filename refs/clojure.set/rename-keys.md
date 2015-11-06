@@ -30,7 +30,7 @@ Returns the map with the keys in kmap renamed to the vals in kmap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/clojure/set.cljs#L72-L80):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/set.cljs#L72-L80):
 
 ```clj
 (defn rename-keys
@@ -47,11 +47,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── clojure
-            └── <ins>[set.cljs:72-80](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/clojure/set.cljs#L72-L80)</ins>
+            └── <ins>[set.cljs:72-80](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/clojure/set.cljs#L72-L80)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn rename-keys\n  [map kmap]\n    (reduce\n     (fn [m [old new]]\n       (if (contains? map old)\n         (assoc m new (get map old))\n         m))\n     (apply dissoc map (keys kmap)) kmap))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/clojure/set.cljs",
           :lines [72 80]},
  :full-name "clojure.set/rename-keys",

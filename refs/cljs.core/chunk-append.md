@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L2681-L2682):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L2681-L2682):
 
 ```clj
 (defn chunk-append [b x]
@@ -33,11 +33,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2681-2682](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L2681-L2682)</ins>
+            └── <ins>[core.cljs:2681-2682](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L2681-L2682)</ins>
 </pre>
 
 -->
@@ -83,7 +83,7 @@ The API data for this symbol:
  :source {:code "(defn chunk-append [b x]\n  (.add b x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2681 2682]},
  :full-name "cljs.core/chunk-append",

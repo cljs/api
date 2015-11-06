@@ -30,7 +30,7 @@ Wraps x in a way such that a reduce will terminate with the value x
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L829-L832):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L829-L832):
 
 ```clj
 (defn reduced
@@ -42,11 +42,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2505/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2505
+clojurescript @ r2511
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:829-832](https://github.com/clojure/clojurescript/blob/r2505/src/cljs/cljs/core.cljs#L829-L832)</ins>
+            └── <ins>[core.cljs:829-832](https://github.com/clojure/clojurescript/blob/r2511/src/cljs/cljs/core.cljs#L829-L832)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn reduced\n  [x]\n  (Reduced. x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r2505",
+          :tag "r2511",
           :filename "src/cljs/cljs/core.cljs",
           :lines [829 832]},
  :full-name "cljs.core/reduced",
