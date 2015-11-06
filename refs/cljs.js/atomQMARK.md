@@ -1,11 +1,11 @@
-## cljs.js/atom?
+## ~~cljs.js/atom?~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.48"><img valign="middle" alt="[×] 1.7.48" title="Removed in 1.7.48" src="https://img.shields.io/badge/×-1.7.48-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -79,8 +79,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "atom?",
- :type "function",
  :signature ["[x]"],
+ :history [["+" "1.7.10"] ["-" "1.7.48"]],
+ :type "function",
+ :full-name-encode "cljs.js/atomQMARK",
  :source {:code "(defn atom? [x]\n  (instance? Atom x))",
           :title "Source code",
           :repo "clojurescript",
@@ -88,8 +90,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [41 42]},
  :full-name "cljs.js/atom?",
- :full-name-encode "cljs.js/atomQMARK",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.48", :last-seen "1.7.28"}}
 
 ```
 

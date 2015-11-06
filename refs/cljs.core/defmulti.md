@@ -36,7 +36,7 @@ Options are key-value pairs and may be one of:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/core.cljc#L2390-L2434):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/core.cljc#L2418-L2462):
 
 ```clj
 (core/defmacro defmulti
@@ -83,12 +83,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2390-2434](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/core.cljc#L2390-L2434)</ins>
+                └── <ins>[core.cljc:2418-2462](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/core.cljc#L2418-L2462)</ins>
 </pre>
 
 -->
@@ -139,9 +139,9 @@ The API data for this symbol:
  :source {:code "(core/defmacro defmulti\n  [mm-name & options]\n  (core/let [docstring   (if (core/string? (first options))\n                           (first options)\n                           nil)\n             options     (if (core/string? (first options))\n                           (next options)\n                           options)\n             m           (if (map? (first options))\n                           (first options)\n                           {})\n             options     (if (map? (first options))\n                           (next options)\n                           options)\n             dispatch-fn (first options)\n             options     (next options)\n             m           (if docstring\n                           (assoc m :doc docstring)\n                           m)\n             m           (if (meta mm-name)\n                           (conj (meta mm-name) m)\n                           m)\n             mm-ns (core/-> &env :ns :name core/str)]\n    (core/when (= (count options) 1)\n      (throw\n        #?(:clj (Exception. \"The syntax for defmulti has changed. Example: (defmulti name dispatch-fn :default dispatch-value)\")\n           :cljs (js/Error. \"The syntax for defmulti has changed. Example: (defmulti name dispatch-fn :default dispatch-value)\"))))\n    (core/let [options (apply core/hash-map options)\n               default (core/get options :default :default)]\n      (check-valid-options options :default :hierarchy)\n      `(defonce ~(with-meta mm-name m)\n         (let [method-table# (atom {})\n               prefer-table# (atom {})\n               method-cache# (atom {})\n               cached-hierarchy# (atom {})\n               hierarchy# (get ~options :hierarchy (cljs.core/get-global-hierarchy))]\n           (cljs.core/MultiFn. (cljs.core/symbol ~mm-ns ~(name mm-name)) ~dispatch-fn ~default hierarchy#\n             method-table# prefer-table# method-cache# cached-hierarchy#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2390 2434]},
+          :lines [2418 2462]},
  :full-name "cljs.core/defmulti",
  :clj-symbol "clojure.core/defmulti",
  :docstring "Creates a new multimethod with the associated dispatch function.\nThe docstring and attribute-map are optional.\n\nOptions are key-value pairs and may be one of:\n  :default    the default dispatch value, defaults to :default\n  :hierarchy  the isa? hierarchy to use for dispatching\n              defaults to the global hierarchy"}

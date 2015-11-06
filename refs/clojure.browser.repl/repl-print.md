@@ -22,25 +22,26 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L31-L33):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L38-L41):
 
 ```clj
 (defn repl-print [data]
-  (if-let [conn @xpc-connection]
-    (net/transmit conn :print (pr-str data))))
+  (.push print-queue (pr-str data))
+  (when-let [conn @xpc-connection]
+    (flush-print-queue! conn)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:31-33](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L31-L33)</ins>
+                    └── <ins>[repl.cljs:38-41](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L38-L41)</ins>
 </pre>
 
 -->
@@ -83,12 +84,12 @@ The API data for this symbol:
  :name "repl-print",
  :type "function",
  :signature ["[data]"],
- :source {:code "(defn repl-print [data]\n  (if-let [conn @xpc-connection]\n    (net/transmit conn :print (pr-str data))))",
+ :source {:code "(defn repl-print [data]\n  (.push print-queue (pr-str data))\n  (when-let [conn @xpc-connection]\n    (flush-print-queue! conn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [31 33]},
+          :lines [38 41]},
  :full-name "clojure.browser.repl/repl-print",
  :full-name-encode "clojure.browser.repl/repl-print",
  :history [["+" "0.0-927"]]}

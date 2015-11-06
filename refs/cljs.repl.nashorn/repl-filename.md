@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L107):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L107):
 
 ```clj
 (def repl-filename "<cljs repl>")
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[nashorn.clj:107](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L107)</ins>
+                    └── <ins>[nashorn.clj:107](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L107)</ins>
 </pre>
 
 -->
@@ -78,7 +78,7 @@ The API data for this symbol:
  :source {:code "(def repl-filename \"<cljs repl>\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [107]},
  :full-name "cljs.repl.nashorn/repl-filename",

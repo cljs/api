@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L29-L43):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L29-L43):
 
 ```clj
     (defn create-engine
@@ -49,13 +49,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[nashorn.clj:29-43](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L29-L43)</ins>
+                    └── <ins>[nashorn.clj:29-43](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/nashorn.clj#L29-L43)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "    (defn create-engine\n      ([] (create-engine nil))\n      ([{:keys [code-cache] :or {code-cache true}}]\n       (let [args (when code-cache [\"-pcc\"])\n             factories (.getEngineFactories (ScriptEngineManager.))\n             factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n         (if-let [engine (if-not (empty? args)\n                           (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                           (.getScriptEngine ^ScriptEngineFactory factory))]\n           (let [context (.getContext engine)]\n             (.setWriter context *out*)\n             (.setErrorWriter context *err*)\n             engine)\n           (throw (IllegalArgumentException.\n                    \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [29 43]},
  :full-name "cljs.repl.nashorn/create-engine",

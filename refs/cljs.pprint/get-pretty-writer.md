@@ -60,7 +60,7 @@ It prints a table of squares and cubes for the numbers from 1 to 10:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L2052-L2087):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2052-L2087):
 
 ```clj
 (defn get-pretty-writer
@@ -74,12 +74,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:2052-2087](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L2052-L2087)</ins>
+                └── <ins>[pprint.cljs:2052-2087](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2052-L2087)</ins>
 </pre>
 
 -->
@@ -130,7 +130,7 @@ The API data for this symbol:
  :source {:code "(defn get-pretty-writer\n  [writer]\n  (if (pretty-writer? writer)\n    writer\n    (pretty-writer writer *print-right-margin* *print-miser-width*)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [2052 2087]},
  :full-name "cljs.pprint/get-pretty-writer",

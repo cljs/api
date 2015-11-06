@@ -34,7 +34,7 @@ returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L145-L151):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/analyzer/api.clj#L145-L151):
 
 ```clj
 (defn all-ns
@@ -48,13 +48,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:145-151](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L145-L151)</ins>
+                    └── <ins>[api.clj:145-151](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/analyzer/api.clj#L145-L151)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn all-ns\n  ([]\n   (all-ns env/*compiler*))\n  ([state]\n   (keys (get @state ::ana/namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [145 151]},
  :full-name "cljs.analyzer.api/all-ns",

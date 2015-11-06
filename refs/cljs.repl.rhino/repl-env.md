@@ -28,7 +28,7 @@ Hang on to return for use across repl calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/rhino.clj#L212-L216):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L212-L216):
 
 ```clj
 (defn repl-env
@@ -40,13 +40,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[rhino.clj:212-216](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/rhino.clj#L212-L216)</ins>
+                    └── <ins>[rhino.clj:212-216](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L212-L216)</ins>
 </pre>
 
 -->
@@ -94,7 +94,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as opts}]\n  (repl-env* opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [212 216]},
  :full-name "cljs.repl.rhino/repl-env",

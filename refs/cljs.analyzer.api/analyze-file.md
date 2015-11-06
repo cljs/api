@@ -40,7 +40,7 @@ meaningful value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L110-L129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/analyzer/api.clj#L110-L129):
 
 ```clj
 (defn analyze-file
@@ -61,13 +61,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:110-129](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L110-L129)</ins>
+                    └── <ins>[api.clj:110-129](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/analyzer/api.clj#L110-L129)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn analyze-file\n  ([f] (analyze-file f nil))\n  ([f opts]\n   (analyze-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     f opts))\n  ([state f opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (ana/analyze-file f opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [110 129]},
  :full-name "cljs.analyzer.api/analyze-file",

@@ -27,7 +27,7 @@ Get the value of the field a named by the argument (which should be a keyword).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.clj#L27-L30):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.clj#L27-L30):
 
 ```clj
 (defmacro getf
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:27-30](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.clj#L27-L30)</ins>
+                └── <ins>[pprint.clj:27-30](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.clj#L27-L30)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defmacro getf\n  [sym]\n  `(~sym @@~'this))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [27 30]},
  :full-name "cljs.pprint/getf",

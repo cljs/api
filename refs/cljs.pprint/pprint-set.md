@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L2860):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2860):
 
 ```clj
 (def pprint-set (formatter-out "~<#{~;~@{~w~^ ~:_~}~;}~:>"))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:2860](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L2860)</ins>
+                └── <ins>[pprint.cljs:2860](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L2860)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(def pprint-set (formatter-out \"~<#{~;~@{~w~^ ~:_~}~;}~:>\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [2860]},
  :full-name "cljs.pprint/pprint-set",

@@ -34,7 +34,7 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/server.clj#L106-L129):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/server.clj#L106-L129):
 
 ```clj
 (defn send-and-close
@@ -65,13 +65,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:106-129](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/server.clj#L106-L129)</ins>
+                    └── <ins>[server.clj:106-129](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/server.clj#L106-L129)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn send-and-close\n  ([conn status form]\n    (send-and-close conn status form \"text/html\"))\n  ([conn status form content-type]\n    (send-and-close conn status form content-type \"UTF-8\"))\n  ([conn status form content-type encoding]\n    (let [byte-form (.getBytes form encoding)\n          content-length (count byte-form)\n          headers (map #(.getBytes (str % \"\\r\\n\"))\n                    [(status-line status)\n                     \"Server: ClojureScript REPL\"\n                     (str \"Content-Type: \"\n                       content-type\n                       \"; charset=\" encoding)\n                     (str \"Content-Length: \" content-length)\n                     \"\"])]\n      (with-open [os (.getOutputStream conn)]\n        (doseq [header headers]\n          (.write os header 0 (count header)))\n        (.write os byte-form 0 content-length)\n        (.flush os)\n        (.close conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [106 129]},
  :full-name "cljs.repl.server/send-and-close",

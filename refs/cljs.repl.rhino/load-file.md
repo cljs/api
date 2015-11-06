@@ -29,7 +29,7 @@ used.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/rhino.clj#L89-L95):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L89-L95):
 
 ```clj
 (defn load-file
@@ -42,13 +42,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[rhino.clj:89-95](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/rhino.clj#L89-L95)</ins>
+                    └── <ins>[rhino.clj:89-95](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/repl/rhino.clj#L89-L95)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn load-file\n  [repl-env opts src]\n  (let [goog-path (io/file (util/output-directory opts) \"goog\" src)]\n    (rhino-eval repl-env (.getPath goog-path) 1 (io/reader goog-path))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [89 95]},
  :full-name "cljs.repl.rhino/load-file",

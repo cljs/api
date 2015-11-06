@@ -35,7 +35,7 @@ To create your own reporter see cljs.test/report
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/test.cljs#L252-L267):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/test.cljs#L252-L267):
 
 ```clj
 (defn empty-env
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:252-267](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/test.cljs#L252-L267)</ins>
+                └── <ins>[test.cljs:252-267](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/test.cljs#L252-L267)</ins>
 </pre>
 
 -->
@@ -107,7 +107,7 @@ The API data for this symbol:
  :source {:code "(defn empty-env\n  ([] (empty-env ::default))\n  ([reporter]\n   (cond-> {:report-counters {:test 0 :pass 0 :fail 0 :error 0}\n            :testing-vars ()\n            :testing-contexts ()\n            :formatter pr-str\n            :reporter reporter}\n     (= ::pprint reporter) (assoc :reporter ::default\n                             :formatter pprint/pprint))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [252 267]},
  :full-name "cljs.test/empty-env",

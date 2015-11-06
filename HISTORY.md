@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.48](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.48)__</td>
+<td>2015-08-05</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150805</kbd></td>
+<td>
+<a href="#user-content-1748syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1748library">
++3 -4
+</a>
+</td>
+<td>
+<a href="#user-content-1748compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.28](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28)__</td>
 <td>2015-07-31</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2890,6 +2913,65 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.48
+
+<a name="1748syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1748library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/goog-define](refs/cljs.core/goog-define.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/atom?~~](refs/cljs.js/atomQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/debug-prn~~](refs/cljs.js/debug-prn.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/valid-name?~~](refs/cljs.js/valid-nameQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/valid-opts?~~](refs/cljs.js/valid-optsQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[clojure.browser.repl/flush-print-queue!](refs/clojure.browser.repl/flush-print-queueBANG.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[clojure.browser.repl/print-queue](refs/clojure.browser.repl/print-queue.md)</samp></td>
+</tr>
+</table>
+
+<a name="1748compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.7.28

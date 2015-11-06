@@ -29,7 +29,7 @@ first provide statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L87-L92):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/build/api.clj#L87-L92):
 
 ```clj
 (defn parse-js-ns
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:87-92](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L87-L92)</ins>
+                    └── <ins>[api.clj:87-92](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/build/api.clj#L87-L92)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn parse-js-ns\n  [f]\n  (closure/parse-js-ns f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [87 92]},
  :full-name "cljs.build.api/parse-js-ns",

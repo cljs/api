@@ -36,7 +36,7 @@ Ensure that core.cljs has been loaded.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/compiler/api.clj#L33-L46):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L33-L46):
 
 ```clj
 (defn with-core-cljs
@@ -58,13 +58,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── clojure
             └── cljs
                 └── compiler
-                    └── <ins>[api.clj:33-46](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/compiler/api.clj#L33-L46)</ins>
+                    └── <ins>[api.clj:33-46](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/clojure/cljs/compiler/api.clj#L33-L46)</ins>
 </pre>
 
 -->
@@ -112,7 +112,7 @@ The API data for this symbol:
  :source {:code "(defn with-core-cljs\n  ([] (comp/with-core-cljs nil))\n  ([opts] (with-core-cljs opts (fn [])))\n  ([opts body]\n   (with-core-cljs\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     opts body))\n  ([state opts body]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/with-core-cljs opts body)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [33 46]},
  :full-name "cljs.compiler.api/with-core-cljs",

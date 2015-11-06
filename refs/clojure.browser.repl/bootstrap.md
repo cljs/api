@@ -28,7 +28,7 @@ in goog.base to support re-loading of namespaces after page load.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L113-L170):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L125-L182):
 
 ```clj
 (defn bootstrap
@@ -93,13 +93,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:113-170](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L113-L170)</ins>
+                    └── <ins>[repl.cljs:125-182](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L125-L182)</ins>
 </pre>
 
 -->
@@ -147,9 +147,9 @@ The API data for this symbol:
  :source {:code "(defn bootstrap\n  []\n  ;; Monkey-patch goog.provide if running under optimizations :none - David\n  (when-not js/COMPILED\n    (set! (.-require__ js/goog) js/goog.require)\n    ;; suppress useless Google Closure error about duplicate provides\n    (set! (.-isProvided_ js/goog) (fn [name] false))\n    ;; provide cljs.user\n    (goog/constructNamespace_ \"cljs.user\")\n    (set! (.-writeScriptTag__ js/goog)\n      (fn [src opt_sourceText]\n        ;; the page is already loaded, we can no longer leverage document.write\n        ;; instead construct script tag elements and append them to the body\n        ;; of the page, to avoid parallel script loading enforce sequential\n        ;; load with a simple load queue\n        (let [loaded (atom false)\n              onload (fn []\n                       (when (and load-queue (false? @loaded))\n                         (swap! loaded not)\n                         (if (zero? (alength load-queue))\n                           (set! load-queue nil)\n                           (.apply js/goog.writeScriptTag__ nil (.shift load-queue)))))]\n          (.appendChild js/document.body\n            (as-> (.createElement js/document \"script\") script\n              (doto script\n                (gobj/set \"type\" \"text/javascript\")\n                (gobj/set \"onload\" onload)\n                (gobj/set \"onreadystatechange\" onload)) ;; IE\n              (if (nil? opt_sourceText)\n                (doto script (gobj/set \"src\" src))\n                (doto script (gdom/setTextContext opt_sourceText))))))))\n    ;; queue or load\n    (set! (.-writeScriptTag_ js/goog)\n      (fn [src opt_sourceText]\n        (if load-queue\n          (.push load-queue #js [src opt_sourceText])\n          (do\n            (set! load-queue #js [])\n            (js/goog.writeScriptTag__ src opt_sourceText)))))\n    ;; we must reuse Closure library dev time dependency management, under namespace\n    ;; reload scenarios we simply delete entries from the correct private locations\n    (set! (.-require js/goog)\n      (fn [src reload]\n        (when (= reload \"reload-all\")\n          (set! (.-cljsReloadAll_ js/goog) true))\n        (let [reload? (or reload (.-cljsReloadAll__ js/goog))]\n          (when reload?\n            (let [path (aget js/goog.dependencies_.nameToPath src)]\n              (gobj/remove js/goog.dependencies_.visited path)\n              (gobj/remove js/goog.dependencies_.written path)\n              (gobj/remove js/goog.dependencies_.written\n                (str js/goog.basePath path))))\n          (let [ret (.require__ js/goog src)]\n            (when (= reload \"reload-all\")\n              (set! (.-cljsReloadAll_ js/goog) false))\n            ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [113 170]},
+          :lines [125 182]},
  :full-name "clojure.browser.repl/bootstrap",
  :docstring "Reusable browser REPL bootstrapping. Patches the essential functions\nin goog.base to support re-loading of namespaces after page load."}
 

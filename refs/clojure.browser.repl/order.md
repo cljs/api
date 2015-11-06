@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L76):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L88):
 
 ```clj
 (def order (atom 0))
@@ -27,13 +27,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:76](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L76)</ins>
+                    └── <ins>[repl.cljs:88](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/repl.cljs#L88)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(def order (atom 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [76]},
+          :lines [88]},
  :full-name "clojure.browser.repl/order",
  :full-name-encode "clojure.browser.repl/order",
  :history [["+" "0.0-927"]]}

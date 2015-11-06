@@ -37,7 +37,7 @@ Output is sent to *out* which must be a pretty printing writer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L852-L863):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L852-L863):
 
 ```clj
 (defn pprint-indent
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:852-863](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L852-L863)</ins>
+                └── <ins>[pprint.cljs:852-863](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/pprint.cljs#L852-L863)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn pprint-indent\n  [relative-to n]\n  (check-enumerated-arg relative-to #{:block :current})\n  (indent *out* relative-to n))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [852 863]},
  :full-name "cljs.pprint/pprint-indent",

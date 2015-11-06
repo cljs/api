@@ -32,7 +32,7 @@ replacement at the root of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L84-L90):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/walk.cljs#L84-L90):
 
 ```clj
 (defn prewalk-replace
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:84-90](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L84-L90)</ins>
+                └── <ins>[walk.cljs:84-90](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/walk.cljs#L84-L90)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn prewalk-replace\n  [smap form]\n  (prewalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/walk.cljs",
           :lines [84 90]},
  :full-name "clojure.walk/prewalk-replace",

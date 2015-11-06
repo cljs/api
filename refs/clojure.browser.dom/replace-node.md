@@ -29,7 +29,7 @@ element or an html string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/dom.cljs#L114-L122):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/dom.cljs#L114-L122):
 
 ```clj
 (defn replace-node
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[dom.cljs:114-122](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/dom.cljs#L114-L122)</ins>
+                    └── <ins>[dom.cljs:114-122](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/dom.cljs#L114-L122)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn replace-node\n  [old-node new-node]\n  (let [old-node (ensure-element old-node)\n        new-node (ensure-element new-node)]\n    (gdom/replaceNode new-node old-node)\n    new-node))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [114 122]},
  :full-name "clojure.browser.dom/replace-node",

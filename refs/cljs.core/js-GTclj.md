@@ -75,7 +75,7 @@ strings to keywords.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L9312-L9340):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/core.cljs#L9312-L9340):
 
 ```clj
 (defn js->clj
@@ -109,12 +109,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9312-9340](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L9312-L9340)</ins>
+                └── <ins>[core.cljs:9312-9340](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/core.cljs#L9312-L9340)</ins>
 </pre>
 
 -->
@@ -164,7 +164,7 @@ The API data for this symbol:
  :source {:code "(defn js->clj\n  ([x] (js->clj x {:keywordize-keys false}))\n  ([x & opts]\n    (let [{:keys [keywordize-keys]} opts\n          keyfn (if keywordize-keys keyword str)\n          f (fn thisfn [x]\n              (cond\n                (satisfies? IEncodeClojure x)\n                (-js->clj x (apply array-map opts))\n\n                (seq? x)\n                (doall (map thisfn x))\n\n                (coll? x)\n                (into (empty x) (map thisfn x))\n\n                (array? x)\n                (vec (map thisfn x))\n                 \n                (identical? (type x) js/Object)\n                (into {} (for [k (js-keys x)]\n                           [(keyfn k) (thisfn (aget x k))]))\n\n                :else x))]\n      (f x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [9312 9340]},
  :examples [{:id "61d263",

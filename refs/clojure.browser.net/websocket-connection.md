@@ -28,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/net.cljs#L174-L180):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/net.cljs#L174-L180):
 
 ```clj
 (defn websocket-connection
@@ -44,13 +44,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
+clojurescript @ r1.7.48
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[net.cljs:174-180](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/net.cljs#L174-L180)</ins>
+                    └── <ins>[net.cljs:174-180](https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/clojure/browser/net.cljs#L174-L180)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn websocket-connection\n  ([]\n     (websocket-connection nil nil))\n  ([auto-reconnect?]\n     (websocket-connection auto-reconnect? nil))\n  ([auto-reconnect? next-reconnect-fn]\n     (WebSocket. auto-reconnect? next-reconnect-fn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.28",
+          :tag "r1.7.48",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [174 180]},
  :full-name "clojure.browser.net/websocket-connection",
