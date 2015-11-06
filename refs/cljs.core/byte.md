@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/cljs/core.cljs#L1489):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1489):
 
 ```clj
 (defn byte [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1489](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/cljs/core.cljs#L1489)</ins>
+            └── <ins>[core.cljs:1489](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1489)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/core.clj#L288):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L288):
 
 ```clj
 (defmacro byte [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:288](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/core.clj#L288)</ins>
+            └── <ins>[core.clj:288](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L288)</ins>
 </pre>
 -->
 
@@ -109,13 +109,13 @@ The API data for this symbol:
  :source {:code "(defn byte [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1489]},
  :extra-sources [{:code "(defmacro byte [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1885",
+                  :tag "r1886",
                   :filename "src/clj/cljs/core.clj",
                   :lines [288]}],
  :full-name "cljs.core/byte",

@@ -33,7 +33,7 @@ reducing fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/clojure/core/reducers.cljs#L56-L67):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/clojure/core/reducers.cljs#L56-L67):
 
 ```clj
 (defn reducer
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:56-67](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/clojure/core/reducers.cljs#L56-L67)</ins>
+                └── <ins>[reducers.cljs:56-67](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/clojure/core/reducers.cljs#L56-L67)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defn reducer\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [this f1]\n         (-reduce this f1 (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [56 67]},
  :full-name "clojure.core.reducers/reducer",

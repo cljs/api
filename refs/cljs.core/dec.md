@@ -40,7 +40,7 @@ Returns a number one less than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/cljs/core.cljs#L1471-L1473):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1471-L1473):
 
 ```clj
 (defn dec
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1471-1473](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/cljs/core.cljs#L1471-L1473)</ins>
+            └── <ins>[core.cljs:1471-1473](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1471-L1473)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/core.clj#L387-L388):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L387-L388):
 
 ```clj
 (defmacro dec [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:387-388](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/core.clj#L387-L388)</ins>
+            └── <ins>[core.clj:387-388](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L387-L388)</ins>
 </pre>
 -->
 
@@ -128,13 +128,13 @@ The API data for this symbol:
  :source {:code "(defn dec\n  [x] (- x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1471 1473]},
  :extra-sources [{:code "(defmacro dec [x]\n  `(- ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1885",
+                  :tag "r1886",
                   :filename "src/clj/cljs/core.clj",
                   :lines [387 388]}],
  :full-name "cljs.core/dec",

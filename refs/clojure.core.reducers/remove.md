@@ -34,7 +34,7 @@ Removes values in the reduction of coll for which (pred val)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/clojure/core/reducers.cljs#L137-L142):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/clojure/core/reducers.cljs#L137-L142):
 
 ```clj
 (defcurried remove
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:137-142](https://github.com/clojure/clojurescript/blob/r1885/src/cljs/clojure/core/reducers.cljs#L137-L142)</ins>
+                └── <ins>[reducers.cljs:137-142](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/clojure/core/reducers.cljs#L137-L142)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defcurried remove\n  \"Removes values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (filter (complement pred) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [137 142]},
  :full-name "clojure.core.reducers/remove",

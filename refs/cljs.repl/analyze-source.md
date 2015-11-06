@@ -28,7 +28,7 @@ cljs.analyzer/namespaces so as to support code reflection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/repl.clj#L155-L162):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl.clj#L155-L162):
 
 ```clj
 (defn analyze-source
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:155-162](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/repl.clj#L155-L162)</ins>
+            └── <ins>[repl.clj:155-162](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl.clj#L155-L162)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn analyze-source\n  [src-dir]\n  (if-let [src-dir (and (not (empty? src-dir))\n                     (File. src-dir))]\n    (doseq [file (comp/cljs-files-in src-dir)]\n      (ana/analyze-file (str \"file://\" (.getAbsolutePath file))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/clj/cljs/repl.clj",
           :lines [155 162]},
  :full-name "cljs.repl/analyze-source",

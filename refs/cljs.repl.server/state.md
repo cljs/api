@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/repl/server.clj#L16-L18):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/server.clj#L16-L18):
 
 ```clj
 (defonce state (atom {:socket nil
@@ -29,12 +29,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1885/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1885
+clojurescript @ r1886
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[server.clj:16-18](https://github.com/clojure/clojurescript/blob/r1885/src/clj/cljs/repl/server.clj#L16-L18)</ins>
+                └── <ins>[server.clj:16-18](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/server.clj#L16-L18)</ins>
 </pre>
 
 -->
@@ -79,7 +79,7 @@ The API data for this symbol:
  :source {:code "(defonce state (atom {:socket nil\n                      :connection nil\n                      :promised-conn nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1885",
+          :tag "r1886",
           :filename "src/clj/cljs/repl/server.clj",
           :lines [16 18]},
  :full-name "cljs.repl.server/state",
