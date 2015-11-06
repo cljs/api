@@ -52,7 +52,7 @@ truthiness condition used by `if` expressions.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1187-L1188):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1187-L1188):
 
 ```clj
 (defn ^boolean boolean [x]
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1187-1188](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1187-L1188)</ins>
+            └── <ins>[core.cljs:1187-1188](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1187-L1188)</ins>
 </pre>
 
 -->
@@ -121,7 +121,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean boolean [x]\n  (if x true false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1187 1188]},
  :examples [{:id "9edf3a",

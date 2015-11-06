@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/browser.clj#L18-L19):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/repl/browser.clj#L20-L21):
 
 ```clj
 (defonce browser-state (atom {:return-value-fn nil
@@ -28,12 +28,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:18-19](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/browser.clj#L18-L19)</ins>
+                └── <ins>[browser.clj:20-21](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/repl/browser.clj#L20-L21)</ins>
 </pre>
 
 -->
@@ -78,9 +78,9 @@ The API data for this symbol:
  :source {:code "(defonce browser-state (atom {:return-value-fn nil\n                              :client-js nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [18 19]},
+          :lines [20 21]},
  :full-name "cljs.repl.browser/browser-state",
  :full-name-encode "cljs.repl.browser/browser-state",
  :history [["+" "0.0-1503"]]}

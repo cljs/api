@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L4199):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L4199):
 
 ```clj
 (set! cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD 8)
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:4199](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L4199)</ins>
+            └── <ins>[core.cljs:4199](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L4199)</ins>
 </pre>
 
 -->
@@ -77,7 +77,7 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.PersistentArrayMap/HASHMAP_THRESHOLD 8)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4199]},
  :full-name "cljs.core/PersistentArrayMap.HASHMAP_THRESHOLD",

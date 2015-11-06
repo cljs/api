@@ -60,7 +60,7 @@ Set bit at index n
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1676-L1679):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1676-L1679):
 
 ```clj
 (defn bit-set
@@ -72,18 +72,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1676-1679](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1676-L1679)</ins>
+            └── <ins>[core.cljs:1676-1679](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1676-L1679)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L462-L463):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L462-L463):
 
 ```clj
 (defmacro bit-set [x n]
@@ -94,11 +94,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:462-463](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L462-L463)</ins>
+            └── <ins>[core.clj:462-463](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L462-L463)</ins>
 </pre>
 -->
 
@@ -149,13 +149,13 @@ The API data for this symbol:
  :source {:code "(defn bit-set\n  [x n]\n  (cljs.core/bit-set x n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1676 1679]},
  :extra-sources [{:code "(defmacro bit-set [x n]\n  (list 'js* \"(~{} | (1 << ~{}))\" x n))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1886",
+                  :tag "r1889",
                   :filename "src/clj/cljs/core.clj",
                   :lines [462 463]}],
  :examples [{:id "6a8a49",

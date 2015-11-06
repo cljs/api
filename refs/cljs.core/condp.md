@@ -77,7 +77,7 @@ IllegalArgumentException is thrown.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L932-L972):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L932-L972):
 
 ```clj
 (defmacro condp
@@ -107,11 +107,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:932-972](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L932-L972)</ins>
+            └── <ins>[core.clj:932-972](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L932-L972)</ins>
 </pre>
 
 -->
@@ -164,7 +164,7 @@ The API data for this symbol:
  :source {:code "(defmacro condp\n  [pred expr & clauses]\n  (let [gpred (gensym \"pred__\")\n        gexpr (gensym \"expr__\")\n        emit (fn emit [pred expr args]\n               (let [[[a b c :as clause] more]\n                       (split-at (if (= :>> (second args)) 3 2) args)\n                       n (count clause)]\n                 (cond\n                  (= 0 n) `(throw (js/Error. (core/str \"No matching clause: \" ~expr)))\n                  (= 1 n) a\n                  (= 2 n) `(if (~pred ~a ~expr)\n                             ~b\n                             ~(emit pred expr more))\n                  :else `(if-let [p# (~pred ~a ~expr)]\n                           (~c p#)\n                           ~(emit pred expr more)))))\n        gres (gensym \"res__\")]\n    `(let [~gpred ~pred\n           ~gexpr ~expr]\n       ~(emit gpred gexpr clauses))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/clj/cljs/core.clj",
           :lines [932 972]},
  :full-name "cljs.core/condp",

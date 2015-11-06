@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/reader.cljs#L195-L197):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/reader.cljs#L195-L197):
 
 ```clj
 (defn make-unicode-char [code-str]
@@ -34,11 +34,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[reader.cljs:195-197](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/reader.cljs#L195-L197)</ins>
+            └── <ins>[reader.cljs:195-197](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/reader.cljs#L195-L197)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defn make-unicode-char [code-str]\n    (let [code (js/parseInt code-str 16)]\n      (.fromCharCode js/String code)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [195 197]},
  :full-name "cljs.reader/make-unicode-char",

@@ -40,7 +40,7 @@ Returns true if x is the value true, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1168-L1170):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1168-L1170):
 
 ```clj
 (defn ^boolean true?
@@ -51,18 +51,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1168-1170](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L1168-L1170)</ins>
+            └── <ins>[core.cljs:1168-1170](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L1168-L1170)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L228-L229):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L228-L229):
 
 ```clj
 (defmacro true? [x]
@@ -73,11 +73,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:228-229](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/core.clj#L228-L229)</ins>
+            └── <ins>[core.clj:228-229](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/core.clj#L228-L229)</ins>
 </pre>
 -->
 
@@ -129,13 +129,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean true?\n  [x] (cljs.core/true? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1168 1170]},
  :extra-sources [{:code "(defmacro true? [x]\n  (bool-expr (list 'js* \"~{} === true\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1886",
+                  :tag "r1889",
                   :filename "src/clj/cljs/core.clj",
                   :lines [228 229]}],
  :full-name "cljs.core/true?",

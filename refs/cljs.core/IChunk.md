@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L338-L339):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L338-L339):
 
 ```clj
 (defprotocol IChunk
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:338-339](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L338-L339)</ins>
+            └── <ins>[core.cljs:338-339](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L338-L339)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol IChunk\n  (-drop-first [coll]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [338 339]},
  :methods [{:name "-drop-first",

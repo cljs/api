@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L240-L241):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L240-L241):
 
 ```clj
 (defprotocol ISet
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:240-241](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L240-L241)</ins>
+            └── <ins>[core.cljs:240-241](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L240-L241)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISet\n  (-disjoin [coll v]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [240 241]},
  :methods [{:name "-disjoin", :signature ["[coll v]"], :docstring nil}],

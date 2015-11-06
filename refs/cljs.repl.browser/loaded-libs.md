@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/browser.clj#L21):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/repl/browser.clj#L23):
 
 ```clj
 (def loaded-libs (atom #{}))
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[browser.clj:21](https://github.com/clojure/clojurescript/blob/r1886/src/clj/cljs/repl/browser.clj#L21)</ins>
+                └── <ins>[browser.clj:23](https://github.com/clojure/clojurescript/blob/r1889/src/clj/cljs/repl/browser.clj#L23)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(def loaded-libs (atom #{}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/clj/cljs/repl/browser.clj",
-          :lines [21]},
+          :lines [23]},
  :full-name "cljs.repl.browser/loaded-libs",
  :full-name-encode "cljs.repl.browser/loaded-libs",
  :history [["+" "0.0-927"]]}

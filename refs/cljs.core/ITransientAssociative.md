@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L322-L323):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L322-L323):
 
 ```clj
 (defprotocol ITransientAssociative
@@ -31,11 +31,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1886/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1886
+clojurescript @ r1889
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:322-323](https://github.com/clojure/clojurescript/blob/r1886/src/cljs/cljs/core.cljs#L322-L323)</ins>
+            └── <ins>[core.cljs:322-323](https://github.com/clojure/clojurescript/blob/r1889/src/cljs/cljs/core.cljs#L322-L323)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ITransientAssociative\n  (-assoc! [tcoll key val]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1886",
+          :tag "r1889",
           :filename "src/cljs/cljs/core.cljs",
           :lines [322 323]},
  :methods [{:name "-assoc!",
