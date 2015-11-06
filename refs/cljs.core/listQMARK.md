@@ -42,7 +42,7 @@ Returns true if x implements IList
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L2758-L2761):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L2758-L2761):
 
 ```clj
 (defn ^boolean list?
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2758-2761](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/core.cljs#L2758-L2761)</ins>
+                └── <ins>[core.cljs:2758-2761](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/core.cljs#L2758-L2761)</ins>
 </pre>
 
 -->
@@ -113,7 +113,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean list?\n  [x]\n  (satisfies? IList x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2758 2761]},
  :full-name "cljs.core/list?",

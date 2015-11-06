@@ -30,7 +30,7 @@ Returns the node at loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/clojure/zip.cljs#L60-L62):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/zip.cljs#L60-L62):
 
 ```clj
 (defn node
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:60-62](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/clojure/zip.cljs#L60-L62)</ins>
+                └── <ins>[zip.cljs:60-62](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/zip.cljs#L60-L62)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn node\n  [loc] (loc 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [60 62]},
  :full-name "clojure.zip/node",

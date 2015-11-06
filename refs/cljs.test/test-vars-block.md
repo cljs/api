@@ -28,7 +28,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/test.cljs#L524-L555):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/test.cljs#L524-L555):
 
 ```clj
 (defn test-vars-block
@@ -67,12 +67,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:524-555](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/cljs/test.cljs#L524-L555)</ins>
+                └── <ins>[test.cljs:524-555](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/cljs/test.cljs#L524-L555)</ins>
 </pre>
 
 -->
@@ -120,7 +120,7 @@ The API data for this symbol:
  :source {:code "(defn test-vars-block\n  [vars]\n  (map\n   (fn [[ns vars]]\n     (fn []\n       (block\n        (let [env (get-current-env)\n              once-fixtures (get-in env [:once-fixtures ns])\n              each-fixtures (get-in env [:each-fixtures ns])]\n          (case (execution-strategy once-fixtures each-fixtures)\n            :async\n            (->> vars\n                 (filter (comp :test meta))\n                 (mapcat (comp (partial wrap-map-fixtures each-fixtures)\n                               test-var-block))\n                 (wrap-map-fixtures once-fixtures))\n            :sync\n            (let [each-fixture-fn (join-fixtures each-fixtures)]\n              [(fn []\n                 ((join-fixtures once-fixtures)\n                  (fn []\n                    (doseq [v vars]\n                      (when-let [t (:test (meta v))]\n                        ;; (alter-meta! v update :test disable-async)\n                        (each-fixture-fn\n                         (fn []\n                           ;; (test-var v)\n                           (run-block\n                            (test-var-block* v (disable-async t))))))))))]))))))\n   (group-by (comp :ns meta) vars)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [524 555]},
  :full-name "cljs.test/test-vars-block",

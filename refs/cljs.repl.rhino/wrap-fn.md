@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl/rhino.clj#L156-L167):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl/rhino.clj#L156-L167):
 
 ```clj
 (defn wrap-fn [form]
@@ -43,13 +43,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[rhino.clj:156-167](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/repl/rhino.clj#L156-L167)</ins>
+                    └── <ins>[rhino.clj:156-167](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/repl/rhino.clj#L156-L167)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn wrap-fn [form]\n  (cond\n    (and (seq? form) (= 'ns (first form))) identity\n    ('#{*1 *2 *3 *e} form) (fn [x] `(cljs.core.pr-str ~x))\n    :else\n    (fn [x]\n      `(cljs.core.pr-str\n         (let [ret# ~x]\n           (set! *3 *2)\n           (set! *2 *1)\n           (set! *1 ret#)\n           ret#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [156 167]},
  :full-name "cljs.repl.rhino/wrap-fn",

@@ -29,7 +29,7 @@ transient dependents.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/build/api.clj#L69-L74):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/build/api.clj#L69-L74):
 
 ```clj
 (defn cljs-ns-dependents
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:69-74](https://github.com/clojure/clojurescript/blob/r3263/src/main/clojure/cljs/build/api.clj#L69-L74)</ins>
+                    └── <ins>[api.clj:69-74](https://github.com/clojure/clojurescript/blob/r3264/src/main/clojure/cljs/build/api.clj#L69-L74)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn cljs-ns-dependents\n  [ns]\n  (ana/ns-dependents ns))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [69 74]},
  :full-name "cljs.build.api/cljs-ns-dependents",

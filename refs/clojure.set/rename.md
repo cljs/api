@@ -30,7 +30,7 @@ Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in k
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/clojure/set.cljs#L82-L85):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/set.cljs#L82-L85):
 
 ```clj
 (defn rename
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3263/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3263
+clojurescript @ r3264
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[set.cljs:82-85](https://github.com/clojure/clojurescript/blob/r3263/src/main/cljs/clojure/set.cljs#L82-L85)</ins>
+                └── <ins>[set.cljs:82-85](https://github.com/clojure/clojurescript/blob/r3264/src/main/cljs/clojure/set.cljs#L82-L85)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn rename\n  [xrel kmap]\n    (set (map #(rename-keys % kmap) xrel)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3263",
+          :tag "r3264",
           :filename "src/main/cljs/clojure/set.cljs",
           :lines [82 85]},
  :full-name "clojure.set/rename",
