@@ -39,7 +39,7 @@ ClojureScript namespaces that require and use the macros from
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L49-L71):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L49-L71):
 
 ```clj
 (defn cljs-dependents-for-macro-namespaces
@@ -61,13 +61,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:49-71](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L49-L71)</ins>
+                    └── <ins>[api.clj:49-71](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L49-L71)</ins>
 </pre>
 
 -->
@@ -115,7 +115,7 @@ The API data for this symbol:
  :source {:code "(defn cljs-dependents-for-macro-namespaces\n  ([namespaces]\n   (cljs-dependents-for-macro-namespaces\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     namespaces))\n  ([state namespaces]\n   (map :name\n     (let [namespaces-set (set namespaces)]\n       (filter (fn [x] (not-empty\n                         (intersection namespaces-set (-> x :require-macros vals set))))\n         (vals (:cljs.analyzer/namespaces @state)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [49 71]},
  :full-name "cljs.build.api/cljs-dependents-for-macro-namespaces",

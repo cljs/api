@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L212-L227):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/browser.clj#L212-L227):
 
 ```clj
 (defn compile-client-js [opts]
@@ -47,13 +47,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:212-227](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L212-L227)</ins>
+                    └── <ins>[browser.clj:212-227](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/browser.clj#L212-L227)</ins>
 </pre>
 
 -->
@@ -99,7 +99,7 @@ The API data for this symbol:
  :source {:code "(defn compile-client-js [opts]\n  (let [copts {:optimizations (:optimizations opts)\n               :output-dir (:working-dir opts)}]\n    ;; we're inside the REPL process where cljs.env/*compiler* is already\n    ;; established, need to construct a new one to avoid mutating the one\n    ;; the REPL uses\n    (cljsc/build\n      '[(ns clojure.browser.repl.client\n          (:require [goog.events :as event]\n                    [clojure.browser.repl :as repl]))\n        (defn start [url]\n          (event/listen js/window\n            \"load\"\n            (fn []\n              (repl/start-evaluator url))))]\n      copts (env/default-compiler-env copts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [212 227]},
  :full-name "cljs.repl.browser/compile-client-js",

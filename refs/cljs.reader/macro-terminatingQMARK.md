@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/reader.cljs#L73-L77):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/reader.cljs#L73-L77):
 
 ```clj
 (defn ^boolean macro-terminating? [ch]
@@ -36,12 +36,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[reader.cljs:73-77](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/reader.cljs#L73-L77)</ins>
+                └── <ins>[reader.cljs:73-77](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/reader.cljs#L73-L77)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (not (identical? ch \"#\"))\n       (not (identical? ch \\'))\n       (not (identical? ch \":\"))\n       (macros ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [73 77]},
  :full-name "cljs.reader/macro-terminating?"}

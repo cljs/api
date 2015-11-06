@@ -31,7 +31,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L174-L181):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/zip.cljs#L174-L181):
 
 ```clj
 (defn insert-right
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:174-181](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L174-L181)</ins>
+                └── <ins>[zip.cljs:174-181](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/zip.cljs#L174-L181)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn insert-right\n  [loc item]\n    (let [[node {r :r :as path}] loc]\n      (if (nil? path)\n        (throw \"Insert at top\")\n        (with-meta [node (assoc path :r (cons item r) :changed? true)] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [174 181]},
  :full-name "clojure.zip/insert-right",

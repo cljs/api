@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1761-L1812):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L1761-L1812):
 
 ```clj
 (deftype MetaFn [afn meta]
@@ -83,12 +83,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1761-1812](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L1761-L1812)</ins>
+                └── <ins>[core.cljs:1761-1812](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L1761-L1812)</ins>
 </pre>
 
 -->
@@ -134,7 +134,7 @@ The API data for this symbol:
  :source {:code "(deftype MetaFn [afn meta]\n  IMeta\n  (-meta [_] meta)\n  IWithMeta\n  (-with-meta [_ new-meta]\n    (MetaFn. afn new-meta))\n  Fn\n  IFn\n  (-invoke [_]\n    (afn))\n  (-invoke [_ a]\n    (afn a))\n  (-invoke [_ a b]\n    (afn a b))\n  (-invoke [_ a b c]\n    (afn a b c))\n  (-invoke [_ a b c d]\n    (afn a b c d))\n  (-invoke [_ a b c d e]\n    (afn a b c d e))\n  (-invoke [_ a b c d e f]\n    (afn a b c d e f))\n  (-invoke [_ a b c d e f g]\n    (afn a b c d e f g))\n  (-invoke [_ a b c d e f g h]\n    (afn a b c d e f g h))\n  (-invoke [_ a b c d e f g h i]\n    (afn a b c d e f g h i))\n  (-invoke [_ a b c d e f g h i j]\n    (afn a b c d e f g h i j))\n  (-invoke [_ a b c d e f g h i j k]\n    (afn a b c d e f g h i j k))\n  (-invoke [_ a b c d e f g h i j k l]\n    (afn a b c d e f g h i j k l))\n  (-invoke [_ a b c d e f g h i j k l m]\n    (afn a b c d e f g h i j k l m))\n  (-invoke [_ a b c d e f g h i j k l m n]\n    (afn a b c d e f g h i j k l m n))\n  (-invoke [_ a b c d e f g h i j k l m n o]\n    (afn a b c d e f g h i j k l m n o))\n  (-invoke [_ a b c d e f g h i j k l m n o p]\n    (afn a b c d e f g h i j k l m n o p))\n  (-invoke [_ a b c d e f g h i j k l m n o p q]\n    (afn a b c d e f g h i j k l m n o p q))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r]\n    (afn a b c d e f g h i j k l m n o p q r))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s]\n    (afn a b c d e f g h i j k l m n o p q r s))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t]\n    (afn a b c d e f g h i j k l m n o p q r s t))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t rest]\n    (apply afn a b c d e f g h i j k l m n o p q r s t rest)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1761 1812]},
  :full-name "cljs.core/MetaFn",

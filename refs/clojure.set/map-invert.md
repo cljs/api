@@ -30,7 +30,7 @@ Returns the map with the vals mapped to the keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/set.cljs#L97-L99):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/set.cljs#L97-L99):
 
 ```clj
 (defn map-invert
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[set.cljs:97-99](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/set.cljs#L97-L99)</ins>
+                └── <ins>[set.cljs:97-99](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/set.cljs#L97-L99)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn map-invert\n  [m] (reduce (fn [m [k v]] (assoc m v k)) {} m))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/set.cljs",
           :lines [97 99]},
  :full-name "clojure.set/map-invert",

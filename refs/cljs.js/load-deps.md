@@ -1,11 +1,11 @@
-## cljs.js/load-deps
+## ~~cljs.js/load-deps~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -102,9 +102,11 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "load-deps",
- :type "function",
  :signature ["[bound-vars ana-env lib deps cb]"
              "[bound-vars ana-env lib deps opts cb]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/load-deps",
  :source {:code "(defn load-deps\n  ([bound-vars ana-env lib deps cb]\n   (analyze-deps bound-vars ana-env lib deps nil cb))\n  ([bound-vars ana-env lib deps opts cb]\n   (when (:verbose opts)\n     (debug-prn \"Loading dependencies for\" lib))\n   (binding [ana/*cljs-dep-set* (vary-meta (conj (:*cljs-dep-set* bound-vars) lib)\n                                  update-in [:dep-path] conj lib)]\n     (assert (every? #(not (contains? (:*cljs-dep-set* bound-vars) %)) deps)\n       (str \"Circular dependency detected \"\n         (-> (:*cljs-dep-set* bound-vars) meta :dep-path)))\n     (if (seq deps)\n       (let [dep (first deps)]\n         (require bound-vars dep\n           (-> opts\n             (dissoc :context)\n             (dissoc :ns))\n           (fn [res]\n             (if-not (:error res)\n               (load-deps bound-vars ana-env lib (next deps) opts cb)\n               (cb res)))))\n       (cb {:value nil})))))",
           :title "Source code",
           :repo "clojurescript",
@@ -112,8 +114,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [236 257]},
  :full-name "cljs.js/load-deps",
- :full-name-encode "cljs.js/load-deps",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

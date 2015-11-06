@@ -1,11 +1,11 @@
-## cljs.js/sm-data
+## ~~cljs.js/sm-data~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -82,8 +82,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "sm-data",
- :type "function",
  :signature ["[]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/sm-data",
  :source {:code "(defn sm-data []\n  (atom\n    {:source-map (sorted-map)\n     :gen-col    0\n     :gen-line   0}))",
           :title "Source code",
           :repo "clojurescript",
@@ -91,8 +93,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [122 126]},
  :full-name "cljs.js/sm-data",
- :full-name-encode "cljs.js/sm-data",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

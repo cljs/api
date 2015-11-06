@@ -31,7 +31,7 @@ up to 10 times.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L62-L74):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L62-L74):
 
 ```clj
 (defn send-print
@@ -51,13 +51,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
                 └── browser
-                    └── <ins>[repl.cljs:62-74](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/browser/repl.cljs#L62-L74)</ins>
+                    └── <ins>[repl.cljs:62-74](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/browser/repl.cljs#L62-L74)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn send-print\n  ([url data]\n   (send-print url data 0))\n  ([url data n]\n   (let [conn (net/xhr-connection)]\n     (event/listen conn :error\n       (fn [_]\n         (if (< n 10)\n           (send-print url data (inc n))\n           (.log js/console (str \"Could not send \" data \" after \" n \" attempts.\")))))\n     (net/transmit conn url \"POST\" data nil 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [62 74]},
  :full-name "clojure.browser.repl/send-print",

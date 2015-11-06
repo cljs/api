@@ -44,7 +44,7 @@ requested via opts where :restore is false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L87-L108):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L87-L108):
 
 ```clj
 (defn parse-ns
@@ -66,13 +66,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:87-108](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer/api.clj#L87-L108)</ins>
+                    └── <ins>[api.clj:87-108](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer/api.clj#L87-L108)</ins>
 </pre>
 
 -->
@@ -123,7 +123,7 @@ The API data for this symbol:
  :source {:code "(defn parse-ns\n  ([src] (parse-ns src nil nil))\n  ([src opts] (parse-ns src nil opts))\n  ([src dest opts]\n   (parse-ns\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (ana/parse-ns src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [87 108]},
  :full-name "cljs.analyzer.api/parse-ns",

@@ -41,7 +41,7 @@ with (zero? (count x)). See also foldcat.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/core/reducers.cljs#L213-L230):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/core/reducers.cljs#L213-L230):
 
 ```clj
 (defn cat
@@ -62,13 +62,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
                 └── core
-                    └── <ins>[reducers.cljs:213-230](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/core/reducers.cljs#L213-L230)</ins>
+                    └── <ins>[reducers.cljs:213-230](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/core/reducers.cljs#L213-L230)</ins>
 </pre>
 
 -->
@@ -119,7 +119,7 @@ The API data for this symbol:
  :source {:code "(defn cat\n  ([] (array))\n  ([ctor]\n     (fn\n       ([] (ctor))\n       ([left right] (cat left right))))\n  ([left right]\n     (cond\n       (zero? (count left)) right\n       (zero? (count right)) left\n       :else\n       (Cat. (+ (count left) (count right)) left right))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
           :lines [213 230]},
  :full-name "clojure.core.reducers/cat",

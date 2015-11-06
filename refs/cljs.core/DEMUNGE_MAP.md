@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L301-L326):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L301-L326):
 
 ```clj
 (def ^{:jsdoc ["@enum {string}"]}
@@ -52,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:301-326](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L301-L326)</ins>
+                └── <ins>[core.cljs:301-326](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L301-L326)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(def ^{:jsdoc [\"@enum {string}\"]}\n  DEMUNGE_MAP\n  #js {\"_\"             \"-\"\n       \"_COLON_\"       \":\"\n       \"_PLUS_\"        \"+\"\n       \"_GT_\"          \">\"\n       \"_LT_\"          \"<\"\n       \"_EQ_\"          \"=\"\n       \"_TILDE_\"       \"~\"\n       \"_BANG_\"        \"!\"\n       \"_CIRCA_\"       \"@\"\n       \"_SHARP_\"       \"#\"\n       \"_SINGLEQUOTE_\" \"'\"\n       \"_DOUBLEQUOTE_\" \"\\\\\\\"\"\n       \"_PERCENT_\"     \"%\"\n       \"_CARET_\"       \"^\"\n       \"_AMPERSAND_\"   \"&\"\n       \"_STAR_\"        \"*\"\n       \"_BAR_\"         \"|\"\n       \"_LBRACE_\"      \"{\"\n       \"_RBRACE_\"      \"}\"\n       \"_LBRACK_\"      \"[\"\n       \"_RBRACK_\"      \"]\"\n       \"_SLASH_\"       \"/\"\n       \"_BSLASH_\"      \"\\\\\\\\\"\n       \"_QMARK_\"       \"?\"})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [301 326]},
  :full-name "cljs.core/DEMUNGE_MAP",

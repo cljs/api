@@ -55,12 +55,13 @@ opts (map)
 
 cb (function)
   callback, will be invoked with a map. If succesful the map will contain
-  a :value key with the result of evaluation. If unsuccessful will contain
-  a :error key with an ex-info instance describing the cause of failure.
+  a :value key with the result of evaluation and :ns the current namespace.
+  If unsuccessful will contain a :error key with an ex-info instance describing
+  the cause of failure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L700-L743):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L704-L748):
 
 ```clj
 (defn eval-str
@@ -85,12 +86,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:700-743](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L700-L743)</ins>
+                └── <ins>[js.cljs:704-748](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L704-L748)</ins>
 </pre>
 
 -->
@@ -140,11 +141,11 @@ The API data for this symbol:
  :source {:code "(defn eval-str\n  ([state source cb]\n   (eval-str state source nil cb))\n  ([state source name cb]\n   (eval-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (eval-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (or (:analyze-deps opts) true)\n      :*load-macros*  (or (:load-macros opts) true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [700 743]},
+          :lines [704 748]},
  :full-name "cljs.js/eval-str",
- :docstring "Evalute ClojureScript source given as a string. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :eval         - eval function to invoke, see *eval-fn*\n  :load         - library resolution function, see *load-fn*\n  :source-map   - set to true to generate inline source map information\n  :cache-source - optional, a function to run side-effects with the\n                  compilation result prior to actual evalution. This function\n                  takes two arguments, the first is the eval map, the source\n                  will be under :source. The second argument is a callback of\n                  one argument. If an error occurs an :error key should be\n                  supplied.\n\ncb (function)\n  callback, will be invoked with a map. If succesful the map will contain\n  a :value key with the result of evaluation. If unsuccessful will contain\n  a :error key with an ex-info instance describing the cause of failure."}
+ :docstring "Evalute ClojureScript source given as a string. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :eval         - eval function to invoke, see *eval-fn*\n  :load         - library resolution function, see *load-fn*\n  :source-map   - set to true to generate inline source map information\n  :cache-source - optional, a function to run side-effects with the\n                  compilation result prior to actual evalution. This function\n                  takes two arguments, the first is the eval map, the source\n                  will be under :source. The second argument is a callback of\n                  one argument. If an error occurs an :error key should be\n                  supplied.\n\ncb (function)\n  callback, will be invoked with a map. If succesful the map will contain\n  a :value key with the result of evaluation and :ns the current namespace.\n  If unsuccessful will contain a :error key with an ex-info instance describing\n  the cause of failure."}
 
 ```
 

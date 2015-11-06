@@ -30,7 +30,7 @@ Like postwalk, but does pre-order traversal.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L62-L66):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L62-L66):
 
 ```clj
 (defn prewalk
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:62-66](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L62-L66)</ins>
+                └── <ins>[walk.cljs:62-66](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L62-L66)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defn prewalk\n  [f form]\n  (walk (partial prewalk f) identity (f form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/walk.cljs",
           :lines [62 66]},
  :full-name "clojure.walk/prewalk",

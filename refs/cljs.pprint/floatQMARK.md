@@ -27,7 +27,7 @@ Returns true if n is an float.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L54-L60):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L54-L60):
 
 ```clj
 (defn ^boolean float?
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:54-60](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L54-L60)</ins>
+                └── <ins>[pprint.cljs:54-60](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L54-L60)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean float?\n  [n]\n  (and (number? n)\n       (not ^boolean (js/isNaN n))\n       (not (identical? n js/Infinity))\n       (not (== (js/parseFloat n) (js/parseInt n 10)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [54 60]},
  :full-name "cljs.pprint/float?",

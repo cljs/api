@@ -27,7 +27,7 @@ non-mandatory newlines.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L625-L630):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L625-L630):
 
 ```clj
 (def ^:dynamic
@@ -42,12 +42,12 @@ non-mandatory newlines.",
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:625-630](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L625-L630)</ins>
+                └── <ins>[pprint.cljs:625-630](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L625-L630)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n ^{:doc \"Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.\",\n   :added \"1.2\"}\n *print-right-margin* 72)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [625 630]},
  :full-name "cljs.pprint/*print-right-margin*",

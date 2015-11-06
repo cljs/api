@@ -33,7 +33,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L37-L52):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L37-L52):
 
 ```clj
 (defn walk
@@ -52,12 +52,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:37-52](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/walk.cljs#L37-L52)</ins>
+                └── <ins>[walk.cljs:37-52](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/walk.cljs#L37-L52)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn walk\n  [inner outer form]\n  (cond\n    (list? form) (outer (apply list (map inner form)))\n    (satisfies? IMapEntry form) (outer (vec (map inner form)))\n    (seq? form) (outer (doall (map inner form)))\n    (satisfies? IRecord form)\n    (outer (reduce (fn [r x] (conj r (inner x))) form form))\n    (coll? form) (outer (into (empty form) (map inner form)))\n    :else (outer form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/walk.cljs",
           :lines [37 52]},
  :full-name "clojure.walk/walk",

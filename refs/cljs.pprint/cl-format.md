@@ -56,7 +56,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L893-L928):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L893-L928):
 
 ```clj
 (defn cl-format
@@ -70,12 +70,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:893-928](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L893-L928)</ins>
+                └── <ins>[pprint.cljs:893-928](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L893-L928)</ins>
 </pre>
 
 -->
@@ -126,7 +126,7 @@ The API data for this symbol:
  :source {:code "(defn cl-format\n  [writer format-in & args]\n  (let [compiled-format (if (string? format-in) (compile-format format-in) format-in)\n        navigator (init-navigator args)]\n    (execute-format writer compiled-format navigator)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [893 928]},
  :full-name "cljs.pprint/cl-format",

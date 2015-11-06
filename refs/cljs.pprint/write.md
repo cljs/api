@@ -51,7 +51,7 @@ The following keyword arguments can be passed with values:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L748-L809):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L748-L809):
 
 ```clj
 (defn write
@@ -100,12 +100,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.cljs:748-809](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/pprint.cljs#L748-L809)</ins>
+                └── <ins>[pprint.cljs:748-809](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/pprint.cljs#L748-L809)</ins>
 </pre>
 
 -->
@@ -156,7 +156,7 @@ The API data for this symbol:
  :source {:code "(defn write\n  [object & kw-args]\n  (let [options (merge {:stream true} (apply hash-map kw-args))]\n    ;;TODO rewrite this as a macro\n    (binding [cljs.pprint/*print-base* (:base options cljs.pprint/*print-base*)\n              ;;:case             *print-case*,\n              cljs.pprint/*print-circle* (:circle options cljs.pprint/*print-circle*)\n              ;;:escape           *print-escape*\n              ;;:gensym           *print-gensym*\n              cljs.core/*print-length* (:length options cljs.core/*print-length*)\n              cljs.core/*print-level* (:level options cljs.core/*print-level*)\n              cljs.pprint/*print-lines* (:lines options cljs.pprint/*print-lines*)\n              cljs.pprint/*print-miser-width* (:miser-width options cljs.pprint/*print-miser-width*)\n              cljs.pprint/*print-pprint-dispatch* (:dispatch options cljs.pprint/*print-pprint-dispatch*)\n              cljs.pprint/*print-pretty* (:pretty options cljs.pprint/*print-pretty*)\n              cljs.pprint/*print-radix* (:radix options cljs.pprint/*print-radix*)\n              cljs.core/*print-readably* (:readably options cljs.core/*print-readably*)\n              cljs.pprint/*print-right-margin* (:right-margin options cljs.pprint/*print-right-margin*)\n              cljs.pprint/*print-suppress-namespaces* (:suppress-namespaces options cljs.pprint/*print-suppress-namespaces*)]\n      ;;TODO enable printing base\n      #_[bindings (if (or (not (= *print-base* 10)) *print-radix*)\n                  {#'pr pr-with-base}\n                  {})]\n      (binding []\n        (let [sb (StringBuffer.)\n              optval (if (contains? options :stream)\n                       (:stream options)\n                       true)\n              base-writer (if (or (true? optval) (nil? optval))\n                            (StringBufferWriter. sb)\n                            optval)]\n          (if *print-pretty*\n            (with-pretty-writer base-writer\n                                (write-out object))\n            (binding [*out* base-writer]\n              (pr object)))\n          (if (true? optval)\n            (*print-fn* (str sb)))\n          (if (nil? optval)\n            (str sb)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [748 809]},
  :full-name "cljs.pprint/write",

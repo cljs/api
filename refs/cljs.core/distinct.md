@@ -40,7 +40,7 @@ Returns a lazy sequence of the elements of coll with duplicates removed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8098-L8120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L8233-L8255):
 
 ```clj
 (defn distinct
@@ -71,12 +71,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8098-8120](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L8098-L8120)</ins>
+                └── <ins>[core.cljs:8233-8255](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L8233-L8255)</ins>
 </pre>
 
 -->
@@ -129,9 +129,9 @@ The API data for this symbol:
  :source {:code "(defn distinct\n  ([]\n    (fn [rf]\n      (let [seen (volatile! #{})]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if (contains? @seen input)\n              result\n              (do (vswap! seen conj input)\n                  (rf result input))))))))\n  ([coll]\n    (let [step (fn step [xs seen]\n                 (lazy-seq\n                   ((fn [[f :as xs] seen]\n                      (when-let [s (seq xs)]\n                        (if (contains? seen f)\n                          (recur (rest s) seen)\n                          (cons f (step (rest s) (conj seen f))))))\n                     xs seen)))]\n      (step coll #{}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8098 8120]},
+          :lines [8233 8255]},
  :full-name "cljs.core/distinct",
  :clj-symbol "clojure.core/distinct",
  :docstring "Returns a lazy sequence of the elements of coll with duplicates removed"}

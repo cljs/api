@@ -27,7 +27,7 @@ Construct a Node.js evalution environment. Can supply :host and :port.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/node.clj#L216-L219):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/node.clj#L216-L219):
 
 ```clj
 (defn repl-env
@@ -39,13 +39,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:216-219](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/node.clj#L216-L219)</ins>
+                    └── <ins>[node.clj:216-219](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/node.clj#L216-L219)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env\n  [& {:as options}]\n  (repl-env* options))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [216 219]},
  :full-name "cljs.repl.node/repl-env",

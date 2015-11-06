@@ -35,7 +35,7 @@ For example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L28-L39):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L28-L39):
 
 ```clj
 (defn ^File target-file-for-cljs-ns
@@ -50,13 +50,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:28-39](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/build/api.clj#L28-L39)</ins>
+                    └── <ins>[api.clj:28-39](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/build/api.clj#L28-L39)</ins>
 </pre>
 
 -->
@@ -105,7 +105,7 @@ The API data for this symbol:
  :source {:code "(defn ^File target-file-for-cljs-ns\n  ([ns-sym] (target-file-for-cljs-ns ns-sym nil))\n  ([ns-sym output-dir]\n    (util/to-target-file\n      (util/output-directory {:output-dir output-dir})\n      {:ns ns-sym})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [28 39]},
  :full-name "cljs.build.api/target-file-for-cljs-ns",

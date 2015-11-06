@@ -1,11 +1,11 @@
-## cljs.js/analyze-deps
+## ~~cljs.js/analyze-deps~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -118,9 +118,11 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "analyze-deps",
- :type "function",
  :signature ["[bound-vars ana-env lib deps cb]"
              "[bound-vars ana-env lib deps opts cb]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/analyze-deps",
  :source {:code "(defn analyze-deps\n  ([bound-vars ana-env lib deps cb]\n   (analyze-deps bound-vars ana-env lib deps nil cb))\n  ([bound-vars ana-env lib deps opts cb]\n   (let [compiler @(:*compiler* bound-vars)]\n     (binding [ana/*cljs-dep-set* (vary-meta (conj (:*cljs-dep-set* bound-vars) lib)\n                                    update-in [:dep-path] conj lib)]\n       (assert (every? #(not (contains? (:*cljs-dep-set* bound-vars) %)) deps)\n         (str \"Circular dependency detected \"\n           (-> (:*cljs-dep-set* bound-vars) meta :dep-path)))\n       (if (seq deps)\n         (let [dep (first deps)]\n           (try\n             ((:*load-fn* bound-vars) {:name dep :path (ns->relpath dep)}\n              (fn [resource]\n                (assert (or (map? resource) (nil? resource))\n                  \"*load-fn* may only return a map or nil\")\n                (if resource\n                  (let [{:keys [name lang source]} resource]\n                    (condp = lang\n                      :clj (analyze* bound-vars source name opts\n                             (fn [res]\n                               (if-not (:error res)\n                                 (analyze-deps bound-vars ana-env lib (next deps) opts cb)\n                                 (cb res))))\n                      :js (analyze-deps bound-vars ana-env lib (next deps) opts cb)\n                      (wrap-error\n                        (ana/error ana-env\n                          (str \"Invalid :lang specified \" lang \", only :clj or :js allowed\")))))\n                  (cb (wrap-error\n                        (ana/error ana-env\n                          (ana/error-message :undeclared-ns\n                            {:ns-sym dep :js-provide (name dep)})))))))\n             (catch :default cause\n               (cb (wrap-error\n                     (ana/error ana-env\n                       (str \"Could not analyze dep \" dep) cause))))))\n         (cb {:value nil}))))))",
           :title "Source code",
           :repo "clojurescript",
@@ -128,8 +130,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [261 298]},
  :full-name "cljs.js/analyze-deps",
- :full-name-encode "cljs.js/analyze-deps",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

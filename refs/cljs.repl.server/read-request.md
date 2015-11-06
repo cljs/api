@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/server.clj#L92-L98):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/server.clj#L92-L98):
 
 ```clj
 (defn read-request [rdr]
@@ -38,13 +38,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[server.clj:92-98](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/server.clj#L92-L98)</ins>
+                    └── <ins>[server.clj:92-98](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/server.clj#L92-L98)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn read-request [rdr]\n  (if-let [line (.readLine rdr)]\n    (cond\n      (.startsWith line \"POST\") (read-post line rdr)\n      (.startsWith line \"GET\") (read-get line rdr)\n      :else {:method :unknown :content line})\n    {:method :unknown :content nil}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [92 98]},
  :full-name "cljs.repl.server/read-request",

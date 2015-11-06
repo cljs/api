@@ -107,7 +107,7 @@ test-constants need not be all of the same type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2008-L2077):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/core.cljc#L2011-L2080):
 
 ```clj
 (core/defmacro case
@@ -116,7 +116,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
                        (last clauses)
                        `(throw
                           (js/Error.
-                            (core/str "No matching clause: " ~e))))
+                            (cljs.core/str "No matching clause: " ~e))))
              env     &env
              pairs   (reduce
                        (core/fn [m [test expr]]
@@ -164,12 +164,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2008-2077](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/core.cljc#L2008-L2077)</ins>
+                └── <ins>[core.cljc:2011-2080](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/core.cljc#L2011-L2080)</ins>
 </pre>
 
 -->
@@ -219,12 +219,12 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/cond" "cljs.core/condp"],
  :full-name-encode "cljs.core/case",
- :source {:code "(core/defmacro case\n  [e & clauses]\n  (core/let [default (if (odd? (count clauses))\n                       (last clauses)\n                       `(throw\n                          (js/Error.\n                            (core/str \"No matching clause: \" ~e))))\n             env     &env\n             pairs   (reduce\n                       (core/fn [m [test expr]]\n                         (core/cond\n                           (seq? test)\n                           (reduce\n                             (core/fn [m test]\n                               (core/let [test (if (core/symbol? test)\n                                                 (core/list 'quote test)\n                                                 test)]\n                                 (assoc-test m test expr env)))\n                             m test)\n                           (core/symbol? test)\n                           (assoc-test m (core/list 'quote test) expr env)\n                           :else\n                           (assoc-test m test expr env)))\n                     {} (partition 2 clauses))\n             esym    (gensym)\n             tests   (keys pairs)]\n    (core/cond\n      (every? (some-fn core/number? core/string? core/char? #(const? env %)) tests)\n      (core/let [no-default (if (odd? (count clauses)) (butlast clauses) clauses)\n                 tests      (mapv #(if (seq? %) (vec %) [%]) (take-nth 2 no-default))\n                 thens      (vec (take-nth 2 (drop 1 no-default)))]\n        `(let [~esym ~e] (case* ~esym ~tests ~thens ~default)))\n\n      (every? core/keyword? tests)\n      (core/let [tests (core/->> tests\n                         (map #(.substring (core/str %) 1))\n                         vec\n                         (mapv #(if (seq? %) (vec %) [%])))\n                 thens (vec (vals pairs))]\n        `(let [~esym (if (keyword? ~e) (.-fqn ~e) nil)]\n           (case* ~esym ~tests ~thens ~default)))\n      \n      ;; equality\n      :else\n      `(let [~esym ~e]\n         (cond\n           ~@(mapcat (core/fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n           :else ~default)))))",
+ :source {:code "(core/defmacro case\n  [e & clauses]\n  (core/let [default (if (odd? (count clauses))\n                       (last clauses)\n                       `(throw\n                          (js/Error.\n                            (cljs.core/str \"No matching clause: \" ~e))))\n             env     &env\n             pairs   (reduce\n                       (core/fn [m [test expr]]\n                         (core/cond\n                           (seq? test)\n                           (reduce\n                             (core/fn [m test]\n                               (core/let [test (if (core/symbol? test)\n                                                 (core/list 'quote test)\n                                                 test)]\n                                 (assoc-test m test expr env)))\n                             m test)\n                           (core/symbol? test)\n                           (assoc-test m (core/list 'quote test) expr env)\n                           :else\n                           (assoc-test m test expr env)))\n                     {} (partition 2 clauses))\n             esym    (gensym)\n             tests   (keys pairs)]\n    (core/cond\n      (every? (some-fn core/number? core/string? core/char? #(const? env %)) tests)\n      (core/let [no-default (if (odd? (count clauses)) (butlast clauses) clauses)\n                 tests      (mapv #(if (seq? %) (vec %) [%]) (take-nth 2 no-default))\n                 thens      (vec (take-nth 2 (drop 1 no-default)))]\n        `(let [~esym ~e] (case* ~esym ~tests ~thens ~default)))\n\n      (every? core/keyword? tests)\n      (core/let [tests (core/->> tests\n                         (map #(.substring (core/str %) 1))\n                         vec\n                         (mapv #(if (seq? %) (vec %) [%])))\n                 thens (vec (vals pairs))]\n        `(let [~esym (if (keyword? ~e) (.-fqn ~e) nil)]\n           (case* ~esym ~tests ~thens ~default)))\n      \n      ;; equality\n      :else\n      `(let [~esym ~e]\n         (cond\n           ~@(mapcat (core/fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n           :else ~default)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2008 2077]},
+          :lines [2011 2080]},
  :examples [{:id "09a90c",
              :content "```clj\n(def a 1)\n(def b 2)\n\n(case a\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"one\"\n\n(case b\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"default\"\n\n(case b\n  0 \"zero\"\n  1 \"one\")\n;; Error: No matching clause: 2\n```"}],
  :full-name "cljs.core/case",

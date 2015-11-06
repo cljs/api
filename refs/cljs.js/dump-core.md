@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.clj#L20-L21):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.clj#L20-L21):
 
 ```clj
 (defmacro dump-core []
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.clj:20-21](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.clj#L20-L21)</ins>
+                └── <ins>[js.clj:20-21](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.clj#L20-L21)</ins>
 </pre>
 
 -->
@@ -84,7 +84,7 @@ The API data for this symbol:
  :source {:code "(defmacro dump-core []\n  `(quote ~(get-in @env/*compiler* [::ana/namespaces 'cljs.core])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/js.clj",
           :lines [20 21]},
  :full-name "cljs.js/dump-core",

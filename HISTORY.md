@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.7.28](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28)__</td>
+<td>2015-07-31</td>
+<td><kbd>1.7.0</kbd></td>
+<td><kbd>0.10.0-alpha3</kbd></td>
+<td><kbd>0.0-20150505</kbd></td>
+<td>
+<a href="#user-content-1728syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1728library">
++8 -14
+</a>
+</td>
+<td>
+<a href="#user-content-1728compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.10](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10)__</td>
 <td>2015-07-29</td>
 <td><kbd>1.7.0</kbd></td>
@@ -2867,6 +2890,155 @@
 </td>
 </tr>
 
+</table>
+
+### 1.7.28
+
+<a name="1728syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1728library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/ArrayNodeIterator](refs/cljs.core/ArrayNodeIterator.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/HashMapIter](refs/cljs.core/HashMapIter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/HashSetIter](refs/cljs.core/HashSetIter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/NodeIterator](refs/cljs.core/NodeIterator.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/PersistentQueueIter](refs/cljs.core/PersistentQueueIter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-type-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/RecordIter](refs/cljs.core/RecordIter.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/analyze~~](refs/cljs.js/analyze.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/analyze\*~~](refs/cljs.js/analyzeSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/analyze-deps~~](refs/cljs.js/analyze-deps.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/analyze-str](refs/cljs.js/analyze-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/append-source-map~~](refs/cljs.js/append-source-map.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/compile~~](refs/cljs.js/compile.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/compile\*~~](refs/cljs.js/compileSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.js/compile-str](refs/cljs.js/compile-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/eval\*~~](refs/cljs.js/evalSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/eval-str\*~~](refs/cljs.js/eval-strSTAR.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/load-deps~~](refs/cljs.js/load-deps.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/load-macros~~](refs/cljs.js/load-macros.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/ns-side-effects~~](refs/cljs.js/ns-side-effects.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/prefix~~](refs/cljs.js/prefix.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/sm-data~~](refs/cljs.js/sm-data.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/×-function-red.svg">
+</td>
+<td><samp>[~~cljs.js/wrap-error~~](refs/cljs.js/wrap-error.md)</samp></td>
+</tr>
+</table>
+
+<a name="1728compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.7.10

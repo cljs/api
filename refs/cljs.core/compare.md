@@ -74,7 +74,7 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2041-L2065):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L2041-L2065):
 
 ```clj
 (defn ^number compare
@@ -104,12 +104,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2041-2065](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/core.cljs#L2041-L2065)</ins>
+                └── <ins>[core.cljs:2041-2065](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/core.cljs#L2041-L2065)</ins>
 </pre>
 
 -->
@@ -165,7 +165,7 @@ The API data for this symbol:
  :source {:code "(defn ^number compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (number? x) (if (number? y)\n                 (garray/defaultCompare x y)\n                 (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))\n\n   (satisfies? IComparable x)\n   (-compare x y)\n\n   :else\n   (if (and (or (string? x) (array? x) (true? x) (false? x))\n            (identical? (type x) (type y)))\n     (garray/defaultCompare x y)\n     (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2041 2065]},
  :examples [{:id "e13fa0",

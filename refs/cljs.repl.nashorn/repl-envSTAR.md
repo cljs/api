@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/nashorn.clj#L171-L175):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L171-L175):
 
 ```clj
 (defn repl-env* [{:keys [debug] :as opts}]
@@ -36,13 +36,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[nashorn.clj:171-175](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/nashorn.clj#L171-L175)</ins>
+                    └── <ins>[nashorn.clj:171-175](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/nashorn.clj#L171-L175)</ins>
 </pre>
 
 -->
@@ -88,7 +88,7 @@ The API data for this symbol:
  :source {:code "(defn repl-env* [{:keys [debug] :as opts}]\n      (let [engine (create-engine opts)]\n        (merge\n          (NashornEnv. engine debug)\n          opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [171 175]},
  :full-name "cljs.repl.nashorn/repl-env*",

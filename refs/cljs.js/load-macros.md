@@ -1,11 +1,11 @@
-## cljs.js/load-macros
+## ~~cljs.js/load-macros~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -93,8 +93,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "load-macros",
- :type "function",
  :signature ["[bound-vars k macros reload reloads opts cb]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/load-macros",
  :source {:code "(defn load-macros [bound-vars k macros reload reloads opts cb]\n  (if (seq macros)\n    (let [nsym (first (vals macros))\n          k    (or (k reload)\n                   (get-in reloads [k nsym])\n                   (and (= nsym name) (:*reload-macros* bound-vars) :reload))]\n      (require bound-vars nsym k\n        (-> opts\n          (assoc :macros-ns true)\n          (dissoc :context)\n          (dissoc :ns))\n        (fn [res]\n          (if-not (:error res)\n            (load-macros bound-vars k (next macros) reload reloads opts cb)\n            (cb res)))))\n    (cb {:value nil})))",
           :title "Source code",
           :repo "clojurescript",
@@ -102,8 +104,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [300 315]},
  :full-name "cljs.js/load-macros",
- :full-name-encode "cljs.js/load-macros",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

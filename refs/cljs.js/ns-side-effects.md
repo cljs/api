@@ -1,11 +1,11 @@
-## cljs.js/ns-side-effects
+## ~~cljs.js/ns-side-effects~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -141,9 +141,11 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "ns-side-effects",
- :type "function",
  :signature ["[bound-vars ana-env ast opts cb]"
              "[load bound-vars ana-env {:keys [op], :as ast} opts cb]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/ns-side-effects",
  :source {:code "(defn ns-side-effects\n  ([bound-vars ana-env ast opts cb]\n    (ns-side-effects false bound-vars ana-env ast opts cb))\n  ([load bound-vars ana-env {:keys [op] :as ast} opts cb]\n   (when (:verbose opts)\n     (debug-prn \"Namespace side effects for\" (:name ast)))\n   (if (= :ns op)\n     (let [{:keys [deps uses requires require-macros use-macros reload reloads]} ast\n           env (:*compiler* bound-vars)]\n       (letfn [(check-uses-and-load-macros [res]\n                 (if (:error res)\n                   (cb res)\n                   (let [res (try\n                               (when (and (:*analyze-deps* bound-vars) (seq uses))\n                                 (when (:verbose opts) (debug-prn \"Checking uses\"))\n                                 (ana/check-uses uses env)\n                                 {:value nil})\n                               (catch :default cause\n                                 (wrap-error\n                                   (ana/error ana-env\n                                     (str \"Could not parse ns form \" (:name ast)) cause))))]\n                     (if (:error res)\n                       (cb res)\n                       (if (:*load-macros* bound-vars)\n                         (do\n                           (when (:verbose opts) (debug-prn \"Processing :use-macros for\" (:name ast)))\n                           (load-macros bound-vars :use-macros use-macros reload reloads opts\n                             (fn [res]\n                               (if (:error res)\n                                 (cb res)\n                                 (do\n                                   (when (:verbose opts) (debug-prn \"Processing :require-macros for\" (:name ast)))\n                                   (load-macros bound-vars :require-macros require-macros reloads reloads opts\n                                     (fn [res]\n                                       (if (:error res)\n                                         (cb res)\n                                         (let [res (try\n                                                     (when (seq use-macros)\n                                                       (when (:verbose opts) (debug-prn \"Checking :use-macros for\" (:name ast)))\n                                                       (ana/check-use-macros use-macros env))\n                                                     {:value nil}\n                                                     (catch :default cause\n                                                       (wrap-error\n                                                         (ana/error ana-env\n                                                           (str \"Could not parse ns form \" (:name ast)) cause))))]\n                                           (if (:error res)\n                                             (cb res)\n                                             (cb {:value ast})))))))))))\n                        (cb {:value ast}))))))]\n         (cond\n           (and load (seq deps))\n           (load-deps bound-vars ana-env (:name ast) deps (dissoc opts :macros-ns)\n             check-uses-and-load-macros)\n\n           (and (not load) (:*analyze-deps* bound-vars) (seq deps))\n           (analyze-deps bound-vars ana-env (:name ast) deps (dissoc opts :macros-ns)\n             check-uses-and-load-macros)\n\n           :else\n           (check-uses-and-load-macros {:value nil}))))\n     (cb {:value ast}))))",
           :title "Source code",
           :repo "clojurescript",
@@ -151,8 +153,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [317 377]},
  :full-name "cljs.js/ns-side-effects",
- :full-name-encode "cljs.js/ns-side-effects",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

@@ -1,11 +1,11 @@
-## cljs.js/append-source-map
+## ~~cljs.js/append-source-map~~
 
 
 
  <table border="1">
 <tr>
 <td>function</td>
-<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.28"><img valign="middle" alt="[×] 1.7.28" title="Removed in 1.7.28" src="https://img.shields.io/badge/×-1.7.28-red.svg"></a> </td>
 </tr>
 </table>
 
@@ -99,8 +99,10 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "append-source-map",
- :type "function",
  :signature ["[state name source sb sm-data {:keys [output-dir asset-path], :as opts}]"],
+ :history [["+" "1.7.10"] ["-" "1.7.28"]],
+ :type "function",
+ :full-name-encode "cljs.js/append-source-map",
  :source {:code "(defn append-source-map\n  [state name source sb sm-data {:keys [output-dir asset-path] :as opts}]\n   (let [t    (.valueOf (js/Date.))\n         smn  (if name\n                (string/replace (munge (str name)) \".\" \"/\")\n                (str \"cljs-\" t))\n         ts   (.valueOf (js/Date.))\n         out  (or output-dir asset-path)\n         src  (cond-> (str smn \".cljs?rel=\" ts)\n                out (prefix (str out \"/\")))\n         file (cond-> (str smn \".js?rel=\" ts)\n                out (prefix (str out \"/\")))\n         json (sm/encode {src (:source-map sm-data)}\n                {:lines (+ (:gen-line sm-data) 3)\n                 :file  file :sources-content [source]})]\n     (when (:verbose opts) (debug-prn json))\n     (swap! state assoc-in\n       [:source-maps name] (sm/invert-reverse-map (:source-map sm-data)))\n     (.append sb\n       (str \"\\n//# sourceURL=\" file\n            \"\\n//# sourceMappingURL=data:application/json;base64,\"\n            (base64/encodeString json)))))",
           :title "Source code",
           :repo "clojurescript",
@@ -108,8 +110,7 @@ The API data for this symbol:
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [131 152]},
  :full-name "cljs.js/append-source-map",
- :full-name-encode "cljs.js/append-source-map",
- :history [["+" "1.7.10"]]}
+ :removed {:in "1.7.28", :last-seen "1.7.10"}}
 
 ```
 

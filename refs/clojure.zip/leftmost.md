@@ -30,7 +30,7 @@ Returns the loc of the leftmost sibling of the node at this loc, or self
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L157-L163):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/zip.cljs#L157-L163):
 
 ```clj
 (defn leftmost
@@ -45,12 +45,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[zip.cljs:157-163](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/clojure/zip.cljs#L157-L163)</ins>
+                └── <ins>[zip.cljs:157-163](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/clojure/zip.cljs#L157-L163)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn leftmost\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (if (and path (seq l))\n        (with-meta [(first l) (assoc path :l [] :r (concat (rest l) [node] r))] (meta loc))\n        loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/cljs/clojure/zip.cljs",
           :lines [157 163]},
  :full-name "clojure.zip/leftmost",

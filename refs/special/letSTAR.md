@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer.cljc#L1487-L1489):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer.cljc#L1487-L1489):
 
 ```clj
 (defmethod parse 'let*
@@ -29,12 +29,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1487-1489](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/analyzer.cljc#L1487-L1489)</ins>
+                └── <ins>[analyzer.cljc:1487-1489](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/analyzer.cljc#L1487-L1489)</ins>
 </pre>
 
 -->
@@ -74,7 +74,7 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'let*\n  [op encl-env form _ _]\n  (analyze-let encl-env form false))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/analyzer.cljc",
           :lines [1487 1489]},
  :full-name "special/let*",

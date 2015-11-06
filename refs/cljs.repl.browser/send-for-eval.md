@@ -32,7 +32,7 @@ when the return value is received.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L60-L68):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/browser.clj#L60-L68):
 
 ```clj
 (defn send-for-eval
@@ -47,13 +47,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
+clojurescript @ r1.7.28
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[browser.clj:60-68](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/clojure/cljs/repl/browser.clj#L60-L68)</ins>
+                    └── <ins>[browser.clj:60-68](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/clojure/cljs/repl/browser.clj#L60-L68)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn send-for-eval\n  ([form return-value-fn]\n    (send-for-eval @(server/connection) form return-value-fn))\n  ([conn form return-value-fn]\n    (set-return-value-fn return-value-fn)\n    (server/send-and-close conn 200 form \"text/javascript\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.10",
+          :tag "r1.7.28",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [60 68]},
  :full-name "cljs.repl.browser/send-for-eval",
