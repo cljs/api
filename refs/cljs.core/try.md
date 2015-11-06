@@ -37,7 +37,7 @@ Catches and handles JavaScript exceptions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L863-L891):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L856-L884):
 
 ```clj
 (defmacro try
@@ -67,11 +67,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:863-891](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L863-L891)</ins>
+            └── <ins>[core.clj:856-884](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L856-L884)</ins>
 </pre>
 
 -->
@@ -122,9 +122,9 @@ The API data for this symbol:
  :source {:code "(defmacro try\n  [& forms]\n  (let [catch? #(and (list? %) (= (first %) 'catch))\n        [body catches] (split-with (complement catch?) forms)\n        [catches fin] (split-with catch? catches)\n        e (gensym \"e\")]\n    (assert (every? #(clojure.core/> (count %) 2) catches) \"catch block must specify a prototype and a name\")\n    (if (seq catches)\n      `(~'try*\n        ~@body\n        (catch ~e\n            (cond\n             ~@(mapcat\n                (fn [[_ type name & cb]]\n                  `[(instance? ~type ~e) (let [~name ~e] ~@cb)])\n                catches)\n             :else (throw ~e)))\n        ~@fin)\n      `(~'try*\n        ~@body\n        ~@fin))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/clj/cljs/core.clj",
-          :lines [863 891]},
+          :lines [856 884]},
  :full-name "cljs.core/try",
  :clj-symbol "clojure.core/try",
  :docstring "(try expr* catch-clause* finally-clause?)\n\n Special Form\n\n catch-clause => (catch protoname name expr*)\n finally-clause => (finally expr*)\n\nCatches and handles JavaScript exceptions."}

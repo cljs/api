@@ -43,7 +43,7 @@ Returns a new sorted set with supplied keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5776-L5779):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5778-L5781):
 
 ```clj
 (defn sorted-set
@@ -55,11 +55,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5776-5779](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5776-L5779)</ins>
+            └── <ins>[core.cljs:5778-5781](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5778-L5781)</ins>
 </pre>
 
 -->
@@ -115,9 +115,9 @@ The API data for this symbol:
  :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj cljs.core.PersistentTreeSet/EMPTY keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5776 5779]},
+          :lines [5778 5781]},
  :full-name "cljs.core/sorted-set",
  :clj-symbol "clojure.core/sorted-set",
  :docstring "Returns a new sorted set with supplied keys."}

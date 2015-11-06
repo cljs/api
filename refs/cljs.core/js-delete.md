@@ -47,7 +47,7 @@ a
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L962-L963):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L963-L964):
 
 ```clj
 (defn js-delete [obj key]
@@ -58,11 +58,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:962-963](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L962-L963)</ins>
+            └── <ins>[core.cljs:963-964](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L963-L964)</ins>
 </pre>
 
 -->
@@ -112,9 +112,9 @@ The API data for this symbol:
  :source {:code "(defn js-delete [obj key]\n  (js* \"delete ~{obj}[~{key}]\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [962 963]},
+          :lines [963 964]},
  :examples [{:id "5b24ea",
              :content "```clj\n(def a #js {:foo 1 :bar 2})\n(js-delete a \"foo\")\n\na\n;;=> #js {:bar 2}\n```"}],
  :full-name "cljs.core/js-delete"}

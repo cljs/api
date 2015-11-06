@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L436-L470):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L433-L457):
 
 ```clj
 (defmethod parse 'letfn*
@@ -25,33 +25,23 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
   (assert (and (vector? bindings) (even? (count bindings))) "bindings must be vector of even number of elements")
   (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))
         names    (keys n->fexpr)
-        n->gsym  (into {} (map (juxt identity #(gensym (str % "__"))) names))
-        gsym->n  (into {} (map (juxt n->gsym identity) names))
         context  (:context env)
-        bes      (reduce (fn [bes n]
-                           (let [g (n->gsym n)]
-                             (conj bes {:name  g
-                                        :tag   (-> n meta :tag)
-                                        :local true})))
-                         []
-                         names)
-        meth-env (reduce (fn [env be]
-                           (let [n (gsym->n (be :name))]
-                             (assoc-in env [:locals n] be)))
-                         (assoc env :context :expr)
-                         bes)
-        [meth-env finits]
-        (reduce (fn [[env finits] n]
-                  (let [finit (analyze meth-env (n->fexpr n))
-                        be (-> (get-in env [:locals n])
-                               (assoc :init finit))]
+        [meth-env bes]
+        (reduce (fn [[{:keys [locals] :as env} bes] n]
+                  (let [be {:name   n
+                            :tag    (-> n meta :tag)
+                            :local  true
+                            :shadow (locals n)}]
                     [(assoc-in env [:locals n] be)
-                     (conj finits finit)]))
-                [meth-env []]
-                names)
+                     (conj bes be)]))
+                [env []] names)
+        meth-env (assoc meth-env :context :expr)
+        bes (vec (map (fn [{:keys [name shadow] :as be}]
+                        (let [env (assoc-in meth-env [:locals name] shadow)]
+                          (assoc be :init (analyze env (n->fexpr name)))))
+                      bes))
         {:keys [statements ret]}
-        (analyze-block (assoc meth-env :context (if (= :expr context) :return context)) exprs)
-        bes (vec (map #(get-in meth-env [:locals %]) names))]
+        (analyze-block (assoc meth-env :context (if (= :expr context) :return context)) exprs)]
     {:env env :op :letfn :bindings bes :statements statements :ret ret :form form
      :children (into (vec (map :init bes))
                      (conj (vec statements) ret))}))
@@ -61,11 +51,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:436-470](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L436-L470)</ins>
+            └── <ins>[analyzer.clj:433-457](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L433-L457)</ins>
 </pre>
 
 -->
@@ -102,12 +92,12 @@ The API data for this symbol:
 {:ns "special",
  :name "letfn*",
  :type "special form",
- :source {:code "(defmethod parse 'letfn*\n  [op env [_ bindings & exprs :as form] name]\n  (assert (and (vector? bindings) (even? (count bindings))) \"bindings must be vector of even number of elements\")\n  (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))\n        names    (keys n->fexpr)\n        n->gsym  (into {} (map (juxt identity #(gensym (str % \"__\"))) names))\n        gsym->n  (into {} (map (juxt n->gsym identity) names))\n        context  (:context env)\n        bes      (reduce (fn [bes n]\n                           (let [g (n->gsym n)]\n                             (conj bes {:name  g\n                                        :tag   (-> n meta :tag)\n                                        :local true})))\n                         []\n                         names)\n        meth-env (reduce (fn [env be]\n                           (let [n (gsym->n (be :name))]\n                             (assoc-in env [:locals n] be)))\n                         (assoc env :context :expr)\n                         bes)\n        [meth-env finits]\n        (reduce (fn [[env finits] n]\n                  (let [finit (analyze meth-env (n->fexpr n))\n                        be (-> (get-in env [:locals n])\n                               (assoc :init finit))]\n                    [(assoc-in env [:locals n] be)\n                     (conj finits finit)]))\n                [meth-env []]\n                names)\n        {:keys [statements ret]}\n        (analyze-block (assoc meth-env :context (if (= :expr context) :return context)) exprs)\n        bes (vec (map #(get-in meth-env [:locals %]) names))]\n    {:env env :op :letfn :bindings bes :statements statements :ret ret :form form\n     :children (into (vec (map :init bes))\n                     (conj (vec statements) ret))}))",
+ :source {:code "(defmethod parse 'letfn*\n  [op env [_ bindings & exprs :as form] name]\n  (assert (and (vector? bindings) (even? (count bindings))) \"bindings must be vector of even number of elements\")\n  (let [n->fexpr (into {} (map (juxt first second) (partition 2 bindings)))\n        names    (keys n->fexpr)\n        context  (:context env)\n        [meth-env bes]\n        (reduce (fn [[{:keys [locals] :as env} bes] n]\n                  (let [be {:name   n\n                            :tag    (-> n meta :tag)\n                            :local  true\n                            :shadow (locals n)}]\n                    [(assoc-in env [:locals n] be)\n                     (conj bes be)]))\n                [env []] names)\n        meth-env (assoc meth-env :context :expr)\n        bes (vec (map (fn [{:keys [name shadow] :as be}]\n                        (let [env (assoc-in meth-env [:locals name] shadow)]\n                          (assoc be :init (analyze env (n->fexpr name)))))\n                      bes))\n        {:keys [statements ret]}\n        (analyze-block (assoc meth-env :context (if (= :expr context) :return context)) exprs)]\n    {:env env :op :letfn :bindings bes :statements statements :ret ret :form form\n     :children (into (vec (map :init bes))\n                     (conj (vec statements) ret))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [436 470]},
+          :lines [433 457]},
  :full-name "special/letfn*",
  :full-name-encode "special/letfnSTAR",
  :history [["+" "0.0-1236"]]}

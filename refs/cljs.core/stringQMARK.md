@@ -30,7 +30,7 @@ Returns true if `x` is a string, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1011-L1014):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1012-L1015):
 
 ```clj
 (defn ^boolean string? [x]
@@ -43,11 +43,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1011-1014](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1011-L1014)</ins>
+            └── <ins>[core.cljs:1012-1015](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1012-L1015)</ins>
 </pre>
 
 -->
@@ -100,9 +100,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean string? [x]\n  (and ^boolean (goog/isString x)\n       (not (or (identical? (.charAt x 0) \\uFDD0)\n                (identical? (.charAt x 0) \\uFDD1)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1011 1014]},
+          :lines [1012 1015]},
  :full-name "cljs.core/string?",
  :clj-symbol "clojure.core/string?"}
 

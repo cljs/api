@@ -27,7 +27,7 @@ Equivalent to (fold cat append! coll)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L228-L231):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L228-L231):
 
 ```clj
 (defn foldcat
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:228-231](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L228-L231)</ins>
+                └── <ins>[reducers.cljs:228-231](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L228-L231)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn foldcat\n  [coll]\n  (fold cat append! coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [228 231]},
  :full-name "clojure.core.reducers/foldcat",

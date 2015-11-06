@@ -35,7 +35,7 @@ supplied defaults to, and modifies, the global hierarchy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6994-L7013):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6996-L7015):
 
 ```clj
 (defn underive
@@ -61,11 +61,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6994-7013](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6994-L7013)</ins>
+            └── <ins>[core.cljs:6996-7015](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6996-L7015)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defn underive\n  ([tag parent]\n     ;; (alter-var-root #'global-hierarchy underive tag parent)\n     (swap! global-hierarchy underive tag parent) nil)\n  ([h tag parent]\n    (let [parentMap (:parents h)\n          childsParents (if (parentMap tag)\n                          (disj (parentMap tag) parent) #{})\n          newParents (if (not-empty childsParents)\n                      (assoc parentMap tag childsParents)\n                      (dissoc parentMap tag))\n          deriv-seq (flatten (map #(cons (first %) (interpose (first %) (second %)))\n                                  (seq newParents)))]\n      (if (contains? (parentMap tag) parent)\n        (reduce #(apply derive %1 %2) (make-hierarchy)\n                (partition 2 deriv-seq))\n        h))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6994 7013]},
+          :lines [6996 7015]},
  :full-name "cljs.core/underive",
  :clj-symbol "clojure.core/underive",
  :docstring "Removes a parent/child relationship between parent and\ntag. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy."}

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L3777):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L3778):
 
 ```clj
 (set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj) 0))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3777](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L3777)</ins>
+            └── <ins>[core.cljs:3778](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L3778)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.HashMap/EMPTY (HashMap. nil 0 (js-obj) 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3777]},
+          :lines [3778]},
  :full-name "cljs.core/HashMap.EMPTY",
  :full-name-encode "cljs.core/HashMapDOTEMPTY",
  :history [["+" "0.0-927"]]}

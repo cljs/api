@@ -47,13 +47,13 @@ Returns a new sorted map with supplied mappings, using the supplied comparator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5516-L5524):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5517-L5525):
 
 ```clj
 (defn sorted-map-by
   ([comparator & keyvals]
      (loop [in (seq keyvals)
-            out (cljs.core.PersistentTreeMap. comparator nil 0 nil 0)]
+            out (cljs.core.PersistentTreeMap. (fn->comparator comparator) nil 0 nil 0)]
        (if in
          (recur (nnext in) (assoc out (first in) (second in)))
          out))))
@@ -63,11 +63,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:5516-5524](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L5516-L5524)</ins>
+            └── <ins>[core.cljs:5517-5525](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L5517-L5525)</ins>
 </pre>
 
 -->
@@ -120,12 +120,12 @@ The API data for this symbol:
            "cljs.core/rsubseq"
            "cljs.core/sorted-set-by"],
  :full-name-encode "cljs.core/sorted-map-by",
- :source {:code "(defn sorted-map-by\n  ([comparator & keyvals]\n     (loop [in (seq keyvals)\n            out (cljs.core.PersistentTreeMap. comparator nil 0 nil 0)]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
+ :source {:code "(defn sorted-map-by\n  ([comparator & keyvals]\n     (loop [in (seq keyvals)\n            out (cljs.core.PersistentTreeMap. (fn->comparator comparator) nil 0 nil 0)]\n       (if in\n         (recur (nnext in) (assoc out (first in) (second in)))\n         out))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [5516 5524]},
+          :lines [5517 5525]},
  :full-name "cljs.core/sorted-map-by",
  :clj-symbol "clojure.core/sorted-map-by",
  :docstring "keyval => key val\nReturns a new sorted map with supplied mappings, using the supplied comparator."}

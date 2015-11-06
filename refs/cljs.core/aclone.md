@@ -59,7 +59,7 @@ Returns a javascript array, cloned from the passed in array
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L85-L88):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L85-L88):
 
 ```clj
 (defn aclone
@@ -71,18 +71,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L85-L88)</ins>
+            └── <ins>[core.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L85-L88)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1013-L1014):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1006-L1007):
 
 ```clj
 (defmacro aclone [a]
@@ -93,11 +93,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1013-1014](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/core.clj#L1013-L1014)</ins>
+            └── <ins>[core.clj:1006-1007](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/core.clj#L1006-L1007)</ins>
 </pre>
 -->
 
@@ -148,15 +148,15 @@ The API data for this symbol:
  :source {:code "(defn aclone\n  [array-like]\n  (.slice array-like))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
           :lines [85 88]},
  :extra-sources [{:code "(defmacro aclone [a]\n  (list 'js* \"~{}.slice()\" a))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1503",
+                  :tag "r1513",
                   :filename "src/clj/cljs/core.clj",
-                  :lines [1013 1014]}],
+                  :lines [1006 1007]}],
  :examples [{:id "422c4e",
              :content "```clj\n(def a #js [1 2 3])\n(def b (aclone a))\n(aset b 0 4)\n\na\n;;=> #js [1 2 3]\n\nb\n;;=> #js [4 2 3]\n```"}],
  :full-name "cljs.core/aclone",

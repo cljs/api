@@ -60,7 +60,7 @@ false or nil).
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L240-L248):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L238-L246):
 
 ```clj
 (defmethod parse 'if
@@ -78,11 +78,11 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── clj
         └── cljs
-            └── <ins>[analyzer.clj:240-248](https://github.com/clojure/clojurescript/blob/r1503/src/clj/cljs/analyzer.clj#L240-L248)</ins>
+            └── <ins>[analyzer.clj:238-246](https://github.com/clojure/clojurescript/blob/r1513/src/clj/cljs/analyzer.clj#L238-L246)</ins>
 </pre>
 
 -->
@@ -137,9 +137,9 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name]\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (analyze env then)\n        else-expr (analyze env else)]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked @*unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/clj/cljs/analyzer.clj",
-          :lines [240 248]},
+          :lines [238 246]},
  :examples [{:id "e591ff",
              :content "```clj\n(def v [1 2])\n\n(if (empty? v) \"empty!\" \"filled!\")\n;;=> \"filled!\"\n\n(str \"This vector is \"\n  (if (empty? v) \"empty!\" \"filled!\"))\n;;=> \"This vector is filled!\"\n```"}],
  :full-name "special/if",

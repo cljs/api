@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2830):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2831):
 
 ```clj
 (set! cljs.core.Vector/EMPTY (Vector. nil (array) 0))
@@ -27,11 +27,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2830](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2830)</ins>
+            └── <ins>[core.cljs:2831](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2831)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(set! cljs.core.Vector/EMPTY (Vector. nil (array) 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2830]},
+          :lines [2831]},
  :full-name "cljs.core/Vector.EMPTY",
  :full-name-encode "cljs.core/VectorDOTEMPTY",
  :history [["+" "0.0-927"]]}

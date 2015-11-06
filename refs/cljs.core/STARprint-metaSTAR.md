@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6290):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6292):
 
 ```clj
 (def *print-meta* false)
@@ -30,11 +30,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:6290](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L6290)</ins>
+            └── <ins>[core.cljs:6292](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L6292)</ins>
 </pre>
 
 -->
@@ -82,9 +82,9 @@ The API data for this symbol:
  :source {:code "(def *print-meta* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [6290]},
+          :lines [6292]},
  :full-name "cljs.core/*print-meta*",
  :full-name-encode "cljs.core/STARprint-metaSTAR",
  :clj-symbol "clojure.core/*print-meta*",

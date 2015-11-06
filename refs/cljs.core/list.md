@@ -36,7 +36,7 @@ Creates a new list containing `items`.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1665-L1672):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1666-L1673):
 
 ```clj
 (defn list
@@ -53,11 +53,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1665-1672](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L1665-L1672)</ins>
+            └── <ins>[core.cljs:1666-1673](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L1666-L1673)</ins>
 </pre>
 
 -->
@@ -110,9 +110,9 @@ The API data for this symbol:
  :source {:code "(defn list\n  ([] ())\n  ([x] (conj () x))\n  ([x y] (conj (list y) x))\n  ([x y z] (conj (list y z) x))\n  ([x y z & items]\n     (conj (conj (conj (reduce conj () (reverse items))\n                       z) y) x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [1665 1672]},
+          :lines [1666 1673]},
  :full-name "cljs.core/list",
  :clj-symbol "clojure.core/list"}
 

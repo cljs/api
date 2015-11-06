@@ -25,14 +25,14 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L623-L628):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L623-L628):
 
 ```clj
 (defn prim-seq
   ([prim]
      (prim-seq prim 0))
   ([prim i]
-     (when-not (zero? (alength prim))
+     (when (< i (alength prim))
        (IndexedSeq. prim i))))
 ```
 
@@ -40,11 +40,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:623-628](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L623-L628)</ins>
+            └── <ins>[core.cljs:623-628](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L623-L628)</ins>
 </pre>
 
 -->
@@ -87,10 +87,10 @@ The API data for this symbol:
  :name "prim-seq",
  :type "function",
  :signature ["[prim]" "[prim i]"],
- :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when-not (zero? (alength prim))\n       (IndexedSeq. prim i))))",
+ :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when (< i (alength prim))\n       (IndexedSeq. prim i))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
           :lines [623 628]},
  :full-name "cljs.core/prim-seq",

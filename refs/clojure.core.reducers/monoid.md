@@ -29,7 +29,7 @@ must return an identity value for it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L233-L240):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L233-L240):
 
 ```clj
 (defn monoid
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── clojure
             └── core
-                └── <ins>[reducers.cljs:233-240](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/clojure/core/reducers.cljs#L233-L240)</ins>
+                └── <ins>[reducers.cljs:233-240](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/clojure/core/reducers.cljs#L233-L240)</ins>
 </pre>
 
 -->
@@ -96,7 +96,7 @@ The API data for this symbol:
  :source {:code "(defn monoid\n  [op ctor]\n  (fn m\n    ([] (ctor))\n    ([a b] (op a b))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/clojure/core/reducers.cljs",
           :lines [233 240]},
  :full-name "clojure.core.reducers/monoid",

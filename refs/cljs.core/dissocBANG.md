@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2102-L2103):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2103-L2104):
 
 ```clj
 (defn dissoc! [tcoll key]
@@ -36,11 +36,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1503/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1503
+clojurescript @ r1513
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2102-2103](https://github.com/clojure/clojurescript/blob/r1503/src/cljs/cljs/core.cljs#L2102-L2103)</ins>
+            └── <ins>[core.cljs:2103-2104](https://github.com/clojure/clojurescript/blob/r1513/src/cljs/cljs/core.cljs#L2103-L2104)</ins>
 </pre>
 
 -->
@@ -91,9 +91,9 @@ The API data for this symbol:
  :source {:code "(defn dissoc! [tcoll key]\n  (-dissoc! tcoll key))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1503",
+          :tag "r1513",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [2102 2103]},
+          :lines [2103 2104]},
  :full-name "cljs.core/dissoc!",
  :clj-symbol "clojure.core/dissoc!"}
 
