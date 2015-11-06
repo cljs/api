@@ -25,7 +25,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2214):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/cljs/cljs/core.cljs#L2214):
 
 ```clj
 (defn ^number unchecked-float [x] x)
@@ -35,18 +35,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:2214](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L2214)</ins>
+            └── <ins>[core.cljs:2214](https://github.com/clojure/clojurescript/blob/r3191/src/cljs/cljs/core.cljs#L2214)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L436):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L436):
 
 ```clj
 (defmacro unchecked-float [x] x)
@@ -56,11 +56,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:436](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L436)</ins>
+            └── <ins>[core.clj:436](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L436)</ins>
 </pre>
 -->
 
@@ -110,13 +110,13 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-float [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2214]},
  :extra-sources [{:code "(defmacro unchecked-float [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r3190",
+                  :tag "r3191",
                   :filename "src/clj/cljs/core.clj",
                   :lines [436]}],
  :full-name "cljs.core/unchecked-float",

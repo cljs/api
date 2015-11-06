@@ -42,7 +42,7 @@ argument accepted for compatibility with Clojure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L290-L296):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/cljs/cljs/core.cljs#L290-L296):
 
 ```clj
 (defn ^array into-array
@@ -56,11 +56,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:290-296](https://github.com/clojure/clojurescript/blob/r3190/src/cljs/cljs/core.cljs#L290-L296)</ins>
+            └── <ins>[core.cljs:290-296](https://github.com/clojure/clojurescript/blob/r3191/src/cljs/cljs/core.cljs#L290-L296)</ins>
 </pre>
 
 -->
@@ -114,7 +114,7 @@ The API data for this symbol:
  :source {:code "(defn ^array into-array\n  ([aseq]\n     (into-array nil aseq))\n  ([type aseq]\n     (reduce (fn [a x] (.push a x) a) (array) aseq)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/cljs/cljs/core.cljs",
           :lines [290 296]},
  :full-name "cljs.core/into-array",

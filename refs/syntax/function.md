@@ -65,7 +65,7 @@ automatically assigned `%` argument names.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L510-L529):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L508-L527):
 
 ```clj
 (defn- read-fn
@@ -94,18 +94,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.9.0
+tools.reader @ tools.reader-0.9.1
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:510-529](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L510-L529)</ins>
+                    └── <ins>[reader.clj:508-527](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L508-L527)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L750-L762):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L748-L760):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -127,13 +127,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.9.0
+tools.reader @ tools.reader-0.9.1
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:750-762](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L750-L762)</ins>
+                    └── <ins>[reader.clj:748-760](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L748-L760)</ins>
 </pre>
 -->
 
@@ -178,15 +178,15 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-fn\n  [rdr _ opts pending-forms]\n  (if (thread-bound? #'arg-env)\n    (throw (IllegalStateException. \"Nested #()s are not allowed\")))\n  (binding [arg-env (sorted-map)]\n    (let [form (read* (doto rdr (unread \\()) true nil opts pending-forms) ;; this sets bindings\n          rargs (rseq arg-env)\n          args (if rargs\n                 (let [higharg (key (first rargs))]\n                   (let [args (loop [i 1 args (transient [])]\n                                (if (> i higharg)\n                                  (persistent! args)\n                                  (recur (inc i) (conj! args (or (get arg-env i)\n                                                                 (garg i))))))\n                         args (if (arg-env -1)\n                                (conj args '& (arg-env -1))\n                                args)]\n                     args))\n                 [])]\n      (list 'fn* args form))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.9.0",
+                  :tag "tools.reader-0.9.1",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [510 529]}
+                  :lines [508 527]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.9.0",
+                  :tag "tools.reader-0.9.1",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [750 762]}),
+                  :lines [748 760]}),
  :usage ["#(...)"],
  :examples [{:id "6a87de",
              :content "```clj\n(map #(* 2 %) [1 2 3])\n;;=> (2 4 6)\n\n(def f #(println %1 %2 %&))\n(f 1 2 3 4 5)\n;; prints: 1 2 (3 4 5)\n```"}],

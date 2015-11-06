@@ -77,7 +77,7 @@ js/-Infinity
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L294-L320):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L292-L318):
 
 ```clj
 (defn- read-symbol
@@ -113,13 +113,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.9.0
+tools.reader @ tools.reader-0.9.1
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:294-320](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.0/src/main/clojure/clojure/tools/reader.clj#L294-L320)</ins>
+                    └── <ins>[reader.clj:292-318](https://github.com/clojure/tools.reader/blob/tools.reader-0.9.1/src/main/clojure/clojure/tools/reader.clj#L292-L318)</ins>
 </pre>
 -->
 
@@ -161,9 +161,9 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.9.0",
+                  :tag "tools.reader-0.9.1",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [294 320]}],
+                  :lines [292 318]}],
  :usage ["Infinity" "-Infinity" "+Infinity"],
  :examples [{:id "463fd4",
              :content "```clj\nInfinity\n;;=> Infinity\n\n+Infinity\n;;=> Infinity\n\n-Infinity\n;;=> -Infinity\n```\n\nMath with infinities:\n\n```clj\n(/ 1 0)\n;;=> Infinity\n\n(Math/log 0)\n;;=> -Infinity\n\n(* 0 Infinity)\n;;=> NaN\n```\n\nThey are equivalent to the JavaScript symbols:\n\n```clj\njs/Infinity\n;;=> Infinity\n\njs/-Infinity\n;;=> -Infinity\n```"}],

@@ -92,7 +92,7 @@ Available clojure.main/repl style options and their defaults:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L856-L926):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl.clj#L856-L926):
 
 ```clj
 (defn repl
@@ -106,11 +106,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:856-926](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L856-L926)</ins>
+            └── <ins>[repl.clj:856-926](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl.clj#L856-L926)</ins>
 </pre>
 
 -->
@@ -158,7 +158,7 @@ The API data for this symbol:
  :source {:code "(defn repl\n  [repl-env & opts]\n  (assert (even? (count opts))\n    \"Arguments after repl-env must be interleaved key value pairs\")\n  (repl* repl-env (apply hash-map opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/clj/cljs/repl.clj",
           :lines [856 926]},
  :full-name "cljs.repl/repl",

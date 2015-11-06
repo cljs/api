@@ -28,7 +28,7 @@ file (.cljs or .cljc).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L203-L215):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl.clj#L203-L215):
 
 ```clj
 (defn ^File js-src->cljs-src
@@ -48,11 +48,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── clj
         └── cljs
-            └── <ins>[repl.clj:203-215](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/repl.clj#L203-L215)</ins>
+            └── <ins>[repl.clj:203-215](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/repl.clj#L203-L215)</ins>
 </pre>
 
 -->
@@ -101,7 +101,7 @@ The API data for this symbol:
  :source {:code "(defn ^File js-src->cljs-src\n  [f]\n  (let [f (io/file f)\n        dir (.getParentFile f)\n        base-name (string/replace (.getName f) \".js\" \"\")\n        cljsf (io/file dir (str base-name \".cljs\"))]\n    (if (.exists cljsf)\n      cljsf\n      (let [cljcf (io/file dir (str base-name \".cljc\"))]\n        (if (.exists cljcf)\n          cljcf)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/clj/cljs/repl.clj",
           :lines [203 215]},
  :full-name "cljs.repl/js-src->cljs-src",

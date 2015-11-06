@@ -77,7 +77,7 @@ will be defined, taking positional parameters for the fields
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L1024-L1091):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L1024-L1091):
 
 ```clj
 (defmacro deftype
@@ -106,11 +106,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:1024-1091](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L1024-L1091)</ins>
+            └── <ins>[core.clj:1024-1091](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L1024-L1091)</ins>
 </pre>
 
 -->
@@ -161,7 +161,7 @@ The API data for this symbol:
  :source {:code "(defmacro deftype\n  [t fields & impls]\n  (validate-fields \"deftype\" t fields)\n  (let [env &env\n        r (:name (cljs.analyzer/resolve-var (dissoc env :locals) t))\n        [fpps pmasks] (prepare-protocol-masks env impls)\n        protocols (collect-protocols impls env)\n        t (vary-meta t assoc\n            :protocols protocols\n            :skip-protocol-flag fpps) ]\n    `(do\n       (deftype* ~t ~fields ~pmasks\n         ~(if (seq impls)\n            `(extend-type ~t ~@(dt->et t impls fields))))\n       (set! (.-cljs$lang$type ~t) true)\n       (set! (.-cljs$lang$ctorStr ~t) ~(core/str r))\n       (set! (.-cljs$lang$ctorPrWriter ~t) (fn [this# writer# opt#] (-write writer# ~(core/str r))))\n\n       ~(build-positional-factory t r fields)\n       ~t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/clj/cljs/core.clj",
           :lines [1024 1091]},
  :full-name "cljs.core/deftype",

@@ -73,7 +73,7 @@ Same as (def name (fn [params* ] exprs*)) or (def
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L2186-L2242):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L2186-L2242):
 
 ```clj
 (def
@@ -139,11 +139,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3190/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3190
+clojurescript @ r3191
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:2186-2242](https://github.com/clojure/clojurescript/blob/r3190/src/clj/cljs/core.clj#L2186-L2242)</ins>
+            └── <ins>[core.clj:2186-2242](https://github.com/clojure/clojurescript/blob/r3191/src/clj/cljs/core.clj#L2186-L2242)</ins>
 </pre>
 
 -->
@@ -200,7 +200,7 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:doc \"Same as (def name (fn [params* ] exprs*)) or (def\n    name (fn ([params* ] exprs*)+)) with any doc-string or attrs added\n    to the var metadata. prepost-map defines a map with optional keys\n    :pre and :post that contain collections of pre or post conditions.\"\n    :arglists '([name doc-string? attr-map? [params*] prepost-map? body]\n                 [name doc-string? attr-map? ([params*] prepost-map? body)+ attr-map?])}\n  defn (fn defn [&form &env name & fdecl]\n         ;; Note: Cannot delegate this check to def because of the call to (with-meta name ..)\n         (if (core/instance? clojure.lang.Symbol name)\n           nil\n           (throw (IllegalArgumentException. \"First argument to defn must be a symbol\")))\n         (core/let [m (if (core/string? (first fdecl))\n                        {:doc (first fdecl)}\n                        {})\n                    fdecl (if (core/string? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    m (if (map? (first fdecl))\n                        (conj m (first fdecl))\n                        m)\n                    fdecl (if (map? (first fdecl))\n                            (next fdecl)\n                            fdecl)\n                    fdecl (if (vector? (first fdecl))\n                            (core/list fdecl)\n                            fdecl)\n                    m (if (map? (last fdecl))\n                        (conj m (last fdecl))\n                        m)\n                    fdecl (if (map? (last fdecl))\n                            (butlast fdecl)\n                            fdecl)\n                    m (conj {:arglists (core/list 'quote (sigs fdecl))} m)\n                    m (core/let [inline (:inline m)\n                                 ifn (first inline)\n                                 iname (second inline)]\n                        ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)\n                        (if (if (clojure.lang.Util/equiv 'fn ifn)\n                              (if (core/instance? clojure.lang.Symbol iname) false true))\n                          ;; inserts the same fn name to the inline fn if it does not have one\n                          (assoc m :inline (cons ifn (cons (clojure.lang.Symbol/intern (.concat (.getName ^clojure.lang.Symbol name) \"__inliner\"))\n                                                       (next inline))))\n                          m))\n                    m (conj (if (meta name) (meta name) {}) m)]\n           (cond\n             (multi-arity-fn? fdecl)\n             (multi-arity-fn name m fdecl)\n\n             (variadic-fn? fdecl)\n             (variadic-fn name m fdecl)\n\n             :else\n             (core/list 'def (with-meta name m)\n              ;;todo - restore propagation of fn name\n              ;;must figure out how to convey primitive hints to self calls first\n              (cons `fn fdecl))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r3190",
+          :tag "r3191",
           :filename "src/clj/cljs/core.clj",
           :lines [2186 2242]},
  :full-name "cljs.core/defn",
