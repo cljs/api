@@ -35,7 +35,7 @@ Returns true if `n` is a number, false otherwise.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L678-L679):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679):
 
 ```clj
 (defn number? [n]
@@ -46,11 +46,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L678-L679)</ins>
+            └── <ins>[core.cljs:678-679](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L678-L679)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn number? [n]\n  (goog/isNumber n))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [678 679]},
  :full-name "cljs.core/number?",

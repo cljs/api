@@ -46,7 +46,7 @@ Returns a new JavaScript object using the supplied mappings.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L626-L627):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L626-L627):
 
 ```clj
 (defn js-obj []
@@ -57,11 +57,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:626-627](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L626-L627)</ins>
+            └── <ins>[core.cljs:626-627](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L626-L627)</ins>
 </pre>
 
 -->
@@ -111,7 +111,7 @@ The API data for this symbol:
  :source {:code "(defn js-obj []\n  (js* \"{}\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [626 627]},
  :examples [{:id "657cd7",

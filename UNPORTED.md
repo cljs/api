@@ -699,19 +699,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/print-str](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/print-str)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/printf](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/printf)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/println-str](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/println-str)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/prn-str](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/prn-str)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

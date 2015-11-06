@@ -65,7 +65,7 @@ items, returns val and f is not called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L772-L785):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L772-L785):
 
 ```clj
 (defn reduce
@@ -79,11 +79,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:772-785](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L772-L785)</ins>
+            └── <ins>[core.cljs:772-785](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L772-L785)</ins>
 </pre>
 
 -->
@@ -138,7 +138,7 @@ The API data for this symbol:
  :source {:code "(defn reduce\n  ([f coll]\n     (-reduce coll f))\n  ([f val coll]\n     (-reduce coll f val)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [772 785]},
  :full-name "cljs.core/reduce",

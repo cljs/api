@@ -40,7 +40,7 @@ Returns a seq of the items in coll in reverse order. Not lazy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1193-L1196):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1193-L1196):
 
 ```clj
 (defn reverse
@@ -52,11 +52,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1193-1196](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1193-L1196)</ins>
+            └── <ins>[core.cljs:1193-1196](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1193-L1196)</ins>
 </pre>
 
 -->
@@ -109,7 +109,7 @@ The API data for this symbol:
  :source {:code "(defn reverse\n  [coll]\n  (reduce conj () coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1193 1196]},
  :full-name "cljs.core/reverse",

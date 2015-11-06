@@ -51,7 +51,7 @@ side-effects.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1590-L1602):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1590-L1602):
 
 ```clj
 (defn keep-indexed
@@ -70,11 +70,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:1590-1602](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L1590-L1602)</ins>
+            └── <ins>[core.cljs:1590-1602](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L1590-L1602)</ins>
 </pre>
 
 -->
@@ -127,7 +127,7 @@ The API data for this symbol:
  :source {:code "(defn keep-indexed\n  ([f coll]\n     (let [keepi (fn kpi [idx coll]\n                   (lazy-seq\n                    (when-let [s (seq coll)]\n                      (let [x (f idx (first s))]\n                        (if (nil? x)\n                          (kpi (inc idx) (rest s))\n                          (cons x (kpi (inc idx) (rest s))))))))]\n       (keepi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1590 1602]},
  :full-name "cljs.core/keep-indexed",

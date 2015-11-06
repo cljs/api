@@ -28,30 +28,23 @@ options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3061-L3072):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3071-L3075):
 
 ```clj
 (defn pr-str-with-opts
   [objs opts]
-  (let [first-obj (first objs)
-        sb (gstring/StringBuffer.)]
-    (doseq [obj objs]
-      (when-not (identical? obj first-obj)
-        (.append sb " "))
-      (doseq [string (pr-seq obj opts)]
-        (.append sb string)))
-    (str sb)))
+  (str (pr-sb objs opts)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:3061-3072](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3061-L3072)</ins>
+            └── <ins>[core.cljs:3071-3075](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L3071-L3075)</ins>
 </pre>
 
 -->
@@ -96,12 +89,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/pr-str-with-opts",
- :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (let [first-obj (first objs)\n        sb (gstring/StringBuffer.)]\n    (doseq [obj objs]\n      (when-not (identical? obj first-obj)\n        (.append sb \" \"))\n      (doseq [string (pr-seq obj opts)]\n        (.append sb string)))\n    (str sb)))",
+ :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (str (pr-sb objs opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
-          :lines [3061 3072]},
+          :lines [3071 3075]},
  :full-name "cljs.core/pr-str-with-opts",
  :docstring "Prints a sequence of objects to a string, observing all the\noptions given in opts"}
 

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L57-L66):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/rhino.clj#L57-L66):
 
 ```clj
 (defn rhino-eval
@@ -41,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
             └── repl
-                └── <ins>[rhino.clj:57-66](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/repl/rhino.clj#L57-L66)</ins>
+                └── <ins>[rhino.clj:57-66](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/repl/rhino.clj#L57-L66)</ins>
 </pre>
 
 -->
@@ -92,7 +92,7 @@ The API data for this symbol:
  :source {:code "(defn rhino-eval\n  [repl-env filename line js]\n  (try\n    (let [linenum (or line Integer/MIN_VALUE)]\n      {:status :success\n       :value (eval-result (-eval js repl-env filename linenum))})\n    (catch Throwable ex\n      {:status :exception\n       :value (.toString ex)\n       :stacktrace (stacktrace ex)})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [57 66]},
  :full-name "cljs.repl.rhino/rhino-eval",

@@ -133,7 +133,7 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L206-L212):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212):
 
 ```clj
 (defn =
@@ -145,11 +145,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L206-L212)</ins>
+            └── <ins>[core.cljs:206-212](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L206-L212)</ins>
 </pre>
 
 -->
@@ -202,7 +202,7 @@ The API data for this symbol:
  :source {:code "(defn =\n  [x y]\n  (-equiv x y))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [206 212]},
  :examples [{:id "edffb6",

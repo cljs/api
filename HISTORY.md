@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[0.0-1011](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1011)__</td>
+<td>2012-04-02</td>
+<td><kbd>1.3.0</kbd></td>
+<td></td>
+<td><kbd>20110323-r790</kbd></td>
+<td>
+<a href="#user-content-001011syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-001011library">
++4 
+</a>
+</td>
+<td>
+<a href="#user-content-001011compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[0.0-1006](https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1006)__</td>
 <td>2012-03-30</td>
 <td><kbd>1.3.0</kbd></td>
@@ -107,6 +130,47 @@
 </td>
 </tr>
 
+</table>
+
+### 0.0-1011
+
+<a name="001011syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="001011library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/print-str](refs/cljs.core/print-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/println-str](refs/cljs.core/println-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/prn-str](refs/cljs.core/prn-str.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.core/prn-str-with-opts](refs/cljs.core/prn-str-with-opts.md)</samp></td>
+</tr>
+</table>
+
+<a name="001011compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 0.0-1006
@@ -1384,7 +1448,7 @@
 </tr>
 <tr>
 <td>
-<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/+-macro-brightgreen.svg">
 </td>
 <td><samp>[cljs.core/delay](refs/cljs.core/delay.md)</samp></td>
 </tr>

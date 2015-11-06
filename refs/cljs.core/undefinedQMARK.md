@@ -22,7 +22,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L649-L650):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L649-L650):
 
 ```clj
 (defn undefined? [x]
@@ -33,18 +33,18 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:649-650](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L649-L650)</ins>
+            └── <ins>[core.cljs:649-650](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L649-L650)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L54-L55):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L54-L55):
 
 ```clj
 (defmacro undefined? [x]
@@ -55,11 +55,11 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cl
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── clj
         └── cljs
-            └── <ins>[core.clj:54-55](https://github.com/clojure/clojurescript/blob/r1006/src/clj/cljs/core.clj#L54-L55)</ins>
+            └── <ins>[core.clj:54-55](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L54-L55)</ins>
 </pre>
 -->
 
@@ -105,13 +105,13 @@ The API data for this symbol:
  :source {:code "(defn undefined? [x]\n  (cljs.core/undefined? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [649 650]},
  :extra-sources [{:code "(defmacro undefined? [x]\n  (list 'js* \"(void 0 === ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1006",
+                  :tag "r1011",
                   :filename "src/clj/cljs/core.clj",
                   :lines [54 55]}],
  :full-name "cljs.core/undefined?"}

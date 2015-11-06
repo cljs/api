@@ -4,7 +4,7 @@
 
  <table border="1">
 <tr>
-<td>function</td>
+<td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
 [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/delay</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/delay)
@@ -23,33 +23,28 @@
 
 
 
-Source docstring:
-
-```
-Takes a body of expressions and yields a Delay object that will
-invoke the body only the first time it is forced (with force or deref/@), and
-will cache the result and return it on all subsequent force
-calls.
-```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3388-L3394):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L437-L442):
 
 ```clj
-(defn delay
-  [& body]
-  (Delay. (fn [] (apply identity body)) (atom nil)))
+(defmacro delay [& body]
+  "Takes a body of expressions and yields a Delay object that will
+  invoke the body only the first time it is forced (with force or deref/@), and
+  will cache the result and return it on all subsequent force
+  calls."
+  `(new cljs.core.Delay (atom {:done false, :value nil}) (fn [] ~@body)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
-    └── cljs
+    └── clj
         └── cljs
-            └── <ins>[core.cljs:3388-3394](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L3388-L3394)</ins>
+            └── <ins>[core.clj:437-442](https://github.com/clojure/clojurescript/blob/r1011/src/clj/cljs/core.clj#L437-L442)</ins>
 </pre>
 
 -->
@@ -63,7 +58,7 @@ clojurescript @ r1006
 [`clojure.core/delay` @ clojuredocs](http://clojuredocs.org/clojure.core/delay)<br>
 [`clojure.core/delay` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/delay/)<br>
 [`clojure.core/delay` @ crossclj](http://crossclj.info/fun/clojure.core/delay.html)<br>
-[`cljs.core/delay` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/delay.html)<br>
+[`cljs.core/delay` @ crossclj](http://crossclj.info/fun/cljs.core/delay.html)<br>
 
 ---
 
@@ -95,17 +90,16 @@ The API data for this symbol:
  :name "delay",
  :signature ["[& body]"],
  :history [["+" "0.0-927"]],
- :type "function",
+ :type "macro",
  :full-name-encode "cljs.core/delay",
- :source {:code "(defn delay\n  [& body]\n  (Delay. (fn [] (apply identity body)) (atom nil)))",
+ :source {:code "(defmacro delay [& body]\n  \"Takes a body of expressions and yields a Delay object that will\n  invoke the body only the first time it is forced (with force or deref/@), and\n  will cache the result and return it on all subsequent force\n  calls.\"\n  `(new cljs.core.Delay (atom {:done false, :value nil}) (fn [] ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
-          :filename "src/cljs/cljs/core.cljs",
-          :lines [3388 3394]},
+          :tag "r1011",
+          :filename "src/clj/cljs/core.clj",
+          :lines [437 442]},
  :full-name "cljs.core/delay",
- :clj-symbol "clojure.core/delay",
- :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}
+ :clj-symbol "clojure.core/delay"}
 
 ```
 

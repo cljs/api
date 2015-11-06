@@ -62,7 +62,7 @@ Returns the number of items in the collection. (count nil) returns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L495-L499):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L495-L499):
 
 ```clj
 (defn count
@@ -74,11 +74,11 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1006/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1006
+clojurescript @ r1011
 └── src
     └── cljs
         └── cljs
-            └── <ins>[core.cljs:495-499](https://github.com/clojure/clojurescript/blob/r1006/src/cljs/cljs/core.cljs#L495-L499)</ins>
+            └── <ins>[core.cljs:495-499](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L495-L499)</ins>
 </pre>
 
 -->
@@ -130,7 +130,7 @@ The API data for this symbol:
  :source {:code "(defn count\n  [coll]\n  (-count coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1006",
+          :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [495 499]},
  :examples [{:id "96e470",
