@@ -27,7 +27,7 @@ True if s ends with substr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/string.cljs#L250-L253):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L250-L253):
 
 ```clj
 (defn ^boolean ends-with?
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:250-253](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/string.cljs#L250-L253)</ins>
+                └── <ins>[string.cljs:250-253](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L250-L253)</ins>
 </pre>
 
 -->
@@ -93,7 +93,7 @@ The API data for this symbol:
  :source {:code "(defn ^boolean ends-with?\n  [s substr]\n  (gstring/endsWith s substr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [250 253]},
  :full-name "clojure.string/ends-with?",

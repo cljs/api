@@ -31,7 +31,7 @@ accepts a filename argument which will be used in any emitted errors.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/analyzer/api.clj#L88-L92):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L88-L92):
 
 ```clj
 (defn forms-seq
@@ -43,13 +43,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:88-92](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/analyzer/api.clj#L88-L92)</ins>
+                    └── <ins>[api.clj:88-92](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L88-L92)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn forms-seq\n  ([rdr] (ana/forms-seq* rdr nil))\n  ([rdr filename] (ana/forms-seq* rdr filename)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [88 92]},
  :full-name "cljs.analyzer.api/forms-seq",

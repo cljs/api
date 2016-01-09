@@ -25,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10109-L10127):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L10108-L10126):
 
 ```clj
 (deftype Namespace [obj name]
@@ -53,12 +53,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10109-10127](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10109-L10127)</ins>
+                └── <ins>[core.cljs:10108-10126](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L10108-L10126)</ins>
 </pre>
 
 -->
@@ -109,9 +109,9 @@ The API data for this symbol:
  :source {:code "(deftype Namespace [obj name]\n  Object\n  (findInternedVar [this sym]\n    (let [k (munge (str sym))]\n      (when ^boolean (gobject/containsKey obj k)\n        (let [var-sym (symbol (str name) (str sym))\n              var-meta {:ns this}]\n          (Var. (ns-lookup obj k) var-sym var-meta)))))\n  (getName [_] name)\n  (toString [_]\n    (str name))\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Namespace other)\n      (= name (.-name other))\n      false))\n  IHash\n  (-hash [_]\n    (hash name)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10109 10127]},
+          :lines [10108 10126]},
  :full-name "cljs.core/Namespace",
  :clj-symbol "clojure.lang/Namespace"}
 

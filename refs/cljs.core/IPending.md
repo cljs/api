@@ -22,30 +22,30 @@ Source docstring:
 
 ```
 Protocol for types which can have a deferred realization. Currently only
-  implemented by Delay.
+  implemented by Delay and LazySeq.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L648-L652):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L651-L655):
 
 ```clj
 (defprotocol IPending
   "Protocol for types which can have a deferred realization. Currently only
-  implemented by Delay."
-  (^boolean -realized? [d]
-    "Returns true if a value for d has been produced, false otherwise."))
+  implemented by Delay and LazySeq."
+  (^boolean -realized? [x]
+    "Returns true if a value for x has been produced, false otherwise."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:648-652](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L648-L652)</ins>
+                └── <ins>[core.cljs:651-655](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L651-L655)</ins>
 </pre>
 
 -->
@@ -92,18 +92,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IPending",
- :source {:code "(defprotocol IPending\n  \"Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay.\"\n  (^boolean -realized? [d]\n    \"Returns true if a value for d has been produced, false otherwise.\"))",
+ :source {:code "(defprotocol IPending\n  \"Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay and LazySeq.\"\n  (^boolean -realized? [x]\n    \"Returns true if a value for x has been produced, false otherwise.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [648 652]},
+          :lines [651 655]},
  :methods [{:name "-realized?",
-            :signature ["[d]"],
-            :docstring "Returns true if a value for d has been produced, false otherwise."}],
+            :signature ["[x]"],
+            :docstring "Returns true if a value for x has been produced, false otherwise."}],
  :full-name "cljs.core/IPending",
  :clj-symbol "clojure.lang/IPending",
- :docstring "Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay."}
+ :docstring "Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay and LazySeq."}
 
 ```
 

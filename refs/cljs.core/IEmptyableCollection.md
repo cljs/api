@@ -22,26 +22,26 @@ Protocol for creating an empty collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L462-L466):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L465-L469):
 
 ```clj
 (defprotocol IEmptyableCollection
   "Protocol for creating an empty collection."
   (-empty [coll]
     "Returns an empty collection of the same category as coll. Used
-     by cljs.core/count."))
+     by cljs.core/empty."))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:462-466](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L462-L466)</ins>
+                └── <ins>[core.cljs:465-469](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L465-L469)</ins>
 </pre>
 
 -->
@@ -85,15 +85,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IEmptyableCollection",
- :source {:code "(defprotocol IEmptyableCollection\n  \"Protocol for creating an empty collection.\"\n  (-empty [coll]\n    \"Returns an empty collection of the same category as coll. Used\n     by cljs.core/count.\"))",
+ :source {:code "(defprotocol IEmptyableCollection\n  \"Protocol for creating an empty collection.\"\n  (-empty [coll]\n    \"Returns an empty collection of the same category as coll. Used\n     by cljs.core/empty.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [462 466]},
+          :lines [465 469]},
  :methods [{:name "-empty",
             :signature ["[coll]"],
-            :docstring "Returns an empty collection of the same category as coll. Used\n     by cljs.core/count."}],
+            :docstring "Returns an empty collection of the same category as coll. Used\n     by cljs.core/empty."}],
  :full-name "cljs.core/IEmptyableCollection",
  :docstring "Protocol for creating an empty collection."}
 

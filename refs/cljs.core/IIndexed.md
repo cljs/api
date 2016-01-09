@@ -21,15 +21,15 @@
 Source docstring:
 
 ```
-Protocol for collections to provide idexed-based access to their items.
+Protocol for collections to provide indexed-based access to their items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L479-L483):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L482-L486):
 
 ```clj
 (defprotocol IIndexed
-  "Protocol for collections to provide idexed-based access to their items."
+  "Protocol for collections to provide indexed-based access to their items."
   (-nth [coll n] [coll n not-found]
     "Returns the value at the index n in the collection coll.
      Returns not-found if index n is out of bounds and not-found is supplied."))
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:479-483](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L479-L483)</ins>
+                └── <ins>[core.cljs:482-486](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L482-L486)</ins>
 </pre>
 
 -->
@@ -91,18 +91,18 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IIndexed",
- :source {:code "(defprotocol IIndexed\n  \"Protocol for collections to provide idexed-based access to their items.\"\n  (-nth [coll n] [coll n not-found]\n    \"Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied.\"))",
+ :source {:code "(defprotocol IIndexed\n  \"Protocol for collections to provide indexed-based access to their items.\"\n  (-nth [coll n] [coll n not-found]\n    \"Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [479 483]},
+          :lines [482 486]},
  :methods [{:name "-nth",
             :signature ["[coll n]" "[coll n not-found]"],
             :docstring "Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied."}],
  :full-name "cljs.core/IIndexed",
  :clj-symbol "clojure.lang/Indexed",
- :docstring "Protocol for collections to provide idexed-based access to their items."}
+ :docstring "Protocol for collections to provide indexed-based access to their items."}
 
 ```
 

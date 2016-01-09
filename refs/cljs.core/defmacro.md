@@ -110,7 +110,7 @@ called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L2878-L2919):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L2882-L2923):
 
 ```clj
 (core/defn defmacro
@@ -155,12 +155,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2878-2919](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L2878-L2919)</ins>
+                └── <ins>[core.cljc:2882-2923](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L2882-L2923)</ins>
 </pre>
 
 -->
@@ -217,9 +217,9 @@ The API data for this symbol:
  :source {:code "(core/defn defmacro\n  [&form &env name & args]\n  (core/let [prefix (core/loop [p (core/list (vary-meta name assoc :macro true)) args args]\n                      (core/let [f (first args)]\n                        (if (core/string? f)\n                          (recur (cons f p) (next args))\n                          (if (map? f)\n                            (recur (cons f p) (next args))\n                            p))))\n             fdecl (core/loop [fd args]\n                     (if (core/string? (first fd))\n                       (recur (next fd))\n                       (if (map? (first fd))\n                         (recur (next fd))\n                         fd)))\n             fdecl (if (vector? (first fdecl))\n                     (core/list fdecl)\n                     fdecl)\n             add-implicit-args (core/fn [fd]\n                                 (core/let [args (first fd)]\n                                   (cons (vec (cons '&form (cons '&env args))) (next fd))))\n             add-args (core/fn [acc ds]\n                        (if (core/nil? ds)\n                          acc\n                          (core/let [d (first ds)]\n                            (if (map? d)\n                              (conj acc d)\n                              (recur (conj acc (add-implicit-args d)) (next ds))))))\n             fdecl (seq (add-args [] fdecl))\n             decl (core/loop [p prefix d fdecl]\n                    (if p\n                      (recur (next p) (cons (first p) d))\n                      d))]\n    (core/list 'do\n      (cons `defn decl)\n      (core/list 'set! `(. ~name ~'-cljs$lang$macro) true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2878 2919]},
+          :lines [2882 2923]},
  :examples [{:id "8040c8",
              :content "Here is a `str->int` macro that works for either ClojureScript compiler\nversion.  It simply expands to a `js/parseInt` call:\n\n```clj\n;; in macros.clj\n(ns foo.macros)\n\n;; expands to a runtime call\n(defmacro str->int [s]\n  `(js/parseInt s))\n```\n\nIf we want to evaluate the conversion at _compile time_ instead of expanding it\nto a runtime call, we must use reader conditionals (in a `.cljc` file) to\nchoose the function appropriate for each compiler's evaluation environment.\n\n```clj\n;; in macros.cljc\n(ns foo.macros)\n\n;; expands to the result of the conversion\n(defmacro str->int [s]\n  #?(:clj  (Integer/parseInt s)\n     :cljs (js/parseInt s)))\n```"}],
  :full-name "cljs.core/defmacro",

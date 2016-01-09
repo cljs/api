@@ -41,53 +41,53 @@ c. Returns true or false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L901-L905):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L904-L908):
 
 ```clj
 (defn ^boolean instance?
-  [t o]
-  (cljs.core/instance? t o))
+  [c x]
+  (cljs.core/instance? c x))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:901-905](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L901-L905)</ins>
+                └── <ins>[core.cljs:904-908](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L904-L908)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L922-L929):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L924-L931):
 
 ```clj
-(core/defmacro instance? [t o]
+(core/defmacro instance? [c x]
   ;; Google Closure warns about some references to RegExp, so
   ;; (instance? RegExp ...) needs to be inlined, but the expansion
   ;; should preserve the order of argument evaluation.
-  (bool-expr (if (clojure.core/symbol? t)
-               (core/list 'js* "(~{} instanceof ~{})" o t)
-               `(let [t# ~t o# ~o]
-                  (~'js* "(~{} instanceof ~{})" o# t#)))))
+  (bool-expr (if (clojure.core/symbol? c)
+               (core/list 'js* "(~{} instanceof ~{})" x c)
+               `(let [c# ~c x# ~x]
+                  (~'js* "(~{} instanceof ~{})" x# c#)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:922-929](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L922-L929)</ins>
+                └── <ins>[core.cljc:924-931](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L924-L931)</ins>
 </pre>
 -->
 
@@ -136,18 +136,18 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/type"],
  :full-name-encode "cljs.core/instanceQMARK",
- :source {:code "(defn ^boolean instance?\n  [t o]\n  (cljs.core/instance? t o))",
+ :source {:code "(defn ^boolean instance?\n  [c x]\n  (cljs.core/instance? c x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [901 905]},
- :extra-sources [{:code "(core/defmacro instance? [t o]\n  ;; Google Closure warns about some references to RegExp, so\n  ;; (instance? RegExp ...) needs to be inlined, but the expansion\n  ;; should preserve the order of argument evaluation.\n  (bool-expr (if (clojure.core/symbol? t)\n               (core/list 'js* \"(~{} instanceof ~{})\" o t)\n               `(let [t# ~t o# ~o]\n                  (~'js* \"(~{} instanceof ~{})\" o# t#)))))",
+          :lines [904 908]},
+ :extra-sources [{:code "(core/defmacro instance? [c x]\n  ;; Google Closure warns about some references to RegExp, so\n  ;; (instance? RegExp ...) needs to be inlined, but the expansion\n  ;; should preserve the order of argument evaluation.\n  (bool-expr (if (clojure.core/symbol? c)\n               (core/list 'js* \"(~{} instanceof ~{})\" x c)\n               `(let [c# ~c x# ~x]\n                  (~'js* \"(~{} instanceof ~{})\" x# c#)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.189",
+                  :tag "r1.7.228",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [922 929]}],
+                  :lines [924 931]}],
  :full-name "cljs.core/instance?",
  :clj-symbol "clojure.core/instance?",
  :docstring "Evaluates x and tests if it is an instance of the type\nc. Returns true or false"}

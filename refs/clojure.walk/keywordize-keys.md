@@ -30,7 +30,7 @@ Recursively transforms all map keys from strings to keywords.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/walk.cljs#L66-L72):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/walk.cljs#L66-L72):
 
 ```clj
 (defn keywordize-keys
@@ -44,12 +44,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[walk.cljs:66-72](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/walk.cljs#L66-L72)</ins>
+                └── <ins>[walk.cljs:66-72](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/walk.cljs#L66-L72)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn keywordize-keys\n  [m]\n  (let [f (fn [[k v]] (if (string? k) [(keyword k) v] [k v]))]\n    ;; only apply to maps\n    (postwalk (fn [x] (if (map? x) (into {} (map f x)) x)) m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/clojure/walk.cljs",
           :lines [66 72]},
  :full-name "clojure.walk/keywordize-keys",

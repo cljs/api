@@ -30,7 +30,7 @@ Return the compiler options from compiler state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/analyzer/api.clj#L55-L59):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L55-L59):
 
 ```clj
 (defn get-options
@@ -43,13 +43,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:55-59](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/analyzer/api.clj#L55-L59)</ins>
+                    └── <ins>[api.clj:55-59](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L55-L59)</ins>
 </pre>
 
 -->
@@ -97,7 +97,7 @@ The API data for this symbol:
  :source {:code "(defn get-options\n  ([] (get-options env/*compiler*))\n  ([state]\n   (get @state :options)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [55 59]},
  :full-name "cljs.analyzer.api/get-options",

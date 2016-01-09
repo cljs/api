@@ -30,10 +30,10 @@ Returns true if v is of type cljs.core.Var
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L1043-L1046):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1046-L1049):
 
 ```clj
-(defn var?
+(defn ^boolean var?
   [v]
   (instance? cljs.core.Var v))
 ```
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1043-1046](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L1043-L1046)</ins>
+                └── <ins>[core.cljs:1046-1049](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1046-L1049)</ins>
 </pre>
 
 -->
@@ -89,18 +89,19 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "var?",
  :signature ["[v]"],
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.core/varQMARK",
- :source {:code "(defn var?\n  [v]\n  (instance? cljs.core.Var v))",
+ :source {:code "(defn ^boolean var?\n  [v]\n  (instance? cljs.core.Var v))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1043 1046]},
+          :lines [1046 1049]},
  :full-name "cljs.core/var?",
  :clj-symbol "clojure.core/var?",
  :docstring "Returns true if v is of type cljs.core.Var"}

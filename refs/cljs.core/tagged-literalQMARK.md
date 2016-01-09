@@ -30,10 +30,10 @@ Return true if the value is the data representation of a tagged literal
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10003-L10006):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L10002-L10005):
 
 ```clj
-(defn tagged-literal?
+(defn ^boolean tagged-literal?
   [value]
   (instance? TaggedLiteral value))
 ```
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10003-10006](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10003-L10006)</ins>
+                └── <ins>[core.cljs:10002-10005](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L10002-L10005)</ins>
 </pre>
 
 -->
@@ -89,18 +89,19 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "tagged-literal?",
  :signature ["[value]"],
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.core/tagged-literalQMARK",
- :source {:code "(defn tagged-literal?\n  [value]\n  (instance? TaggedLiteral value))",
+ :source {:code "(defn ^boolean tagged-literal?\n  [value]\n  (instance? TaggedLiteral value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10003 10006]},
+          :lines [10002 10005]},
  :full-name "cljs.core/tagged-literal?",
  :clj-symbol "clojure.core/tagged-literal?",
  :docstring "Return true if the value is the data representation of a tagged literal"}

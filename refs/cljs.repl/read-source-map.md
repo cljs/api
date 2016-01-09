@@ -27,7 +27,7 @@ Return the source map for the JavaScript source file.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/repl.cljc#L223-L241):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L224-L242):
 
 ```clj
 (defn read-source-map
@@ -54,12 +54,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:223-241](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/repl.cljc#L223-L241)</ins>
+                └── <ins>[repl.cljc:224-242](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L224-L242)</ins>
 </pre>
 
 -->
@@ -107,9 +107,9 @@ The API data for this symbol:
  :source {:code "(defn read-source-map\n  [f]\n  (when-let [smf (util/file-or-resource (str f \".map\"))]\n    (let [ns (if (= f \"cljs/core.aot.js\")\n               'cljs.core\n               (some-> (js-src->cljs-src f) ana/parse-ns :ns))]\n      (when ns\n        (as-> @env/*compiler* compiler-env\n          (let [t (util/last-modified smf)]\n            (if (or (and (= ns 'cljs.core)\n                         (nil? (get-in compiler-env [::source-maps ns])))\n                    (and (not= ns 'cljs.core)\n                         (> t (get-in compiler-env [::source-maps ns :last-modified] 0))))\n              (swap! env/*compiler* assoc-in [::source-maps ns]\n                {:last-modified t\n                 :source-map (sm/decode (json/read-str (slurp smf) :key-fn keyword))})\n              compiler-env))\n          (get-in compiler-env [::source-maps ns :source-map]))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [223 241]},
+          :lines [224 242]},
  :full-name "cljs.repl/read-source-map",
  :docstring "Return the source map for the JavaScript source file."}
 

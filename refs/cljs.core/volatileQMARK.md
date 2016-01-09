@@ -35,10 +35,10 @@ Returns true if x is a volatile.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L4066-L4068):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L4073-L4075):
 
 ```clj
-(defn volatile?
+(defn ^boolean volatile?
   [x] (instance? Volatile x))
 ```
 
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:4066-4068](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L4066-L4068)</ins>
+                └── <ins>[core.cljs:4073-4075](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L4073-L4075)</ins>
 </pre>
 
 -->
@@ -93,19 +93,20 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "volatile?",
  :signature ["[x]"],
  :history [["+" "0.0-2496"]],
  :type "function",
  :related ["cljs.core/volatile!"],
  :full-name-encode "cljs.core/volatileQMARK",
- :source {:code "(defn volatile?\n  [x] (instance? Volatile x))",
+ :source {:code "(defn ^boolean volatile?\n  [x] (instance? Volatile x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4066 4068]},
+          :lines [4073 4075]},
  :full-name "cljs.core/volatile?",
  :clj-symbol "clojure.core/volatile?",
  :docstring "Returns true if x is a volatile."}

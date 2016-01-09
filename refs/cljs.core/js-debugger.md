@@ -45,28 +45,30 @@ open.  Equivalent to `debugger;` in JavaScript.
 Source docstring:
 
 ```
-Emit JavaScript "debugger;" statement.
+Emit JavaScript "debugger;" statement
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L866-L869):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L866-L871):
 
 ```clj
 (core/defmacro js-debugger
   []
-  (core/list 'js* "debugger;"))
+  (core/list 'do
+             (core/list 'js* "debugger")
+             nil))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:866-869](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L866-L869)</ins>
+                └── <ins>[core.cljc:866-871](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L866-L871)</ins>
 </pre>
 
 -->
@@ -112,16 +114,16 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.core/js-debugger",
- :source {:code "(core/defmacro js-debugger\n  []\n  (core/list 'js* \"debugger;\"))",
+ :source {:code "(core/defmacro js-debugger\n  []\n  (core/list 'do\n             (core/list 'js* \"debugger\")\n             nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [866 869]},
+          :lines [866 871]},
  :examples [{:id "87f2fa",
              :content "```clj\n(defn foo []\n  (println \"HI\")\n  (js-debugger)\n  (println \"WORLD\"))\n\n(foo)\n;; will print \"HI\" then pause JS inside this function\n;; if browser devtools are open.\n```"}],
  :full-name "cljs.core/js-debugger",
- :docstring "Emit JavaScript \"debugger;\" statement."}
+ :docstring "Emit JavaScript \"debugger;\" statement"}
 
 ```
 

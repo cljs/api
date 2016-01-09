@@ -21,22 +21,28 @@
 Source docstring:
 
 ```
-When set to logical true, objects will be printed in a way that preserves
-their type when read in later.
-
-Defaults to false.
+*print-length* controls how many items of each collection the
+printer will print. If it is bound to logical false, there is no
+limit. Otherwise, it must be bound to an integer indicating the maximum
+number of items of each collection to print. If a collection contains
+more items, the printer will print items up to the limit followed by
+'...' to represent the remaining items. The root binding is nil
+indicating no limit.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L105-L112):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L105-L115):
 
 ```clj
 (def
   ^{:dynamic true
-    :doc "When set to logical true, objects will be printed in a way that preserves
-  their type when read in later.
-
-  Defaults to false."
+    :doc "*print-length* controls how many items of each collection the
+  printer will print. If it is bound to logical false, there is no
+  limit. Otherwise, it must be bound to an integer indicating the maximum
+  number of items of each collection to print. If a collection contains
+  more items, the printer will print items up to the limit followed by
+  '...' to represent the remaining items. The root binding is nil
+  indicating no limit."
     :jsdoc ["@type {null|number}"]}
   *print-length* nil)
 ```
@@ -45,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:105-112](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L105-L112)</ins>
+                └── <ins>[core.cljs:105-115](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L105-L115)</ins>
 </pre>
 
 -->
@@ -97,15 +103,15 @@ The API data for this symbol:
  :history [["+" "0.0-2060"]],
  :type "dynamic var",
  :full-name-encode "cljs.core/STARprint-lengthSTAR",
- :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical true, objects will be printed in a way that preserves\n  their type when read in later.\n\n  Defaults to false.\"\n    :jsdoc [\"@type {null|number}\"]}\n  *print-length* nil)",
+ :source {:code "(def\n  ^{:dynamic true\n    :doc \"*print-length* controls how many items of each collection the\n  printer will print. If it is bound to logical false, there is no\n  limit. Otherwise, it must be bound to an integer indicating the maximum\n  number of items of each collection to print. If a collection contains\n  more items, the printer will print items up to the limit followed by\n  '...' to represent the remaining items. The root binding is nil\n  indicating no limit.\"\n    :jsdoc [\"@type {null|number}\"]}\n  *print-length* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [105 112]},
+          :lines [105 115]},
  :full-name "cljs.core/*print-length*",
  :clj-symbol "clojure.core/*print-length*",
- :docstring "When set to logical true, objects will be printed in a way that preserves\ntheir type when read in later.\n\nDefaults to false."}
+ :docstring "*print-length* controls how many items of each collection the\nprinter will print. If it is bound to logical false, there is no\nlimit. Otherwise, it must be bound to an integer indicating the maximum\nnumber of items of each collection to print. If a collection contains\nmore items, the printer will print items up to the limit followed by\n'...' to represent the remaining items. The root binding is nil\nindicating no limit."}
 
 ```
 

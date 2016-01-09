@@ -27,10 +27,10 @@ Return true if x implements ICloneable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L1062-L1065):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1065-L1068):
 
 ```clj
-(defn cloneable?
+(defn ^boolean cloneable?
   [value]
   (satisfies? ICloneable value))
 ```
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1062-1065](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L1062-L1065)</ins>
+                └── <ins>[core.cljs:1065-1068](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1065-L1068)</ins>
 </pre>
 
 -->
@@ -83,18 +83,19 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.core",
+{:return-type boolean,
+ :ns "cljs.core",
  :name "cloneable?",
  :signature ["[value]"],
  :history [["+" "0.0-2156"]],
  :type "function",
  :full-name-encode "cljs.core/cloneableQMARK",
- :source {:code "(defn cloneable?\n  [value]\n  (satisfies? ICloneable value))",
+ :source {:code "(defn ^boolean cloneable?\n  [value]\n  (satisfies? ICloneable value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1062 1065]},
+          :lines [1065 1068]},
  :full-name "cljs.core/cloneable?",
  :docstring "Return true if x implements ICloneable protocol."}
 

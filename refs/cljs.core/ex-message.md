@@ -23,13 +23,12 @@
 Source docstring:
 
 ```
-Alpha - subject to change.
 Returns the message attached to the given Error / ExceptionInfo object.
 For non-Errors returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L9934-L9940):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L9935-L9940):
 
 ```clj
 (defn ex-message
@@ -42,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:9934-9940](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L9934-L9940)</ins>
+                └── <ins>[core.cljs:9935-9940](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L9935-L9940)</ins>
 </pre>
 
 -->
@@ -95,11 +94,11 @@ The API data for this symbol:
  :source {:code "(defn ex-message\n  [ex]\n  (when (instance? js/Error ex)\n    (.-message ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9934 9940]},
+          :lines [9935 9940]},
  :full-name "cljs.core/ex-message",
- :docstring "Alpha - subject to change.\nReturns the message attached to the given Error / ExceptionInfo object.\nFor non-Errors returns nil."}
+ :docstring "Returns the message attached to the given Error / ExceptionInfo object.\nFor non-Errors returns nil."}
 
 ```
 

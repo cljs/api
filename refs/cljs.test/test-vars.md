@@ -32,7 +32,7 @@ testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/test.cljs#L576-L583):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/test.cljs#L576-L583):
 
 ```clj
 (defn test-vars
@@ -46,12 +46,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.cljs:576-583](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/test.cljs#L576-L583)</ins>
+                └── <ins>[test.cljs:576-583](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/test.cljs#L576-L583)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn test-vars\n  [vars]\n  (run-block (concat (test-vars-block vars)\n                     [(fn []\n                        (report {:type :end-test-vars :vars vars}))])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [576 583]},
  :full-name "cljs.test/test-vars",

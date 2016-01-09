@@ -34,7 +34,7 @@ the goog.require statement for it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L95-L108):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/build/api.clj#L95-L108):
 
 ```clj
 (defn ^String src-file->goog-require
@@ -55,13 +55,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:95-108](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L95-L108)</ins>
+                    └── <ins>[api.clj:95-108](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/build/api.clj#L95-L108)</ins>
 </pre>
 
 -->
@@ -110,7 +110,7 @@ The API data for this symbol:
  :source {:code "(defn ^String src-file->goog-require\n  ([src] (src-file->goog-require src nil))\n  ([src options]\n   (src-file->goog-require\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     src options))\n  ([state src options]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers options ana/*cljs-warning-handlers*)]\n       (closure/src-file->goog-require src options)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [95 108]},
  :full-name "cljs.build.api/src-file->goog-require",

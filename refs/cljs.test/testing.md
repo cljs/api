@@ -31,28 +31,29 @@ but must occur inside a test function (deftest).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/test.clj#L191-L199):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/test.clj#L191-L200):
 
 ```clj
 (defmacro testing
   ([string & body]
    `(do
       (cljs.test/update-current-env! [:testing-contexts] conj ~string)
-      (let [ret# (do ~@body)]
-        (cljs.test/update-current-env! [:testing-contexts] rest)
-        ret#))))
+      (try
+        ~@body
+        (finally
+          (cljs.test/update-current-env! [:testing-contexts] rest))))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[test.clj:191-199](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/test.clj#L191-L199)</ins>
+                └── <ins>[test.clj:191-200](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/test.clj#L191-L200)</ins>
 </pre>
 
 -->
@@ -100,12 +101,12 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "macro",
  :full-name-encode "cljs.test/testing",
- :source {:code "(defmacro testing\n  ([string & body]\n   `(do\n      (cljs.test/update-current-env! [:testing-contexts] conj ~string)\n      (let [ret# (do ~@body)]\n        (cljs.test/update-current-env! [:testing-contexts] rest)\n        ret#))))",
+ :source {:code "(defmacro testing\n  ([string & body]\n   `(do\n      (cljs.test/update-current-env! [:testing-contexts] conj ~string)\n      (try\n        ~@body\n        (finally\n          (cljs.test/update-current-env! [:testing-contexts] rest))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [191 199]},
+          :lines [191 200]},
  :full-name "cljs.test/testing",
  :clj-symbol "clojure.test/testing",
  :docstring "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest)."}

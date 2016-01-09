@@ -31,7 +31,7 @@ exactly equivalent to (pprint *1).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/pprint.clj#L153-L157):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/pprint.clj#L153-L157):
 
 ```clj
 (defmacro pp
@@ -42,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.189
+clojurescript @ r1.7.228
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[pprint.clj:153-157](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/pprint.clj#L153-L157)</ins>
+                └── <ins>[pprint.clj:153-157](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/pprint.clj#L153-L157)</ins>
 </pre>
 
 -->
@@ -98,7 +98,7 @@ The API data for this symbol:
  :source {:code "(defmacro pp\n  [] `(cljs.pprint/pprint *1))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.189",
+          :tag "r1.7.228",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [153 157]},
  :full-name "cljs.pprint/pp",

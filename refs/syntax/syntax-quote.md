@@ -59,7 +59,7 @@ See [`auto-gensym`][doc:syntax/auto-gensym].
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L737-L741):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L737-L741):
 
 ```clj
 (defn- read-syntax-quote
@@ -73,18 +73,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.10.0-alpha3
+tools.reader @ tools.reader-1.0.0-alpha1
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:737-741](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L737-L741)</ins>
+                    └── <ins>[reader.clj:737-741](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L737-L741)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L743-L762):
 
 ```clj
 (defn- macros [ch]
@@ -113,13 +113,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-0.10.0-alpha3
+tools.reader @ tools.reader-1.0.0-alpha1
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-0.10.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
 </pre>
 -->
 
@@ -164,13 +164,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-syntax-quote\n  [rdr backquote opts pending-forms]\n  (binding [gensym-env {}]\n    (-> (read* rdr true nil opts pending-forms)\n      syntax-quote*)))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.10.0-alpha3",
+                  :tag "tools.reader-1.0.0-alpha1",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [737 741]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-0.10.0-alpha3",
+                  :tag "tools.reader-1.0.0-alpha1",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [743 762]}),
  :examples [{:id "bffbdf",
