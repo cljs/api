@@ -53,7 +53,7 @@ seq to reside in memory at one time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L8670-L8682):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L8670-L8682):
 
 ```clj
 (defn doall
@@ -69,12 +69,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8670-8682](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L8670-L8682)</ins>
+                └── <ins>[core.cljs:8670-8682](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L8670-L8682)</ins>
 </pre>
 
 -->
@@ -127,7 +127,7 @@ The API data for this symbol:
  :source {:code "(defn doall\n  ([coll]\n   (dorun coll)\n   coll)\n  ([n coll]\n   (dorun n coll)\n   coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [8670 8682]},
  :full-name "cljs.core/doall",

@@ -30,7 +30,7 @@ Return true if x is a Symbol
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L907-L910):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L907-L910):
 
 ```clj
 (defn ^boolean symbol?
@@ -42,19 +42,19 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:907-910](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L907-L910)</ins>
+                └── <ins>[core.cljs:907-910](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L907-L910)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L934-L935):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L934-L935):
 
 ```clj
 (core/defmacro symbol? [x]
@@ -65,12 +65,12 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:934-935](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L934-L935)</ins>
+                └── <ins>[core.cljc:934-935](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L934-L935)</ins>
 </pre>
 -->
 
@@ -120,13 +120,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol?\n  [x]\n  (instance? Symbol x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [907 910]},
  :extra-sources [{:code "(core/defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.170",
+                  :tag "r1.7.189",
                   :filename "src/main/clojure/cljs/core.cljc",
                   :lines [934 935]}],
  :full-name "cljs.core/symbol?",

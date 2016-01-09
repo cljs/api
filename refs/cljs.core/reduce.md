@@ -65,7 +65,7 @@ items, returns val and f is not called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L2168-L2209):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L2168-L2209):
 
 ```clj
 (defn reduce
@@ -107,12 +107,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2168-2209](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L2168-L2209)</ins>
+                └── <ins>[core.cljs:2168-2209](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L2168-L2209)</ins>
 </pre>
 
 -->
@@ -167,7 +167,7 @@ The API data for this symbol:
  :source {:code "(defn reduce\n  ([f coll]\n     (cond\n       (implements? IReduce coll)\n       (-reduce ^not-native coll f)\n\n       (array? coll)\n       (array-reduce coll f)\n\n       (string? coll)\n       (array-reduce coll f)\n\n       (native-satisfies? IReduce coll)\n       (-reduce coll f)\n\n       :else\n       (seq-reduce f coll)))\n  ([f val coll]\n     (cond\n       (implements? IReduce coll)\n       (-reduce ^not-native coll f val)\n\n       (array? coll)\n       (array-reduce coll f val)\n      \n       (string? coll)\n       (array-reduce coll f val)\n\n       (native-satisfies? IReduce coll)\n       (-reduce coll f val)\n\n       :else\n       (seq-reduce f val coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2168 2209]},
  :full-name "cljs.core/reduce",

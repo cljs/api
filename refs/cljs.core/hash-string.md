@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L859-L866):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L859-L866):
 
 ```clj
 (defn hash-string [k]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:859-866](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L859-L866)</ins>
+                └── <ins>[core.cljs:859-866](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L859-L866)</ins>
 </pre>
 
 -->
@@ -90,7 +90,7 @@ The API data for this symbol:
  :source {:code "(defn hash-string [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [859 866]},
  :full-name "cljs.core/hash-string",

@@ -66,7 +66,7 @@ reify is a macro with the following structure:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1216-L1274):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1216-L1274):
 
 ```clj
 (core/defmacro reify
@@ -97,12 +97,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1216-1274](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1216-L1274)</ins>
+                └── <ins>[core.cljc:1216-1274](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1216-L1274)</ins>
 </pre>
 
 -->
@@ -153,7 +153,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro reify\n  [& impls]\n  (core/let [t        (with-meta\n                        (gensym\n                          (core/str \"t_\"\n                            (string/replace (core/str (munge ana/*cljs-ns*)) \".\" \"$\")))\n                        {:anonymous true})\n             meta-sym (gensym \"meta\")\n             this-sym (gensym \"_\")\n             locals   (keys (:locals &env))\n             ns       (core/-> &env :ns :name)\n             munge    comp/munge]\n    `(do\n       (when-not (exists? ~(symbol (core/str ns) (core/str t)))\n         (deftype ~t [~@locals ~meta-sym]\n           IWithMeta\n           (~'-with-meta [~this-sym ~meta-sym]\n             (new ~t ~@locals ~meta-sym))\n           IMeta\n           (~'-meta [~this-sym] ~meta-sym)\n           ~@impls))\n       (new ~t ~@locals ~(ana/elide-reader-meta (meta &form))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1216 1274]},
  :full-name "cljs.core/reify",

@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L10158-L10166):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10158-L10166):
 
 ```clj
 (defn ns-interns* [sym]
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10158-10166](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L10158-L10166)</ins>
+                └── <ins>[core.cljs:10158-10166](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10158-L10166)</ins>
 </pre>
 
 -->
@@ -91,7 +91,7 @@ The API data for this symbol:
  :source {:code "(defn ns-interns* [sym]\n  (let [ns-obj (find-ns-obj sym)\n        ns     (Namespace. ns-obj sym)]\n    (letfn [(step [ret k]\n              (let [var-sym (symbol (demunge k))]\n                (assoc ret\n                  var-sym (Var. #(gobject/get ns-obj k)\n                            (symbol (str sym) (str var-sym)) {:ns ns}))))]\n      (reduce step {} (js-keys ns-obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10158 10166]},
  :full-name "cljs.core/ns-interns*",

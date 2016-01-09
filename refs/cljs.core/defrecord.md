@@ -81,7 +81,7 @@ and map->TypeName, taking a map of keywords to field values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1738-L1805):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1738-L1805):
 
 ```clj
 (core/defmacro defrecord
@@ -106,12 +106,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1738-1805](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1738-L1805)</ins>
+                └── <ins>[core.cljc:1738-1805](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1738-L1805)</ins>
 </pre>
 
 -->
@@ -162,7 +162,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro defrecord\n  [rsym fields & impls]\n  (validate-fields \"defrecord\" rsym fields)\n  (core/let [rsym (vary-meta rsym assoc :internal-ctor true)\n             r    (vary-meta\n                    (:name (cljs.analyzer/resolve-var (dissoc &env :locals) rsym))\n                    assoc :internal-ctor true)]\n    `(let []\n       ~(emit-defrecord &env rsym r fields impls)\n       (set! (.-getBasis ~r) (fn [] '[~@fields]))\n       (set! (.-cljs$lang$type ~r) true)\n       (set! (.-cljs$lang$ctorPrSeq ~r) (fn [this#] (cljs.core/list ~(core/str r))))\n       (set! (.-cljs$lang$ctorPrWriter ~r) (fn [this# writer#] (-write writer# ~(core/str r))))\n       ~(build-positional-factory rsym r fields)\n       ~(build-map-factory rsym r fields)\n       ~r)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1738 1805]},
  :full-name "cljs.core/defrecord",

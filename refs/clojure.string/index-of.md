@@ -31,7 +31,7 @@ forward from from-index or nil if not found.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L217-L229):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/string.cljs#L217-L229):
 
 ```clj
 (defn index-of
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:217-229](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/clojure/string.cljs#L217-L229)</ins>
+                └── <ins>[string.cljs:217-229](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/clojure/string.cljs#L217-L229)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn index-of\n  ([s value]\n   (let [result (.indexOf s value)]\n     (if (neg? result)\n       nil\n       result)))\n  ([s value from-index]\n   (let [result (.indexOf s value from-index)]\n     (if (neg? result)\n       nil\n       result))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [217 229]},
  :full-name "clojure.string/index-of",

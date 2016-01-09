@@ -77,7 +77,7 @@ IllegalArgumentException is thrown.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L2026-L2066):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L2026-L2066):
 
 ```clj
 (core/defmacro condp
@@ -107,12 +107,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2026-2066](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L2026-L2066)</ins>
+                └── <ins>[core.cljc:2026-2066](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L2026-L2066)</ins>
 </pre>
 
 -->
@@ -165,7 +165,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro condp\n  [pred expr & clauses]\n  (core/let [gpred (gensym \"pred__\")\n             gexpr (gensym \"expr__\")\n             emit (core/fn emit [pred expr args]\n                    (core/let [[[a b c :as clause] more]\n                               (split-at (if (= :>> (second args)) 3 2) args)\n                               n (count clause)]\n                      (core/cond\n                        (= 0 n) `(throw (js/Error. (core/str \"No matching clause: \" ~expr)))\n                        (= 1 n) a\n                        (= 2 n) `(if (~pred ~a ~expr)\n                                   ~b\n                                   ~(emit pred expr more))\n                        :else `(if-let [p# (~pred ~a ~expr)]\n                                 (~c p#)\n                                 ~(emit pred expr more)))))\n             gres (gensym \"res__\")]\n    `(let [~gpred ~pred\n           ~gexpr ~expr]\n       ~(emit gpred gexpr clauses))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [2026 2066]},
  :full-name "cljs.core/condp",

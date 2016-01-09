@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L10139-L10156):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10139-L10156):
 
 ```clj
 (defn find-ns-obj [ns]
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:10139-10156](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L10139-L10156)</ins>
+                └── <ins>[core.cljs:10139-10156](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L10139-L10156)</ins>
 </pre>
 
 -->
@@ -100,7 +100,7 @@ The API data for this symbol:
  :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  ; Under simple optimizations on nodejs, namespaces will be in module\n                  ; rather than global scope and must be accessed by a direct call to eval.\n                  ; The first segment may refer to an undefined variable, so its evaluation\n                  ; may throw ReferenceError.\n                  (find-ns-obj*\n                    (try\n                      (js/eval (first segs))\n                      (catch js/ReferenceError e\n                        nil))\n                    (next segs))\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10139 10156]},
  :full-name "cljs.core/find-ns-obj",

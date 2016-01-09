@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__1.7.170__ [all](HISTORY.md)</td>
-<td>2015-11-06</td>
+<td>__1.7.189__ [all](HISTORY.md)</td>
+<td>2015-12-01</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.7.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __1.7.170__ ([See Full History](HISTORY.md)):
+Changes from __1.7.189__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 

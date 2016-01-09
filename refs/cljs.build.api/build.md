@@ -30,7 +30,7 @@ Given a source which can be compiled, produce runnable JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/build/api.clj#L198-L207):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L198-L207):
 
 ```clj
 (defn build
@@ -48,13 +48,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:198-207](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/build/api.clj#L198-L207)</ins>
+                    └── <ins>[api.clj:198-207](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L198-L207)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn build\n  ([source opts]\n   (build source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/build source opts compiler-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [198 207]},
  :full-name "cljs.build.api/build",

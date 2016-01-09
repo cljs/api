@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/repl/node.clj#L225-L226):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/repl/node.clj#L225-L226):
 
 ```clj
 (defn -main []
@@ -33,13 +33,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
                 └── repl
-                    └── <ins>[node.clj:225-226](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/repl/node.clj#L225-L226)</ins>
+                    └── <ins>[node.clj:225-226](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/repl/node.clj#L225-L226)</ins>
 </pre>
 
 -->
@@ -85,7 +85,7 @@ The API data for this symbol:
  :source {:code "(defn -main []\n  (repl/repl (repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [225 226]},
  :full-name "cljs.repl.node/-main",

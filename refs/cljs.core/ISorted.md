@@ -26,7 +26,7 @@ Protocol for a collection which can represent their items
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L616-L631):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L616-L631):
 
 ```clj
 (defprotocol ISorted
@@ -51,12 +51,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:616-631](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L616-L631)</ins>
+                └── <ins>[core.cljs:616-631](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L616-L631)</ins>
 </pre>
 
 -->
@@ -106,7 +106,7 @@ The API data for this symbol:
  :source {:code "(defprotocol ISorted\n  \"Protocol for a collection which can represent their items\n  in a sorted manner. \"\n  (^clj -sorted-seq [coll ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\")\n  (^clj -sorted-seq-from [coll k ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\n     If ascending is true, the result should contain all items which are > or >=\n     than k. If ascending is false, the result should contain all items which\n     are < or <= than k, e.g.\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 true) => (3 4 5)\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 false) => (3 2 1)\")\n  (-entry-key [coll entry]\n    \"Returns the key for entry.\")\n  (-comparator [coll]\n    \"Returns the comparator for coll.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [616 631]},
  :methods [{:name "-sorted-seq",

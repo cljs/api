@@ -29,7 +29,7 @@ plus all dependencies in dependency order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/build/api.clj#L143-L148):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L143-L148):
 
 ```clj
 (defn add-dependencies
@@ -41,13 +41,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:143-148](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/build/api.clj#L143-L148)</ins>
+                    └── <ins>[api.clj:143-148](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/build/api.clj#L143-L148)</ins>
 </pre>
 
 -->
@@ -95,7 +95,7 @@ The API data for this symbol:
  :source {:code "(defn add-dependencies\n  [opts & ijss]\n  (closure/add-dependencies opts ijss))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [143 148]},
  :full-name "cljs.build.api/add-dependencies",

@@ -68,7 +68,7 @@ effect, and defines no new types.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1807-L1917):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1807-L1917):
 
 ```clj
 (core/defmacro defprotocol
@@ -149,12 +149,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1807-1917](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/clojure/cljs/core.cljc#L1807-L1917)</ins>
+                └── <ins>[core.cljc:1807-1917](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/clojure/cljs/core.cljc#L1807-L1917)</ins>
 </pre>
 
 -->
@@ -205,7 +205,7 @@ The API data for this symbol:
  :source {:code "(core/defmacro defprotocol\n  [psym & doc+methods]\n  (core/let [p (:name (cljs.analyzer/resolve-var (dissoc &env :locals) psym))\n             [doc methods] (if (core/string? (first doc+methods))\n                             [(first doc+methods) (next doc+methods)]\n                             [nil doc+methods])\n             psym (vary-meta psym assoc\n                    :doc doc\n                    :protocol-symbol true)\n             ns-name (core/-> &env :ns :name)\n             fqn (core/fn [n] (symbol (core/str ns-name \".\" n)))\n             prefix (protocol-prefix p)\n             _ (core/doseq [[mname & arities] methods]\n                 (core/when (some #{0} (map count (filter vector? arities)))\n                   (throw\n                     #?(:clj (Exception.\n                               (core/str \"Invalid protocol, \" psym\n                                 \" defines method \" mname \" with arity 0\"))\n                        :cljs (js/Error.\n                                (core/str \"Invalid protocol, \" psym\n                                  \" defines method \" mname \" with arity 0\"))))))\n             expand-sig (core/fn [fname slot sig]\n                          `(~sig\n                             (if (and (not (nil? ~(first sig)))\n                                      (not (nil? (. ~(first sig) ~(symbol (core/str \"-\" slot)))))) ;; Property access needed here.\n                               (. ~(first sig) ~slot ~@sig)\n                               (let [x# (if (nil? ~(first sig)) nil ~(first sig))\n                                     m# (aget ~(fqn fname) (goog/typeOf x#))]\n                                 (if-not (nil? m#)\n                                   (m# ~@sig)\n                                   (let [m# (aget ~(fqn fname) \"_\")]\n                                     (if-not (nil? m#)\n                                       (m# ~@sig)\n                                       (throw\n                                         (missing-protocol\n                                           ~(core/str psym \".\" fname) ~(first sig))))))))))\n             psym (core/-> psym\n                    (vary-meta update-in [:jsdoc] conj\n                      \"@interface\")\n                    (vary-meta assoc-in [:protocol-info :methods]\n                      (into {}\n                        (map\n                          (core/fn [[fname & sigs]]\n                            (core/let [doc (core/as-> (last sigs) doc\n                                             (core/when (core/string? doc) doc))\n                                       sigs (take-while vector? sigs)]\n                              [(vary-meta fname assoc :doc doc)\n                               (vec sigs)]))\n                          methods))))\n             method (core/fn [[fname & sigs]]\n                      (core/let [doc (core/as-> (last sigs) doc\n                                       (core/when (core/string? doc) doc))\n                                 sigs (take-while vector? sigs)\n                                 amp (core/when (some #{'&} (apply concat sigs))\n                                       (cljs.analyzer/warning\n                                        :protocol-with-variadic-method\n                                        &env {:protocol psym :name fname}))\n                                 slot (symbol (core/str prefix (name fname)))\n                                 fname (vary-meta fname assoc\n                                         :protocol p\n                                         :doc doc)]\n                        `(defn ~fname\n                           ~@(map (core/fn [sig]\n                                    (expand-sig fname\n                                      (symbol (core/str slot \"$arity$\" (count sig)))\n                                      sig))\n                               sigs))))]\n    `(do\n       (set! ~'*unchecked-if* true)\n       (def ~psym (~'js* \"function(){}\"))\n       ~@(map method methods)\n       (set! ~'*unchecked-if* false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [1807 1917]},
  :full-name "cljs.core/defprotocol",

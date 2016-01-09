@@ -41,7 +41,7 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L8256-L8279):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L8256-L8279):
 
 ```clj
 (defn distinct
@@ -72,12 +72,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.170/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.170
+clojurescript @ r1.7.189
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:8256-8279](https://github.com/clojure/clojurescript/blob/r1.7.170/src/main/cljs/cljs/core.cljs#L8256-L8279)</ins>
+                └── <ins>[core.cljs:8256-8279](https://github.com/clojure/clojurescript/blob/r1.7.189/src/main/cljs/cljs/core.cljs#L8256-L8279)</ins>
 </pre>
 
 -->
@@ -130,7 +130,7 @@ The API data for this symbol:
  :source {:code "(defn distinct\n  ([]\n    (fn [rf]\n      (let [seen (volatile! #{})]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if (contains? @seen input)\n              result\n              (do (vswap! seen conj input)\n                  (rf result input))))))))\n  ([coll]\n    (let [step (fn step [xs seen]\n                 (lazy-seq\n                   ((fn [[f :as xs] seen]\n                      (when-let [s (seq xs)]\n                        (if (contains? seen f)\n                          (recur (rest s) seen)\n                          (cons f (step (rest s) (conj seen f))))))\n                     xs seen)))]\n      (step coll #{}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.170",
+          :tag "r1.7.189",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [8256 8279]},
  :full-name "cljs.core/distinct",
