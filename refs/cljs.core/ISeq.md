@@ -25,7 +25,7 @@ Protocol for collections to provide access to their items as sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L491-L499):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L499-L507):
 
 ```clj
 (defprotocol ISeq
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:491-499](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L491-L499)</ins>
+                └── <ins>[core.cljs:499-507](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L499-L507)</ins>
 </pre>
 
 -->
@@ -98,9 +98,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISeq\n  \"Protocol for collections to provide access to their items as sequences.\"\n  (-first [coll]\n    \"Returns the first item in the collection coll. Used by cljs.core/first.\")\n  (^clj -rest [coll]\n    \"Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [491 499]},
+          :lines [499 507]},
  :methods [{:name "-first",
             :signature ["[coll]"],
             :docstring "Returns the first item in the collection coll. Used by cljs.core/first."}

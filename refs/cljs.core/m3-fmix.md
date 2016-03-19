@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L806-L813):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L814-L821):
 
 ```clj
 (defn ^number m3-fmix [h1 len]
@@ -39,12 +39,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:806-813](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L806-L813)</ins>
+                └── <ins>[core.cljs:814-821](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L814-L821)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-fmix [h1 len]\n  (as-> (int h1) h1\n    (bit-xor h1 len)\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))\n    (imul h1 (int 0x85ebca6b))\n    (bit-xor h1 (unsigned-bit-shift-right h1 13))\n    (imul h1 (int 0xc2b2ae35))\n    (bit-xor h1 (unsigned-bit-shift-right h1 16))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [806 813]},
+          :lines [814 821]},
  :full-name "cljs.core/m3-fmix"}
 
 ```

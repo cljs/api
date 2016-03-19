@@ -31,7 +31,7 @@ eval and eval-str.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L103-L113):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L109-L119):
 
 ```clj
 (defn empty-state
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:103-113](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L103-L113)</ins>
+                └── <ins>[js.cljs:109-119](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L109-L119)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn empty-state\n  ([]\n   (doto (env/default-compiler-env)\n     (swap!\n       (fn [state]\n         (-> state\n           (assoc-in [::ana/namespaces 'cljs.core] (dump-core)))))))\n  ([init]\n   (doto (empty-state) (swap! init))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [103 113]},
+          :lines [109 119]},
  :full-name "cljs.js/empty-state",
  :docstring "Construct an empty compiler state. Required to invoke analyze, compile,\neval and eval-str."}
 

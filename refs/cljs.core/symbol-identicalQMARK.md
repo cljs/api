@@ -27,7 +27,7 @@ Efficient test to determine that two symbol are identical.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L2972-L2979):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3067-L3074):
 
 ```clj
 (defn ^boolean symbol-identical?
@@ -43,12 +43,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:2972-2979](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L2972-L2979)</ins>
+                └── <ins>[core.cljs:3067-3074](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3067-L3074)</ins>
 </pre>
 
 -->
@@ -97,9 +97,9 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol-identical?\n  [x y]\n  (if (identical? x y)\n    true\n    (if (and (symbol? x) (symbol? y))\n      (identical? (.-str x) (.-str y))\n      false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2972 2979]},
+          :lines [3067 3074]},
  :full-name "cljs.core/symbol-identical?",
  :docstring "Efficient test to determine that two symbol are identical."}
 

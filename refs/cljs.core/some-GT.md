@@ -45,27 +45,30 @@ and when that result is not nil, through the next etc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7271-L7280):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7286-L7298):
 
 ```clj
 (defmacro some->
   [expr & forms]
   (let [g (gensym)
-        pstep (fn [step] `(if (nil? ~g) nil (-> ~g ~step)))]
+        steps (map (fn [step] `(if (nil? ~g) nil (-> ~g ~step)))
+                   forms)]
     `(let [~g ~expr
-           ~@(interleave (repeat g) (map pstep forms))]
-       ~g)))
+           ~@(interleave (repeat g) (butlast steps))]
+       ~(if (empty? steps)
+          g
+          (last steps)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0
+clojure @ clojure-1.8.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7271-7280](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7271-L7280)</ins>
+            └── <ins>[core.clj:7286-7298](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7286-L7298)</ins>
 </pre>
 
 -->
@@ -118,12 +121,12 @@ The API data for this symbol:
            "cljs.core/some->>"
            "cljs.core/some"],
  :full-name-encode "cljs.core/some-GT",
- :source {:code "(defmacro some->\n  [expr & forms]\n  (let [g (gensym)\n        pstep (fn [step] `(if (nil? ~g) nil (-> ~g ~step)))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep forms))]\n       ~g)))",
+ :source {:code "(defmacro some->\n  [expr & forms]\n  (let [g (gensym)\n        steps (map (fn [step] `(if (nil? ~g) nil (-> ~g ~step)))\n                   forms)]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (butlast steps))]\n       ~(if (empty? steps)\n          g\n          (last steps)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0",
+          :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [7271 7280]},
+          :lines [7286 7298]},
  :full-name "cljs.core/some->",
  :clj-symbol "clojure.core/some->",
  :docstring "When expr is not nil, threads it into the first form (via ->),\nand when that result is not nil, through the next etc"}

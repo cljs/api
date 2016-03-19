@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L150-L153):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L157-L160):
 
 ```clj
 (defprotocol IPrintStacktrace
@@ -30,12 +30,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:150-153](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L150-L153)</ins>
+                └── <ins>[repl.cljc:157-160](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L157-L160)</ins>
 </pre>
 
 -->
@@ -81,9 +81,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IPrintStacktrace\n  (-print-stacktrace [repl-env stacktrace error build-options]\n    \"Implementing REPL evaluation environments are given the opportunity to\n     print the mapped stacktrace themselves. This permits further processing.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [150 153]},
+          :lines [157 160]},
  :methods [{:name "-print-stacktrace",
             :signature ["[repl-env stacktrace error build-options]"],
             :docstring "Implementing REPL evaluation environments are given the opportunity to\n     print the mapped stacktrace themselves. This permits further processing."}],

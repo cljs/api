@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L36):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L38):
 
 ```clj
 (def ^:dynamic *repl-opts* nil)
@@ -27,12 +27,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:36](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L36)</ins>
+                └── <ins>[repl.cljc:38](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L38)</ins>
 </pre>
 
 -->
@@ -77,9 +77,9 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *repl-opts* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [36]},
+          :lines [38]},
  :full-name "cljs.repl/*repl-opts*",
  :full-name-encode "cljs.repl/STARrepl-optsSTAR",
  :history [["+" "0.0-2911"]]}

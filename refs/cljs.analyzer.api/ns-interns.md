@@ -34,7 +34,7 @@ clojure.core/ns-interns but returns var analysis maps not vars.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L169-L178):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L169-L178):
 
 ```clj
 (defn ns-interns
@@ -51,13 +51,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
                 └── analyzer
-                    └── <ins>[api.clj:169-178](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer/api.clj#L169-L178)</ins>
+                    └── <ins>[api.clj:169-178](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L169-L178)</ins>
 </pre>
 
 -->
@@ -108,7 +108,7 @@ The API data for this symbol:
  :source {:code "(defn ns-interns\n  ([ns]\n   (ns-interns env/*compiler* ns))\n  ([state ns]\n   {:pre [(symbol? ns)]}\n   (merge\n     (get-in @state [::ana/namespaces ns :macros])\n     (get-in @state [::ana/namespaces ns :defs]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
           :lines [169 178]},
  :full-name "cljs.analyzer.api/ns-interns",

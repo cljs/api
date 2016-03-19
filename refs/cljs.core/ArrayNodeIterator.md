@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L6427-L6445):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6599-L6617):
 
 ```clj
 (deftype ArrayNodeIterator [arr ^:mutable i ^:mutable next-iter]
@@ -50,12 +50,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:6427-6445](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L6427-L6445)</ins>
+                └── <ins>[core.cljs:6599-6617](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6599-L6617)</ins>
 </pre>
 
 -->
@@ -101,9 +101,9 @@ The API data for this symbol:
  :source {:code "(deftype ArrayNodeIterator [arr ^:mutable i ^:mutable next-iter]\n  Object\n  (hasNext [this]\n    (let [len (alength arr)]\n      (loop []\n        (if-not (and  (some? next-iter) ^boolean (.hasNext next-iter))\n          (if (< i len)\n            (let [node (aget arr i)]\n              (set! i (inc i))\n              (when (some? node)\n                (set! next-iter (-iterator node)))\n              (recur))\n            false)\n          true))))\n  (next [this]\n    (if ^boolean (.hasNext this)\n      (.next next-iter)\n      (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6427 6445]},
+          :lines [6599 6617]},
  :full-name "cljs.core/ArrayNodeIterator",
  :full-name-encode "cljs.core/ArrayNodeIterator",
  :history [["+" "1.7.28"]]}

@@ -31,7 +31,7 @@ print the ClojureScript stacktrace. See mapped-stacktrace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L343-L353):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L350-L360):
 
 ```clj
 (defn print-mapped-stacktrace
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:343-353](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L343-L353)</ins>
+                └── <ins>[repl.cljc:350-360](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L350-L360)</ins>
 </pre>
 
 -->
@@ -102,9 +102,9 @@ The API data for this symbol:
  :source {:code "(defn print-mapped-stacktrace\n  ([stacktrace] (print-mapped-stacktrace stacktrace *repl-opts*))\n  ([stacktrace opts]\n   (doseq [{:keys [function file line column]}\n           (mapped-stacktrace stacktrace opts)]\n     (err-out\n       (println \"\\t\"\n         (str (when function (str function \" \"))\n           \"(\" file (when line (str \":\" line)) (when column (str \":\" column)) \")\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [343 353]},
+          :lines [350 360]},
  :full-name "cljs.repl/print-mapped-stacktrace",
  :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nprint the ClojureScript stacktrace. See mapped-stacktrace."}
 

@@ -104,6 +104,12 @@ interactive ClojureScript REPL (Read Eval Print Loop)
 </tr>
 <tr>
 <td></td>
+<td><samp>[known-repl-opts](../cljs.repl/known-repl-opts.md)</samp></td>
+<td><samp>var</samp></td>
+<td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.8.34"><img valign="middle" alt="[+] 1.8.34" title="Added in 1.8.34" src="https://img.shields.io/badge/+-1.8.34-lightgrey.svg"></a> </td>
+</tr>
+<tr>
+<td></td>
 <td><samp>[load-file](../cljs.repl/load-file.md)</samp></td>
 <td><samp>function</samp></td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>

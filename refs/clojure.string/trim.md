@@ -35,7 +35,7 @@ Removes whitespace from both ends of string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L165-L168):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L165-L168):
 
 ```clj
 (defn trim
@@ -47,12 +47,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:165-168](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L165-L168)</ins>
+                └── <ins>[string.cljs:165-168](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L165-L168)</ins>
 </pre>
 
 -->
@@ -104,7 +104,7 @@ The API data for this symbol:
  :source {:code "(defn trim\n  [s]\n  (gstring/trim s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [165 168]},
  :full-name "clojure.string/trim",

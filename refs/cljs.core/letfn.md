@@ -52,7 +52,7 @@ in all of the definitions of the functions, as well as the body.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L6271-L6282):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6297-L6308):
 
 ```clj
 (defmacro letfn 
@@ -66,11 +66,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0
+clojure @ clojure-1.8.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:6271-6282](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L6271-L6282)</ins>
+            └── <ins>[core.clj:6297-6308](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6297-L6308)</ins>
 </pre>
 
 -->
@@ -123,9 +123,9 @@ The API data for this symbol:
  :source {:code "(defmacro letfn \n  [fnspecs & body] \n  `(letfn* ~(vec (interleave (map first fnspecs) \n                             (map #(cons `fn %) fnspecs)))\n           ~@body))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0",
+          :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [6271 6282]},
+          :lines [6297 6308]},
  :full-name "cljs.core/letfn",
  :clj-symbol "clojure.core/letfn",
  :docstring "fnspec ==> (fname [params*] exprs) or (fname ([params*] exprs)+)\n\nTakes a vector of function specs and a body, and generates a set of\nbindings of functions to their names. All of the names are available\nin all of the definitions of the functions, as well as the body."}

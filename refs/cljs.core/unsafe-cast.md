@@ -27,7 +27,7 @@ EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L887-L891):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L875-L879):
 
 ```clj
 (core/defmacro unsafe-cast
@@ -40,12 +40,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:887-891](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L887-L891)</ins>
+                └── <ins>[core.cljc:875-879](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L875-L879)</ins>
 </pre>
 
 -->
@@ -93,9 +93,9 @@ The API data for this symbol:
  :source {:code "(core/defmacro unsafe-cast\n  [t x]\n  (core/let [cast-expr (core/str \"~{} = /** @type {\" t \"} */ (~{})\")]\n    (core/list 'js* cast-expr x x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [887 891]},
+          :lines [875 879]},
  :full-name "cljs.core/unsafe-cast",
  :docstring "EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type."}
 

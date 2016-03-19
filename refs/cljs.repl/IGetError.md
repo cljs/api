@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L123-L133):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L130-L140):
 
 ```clj
 (defprotocol IGetError
@@ -37,12 +37,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[repl.cljc:123-133](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/repl.cljc#L123-L133)</ins>
+                └── <ins>[repl.cljc:130-140](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L130-L140)</ins>
 </pre>
 
 -->
@@ -88,9 +88,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IGetError\n  (-get-error [repl-env name env build-options]\n    \"Given a symbol representing a var holding an error, an analysis\n     environment, and the REPL/compiler options return the canonical error\n     representation:\n\n     {:value <string>\n      :stacktrace <string>}\n\n    :value should be the host environment JavaScript error message string.\n    :stacktrace should be the host JavaScript environment stacktrace string.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [123 133]},
+          :lines [130 140]},
  :methods [{:name "-get-error",
             :signature ["[repl-env name env build-options]"],
             :docstring "Given a symbol representing a var holding an error, an analysis\n     environment, and the REPL/compiler options return the canonical error\n     representation:\n\n     {:value <string>\n      :stacktrace <string>}\n\n    :value should be the host environment JavaScript error message string.\n    :stacktrace should be the host JavaScript environment stacktrace string."}],

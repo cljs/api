@@ -65,28 +65,31 @@ after the first true test expression.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7247-L7259):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7257-L7272):
 
 ```clj
 (defmacro cond->>
   [expr & clauses]
   (assert (even? (count clauses)))
   (let [g (gensym)
-        pstep (fn [[test step]] `(if ~test (->> ~g ~step) ~g))]
+        steps (map (fn [[test step]] `(if ~test (->> ~g ~step) ~g))
+                   (partition 2 clauses))]
     `(let [~g ~expr
-           ~@(interleave (repeat g) (map pstep (partition 2 clauses)))]
-       ~g)))
+           ~@(interleave (repeat g) (butlast steps))]
+       ~(if (empty? steps)
+          g
+          (last steps)))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0
+clojure @ clojure-1.8.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:7247-7259](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L7247-L7259)</ins>
+            └── <ins>[core.clj:7257-7272](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7257-L7272)</ins>
 </pre>
 
 -->
@@ -139,12 +142,12 @@ The API data for this symbol:
            "cljs.core/cond->"
            "cljs.core/cond"],
  :full-name-encode "cljs.core/cond-GTGT",
- :source {:code "(defmacro cond->>\n  [expr & clauses]\n  (assert (even? (count clauses)))\n  (let [g (gensym)\n        pstep (fn [[test step]] `(if ~test (->> ~g ~step) ~g))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (map pstep (partition 2 clauses)))]\n       ~g)))",
+ :source {:code "(defmacro cond->>\n  [expr & clauses]\n  (assert (even? (count clauses)))\n  (let [g (gensym)\n        steps (map (fn [[test step]] `(if ~test (->> ~g ~step) ~g))\n                   (partition 2 clauses))]\n    `(let [~g ~expr\n           ~@(interleave (repeat g) (butlast steps))]\n       ~(if (empty? steps)\n          g\n          (last steps)))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0",
+          :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [7247 7259]},
+          :lines [7257 7272]},
  :examples [{:id "e07a05",
              :content "```clj\n(def filter? true)\n(def sum? true)\n\n(cond->> [1 2 3 4]\n  filter? (filter even?)\n  sum?    (reduce +))\n;;=> 6\n```"}],
  :full-name "cljs.core/cond->>",

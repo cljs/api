@@ -37,59 +37,77 @@ Creates an empty JavaScript array of size `size`.
 Source docstring:
 
 ```
-Construct a JavaScript array of specified size. Accepts ignored type
-argument for compatibility with Clojure.
+Construct a JavaScript array of the specified dimensions. Accepts ignored
+type argument for compatibility with Clojure. Note that there is no efficient
+way to allocate multi-dimensional arrays in JavaScript; as such, this function
+will run in polynomial time when called with 3 or more arguments.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L356-L362):
+Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L358-L372):
 
 ```clj
 (defn ^array make-array
   ([size]
      (js/Array. size))
   ([type size]
-     (make-array size)))
+     (make-array size))
+  ([type size & more-sizes]
+    (let [dims more-sizes
+          dimarray (make-array size)]
+      (dotimes [i (alength dimarray)]
+        (aset dimarray i (apply make-array nil dims)))
+      dimarray)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:356-362](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L356-L362)</ins>
+                └── <ins>[core.cljs:358-372](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L358-L372)</ins>
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L2329-L2335):
+Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2361-L2377):
 
 ```clj
 (core/defmacro make-array
-  [size]
-  (vary-meta
-    (if (core/number? size)
-      `(array ~@(take size (repeat nil)))
-      `(js/Array. ~size))
-    assoc :tag 'array))
+  ([size]
+   (vary-meta
+     (if (core/number? size)
+       `(array ~@(take size (repeat nil)))
+       `(js/Array. ~size))
+     assoc :tag 'array))
+  ([type size]
+   `(make-array ~size))
+  ([type size & more-sizes]
+   (vary-meta
+     `(let [dims#     (list ~@more-sizes)
+            dimarray# (make-array ~size)]
+        (dotimes [i# (alength dimarray#)]
+          (aset dimarray# i# (apply make-array nil dims#)))
+        dimarray#)
+     assoc :tag 'array)))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:2329-2335](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L2329-L2335)</ins>
+                └── <ins>[core.cljc:2361-2377](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2361-L2377)</ins>
 </pre>
 -->
 
@@ -138,21 +156,21 @@ The API data for this symbol:
  :type "function/macro",
  :related ["cljs.core/aclone" "cljs.core/array"],
  :full-name-encode "cljs.core/make-array",
- :source {:code "(defn ^array make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size)))",
+ :source {:code "(defn ^array make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size))\n  ([type size & more-sizes]\n    (let [dims more-sizes\n          dimarray (make-array size)]\n      (dotimes [i (alength dimarray)]\n        (aset dimarray i (apply make-array nil dims)))\n      dimarray)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [356 362]},
- :extra-sources [{:code "(core/defmacro make-array\n  [size]\n  (vary-meta\n    (if (core/number? size)\n      `(array ~@(take size (repeat nil)))\n      `(js/Array. ~size))\n    assoc :tag 'array))",
+          :lines [358 372]},
+ :extra-sources [{:code "(core/defmacro make-array\n  ([size]\n   (vary-meta\n     (if (core/number? size)\n       `(array ~@(take size (repeat nil)))\n       `(js/Array. ~size))\n     assoc :tag 'array))\n  ([type size]\n   `(make-array ~size))\n  ([type size & more-sizes]\n   (vary-meta\n     `(let [dims#     (list ~@more-sizes)\n            dimarray# (make-array ~size)]\n        (dotimes [i# (alength dimarray#)]\n          (aset dimarray# i# (apply make-array nil dims#)))\n        dimarray#)\n     assoc :tag 'array)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.7.228",
+                  :tag "r1.8.34",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2329 2335]}],
+                  :lines [2361 2377]}],
  :full-name "cljs.core/make-array",
  :clj-symbol "clojure.core/make-array",
- :docstring "Construct a JavaScript array of specified size. Accepts ignored type\nargument for compatibility with Clojure."}
+ :docstring "Construct a JavaScript array of the specified dimensions. Accepts ignored\ntype argument for compatibility with Clojure. Note that there is no efficient\nway to allocate multi-dimensional arrays in JavaScript; as such, this function\nwill run in polynomial time when called with 3 or more arguments."}
 
 ```
 

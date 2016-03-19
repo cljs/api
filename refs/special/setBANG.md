@@ -41,7 +41,7 @@ Used to set vars and JavaScript object fields
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer.cljc#L1572-L1613):
+Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1578-L1618):
 
 ```clj
 (defmethod parse 'set!
@@ -57,8 +57,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
                          (= target '*unchecked-if*) ;; TODO: proper resolve
                          (or (true? val) (false? val)))
                        (do
-                         #?(:clj  (reset! *unchecked-if* val)
-                            :cljs (set! *unchecked-if* val))
+                         (set! *unchecked-if* val)
                          ::set-unchecked-if)
 
                        (symbol? target)
@@ -92,12 +91,12 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[analyzer.cljc:1572-1613](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/analyzer.cljc#L1572-L1613)</ins>
+                └── <ins>[analyzer.cljc:1578-1618](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1578-L1618)</ins>
 </pre>
 
 -->
@@ -146,12 +145,12 @@ The API data for this symbol:
  :type "special form",
  :related ["cljs.core/aset" "cljs.core/reset!"],
  :full-name-encode "special/setBANG",
- :source {:code "(defmethod parse 'set!\n  [_ env [_ target val alt :as form] _ _]\n  (let [[target val] (if alt\n                       ;; (set! o -prop val)\n                       [`(. ~target ~val) alt]\n                       [target val])]\n    (disallowing-recur\n     (let [enve (assoc env :context :expr)\n           targetexpr (cond\n                       (and\n                         (= target '*unchecked-if*) ;; TODO: proper resolve\n                         (or (true? val) (false? val)))\n                       (do\n                         #?(:clj  (reset! *unchecked-if* val)\n                            :cljs (set! *unchecked-if* val))\n                         ::set-unchecked-if)\n\n                       (symbol? target)\n                       (do\n                         (when (:const (resolve-var (dissoc env :locals) target))\n                           (throw (error env \"Can't set! a constant\")))\n                         (let [local (-> env :locals target)]\n                           (when-not (or (nil? local)\n                                         (and (:field local)\n                                              (or (:mutable local)\n                                                  (:unsynchronized-mutable local)\n                                                  (:volatile-mutable local))))\n                             (throw (error env \"Can't set! local var or non-mutable field\"))))\n                         (analyze-symbol enve target))\n\n                       :else\n                       (when (seq? target)\n                         (let [targetexpr (analyze-seq enve target nil)]\n                           (when (:field targetexpr)\n                             targetexpr))))\n           valexpr (analyze enve val)]\n       (when-not targetexpr\n         (throw (error env \"set! target must be a field or a symbol naming a var\")))\n       (cond\n        (= targetexpr ::set-unchecked-if) {:env env :op :no-op}\n        :else {:env env :op :set! :form form :target targetexpr :val valexpr\n               :children [targetexpr valexpr]})))))",
+ :source {:code "(defmethod parse 'set!\n  [_ env [_ target val alt :as form] _ _]\n  (let [[target val] (if alt\n                       ;; (set! o -prop val)\n                       [`(. ~target ~val) alt]\n                       [target val])]\n    (disallowing-recur\n     (let [enve (assoc env :context :expr)\n           targetexpr (cond\n                       (and\n                         (= target '*unchecked-if*) ;; TODO: proper resolve\n                         (or (true? val) (false? val)))\n                       (do\n                         (set! *unchecked-if* val)\n                         ::set-unchecked-if)\n\n                       (symbol? target)\n                       (do\n                         (when (:const (resolve-var (dissoc env :locals) target))\n                           (throw (error env \"Can't set! a constant\")))\n                         (let [local (-> env :locals target)]\n                           (when-not (or (nil? local)\n                                         (and (:field local)\n                                              (or (:mutable local)\n                                                  (:unsynchronized-mutable local)\n                                                  (:volatile-mutable local))))\n                             (throw (error env \"Can't set! local var or non-mutable field\"))))\n                         (analyze-symbol enve target))\n\n                       :else\n                       (when (seq? target)\n                         (let [targetexpr (analyze-seq enve target nil)]\n                           (when (:field targetexpr)\n                             targetexpr))))\n           valexpr (analyze enve val)]\n       (when-not targetexpr\n         (throw (error env \"set! target must be a field or a symbol naming a var\")))\n       (cond\n        (= targetexpr ::set-unchecked-if) {:env env :op :no-op}\n        :else {:env env :op :set! :form form :target targetexpr :val valexpr\n               :children [targetexpr valexpr]})))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1572 1613]},
+          :lines [1578 1618]},
  :full-name "special/set!",
  :clj-symbol "clojure.core/set!",
  :docstring "Used to set vars and JavaScript object fields"}

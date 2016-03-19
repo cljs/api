@@ -22,7 +22,7 @@ Protocol for adding metadata to an object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L570-L573):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L578-L581):
 
 ```clj
 (defprotocol IWithMeta
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:570-573](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L570-L573)</ins>
+                └── <ins>[core.cljs:578-581](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L578-L581)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol IWithMeta\n  \"Protocol for adding metadata to an object.\"\n  (^clj -with-meta [o meta]\n    \"Returns a new object with value of o and metadata meta added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [570 573]},
+          :lines [578 581]},
  :methods [{:name "-with-meta",
             :signature ["[o meta]"],
             :docstring "Returns a new object with value of o and metadata meta added to it."}],

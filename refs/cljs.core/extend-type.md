@@ -57,8 +57,22 @@ Source docstring:
 
 ```
 Extend a type to a series of protocols. Useful when you are
- supplying the definitions explicitly inline. Propagates the
- type as a type hint on the first argument of all fns.
+supplying the definitions explicitly inline. Propagates the
+type as a type hint on the first argument of all fns.
+
+type-sym may be
+
+ * default, meaning the definitions will apply for any value,
+   unless an extend-type exists for one of the more specific
+   cases below.
+ * nil, meaning the definitions will apply for the nil value.
+ * any of object, boolean, number, string, array, or function,
+   indicating the definitions will apply for values of the
+   associated base JavaScript types. Note that, for example,
+   string should be used instead of js/String.
+ * a JavaScript type not covered by the previous list, such
+   as js/RegExp.
+ * a type defined by deftype or defrecord.
 
 (extend-type MyType
   ICounted
@@ -69,7 +83,7 @@ Extend a type to a series of protocols. Useful when you are
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L1485-L1508):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1501-L1541):
 
 ```clj
 (core/defmacro extend-type
@@ -78,6 +92,9 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
              _ (validate-impls env impls)
              resolve (partial resolve-var env)
              impl-map (->impl-map impls)
+             impl-map (if ('#{boolean number} type-sym)
+                        (type-hint-impl-map type-sym impl-map)
+                        impl-map)
              [type assign-impls] (core/if-let [type (base-type type-sym)]
                                    [type base-assign-impls]
                                    [(resolve type-sym) proto-assign-impls])]
@@ -92,12 +109,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:1485-1508](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L1485-L1508)</ins>
+                └── <ins>[core.cljc:1501-1541](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1501-L1541)</ins>
 </pre>
 
 -->
@@ -147,15 +164,15 @@ The API data for this symbol:
  :type "macro",
  :related ["cljs.core/extend-protocol"],
  :full-name-encode "cljs.core/extend-type",
- :source {:code "(core/defmacro extend-type\n  [type-sym & impls]\n  (core/let [env &env\n             _ (validate-impls env impls)\n             resolve (partial resolve-var env)\n             impl-map (->impl-map impls)\n             [type assign-impls] (core/if-let [type (base-type type-sym)]\n                                   [type base-assign-impls]\n                                   [(resolve type-sym) proto-assign-impls])]\n    (core/when (core/and (:extending-base-js-type cljs.analyzer/*cljs-warnings*)\n            (js-base-type type-sym))\n      (cljs.analyzer/warning :extending-base-js-type env\n        {:current-symbol type-sym :suggested-symbol (js-base-type type-sym)}))\n    `(do ~@(mapcat #(assign-impls env resolve type-sym type %) impl-map))))",
+ :source {:code "(core/defmacro extend-type\n  [type-sym & impls]\n  (core/let [env &env\n             _ (validate-impls env impls)\n             resolve (partial resolve-var env)\n             impl-map (->impl-map impls)\n             impl-map (if ('#{boolean number} type-sym)\n                        (type-hint-impl-map type-sym impl-map)\n                        impl-map)\n             [type assign-impls] (core/if-let [type (base-type type-sym)]\n                                   [type base-assign-impls]\n                                   [(resolve type-sym) proto-assign-impls])]\n    (core/when (core/and (:extending-base-js-type cljs.analyzer/*cljs-warnings*)\n            (js-base-type type-sym))\n      (cljs.analyzer/warning :extending-base-js-type env\n        {:current-symbol type-sym :suggested-symbol (js-base-type type-sym)}))\n    `(do ~@(mapcat #(assign-impls env resolve type-sym type %) impl-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1485 1508]},
+          :lines [1501 1541]},
  :full-name "cljs.core/extend-type",
  :clj-symbol "clojure.core/extend-type",
- :docstring "Extend a type to a series of protocols. Useful when you are\n supplying the definitions explicitly inline. Propagates the\n type as a type hint on the first argument of all fns.\n\n(extend-type MyType\n  ICounted\n  (-count [c] ...)\n  Foo\n  (bar [x y] ...)\n  (baz ([x] ...) ([x y & zs] ...))"}
+ :docstring "Extend a type to a series of protocols. Useful when you are\nsupplying the definitions explicitly inline. Propagates the\ntype as a type hint on the first argument of all fns.\n\ntype-sym may be\n\n * default, meaning the definitions will apply for any value,\n   unless an extend-type exists for one of the more specific\n   cases below.\n * nil, meaning the definitions will apply for the nil value.\n * any of object, boolean, number, string, array, or function,\n   indicating the definitions will apply for values of the\n   associated base JavaScript types. Note that, for example,\n   string should be used instead of js/String.\n * a JavaScript type not covered by the previous list, such\n   as js/RegExp.\n * a type defined by deftype or defrecord.\n\n(extend-type MyType\n  ICounted\n  (-count [c] ...)\n  Foo\n  (bar [x y] ...)\n  (baz ([x] ...) ([x y & zs] ...))"}
 
 ```
 

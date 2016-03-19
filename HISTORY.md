@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.8.34](https://github.com/cljsinfo/cljs-api-docs/tree/1.8.34)__</td>
+<td>2016-03-18</td>
+<td><kbd>1.8.0</kbd></td>
+<td><kbd>1.0.0-alpha3</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-1834syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1834library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1834compiler">
++1 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.7.228](https://github.com/cljsinfo/cljs-api-docs/tree/1.7.228)__</td>
 <td>2016-01-08</td>
 <td><kbd>1.7.0</kbd></td>
@@ -3097,6 +3120,29 @@
 </td>
 </tr>
 
+</table>
+
+### 1.8.34
+
+<a name="1834syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1834library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="1834compiler"></a> __Compiler API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-var-brightgreen.svg">
+</td>
+<td><samp>[cljs.repl/known-repl-opts](refs/cljs.repl/known-repl-opts.md)</samp></td>
+</tr>
 </table>
 
 ### 1.7.228

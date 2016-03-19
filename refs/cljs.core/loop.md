@@ -64,7 +64,7 @@ therein. Acts as a recur target.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L732-L754):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L720-L742):
 
 ```clj
 (core/defmacro loop
@@ -93,12 +93,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
-                └── <ins>[core.cljc:732-754](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/core.cljc#L732-L754)</ins>
+                └── <ins>[core.cljc:720-742](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L720-L742)</ins>
 </pre>
 
 -->
@@ -151,9 +151,9 @@ The API data for this symbol:
  :source {:code "(core/defmacro loop\n  [bindings & body]\n  (assert-args loop\n    (vector? bindings) \"a vector for its binding\"\n    (even? (count bindings)) \"an even number of forms in binding vector\")\n  (core/let [db (destructure bindings)]\n    (if (= db bindings)\n      `(loop* ~bindings ~@body)\n      (core/let [vs (take-nth 2 (drop 1 bindings))\n                 bs (take-nth 2 bindings)\n                 gs (map (core/fn [b] (if (core/symbol? b) b (gensym))) bs)\n                 bfs (reduce (core/fn [ret [b v g]]\n                               (if (core/symbol? b)\n                                 (conj ret g v)\n                                 (conj ret g v b g)))\n                       [] (map core/vector bs vs gs))]\n        `(let ~bfs\n           (loop* ~(vec (interleave gs gs))\n             (let ~(vec (interleave bs gs))\n               ~@body)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [732 754]},
+          :lines [720 742]},
  :examples [{:id "60291e",
              :content "```clj\n(loop [x 0]\n  (when (< x 10)\n    (println x)\n    (recur (+ x 2))))\n;; Prints:\n;; 0\n;; 2\n;; 4\n;; 6\n;; 8\n;;\n;;=> nil\n```"}],
  :full-name "cljs.core/loop",

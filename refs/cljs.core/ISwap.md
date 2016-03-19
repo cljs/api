@@ -22,7 +22,7 @@ Protocol for adding swapping functionality.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L740-L743):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L748-L751):
 
 ```clj
 (defprotocol ISwap
@@ -35,12 +35,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:740-743](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L740-L743)</ins>
+                └── <ins>[core.cljs:748-751](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L748-L751)</ins>
 </pre>
 
 -->
@@ -87,9 +87,9 @@ The API data for this symbol:
  :source {:code "(defprotocol ISwap\n  \"Protocol for adding swapping functionality.\"\n  (-swap! [o f] [o f a] [o f a b] [o f a b xs]\n    \"Swaps the value of o to be (apply f current-value-of-atom args).\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [740 743]},
+          :lines [748 751]},
  :methods [{:name "-swap!",
             :signature ["[o f]" "[o f a]" "[o f a b]" "[o f a b xs]"],
             :docstring "Swaps the value of o to be (apply f current-value-of-atom args)."}],

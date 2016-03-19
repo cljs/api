@@ -30,7 +30,7 @@ Create seq from a primitive JavaScript Array-like.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1458-L1464):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1521-L1527):
 
 ```clj
 (defn prim-seq
@@ -38,19 +38,19 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
      (prim-seq prim 0))
   ([prim i]
      (when (< i (alength prim))
-       (IndexedSeq. prim i))))
+       (IndexedSeq. prim i nil))))
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:1458-1464](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L1458-L1464)</ins>
+                └── <ins>[core.cljs:1521-1527](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1521-L1527)</ins>
 </pre>
 
 -->
@@ -95,12 +95,12 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/prim-seq",
- :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when (< i (alength prim))\n       (IndexedSeq. prim i))))",
+ :source {:code "(defn prim-seq\n  ([prim]\n     (prim-seq prim 0))\n  ([prim i]\n     (when (< i (alength prim))\n       (IndexedSeq. prim i nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1458 1464]},
+          :lines [1521 1527]},
  :full-name "cljs.core/prim-seq",
  :docstring "Create seq from a primitive JavaScript Array-like."}
 

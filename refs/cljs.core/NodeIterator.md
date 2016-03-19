@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L6174-L6210):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6346-L6382):
 
 ```clj
 (deftype NodeIterator [arr ^:mutable i ^:mutable next-entry ^:mutable next-iter]
@@ -68,12 +68,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:6174-6210](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L6174-L6210)</ins>
+                └── <ins>[core.cljs:6346-6382](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6346-L6382)</ins>
 </pre>
 
 -->
@@ -119,9 +119,9 @@ The API data for this symbol:
  :source {:code "(deftype NodeIterator [arr ^:mutable i ^:mutable next-entry ^:mutable next-iter]\n  Object\n  (advance [this]\n    (let [len (alength arr)]\n      (loop []\n        (if (< i len)\n          (let [key (aget arr i)\n                node-or-val (aget arr (inc i))\n                ^boolean found\n                (cond (some? key)\n                      (set! next-entry [key node-or-val])\n                      (some? node-or-val)\n                      (let [new-iter (-iterator node-or-val)]\n                        (if ^boolean (.hasNext new-iter)\n                          (set! next-iter new-iter)\n                          false))\n                      :else false)]\n            (set! i (+ i 2))\n            (if found true (recur)))\n          false))))\n  (hasNext [this]\n    (or (some? next-entry) (some? next-iter) (.advance this)))\n  (next [this]\n    (cond\n      (some? next-entry)\n      (let [ret next-entry]\n        (set! next-entry nil)\n        ret)\n      (some? next-iter)\n      (let [ret (.next next-iter)]\n        (when-not ^boolean (.hasNext next-iter)\n          (set! next-iter nil))\n        ret)\n      ^boolean (.advance this)\n      (.next this)\n      :else (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6174 6210]},
+          :lines [6346 6382]},
  :full-name "cljs.core/NodeIterator",
  :full-name-encode "cljs.core/NodeIterator",
  :history [["+" "1.7.28"]]}

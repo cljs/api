@@ -27,7 +27,7 @@ Returns highest resolution time offered by host in milliseconds.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L339-L352):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L339-L352):
 
 ```clj
 (defn system-time
@@ -49,12 +49,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:339-352](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L339-L352)</ins>
+                └── <ins>[core.cljs:339-352](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L339-L352)</ins>
 </pre>
 
 -->
@@ -102,7 +102,7 @@ The API data for this symbol:
  :source {:code "(defn system-time\n  []\n  (cond\n    (and (exists? js/performance)\n         (not (nil? (. js/performance -now))))\n    (.now js/performance)\n\n    (and (exists? js/process)\n         (not (nil? (. js/process -hrtime))))\n    (let [t (.hrtime js/process)]\n      (/ (+ (* (aget t 0) 1e9) (aget t 1)) 1e6))\n\n    :else (.getTime (js/Date.))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [339 352]},
  :full-name "cljs.core/system-time",

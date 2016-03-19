@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L115-L116):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L121-L122):
 
 ```clj
 (defn load-analysis-cache! [state ns cache]
@@ -33,12 +33,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:115-116](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L115-L116)</ins>
+                └── <ins>[js.cljs:121-122](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L121-L122)</ins>
 </pre>
 
 -->
@@ -84,9 +84,9 @@ The API data for this symbol:
  :source {:code "(defn load-analysis-cache! [state ns cache]\n  (swap! state assoc-in [::ana/namespaces ns] cache))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [115 116]},
+          :lines [121 122]},
  :full-name "cljs.js/load-analysis-cache!",
  :full-name-encode "cljs.js/load-analysis-cacheBANG",
  :history [["+" "1.7.10"]]}

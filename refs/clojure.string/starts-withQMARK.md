@@ -6,6 +6,9 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.145"><img valign="middle" alt="[+] 1.7.145" title="Added in 1.7.145" src="https://img.shields.io/badge/+-1.7.145-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.string/starts-with?</samp>](http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/starts-with?)
+</td>
 </tr>
 </table>
 
@@ -27,7 +30,7 @@ True if s starts with substr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L245-L248):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L245-L248):
 
 ```clj
 (defn ^boolean starts-with?
@@ -39,12 +42,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── clojure
-                └── <ins>[string.cljs:245-248](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/clojure/string.cljs#L245-L248)</ins>
+                └── <ins>[string.cljs:245-248](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L245-L248)</ins>
 </pre>
 
 -->
@@ -55,6 +58,9 @@ clojurescript @ r1.7.228
 
 ###### External doc links:
 
+[`clojure.string/starts-with?` @ clojuredocs](http://clojuredocs.org/clojure.string/starts-with_q)<br>
+[`clojure.string/starts-with?` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.string/starts-with%3F/)<br>
+[`clojure.string/starts-with?` @ crossclj](http://crossclj.info/fun/clojure.string/starts-with%3F.html)<br>
 [`clojure.string/starts-with?` @ crossclj](http://crossclj.info/fun/clojure.string.cljs/starts-with%3F.html)<br>
 
 ---
@@ -93,10 +99,11 @@ The API data for this symbol:
  :source {:code "(defn ^boolean starts-with?\n  [s substr]\n  (gstring/startsWith s substr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [245 248]},
  :full-name "clojure.string/starts-with?",
+ :clj-symbol "clojure.string/starts-with?",
  :docstring "True if s starts with substr."}
 
 ```

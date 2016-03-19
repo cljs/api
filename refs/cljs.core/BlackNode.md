@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L7234-L7334):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7430-L7539):
 
 ```clj
 (deftype BlackNode [key val left right ^:mutable __hash]
@@ -54,6 +54,15 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 
   (kv-reduce [node f init]
     (tree-map-kv-reduce node f init))
+
+  (indexOf [coll x]
+    (-indexOf coll x 0))
+  (indexOf [coll x start]
+    (-indexOf coll x start))
+  (lastIndexOf [coll x]
+    (-lastIndexOf coll x (count coll)))
+  (lastIndexOf [coll x start]
+    (-lastIndexOf coll x start))
 
   IMapEntry
   (-key [node] key)
@@ -132,12 +141,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:7234-7334](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L7234-L7334)</ins>
+                └── <ins>[core.cljs:7430-7539](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7430-L7539)</ins>
 </pre>
 
 -->
@@ -180,12 +189,12 @@ The API data for this symbol:
  :name "BlackNode",
  :type "type",
  :signature ["[key val left right __hash]"],
- :source {:code "(deftype BlackNode [key val left right ^:mutable __hash]\n  Object\n  (add-left [node ins]\n    (.balance-left ins node))\n\n  (add-right [node ins]\n    (.balance-right ins node))\n\n  (remove-left [node del]\n    (balance-left-del key val del right))\n\n  (remove-right [node del]\n    (balance-right-del key val left del))\n\n  (blacken [node] node)\n\n  (redden [node] (RedNode. key val left right nil))\n\n  (balance-left [node parent]\n    (BlackNode. (.-key parent) (.-val parent) node (.-right parent) nil))\n\n  (balance-right [node parent]\n    (BlackNode. (.-key parent) (.-val parent) (.-left parent) node nil))\n\n  (replace [node key val left right]\n    (BlackNode. key val left right nil))\n\n  (kv-reduce [node f init]\n    (tree-map-kv-reduce node f init))\n\n  IMapEntry\n  (-key [node] key)\n  (-val [node] val)\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IMeta\n  (-meta [node] nil)\n\n  IWithMeta\n  (-with-meta [node meta]\n    (with-meta [key val] meta))\n\n  IStack\n  (-peek [node] val)\n\n  (-pop [node] [key])\n\n  ICollection\n  (-conj [node o] [key val o])\n\n  IEmptyableCollection\n  (-empty [node] [])\n\n  ISequential\n  ISeqable\n  (-seq [node] (list key val))\n\n  ICounted\n  (-count [node] 2)\n\n  IIndexed\n  (-nth [node n]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    nil))\n\n  (-nth [node n not-found]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    not-found))\n\n  ILookup\n  (-lookup [node k] (-nth node k nil))\n  (-lookup [node k not-found] (-nth node k not-found))\n\n  IAssociative\n  (-assoc [node k v]\n    (assoc [key val] k v))\n\n  IVector\n  (-assoc-n [node n v]\n    (-assoc-n [key val] n v))\n\n  IReduce\n  (-reduce [node f]\n    (ci-reduce node f))\n\n  (-reduce [node f start]\n    (ci-reduce node f start))\n\n  IFn\n  (-invoke [node k]\n    (-lookup node k))\n\n  (-invoke [node k not-found]\n    (-lookup node k not-found)))",
+ :source {:code "(deftype BlackNode [key val left right ^:mutable __hash]\n  Object\n  (add-left [node ins]\n    (.balance-left ins node))\n\n  (add-right [node ins]\n    (.balance-right ins node))\n\n  (remove-left [node del]\n    (balance-left-del key val del right))\n\n  (remove-right [node del]\n    (balance-right-del key val left del))\n\n  (blacken [node] node)\n\n  (redden [node] (RedNode. key val left right nil))\n\n  (balance-left [node parent]\n    (BlackNode. (.-key parent) (.-val parent) node (.-right parent) nil))\n\n  (balance-right [node parent]\n    (BlackNode. (.-key parent) (.-val parent) (.-left parent) node nil))\n\n  (replace [node key val left right]\n    (BlackNode. key val left right nil))\n\n  (kv-reduce [node f init]\n    (tree-map-kv-reduce node f init))\n\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  IMapEntry\n  (-key [node] key)\n  (-val [node] val)\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IMeta\n  (-meta [node] nil)\n\n  IWithMeta\n  (-with-meta [node meta]\n    (with-meta [key val] meta))\n\n  IStack\n  (-peek [node] val)\n\n  (-pop [node] [key])\n\n  ICollection\n  (-conj [node o] [key val o])\n\n  IEmptyableCollection\n  (-empty [node] [])\n\n  ISequential\n  ISeqable\n  (-seq [node] (list key val))\n\n  ICounted\n  (-count [node] 2)\n\n  IIndexed\n  (-nth [node n]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    nil))\n\n  (-nth [node n not-found]\n    (cond (== n 0) key\n          (== n 1) val\n          :else    not-found))\n\n  ILookup\n  (-lookup [node k] (-nth node k nil))\n  (-lookup [node k not-found] (-nth node k not-found))\n\n  IAssociative\n  (-assoc [node k v]\n    (assoc [key val] k v))\n\n  IVector\n  (-assoc-n [node n v]\n    (-assoc-n [key val] n v))\n\n  IReduce\n  (-reduce [node f]\n    (ci-reduce node f))\n\n  (-reduce [node f start]\n    (ci-reduce node f start))\n\n  IFn\n  (-invoke [node k]\n    (-lookup node k))\n\n  (-invoke [node k not-found]\n    (-lookup node k not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7234 7334]},
+          :lines [7430 7539]},
  :full-name "cljs.core/BlackNode",
  :full-name-encode "cljs.core/BlackNode",
  :history [["+" "0.0-1211"]]}

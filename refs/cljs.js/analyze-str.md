@@ -55,7 +55,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L480-L519):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L491-L530):
 
 ```clj
 (defn analyze-str
@@ -70,8 +70,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
      {:*compiler*     state
       :*data-readers* tags/*cljs-data-readers*
       :*passes*       (or (:passes opts) ana/*passes*)
-      :*analyze-deps* (or (:analyze-deps opts) true)
-      :*load-macros*  (or (:load-macros opts) true)
+      :*analyze-deps* (:analyze-deps opts true)
+      :*load-macros*  (:load-macros opts true)
       :*load-fn*      (or (:load opts) *load-fn*)
       :*eval-fn*      (or (:eval opts) *eval-fn*)}
      source name opts cb)))
@@ -81,12 +81,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:480-519](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L480-L519)</ins>
+                └── <ins>[js.cljs:491-530](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L491-L530)</ins>
 </pre>
 
 -->
@@ -133,12 +133,12 @@ The API data for this symbol:
  :history [["+" "1.7.28"]],
  :type "function",
  :full-name-encode "cljs.js/analyze-str",
- :source {:code "(defn analyze-str\n  ([state source cb]\n   (analyze-str state source nil cb))\n  ([state source name cb]\n   (analyze-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (analyze-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*passes*       (or (:passes opts) ana/*passes*)\n      :*analyze-deps* (or (:analyze-deps opts) true)\n      :*load-macros*  (or (:load-macros opts) true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
+ :source {:code "(defn analyze-str\n  ([state source cb]\n   (analyze-str state source nil cb))\n  ([state source name cb]\n   (analyze-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (analyze-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*passes*       (or (:passes opts) ana/*passes*)\n      :*analyze-deps* (:analyze-deps opts true)\n      :*load-macros*  (:load-macros opts true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [480 519]},
+          :lines [491 530]},
  :full-name "cljs.js/analyze-str",
  :docstring "Analyze ClojureScript source. The compiler state will be populated with\nthe results of analyzes. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n:eval - the eval function to invoke, see *eval-fn*\n:load - library resolution function, see *load-fn*\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value, the actual value is not meaningful. If unsuccessful the\n  map will contain a key :error with an ex-info instance describing the cause\n  of failure."}
 

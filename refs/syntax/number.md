@@ -100,7 +100,7 @@ Radix notation for using up to base 36.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L260-L269):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L260-L269):
 
 ```clj
 (defn- read-number
@@ -119,13 +119,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:260-269](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L260-L269)</ins>
+                    └── <ins>[reader.clj:260-269](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L260-L269)</ins>
 </pre>
 -->
 
@@ -171,7 +171,7 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-number\n  [rdr initch]\n  (loop [sb (doto (StringBuilder.) (.append initch))\n         ch (read-char rdr)]\n    (if (or (whitespace? ch) (macros ch) (nil? ch))\n      (let [s (str sb)]\n        (unread rdr ch)\n        (or (match-number s)\n            (reader-error rdr \"Invalid number format [\" s \"]\")))\n      (recur (doto sb (.append ch)) (read-char rdr)))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [260 269]}],
  :examples [{:id "f96060",

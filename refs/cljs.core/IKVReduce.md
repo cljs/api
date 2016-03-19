@@ -6,6 +6,9 @@
 <tr>
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
+<td>
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IKVReduce</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IKVReduce.java)
+</td>
 </tr>
 </table>
 
@@ -23,7 +26,7 @@ Protocol for associative types that can reduce themselves
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L583-L588):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L591-L596):
 
 ```clj
 (defprotocol IKVReduce
@@ -38,12 +41,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[core.cljs:583-588](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/core.cljs#L583-L588)</ins>
+                └── <ins>[core.cljs:591-596](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L591-L596)</ins>
 </pre>
 
 -->
@@ -54,6 +57,9 @@ clojurescript @ r1.7.228
 
 ###### External doc links:
 
+[`clojure.lang/IKVReduce` @ clojuredocs](http://clojuredocs.org/clojure.lang/IKVReduce)<br>
+[`clojure.lang/IKVReduce` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.lang/IKVReduce/)<br>
+[`clojure.lang/IKVReduce` @ crossclj](http://crossclj.info/fun/clojure.lang/IKVReduce.html)<br>
 [`cljs.core/IKVReduce` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/IKVReduce.html)<br>
 
 ---
@@ -90,13 +96,14 @@ The API data for this symbol:
  :source {:code "(defprotocol IKVReduce\n  \"Protocol for associative types that can reduce themselves\n  via a function of key and val. Called by cljs.core/reduce-kv.\"\n  (-kv-reduce [coll f init]\n    \"Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [583 588]},
+          :lines [591 596]},
  :methods [{:name "-kv-reduce",
             :signature ["[coll f init]"],
             :docstring "Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments."}],
  :full-name "cljs.core/IKVReduce",
+ :clj-symbol "clojure.lang/IKVReduce",
  :docstring "Protocol for associative types that can reduce themselves\n  via a function of key and val. Called by cljs.core/reduce-kv."}
 
 ```

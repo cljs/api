@@ -61,7 +61,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L767-L811):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L784-L828):
 
 ```clj
 (defn eval-str
@@ -75,8 +75,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
    (eval-str*
      {:*compiler*     state
       :*data-readers* tags/*cljs-data-readers*
-      :*analyze-deps* (or (:analyze-deps opts) true)
-      :*load-macros*  (or (:load-macros opts) true)
+      :*analyze-deps* (:analyze-deps opts true)
+      :*load-macros*  (:load-macros opts true)
       :*load-fn*      (or (:load opts) *load-fn*)
       :*eval-fn*      (or (:eval opts) *eval-fn*)}
      source name opts cb)))
@@ -86,12 +86,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:767-811](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L767-L811)</ins>
+                └── <ins>[js.cljs:784-828](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L784-L828)</ins>
 </pre>
 
 -->
@@ -138,12 +138,12 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.js/eval-str",
- :source {:code "(defn eval-str\n  ([state source cb]\n   (eval-str state source nil cb))\n  ([state source name cb]\n   (eval-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (eval-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (or (:analyze-deps opts) true)\n      :*load-macros*  (or (:load-macros opts) true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
+ :source {:code "(defn eval-str\n  ([state source cb]\n   (eval-str state source nil cb))\n  ([state source name cb]\n   (eval-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (eval-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (:analyze-deps opts true)\n      :*load-macros*  (:load-macros opts true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [767 811]},
+          :lines [784 828]},
  :full-name "cljs.js/eval-str",
  :docstring "Evalute ClojureScript source given as a string. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :eval         - eval function to invoke, see *eval-fn*\n  :load         - library resolution function, see *load-fn*\n  :source-map   - set to true to generate inline source map information\n  :cache-source - optional, a function to run side-effects with the\n                  compilation result prior to actual evalution. This function\n                  takes two arguments, the first is the eval map, the source\n                  will be under :source. The second argument is a callback of\n                  one argument. If an error occurs an :error key should be\n                  supplied.\n\ncb (function)\n  callback, will be invoked with a map. If succesful the map will contain\n  a :value key with the result of evaluation and :ns the current namespace.\n  If unsuccessful will contain a :error key with an ex-info instance describing\n  the cause of failure."}
 

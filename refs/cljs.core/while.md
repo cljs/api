@@ -44,7 +44,7 @@ some side-effect will cause test to become false/nil. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L6060-L6068):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6087-L6095):
 
 ```clj
 (defmacro while
@@ -59,11 +59,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0
+clojure @ clojure-1.8.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:6060-6068](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L6060-L6068)</ins>
+            └── <ins>[core.clj:6087-6095](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6087-L6095)</ins>
 </pre>
 
 -->
@@ -116,9 +116,9 @@ The API data for this symbol:
  :source {:code "(defmacro while\n  [test & body]\n  `(loop []\n     (when ~test\n       ~@body\n       (recur))))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0",
+          :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [6060 6068]},
+          :lines [6087 6095]},
  :full-name "cljs.core/while",
  :clj-symbol "clojure.core/while",
  :docstring "Repeatedly executes body while test expression is true. Presumes\nsome side-effect will cause test to become false/nil. Returns nil"}

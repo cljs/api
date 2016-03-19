@@ -93,7 +93,7 @@ last item in second form, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L1580-L1594):
+Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1602-L1616):
 
 ```clj
 (defmacro ->>
@@ -112,11 +112,11 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.7.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.7.0
+clojure @ clojure-1.8.0
 └── src
     └── clj
         └── clojure
-            └── <ins>[core.clj:1580-1594](https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L1580-L1594)</ins>
+            └── <ins>[core.clj:1602-1616](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1602-L1616)</ins>
 </pre>
 
 -->
@@ -169,9 +169,9 @@ The API data for this symbol:
  :source {:code "(defmacro ->>\n  [x & forms]\n  (loop [x x, forms forms]\n    (if forms\n      (let [form (first forms)\n            threaded (if (seq? form)\n              (with-meta `(~(first form) ~@(next form)  ~x) (meta form))\n              (list form x))]\n        (recur threaded (next forms)))\n      x)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.7.0",
+          :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1580 1594]},
+          :lines [1602 1616]},
  :examples [{:id "1dc72c",
              :content "Sequence transformation functions often take a sequence as the last argument,\nthus the thread-last macro is commonly used with them.  Here we compute the sum\nof the first 10 even squares:\n\n```clj\n(->> (range)\n     (map #(* % %))\n     (filter even?)\n     (take 10)\n     (reduce +))\n;;=> 1140\n```\n\nThis expands to:\n\n```clj\n(reduce +\n  (take 10\n    (filter even?\n      (map #(* % %)\n        (range)))))\n;;=> 1140\n```"}],
  :known-as "thread last",

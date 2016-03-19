@@ -113,7 +113,7 @@ literal UUID:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L811-L824):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L811-L824):
 
 ```clj
 (defn- read-tagged [rdr initch opts pending-forms]
@@ -136,13 +136,13 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:811-824](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L811-L824)</ins>
+                    └── <ins>[reader.clj:811-824](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L811-L824)</ins>
 </pre>
 -->
 
@@ -184,7 +184,7 @@ The API data for this symbol:
  :extra-sources [{:code "(defn- read-tagged [rdr initch opts pending-forms]\n  (let [tag (read* rdr true nil opts pending-forms)]\n    (if-not (symbol? tag)\n      (reader-error rdr \"Reader tag must be a symbol\"))\n    (if *suppress-read*\n      (tagged-literal tag (read* rdr true nil opts pending-forms))\n      (if-let [f (or (*data-readers* tag)\n                     (default-data-readers tag))]\n        (f (read* rdr true nil opts pending-forms))\n        (if (.contains (name tag) \".\")\n          (read-ctor rdr tag opts pending-forms)\n          (if-let [f *default-data-reader-fn*]\n            (f tag (read* rdr true nil opts pending-forms))\n            (reader-error rdr \"No reader function for tag \" (name tag))))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [811 824]}],
  :usage ["#foo ..."],

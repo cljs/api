@@ -22,7 +22,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L118-L120):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L124-L126):
 
 ```clj
 (defn load-source-map! [state ns sm-json]
@@ -34,12 +34,12 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── cljs
             └── cljs
-                └── <ins>[js.cljs:118-120](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/cljs/cljs/js.cljs#L118-L120)</ins>
+                └── <ins>[js.cljs:124-126](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L124-L126)</ins>
 </pre>
 
 -->
@@ -85,9 +85,9 @@ The API data for this symbol:
  :source {:code "(defn load-source-map! [state ns sm-json]\n  (let [sm (sm/decode (.parse js/JSON sm-json))]\n    (swap! state assoc-in [:source-maps ns] sm)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [118 120]},
+          :lines [124 126]},
  :full-name "cljs.js/load-source-map!",
  :full-name-encode "cljs.js/load-source-mapBANG",
  :history [["+" "1.7.10"]]}

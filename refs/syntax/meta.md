@@ -83,7 +83,7 @@ Chain metadata:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L369-L385):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L369-L385):
 
 ```clj
 (defn- read-meta
@@ -108,18 +108,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:369-385](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L369-L385)</ins>
+                    └── <ins>[reader.clj:369-385](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L369-L385)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
 
 ```clj
 (defn- macros [ch]
@@ -148,13 +148,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
 </pre>
 -->
 
@@ -199,13 +199,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-meta\n  [rdr _ opts pending-forms]\n  (log-source rdr\n    (let [[line column] (starting-line-col-info rdr)\n          m (desugar-meta (read* rdr true nil opts pending-forms))]\n      (when-not (map? m)\n        (reader-error rdr \"Metadata must be Symbol, Keyword, String or Map\"))\n      (let [o (read* rdr true nil opts pending-forms)]\n        (if (instance? IMeta o)\n          (let [m (if (and line (seq? o))\n                    (assoc m :line line :column column)\n                    m)]\n            (if (instance? IObj o)\n              (with-meta o (merge (meta o) m))\n              (reset-meta! o m)))\n          (reader-error rdr \"Metadata can only be applied to IMetas\"))))))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [369 385]}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [743 762]}),
  :usage ["^{...}" "^:foo" "^\"foo\"" "^foo"],

@@ -8,6 +8,7 @@ symbols that are not yet ported to ClojureScript:
 - [clojure.core](#clojurecore)
 - [clojure.core.protocols](#clojurecoreprotocols)
 - [clojure.core.reducers](#clojurecorereducers)
+- [clojure.core.server](#clojurecoreserver)
 - [clojure.data](#clojuredata)
 - [clojure.edn](#clojureedn)
 - [clojure.inspector](#clojureinspector)
@@ -486,6 +487,10 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core/map-entry?](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/map-entry?)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/monitor-enter](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/monitor-enter)</samp></td>
 </tr>
 <tr>
@@ -813,6 +818,39 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core.reducers/->Cat](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/-%3ECat)</samp></td>
+</tr>
+</table>
+
+## clojure.core.server
+
+ <table>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/repl](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/repl)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/repl-init](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/repl-init)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/repl-read](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/repl-read)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/start-server](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/start-server)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/start-servers](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/start-servers)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/stop-server](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/stop-server)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.core.server/stop-servers](http://clojure.github.io/clojure/branch-master/clojure.core.server-api.html#clojure.core.server/stop-servers)</samp></td>
 </tr>
 </table>
 
@@ -1282,6 +1320,10 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.lang/TransformerIterator](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TransformerIterator.java)</samp></td>
+</tr>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.lang/Tuple](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Tuple.java)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

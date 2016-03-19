@@ -53,7 +53,7 @@ Like [`cond`][doc:syntax/cond], except:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L496-L514):
+Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514):
 
 ```clj
 (defn- read-cond
@@ -81,18 +81,18 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:496-514](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L496-L514)</ins>
+                    └── <ins>[reader.clj:496-514](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514)</ins>
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -114,13 +114,13 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha1
+tools.reader @ tools.reader-1.0.0-alpha3
 └── src
     └── main
         └── clojure
             └── clojure
                 └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha1/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
 </pre>
 -->
 
@@ -162,13 +162,13 @@ The API data for this symbol:
  :extra-sources ({:code "(defn- read-cond\n  [rdr _ opts pending-forms]\n  (when (not (and opts (#{:allow :preserve} (:read-cond opts))))\n    (throw (RuntimeException. \"Conditional read not allowed\")))\n  (if-let [ch (read-char rdr)]\n    (let [splicing (= ch \\@)\n          ch (if splicing (read-char rdr) ch)]\n      (when splicing\n        (when-not *read-delim*\n          (reader-error rdr \"cond-splice not in list\")))\n      (if-let [ch (if (whitespace? ch) (read-past whitespace? rdr) ch)]\n        (if (not= ch \\()\n          (throw (RuntimeException. \"read-cond body must be a list\"))\n          (binding [*suppress-read* (or *suppress-read* (= :preserve (:read-cond opts)))]\n            (if *suppress-read*\n              (reader-conditional (read-list rdr ch opts pending-forms) splicing)\n              (read-cond-delimited rdr splicing opts pending-forms))))\n        (reader-error rdr \"EOF while reading character\")))\n    (reader-error rdr \"EOF while reading character\")))",
                   :title "Reader code",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [496 514]}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
-                  :tag "tools.reader-1.0.0-alpha1",
+                  :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
                   :lines [764 776]}),
  :usage ["#?@(...)"],

@@ -30,7 +30,7 @@ Given a Compilable, compile it and return an IJavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/build/api.clj#L176-L186):
+Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L176-L186):
 
 ```clj
 (defn compile
@@ -49,13 +49,13 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.228/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.228
+clojurescript @ r1.8.34
 └── src
     └── main
         └── clojure
             └── cljs
                 └── build
-                    └── <ins>[api.clj:176-186](https://github.com/clojure/clojurescript/blob/r1.7.228/src/main/clojure/cljs/build/api.clj#L176-L186)</ins>
+                    └── <ins>[api.clj:176-186](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L176-L186)</ins>
 </pre>
 
 -->
@@ -103,7 +103,7 @@ The API data for this symbol:
  :source {:code "(defn compile\n  ([opts compilable]\n   (compile\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     opts compilable))\n  ([state opts compilable]\n   (env/with-compiler-env state\n     (closure/compile compilable opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.7.228",
+          :tag "r1.8.34",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [176 186]},
  :full-name "cljs.build.api/compile",
