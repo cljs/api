@@ -22,13 +22,15 @@
                  }
 
  ;; map full symbol names to their API data
- :symbols {"cljs.core/keys"
+ :symbols {"cljs.core/->"
              {;; auto-parsed docs
 
-              :full-name         "cljs.core/keys",
-              :full-name-encode  "cljs.core_keys", ;; used for filenames
+              :full-name         "cljs.core/->",
+              :full-name-encode  "cljs.core/-GT", ;; used for filenames
               :ns                "cljs.core",
-              :name              "keys",
+              :name              "->",
+
+              ;; example data here taken from cljs.core/keys
               :type              "function",
               :docstring         "Returns a sequence of the map's keys.",
               :signature         ["[hash-map]"],
@@ -42,14 +44,6 @@
               ;; equivalent symbol in Clojure (if applicable)
               :clj-symbol        "clojure.core/keys",
 
-              ;; syntax usage strings
-              ;; (see cljsdoc/syntax_inst-literal.cljsdoc for example)
-              :usage []
-
-              ;; alternate display name (if :full-name is a pseudo-symbol that shouldn't be displayed)
-              ;; for example, syntax/queue-literal should be displayed "#queue [] literal"
-              :display ""
-
               ;; syntax equivalency to clojure or edn if applicable
               :clj-doc "... external URL for clojure syntax doc ..."
               :edn-doc "... external URL for edn syntax doc ..."
@@ -60,10 +54,28 @@
               :examples [{:id "a34fe2"
                           :content "... example in markdown ..."}]
               :related ["cljs.core/foo" "cljs.core/bar"]
+
+              ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
+              :moved "cljs.core/another-name"
+
+              ;; syntax usage strings (like a signature, but for syntax)
+              ;; (from syntax/inst-literal)
+              :usage ["#inst \"yyyy-mm-dd\""
+                      "#inst \"yyyy-mm-ddThh:mm:ss\""
+                      "#inst \"yyyy-mm-ddThh:mm:ssZ\""
+                      "#inst \"yyyy-mm-ddThh:mm:ss-hh:mm\""]
+
+              ;; alternate display name (if :full-name is a pseudo-symbol that shouldn't be displayed)
+              :display "#queue [] literal" ;; (from syntax/queue-literal)
+
+              ;; what it's usually called
+              :known-as "thread first" ;; (from cljs.core/->)
               }
 
            ;; ...
            }
+
+ :namespaces { ... }
 
  ;; API categories (i.e. syntax, library, compiler)
  :api {
