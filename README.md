@@ -291,4 +291,4 @@ $ script/docset-pr.sh
 
 ## License
 
-MIT, Copyright © 2014-2015 Shaun LeBron
+MIT, Copyright © 2014-2016 Shaun LeBron
