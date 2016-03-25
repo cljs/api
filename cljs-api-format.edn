@@ -67,6 +67,7 @@
 
               ;; alternate display name (if :full-name is a pseudo-symbol that shouldn't be displayed)
               :display "#queue [] literal" ;; (from syntax/queue-literal)
+                :display "if" ;; (another example, from special/if)
 
               ;; what it's usually called
               :known-as "thread first" ;; (from cljs.core/->)
