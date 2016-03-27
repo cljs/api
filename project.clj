@@ -13,7 +13,6 @@
                  [ccfontes/fuzzy-matcher "0.0.1"]
                  [clj-time "0.9.0"]
                  [clojure-watch "0.1.11"]
-                 [clj-yaml "0.4.0"]
                  ]
 
   :source-paths ["src/main"]

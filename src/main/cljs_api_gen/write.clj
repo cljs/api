@@ -6,7 +6,6 @@
     [clojure.edn :as edn]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [join replace split trim]]
-    [clj-yaml.core :as yaml]
     [fipp.edn :refer [pprint]]
     [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
                                           unnamed-doclink-pattern
@@ -382,15 +381,7 @@
     (mkdirs (parent gh-filename))
     (mkdirs (parent site-filename))
 
-    (spit gh-filename (render-template "var.md" data))
-    #_(spit site-filename
-      (yaml/generate-string
-        {:sectionid "docs"
-         :layout "var"
-         :ns (:ns item)
-         :name (:name item)
-         :full-name (:full-name item)
-         :title (get-full-display-name item)}))))
+    (spit gh-filename (render-template "var.md" data))))
 
 ;;--------------------------------------------------------------------------------
 ;; history file
@@ -706,14 +697,6 @@
     (println "writing var files...")
     (doseq [item (vals (:symbols result))]
       (dump-var-file! item))
-
-    #_(println "writing var data for site...")
-    #_(spit (str *output-dir* "/" site-dir "/vars.yaml")
-          (binding [*doclink-prefix* site-docs-root
-                    *doclink-ext* ".html"]
-            (let [vars (map var-file-data (vals (:symbols result)))
-                  data (zipmap (map :full-name vars) vars)]
-              (yaml/generate-string data))))
 
     (println "writing readme...")
     (dump-readme! result)
