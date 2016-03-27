@@ -1,15 +1,6 @@
 # ClojureScript API Docs Builder
 
- <table>
-<tr>
-<td>
-[<img valign="middle" src="https://travis-ci.org/cljsinfo/cljs-api-docs.svg?branch=master">](https://travis-ci.org/cljsinfo/cljs-api-docs)
-</td>
-<td>
-  __[:book: Latest API Documentation](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.md)__
-</td>
-</tr>
-</table>
+__[:book: Latest API Documentation](https://github.com/cljsinfo/cljs-api-docs/blob/catalog/INDEX.md)__
 
 Hello! We are building a ClojureScript website. A section of this website will
 be devoted to providing beautiful and informative documentation for the core
