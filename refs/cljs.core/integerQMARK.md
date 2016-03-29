@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(integer? n)</samp><br>
+
+---
 
  <samp>
 (__integer?__ n)<br>
@@ -40,7 +43,7 @@ Returns true if n is an integer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2091-L2097):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean integer?
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2091-2097](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2091-L2097)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "integer?",
  :signature ["[n]"],
+ :name-encode "integerQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/integer?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/integer?"},
  :related ["cljs.core/int"],
  :full-name-encode "cljs.core/integerQMARK",
  :source {:code "(defn ^boolean integer?\n  [n]\n  (and (number? n)\n       (not ^boolean (js/isNaN n))\n       (not (identical? n js/Infinity))\n       (== (js/parseFloat n) (js/parseInt n 10))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2091 2097]},
+          :lines [2091 2097],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2091-L2097"},
+ :usage ["(integer? n)"],
  :full-name "cljs.core/integer?",
- :clj-symbol "clojure.core/integer?",
- :docstring "Returns true if n is an integer."}
+ :docstring "Returns true if n is an integer.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/integerQMARK.cljsdoc"}
 
 ```
 

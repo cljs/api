@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(volatile! val)</samp><br>
+
+---
 
  <samp>
 (__volatile!__ val)<br>
@@ -38,7 +41,7 @@ Creates and returns a Volatile with an initial value of val.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4192-L4195):
+Source code @ [github]():
 
 ```clj
 (defn volatile!
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4192-4195](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4192-L4195)</ins>
+
 </pre>
 
 -->
@@ -100,8 +98,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "volatile!",
  :signature ["[val]"],
+ :name-encode "volatileBANG",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/volatile!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/volatile!"},
  :related ["cljs.core/volatile?"
            "cljs.core/vswap!"
            "cljs.core/vreset!"
@@ -110,12 +111,14 @@ The API data for this symbol:
  :source {:code "(defn volatile!\n  [val]\n  (Volatile. val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4192 4195]},
+          :lines [4192 4195],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4192-L4195"},
+ :usage ["(volatile! val)"],
  :full-name "cljs.core/volatile!",
- :clj-symbol "clojure.core/volatile!",
- :docstring "Creates and returns a Volatile with an initial value of val."}
+ :docstring "Creates and returns a Volatile with an initial value of val.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/volatileBANG.cljsdoc"}
 
 ```
 

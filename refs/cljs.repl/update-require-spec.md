@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(update-require-spec specs & additions)</samp><br>
+
+---
 
  <samp>
 (__update-require-spec__ specs & additions)<br>
@@ -28,7 +31,7 @@ return an updated specification.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L226-L241):
+Source code @ [github]():
 
 ```clj
 (defn update-require-spec
@@ -51,11 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:226-241](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L226-L241)</ins>
+
 </pre>
 
 -->
@@ -106,6 +105,7 @@ The API data for this symbol:
           :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
           :lines [226 241]},
+ :usage ["(update-require-spec specs & additions)"],
  :full-name "cljs.repl/update-require-spec",
  :docstring "Given the specification portion of a ns form and require spec additions\nreturn an updated specification.",
  :removed {:in "0.0-2655", :last-seen "0.0-2644"}}

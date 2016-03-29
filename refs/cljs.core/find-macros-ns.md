@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(find-macros-ns ns)</samp><br>
+
+---
 
  <samp>
 (__find-macros-ns__ ns)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10430-L10444):
+Source code @ [github]():
 
 ```clj
 (defn find-macros-ns [ns]
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10430-10444](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10430-L10444)</ins>
+
 </pre>
 
 -->
@@ -92,17 +90,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "find-macros-ns",
- :type "function",
  :signature ["[ns]"],
+ :name-encode "find-macros-ns",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.core/find-macros-ns",
  :source {:code "(defn find-macros-ns [ns]\n  (when (nil? NS_CACHE)\n    (set! NS_CACHE (atom {})))\n  (let [the-ns (get @NS_CACHE ns)]\n    (if-not (nil? the-ns)\n      the-ns\n      (let [ns-str (str ns)\n           ns (if (not ^boolean (gstring/contains ns-str \"$macros\"))\n                (symbol (str ns-str \"$macros\"))\n                ns)\n           ns-obj (find-ns-obj ns)]\n       (when-not (nil? ns-obj)\n         (let [new-ns (create-ns ns ns-obj)]\n           (swap! NS_CACHE assoc ns new-ns)\n           new-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10430 10444]},
+          :lines [10430 10444],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10430-L10444"},
+ :usage ["(find-macros-ns ns)"],
  :full-name "cljs.core/find-macros-ns",
- :full-name-encode "cljs.core/find-macros-ns",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find-macros-ns.cljsdoc"}
 
 ```
 

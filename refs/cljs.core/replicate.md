@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(replicate n x)</samp><br>
+
+---
 
  <samp>
 (__replicate__ n x)<br>
@@ -30,7 +33,7 @@ Returns a lazy seq of n xs.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4474-L4476):
+Source code @ [github]():
 
 ```clj
 (defn replicate
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4474-4476](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4474-L4476)</ins>
+
 </pre>
 
 -->
@@ -91,18 +89,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "replicate",
  :signature ["[n x]"],
+ :name-encode "replicate",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/replicate",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/replicate"},
  :full-name-encode "cljs.core/replicate",
  :source {:code "(defn replicate\n  [n x] (take n (repeat x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4474 4476]},
+          :lines [4474 4476],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4474-L4476"},
+ :usage ["(replicate n x)"],
  :full-name "cljs.core/replicate",
- :clj-symbol "clojure.core/replicate",
- :docstring "Returns a lazy seq of n xs."}
+ :docstring "Returns a lazy seq of n xs.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/replicate.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(mod n d)</samp><br>
+
+---
 
  <samp>
 (__mod__ n d)<br>
@@ -60,7 +63,7 @@ Modulus of num and div. Truncates toward negative infinity.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2562-L2565):
+Source code @ [github]():
 
 ```clj
 (defn mod
@@ -72,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2562-2565](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2562-L2565)</ins>
+
 </pre>
 
 -->
@@ -123,21 +121,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "mod",
  :signature ["[n d]"],
+ :name-encode "mod",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/mod",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/mod"},
  :related ["cljs.core/rem"],
  :full-name-encode "cljs.core/mod",
  :source {:code "(defn mod\n  [n d]\n  (js-mod (+ (js-mod n d) d) d))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2562 2565]},
+          :lines [2562 2565],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2562-L2565"},
+ :usage ["(mod n d)"],
  :examples [{:id "8165e8",
              :content "```clj\n(mod -5 3)\n;;=> 1\n\n(mod 5 3)\n;;=> 2\n\n(mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/mod",
- :clj-symbol "clojure.core/mod",
- :docstring "Modulus of num and div. Truncates toward negative infinity."}
+ :docstring "Modulus of num and div. Truncates toward negative infinity.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/mod.cljsdoc"}
 
 ```
 

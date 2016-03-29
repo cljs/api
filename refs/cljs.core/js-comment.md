@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-comment comment)</samp><br>
+
+---
 
  <samp>
 (__js-comment__ comment)<br>
@@ -28,7 +31,7 @@ new comment line. Comment block will be preceded and followed by a newline
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L861-L873):
+Source code @ [github]():
 
 ```clj
 (core/defmacro js-comment
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:861-873](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L861-L873)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "js-comment",
  :signature ["[comment]"],
+ :name-encode "js-comment",
  :history [["+" "1.7.107"]],
  :type "macro",
  :full-name-encode "cljs.core/js-comment",
  :source {:code "(core/defmacro js-comment\n  [comment]\n  (core/let [[x & ys] (string/split comment #\"\\n\")]\n    (core/list 'js*\n      (core/str\n        \"\\n/**\\n\"\n        (core/str \" * \" x \"\\n\")\n        (core/->> ys\n          (map #(core/str \" * \" (string/replace % #\"^   \" \"\") \"\\n\"))\n          (reduce core/str \"\"))\n        \" */\\n\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [861 873]},
+          :lines [861 873],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L861-L873"},
+ :usage ["(js-comment comment)"],
  :full-name "cljs.core/js-comment",
- :docstring "Emit a top-level JavaScript multi-line comment. New lines will create a\nnew comment line. Comment block will be preceded and followed by a newline"}
+ :docstring "Emit a top-level JavaScript multi-line comment. New lines will create a\nnew comment line. Comment block will be preceded and followed by a newline",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-comment.cljsdoc"}
 
 ```
 

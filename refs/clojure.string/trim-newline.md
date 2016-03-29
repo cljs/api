@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(trim-newline s)</samp><br>
+
+---
 
  <samp>
 (__trim-newline__ s)<br>
@@ -38,7 +41,7 @@ string.  Similar to Perl's chomp.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L180-L191):
+Source code @ [github]():
 
 ```clj
 (defn trim-newline
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:180-191](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L180-L191)</ins>
+
 </pre>
 
 -->
@@ -108,18 +106,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "trim-newline",
  :signature ["[s]"],
+ :name-encode "trim-newline",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/trim-newline",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/trim-newline"},
  :full-name-encode "clojure.string/trim-newline",
  :source {:code "(defn trim-newline\n  [s]\n  (loop [index (.-length s)]\n    (if (zero? index)\n      \"\"\n      (let [ch (get s (dec index))]\n        (if (or (identical? \\newline ch)\n                (identical? \\return ch))\n          (recur (dec index))\n          (.substring s 0 index))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [180 191]},
+          :lines [180 191],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L180-L191"},
+ :usage ["(trim-newline s)"],
  :full-name "clojure.string/trim-newline",
- :clj-symbol "clojure.string/trim-newline",
- :docstring "Removes all trailing newline \\n or return \\r characters from\nstring.  Similar to Perl's chomp."}
+ :docstring "Removes all trailing newline \\n or return \\r characters from\nstring.  Similar to Perl's chomp.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/trim-newline.cljsdoc"}
 
 ```
 

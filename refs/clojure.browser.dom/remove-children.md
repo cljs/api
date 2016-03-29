@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(remove-children id)</samp><br>
+
+---
 
  <samp>
 (__remove-children__ id)<br>
@@ -27,7 +30,7 @@ Remove all children from the element with the passed id.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L92-L96):
+Source code @ [github]():
 
 ```clj
 (defn remove-children
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:92-96](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L92-L96)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "remove-children",
  :signature ["[id]"],
+ :name-encode "remove-children",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/remove-children",
  :source {:code "(defn remove-children\n  [id]\n  (let [parent (gdom/getElement (name id))]\n    (do (gdom/removeChildren parent))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [92 96]},
+          :lines [92 96],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L92-L96"},
+ :usage ["(remove-children id)"],
  :full-name "clojure.browser.dom/remove-children",
- :docstring "Remove all children from the element with the passed id."}
+ :docstring "Remove all children from the element with the passed id.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/remove-children.cljsdoc"}
 
 ```
 

@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L16):
+Source code @ [github]():
 
 ```clj
 (def *clojurescript-version*)
@@ -30,12 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:16](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L16)</ins>
+
 </pre>
 
 -->
@@ -79,17 +74,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*clojurescript-version*",
+ :name-encode "STARclojurescript-versionSTAR",
+ :history [["+" "0.0-2014"]],
  :type "var",
+ :clj-equiv {:full-name "clojure.core/*clojure-version*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*clojure-version*"},
+ :full-name-encode "cljs.core/STARclojurescript-versionSTAR",
  :source {:code "(def *clojurescript-version*)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [16]},
+          :lines [16],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L16"},
  :full-name "cljs.core/*clojurescript-version*",
- :full-name-encode "cljs.core/STARclojurescript-versionSTAR",
- :clj-symbol "clojure.core/*clojure-version*",
- :history [["+" "0.0-2014"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARclojurescript-versionSTAR.cljsdoc"}
 
 ```
 

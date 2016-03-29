@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(includes? s substr)</samp><br>
+
+---
 
  <samp>
 (__includes?__ s substr)<br>
@@ -30,7 +33,7 @@ True if s includes substr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L255-L258):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean includes?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:255-258](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L255-L258)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "includes?",
  :signature ["[s substr]"],
+ :name-encode "includesQMARK",
  :history [["+" "1.7.145"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/includes?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/includes?"},
  :full-name-encode "clojure.string/includesQMARK",
  :source {:code "(defn ^boolean includes?\n  [s substr]\n  (gstring/contains s substr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [255 258]},
+          :lines [255 258],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L255-L258"},
+ :usage ["(includes? s substr)"],
  :full-name "clojure.string/includes?",
- :clj-symbol "clojure.string/includes?",
- :docstring "True if s includes substr."}
+ :docstring "True if s includes substr.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/includesQMARK.cljsdoc"}
 
 ```
 

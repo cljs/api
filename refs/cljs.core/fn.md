@@ -12,6 +12,10 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(fn name? \[params\*\] prepost-map? body)</samp><br>
+<samp>(fn name? (\[params\*\] prepost-map? body)+)</samp><br>
+
+---
 
  <samp>
 (__fn__ name? \[params\*\] prepost-map? body)<br>
@@ -67,7 +71,7 @@ Defines a function
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4357-L4417):
+Source code @ [github]():
 
 ```clj
 (defmacro fn
@@ -129,11 +133,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:4357-4417](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4357-L4417)</ins>
+
 </pre>
 
 -->
@@ -180,8 +180,11 @@ The API data for this symbol:
  :name "fn",
  :signature ["[name? [params*] prepost-map? body]"
              "[name? ([params*] prepost-map? body)+]"],
+ :name-encode "fn",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/fn",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/fn"},
  :related ["cljs.core/defn" "cljs.core/defn-"],
  :full-name-encode "cljs.core/fn",
  :source {:code "(defmacro fn\n  [& sigs]\n    (let [name (if (symbol? (first sigs)) (first sigs) nil)\n          sigs (if name (next sigs) sigs)\n          sigs (if (vector? (first sigs)) \n                 (list sigs) \n                 (if (seq? (first sigs))\n                   sigs\n                   ;; Assume single arity syntax\n                   (throw (IllegalArgumentException. \n                            (if (seq sigs)\n                              (str \"Parameter declaration \" \n                                   (first sigs)\n                                   \" should be a vector\")\n                              (str \"Parameter declaration missing\"))))))\n          psig (fn* [sig]\n                 ;; Ensure correct type before destructuring sig\n                 (when (not (seq? sig))\n                   (throw (IllegalArgumentException.\n                            (str \"Invalid signature \" sig\n                                 \" should be a list\"))))\n                 (let [[params & body] sig\n                       _ (when (not (vector? params))\n                           (throw (IllegalArgumentException. \n                                    (if (seq? (first sigs))\n                                      (str \"Parameter declaration \" params\n                                           \" should be a vector\")\n                                      (str \"Invalid signature \" sig\n                                           \" should be a list\")))))\n                       conds (when (and (next body) (map? (first body))) \n                                           (first body))\n                       body (if conds (next body) body)\n                       conds (or conds (meta params))\n                       pre (:pre conds)\n                       post (:post conds)                       \n                       body (if post\n                              `((let [~'% ~(if (< 1 (count body)) \n                                            `(do ~@body) \n                                            (first body))]\n                                 ~@(map (fn* [c] `(assert ~c)) post)\n                                 ~'%))\n                              body)\n                       body (if pre\n                              (concat (map (fn* [c] `(assert ~c)) pre) \n                                      body)\n                              body)]\n                   (maybe-destructured params body)))\n          new-sigs (map psig sigs)]\n      (with-meta\n        (if name\n          (list* 'fn* name new-sigs)\n          (cons 'fn* new-sigs))\n        (meta &form))))",
@@ -189,10 +192,13 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [4357 4417]},
+          :lines [4357 4417],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4357-L4417"},
+ :usage ["(fn name? [params*] prepost-map? body)"
+         "(fn name? ([params*] prepost-map? body)+)"],
  :full-name "cljs.core/fn",
- :clj-symbol "clojure.core/fn",
- :docstring "params => positional-params* , or positional-params* & next-param\npositional-param => binding-form\nnext-param => binding-form\nname => symbol\n\nDefines a function"}
+ :docstring "params => positional-params* , or positional-params* & next-param\npositional-param => binding-form\nnext-param => binding-form\nname => symbol\n\nDefines a function",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/fn.cljsdoc"}
 
 ```
 

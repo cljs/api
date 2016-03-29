@@ -24,7 +24,7 @@ Do not use this.  It is kept for backwards compatibility with existing
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L253-L257):
+Source code @ [github]():
 
 ```clj
 (defprotocol ^:deprecated IPrintable
@@ -38,11 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:253-257](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L253-L257)</ins>
+
 </pre>
 
 -->

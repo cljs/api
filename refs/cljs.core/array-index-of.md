@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(array-index-of arr k)</samp><br>
+
+---
 
  <samp>
 (__array-index-of__ arr k)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5908-L5920):
+Source code @ [github]():
 
 ```clj
 (defn array-index-of [arr k]
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5908-5920](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5908-L5920)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "array-index-of",
- :type "function",
  :signature ["[arr k]"],
+ :name-encode "array-index-of",
+ :history [["+" "0.0-3178"]],
+ :type "function",
+ :full-name-encode "cljs.core/array-index-of",
  :source {:code "(defn array-index-of [arr k]\n  (cond\n    (keyword? k) (array-index-of-keyword? arr k)\n\n    (or ^boolean (goog/isString k) (number? k))\n    (array-index-of-identical? arr k)\n\n    (symbol? k) (array-index-of-symbol? arr k)\n\n    (nil? k)\n    (array-index-of-nil? arr)\n\n    :else (array-index-of-equiv? arr k)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5908 5920]},
+          :lines [5908 5920],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5908-L5920"},
+ :usage ["(array-index-of arr k)"],
  :full-name "cljs.core/array-index-of",
- :full-name-encode "cljs.core/array-index-of",
- :history [["+" "0.0-3178"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array-index-of.cljsdoc"}
 
 ```
 

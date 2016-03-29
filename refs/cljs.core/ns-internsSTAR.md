@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ns-interns\* sym)</samp><br>
+
+---
 
  <samp>
 (__ns-interns\*__ sym)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10402-L10410):
+Source code @ [github]():
 
 ```clj
 (defn ns-interns* [sym]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10402-10410](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10402-L10410)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ns-interns*",
- :type "function",
  :signature ["[sym]"],
+ :name-encode "ns-internsSTAR",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.core/ns-internsSTAR",
  :source {:code "(defn ns-interns* [sym]\n  (let [ns-obj (find-ns-obj sym)\n        ns     (Namespace. ns-obj sym)]\n    (letfn [(step [ret k]\n              (let [var-sym (symbol (demunge k))]\n                (assoc ret\n                  var-sym (Var. #(gobject/get ns-obj k)\n                            (symbol (str sym) (str var-sym)) {:ns ns}))))]\n      (reduce step {} (js-keys ns-obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10402 10410]},
+          :lines [10402 10410],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10402-L10410"},
+ :usage ["(ns-interns* sym)"],
  :full-name "cljs.core/ns-interns*",
- :full-name-encode "cljs.core/ns-internsSTAR",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ns-internsSTAR.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(m3-hash-int in)</samp><br>
+
+---
 
  <samp>
 (__m3-hash-int__ in)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L823-L828):
+Source code @ [github]():
 
 ```clj
 (defn ^number m3-hash-int [in]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:823-828](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L823-L828)</ins>
+
 </pre>
 
 -->
@@ -85,16 +83,20 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "m3-hash-int",
  :signature ["[in]"],
+ :name-encode "m3-hash-int",
  :history [["+" "0.0-2261"]],
  :type "function",
  :full-name-encode "cljs.core/m3-hash-int",
  :source {:code "(defn ^number m3-hash-int [in]\n  (if (zero? in)\n    in\n    (let [k1 (m3-mix-K1 in)\n          h1 (m3-mix-H1 m3-seed k1)]\n      (m3-fmix h1 4))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [823 828]},
- :full-name "cljs.core/m3-hash-int"}
+          :lines [823 828],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L823-L828"},
+ :usage ["(m3-hash-int in)"],
+ :full-name "cljs.core/m3-hash-int",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/m3-hash-int.cljsdoc"}
 
 ```
 

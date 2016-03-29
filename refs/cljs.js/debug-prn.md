@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(debug-prn & args)</samp><br>
+
+---
 
  <samp>
 (__debug-prn__ & args)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L25-L28):
+Source code @ [github]():
 
 ```clj
 (defn debug-prn
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:25-28](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L25-L28)</ins>
+
 </pre>
 
 -->
@@ -91,6 +89,7 @@ The API data for this symbol:
           :tag "r1.7.28",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [25 28]},
+ :usage ["(debug-prn & args)"],
  :full-name "cljs.js/debug-prn",
  :removed {:in "1.7.48", :last-seen "1.7.28"}}
 

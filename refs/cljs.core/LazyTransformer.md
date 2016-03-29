@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(LazyTransformer. stepper first rest meta)</samp><br>
+
+---
 
  <samp>
 (__LazyTransformer.__ stepper first rest meta)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3775-L3843):
+Source code @ [github]():
 
 ```clj
 (deftype LazyTransformer [^:mutable stepper ^:mutable first ^:mutable rest meta]
@@ -100,12 +103,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3775-3843](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3775-L3843)</ins>
+
 </pre>
 
 -->
@@ -146,17 +144,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "LazyTransformer",
- :type "type",
  :signature ["[stepper first rest meta]"],
+ :name-encode "LazyTransformer",
+ :history [["+" "0.0-2301"]],
+ :type "type",
+ :full-name-encode "cljs.core/LazyTransformer",
  :source {:code "(deftype LazyTransformer [^:mutable stepper ^:mutable first ^:mutable rest meta]\n  Object\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  IWithMeta\n  (-with-meta [this new-meta]\n    (LazyTransformer. stepper first rest new-meta))\n\n  IMeta\n  (-meta [this] meta)\n\n  ICollection\n  (-conj [this o]\n    (cons o (-seq this)))\n\n  IEmptyableCollection\n  (-empty [this]\n    ())\n\n  ISequential\n  IEquiv\n  (-equiv [this other]\n    (let [s (-seq this)]\n      (if-not (nil? s)\n        (equiv-sequential this other)\n        (and (sequential? other)\n             (nil? (seq other))))))\n\n  IHash\n  (-hash [this]\n    (hash-ordered-coll this))\n\n  ISeqable\n  (-seq [this]\n    (when-not (nil? stepper)\n      (.step stepper this))\n    (if (nil? rest)\n      nil\n      this))\n\n  ISeq\n  (-first [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      nil\n      first))\n\n  (-rest [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      ()\n      rest))\n\n  INext\n  (-next [this]\n    (when-not (nil? stepper)\n      (-seq this))\n    (if (nil? rest)\n      nil\n      (-seq rest))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3775 3843]},
+          :lines [3775 3843],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3775-L3843"},
+ :usage ["(LazyTransformer. stepper first rest meta)"],
  :full-name "cljs.core/LazyTransformer",
- :full-name-encode "cljs.core/LazyTransformer",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/LazyTransformer.cljsdoc"}
 
 ```
 

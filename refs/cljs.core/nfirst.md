@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(nfirst coll)</samp><br>
+
+---
 
  <samp>
 (__nfirst__ coll)<br>
@@ -59,7 +62,7 @@ Same as (next (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1611-L1614):
+Source code @ [github]():
 
 ```clj
 (defn nfirst
@@ -71,12 +74,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1611-1614](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1611-L1614)</ins>
+
 </pre>
 
 -->
@@ -122,21 +120,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "nfirst",
  :signature ["[coll]"],
+ :name-encode "nfirst",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/nfirst",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/nfirst"},
  :related ["cljs.core/next"],
  :full-name-encode "cljs.core/nfirst",
  :source {:code "(defn nfirst\n  [coll]\n  (next (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1611 1614]},
+          :lines [1611 1614],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1611-L1614"},
+ :usage ["(nfirst coll)"],
  :examples [{:id "60b8a4",
              :content "```clj\n(nfirst [[1 2 3] [4 5]])\n;;=> (2 3)\n\n(nfirst [[1 2] [3 4]])\n;;=> (2)\n\n(nfirst [[1] [2 3]])\n;;=> nil\n\n(nfirst [[] [1 2]])\n;;=> nil\n```"}],
  :full-name "cljs.core/nfirst",
- :clj-symbol "clojure.core/nfirst",
- :docstring "Same as (next (first x))"}
+ :docstring "Same as (next (first x))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/nfirst.cljsdoc"}
 
 ```
 

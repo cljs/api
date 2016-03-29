@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L125-L128):
+Source code @ [github]():
 
 ```clj
 (defprotocol IParseError
@@ -30,12 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:125-128](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L125-L128)</ins>
+
 </pre>
 
 -->
@@ -76,19 +71,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "IParseError",
+ :name-encode "IParseError",
+ :history [["+" "0.0-3030"]],
  :type "protocol",
  :full-name-encode "cljs.repl/IParseError",
  :source {:code "(defprotocol IParseError\n  (-parse-error [repl-env error build-options]\n    \"Given the original JavaScript error return the error to actually\n     use.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [125 128]},
+          :lines [127 130],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L127-L130"},
  :methods [{:name "-parse-error",
             :signature ["[repl-env error build-options]"],
             :docstring "Given the original JavaScript error return the error to actually\n     use."}],
  :full-name "cljs.repl/IParseError",
- :history [["+" "0.0-3030"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/IParseError.cljsdoc"}
 
 ```
 

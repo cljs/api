@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(print-doc m)</samp><br>
+
+---
 
  <samp>
 (__print-doc__ m)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/repl.cljs#L12-L49):
+Source code @ [github]():
 
 ```clj
 (defn print-doc [m]
@@ -69,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[repl.cljs:12-49](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/repl.cljs#L12-L49)</ins>
+
 </pre>
 
 -->
@@ -115,17 +113,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "print-doc",
- :type "function",
  :signature ["[m]"],
+ :name-encode "print-doc",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.repl/print-doc",
  :source {:code "(defn print-doc [m]\n  (println \"-------------------------\")\n  (println (str (when-let [ns (:ns m)] (str ns \"/\")) (:name m)))\n  (when (:protocol m)\n    (println \"Protocol\"))\n  (cond\n    (:forms m) (doseq [f (:forms m)]\n                 (println \"  \" f))\n    (:arglists m) (let [arglists (:arglists m)]\n                    (if (or (:macro m)\n                         (:repl-special-function m))\n                     (prn arglists)\n                     (prn\n                       (if (= 'quote (first arglists))\n                         (second arglists)\n                         arglists)))))\n  (if (:special-form m)\n    (do\n      (println \"Special Form\")\n      (println \" \" (:doc m)) \n      (if (contains? m :url)\n        (when (:url m)\n          (println (str \"\\n  Please see http://clojure.org/\" (:url m))))\n        (println (str \"\\n  Please see http://clojure.org/special_forms#\"\n                   (:name m)))))\n    (do\n      (when (:macro m)\n        (println \"Macro\"))\n      (when (:repl-special-function m)\n        (println \"REPL Special Function\"))\n      (println \" \" (:doc m))\n      (when (:protocol m)\n        (doseq [[name {:keys [doc arglists]}] (:methods m)]\n          (println)\n          (println \" \" name)\n          (println \" \" arglists)\n          (when doc\n            (println \" \" doc)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/repl.cljs",
-          :lines [12 49]},
+          :lines [12 49],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/repl.cljs#L12-L49"},
+ :usage ["(print-doc m)"],
  :full-name "cljs.repl/print-doc",
- :full-name-encode "cljs.repl/print-doc",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/print-doc.cljsdoc"}
 
 ```
 

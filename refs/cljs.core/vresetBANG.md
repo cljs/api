@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(vreset! vol newval)</samp><br>
+
+---
 
  <samp>
 (__vreset!__ vol newval)<br>
@@ -37,7 +40,7 @@ current value. Returns newval.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4201-L4204):
+Source code @ [github]():
 
 ```clj
 (defn vreset!
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4201-4204](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4201-L4204)</ins>
+
 </pre>
 
 -->
@@ -98,19 +96,24 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "vreset!",
  :signature ["[vol newval]"],
+ :name-encode "vresetBANG",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/vreset!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vreset!"},
  :related ["cljs.core/vswap!" "cljs.core/volatile!"],
  :full-name-encode "cljs.core/vresetBANG",
  :source {:code "(defn vreset!\n  [vol newval]  (-vreset! vol newval))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4201 4204]},
+          :lines [4201 4204],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4201-L4204"},
+ :usage ["(vreset! vol newval)"],
  :full-name "cljs.core/vreset!",
- :clj-symbol "clojure.core/vreset!",
- :docstring "Sets the value of volatile to newval without regard for the\ncurrent value. Returns newval."}
+ :docstring "Sets the value of volatile to newval without regard for the\ncurrent value. Returns newval.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vresetBANG.cljsdoc"}
 
 ```
 

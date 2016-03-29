@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(doc name)</samp><br>
+
+---
 
  <samp>
 (__doc__ name)<br>
@@ -63,7 +66,7 @@ Prints documentation for a var or special form given its name
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1159-L1193):
+Source code @ [github]():
 
 ```clj
 (defmacro doc
@@ -106,12 +109,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:1159-1193](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1159-L1193)</ins>
+
 </pre>
 
 -->
@@ -157,21 +155,26 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "doc",
  :signature ["[name]"],
+ :name-encode "doc",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.repl/doc",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/doc"},
  :related ["cljs.repl/find-doc" "cljs.core/meta" "special/var"],
  :full-name-encode "cljs.repl/doc",
  :source {:code "(defmacro doc\n  [name]\n  `(print\n     (binding [cljs.core/*print-newline* true]\n       (with-out-str\n         ~(if-let [special-name ('{& fn catch try finally try} name)]\n            `(doc ~special-name)\n            (cond\n              (special-doc-map name)\n              `(cljs.repl/print-doc (quote ~(special-doc name)))\n\n              (repl-special-doc-map name)\n              `(cljs.repl/print-doc (quote ~(repl-special-doc name)))\n\n              (ana-api/find-ns name)\n              `(cljs.repl/print-doc\n                 (quote ~(select-keys (ana-api/find-ns name) [:name :doc])))\n\n              (ana-api/resolve &env name)\n              `(cljs.repl/print-doc\n                 (quote ~(let [var (ana-api/resolve &env name)\n                               m (select-keys var\n                                   [:ns :name :doc :forms :arglists :macro :url])]\n                           (cond-> (update-in m [:name] clojure.core/name)\n                             (:protocol-symbol var)\n                             (assoc :protocol true\n                                    :methods\n                                    (->> (get-in var [:protocol-info :methods])\n                                      (map (fn [[fname sigs]]\n                                             [fname {:doc (:doc\n                                                            (ana-api/resolve &env\n                                                              (symbol (str (:ns var)) (str fname))))\n                                                     :arglists (seq sigs)}]))\n                                      (into {})))))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1159 1193]},
+          :lines [1161 1195],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L1161-L1195"},
+ :usage ["(doc name)"],
  :examples [{:id "4d2768",
              :content "```clj\n(doc map)\n;; Prints:\n;;  -------------------------\n;;  cljs.core/map\n;;  [f coll]\n;;    Returns a lazy sequence consisting of the result of applying f to\n;;    the set of first items of each coll, followed by applying f to the\n;;    set of second items in each coll, until any one of the colls is\n;;    exhausted.  Any remaining items in other colls are ignored. Function\n;;    f should accept number-of-colls arguments. Returns a transducer when\n;;    no collection is provided.\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/doc",
- :clj-symbol "clojure.repl/doc",
- :docstring "Prints documentation for a var or special form given its name"}
+ :docstring "Prints documentation for a var or special form given its name",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/doc.cljsdoc"}
 
 ```
 

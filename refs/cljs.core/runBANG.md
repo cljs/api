@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(run! proc coll)</samp><br>
+
+---
 
  <samp>
 (__run!__ proc coll)<br>
@@ -31,7 +34,7 @@ effects, on successive items in the collection. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9537-L9542):
+Source code @ [github]():
 
 ```clj
 (defn run!
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9537-9542](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9537-L9542)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "run!",
  :signature ["[proc coll]"],
+ :name-encode "runBANG",
  :history [["+" "0.0-2301"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/run!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/run!"},
  :full-name-encode "cljs.core/runBANG",
  :source {:code "(defn run!\n  [proc coll]\n  (reduce #(proc %2) nil coll)\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9537 9542]},
+          :lines [9537 9542],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9537-L9542"},
+ :usage ["(run! proc coll)"],
  :full-name "cljs.core/run!",
- :clj-symbol "clojure.core/run!",
- :docstring "Runs the supplied procedure (via reduce), for purposes of side\neffects, on successive items in the collection. Returns nil"}
+ :docstring "Runs the supplied procedure (via reduce), for purposes of side\neffects, on successive items in the collection. Returns nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/runBANG.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(starts-with? s substr)</samp><br>
+
+---
 
  <samp>
 (__starts-with?__ s substr)<br>
@@ -30,7 +33,7 @@ True if s starts with substr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L245-L248):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean starts-with?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:245-248](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L245-L248)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "starts-with?",
  :signature ["[s substr]"],
+ :name-encode "starts-withQMARK",
  :history [["+" "1.7.145"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/starts-with?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/starts-with?"},
  :full-name-encode "clojure.string/starts-withQMARK",
  :source {:code "(defn ^boolean starts-with?\n  [s substr]\n  (gstring/startsWith s substr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [245 248]},
+          :lines [245 248],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L245-L248"},
+ :usage ["(starts-with? s substr)"],
  :full-name "clojure.string/starts-with?",
- :clj-symbol "clojure.string/starts-with?",
- :docstring "True if s starts with substr."}
+ :docstring "True if s starts with substr.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/starts-withQMARK.cljsdoc"}
 
 ```
 

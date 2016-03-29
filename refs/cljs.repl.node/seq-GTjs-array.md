@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(seq->js-array v)</samp><br>
+
+---
 
  <samp>
 (__seq->js-array__ v)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L75-L76):
+Source code @ [github]():
 
 ```clj
 (defn seq->js-array [v]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:75-76](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L75-L76)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "seq->js-array",
- :type "function",
  :signature ["[v]"],
+ :name-encode "seq-GTjs-array",
+ :history [["+" "0.0-2814"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/seq-GTjs-array",
  :source {:code "(defn seq->js-array [v]\n  (str \"[\" (apply str (interpose \", \" (map pr-str v))) \"]\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [75 76]},
+          :lines [75 76],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L75-L76"},
+ :usage ["(seq->js-array v)"],
  :full-name "cljs.repl.node/seq->js-array",
- :full-name-encode "cljs.repl.node/seq-GTjs-array",
- :history [["+" "0.0-2814"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/seq-GTjs-array.cljsdoc"}
 
 ```
 

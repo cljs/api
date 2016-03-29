@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(successful? summary)</samp><br>
+
+---
 
  <samp>
 (__successful?__ summary)<br>
@@ -31,7 +34,7 @@ were successful, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L588-L593):
+Source code @ [github]():
 
 ```clj
 (defn successful?
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:588-593](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L588-L593)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "successful?",
  :signature ["[summary]"],
+ :name-encode "successfulQMARK",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/successful?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/successful?"},
  :full-name-encode "cljs.test/successfulQMARK",
  :source {:code "(defn successful?\n  [summary]\n  (and (zero? (:fail summary 0))\n       (zero? (:error summary 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [588 593]},
+          :lines [588 593],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L588-L593"},
+ :usage ["(successful? summary)"],
  :full-name "cljs.test/successful?",
- :clj-symbol "clojure.test/successful?",
- :docstring "Returns true if the given test summary indicates all tests\nwere successful, false otherwise."}
+ :docstring "Returns true if the given test summary indicates all tests\nwere successful, false otherwise.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/successfulQMARK.cljsdoc"}
 
 ```
 

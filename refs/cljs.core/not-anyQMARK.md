@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(not-any? pred coll)</samp><br>
+
+---
 
  <samp>
 (__not-any?__ pred coll)<br>
@@ -42,7 +45,7 @@ else true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3901-L3904):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean not-any?
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3901-3904](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3901-L3904)</ins>
+
 </pre>
 
 -->
@@ -105,19 +103,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "not-any?",
  :signature ["[pred coll]"],
+ :name-encode "not-anyQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/not-any?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/not-any?"},
  :related ["cljs.core/every?" "cljs.core/some"],
  :full-name-encode "cljs.core/not-anyQMARK",
  :source {:code "(defn ^boolean not-any?\n  [pred coll] (not (some pred coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3901 3904]},
+          :lines [3901 3904],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3901-L3904"},
+ :usage ["(not-any? pred coll)"],
  :full-name "cljs.core/not-any?",
- :clj-symbol "clojure.core/not-any?",
- :docstring "Returns false if (pred x) is logical true for any x in coll,\nelse true."}
+ :docstring "Returns false if (pred x) is logical true for any x in coll,\nelse true.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/not-anyQMARK.cljsdoc"}
 
 ```
 

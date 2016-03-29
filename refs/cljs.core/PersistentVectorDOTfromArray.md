@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentVector.fromArray xs no-clone)</samp><br>
+
+---
 
  <samp>
 (__PersistentVector.fromArray__ xs no-clone)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5060-L5071):
+Source code @ [github]():
 
 ```clj
 (set! (.-fromArray PersistentVector)
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5060-5071](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5060-L5071)</ins>
+
 </pre>
 
 -->
@@ -90,6 +88,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentVector.fromArray",
  :signature ["[xs no-clone]"],
+ :name-encode "PersistentVectorDOTfromArray",
  :history [["+" "0.0-1006"]],
  :parent-type "PersistentVector",
  :type "function",
@@ -97,10 +96,13 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentVector)\n  (fn [xs ^boolean no-clone]\n    (let [l (alength xs)\n          xs (if no-clone xs (aclone xs))]\n      (if (< l 32)\n        (PersistentVector. nil l 5 (.-EMPTY-NODE PersistentVector) xs nil)\n        (let [node (.slice xs 0 32)\n              v (PersistentVector. nil 32 5 (.-EMPTY-NODE PersistentVector) node nil)]\n          (loop [i 32 out (-as-transient v)]\n            (if (< i l)\n              (recur (inc i) (conj! out (aget xs i)))\n              (persistent! out))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5060 5071]},
- :full-name "cljs.core/PersistentVector.fromArray"}
+          :lines [5060 5071],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5060-L5071"},
+ :usage ["(PersistentVector.fromArray xs no-clone)"],
+ :full-name "cljs.core/PersistentVector.fromArray",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentVectorDOTfromArray.cljsdoc"}
 
 ```
 

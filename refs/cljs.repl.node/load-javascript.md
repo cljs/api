@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-javascript repl-env provides url)</samp><br>
+
+---
 
  <samp>
 (__load-javascript__ repl-env provides url)<br>
@@ -27,7 +30,7 @@ Load a Closure JavaScript file into the Node REPL process.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L69-L73):
+Source code @ [github]():
 
 ```clj
 (defn load-javascript
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:69-73](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L69-L73)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "cljs.repl.node",
  :name "load-javascript",
  :signature ["[repl-env provides url]"],
+ :name-encode "load-javascript",
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.repl.node/load-javascript",
  :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (node-eval repl-env\n    (str \"goog.require('\" (comp/munge (first provides)) \"')\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [69 73]},
+          :lines [69 73],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L69-L73"},
+ :usage ["(load-javascript repl-env provides url)"],
  :full-name "cljs.repl.node/load-javascript",
- :docstring "Load a Closure JavaScript file into the Node REPL process."}
+ :docstring "Load a Closure JavaScript file into the Node REPL process.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/load-javascript.cljsdoc"}
 
 ```
 

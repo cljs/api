@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(aclone arr)</samp><br>
+
+---
 
  <samp>
 (__aclone__ arr)<br>
@@ -59,7 +62,7 @@ Returns a javascript array, cloned from the passed in array
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L374-L381):
+Source code @ [github]():
 
 ```clj
 (defn aclone
@@ -75,12 +78,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:374-381](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L374-L381)</ins>
+
 </pre>
 
 -->
@@ -126,21 +124,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "aclone",
  :signature ["[arr]"],
+ :name-encode "aclone",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/aclone",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/aclone"},
  :related ["cljs.core/array" "cljs.core/make-array"],
  :full-name-encode "cljs.core/aclone",
  :source {:code "(defn aclone\n  [arr]\n  (let [len (alength arr)\n        new-arr (make-array len)]\n    (dotimes [i len]\n      (aset new-arr i (aget arr i)))\n    new-arr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [374 381]},
+          :lines [374 381],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L374-L381"},
+ :usage ["(aclone arr)"],
  :examples [{:id "422c4e",
              :content "```clj\n(def a #js [1 2 3])\n(def b (aclone a))\n(aset b 0 4)\n\na\n;;=> #js [1 2 3]\n\nb\n;;=> #js [4 2 3]\n```"}],
  :full-name "cljs.core/aclone",
- :clj-symbol "clojure.core/aclone",
- :docstring "Returns a javascript array, cloned from the passed in array"}
+ :docstring "Returns a javascript array, cloned from the passed in array",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/aclone.cljsdoc"}
 
 ```
 

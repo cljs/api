@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(handle-get opts conn request)</samp><br>
+
+---
 
  <samp>
 (__handle-get__ opts conn request)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L199-L204):
+Source code @ [github]():
 
 ```clj
 (defn handle-get [opts conn request]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:199-204](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L199-L204)</ins>
+
 </pre>
 
 -->
@@ -93,6 +91,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [199 204]},
+ :usage ["(handle-get opts conn request)"],
  :full-name "cljs.repl.browser/handle-get",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

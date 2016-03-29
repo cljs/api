@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(parse-param path)</samp><br>
+
+---
 
  <samp>
 (__parse-param__ path)<br>
@@ -28,7 +31,7 @@ into the vector ["var" "foo"].
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/reflect.clj#L44-L50):
+Source code @ [github]():
 
 ```clj
 (defn parse-param
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[reflect.clj:44-50](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/reflect.clj#L44-L50)</ins>
+
 </pre>
 
 -->
@@ -90,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.repl.reflect",
  :name "parse-param",
  :signature ["[path]"],
+ :name-encode "parse-param",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.reflect/parse-param",
  :source {:code "(defn parse-param\n  [path]\n  (-> (str/split path #\"\\?\")\n      (last)\n      (str/split #\"=\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/reflect.clj",
-          :lines [44 50]},
+          :lines [44 50],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/reflect.clj#L44-L50"},
+ :usage ["(parse-param path)"],
  :full-name "cljs.repl.reflect/parse-param",
- :docstring "Parses the query parameter of a path of the form \"/reflect?var=foo\"\ninto the vector [\"var\" \"foo\"]."}
+ :docstring "Parses the query parameter of a path of the form \"/reflect?var=foo\"\ninto the vector [\"var\" \"foo\"].",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.reflect/parse-param.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(counted? x)</samp><br>
+
+---
 
  <samp>
 (__counted?__ x)<br>
@@ -37,7 +40,7 @@ Returns true if coll implements count in constant time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1383-L1385):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean counted?
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1383-1385](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1383-L1385)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "counted?",
  :signature ["[x]"],
+ :name-encode "countedQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/counted?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/counted?"},
  :full-name-encode "cljs.core/countedQMARK",
  :source {:code "(defn ^boolean counted?\n  [x] (satisfies? ICounted x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1383 1385]},
+          :lines [1383 1385],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1383-L1385"},
+ :usage ["(counted? x)"],
  :full-name "cljs.core/counted?",
- :clj-symbol "clojure.core/counted?",
- :docstring "Returns true if coll implements count in constant time"}
+ :docstring "Returns true if coll implements count in constant time",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/countedQMARK.cljsdoc"}
 
 ```
 

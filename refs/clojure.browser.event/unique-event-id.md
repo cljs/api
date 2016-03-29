@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(unique-event-id event-type)</samp><br>
+
+---
 
  <samp>
 (__unique-event-id__ event-type)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L94):
+Source code @ [github]():
 
 ```clj
 (defn unique-event-id [event-type])
@@ -32,13 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:94](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L94)</ins>
+
 </pre>
 
 -->
@@ -79,17 +76,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "unique-event-id",
- :type "function",
  :signature ["[event-type]"],
+ :name-encode "unique-event-id",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/unique-event-id",
  :source {:code "(defn unique-event-id [event-type])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [94]},
+          :lines [94],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L94"},
+ :usage ["(unique-event-id event-type)"],
  :full-name "clojure.browser.event/unique-event-id",
- :full-name-encode "clojure.browser.event/unique-event-id",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/unique-event-id.cljsdoc"}
 
 ```
 

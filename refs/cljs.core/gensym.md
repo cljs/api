@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(gensym)</samp><br>
+<samp>(gensym prefix-string)</samp><br>
+
+---
 
  <samp>
 (__gensym__)<br>
@@ -35,7 +39,7 @@ prefix is not supplied, the prefix is 'G__'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9411-L9419):
+Source code @ [github]():
 
 ```clj
 (defn gensym
@@ -50,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9411-9419](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9411-L9419)</ins>
+
 </pre>
 
 -->
@@ -100,18 +99,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "gensym",
  :signature ["[]" "[prefix-string]"],
+ :name-encode "gensym",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/gensym",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/gensym"},
  :full-name-encode "cljs.core/gensym",
  :source {:code "(defn gensym\n  ([] (gensym \"G__\"))\n  ([prefix-string]\n     (when (nil? gensym_counter)\n       (set! gensym_counter (atom 0)))\n     (symbol (str prefix-string (swap! gensym_counter inc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9411 9419]},
+          :lines [9411 9419],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9411-L9419"},
+ :usage ["(gensym)" "(gensym prefix-string)"],
  :full-name "cljs.core/gensym",
- :clj-symbol "clojure.core/gensym",
- :docstring "Returns a new symbol with a unique name. If a prefix string is\nsupplied, the name is prefix# where # is some unique number. If\nprefix is not supplied, the prefix is 'G__'."}
+ :docstring "Returns a new symbol with a unique name. If a prefix string is\nsupplied, the name is prefix# where # is some unique number. If\nprefix is not supplied, the prefix is 'G__'.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/gensym.cljsdoc"}
 
 ```
 

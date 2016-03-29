@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(completing f)</samp><br>
+<samp>(completing f cf)</samp><br>
+
+---
 
  <samp>
 (__completing__ f)<br>
@@ -35,7 +39,7 @@ identity) on the result argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2301-L2310):
+Source code @ [github]():
 
 ```clj
 (defn completing
@@ -51,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2301-2310](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2301-L2310)</ins>
+
 </pre>
 
 -->
@@ -101,18 +100,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "completing",
  :signature ["[f]" "[f cf]"],
+ :name-encode "completing",
  :history [["+" "0.0-2341"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/completing",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/completing"},
  :full-name-encode "cljs.core/completing",
  :source {:code "(defn completing\n  ([f] (completing f identity))\n  ([f cf]\n    (fn\n      ([] (f))\n      ([x] (cf x))\n      ([x y] (f x y)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2301 2310]},
+          :lines [2301 2310],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2301-L2310"},
+ :usage ["(completing f)" "(completing f cf)"],
  :full-name "cljs.core/completing",
- :clj-symbol "clojure.core/completing",
- :docstring "Takes a reducing function f of 2 args and returns a fn suitable for\ntransduce by adding an arity-1 signature that calls cf (default -\nidentity) on the result argument."}
+ :docstring "Takes a reducing function f of 2 args and returns a fn suitable for\ntransduce by adding an arity-1 signature that calls cf (default -\nidentity) on the result argument.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/completing.cljsdoc"}
 
 ```
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L20):
+Source code @ [github]():
 
 ```clj
 (def loaded-libs (atom #{}))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1552/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1552
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[rhino.clj:20](https://github.com/clojure/clojurescript/blob/r1552/src/clj/cljs/repl/rhino.clj#L20)</ins>
+
 </pre>
 
 -->

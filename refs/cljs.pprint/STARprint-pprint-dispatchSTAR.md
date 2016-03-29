@@ -26,7 +26,7 @@ set-pprint-dispatch to modify.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L619-L623):
+Source code @ [github]():
 
 ```clj
 (defonce ^:dynamic
@@ -40,12 +40,7 @@ set-pprint-dispatch to modify."
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:619-623](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L619-L623)</ins>
+
 </pre>
 
 -->
@@ -89,18 +84,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-pprint-dispatch*",
+ :name-encode "STARprint-pprint-dispatchSTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-pprint-dispatch*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-pprint-dispatch*"},
  :full-name-encode "cljs.pprint/STARprint-pprint-dispatchSTAR",
  :source {:code "(defonce ^:dynamic\n ^{:doc \"The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.\"\n   :added \"1.2\"}\n *print-pprint-dispatch* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [619 623]},
+          :lines [619 623],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L619-L623"},
  :full-name "cljs.pprint/*print-pprint-dispatch*",
- :clj-symbol "clojure.pprint/*print-pprint-dispatch*",
- :docstring "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify."}
+ :docstring "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-pprint-dispatchSTAR.cljsdoc"}
 
 ```
 

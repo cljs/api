@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentArrayMap.fromArrays ks vs)</samp><br>
+
+---
 
  <samp>
 (__PersistentArrayMap.fromArrays__ ks vs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3976-L3983):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.PersistentArrayMap/fromArrays
@@ -39,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:3976-3983](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3976-L3983)</ins>
+
 </pre>
 
 -->
@@ -95,6 +94,7 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3976 3983]},
+ :usage ["(PersistentArrayMap.fromArrays ks vs)"],
  :full-name "cljs.core/PersistentArrayMap.fromArrays",
  :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 

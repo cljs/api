@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(LazyTransformer.createMulti xform colls)</samp><br>
+
+---
 
  <samp>
 (__LazyTransformer.createMulti__ xform colls)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3851-L3858):
+Source code @ [github]():
 
 ```clj
 (set! (.-createMulti LazyTransformer)
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3851-3858](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3851-L3858)</ins>
+
 </pre>
 
 -->
@@ -86,6 +84,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "LazyTransformer.createMulti",
  :signature ["[xform colls]"],
+ :name-encode "LazyTransformerDOTcreateMulti",
  :history [["+" "0.0-2301"]],
  :parent-type "LazyTransformer",
  :type "function",
@@ -93,10 +92,13 @@ The API data for this symbol:
  :source {:code "(set! (.-createMulti LazyTransformer)\n  (fn [xform colls]\n    (let [iters (array)]\n      (doseq [coll colls]\n        (.push iters (iter coll)))\n      (LazyTransformer.\n        (multi-stepper xform iters (make-array (alength iters)))\n        nil nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3851 3858]},
- :full-name "cljs.core/LazyTransformer.createMulti"}
+          :lines [3851 3858],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3851-L3858"},
+ :usage ["(LazyTransformer.createMulti xform colls)"],
+ :full-name "cljs.core/LazyTransformer.createMulti",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/LazyTransformerDOTcreateMulti.cljsdoc"}
 
 ```
 

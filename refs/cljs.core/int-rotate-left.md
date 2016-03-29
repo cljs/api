@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(int-rotate-left x n)</samp><br>
+
+---
 
  <samp>
 (__int-rotate-left__ x n)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L784-L787):
+Source code @ [github]():
 
 ```clj
 (defn ^number int-rotate-left [x n]
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:784-787](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L784-L787)</ins>
+
 </pre>
 
 -->
@@ -83,16 +81,20 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "int-rotate-left",
  :signature ["[x n]"],
+ :name-encode "int-rotate-left",
  :history [["+" "0.0-2261"]],
  :type "function",
  :full-name-encode "cljs.core/int-rotate-left",
  :source {:code "(defn ^number int-rotate-left [x n]\n  (bit-or\n    (bit-shift-left x n)\n    (unsigned-bit-shift-right x (- n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [784 787]},
- :full-name "cljs.core/int-rotate-left"}
+          :lines [784 787],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L784-L787"},
+ :usage ["(int-rotate-left x n)"],
+ :full-name "cljs.core/int-rotate-left",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/int-rotate-left.cljsdoc"}
 
 ```
 

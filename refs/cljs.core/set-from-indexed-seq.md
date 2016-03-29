@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-from-indexed-seq iseq)</samp><br>
+
+---
 
  <samp>
 (__set-from-indexed-seq__ iseq)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8435-L8439):
+Source code @ [github]():
 
 ```clj
 (defn set-from-indexed-seq [iseq]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8435-8439](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8435-L8439)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "set-from-indexed-seq",
- :type "function",
  :signature ["[iseq]"],
+ :name-encode "set-from-indexed-seq",
+ :history [["+" "0.0-1877"]],
+ :type "function",
+ :full-name-encode "cljs.core/set-from-indexed-seq",
  :source {:code "(defn set-from-indexed-seq [iseq]\n  (let [arr (.-arr iseq)\n        ret (areduce arr i ^not-native res (-as-transient #{})\n              (-conj! res (aget arr i)))]\n    (-persistent! ^not-native ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8435 8439]},
+          :lines [8435 8439],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8435-L8439"},
+ :usage ["(set-from-indexed-seq iseq)"],
  :full-name "cljs.core/set-from-indexed-seq",
- :full-name-encode "cljs.core/set-from-indexed-seq",
- :history [["+" "0.0-1877"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/set-from-indexed-seq.cljsdoc"}
 
 ```
 

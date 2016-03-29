@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(some? x)</samp><br>
+
+---
 
  <samp>
 (__some?__ x)<br>
@@ -41,7 +44,7 @@ Returns true if x is not nil, false otherwise.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L211-L213):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean some?
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:211-213](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L211-L213)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "some?",
  :signature ["[x]"],
+ :name-encode "someQMARK",
  :history [["+" "0.0-2261"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/some?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/some?"},
  :related ["cljs.core/true?" "cljs.core/nil?"],
  :full-name-encode "cljs.core/someQMARK",
  :source {:code "(defn ^boolean some?\n  [x] (not (nil? x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [211 213]},
+          :lines [211 213],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L211-L213"},
+ :usage ["(some? x)"],
  :full-name "cljs.core/some?",
- :clj-symbol "clojure.core/some?",
- :docstring "Returns true if x is not nil, false otherwise."}
+ :docstring "Returns true if x is not nil, false otherwise.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/someQMARK.cljsdoc"}
 
 ```
 

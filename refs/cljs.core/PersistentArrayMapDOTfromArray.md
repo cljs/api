@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentArrayMap.fromArray arr no-clone no-check)</samp><br>
+
+---
 
  <samp>
 (__PersistentArrayMap.fromArray__ arr no-clone no-check)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6181-L6198):
+Source code @ [github]():
 
 ```clj
 (set! (.-fromArray PersistentArrayMap)
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6181-6198](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6181-L6198)</ins>
+
 </pre>
 
 -->
@@ -96,6 +94,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentArrayMap.fromArray",
  :signature ["[arr no-clone no-check]"],
+ :name-encode "PersistentArrayMapDOTfromArray",
  :history [["+" "0.0-1798"]],
  :parent-type "PersistentArrayMap",
  :type "function",
@@ -103,10 +102,13 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentArrayMap)\n  (fn [arr ^boolean no-clone ^boolean no-check]\n    (as-> (if no-clone arr (aclone arr)) arr\n      (if no-check\n        arr\n        (let [ret (array)]\n          (loop [i 0]\n            (when (< i (alength arr))\n              (let [k (aget arr i)\n                    v (aget arr (inc i))\n                    idx (array-index-of ret k)]\n                (when (== idx -1)\n                  (.push ret k)\n                  (.push ret v)))\n              (recur (+ i 2))))\n          ret))\n      (let [cnt (/ (alength arr) 2)]\n        (PersistentArrayMap. nil cnt arr nil)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6181 6198]},
- :full-name "cljs.core/PersistentArrayMap.fromArray"}
+          :lines [6181 6198],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6181-L6198"},
+ :usage ["(PersistentArrayMap.fromArray arr no-clone no-check)"],
+ :full-name "cljs.core/PersistentArrayMap.fromArray",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTfromArray.cljsdoc"}
 
 ```
 

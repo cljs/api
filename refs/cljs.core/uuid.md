@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(uuid s)</samp><br>
+
+---
 
  <samp>
 (__uuid__ s)<br>
@@ -60,7 +63,7 @@ No validation is performed:
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10108-L10109):
+Source code @ [github]():
 
 ```clj
 (defn uuid [s]
@@ -71,12 +74,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10108-10109](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10108-L10109)</ins>
+
 </pre>
 
 -->
@@ -119,6 +117,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "uuid",
  :signature ["[s]"],
+ :name-encode "uuid",
  :history [["+" "0.0-3291"]],
  :type "function",
  :related ["cljs.core/random-uuid" "syntax/uuid-literal"],
@@ -126,12 +125,15 @@ The API data for this symbol:
  :source {:code "(defn uuid [s]\n  (UUID. s nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10108 10109]},
+          :lines [10108 10109],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10108-L10109"},
+ :usage ["(uuid s)"],
  :examples [{:id "d6491d",
              :content "```clj\n(uuid \"00000000-0000-0000-0000-000000000000\")\n;;=> #uuid \"00000000-0000-0000-0000-000000000000\"\n\n(uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\")\n;;=> #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n```\n\nNo validation is performed:\n\n```clj\n(uuid \"\")\n;;=> #uuid \"\"\n```"}],
- :full-name "cljs.core/uuid"}
+ :full-name "cljs.core/uuid",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/uuid.cljsdoc"}
 
 ```
 

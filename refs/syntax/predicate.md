@@ -98,8 +98,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A naming convention for predicate functions (unenforced).\n\nA predicate function is one that returns `true` or `false`, and is presumably\npure (not having any side-effects on state).\n\nSome predicate functions which use this convention:\n\n- [doc:cljs.core/even?]\n- [doc:cljs.core/empty?]\n- [doc:cljs.core/contains?]\n- [doc:cljs.core/nil?]\n\nIt is sometimes used to name boolean values as well, not just predicate functions.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "predicate",
+ :name-encode "predicate",
  :history [["+" "0.0-927"]],
  :type "convention",
  :related ["syntax/impure"],
@@ -109,7 +112,7 @@ The API data for this symbol:
              :content "Create a `divisible?` predicate:\n\n```clj\n(defn divisible? [n factor]\n  (zero? (mod n factor)))\n\n(divisible? 15 3)\n;;=> true\n\n(divisible? 15 2)\n;;=> false\n\n(filter #(divisible? 15 %) (range 15))\n;;=> (1 3 5)\n```"}],
  :full-name "syntax/predicate",
  :display "? predicate",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/predicate.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(constrain-order order f)</samp><br>
+
+---
 
  <samp>
 (__constrain-order__ order f)<br>
@@ -28,7 +31,7 @@ that they are printed in the correct order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L164-L169):
+Source code @ [github]():
 
 ```clj
 (defn constrain-order
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:164-169](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L164-L169)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.repl.browser",
  :name "constrain-order",
  :signature ["[order f]"],
+ :name-encode "constrain-order",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/constrain-order",
  :source {:code "(defn constrain-order\n  [order f]\n  (send-via es ordering add-in-order order f)\n  (send-via es ordering run-in-order))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [164 169]},
+          :lines [164 169],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L164-L169"},
+ :usage ["(constrain-order order f)"],
  :full-name "cljs.repl.browser/constrain-order",
- :docstring "Elements to be printed in the REPL will arrive out of order. Ensure\nthat they are printed in the correct order."}
+ :docstring "Elements to be printed in the REPL will arrive out of order. Ensure\nthat they are printed in the correct order.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/constrain-order.cljsdoc"}
 
 ```
 

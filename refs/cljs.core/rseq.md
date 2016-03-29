@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rseq coll)</samp><br>
+
+---
 
  <samp>
 (__rseq__ coll)<br>
@@ -45,7 +48,7 @@ can be a vector or sorted-map), in reverse order. If rev is empty returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2915-L2919):
+Source code @ [github]():
 
 ```clj
 (defn ^seq rseq
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2915-2919](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2915-L2919)</ins>
+
 </pre>
 
 -->
@@ -109,19 +107,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "rseq",
  :signature ["[coll]"],
+ :name-encode "rseq",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rseq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rseq"},
  :related ["cljs.core/reverse"],
  :full-name-encode "cljs.core/rseq",
  :source {:code "(defn ^seq rseq\n  [rev]\n  (-rseq rev))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2915 2919]},
+          :lines [2915 2919],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2915-L2919"},
+ :usage ["(rseq coll)"],
  :full-name "cljs.core/rseq",
- :clj-symbol "clojure.core/rseq",
- :docstring "Returns, in constant time, a seq of the items in rev (which\ncan be a vector or sorted-map), in reverse order. If rev is empty returns nil"}
+ :docstring "Returns, in constant time, a seq of the items in rev (which\ncan be a vector or sorted-map), in reverse order. If rev is empty returns nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rseq.cljsdoc"}
 
 ```
 

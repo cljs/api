@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(record? x)</samp><br>
+
+---
 
  <samp>
 (__record?__ x)<br>
@@ -30,7 +33,7 @@ Return true if x satisfies IRecord
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1997-L2000):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean record?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1997-2000](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1997-L2000)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "record?",
  :signature ["[x]"],
+ :name-encode "recordQMARK",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/record?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/record?"},
  :full-name-encode "cljs.core/recordQMARK",
  :source {:code "(defn ^boolean record?\n  [x]\n  (satisfies? IRecord x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1997 2000]},
+          :lines [1997 2000],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1997-L2000"},
+ :usage ["(record? x)"],
  :full-name "cljs.core/record?",
- :clj-symbol "clojure.core/record?",
- :docstring "Return true if x satisfies IRecord"}
+ :docstring "Return true if x satisfies IRecord",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/recordQMARK.cljsdoc"}
 
 ```
 

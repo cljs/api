@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(add-dependencies opts & ijss)</samp><br>
+
+---
 
  <samp>
 (__add-dependencies__ opts & ijss)<br>
@@ -29,7 +32,7 @@ plus all dependencies in dependency order.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L143-L148):
+Source code @ [github]():
 
 ```clj
 (defn add-dependencies
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:143-148](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L143-L148)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "add-dependencies",
  :signature ["[opts & ijss]"],
+ :name-encode "add-dependencies",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/add-dependencies",
  :source {:code "(defn add-dependencies\n  [opts & ijss]\n  (closure/add-dependencies opts ijss))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [143 148]},
+          :lines [143 148],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L143-L148"},
+ :usage ["(add-dependencies opts & ijss)"],
  :full-name "cljs.build.api/add-dependencies",
- :docstring "Given one or more IJavaScript objects in dependency order, produce\na new sequence of IJavaScript objects which includes the input list\nplus all dependencies in dependency order."}
+ :docstring "Given one or more IJavaScript objects in dependency order, produce\na new sequence of IJavaScript objects which includes the input list\nplus all dependencies in dependency order.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/add-dependencies.cljsdoc"}
 
 ```
 

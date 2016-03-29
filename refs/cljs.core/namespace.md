@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(namespace x)</samp><br>
+
+---
 
  <samp>
 (__namespace__ x)<br>
@@ -74,7 +77,7 @@ Returns the namespace String of a symbol or keyword, or nil if not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3076-L3081):
+Source code @ [github]():
 
 ```clj
 (defn namespace
@@ -88,12 +91,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3076-3081](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3076-L3081)</ins>
+
 </pre>
 
 -->
@@ -139,21 +137,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "namespace",
  :signature ["[x]"],
+ :name-encode "namespace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/namespace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/namespace"},
  :related ["cljs.core/name"],
  :full-name-encode "cljs.core/namespace",
  :source {:code "(defn namespace\n  [x]\n  (if (implements? INamed x)\n    (-namespace ^not-native x)\n    (throw (js/Error. (str \"Doesn't support namespace: \" x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3076 3081]},
+          :lines [3076 3081],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3076-L3081"},
+ :usage ["(namespace x)"],
  :examples [{:id "5bd3b4",
              :content "With namespaces:\n\n```clj\n(namespace :foo/bar)\n;;=> \"foo\"\n\n(namespace 'foo/bar)\n;;=> \"foo\"\n```\n\nWithout namespaces:\n\n```clj\n(namespace :foo)\n;;=> nil\n\n(namespace 'foo)\n;;=> nil\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> nil\n```"}],
  :full-name "cljs.core/namespace",
- :clj-symbol "clojure.core/namespace",
- :docstring "Returns the namespace String of a symbol or keyword, or nil if not present."}
+ :docstring "Returns the namespace String of a symbol or keyword, or nil if not present.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/namespace.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(if-some \[x test\] then)</samp><br>
+<samp>(if-some \[x test\] then else)</samp><br>
+
+---
 
  <samp>
 (__if-some__ \[x test\] then)<br>
@@ -47,7 +51,7 @@ value of test, if not, yields else
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1784-L1802):
+Source code @ [github]():
 
 ```clj
 (defmacro if-some
@@ -70,11 +74,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1784-1802](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1784-L1802)</ins>
+
 </pre>
 
 -->
@@ -120,8 +120,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "if-some",
  :signature ["[[x test] then]" "[[x test] then else]"],
+ :name-encode "if-some",
  :history [["+" "0.0-2261"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/if-some",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/if-some"},
  :related ["cljs.core/when-some"],
  :full-name-encode "cljs.core/if-some",
  :source {:code "(defmacro if-some\n  ([bindings then]\n   `(if-some ~bindings ~then nil))\n  ([bindings then else & oldform]\n   (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (nil? oldform) \"1 or 2 forms after binding vector\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n     `(let [temp# ~tst]\n        (if (nil? temp#)\n          ~else\n          (let [~form temp#]\n            ~then))))))",
@@ -129,10 +132,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1784 1802]},
+          :lines [1784 1802],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1784-L1802"},
+ :usage ["(if-some [x test] then)" "(if-some [x test] then else)"],
  :full-name "cljs.core/if-some",
- :clj-symbol "clojure.core/if-some",
- :docstring "bindings => binding-form test\n\nIf test is not nil, evaluates then with binding-form bound to the\nvalue of test, if not, yields else"}
+ :docstring "bindings => binding-form test\n\nIf test is not nil, evaluates then with binding-form bound to the\nvalue of test, if not, yields else",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/if-some.cljsdoc"}
 
 ```
 

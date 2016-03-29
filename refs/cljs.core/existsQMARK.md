@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(exists? x)</samp><br>
+
+---
 
  <samp>
 (__exists?__ x)<br>
@@ -28,7 +31,7 @@ in JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L896-L902):
+Source code @ [github]():
 
 ```clj
 (core/defmacro exists?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:896-902](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L896-L902)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "exists?",
  :signature ["[x]"],
+ :name-encode "existsQMARK",
  :history [["+" "0.0-1798"]],
  :type "macro",
  :full-name-encode "cljs.core/existsQMARK",
  :source {:code "(core/defmacro exists?\n  [x]\n  (bool-expr\n    (core/list 'js* \"typeof ~{} !== 'undefined'\"\n      (vary-meta x assoc :cljs.analyzer/no-resolve true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [896 902]},
+          :lines [896 902],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L896-L902"},
+ :usage ["(exists? x)"],
  :full-name "cljs.core/exists?",
- :docstring "Return true if argument exists, analogous to usage of typeof operator\nin JavaScript."}
+ :docstring "Return true if argument exists, analogous to usage of typeof operator\nin JavaScript.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/existsQMARK.cljsdoc"}
 
 ```
 

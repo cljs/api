@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Seqable</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Seqable.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Seqable</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Seqable.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding the ability to a type to be transformed into a sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L608-L611):
+Source code @ [github]():
 
 ```clj
 (defprotocol ISeqable
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:608-611](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L608-L611)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ISeqable",
+ :name-encode "ISeqable",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Seqable",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Seqable.java"},
  :full-name-encode "cljs.core/ISeqable",
  :source {:code "(defprotocol ISeqable\n  \"Protocol for adding the ability to a type to be transformed into a sequence.\"\n  (^clj-or-nil -seq [o]\n    \"Returns a seq of o, or nil if o is empty.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [608 611]},
+          :lines [608 611],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L608-L611"},
  :methods [{:name "-seq",
             :signature ["[o]"],
             :docstring "Returns a seq of o, or nil if o is empty."}],
  :full-name "cljs.core/ISeqable",
- :clj-symbol "clojure.lang/Seqable",
- :docstring "Protocol for adding the ability to a type to be transformed into a sequence."}
+ :docstring "Protocol for adding the ability to a type to be transformed into a sequence.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISeqable.cljsdoc"}
 
 ```
 

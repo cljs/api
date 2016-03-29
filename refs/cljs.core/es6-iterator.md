@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(es6-iterator coll)</samp><br>
+
+---
 
  <samp>
 (__es6-iterator__ coll)<br>
@@ -27,7 +30,7 @@ EXPERIMENTAL: Return a ES2015 compatible iterator for coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1169-L1172):
+Source code @ [github]():
 
 ```clj
 (defn es6-iterator
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1169-1172](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1169-L1172)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "es6-iterator",
  :signature ["[coll]"],
+ :name-encode "es6-iterator",
  :history [["+" "0.0-2371"]],
  :type "function",
  :full-name-encode "cljs.core/es6-iterator",
  :source {:code "(defn es6-iterator\n  [coll]\n  (ES6Iterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1169 1172]},
+          :lines [1169 1172],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1169-L1172"},
+ :usage ["(es6-iterator coll)"],
  :full-name "cljs.core/es6-iterator",
- :docstring "EXPERIMENTAL: Return a ES2015 compatible iterator for coll."}
+ :docstring "EXPERIMENTAL: Return a ES2015 compatible iterator for coll.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/es6-iterator.cljsdoc"}
 
 ```
 

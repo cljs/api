@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(doubles x)</samp><br>
+
+---
 
  <samp>
 (__doubles__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2554):
+Source code @ [github]():
 
 ```clj
 (defn doubles [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2554](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2554)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "doubles",
  :signature ["[x]"],
+ :name-encode "doubles",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/doubles",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/doubles"},
  :full-name-encode "cljs.core/doubles",
  :source {:code "(defn doubles [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2554]},
+          :lines [2554],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2554"},
+ :usage ["(doubles x)"],
  :full-name "cljs.core/doubles",
- :clj-symbol "clojure.core/doubles"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/doubles.cljsdoc"}
 
 ```
 

@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(src-file->goog-require src)</samp><br>
+<samp>(src-file->goog-require src options)</samp><br>
+<samp>(src-file->goog-require state src options)</samp><br>
+
+---
 
  <samp>
 (__src-file->goog-require__ src)<br>
@@ -34,7 +39,7 @@ the goog.require statement for it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L95-L108):
+Source code @ [github]():
 
 ```clj
 (defn ^String src-file->goog-require
@@ -55,13 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:95-108](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L95-L108)</ins>
+
 </pre>
 
 -->
@@ -104,17 +103,23 @@ The API data for this symbol:
  :ns "cljs.build.api",
  :name "src-file->goog-require",
  :signature ["[src]" "[src options]" "[state src options]"],
+ :name-encode "src-file-GTgoog-require",
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.build.api/src-file-GTgoog-require",
  :source {:code "(defn ^String src-file->goog-require\n  ([src] (src-file->goog-require src nil))\n  ([src options]\n   (src-file->goog-require\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     src options))\n  ([state src options]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers options ana/*cljs-warning-handlers*)]\n       (closure/src-file->goog-require src options)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [95 108]},
+          :lines [95 108],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L95-L108"},
+ :usage ["(src-file->goog-require src)"
+         "(src-file->goog-require src options)"
+         "(src-file->goog-require state src options)"],
  :full-name "cljs.build.api/src-file->goog-require",
- :docstring "Given a ClojureScript or Google Closure style JavaScript source file return\nthe goog.require statement for it."}
+ :docstring "Given a ClojureScript or Google Closure style JavaScript source file return\nthe goog.require statement for it.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/src-file-GTgoog-require.cljsdoc"}
 
 ```
 

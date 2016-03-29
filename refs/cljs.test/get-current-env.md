@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(get-current-env)</samp><br>
+
+---
 
  <samp>
 (__get-current-env__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L271-L272):
+Source code @ [github]():
 
 ```clj
 (defn get-current-env []
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:271-272](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L271-L272)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "get-current-env",
- :type "function",
  :signature ["[]"],
+ :name-encode "get-current-env",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/get-current-env",
  :source {:code "(defn get-current-env []\n  (or *current-env* (empty-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [271 272]},
+          :lines [271 272],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L271-L272"},
+ :usage ["(get-current-env)"],
  :full-name "cljs.test/get-current-env",
- :full-name-encode "cljs.test/get-current-env",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/get-current-env.cljsdoc"}
 
 ```
 

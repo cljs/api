@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(gen-apply-to)</samp><br>
+
+---
 
  <samp>
 (__gen-apply-to__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2609-L2617):
+Source code @ [github]():
 
 ```clj
 (core/defmacro gen-apply-to []
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2609-2617](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2609-L2617)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "gen-apply-to",
- :type "macro",
  :signature ["[]"],
+ :name-encode "gen-apply-to",
+ :history [["+" "0.0-1211"]],
+ :type "macro",
+ :full-name-encode "cljs.core/gen-apply-to",
  :source {:code "(core/defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2609 2617]},
+          :lines [2609 2617],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2609-L2617"},
+ :usage ["(gen-apply-to)"],
  :full-name "cljs.core/gen-apply-to",
- :full-name-encode "cljs.core/gen-apply-to",
- :history [["+" "0.0-1211"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/gen-apply-to.cljsdoc"}
 
 ```
 

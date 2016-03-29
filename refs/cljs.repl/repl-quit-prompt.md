@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(repl-quit-prompt)</samp><br>
+
+---
 
  <samp>
 (__repl-quit-prompt__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L737-L738):
+Source code @ [github]():
 
 ```clj
 (defn repl-quit-prompt []
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:737-738](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L737-L738)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "repl-quit-prompt",
- :type "function",
  :signature ["[]"],
+ :name-encode "repl-quit-prompt",
+ :history [["+" "0.0-3148"]],
+ :type "function",
+ :full-name-encode "cljs.repl/repl-quit-prompt",
  :source {:code "(defn repl-quit-prompt []\n  (println \"To quit, type:\" :cljs/quit))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [737 738]},
+          :lines [739 740],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L739-L740"},
+ :usage ["(repl-quit-prompt)"],
  :full-name "cljs.repl/repl-quit-prompt",
- :full-name-encode "cljs.repl/repl-quit-prompt",
- :history [["+" "0.0-3148"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/repl-quit-prompt.cljsdoc"}
 
 ```
 

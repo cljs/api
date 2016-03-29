@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L18):
+Source code @ [github]():
 
 ```clj
 (def current-repl-env (atom nil))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2511/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2511
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[rhino.clj:18](https://github.com/clojure/clojurescript/blob/r2511/src/clj/cljs/repl/rhino.clj#L18)</ins>
+
 </pre>
 
 -->

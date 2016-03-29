@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(repl-read request-prompt request-exit)</samp><br>
+<samp>(repl-read request-prompt request-exit opts)</samp><br>
+
+---
 
  <samp>
 (__repl-read__ request-prompt request-exit)<br>
@@ -39,7 +43,7 @@ supporting .unread and collapsing all of CR, LF, and CRLF into a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L85-L106):
+Source code @ [github]():
 
 ```clj
 (defn repl-read
@@ -60,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:85-106](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L85-L106)</ins>
+
 </pre>
 
 -->
@@ -108,17 +107,22 @@ The API data for this symbol:
  :name "repl-read",
  :signature ["[request-prompt request-exit]"
              "[request-prompt request-exit opts]"],
+ :name-encode "repl-read",
  :history [["+" "0.0-2719"]],
  :type "function",
  :full-name-encode "cljs.repl/repl-read",
  :source {:code "(defn repl-read\n  ([request-prompt request-exit]\n   (repl-read request-prompt request-exit *repl-opts*))\n  ([request-prompt request-exit opts]\n   (binding [*in* (if (true? (:source-map-inline opts))\n                    ((:reader opts))\n                    *in*)]\n     (or ({:line-start request-prompt :stream-end request-exit}\n          (skip-whitespace *in*))\n        (let [input (reader/read {:read-cond :allow :features #{:cljs}} *in*)]\n          (skip-if-eol *in*)\n          input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [85 106]},
+          :lines [87 108],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L87-L108"},
+ :usage ["(repl-read request-prompt request-exit)"
+         "(repl-read request-prompt request-exit opts)"],
  :full-name "cljs.repl/repl-read",
- :docstring "Default :read hook for repl. Reads from *in* which must either be an\ninstance of LineNumberingPushbackReader or duplicate its behavior of both\nsupporting .unread and collapsing all of CR, LF, and CRLF into a single\n\\newline. repl-read:\n  - skips whitespace, then\n    - returns request-prompt on start of line, or\n    - returns request-exit on end of stream, or\n    - reads an object from the input stream, then\n      - skips the next input character if it's end of line, then\n      - returns the object."}
+ :docstring "Default :read hook for repl. Reads from *in* which must either be an\ninstance of LineNumberingPushbackReader or duplicate its behavior of both\nsupporting .unread and collapsing all of CR, LF, and CRLF into a single\n\\newline. repl-read:\n  - skips whitespace, then\n    - returns request-prompt on start of line, or\n    - returns request-exit on end of stream, or\n    - reads an object from the input stream, then\n      - skips the next input character if it's end of line, then\n      - returns the object.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/repl-read.cljsdoc"}
 
 ```
 

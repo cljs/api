@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(deftest name & body)</samp><br>
+
+---
 
  <samp>
 (__deftest__ name & body)<br>
@@ -39,7 +42,7 @@ When cljs.analyzer/*load-tests* is false, deftest is ignored.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L205-L221):
+Source code @ [github]():
 
 ```clj
 (defmacro deftest
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:205-221](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L205-L221)</ins>
+
 </pre>
 
 -->
@@ -105,18 +103,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "deftest",
  :signature ["[name & body]"],
+ :name-encode "deftest",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/deftest",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/deftest"},
  :full-name-encode "cljs.test/deftest",
  :source {:code "(defmacro deftest\n  [name & body]\n  (when ana/*load-tests*\n    `(do\n       (def ~(vary-meta name assoc :test `(fn [] ~@body))\n         (fn [] (cljs.test/test-var (.-cljs$lang$var ~name))))\n       (set! (.-cljs$lang$var ~name) (var ~name)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [205 221]},
+          :lines [205 221],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L205-L221"},
+ :usage ["(deftest name & body)"],
  :full-name "cljs.test/deftest",
- :clj-symbol "clojure.test/deftest",
- :docstring "Defines a test function with no arguments.  Test functions may call\nother tests, so tests may be composed.  If you compose tests, you\nshould also define a function named test-ns-hook; run-tests will\ncall test-ns-hook instead of testing all vars.\n\nNote: Actually, the test body goes in the :test metadata on the var,\nand the real function (the value of the var) calls test-var on\nitself.\n\nWhen cljs.analyzer/*load-tests* is false, deftest is ignored."}
+ :docstring "Defines a test function with no arguments.  Test functions may call\nother tests, so tests may be composed.  If you compose tests, you\nshould also define a function named test-ns-hook; run-tests will\ncall test-ns-hook instead of testing all vars.\n\nNote: Actually, the test body goes in the :test metadata on the var,\nand the real function (the value of the var) calls test-var on\nitself.\n\nWhen cljs.analyzer/*load-tests* is false, deftest is ignored.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/deftest.cljsdoc"}
 
 ```
 

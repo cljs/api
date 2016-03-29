@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(var symbol)</samp><br>
+
+---
 
  <samp>
 (__var__ symbol)<br>
@@ -31,7 +34,7 @@ itself (not its value) is returned. The reader macro #'x expands to (var x).
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L965-L971):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'var
@@ -47,12 +50,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:965-971](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L965-L971)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "special",
  :name "var",
  :signature ["[symbol]"],
+ :name-encode "var",
  :history [["+" "0.0-2496"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/var",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/var"},
  :full-name-encode "special/var",
  :source {:code "(defmethod parse 'var\n  [op env [_ sym :as form] _ _]\n  (merge\n    {:env env\n     :op :var-special\n     :form form}\n    (var-ast env sym)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [965 971]},
+          :lines [965 971],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L965-L971"},
+ :usage ["(var symbol)"],
  :full-name "special/var",
- :clj-symbol "clojure.core/var",
- :docstring "The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x)."}
+ :docstring "The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/var.cljsdoc"}
 
 ```
 

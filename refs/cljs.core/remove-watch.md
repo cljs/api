@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(remove-watch a key)</samp><br>
+
+---
 
  <samp>
 (__remove-watch__ a key)<br>
@@ -65,7 +68,7 @@ Removes a watch (set by add-watch) from a reference
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9399-L9403):
+Source code @ [github]():
 
 ```clj
 (defn remove-watch
@@ -78,12 +81,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9399-9403](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9399-L9403)</ins>
+
 </pre>
 
 -->
@@ -129,21 +127,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "remove-watch",
  :signature ["[a key]"],
+ :name-encode "remove-watch",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/remove-watch",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove-watch"},
  :related ["cljs.core/add-watch"],
  :full-name-encode "cljs.core/remove-watch",
  :source {:code "(defn remove-watch\n  [iref key]\n  (-remove-watch iref key)\n  iref)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9399 9403]},
+          :lines [9399 9403],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9399-L9403"},
+ :usage ["(remove-watch a key)"],
  :examples [{:id "70044a",
              :content "```clj\n(def a (atom {}))\n\n(add-watch a :logger\n  (fn [_key _atom old-state new-state]\n    (println \"old:\" old-state)\n    (println \"new:\" new-state)))\n\n(swap! a assoc :foo \"bar\")\n;;=> will print the following:\n;; old: {}\n;; new: {:foo \"bar\"}\n\n(remove-watch a :logger)\n\n(swap! a assoc :foo 3)\n;;=> nothing will be printed...\n```"}],
  :full-name "cljs.core/remove-watch",
- :clj-symbol "clojure.core/remove-watch",
- :docstring "Removes a watch (set by add-watch) from a reference"}
+ :docstring "Removes a watch (set by add-watch) from a reference",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/remove-watch.cljsdoc"}
 
 ```
 

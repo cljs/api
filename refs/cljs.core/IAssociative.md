@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Associative</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Associative.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Associative</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Associative.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding associativity to collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L523-L530):
+Source code @ [github]():
 
 ```clj
 (defprotocol IAssociative
@@ -42,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:523-530](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L523-L530)</ins>
+
 </pre>
 
 -->
@@ -91,15 +86,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IAssociative",
+ :name-encode "IAssociative",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Associative",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Associative.java"},
  :full-name-encode "cljs.core/IAssociative",
  :source {:code "(defprotocol IAssociative\n  \"Protocol for adding associativity to collections.\"\n  (^boolean -contains-key? [coll k]\n    \"Returns true if k is a key in coll.\")\n  #_(-entry-at [coll k])\n  (^clj -assoc [coll k v]\n    \"Returns a new collection of coll with a mapping from key k to\n     value v added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [523 530]},
+          :lines [523 530],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L523-L530"},
  :methods [{:name "-contains-key?",
             :signature ["[coll k]"],
             :docstring "Returns true if k is a key in coll."}
@@ -107,8 +106,8 @@ The API data for this symbol:
             :signature ["[coll k v]"],
             :docstring "Returns a new collection of coll with a mapping from key k to\n     value v added to it."}],
  :full-name "cljs.core/IAssociative",
- :clj-symbol "clojure.lang/Associative",
- :docstring "Protocol for adding associativity to collections."}
+ :docstring "Protocol for adding associativity to collections.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IAssociative.cljsdoc"}
 
 ```
 

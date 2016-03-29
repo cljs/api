@@ -27,7 +27,7 @@ levels of nesting.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L632-L637):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic
@@ -42,12 +42,7 @@ levels of nesting.",
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:632-637](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L632-L637)</ins>
+
 </pre>
 
 -->
@@ -91,18 +86,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-miser-width*",
+ :name-encode "STARprint-miser-widthSTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-miser-width*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-miser-width*"},
  :full-name-encode "cljs.pprint/STARprint-miser-widthSTAR",
  :source {:code "(def ^:dynamic\n ^{:doc \"The column at which to enter miser style. Depending on the dispatch table,\nmiser style add newlines in more places to try to keep lines short allowing for further\nlevels of nesting.\",\n   :added \"1.2\"}\n *print-miser-width* 40)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [632 637]},
+          :lines [632 637],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L632-L637"},
  :full-name "cljs.pprint/*print-miser-width*",
- :clj-symbol "clojure.pprint/*print-miser-width*",
- :docstring "The column at which to enter miser style. Depending on the dispatch table,\nmiser style add newlines in more places to try to keep lines short allowing for further\nlevels of nesting."}
+ :docstring "The column at which to enter miser style. Depending on the dispatch table,\nmiser style add newlines in more places to try to keep lines short allowing for further\nlevels of nesting.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-miser-widthSTAR.cljsdoc"}
 
 ```
 

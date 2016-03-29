@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L21):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic *out* nil)
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:21](https://github.com/clojure/clojurescript/blob/r3308/src/main/cljs/cljs/pprint.cljs#L21)</ins>
+
 </pre>
 
 -->

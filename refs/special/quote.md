@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(quote form)</samp><br>
+
+---
 
  <samp>
 (__quote__ form)<br>
@@ -30,7 +33,7 @@ Yields the unevaluated form.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1546-L1548):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'quote
@@ -42,12 +45,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:1546-1548](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1546-L1548)</ins>
+
 </pre>
 
 -->
@@ -91,18 +89,23 @@ The API data for this symbol:
 {:ns "special",
  :name "quote",
  :signature ["[form]"],
+ :name-encode "quote",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/quote",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/quote"},
  :full-name-encode "special/quote",
  :source {:code "(defmethod parse 'quote\n  [_ env [_ x] _ _]\n  (analyze (assoc env :quoted? true) x))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1546 1548]},
+          :lines [1546 1548],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L1546-L1548"},
+ :usage ["(quote form)"],
  :full-name "special/quote",
- :clj-symbol "clojure.core/quote",
- :docstring "Yields the unevaluated form."}
+ :docstring "Yields the unevaluated form.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/quote.cljsdoc"}
 
 ```
 

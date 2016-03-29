@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-str s)</samp><br>
+
+---
 
  <samp>
 (__js-str__ s)<br>
@@ -47,7 +50,7 @@ Equivalent to `''+s` in JavaScript.
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2639-L2640):
+Source code @ [github]():
 
 ```clj
 (core/defmacro js-str [s]
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2639-2640](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2639-L2640)</ins>
+
 </pre>
 
 -->
@@ -106,6 +104,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-str",
  :signature ["[s]"],
+ :name-encode "js-str",
  :history [["+" "0.0-2341"]],
  :type "macro",
  :related ["cljs.core/str"],
@@ -113,12 +112,15 @@ The API data for this symbol:
  :source {:code "(core/defmacro js-str [s]\n  (core/list 'js* \"''+~{}\" s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2639 2640]},
+          :lines [2639 2640],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2639-L2640"},
+ :usage ["(js-str s)"],
  :examples [{:id "e92009",
              :content "```clj\n(js-str 23)\n;;=> \"23\"\n\n(js-str #js {:foo 1})\n;;=> \"[Object object]\"\n```"}],
- :full-name "cljs.core/js-str"}
+ :full-name "cljs.core/js-str",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-str.cljsdoc"}
 
 ```
 

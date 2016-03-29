@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(split-at n coll)</samp><br>
+
+---
 
  <samp>
 (__split-at__ n coll)<br>
@@ -41,7 +44,7 @@ Returns a vector of [(take n coll) (drop n coll)]
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4464-L4467):
+Source code @ [github]():
 
 ```clj
 (defn split-at
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4464-4467](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4464-L4467)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "split-at",
  :signature ["[n coll]"],
+ :name-encode "split-at",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/split-at",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/split-at"},
  :related ["cljs.core/split-with" "clojure.string/split"],
  :full-name-encode "cljs.core/split-at",
  :source {:code "(defn split-at\n  [n coll]\n  [(take n coll) (drop n coll)])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4464 4467]},
+          :lines [4464 4467],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4464-L4467"},
+ :usage ["(split-at n coll)"],
  :full-name "cljs.core/split-at",
- :clj-symbol "clojure.core/split-at",
- :docstring "Returns a vector of [(take n coll) (drop n coll)]"}
+ :docstring "Returns a vector of [(take n coll) (drop n coll)]",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/split-at.cljsdoc"}
 
 ```
 

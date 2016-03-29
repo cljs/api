@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(init-engine engine output-dir debug)</samp><br>
+
+---
 
  <samp>
 (__init-engine__ engine output-dir debug)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L55-L73):
+Source code @ [github]():
 
 ```clj
 (defn init-engine [engine output-dir debug]
@@ -50,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[nashorn.clj:55-73](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L55-L73)</ins>
+
 </pre>
 
 -->
@@ -97,17 +94,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.nashorn",
  :name "init-engine",
- :type "function",
  :signature ["[engine output-dir debug]"],
+ :name-encode "init-engine",
+ :history [["+" "0.0-2814"]],
+ :type "function",
+ :full-name-encode "cljs.repl.nashorn/init-engine",
  :source {:code "(defn init-engine [engine output-dir debug]\n      (eval-resource engine \"goog/base.js\" debug)\n      (eval-resource engine \"goog/deps.js\" debug)\n      (eval-str engine \"var global = this\") ; required by React\n      (eval-str engine\n        (format\n          (str \"var nashorn_load = function(path) {\"\n            \"  var outputPath = \\\"%s\\\" + \\\"/\\\" + path;\"\n            (when debug \"  print(\\\"loading: \\\" + outputPath) ; \")\n            \"  load(outputPath);\"\n            \"};\")\n          output-dir))\n      (eval-str engine\n        (str \"goog.global.CLOSURE_IMPORT_SCRIPT = function(path) {\"\n          \" nashorn_load(\\\"goog/\\\" + path);\"\n          \" return true;\"\n          \"};\"))\n      (eval-str engine \"goog.global.isProvided_ = function(name) { return false; };\")\n      engine)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
-          :lines [55 73]},
+          :lines [55 73],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L55-L73"},
+ :usage ["(init-engine engine output-dir debug)"],
  :full-name "cljs.repl.nashorn/init-engine",
- :full-name-encode "cljs.repl.nashorn/init-engine",
- :history [["+" "0.0-2814"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/init-engine.cljsdoc"}
 
 ```
 

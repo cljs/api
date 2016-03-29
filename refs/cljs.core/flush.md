@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(flush)</samp><br>
+
+---
 
  <samp>
 (__flush__)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9013-L9014):
+Source code @ [github]():
 
 ```clj
 (defn flush [] ;stub
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9013-9014](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9013-L9014)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "flush",
  :signature ["[]"],
+ :name-encode "flush",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/flush",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/flush"},
  :full-name-encode "cljs.core/flush",
  :source {:code "(defn flush [] ;stub\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9013 9014]},
+          :lines [9013 9014],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9013-L9014"},
+ :usage ["(flush)"],
  :full-name "cljs.core/flush",
- :clj-symbol "clojure.core/flush"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/flush.cljsdoc"}
 
 ```
 

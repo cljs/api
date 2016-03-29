@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-discard rdr _)</samp><br>
+
+---
 
  <samp>
 (__read-discard__ rdr _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L404-L407):
+Source code @ [github]():
 
 ```clj
 (defn read-discard
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:404-407](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L404-L407)</ins>
+
 </pre>
 
 -->
@@ -81,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-discard",
- :type "function",
  :signature ["[rdr _]"],
+ :name-encode "read-discard",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-discard",
  :source {:code "(defn read-discard\n  [rdr _]\n  (read rdr true nil true)\n  rdr)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [404 407]},
+          :lines [404 407],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L404-L407"},
+ :usage ["(read-discard rdr _)"],
  :full-name "cljs.reader/read-discard",
- :full-name-encode "cljs.reader/read-discard",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-discard.cljsdoc"}
 
 ```
 

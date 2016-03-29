@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1006"><img valign="middle" alt="[+] 0.0-1006" title="Added in 0.0-1006" src="https://img.shields.io/badge/+-0.0--1006-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentVector</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentVector</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentVector.java)
 </td>
 </tr>
 </table>
 
+<samp>(PersistentVector. meta cnt shift root tail __hash)</samp><br>
+
+---
 
  <samp>
 (__PersistentVector.__ meta cnt shift root tail __hash)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4865-L5053):
+Source code @ [github]():
 
 ```clj
 (deftype PersistentVector [meta cnt shift root tail ^:mutable __hash]
@@ -223,12 +226,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4865-5053](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4865-L5053)</ins>
+
 </pre>
 
 -->
@@ -273,17 +271,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentVector",
  :signature ["[meta cnt shift root tail __hash]"],
+ :name-encode "PersistentVector",
  :history [["+" "0.0-1006"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/PersistentVector",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentVector.java"},
  :full-name-encode "cljs.core/PersistentVector",
  :source {:code "(deftype PersistentVector [meta cnt shift root tail ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  ICloneable\n  (-clone [_] (PersistentVector. meta cnt shift root tail __hash))\n\n  IWithMeta\n  (-with-meta [coll meta] (PersistentVector. meta cnt shift root tail __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  IStack\n  (-peek [coll]\n    (when (> cnt 0)\n      (-nth coll (dec cnt))))\n  (-pop [coll]\n    (cond\n     (zero? cnt) (throw (js/Error. \"Can't pop empty vector\"))\n     (== 1 cnt) (-with-meta (.-EMPTY PersistentVector) meta)\n     (< 1 (- cnt (tail-off coll)))\n      (PersistentVector. meta (dec cnt) shift root (.slice tail 0 -1) nil)\n      :else (let [new-tail (unchecked-array-for coll (- cnt 2))\n                  nr (pop-tail coll shift root)\n                  new-root (if (nil? nr) (.-EMPTY-NODE PersistentVector) nr)\n                  cnt-1 (dec cnt)]\n              (if (and (< 5 shift) (nil? (pv-aget new-root 1)))\n                (PersistentVector. meta cnt-1 (- shift 5) (pv-aget new-root 0) new-tail nil)\n                (PersistentVector. meta cnt-1 shift new-root new-tail nil)))))\n\n  ICollection\n  (-conj [coll o]\n    (if (< (- cnt (tail-off coll)) 32)\n      (let [len (alength tail)\n            new-tail (make-array (inc len))]\n        (dotimes [i len]\n          (aset new-tail i (aget tail i)))\n        (aset new-tail len o)\n        (PersistentVector. meta (inc cnt) shift root new-tail nil))\n      (let [root-overflow? (> (bit-shift-right-zero-fill cnt 5) (bit-shift-left 1 shift))\n            new-shift (if root-overflow? (+ shift 5) shift)\n            new-root (if root-overflow?\n                       (let [n-r (pv-fresh-node nil)]\n                           (pv-aset n-r 0 root)\n                           (pv-aset n-r 1 (new-path nil shift (VectorNode. nil tail)))\n                           n-r)\n                       (push-tail coll shift root (VectorNode. nil tail)))]\n        (PersistentVector. meta (inc cnt) new-shift new-root (array o) nil))))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY PersistentVector) meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other]\n    (if (instance? PersistentVector other)\n      (if (== cnt (count other))\n        (let [me-iter  (-iterator coll)\n              you-iter (-iterator other)]\n          (loop []\n            (if (.hasNext me-iter)\n              (let [x (.next me-iter)\n                    y (.next you-iter)]\n                (if (= x y)\n                  (recur)\n                  false))\n              true)))\n        false)\n      (equiv-sequential coll other)))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (cond\n      (zero? cnt) nil\n      (<= cnt 32) (IndexedSeq. tail 0 nil)\n      :else (chunked-seq coll (first-array-for-longvec coll) 0 0)))\n\n  ICounted\n  (-count [coll] cnt)\n\n  IIndexed\n  (-nth [coll n]\n    (aget (array-for coll n) (bit-and n 0x01f)))\n  (-nth [coll n not-found]\n    (if (and (<= 0 n) (< n cnt))\n      (aget (unchecked-array-for coll n) (bit-and n 0x01f))\n      not-found))\n\n  ILookup\n  (-lookup [coll k] (-lookup coll k nil))\n  (-lookup [coll k not-found] (if (number? k)\n                                (-nth coll k not-found)\n                                not-found))\n\n  IMapEntry\n  (-key [coll]\n    (-nth coll 0))\n  (-val [coll]\n    (-nth coll 1))\n\n  IAssociative\n  (-assoc [coll k v]\n    (if (number? k)\n      (-assoc-n coll k v)\n      (throw (js/Error. \"Vector's key for assoc must be a number.\"))))\n\n  IVector\n  (-assoc-n [coll n val]\n    (cond\n       (and (<= 0 n) (< n cnt))\n       (if (<= (tail-off coll) n)\n         (let [new-tail (aclone tail)]\n           (aset new-tail (bit-and n 0x01f) val)\n           (PersistentVector. meta cnt shift root new-tail nil))\n         (PersistentVector. meta cnt shift (do-assoc coll shift root n val) tail nil))\n       (== n cnt) (-conj coll val)\n       :else (throw (js/Error. (str \"Index \" n \" out of bounds  [0,\" cnt \"]\")))))\n\n  IReduce\n  (-reduce [v f]\n    (ci-reduce v f))\n  (-reduce [v f init]\n    (loop [i 0 init init]\n      (if (< i cnt)\n        (let [arr  (unchecked-array-for v i)\n              len  (alength arr)\n              init (loop [j 0 init init]\n                     (if (< j len)\n                       (let [init (f init (aget arr j))]\n                         (if (reduced? init)\n                           init\n                           (recur (inc j) init)))\n                       init))]\n          (if (reduced? init)\n            @init\n            (recur (+ i len) init)))\n        init)))\n\n  IKVReduce\n  (-kv-reduce [v f init]\n    (loop [i 0 init init]\n      (if (< i cnt)\n        (let [arr  (unchecked-array-for v i)\n              len  (alength arr)\n              init (loop [j 0 init init]\n                     (if (< j len)\n                       (let [init (f init (+ j i) (aget arr j))]\n                         (if (reduced? init)\n                           init\n                           (recur (inc j) init)))\n                       init))]\n          (if (reduced? init)\n            @init\n            (recur (+ i len) init)))\n        init)))\n\n  IFn\n  (-invoke [coll k]\n    (-nth coll k))\n  (-invoke [coll k not-found]\n    (-nth coll k not-found))\n\n  IEditableCollection\n  (-as-transient [coll]\n    (TransientVector. cnt shift (tv-editable-root root) (tv-editable-tail tail)))\n\n  IReversible\n  (-rseq [coll]\n    (if (pos? cnt)\n      (RSeq. coll (dec cnt) nil)))\n\n  IIterable\n  (-iterator [this]\n    (ranged-iterator this 0 cnt)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4865 5053]},
+          :lines [4865 5053],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4865-L5053"},
+ :usage ["(PersistentVector. meta cnt shift root tail __hash)"],
  :full-name "cljs.core/PersistentVector",
- :clj-symbol "clojure.lang/PersistentVector"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentVector.cljsdoc"}
 
 ```
 

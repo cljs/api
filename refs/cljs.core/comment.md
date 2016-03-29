@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(comment & body)</samp><br>
+
+---
 
  <samp>
 (__comment__ & body)<br>
@@ -66,7 +69,7 @@ Ignores body, yields nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4555-L4558):
+Source code @ [github]():
 
 ```clj
 (defmacro comment
@@ -77,11 +80,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:4555-4558](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4555-L4558)</ins>
+
 </pre>
 
 -->
@@ -127,20 +126,25 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "comment",
  :signature ["[& body]"],
+ :name-encode "comment",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/comment",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/comment"},
  :full-name-encode "cljs.core/comment",
  :source {:code "(defmacro comment\n  [& body])",
           :title "Source code",
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [4555 4558]},
+          :lines [4555 4558],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4555-L4558"},
+ :usage ["(comment & body)"],
  :examples [{:id "482fd7",
              :content "```clj\n(comment 123)\n;;=> nil\n\n(comment\n  (foo 1 2 3)\n  (bar \"hello\"))\n;;=> nil\n```\n\nInner forms must still be syntactically correct:\n\n```clj\n(comment [1 2 3]])\n;; Error: Unmatched delimiter ]\n\n(comment a : b)\n;; Error: Invalid token :\n```"}],
  :full-name "cljs.core/comment",
- :clj-symbol "clojure.core/comment",
- :docstring "Ignores body, yields nil"}
+ :docstring "Ignores body, yields nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/comment.cljsdoc"}
 
 ```
 

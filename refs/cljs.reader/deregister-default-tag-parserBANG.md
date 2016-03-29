@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(deregister-default-tag-parser!)</samp><br>
+
+---
 
  <samp>
 (__deregister-default-tag-parser!__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L626-L630):
+Source code @ [github]():
 
 ```clj
 (defn deregister-default-tag-parser!
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:626-630](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L626-L630)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "deregister-default-tag-parser!",
- :type "function",
  :signature ["[]"],
+ :name-encode "deregister-default-tag-parserBANG",
+ :history [["+" "0.0-1576"]],
+ :type "function",
+ :full-name-encode "cljs.reader/deregister-default-tag-parserBANG",
  :source {:code "(defn deregister-default-tag-parser!\n  []\n  (let [old-parser @*default-data-reader-fn*]\n    (swap! *default-data-reader-fn* (fn [_] nil))\n    old-parser))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [626 630]},
+          :lines [626 630],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L626-L630"},
+ :usage ["(deregister-default-tag-parser!)"],
  :full-name "cljs.reader/deregister-default-tag-parser!",
- :full-name-encode "cljs.reader/deregister-default-tag-parserBANG",
- :history [["+" "0.0-1576"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/deregister-default-tag-parserBANG.cljsdoc"}
 
 ```
 

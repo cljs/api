@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(map f)</samp><br>
+<samp>(map f coll)</samp><br>
+
+---
 
  <samp>
 (__map__ f)<br>
@@ -33,7 +37,7 @@ Applies f to every value in the reduction of coll. Foldable.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L96-L104):
+Source code @ [github]():
 
 ```clj
 (defcurried map
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:96-104](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L96-L104)</ins>
+
 </pre>
 
 -->
@@ -102,18 +100,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "map",
  :signature ["[f]" "[f coll]"],
+ :name-encode "map",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/map",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/map"},
  :full-name-encode "clojure.core.reducers/map",
  :source {:code "(defcurried map\n  \"Applies f to every value in the reduction of coll. Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (f1 ret (f k v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [96 104]},
+          :lines [96 104],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L96-L104"},
+ :usage ["(map f)" "(map f coll)"],
  :full-name "clojure.core.reducers/map",
- :clj-symbol "clojure.core.reducers/map",
- :docstring "Applies f to every value in the reduction of coll. Foldable."}
+ :docstring "Applies f to every value in the reduction of coll. Foldable.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/map.cljsdoc"}
 
 ```
 

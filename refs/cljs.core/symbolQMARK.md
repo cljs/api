@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(symbol? x)</samp><br>
+
+---
 
  <samp>
 (__symbol?__ x)<br>
@@ -30,7 +33,7 @@ Return true if x is a Symbol
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L925-L928):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean symbol?
@@ -42,19 +45,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:925-928](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L925-L928)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L924-L925):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro symbol? [x]
@@ -65,12 +63,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:924-925](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L924-L925)</ins>
+
 </pre>
 -->
 
@@ -114,24 +107,30 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "symbol?",
  :signature ["[x]"],
+ :name-encode "symbolQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/symbol?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/symbol?"},
  :full-name-encode "cljs.core/symbolQMARK",
  :source {:code "(defn ^boolean symbol?\n  [x]\n  (instance? Symbol x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [925 928]},
+          :lines [925 928],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L925-L928"},
  :extra-sources [{:code "(core/defmacro symbol? [x]\n  (bool-expr `(instance? Symbol ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [924 925]}],
+                  :lines [924 925],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L924-L925"}],
+ :usage ["(symbol? x)"],
  :full-name "cljs.core/symbol?",
- :clj-symbol "clojure.core/symbol?",
- :docstring "Return true if x is a Symbol"}
+ :docstring "Return true if x is a Symbol",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/symbolQMARK.cljsdoc"}
 
 ```
 

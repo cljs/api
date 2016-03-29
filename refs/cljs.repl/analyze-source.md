@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(analyze-source src-dir)</samp><br>
+<samp>(analyze-source src-dir opts)</samp><br>
+
+---
 
  <samp>
 (__analyze-source__ src-dir)<br>
@@ -31,7 +35,7 @@ Given a source directory, analyzes all .cljs files. Used to populate
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L727-L735):
+Source code @ [github]():
 
 ```clj
 (defn analyze-source
@@ -47,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:727-735](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L727-L735)</ins>
+
 </pre>
 
 -->
@@ -94,17 +93,21 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "analyze-source",
  :signature ["[src-dir]" "[src-dir opts]"],
+ :name-encode "analyze-source",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl/analyze-source",
  :source {:code "(defn analyze-source\n  ([src-dir] (analyze-source src-dir nil))\n  ([src-dir opts]\n    (if-let [src-dir (and (not (empty? src-dir))\n                       (File. src-dir))]\n      (doseq [file (comp/cljs-files-in src-dir)]\n        (ana/analyze-file (str \"file://\" (.getAbsolutePath file)) opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [727 735]},
+          :lines [729 737],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L729-L737"},
+ :usage ["(analyze-source src-dir)" "(analyze-source src-dir opts)"],
  :full-name "cljs.repl/analyze-source",
- :docstring "Given a source directory, analyzes all .cljs files. Used to populate\n(:cljs.analyzer/namespaces compiler-env) so as to support code reflection."}
+ :docstring "Given a source directory, analyzes all .cljs files. Used to populate\n(:cljs.analyzer/namespaces compiler-env) so as to support code reflection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/analyze-source.cljsdoc"}
 
 ```
 

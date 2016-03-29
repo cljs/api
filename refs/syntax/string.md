@@ -72,7 +72,7 @@ Characters can be escaped:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L292-L301):
+Reader code @ [github]():
 
 ```clj
 (defn- read-string*
@@ -91,18 +91,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:292-301](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L292-L301)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -131,13 +125,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -170,8 +158,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Create a string.  ClojureScript strings are the same as [JavaScript strings].\n\n[JavaScript strings]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String\n\nStrings may span multiple lines.\n\nStandard escape characters such as `\\\"` are supported, as well as unicode\nescape characters:\n\n| unicode characters  | constraints                                   |\n|---------------------|-----------------------------------------------|\n| `\\uXXXX`            | XXXX must have 4 digits outside 0xD7FF-0xE000 |\n| `\\oXXX`             | XXX is octal between 0 and 0377               |",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#strings",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "string",
+ :name-encode "string",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["cljs.core/str"],
@@ -181,20 +172,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [292 301]}
+                  :lines [292 301],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L292-L301"}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage ["\"...\""],
  :examples [{:id "eb97ac",
              :content "```clj\n\"foo\"\n;;=> \"foo\"\n\n\"hello\n     world\"\n;;=> \"hello\\n     world\"\n```\n\nCharacters can be escaped:\n\n```clj\n(println \"foo\\nbar\")\n;; prints:\n;;   foo\n;;   bar\n```"}],
- :edn-doc "https://github.com/edn-format/edn#strings",
  :full-name "syntax/string",
  :display "\"\" string",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/string.cljsdoc"}
 
 ```
 

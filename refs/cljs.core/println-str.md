@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(println-str & objs)</samp><br>
+
+---
 
  <samp>
 (__println-str__ & objs)<br>
@@ -30,7 +33,7 @@ println to a string, returning it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9203-L9206):
+Source code @ [github]():
 
 ```clj
 (defn println-str
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9203-9206](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9203-L9206)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "println-str",
  :signature ["[& objs]"],
+ :name-encode "println-str",
  :history [["+" "0.0-1011"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/println-str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/println-str"},
  :full-name-encode "cljs.core/println-str",
  :source {:code "(defn println-str\n  [& objs]\n  (prn-str-with-opts objs (assoc (pr-opts) :readably false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9203 9206]},
+          :lines [9203 9206],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9203-L9206"},
+ :usage ["(println-str & objs)"],
  :full-name "cljs.core/println-str",
- :clj-symbol "clojure.core/println-str",
- :docstring "println to a string, returning it"}
+ :docstring "println to a string, returning it",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/println-str.cljsdoc"}
 
 ```
 

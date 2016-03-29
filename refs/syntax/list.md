@@ -89,7 +89,7 @@ To signify an unevaluated list, precede it with a quote:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L204-L220):
+Reader code @ [github]():
 
 ```clj
 (defn- read-list
@@ -114,18 +114,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:204-220](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L204-L220)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -154,13 +148,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -193,8 +181,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Creates a list.  The most salient feature of a list is that, when evaluated, it\nis interpreted as a _call_.\n\nIn most languages, the parenthesis is on the right side of a function when\ncalling:\n\n```js\n// (not ClojureScript)\nf(a, b)\n```\n\nIn ClojureScript, the parenthesis simply starts on the left side:\n\n```clj\n;; ClojureScript (comma is optional)\n(f a, b)\n```\n\nThus, when `(f a b)` is evaluated, it calls `f` with two arguments `a` and `b`.\n\nIf `f` is a function, its arguments `a` and `b` will be evaluated before\nthe function receives them.\n\nIf `f` is a special form or macro, it will receive its arguments `a` and `b`\nunevaluated, where they _may_ be evaluated internally.\n\n(See [doc:cljs.core/List] for data structure details.)",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#lists",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "list",
+ :name-encode "list",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["syntax/vector" "syntax/quote"],
@@ -204,20 +195,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [204 220]}
+                  :lines [204 220],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L204-L220"}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage ["(...)"],
  :examples [{:id "cd26b0",
              :content "The following is a list that is evaluated to create var `a`:\n\n```clj\n(def a 1)\n```\n\nAn empty list is unevaluated and left as an empty list:\n\n```clj\n()\n;;=> ()\n```\n\nTo signify an unevaluated list, precede it with a quote:\n\n```clj\n'(1 2 3)\n;;=> (1 2 3)\n```"}],
- :edn-doc "https://github.com/edn-format/edn#lists",
  :full-name "syntax/list",
  :display "() list",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/list.cljsdoc"}
 
 ```
 

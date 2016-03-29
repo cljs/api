@@ -24,7 +24,7 @@ console objects.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L74-L79):
+Source code @ [github]():
 
 ```clj
 (def
@@ -39,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:74-79](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L74-L79)</ins>
+
 </pre>
 
 -->
@@ -85,17 +80,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-newline*",
- :docstring "When set to logical false will drop newlines from printing calls.\nThis is to work around the implicit newlines emitted by standard JavaScript\nconsole objects.",
+ :name-encode "STARprint-newlineSTAR",
+ :history [["+" "0.0-2060"]],
  :type "dynamic var",
+ :full-name-encode "cljs.core/STARprint-newlineSTAR",
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false will drop newlines from printing calls.\n  This is to work around the implicit newlines emitted by standard JavaScript\n  console objects.\"}\n  *print-newline* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [74 79]},
+          :lines [74 79],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L74-L79"},
  :full-name "cljs.core/*print-newline*",
- :full-name-encode "cljs.core/STARprint-newlineSTAR",
- :history [["+" "0.0-2060"]]}
+ :docstring "When set to logical false will drop newlines from printing calls.\nThis is to work around the implicit newlines emitted by standard JavaScript\nconsole objects.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-newlineSTAR.cljsdoc"}
 
 ```
 

@@ -78,17 +78,19 @@ The API data for this symbol:
 
 ```clj
 {:description "A comma is treated as whitespace when appearing outside a string.\n\nThis is mainly used to help delineate elements in a collection when necessary.\n\nCommas are used when printing maps in the REPL:\n\n```clj\n{:foo 1, :bar 2, :bar 3}\n```",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#general-considerations",
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "comma",
+ :name-encode "comma",
  :history [["+" "0.0-927"]],
  :type "special character",
  :full-name-encode "syntax/comma",
  :examples [{:id "68e4a0",
              :content "```clj\n[1, 2, 3, 4]\n;;=> [1 2 3 4]\n\n{:foo :bar :baz :quux}\n;;=> {:foo :bar, :baz :quux}\n```"}],
- :edn-doc "https://github.com/edn-format/edn#general-considerations",
  :full-name "syntax/comma",
  :display ", comma",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/comma.cljsdoc"}
 
 ```
 

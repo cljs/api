@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(log & args)</samp><br>
+
+---
 
  <samp>
 (__log__ & args)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L20-L21):
+Source code @ [github]():
 
 ```clj
 (defn log [& args]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:20-21](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L20-L21)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "log",
- :type "function",
  :signature ["[& args]"],
+ :name-encode "log",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/log",
  :source {:code "(defn log [& args]\n  (.log js/console (apply pr-str args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [20 21]},
+          :lines [20 21],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L20-L21"},
+ :usage ["(log & args)"],
  :full-name "clojure.browser.dom/log",
- :full-name-encode "clojure.browser.dom/log",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/log.cljsdoc"}
 
 ```
 

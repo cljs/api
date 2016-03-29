@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(next coll)</samp><br>
+
+---
 
  <samp>
 (__next__ coll)<br>
@@ -64,7 +67,7 @@ argument.  If there are no more items, returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1132-L1139):
+Source code @ [github]():
 
 ```clj
 (defn ^seq next
@@ -79,12 +82,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1132-1139](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1132-L1139)</ins>
+
 </pre>
 
 -->
@@ -131,21 +129,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "next",
  :signature ["[coll]"],
+ :name-encode "next",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/next",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/next"},
  :related ["cljs.core/rest" "cljs.core/first" "cljs.core/fnext"],
  :full-name-encode "cljs.core/next",
  :source {:code "(defn ^seq next\n  [coll]\n  (when-not (nil? coll)\n    (if (implements? INext coll)\n      (-next ^not-native coll)\n      (seq (rest coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1132 1139]},
+          :lines [1132 1139],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1132-L1139"},
+ :usage ["(next coll)"],
  :examples [{:id "7db59a",
              :content "```clj\n(next [1 2 3])\n;;=> (2 3)\n\n(next [1 2])\n;;=> (2)\n\n(next [1])\n;;=> nil\n\n(next [])\n;;=> nil\n```"}],
  :full-name "cljs.core/next",
- :clj-symbol "clojure.core/next",
- :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil"}
+ :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/next.cljsdoc"}
 
 ```
 

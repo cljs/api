@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(check-string-hash-cache k)</samp><br>
+
+---
 
  <samp>
 (__check-string-hash-cache__ k)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1147-L1154):
+Source code @ [github]():
 
 ```clj
 (defn check-string-hash-cache [k]
@@ -39,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2234/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2234
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:1147-1154](https://github.com/clojure/clojurescript/blob/r2234/src/cljs/cljs/core.cljs#L1147-L1154)</ins>
+
 </pre>
 
 -->
@@ -94,6 +93,7 @@ The API data for this symbol:
           :tag "r2234",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1147 1154]},
+ :usage ["(check-string-hash-cache k)"],
  :full-name "cljs.core/check-string-hash-cache",
  :removed {:in "0.0-2261", :last-seen "0.0-2234"}}
 

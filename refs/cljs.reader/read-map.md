@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-map rdr _)</samp><br>
+
+---
 
  <samp>
 (__read-map__ rdr _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L274-L279):
+Source code @ [github]():
 
 ```clj
 (defn read-map
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:274-279](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L274-L279)</ins>
+
 </pre>
 
 -->
@@ -83,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-map",
- :type "function",
  :signature ["[rdr _]"],
+ :name-encode "read-map",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-map",
  :source {:code "(defn read-map\n  [rdr _]\n  (let [l (read-delimited-list \"}\" rdr true)]\n    (when (odd? (count l))\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (apply hash-map l)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [274 279]},
+          :lines [274 279],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L274-L279"},
+ :usage ["(read-map rdr _)"],
  :full-name "cljs.reader/read-map",
- :full-name-encode "cljs.reader/read-map",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-map.cljsdoc"}
 
 ```
 

@@ -62,7 +62,7 @@ For readability, it is sometimes preferable to use `clj->js` rather than nested
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L62-L77):
+Reader code @ [github]():
 
 ```clj
 (defn read-js
@@ -87,17 +87,12 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:62-77](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L62-L77)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83):
+Reader table @ [github]():
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -111,12 +106,7 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:79-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83)</ins>
+
 </pre>
 -->
 
@@ -149,8 +139,10 @@ The API data for this symbol:
 
 ```clj
 {:description "Create a literal JavaScript object or array.  Data in the form of a map `{}` or\nvector `[]` must follow the `#js` tag, which will be converted at compile-time\nto a JavaScript object or array, respectively.\n\nThis will not implicitly convert nested data into JavaScript objects or arrays.",
+ :syntax-equiv {:edn-url nil, :clj-url nil},
  :ns "syntax",
  :name "js-literal",
+ :name-encode "js-literal",
  :history [["+" "0.0-2120"]],
  :type "tagged literal",
  :related ["cljs.core/js-obj" "cljs.core/array" "cljs.core/clj->js"],
@@ -158,20 +150,23 @@ The API data for this symbol:
  :extra-sources ({:code "(defn read-js\n  [form]\n  (when-not (or (vector? form) (map? form))\n    (throw\n      #?(:clj  (RuntimeException.\n                 \"JavaScript literal must use map or vector notation\")\n         :cljs (js/Error.\n                 \"JavaScript literal must use map or vector notation\"))))\n  (when-not (or (not (map? form))\n                (every? valid-js-literal-key? (keys form)))\n    (throw\n      #?(:clj  (RuntimeException.\n                 \"JavaScript literal keys must be strings or unqualified keywords\")\n         :cljs (js/Error.\n                 \"JavaScript literal keys must be strings or unqualified keywords\"))))\n  (JSValue. form))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [62 77]}
+                  :lines [62 77],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L62-L77"}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [79 83]}),
+                  :lines [79 83],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L79-L83"}),
  :usage ["#js [...]" "#js {...}"],
  :examples [{:id "05e121",
              :content "```clj\n#js {:foo 1 bar 2}\n;;=> #js {:foo 1, :bar 2}\n\n#js [1 2 3]\n;;=> #js [1 2 3]\n```\n\nFor readability, it is sometimes preferable to use `clj->js` rather than nested\n`#js` tags.\n\n```clj\n#js {:foo #js {:bar 1}}\n;;=> #js {:foo #js {:bar 1}}\n\n(clj->js {:foo {:bar 1}})\n;;=> #js {:foo #js {:bar 1}}\n```"}],
  :full-name "syntax/js-literal",
- :display "#js literal"}
+ :display "#js literal",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/js-literal.cljsdoc"}
 
 ```
 

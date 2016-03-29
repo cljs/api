@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(SetEntriesIterator. s)</samp><br>
+
+---
 
  <samp>
 (__SetEntriesIterator.__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4887-L4894):
+Source code @ [github]():
 
 ```clj
 (deftype SetEntriesIterator [^:mutable s]
@@ -39,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:4887-4894](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4887-L4894)</ins>
+
 </pre>
 
 -->
@@ -94,6 +93,7 @@ The API data for this symbol:
           :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4887 4894]},
+ :usage ["(SetEntriesIterator. s)"],
  :full-name "cljs.core/SetEntriesIterator",
  :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 

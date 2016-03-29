@@ -7,11 +7,16 @@
 <td>function/macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/%3E)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/>)
 </td>
 </tr>
 </table>
 
+<samp>(> x)</samp><br>
+<samp>(> x y)</samp><br>
+<samp>(> x y & more)</samp><br>
+
+---
 
  <samp>
 (__>__ x)<br>
@@ -67,7 +72,7 @@ otherwise false.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2385-L2395):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean >
@@ -85,19 +90,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2385-2395](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2385-L2395)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1035-L1038):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric >
@@ -110,12 +110,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1035-1038](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1035-L1038)</ins>
+
 </pre>
 -->
 
@@ -160,27 +155,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name ">",
  :signature ["[x]" "[x y]" "[x y & more]"],
+ :name-encode "GT",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/>",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/>"},
  :related ["cljs.core/>="],
  :full-name-encode "cljs.core/GT",
  :source {:code "(defn ^boolean >\n  ([x] true)\n  ([x y] (cljs.core/> x y))\n  ([x y & more]\n   (if (cljs.core/> x y)\n     (if (next more)\n       (recur y (first more) (next more))\n       (cljs.core/> y (first more)))\n     false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2385 2395]},
+          :lines [2385 2395],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2385-L2395"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric >\n  ([x] true)\n  ([x y] (bool-expr (core/list 'js* \"(~{} > ~{})\" x y)))\n  ([x y & more] `(and (> ~x ~y) (> ~y ~@more))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1035 1038]}],
+                  :lines [1035 1038],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1035-L1038"}],
+ :usage ["(> x)" "(> x y)" "(> x y & more)"],
  :examples [{:id "67180c",
              :content "```clj\n(> 1 2)\n;;=> false\n\n(> 2 1)\n;;=> true\n\n(> 2 2)\n;;=> false\n\n(> 6 5 4 3 2)\n;;=> true\n```"}],
  :full-name "cljs.core/>",
- :clj-symbol "clojure.core/>",
- :docstring "Returns non-nil if nums are in monotonically decreasing order,\notherwise false."}
+ :docstring "Returns non-nil if nums are in monotonically decreasing order,\notherwise false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/GT.cljsdoc"}
 
 ```
 

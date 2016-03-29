@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L169):
+Source code @ [github]():
 
 ```clj
 (def *loaded* (atom #{}))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:169](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L169)</ins>
+
 </pre>
 
 -->
@@ -73,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "*loaded*",
+ :name-encode "STARloadedSTAR",
+ :history [["+" "1.7.10"]],
  :type "var",
+ :full-name-encode "cljs.js/STARloadedSTAR",
  :source {:code "(def *loaded* (atom #{}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [169]},
+          :lines [169],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L169"},
  :full-name "cljs.js/*loaded*",
- :full-name-encode "cljs.js/STARloadedSTAR",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/STARloadedSTAR.cljsdoc"}
 
 ```
 

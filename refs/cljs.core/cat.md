@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(cat rf)</samp><br>
+
+---
 
  <samp>
 (__cat__ rf)<br>
@@ -31,7 +34,7 @@ collection, into the reduction.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9463-L9473):
+Source code @ [github]():
 
 ```clj
 (defn cat
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9463-9473](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9463-L9473)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "cat",
  :signature ["[rf]"],
+ :name-encode "cat",
  :history [["+" "0.0-2341"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/cat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cat"},
  :full-name-encode "cljs.core/cat",
  :source {:code "(defn cat\n  [rf]\n  (let [rf1 (preserving-reduced rf)]  \n    (fn\n      ([] (rf))\n      ([result] (rf result))\n      ([result input]\n         (reduce rf1 result input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9463 9473]},
+          :lines [9463 9473],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9463-L9473"},
+ :usage ["(cat rf)"],
  :full-name "cljs.core/cat",
- :clj-symbol "clojure.core/cat",
- :docstring "A transducer which concatenates the contents of each input, which must be a\ncollection, into the reduction."}
+ :docstring "A transducer which concatenates the contents of each input, which must be a\ncollection, into the reduction.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cat.cljsdoc"}
 
 ```
 

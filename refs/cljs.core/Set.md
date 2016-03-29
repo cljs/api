@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Set. meta hash-map)</samp><br>
+
+---
 
  <samp>
 (__Set.__ meta hash-map)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2659-L2706):
+Source code @ [github]():
 
 ```clj
 (deftype Set [meta hash-map]
@@ -79,11 +82,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:2659-2706](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2659-L2706)</ins>
+
 </pre>
 
 -->
@@ -134,6 +133,7 @@ The API data for this symbol:
           :tag "r1011",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2659 2706]},
+ :usage ["(Set. meta hash-map)"],
  :full-name "cljs.core/Set",
  :removed {:in "0.0-1211", :last-seen "0.0-1011"}}
 

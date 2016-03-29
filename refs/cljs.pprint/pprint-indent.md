@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pprint-indent relative-to n)</samp><br>
+
+---
 
  <samp>
 (__pprint-indent__ relative-to n)<br>
@@ -37,7 +40,7 @@ Output is sent to *out* which must be a pretty printing writer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L852-L863):
+Source code @ [github]():
 
 ```clj
 (defn pprint-indent
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:852-863](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L852-L863)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pprint-indent",
  :signature ["[relative-to n]"],
+ :name-encode "pprint-indent",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/pprint-indent",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pprint-indent"},
  :full-name-encode "cljs.pprint/pprint-indent",
  :source {:code "(defn pprint-indent\n  [relative-to n]\n  (check-enumerated-arg relative-to #{:block :current})\n  (indent *out* relative-to n))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [852 863]},
+          :lines [852 863],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L852-L863"},
+ :usage ["(pprint-indent relative-to n)"],
  :full-name "cljs.pprint/pprint-indent",
- :clj-symbol "clojure.pprint/pprint-indent",
- :docstring "Create an indent at this point in the pretty printing stream. This defines how\nfollowing lines are indented. relative-to can be either :block or :current depending\nwhether the indent should be computed relative to the start of the logical block or\nthe current column position. n is an offset.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer."}
+ :docstring "Create an indent at this point in the pretty printing stream. This defines how\nfollowing lines are indented. relative-to can be either :block or :current depending\nwhether the indent should be computed relative to the start of the logical block or\nthe current column position. n is an offset.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint-indent.cljsdoc"}
 
 ```
 

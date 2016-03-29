@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(vary-meta obj f & args)</samp><br>
+
+---
 
  <samp>
 (__vary-meta__ obj f & args)<br>
@@ -62,7 +65,7 @@ Returns an object of the same type and value as obj, with
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3605-L3619):
+Source code @ [github]():
 
 ```clj
 (defn vary-meta
@@ -84,12 +87,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3605-3619](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3605-L3619)</ins>
+
 </pre>
 
 -->
@@ -135,21 +133,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "vary-meta",
  :signature ["[obj f & args]"],
+ :name-encode "vary-meta",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/vary-meta",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vary-meta"},
  :related ["cljs.core/alter-meta!" "cljs.core/with-meta"],
  :full-name-encode "cljs.core/vary-meta",
  :source {:code "(defn vary-meta\n  ([obj f]\n   (with-meta obj (f (meta obj))))\n  ([obj f a]\n   (with-meta obj (f (meta obj) a)))\n  ([obj f a b]\n   (with-meta obj (f (meta obj) a b)))\n  ([obj f a b c]\n   (with-meta obj (f (meta obj) a b c)))\n  ([obj f a b c d]\n   (with-meta obj (f (meta obj) a b c d)))\n  ([obj f a b c d & args]\n   (with-meta obj (apply f (meta obj) a b c d args))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3605 3619]},
+          :lines [3605 3619],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3605-L3619"},
+ :usage ["(vary-meta obj f & args)"],
  :examples [{:id "8cca62",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (vary-meta a assoc :bar true))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:foo true, :bar true}\n```"}],
  :full-name "cljs.core/vary-meta",
- :clj-symbol "clojure.core/vary-meta",
- :docstring "Returns an object of the same type and value as obj, with\n(apply f (meta obj) args) as its metadata."}
+ :docstring "Returns an object of the same type and value as obj, with\n(apply f (meta obj) args) as its metadata.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vary-meta.cljsdoc"}
 
 ```
 

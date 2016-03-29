@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(case e & clauses)</samp><br>
+
+---
 
  <samp>
 (__case__ e & clauses)<br>
@@ -107,7 +110,7 @@ test-constants need not be all of the same type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2125-L2194):
+Source code @ [github]():
 
 ```clj
 (core/defmacro case
@@ -164,12 +167,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2125-2194](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2125-L2194)</ins>
+
 </pre>
 
 -->
@@ -215,21 +213,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "case",
  :signature ["[e & clauses]"],
+ :name-encode "case",
  :history [["+" "0.0-1211"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/case",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/case"},
  :related ["cljs.core/cond" "cljs.core/condp"],
  :full-name-encode "cljs.core/case",
  :source {:code "(core/defmacro case\n  [e & clauses]\n  (core/let [default (if (odd? (count clauses))\n                       (last clauses)\n                       `(throw\n                          (js/Error.\n                            (cljs.core/str \"No matching clause: \" ~e))))\n             env     &env\n             pairs   (reduce\n                       (core/fn [m [test expr]]\n                         (core/cond\n                           (seq? test)\n                           (reduce\n                             (core/fn [m test]\n                               (core/let [test (if (core/symbol? test)\n                                                 (core/list 'quote test)\n                                                 test)]\n                                 (assoc-test m test expr env)))\n                             m test)\n                           (core/symbol? test)\n                           (assoc-test m (core/list 'quote test) expr env)\n                           :else\n                           (assoc-test m test expr env)))\n                     {} (partition 2 clauses))\n             esym    (gensym)\n             tests   (keys pairs)]\n    (core/cond\n      (every? (some-fn core/number? core/string? #?(:clj core/char? :cljs (core/fnil core/char? :nonchar)) #(const? env %)) tests)\n      (core/let [no-default (if (odd? (count clauses)) (butlast clauses) clauses)\n                 tests      (mapv #(if (seq? %) (vec %) [%]) (take-nth 2 no-default))\n                 thens      (vec (take-nth 2 (drop 1 no-default)))]\n        `(let [~esym ~e] (case* ~esym ~tests ~thens ~default)))\n\n      (every? core/keyword? tests)\n      (core/let [tests (core/->> tests\n                         (map #(.substring (core/str %) 1))\n                         vec\n                         (mapv #(if (seq? %) (vec %) [%])))\n                 thens (vec (vals pairs))]\n        `(let [~esym (if (keyword? ~e) (.-fqn ~e) nil)]\n           (case* ~esym ~tests ~thens ~default)))\n\n      ;; equality\n      :else\n      `(let [~esym ~e]\n         (cond\n           ~@(mapcat (core/fn [[m c]] `((cljs.core/= ~m ~esym) ~c)) pairs)\n           :else ~default)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2125 2194]},
+          :lines [2125 2194],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2125-L2194"},
+ :usage ["(case e & clauses)"],
  :examples [{:id "09a90c",
              :content "```clj\n(def a 1)\n(def b 2)\n\n(case a\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"one\"\n\n(case b\n  0 \"zero\"\n  1 \"one\"\n  \"default\")\n;;=> \"default\"\n\n(case b\n  0 \"zero\"\n  1 \"one\")\n;; Error: No matching clause: 2\n```"}],
  :full-name "cljs.core/case",
- :clj-symbol "clojure.core/case",
- :docstring "Takes an expression, and a set of clauses.\n\nEach clause can take the form of either:\n\ntest-constant result-expr\n\n(test-constant1 ... test-constantN)  result-expr\n\nThe test-constants are not evaluated. They must be compile-time\nliterals, and need not be quoted.  If the expression is equal to a\ntest-constant, the corresponding result-expr is returned. A single\ndefault expression can follow the clauses, and its value will be\nreturned if no clause matches. If no default expression is provided\nand no clause matches, an Error is thrown.\n\nUnlike cond and condp, case does a constant-time dispatch, the\nclauses are not considered sequentially.  All manner of constant\nexpressions are acceptable in case, including numbers, strings,\nsymbols, keywords, and (ClojureScript) composites thereof. Note that since\nlists are used to group multiple constants that map to the same\nexpression, a vector can be used to match a list if needed. The\ntest-constants need not be all of the same type."}
+ :docstring "Takes an expression, and a set of clauses.\n\nEach clause can take the form of either:\n\ntest-constant result-expr\n\n(test-constant1 ... test-constantN)  result-expr\n\nThe test-constants are not evaluated. They must be compile-time\nliterals, and need not be quoted.  If the expression is equal to a\ntest-constant, the corresponding result-expr is returned. A single\ndefault expression can follow the clauses, and its value will be\nreturned if no clause matches. If no default expression is provided\nand no clause matches, an Error is thrown.\n\nUnlike cond and condp, case does a constant-time dispatch, the\nclauses are not considered sequentially.  All manner of constant\nexpressions are acceptable in case, including numbers, strings,\nsymbols, keywords, and (ClojureScript) composites thereof. Note that since\nlists are used to group multiple constants that map to the same\nexpression, a vector can be used to match a list if needed. The\ntest-constants need not be all of the same type.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/case.cljsdoc"}
 
 ```
 

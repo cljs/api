@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(with-state state & body)</samp><br>
+
+---
 
  <samp>
 (__with-state__ state & body)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.clj#L15-L18):
+Source code @ [github]():
 
 ```clj
 (defmacro with-state
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.clj:15-18](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.clj#L15-L18)</ins>
+
 </pre>
 
 -->
@@ -81,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "with-state",
- :type "macro",
  :signature ["[state & body]"],
+ :name-encode "with-state",
+ :history [["+" "1.7.10"]],
+ :type "macro",
+ :full-name-encode "cljs.js/with-state",
  :source {:code "(defmacro with-state\n  [state & body]\n  `(menv/with-compiler-env ~state\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.clj",
-          :lines [15 18]},
+          :lines [15 18],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.clj#L15-L18"},
+ :usage ["(with-state state & body)"],
  :full-name "cljs.js/with-state",
- :full-name-encode "cljs.js/with-state",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/with-state.cljsdoc"}
 
 ```
 

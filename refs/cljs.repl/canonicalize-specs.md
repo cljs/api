@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(canonicalize-specs specs)</samp><br>
+
+---
 
  <samp>
 (__canonicalize-specs__ specs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L577-L583):
+Source code @ [github]():
 
 ```clj
 (defn canonicalize-specs [specs]
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:577-583](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L577-L583)</ins>
+
 </pre>
 
 -->
@@ -84,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "canonicalize-specs",
- :type "function",
  :signature ["[specs]"],
+ :name-encode "canonicalize-specs",
+ :history [["+" "0.0-3148"]],
+ :type "function",
+ :full-name-encode "cljs.repl/canonicalize-specs",
  :source {:code "(defn canonicalize-specs [specs]\n  (letfn [(canonicalize [quoted-spec-or-kw]\n            (if (keyword? quoted-spec-or-kw)\n              quoted-spec-or-kw\n              (as-> (second quoted-spec-or-kw) spec\n                (if (vector? spec) spec [spec]))))]\n    (map canonicalize specs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [577 583]},
+          :lines [579 585],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L579-L585"},
+ :usage ["(canonicalize-specs specs)"],
  :full-name "cljs.repl/canonicalize-specs",
- :full-name-encode "cljs.repl/canonicalize-specs",
- :history [["+" "0.0-3148"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/canonicalize-specs.cljsdoc"}
 
 ```
 

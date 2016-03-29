@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(random-sample prob)</samp><br>
+<samp>(random-sample prob coll)</samp><br>
+
+---
 
  <samp>
 (__random-sample__ prob)<br>
@@ -34,7 +38,7 @@ Returns items from coll with random probability of prob (0.0 -
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9494-L9500):
+Source code @ [github]():
 
 ```clj
 (defn random-sample
@@ -48,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9494-9500](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9494-L9500)</ins>
+
 </pre>
 
 -->
@@ -98,18 +97,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "random-sample",
  :signature ["[prob]" "[prob coll]"],
+ :name-encode "random-sample",
  :history [["+" "0.0-2301"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/random-sample",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/random-sample"},
  :full-name-encode "cljs.core/random-sample",
  :source {:code "(defn random-sample\n  ([prob]\n     (filter (fn [_] (< (rand) prob))))\n  ([prob coll]\n     (filter (fn [_] (< (rand) prob)) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9494 9500]},
+          :lines [9494 9500],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9494-L9500"},
+ :usage ["(random-sample prob)" "(random-sample prob coll)"],
  :full-name "cljs.core/random-sample",
- :clj-symbol "clojure.core/random-sample",
- :docstring "Returns items from coll with random probability of prob (0.0 -\n1.0).  Returns a transducer when no collection is provided."}
+ :docstring "Returns items from coll with random probability of prob (0.0 -\n1.0).  Returns a transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/random-sample.cljsdoc"}
 
 ```
 

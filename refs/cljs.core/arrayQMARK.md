@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(array? x)</samp><br>
+
+---
 
  <samp>
 (__array?__ x)<br>
@@ -53,7 +56,7 @@ Returns true if x is a JavaScript array.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L191-L196):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean array?
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:191-196](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L191-L196)</ins>
+
 </pre>
 
 -->
@@ -116,6 +114,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "array?",
  :signature ["[x]"],
+ :name-encode "arrayQMARK",
  :history [["+" "0.0-1798"]],
  :type "function",
  :related ["cljs.core/object?"],
@@ -123,13 +122,16 @@ The API data for this symbol:
  :source {:code "(defn ^boolean array?\n  [x]\n  (if (identical? *target* \"nodejs\")\n    (.isArray js/Array x)\n    (instance? js/Array x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [191 196]},
+          :lines [191 196],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L191-L196"},
+ :usage ["(array? x)"],
  :examples [{:id "39913c",
              :content "```clj\n(array? #js [1 2 3])\n;;=> true\n\n(array? [1 2 3])\n;;=> false\n\n(array? \"hi\")\n;;=> false\n```"}],
  :full-name "cljs.core/array?",
- :docstring "Returns true if x is a JavaScript array."}
+ :docstring "Returns true if x is a JavaScript array.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/arrayQMARK.cljsdoc"}
 
 ```
 

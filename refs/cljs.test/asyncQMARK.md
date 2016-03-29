@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(async? x)</samp><br>
+
+---
 
  <samp>
 (__async?__ x)<br>
@@ -27,7 +30,7 @@ Returns whether x implements IAsyncTest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L421-L424):
+Source code @ [github]():
 
 ```clj
 (defn async?
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:421-424](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L421-L424)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "async?",
  :signature ["[x]"],
+ :name-encode "asyncQMARK",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.test/asyncQMARK",
  :source {:code "(defn async?\n  [x]\n  (satisfies? IAsyncTest x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [421 424]},
+          :lines [421 424],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L421-L424"},
+ :usage ["(async? x)"],
  :full-name "cljs.test/async?",
- :docstring "Returns whether x implements IAsyncTest."}
+ :docstring "Returns whether x implements IAsyncTest.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/asyncQMARK.cljsdoc"}
 
 ```
 

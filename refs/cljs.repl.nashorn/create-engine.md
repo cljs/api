@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(create-engine)</samp><br>
+<samp>(create-engine {:keys \[code-cache\], :or {code-cache true}})</samp><br>
+
+---
 
  <samp>
 (__create-engine__)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L29-L43):
+Source code @ [github]():
 
 ```clj
     (defn create-engine
@@ -49,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[nashorn.clj:29-43](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L29-L43)</ins>
+
 </pre>
 
 -->
@@ -96,17 +94,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.nashorn",
  :name "create-engine",
- :type "function",
  :signature ["[]" "[{:keys [code-cache], :or {code-cache true}}]"],
+ :name-encode "create-engine",
+ :history [["+" "0.0-2814"]],
+ :type "function",
+ :full-name-encode "cljs.repl.nashorn/create-engine",
  :source {:code "    (defn create-engine\n      ([] (create-engine nil))\n      ([{:keys [code-cache] :or {code-cache true}}]\n       (let [args (when code-cache [\"-pcc\"])\n             factories (.getEngineFactories (ScriptEngineManager.))\n             factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n         (if-let [engine (if-not (empty? args)\n                           (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                           (.getScriptEngine ^ScriptEngineFactory factory))]\n           (let [context (.getContext engine)]\n             (.setWriter context *out*)\n             (.setErrorWriter context *err*)\n             engine)\n           (throw (IllegalArgumentException.\n                    \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
-          :lines [29 43]},
+          :lines [29 43],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L29-L43"},
+ :usage ["(create-engine)"
+         "(create-engine {:keys [code-cache], :or {code-cache true}})"],
  :full-name "cljs.repl.nashorn/create-engine",
- :full-name-encode "cljs.repl.nashorn/create-engine",
- :history [["+" "0.0-2814"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/create-engine.cljsdoc"}
 
 ```
 

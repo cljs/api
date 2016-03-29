@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(replace smap)</samp><br>
+<samp>(replace smap coll)</samp><br>
+
+---
 
  <samp>
 (__replace__ smap)<br>
@@ -52,7 +56,7 @@ is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8476-L8491):
+Source code @ [github]():
 
 ```clj
 (defn replace
@@ -73,12 +77,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8476-8491](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8476-L8491)</ins>
+
 </pre>
 
 -->
@@ -124,8 +123,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "replace",
  :signature ["[smap]" "[smap coll]"],
+ :name-encode "replace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/replace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/replace"},
  :related ["cljs.core/map"
            "clojure.walk/prewalk-replace"
            "clojure.walk/postwalk-replace"],
@@ -133,12 +135,14 @@ The API data for this symbol:
  :source {:code "(defn replace\n  ([smap]\n     (map #(if-let [e (find smap %)] (val e) %)))\n  ([smap coll]\n     (if (vector? coll)\n       (let [n (count coll)]\n         (reduce (fn [v i]\n                   (if-let [e (find smap (nth v i))]\n                     (assoc v i (second e))\n                     v))\n           coll (take n (iterate inc 0))))\n       (map #(if-let [e (find smap %)] (second e) %) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8476 8491]},
+          :lines [8476 8491],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8476-L8491"},
+ :usage ["(replace smap)" "(replace smap coll)"],
  :full-name "cljs.core/replace",
- :clj-symbol "clojure.core/replace",
- :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap.  Returns a transducer when no collection\nis provided."}
+ :docstring "Given a map of replacement pairs and a vector/collection, returns a\nvector/seq with any elements = a key in smap replaced with the\ncorresponding val in smap.  Returns a transducer when no collection\nis provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/replace.cljsdoc"}
 
 ```
 

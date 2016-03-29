@@ -7,7 +7,7 @@
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentHashSet.EMPTY</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentHashSet.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentHashSet.EMPTY</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentHashSet.java)
 </td>
 </tr>
 </table>
@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8284-L8285):
+Source code @ [github]():
 
 ```clj
 (set! (.-EMPTY PersistentHashSet)
@@ -31,12 +31,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8284-8285](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8284-L8285)</ins>
+
 </pre>
 
 -->
@@ -80,18 +75,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentHashSet.EMPTY",
+ :name-encode "PersistentHashSetDOTEMPTY",
  :history [["+" "0.0-1211"]],
  :parent-type "PersistentHashSet",
  :type "var",
+ :clj-equiv {:full-name "clojure.lang/PersistentHashSet.EMPTY",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentHashSet.java"},
  :full-name-encode "cljs.core/PersistentHashSetDOTEMPTY",
  :source {:code "(set! (.-EMPTY PersistentHashSet)\n  (PersistentHashSet. nil (.-EMPTY PersistentArrayMap) empty-unordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8284 8285]},
+          :lines [8284 8285],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8284-L8285"},
  :full-name "cljs.core/PersistentHashSet.EMPTY",
- :clj-symbol "clojure.lang/PersistentHashSet.EMPTY"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSetDOTEMPTY.cljsdoc"}
 
 ```
 

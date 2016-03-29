@@ -26,7 +26,7 @@ pretty printing the results of macro expansions
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L657-L661):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic
@@ -40,12 +40,7 @@ pretty printing the results of macro expansions"
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:657-661](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L657-L661)</ins>
+
 </pre>
 
 -->
@@ -89,18 +84,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-suppress-namespaces*",
+ :name-encode "STARprint-suppress-namespacesSTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-suppress-namespaces*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-suppress-namespaces*"},
  :full-name-encode "cljs.pprint/STARprint-suppress-namespacesSTAR",
  :source {:code "(def ^:dynamic\n^{:doc \"Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions\"\n  :added \"1.2\"}\n*print-suppress-namespaces* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [657 661]},
+          :lines [657 661],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L657-L661"},
  :full-name "cljs.pprint/*print-suppress-namespaces*",
- :clj-symbol "clojure.pprint/*print-suppress-namespaces*",
- :docstring "Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions"}
+ :docstring "Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-suppress-namespacesSTAR.cljsdoc"}
 
 ```
 

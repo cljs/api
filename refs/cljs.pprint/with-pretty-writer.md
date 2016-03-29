@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(with-pretty-writer base-writer & body)</samp><br>
+
+---
 
  <samp>
 (__with-pretty-writer__ base-writer & body)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L17-L24):
+Source code @ [github]():
 
 ```clj
 (defmacro with-pretty-writer [base-writer & body]
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:17-24](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L17-L24)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "with-pretty-writer",
- :type "macro",
  :signature ["[base-writer & body]"],
+ :name-encode "with-pretty-writer",
+ :history [["+" "0.0-3255"]],
+ :type "macro",
+ :full-name-encode "cljs.pprint/with-pretty-writer",
  :source {:code "(defmacro with-pretty-writer [base-writer & body]\n  `(let [base-writer# ~base-writer\n         new-writer# (not (pretty-writer? base-writer#))]\n     (cljs.core/binding [cljs.core/*out* (if new-writer#\n                         (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)\n                         base-writer#)]\n       ~@body\n       (-ppflush cljs.core/*out*))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [17 24]},
+          :lines [17 24],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L17-L24"},
+ :usage ["(with-pretty-writer base-writer & body)"],
  :full-name "cljs.pprint/with-pretty-writer",
- :full-name-encode "cljs.pprint/with-pretty-writer",
- :history [["+" "0.0-3255"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/with-pretty-writer.cljsdoc"}
 
 ```
 

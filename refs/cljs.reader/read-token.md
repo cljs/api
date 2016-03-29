@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-token rdr initch)</samp><br>
+
+---
 
  <samp>
 (__read-token__ rdr initch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L79-L87):
+Source code @ [github]():
 
 ```clj
 (defn read-token
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:79-87](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L79-L87)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-token",
- :type "function",
  :signature ["[rdr initch]"],
+ :name-encode "read-token",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-token",
  :source {:code "(defn read-token\n  [rdr initch]\n  (loop [sb (StringBuffer. initch)\n         ch (read-char rdr)]\n    (if (or (nil? ch)\n            (whitespace? ch)\n            (macro-terminating? ch))\n      (do (unread rdr ch) (.toString sb))\n      (recur (do (.append sb ch) sb) (read-char rdr)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [79 87]},
+          :lines [79 87],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L79-L87"},
+ :usage ["(read-token rdr initch)"],
  :full-name "cljs.reader/read-token",
- :full-name-encode "cljs.reader/read-token",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-token.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(right loc)</samp><br>
+
+---
 
  <samp>
 (__right__ loc)<br>
@@ -30,7 +33,7 @@ Returns the loc of the right sibling of the node at this loc, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L135-L140):
+Source code @ [github]():
 
 ```clj
 (defn right
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:135-140](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L135-L140)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "right",
  :signature ["[loc]"],
+ :name-encode "right",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/right",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/right"},
  :full-name-encode "clojure.zip/right",
  :source {:code "(defn right\n  [loc]\n    (let [[node {l :l  [r & rnext :as rs] :r :as path}] loc]\n      (when (and path rs)\n        (with-meta [r (assoc path :l (conj l node) :r rnext)] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [135 140]},
+          :lines [135 140],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L135-L140"},
+ :usage ["(right loc)"],
  :full-name "clojure.zip/right",
- :clj-symbol "clojure.zip/right",
- :docstring "Returns the loc of the right sibling of the node at this loc, or nil"}
+ :docstring "Returns the loc of the right sibling of the node at this loc, or nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/right.cljsdoc"}
 
 ```
 

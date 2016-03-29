@@ -42,7 +42,7 @@ the first line of the file to have a [shebang line](https://en.wikipedia.org/wik
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader/impl/commons.clj#L123-L125):
+Reader code @ [github]():
 
 ```clj
 (defn read-comment
@@ -54,20 +54,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── reader
-                        └── impl
-                            └── <ins>[commons.clj:123-125](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader/impl/commons.clj#L123-L125)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -89,13 +81,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -128,8 +114,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Equivalent to [doc:syntax/comment].\n\nThis is intended to allow executable ClojureScript files under Unix by allowing\nthe first line of the file to have a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix)).",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L114"},
  :ns "syntax",
  :name "shebang",
+ :name-encode "shebang",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :full-name-encode "syntax/shebang",
@@ -138,18 +127,20 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader/impl/commons.clj",
-                  :lines [123 125]}
+                  :lines [123 125],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader/impl/commons.clj#L123-L125"}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :examples [{:id "de569a",
              :content "```clj\n#!/bin/cljs\n;; waits for another form since #!/bin/cljs was ignored.\n\n123 #! this is ignored\n;;=> 123\n```"}],
  :full-name "syntax/shebang",
  :display "#! shebang",
- :clj-doc "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L114"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/shebang.cljsdoc"}
 
 ```
 

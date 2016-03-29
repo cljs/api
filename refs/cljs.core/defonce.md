@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(defonce x init)</samp><br>
+
+---
 
  <samp>
 (__defonce__ x init)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L603-L605):
+Source code @ [github]():
 
 ```clj
 (core/defmacro defonce [x init]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:603-605](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L603-L605)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "defonce",
  :signature ["[x init]"],
+ :name-encode "defonce",
  :history [["+" "0.0-2156"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/defonce",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defonce"},
  :full-name-encode "cljs.core/defonce",
  :source {:code "(core/defmacro defonce [x init]\n  `(when-not (exists? ~x)\n     (def ~x ~init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [603 605]},
+          :lines [603 605],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L603-L605"},
+ :usage ["(defonce x init)"],
  :full-name "cljs.core/defonce",
- :clj-symbol "clojure.core/defonce"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/defonce.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(even? n)</samp><br>
+
+---
 
  <samp>
 (__even?__ n)<br>
@@ -42,7 +45,7 @@ Returns true if n is even, throws an exception if n is not an integer
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3906-L3910):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean even?
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3906-3910](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3906-L3910)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "even?",
  :signature ["[n]"],
+ :name-encode "evenQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/even?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/even?"},
  :related ["cljs.core/odd?"],
  :full-name-encode "cljs.core/evenQMARK",
  :source {:code "(defn ^boolean even?\n   [n] (if (integer? n)\n        (zero? (bit-and n 1))\n        (throw (js/Error. (str \"Argument must be an integer: \" n)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3906 3910]},
+          :lines [3906 3910],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3906-L3910"},
+ :usage ["(even? n)"],
  :full-name "cljs.core/even?",
- :clj-symbol "clojure.core/even?",
- :docstring "Returns true if n is even, throws an exception if n is not an integer"}
+ :docstring "Returns true if n is even, throws an exception if n is not an integer",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/evenQMARK.cljsdoc"}
 
 ```
 

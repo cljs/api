@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkedCons</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ChunkedCons.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkedCons</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ChunkedCons.java)
 </td>
 </tr>
 </table>
 
+<samp>(ChunkedCons. chunk more meta __hash)</samp><br>
+
+---
 
  <samp>
 (__ChunkedCons.__ chunk more meta __hash)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3227-L3295):
+Source code @ [github]():
 
 ```clj
 (deftype ChunkedCons [chunk more meta ^:mutable __hash]
@@ -103,12 +106,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3227-3295](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3227-L3295)</ins>
+
 </pre>
 
 -->
@@ -153,17 +151,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ChunkedCons",
  :signature ["[chunk more meta __hash]"],
+ :name-encode "ChunkedCons",
  :history [["+" "0.0-1424"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/ChunkedCons",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ChunkedCons.java"},
  :full-name-encode "cljs.core/ChunkedCons",
  :source {:code "(deftype ChunkedCons [chunk more meta ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n  \n  IWithMeta\n  (-with-meta [coll m]\n    (ChunkedCons. chunk more m __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ASeq\n  ISeq\n  (-first [coll] (-nth chunk 0))\n  (-rest [coll]\n    (if (> (-count chunk) 1)\n      (ChunkedCons. (-drop-first chunk) more meta nil)\n      (if (nil? more)\n        ()\n        more)))\n\n  INext\n  (-next [coll]\n    (if (> (-count chunk) 1)\n      (ChunkedCons. (-drop-first chunk) more meta nil)\n      (let [more (-seq more)]\n        (when-not (nil? more)\n          more))))\n\n  IChunkedSeq\n  (-chunked-first [coll] chunk)\n  (-chunked-rest [coll]\n    (if (nil? more)\n      ()\n      more))\n\n  IChunkedNext\n  (-chunked-next [coll]\n    (if (nil? more)\n      nil\n      more))\n\n  ICollection\n  (-conj [this o]\n    (cons o this))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3227 3295]},
+          :lines [3227 3295],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3227-L3295"},
+ :usage ["(ChunkedCons. chunk more meta __hash)"],
  :full-name "cljs.core/ChunkedCons",
- :clj-symbol "clojure.lang/ChunkedCons"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ChunkedCons.cljsdoc"}
 
 ```
 

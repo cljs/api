@@ -24,7 +24,7 @@ Strings which should be printed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L51-L57):
+Source code @ [github]():
 
 ```clj
 (defonce
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:51-57](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L51-L57)</ins>
+
 </pre>
 
 -->
@@ -86,17 +81,20 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-err-fn*",
- :docstring "Each runtime environment provides a different way to print error output.\nWhatever function *print-fn* is bound to will be passed any\nStrings which should be printed.",
+ :name-encode "STARprint-err-fnSTAR",
+ :history [["+" "1.7.10"]],
  :type "dynamic var",
+ :full-name-encode "cljs.core/STARprint-err-fnSTAR",
  :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to print error output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\" :dynamic true}\n  *print-err-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-err-fn* fn set for evaluation environment\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [51 57]},
+          :lines [51 57],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L51-L57"},
  :full-name "cljs.core/*print-err-fn*",
- :full-name-encode "cljs.core/STARprint-err-fnSTAR",
- :history [["+" "1.7.10"]]}
+ :docstring "Each runtime environment provides a different way to print error output.\nWhatever function *print-fn* is bound to will be passed any\nStrings which should be printed.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-err-fnSTAR.cljsdoc"}
 
 ```
 

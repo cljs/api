@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(find-ns ns)</samp><br>
+
+---
 
  <samp>
 (__find-ns__ ns)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10418-L10428):
+Source code @ [github]():
 
 ```clj
 (defn find-ns [ns]
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10418-10428](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10418-L10428)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "find-ns",
  :signature ["[ns]"],
+ :name-encode "find-ns",
  :history [["+" "1.7.10"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/find-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/find-ns"},
  :full-name-encode "cljs.core/find-ns",
  :source {:code "(defn find-ns [ns]\n  (when (nil? NS_CACHE)\n    (set! NS_CACHE (atom {})))\n  (let [the-ns (get @NS_CACHE ns)]\n    (if-not (nil? the-ns)\n      the-ns\n      (let [ns-obj (find-ns-obj ns)]\n        (when-not (nil? ns-obj)\n          (let [new-ns (create-ns ns ns-obj)]\n            (swap! NS_CACHE assoc ns new-ns)\n            new-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10418 10428]},
+          :lines [10418 10428],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10418-L10428"},
+ :usage ["(find-ns ns)"],
  :full-name "cljs.core/find-ns",
- :clj-symbol "clojure.core/find-ns"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find-ns.cljsdoc"}
 
 ```
 

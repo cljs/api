@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(clj->js x)</samp><br>
+
+---
 
  <samp>
 (__clj->js__ x)<br>
@@ -64,7 +67,7 @@ Maps become Objects. Arbitrary keys are encoded to by key->js.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9561-L9580):
+Source code @ [github]():
 
 ```clj
 (defn clj->js
@@ -90,12 +93,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9561-9580](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9561-L9580)</ins>
+
 </pre>
 
 -->
@@ -138,6 +136,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "clj->js",
  :signature ["[x]"],
+ :name-encode "clj-GTjs",
  :history [["+" "0.0-1552"]],
  :type "function",
  :related ["cljs.core/js->clj"],
@@ -145,13 +144,16 @@ The API data for this symbol:
  :source {:code "(defn clj->js\n   [x]\n   (when-not (nil? x)\n     (if (satisfies? IEncodeJS x)\n       (-clj->js x)\n       (cond\n         (keyword? x) (name x)\n         (symbol? x) (str x)\n         (map? x) (let [m (js-obj)]\n                    (doseq [[k v] x]\n                      (aset m (key->js k) (clj->js v)))\n                    m)\n         (coll? x) (let [arr (array)]\n                     (doseq [x (map clj->js x)]\n                       (.push arr x))\n                     arr)\n         :else x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9561 9580]},
+          :lines [9561 9580],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9561-L9580"},
+ :usage ["(clj->js x)"],
  :examples [{:id "2b1057",
              :content "```clj\n(clj->js {:foo 1 :bar 2})\n;;=> #js {:foo 1, :bar 2}\n\n(clj->js [:foo \"bar\" 'baz])\n;;=> #js [\"foo\" \"bar\" \"baz\"]\n\n(clj->js [1 {:foo \"bar\"} 4])\n;;=> #js [1 #js {:foo \"bar\"} 4]\n```"}],
  :full-name "cljs.core/clj->js",
- :docstring "Recursively transforms ClojureScript values to JavaScript.\nsets/vectors/lists become Arrays, Keywords and Symbol become Strings,\nMaps become Objects. Arbitrary keys are encoded to by key->js."}
+ :docstring "Recursively transforms ClojureScript values to JavaScript.\nsets/vectors/lists become Arrays, Keywords and Symbol become Strings,\nMaps become Objects. Arbitrary keys are encoded to by key->js.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/clj-GTjs.cljsdoc"}
 
 ```
 

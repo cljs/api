@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(long x)</samp><br>
+
+---
 
  <samp>
 (__long__ x)<br>
@@ -30,7 +33,7 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2538-L2541):
+Source code @ [github]():
 
 ```clj
 (defn long
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2538-2541](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2538-L2541)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "long",
  :signature ["[x]"],
+ :name-encode "long",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/long",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/long"},
  :full-name-encode "cljs.core/long",
  :source {:code "(defn long\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2538 2541]},
+          :lines [2538 2541],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2538-L2541"},
+ :usage ["(long x)"],
  :full-name "cljs.core/long",
- :clj-symbol "clojure.core/long",
- :docstring "Coerce to long by stripping decimal places. Identical to `int'."}
+ :docstring "Coerce to long by stripping decimal places. Identical to `int'.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/long.cljsdoc"}
 
 ```
 

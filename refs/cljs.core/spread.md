@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(spread arglist)</samp><br>
+
+---
 
  <samp>
 (__spread__ arglist)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3440-L3446):
+Source code @ [github]():
 
 ```clj
 (defn spread
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3440-3446](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3440-L3446)</ins>
+
 </pre>
 
 -->
@@ -84,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "spread",
- :type "function",
  :signature ["[arglist]"],
+ :name-encode "spread",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.core/spread",
  :source {:code "(defn spread\n  [arglist]\n  (cond\n   (nil? arglist) nil\n   (nil? (next arglist)) (seq (first arglist))\n   :else (cons (first arglist)\n               (spread (next arglist)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3440 3446]},
+          :lines [3440 3446],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3440-L3446"},
+ :usage ["(spread arglist)"],
  :full-name "cljs.core/spread",
- :full-name-encode "cljs.core/spread",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/spread.cljsdoc"}
 
 ```
 

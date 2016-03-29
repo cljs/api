@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(iterate f x)</samp><br>
+
+---
 
  <samp>
 (__iterate__ f x)<br>
@@ -44,7 +47,7 @@ Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effec
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4485-L4488):
+Source code @ [github]():
 
 ```clj
 (defn iterate
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4485-4488](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4485-L4488)</ins>
+
 </pre>
 
 -->
@@ -106,8 +104,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "iterate",
  :signature ["[f x]"],
+ :name-encode "iterate",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/iterate",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/iterate"},
  :related ["cljs.core/cycle"
            "cljs.core/repeatedly"
            "cljs.core/repeat"],
@@ -115,12 +116,14 @@ The API data for this symbol:
  :source {:code "(defn iterate\n  [f x] (cons x (lazy-seq (iterate f (f x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4485 4488]},
+          :lines [4485 4488],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4485-L4488"},
+ :usage ["(iterate f x)"],
  :full-name "cljs.core/iterate",
- :clj-symbol "clojure.core/iterate",
- :docstring "Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effects"}
+ :docstring "Returns a lazy sequence of x, (f x), (f (f x)) etc. f must be free of side-effects",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/iterate.cljsdoc"}
 
 ```
 

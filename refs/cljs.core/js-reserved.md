@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10277-L10279):
+Source code @ [github]():
 
 ```clj
 (def
@@ -29,12 +29,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10277-10279](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10277-L10279)</ins>
+
 </pre>
 
 -->
@@ -75,16 +70,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "js-reserved",
+ :name-encode "js-reserved",
+ :history [["+" "1.7.10"]],
  :type "var",
+ :full-name-encode "cljs.core/js-reserved",
  :source {:code "(def\n  ^{:jsdoc [\"@type {null|Object}\"]}\n  js-reserved nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10277 10279]},
+          :lines [10277 10279],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10277-L10279"},
  :full-name "cljs.core/js-reserved",
- :full-name-encode "cljs.core/js-reserved",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-reserved.cljsdoc"}
 
 ```
 

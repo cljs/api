@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-literal rdr ch)</samp><br>
+
+---
 
  <samp>
 (__read-literal__ rdr ch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L337-L350):
+Source code @ [github]():
 
 ```clj
 (defn read-literal
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:337-350](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L337-L350)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-literal",
- :type "function",
  :signature ["[rdr ch]"],
+ :name-encode "read-literal",
+ :history [["+" "1.7.107"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-literal",
  :source {:code "(defn read-literal\n  [rdr ch]\n  (let [token (read-token rdr ch)\n        chars (subs token 1)]\n    (cond (identical? (.-length chars) 1) chars\n          (identical? chars \"tab\")       \"\\t\"\n          (identical? chars \"return\")    \"\\r\"\n          (identical? chars \"newline\")   \"\\n\"\n          (identical? chars \"space\")     \" \"\n          (identical? chars \"backspace\") \"\\b\"\n          (identical? chars \"formfeed\")  \"\\f\"\n          (identical? (.charAt chars 0) \"u\") (make-unicode-char (subs chars 1))\n          (identical? (.charAt chars 0) \"o\") (not-implemented rdr token)\n          :else (reader-error rdr \"Unknown character literal: \" token))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [337 350]},
+          :lines [337 350],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L337-L350"},
+ :usage ["(read-literal rdr ch)"],
  :full-name "cljs.reader/read-literal",
- :full-name-encode "cljs.reader/read-literal",
- :history [["+" "1.7.107"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-literal.cljsdoc"}
 
 ```
 

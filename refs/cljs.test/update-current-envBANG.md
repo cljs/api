@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(update-current-env! ks f & args)</samp><br>
+
+---
 
  <samp>
 (__update-current-env!__ ks f & args)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L274-L275):
+Source code @ [github]():
 
 ```clj
 (defn update-current-env! [ks f & args]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:274-275](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L274-L275)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "update-current-env!",
- :type "function",
  :signature ["[ks f & args]"],
+ :name-encode "update-current-envBANG",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/update-current-envBANG",
  :source {:code "(defn update-current-env! [ks f & args]\n  (set! *current-env* (apply update-in (get-current-env) ks f args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [274 275]},
+          :lines [274 275],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L274-L275"},
+ :usage ["(update-current-env! ks f & args)"],
  :full-name "cljs.test/update-current-env!",
- :full-name-encode "cljs.test/update-current-envBANG",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/update-current-envBANG.cljsdoc"}
 
 ```
 

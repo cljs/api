@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-file\* f)</samp><br>
+
+---
 
  <samp>
 (__load-file\*__ f)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L1926-L1931):
+Source code @ [github]():
 
 ```clj
 (defmacro load-file* [f]
@@ -37,11 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:1926-1931](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/core.clj#L1926-L1931)</ins>
+
 </pre>
 
 -->
@@ -92,6 +91,7 @@ The API data for this symbol:
           :tag "r3058",
           :filename "src/clj/cljs/core.clj",
           :lines [1926 1931]},
+ :usage ["(load-file* f)"],
  :full-name "cljs.core/load-file*",
  :removed {:in "0.0-3115", :last-seen "0.0-3058"}}
 

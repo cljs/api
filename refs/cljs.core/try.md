@@ -7,12 +7,12 @@
 <tr>
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1933"><img valign="middle" alt="[×] 0.0-1933" title="Removed in 0.0-1933" src="https://img.shields.io/badge/×-0.0--1933-red.svg"></a> </td>
-<td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/try</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/try)
-</td>
 </tr>
 </table>
 
+<samp>(try & forms)</samp><br>
+
+---
 
  <samp>
 (__try__ & forms)<br>
@@ -38,7 +38,7 @@ Catches and handles JavaScript exceptions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L1004-L1032):
+Source code @ [github]():
 
 ```clj
 (defmacro try
@@ -68,11 +68,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[core.clj:1004-1032](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/core.clj#L1004-L1032)</ins>
+
 </pre>
 
 -->
@@ -83,9 +79,6 @@ clojurescript @ r1913
 
 ###### External doc links:
 
-[`clojure.core/try` @ clojuredocs](http://clojuredocs.org/clojure.core/try)<br>
-[`clojure.core/try` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/try/)<br>
-[`clojure.core/try` @ crossclj](http://crossclj.info/fun/clojure.core/try.html)<br>
 [`cljs.core/try` @ crossclj](http://crossclj.info/fun/cljs.core/try.html)<br>
 
 ---
@@ -127,6 +120,7 @@ The API data for this symbol:
           :tag "r1913",
           :filename "src/clj/cljs/core.clj",
           :lines [1004 1032]},
+ :usage ["(try & forms)"],
  :full-name "cljs.core/try",
  :clj-symbol "clojure.core/try",
  :docstring "(try expr* catch-clause* finally-clause?)\n\n Special Form\n\n catch-clause => (catch protoname name expr*)\n finally-clause => (finally expr*)\n\nCatches and handles JavaScript exceptions.",

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(sorted-set & keys)</samp><br>
+
+---
 
  <samp>
 (__sorted-set__ & keys)<br>
@@ -43,7 +46,7 @@ Returns a new sorted set with supplied keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8464-L8467):
+Source code @ [github]():
 
 ```clj
 (defn sorted-set
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8464-8467](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8464-L8467)</ins>
+
 </pre>
 
 -->
@@ -106,8 +104,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sorted-set",
  :signature ["[& keys]"],
+ :name-encode "sorted-set",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sorted-set",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-set"},
  :related ["cljs.core/sorted-set-by"
            "cljs.core/subseq"
            "cljs.core/rsubseq"
@@ -116,12 +117,14 @@ The API data for this symbol:
  :source {:code "(defn sorted-set\n  ([& keys]\n   (reduce -conj (.-EMPTY PersistentTreeSet) keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8464 8467]},
+          :lines [8464 8467],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8464-L8467"},
+ :usage ["(sorted-set & keys)"],
  :full-name "cljs.core/sorted-set",
- :clj-symbol "clojure.core/sorted-set",
- :docstring "Returns a new sorted set with supplied keys."}
+ :docstring "Returns a new sorted set with supplied keys.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-set.cljsdoc"}
 
 ```
 

@@ -18,7 +18,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/pprint.cljs#L120):
+Source code @ [github]():
 
 ```clj
 (defprotocol PrettyFlush (ppflush [this]))
@@ -28,11 +28,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3211/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3211
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[pprint.cljs:120](https://github.com/clojure/clojurescript/blob/r3211/src/cljs/cljs/pprint.cljs#L120)</ins>
+
 </pre>
 
 -->

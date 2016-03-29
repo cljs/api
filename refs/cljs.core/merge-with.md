@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(merge-with f & maps)</samp><br>
+
+---
 
  <samp>
 (__merge-with__ f & maps)<br>
@@ -47,7 +50,7 @@ the result by calling (f val-in-result val-in-latter).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8162-L8176):
+Source code @ [github]():
 
 ```clj
 (defn merge-with
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8162-8176](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8162-L8176)</ins>
+
 </pre>
 
 -->
@@ -118,19 +116,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "merge-with",
  :signature ["[f & maps]"],
+ :name-encode "merge-with",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/merge-with",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/merge-with"},
  :related ["cljs.core/merge"],
  :full-name-encode "cljs.core/merge-with",
  :source {:code "(defn merge-with\n  [f & maps]\n  (when (some identity maps)\n    (let [merge-entry (fn [m e]\n                        (let [k (first e) v (second e)]\n                          (if (contains? m k)\n                            (assoc m k (f (get m k) v))\n                            (assoc m k v))))\n          merge2 (fn [m1 m2]\n                   (reduce merge-entry (or m1 {}) (seq m2)))]\n      (reduce merge2 maps))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8162 8176]},
+          :lines [8162 8176],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8162-L8176"},
+ :usage ["(merge-with f & maps)"],
  :full-name "cljs.core/merge-with",
- :clj-symbol "clojure.core/merge-with",
- :docstring "Returns a map that consists of the rest of the maps conj-ed onto\nthe first.  If a key occurs in more than one map, the mapping(s)\nfrom the latter (left-to-right) will be combined with the mapping in\nthe result by calling (f val-in-result val-in-latter)."}
+ :docstring "Returns a map that consists of the rest of the maps conj-ed onto\nthe first.  If a key occurs in more than one map, the mapping(s)\nfrom the latter (left-to-right) will be combined with the mapping in\nthe result by calling (f val-in-result val-in-latter).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/merge-with.cljsdoc"}
 
 ```
 

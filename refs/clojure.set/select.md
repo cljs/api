@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(select pred xset)</samp><br>
+
+---
 
  <samp>
 (__select__ pred xset)<br>
@@ -40,7 +43,7 @@ Returns a set of the elements for which pred is true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L61-L65):
+Source code @ [github]():
 
 ```clj
 (defn select
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:61-65](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L61-L65)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "clojure.set",
  :name "select",
  :signature ["[pred xset]"],
+ :name-encode "select",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/select",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/select"},
  :related ["cljs.core/filter"],
  :full-name-encode "clojure.set/select",
  :source {:code "(defn select\n  [pred xset]\n    (reduce (fn [s k] (if (pred k) s (disj s k)))\n            xset xset))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [61 65]},
+          :lines [61 65],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L61-L65"},
+ :usage ["(select pred xset)"],
  :full-name "clojure.set/select",
- :clj-symbol "clojure.set/select",
- :docstring "Returns a set of the elements for which pred is true"}
+ :docstring "Returns a set of the elements for which pred is true",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/select.cljsdoc"}
 
 ```
 

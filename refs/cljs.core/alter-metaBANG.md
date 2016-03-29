@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(alter-meta! data f & args)</samp><br>
+
+---
 
  <samp>
 (__alter-meta!__ data f & args)<br>
@@ -76,7 +79,7 @@ f must be free of side-effects
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9362-L9369):
+Source code @ [github]():
 
 ```clj
 (defn alter-meta!
@@ -88,12 +91,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9362-9369](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9362-L9369)</ins>
+
 </pre>
 
 -->
@@ -139,21 +137,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "alter-meta!",
  :signature ["[data f & args]"],
+ :name-encode "alter-metaBANG",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/alter-meta!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/alter-meta!"},
  :related ["cljs.core/with-meta" "cljs.core/vary-meta"],
  :full-name-encode "cljs.core/alter-metaBANG",
  :source {:code "(defn alter-meta!\n  [iref f & args]\n  (set! (.-meta iref) (apply f (.-meta iref) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9362 9369]},
+          :lines [9362 9369],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9362-L9369"},
+ :usage ["(alter-meta! data f & args)"],
  :examples [{:id "8378a0",
              :content "Metadata of symbols and collections can be altered:\n\n```clj\n(def a ^:foo [1 2 3])\n(meta a)\n;;=> {:foo true}\n\n(alter-meta! a assoc :bar true)\n(meta a)\n;;=> {:foo true, :bar true}\n```\n\nMetadata of vars cannot be altered:\n\n```clj\n(def a [1 2 3])\n(meta #'a)\n;;=> {:arglists (), :test nil, :name a, :column 1, :line 1, :file \"<cljs repl>\", :doc nil, :ns cljs.user}\n\n(alter-meta! #'a assoc :bar true)\n(:bar (meta #'a))\n;;=> nil\n```"}],
  :full-name "cljs.core/alter-meta!",
- :clj-symbol "clojure.core/alter-meta!",
- :docstring "Atomically sets the metadata for a namespace/var/ref/agent/atom to be:\n\n(apply f its-current-meta args)\n\nf must be free of side-effects"}
+ :docstring "Atomically sets the metadata for a namespace/var/ref/agent/atom to be:\n\n(apply f its-current-meta args)\n\nf must be free of side-effects",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/alter-metaBANG.cljsdoc"}
 
 ```
 

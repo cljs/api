@@ -77,7 +77,7 @@ A keyword is also callable for retrieving values from a map:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361):
+Reader code @ [github]():
 
 ```clj
 (defn- read-keyword
@@ -105,18 +105,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:343-361](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -145,13 +139,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -184,8 +172,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A keyword is a string-like datatype that evaluates to itself.  Keywords are often used\nas enums or keys for maps.  Keywords should not start with a number.\n\nKeywords can have an optional namespace. For example, `:foo/bar`. This is useful\nfor functions in a namespace to prevent key collisions on a globally accessible\nmap.",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#keywords",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "keyword",
+ :name-encode "keyword",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["syntax/keyword-qualify"
@@ -197,22 +188,23 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [343 361]}
+                  :lines [343 361],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361"}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage [":foo" ":foo/bar"],
  :examples [{:id "e5fdbe",
              :content "```clj\n:foo\n;;=> :foo\n\n:a/foo\n;;=> :a/foo\n```"}
             {:id "9765fe",
              :content "A keyword is also callable for retrieving values from a map:\n\n```clj\n(def m {:foo 1})\n(:foo m)\n;;=> 1\n\n(def things [{:foo 1 :bar 2}\n             {:foo 3 :bar 4}\n             {:foo 5 :bar 6}])\n(map :foo things)\n;;=> (1 3 5)\n```"}],
- :edn-doc "https://github.com/edn-format/edn#keywords",
  :full-name "syntax/keyword",
  :display ": keyword",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/keyword.cljsdoc"}
 
 ```
 

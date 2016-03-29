@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(merge-require requires \[lib :as spec\])</samp><br>
+
+---
 
  <samp>
 (__merge-require__ requires \[lib :as spec\])<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L211-L224):
+Source code @ [github]():
 
 ```clj
 (defn merge-require [requires [lib :as spec]]
@@ -45,11 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:211-224](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L211-L224)</ins>
+
 </pre>
 
 -->
@@ -100,6 +99,7 @@ The API data for this symbol:
           :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
           :lines [211 224]},
+ :usage ["(merge-require requires [lib :as spec])"],
  :full-name "cljs.repl/merge-require",
  :removed {:in "0.0-2655", :last-seen "0.0-2644"}}
 

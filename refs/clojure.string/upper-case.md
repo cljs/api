@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(upper-case s)</samp><br>
+
+---
 
  <samp>
 (__upper-case__ s)<br>
@@ -35,7 +38,7 @@ Converts string to all upper-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L85-L88):
+Source code @ [github]():
 
 ```clj
 (defn upper-case
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:85-88](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L85-L88)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "upper-case",
  :signature ["[s]"],
+ :name-encode "upper-case",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/upper-case",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/upper-case"},
  :full-name-encode "clojure.string/upper-case",
  :source {:code "(defn upper-case\n  [s]\n  (.toUpperCase s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [85 88]},
+          :lines [85 88],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L85-L88"},
+ :usage ["(upper-case s)"],
  :full-name "clojure.string/upper-case",
- :clj-symbol "clojure.string/upper-case",
- :docstring "Converts string to all upper-case."}
+ :docstring "Converts string to all upper-case.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/upper-case.cljsdoc"}
 
 ```
 

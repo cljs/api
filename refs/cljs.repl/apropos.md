@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(apropos str-or-pattern)</samp><br>
+
+---
 
  <samp>
 (__apropos__ str-or-pattern)<br>
@@ -60,7 +63,7 @@ str-or-pattern.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1262-L1277):
+Source code @ [github]():
 
 ```clj
 (defmacro apropos
@@ -82,12 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:1262-1277](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1262-L1277)</ins>
+
 </pre>
 
 -->
@@ -133,21 +131,26 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "apropos",
  :signature ["[str-or-pattern]"],
+ :name-encode "apropos",
  :history [["+" "0.0-2985"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.repl/apropos",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/apropos"},
  :related ["cljs.repl/find-doc"],
  :full-name-encode "cljs.repl/apropos",
  :source {:code "(defmacro apropos\n  [str-or-pattern]\n  (let [matches? (if (instance? Pattern str-or-pattern)\n                   #(re-find str-or-pattern (str %))\n                   #(.contains (str %) (str str-or-pattern)))]\n    `(quote\n       ~(sort\n          (mapcat\n            (fn [ns]\n              (let [ns-name (str ns)]\n                (map #(symbol ns-name (str %))\n                  (filter matches? (keys (ana-api/ns-publics ns))))))\n            (ana-api/all-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1262 1277]},
+          :lines [1264 1279],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L1264-L1279"},
+ :usage ["(apropos str-or-pattern)"],
  :examples [{:id "aceda4",
              :content "```clj\n(apropos \"some\")\n;;=> (cljs.core/if-some\n;;    cljs.core/some\n;;    cljs.core/some->\n;;    cljs.core/some->>\n;;    cljs.core/some-fn\n;;    cljs.core/some?\n;;    cljs.core/when-some)\n```"}],
  :full-name "cljs.repl/apropos",
- :clj-symbol "clojure.repl/apropos",
- :docstring "Given a regular expression or stringable thing, return a seq of all\npublic definitions in all currently-loaded namespaces that match the\nstr-or-pattern."}
+ :docstring "Given a regular expression or stringable thing, return a seq of all\npublic definitions in all currently-loaded namespaces that match the\nstr-or-pattern.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/apropos.cljsdoc"}
 
 ```
 

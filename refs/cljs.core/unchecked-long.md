@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(unchecked-long x)</samp><br>
+
+---
 
  <samp>
 (__unchecked-long__ x)<br>
@@ -30,7 +33,7 @@ Coerce to long by stripping decimal places. Identical to `int'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2543-L2546):
+Source code @ [github]():
 
 ```clj
 (defn unchecked-long
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2543-2546](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2543-L2546)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "unchecked-long",
  :signature ["[x]"],
+ :name-encode "unchecked-long",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/unchecked-long",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-long"},
  :full-name-encode "cljs.core/unchecked-long",
  :source {:code "(defn unchecked-long\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2543 2546]},
+          :lines [2543 2546],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2543-L2546"},
+ :usage ["(unchecked-long x)"],
  :full-name "cljs.core/unchecked-long",
- :clj-symbol "clojure.core/unchecked-long",
- :docstring "Coerce to long by stripping decimal places. Identical to `int'."}
+ :docstring "Coerce to long by stripping decimal places. Identical to `int'.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unchecked-long.cljsdoc"}
 
 ```
 

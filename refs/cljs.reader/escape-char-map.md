@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(escape-char-map c)</samp><br>
+
+---
 
  <samp>
 (__escape-char-map__ c)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L152-L161):
+Source code @ [github]():
 
 ```clj
 (defn escape-char-map [c]
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:152-161](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L152-L161)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "escape-char-map",
- :type "function",
  :signature ["[c]"],
+ :name-encode "escape-char-map",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/escape-char-map",
  :source {:code "(defn escape-char-map [c]\n  (cond\n   (identical? c \\t) \"\\t\"\n   (identical? c \\r) \"\\r\"\n   (identical? c \\n) \"\\n\"\n   (identical? c \\\\) \\\\\n   (identical? c \\\") \\\"\n   (identical? c \\b) \"\\b\"\n   (identical? c \\f) \"\\f\"\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [152 161]},
+          :lines [152 161],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L152-L161"},
+ :usage ["(escape-char-map c)"],
  :full-name "cljs.reader/escape-char-map",
- :full-name-encode "cljs.reader/escape-char-map",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/escape-char-map.cljsdoc"}
 
 ```
 

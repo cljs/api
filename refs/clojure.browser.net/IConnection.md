@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L30-L42):
+Source code @ [github]():
 
 ```clj
 (defprotocol IConnection
@@ -39,13 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[net.cljs:30-42](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L30-L42)</ins>
+
 </pre>
 
 -->
@@ -86,14 +80,17 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.net",
  :name "IConnection",
+ :name-encode "IConnection",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "clojure.browser.net/IConnection",
  :source {:code "(defprotocol IConnection\n  (connect\n    [this]\n    [this opt1]\n    [this opt1 opt2]\n    [this opt1 opt2 opt3])\n  (transmit\n    [this opt]\n    [this opt opt2]\n    [this opt opt2 opt3]\n    [this opt opt2 opt3 opt4]\n    [this opt opt2 opt3 opt4 opt5])\n  (close [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/net.cljs",
-          :lines [30 42]},
+          :lines [30 42],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/net.cljs#L30-L42"},
  :methods [{:name "connect",
             :signature ["[this]"
                         "[this opt1]"
@@ -109,7 +106,7 @@ The API data for this symbol:
             :docstring nil}
            {:name "close", :signature ["[this]"], :docstring nil}],
  :full-name "clojure.browser.net/IConnection",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/IConnection.cljsdoc"}
 
 ```
 

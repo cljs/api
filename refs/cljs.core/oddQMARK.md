@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(odd? n)</samp><br>
+
+---
 
  <samp>
 (__odd?__ n)<br>
@@ -42,7 +45,7 @@ Returns true if n is odd, throws an exception if n is not an integer
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3912-L3914):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean odd?
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3912-3914](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3912-L3914)</ins>
+
 </pre>
 
 -->
@@ -105,19 +103,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "odd?",
  :signature ["[n]"],
+ :name-encode "oddQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/odd?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/odd?"},
  :related ["cljs.core/even?"],
  :full-name-encode "cljs.core/oddQMARK",
  :source {:code "(defn ^boolean odd?\n  [n] (not (even? n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3912 3914]},
+          :lines [3912 3914],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3912-L3914"},
+ :usage ["(odd? n)"],
  :full-name "cljs.core/odd?",
- :clj-symbol "clojure.core/odd?",
- :docstring "Returns true if n is odd, throws an exception if n is not an integer"}
+ :docstring "Returns true if n is odd, throws an exception if n is not an integer",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/oddQMARK.cljsdoc"}
 
 ```
 

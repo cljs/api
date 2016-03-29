@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-regex rdr ch)</samp><br>
+
+---
 
  <samp>
 (__read-regex__ rdr ch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L400-L402):
+Source code @ [github]():
 
 ```clj
 (defn read-regex
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:400-402](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L400-L402)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-regex",
- :type "function",
  :signature ["[rdr ch]"],
+ :name-encode "read-regex",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-regex",
  :source {:code "(defn read-regex\n  [rdr ch]\n  (-> (read-raw-string* rdr ch) re-pattern))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [400 402]},
+          :lines [400 402],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L400-L402"},
+ :usage ["(read-regex rdr ch)"],
  :full-name "cljs.reader/read-regex",
- :full-name-encode "cljs.reader/read-regex",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-regex.cljsdoc"}
 
 ```
 

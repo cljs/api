@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(postwalk-replace smap form)</samp><br>
+
+---
 
  <samp>
 (__postwalk-replace__ smap form)<br>
@@ -32,7 +35,7 @@ replacement at the leaves of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L90-L96):
+Source code @ [github]():
 
 ```clj
 (defn postwalk-replace
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:90-96](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L90-L96)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "postwalk-replace",
  :signature ["[smap form]"],
+ :name-encode "postwalk-replace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/postwalk-replace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/postwalk-replace"},
  :full-name-encode "clojure.walk/postwalk-replace",
  :source {:code "(defn postwalk-replace\n  [smap form]\n  (postwalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [90 96]},
+          :lines [90 96],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L90-L96"},
+ :usage ["(postwalk-replace smap form)"],
  :full-name "clojure.walk/postwalk-replace",
- :clj-symbol "clojure.walk/postwalk-replace",
- :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the leaves of the tree first."}
+ :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the leaves of the tree first.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/postwalk-replace.cljsdoc"}
 
 ```
 

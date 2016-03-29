@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(insert-at parent child index)</samp><br>
+
+---
 
  <samp>
 (__insert-at__ parent child index)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L104-L105):
+Source code @ [github]():
 
 ```clj
 (defn insert-at [parent child index]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:104-105](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L104-L105)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "insert-at",
- :type "function",
  :signature ["[parent child index]"],
+ :name-encode "insert-at",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/insert-at",
  :source {:code "(defn insert-at [parent child index]\n  (gdom/insertChildAt parent child index))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [104 105]},
+          :lines [104 105],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L104-L105"},
+ :usage ["(insert-at parent child index)"],
  :full-name "clojure.browser.dom/insert-at",
- :full-name-encode "clojure.browser.dom/insert-at",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/insert-at.cljsdoc"}
 
 ```
 

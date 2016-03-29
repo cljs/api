@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(validate-unicode-escape unicode-pattern reader escape-char unicode-str)</samp><br>
+
+---
 
  <samp>
 (__validate-unicode-escape__ unicode-pattern reader escape-char unicode-str)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L184-L187):
+Source code @ [github]():
 
 ```clj
 (defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:184-187](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L184-L187)</ins>
+
 </pre>
 
 -->
@@ -81,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "validate-unicode-escape",
- :type "function",
  :signature ["[unicode-pattern reader escape-char unicode-str]"],
+ :name-encode "validate-unicode-escape",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.reader/validate-unicode-escape",
  :source {:code "(defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]\n  (if (re-matches unicode-pattern unicode-str)\n    unicode-str\n    (reader-error reader \"Unexpected unicode escape \\\\\" escape-char unicode-str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [184 187]},
+          :lines [184 187],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L184-L187"},
+ :usage ["(validate-unicode-escape unicode-pattern reader escape-char unicode-str)"],
  :full-name "cljs.reader/validate-unicode-escape",
- :full-name-encode "cljs.reader/validate-unicode-escape",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/validate-unicode-escape.cljsdoc"}
 
 ```
 

@@ -7,11 +7,14 @@
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" title="Added in 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> </td>
 <td>
-imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/cond->></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cond-%3E%3E)
+imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/cond->></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cond->>)
 </td>
 </tr>
 </table>
 
+<samp>(cond->> expr & clauses)</samp><br>
+
+---
 
  <samp>
 (__cond->>__ expr & clauses)<br>
@@ -65,7 +68,7 @@ after the first true test expression.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7257-L7272):
+Source code @ [github]():
 
 ```clj
 (defmacro cond->>
@@ -85,11 +88,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:7257-7272](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7257-L7272)</ins>
+
 </pre>
 
 -->
@@ -135,8 +134,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "cond->>",
  :signature ["[expr & clauses]"],
+ :name-encode "cond-GTGT",
  :history [["+" "0.0-1798"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/cond->>",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cond->>"},
  :related ["cljs.core/->"
            "cljs.core/->>"
            "cljs.core/cond->"
@@ -147,12 +149,14 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [7257 7272]},
+          :lines [7257 7272],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7257-L7272"},
+ :usage ["(cond->> expr & clauses)"],
  :examples [{:id "e07a05",
              :content "```clj\n(def filter? true)\n(def sum? true)\n\n(cond->> [1 2 3 4]\n  filter? (filter even?)\n  sum?    (reduce +))\n;;=> 6\n```"}],
  :full-name "cljs.core/cond->>",
- :clj-symbol "clojure.core/cond->>",
- :docstring "Takes an expression and a set of test/form pairs. Threads expr (via ->>)\nthrough each form for which the corresponding test expression\nis true.  Note that, unlike cond branching, cond->> threading does not short circuit\nafter the first true test expression."}
+ :docstring "Takes an expression and a set of test/form pairs. Threads expr (via ->>)\nthrough each form for which the corresponding test expression\nis true.  Note that, unlike cond branching, cond->> threading does not short circuit\nafter the first true test expression.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cond-GTGT.cljsdoc"}
 
 ```
 

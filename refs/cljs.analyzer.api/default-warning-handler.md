@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(default-warning-handler warning-type env extra)</samp><br>
+
+---
 
  <samp>
 (__default-warning-handler__ warning-type env extra)<br>
@@ -29,7 +32,7 @@ Outputs the warning messages to *err*.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L48-L53):
+Source code @ [github]():
 
 ```clj
 (defn default-warning-handler
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:48-53](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L48-L53)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "default-warning-handler",
  :signature ["[warning-type env extra]"],
+ :name-encode "default-warning-handler",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/default-warning-handler",
  :source {:code "(defn default-warning-handler\n  [warning-type env extra]\n  (ana/default-warning-handler warning-type env extra))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [48 53]},
+          :lines [48 53],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L48-L53"},
+ :usage ["(default-warning-handler warning-type env extra)"],
  :full-name "cljs.analyzer.api/default-warning-handler",
- :docstring "The default warning handler.\n\nOutputs the warning messages to *err*."}
+ :docstring "The default warning handler.\n\nOutputs the warning messages to *err*.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/default-warning-handler.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(vswap! vol f & args)</samp><br>
+
+---
 
  <samp>
 (__vswap!__ vol f & args)<br>
@@ -38,7 +41,7 @@ was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2668-L2673):
+Source code @ [github]():
 
 ```clj
 (core/defmacro vswap!
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2668-2673](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2668-L2673)</ins>
+
 </pre>
 
 -->
@@ -100,19 +98,24 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "vswap!",
  :signature ["[vol f & args]"],
+ :name-encode "vswapBANG",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/vswap!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vswap!"},
  :related ["cljs.core/vreset!" "cljs.core/volatile!"],
  :full-name-encode "cljs.core/vswapBANG",
  :source {:code "(core/defmacro vswap!\n  [vol f & args]\n  `(-vreset! ~vol (~f (-deref ~vol) ~@args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2668 2673]},
+          :lines [2668 2673],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2668-L2673"},
+ :usage ["(vswap! vol f & args)"],
  :full-name "cljs.core/vswap!",
- :clj-symbol "clojure.core/vswap!",
- :docstring "Non-atomically swaps the value of the volatile as if:\n(apply f current-value-of-vol args). Returns the value that\nwas swapped in."}
+ :docstring "Non-atomically swaps the value of the volatile as if:\n(apply f current-value-of-vol args). Returns the value that\nwas swapped in.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vswapBANG.cljsdoc"}
 
 ```
 

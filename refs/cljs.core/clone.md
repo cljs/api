@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(clone value)</samp><br>
+
+---
 
  <samp>
 (__clone__ value)<br>
@@ -27,7 +30,7 @@ Clone the supplied value which must implement ICloneable.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1075-L1078):
+Source code @ [github]():
 
 ```clj
 (defn clone
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1075-1078](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1075-L1078)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "clone",
  :signature ["[value]"],
+ :name-encode "clone",
  :history [["+" "0.0-2134"]],
  :type "function",
  :full-name-encode "cljs.core/clone",
  :source {:code "(defn clone\n  [value]\n  (-clone value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1075 1078]},
+          :lines [1075 1078],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1075-L1078"},
+ :usage ["(clone value)"],
  :full-name "cljs.core/clone",
- :docstring "Clone the supplied value which must implement ICloneable."}
+ :docstring "Clone the supplied value which must implement ICloneable.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/clone.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(transient coll)</samp><br>
+
+---
 
  <samp>
 (__transient__ coll)<br>
@@ -30,7 +33,7 @@ Returns a new, transient version of the collection, in constant time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3486-L3489):
+Source code @ [github]():
 
 ```clj
 (defn transient
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3486-3489](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3486-L3489)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "transient",
  :signature ["[coll]"],
+ :name-encode "transient",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/transient",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/transient"},
  :full-name-encode "cljs.core/transient",
  :source {:code "(defn transient\n  [coll]\n  (-as-transient coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3486 3489]},
+          :lines [3486 3489],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3486-L3489"},
+ :usage ["(transient coll)"],
  :full-name "cljs.core/transient",
- :clj-symbol "clojure.core/transient",
- :docstring "Returns a new, transient version of the collection, in constant time."}
+ :docstring "Returns a new, transient version of the collection, in constant time.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/transient.cljsdoc"}
 
 ```
 

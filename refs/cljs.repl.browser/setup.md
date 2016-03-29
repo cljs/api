@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(setup {:keys \[working-dir\], :as repl-env} opts)</samp><br>
+
+---
 
  <samp>
 (__setup__ {:keys \[working-dir\], :as repl-env} opts)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L238-L251):
+Source code @ [github]():
 
 ```clj
 (defn setup [{:keys [working-dir] :as repl-env} opts]
@@ -45,13 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:238-251](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L238-L251)</ins>
+
 </pre>
 
 -->
@@ -92,17 +89,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "setup",
- :type "function",
  :signature ["[{:keys [working-dir], :as repl-env} opts]"],
+ :name-encode "setup",
+ :history [["+" "0.0-2665"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/setup",
  :source {:code "(defn setup [{:keys [working-dir] :as repl-env} opts]\n  (binding [browser-state (:browser-state repl-env)\n            ordering (:ordering repl-env)\n            es (:es repl-env)\n            server/state (:server-state repl-env)]\n    (repl/err-out (println \"Compiling client js ...\"))\n    (swap! browser-state\n      (fn [old]\n        (assoc old :client-js\n          (create-client-js-file\n            repl-env (io/file working-dir \"client.js\")))))\n    (repl/err-out (println \"Waiting for browser to connect ...\"))\n    opts\n    (server/start repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [238 251]},
+          :lines [238 251],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L238-L251"},
+ :usage ["(setup {:keys [working-dir], :as repl-env} opts)"],
  :full-name "cljs.repl.browser/setup",
- :full-name-encode "cljs.repl.browser/setup",
- :history [["+" "0.0-2665"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/setup.cljsdoc"}
 
 ```
 

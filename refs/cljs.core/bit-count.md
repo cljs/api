@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(bit-count x)</samp><br>
+
+---
 
  <samp>
 (__bit-count__ x)<br>
@@ -51,7 +54,7 @@ Counts the number of bits set in n
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2643-L2648):
+Source code @ [github]():
 
 ```clj
 (defn bit-count
@@ -65,12 +68,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2643-2648](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2643-L2648)</ins>
+
 </pre>
 
 -->
@@ -113,19 +111,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "bit-count",
  :signature ["[x]"],
+ :name-encode "bit-count",
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/bit-count",
  :source {:code "(defn bit-count\n  [v]\n  (let [v (- v (bit-and (bit-shift-right v 1) 0x55555555))\n        v (+ (bit-and v 0x33333333) (bit-and (bit-shift-right v 2) 0x33333333))]\n    (bit-shift-right (* (bit-and (+ v (bit-shift-right v 4)) 0xF0F0F0F) 0x1010101) 24)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2643 2648]},
+          :lines [2643 2648],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2643-L2648"},
+ :usage ["(bit-count x)"],
  :examples [{:id "35c78c",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-count 2r1011)\n;;=> 3\n```\n\nSame number in decimal:\n\n```clj\n(bit-count 11)\n;;=> 3\n```"}],
  :full-name "cljs.core/bit-count",
- :docstring "Counts the number of bits set in n"}
+ :docstring "Counts the number of bits set in n",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bit-count.cljsdoc"}
 
 ```
 

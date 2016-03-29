@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(flatten x)</samp><br>
+
+---
 
  <samp>
 (__flatten__ x)<br>
@@ -40,7 +43,7 @@ etc.) and returns their contents as a single, flat sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4602-L4608):
+Source code @ [github]():
 
 ```clj
 (defn flatten
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4602-4608](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4602-L4608)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "flatten",
  :signature ["[x]"],
+ :name-encode "flatten",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/flatten",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/flatten"},
  :full-name-encode "cljs.core/flatten",
  :source {:code "(defn flatten\n  [x]\n  (filter #(not (sequential? %))\n          (rest (tree-seq sequential? seq x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4602 4608]},
+          :lines [4602 4608],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4602-L4608"},
+ :usage ["(flatten x)"],
  :full-name "cljs.core/flatten",
- :clj-symbol "clojure.core/flatten",
- :docstring "Takes any nested combination of sequential things (lists, vectors,\netc.) and returns their contents as a single, flat sequence.\n(flatten nil) returns nil."}
+ :docstring "Takes any nested combination of sequential things (lists, vectors,\netc.) and returns their contents as a single, flat sequence.\n(flatten nil) returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/flatten.cljsdoc"}
 
 ```
 

@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IMeta</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IMeta.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IMeta</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IMeta.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for accessing the metadata of an object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L573-L576):
+Source code @ [github]():
 
 ```clj
 (defprotocol IMeta
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:573-576](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L573-L576)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IMeta",
+ :name-encode "IMeta",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IMeta",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IMeta.java"},
  :full-name-encode "cljs.core/IMeta",
  :source {:code "(defprotocol IMeta\n  \"Protocol for accessing the metadata of an object.\"\n  (^clj-or-nil -meta [o]\n    \"Returns the metadata of object o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [573 576]},
+          :lines [573 576],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L573-L576"},
  :methods [{:name "-meta",
             :signature ["[o]"],
             :docstring "Returns the metadata of object o."}],
  :full-name "cljs.core/IMeta",
- :clj-symbol "clojure.lang/IMeta",
- :docstring "Protocol for accessing the metadata of an object."}
+ :docstring "Protocol for accessing the metadata of an object.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IMeta.cljsdoc"}
 
 ```
 

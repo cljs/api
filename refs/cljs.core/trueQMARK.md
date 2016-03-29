@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(true? x)</samp><br>
+
+---
 
  <samp>
 (__true?__ x)<br>
@@ -40,7 +43,7 @@ Returns true if x is the value true, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2057-L2059):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean true?
@@ -51,19 +54,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2057-2059](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2057-L2059)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L886-L887):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro true? [x]
@@ -74,12 +72,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:886-887](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L886-L887)</ins>
+
 </pre>
 -->
 
@@ -124,25 +117,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "true?",
  :signature ["[x]"],
+ :name-encode "trueQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/true?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/true?"},
  :related ["cljs.core/false?"],
  :full-name-encode "cljs.core/trueQMARK",
  :source {:code "(defn ^boolean true?\n  [x] (cljs.core/true? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2057 2059]},
+          :lines [2057 2059],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2057-L2059"},
  :extra-sources [{:code "(core/defmacro true? [x]\n  (bool-expr (core/list 'js* \"~{} === true\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [886 887]}],
+                  :lines [886 887],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L886-L887"}],
+ :usage ["(true? x)"],
  :full-name "cljs.core/true?",
- :clj-symbol "clojure.core/true?",
- :docstring "Returns true if x is the value true, false otherwise."}
+ :docstring "Returns true if x is the value true, false otherwise.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/trueQMARK.cljsdoc"}
 
 ```
 

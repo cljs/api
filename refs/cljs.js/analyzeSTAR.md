@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(analyze\* bound-vars source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__analyze\*__ bound-vars source name opts cb)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L379-L421):
+Source code @ [github]():
 
 ```clj
 (defn analyze* [bound-vars source name opts cb]
@@ -74,12 +77,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:379-421](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L379-L421)</ins>
+
 </pre>
 
 -->
@@ -130,6 +128,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [379 421]},
+ :usage ["(analyze* bound-vars source name opts cb)"],
  :full-name "cljs.js/analyze*",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

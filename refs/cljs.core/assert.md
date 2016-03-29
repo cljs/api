@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(assert expr)</samp><br>
+<samp>(assert expr message)</samp><br>
+
+---
 
  <samp>
 (__assert__ expr)<br>
@@ -59,7 +63,7 @@ logical true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2196-L2207):
+Source code @ [github]():
 
 ```clj
 (core/defmacro assert
@@ -78,12 +82,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2196-2207](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2196-L2207)</ins>
+
 </pre>
 
 -->
@@ -129,20 +128,25 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "assert",
  :signature ["[expr]" "[expr message]"],
+ :name-encode "assert",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/assert",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/assert"},
  :full-name-encode "cljs.core/assert",
  :source {:code "(core/defmacro assert\n  ([x]\n     (core/when *assert*\n       `(when-not ~x\n          (throw (js/Error. ~(core/str \"Assert failed: \" (core/pr-str x)))))))\n  ([x message]\n     (core/when *assert*\n       `(when-not ~x\n          (throw (js/Error.\n                  (cljs.core/str \"Assert failed: \" ~message \"\\n\" ~(core/pr-str x))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2196 2207]},
+          :lines [2196 2207],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2196-L2207"},
+ :usage ["(assert expr)" "(assert expr message)"],
  :examples [{:id "1dc16f",
              :content "```clj\n(assert true)\n;;=> nil\n\n(assert false)\n;;=> Uncaught Error: Assert failed: false\n\n(assert (= 1 2) \"1 is not 2\")\n;;=> Uncaught Error: Assert failed: 1 is not 2\n;;   (= 1 2)\n```"}],
  :full-name "cljs.core/assert",
- :clj-symbol "clojure.core/assert",
- :docstring "Evaluates expr and throws an exception if it does not evaluate to\nlogical true."}
+ :docstring "Evaluates expr and throws an exception if it does not evaluate to\nlogical true.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/assert.cljsdoc"}
 
 ```
 

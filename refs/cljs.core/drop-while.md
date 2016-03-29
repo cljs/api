@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(drop-while pred)</samp><br>
+<samp>(drop-while pred coll)</samp><br>
+
+---
 
  <samp>
 (__drop-while__ pred)<br>
@@ -49,7 +53,7 @@ stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4433-L4456):
+Source code @ [github]():
 
 ```clj
 (defn drop-while
@@ -79,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4433-4456](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4433-L4456)</ins>
+
 </pre>
 
 -->
@@ -130,19 +129,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "drop-while",
  :signature ["[pred]" "[pred coll]"],
+ :name-encode "drop-while",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/drop-while",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/drop-while"},
  :related ["cljs.core/take-while" "cljs.core/split-with"],
  :full-name-encode "cljs.core/drop-while",
  :source {:code "(defn drop-while\n  ([pred]\n     (fn [rf]\n       (let [da (volatile! true)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [drop? @da]\n                (if (and drop? (pred input))\n                  result\n                  (do\n                    (vreset! da nil)\n                    (rf result input)))))))))\n  ([pred coll]\n     (let [step (fn [pred coll]\n                  (let [s (seq coll)]\n                    (if (and s (pred (first s)))\n                      (recur pred (rest s))\n                      s)))]\n       (lazy-seq (step pred coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4433 4456]},
+          :lines [4433 4456],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4433-L4456"},
+ :usage ["(drop-while pred)" "(drop-while pred coll)"],
  :full-name "cljs.core/drop-while",
- :clj-symbol "clojure.core/drop-while",
- :docstring "Returns a lazy sequence of the items in coll starting from the\nfirst item for which (pred item) returns logical false.  Returns a\nstateful transducer when no collection is provided."}
+ :docstring "Returns a lazy sequence of the items in coll starting from the\nfirst item for which (pred item) returns logical false.  Returns a\nstateful transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/drop-while.cljsdoc"}
 
 ```
 

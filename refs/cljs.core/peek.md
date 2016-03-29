@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(peek coll)</samp><br>
+
+---
 
  <samp>
 (__peek__ coll)<br>
@@ -89,7 +92,7 @@ more efficient than, last. If the collection is empty, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1925-L1930):
+Source code @ [github]():
 
 ```clj
 (defn peek
@@ -102,12 +105,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1925-1930](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1925-L1930)</ins>
+
 </pre>
 
 -->
@@ -153,23 +151,28 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "peek",
  :signature ["[coll]"],
+ :name-encode "peek",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/peek",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/peek"},
  :related ["cljs.core/first" "cljs.core/pop" "cljs.core/conj"],
  :full-name-encode "cljs.core/peek",
  :source {:code "(defn peek\n  [coll]\n  (when-not (nil? coll)\n    (-peek coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1925 1930]},
+          :lines [1925 1930],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1925-L1930"},
+ :usage ["(peek coll)"],
  :examples [{:id "4abc4c",
              :content "With vectors:\n\n```clj\n(peek [1 2 3])\n;;=> 3\n\n(peek [1 2])\n;;=> 2\n\n(peek [1])\n;;=> 1\n\n(peek [])\n;;=> nil\n```"}
             {:id "d50bd0",
              :content "With lists:\n\n```clj\n(peek '(1 2 3))\n;;=> 1\n\n(peek '(1 2))\n;;=> 1\n\n(peek '(1))\n;;=> 1\n\n(peek '())\n;;=> nil\n```"}],
  :full-name "cljs.core/peek",
- :clj-symbol "clojure.core/peek",
- :docstring "For a list or queue, same as first, for a vector, same as, but much\nmore efficient than, last. If the collection is empty, returns nil."}
+ :docstring "For a list or queue, same as first, for a vector, same as, but much\nmore efficient than, last. If the collection is empty, returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/peek.cljsdoc"}
 
 ```
 

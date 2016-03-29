@@ -56,7 +56,7 @@ Duplicate values will cause an error:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L387-L402):
+Reader code @ [github]():
 
 ```clj
 (defn- read-set
@@ -81,18 +81,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:387-402](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L387-L402)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -114,13 +108,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -153,8 +141,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Create a literal set.  Values must be unique.",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#sets",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "set",
+ :name-encode "set",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["cljs.core/hash-set"
@@ -166,20 +157,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [387 402]}
+                  :lines [387 402],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L387-L402"}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#{...}"],
  :examples [{:id "f11ab6",
              :content "```clj\n#{1 2 3}\n;;=> #{1 2 3}\n```\n\nDuplicate values will cause an error:\n\n```clj\n#{1 1 2 3}\n;; Error: Duplicate key: 1\n```"}],
- :edn-doc "https://github.com/edn-format/edn#sets",
  :full-name "syntax/set",
  :display "#{} set",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/set.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(interpose sep coll)</samp><br>
+
+---
 
  <samp>
 (__interpose__ sep coll)<br>
@@ -42,7 +45,7 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4504-L4522):
+Source code @ [github]():
 
 ```clj
 (defn interpose
@@ -68,12 +71,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4504-4522](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4504-L4522)</ins>
+
 </pre>
 
 -->
@@ -119,19 +117,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "interpose",
  :signature ["[sep coll]"],
+ :name-encode "interpose",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/interpose",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/interpose"},
  :related ["cljs.core/interleave" "clojure.string/join"],
  :full-name-encode "cljs.core/interpose",
  :source {:code "(defn interpose\n  ([sep]\n    (fn [rf]\n      (let [started (volatile! false)]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (if @started\n              (let [sepr (rf result sep)]\n                (if (reduced? sepr)\n                  sepr\n                  (rf sepr input)))\n              (do\n                (vreset! started true)\n                (rf result input))))))))\n  ([sep coll] (drop 1 (interleave (repeat sep) coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4504 4522]},
+          :lines [4504 4522],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4504-L4522"},
+ :usage ["(interpose sep coll)"],
  :full-name "cljs.core/interpose",
- :clj-symbol "clojure.core/interpose",
- :docstring "Returns a lazy seq of the elements of coll separated by sep.\nReturns a stateful transducer when no collection is provided."}
+ :docstring "Returns a lazy seq of the elements of coll separated by sep.\nReturns a stateful transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/interpose.cljsdoc"}
 
 ```
 

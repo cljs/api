@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(compare x y)</samp><br>
+
+---
 
  <samp>
 (__compare__ x y)<br>
@@ -74,7 +77,7 @@ of the same type and special-cases nil to be less than any other object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2136-L2160):
+Source code @ [github]():
 
 ```clj
 (defn ^number compare
@@ -104,12 +107,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2136-2160](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2136-L2160)</ins>
+
 </pre>
 
 -->
@@ -156,8 +154,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "compare",
  :signature ["[x y]"],
+ :name-encode "compare",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/compare",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/compare"},
  :related ["cljs.core/sort-by"
            "cljs.core/sorted-set-by"
            "cljs.core/sorted-map-by"],
@@ -165,14 +166,16 @@ The API data for this symbol:
  :source {:code "(defn ^number compare\n  [x y]\n  (cond\n   (identical? x y) 0\n\n   (nil? x) -1\n\n   (nil? y) 1\n\n   (number? x) (if (number? y)\n                 (garray/defaultCompare x y)\n                 (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))\n\n   (satisfies? IComparable x)\n   (-compare x y)\n\n   :else\n   (if (and (or (string? x) (array? x) (true? x) (false? x))\n            (identical? (type x) (type y)))\n     (garray/defaultCompare x y)\n     (throw (js/Error. (str \"Cannot compare \" x \" to \" y))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2136 2160]},
+          :lines [2136 2160],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2136-L2160"},
+ :usage ["(compare x y)"],
  :examples [{:id "e13fa0",
              :content "```clj\n(compare 10 12)\n;;=> -1\n\n(compare 12 10)\n;;=> 1\n\n(compare 10 10)\n;;=> 0\n\n(compare 10 nil)\n;;=>  1\n\n(compare 10 (list 1 2 3))\n;; Error: compare on non-nil objects of different types\n```"}],
  :full-name "cljs.core/compare",
- :clj-symbol "clojure.core/compare",
- :docstring "Comparator. Returns a negative number, zero, or a positive number\n when x is logically 'less than', 'equal to', or 'greater than'\n y. Uses IComparable if available and google.array.defaultCompare for objects\nof the same type and special-cases nil to be less than any other object."}
+ :docstring "Comparator. Returns a negative number, zero, or a positive number\n when x is logically 'less than', 'equal to', or 'greater than'\n y. Uses IComparable if available and google.array.defaultCompare for objects\nof the same type and special-cases nil to be less than any other object.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/compare.cljsdoc"}
 
 ```
 

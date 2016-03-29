@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(test-ns ns)</samp><br>
+<samp>(test-ns env \[quote ns :as form\])</samp><br>
+
+---
 
  <samp>
 (__test-ns__ ns)<br>
@@ -38,7 +42,7 @@ Internally binds *report-counters* to a ref initialized to
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L360-L372):
+Source code @ [github]():
 
 ```clj
 (defmacro test-ns
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:360-372](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L360-L372)</ins>
+
 </pre>
 
 -->
@@ -104,18 +103,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "test-ns",
  :signature ["[ns]" "[env [quote ns :as form]]"],
+ :name-encode "test-ns",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/test-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-ns"},
  :full-name-encode "cljs.test/test-ns",
  :source {:code "(defmacro test-ns\n  ([ns] `(cljs.test/test-ns (cljs.test/empty-env) ~ns))\n  ([env [quote ns :as form]]\n   `(cljs.test/run-block\n     (concat (cljs.test/test-ns-block ~env ~form)\n             [(fn []\n                (cljs.test/clear-env!))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [360 372]},
+          :lines [360 372],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L360-L372"},
+ :usage ["(test-ns ns)" "(test-ns env [quote ns :as form])"],
  :full-name "cljs.test/test-ns",
- :clj-symbol "clojure.test/test-ns",
- :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  "}
+ :docstring "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*initial-report-counters*.  ",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-ns.cljsdoc"}
 
 ```
 

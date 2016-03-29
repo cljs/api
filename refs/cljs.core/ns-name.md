@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ns-name ns-obj)</samp><br>
+
+---
 
  <samp>
 (__ns-name__ ns-obj)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10446-L10447):
+Source code @ [github]():
 
 ```clj
 (defn ns-name [ns-obj]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10446-10447](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10446-L10447)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ns-name",
  :signature ["[ns-obj]"],
+ :name-encode "ns-name",
  :history [["+" "1.7.10"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ns-name",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-name"},
  :full-name-encode "cljs.core/ns-name",
  :source {:code "(defn ns-name [ns-obj]\n  (.-name ns-obj))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10446 10447]},
+          :lines [10446 10447],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10446-L10447"},
+ :usage ["(ns-name ns-obj)"],
  :full-name "cljs.core/ns-name",
- :clj-symbol "clojure.core/ns-name"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ns-name.cljsdoc"}
 
 ```
 

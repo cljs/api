@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ex-message ex)</samp><br>
+
+---
 
  <samp>
 (__ex-message__ ex)<br>
@@ -28,7 +31,7 @@ For non-Errors returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10180-L10185):
+Source code @ [github]():
 
 ```clj
 (defn ex-message
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10180-10185](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10180-L10185)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ex-message",
  :signature ["[ex]"],
+ :name-encode "ex-message",
  :history [["+" "0.0-1576"]],
  :type "function",
  :full-name-encode "cljs.core/ex-message",
  :source {:code "(defn ex-message\n  [ex]\n  (when (instance? js/Error ex)\n    (.-message ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10180 10185]},
+          :lines [10180 10185],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10180-L10185"},
+ :usage ["(ex-message ex)"],
  :full-name "cljs.core/ex-message",
- :docstring "Returns the message attached to the given Error / ExceptionInfo object.\nFor non-Errors returns nil."}
+ :docstring "Returns the message attached to the given Error / ExceptionInfo object.\nFor non-Errors returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ex-message.cljsdoc"}
 
 ```
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L24):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic browser-state nil)
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:24](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L24)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "browser-state",
+ :name-encode "browser-state",
+ :history [["+" "0.0-1503"]],
  :type "dynamic var",
+ :full-name-encode "cljs.repl.browser/browser-state",
  :source {:code "(def ^:dynamic browser-state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [24]},
+          :lines [24],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L24"},
  :full-name "cljs.repl.browser/browser-state",
- :full-name-encode "cljs.repl.browser/browser-state",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/browser-state.cljsdoc"}
 
 ```
 

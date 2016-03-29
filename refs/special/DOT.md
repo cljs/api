@@ -153,7 +153,7 @@ They all expand into calls to the dot operator at macroexpansion time.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L2120-L2122):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse '.
@@ -165,12 +165,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:2120-2122](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L2120-L2122)</ins>
+
 </pre>
 
 -->
@@ -215,24 +210,28 @@ The API data for this symbol:
  :ns "special",
  :name ".",
  :signature ["[o -p]" "[o m]" "[o m 1 2]" "[o (m 1 2)]"],
+ :name-encode "DOT",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/.",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/."},
  :related ["cljs.core/.." "cljs.core/aget"],
  :full-name-encode "special/DOT",
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _ _]\n  (disallowing-recur (analyze-dot env target field member+ form)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [2120 2122]},
+          :lines [2120 2122],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L2120-L2122"},
  :usage ["(.-foo obj)" "(.foo obj)"],
  :examples [{:id "22ccbb",
              :content "We can access the JavaScript properties of a string:\n\n```js\n// JavaScript\nvar m = \"Hello World\";\nm.length;\n//=> 11\n```\n\n```clj\n;; ClojureScript\n(def m \"Hello World\")\n(.-length m)\n;;=> 11\n```\n\nWe can also call member functions on the string:\n\n```js\n// JavaScript\nm.toUpperCase();\n//=> \"HELLO WORLD\"\n\nm.replace(\"H\", \"\");\n//=> \"ello World\";\n```\n\n```clj\n;; ClojureScript\n(.toUpperCase m)\n;;=> \"HELLO WORLD\"\n\n(.replace m \"H\" \"\")\n;;=> \"ello World\"\n```"}
             {:id "7c5e58",
              :content "Create a JavaScript object `o`:\n\n```clj\n(def o #js {:foo \"bar\"})\n```\n\nYou can get the value at property `\"foo\"` with any of the following:\n\n```clj\n(. o -foo)\n;;=> \"bar\"\n\n(.-foo o)\n;;=> \"bar\"\n\n(aget o \"foo\")\n;;=> \"bar\"\n```"}],
  :full-name "special/.",
- :clj-symbol "clojure.core/.",
- :docstring "The instance member form works for methods and fields.\nThey all expand into calls to the dot operator at macroexpansion time."}
+ :docstring "The instance member form works for methods and fields.\nThey all expand into calls to the dot operator at macroexpansion time.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/DOT.cljsdoc"}
 
 ```
 

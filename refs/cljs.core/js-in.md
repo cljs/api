@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-in key obj)</samp><br>
+
+---
 
  <samp>
 (__js-in__ key obj)<br>
@@ -56,7 +59,7 @@ Properties inherited from prototype chain are also detected:
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L851-L852):
+Source code @ [github]():
 
 ```clj
 (core/defmacro js-in [key obj]
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:851-852](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L851-L852)</ins>
+
 </pre>
 
 -->
@@ -115,6 +113,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-in",
  :signature ["[key obj]"],
+ :name-encode "js-in",
  :history [["+" "0.0-2411"]],
  :type "macro",
  :related ["cljs.core/contains?"],
@@ -122,12 +121,15 @@ The API data for this symbol:
  :source {:code "(core/defmacro js-in [key obj]\n  (core/list 'js* \"~{} in ~{}\" key obj))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [851 852]},
+          :lines [851 852],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L851-L852"},
+ :usage ["(js-in key obj)"],
  :examples [{:id "a45b18",
              :content "```clj\n(def a #js {:foo 1 :bar 2})\n\n(js-in \"foo\" a)\n;;=> true\n\n(js-in \"hello\" a)\n;;=> false\n```\n\nProperties inherited from prototype chain are also detected:\n\n```clj\n(js-in \"toString\" a)\n;;=> true\n```"}],
- :full-name "cljs.core/js-in"}
+ :full-name "cljs.core/js-in",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-in.cljsdoc"}
 
 ```
 

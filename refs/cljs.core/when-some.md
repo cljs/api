@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(when-some \[x test\] & body)</samp><br>
+
+---
 
  <samp>
 (__when-some__ \[x test\] & body)<br>
@@ -43,7 +46,7 @@ value of test
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1804-L1819):
+Source code @ [github]():
 
 ```clj
 (defmacro when-some
@@ -63,11 +66,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1804-1819](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1804-L1819)</ins>
+
 </pre>
 
 -->
@@ -113,8 +112,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "when-some",
  :signature ["[[x test] & body]"],
+ :name-encode "when-some",
  :history [["+" "0.0-2261"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/when-some",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/when-some"},
  :related ["cljs.core/if-some"],
  :full-name-encode "cljs.core/when-some",
  :source {:code "(defmacro when-some\n  [bindings & body]\n  (assert-args\n     (vector? bindings) \"a vector for its binding\"\n     (= 2 (count bindings)) \"exactly 2 forms in binding vector\")\n   (let [form (bindings 0) tst (bindings 1)]\n    `(let [temp# ~tst]\n       (if (nil? temp#)\n         nil\n         (let [~form temp#]\n           ~@body)))))",
@@ -122,10 +124,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1804 1819]},
+          :lines [1804 1819],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1804-L1819"},
+ :usage ["(when-some [x test] & body)"],
  :full-name "cljs.core/when-some",
- :clj-symbol "clojure.core/when-some",
- :docstring "bindings => binding-form test\n\nWhen test is not nil, evaluates body with binding-form bound to the\nvalue of test"}
+ :docstring "bindings => binding-form test\n\nWhen test is not nil, evaluates body with binding-form bound to the\nvalue of test",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/when-some.cljsdoc"}
 
 ```
 

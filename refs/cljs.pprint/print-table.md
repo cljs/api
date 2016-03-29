@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(print-table ks rows)</samp><br>
+<samp>(print-table rows)</samp><br>
+
+---
 
  <samp>
 (__print-table__ ks rows)<br>
@@ -35,7 +39,7 @@ in ks. If ks are not specified, use the keys of the first item in rows.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L3295-L3319):
+Source code @ [github]():
 
 ```clj
 (defn print-table
@@ -65,12 +69,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:3295-3319](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L3295-L3319)</ins>
+
 </pre>
 
 -->
@@ -115,18 +114,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "print-table",
  :signature ["[ks rows]" "[rows]"],
+ :name-encode "print-table",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/print-table",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/print-table"},
  :full-name-encode "cljs.pprint/print-table",
  :source {:code "(defn print-table\n  ([ks rows]\n   (binding [*print-newline*]\n     (when (seq rows)\n       (let [widths (map\n                      (fn [k]\n                        (apply max (count (str k)) (map #(count (str (get % k))) rows)))\n                      ks)\n             spacers (map #(apply str (repeat % \"-\")) widths)\n             fmt-row (fn [leader divider trailer row]\n                       (str leader\n                            (apply str (interpose divider\n                                                  (for [[col width] (map vector (map #(get row %) ks) widths)]\n                                                    (add-padding width (str col)))))\n                            trailer))]\n         (cljs.core/println)\n         (cljs.core/println (fmt-row \"| \" \" | \" \" |\" (zipmap ks ks)))\n         (cljs.core/println (fmt-row \"|-\" \"-+-\" \"-|\" (zipmap ks spacers)))\n         (doseq [row rows]\n           (cljs.core/println (fmt-row \"| \" \" | \" \" |\" row)))))))\n  ([rows] (print-table (keys (first rows)) rows)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [3295 3319]},
+          :lines [3295 3319],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L3295-L3319"},
+ :usage ["(print-table ks rows)" "(print-table rows)"],
  :full-name "cljs.pprint/print-table",
- :clj-symbol "clojure.pprint/print-table",
- :docstring "Prints a collection of maps in a textual table. Prints table headings\nks, and then a line of output for each row, corresponding to the keys\nin ks. If ks are not specified, use the keys of the first item in rows."}
+ :docstring "Prints a collection of maps in a textual table. Prints table headings\nks, and then a line of output for each row, corresponding to the keys\nin ks. If ks are not specified, use the keys of the first item in rows.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/print-table.cljsdoc"}
 
 ```
 

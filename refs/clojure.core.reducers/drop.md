@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(drop n)</samp><br>
+<samp>(drop n coll)</samp><br>
+
+---
 
  <samp>
 (__drop__ n)<br>
@@ -33,7 +37,7 @@ Elides the first n values from the reduction of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L178-L190):
+Source code @ [github]():
 
 ```clj
 (defcurried drop
@@ -55,13 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:178-190](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L178-L190)</ins>
+
 </pre>
 
 -->
@@ -106,18 +104,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "drop",
  :signature ["[n]" "[n coll]"],
+ :name-encode "drop",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/drop",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/drop"},
  :full-name-encode "clojure.core.reducers/drop",
  :source {:code "(defcurried drop\n  \"Elides the first n values from the reduction of coll.\"\n  {}\n  [n coll]\n  (reducer coll\n   (fn [f1]\n     (let [cnt (atom n)]\n       (rfn [f1 k]\n         ([ret k v]\n            (swap! cnt dec)\n            (if (neg? @cnt)\n              (f1 ret k v)\n              ret)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [178 190]},
+          :lines [178 190],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L178-L190"},
+ :usage ["(drop n)" "(drop n coll)"],
  :full-name "clojure.core.reducers/drop",
- :clj-symbol "clojure.core.reducers/drop",
- :docstring "Elides the first n values from the reduction of coll."}
+ :docstring "Elides the first n values from the reduction of coll.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/drop.cljsdoc"}
 
 ```
 

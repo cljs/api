@@ -17,25 +17,22 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L40-L43):
+Source code @ [github]():
 
 ```clj
 (def known-repl-opts
   "Set of all known REPL options."
-  #{:analyze-path :caught :def-emits-var :flush :need-prompt :print :print-no-newline :prompt :read
-    :reader :repl-verbose :watch :watch-fn})
+  #{:analyze-path :bind-err :caught :compiler-env :def-emits-var :eval :flush
+    :init :need-prompt :print :print-no-newline :prompt :quit-prompt :read
+    :reader :repl-requires :repl-verbose :source-map-inline :watch :watch-fn
+    :wrap})
 ```
 
 <!--
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:40-43](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L40-L43)</ins>
+
 </pre>
 
 -->
@@ -76,16 +73,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "known-repl-opts",
+ :name-encode "known-repl-opts",
+ :history [["+" "1.8.34"]],
  :type "var",
- :source {:code "(def known-repl-opts\n  \"Set of all known REPL options.\"\n  #{:analyze-path :caught :def-emits-var :flush :need-prompt :print :print-no-newline :prompt :read\n    :reader :repl-verbose :watch :watch-fn})",
+ :full-name-encode "cljs.repl/known-repl-opts",
+ :source {:code "(def known-repl-opts\n  \"Set of all known REPL options.\"\n  #{:analyze-path :bind-err :caught :compiler-env :def-emits-var :eval :flush\n    :init :need-prompt :print :print-no-newline :prompt :quit-prompt :read\n    :reader :repl-requires :repl-verbose :source-map-inline :watch :watch-fn\n    :wrap})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [40 43]},
+          :lines [40 45],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L40-L45"},
  :full-name "cljs.repl/known-repl-opts",
- :full-name-encode "cljs.repl/known-repl-opts",
- :history [["+" "1.8.34"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/known-repl-opts.cljsdoc"}
 
 ```
 

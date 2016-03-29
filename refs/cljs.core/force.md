@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(force x)</samp><br>
+
+---
 
  <samp>
 (__force__ x)<br>
@@ -30,7 +33,7 @@ If x is a Delay, returns the (possibly cached) value of its expression, else ret
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9444-L9449):
+Source code @ [github]():
 
 ```clj
 (defn force
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9444-9449](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9444-L9449)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "force",
  :signature ["[x]"],
+ :name-encode "force",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/force",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/force"},
  :full-name-encode "cljs.core/force",
  :source {:code "(defn force\n  [x]\n  (if (delay? x)\n    (deref x)\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9444 9449]},
+          :lines [9444 9449],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9444-L9449"},
+ :usage ["(force x)"],
  :full-name "cljs.core/force",
- :clj-symbol "clojure.core/force",
- :docstring "If x is a Delay, returns the (possibly cached) value of its expression, else returns x"}
+ :docstring "If x is a Delay, returns the (possibly cached) value of its expression, else returns x",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/force.cljsdoc"}
 
 ```
 

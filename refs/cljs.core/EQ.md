@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(= x)</samp><br>
+<samp>(= x y)</samp><br>
+<samp>(= x y & more)</samp><br>
+
+---
 
  <samp>
 (__=__ x)<br>
@@ -133,7 +138,7 @@ comparison.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1141-L1157):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean =
@@ -155,12 +160,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1141-1157](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1141-L1157)</ins>
+
 </pre>
 
 -->
@@ -207,16 +207,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "=",
  :signature ["[x]" "[x y]" "[x y & more]"],
+ :name-encode "EQ",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/=",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/="},
  :related ["cljs.core/==" "cljs.core/not=" "cljs.core/identical?"],
  :full-name-encode "cljs.core/EQ",
  :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y]\n    (if (nil? x)\n      (nil? y)\n      (or (identical? x y)\n        ^boolean (-equiv x y))))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1141 1157]},
+          :lines [1141 1157],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1141-L1157"},
+ :usage ["(= x)" "(= x y)" "(= x y & more)"],
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}
             {:id "a2d064",
@@ -224,8 +229,8 @@ The API data for this symbol:
             {:id "6c8424",
              :content "It is natural to compare deeply nested collections since value equality checks\nare cheap in ClojureScript:\n\n```clj\n(def a {:foo {:bar \"baz\"}})\n(def b {:foo {:bar \"baz\"}})\n(= a b)\n;;=> true\n\n(= [a b] [a b])\n;=> true\n```\n\nJavaScript objects cannot be compared in this way until they are converted to\nClojureScript collections:\n\n```clj\n(def a #js {:foo #js {:bar \"baz\"}})\n(def b #js {:foo #js {:bar \"baz\"}})\n(= a b)\n;;=> false\n\n(= (js->clj a)\n   (js->clj b))\n;;=> true\n```"}],
  :full-name "cljs.core/=",
- :clj-symbol "clojure.core/=",
- :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison."}
+ :docstring "Equality. Returns true if x equals y, false if not. Compares\nnumbers and collections in a type-independent manner.  Clojure's immutable data\nstructures define -equiv (and thus =) as a value, not an identity,\ncomparison.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/EQ.cljsdoc"}
 
 ```
 

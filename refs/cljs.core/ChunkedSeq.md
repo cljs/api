@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkedSeq</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentVector.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkedSeq</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentVector.java)
 </td>
 </tr>
 </table>
 
+<samp>(ChunkedSeq. vec node i off meta __hash)</samp><br>
+
+---
 
  <samp>
 (__ChunkedSeq.__ vec node i off meta __hash)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5095-L5175):
+Source code @ [github]():
 
 ```clj
 (deftype ChunkedSeq [vec node i off meta ^:mutable __hash]
@@ -115,12 +118,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5095-5175](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5095-L5175)</ins>
+
 </pre>
 
 -->
@@ -165,17 +163,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ChunkedSeq",
  :signature ["[vec node i off meta __hash]"],
+ :name-encode "ChunkedSeq",
  :history [["+" "0.0-1424"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/ChunkedSeq",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentVector.java"},
  :full-name-encode "cljs.core/ChunkedSeq",
  :source {:code "(deftype ChunkedSeq [vec node i off meta ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  IWithMeta\n  (-with-meta [coll m]\n    (chunked-seq vec node i off m))\n  IMeta\n  (-meta [coll] meta)\n\n  ISeqable\n  (-seq [coll] coll)\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  ASeq\n  ISeq\n  (-first [coll]\n    (aget node off))\n  (-rest [coll]\n    (if (< (inc off) (alength node))\n      (let [s (chunked-seq vec node i (inc off))]\n        (if (nil? s)\n          ()\n          s))\n      (-chunked-rest coll)))\n\n  INext\n  (-next [coll]\n    (if (< (inc off) (alength node))\n      (let [s (chunked-seq vec node i (inc off))]\n        (if (nil? s)\n          nil\n          s))\n      (-chunked-next coll)))\n\n  ICollection\n  (-conj [coll o]\n    (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll]\n    (with-meta (.-EMPTY PersistentVector) meta))\n\n  IChunkedSeq\n  (-chunked-first [coll]\n    (array-chunk node off))\n  (-chunked-rest [coll]\n    (let [end (+ i (alength node))]\n      (if (< end (-count vec))\n        (chunked-seq vec (unchecked-array-for vec end) end 0)\n        ())))\n\n  IChunkedNext\n  (-chunked-next [coll]\n    (let [end (+ i (alength node))]\n      (when (< end (-count vec))\n        (chunked-seq vec (unchecked-array-for vec end) end 0))))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  IReduce\n  (-reduce [coll f]\n    (ci-reduce (subvec vec (+ i off) (count vec)) f))\n\n  (-reduce [coll f start]\n    (ci-reduce (subvec vec (+ i off) (count vec)) f start)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5095 5175]},
+          :lines [5095 5175],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5095-L5175"},
+ :usage ["(ChunkedSeq. vec node i off meta __hash)"],
  :full-name "cljs.core/ChunkedSeq",
- :clj-symbol "clojure.lang/ChunkedSeq"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ChunkedSeq.cljsdoc"}
 
 ```
 

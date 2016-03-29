@@ -84,16 +84,18 @@ The API data for this symbol:
 
 ```clj
 {:description "The amount of whitespace between syntax forms does not affect syntax\ncorrectness.  Elements are free to be aligned as desired.\n\nIndentation is conventionally two spaces, no tab characters.\n[More indentation conventions here](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization)\n\nWhitespace around collection delimiters is not required:\n\n```clj\n(a(b(c)))\n```\n\n```clj\n#js[1 2 3]\n#inst\"2015-10-12\"\n```\n\nA [comma][doc:syntax/comma] is considered whitespace:\n\n```clj\n[1, 2, 3]\n{:foo 1, :bar 2}\n```",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#general-considerations",
+                :clj-url "https://github.com/edn-format/edn#general-considerations"},
  :ns "syntax",
  :name "whitespace",
+ :name-encode "whitespace",
  :history [["+" "0.0-927"]],
  :type "special character",
  :related ["syntax/comma"],
  :full-name-encode "syntax/whitespace",
- :edn-doc "https://github.com/edn-format/edn#general-considerations",
  :full-name "syntax/whitespace",
  :display "whitespace",
- :clj-doc "https://github.com/edn-format/edn#general-considerations"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/whitespace.cljsdoc"}
 
 ```
 

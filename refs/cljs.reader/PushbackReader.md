@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L13-L16):
+Source code @ [github]():
 
 ```clj
 (defprotocol PushbackReader
@@ -30,12 +30,7 @@ nil if the end of stream has been reached")
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:13-16](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L13-L16)</ins>
+
 </pre>
 
 -->
@@ -76,14 +71,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "PushbackReader",
+ :name-encode "PushbackReader",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.reader/PushbackReader",
  :source {:code "(defprotocol PushbackReader\n  (read-char [reader] \"Returns the next char from the Reader,\nnil if the end of stream has been reached\")\n  (unread [reader ch] \"Push back a single character on to the stream\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [13 16]},
+          :lines [13 16],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L13-L16"},
  :methods [{:name "read-char",
             :signature ["[reader]"],
             :docstring "Returns the next char from the Reader,\nnil if the end of stream has been reached"}
@@ -91,7 +89,7 @@ The API data for this symbol:
             :signature ["[reader ch]"],
             :docstring "Push back a single character on to the stream"}],
  :full-name "cljs.reader/PushbackReader",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/PushbackReader.cljsdoc"}
 
 ```
 

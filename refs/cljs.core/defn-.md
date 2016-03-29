@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(defn- name & decls)</samp><br>
+
+---
 
  <samp>
 (__defn-__ name & decls)<br>
@@ -43,7 +46,7 @@ same as defn, yielding non-public def
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4743-L4747):
+Source code @ [github]():
 
 ```clj
 (defmacro defn-
@@ -55,11 +58,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:4743-4747](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4743-L4747)</ins>
+
 </pre>
 
 -->
@@ -105,8 +104,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "defn-",
  :signature ["[name & decls]"],
+ :name-encode "defn-",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/defn-",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defn-"},
  :related ["cljs.core/defn"],
  :full-name-encode "cljs.core/defn-",
  :source {:code "(defmacro defn-\n  [name & decls]\n    (list* `defn (with-meta name (assoc (meta name) :private true)) decls))",
@@ -114,10 +116,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [4743 4747]},
+          :lines [4743 4747],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L4743-L4747"},
+ :usage ["(defn- name & decls)"],
  :full-name "cljs.core/defn-",
- :clj-symbol "clojure.core/defn-",
- :docstring "same as defn, yielding non-public def"}
+ :docstring "same as defn, yielding non-public def",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/defn-.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(throw expr)</samp><br>
+
+---
 
  <samp>
 (__throw__ expr)<br>
@@ -44,7 +47,7 @@ The expr is evaluated and thrown.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1007-L1012):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'throw
@@ -59,12 +62,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:1007-1012](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1007-L1012)</ins>
+
 </pre>
 
 -->
@@ -109,19 +107,24 @@ The API data for this symbol:
  :ns "special",
  :name "throw",
  :signature ["[expr]"],
+ :name-encode "throw",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/throw",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/throw"},
  :related ["special/try" "special/catch" "special/finally"],
  :full-name-encode "special/throw",
  :source {:code "(defmethod parse 'throw\n  [op env [_ throw :as form] name _]\n  (let [throw-expr (disallowing-recur (analyze (assoc env :context :expr) throw))]\n    {:env env :op :throw :form form\n     :throw throw-expr\n     :children [throw-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1007 1012]},
+          :lines [1007 1012],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L1007-L1012"},
+ :usage ["(throw expr)"],
  :full-name "special/throw",
- :clj-symbol "clojure.core/throw",
- :docstring "The expr is evaluated and thrown."}
+ :docstring "The expr is evaluated and thrown.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/throw.cljsdoc"}
 
 ```
 

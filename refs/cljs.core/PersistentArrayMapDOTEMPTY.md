@@ -7,7 +7,7 @@
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentArrayMap.EMPTY</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentArrayMap.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentArrayMap.EMPTY</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentArrayMap.java)
 </td>
 </tr>
 </table>
@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6177):
+Source code @ [github]():
 
 ```clj
 (set! (.-EMPTY PersistentArrayMap) (PersistentArrayMap. nil 0 (array) empty-unordered-hash))
@@ -30,12 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6177](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6177)</ins>
+
 </pre>
 
 -->
@@ -79,18 +74,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentArrayMap.EMPTY",
+ :name-encode "PersistentArrayMapDOTEMPTY",
  :history [["+" "0.0-1211"]],
  :parent-type "PersistentArrayMap",
  :type "var",
+ :clj-equiv {:full-name "clojure.lang/PersistentArrayMap.EMPTY",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentArrayMap.java"},
  :full-name-encode "cljs.core/PersistentArrayMapDOTEMPTY",
  :source {:code "(set! (.-EMPTY PersistentArrayMap) (PersistentArrayMap. nil 0 (array) empty-unordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6177]},
+          :lines [6177],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6177"},
  :full-name "cljs.core/PersistentArrayMap.EMPTY",
- :clj-symbol "clojure.lang/PersistentArrayMap.EMPTY"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTEMPTY.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(chunk-rest s)</samp><br>
+
+---
 
  <samp>
 (__chunk-rest__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3313-L3314):
+Source code @ [github]():
 
 ```clj
 (defn chunk-rest [s]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3313-3314](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3313-L3314)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "chunk-rest",
- :type "function",
  :signature ["[s]"],
+ :name-encode "chunk-rest",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.core/chunk-rest",
  :source {:code "(defn chunk-rest [s]\n  (-chunked-rest s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3313 3314]},
+          :lines [3313 3314],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3313-L3314"},
+ :usage ["(chunk-rest s)"],
  :full-name "cljs.core/chunk-rest",
- :full-name-encode "cljs.core/chunk-rest",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunk-rest.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(iteration xform coll)</samp><br>
+
+---
 
  <samp>
 (__iteration__ xform coll)<br>
@@ -29,7 +32,7 @@ will be performed every time iterator/seq/reduce is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8205-L8210):
+Source code @ [github]():
 
 ```clj
 (defn iteration
@@ -41,11 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:8205-8210](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8205-L8210)</ins>
+
 </pre>
 
 -->
@@ -96,6 +95,7 @@ The API data for this symbol:
           :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8205 8210]},
+ :usage ["(iteration xform coll)"],
  :full-name "cljs.core/iteration",
  :docstring "Returns an iterable/seqable/reducible sequence of applications of\nthe transducer to the items in coll. Note that these applications\nwill be performed every time iterator/seq/reduce is called.",
  :removed {:in "0.0-2371", :last-seen "0.0-2356"}}

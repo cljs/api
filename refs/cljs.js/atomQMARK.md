@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(atom? x)</samp><br>
+
+---
 
  <samp>
 (__atom?__ x)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L41-L42):
+Source code @ [github]():
 
 ```clj
 (defn atom? [x]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:41-42](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L41-L42)</ins>
+
 </pre>
 
 -->
@@ -89,6 +87,7 @@ The API data for this symbol:
           :tag "r1.7.28",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [41 42]},
+ :usage ["(atom? x)"],
  :full-name "cljs.js/atom?",
  :removed {:in "1.7.48", :last-seen "1.7.28"}}
 

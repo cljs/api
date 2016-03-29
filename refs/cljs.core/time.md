@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(time expr)</samp><br>
+
+---
 
  <samp>
 (__time__ expr)<br>
@@ -30,7 +33,7 @@ Evaluates expr and prints the time it took. Returns the value of expr.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2564-L2572):
+Source code @ [github]():
 
 ```clj
 (core/defmacro time
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2564-2572](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2564-L2572)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "time",
  :signature ["[expr]"],
+ :name-encode "time",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/time",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/time"},
  :full-name-encode "cljs.core/time",
  :source {:code "(core/defmacro time\n  [expr]\n  `(let [start# (system-time)\n         ret# ~expr]\n     (prn (cljs.core/str \"Elapsed time: \"\n            (.toFixed (- (system-time) start#) 6)\n            \" msecs\"))\n     ret#))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2564 2572]},
+          :lines [2564 2572],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2564-L2572"},
+ :usage ["(time expr)"],
  :full-name "cljs.core/time",
- :clj-symbol "clojure.core/time",
- :docstring "Evaluates expr and prints the time it took. Returns the value of expr."}
+ :docstring "Evaluates expr and prints the time it took. Returns the value of expr.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/time.cljsdoc"}
 
 ```
 

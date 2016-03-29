@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Iterator. s)</samp><br>
+
+---
 
  <samp>
 (__Iterator.__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4861-L4868):
+Source code @ [github]():
 
 ```clj
 (deftype Iterator [^:mutable s]
@@ -39,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:4861-4868](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4861-L4868)</ins>
+
 </pre>
 
 -->
@@ -94,6 +93,7 @@ The API data for this symbol:
           :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4861 4868]},
+ :usage ["(Iterator. s)"],
  :full-name "cljs.core/Iterator",
  :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 

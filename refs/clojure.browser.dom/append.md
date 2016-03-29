@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(append parent & children)</samp><br>
+
+---
 
  <samp>
 (__append__ parent & children)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L13-L15):
+Source code @ [github]():
 
 ```clj
 (defn append [parent & children]
@@ -34,13 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:13-15](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L13-L15)</ins>
+
 </pre>
 
 -->
@@ -81,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "append",
- :type "function",
  :signature ["[parent & children]"],
+ :name-encode "append",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/append",
  :source {:code "(defn append [parent & children]\n  (apply gdom/append parent children)\n  parent)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [13 15]},
+          :lines [13 15],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L13-L15"},
+ :usage ["(append parent & children)"],
  :full-name "clojure.browser.dom/append",
- :full-name-encode "clojure.browser.dom/append",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/append.cljsdoc"}
 
 ```
 

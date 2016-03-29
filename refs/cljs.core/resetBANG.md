@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reset! a new-value)</samp><br>
+
+---
 
  <samp>
 (__reset!__ a new-value)<br>
@@ -45,7 +48,7 @@ current value. Returns newval.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4123-L4136):
+Source code @ [github]():
 
 ```clj
 (defn reset!
@@ -66,12 +69,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4123-4136](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4123-L4136)</ins>
+
 </pre>
 
 -->
@@ -117,8 +115,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reset!",
  :signature ["[a new-value]"],
+ :name-encode "resetBANG",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reset!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reset!"},
  :related ["cljs.core/swap!"
            "cljs.core/compare-and-set!"
            "cljs.core/atom"],
@@ -126,12 +127,14 @@ The API data for this symbol:
  :source {:code "(defn reset!\n  [a new-value]\n  (if (instance? Atom a)\n    (let [validate (.-validator a)]\n      (when-not (nil? validate)\n        (assert (validate new-value) \"Validator rejected reference state\"))\n      (let [old-value (.-state a)]\n        (set! (.-state a) new-value)\n        (when-not (nil? (.-watches a))\n          (-notify-watches a old-value new-value))\n        new-value))\n    (-reset! a new-value)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4123 4136]},
+          :lines [4123 4136],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4123-L4136"},
+ :usage ["(reset! a new-value)"],
  :full-name "cljs.core/reset!",
- :clj-symbol "clojure.core/reset!",
- :docstring "Sets the value of atom to newval without regard for the\ncurrent value. Returns newval."}
+ :docstring "Sets the value of atom to newval without regard for the\ncurrent value. Returns newval.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/resetBANG.cljsdoc"}
 
 ```
 

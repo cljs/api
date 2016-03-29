@@ -65,7 +65,7 @@ automatically assigned `%` argument names.
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L524-L543):
+Reader code @ [github]():
 
 ```clj
 (defn- read-fn
@@ -94,18 +94,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:524-543](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L524-L543)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -127,13 +121,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -166,8 +154,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Shorthand for creating an anonymous function:\n\n`#(...)` = `(fn [args] (...))`\n\nUse the following to access the implicit function arguments:\n\n- `%` or `%1` for first argument.\n- `%2`, `%3` and so on for subsequent arguments\n- `%&` for the rest of the arguments after the highest individually referenced argument\n\nNote that `#(1)` does not create a function that returns `1`, for the same\nreason that `(1)` does evaluate to `1`.\n\n`#()` forms cannot be nested, since this would create an ambiguity between the\nautomatically assigned `%` argument names.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc2"},
  :ns "syntax",
  :name "function",
+ :name-encode "function",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["syntax/arg"
@@ -180,19 +171,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [524 543]}
+                  :lines [524 543],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L524-L543"}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#(...)"],
  :examples [{:id "6a87de",
              :content "```clj\n(map #(* 2 %) [1 2 3])\n;;=> (2 4 6)\n\n(def f #(println %1 %2 %&))\n(f 1 2 3 4 5)\n;; prints: 1 2 (3 4 5)\n```"}],
  :full-name "syntax/function",
  :display "#() function",
- :clj-doc "http://clojure.org/reader#toc2"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/function.cljsdoc"}
 
 ```
 

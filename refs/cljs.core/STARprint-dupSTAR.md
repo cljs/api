@@ -28,7 +28,7 @@ Defaults to false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L97-L103):
+Source code @ [github]():
 
 ```clj
 (def
@@ -44,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:97-103](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L97-L103)</ins>
+
 </pre>
 
 -->
@@ -93,18 +88,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-dup*",
+ :name-encode "STARprint-dupSTAR",
  :history [["+" "0.0-927"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.core/*print-dup*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-dup*"},
  :full-name-encode "cljs.core/STARprint-dupSTAR",
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical true, objects will be printed in a way that preserves\n  their type when read in later.\n\n  Defaults to false.\"}\n  *print-dup* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [97 103]},
+          :lines [97 103],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L97-L103"},
  :full-name "cljs.core/*print-dup*",
- :clj-symbol "clojure.core/*print-dup*",
- :docstring "When set to logical true, objects will be printed in a way that preserves\ntheir type when read in later.\n\nDefaults to false."}
+ :docstring "When set to logical true, objects will be printed in a way that preserves\ntheir type when read in later.\n\nDefaults to false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-dupSTAR.cljsdoc"}
 
 ```
 

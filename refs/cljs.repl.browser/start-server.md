@@ -10,6 +10,9 @@
 </tr>
 </table>
 
+<samp>(start-server opts)</samp><br>
+
+---
 
  <samp>
 (__start-server__ opts)<br>
@@ -28,7 +31,7 @@ Start the server on the specified port.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L265-L270):
+Source code @ [github]():
 
 ```clj
 (defn start-server
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:265-270](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L265-L270)</ins>
+
 </pre>
 
 -->
@@ -99,6 +97,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [265 270]},
+ :usage ["(start-server opts)"],
  :full-name "cljs.repl.browser/start-server",
  :docstring "Start the server on the specified port.",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}

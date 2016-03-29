@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L21-L28):
+Source code @ [github]():
 
 ```clj
 (def event-types
@@ -34,13 +34,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[net.cljs:21-28](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L21-L28)</ins>
+
 </pre>
 
 -->
@@ -81,16 +75,19 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.net",
  :name "event-types",
+ :name-encode "event-types",
+ :history [["+" "0.0-927"]],
  :type "var",
+ :full-name-encode "clojure.browser.net/event-types",
  :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (merge\n          (js->clj EventType)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/net.cljs",
-          :lines [21 28]},
+          :lines [21 28],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/net.cljs#L21-L28"},
  :full-name "clojure.browser.net/event-types",
- :full-name-encode "clojure.browser.net/event-types",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/event-types.cljsdoc"}
 
 ```
 

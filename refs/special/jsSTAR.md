@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L2201-L2218):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'js*
@@ -44,12 +44,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:2201-2218](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L2201-L2218)</ins>
+
 </pre>
 
 -->
@@ -85,16 +80,19 @@ The API data for this symbol:
 ```clj
 {:ns "special",
  :name "js*",
+ :name-encode "jsSTAR",
+ :history [["+" "0.0-927"]],
  :type "special form",
+ :full-name-encode "special/jsSTAR",
  :source {:code "(defmethod parse 'js*\n  [op env [_ jsform & args :as form] _ _]\n  (when-not (string? jsform)\n    (throw (error env \"Invalid js* form\")))\n  (if-not (nil? args)\n    (analyze-js-star env jsform args form)\n    (let [code      (apply str (js-star-interp env jsform))\n          tag       (get-js-tag form)\n          form-meta (meta form)\n          js-op     (:js-op form-meta)\n          numeric   (:numeric form-meta)]\n      {:op :js\n       :env env\n       :form form\n       :code code\n       :tag tag\n       :js-op js-op\n       :numeric numeric})))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [2201 2218]},
+          :lines [2201 2218],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L2201-L2218"},
  :full-name "special/js*",
- :full-name-encode "special/jsSTAR",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/jsSTAR.cljsdoc"}
 
 ```
 

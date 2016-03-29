@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(repl-env\* {:keys \[output-dir\], :as opts})</samp><br>
+
+---
 
  <samp>
 (__repl-env\*__ {:keys \[output-dir\], :as opts})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L286-L307):
+Source code @ [github]():
 
 ```clj
 (defn repl-env*
@@ -53,13 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:286-307](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L286-L307)</ins>
+
 </pre>
 
 -->
@@ -100,17 +97,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "repl-env*",
- :type "function",
  :signature ["[{:keys [output-dir], :as opts}]"],
+ :name-encode "repl-envSTAR",
+ :history [["+" "0.0-3030"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/repl-envSTAR",
  :source {:code "(defn repl-env*\n  [{:keys [output-dir] :as opts}]\n  (merge (BrowserEnv.)\n    {:host \"localhost\"\n     :port 9000\n     :working-dir (->> [\".repl\" (util/clojurescript-version)]\n                       (remove empty?) (string/join \"-\"))\n     :serve-static true\n     :static-dir (cond-> [\".\" \"out/\"] output-dir (conj output-dir))\n     :preloaded-libs []\n     :optimizations :simple\n     :src \"src/\"\n     :browser-state (atom {:return-value-fn nil\n                          :client-js nil})\n     :ordering (agent {:expecting nil :fns {}})\n     :es (Executors/newFixedThreadPool 16)\n     :server-state\n     (atom\n       {:socket nil\n        :connection nil\n        :promised-conn nil})}\n    opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [286 307]},
+          :lines [286 307],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L286-L307"},
+ :usage ["(repl-env* {:keys [output-dir], :as opts})"],
  :full-name "cljs.repl.browser/repl-env*",
- :full-name-encode "cljs.repl.browser/repl-envSTAR",
- :history [["+" "0.0-3030"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/repl-envSTAR.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(no-warn & body)</samp><br>
+
+---
 
  <samp>
 (__no-warn__ & body)<br>
@@ -27,7 +30,7 @@ Disable analyzer warnings for any analysis executed in body.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L36-L41):
+Source code @ [github]():
 
 ```clj
 (defmacro no-warn
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:36-41](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L36-L41)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "no-warn",
  :signature ["[& body]"],
+ :name-encode "no-warn",
  :history [["+" "0.0-3291"]],
  :type "macro",
  :full-name-encode "cljs.analyzer.api/no-warn",
  :source {:code "(defmacro no-warn\n  [& body]\n  (let [no-warnings (zipmap (keys ana/*cljs-warnings*) (repeat false))]\n    `(binding [ana/*cljs-warnings* ~no-warnings]\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [36 41]},
+          :lines [36 41],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L36-L41"},
+ :usage ["(no-warn & body)"],
  :full-name "cljs.analyzer.api/no-warn",
- :docstring "Disable analyzer warnings for any analysis executed in body."}
+ :docstring "Disable analyzer warnings for any analysis executed in body.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/no-warn.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(set coll)</samp><br>
+
+---
 
  <samp>
 (__set__ coll)<br>
@@ -54,7 +57,7 @@ Returns a set of the distinct elements of coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8441-L8456):
+Source code @ [github]():
 
 ```clj
 (defn set
@@ -78,12 +81,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8441-8456](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8441-L8456)</ins>
+
 </pre>
 
 -->
@@ -129,8 +127,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "set",
  :signature ["[coll]"],
+ :name-encode "set",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/set",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set"},
  :related ["cljs.core/hash-set"
            "cljs.core/sorted-set"
            "cljs.core/conj"
@@ -150,12 +151,14 @@ The API data for this symbol:
  :source {:code "(defn set\n  [coll]\n  (let [in (seq coll)]\n    (cond\n      (nil? in) #{}\n\n      (and (instance? IndexedSeq in) (zero? (.-i in)))\n      (set-from-indexed-seq in)\n\n      :else\n      (loop [^not-native in in\n             ^not-native out (-as-transient #{})]\n        (if-not (nil? in)\n          (recur (next in) (-conj! out (-first in)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8441 8456]},
+          :lines [8441 8456],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8441-L8456"},
+ :usage ["(set coll)"],
  :full-name "cljs.core/set",
- :clj-symbol "clojure.core/set",
- :docstring "Returns a set of the distinct elements of coll."}
+ :docstring "Returns a set of the distinct elements of coll.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/set.cljsdoc"}
 
 ```
 

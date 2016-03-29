@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-inline-comment comment)</samp><br>
+
+---
 
  <samp>
 (__js-inline-comment__ comment)<br>
@@ -27,7 +30,7 @@ Emit an inline JavaScript comment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L881-L884):
+Source code @ [github]():
 
 ```clj
 (core/defmacro js-inline-comment
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:881-884](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L881-L884)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "js-inline-comment",
  :signature ["[comment]"],
+ :name-encode "js-inline-comment",
  :history [["+" "1.7.107"]],
  :type "macro",
  :full-name-encode "cljs.core/js-inline-comment",
  :source {:code "(core/defmacro js-inline-comment\n  [comment]\n  (core/list 'js* (core/str \"/**\" comment \"*/\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [881 884]},
+          :lines [881 884],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L881-L884"},
+ :usage ["(js-inline-comment comment)"],
  :full-name "cljs.core/js-inline-comment",
- :docstring "Emit an inline JavaScript comment."}
+ :docstring "Emit an inline JavaScript comment.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-inline-comment.cljsdoc"}
 
 ```
 

@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IEditableCollection</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IEditableCollection.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IEditableCollection</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IEditableCollection.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for collections which can transformed to transients.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L675-L678):
+Source code @ [github]():
 
 ```clj
 (defprotocol IEditableCollection
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:675-678](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L675-L678)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IEditableCollection",
+ :name-encode "IEditableCollection",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IEditableCollection",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IEditableCollection.java"},
  :full-name-encode "cljs.core/IEditableCollection",
  :source {:code "(defprotocol IEditableCollection\n  \"Protocol for collections which can transformed to transients.\"\n  (^clj -as-transient [coll]\n    \"Returns a new, transient version of the collection, in constant time.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [675 678]},
+          :lines [675 678],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L675-L678"},
  :methods [{:name "-as-transient",
             :signature ["[coll]"],
             :docstring "Returns a new, transient version of the collection, in constant time."}],
  :full-name "cljs.core/IEditableCollection",
- :clj-symbol "clojure.lang/IEditableCollection",
- :docstring "Protocol for collections which can transformed to transients."}
+ :docstring "Protocol for collections which can transformed to transients.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IEditableCollection.cljsdoc"}
 
 ```
 

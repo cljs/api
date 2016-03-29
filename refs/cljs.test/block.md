@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(block fns)</samp><br>
+
+---
 
  <samp>
 (__block__ fns)<br>
@@ -28,7 +31,7 @@ continuation.  See run-block.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L445-L450):
+Source code @ [github]():
 
 ```clj
 (defn block
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:445-450](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L445-L450)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "block",
  :signature ["[fns]"],
+ :name-encode "block",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.test/block",
  :source {:code "(defn block\n  [fns]\n  (some-> fns\n          (vary-meta assoc ::block? true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [445 450]},
+          :lines [445 450],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L445-L450"},
+ :usage ["(block fns)"],
  :full-name "cljs.test/block",
- :docstring "Tag a seq of fns to be picked up by run-block as injected\ncontinuation.  See run-block."}
+ :docstring "Tag a seq of fns to be picked up by run-block as injected\ncontinuation.  See run-block.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/block.cljsdoc"}
 
 ```
 

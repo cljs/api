@@ -8,11 +8,14 @@ _known as "thread last"_
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/->></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3E%3E)
+imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/->></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->>)
 </td>
 </tr>
 </table>
 
+<samp>(->> x & forms)</samp><br>
+
+---
 
  <samp>
 (__->>__ x & forms)<br>
@@ -93,7 +96,7 @@ last item in second form, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1602-L1616):
+Source code @ [github]():
 
 ```clj
 (defmacro ->>
@@ -112,11 +115,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1602-1616](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1602-L1616)</ins>
+
 </pre>
 
 -->
@@ -162,8 +161,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "->>",
  :signature ["[x & forms]"],
+ :name-encode "-GTGT",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/->>",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->>"},
  :related ["cljs.core/->"],
  :full-name-encode "cljs.core/-GTGT",
  :source {:code "(defmacro ->>\n  [x & forms]\n  (loop [x x, forms forms]\n    (if forms\n      (let [form (first forms)\n            threaded (if (seq? form)\n              (with-meta `(~(first form) ~@(next form)  ~x) (meta form))\n              (list form x))]\n        (recur threaded (next forms)))\n      x)))",
@@ -171,13 +173,15 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1602 1616]},
+          :lines [1602 1616],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1602-L1616"},
+ :usage ["(->> x & forms)"],
  :examples [{:id "1dc72c",
              :content "Sequence transformation functions often take a sequence as the last argument,\nthus the thread-last macro is commonly used with them.  Here we compute the sum\nof the first 10 even squares:\n\n```clj\n(->> (range)\n     (map #(* % %))\n     (filter even?)\n     (take 10)\n     (reduce +))\n;;=> 1140\n```\n\nThis expands to:\n\n```clj\n(reduce +\n  (take 10\n    (filter even?\n      (map #(* % %)\n        (range)))))\n;;=> 1140\n```"}],
  :known-as "thread last",
  :full-name "cljs.core/->>",
- :clj-symbol "clojure.core/->>",
- :docstring "Threads the expr through the forms. Inserts x as the\nlast item in the first form, making a list of it if it is not a\nlist already. If there are more forms, inserts the first form as the\nlast item in second form, etc."}
+ :docstring "Threads the expr through the forms. Inserts x as the\nlast item in the first form, making a list of it if it is not a\nlist already. If there are more forms, inserts the first form as the\nlast item in second form, etc.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/-GTGT.cljsdoc"}
 
 ```
 

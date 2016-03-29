@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(declare & names)</samp><br>
+
+---
 
  <samp>
 (__declare__ & names)<br>
@@ -56,7 +59,7 @@ defs the supplied var names with no bindings, useful for making forward declarat
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L2667-L2670):
+Source code @ [github]():
 
 ```clj
 (defmacro declare
@@ -67,11 +70,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:2667-2670](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L2667-L2670)</ins>
+
 </pre>
 
 -->
@@ -117,8 +116,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "declare",
  :signature ["[& names]"],
+ :name-encode "declare",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/declare",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/declare"},
  :related ["special/def"],
  :full-name-encode "cljs.core/declare",
  :source {:code "(defmacro declare\n  [& names] `(do ~@(map #(list 'def (vary-meta % assoc :declared true)) names)))",
@@ -126,12 +128,14 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [2667 2670]},
+          :lines [2667 2670],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L2667-L2670"},
+ :usage ["(declare & names)"],
  :examples [{:id "5a2dc2",
              :content "```clj\na\n;; WARNING: Use of undeclared Var\n\n(declare a)\na\n;;=> nil\n```"}],
  :full-name "cljs.core/declare",
- :clj-symbol "clojure.core/declare",
- :docstring "defs the supplied var names with no bindings, useful for making forward declarations."}
+ :docstring "defs the supplied var names with no bindings, useful for making forward declarations.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/declare.cljsdoc"}
 
 ```
 

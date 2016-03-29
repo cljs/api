@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(listen src type fn)</samp><br>
+<samp>(listen src type fn capture?)</samp><br>
+
+---
 
  <samp>
 (__listen__ src type fn)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L46-L53):
+Source code @ [github]():
 
 ```clj
 (defn listen
@@ -42,13 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:46-53](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L46-L53)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "listen",
- :type "function",
  :signature ["[src type fn]" "[src type fn capture?]"],
+ :name-encode "listen",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/listen",
  :source {:code "(defn listen\n  ([src type fn]\n     (listen src type fn false))\n  ([src type fn capture?]\n     (events/listen src\n                    (get (event-types src) type type)\n                    fn\n                    capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [46 53]},
+          :lines [46 53],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L46-L53"},
+ :usage ["(listen src type fn)" "(listen src type fn capture?)"],
  :full-name "clojure.browser.event/listen",
- :full-name-encode "clojure.browser.event/listen",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/listen.cljsdoc"}
 
 ```
 

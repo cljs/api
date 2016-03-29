@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(get-js-index)</samp><br>
+<samp>(get-js-index state)</samp><br>
+
+---
 
  <samp>
 (__get-js-index__)<br>
@@ -31,7 +35,7 @@ compiler state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L61-L66):
+Source code @ [github]():
 
 ```clj
 (defn get-js-index
@@ -44,13 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:61-66](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L61-L66)</ins>
+
 </pre>
 
 -->
@@ -92,17 +90,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "get-js-index",
  :signature ["[]" "[state]"],
+ :name-encode "get-js-index",
  :history [["+" "1.7.122"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/get-js-index",
  :source {:code "(defn get-js-index\n  ([] (get-options env/*compiler*))\n  ([state]\n   (get @state :js-dependency-index)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [61 66]},
+          :lines [61 66],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L61-L66"},
+ :usage ["(get-js-index)" "(get-js-index state)"],
  :full-name "cljs.analyzer.api/get-js-index",
- :docstring "Return the currently computed Google Closure js dependency index from the\ncompiler state."}
+ :docstring "Return the currently computed Google Closure js dependency index from the\ncompiler state.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/get-js-index.cljsdoc"}
 
 ```
 

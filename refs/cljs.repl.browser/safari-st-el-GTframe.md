@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(safari-st-el->frame repl-env st-el opts)</samp><br>
+
+---
 
  <samp>
 (__safari-st-el->frame__ repl-env st-el opts)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L318-L333):
+Source code @ [github]():
 
 ```clj
 (defn safari-st-el->frame
@@ -47,13 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:318-333](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L318-L333)</ins>
+
 </pre>
 
 -->
@@ -104,6 +101,7 @@ The API data for this symbol:
           :tag "r3308",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [318 333]},
+ :usage ["(safari-st-el->frame repl-env st-el opts)"],
  :full-name "cljs.repl.browser/safari-st-el->frame",
  :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 

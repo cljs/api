@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(file->ns file)</samp><br>
+
+---
 
  <samp>
 (__file->ns__ file)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L35-L39):
+Source code @ [github]():
 
 ```clj
 (defn file->ns
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:35-39](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L35-L39)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "file->ns",
- :type "function",
  :signature ["[file]"],
+ :name-encode "file-GTns",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.js/file-GTns",
  :source {:code "(defn file->ns\n  [file]\n  (let [lib-name (subs (string/replace file \"/\" \".\")\n                   0 (- (count file) 5))]\n    (symbol (demunge lib-name))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [35 39]},
+          :lines [35 39],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L35-L39"},
+ :usage ["(file->ns file)"],
  :full-name "cljs.js/file->ns",
- :full-name-encode "cljs.js/file-GTns",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/file-GTns.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(take-while pred)</samp><br>
+<samp>(take-while pred coll)</samp><br>
+
+---
 
  <samp>
 (__take-while__ pred)<br>
@@ -33,7 +37,7 @@ Ends the reduction of coll when (pred val) returns logical false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L152-L162):
+Source code @ [github]():
 
 ```clj
 (defcurried take-while
@@ -53,13 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:152-162](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L152-L162)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "take-while",
  :signature ["[pred]" "[pred coll]"],
+ :name-encode "take-while",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/take-while",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/take-while"},
  :full-name-encode "clojure.core.reducers/take-while",
  :source {:code "(defcurried take-while\n  \"Ends the reduction of coll when (pred val) returns logical false.\"\n  {}\n  [pred coll]\n  (reducer coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (if (pred k v)\n               (f1 ret k v)\n               (reduced ret)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [152 162]},
+          :lines [152 162],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L152-L162"},
+ :usage ["(take-while pred)" "(take-while pred coll)"],
  :full-name "clojure.core.reducers/take-while",
- :clj-symbol "clojure.core.reducers/take-while",
- :docstring "Ends the reduction of coll when (pred val) returns logical false."}
+ :docstring "Ends the reduction of coll when (pred val) returns logical false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/take-while.cljsdoc"}
 
 ```
 

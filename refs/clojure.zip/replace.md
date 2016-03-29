@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(replace loc node)</samp><br>
+
+---
 
  <samp>
 (__replace__ loc node)<br>
@@ -30,7 +33,7 @@ Replaces the node at this loc, without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L183-L187):
+Source code @ [github]():
 
 ```clj
 (defn replace
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:183-187](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L183-L187)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "replace",
  :signature ["[loc node]"],
+ :name-encode "replace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/replace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/replace"},
  :full-name-encode "clojure.zip/replace",
  :source {:code "(defn replace\n  [loc node]\n    (let [[_ path] loc]\n      (with-meta [node (assoc path :changed? true)] (meta loc))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [183 187]},
+          :lines [183 187],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L183-L187"},
+ :usage ["(replace loc node)"],
  :full-name "clojure.zip/replace",
- :clj-symbol "clojure.zip/replace",
- :docstring "Replaces the node at this loc, without moving"}
+ :docstring "Replaces the node at this loc, without moving",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/replace.cljsdoc"}
 
 ```
 

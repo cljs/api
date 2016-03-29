@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(dispatch-macros s)</samp><br>
+
+---
 
  <samp>
 (__dispatch-macros__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L430-L437):
+Source code @ [github]():
 
 ```clj
 (defn dispatch-macros [s]
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:430-437](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L430-L437)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "dispatch-macros",
- :type "function",
  :signature ["[s]"],
+ :name-encode "dispatch-macros",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/dispatch-macros",
  :source {:code "(defn dispatch-macros [s]\n  (cond\n   (identical? s \"{\") read-set\n   (identical? s \"<\") (throwing-reader \"Unreadable form\")\n   (identical? s \"\\\"\") read-regex\n   (identical? s\"!\") read-comment\n   (identical? s \"_\") read-discard\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [430 437]},
+          :lines [430 437],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L430-L437"},
+ :usage ["(dispatch-macros s)"],
  :full-name "cljs.reader/dispatch-macros",
- :full-name-encode "cljs.reader/dispatch-macros",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/dispatch-macros.cljsdoc"}
 
 ```
 

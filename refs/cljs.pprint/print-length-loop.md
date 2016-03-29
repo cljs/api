@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(print-length-loop bindings & body)</samp><br>
+
+---
 
  <samp>
 (__print-length-loop__ bindings & body)<br>
@@ -31,7 +34,7 @@ for use in pretty-printer dispatch functions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L92-L101):
+Source code @ [github]():
 
 ```clj
 (defmacro print-length-loop
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:92-101](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L92-L101)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "print-length-loop",
  :signature ["[bindings & body]"],
+ :name-encode "print-length-loop",
  :history [["+" "0.0-3255"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.pprint/print-length-loop",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/print-length-loop"},
  :full-name-encode "cljs.pprint/print-length-loop",
  :source {:code "(defmacro print-length-loop\n  [bindings & body]\n  (let [count-var (gensym \"length-count\")\n        mod-body (pll-mod-body count-var body)]\n    `(loop ~(apply vector count-var 0 bindings)\n       (if (or (not cljs.core/*print-length*) (< ~count-var cljs.core/*print-length*))\n         (do ~@mod-body)\n         (~'-write cljs.core/*out* \"...\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [92 101]},
+          :lines [92 101],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L92-L101"},
+ :usage ["(print-length-loop bindings & body)"],
  :full-name "cljs.pprint/print-length-loop",
- :clj-symbol "clojure.pprint/print-length-loop",
- :docstring "A version of loop that iterates at most *print-length* times. This is designed\nfor use in pretty-printer dispatch functions."}
+ :docstring "A version of loop that iterates at most *print-length* times. This is designed\nfor use in pretty-printer dispatch functions.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/print-length-loop.cljsdoc"}
 
 ```
 

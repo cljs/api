@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(total-listener-count)</samp><br>
+
+---
 
  <samp>
 (__total-listener-count__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L87-L88):
+Source code @ [github]():
 
 ```clj
 (defn total-listener-count []
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:87-88](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L87-L88)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "total-listener-count",
- :type "function",
  :signature ["[]"],
+ :name-encode "total-listener-count",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/total-listener-count",
  :source {:code "(defn total-listener-count []\n  (events/getTotalListenerCount))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [87 88]},
+          :lines [87 88],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L87-L88"},
+ :usage ["(total-listener-count)"],
  :full-name "clojure.browser.event/total-listener-count",
- :full-name-encode "clojure.browser.event/total-listener-count",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/total-listener-count.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(last-index-of s value)</samp><br>
+<samp>(last-index-of s value from-index)</samp><br>
+
+---
 
  <samp>
 (__last-index-of__ s value)<br>
@@ -34,7 +38,7 @@ searching backward from from-index or nil if not found.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L231-L243):
+Source code @ [github]():
 
 ```clj
 (defn last-index-of
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:231-243](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L231-L243)</ins>
+
 </pre>
 
 -->
@@ -104,18 +103,24 @@ The API data for this symbol:
 {:ns "clojure.string",
  :name "last-index-of",
  :signature ["[s value]" "[s value from-index]"],
+ :name-encode "last-index-of",
  :history [["+" "1.7.145"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/last-index-of",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/last-index-of"},
  :full-name-encode "clojure.string/last-index-of",
  :source {:code "(defn last-index-of\n  ([s value]\n   (let [result (.lastIndexOf s value)]\n     (if (neg? result)\n       nil\n       result)))\n  ([s value from-index]\n   (let [result (.lastIndexOf s value from-index)]\n     (if (neg? result)\n       nil\n       result))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [231 243]},
+          :lines [231 243],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L231-L243"},
+ :usage ["(last-index-of s value)"
+         "(last-index-of s value from-index)"],
  :full-name "clojure.string/last-index-of",
- :clj-symbol "clojure.string/last-index-of",
- :docstring "Return last index of value (string or char) in s, optionally\nsearching backward from from-index or nil if not found."}
+ :docstring "Return last index of value (string or char) in s, optionally\nsearching backward from from-index or nil if not found.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/last-index-of.cljsdoc"}
 
 ```
 

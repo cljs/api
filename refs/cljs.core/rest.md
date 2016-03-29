@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rest coll)</samp><br>
+
+---
 
  <samp>
 (__rest__ coll)<br>
@@ -65,7 +68,7 @@ argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1119-L1130):
+Source code @ [github]():
 
 ```clj
 (defn ^seq rest
@@ -84,12 +87,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1119-1130](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1119-L1130)</ins>
+
 </pre>
 
 -->
@@ -136,8 +134,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "rest",
  :signature ["[coll]"],
+ :name-encode "rest",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rest",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rest"},
  :related ["cljs.core/next"
            "cljs.core/first"
            "cljs.core/drop"
@@ -146,14 +147,16 @@ The API data for this symbol:
  :source {:code "(defn ^seq rest\n  [coll]\n  (if-not (nil? coll)\n    (if (implements? ISeq coll)\n      (-rest ^not-native coll)\n      (let [s (seq coll)]\n        (if s\n          (-rest ^not-native s)\n          ())))\n    ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1119 1130]},
+          :lines [1119 1130],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1119-L1130"},
+ :usage ["(rest coll)"],
  :examples [{:id "0869af",
              :content "```clj\n(rest [1 2 3])\n;;=> (2 3)\n\n(rest [1 2])\n;;=> (2)\n\n(rest [1])\n;;=> ()\n\n(rest [])\n;;=> ()\n```"}],
  :full-name "cljs.core/rest",
- :clj-symbol "clojure.core/rest",
- :docstring "Returns a possibly empty seq of the items after the first. Calls seq on its\nargument."}
+ :docstring "Returns a possibly empty seq of the items after the first. Calls seq on its\nargument.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rest.cljsdoc"}
 
 ```
 

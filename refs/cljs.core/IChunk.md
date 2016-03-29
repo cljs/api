@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IChunk</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IChunk.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IChunk</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IChunk.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for accessing the items of a chunk.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L716-L719):
+Source code @ [github]():
 
 ```clj
 (defprotocol IChunk
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:716-719](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L716-L719)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IChunk",
+ :name-encode "IChunk",
  :history [["+" "0.0-1424"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IChunk",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IChunk.java"},
  :full-name-encode "cljs.core/IChunk",
  :source {:code "(defprotocol IChunk\n  \"Protocol for accessing the items of a chunk.\"\n  (-drop-first [coll]\n    \"Return a new chunk of coll with the first item removed.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [716 719]},
+          :lines [716 719],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L716-L719"},
  :methods [{:name "-drop-first",
             :signature ["[coll]"],
             :docstring "Return a new chunk of coll with the first item removed."}],
  :full-name "cljs.core/IChunk",
- :clj-symbol "clojure.lang/IChunk",
- :docstring "Protocol for accessing the items of a chunk."}
+ :docstring "Protocol for accessing the items of a chunk.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IChunk.cljsdoc"}
 
 ```
 

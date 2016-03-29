@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(hash o)</samp><br>
+
+---
 
  <samp>
 (__hash__ o)<br>
@@ -31,7 +34,7 @@ consistent with =.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L879-L910):
+Source code @ [github]():
 
 ```clj
 (defn hash
@@ -70,12 +73,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:879-910](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L879-L910)</ins>
+
 </pre>
 
 -->
@@ -120,18 +118,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "hash",
  :signature ["[o]"],
+ :name-encode "hash",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/hash",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/hash"},
  :full-name-encode "cljs.core/hash",
  :source {:code "(defn hash\n  [o]\n  (cond\n    (implements? IHash o)\n    (-hash ^not-native o)\n\n    (number? o)\n    (if (js/isFinite o)\n      (js-mod (Math/floor o) 2147483647)\n      (case o\n        Infinity\n        2146435072\n        -Infinity\n        -1048576\n        2146959360))\n\n    (true? o) 1\n\n    (false? o) 0\n\n    (string? o)\n    (m3-hash-int (hash-string o))\n\n    (instance? js/Date o)\n    (.valueOf o)\n\n    (nil? o) 0\n\n    :else\n    (-hash o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [879 910]},
+          :lines [879 910],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L879-L910"},
+ :usage ["(hash o)"],
  :full-name "cljs.core/hash",
- :clj-symbol "clojure.core/hash",
- :docstring "Returns the hash code of its argument. Note this is the hash code\nconsistent with =."}
+ :docstring "Returns the hash code of its argument. Note this is the hash code\nconsistent with =.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash.cljsdoc"}
 
 ```
 

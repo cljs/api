@@ -27,7 +27,7 @@ non-mandatory newlines.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L625-L630):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic
@@ -42,12 +42,7 @@ non-mandatory newlines.",
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:625-630](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L625-L630)</ins>
+
 </pre>
 
 -->
@@ -91,18 +86,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-right-margin*",
+ :name-encode "STARprint-right-marginSTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-right-margin*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-right-margin*"},
  :full-name-encode "cljs.pprint/STARprint-right-marginSTAR",
  :source {:code "(def ^:dynamic\n ^{:doc \"Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.\",\n   :added \"1.2\"}\n *print-right-margin* 72)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [625 630]},
+          :lines [625 630],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L625-L630"},
  :full-name "cljs.pprint/*print-right-margin*",
- :clj-symbol "clojure.pprint/*print-right-margin*",
- :docstring "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines."}
+ :docstring "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-right-marginSTAR.cljsdoc"}
 
 ```
 

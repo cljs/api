@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(add-implicit-options opts)</samp><br>
+
+---
 
  <samp>
 (__add-implicit-options__ opts)<br>
@@ -29,7 +32,7 @@ true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L150-L155):
+Source code @ [github]():
 
 ```clj
 (defn add-implicit-options
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:150-155](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L150-L155)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "add-implicit-options",
  :signature ["[opts]"],
+ :name-encode "add-implicit-options",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/add-implicit-options",
  :source {:code "(defn add-implicit-options\n  [opts]\n  (closure/add-implicit-options opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [150 155]},
+          :lines [150 155],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L150-L155"},
+ :usage ["(add-implicit-options opts)"],
  :full-name "cljs.build.api/add-implicit-options",
- :docstring "Given a valid map of build options add any standard implicit options. For\nexample :optimizations :none implies :cache-analysis true and :source-map\ntrue."}
+ :docstring "Given a valid map of build options add any standard implicit options. For\nexample :optimizations :none implies :cache-analysis true and :source-map\ntrue.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/add-implicit-options.cljsdoc"}
 
 ```
 

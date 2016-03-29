@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(realized? x)</samp><br>
+
+---
 
  <samp>
 (__realized?__ x)<br>
@@ -40,7 +43,7 @@ Returns true if a value has been produced for a delay or lazy sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9451-L9454):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean realized?
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9451-9454](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9451-L9454)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "realized?",
  :signature ["[x]"],
+ :name-encode "realizedQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/realized?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/realized?"},
  :related ["cljs.core/lazy-seq"],
  :full-name-encode "cljs.core/realizedQMARK",
  :source {:code "(defn ^boolean realized?\n  [x]\n  (-realized? x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9451 9454]},
+          :lines [9451 9454],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9451-L9454"},
+ :usage ["(realized? x)"],
  :full-name "cljs.core/realized?",
- :clj-symbol "clojure.core/realized?",
- :docstring "Returns true if a value has been produced for a delay or lazy sequence."}
+ :docstring "Returns true if a value has been produced for a delay or lazy sequence.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/realizedQMARK.cljsdoc"}
 
 ```
 

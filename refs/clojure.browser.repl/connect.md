@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(connect repl-server-url)</samp><br>
+
+---
 
  <samp>
 (__connect__ repl-server-url)<br>
@@ -29,7 +32,7 @@ the document that called this function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L184-L206):
+Source code @ [github]():
 
 ```clj
 (defn connect
@@ -58,13 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:184-206](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L184-L206)</ins>
+
 </pre>
 
 -->
@@ -106,17 +103,21 @@ The API data for this symbol:
 {:ns "clojure.browser.repl",
  :name "connect",
  :signature ["[repl-server-url]"],
+ :name-encode "connect",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.repl/connect",
  :source {:code "(defn connect\n  [repl-server-url]\n  (let [repl-connection\n        (net/xpc-connection\n          {:peer_uri repl-server-url})]\n    (swap! xpc-connection (constantly repl-connection))\n    (net/register-service repl-connection\n      :evaluate-javascript\n      (fn [js]\n        (net/transmit\n          repl-connection\n          :send-result\n          (evaluate-javascript repl-connection js))))\n    (net/connect repl-connection\n      (constantly nil)\n      (fn [iframe]\n        (set! (.-display (.-style iframe))\n          \"none\")))\n    (bootstrap)\n    repl-connection))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [184 206]},
+          :lines [184 206],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L184-L206"},
+ :usage ["(connect repl-server-url)"],
  :full-name "clojure.browser.repl/connect",
- :docstring "Connects to a REPL server from an HTML document. After the\nconnection is made, the REPL will evaluate forms in the context of\nthe document that called this function."}
+ :docstring "Connects to a REPL server from an HTML document. After the\nconnection is made, the REPL will evaluate forms in the context of\nthe document that called this function.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/connect.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(chunked-seq? x)</samp><br>
+
+---
 
  <samp>
 (__chunked-seq?__ x)<br>
@@ -27,7 +30,7 @@ Return true if x is satisfies IChunkedSeq.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2008-L2010):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean chunked-seq?
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2008-2010](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2008-L2010)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "chunked-seq?",
  :signature ["[x]"],
+ :name-encode "chunked-seqQMARK",
  :history [["+" "0.0-1424"]],
  :type "function",
  :full-name-encode "cljs.core/chunked-seqQMARK",
  :source {:code "(defn ^boolean chunked-seq?\n  [x] (implements? IChunkedSeq x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2008 2010]},
+          :lines [2008 2010],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2008-L2010"},
+ :usage ["(chunked-seq? x)"],
  :full-name "cljs.core/chunked-seq?",
- :docstring "Return true if x is satisfies IChunkedSeq."}
+ :docstring "Return true if x is satisfies IChunkedSeq.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunked-seqQMARK.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-vector rdr _)</samp><br>
+
+---
 
  <samp>
 (__read-vector__ rdr _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L270-L272):
+Source code @ [github]():
 
 ```clj
 (defn read-vector
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:270-272](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L270-L272)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-vector",
- :type "function",
  :signature ["[rdr _]"],
+ :name-encode "read-vector",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-vector",
  :source {:code "(defn read-vector\n  [rdr _]\n  (read-delimited-list \"]\" rdr true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [270 272]},
+          :lines [270 272],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L270-L272"},
+ :usage ["(read-vector rdr _)"],
  :full-name "cljs.reader/read-vector",
- :full-name-encode "cljs.reader/read-vector",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-vector.cljsdoc"}
 
 ```
 

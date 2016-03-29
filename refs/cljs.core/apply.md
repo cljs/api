@@ -12,6 +12,13 @@
 </tr>
 </table>
 
+<samp>(apply f args)</samp><br>
+<samp>(apply f x args)</samp><br>
+<samp>(apply f x y args)</samp><br>
+<samp>(apply f x y z args)</samp><br>
+<samp>(apply f a b c d & args)</samp><br>
+
+---
 
  <samp>
 (__apply__ f args)<br>
@@ -69,7 +76,7 @@ Applies fn f to the argument list formed by prepending intervening arguments to 
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3557-L3602):
+Source code @ [github]():
 
 ```clj
 (defn apply
@@ -123,12 +130,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3557-3602](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3557-L3602)</ins>
+
 </pre>
 
 -->
@@ -178,21 +180,30 @@ The API data for this symbol:
              "[f x y args]"
              "[f x y z args]"
              "[f a b c d & args]"],
+ :name-encode "apply",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/apply",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/apply"},
  :related ["cljs.core/map"],
  :full-name-encode "cljs.core/apply",
  :source {:code "(defn apply\n  ([f args]\n     (let [fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (let [bc (bounded-count args (inc fixed-arity))]\n          (if (<= bc fixed-arity)\n            (apply-to f bc args)\n            (.cljs$lang$applyTo f args)))\n         (.apply f f (to-array args)))))\n  ([f x args]\n     (let [arglist (list* x args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (let [bc (bounded-count arglist (inc fixed-arity))]\n          (if (<= bc fixed-arity)\n            (apply-to f bc arglist)\n            (.cljs$lang$applyTo f arglist)))\n         (.apply f f (to-array arglist)))))\n  ([f x y args]\n     (let [arglist (list* x y args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (let [bc (bounded-count arglist (inc fixed-arity))]\n          (if (<= bc fixed-arity)\n            (apply-to f bc arglist)\n            (.cljs$lang$applyTo f arglist)))\n         (.apply f f (to-array arglist)))))\n  ([f x y z args]\n     (let [arglist (list* x y z args)\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (let [bc (bounded-count arglist (inc fixed-arity))]\n          (if (<= bc fixed-arity)\n            (apply-to f bc arglist)\n            (.cljs$lang$applyTo f arglist)))\n         (.apply f f (to-array arglist)))))\n  ([f a b c d & args]\n     (let [arglist (cons a (cons b (cons c (cons d (spread args)))))\n           fixed-arity (.-cljs$lang$maxFixedArity f)]\n       (if (.-cljs$lang$applyTo f)\n         (let [bc (bounded-count arglist (inc fixed-arity))]\n          (if (<= bc fixed-arity)\n            (apply-to f bc arglist)\n            (.cljs$lang$applyTo f arglist)))\n         (.apply f f (to-array arglist))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3557 3602]},
+          :lines [3557 3602],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3557-L3602"},
+ :usage ["(apply f args)"
+         "(apply f x args)"
+         "(apply f x y args)"
+         "(apply f x y z args)"
+         "(apply f a b c d & args)"],
  :examples [{:id "174052",
              :content "```clj\n(max 1 2 3)\n;;=> 3\n\n(apply max [1 2 3])\n;;=> 3\n\n(apply max 1 [2 3])\n;;=> 3\n```"}],
  :full-name "cljs.core/apply",
- :clj-symbol "clojure.core/apply",
- :docstring "Applies fn f to the argument list formed by prepending intervening arguments to args."}
+ :docstring "Applies fn f to the argument list formed by prepending intervening arguments to args.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/apply.cljsdoc"}
 
 ```
 

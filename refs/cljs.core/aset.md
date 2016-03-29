@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(aset array i val)</samp><br>
+<samp>(aset array idx idx2 & idxv)</samp><br>
+
+---
 
  <samp>
 (__aset__ array i val)<br>
@@ -74,7 +78,7 @@ Sets the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L402-L407):
+Function code @ [github]():
 
 ```clj
 (defn aset
@@ -88,19 +92,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:402-407](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L402-L407)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L937-L943):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro aset
@@ -116,12 +115,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:937-943](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L937-L943)</ins>
+
 </pre>
 -->
 
@@ -165,25 +159,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "aset",
  :signature ["[array i val]" "[array idx idx2 & idxv]"],
+ :name-encode "aset",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/aset",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/aset"},
  :related ["cljs.core/aget" "special/set!" "cljs.core/assoc-in"],
  :full-name-encode "cljs.core/aset",
  :source {:code "(defn aset\n  ([array i val]\n    (cljs.core/aset array i val))\n  ([array idx idx2 & idxv]\n    (apply aset (aget array idx) idx2 idxv)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [402 407]},
+          :lines [402 407],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L402-L407"},
  :extra-sources [{:code "(core/defmacro aset\n  ([a i v]\n   (core/list 'js* \"(~{}[~{}] = ~{})\" a i v))\n  ([a idx idx2 & idxv]\n   (core/let [n    (core/dec (count idxv))\n              astr (apply core/str (repeat n \"[~{}]\"))]\n     `(~'js* ~(core/str \"(~{}[~{}][~{}]\" astr \" = ~{})\") ~a ~idx ~idx2 ~@idxv))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [937 943]}],
+                  :lines [937 943],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L937-L943"}],
+ :usage ["(aset array i val)" "(aset array idx idx2 & idxv)"],
  :full-name "cljs.core/aset",
- :clj-symbol "clojure.core/aset",
- :docstring "Sets the value at the index."}
+ :docstring "Sets the value at the index.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/aset.cljsdoc"}
 
 ```
 

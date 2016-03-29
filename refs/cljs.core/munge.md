@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(munge name)</samp><br>
+
+---
 
  <samp>
 (__munge__ name)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10316-L10324):
+Source code @ [github]():
 
 ```clj
 (defn munge [name]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10316-10324](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10316-L10324)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "munge",
- :type "function",
  :signature ["[name]"],
+ :name-encode "munge",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.core/munge",
  :source {:code "(defn munge [name]\n  (let [name' (munge-str (str name))\n        name' (cond\n                (identical? name' \"..\") \"_DOT__DOT_\"\n                (js-reserved? name') (str name' \"$\")\n                :else name')]\n    (if (symbol? name)\n      (symbol name')\n      (str name'))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10316 10324]},
+          :lines [10316 10324],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10316-L10324"},
+ :usage ["(munge name)"],
  :full-name "cljs.core/munge",
- :full-name-encode "cljs.core/munge",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/munge.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(parse-js-ns f)</samp><br>
+
+---
 
  <samp>
 (__parse-js-ns__ f)<br>
@@ -29,7 +32,7 @@ first provide statement.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L73-L78):
+Source code @ [github]():
 
 ```clj
 (defn parse-js-ns
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:73-78](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L73-L78)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "parse-js-ns",
  :signature ["[f]"],
+ :name-encode "parse-js-ns",
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.build.api/parse-js-ns",
  :source {:code "(defn parse-js-ns\n  [f]\n  (closure/parse-js-ns f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [73 78]},
+          :lines [73 78],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L73-L78"},
+ :usage ["(parse-js-ns f)"],
  :full-name "cljs.build.api/parse-js-ns",
- :docstring "Given a Google Closure style JavaScript file or resource return the namespace\ninformation for the given file. Only returns the value extracted from the\nfirst provide statement."}
+ :docstring "Given a Google Closure style JavaScript file or resource return the namespace\ninformation for the given file. Only returns the value extracted from the\nfirst provide statement.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/parse-js-ns.cljsdoc"}
 
 ```
 

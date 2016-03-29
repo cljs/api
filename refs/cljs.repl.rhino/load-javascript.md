@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-javascript repl-env ns url)</samp><br>
+
+---
 
  <samp>
 (__load-javascript__ repl-env ns url)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L97-L102):
+Source code @ [github]():
 
 ```clj
 (defn load-javascript [repl-env ns url]
@@ -37,13 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[rhino.clj:97-102](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L97-L102)</ins>
+
 </pre>
 
 -->
@@ -84,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.rhino",
  :name "load-javascript",
- :type "function",
  :signature ["[repl-env ns url]"],
+ :name-encode "load-javascript",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.repl.rhino/load-javascript",
  :source {:code "(defn load-javascript [repl-env ns url]\n  (try\n    (with-open [reader (io/reader url)]\n      (-eval reader repl-env (.toString url) 1))\n    ;; TODO: don't show errors for goog/base.js line number 105\n    (catch Throwable ex (println (.getMessage ex)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
-          :lines [97 102]},
+          :lines [97 102],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/rhino.clj#L97-L102"},
+ :usage ["(load-javascript repl-env ns url)"],
  :full-name "cljs.repl.rhino/load-javascript",
- :full-name-encode "cljs.repl.rhino/load-javascript",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/load-javascript.cljsdoc"}
 
 ```
 

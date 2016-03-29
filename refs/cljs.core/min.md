@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(min x)</samp><br>
+<samp>(min x y)</samp><br>
+<samp>(min x y & more)</samp><br>
+
+---
 
  <samp>
 (__min__ x)<br>
@@ -64,7 +69,7 @@ Returns the least of the nums.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2420-L2425):
+Function code @ [github]():
 
 ```clj
 (defn ^number min
@@ -78,19 +83,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2420-2425](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2420-L2425)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1071-L1075):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric min
@@ -104,12 +104,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1071-1075](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1071-L1075)</ins>
+
 </pre>
 -->
 
@@ -154,27 +149,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "min",
  :signature ["[x]" "[x y]" "[x y & more]"],
+ :name-encode "min",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/min",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/min"},
  :related ["cljs.core/max" "cljs.core/min-key"],
  :full-name-encode "cljs.core/min",
  :source {:code "(defn ^number min\n  ([x] x)\n  ([x y] (cljs.core/min x y))\n  ([x y & more]\n   (reduce min (cljs.core/min x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2420 2425]},
+          :lines [2420 2425],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2420-L2425"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric min\n  ([x] x)\n  ([x y] `(let [x# ~x, y# ~y]\n            (~'js* \"((~{} < ~{}) ? ~{} : ~{})\" x# y# x# y#)))\n  ([x y & more] `(min (min ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1071 1075]}],
+                  :lines [1071 1075],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1071-L1075"}],
+ :usage ["(min x)" "(min x y)" "(min x y & more)"],
  :examples [{:id "ab2de5",
              :content "```clj\n(min 1 2 3 4)\n;; => 1\n```\n\nApply it to a collection:\n\n```clj\n(apply min [1 2 3 4])\n;; => 1\n```"}],
  :full-name "cljs.core/min",
- :clj-symbol "clojure.core/min",
- :docstring "Returns the least of the nums."}
+ :docstring "Returns the least of the nums.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/min.cljsdoc"}
 
 ```
 

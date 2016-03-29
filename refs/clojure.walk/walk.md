@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(walk inner outer form)</samp><br>
+
+---
 
  <samp>
 (__walk__ inner outer form)<br>
@@ -33,7 +36,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L37-L50):
+Source code @ [github]():
 
 ```clj
 (defn walk
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:37-50](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L37-L50)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "walk",
  :signature ["[inner outer form]"],
+ :name-encode "walk",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/walk",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/walk"},
  :full-name-encode "clojure.walk/walk",
  :source {:code "(defn walk\n  [inner outer form]\n  (cond\n    (list? form)   (outer (apply list (map inner form)))\n    (seq? form)    (outer (doall (map inner form)))\n    (record? form) (outer (reduce (fn [r x] (conj r (inner x))) form form))\n    (coll? form)   (outer (into (empty form) (map inner form)))\n    :else          (outer form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [37 50]},
+          :lines [37 50],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L37-L50"},
+ :usage ["(walk inner outer form)"],
  :full-name "clojure.walk/walk",
- :clj-symbol "clojure.walk/walk",
- :docstring "Traverses form, an arbitrary data structure.  inner and outer are\nfunctions.  Applies inner to each element of form, building up a\ndata structure of the same type, then applies outer to the result.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}
+ :docstring "Traverses form, an arbitrary data structure.  inner and outer are\nfunctions.  Applies inner to each element of form, building up a\ndata structure of the same type, then applies outer to the result.\nRecognizes all Clojure data structures. Consumes seqs as with doall.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/walk.cljsdoc"}
 
 ```
 

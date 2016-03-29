@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(do exprs\*)</samp><br>
+
+---
 
  <samp>
 (__do__ exprs\*)<br>
@@ -31,7 +34,7 @@ the last. If no expressions are supplied, returns nil.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1411-L1432):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'do
@@ -62,12 +65,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:1411-1432](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1411-L1432)</ins>
+
 </pre>
 
 -->
@@ -111,18 +109,23 @@ The API data for this symbol:
 {:ns "special",
  :name "do",
  :signature ["[exprs*]"],
+ :name-encode "do",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/do",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/do"},
  :full-name-encode "special/do",
  :source {:code "(defmethod parse 'do\n  [op env [_ & exprs :as form] _ _]\n  (let [statements (analyze-do-statements env exprs)]\n    (if (<= (count exprs) 1)\n      (let [ret      (analyze env (first exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements :ret ret\n         :children children})\n      (let [ret-env  (if (= :statement (:context env))\n                       (assoc env :context :statement)\n                       (assoc env :context :return))\n            ret      (analyze ret-env (last exprs))\n            children (conj (vec statements) ret)]\n        {:op :do\n         :env env\n         :form form\n         :statements statements\n         :ret ret\n         :children children}))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1411 1432]},
+          :lines [1411 1432],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L1411-L1432"},
+ :usage ["(do exprs*)"],
  :full-name "special/do",
- :clj-symbol "clojure.core/do",
- :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil."}
+ :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/do.cljsdoc"}
 
 ```
 

@@ -28,7 +28,7 @@ Defaults to true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L81-L87):
+Source code @ [github]():
 
 ```clj
 (def
@@ -44,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:81-87](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L81-L87)</ins>
+
 </pre>
 
 -->
@@ -93,18 +88,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-readably*",
+ :name-encode "STARprint-readablySTAR",
  :history [["+" "0.0-927"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.core/*print-readably*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-readably*"},
  :full-name-encode "cljs.core/STARprint-readablySTAR",
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"When set to logical false, strings and characters will be printed with\n  non-alphanumeric characters converted to the appropriate escape sequences.\n\n  Defaults to true\"}\n  *print-readably* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [81 87]},
+          :lines [81 87],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L81-L87"},
  :full-name "cljs.core/*print-readably*",
- :clj-symbol "clojure.core/*print-readably*",
- :docstring "When set to logical false, strings and characters will be printed with\nnon-alphanumeric characters converted to the appropriate escape sequences.\n\nDefaults to true"}
+ :docstring "When set to logical false, strings and characters will be printed with\nnon-alphanumeric characters converted to the appropriate escape sequences.\n\nDefaults to true",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-readablySTAR.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(compose-fixtures f1 f2)</samp><br>
+
+---
 
  <samp>
 (__compose-fixtures__ f1 f2)<br>
@@ -33,7 +36,7 @@ NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L496-L502):
+Source code @ [github]():
 
 ```clj
 (defn compose-fixtures
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:496-502](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L496-L502)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "compose-fixtures",
  :signature ["[f1 f2]"],
+ :name-encode "compose-fixtures",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/compose-fixtures",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/compose-fixtures"},
  :full-name-encode "cljs.test/compose-fixtures",
  :source {:code "(defn compose-fixtures\n  [f1 f2]\n  (fn [g] (f1 (fn [] (f2 g)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [496 502]},
+          :lines [496 502],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L496-L502"},
+ :usage ["(compose-fixtures f1 f2)"],
  :full-name "cljs.test/compose-fixtures",
- :clj-symbol "clojure.test/compose-fixtures",
- :docstring "Composes two fixture functions, creating a new fixture function\nthat combines their behavior.\n\nNOTE: Incompatible with map fixtures."}
+ :docstring "Composes two fixture functions, creating a new fixture function\nthat combines their behavior.\n\nNOTE: Incompatible with map fixtures.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/compose-fixtures.cljsdoc"}
 
 ```
 

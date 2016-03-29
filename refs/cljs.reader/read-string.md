@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(read-string s)</samp><br>
+
+---
 
  <samp>
 (__read-string__ s)<br>
@@ -30,7 +33,7 @@ Reads one object from the string s
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L460-L466):
+Source code @ [github]():
 
 ```clj
 (defn read-string
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:460-466](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L460-L466)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.reader",
  :name "read-string",
  :signature ["[s]"],
+ :name-encode "read-string",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/read-string",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/read-string"},
  :full-name-encode "cljs.reader/read-string",
  :source {:code "(defn read-string\n  [s]\n  (when-not (string? s)\n    (throw (js/Error. \"Cannot read from non-string object.\")))\n  (let [r (push-back-reader s)]\n    (read r false nil false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [460 466]},
+          :lines [460 466],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L460-L466"},
+ :usage ["(read-string s)"],
  :full-name "cljs.reader/read-string",
- :clj-symbol "clojure.core/read-string",
- :docstring "Reads one object from the string s"}
+ :docstring "Reads one object from the string s",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-string.cljsdoc"}
 
 ```
 

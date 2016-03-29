@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(es6-iterable ty)</samp><br>
+
+---
 
  <samp>
 (__es6-iterable__ ty)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2642-L2646):
+Source code @ [github]():
 
 ```clj
 (core/defmacro es6-iterable [ty]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2642-2646](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2642-L2646)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "es6-iterable",
- :type "macro",
  :signature ["[ty]"],
+ :name-encode "es6-iterable",
+ :history [["+" "0.0-2411"]],
+ :type "macro",
+ :full-name-encode "cljs.core/es6-iterable",
  :source {:code "(core/defmacro es6-iterable [ty]\n  `(aset (.-prototype ~ty) cljs.core/ITER_SYMBOL\n     (fn []\n       (this-as this#\n         (cljs.core/es6-iterator this#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2642 2646]},
+          :lines [2642 2646],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2642-L2646"},
+ :usage ["(es6-iterable ty)"],
  :full-name "cljs.core/es6-iterable",
- :full-name-encode "cljs.core/es6-iterable",
- :history [["+" "0.0-2411"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/es6-iterable.cljsdoc"}
 
 ```
 

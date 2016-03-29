@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(first coll)</samp><br>
+
+---
 
  <samp>
 (__first__ coll)<br>
@@ -61,7 +64,7 @@ argument. If coll is nil, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1108-L1117):
+Source code @ [github]():
 
 ```clj
 (defn first
@@ -78,12 +81,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1108-1117](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1108-L1117)</ins>
+
 </pre>
 
 -->
@@ -129,8 +127,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "first",
  :signature ["[coll]"],
+ :name-encode "first",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/first",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/first"},
  :related ["cljs.core/rest"
            "cljs.core/next"
            "cljs.core/nth"
@@ -141,14 +142,16 @@ The API data for this symbol:
  :source {:code "(defn first\n  [coll]\n  (when-not (nil? coll)\n    (if (implements? ISeq coll)\n      (-first ^not-native coll)\n      (let [s (seq coll)]\n        (when-not (nil? s)\n          (-first s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1108 1117]},
+          :lines [1108 1117],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1108-L1117"},
+ :usage ["(first coll)"],
  :examples [{:id "40e413",
              :content "```clj\n(first [1 2 3])\n;;=> 1\n\n(first [])\n;;=> nil\n```"}],
  :full-name "cljs.core/first",
- :clj-symbol "clojure.core/first",
- :docstring "Returns the first item in the collection. Calls seq on its\nargument. If coll is nil, returns nil."}
+ :docstring "Returns the first item in the collection. Calls seq on its\nargument. If coll is nil, returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/first.cljsdoc"}
 
 ```
 

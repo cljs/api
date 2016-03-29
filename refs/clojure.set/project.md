@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(project xrel ks)</samp><br>
+
+---
 
  <samp>
 (__project__ xrel ks)<br>
@@ -30,7 +33,7 @@ Returns a rel of the elements of xrel with only the keys in ks
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L67-L70):
+Source code @ [github]():
 
 ```clj
 (defn project
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:67-70](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L67-L70)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "project",
  :signature ["[xrel ks]"],
+ :name-encode "project",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/project",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/project"},
  :full-name-encode "clojure.set/project",
  :source {:code "(defn project\n  [xrel ks]\n    (set (map #(select-keys % ks) xrel)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [67 70]},
+          :lines [67 70],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L67-L70"},
+ :usage ["(project xrel ks)"],
  :full-name "clojure.set/project",
- :clj-symbol "clojure.set/project",
- :docstring "Returns a rel of the elements of xrel with only the keys in ks"}
+ :docstring "Returns a rel of the elements of xrel with only the keys in ks",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/project.cljsdoc"}
 
 ```
 

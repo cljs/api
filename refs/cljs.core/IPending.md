@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPending</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IPending.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPending</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPending.java)
 </td>
 </tr>
 </table>
@@ -26,7 +26,7 @@ Protocol for types which can have a deferred realization. Currently only
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L659-L663):
+Source code @ [github]():
 
 ```clj
 (defprotocol IPending
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:659-663](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L659-L663)</ins>
+
 </pre>
 
 -->
@@ -89,21 +84,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IPending",
+ :name-encode "IPending",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IPending",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPending.java"},
  :full-name-encode "cljs.core/IPending",
  :source {:code "(defprotocol IPending\n  \"Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay and LazySeq.\"\n  (^boolean -realized? [x]\n    \"Returns true if a value for x has been produced, false otherwise.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [659 663]},
+          :lines [659 663],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L659-L663"},
  :methods [{:name "-realized?",
             :signature ["[x]"],
             :docstring "Returns true if a value for x has been produced, false otherwise."}],
  :full-name "cljs.core/IPending",
- :clj-symbol "clojure.lang/IPending",
- :docstring "Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay and LazySeq."}
+ :docstring "Protocol for types which can have a deferred realization. Currently only\n  implemented by Delay and LazySeq.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IPending.cljsdoc"}
 
 ```
 

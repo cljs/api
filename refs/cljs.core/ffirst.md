@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ffirst coll)</samp><br>
+
+---
 
  <samp>
 (__ffirst__ coll)<br>
@@ -52,7 +55,7 @@ Same as (first (first x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1606-L1609):
+Source code @ [github]():
 
 ```clj
 (defn ffirst
@@ -64,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1606-1609](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1606-L1609)</ins>
+
 </pre>
 
 -->
@@ -115,21 +113,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "ffirst",
  :signature ["[coll]"],
+ :name-encode "ffirst",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ffirst",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ffirst"},
  :related ["cljs.core/first" "cljs.core/fnext" "cljs.core/nfirst"],
  :full-name-encode "cljs.core/ffirst",
  :source {:code "(defn ffirst\n  [coll]\n  (first (first coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1606 1609]},
+          :lines [1606 1609],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1606-L1609"},
+ :usage ["(ffirst coll)"],
  :examples [{:id "575ba2",
              :content "```clj\n(ffirst [[1 2] [3 4] [5 6]])\n;;=> 1\n```"}],
  :full-name "cljs.core/ffirst",
- :clj-symbol "clojure.core/ffirst",
- :docstring "Same as (first (first x))"}
+ :docstring "Same as (first (first x))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ffirst.cljsdoc"}
 
 ```
 

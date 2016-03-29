@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Counted</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Counted.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Counted</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Counted.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding the ability to count a collection in constant time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L468-L471):
+Source code @ [github]():
 
 ```clj
 (defprotocol ICounted
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:468-471](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L468-L471)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ICounted",
+ :name-encode "ICounted",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Counted",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Counted.java"},
  :full-name-encode "cljs.core/ICounted",
  :source {:code "(defprotocol ICounted\n  \"Protocol for adding the ability to count a collection in constant time.\"\n  (^number -count [coll]\n    \"Calculates the count of coll in constant time. Used by cljs.core/count.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [468 471]},
+          :lines [468 471],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L468-L471"},
  :methods [{:name "-count",
             :signature ["[coll]"],
             :docstring "Calculates the count of coll in constant time. Used by cljs.core/count."}],
  :full-name "cljs.core/ICounted",
- :clj-symbol "clojure.lang/Counted",
- :docstring "Protocol for adding the ability to count a collection in constant time."}
+ :docstring "Protocol for adding the ability to count a collection in constant time.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ICounted.cljsdoc"}
 
 ```
 

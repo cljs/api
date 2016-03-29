@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(re-find re s)</samp><br>
+
+---
 
  <samp>
 (__re-find__ re s)<br>
@@ -41,7 +44,7 @@ capturing groups.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8948-L8960):
+Source code @ [github]():
 
 ```clj
 (defn re-find
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8948-8960](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8948-L8960)</ins>
+
 </pre>
 
 -->
@@ -110,18 +108,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "re-find",
  :signature ["[re s]"],
+ :name-encode "re-find",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/re-find",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/re-find"},
  :full-name-encode "cljs.core/re-find",
  :source {:code "(defn re-find\n  [re s]\n  (if (string? s)\n    (let [matches (.exec re s)]\n      (when-not (nil? matches)\n        (if (== (count matches) 1)\n          (first matches)\n          (vec matches))))\n    (throw (js/TypeError. \"re-find must match against a string.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8948 8960]},
+          :lines [8948 8960],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8948-L8960"},
+ :usage ["(re-find re s)"],
  :full-name "cljs.core/re-find",
- :clj-symbol "clojure.core/re-find",
- :docstring "Returns the first regex match, if any, of s to re, using\nre.exec(s). Returns a vector, containing first the matching\nsubstring, then any capturing groups if the regular expression contains\ncapturing groups."}
+ :docstring "Returns the first regex match, if any, of s to re, using\nre.exec(s). Returns a vector, containing first the matching\nsubstring, then any capturing groups if the regular expression contains\ncapturing groups.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/re-find.cljsdoc"}
 
 ```
 

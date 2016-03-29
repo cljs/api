@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(sm-data)</samp><br>
+
+---
 
  <samp>
 (__sm-data__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L122-L126):
+Source code @ [github]():
 
 ```clj
 (defn sm-data []
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:122-126](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L122-L126)</ins>
+
 </pre>
 
 -->
@@ -92,6 +90,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [122 126]},
+ :usage ["(sm-data)"],
  :full-name "cljs.js/sm-data",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

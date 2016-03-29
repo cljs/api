@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(hash-string\* s)</samp><br>
+
+---
 
  <samp>
 (__hash-string\*__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L853-L862):
+Source code @ [github]():
 
 ```clj
 (defn hash-string* [s]
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:853-862](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L853-L862)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "hash-string*",
- :type "function",
  :signature ["[s]"],
+ :name-encode "hash-stringSTAR",
+ :history [["+" "0.0-2261"]],
+ :type "function",
+ :full-name-encode "cljs.core/hash-stringSTAR",
  :source {:code "(defn hash-string* [s]\n  (if-not (nil? s)\n    (let [len (alength s)]\n      (if (pos? len)\n        (loop [i 0 hash 0]\n          (if (< i len)\n            (recur (inc i) (+ (imul 31 hash) (.charCodeAt s i)))\n            hash))\n        0))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [853 862]},
+          :lines [853 862],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L853-L862"},
+ :usage ["(hash-string* s)"],
  :full-name "cljs.core/hash-string*",
- :full-name-encode "cljs.core/hash-stringSTAR",
- :history [["+" "0.0-2261"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-stringSTAR.cljsdoc"}
 
 ```
 

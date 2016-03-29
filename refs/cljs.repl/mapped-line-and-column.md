@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(mapped-line-and-column source-map line column)</samp><br>
+
+---
 
  <samp>
 (__mapped-line-and-column__ source-map line column)<br>
@@ -28,7 +31,7 @@ and column back to the original line and column.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L223-L241):
+Source code @ [github]():
 
 ```clj
 (defn mapped-line-and-column
@@ -54,11 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3126/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3126
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:223-241](https://github.com/clojure/clojurescript/blob/r3126/src/clj/cljs/repl.clj#L223-L241)</ins>
+
 </pre>
 
 -->
@@ -109,6 +108,7 @@ The API data for this symbol:
           :tag "r3126",
           :filename "src/clj/cljs/repl.clj",
           :lines [223 241]},
+ :usage ["(mapped-line-and-column source-map line column)"],
  :full-name "cljs.repl/mapped-line-and-column",
  :docstring "Given a cljs.source-map source map data structure map a generated line\nand column back to the original line and column.",
  :removed {:in "0.0-3148", :last-seen "0.0-3126"}}

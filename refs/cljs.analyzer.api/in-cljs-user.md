@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(in-cljs-user env & body)</samp><br>
+
+---
 
  <samp>
 (__in-cljs-user__ env & body)<br>
@@ -28,7 +31,7 @@ environment atom and runs body.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L210-L216):
+Source code @ [github]():
 
 ```clj
 (defmacro in-cljs-user
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:210-216](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L210-L216)</ins>
+
 </pre>
 
 -->
@@ -90,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "in-cljs-user",
  :signature ["[env & body]"],
+ :name-encode "in-cljs-user",
  :history [["+" "0.0-2629"]],
  :type "macro",
  :full-name-encode "cljs.analyzer.api/in-cljs-user",
  :source {:code "(defmacro in-cljs-user\n  [env & body]\n  `(binding [cljs.analyzer/*cljs-ns* 'cljs.user]\n     (cljs.env/with-compiler-env ~env\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [210 216]},
+          :lines [210 216],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L210-L216"},
+ :usage ["(in-cljs-user env & body)"],
  :full-name "cljs.analyzer.api/in-cljs-user",
- :docstring "Binds cljs.analyzer/*cljs-ns* to 'cljs.user and uses the given compilation\nenvironment atom and runs body."}
+ :docstring "Binds cljs.analyzer/*cljs-ns* to 'cljs.user and uses the given compilation\nenvironment atom and runs body.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/in-cljs-user.cljsdoc"}
 
 ```
 

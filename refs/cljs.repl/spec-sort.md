@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L190-L194):
+Source code @ [github]():
 
 ```clj
 (def spec-sort
@@ -31,11 +31,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:190-194](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L190-L194)</ins>
+
 </pre>
 
 -->

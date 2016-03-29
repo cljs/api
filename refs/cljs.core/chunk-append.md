@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(chunk-append b x)</samp><br>
+
+---
 
  <samp>
 (__chunk-append__ b x)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3304-L3305):
+Source code @ [github]():
 
 ```clj
 (defn chunk-append [b x]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3304-3305](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3304-L3305)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "chunk-append",
- :type "function",
  :signature ["[b x]"],
+ :name-encode "chunk-append",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.core/chunk-append",
  :source {:code "(defn chunk-append [b x]\n  (.add b x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3304 3305]},
+          :lines [3304 3305],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3304-L3305"},
+ :usage ["(chunk-append b x)"],
  :full-name "cljs.core/chunk-append",
- :full-name-encode "cljs.core/chunk-append",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunk-append.cljsdoc"}
 
 ```
 

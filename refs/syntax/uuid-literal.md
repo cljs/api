@@ -74,7 +74,7 @@ Get as a string:
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L16-L23):
+Reader code @ [github]():
 
 ```clj
    (defn read-uuid
@@ -91,17 +91,12 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:16-23](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L16-L23)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83):
+Reader table @ [github]():
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -115,12 +110,7 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:79-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83)</ins>
+
 </pre>
 -->
 
@@ -153,8 +143,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Creates a universally unique identifier (UUID), using the [doc:cljs.core/UUID] type.\n\nThe format is `#uuid \"8-4-4-4-12\"`, where the numbers represent the number of hex digits.\n\nRepresenting UUIDs with `#uuid` rather than just a plain string has the following benefits:\n\n- the reader will throw an exception on malformed UUIDs\n- its UUID type is preserved and shown when serialized to [edn].\n\nTo create a UUID from an evaluated expression, use [doc:cljs.core/uuid].\n\n[edn]:https://github.com/edn-format/edn",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
+                :clj-url "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947"},
  :ns "syntax",
  :name "uuid-literal",
+ :name-encode "uuid-literal",
  :history [["+" "0.0-1211"]],
  :type "tagged literal",
  :related ["cljs.core/uuid" "cljs.core/random-uuid"],
@@ -162,22 +155,23 @@ The API data for this symbol:
  :extra-sources ({:code "   (defn read-uuid\n     [form]\n     (when-not (string? form)\n       (throw (RuntimeException. \"UUID literal expects a string as its representation.\")))\n     (try\n       (java.util.UUID/fromString form)\n       (catch Throwable e\n         (throw (RuntimeException. (.getMessage e)))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [16 23]}
+                  :lines [16 23],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L16-L23"}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [79 83]}),
+                  :lines [79 83],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L79-L83"}),
  :usage ["#uuid \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""],
  :examples [{:id "12c0f0",
              :content "```clj\n#uuid \"00000000-0000-0000-0000-000000000000\"\n;;=> #uuid \"00000000-0000-0000-0000-000000000000\"\n\n#uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n;;=> #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n\n#uuid \"asdf\"\n;; clojure.lang.ExceptionInfo: Invalid UUID string: asdf\n```\n\nGet as a string:\n\n```clj\n(def foo #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\")\n(str foo)\n;;=> \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n```"}],
- :edn-doc "https://github.com/edn-format/edn#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
  :full-name "syntax/uuid-literal",
  :display "#uuid literal",
- :clj-doc "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/uuid-literal.cljsdoc"}
 
 ```
 

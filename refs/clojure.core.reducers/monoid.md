@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(monoid op ctor)</samp><br>
+
+---
 
  <samp>
 (__monoid__ op ctor)<br>
@@ -32,7 +35,7 @@ must return an identity value for it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L242-L249):
+Source code @ [github]():
 
 ```clj
 (defn monoid
@@ -46,13 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:242-249](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L242-L249)</ins>
+
 </pre>
 
 -->
@@ -97,18 +94,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "monoid",
  :signature ["[op ctor]"],
+ :name-encode "monoid",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/monoid",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/monoid"},
  :full-name-encode "clojure.core.reducers/monoid",
  :source {:code "(defn monoid\n  [op ctor]\n  (fn m\n    ([] (ctor))\n    ([a b] (op a b))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [242 249]},
+          :lines [242 249],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L242-L249"},
+ :usage ["(monoid op ctor)"],
  :full-name "clojure.core.reducers/monoid",
- :clj-symbol "clojure.core.reducers/monoid",
- :docstring "Builds a combining fn out of the supplied operator and identity\nconstructor. op must be associative and ctor called with no args\nmust return an identity value for it."}
+ :docstring "Builds a combining fn out of the supplied operator and identity\nconstructor. op must be associative and ctor called with no args\nmust return an identity value for it.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/monoid.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(with-pprint-dispatch function & body)</samp><br>
+
+---
 
  <samp>
 (__with-pprint-dispatch__ function & body)<br>
@@ -30,7 +33,7 @@ Execute body with the pretty print dispatch function bound to function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L147-L151):
+Source code @ [github]():
 
 ```clj
 (defmacro with-pprint-dispatch
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:147-151](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L147-L151)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "with-pprint-dispatch",
  :signature ["[function & body]"],
+ :name-encode "with-pprint-dispatch",
  :history [["+" "0.0-3255"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.pprint/with-pprint-dispatch",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/with-pprint-dispatch"},
  :full-name-encode "cljs.pprint/with-pprint-dispatch",
  :source {:code "(defmacro with-pprint-dispatch\n  [function & body]\n  `(cljs.core/binding [cljs.pprint/*print-pprint-dispatch* ~function]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [147 151]},
+          :lines [147 151],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L147-L151"},
+ :usage ["(with-pprint-dispatch function & body)"],
  :full-name "cljs.pprint/with-pprint-dispatch",
- :clj-symbol "clojure.pprint/with-pprint-dispatch",
- :docstring "Execute body with the pretty print dispatch function bound to function."}
+ :docstring "Execute body with the pretty print dispatch function bound to function.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/with-pprint-dispatch.cljsdoc"}
 
 ```
 

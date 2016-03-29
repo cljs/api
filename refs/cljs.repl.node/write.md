@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(write out js)</samp><br>
+
+---
 
  <samp>
 (__write__ out js)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L35-L38):
+Source code @ [github]():
 
 ```clj
 (defn write [^BufferedWriter out ^String js]
@@ -35,13 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:35-38](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L35-L38)</ins>
+
 </pre>
 
 -->
@@ -82,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "write",
- :type "function",
  :signature ["[out js]"],
+ :name-encode "write",
+ :history [["+" "0.0-2629"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/write",
  :source {:code "(defn write [^BufferedWriter out ^String js]\n  (.write out js)\n  (.write out (int 0)) ;; terminator\n  (.flush out))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [35 38]},
+          :lines [35 38],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L35-L38"},
+ :usage ["(write out js)"],
  :full-name "cljs.repl.node/write",
- :full-name-encode "cljs.repl.node/write",
- :history [["+" "0.0-2629"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/write.cljsdoc"}
 
 ```
 

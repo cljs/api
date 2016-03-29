@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(HashMap. meta count hashobj __hash)</samp><br>
+
+---
 
  <samp>
 (__HashMap.__ meta count hashobj __hash)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3737-L3828):
+Source code @ [github]():
 
 ```clj
 (deftype HashMap [meta count hashobj ^:mutable __hash]
@@ -123,11 +126,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:3737-3828](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3737-L3828)</ins>
+
 </pre>
 
 -->
@@ -178,6 +177,7 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3737 3828]},
+ :usage ["(HashMap. meta count hashobj __hash)"],
  :full-name "cljs.core/HashMap",
  :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 

@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(doto x & forms)</samp><br>
+
+---
 
  <samp>
 (__doto__ x & forms)<br>
@@ -34,7 +37,7 @@ are evaluated in order.  Returns x.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3724-L3739):
+Source code @ [github]():
 
 ```clj
 (defmacro doto
@@ -53,11 +56,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:3724-3739](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3724-L3739)</ins>
+
 </pre>
 
 -->
@@ -102,18 +101,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "doto",
  :signature ["[x & forms]"],
+ :name-encode "doto",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/doto",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/doto"},
  :full-name-encode "cljs.core/doto",
  :source {:code "(defmacro doto\n  [x & forms]\n    (let [gx (gensym)]\n      `(let [~gx ~x]\n         ~@(map (fn [f]\n                  (if (seq? f)\n                    `(~(first f) ~gx ~@(next f))\n                    `(~f ~gx)))\n                forms)\n         ~gx)))",
           :title "Source code",
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [3724 3739]},
+          :lines [3724 3739],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3724-L3739"},
+ :usage ["(doto x & forms)"],
  :full-name "cljs.core/doto",
- :clj-symbol "clojure.core/doto",
- :docstring "Evaluates x then calls all of the methods and functions with the\nvalue of x supplied at the front of the given arguments.  The forms\nare evaluated in order.  Returns x.\n\n(doto (new java.util.HashMap) (.put \"a\" 1) (.put \"b\" 2))"}
+ :docstring "Evaluates x then calls all of the methods and functions with the\nvalue of x supplied at the front of the given arguments.  The forms\nare evaluated in order.  Returns x.\n\n(doto (new java.util.HashMap) (.put \"a\" 1) (.put \"b\" 2))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/doto.cljsdoc"}
 
 ```
 

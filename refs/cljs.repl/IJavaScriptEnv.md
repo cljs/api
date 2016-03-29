@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L114-L118):
+Source code @ [github]():
 
 ```clj
 (defprotocol IJavaScriptEnv
@@ -31,12 +31,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:114-118](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L114-L118)</ins>
+
 </pre>
 
 -->
@@ -77,14 +72,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "IJavaScriptEnv",
+ :name-encode "IJavaScriptEnv",
+ :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.repl/IJavaScriptEnv",
  :source {:code "(defprotocol IJavaScriptEnv\n  (-setup [repl-env opts] \"initialize the environment\")\n  (-evaluate [repl-env filename line js] \"evaluate a javascript string\")\n  (-load [repl-env provides url] \"load code at url into the environment\")\n  (-tear-down [repl-env] \"dispose of the environment\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [114 118]},
+          :lines [116 120],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L116-L120"},
  :methods [{:name "-setup",
             :signature ["[repl-env opts]"],
             :docstring "initialize the environment"}
@@ -98,7 +96,7 @@ The API data for this symbol:
             :signature ["[repl-env]"],
             :docstring "dispose of the environment"}],
  :full-name "cljs.repl/IJavaScriptEnv",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/IJavaScriptEnv.cljsdoc"}
 
 ```
 

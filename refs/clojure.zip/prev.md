@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(prev loc)</samp><br>
+
+---
 
  <samp>
 (__prev__ loc)<br>
@@ -31,7 +34,7 @@ at the root, returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L221-L230):
+Source code @ [github]():
 
 ```clj
 (defn prev
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:221-230](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L221-L230)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "prev",
  :signature ["[loc]"],
+ :name-encode "prev",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/prev",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/prev"},
  :full-name-encode "clojure.zip/prev",
  :source {:code "(defn prev\n  [loc]\n    (if-let [lloc (left loc)]\n      (loop [loc lloc]\n        (if-let [child (and (branch? loc) (down loc))]\n          (recur (rightmost child))\n          loc))\n      (up loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [221 230]},
+          :lines [221 230],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L221-L230"},
+ :usage ["(prev loc)"],
  :full-name "clojure.zip/prev",
- :clj-symbol "clojure.zip/prev",
- :docstring "Moves to the previous loc in the hierarchy, depth-first. If already\nat the root, returns nil."}
+ :docstring "Moves to the previous loc in the hierarchy, depth-first. If already\nat the root, returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/prev.cljsdoc"}
 
 ```
 

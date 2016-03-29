@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(run-tests-block env-or-ns & namespaces)</samp><br>
+
+---
 
  <samp>
 (__run-tests-block__ env-or-ns & namespaces)<br>
@@ -28,7 +31,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L248-L281):
+Source code @ [github]():
 
 ```clj
 (defmacro run-tests-block
@@ -69,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:248-281](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L248-L281)</ins>
+
 </pre>
 
 -->
@@ -116,17 +114,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "run-tests-block",
  :signature ["[env-or-ns & namespaces]"],
+ :name-encode "run-tests-block",
  :history [["+" "0.0-2814"]],
  :type "macro",
  :full-name-encode "cljs.test/run-tests-block",
  :source {:code "(defmacro run-tests-block\n  [env-or-ns & namespaces]\n  (assert (every?\n           (fn [[quote ns]] (and (= quote 'quote) (symbol? ns)))\n           namespaces)\n          \"All arguments to run-tests must be quoted symbols\")\n  (let [is-ns (ns? env-or-ns)\n        env (gensym \"env\")\n        summary (gensym \"summary\")]\n    `(let [~env ~(if is-ns\n                   `(cljs.test/empty-env)\n                   env-or-ns)\n           ~summary (cljs.core/volatile!\n                     {:test 0 :pass 0 :fail 0 :error 0\n                      :type :summary})]\n       (concat ~@(map\n                  (fn [ns]\n                    `(concat (cljs.test/test-ns-block ~env ~ns)\n                             [(fn []\n                                (cljs.core/vswap!\n                                 ~summary\n                                 (partial merge-with +)\n                                 (:report-counters\n                                  (cljs.test/get-and-clear-env!))))]))\n                  (if is-ns\n                    (concat [env-or-ns] namespaces)\n                    namespaces))\n               [(fn []\n                   (cljs.test/set-env! ~env)\n                   (do-report (deref ~summary))\n                   (report (assoc (deref ~summary) :type :end-run-tests))\n                   (cljs.test/clear-env!))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [248 281]},
+          :lines [248 281],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L248-L281"},
+ :usage ["(run-tests-block env-or-ns & namespaces)"],
  :full-name "cljs.test/run-tests-block",
- :docstring "Like test-vars, but returns a block for further composition and\nlater execution."}
+ :docstring "Like test-vars, but returns a block for further composition and\nlater execution.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/run-tests-block.cljsdoc"}
 
 ```
 

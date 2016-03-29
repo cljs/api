@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(long-array size-or-seq)</samp><br>
+<samp>(long-array size init-val-or-seq)</samp><br>
+
+---
 
  <samp>
 (__long-array__ size-or-seq)<br>
@@ -34,7 +38,7 @@ with Clojure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3366-L3386):
+Source code @ [github]():
 
 ```clj
 (defn long-array
@@ -62,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3366-3386](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3366-L3386)</ins>
+
 </pre>
 
 -->
@@ -112,18 +111,24 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "long-array",
  :signature ["[size-or-seq]" "[size init-val-or-seq]"],
+ :name-encode "long-array",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/long-array",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/long-array"},
  :full-name-encode "cljs.core/long-array",
  :source {:code "(defn long-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (long-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3366 3386]},
+          :lines [3366 3386],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3366-L3386"},
+ :usage ["(long-array size-or-seq)"
+         "(long-array size init-val-or-seq)"],
  :full-name "cljs.core/long-array",
- :clj-symbol "clojure.core/long-array",
- :docstring "Creates an array of longs. Does not coerce array, provided for compatibility\nwith Clojure."}
+ :docstring "Creates an array of longs. Does not coerce array, provided for compatibility\nwith Clojure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/long-array.cljsdoc"}
 
 ```
 

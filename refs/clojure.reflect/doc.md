@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(doc sym)</samp><br>
+
+---
 
  <samp>
 (__doc__ sym)<br>
@@ -28,7 +31,7 @@ documentation information at the repl.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L45-L49):
+Source code @ [github]():
 
 ```clj
 (defn doc
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[reflect.cljs:45-49](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L45-L49)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 {:ns "clojure.reflect",
  :name "doc",
  :signature ["[sym]"],
+ :name-encode "doc",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "clojure.reflect/doc",
  :source {:code "(defn doc\n  [sym]\n  (meta sym print-doc))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/reflect.cljs",
-          :lines [45 49]},
+          :lines [45 49],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/reflect.cljs#L45-L49"},
+ :usage ["(doc sym)"],
  :full-name "clojure.reflect/doc",
- :docstring "Queries the reflection api with a fully qualified symbol, then prints\ndocumentation information at the repl."}
+ :docstring "Queries the reflection api with a fully qualified symbol, then prints\ndocumentation information at the repl.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.reflect/doc.cljsdoc"}
 
 ```
 

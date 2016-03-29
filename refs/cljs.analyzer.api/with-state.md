@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(with-state state body)</samp><br>
+
+---
 
  <samp>
 (__with-state__ state body)<br>
@@ -27,7 +30,7 @@ Run the body with the given compilation state Atom<Map>.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L25-L29):
+Source code @ [github]():
 
 ```clj
 (defmacro with-state
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:25-29](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L25-L29)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "with-state",
  :signature ["[state body]"],
+ :name-encode "with-state",
  :history [["+" "1.7.10"]],
  :type "macro",
  :full-name-encode "cljs.analyzer.api/with-state",
  :source {:code "(defmacro with-state\n  [state body]\n  `(env/with-compiler-env ~state\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [25 29]},
+          :lines [25 29],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L25-L29"},
+ :usage ["(with-state state body)"],
  :full-name "cljs.analyzer.api/with-state",
- :docstring "Run the body with the given compilation state Atom<Map>."}
+ :docstring "Run the body with the given compilation state Atom<Map>.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/with-state.cljsdoc"}
 
 ```
 

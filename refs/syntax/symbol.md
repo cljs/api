@@ -92,7 +92,7 @@ To signify an unevaluated symbol, precede it with a quote:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329):
+Reader code @ [github]():
 
 ```clj
 (defn- read-symbol
@@ -128,13 +128,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:303-329](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329)</ins>
+
 </pre>
 -->
 
@@ -167,25 +161,28 @@ The API data for this symbol:
 
 ```clj
 {:description "A symbol represents a name.  When evaluated, its result will be the value that the symbol\nis bound to.\n\nSome naming rules:\n\n- must not begin with a number\n- can contain special characters `. * + ! - _ ? $ % & = < > : #`, as long as:\n  - if starting with `-`, `+`, or `.`, next character cannot be numeric (would be interpreted as number)\n  - cannot start with `:` and `#`\n- symbols starting or ending with a decimal are reserved for interop purposes (see [doc:syntax/dot])\n\nSymbols can use a single `/` for an optional namespace. See [doc:syntax/namespace]:\n\n- `foo/bar` => value of `bar` in the `foo` namespace\n\nTo access symbols in the global JavaScript context, use the [doc:syntax/js-namespace]:\n\n- `js/document` => global `document` JavaScript object\n\nDots can also be included in symbols for direct JS property access, see [doc:syntax/dot]:\n\n- `js/console.log` => the `console.log` JavaScript function",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#symbols",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "symbol",
+ :name-encode "symbol",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["cljs.core/symbol" "cljs.core/symbol?"],
  :full-name-encode "syntax/symbol",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [303 329]}],
+                  :lines [303 329],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329"}),
  :usage ["foo" "foo/bar"],
  :examples [{:id "cd60a5",
              :content "The following has two symbols, `def` and `a`:\n\n```clj\n(def a 1)\n```\n\nThe evaluation of the symbols is controlled by the evaluation of the list `(def\na 1)`.  `def` evaluates to a special form, which suppresses the evaluation of\n`a` since it is just being used as a name for the bound value `1`.\n\nWhen a symbol is by itself, it will evaluated to 1:\n\n```clj\na\n;;=> 1\n```\n\nTo signify an unevaluated symbol, precede it with a quote:\n\n```clj\n'a\n;;=> a\n```"}],
- :edn-doc "https://github.com/edn-format/edn#symbols",
  :full-name "syntax/symbol",
  :display "symbol literal",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/symbol.cljsdoc"}
 
 ```
 

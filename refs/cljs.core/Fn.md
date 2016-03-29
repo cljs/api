@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1552"><img valign="middle" alt="[+] 0.0-1552" title="Added in 0.0-1552" src="https://img.shields.io/badge/+-0.0--1552-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Fn</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Fn.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Fn</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Fn.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Marker protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L432-L433):
+Source code @ [github]():
 
 ```clj
 (defprotocol Fn
@@ -36,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:432-433](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L432-L433)</ins>
+
 </pre>
 
 -->
@@ -85,18 +80,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Fn",
+ :name-encode "Fn",
  :history [["+" "0.0-1552"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Fn",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Fn.java"},
  :full-name-encode "cljs.core/Fn",
  :source {:code "(defprotocol Fn\n  \"Marker protocol\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [432 433]},
+          :lines [432 433],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L432-L433"},
  :full-name "cljs.core/Fn",
- :clj-symbol "clojure.lang/Fn",
- :docstring "Marker protocol"}
+ :docstring "Marker protocol",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Fn.cljsdoc"}
 
 ```
 

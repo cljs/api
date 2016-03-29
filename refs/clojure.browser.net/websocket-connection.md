@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(websocket-connection)</samp><br>
+<samp>(websocket-connection auto-reconnect?)</samp><br>
+<samp>(websocket-connection auto-reconnect? next-reconnect-fn)</samp><br>
+
+---
 
  <samp>
 (__websocket-connection__)<br>
@@ -28,7 +33,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L174-L180):
+Source code @ [github]():
 
 ```clj
 (defn websocket-connection
@@ -44,13 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[net.cljs:174-180](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L174-L180)</ins>
+
 </pre>
 
 -->
@@ -91,19 +90,25 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.net",
  :name "websocket-connection",
- :type "function",
  :signature ["[]"
              "[auto-reconnect?]"
              "[auto-reconnect? next-reconnect-fn]"],
+ :name-encode "websocket-connection",
+ :history [["+" "0.0-2911"]],
+ :type "function",
+ :full-name-encode "clojure.browser.net/websocket-connection",
  :source {:code "(defn websocket-connection\n  ([]\n     (websocket-connection nil nil))\n  ([auto-reconnect?]\n     (websocket-connection auto-reconnect? nil))\n  ([auto-reconnect? next-reconnect-fn]\n     (WebSocket. auto-reconnect? next-reconnect-fn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/net.cljs",
-          :lines [174 180]},
+          :lines [174 180],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/net.cljs#L174-L180"},
+ :usage ["(websocket-connection)"
+         "(websocket-connection auto-reconnect?)"
+         "(websocket-connection auto-reconnect? next-reconnect-fn)"],
  :full-name "clojure.browser.net/websocket-connection",
- :full-name-encode "clojure.browser.net/websocket-connection",
- :history [["+" "0.0-2911"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/websocket-connection.cljsdoc"}
 
 ```
 

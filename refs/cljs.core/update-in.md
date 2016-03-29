@@ -12,6 +12,13 @@
 </tr>
 </table>
 
+<samp>(update-in m \[k & ks\] f)</samp><br>
+<samp>(update-in m \[k & ks\] f a)</samp><br>
+<samp>(update-in m \[k & ks\] f a b)</samp><br>
+<samp>(update-in m \[k & ks\] f a b c)</samp><br>
+<samp>(update-in m \[k & ks\] f a b c & args)</samp><br>
+
+---
 
  <samp>
 (__update-in__ m \[k & ks\] f)<br>
@@ -61,7 +68,7 @@ created.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4701-L4726):
+Source code @ [github]():
 
 ```clj
 (defn update-in
@@ -91,12 +98,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4701-4726](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4701-L4726)</ins>
+
 </pre>
 
 -->
@@ -146,19 +148,28 @@ The API data for this symbol:
              "[m [k & ks] f a b]"
              "[m [k & ks] f a b c]"
              "[m [k & ks] f a b c & args]"],
+ :name-encode "update-in",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/update-in",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/update-in"},
  :related ["cljs.core/assoc-in" "cljs.core/get-in"],
  :full-name-encode "cljs.core/update-in",
  :source {:code "(defn update-in\n  ([m [k & ks] f]\n   (if ks\n     (assoc m k (update-in (get m k) ks f))\n     (assoc m k (f (get m k)))))\n  ([m [k & ks] f a]\n   (if ks\n     (assoc m k (update-in (get m k) ks f a))\n     (assoc m k (f (get m k) a))))\n  ([m [k & ks] f a b]\n   (if ks\n     (assoc m k (update-in (get m k) ks f a b))\n     (assoc m k (f (get m k) a b))))\n  ([m [k & ks] f a b c]\n   (if ks\n     (assoc m k (update-in (get m k) ks f a b c))\n     (assoc m k (f (get m k) a b c))))\n  ([m [k & ks] f a b c & args]\n   (if ks\n     (assoc m k (apply update-in (get m k) ks f a b c args))\n     (assoc m k (apply f (get m k) a b c args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4701 4726]},
+          :lines [4701 4726],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4701-L4726"},
+ :usage ["(update-in m [k & ks] f)"
+         "(update-in m [k & ks] f a)"
+         "(update-in m [k & ks] f a b)"
+         "(update-in m [k & ks] f a b c)"
+         "(update-in m [k & ks] f a b c & args)"],
  :full-name "cljs.core/update-in",
- :clj-symbol "clojure.core/update-in",
- :docstring "'Updates' a value in a nested associative structure, where ks is a\nsequence of keys and f is a function that will take the old value\nand any supplied args and return the new value, and returns a new\nnested structure.  If any levels do not exist, hash-maps will be\ncreated."}
+ :docstring "'Updates' a value in a nested associative structure, where ks is a\nsequence of keys and f is a function that will take the old value\nand any supplied args and return the new value, and returns a new\nnested structure.  If any levels do not exist, hash-maps will be\ncreated.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/update-in.cljsdoc"}
 
 ```
 

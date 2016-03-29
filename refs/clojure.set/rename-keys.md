@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rename-keys map kmap)</samp><br>
+
+---
 
  <samp>
 (__rename-keys__ map kmap)<br>
@@ -30,7 +33,7 @@ Returns the map with the keys in kmap renamed to the vals in kmap
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L72-L80):
+Source code @ [github]():
 
 ```clj
 (defn rename-keys
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:72-80](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L72-L80)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "rename-keys",
  :signature ["[map kmap]"],
+ :name-encode "rename-keys",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/rename-keys",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/rename-keys"},
  :full-name-encode "clojure.set/rename-keys",
  :source {:code "(defn rename-keys\n  [map kmap]\n    (reduce\n     (fn [m [old new]]\n       (if (contains? map old)\n         (assoc m new (get map old))\n         m))\n     (apply dissoc map (keys kmap)) kmap))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [72 80]},
+          :lines [72 80],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L72-L80"},
+ :usage ["(rename-keys map kmap)"],
  :full-name "clojure.set/rename-keys",
- :clj-symbol "clojure.set/rename-keys",
- :docstring "Returns the map with the keys in kmap renamed to the vals in kmap"}
+ :docstring "Returns the map with the keys in kmap renamed to the vals in kmap",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/rename-keys.cljsdoc"}
 
 ```
 

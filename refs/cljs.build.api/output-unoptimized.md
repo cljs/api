@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(output-unoptimized opts & sources)</samp><br>
+
+---
 
  <samp>
 (__output-unoptimized__ opts & sources)<br>
@@ -32,7 +35,7 @@ libraries.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L188-L196):
+Source code @ [github]():
 
 ```clj
 (defn output-unoptimized
@@ -44,13 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:188-196](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L188-L196)</ins>
+
 </pre>
 
 -->
@@ -92,17 +89,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "output-unoptimized",
  :signature ["[opts & sources]"],
+ :name-encode "output-unoptimized",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/output-unoptimized",
  :source {:code "(defn output-unoptimized\n  [opts & sources]\n  (apply closure/output-unoptimized opts sources))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [188 196]},
+          :lines [188 196],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L188-L196"},
+ :usage ["(output-unoptimized opts & sources)"],
  :full-name "cljs.build.api/output-unoptimized",
- :docstring "Ensure that all JavaScript source files are on disk (not in jars),\nwrite the goog deps file including only the libraries that are being\nused and write the deps file for the current project.\n\nThe deps file for the current project will include third-party\nlibraries."}
+ :docstring "Ensure that all JavaScript source files are on disk (not in jars),\nwrite the goog deps file including only the libraries that are being\nused and write the deps file for the current project.\n\nThe deps file for the current project will include third-party\nlibraries.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/output-unoptimized.cljsdoc"}
 
 ```
 

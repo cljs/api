@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Reduced</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Reduced.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Reduced</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Reduced.java)
 </td>
 </tr>
 </table>
 
+<samp>(Reduced. val)</samp><br>
+
+---
 
  <samp>
 (__Reduced.__ val)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1283-L1285):
+Source code @ [github]():
 
 ```clj
 (deftype Reduced [val]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1283-1285](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1283-L1285)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "Reduced",
  :signature ["[val]"],
+ :name-encode "Reduced",
  :history [["+" "0.0-1211"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/Reduced",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Reduced.java"},
  :full-name-encode "cljs.core/Reduced",
  :source {:code "(deftype Reduced [val]\n  IDeref\n  (-deref [o] val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1283 1285]},
+          :lines [1283 1285],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1283-L1285"},
+ :usage ["(Reduced. val)"],
  :full-name "cljs.core/Reduced",
- :clj-symbol "clojure.lang/Reduced"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Reduced.cljsdoc"}
 
 ```
 

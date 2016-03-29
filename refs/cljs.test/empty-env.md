@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(empty-env)</samp><br>
+<samp>(empty-env reporter)</samp><br>
+
+---
 
  <samp>
 (__empty-env__)<br>
@@ -35,7 +39,7 @@ To create your own reporter see cljs.test/report
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L252-L267):
+Source code @ [github]():
 
 ```clj
 (defn empty-env
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:252-267](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L252-L267)</ins>
+
 </pre>
 
 -->
@@ -101,17 +100,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "empty-env",
  :signature ["[]" "[reporter]"],
+ :name-encode "empty-env",
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/empty-env",
  :source {:code "(defn empty-env\n  ([] (empty-env ::default))\n  ([reporter]\n   (cond-> {:report-counters {:test 0 :pass 0 :fail 0 :error 0}\n            :testing-vars ()\n            :testing-contexts ()\n            :formatter pr-str\n            :reporter reporter}\n     (= ::pprint reporter) (assoc :reporter ::default\n                             :formatter pprint/pprint))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [252 267]},
+          :lines [252 267],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L252-L267"},
+ :usage ["(empty-env)" "(empty-env reporter)"],
  :full-name "cljs.test/empty-env",
- :docstring "Generates a testing environment with a reporter.\n(empty-env) - uses the :cljs.test/default reporter.\n(empty-env :cljs.test/pprint) - pretty prints all data structures. \n(empty-env reporter) - uses a reporter of your choosing.\n\nTo create your own reporter see cljs.test/report"}
+ :docstring "Generates a testing environment with a reporter.\n(empty-env) - uses the :cljs.test/default reporter.\n(empty-env :cljs.test/pprint) - pretty prints all data structures. \n(empty-env reporter) - uses a reporter of your choosing.\n\nTo create your own reporter see cljs.test/report",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/empty-env.cljsdoc"}
 
 ```
 

@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(distinct? x)</samp><br>
+<samp>(distinct? x y)</samp><br>
+<samp>(distinct? x y & more)</samp><br>
+
+---
 
  <samp>
 (__distinct?__ x)<br>
@@ -78,7 +83,7 @@ Returns true if no two of the arguments are =
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2118-L2132):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean distinct?
@@ -101,12 +106,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2118-2132](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2118-L2132)</ins>
+
 </pre>
 
 -->
@@ -153,21 +153,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "distinct?",
  :signature ["[x]" "[x y]" "[x y & more]"],
+ :name-encode "distinctQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/distinct?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/distinct?"},
  :related ["cljs.core/distinct"],
  :full-name-encode "cljs.core/distinctQMARK",
  :source {:code "(defn ^boolean distinct?\n  ([x] true)\n  ([x y] (not (= x y)))\n  ([x y & more]\n     (if (not (= x y))\n     (loop [s #{x y} xs more]\n       (let [x (first xs)\n             etc (next xs)]\n         (if xs\n           (if (contains? s x)\n             false\n             (recur (conj s x) etc))\n           true)))\n     false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2118 2132]},
+          :lines [2118 2132],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2118-L2132"},
+ :usage ["(distinct? x)" "(distinct? x y)" "(distinct? x y & more)"],
  :examples [{:id "b32799",
              :content "```clj\n(distinct? 1)\n;;=> true\n\n(distinct? 1 2)\n;;=> true\n\n(distinct? 1 1)\n;;=> false\n\n(distinct? 1 2 3)\n;;=> true\n\n(distinct? 1 2 1)\n;;=> false\n```\n\nApply it a collection:\n\n```clj\n(apply distinct? [1 2 3])\n;;=> true\n\n(apply distinct? [1 2 1])\n;;=> false\n```"}],
  :full-name "cljs.core/distinct?",
- :clj-symbol "clojure.core/distinct?",
- :docstring "Returns true if no two of the arguments are ="}
+ :docstring "Returns true if no two of the arguments are =",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/distinctQMARK.cljsdoc"}
 
 ```
 

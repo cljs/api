@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(copy-arguments dest)</samp><br>
+
+---
 
  <samp>
 (__copy-arguments__ dest)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2741-L2746):
+Source code @ [github]():
 
 ```clj
 (core/defmacro copy-arguments [dest]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2741-2746](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2741-L2746)</ins>
+
 </pre>
 
 -->
@@ -83,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "copy-arguments",
- :type "macro",
  :signature ["[dest]"],
+ :name-encode "copy-arguments",
+ :history [["+" "1.7.10"]],
+ :type "macro",
+ :full-name-encode "cljs.core/copy-arguments",
  :source {:code "(core/defmacro copy-arguments [dest]\n  `(let [len# (alength (js-arguments))]\n     (loop [i# 0]\n       (when (< i# len#)\n         (.push ~dest (aget (js-arguments) i#))\n         (recur (inc i#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2741 2746]},
+          :lines [2741 2746],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2741-L2746"},
+ :usage ["(copy-arguments dest)"],
  :full-name "cljs.core/copy-arguments",
- :full-name-encode "cljs.core/copy-arguments",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/copy-arguments.cljsdoc"}
 
 ```
 

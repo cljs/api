@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reduced x)</samp><br>
+
+---
 
  <samp>
 (__reduced__ x)<br>
@@ -30,7 +33,7 @@ Wraps x in a way such that a reduce will terminate with the value x
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1287-L1290):
+Source code @ [github]():
 
 ```clj
 (defn reduced
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1287-1290](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1287-L1290)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "reduced",
  :signature ["[x]"],
+ :name-encode "reduced",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reduced",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reduced"},
  :full-name-encode "cljs.core/reduced",
  :source {:code "(defn reduced\n  [x]\n  (Reduced. x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1287 1290]},
+          :lines [1287 1290],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1287-L1290"},
+ :usage ["(reduced x)"],
  :full-name "cljs.core/reduced",
- :clj-symbol "clojure.core/reduced",
- :docstring "Wraps x in a way such that a reduce will terminate with the value x"}
+ :docstring "Wraps x in a way such that a reduce will terminate with the value x",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduced.cljsdoc"}
 
 ```
 

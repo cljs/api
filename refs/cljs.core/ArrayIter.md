@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ArrayIter</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ArrayIter.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ArrayIter</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ArrayIter.java)
 </td>
 </tr>
 </table>
 
+<samp>(ArrayIter. arr i)</samp><br>
+
+---
 
  <samp>
 (__ArrayIter.__ arr i)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3651-L3658):
+Source code @ [github]():
 
 ```clj
 (deftype ArrayIter [arr ^:mutable i]
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3651-3658](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3651-L3658)</ins>
+
 </pre>
 
 -->
@@ -92,17 +90,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ArrayIter",
  :signature ["[arr i]"],
+ :name-encode "ArrayIter",
  :history [["+" "0.0-2301"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/ArrayIter",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ArrayIter.java"},
  :full-name-encode "cljs.core/ArrayIter",
  :source {:code "(deftype ArrayIter [arr ^:mutable i]\n  Object\n  (hasNext [_] (< i (alength arr)))\n  (next [_]\n    (let [ret (aget arr i)]\n      (set! i (inc i))\n      ret))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3651 3658]},
+          :lines [3651 3658],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3651-L3658"},
+ :usage ["(ArrayIter. arr i)"],
  :full-name "cljs.core/ArrayIter",
- :clj-symbol "clojure.lang/ArrayIter"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ArrayIter.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(special-symbol? x)</samp><br>
+
+---
 
  <samp>
 (__special-symbol?__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10201-L10205):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean special-symbol? [x]
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10201-10205](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10201-L10205)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,22 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "special-symbol?",
  :signature ["[x]"],
+ :name-encode "special-symbolQMARK",
  :history [["+" "0.0-1803"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/special-symbol?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/special-symbol?"},
  :full-name-encode "cljs.core/special-symbolQMARK",
  :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try catch finally\n       recur new set! ns deftype* defrecord* . js* & quote var}\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10201 10205]},
+          :lines [10201 10205],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10201-L10205"},
+ :usage ["(special-symbol? x)"],
  :full-name "cljs.core/special-symbol?",
- :clj-symbol "clojure.core/special-symbol?"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/special-symbolQMARK.cljsdoc"}
 
 ```
 

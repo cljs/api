@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(inc x)</samp><br>
+
+---
 
  <samp>
 (__inc__ x)<br>
@@ -40,7 +43,7 @@ Returns a number one greater than num.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1277-L1279):
+Function code @ [github]():
 
 ```clj
 (defn inc
@@ -51,19 +54,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1277-1279](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1277-L1279)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1053-L1054):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric inc [x]
@@ -74,12 +72,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1053-1054](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1053-L1054)</ins>
+
 </pre>
 -->
 
@@ -123,25 +116,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "inc",
  :signature ["[x]"],
+ :name-encode "inc",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/inc",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/inc"},
  :related ["cljs.core/dec"],
  :full-name-encode "cljs.core/inc",
  :source {:code "(defn inc\n  [x] (cljs.core/+ x 1))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1277 1279]},
+          :lines [1277 1279],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1277-L1279"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric inc [x]\n  `(+ ~x 1))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1053 1054]}],
+                  :lines [1053 1054],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1053-L1054"}],
+ :usage ["(inc x)"],
  :full-name "cljs.core/inc",
- :clj-symbol "clojure.core/inc",
- :docstring "Returns a number one greater than num."}
+ :docstring "Returns a number one greater than num.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/inc.cljsdoc"}
 
 ```
 

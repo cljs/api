@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Vector.fromArray xs)</samp><br>
+
+---
 
  <samp>
 (__Vector.fromArray__ xs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2861):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.Vector/fromArray (fn [xs] (Vector. nil xs nil)))
@@ -32,11 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:2861](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2861)</ins>
+
 </pre>
 
 -->
@@ -88,6 +87,7 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2861]},
+ :usage ["(Vector.fromArray xs)"],
  :full-name "cljs.core/Vector.fromArray",
  :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 

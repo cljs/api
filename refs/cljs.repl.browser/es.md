@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L26):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic es nil)
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:26](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L26)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "es",
+ :name-encode "es",
+ :history [["+" "0.0-3148"]],
  :type "dynamic var",
+ :full-name-encode "cljs.repl.browser/es",
  :source {:code "(def ^:dynamic es nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [26]},
+          :lines [26],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L26"},
  :full-name "cljs.repl.browser/es",
- :full-name-encode "cljs.repl.browser/es",
- :history [["+" "0.0-3148"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/es.cljsdoc"}
 
 ```
 

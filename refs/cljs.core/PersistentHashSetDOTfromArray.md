@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentHashSet.fromArray items no-clone)</samp><br>
+
+---
 
  <samp>
 (__PersistentHashSet.fromArray__ items no-clone)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8287-L8301):
+Source code @ [github]():
 
 ```clj
 (set! (.-fromArray PersistentHashSet)
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8287-8301](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8287-L8301)</ins>
+
 </pre>
 
 -->
@@ -93,6 +91,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentHashSet.fromArray",
  :signature ["[items no-clone]"],
+ :name-encode "PersistentHashSetDOTfromArray",
  :history [["+" "0.0-1443"]],
  :parent-type "PersistentHashSet",
  :type "function",
@@ -100,10 +99,13 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentHashSet)\n  (fn [items ^boolean no-clone]\n    (let [len (alength items)]\n      (if (<= len (.-HASHMAP-THRESHOLD PersistentArrayMap))\n        (let [arr (if no-clone items (aclone items))]\n          (loop [i 0\n                 out (transient (.-EMPTY PersistentArrayMap))]\n            (if (< i len)\n              (recur (inc i) (-assoc! out (aget items i) nil))\n              (PersistentHashSet. nil (-persistent! out) nil))))\n       (loop [i 0\n              out (transient (.-EMPTY PersistentHashSet))]\n         (if (< i len)\n           (recur (inc i) (-conj! out (aget items i)))\n           (-persistent! out)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8287 8301]},
- :full-name "cljs.core/PersistentHashSet.fromArray"}
+          :lines [8287 8301],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8287-L8301"},
+ :usage ["(PersistentHashSet.fromArray items no-clone)"],
+ :full-name "cljs.core/PersistentHashSet.fromArray",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSetDOTfromArray.cljsdoc"}
 
 ```
 

@@ -7,7 +7,7 @@
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentTreeSet.EMPTY</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentTreeSet.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentTreeSet.EMPTY</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentTreeSet.java)
 </td>
 </tr>
 </table>
@@ -20,7 +20,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8430-L8431):
+Source code @ [github]():
 
 ```clj
 (set! (.-EMPTY PersistentTreeSet)
@@ -31,12 +31,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8430-8431](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8430-L8431)</ins>
+
 </pre>
 
 -->
@@ -80,18 +75,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentTreeSet.EMPTY",
+ :name-encode "PersistentTreeSetDOTEMPTY",
  :history [["+" "0.0-1211"]],
  :parent-type "PersistentTreeSet",
  :type "var",
+ :clj-equiv {:full-name "clojure.lang/PersistentTreeSet.EMPTY",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentTreeSet.java"},
  :full-name-encode "cljs.core/PersistentTreeSetDOTEMPTY",
  :source {:code "(set! (.-EMPTY PersistentTreeSet)\n  (PersistentTreeSet. nil (.-EMPTY PersistentTreeMap) empty-unordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8430 8431]},
+          :lines [8430 8431],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8430-L8431"},
  :full-name "cljs.core/PersistentTreeSet.EMPTY",
- :clj-symbol "clojure.lang/PersistentTreeSet.EMPTY"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentTreeSetDOTEMPTY.cljsdoc"}
 
 ```
 

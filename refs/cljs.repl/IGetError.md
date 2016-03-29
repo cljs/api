@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L130-L140):
+Source code @ [github]():
 
 ```clj
 (defprotocol IGetError
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:130-140](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L130-L140)</ins>
+
 </pre>
 
 -->
@@ -83,19 +78,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "IGetError",
+ :name-encode "IGetError",
+ :history [["+" "0.0-2985"]],
  :type "protocol",
  :full-name-encode "cljs.repl/IGetError",
  :source {:code "(defprotocol IGetError\n  (-get-error [repl-env name env build-options]\n    \"Given a symbol representing a var holding an error, an analysis\n     environment, and the REPL/compiler options return the canonical error\n     representation:\n\n     {:value <string>\n      :stacktrace <string>}\n\n    :value should be the host environment JavaScript error message string.\n    :stacktrace should be the host JavaScript environment stacktrace string.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [130 140]},
+          :lines [132 142],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L132-L142"},
  :methods [{:name "-get-error",
             :signature ["[repl-env name env build-options]"],
             :docstring "Given a symbol representing a var holding an error, an analysis\n     environment, and the REPL/compiler options return the canonical error\n     representation:\n\n     {:value <string>\n      :stacktrace <string>}\n\n    :value should be the host environment JavaScript error message string.\n    :stacktrace should be the host JavaScript environment stacktrace string."}],
  :full-name "cljs.repl/IGetError",
- :history [["+" "0.0-2985"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/IGetError.cljsdoc"}
 
 ```
 

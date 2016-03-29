@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(join-fixtures fixtures)</samp><br>
+
+---
 
  <samp>
 (__join-fixtures__ fixtures)<br>
@@ -33,7 +36,7 @@ NOTE: Incompatible with map fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L504-L510):
+Source code @ [github]():
 
 ```clj
 (defn join-fixtures
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:504-510](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L504-L510)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "join-fixtures",
  :signature ["[fixtures]"],
+ :name-encode "join-fixtures",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/join-fixtures",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/join-fixtures"},
  :full-name-encode "cljs.test/join-fixtures",
  :source {:code "(defn join-fixtures\n  [fixtures]\n  (reduce compose-fixtures default-fixture fixtures))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [504 510]},
+          :lines [504 510],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L504-L510"},
+ :usage ["(join-fixtures fixtures)"],
  :full-name "cljs.test/join-fixtures",
- :clj-symbol "clojure.test/join-fixtures",
- :docstring "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty.\n\nNOTE: Incompatible with map fixtures."}
+ :docstring "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty.\n\nNOTE: Incompatible with map fixtures.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/join-fixtures.cljsdoc"}
 
 ```
 

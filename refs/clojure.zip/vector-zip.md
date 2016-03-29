@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(vector-zip root)</samp><br>
+
+---
 
  <samp>
 (__vector-zip__ root)<br>
@@ -30,7 +33,7 @@ Returns a zipper for nested vectors, given a root vector
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L42-L48):
+Source code @ [github]():
 
 ```clj
 (defn vector-zip
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:42-48](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L42-L48)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "vector-zip",
  :signature ["[root]"],
+ :name-encode "vector-zip",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/vector-zip",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/vector-zip"},
  :full-name-encode "clojure.zip/vector-zip",
  :source {:code "(defn vector-zip\n  [root]\n    (zipper vector?\n            seq\n            (fn [node children] (with-meta (vec children) (meta node)))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [42 48]},
+          :lines [42 48],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L42-L48"},
+ :usage ["(vector-zip root)"],
  :full-name "clojure.zip/vector-zip",
- :clj-symbol "clojure.zip/vector-zip",
- :docstring "Returns a zipper for nested vectors, given a root vector"}
+ :docstring "Returns a zipper for nested vectors, given a root vector",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/vector-zip.cljsdoc"}
 
 ```
 

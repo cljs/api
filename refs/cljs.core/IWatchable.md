@@ -22,7 +22,7 @@ Protocol for types that can be watched. Currently only implemented by Atom.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L665-L673):
+Source code @ [github]():
 
 ```clj
 (defprotocol IWatchable
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:665-673](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L665-L673)</ins>
+
 </pre>
 
 -->
@@ -86,15 +81,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IWatchable",
+ :name-encode "IWatchable",
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/IWatchable",
  :source {:code "(defprotocol IWatchable\n  \"Protocol for types that can be watched. Currently only implemented by Atom.\"\n  (-notify-watches [this oldval newval]\n    \"Calls all watchers with this, oldval and newval.\")\n  (-add-watch [this key f]\n    \"Adds a watcher function f to this. Keys must be unique per reference,\n     and can be used to remove the watch with -remove-watch.\")\n  (-remove-watch [this key]\n    \"Removes watcher that corresponds to key from this.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [665 673]},
+          :lines [665 673],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L665-L673"},
  :methods [{:name "-notify-watches",
             :signature ["[this oldval newval]"],
             :docstring "Calls all watchers with this, oldval and newval."}
@@ -105,7 +102,8 @@ The API data for this symbol:
             :signature ["[this key]"],
             :docstring "Removes watcher that corresponds to key from this."}],
  :full-name "cljs.core/IWatchable",
- :docstring "Protocol for types that can be watched. Currently only implemented by Atom."}
+ :docstring "Protocol for types that can be watched. Currently only implemented by Atom.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IWatchable.cljsdoc"}
 
 ```
 

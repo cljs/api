@@ -86,7 +86,7 @@ A function that works in Clojure and ClojureScript ([source]):
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514):
+Reader code @ [github]():
 
 ```clj
 (defn- read-cond
@@ -114,18 +114,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:496-514](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -147,13 +141,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -186,8 +174,11 @@ The API data for this symbol:
 
 ```clj
 {:description "(Only allowed in `.cljc` files or the REPL)\n\nAllows the reader to conditionally select from the given list of forms\ndepending on available \"feature\" keys.  For example:\n\n```clj\n#?(:clj \"Clojure\"\n   :cljs \"ClojureScript\")\n```\n\nClojureScript's reader is configured with the `:cljs` feature key, making the\nexpression above read as `\"ClojureScript\"`.  Clojure's reader is\nsimilarly configured with the `:clj` key.\n\nThis essentially allows us to write portable code for use in both Clojure and\nClojureScript.\n\n## For Macros\n\nReader conditionals are especially important when writing macros in\nClojureScript, since the macros may be handed off to Clojure for evaluation,\ndepending on the ClojureScript compiler version:\n\n| compiler version  | macros evaluated by |\n|-------------------|---------------------|\n| ClojureScript JVM | Clojure             |\n| ClojureScript JS  | ClojureScript       |\n\nThus, reader conditionals allow us to account for differences in both versions\nof the compiler.  See [doc:cljs.core/defmacro] for details.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc5"},
  :ns "syntax",
  :name "cond",
+ :name-encode "cond",
  :history [["+" "0.0-3190"]],
  :type "syntax",
  :related ["syntax/cond-splicing"],
@@ -197,19 +188,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [496 514]}
+                  :lines [496 514],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514"}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#?(...)"],
  :examples [{:id "eec90f",
              :content "```clj\n#?(:clj \"Clojure\" :cljs \"ClojureScript\")\n;;=> \"ClojureScript\"\n```\n\nA function that works in Clojure and ClojureScript ([source]):\n\n[source]:https://github.com/lymingtonprecision/route-ccrs/blob/c579aea05504736f2cfbd31c3c755f7e25fdad77/src/route_ccrs/manufacturing_methods.cljc#L8-L10\n\n```clj\n(defn str->int [s]\n  #?(:clj  (java.lang.Integer/parseInt s)\n     :cljs (js/parseInt s)))\n\n(str->int \"123\")\n;;=> 123\n```"}],
  :full-name "syntax/cond",
  :display "#? reader conditional",
- :clj-doc "http://clojure.org/reader#toc5"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/cond.cljsdoc"}
 
 ```
 

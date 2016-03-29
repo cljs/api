@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(extend-protocol p & specs)</samp><br>
+
+---
 
  <samp>
 (__extend-protocol__ p & specs)<br>
@@ -68,7 +71,7 @@ expands into:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core_deftype.clj#L831-L869):
+Source code @ [github]():
 
 ```clj
 (defmacro extend-protocol 
@@ -80,11 +83,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core_deftype.clj:831-869](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core_deftype.clj#L831-L869)</ins>
+
 </pre>
 
 -->
@@ -129,8 +128,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "extend-protocol",
  :signature ["[p & specs]"],
+ :name-encode "extend-protocol",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/extend-protocol",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/extend-protocol"},
  :related ["cljs.core/extend-type"],
  :full-name-encode "cljs.core/extend-protocol",
  :source {:code "(defmacro extend-protocol \n  [p & specs]\n  (emit-extend-protocol p specs))",
@@ -138,10 +140,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core_deftype.clj",
-          :lines [831 869]},
+          :lines [831 869],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core_deftype.clj#L831-L869"},
+ :usage ["(extend-protocol p & specs)"],
  :full-name "cljs.core/extend-protocol",
- :clj-symbol "clojure.core/extend-protocol",
- :docstring "Useful when you want to provide several implementations of the same\nprotocol all at once. Takes a single protocol and the implementation\nof that protocol for one or more types. Expands into calls to\nextend-type:\n\n(extend-protocol Protocol\n  AType\n    (foo [x] ...)\n    (bar [x y] ...)\n  BType\n    (foo [x] ...)\n    (bar [x y] ...)\n  AClass\n    (foo [x] ...)\n    (bar [x y] ...)\n  nil\n    (foo [x] ...)\n    (bar [x y] ...))\n\nexpands into:\n\n(do\n (clojure.core/extend-type AType Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type BType Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type AClass Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type nil Protocol \n   (foo [x] ...) \n   (bar [x y] ...)))"}
+ :docstring "Useful when you want to provide several implementations of the same\nprotocol all at once. Takes a single protocol and the implementation\nof that protocol for one or more types. Expands into calls to\nextend-type:\n\n(extend-protocol Protocol\n  AType\n    (foo [x] ...)\n    (bar [x y] ...)\n  BType\n    (foo [x] ...)\n    (bar [x y] ...)\n  AClass\n    (foo [x] ...)\n    (bar [x y] ...)\n  nil\n    (foo [x] ...)\n    (bar [x y] ...))\n\nexpands into:\n\n(do\n (clojure.core/extend-type AType Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type BType Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type AClass Protocol \n   (foo [x] ...) \n   (bar [x y] ...))\n (clojure.core/extend-type nil Protocol \n   (foo [x] ...) \n   (bar [x y] ...)))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/extend-protocol.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(make-hierarchy)</samp><br>
+
+---
 
  <samp>
 (__make-hierarchy__)<br>
@@ -38,7 +41,7 @@ Creates a hierarchy object for use with derive, isa? etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9675-L9677):
+Source code @ [github]():
 
 ```clj
 (defn make-hierarchy
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9675-9677](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9675-L9677)</ins>
+
 </pre>
 
 -->
@@ -99,8 +97,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "make-hierarchy",
  :signature ["[]"],
+ :name-encode "make-hierarchy",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/make-hierarchy",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/make-hierarchy"},
  :related ["cljs.core/ancestors"
            "cljs.core/descendants"
            "cljs.core/isa?"
@@ -109,12 +110,14 @@ The API data for this symbol:
  :source {:code "(defn make-hierarchy\n  [] {:parents {} :descendants {} :ancestors {}})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9675 9677]},
+          :lines [9675 9677],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9675-L9677"},
+ :usage ["(make-hierarchy)"],
  :full-name "cljs.core/make-hierarchy",
- :clj-symbol "clojure.core/make-hierarchy",
- :docstring "Creates a hierarchy object for use with derive, isa? etc."}
+ :docstring "Creates a hierarchy object for use with derive, isa? etc.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/make-hierarchy.cljsdoc"}
 
 ```
 

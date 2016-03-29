@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(with-read-known & body)</samp><br>
+
+---
 
  <samp>
 (__with-read-known__ & body)<br>
@@ -28,7 +31,7 @@ i.e. substituting true for :unknown if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L84-L89):
+Source code @ [github]():
 
 ```clj
 (defmacro with-read-known
@@ -41,11 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2850/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2850
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:84-89](https://github.com/clojure/clojurescript/blob/r2850/src/clj/cljs/repl.clj#L84-L89)</ins>
+
 </pre>
 
 -->
@@ -96,6 +95,7 @@ The API data for this symbol:
           :tag "r2850",
           :filename "src/clj/cljs/repl.clj",
           :lines [84 89]},
+ :usage ["(with-read-known & body)"],
  :full-name "cljs.repl/with-read-known",
  :docstring "Evaluates body with *read-eval* set to a \"known\" value,\ni.e. substituting true for :unknown if necessary.",
  :removed {:in "0.0-2911", :last-seen "0.0-2850"}}

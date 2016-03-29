@@ -22,7 +22,7 @@ Protocol for accessing the next items of a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L509-L515):
+Source code @ [github]():
 
 ```clj
 (defprotocol INext
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:509-515](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L509-L515)</ins>
+
 </pre>
 
 -->
@@ -84,20 +79,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "INext",
+ :name-encode "INext",
  :history [["+" "0.0-1424"]],
  :type "protocol",
  :full-name-encode "cljs.core/INext",
  :source {:code "(defprotocol INext\n  \"Protocol for accessing the next items of a collection.\"\n  (^clj-or-nil -next [coll]\n    \"Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [509 515]},
+          :lines [509 515],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L509-L515"},
  :methods [{:name "-next",
             :signature ["[coll]"],
             :docstring "Returns a new collection of coll without the first item. In contrast to\n     rest, it should return nil if there are no more items, e.g.\n     (next []) => nil\n     (next nil) => nil"}],
  :full-name "cljs.core/INext",
- :docstring "Protocol for accessing the next items of a collection."}
+ :docstring "Protocol for accessing the next items of a collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/INext.cljsdoc"}
 
 ```
 

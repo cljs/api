@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(rsubseq sc test key)</samp><br>
+<samp>(rsubseq sc start-test start-key end-test end-key)</samp><br>
+
+---
 
  <samp>
 (__rsubseq__ sc test key)<br>
@@ -50,7 +54,7 @@ which (test (.. sc comparator (compare ek key)) 0) is true
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8644-L8657):
+Source code @ [github]():
 
 ```clj
 (defn rsubseq
@@ -70,12 +74,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8644-8657](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8644-L8657)</ins>
+
 </pre>
 
 -->
@@ -122,19 +121,25 @@ The API data for this symbol:
  :name "rsubseq",
  :signature ["[sc test key]"
              "[sc start-test start-key end-test end-key]"],
+ :name-encode "rsubseq",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rsubseq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rsubseq"},
  :related ["cljs.core/subseq"],
  :full-name-encode "cljs.core/rsubseq",
  :source {:code "(defn rsubseq\n  ([sc test key]\n     (let [include (mk-bound-fn sc test key)]\n       (if (#{< <=} test)\n         (when-let [[e :as s] (-sorted-seq-from sc key false)]\n           (if (include e) s (next s)))\n         (take-while include (-sorted-seq sc false)))))\n  ([sc start-test start-key end-test end-key]\n     (when-let [[e :as s] (-sorted-seq-from sc end-key false)]\n       (take-while (mk-bound-fn sc start-test start-key)\n                   (if ((mk-bound-fn sc end-test end-key) e) s (next s))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8644 8657]},
+          :lines [8644 8657],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8644-L8657"},
+ :usage ["(rsubseq sc test key)"
+         "(rsubseq sc start-test start-key end-test end-key)"],
  :full-name "cljs.core/rsubseq",
- :clj-symbol "clojure.core/rsubseq",
- :docstring "sc must be a sorted collection, test(s) one of <, <=, > or\n>=. Returns a reverse seq of those entries with keys ek for\nwhich (test (.. sc comparator (compare ek key)) 0) is true"}
+ :docstring "sc must be a sorted collection, test(s) one of <, <=, > or\n>=. Returns a reverse seq of those entries with keys ek for\nwhich (test (.. sc comparator (compare ek key)) 0) is true",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rsubseq.cljsdoc"}
 
 ```
 

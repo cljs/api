@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(index xrel ks)</samp><br>
+
+---
 
  <samp>
 (__index__ xrel ks)<br>
@@ -31,7 +34,7 @@ set of the maps in xrel with the corresponding values of ks.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L87-L95):
+Source code @ [github]():
 
 ```clj
 (defn index
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:87-95](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L87-L95)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "index",
  :signature ["[xrel ks]"],
+ :name-encode "index",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/index",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/index"},
  :full-name-encode "clojure.set/index",
  :source {:code "(defn index\n  [xrel ks]\n    (reduce\n     (fn [m x]\n       (let [ik (select-keys x ks)]\n         (assoc m ik (conj (get m ik #{}) x))))\n     {} xrel))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [87 95]},
+          :lines [87 95],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L87-L95"},
+ :usage ["(index xrel ks)"],
  :full-name "clojure.set/index",
- :clj-symbol "clojure.set/index",
- :docstring "Returns a map of the distinct values of ks in the xrel mapped to a\nset of the maps in xrel with the corresponding values of ks."}
+ :docstring "Returns a map of the distinct values of ks in the xrel mapped to a\nset of the maps in xrel with the corresponding values of ks.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/index.cljsdoc"}
 
 ```
 

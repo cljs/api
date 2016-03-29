@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(dir ns)</samp><br>
+
+---
 
  <samp>
 (__dir__ ns)<br>
@@ -67,7 +70,7 @@ Prints a sorted directory of public vars in a namespace
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1279-L1283):
+Source code @ [github]():
 
 ```clj
 (defmacro dir
@@ -80,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:1279-1283](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1279-L1283)</ins>
+
 </pre>
 
 -->
@@ -131,21 +129,26 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "dir",
  :signature ["[ns]"],
+ :name-encode "dir",
  :history [["+" "0.0-2985"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.repl/dir",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/dir"},
  :related ["cljs.repl/find-doc" "cljs.repl/apropos"],
  :full-name-encode "cljs.repl/dir",
  :source {:code "(defmacro dir\n  [ns]\n  `(doseq [sym# (quote ~(sort (keys (ana-api/ns-publics ns))))]\n     (println sym#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1279 1283]},
+          :lines [1281 1285],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L1281-L1285"},
+ :usage ["(dir ns)"],
  :examples [{:id "9bf2b0",
              :content "```clj\n(require 'clojure.set)\n\n(dir clojure.set)\n;; Prints:\n;;  difference\n;;  index\n;;  intersection\n;;  join\n;;  map-invert\n;;  project\n;;  rename\n;;  rename-keys\n;;  select\n;;  subset?\n;;  superset?\n;;  union\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/dir",
- :clj-symbol "clojure.repl/dir",
- :docstring "Prints a sorted directory of public vars in a namespace"}
+ :docstring "Prints a sorted directory of public vars in a namespace",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/dir.cljsdoc"}
 
 ```
 

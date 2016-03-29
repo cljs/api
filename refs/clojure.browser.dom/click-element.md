@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(click-element e)</samp><br>
+
+---
 
  <samp>
 (__click-element__ e)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L147-L149):
+Source code @ [github]():
 
 ```clj
 (defn click-element
@@ -34,13 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:147-149](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L147-L149)</ins>
+
 </pre>
 
 -->
@@ -81,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "click-element",
- :type "function",
  :signature ["[e]"],
+ :name-encode "click-element",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/click-element",
  :source {:code "(defn click-element\n  [e]\n  (.click (ensure-element e) ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [147 149]},
+          :lines [147 149],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L147-L149"},
+ :usage ["(click-element e)"],
  :full-name "clojure.browser.dom/click-element",
- :full-name-encode "clojure.browser.dom/click-element",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/click-element.cljsdoc"}
 
 ```
 

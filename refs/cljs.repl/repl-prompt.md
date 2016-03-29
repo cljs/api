@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(repl-prompt)</samp><br>
+
+---
 
  <samp>
 (__repl-prompt__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L740-L741):
+Source code @ [github]():
 
 ```clj
 (defn repl-prompt []
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:740-741](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L740-L741)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "repl-prompt",
- :type "function",
  :signature ["[]"],
+ :name-encode "repl-prompt",
+ :history [["+" "0.0-2911"]],
+ :type "function",
+ :full-name-encode "cljs.repl/repl-prompt",
  :source {:code "(defn repl-prompt []\n  (print (str ana/*cljs-ns* \"=> \")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [740 741]},
+          :lines [742 743],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L742-L743"},
+ :usage ["(repl-prompt)"],
  :full-name "cljs.repl/repl-prompt",
- :full-name-encode "cljs.repl/repl-prompt",
- :history [["+" "0.0-2911"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/repl-prompt.cljsdoc"}
 
 ```
 

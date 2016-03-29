@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(not-every? pred coll)</samp><br>
+
+---
 
  <samp>
 (__not-every?__ pred coll)<br>
@@ -43,7 +46,7 @@ coll, else true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3887-L3890):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean not-every?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3887-3890](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3887-L3890)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "not-every?",
  :signature ["[pred coll]"],
+ :name-encode "not-everyQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/not-every?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/not-every?"},
  :related ["cljs.core/every?" "cljs.core/not-any?" "cljs.core/some"],
  :full-name-encode "cljs.core/not-everyQMARK",
  :source {:code "(defn ^boolean not-every?\n  [pred coll] (not (every? pred coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3887 3890]},
+          :lines [3887 3890],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3887-L3890"},
+ :usage ["(not-every? pred coll)"],
  :full-name "cljs.core/not-every?",
- :clj-symbol "clojure.core/not-every?",
- :docstring "Returns false if (pred x) is logical true for every x in\ncoll, else true."}
+ :docstring "Returns false if (pred x) is logical true for every x in\ncoll, else true.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/not-everyQMARK.cljsdoc"}
 
 ```
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L269):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic *current-env* nil)
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:269](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L269)</ins>
+
 </pre>
 
 -->
@@ -73,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "*current-env*",
+ :name-encode "STARcurrent-envSTAR",
+ :history [["+" "0.0-2496"]],
  :type "dynamic var",
+ :full-name-encode "cljs.test/STARcurrent-envSTAR",
  :source {:code "(def ^:dynamic *current-env* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [269]},
+          :lines [269],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L269"},
  :full-name "cljs.test/*current-env*",
- :full-name-encode "cljs.test/STARcurrent-envSTAR",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/STARcurrent-envSTAR.cljsdoc"}
 
 ```
 

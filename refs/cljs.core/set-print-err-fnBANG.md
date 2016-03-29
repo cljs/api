@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-print-err-fn! f)</samp><br>
+
+---
 
  <samp>
 (__set-print-err-fn!__ f)<br>
@@ -27,7 +30,7 @@ Set *print-err-fn* to f.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L63-L65):
+Source code @ [github]():
 
 ```clj
 (defn set-print-err-fn!
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:63-65](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L63-L65)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "set-print-err-fn!",
  :signature ["[f]"],
+ :name-encode "set-print-err-fnBANG",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.core/set-print-err-fnBANG",
  :source {:code "(defn set-print-err-fn!\n  [f] (set! *print-err-fn* f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [63 65]},
+          :lines [63 65],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L63-L65"},
+ :usage ["(set-print-err-fn! f)"],
  :full-name "cljs.core/set-print-err-fn!",
- :docstring "Set *print-err-fn* to f."}
+ :docstring "Set *print-err-fn* to f.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/set-print-err-fnBANG.cljsdoc"}
 
 ```
 

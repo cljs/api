@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(type->str ty)</samp><br>
+
+---
 
  <samp>
 (__type->str__ ty)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L268-L271):
+Source code @ [github]():
 
 ```clj
 (defn type->str [ty]
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:268-271](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L268-L271)</ins>
+
 </pre>
 
 -->
@@ -81,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "type->str",
- :type "function",
  :signature ["[ty]"],
+ :name-encode "type-GTstr",
+ :history [["+" "0.0-1859"]],
+ :type "function",
+ :full-name-encode "cljs.core/type-GTstr",
  :source {:code "(defn type->str [ty]\n  (if-let [s (.-cljs$lang$ctorStr ty)]\n    s\n    (str ty)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [268 271]},
+          :lines [268 271],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L268-L271"},
+ :usage ["(type->str ty)"],
  :full-name "cljs.core/type->str",
- :full-name-encode "cljs.core/type-GTstr",
- :history [["+" "0.0-1859"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/type-GTstr.cljsdoc"}
 
 ```
 

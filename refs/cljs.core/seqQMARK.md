@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(seq? x)</samp><br>
+
+---
 
  <samp>
 (__seq?__ x)<br>
@@ -48,7 +51,7 @@ Return true if s satisfies ISeq
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2066-L2071):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean seq?
@@ -62,12 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2066-2071](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2066-L2071)</ins>
+
 </pre>
 
 -->
@@ -114,8 +112,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "seq?",
  :signature ["[x]"],
+ :name-encode "seqQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/seq?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/seq?"},
  :related ["cljs.core/seq"
            "cljs.core/sequential?"
            "cljs.core/vector?"
@@ -127,12 +128,14 @@ The API data for this symbol:
  :source {:code "(defn ^boolean seq?\n  [s]\n  (if (nil? s)\n    false\n    (satisfies? ISeq s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2066 2071]},
+          :lines [2066 2071],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2066-L2071"},
+ :usage ["(seq? x)"],
  :full-name "cljs.core/seq?",
- :clj-symbol "clojure.core/seq?",
- :docstring "Return true if s satisfies ISeq"}
+ :docstring "Return true if s satisfies ISeq",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/seqQMARK.cljsdoc"}
 
 ```
 

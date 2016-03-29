@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(try-expr msg form)</samp><br>
+
+---
 
  <samp>
 (__try-expr__ msg form)<br>
@@ -31,7 +34,7 @@ You don't call this.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L135-L144):
+Source code @ [github]():
 
 ```clj
 (defmacro try-expr
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:135-144](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L135-L144)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "try-expr",
  :signature ["[msg form]"],
+ :name-encode "try-expr",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/try-expr",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/try-expr"},
  :full-name-encode "cljs.test/try-expr",
  :source {:code "(defmacro try-expr\n  [msg form]\n  `(try\n     ~(cljs.test/assert-expr &env msg form)\n     (catch :default t#\n       (cljs.test/do-report \n         {:type :error, :message ~msg,\n          :expected '~form, :actual t#}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [135 144]},
+          :lines [135 144],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L135-L144"},
+ :usage ["(try-expr msg form)"],
  :full-name "cljs.test/try-expr",
- :clj-symbol "clojure.test/try-expr",
- :docstring "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this."}
+ :docstring "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/try-expr.cljsdoc"}
 
 ```
 

@@ -25,7 +25,7 @@ Bind to true if you want write to use pretty printing
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L615-L617):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:615-617](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L615-L617)</ins>
+
 </pre>
 
 -->
@@ -86,18 +81,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-pretty*",
+ :name-encode "STARprint-prettySTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-pretty*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-pretty*"},
  :full-name-encode "cljs.pprint/STARprint-prettySTAR",
  :source {:code "(def ^:dynamic\n ^{:doc \"Bind to true if you want write to use pretty printing\"}\n *print-pretty* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [615 617]},
+          :lines [615 617],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L615-L617"},
  :full-name "cljs.pprint/*print-pretty*",
- :clj-symbol "clojure.pprint/*print-pretty*",
- :docstring "Bind to true if you want write to use pretty printing"}
+ :docstring "Bind to true if you want write to use pretty printing",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-prettySTAR.cljsdoc"}
 
 ```
 

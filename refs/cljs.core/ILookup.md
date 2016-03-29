@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ILookup</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ILookup.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ILookup</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ILookup.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for looking up a value in a data structure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L517-L521):
+Source code @ [github]():
 
 ```clj
 (defprotocol ILookup
@@ -39,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:517-521](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L517-L521)</ins>
+
 </pre>
 
 -->
@@ -88,21 +83,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ILookup",
+ :name-encode "ILookup",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/ILookup",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ILookup.java"},
  :full-name-encode "cljs.core/ILookup",
  :source {:code "(defprotocol ILookup\n  \"Protocol for looking up a value in a data structure.\"\n  (-lookup [o k] [o k not-found]\n    \"Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [517 521]},
+          :lines [517 521],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L517-L521"},
  :methods [{:name "-lookup",
             :signature ["[o k]" "[o k not-found]"],
             :docstring "Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned."}],
  :full-name "cljs.core/ILookup",
- :clj-symbol "clojure.lang/ILookup",
- :docstring "Protocol for looking up a value in a data structure."}
+ :docstring "Protocol for looking up a value in a data structure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ILookup.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(repeatedly f)</samp><br>
+<samp>(repeatedly n f)</samp><br>
+
+---
 
  <samp>
 (__repeatedly__ f)<br>
@@ -50,7 +54,7 @@ to it
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4478-L4483):
+Source code @ [github]():
 
 ```clj
 (defn repeatedly
@@ -62,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4478-4483](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4478-L4483)</ins>
+
 </pre>
 
 -->
@@ -113,8 +112,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "repeatedly",
  :signature ["[f]" "[n f]"],
+ :name-encode "repeatedly",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/repeatedly",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/repeatedly"},
  :related ["cljs.core/repeat"
            "cljs.core/iterate"
            "cljs.core/lazy-seq"
@@ -124,12 +126,14 @@ The API data for this symbol:
  :source {:code "(defn repeatedly\n  ([f] (lazy-seq (cons (f) (repeatedly f))))\n  ([n f] (take n (repeatedly f))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4478 4483]},
+          :lines [4478 4483],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4478-L4483"},
+ :usage ["(repeatedly f)" "(repeatedly n f)"],
  :full-name "cljs.core/repeatedly",
- :clj-symbol "clojure.core/repeatedly",
- :docstring "Takes a function of no args, presumably with side effects, and\nreturns an infinite (or length n if supplied) lazy sequence of calls\nto it"}
+ :docstring "Takes a function of no args, presumably with side effects, and\nreturns an infinite (or length n if supplied) lazy sequence of calls\nto it",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/repeatedly.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(set? x)</samp><br>
+
+---
 
  <samp>
 (__set?__ x)<br>
@@ -40,7 +43,7 @@ Returns true if x satisfies ISet
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1967-L1972):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean set?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1967-1972](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1967-L1972)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "set?",
  :signature ["[x]"],
+ :name-encode "setQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/set?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set?"},
  :related ["cljs.core/set"],
  :full-name-encode "cljs.core/setQMARK",
  :source {:code "(defn ^boolean set?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ISet x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1967 1972]},
+          :lines [1967 1972],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1967-L1972"},
+ :usage ["(set? x)"],
  :full-name "cljs.core/set?",
- :clj-symbol "clojure.core/set?",
- :docstring "Returns true if x satisfies ISet"}
+ :docstring "Returns true if x satisfies ISet",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/setQMARK.cljsdoc"}
 
 ```
 

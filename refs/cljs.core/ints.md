@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ints x)</samp><br>
+
+---
 
  <samp>
 (__ints__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2552):
+Source code @ [github]():
 
 ```clj
 (defn ints [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2552](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2552)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ints",
  :signature ["[x]"],
+ :name-encode "ints",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ints",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ints"},
  :full-name-encode "cljs.core/ints",
  :source {:code "(defn ints [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2552]},
+          :lines [2552],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2552"},
+ :usage ["(ints x)"],
  :full-name "cljs.core/ints",
- :clj-symbol "clojure.core/ints"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ints.cljsdoc"}
 
 ```
 

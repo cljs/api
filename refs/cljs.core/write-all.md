@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(write-all writer & ss)</samp><br>
+
+---
 
  <samp>
 (__write-all__ writer & ss)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9005-L9007):
+Source code @ [github]():
 
 ```clj
 (defn write-all [writer & ss]
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9005-9007](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9005-L9007)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "write-all",
- :type "function",
  :signature ["[writer & ss]"],
+ :name-encode "write-all",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.core/write-all",
  :source {:code "(defn write-all [writer & ss]\n  (doseq [s ss]\n    (-write writer s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9005 9007]},
+          :lines [9005 9007],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9005-L9007"},
+ :usage ["(write-all writer & ss)"],
  :full-name "cljs.core/write-all",
- :full-name-encode "cljs.core/write-all",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/write-all.cljsdoc"}
 
 ```
 

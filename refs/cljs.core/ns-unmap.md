@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ns-unmap \[quote0 ns\] \[quote1 sym\])</samp><br>
+
+---
 
  <samp>
 (__ns-unmap__ \[quote0 ns\] \[quote1 sym\])<br>
@@ -30,7 +33,7 @@ Removes the mappings for the symbol from the namespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2659-L2666):
+Source code @ [github]():
 
 ```clj
 (core/defmacro ns-unmap
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2659-2666](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2659-L2666)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ns-unmap",
  :signature ["[[quote0 ns] [quote1 sym]]"],
+ :name-encode "ns-unmap",
  :history [["+" "0.0-3169"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/ns-unmap",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-unmap"},
  :full-name-encode "cljs.core/ns-unmap",
  :source {:code "(core/defmacro ns-unmap\n  [[quote0 ns] [quote1 sym]]\n  (core/assert (core/and (= quote0 'quote) (core/symbol? ns)\n                         (= quote1 'quote) (core/symbol? sym))\n    \"Arguments to ns-unmap must be quoted symbols\")\n  (swap! env/*compiler* update-in [::ana/namespaces ns :defs] dissoc sym)\n  `(js-delete ~(comp/munge ns) ~(comp/munge (core/str sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2659 2666]},
+          :lines [2659 2666],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2659-L2666"},
+ :usage ["(ns-unmap [quote0 ns] [quote1 sym])"],
  :full-name "cljs.core/ns-unmap",
- :clj-symbol "clojure.core/ns-unmap",
- :docstring "Removes the mappings for the symbol from the namespace."}
+ :docstring "Removes the mappings for the symbol from the namespace.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ns-unmap.cljsdoc"}
 
 ```
 

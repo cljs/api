@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(list? x)</samp><br>
+
+---
 
  <samp>
 (__list?__ x)<br>
@@ -42,7 +45,7 @@ Returns true if x implements IList
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2835-L2838):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean list?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2835-2838](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2835-L2838)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "list?",
  :signature ["[x]"],
+ :name-encode "listQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/list?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/list?"},
  :related ["cljs.core/seq?" "cljs.core/sequential?" "cljs.core/coll?"],
  :full-name-encode "cljs.core/listQMARK",
  :source {:code "(defn ^boolean list?\n  [x]\n  (satisfies? IList x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2835 2838]},
+          :lines [2835 2838],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2835-L2838"},
+ :usage ["(list? x)"],
  :full-name "cljs.core/list?",
- :clj-symbol "clojure.core/list?",
- :docstring "Returns true if x implements IList"}
+ :docstring "Returns true if x implements IList",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/listQMARK.cljsdoc"}
 
 ```
 

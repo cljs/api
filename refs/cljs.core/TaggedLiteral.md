@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TaggedLiteral</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/TaggedLiteral.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TaggedLiteral</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/TaggedLiteral.java)
 </td>
 </tr>
 </table>
 
+<samp>(TaggedLiteral. tag form)</samp><br>
+
+---
 
  <samp>
 (__TaggedLiteral.__ tag form)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10217-L10245):
+Source code @ [github]():
 
 ```clj
 (deftype TaggedLiteral [tag form]
@@ -63,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10217-10245](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10217-L10245)</ins>
+
 </pre>
 
 -->
@@ -113,17 +111,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "TaggedLiteral",
  :signature ["[tag form]"],
+ :name-encode "TaggedLiteral",
  :history [["+" "0.0-3255"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/TaggedLiteral",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/TaggedLiteral.java"},
  :full-name-encode "cljs.core/TaggedLiteral",
  :source {:code "(deftype TaggedLiteral [tag form]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IEquiv\n  (-equiv [this other]\n    (and (instance? TaggedLiteral other)\n         (= tag (.-tag other))\n         (= form (.-form other))))\n\n  IHash\n  (-hash [this]\n    (+ (* 31 (hash tag))\n       (hash form)))\n\n  ILookup\n  (-lookup [this v]\n    (-lookup this v nil))\n  (-lookup [this v not-found]\n    (case v\n      :tag tag\n      :form form\n      not-found))\n\n  IPrintWithWriter\n  (-pr-writer [o writer opts]\n    (-write writer (str \"#\" tag \" \"))\n    (pr-writer form writer opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10217 10245]},
+          :lines [10217 10245],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10217-L10245"},
+ :usage ["(TaggedLiteral. tag form)"],
  :full-name "cljs.core/TaggedLiteral",
- :clj-symbol "clojure.lang/TaggedLiteral"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TaggedLiteral.cljsdoc"}
 
 ```
 

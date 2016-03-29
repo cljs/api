@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(map-indexed f coll)</samp><br>
+
+---
 
  <samp>
 (__map-indexed__ f coll)<br>
@@ -49,7 +52,7 @@ no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4013-L4039):
+Source code @ [github]():
 
 ```clj
 (defn map-indexed
@@ -80,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4013-4039](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4013-L4039)</ins>
+
 </pre>
 
 -->
@@ -131,19 +129,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "map-indexed",
  :signature ["[f coll]"],
+ :name-encode "map-indexed",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/map-indexed",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/map-indexed"},
  :related ["cljs.core/map" "cljs.core/keep-indexed"],
  :full-name-encode "cljs.core/map-indexed",
  :source {:code "(defn map-indexed\n  ([f]\n    (fn [rf]\n      (let [i (volatile! -1)]\n        (fn\n          ([] (rf))\n          ([result] (rf result))\n          ([result input]\n            (rf result (f (vswap! i inc) input)))))))\n  ([f coll]\n    (letfn [(mapi [idx coll]\n              (lazy-seq\n                (when-let [s (seq coll)]\n                  (if (chunked-seq? s)\n                    (let [c (chunk-first s)\n                          size (count c)\n                          b (chunk-buffer size)]\n                      (dotimes [i size]\n                        (chunk-append b (f (+ idx i) (-nth c i))))\n                      (chunk-cons (chunk b) (mapi (+ idx size) (chunk-rest s))))\n                    (cons (f idx (first s)) (mapi (inc idx) (rest s)))))))]\n      (mapi 0 coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4013 4039]},
+          :lines [4013 4039],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4013-L4039"},
+ :usage ["(map-indexed f coll)"],
  :full-name "cljs.core/map-indexed",
- :clj-symbol "clojure.core/map-indexed",
- :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item. Returns a stateful transducer when\nno collection is provided."}
+ :docstring "Returns a lazy sequence consisting of the result of applying f to 0\nand the first item of coll, followed by applying f to 1 and the second\nitem in coll, etc, until coll is exhausted. Thus function f should\naccept 2 arguments, index and item. Returns a stateful transducer when\nno collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/map-indexed.cljsdoc"}
 
 ```
 

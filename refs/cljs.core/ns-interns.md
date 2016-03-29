@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ns-interns \[quote ns\])</samp><br>
+
+---
 
  <samp>
 (__ns-interns__ \[quote ns\])<br>
@@ -30,7 +33,7 @@ Returns a map of the intern mappings for the namespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2648-L2657):
+Source code @ [github]():
 
 ```clj
 (core/defmacro ns-interns
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2648-2657](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2648-L2657)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ns-interns",
  :signature ["[[quote ns]]"],
+ :name-encode "ns-interns",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/ns-interns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-interns"},
  :full-name-encode "cljs.core/ns-interns",
  :source {:code "(core/defmacro ns-interns\n  [[quote ns]]\n  (core/assert (core/and (= quote 'quote) (core/symbol? ns))\n    \"Argument to ns-interns must be a quoted symbol\")\n  `(into {}\n     [~@(map\n          (core/fn [[sym _]]\n            `[(symbol ~(name sym)) (var ~(symbol (name ns) (name sym)))])\n          (get-in @env/*compiler* [:cljs.analyzer/namespaces ns :defs]))]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2648 2657]},
+          :lines [2648 2657],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2648-L2657"},
+ :usage ["(ns-interns [quote ns])"],
  :full-name "cljs.core/ns-interns",
- :clj-symbol "clojure.core/ns-interns",
- :docstring "Returns a map of the intern mappings for the namespace."}
+ :docstring "Returns a map of the intern mappings for the namespace.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ns-interns.cljsdoc"}
 
 ```
 

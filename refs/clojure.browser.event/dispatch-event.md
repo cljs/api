@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(dispatch-event src event)</samp><br>
+
+---
 
  <samp>
 (__dispatch-event__ src event)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L77-L79):
+Source code @ [github]():
 
 ```clj
 (defn dispatch-event
@@ -34,13 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:77-79](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L77-L79)</ins>
+
 </pre>
 
 -->
@@ -81,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "dispatch-event",
- :type "function",
  :signature ["[src event]"],
+ :name-encode "dispatch-event",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/dispatch-event",
  :source {:code "(defn dispatch-event\n  [src event]\n  (events/dispatchEvent src event))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [77 79]},
+          :lines [77 79],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L77-L79"},
+ :usage ["(dispatch-event src event)"],
  :full-name "clojure.browser.event/dispatch-event",
- :full-name-encode "clojure.browser.event/dispatch-event",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/dispatch-event.cljsdoc"}
 
 ```
 

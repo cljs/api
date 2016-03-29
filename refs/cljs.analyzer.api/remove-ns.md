@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(remove-ns ns)</samp><br>
+<samp>(remove-ns state ns)</samp><br>
+
+---
 
  <samp>
 (__remove-ns__ ns)<br>
@@ -33,7 +37,7 @@ Removes the namespace named by the symbol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L202-L208):
+Source code @ [github]():
 
 ```clj
 (defn remove-ns
@@ -48,13 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:202-208](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L202-L208)</ins>
+
 </pre>
 
 -->
@@ -99,18 +97,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "remove-ns",
  :signature ["[ns]" "[state ns]"],
+ :name-encode "remove-ns",
  :history [["+" "0.0-3208"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/remove-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove-ns"},
  :full-name-encode "cljs.analyzer.api/remove-ns",
  :source {:code "(defn remove-ns\n  ([ns]\n   (remove-ns env/*compiler* ns))\n  ([state ns]\n   {:pre [(symbol? ns)]}\n   (swap! state update-in [::ana/namespaces] dissoc ns)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [202 208]},
+          :lines [202 208],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L202-L208"},
+ :usage ["(remove-ns ns)" "(remove-ns state ns)"],
  :full-name "cljs.analyzer.api/remove-ns",
- :clj-symbol "clojure.core/remove-ns",
- :docstring "Removes the namespace named by the symbol."}
+ :docstring "Removes the namespace named by the symbol.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/remove-ns.cljsdoc"}
 
 ```
 

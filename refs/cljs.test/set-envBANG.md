@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-env! new-env)</samp><br>
+
+---
 
  <samp>
 (__set-env!__ new-env)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L277-L278):
+Source code @ [github]():
 
 ```clj
 (defn set-env! [new-env]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:277-278](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L277-L278)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "set-env!",
- :type "function",
  :signature ["[new-env]"],
+ :name-encode "set-envBANG",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/set-envBANG",
  :source {:code "(defn set-env! [new-env]\n  (set! *current-env* new-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [277 278]},
+          :lines [277 278],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L277-L278"},
+ :usage ["(set-env! new-env)"],
  :full-name "cljs.test/set-env!",
- :full-name-encode "cljs.test/set-envBANG",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/set-envBANG.cljsdoc"}
 
 ```
 

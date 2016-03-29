@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-list rdr _)</samp><br>
+
+---
 
  <samp>
 (__read-list__ rdr _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L264-L266):
+Source code @ [github]():
 
 ```clj
 (defn read-list
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:264-266](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L264-L266)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-list",
- :type "function",
  :signature ["[rdr _]"],
+ :name-encode "read-list",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-list",
  :source {:code "(defn read-list\n  [rdr _]\n  (apply list (read-delimited-list \")\" rdr true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [264 266]},
+          :lines [264 266],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L264-L266"},
+ :usage ["(read-list rdr _)"],
  :full-name "cljs.reader/read-list",
- :full-name-encode "cljs.reader/read-list",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-list.cljsdoc"}
 
 ```
 

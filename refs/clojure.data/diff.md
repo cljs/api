@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(diff a b)</samp><br>
+
+---
 
  <samp>
 (__diff__ a b)<br>
@@ -40,7 +43,7 @@ Comparison rules:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L144-L161):
+Source code @ [github]():
 
 ```clj
 (defn diff
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[data.cljs:144-161](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L144-L161)</ins>
+
 </pre>
 
 -->
@@ -106,18 +104,23 @@ The API data for this symbol:
 {:ns "clojure.data",
  :name "diff",
  :signature ["[a b]"],
+ :name-encode "diff",
  :history [["+" "0.0-1503"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.data/diff",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/diff"},
  :full-name-encode "clojure.data/diff",
  :source {:code "(defn diff\n  [a b]\n  (if (= a b)\n    [nil nil a]\n    (if (= (equality-partition a) (equality-partition b))\n      (diff-similar a b)\n      (atom-diff a b))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/data.cljs",
-          :lines [144 161]},
+          :lines [144 161],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/data.cljs#L144-L161"},
+ :usage ["(diff a b)"],
  :full-name "clojure.data/diff",
- :clj-symbol "clojure.data/diff",
- :docstring "Recursively compares a and b, returning a tuple of\n[things-only-in-a things-only-in-b things-in-both].\nComparison rules:\n\n* For equal a and b, return [nil nil a].\n* Maps are subdiffed where keys match and values differ.\n* Sets are never subdiffed.\n* All sequential things are treated as associative collections\n  by their indexes, with results returned as vectors.\n* Everything else (including strings!) is treated as\n  an atom and compared for equality."}
+ :docstring "Recursively compares a and b, returning a tuple of\n[things-only-in-a things-only-in-b things-in-both].\nComparison rules:\n\n* For equal a and b, return [nil nil a].\n* Maps are subdiffed where keys match and values differ.\n* Sets are never subdiffed.\n* All sequential things are treated as associative collections\n  by their indexes, with results returned as vectors.\n* Everything else (including strings!) is treated as\n  an atom and compared for equality.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.data/diff.cljsdoc"}
 
 ```
 

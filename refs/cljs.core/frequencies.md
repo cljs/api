@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(frequencies coll)</samp><br>
+
+---
 
  <samp>
 (__frequencies__ coll)<br>
@@ -44,7 +47,7 @@ they appear.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8843-L8850):
+Source code @ [github]():
 
 ```clj
 (defn frequencies
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8843-8850](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8843-L8850)</ins>
+
 </pre>
 
 -->
@@ -110,19 +108,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "frequencies",
  :signature ["[coll]"],
+ :name-encode "frequencies",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/frequencies",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/frequencies"},
  :related ["cljs.core/group-by" "cljs.core/distinct"],
  :full-name-encode "cljs.core/frequencies",
  :source {:code "(defn frequencies\n  [coll]\n  (persistent!\n   (reduce (fn [counts x]\n             (assoc! counts x (inc (get counts x 0))))\n           (transient {}) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8843 8850]},
+          :lines [8843 8850],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8843-L8850"},
+ :usage ["(frequencies coll)"],
  :full-name "cljs.core/frequencies",
- :clj-symbol "clojure.core/frequencies",
- :docstring "Returns a map from distinct items in coll to the number of times\nthey appear."}
+ :docstring "Returns a map from distinct items in coll to the number of times\nthey appear.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/frequencies.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(ancestors tag)</samp><br>
+<samp>(ancestors h tag)</samp><br>
+
+---
 
  <samp>
 (__ancestors__ tag)<br>
@@ -44,7 +48,7 @@ defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9720-L9726):
+Source code @ [github]():
 
 ```clj
 (defn ancestors
@@ -56,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9720-9726](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9720-L9726)</ins>
+
 </pre>
 
 -->
@@ -106,8 +105,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ancestors",
  :signature ["[tag]" "[h tag]"],
+ :name-encode "ancestors",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ancestors",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ancestors"},
  :related ["cljs.core/descendants"
            "cljs.core/isa?"
            "cljs.core/make-hierarchy"
@@ -116,12 +118,14 @@ The API data for this symbol:
  :source {:code "(defn ancestors\n  ([tag] (ancestors @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:ancestors h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9720 9726]},
+          :lines [9720 9726],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9720-L9726"},
+ :usage ["(ancestors tag)" "(ancestors h tag)"],
  :full-name "cljs.core/ancestors",
- :clj-symbol "clojure.core/ancestors",
- :docstring "Returns the immediate and indirect parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
+ :docstring "Returns the immediate and indirect parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ancestors.cljsdoc"}
 
 ```
 

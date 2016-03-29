@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-raw-string\* reader _)</samp><br>
+
+---
 
  <samp>
 (__read-raw-string\*__ reader _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L304-L317):
+Source code @ [github]():
 
 ```clj
 (defn read-raw-string*
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:304-317](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L304-L317)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-raw-string*",
- :type "function",
  :signature ["[reader _]"],
+ :name-encode "read-raw-stringSTAR",
+ :history [["+" "0.0-2261"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-raw-stringSTAR",
  :source {:code "(defn read-raw-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n      (nil? ch) (reader-error reader \"EOF while reading\")\n      (identical? \"\\\\\" ch) (do (.append buffer ch)\n                             (let [nch (read-char reader)]\n                               (if (nil? nch)\n                                 (reader-error reader \"EOF while reading\")\n                                 (recur (doto buffer (.append nch))\n                                        (read-char reader)))))\n      (identical? \"\\\"\" ch) (.toString buffer)\n      :else (recur (doto buffer (.append ch)) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [304 317]},
+          :lines [304 317],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L304-L317"},
+ :usage ["(read-raw-string* reader _)"],
  :full-name "cljs.reader/read-raw-string*",
- :full-name-encode "cljs.reader/read-raw-stringSTAR",
- :history [["+" "0.0-2261"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-raw-stringSTAR.cljsdoc"}
 
 ```
 

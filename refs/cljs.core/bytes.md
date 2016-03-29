@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(bytes x)</samp><br>
+
+---
 
  <samp>
 (__bytes__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2549):
+Source code @ [github]():
 
 ```clj
 (defn bytes [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2549](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2549)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "bytes",
  :signature ["[x]"],
+ :name-encode "bytes",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/bytes",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bytes"},
  :full-name-encode "cljs.core/bytes",
  :source {:code "(defn bytes [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2549]},
+          :lines [2549],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2549"},
+ :usage ["(bytes x)"],
  :full-name "cljs.core/bytes",
- :clj-symbol "clojure.core/bytes"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bytes.cljsdoc"}
 
 ```
 

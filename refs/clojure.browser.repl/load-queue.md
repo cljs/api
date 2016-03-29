@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L123):
+Source code @ [github]():
 
 ```clj
 (def load-queue nil)
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:123](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L123)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.repl",
  :name "load-queue",
+ :name-encode "load-queue",
+ :history [["+" "0.0-3115"]],
  :type "var",
+ :full-name-encode "clojure.browser.repl/load-queue",
  :source {:code "(def load-queue nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [123]},
+          :lines [123],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L123"},
  :full-name "clojure.browser.repl/load-queue",
- :full-name-encode "clojure.browser.repl/load-queue",
- :history [["+" "0.0-3115"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/load-queue.cljsdoc"}
 
 ```
 

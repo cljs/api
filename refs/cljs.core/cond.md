@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(cond & clauses)</samp><br>
+
+---
 
  <samp>
 (__cond__ & clauses)<br>
@@ -68,7 +71,7 @@ other tests or exprs. (cond) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L580-L593):
+Source code @ [github]():
 
 ```clj
 (defmacro cond
@@ -86,11 +89,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:580-593](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L580-L593)</ins>
+
 </pre>
 
 -->
@@ -136,8 +135,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "cond",
  :signature ["[& clauses]"],
+ :name-encode "cond",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/cond",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cond"},
  :related ["cljs.core/condp" "cljs.core/case" "special/if"],
  :full-name-encode "cljs.core/cond",
  :source {:code "(defmacro cond\n  [& clauses]\n    (when clauses\n      (list 'if (first clauses)\n            (if (next clauses)\n                (second clauses)\n                (throw (IllegalArgumentException.\n                         \"cond requires an even number of forms\")))\n            (cons 'clojure.core/cond (next (next clauses))))))",
@@ -145,12 +147,14 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [580 593]},
+          :lines [580 593],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L580-L593"},
+ :usage ["(cond & clauses)"],
  :examples [{:id "0cc9ac",
              :content "```\n(def a 42)\n(cond\n  (< a 10) \"a is less than 10\"\n  (= a 10) \"a is 10\"\n  (> a 10) \"a is bigger than 10\"\n  :else \"a is not a number!\")\n;;=> \"a is bigger than 10\"\n```"}],
  :full-name "cljs.core/cond",
- :clj-symbol "clojure.core/cond",
- :docstring "Takes a set of test/expr pairs. It evaluates each test one at a\ntime.  If a test returns logical true, cond evaluates and returns\nthe value of the corresponding expr and doesn't evaluate any of the\nother tests or exprs. (cond) returns nil."}
+ :docstring "Takes a set of test/expr pairs. It evaluates each test one at a\ntime.  If a test returns logical true, cond evaluates and returns\nthe value of the corresponding expr and doesn't evaluate any of the\nother tests or exprs. (cond) returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cond.cljsdoc"}
 
 ```
 

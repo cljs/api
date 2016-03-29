@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(double x)</samp><br>
+
+---
 
  <samp>
 (__double__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2439):
+Function code @ [github]():
 
 ```clj
 (defn ^number double [x] x)
@@ -35,19 +38,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2439](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2439)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L954):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro double [x] x)
@@ -57,12 +55,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:954](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L954)</ins>
+
 </pre>
 -->
 
@@ -106,23 +99,29 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "double",
  :signature ["[x]"],
+ :name-encode "double",
  :history [["+" "0.0-1798"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/double",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/double"},
  :full-name-encode "cljs.core/double",
  :source {:code "(defn ^number double [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2439]},
+          :lines [2439],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2439"},
  :extra-sources [{:code "(core/defmacro double [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [954]}],
+                  :lines [954],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L954"}],
+ :usage ["(double x)"],
  :full-name "cljs.core/double",
- :clj-symbol "clojure.core/double"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/double.cljsdoc"}
 
 ```
 

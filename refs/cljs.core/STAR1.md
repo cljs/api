@@ -78,7 +78,7 @@ bound in a repl thread to the most recent value printed
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L156-L158):
+Source code @ [github]():
 
 ```clj
 (def
@@ -90,12 +90,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:156-158](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L156-L158)</ins>
+
 </pre>
 
 -->
@@ -140,21 +135,25 @@ The API data for this symbol:
 {:description "Only usable from a REPL.\n\nHolds the result of the last expression.",
  :ns "cljs.core",
  :name "*1",
+ :name-encode "STAR1",
  :history [["+" "0.0-927"]],
  :type "var",
+ :clj-equiv {:full-name "clojure.core/*1",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*1"},
  :related ["cljs.core/*2" "cljs.core/*3" "cljs.core/*e"],
  :full-name-encode "cljs.core/STAR1",
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent value printed\"}\n  *1)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [156 158]},
+          :lines [156 158],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L156-L158"},
  :examples [{:id "30a861",
              :content "```clj\n(+ 1 2 3 4)\n;;=> 10\n\n*1\n;;=> 10\n\n(inc *1)\n;;=> 11\n```\n\nNote that a standalone evaluation of `*1`, `*2`, `*3`, or `*e` is not a part of\nremembered history:\n\n```clj\n:first\n;;=> :first\n\n:second\n;;=> :second\n\n:third\n;;=> :third\n\n*3\n;;=> :first\n\n*2\n;;=> :second\n\n*1\n;;=> :third\n```"}],
  :full-name "cljs.core/*1",
- :clj-symbol "clojure.core/*1",
- :docstring "bound in a repl thread to the most recent value printed"}
+ :docstring "bound in a repl thread to the most recent value printed",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STAR1.cljsdoc"}
 
 ```
 

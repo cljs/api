@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L39-L41):
+Source code @ [github]():
 
 ```clj
 (def
@@ -29,12 +29,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:39-41](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L39-L41)</ins>
+
 </pre>
 
 -->
@@ -75,16 +70,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*assert*",
+ :name-encode "STARassertSTAR",
+ :history [["+" "1.7.10"]],
  :type "dynamic var",
+ :full-name-encode "cljs.core/STARassertSTAR",
  :source {:code "(def\n  ^{:dynamic true}\n  *assert* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [39 41]},
+          :lines [39 41],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L39-L41"},
  :full-name "cljs.core/*assert*",
- :full-name-encode "cljs.core/STARassertSTAR",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARassertSTAR.cljsdoc"}
 
 ```
 

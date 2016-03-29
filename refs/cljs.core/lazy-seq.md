@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(lazy-seq & body)</samp><br>
+
+---
 
  <samp>
 (__lazy-seq__ & body)<br>
@@ -46,7 +49,7 @@ seq calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2010-L2016):
+Source code @ [github]():
 
 ```clj
 (core/defmacro lazy-seq
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2010-2016](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2010-L2016)</ins>
+
 </pre>
 
 -->
@@ -109,8 +107,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "lazy-seq",
  :signature ["[& body]"],
+ :name-encode "lazy-seq",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/lazy-seq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/lazy-seq"},
  :related ["cljs.core/lazy-cat"
            "cljs.core/realized?"
            "cljs.core/doall"
@@ -119,12 +120,14 @@ The API data for this symbol:
  :source {:code "(core/defmacro lazy-seq\n  [& body]\n  `(new cljs.core/LazySeq nil (fn [] ~@body) nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2010 2016]},
+          :lines [2010 2016],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2010-L2016"},
+ :usage ["(lazy-seq & body)"],
  :full-name "cljs.core/lazy-seq",
- :clj-symbol "clojure.core/lazy-seq",
- :docstring "Takes a body of expressions that returns an ISeq or nil, and yields\na ISeqable object that will invoke the body only the first time seq\nis called, and will cache the result and return it on all subsequent\nseq calls."}
+ :docstring "Takes a body of expressions that returns an ISeq or nil, and yields\na ISeqable object that will invoke the body only the first time seq\nis called, and will cache the result and return it on all subsequent\nseq calls.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/lazy-seq.cljsdoc"}
 
 ```
 

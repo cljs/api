@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(remove pred)</samp><br>
+<samp>(remove pred coll)</samp><br>
+
+---
 
  <samp>
 (__remove__ pred)<br>
@@ -50,7 +54,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4579-L4585):
+Source code @ [github]():
 
 ```clj
 (defn remove
@@ -63,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4579-4585](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4579-L4585)</ins>
+
 </pre>
 
 -->
@@ -114,19 +113,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "remove",
  :signature ["[pred]" "[pred coll]"],
+ :name-encode "remove",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/remove",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove"},
  :related ["cljs.core/filter"],
  :full-name-encode "cljs.core/remove",
  :source {:code "(defn remove\n  ([pred] (filter (complement pred)))\n  ([pred coll]\n     (filter (complement pred) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4579 4585]},
+          :lines [4579 4585],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4579-L4585"},
+ :usage ["(remove pred)" "(remove pred coll)"],
  :full-name "cljs.core/remove",
- :clj-symbol "clojure.core/remove",
- :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects.\nReturns a transducer when no collection is provided."}
+ :docstring "Returns a lazy sequence of the items in coll for which\n(pred item) returns false. pred must be free of side-effects.\nReturns a transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/remove.cljsdoc"}
 
 ```
 

@@ -22,7 +22,7 @@ Protocol for adding to a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L479-L485):
+Source code @ [github]():
 
 ```clj
 (defprotocol ICollection
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:479-485](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L479-L485)</ins>
+
 </pre>
 
 -->
@@ -84,20 +79,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ICollection",
+ :name-encode "ICollection",
  :history [["+" "0.0-927"]],
  :type "protocol",
  :full-name-encode "cljs.core/ICollection",
  :source {:code "(defprotocol ICollection\n  \"Protocol for adding to a collection.\"\n  (^clj -conj [coll o]\n    \"Returns a new collection of coll with o added to it. The new item\n     should be added to the most efficient place, e.g.\n     (conj [1 2 3 4] 5) => [1 2 3 4 5]\n     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [479 485]},
+          :lines [479 485],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L479-L485"},
  :methods [{:name "-conj",
             :signature ["[coll o]"],
             :docstring "Returns a new collection of coll with o added to it. The new item\n     should be added to the most efficient place, e.g.\n     (conj [1 2 3 4] 5) => [1 2 3 4 5]\n     (conj '(2 3 4 5) 1) => '(1 2 3 4 5)"}],
  :full-name "cljs.core/ICollection",
- :docstring "Protocol for adding to a collection."}
+ :docstring "Protocol for adding to a collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ICollection.cljsdoc"}
 
 ```
 

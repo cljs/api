@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(connection)</samp><br>
+
+---
 
  <samp>
 (__connection__)<br>
@@ -28,7 +31,7 @@ connection is not available, store the promise in server/state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L10-L22):
+Source code @ [github]():
 
 ```clj
 (defn connection
@@ -48,13 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:10-22](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L10-L22)</ins>
+
 </pre>
 
 -->
@@ -96,17 +93,21 @@ The API data for this symbol:
 {:ns "cljs.repl.server",
  :name "connection",
  :signature ["[]"],
+ :name-encode "connection",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/connection",
  :source {:code "(defn connection\n  []\n  (let [p    (promise)\n        conn (:connection @state)]\n    (if (and conn (not (.isClosed conn)))\n      (do\n        (deliver p conn)\n        p)\n      (do\n        (swap! state (fn [old] (assoc old :promised-conn p)))\n        p))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [10 22]},
+          :lines [10 22],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L10-L22"},
+ :usage ["(connection)"],
  :full-name "cljs.repl.server/connection",
- :docstring "Promise to return a connection when one is available. If a\nconnection is not available, store the promise in server/state."}
+ :docstring "Promise to return a connection when one is available. If a\nconnection is not available, store the promise in server/state.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/connection.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(underive tag parent)</samp><br>
+<samp>(underive h tag parent)</samp><br>
+
+---
 
  <samp>
 (__underive__ tag parent)<br>
@@ -35,7 +39,7 @@ supplied defaults to, and modifies, the global hierarchy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9771-L9790):
+Source code @ [github]():
 
 ```clj
 (defn underive
@@ -61,12 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9771-9790](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9771-L9790)</ins>
+
 </pre>
 
 -->
@@ -111,18 +110,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "underive",
  :signature ["[tag parent]" "[h tag parent]"],
+ :name-encode "underive",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/underive",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/underive"},
  :full-name-encode "cljs.core/underive",
  :source {:code "(defn underive\n  ([tag parent]\n    (swap-global-hierarchy! underive tag parent)\n    nil)\n  ([h tag parent]\n    (let [parentMap (:parents h)\n          childsParents (if (parentMap tag)\n                          (disj (parentMap tag) parent) #{})\n          newParents (if (not-empty childsParents)\n                      (assoc parentMap tag childsParents)\n                      (dissoc parentMap tag))\n          deriv-seq (flatten (map #(cons (first %) (interpose (first %) (second %)))\n                                  (seq newParents)))]\n      (if (contains? (parentMap tag) parent)\n        (reduce #(apply derive %1 %2) (make-hierarchy)\n                (partition 2 deriv-seq))\n        h))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9771 9790]},
+          :lines [9771 9790],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9771-L9790"},
+ :usage ["(underive tag parent)" "(underive h tag parent)"],
  :full-name "cljs.core/underive",
- :clj-symbol "clojure.core/underive",
- :docstring "Removes a parent/child relationship between parent and\ntag. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy."}
+ :docstring "Removes a parent/child relationship between parent and\ntag. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/underive.cljsdoc"}
 
 ```
 

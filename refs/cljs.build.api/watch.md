@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(watch source opts)</samp><br>
+<samp>(watch source opts compiler-env)</samp><br>
+<samp>(watch source opts compiler-env stop)</samp><br>
+
+---
 
  <samp>
 (__watch__ source opts)<br>
@@ -33,7 +38,7 @@ Given a source which can be compiled, watch it for changes to produce.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L212-L223):
+Source code @ [github]():
 
 ```clj
 (defn watch
@@ -53,13 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:212-223](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L212-L223)</ins>
+
 </pre>
 
 -->
@@ -103,17 +102,23 @@ The API data for this symbol:
  :signature ["[source opts]"
              "[source opts compiler-env]"
              "[source opts compiler-env stop]"],
+ :name-encode "watch",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.build.api/watch",
  :source {:code "(defn watch\n  ([source opts]\n   (watch source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (watch source opts compiler-env nil))\n  ([source opts compiler-env stop]\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/watch source opts compiler-env stop))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [212 223]},
+          :lines [212 223],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L212-L223"},
+ :usage ["(watch source opts)"
+         "(watch source opts compiler-env)"
+         "(watch source opts compiler-env stop)"],
  :full-name "cljs.build.api/watch",
- :docstring "Given a source which can be compiled, watch it for changes to produce."}
+ :docstring "Given a source which can be compiled, watch it for changes to produce.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/watch.cljsdoc"}
 
 ```
 

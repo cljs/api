@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(trampoline f)</samp><br>
+<samp>(trampoline f & args)</samp><br>
+
+---
 
  <samp>
 (__trampoline__ f)<br>
@@ -39,7 +43,7 @@ after trampoline returns.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9630-L9644):
+Source code @ [github]():
 
 ```clj
 (defn trampoline
@@ -56,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9630-9644](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9630-L9644)</ins>
+
 </pre>
 
 -->
@@ -106,18 +105,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "trampoline",
  :signature ["[f]" "[f & args]"],
+ :name-encode "trampoline",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/trampoline",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/trampoline"},
  :full-name-encode "cljs.core/trampoline",
  :source {:code "(defn trampoline\n  ([f]\n     (let [ret (f)]\n       (if (fn? ret)\n         (recur ret)\n         ret)))\n  ([f & args]\n     (trampoline #(apply f args))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9630 9644]},
+          :lines [9630 9644],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9630-L9644"},
+ :usage ["(trampoline f)" "(trampoline f & args)"],
  :full-name "cljs.core/trampoline",
- :clj-symbol "clojure.core/trampoline",
- :docstring "trampoline can be used to convert algorithms requiring mutual\nrecursion without stack consumption. Calls f with supplied args, if\nany. If f returns a fn, calls that fn with no arguments, and\ncontinues to repeat, until the return value is not a fn, then\nreturns that non-fn value. Note that if you want to return a fn as a\nfinal value, you must wrap it in some data structure and unpack it\nafter trampoline returns."}
+ :docstring "trampoline can be used to convert algorithms requiring mutual\nrecursion without stack consumption. Calls f with supplied args, if\nany. If f returns a fn, calls that fn with no arguments, and\ncontinues to repeat, until the return value is not a fn, then\nreturns that non-fn value. Note that if you want to return a fn as a\nfinal value, you must wrap it in some data structure and unpack it\nafter trampoline returns.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/trampoline.cljsdoc"}
 
 ```
 

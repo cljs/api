@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(vec coll)</samp><br>
+
+---
 
  <samp>
 (__vec__ coll)<br>
@@ -42,7 +45,7 @@ will be aliased and should not be modified.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5075-L5084):
+Source code @ [github]():
 
 ```clj
 (defn vec
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5075-5084](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5075-L5084)</ins>
+
 </pre>
 
 -->
@@ -110,19 +108,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "vec",
  :signature ["[coll]"],
+ :name-encode "vec",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/vec",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/vec"},
  :related ["cljs.core/vector" "cljs.core/vector?"],
  :full-name-encode "cljs.core/vec",
  :source {:code "(defn vec\n  [coll]\n  (if (array? coll)\n    (.fromArray PersistentVector coll true)\n    (-persistent!\n      (reduce -conj!\n        (-as-transient (.-EMPTY PersistentVector))\n        coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5075 5084]},
+          :lines [5075 5084],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5075-L5084"},
+ :usage ["(vec coll)"],
  :full-name "cljs.core/vec",
- :clj-symbol "clojure.core/vec",
- :docstring "Creates a new vector containing the contents of coll. JavaScript arrays\nwill be aliased and should not be modified."}
+ :docstring "Creates a new vector containing the contents of coll. JavaScript arrays\nwill be aliased and should not be modified.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/vec.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(compile\* bound-vars source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__compile\*__ bound-vars source name opts cb)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L532-L578):
+Source code @ [github]():
 
 ```clj
 (defn compile* [bound-vars source name opts cb]
@@ -78,12 +81,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:532-578](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L532-L578)</ins>
+
 </pre>
 
 -->
@@ -134,6 +132,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [532 578]},
+ :usage ["(compile* bound-vars source name opts cb)"],
  :full-name "cljs.js/compile*",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

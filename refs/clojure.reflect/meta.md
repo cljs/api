@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(meta sym cb)</samp><br>
+
+---
 
  <samp>
 (__meta__ sym cb)<br>
@@ -29,7 +32,7 @@ meta information.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L25-L31):
+Source code @ [github]():
 
 ```clj
 (defn meta
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[reflect.cljs:25-31](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L25-L31)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "clojure.reflect",
  :name "meta",
  :signature ["[sym cb]"],
+ :name-encode "meta",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "clojure.reflect/meta",
  :source {:code "(defn meta\n  [sym cb]\n  (query-reflection (str \"var=\" (js/encodeURIComponent (str sym)))\n                    #(cb (evaluate-javascript %))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/reflect.cljs",
-          :lines [25 31]},
+          :lines [25 31],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/reflect.cljs#L25-L31"},
+ :usage ["(meta sym cb)"],
  :full-name "clojure.reflect/meta",
- :docstring "Queries the reflection api with a fully qualified symbol, then calls\ncallback fn cb with the evaluated cljs map containing that symbol's\nmeta information."}
+ :docstring "Queries the reflection api with a fully qualified symbol, then calls\ncallback fn cb with the evaluated cljs map containing that symbol's\nmeta information.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.reflect/meta.cljsdoc"}
 
 ```
 

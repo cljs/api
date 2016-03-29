@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(reduce f coll)</samp><br>
+<samp>(reduce f init coll)</samp><br>
+
+---
 
  <samp>
 (__reduce__ f coll)<br>
@@ -35,7 +39,7 @@ Like core/reduce except:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L33-L44):
+Source code @ [github]():
 
 ```clj
 (defn reduce
@@ -53,13 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:33-44](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L33-L44)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "reduce",
  :signature ["[f coll]" "[f init coll]"],
+ :name-encode "reduce",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/reduce",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/reduce"},
  :full-name-encode "clojure.core.reducers/reduce",
  :source {:code "(defn reduce\n  ([f coll] (reduce f (f) coll))\n  ([f init coll]\n     (if (map? coll)\n       (-kv-reduce coll f init)\n       (cond\n         (nil? coll) init\n         (array? coll) (array-reduce coll f init)\n         :else (-reduce coll f init)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [33 44]},
+          :lines [33 44],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L33-L44"},
+ :usage ["(reduce f coll)" "(reduce f init coll)"],
  :full-name "clojure.core.reducers/reduce",
- :clj-symbol "clojure.core.reducers/reduce",
- :docstring "Like core/reduce except:\n  When init is not provided, (f) is used.\n  Maps are reduced with reduce-kv"}
+ :docstring "Like core/reduce except:\n  When init is not provided, (f) is used.\n  Maps are reduced with reduce-kv",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/reduce.cljsdoc"}
 
 ```
 

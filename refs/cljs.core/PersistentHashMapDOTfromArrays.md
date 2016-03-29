@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentHashMap.fromArrays ks vs)</samp><br>
+
+---
 
  <samp>
 (__PersistentHashMap.fromArrays__ ks vs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7141-L7147):
+Source code @ [github]():
 
 ```clj
 (set! (.-fromArrays PersistentHashMap)
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:7141-7147](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7141-L7147)</ins>
+
 </pre>
 
 -->
@@ -85,6 +83,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentHashMap.fromArrays",
  :signature ["[ks vs]"],
+ :name-encode "PersistentHashMapDOTfromArrays",
  :history [["+" "0.0-1211"]],
  :parent-type "PersistentHashMap",
  :type "function",
@@ -92,10 +91,13 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArrays PersistentHashMap)\n  (fn [ks vs]\n    (let [len (alength ks)]\n      (loop [i 0 ^not-native out (transient (.-EMPTY PersistentHashMap))]\n        (if (< i len)\n          (recur (inc i) (-assoc! out (aget ks i) (aget vs i)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7141 7147]},
- :full-name "cljs.core/PersistentHashMap.fromArrays"}
+          :lines [7141 7147],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L7141-L7147"},
+ :usage ["(PersistentHashMap.fromArrays ks vs)"],
+ :full-name "cljs.core/PersistentHashMap.fromArrays",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTfromArrays.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ns-info f)</samp><br>
+
+---
 
  <samp>
 (__ns-info__ f)<br>
@@ -28,7 +31,7 @@ ClojureScript file if it exists.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L251-L257):
+Source code @ [github]():
 
 ```clj
 (defn ns-info
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:251-257](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L251-L257)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "ns-info",
  :signature ["[f]"],
+ :name-encode "ns-info",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl/ns-info",
  :source {:code "(defn ns-info\n  [f]\n  (let [f' (js-src->cljs-src f)]\n    (when (and f' (.exists f'))\n      (ana/parse-ns f'))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [251 257]},
+          :lines [253 259],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L253-L259"},
+ :usage ["(ns-info f)"],
  :full-name "cljs.repl/ns-info",
- :docstring "Given a path to a js source file return the ns info for the corresponding\nClojureScript file if it exists."}
+ :docstring "Given a path to a js source file return the ns info for the corresponding\nClojureScript file if it exists.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/ns-info.cljsdoc"}
 
 ```
 

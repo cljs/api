@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(or)</samp><br>
+<samp>(or x)</samp><br>
+<samp>(or x & next)</samp><br>
+
+---
 
  <samp>
 (__or__)<br>
@@ -103,7 +108,7 @@ value of the last expression. (or) returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L801-L817):
+Source code @ [github]():
 
 ```clj
 (core/defmacro or
@@ -125,12 +130,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:801-817](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L801-L817)</ins>
+
 </pre>
 
 -->
@@ -176,23 +176,28 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "or",
  :signature ["[]" "[x]" "[x & next]"],
+ :name-encode "or",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/or",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/or"},
  :related ["cljs.core/and" "special/if"],
  :full-name-encode "cljs.core/or",
  :source {:code "(core/defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n   (core/let [forms (concat [x] next)]\n     (if (every? #(simple-test-expr? &env %)\n           (map #(cljs.analyzer/analyze &env %) forms))\n       (core/let [or-str (core/->> (repeat (count forms) \"(~{})\")\n                           (interpose \" || \")\n                           (apply core/str))]\n         (bool-expr `(~'js* ~or-str ~@forms)))\n       `(let [or# ~x]\n          (if or# or# (or ~@next)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [801 817]},
+          :lines [801 817],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L801-L817"},
+ :usage ["(or)" "(or x)" "(or x & next)"],
  :examples [{:id "d50433",
              :content "```clj\n(or)\n;;=> nil\n\n(or false)\n;;=> false\n\n(or true)\n;;=> true\n\n(or true true)\n;;=> true\n\n(or true false)\n;;=> true\n\n(or false false)\n;;=> false\n```"}
             {:id "62f291",
              :content "`nil` and `false` are the only falsy values and everything else is truthy:\n\n```clj\n(or \"foo\" \"bar\")\n;;=> \"bar\"\n\n(or \"foo\" nil)\n;;=> \"foo\"\n\n(or \"foo\" false)\n;;=> \"foo\"\n\n(or nil \"foo\")\n;;=> \"foo\"\n\n(or false \"foo\")\n;;=> \"foo\"\n```"}],
  :full-name "cljs.core/or",
- :clj-symbol "clojure.core/or",
- :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns a logical true value, or returns that value and doesn't\nevaluate any of the other expressions, otherwise it returns the\nvalue of the last expression. (or) returns nil."}
+ :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns a logical true value, or returns that value and doesn't\nevaluate any of the other expressions, otherwise it returns the\nvalue of the last expression. (or) returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/or.cljsdoc"}
 
 ```
 

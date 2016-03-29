@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(inputs & xs)</samp><br>
+
+---
 
  <samp>
 (__inputs__ & xs)<br>
@@ -28,7 +31,7 @@ be passed to build or watch.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L157-L174):
+Source code @ [github]():
 
 ```clj
 (defn inputs
@@ -53,13 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:157-174](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L157-L174)</ins>
+
 </pre>
 
 -->
@@ -101,17 +98,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "inputs",
  :signature ["[& xs]"],
+ :name-encode "inputs",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.build.api/inputs",
  :source {:code "(defn inputs\n  [& xs]\n  (reify\n    closure/Inputs\n    (-paths [_]\n      (map io/file xs))\n    closure/Compilable\n    (-compile [_ opts]\n      (letfn [(compile-input [x]\n                (let [compiled (closure/-compile x opts)]\n                  (if (sequential? compiled)\n                    compiled\n                    [compiled])))]\n        (mapcat compile-input xs)))\n    (-find-sources [_ opts]\n      (mapcat #(closure/-find-sources % opts) xs))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [157 174]},
+          :lines [157 174],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L157-L174"},
+ :usage ["(inputs & xs)"],
  :full-name "cljs.build.api/inputs",
- :docstring "Given a list of directories and files, return a compilable object that may\nbe passed to build or watch."}
+ :docstring "Given a list of directories and files, return a compilable object that may\nbe passed to build or watch.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/inputs.cljsdoc"}
 
 ```
 

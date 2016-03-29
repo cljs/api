@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pst e)</samp><br>
+
+---
 
  <samp>
 (__pst__ e)<br>
@@ -31,7 +34,7 @@ exception, stored implicitly by [`*e`][doc:cljs.core/*e].
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1285-L1302):
+Source code @ [github]():
 
 ```clj
 (defmacro pst
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:1285-1302](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1285-L1302)</ins>
+
 </pre>
 
 -->
@@ -109,17 +107,22 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "pst",
  :signature ["[e]"],
+ :name-encode "pst",
  :history [["+" "0.0-2985"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.repl/pst",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/pst"},
  :full-name-encode "cljs.repl/pst",
  :source {:code "(defmacro pst\n  ([] `(pst *e))\n  ([e]\n   (let [{:keys [repl-env] :as env} &env]\n     (when (and e repl-env)\n       (when-let [ret (if (satisfies? IGetError repl-env)\n                   (-get-error repl-env e env *repl-opts*)\n                   (edn/read-string\n                     (evaluate-form repl-env env \"<cljs repl>\"\n                       `(when ~e\n                          (pr-str\n                            {:value (str ~e)\n                             :stacktrace (.-stack ~e)})))))]\n         (display-error repl-env\n           (if (satisfies? IParseError repl-env)\n             (-parse-error repl-env ret *repl-opts*)\n             ret)\n           nil *repl-opts*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1285 1302]},
+          :lines [1287 1304],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L1287-L1304"},
+ :usage ["(pst e)"],
  :full-name "cljs.repl/pst",
- :clj-symbol "clojure.repl/pst"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/pst.cljsdoc"}
 
 ```
 

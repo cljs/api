@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(list & items)</samp><br>
+
+---
 
  <samp>
 (__list__ & items)<br>
@@ -41,7 +44,7 @@ Creates a new list containing the items.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2928-L2943):
+Function code @ [github]():
 
 ```clj
 (defn list
@@ -65,19 +68,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2928-2943](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2928-L2943)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2379-L2382):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro list
@@ -90,12 +88,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2379-2382](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2379-L2382)</ins>
+
 </pre>
 -->
 
@@ -139,25 +132,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "list",
  :signature ["[& items]"],
+ :name-encode "list",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/list",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/list"},
  :related ["cljs.core/vector" "cljs.core/list?"],
  :full-name-encode "cljs.core/list",
  :source {:code "(defn list\n  [& xs]\n  (let [arr (if (and (instance? IndexedSeq xs) (zero? (.-i xs)))\n              (.-arr xs)\n              (let [arr (array)]\n                (loop [^not-native xs xs]\n                  (if-not (nil? xs)\n                    (do\n                      (.push arr (-first xs))\n                      (recur (-next xs)))\n                    arr))))]\n    (loop [i (alength arr) ^not-native r ()]\n      (if (> i 0)\n        (recur (dec i) (-conj r (aget arr (dec i))))\n        r))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2928 2943]},
+          :lines [2928 2943],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2928-L2943"},
  :extra-sources [{:code "(core/defmacro list\n  ([] '(.-EMPTY cljs.core/List))\n  ([x & xs]\n    `(-conj (list ~@xs) ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2379 2382]}],
+                  :lines [2379 2382],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2379-L2382"}],
+ :usage ["(list & items)"],
  :full-name "cljs.core/list",
- :clj-symbol "clojure.core/list",
- :docstring "Creates a new list containing the items."}
+ :docstring "Creates a new list containing the items.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/list.cljsdoc"}
 
 ```
 

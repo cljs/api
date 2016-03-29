@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(path loc)</samp><br>
+
+---
 
  <samp>
 (__path__ loc)<br>
@@ -30,7 +33,7 @@ Returns a seq of nodes leading to this loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L82-L85):
+Source code @ [github]():
 
 ```clj
 (defn path
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:82-85](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L82-L85)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "path",
  :signature ["[loc]"],
+ :name-encode "path",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/path",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/path"},
  :full-name-encode "clojure.zip/path",
  :source {:code "(defn path\n  [loc]\n    (:pnodes (loc 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [82 85]},
+          :lines [82 85],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L82-L85"},
+ :usage ["(path loc)"],
  :full-name "clojure.zip/path",
- :clj-symbol "clojure.zip/path",
- :docstring "Returns a seq of nodes leading to this loc"}
+ :docstring "Returns a seq of nodes leading to this loc",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/path.cljsdoc"}
 
 ```
 

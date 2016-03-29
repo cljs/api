@@ -10,6 +10,9 @@
 </tr>
 </table>
 
+<samp>(stop-server)</samp><br>
+
+---
 
  <samp>
 (__stop-server__)<br>
@@ -23,7 +26,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L272-L274):
+Source code @ [github]():
 
 ```clj
 (defn stop-server
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:272-274](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L272-L274)</ins>
+
 </pre>
 
 -->
@@ -92,6 +90,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [272 274]},
+ :usage ["(stop-server)"],
  :full-name "cljs.repl.browser/stop-server",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

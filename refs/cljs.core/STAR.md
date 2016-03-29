@@ -12,6 +12,12 @@
 </tr>
 </table>
 
+<samp>(\*)</samp><br>
+<samp>(\* x)</samp><br>
+<samp>(\* x y)</samp><br>
+<samp>(\* x y & more)</samp><br>
+
+---
 
  <samp>
 (__\*__)<br>
@@ -73,7 +79,7 @@ Returns the product of nums. (*) returns 1.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2345-L2350):
+Function code @ [github]():
 
 ```clj
 (defn ^number *
@@ -87,19 +93,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2345-2350](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2345-L2350)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1009-L1013):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric *
@@ -113,12 +114,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1009-1013](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1009-L1013)</ins>
+
 </pre>
 -->
 
@@ -163,27 +159,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "*",
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
+ :name-encode "STAR",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*"},
  :related ["cljs.core/+" "cljs.core//"],
  :full-name-encode "cljs.core/STAR",
  :source {:code "(defn ^number *\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/* x y))\n  ([x y & more] (reduce * (cljs.core/* x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2345 2350]},
+          :lines [2345 2350],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2345-L2350"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric *\n  ([] 1)\n  ([x] x)\n  ([x y] (core/list 'js* \"(~{} * ~{})\" x y))\n  ([x y & more] `(* (* ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1009 1013]}],
+                  :lines [1009 1013],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1009-L1013"}],
+ :usage ["(*)" "(* x)" "(* x y)" "(* x y & more)"],
  :examples [{:id "bc4a1f",
              :content "```clj\n;; there is an implicit 1\n(*)\n;;=> 1\n\n;; the implicit 1 comes into play\n(* 6)\n;;=> 6\n\n(* 2 3)\n;;=> 6\n\n(* 2 3 4)\n;;=> 24\n```"}],
  :full-name "cljs.core/*",
- :clj-symbol "clojure.core/*",
- :docstring "Returns the product of nums. (*) returns 1."}
+ :docstring "Returns the product of nums. (*) returns 1.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STAR.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(test-var v)</samp><br>
+
+---
 
  <samp>
 (__test-var__ v)<br>
@@ -31,7 +34,7 @@ add v to :testing-vars property of env.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L483-L487):
+Source code @ [github]():
 
 ```clj
 (defn test-var
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:483-487](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L483-L487)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "test-var",
  :signature ["[v]"],
+ :name-encode "test-var",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/test-var",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-var"},
  :full-name-encode "cljs.test/test-var",
  :source {:code "(defn test-var\n  [v]\n  (run-block (test-var-block v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [483 487]},
+          :lines [483 487],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L483-L487"},
+ :usage ["(test-var v)"],
  :full-name "cljs.test/test-var",
- :clj-symbol "clojure.test/test-var",
- :docstring "If v has a function in its :test metadata, calls that function,\nadd v to :testing-vars property of env."}
+ :docstring "If v has a function in its :test metadata, calls that function,\nadd v to :testing-vars property of env.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-var.cljsdoc"}
 
 ```
 

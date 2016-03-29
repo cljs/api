@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(NeverEquiv.)</samp><br>
+
+---
 
  <samp>
 (__NeverEquiv.__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5644-L5649):
+Source code @ [github]():
 
 ```clj
 (deftype NeverEquiv []
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5644-5649](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5644-L5649)</ins>
+
 </pre>
 
 -->
@@ -83,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "NeverEquiv",
- :type "type",
  :signature ["[]"],
+ :name-encode "NeverEquiv",
+ :history [["+" "0.0-927"]],
+ :type "type",
+ :full-name-encode "cljs.core/NeverEquiv",
  :source {:code "(deftype NeverEquiv []\n  Object\n  (equiv [this other]\n    (-equiv this other))\n  IEquiv\n  (-equiv [o other] false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5644 5649]},
+          :lines [5644 5649],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5644-L5649"},
+ :usage ["(NeverEquiv.)"],
  :full-name "cljs.core/NeverEquiv",
- :full-name-encode "cljs.core/NeverEquiv",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/NeverEquiv.cljsdoc"}
 
 ```
 

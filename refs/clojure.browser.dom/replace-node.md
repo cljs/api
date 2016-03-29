@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(replace-node old-node new-node)</samp><br>
+
+---
 
  <samp>
 (__replace-node__ old-node new-node)<br>
@@ -29,7 +32,7 @@ element or an html string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L114-L122):
+Source code @ [github]():
 
 ```clj
 (defn replace-node
@@ -44,13 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:114-122](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L114-L122)</ins>
+
 </pre>
 
 -->
@@ -92,17 +89,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "replace-node",
  :signature ["[old-node new-node]"],
+ :name-encode "replace-node",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/replace-node",
  :source {:code "(defn replace-node\n  [old-node new-node]\n  (let [old-node (ensure-element old-node)\n        new-node (ensure-element new-node)]\n    (gdom/replaceNode new-node old-node)\n    new-node))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [114 122]},
+          :lines [114 122],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L114-L122"},
+ :usage ["(replace-node old-node new-node)"],
  :full-name "clojure.browser.dom/replace-node",
- :docstring "Replace old-node with new-node. old-node can be an element or a\nkeyword which is the id of the node to replace.  new-node can be an\nelement or an html string."}
+ :docstring "Replace old-node with new-node. old-node can be an element or a\nkeyword which is the id of the node to replace.  new-node can be an\nelement or an html string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/replace-node.cljsdoc"}
 
 ```
 

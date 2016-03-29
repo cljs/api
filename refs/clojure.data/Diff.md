@@ -25,7 +25,7 @@ Implementation detail. Subject to change.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L79-L81):
+Source code @ [github]():
 
 ```clj
 (defprotocol Diff
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[data.cljs:79-81](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L79-L81)</ins>
+
 </pre>
 
 -->
@@ -86,21 +81,25 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.data",
  :name "Diff",
+ :name-encode "Diff",
  :history [["+" "0.0-1503"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.data/Diff",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/Diff"},
  :full-name-encode "clojure.data/Diff",
  :source {:code "(defprotocol Diff\n  \"Implementation detail. Subject to change.\"\n  (diff-similar [a b] \"Implementation detail. Subject to change.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/data.cljs",
-          :lines [79 81]},
+          :lines [79 81],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/data.cljs#L79-L81"},
  :methods [{:name "diff-similar",
             :signature ["[a b]"],
             :docstring "Implementation detail. Subject to change."}],
  :full-name "clojure.data/Diff",
- :clj-symbol "clojure.data/Diff",
- :docstring "Implementation detail. Subject to change."}
+ :docstring "Implementation detail. Subject to change.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.data/Diff.cljsdoc"}
 
 ```
 

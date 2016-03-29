@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(sequential? coll)</samp><br>
+
+---
 
  <samp>
 (__sequential?__ coll)<br>
@@ -43,7 +46,7 @@ Returns true if coll satisfies ISequential
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1978-L1980):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean sequential?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1978-1980](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1978-L1980)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sequential?",
  :signature ["[coll]"],
+ :name-encode "sequentialQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sequential?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sequential?"},
  :related ["cljs.core/seq?" "cljs.core/coll?"],
  :full-name-encode "cljs.core/sequentialQMARK",
  :source {:code "(defn ^boolean sequential?\n  [x] (satisfies? ISequential x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1978 1980]},
+          :lines [1978 1980],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1978-L1980"},
+ :usage ["(sequential? coll)"],
  :full-name "cljs.core/sequential?",
- :clj-symbol "clojure.core/sequential?",
- :docstring "Returns true if coll satisfies ISequential"}
+ :docstring "Returns true if coll satisfies ISequential",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sequentialQMARK.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(butlast s)</samp><br>
+
+---
 
  <samp>
 (__butlast__ s)<br>
@@ -66,7 +69,7 @@ Return a seq of all but the last item in coll, in linear time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8519-L8525):
+Source code @ [github]():
 
 ```clj
 (defn butlast
@@ -81,12 +84,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8519-8525](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8519-L8525)</ins>
+
 </pre>
 
 -->
@@ -132,8 +130,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "butlast",
  :signature ["[s]"],
+ :name-encode "butlast",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/butlast",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/butlast"},
  :related ["cljs.core/first"
            "cljs.core/rest"
            "cljs.core/last"
@@ -144,14 +145,16 @@ The API data for this symbol:
  :source {:code "(defn butlast\n  [s]\n  (loop [ret [] s s]\n    (if (next s)\n      (recur (conj ret (first s)) (next s))\n      (seq ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8519 8525]},
+          :lines [8519 8525],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8519-L8525"},
+ :usage ["(butlast s)"],
  :examples [{:id "7a4676",
              :content "```clj\n(butlast [1 2 3])\n;;=> (1 2)\n\n(butlast [1 2])\n;;=> (1)\n\n(butlast [1])\n;;=> nil\n\n(butlast [])\n;;=> nil\n```"}],
  :full-name "cljs.core/butlast",
- :clj-symbol "clojure.core/butlast",
- :docstring "Return a seq of all but the last item in coll, in linear time"}
+ :docstring "Return a seq of all but the last item in coll, in linear time",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/butlast.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(group-by f coll)</samp><br>
+
+---
 
  <samp>
 (__group-by__ f coll)<br>
@@ -47,7 +50,7 @@ corresponding elements, in the order they appeared in coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9663-L9673):
+Source code @ [github]():
 
 ```clj
 (defn group-by
@@ -64,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9663-9673](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9663-L9673)</ins>
+
 </pre>
 
 -->
@@ -115,19 +113,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "group-by",
  :signature ["[f coll]"],
+ :name-encode "group-by",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/group-by",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/group-by"},
  :related ["cljs.core/partition-by" "cljs.core/frequencies"],
  :full-name-encode "cljs.core/group-by",
  :source {:code "(defn group-by\n  [f coll]\n  (persistent!\n    (reduce\n      (fn [ret x]\n        (let [k (f x)]\n          (assoc! ret k (conj (get ret k []) x))))\n      (transient {}) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9663 9673]},
+          :lines [9663 9673],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9663-L9673"},
+ :usage ["(group-by f coll)"],
  :full-name "cljs.core/group-by",
- :clj-symbol "clojure.core/group-by",
- :docstring "Returns a map of the elements of coll keyed by the result of\nf on each element. The value at each key will be a vector of the\ncorresponding elements, in the order they appeared in coll."}
+ :docstring "Returns a map of the elements of coll keyed by the result of\nf on each element. The value at each key will be a vector of the\ncorresponding elements, in the order they appeared in coll.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/group-by.cljsdoc"}
 
 ```
 

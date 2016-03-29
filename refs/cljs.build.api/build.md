@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(build source opts)</samp><br>
+<samp>(build source opts compiler-env)</samp><br>
+
+---
 
  <samp>
 (__build__ source opts)<br>
@@ -30,7 +34,7 @@ Given a source which can be compiled, produce runnable JavaScript.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L198-L210):
+Source code @ [github]():
 
 ```clj
 (defn build
@@ -41,8 +45,8 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
        (env/default-compiler-env opts))))
   ([source opts compiler-env]
    (doseq [[unknown-opt suggested-opt] (util/unknown-opts (set (keys opts)) closure/known-opts)]
-     (println (str "WARNING: Unknown compiler option '" unknown-opt "'."
-                (when suggested-opt (str " Did you mean '" suggested-opt "'?")))))
+     (when suggested-opt
+       (println (str "WARNING: Unknown compiler option '" unknown-opt "'. Did you mean '" suggested-opt "'?"))))
    (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
      (closure/build source opts compiler-env))))
 ```
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:198-210](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L198-L210)</ins>
+
 </pre>
 
 -->
@@ -99,17 +97,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "build",
  :signature ["[source opts]" "[source opts compiler-env]"],
+ :name-encode "build",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.build.api/build",
- :source {:code "(defn build\n  ([source opts]\n   (build source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (doseq [[unknown-opt suggested-opt] (util/unknown-opts (set (keys opts)) closure/known-opts)]\n     (println (str \"WARNING: Unknown compiler option '\" unknown-opt \"'.\"\n                (when suggested-opt (str \" Did you mean '\" suggested-opt \"'?\")))))\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/build source opts compiler-env))))",
+ :source {:code "(defn build\n  ([source opts]\n   (build source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (doseq [[unknown-opt suggested-opt] (util/unknown-opts (set (keys opts)) closure/known-opts)]\n     (when suggested-opt\n       (println (str \"WARNING: Unknown compiler option '\" unknown-opt \"'. Did you mean '\" suggested-opt \"'?\"))))\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/build source opts compiler-env))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [198 210]},
+          :lines [198 210],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L198-L210"},
+ :usage ["(build source opts)" "(build source opts compiler-env)"],
  :full-name "cljs.build.api/build",
- :docstring "Given a source which can be compiled, produce runnable JavaScript."}
+ :docstring "Given a source which can be compiled, produce runnable JavaScript.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/build.cljsdoc"}
 
 ```
 

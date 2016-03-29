@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(array-iter x)</samp><br>
+
+---
 
  <samp>
 (__array-iter__ x)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3660-L3661):
+Source code @ [github]():
 
 ```clj
 (defn array-iter [x]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3660-3661](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3660-L3661)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "array-iter",
- :type "function",
  :signature ["[x]"],
+ :name-encode "array-iter",
+ :history [["+" "0.0-2301"]],
+ :type "function",
+ :full-name-encode "cljs.core/array-iter",
  :source {:code "(defn array-iter [x]\n  (ArrayIter. x 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3660 3661]},
+          :lines [3660 3661],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3660-L3661"},
+ :usage ["(array-iter x)"],
  :full-name "cljs.core/array-iter",
- :full-name-encode "cljs.core/array-iter",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array-iter.cljsdoc"}
 
 ```
 

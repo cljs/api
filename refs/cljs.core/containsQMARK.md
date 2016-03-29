@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(contains? coll k)</samp><br>
+
+---
 
  <samp>
 (__contains?__ coll k)<br>
@@ -97,7 +100,7 @@ it will not perform a linear search for a value.  See also 'some'.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2099-L2108):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean contains?
@@ -111,12 +114,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2099-2108](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2099-L2108)</ins>
+
 </pre>
 
 -->
@@ -163,21 +161,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "contains?",
  :signature ["[coll k]"],
+ :name-encode "containsQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/contains?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/contains?"},
  :related ["cljs.core/some" "cljs.core/get"],
  :full-name-encode "cljs.core/containsQMARK",
  :source {:code "(defn ^boolean contains?\n  [coll v]\n  (if (identical? (get coll v lookup-sentinel) lookup-sentinel)\n    false\n    true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2099 2108]},
+          :lines [2099 2108],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2099-L2108"},
+ :usage ["(contains? coll k)"],
  :examples [{:id "2991f0",
              :content "Sets and Maps provide key lookups, so `contains?` works as expected:\n\n```clj\n(contains? #{:a :b} :a)\n;;=> true\n\n(contains? {:a 1, :b 2} :a)\n;;=> true\n\n(contains? {:a 1, :b 2} 1)\n;;=> false\n```\n\nVectors provide integer index lookups, so `contains?` works appropriately:\n\n```clj\n(contains? [:a :b] :b)\n;;=> false\n\n(contains? [:a :b] 1)\n;;=> true\n```\n\nLists and Sequences do not provide lookups, so `contains?` will not work:\n\n```clj\n(contains? '(:a :b) :a)\n;;=> false\n\n(contains? '(:a :b) 1)\n;;=> false\n\n(contains? (range 3) 1)\n;;=> false\n```"}],
  :full-name "cljs.core/contains?",
- :clj-symbol "clojure.core/contains?",
- :docstring "Returns true if key is present in the given collection, otherwise\nreturns false.  Note that for numerically indexed collections like\nvectors and arrays, this tests if the numeric key is within the\nrange of indexes. 'contains?' operates constant or logarithmic time;\nit will not perform a linear search for a value.  See also 'some'."}
+ :docstring "Returns true if key is present in the given collection, otherwise\nreturns false.  Note that for numerically indexed collections like\nvectors and arrays, this tests if the numeric key is within the\nrange of indexes. 'contains?' operates constant or logarithmic time;\nit will not perform a linear search for a value.  See also 'some'.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/containsQMARK.cljsdoc"}
 
 ```
 

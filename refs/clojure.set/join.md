@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(join xrel yrel)</samp><br>
+<samp>(join xrel yrel km)</samp><br>
+
+---
 
  <samp>
 (__join__ xrel yrel)<br>
@@ -35,7 +39,7 @@ keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L101-L129):
+Source code @ [github]():
 
 ```clj
 (defn join
@@ -70,12 +74,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:101-129](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L101-L129)</ins>
+
 </pre>
 
 -->
@@ -120,18 +119,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "join",
  :signature ["[xrel yrel]" "[xrel yrel km]"],
+ :name-encode "join",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/join",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/join"},
  :full-name-encode "clojure.set/join",
  :source {:code "(defn join\n  ([xrel yrel] ;natural join\n   (if (and (seq xrel) (seq yrel))\n     (let [ks (intersection (set (keys (first xrel))) (set (keys (first yrel))))\n           [r s] (if (<= (count xrel) (count yrel))\n                   [xrel yrel]\n                   [yrel xrel])\n           idx (index r ks)]\n       (reduce (fn [ret x]\n                 (let [found (idx (select-keys x ks))]\n                   (if found\n                     (reduce #(conj %1 (merge %2 x)) ret found)\n                     ret)))\n               #{} s))\n     #{}))\n  ([xrel yrel km] ;arbitrary key mapping\n   (let [[r s k] (if (<= (count xrel) (count yrel))\n                   [xrel yrel (map-invert km)]\n                   [yrel xrel km])\n         idx (index r (vals k))]\n     (reduce (fn [ret x]\n               (let [found (idx (rename-keys (select-keys x (keys k)) k))]\n                 (if found\n                   (reduce #(conj %1 (merge %2 x)) ret found)\n                   ret)))\n             #{} s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [101 129]},
+          :lines [101 129],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L101-L129"},
+ :usage ["(join xrel yrel)" "(join xrel yrel km)"],
  :full-name "clojure.set/join",
- :clj-symbol "clojure.set/join",
- :docstring "When passed 2 rels, returns the rel corresponding to the natural\njoin. When passed an additional keymap, joins on the corresponding\nkeys."}
+ :docstring "When passed 2 rels, returns the rel corresponding to the natural\njoin. When passed an additional keymap, joins on the corresponding\nkeys.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/join.cljsdoc"}
 
 ```
 

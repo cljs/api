@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(amap a idx ret expr)</samp><br>
+
+---
 
  <samp>
 (__amap__ a idx ret expr)<br>
@@ -74,7 +77,7 @@ array ret.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2463-L2476):
+Source code @ [github]():
 
 ```clj
 (core/defmacro amap
@@ -93,12 +96,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2463-2476](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2463-L2476)</ins>
+
 </pre>
 
 -->
@@ -144,23 +142,28 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "amap",
  :signature ["[a idx ret expr]"],
+ :name-encode "amap",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/amap",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/amap"},
  :related ["cljs.core/map"],
  :full-name-encode "cljs.core/amap",
  :source {:code "(core/defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2463 2476]},
+          :lines [2463 2476],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2463-L2476"},
+ :usage ["(amap a idx ret expr)"],
  :examples [{:id "3a7471",
              :content "```clj\n(def a #js [1 2 3])\n(amap a i ret (* 10 (aget a i)))\n;;=> #js [10 20 30]\n```"}
             {:id "0f57af",
              :content "You can also use `ret` inside the mapped expression if you want to use the\ncurrent result:\n\n```clj\n(def a #js [1 2 3])\n(amap a i ret (+ (if (pos? i)\n                   (aget ret (dec i))\n                   0)\n                 (* 10 (aget a i))))\n;;=> #js [10 30 60]\n```"}],
  :full-name "cljs.core/amap",
- :clj-symbol "clojure.core/amap",
- :docstring "Maps an expression across an array a, using an index named idx, and\nreturn value named ret, initialized to a clone of a, then setting\neach element of ret to the evaluation of expr, returning the new\narray ret."}
+ :docstring "Maps an expression across an array a, using an index named idx, and\nreturn value named ret, initialized to a clone of a, then setting\neach element of ret to the evaluation of expr, returning the new\narray ret.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/amap.cljsdoc"}
 
 ```
 

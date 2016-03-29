@@ -12,6 +12,12 @@
 </tr>
 </table>
 
+<samp>(swap! a f)</samp><br>
+<samp>(swap! a f x)</samp><br>
+<samp>(swap! a f x y)</samp><br>
+<samp>(swap! a f x y & more)</samp><br>
+
+---
 
  <samp>
 (__swap!__ a f)<br>
@@ -59,7 +65,7 @@ the value that was swapped in.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4138-L4158):
+Source code @ [github]():
 
 ```clj
 (defn swap!
@@ -85,12 +91,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4138-4158](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4138-L4158)</ins>
+
 </pre>
 
 -->
@@ -136,19 +137,27 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "swap!",
  :signature ["[a f]" "[a f x]" "[a f x y]" "[a f x y & more]"],
+ :name-encode "swapBANG",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/swap!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/swap!"},
  :related ["cljs.core/atom" "cljs.core/reset!"],
  :full-name-encode "cljs.core/swapBANG",
  :source {:code "(defn swap!\n  ([a f]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a)))\n       (-swap! a f)))\n  ([a f x]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x))\n       (-swap! a f x)))\n  ([a f x y]\n     (if (instance? Atom a)\n       (reset! a (f (.-state a) x y))\n       (-swap! a f x y)))\n  ([a f x y & more]\n     (if (instance? Atom a)\n       (reset! a (apply f (.-state a) x y more))\n       (-swap! a f x y more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4138 4158]},
+          :lines [4138 4158],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4138-L4158"},
+ :usage ["(swap! a f)"
+         "(swap! a f x)"
+         "(swap! a f x y)"
+         "(swap! a f x y & more)"],
  :full-name "cljs.core/swap!",
- :clj-symbol "clojure.core/swap!",
- :docstring "Atomically swaps the value of atom to be:\n(apply f current-value-of-atom args). Note that f may be called\nmultiple times, and thus should be free of side effects.  Returns\nthe value that was swapped in."}
+ :docstring "Atomically swaps the value of atom to be:\n(apply f current-value-of-atom args). Note that f may be called\nmultiple times, and thus should be free of side effects.  Returns\nthe value that was swapped in.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/swapBANG.cljsdoc"}
 
 ```
 

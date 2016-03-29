@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(array & args)</samp><br>
+
+---
 
  <samp>
 (__array__ & args)<br>
@@ -73,7 +76,7 @@ Creates a new javascript array.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L383-L393):
+Function code @ [github]():
 
 ```clj
 (defn ^array array
@@ -91,19 +94,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:383-393](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L383-L393)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2352-L2359):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro array [& rest]
@@ -120,12 +118,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2352-2359](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2352-L2359)</ins>
+
 </pre>
 -->
 
@@ -167,6 +160,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "array",
  :signature ["[& args]"],
+ :name-encode "array",
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :related ["cljs.core/aclone"
@@ -176,21 +170,25 @@ The API data for this symbol:
  :source {:code "(defn ^array array\n  [var-args]            ;; [& items]\n  (let [a (js/Array. (alength (cljs.core/js-arguments)))]\n    (loop [i 0]\n      (if (< i (alength a))\n        (do\n          (aset a i (aget (cljs.core/js-arguments) i))\n          (recur (inc i)))\n        a))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [383 393]},
+          :lines [383 393],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L383-L393"},
  :extra-sources [{:code "(core/defmacro array [& rest]\n  (core/let [xs-str (core/->> (repeat \"~{}\")\n                      (take (count rest))\n                      (interpose \",\")\n                      (apply core/str))]\n    (vary-meta\n      (list* 'js* (core/str \"[\" xs-str \"]\") rest)\n      assoc :tag 'array)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2352 2359]}],
+                  :lines [2352 2359],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2352-L2359"}],
+ :usage ["(array & args)"],
  :examples [{:id "3a546d",
              :content "```clj\n(array 1 2 3)\n;;=> #js [1 2 3]\n\n(apply array [1 2 3])\n;;=> #js [1 2 3]\n\n#js [1 2 3]\n;;=> #js [1 2 3]\n```"}
             {:id "cca945",
              :content "When creating nested JavaScript arrays, you can opt to use `clj->js` instead:\n\n```clj\n(array 1 2 (array 3 4))\n;;=> #js [1 2 #js [3 4]]\n\n(clj->js [1 2 [3 4]])\n;;=> #js [1 2 #js [3 4]]\n```"}],
  :full-name "cljs.core/array",
- :docstring "Creates a new javascript array.\n@param {...*} var_args"}
+ :docstring "Creates a new javascript array.\n@param {...*} var_args",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array.cljsdoc"}
 
 ```
 

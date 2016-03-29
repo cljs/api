@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(doall coll)</samp><br>
+<samp>(doall n coll)</samp><br>
+
+---
 
  <samp>
 (__doall__ coll)<br>
@@ -53,7 +57,7 @@ seq to reside in memory at one time.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8915-L8927):
+Source code @ [github]():
 
 ```clj
 (defn doall
@@ -69,12 +73,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8915-8927](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8915-L8927)</ins>
+
 </pre>
 
 -->
@@ -120,19 +119,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "doall",
  :signature ["[coll]" "[n coll]"],
+ :name-encode "doall",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/doall",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/doall"},
  :related ["cljs.core/dorun" "cljs.core/doseq"],
  :full-name-encode "cljs.core/doall",
  :source {:code "(defn doall\n  ([coll]\n   (dorun coll)\n   coll)\n  ([n coll]\n   (dorun n coll)\n   coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8915 8927]},
+          :lines [8915 8927],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8915-L8927"},
+ :usage ["(doall coll)" "(doall n coll)"],
  :full-name "cljs.core/doall",
- :clj-symbol "clojure.core/doall",
- :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. doall can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, retains the head and returns it, thus causing the entire\nseq to reside in memory at one time."}
+ :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. doall can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, retains the head and returns it, thus causing the entire\nseq to reside in memory at one time.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/doall.cljsdoc"}
 
 ```
 

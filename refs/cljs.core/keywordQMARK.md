@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(keyword? x)</samp><br>
+
+---
 
  <samp>
 (__keyword?__ x)<br>
@@ -30,7 +33,7 @@ Return true if x is a Keyword
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3053-L3056):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean keyword?
@@ -42,19 +45,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3053-3056](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3053-L3056)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L927-L928):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro keyword? [x]
@@ -65,12 +63,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:927-928](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L927-L928)</ins>
+
 </pre>
 -->
 
@@ -114,24 +107,30 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "keyword?",
  :signature ["[x]"],
+ :name-encode "keywordQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/keyword?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/keyword?"},
  :full-name-encode "cljs.core/keywordQMARK",
  :source {:code "(defn ^boolean keyword?\n  [x]\n  (instance? Keyword x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3053 3056]},
+          :lines [3053 3056],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3053-L3056"},
  :extra-sources [{:code "(core/defmacro keyword? [x]\n  (bool-expr `(instance? Keyword ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [927 928]}],
+                  :lines [927 928],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L927-L928"}],
+ :usage ["(keyword? x)"],
  :full-name "cljs.core/keyword?",
- :clj-symbol "clojure.core/keyword?",
- :docstring "Return true if x is a Keyword"}
+ :docstring "Return true if x is a Keyword",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/keywordQMARK.cljsdoc"}
 
 ```
 

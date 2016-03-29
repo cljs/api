@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(compile state source cb)</samp><br>
+<samp>(compile state source name cb)</samp><br>
+<samp>(compile state source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__compile__ state source cb)<br>
@@ -54,7 +59,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L580-L618):
+Source code @ [github]():
 
 ```clj
 (defn compile
@@ -80,12 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:580-618](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L580-L618)</ins>
+
 </pre>
 
 -->
@@ -138,6 +138,9 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [580 618]},
+ :usage ["(compile state source cb)"
+         "(compile state source name cb)"
+         "(compile state source name opts cb)"],
  :full-name "cljs.js/compile",
  :docstring "Compile ClojureScript source into JavaScript. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :load       - library resolution function, see *load-fn*\n  :source-map - set to true to generate inline source map information\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value with the compilation result (string). If unsuccessful the map\n  will contain a key :error with an ex-info instance describing the cause\n  of failure.",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}

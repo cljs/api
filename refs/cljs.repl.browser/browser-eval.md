@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(browser-eval form)</samp><br>
+
+---
 
  <samp>
 (__browser-eval__ form)<br>
@@ -32,7 +35,7 @@ contain the error message. :error means that some other error has occured.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L184-L200):
+Source code @ [github]():
 
 ```clj
 (defn browser-eval
@@ -52,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:184-200](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L184-L200)</ins>
+
 </pre>
 
 -->
@@ -100,17 +97,21 @@ The API data for this symbol:
 {:ns "cljs.repl.browser",
  :name "browser-eval",
  :signature ["[form]"],
+ :name-encode "browser-eval",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/browser-eval",
  :source {:code "(defn browser-eval\n  [form]\n  (let [return-value (promise)]\n    (send-for-eval form\n      (fn [val] (deliver return-value val)))\n    (let [ret @return-value]\n      (try\n        (read-string ret)\n        (catch Exception e\n          {:status :error\n           :value (str \"Could not read return value: \" ret)})))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [184 200]},
+          :lines [184 200],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L184-L200"},
+ :usage ["(browser-eval form)"],
  :full-name "cljs.repl.browser/browser-eval",
- :docstring "Given a string of JavaScript, evaluate it in the browser and return a map representing the\nresult of the evaluation. The map will contain the keys :type and :value. :type can be\n:success, :exception, or :error. :success means that the JavaScript was evaluated without\nexception and :value will contain the return value of the evaluation. :exception means that\nthere was an exception in the browser while evaluating the JavaScript and :value will\ncontain the error message. :error means that some other error has occured."}
+ :docstring "Given a string of JavaScript, evaluate it in the browser and return a map representing the\nresult of the evaluation. The map will contain the keys :type and :value. :type can be\n:success, :exception, or :error. :success means that the JavaScript was evaluated without\nexception and :value will contain the return value of the evaluation. :exception means that\nthere was an exception in the browser while evaluating the JavaScript and :value will\ncontain the error message. :error means that some other error has occured.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/browser-eval.cljsdoc"}
 
 ```
 

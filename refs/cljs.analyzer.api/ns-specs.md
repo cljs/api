@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ns-specs ns)</samp><br>
+
+---
 
  <samp>
 (__ns-specs__ ns)<br>
@@ -28,7 +31,7 @@ provided in the source.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L48-L53):
+Source code @ [github]():
 
 ```clj
 (defn ns-specs
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
-└── src
-    └── clj
-        └── cljs
-            └── analyzer
-                └── <ins>[api.clj:48-53](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/analyzer/api.clj#L48-L53)</ins>
+
 </pre>
 
 -->
@@ -97,6 +95,7 @@ The API data for this symbol:
           :tag "r2644",
           :filename "src/clj/cljs/analyzer/api.clj",
           :lines [48 53]},
+ :usage ["(ns-specs ns)"],
  :full-name "cljs.analyzer.api/ns-specs",
  :docstring "Given a namespace return all the original specs for a namspace as originally\nprovided in the source.",
  :removed {:in "0.0-2655", :last-seen "0.0-2644"}}

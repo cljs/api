@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(re-seq re s)</samp><br>
+
+---
 
  <samp>
 (__re-seq__ re s)<br>
@@ -44,7 +47,7 @@ Returns a lazy sequence of successive matches of re in s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8962-L8969):
+Source code @ [github]():
 
 ```clj
 (defn re-seq
@@ -60,12 +63,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8962-8969](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8962-L8969)</ins>
+
 </pre>
 
 -->
@@ -111,8 +109,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "re-seq",
  :signature ["[re s]"],
+ :name-encode "re-seq",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/re-seq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/re-seq"},
  :related ["cljs.core/re-find"
            "cljs.core/re-pattern"
            "cljs.core/re-matches"
@@ -122,12 +123,14 @@ The API data for this symbol:
  :source {:code "(defn re-seq\n  [re s]\n  (let [match-data (re-find re s)\n        match-idx (.search s re)\n        match-str (if (coll? match-data) (first match-data) match-data)\n        post-match (subs s (+ match-idx (count match-str)))]\n    (when match-data (lazy-seq (cons match-data (when (seq post-match) (re-seq re post-match)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8962 8969]},
+          :lines [8962 8969],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8962-L8969"},
+ :usage ["(re-seq re s)"],
  :full-name "cljs.core/re-seq",
- :clj-symbol "clojure.core/re-seq",
- :docstring "Returns a lazy sequence of successive matches of re in s."}
+ :docstring "Returns a lazy sequence of successive matches of re in s.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/re-seq.cljsdoc"}
 
 ```
 

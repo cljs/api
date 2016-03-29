@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(find-ns sym)</samp><br>
+<samp>(find-ns state sym)</samp><br>
+
+---
 
  <samp>
 (__find-ns__ sym)<br>
@@ -34,7 +38,7 @@ to clojure.core/find-ns.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L160-L167):
+Source code @ [github]():
 
 ```clj
 (defn find-ns
@@ -49,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:160-167](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L160-L167)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "find-ns",
  :signature ["[sym]" "[state sym]"],
+ :name-encode "find-ns",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/find-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/find-ns"},
  :full-name-encode "cljs.analyzer.api/find-ns",
  :source {:code "(defn find-ns\n  ([sym]\n   (find-ns env/*compiler* sym))\n  ([state sym]\n   {:pre [(symbol? sym)]}\n   (get-in @state [::ana/namespaces sym])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [160 167]},
+          :lines [160 167],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L160-L167"},
+ :usage ["(find-ns sym)" "(find-ns state sym)"],
  :full-name "cljs.analyzer.api/find-ns",
- :clj-symbol "clojure.core/find-ns",
- :docstring "Given a namespace return the corresponding namespace analysis map. Analagous\nto clojure.core/find-ns."}
+ :docstring "Given a namespace return the corresponding namespace analysis map. Analagous\nto clojure.core/find-ns.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/find-ns.cljsdoc"}
 
 ```
 

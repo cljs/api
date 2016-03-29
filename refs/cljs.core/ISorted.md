@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Sorted</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Sorted.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Sorted</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Sorted.java)
 </td>
 </tr>
 </table>
@@ -26,7 +26,7 @@ Protocol for a collection which can represent their items
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L627-L642):
+Source code @ [github]():
 
 ```clj
 (defprotocol ISorted
@@ -51,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:627-642](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L627-L642)</ins>
+
 </pre>
 
 -->
@@ -100,15 +95,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ISorted",
+ :name-encode "ISorted",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Sorted",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Sorted.java"},
  :full-name-encode "cljs.core/ISorted",
  :source {:code "(defprotocol ISorted\n  \"Protocol for a collection which can represent their items\n  in a sorted manner. \"\n  (^clj -sorted-seq [coll ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\")\n  (^clj -sorted-seq-from [coll k ascending?]\n    \"Returns a sorted seq from coll in either ascending or descending order.\n     If ascending is true, the result should contain all items which are > or >=\n     than k. If ascending is false, the result should contain all items which\n     are < or <= than k, e.g.\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 true) => (3 4 5)\n     (-sorted-seq-from (sorted-set 1 2 3 4 5) 3 false) => (3 2 1)\")\n  (-entry-key [coll entry]\n    \"Returns the key for entry.\")\n  (-comparator [coll]\n    \"Returns the comparator for coll.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [627 642]},
+          :lines [627 642],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L627-L642"},
  :methods [{:name "-sorted-seq",
             :signature ["[coll ascending?]"],
             :docstring "Returns a sorted seq from coll in either ascending or descending order."}
@@ -122,8 +121,8 @@ The API data for this symbol:
             :signature ["[coll]"],
             :docstring "Returns the comparator for coll."}],
  :full-name "cljs.core/ISorted",
- :clj-symbol "clojure.lang/Sorted",
- :docstring "Protocol for a collection which can represent their items\n  in a sorted manner. "}
+ :docstring "Protocol for a collection which can represent their items\n  in a sorted manner. ",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISorted.cljsdoc"}
 
 ```
 

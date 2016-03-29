@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(get-element id)</samp><br>
+
+---
 
  <samp>
 (__get-element__ id)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L98-L99):
+Source code @ [github]():
 
 ```clj
 (defn get-element [id]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:98-99](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L98-L99)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "get-element",
- :type "function",
  :signature ["[id]"],
+ :name-encode "get-element",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/get-element",
  :source {:code "(defn get-element [id]\n  (gdom/getElement (name id)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [98 99]},
+          :lines [98 99],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L98-L99"},
+ :usage ["(get-element id)"],
  :full-name "clojure.browser.dom/get-element",
- :full-name-encode "clojure.browser.dom/get-element",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/get-element.cljsdoc"}
 
 ```
 

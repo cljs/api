@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(skip-whitespace s)</samp><br>
+
+---
 
  <samp>
 (__skip-whitespace__ s)<br>
@@ -34,7 +37,7 @@ supporting .unread and collapsing all of CR, LF, and CRLF to a single
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L66-L83):
+Source code @ [github]():
 
 ```clj
 (defn skip-whitespace
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:66-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L66-L83)</ins>
+
 </pre>
 
 -->
@@ -100,17 +98,21 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "skip-whitespace",
  :signature ["[s]"],
+ :name-encode "skip-whitespace",
  :history [["+" "0.0-2719"]],
  :type "function",
  :full-name-encode "cljs.repl/skip-whitespace",
  :source {:code "(defn skip-whitespace\n  [s]\n  (loop [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      \\; (do (readers/read-line s) :line-start)\n      (if (or (Character/isWhitespace c) (identical? c \\,))\n        (recur (readers/read-char s))\n        (do (readers/unread s c) :body)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [66 83]},
+          :lines [68 85],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L68-L85"},
+ :usage ["(skip-whitespace s)"],
  :full-name "cljs.repl/skip-whitespace",
- :docstring "Skips whitespace characters on stream s. Returns :line-start, :stream-end,\nor :body to indicate the relative location of the next character on s.\nInterprets comma as whitespace and semicolon as comment to end of line.\nDoes not interpret #! as comment to end of line because only one\ncharacter of lookahead is available. The stream must either be an\ninstance of LineNumberingPushbackReader or duplicate its behavior of both\nsupporting .unread and collapsing all of CR, LF, and CRLF to a single\n\\newline."}
+ :docstring "Skips whitespace characters on stream s. Returns :line-start, :stream-end,\nor :body to indicate the relative location of the next character on s.\nInterprets comma as whitespace and semicolon as comment to end of line.\nDoes not interpret #! as comment to end of line because only one\ncharacter of lookahead is available. The stream must either be an\ninstance of LineNumberingPushbackReader or duplicate its behavior of both\nsupporting .unread and collapsing all of CR, LF, and CRLF to a single\n\\newline.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/skip-whitespace.cljsdoc"}
 
 ```
 

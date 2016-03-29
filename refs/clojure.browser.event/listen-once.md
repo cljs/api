@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(listen-once src type fn)</samp><br>
+<samp>(listen-once src type fn capture?)</samp><br>
+
+---
 
  <samp>
 (__listen-once__ src type fn)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L55-L62):
+Source code @ [github]():
 
 ```clj
 (defn listen-once
@@ -42,13 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:55-62](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L55-L62)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,22 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "listen-once",
- :type "function",
  :signature ["[src type fn]" "[src type fn capture?]"],
+ :name-encode "listen-once",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/listen-once",
  :source {:code "(defn listen-once\n  ([src type fn]\n     (listen-once src type fn false))\n  ([src type fn capture?]\n     (events/listenOnce src\n                        (get (event-types src) type type)\n                        fn\n                        capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [55 62]},
+          :lines [55 62],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L55-L62"},
+ :usage ["(listen-once src type fn)"
+         "(listen-once src type fn capture?)"],
  :full-name "clojure.browser.event/listen-once",
- :full-name-encode "clojure.browser.event/listen-once",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/listen-once.cljsdoc"}
 
 ```
 

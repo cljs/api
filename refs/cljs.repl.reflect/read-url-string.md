@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/reflect.clj#L42):
+Source code @ [github]():
 
 ```clj
 (def read-url-string (comp read-string url-decode))
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[reflect.clj:42](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/reflect.clj#L42)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.reflect",
  :name "read-url-string",
+ :name-encode "read-url-string",
+ :history [["+" "0.0-1503"]],
  :type "var",
+ :full-name-encode "cljs.repl.reflect/read-url-string",
  :source {:code "(def read-url-string (comp read-string url-decode))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/reflect.clj",
-          :lines [42]},
+          :lines [42],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/reflect.clj#L42"},
  :full-name "cljs.repl.reflect/read-url-string",
- :full-name-encode "cljs.repl.reflect/read-url-string",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.reflect/read-url-string.cljsdoc"}
 
 ```
 

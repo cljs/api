@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(indexed? x)</samp><br>
+
+---
 
  <samp>
 (__indexed?__ x)<br>
@@ -27,7 +30,7 @@ Returns true if coll implements nth in constant time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1387-L1389):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean indexed?
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1387-1389](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1387-L1389)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "indexed?",
  :signature ["[x]"],
+ :name-encode "indexedQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/indexedQMARK",
  :source {:code "(defn ^boolean indexed?\n  [x] (satisfies? IIndexed x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1387 1389]},
+          :lines [1387 1389],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1387-L1389"},
+ :usage ["(indexed? x)"],
  :full-name "cljs.core/indexed?",
- :docstring "Returns true if coll implements nth in constant time"}
+ :docstring "Returns true if coll implements nth in constant time",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/indexedQMARK.cljsdoc"}
 
 ```
 

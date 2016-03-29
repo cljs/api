@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-javascript repl-env provides url)</samp><br>
+
+---
 
  <samp>
 (__load-javascript__ repl-env provides url)<br>
@@ -31,7 +34,7 @@ ClojureScript REPL.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L202-L209):
+Source code @ [github]():
 
 ```clj
 (defn load-javascript
@@ -43,13 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:202-209](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L202-L209)</ins>
+
 </pre>
 
 -->
@@ -91,17 +88,21 @@ The API data for this symbol:
 {:ns "cljs.repl.browser",
  :name "load-javascript",
  :signature ["[repl-env provides url]"],
+ :name-encode "load-javascript",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/load-javascript",
  :source {:code "(defn load-javascript\n  [repl-env provides url]\n  (browser-eval (slurp url)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [202 209]},
+          :lines [202 209],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L202-L209"},
+ :usage ["(load-javascript repl-env provides url)"],
  :full-name "cljs.repl.browser/load-javascript",
- :docstring "Accepts a REPL environment, a list of namespaces, and a URL for a\nJavaScript file which contains the implementation for the list of\nnamespaces. Will load the JavaScript file into the REPL environment\nif any of the namespaces have not already been loaded from the\nClojureScript REPL."}
+ :docstring "Accepts a REPL environment, a list of namespaces, and a URL for a\nJavaScript file which contains the implementation for the list of\nnamespaces. Will load the JavaScript file into the REPL environment\nif any of the namespaces have not already been loaded from the\nClojureScript REPL.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/load-javascript.cljsdoc"}
 
 ```
 

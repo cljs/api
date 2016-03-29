@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IMapEntry</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IMapEntry.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IMapEntry</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IMapEntry.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for examining a map entry.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L538-L543):
+Source code @ [github]():
 
 ```clj
 (defprotocol IMapEntry
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:538-543](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L538-L543)</ins>
+
 </pre>
 
 -->
@@ -89,15 +84,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IMapEntry",
+ :name-encode "IMapEntry",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IMapEntry",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IMapEntry.java"},
  :full-name-encode "cljs.core/IMapEntry",
  :source {:code "(defprotocol IMapEntry\n  \"Protocol for examining a map entry.\"\n  (-key [coll]\n    \"Returns the key of the map entry.\")\n  (-val [coll]\n    \"Returns the value of the map entry.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [538 543]},
+          :lines [538 543],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L538-L543"},
  :methods [{:name "-key",
             :signature ["[coll]"],
             :docstring "Returns the key of the map entry."}
@@ -105,8 +104,8 @@ The API data for this symbol:
             :signature ["[coll]"],
             :docstring "Returns the value of the map entry."}],
  :full-name "cljs.core/IMapEntry",
- :clj-symbol "clojure.lang/IMapEntry",
- :docstring "Protocol for examining a map entry."}
+ :docstring "Protocol for examining a map entry.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IMapEntry.cljsdoc"}
 
 ```
 

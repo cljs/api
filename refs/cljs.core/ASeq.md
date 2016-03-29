@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ASeq</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ASeq.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ASeq</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ASeq.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Marker protocol indicating an array sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L496-L497):
+Source code @ [github]():
 
 ```clj
 (defprotocol ASeq
@@ -36,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:496-497](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L496-L497)</ins>
+
 </pre>
 
 -->
@@ -85,18 +80,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ASeq",
+ :name-encode "ASeq",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/ASeq",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ASeq.java"},
  :full-name-encode "cljs.core/ASeq",
  :source {:code "(defprotocol ASeq\n  \"Marker protocol indicating an array sequence.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [496 497]},
+          :lines [496 497],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L496-L497"},
  :full-name "cljs.core/ASeq",
- :clj-symbol "clojure.lang/ASeq",
- :docstring "Marker protocol indicating an array sequence."}
+ :docstring "Marker protocol indicating an array sequence.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ASeq.cljsdoc"}
 
 ```
 

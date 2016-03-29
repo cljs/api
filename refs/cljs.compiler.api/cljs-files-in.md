@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(cljs-files-in dir)</samp><br>
+
+---
 
  <samp>
 (__cljs-files-in__ dir)<br>
@@ -27,7 +30,7 @@ Return a sequence of all .cljs and .cljc files in the given directory.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/compiler/api.clj#L88-L91):
+Source code @ [github]():
 
 ```clj
 (defn cljs-files-in
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── compiler
-                    └── <ins>[api.clj:88-91](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/compiler/api.clj#L88-L91)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.compiler.api",
  :name "cljs-files-in",
  :signature ["[dir]"],
+ :name-encode "cljs-files-in",
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.compiler.api/cljs-files-in",
  :source {:code "(defn cljs-files-in\n  [dir]\n  (comp/cljs-files-in dir))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/compiler/api.clj",
-          :lines [88 91]},
+          :lines [88 91],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/compiler/api.clj#L88-L91"},
+ :usage ["(cljs-files-in dir)"],
  :full-name "cljs.compiler.api/cljs-files-in",
- :docstring "Return a sequence of all .cljs and .cljc files in the given directory."}
+ :docstring "Return a sequence of all .cljs and .cljc files in the given directory.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.compiler.api/cljs-files-in.cljsdoc"}
 
 ```
 

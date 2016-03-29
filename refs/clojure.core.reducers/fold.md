@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(fold reducef coll)</samp><br>
+<samp>(fold combinef reducef coll)</samp><br>
+<samp>(fold n combinef reducef coll)</samp><br>
+
+---
 
  <samp>
 (__fold__ reducef coll)<br>
@@ -46,7 +51,7 @@ Note: Performing operations in parallel is currently not implemented.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L49-L64):
+Source code @ [github]():
 
 ```clj
 (defn fold
@@ -60,13 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:49-64](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L49-L64)</ins>
+
 </pre>
 
 -->
@@ -113,18 +112,25 @@ The API data for this symbol:
  :signature ["[reducef coll]"
              "[combinef reducef coll]"
              "[n combinef reducef coll]"],
+ :name-encode "fold",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/fold",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/fold"},
  :full-name-encode "clojure.core.reducers/fold",
  :source {:code "(defn fold\n  ([reducef coll] (fold reducef reducef coll))\n  ([combinef reducef coll] (fold 512 combinef reducef coll))\n  ([n combinef reducef coll]\n     (coll-fold coll n combinef reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [49 64]},
+          :lines [49 64],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L49-L64"},
+ :usage ["(fold reducef coll)"
+         "(fold combinef reducef coll)"
+         "(fold n combinef reducef coll)"],
  :full-name "clojure.core.reducers/fold",
- :clj-symbol "clojure.core.reducers/fold",
- :docstring "Reduces a collection using a (potentially parallel) reduce-combine\nstrategy. The collection is partitioned into groups of approximately\nn (default 512), each of which is reduced with reducef (with a seed\nvalue obtained by calling (combinef) with no arguments). The results\nof these reductions are then reduced with combinef (default\nreducef). combinef must be associative, and, when called with no\narguments, (combinef) must produce its identity element. These\noperations may be performed in parallel, but the results will\npreserve order.\n\nNote: Performing operations in parallel is currently not implemented."}
+ :docstring "Reduces a collection using a (potentially parallel) reduce-combine\nstrategy. The collection is partitioned into groups of approximately\nn (default 512), each of which is reduced with reducef (with a seed\nvalue obtained by calling (combinef) with no arguments). The results\nof these reductions are then reduced with combinef (default\nreducef). combinef must be associative, and, when called with no\narguments, (combinef) must produce its identity element. These\noperations may be performed in parallel, but the results will\npreserve order.\n\nNote: Performing operations in parallel is currently not implemented.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/fold.cljsdoc"}
 
 ```
 

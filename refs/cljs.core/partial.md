@@ -12,6 +12,13 @@
 </tr>
 </table>
 
+<samp>(partial f)</samp><br>
+<samp>(partial f arg1)</samp><br>
+<samp>(partial f arg1 arg2)</samp><br>
+<samp>(partial f arg1 arg2 arg3)</samp><br>
+<samp>(partial f arg1 arg2 arg3 & more)</samp><br>
+
+---
 
  <samp>
 (__partial__ f)<br>
@@ -60,7 +67,7 @@ called, the returned function calls f with args + additional args.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3959-L3986):
+Source code @ [github]():
 
 ```clj
 (defn partial
@@ -94,12 +101,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3959-3986](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3959-L3986)</ins>
+
 </pre>
 
 -->
@@ -149,19 +151,28 @@ The API data for this symbol:
              "[f arg1 arg2]"
              "[f arg1 arg2 arg3]"
              "[f arg1 arg2 arg3 & more]"],
+ :name-encode "partial",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/partial",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/partial"},
  :related ["cljs.core/comp" "cljs.core/juxt"],
  :full-name-encode "cljs.core/partial",
  :source {:code "(defn partial\n  ([f] f)\n  ([f arg1]\n   (fn\n     ([] (f arg1))\n     ([x] (f arg1 x))\n     ([x y] (f arg1 x y))\n     ([x y z] (f arg1 x y z))\n     ([x y z & args] (apply f arg1 x y z args))))\n  ([f arg1 arg2]\n   (fn\n     ([] (f arg1 arg2))\n     ([x] (f arg1 arg2 x))\n     ([x y] (f arg1 arg2 x y))\n     ([x y z] (f arg1 arg2 x y z))\n     ([x y z & args] (apply f arg1 arg2 x y z args))))\n  ([f arg1 arg2 arg3]\n   (fn\n     ([] (f arg1 arg2 arg3))\n     ([x] (f arg1 arg2 arg3 x))\n     ([x y] (f arg1 arg2 arg3 x y))\n     ([x y z] (f arg1 arg2 arg3 x y z))\n     ([x y z & args] (apply f arg1 arg2 arg3 x y z args))))\n  ([f arg1 arg2 arg3 & more]\n   (fn [& args] (apply f arg1 arg2 arg3 (concat more args)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3959 3986]},
+          :lines [3959 3986],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3959-L3986"},
+ :usage ["(partial f)"
+         "(partial f arg1)"
+         "(partial f arg1 arg2)"
+         "(partial f arg1 arg2 arg3)"
+         "(partial f arg1 arg2 arg3 & more)"],
  :full-name "cljs.core/partial",
- :clj-symbol "clojure.core/partial",
- :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args."}
+ :docstring "Takes a function f and fewer than the normal arguments to f, and\nreturns a fn that takes a variable number of additional args. When\ncalled, the returned function calls f with args + additional args.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/partial.cljsdoc"}
 
 ```
 

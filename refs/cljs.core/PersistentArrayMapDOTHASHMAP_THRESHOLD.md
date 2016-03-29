@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L4672):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.PersistentArrayMap.HASHMAP_THRESHOLD 8)
@@ -27,11 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:4672](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L4672)</ins>
+
 </pre>
 
 -->

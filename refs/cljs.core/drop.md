@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(drop n)</samp><br>
+<samp>(drop n coll)</samp><br>
+
+---
 
  <samp>
 (__drop__ n)<br>
@@ -50,7 +54,7 @@ Returns a stateful transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4394-L4417):
+Source code @ [github]():
 
 ```clj
 (defn drop
@@ -81,12 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4394-4417](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4394-L4417)</ins>
+
 </pre>
 
 -->
@@ -132,8 +131,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "drop",
  :signature ["[n]" "[n coll]"],
+ :name-encode "drop",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/drop",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/drop"},
  :related ["cljs.core/take"
            "cljs.core/drop-last"
            "cljs.core/drop-while"
@@ -143,12 +145,14 @@ The API data for this symbol:
  :source {:code "(defn drop\n  ([n]\n   {:pre [(number? n)]}\n     (fn [rf]\n       (let [na (volatile! n)]\n         (fn\n           ([] (rf))\n           ([result] (rf result))\n           ([result input]\n              (let [n @na]\n                (vswap! na dec)\n                (if (pos? n)\n                  result\n                  (rf result input))))))))\n  ([n coll]\n   {:pre [(number? n)]}\n     (let [step (fn [n coll]\n                  (let [s (seq coll)]\n                    (if (and (pos? n) s)\n                      (recur (dec n) (rest s))\n                      s)))]\n       (lazy-seq (step n coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4394 4417]},
+          :lines [4394 4417],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4394-L4417"},
+ :usage ["(drop n)" "(drop n coll)"],
  :full-name "cljs.core/drop",
- :clj-symbol "clojure.core/drop",
- :docstring "Returns a lazy sequence of all but the first n items in coll.\nReturns a stateful transducer when no collection is provided."}
+ :docstring "Returns a lazy sequence of all but the first n items in coll.\nReturns a stateful transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/drop.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Iteration. xform coll)</samp><br>
+
+---
 
  <samp>
 (__Iteration.__ xform coll)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8192-L8203):
+Source code @ [github]():
 
 ```clj
 (deftype Iteration [xform coll]
@@ -43,11 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:8192-8203](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L8192-L8203)</ins>
+
 </pre>
 
 -->
@@ -98,6 +97,7 @@ The API data for this symbol:
           :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8192 8203]},
+ :usage ["(Iteration. xform coll)"],
  :full-name "cljs.core/Iteration",
  :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 

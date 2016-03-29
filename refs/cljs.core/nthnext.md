@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(nthnext coll n)</samp><br>
+
+---
 
  <samp>
 (__nthnext__ coll n)<br>
@@ -44,7 +47,7 @@ Returns the nth next of coll, (seq coll) when n is 0.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2678-L2684):
+Source code @ [github]():
 
 ```clj
 (defn nthnext
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2678-2684](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2678-L2684)</ins>
+
 </pre>
 
 -->
@@ -110,19 +108,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "nthnext",
  :signature ["[coll n]"],
+ :name-encode "nthnext",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/nthnext",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/nthnext"},
  :related ["cljs.core/nth" "cljs.core/drop" "cljs.core/nthrest"],
  :full-name-encode "cljs.core/nthnext",
  :source {:code "(defn nthnext\n  [coll n]\n  (loop [n n xs (seq coll)]\n    (if (and xs (pos? n))\n      (recur (dec n) (next xs))\n      xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2678 2684]},
+          :lines [2678 2684],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2678-L2684"},
+ :usage ["(nthnext coll n)"],
  :full-name "cljs.core/nthnext",
- :clj-symbol "clojure.core/nthnext",
- :docstring "Returns the nth next of coll, (seq coll) when n is 0."}
+ :docstring "Returns the nth next of coll, (seq coll) when n is 0.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/nthnext.cljsdoc"}
 
 ```
 

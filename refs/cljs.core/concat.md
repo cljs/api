@@ -12,6 +12,12 @@
 </tr>
 </table>
 
+<samp>(concat)</samp><br>
+<samp>(concat x)</samp><br>
+<samp>(concat x y)</samp><br>
+<samp>(concat x y & zs)</samp><br>
+
+---
 
  <samp>
 (__concat__)<br>
@@ -67,7 +73,7 @@ Returns a lazy seq representing the concatenation of the elements in the supplie
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3448-L3471):
+Source code @ [github]():
 
 ```clj
 (defn concat
@@ -99,12 +105,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3448-3471](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3448-L3471)</ins>
+
 </pre>
 
 -->
@@ -150,21 +151,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "concat",
  :signature ["[]" "[x]" "[x y]" "[x y & zs]"],
+ :name-encode "concat",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/concat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/concat"},
  :related ["cljs.core/conj" "cljs.core/into"],
  :full-name-encode "cljs.core/concat",
  :source {:code "(defn concat\n  ([] (lazy-seq nil))\n  ([x] (lazy-seq x))\n  ([x y]\n    (lazy-seq\n      (let [s (seq x)]\n        (if s\n          (if (chunked-seq? s)\n            (chunk-cons (chunk-first s) (concat (chunk-rest s) y))\n            (cons (first s) (concat (rest s) y)))\n          y))))\n  ([x y & zs]\n     (let [cat (fn cat [xys zs]\n                 (lazy-seq\n                   (let [xys (seq xys)]\n                     (if xys\n                       (if (chunked-seq? xys)\n                         (chunk-cons (chunk-first xys)\n                                     (cat (chunk-rest xys) zs))\n                         (cons (first xys) (cat (rest xys) zs)))\n                       (when zs\n                         (cat (first zs) (next zs)))))))]\n       (cat (concat x y) zs))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3448 3471]},
+          :lines [3448 3471],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3448-L3471"},
+ :usage ["(concat)" "(concat x)" "(concat x y)" "(concat x y & zs)"],
  :examples [{:id "dcc019",
              :content "```clj\n(concat (list 1 2 3) (list 4 5 6))\n;;=> (1 2 3 4 5 6)\n\n(concat [1 2 3] (list 4 5 6))\n;; => (1 2 3 4 5 6)\n\n(concat [1] [2] [3])\n;; => (1 2 3)\n```"}],
  :full-name "cljs.core/concat",
- :clj-symbol "clojure.core/concat",
- :docstring "Returns a lazy seq representing the concatenation of the elements in the supplied colls."}
+ :docstring "Returns a lazy seq representing the concatenation of the elements in the supplied colls.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/concat.cljsdoc"}
 
 ```
 

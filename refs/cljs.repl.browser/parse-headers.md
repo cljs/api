@@ -10,6 +10,9 @@
 </tr>
 </table>
 
+<samp>(parse-headers header-lines)</samp><br>
+
+---
 
  <samp>
 (__parse-headers__ header-lines)<br>
@@ -28,7 +31,7 @@ Parse the headers of an HTTP POST request.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L116-L124):
+Source code @ [github]():
 
 ```clj
 (defn parse-headers
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:116-124](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L116-L124)</ins>
+
 </pre>
 
 -->
@@ -102,6 +100,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [116 124]},
+ :usage ["(parse-headers header-lines)"],
  :full-name "cljs.repl.browser/parse-headers",
  :docstring "Parse the headers of an HTTP POST request.",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}

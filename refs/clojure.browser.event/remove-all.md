@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(remove-all opt_obj opt_type opt_capt)</samp><br>
+
+---
 
  <samp>
 (__remove-all__ opt_obj opt_type opt_capt)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L100):
+Source code @ [github]():
 
 ```clj
 (defn remove-all [opt_obj opt_type opt_capt])
@@ -32,13 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:100](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L100)</ins>
+
 </pre>
 
 -->
@@ -79,17 +76,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "remove-all",
- :type "function",
  :signature ["[opt_obj opt_type opt_capt]"],
+ :name-encode "remove-all",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/remove-all",
  :source {:code "(defn remove-all [opt_obj opt_type opt_capt])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [100]},
+          :lines [100],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L100"},
+ :usage ["(remove-all opt_obj opt_type opt_capt)"],
  :full-name "clojure.browser.event/remove-all",
- :full-name-encode "clojure.browser.event/remove-all",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/remove-all.cljsdoc"}
 
 ```
 

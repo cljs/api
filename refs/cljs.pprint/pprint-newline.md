@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pprint-newline kind)</samp><br>
+
+---
 
  <samp>
 (__pprint-newline__ kind)<br>
@@ -35,7 +38,7 @@ Output is sent to *out* which must be a pretty printing writer.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L841-L850):
+Source code @ [github]():
 
 ```clj
 (defn pprint-newline
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:841-850](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L841-L850)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pprint-newline",
  :signature ["[kind]"],
+ :name-encode "pprint-newline",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/pprint-newline",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pprint-newline"},
  :full-name-encode "cljs.pprint/pprint-newline",
  :source {:code "(defn pprint-newline\n  [kind]\n  (check-enumerated-arg kind #{:linear :miser :fill :mandatory})\n  (nl *out* kind))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [841 850]},
+          :lines [841 850],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L841-L850"},
+ :usage ["(pprint-newline kind)"],
  :full-name "cljs.pprint/pprint-newline",
- :clj-symbol "clojure.pprint/pprint-newline",
- :docstring "Print a conditional newline to a pretty printing stream. kind specifies if the\nnewline is :linear, :miser, :fill, or :mandatory.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer."}
+ :docstring "Print a conditional newline to a pretty printing stream. kind specifies if the\nnewline is :linear, :miser, :fill, or :mandatory.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint-newline.cljsdoc"}
 
 ```
 

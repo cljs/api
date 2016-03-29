@@ -58,7 +58,7 @@ nil
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329):
+Reader code @ [github]():
 
 ```clj
 (defn- read-symbol
@@ -94,13 +94,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:303-329](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329)</ins>
+
 </pre>
 -->
 
@@ -133,23 +127,26 @@ The API data for this symbol:
 
 ```clj
 {:description "`nil` is a representation of nothing.\n\nIt is common for operations to safely handle `nil` without\ncausing exceptions.\n\nExpressions evaluate to `nil` if there is no value to return.",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#nil",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "nil",
+ :name-encode "nil",
  :history [["+" "0.0-927"]],
  :type "special symbol",
  :full-name-encode "syntax/nil",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [303 329]}],
+                  :lines [303 329],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329"}),
  :examples [{:id "17b92a",
              :content "```clj\nnil\n;;=> nil\n```\n\n`nil` can sometimes mean \"not found\":\n\n```clj\n(:foo {})\n;;=> nil\n```\n\n`nil` can also mean that the operation didn't make sense:\n\n```clj\n(:foo nil)\n;;=> nil\n```"}],
- :edn-doc "https://github.com/edn-format/edn#nil",
  :full-name "syntax/nil",
  :display "nil",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/nil.cljsdoc"}
 
 ```
 

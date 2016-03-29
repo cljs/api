@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/nodejs.cljs#L15):
+Source code @ [github]():
 
 ```clj
 (def require (js* "require"))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[nodejs.cljs:15](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/nodejs.cljs#L15)</ins>
+
 </pre>
 
 -->
@@ -73,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.nodejs",
  :name "require",
+ :name-encode "require",
+ :history [["+" "0.0-927"]],
  :type "var",
+ :full-name-encode "cljs.nodejs/require",
  :source {:code "(def require (js* \"require\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/nodejs.cljs",
-          :lines [15]},
+          :lines [15],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/nodejs.cljs#L15"},
  :full-name "cljs.nodejs/require",
- :full-name-encode "cljs.nodejs/require",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/require.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(handle-connection opts conn)</samp><br>
+
+---
 
  <samp>
 (__handle-connection__ opts conn)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L248-L256):
+Source code @ [github]():
 
 ```clj
 (defn handle-connection
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:248-256](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L248-L256)</ins>
+
 </pre>
 
 -->
@@ -96,6 +94,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [248 256]},
+ :usage ["(handle-connection opts conn)"],
  :full-name "cljs.repl.browser/handle-connection",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(make-array size)</samp><br>
+
+---
 
  <samp>
 (__make-array__ size)<br>
@@ -44,7 +47,7 @@ will run in polynomial time when called with 3 or more arguments.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L358-L372):
+Function code @ [github]():
 
 ```clj
 (defn ^array make-array
@@ -64,19 +67,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:358-372](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L358-L372)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2361-L2377):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro make-array
@@ -102,12 +100,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2361-2377](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2361-L2377)</ins>
+
 </pre>
 -->
 
@@ -152,25 +145,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "make-array",
  :signature ["[size]"],
+ :name-encode "make-array",
  :history [["+" "0.0-1211"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/make-array",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/make-array"},
  :related ["cljs.core/aclone" "cljs.core/array"],
  :full-name-encode "cljs.core/make-array",
  :source {:code "(defn ^array make-array\n  ([size]\n     (js/Array. size))\n  ([type size]\n     (make-array size))\n  ([type size & more-sizes]\n    (let [dims more-sizes\n          dimarray (make-array size)]\n      (dotimes [i (alength dimarray)]\n        (aset dimarray i (apply make-array nil dims)))\n      dimarray)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [358 372]},
+          :lines [358 372],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L358-L372"},
  :extra-sources [{:code "(core/defmacro make-array\n  ([size]\n   (vary-meta\n     (if (core/number? size)\n       `(array ~@(take size (repeat nil)))\n       `(js/Array. ~size))\n     assoc :tag 'array))\n  ([type size]\n   `(make-array ~size))\n  ([type size & more-sizes]\n   (vary-meta\n     `(let [dims#     (list ~@more-sizes)\n            dimarray# (make-array ~size)]\n        (dotimes [i# (alength dimarray#)]\n          (aset dimarray# i# (apply make-array nil dims#)))\n        dimarray#)\n     assoc :tag 'array)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2361 2377]}],
+                  :lines [2361 2377],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2361-L2377"}],
+ :usage ["(make-array size)"],
  :full-name "cljs.core/make-array",
- :clj-symbol "clojure.core/make-array",
- :docstring "Construct a JavaScript array of the specified dimensions. Accepts ignored\ntype argument for compatibility with Clojure. Note that there is no efficient\nway to allocate multi-dimensional arrays in JavaScript; as such, this function\nwill run in polynomial time when called with 3 or more arguments."}
+ :docstring "Construct a JavaScript array of the specified dimensions. Accepts ignored\ntype argument for compatibility with Clojure. Note that there is no efficient\nway to allocate multi-dimensional arrays in JavaScript; as such, this function\nwill run in polynomial time when called with 3 or more arguments.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/make-array.cljsdoc"}
 
 ```
 

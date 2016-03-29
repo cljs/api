@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L16-L17):
+Source code @ [github]():
 
 ```clj
 (defprotocol IEventType
@@ -28,13 +28,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:16-17](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L16-L17)</ins>
+
 </pre>
 
 -->
@@ -75,19 +69,22 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "IEventType",
+ :name-encode "IEventType",
+ :history [["+" "0.0-2301"]],
  :type "protocol",
  :full-name-encode "clojure.browser.event/IEventType",
  :source {:code "(defprotocol IEventType\n  (event-types [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [16 17]},
+          :lines [16 17],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L16-L17"},
  :methods [{:name "event-types",
             :signature ["[this]"],
             :docstring nil}],
  :full-name "clojure.browser.event/IEventType",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/IEventType.cljsdoc"}
 
 ```
 

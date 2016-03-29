@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(pr-with-opts objs opts)</samp><br>
+
+---
 
  <samp>
 (__pr-with-opts__ objs opts)<br>
@@ -28,7 +31,7 @@ the options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6171-L6180):
+Source code @ [github]():
 
 ```clj
 (defn pr-with-opts
@@ -45,11 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:6171-6180](https://github.com/clojure/clojurescript/blob/r1450/src/cljs/cljs/core.cljs#L6171-L6180)</ins>
+
 </pre>
 
 -->
@@ -100,6 +99,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6171 6180]},
+ :usage ["(pr-with-opts objs opts)"],
  :full-name "cljs.core/pr-with-opts",
  :docstring "Prints a sequence of objects using string-print, observing all\nthe options given in opts",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}

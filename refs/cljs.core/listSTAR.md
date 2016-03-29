@@ -12,6 +12,13 @@
 </tr>
 </table>
 
+<samp>(list\* args)</samp><br>
+<samp>(list\* a args)</samp><br>
+<samp>(list\* a b args)</samp><br>
+<samp>(list\* a b c args)</samp><br>
+<samp>(list\* a b c d & more)</samp><br>
+
+---
 
  <samp>
 (__list\*__ args)<br>
@@ -54,7 +61,7 @@ last of which will be treated as a sequence.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3473-L3481):
+Source code @ [github]():
 
 ```clj
 (defn list*
@@ -70,12 +77,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3473-3481](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3473-L3481)</ins>
+
 </pre>
 
 -->
@@ -125,19 +127,28 @@ The API data for this symbol:
              "[a b args]"
              "[a b c args]"
              "[a b c d & more]"],
+ :name-encode "listSTAR",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/list*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/list*"},
  :related ["cljs.core/list"],
  :full-name-encode "cljs.core/listSTAR",
  :source {:code "(defn list*\n  ([args] (seq args))\n  ([a args] (cons a args))\n  ([a b args] (cons a (cons b args)))\n  ([a b c args] (cons a (cons b (cons c args))))\n  ([a b c d & more]\n     (cons a (cons b (cons c (cons d (spread more)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3473 3481]},
+          :lines [3473 3481],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3473-L3481"},
+ :usage ["(list* args)"
+         "(list* a args)"
+         "(list* a b args)"
+         "(list* a b c args)"
+         "(list* a b c d & more)"],
  :full-name "cljs.core/list*",
- :clj-symbol "clojure.core/list*",
- :docstring "Creates a new list containing the items prepended to the rest, the\nlast of which will be treated as a sequence."}
+ :docstring "Creates a new list containing the items prepended to the rest, the\nlast of which will be treated as a sequence.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/listSTAR.cljsdoc"}
 
 ```
 

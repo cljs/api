@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(target-file-for-cljs-ns ns-sym)</samp><br>
+<samp>(target-file-for-cljs-ns ns-sym output-dir)</samp><br>
+
+---
 
  <samp>
 (__target-file-for-cljs-ns__ ns-sym)<br>
@@ -35,7 +39,7 @@ For example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L28-L39):
+Source code @ [github]():
 
 ```clj
 (defn ^File target-file-for-cljs-ns
@@ -50,13 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:28-39](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L28-L39)</ins>
+
 </pre>
 
 -->
@@ -99,17 +97,22 @@ The API data for this symbol:
  :ns "cljs.build.api",
  :name "target-file-for-cljs-ns",
  :signature ["[ns-sym]" "[ns-sym output-dir]"],
+ :name-encode "target-file-for-cljs-ns",
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.build.api/target-file-for-cljs-ns",
  :source {:code "(defn ^File target-file-for-cljs-ns\n  ([ns-sym] (target-file-for-cljs-ns ns-sym nil))\n  ([ns-sym output-dir]\n    (util/to-target-file\n      (util/output-directory {:output-dir output-dir})\n      {:ns ns-sym})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [28 39]},
+          :lines [28 39],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L28-L39"},
+ :usage ["(target-file-for-cljs-ns ns-sym)"
+         "(target-file-for-cljs-ns ns-sym output-dir)"],
  :full-name "cljs.build.api/target-file-for-cljs-ns",
- :docstring "Given an output directory and a clojurescript namespace return the\ncompilation target file for that namespace.\n\nFor example:\n(target-file-from-cljs-ns \"resources/out\" 'example.core) ->\n<File: \"resources/out/example/core.js\">"}
+ :docstring "Given an output directory and a clojurescript namespace return the\ncompilation target file for that namespace.\n\nFor example:\n(target-file-from-cljs-ns \"resources/out\" 'example.core) ->\n<File: \"resources/out/example/core.js\">",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/target-file-for-cljs-ns.cljsdoc"}
 
 ```
 

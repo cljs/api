@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(wrap-message t data)</samp><br>
+
+---
 
  <samp>
 (__wrap-message__ t data)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L90-L91):
+Source code @ [github]():
 
 ```clj
 (defn wrap-message [t data]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:90-91](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L90-L91)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.repl",
  :name "wrap-message",
- :type "function",
  :signature ["[t data]"],
+ :name-encode "wrap-message",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.repl/wrap-message",
  :source {:code "(defn wrap-message [t data]\n  (pr-str {:type t :content data :order (swap! order inc)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [90 91]},
+          :lines [90 91],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L90-L91"},
+ :usage ["(wrap-message t data)"],
  :full-name "clojure.browser.repl/wrap-message",
- :full-name-encode "clojure.browser.repl/wrap-message",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/wrap-message.cljsdoc"}
 
 ```
 

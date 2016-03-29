@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(print-meta? opts obj)</samp><br>
+
+---
 
  <samp>
 (__print-meta?__ opts obj)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9035-L9038):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean print-meta? [opts obj]
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9035-9038](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9035-L9038)</ins>
+
 </pre>
 
 -->
@@ -83,16 +81,20 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "print-meta?",
  :signature ["[opts obj]"],
+ :name-encode "print-metaQMARK",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.core/print-metaQMARK",
  :source {:code "(defn ^boolean print-meta? [opts obj]\n  (and (boolean (get opts :meta))\n       (implements? IMeta obj)\n       (not (nil? (meta obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9035 9038]},
- :full-name "cljs.core/print-meta?"}
+          :lines [9035 9038],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9035-L9038"},
+ :usage ["(print-meta? opts obj)"],
+ :full-name "cljs.core/print-meta?",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/print-metaQMARK.cljsdoc"}
 
 ```
 

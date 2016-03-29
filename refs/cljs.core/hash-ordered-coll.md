@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(hash-ordered-coll coll)</samp><br>
+
+---
 
  <samp>
 (__hash-ordered-coll__ coll)<br>
@@ -32,7 +35,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1208-L1217):
+Source code @ [github]():
 
 ```clj
 (defn ^number hash-ordered-coll
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1208-1217](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1208-L1217)</ins>
+
 </pre>
 
 -->
@@ -99,18 +97,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "hash-ordered-coll",
  :signature ["[coll]"],
+ :name-encode "hash-ordered-coll",
  :history [["+" "0.0-2261"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/hash-ordered-coll",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/hash-ordered-coll"},
  :full-name-encode "cljs.core/hash-ordered-coll",
  :source {:code "(defn ^number hash-ordered-coll\n  [coll]\n  (loop [n 0 hash-code 1 coll (seq coll)]\n    (if-not (nil? coll)\n      (recur (inc n) (bit-or (+ (imul 31 hash-code) (hash (first coll))) 0)\n        (next coll))\n      (mix-collection-hash hash-code n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1208 1217]},
+          :lines [1208 1217],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1208-L1217"},
+ :usage ["(hash-ordered-coll coll)"],
  :full-name "cljs.core/hash-ordered-coll",
- :clj-symbol "clojure.core/hash-ordered-coll",
- :docstring "Returns the hash code, consistent with =, for an external ordered\ncollection implementing Iterable.\nSee http://clojure.org/data_structures#hash for full algorithms."}
+ :docstring "Returns the hash code, consistent with =, for an external ordered\ncollection implementing Iterable.\nSee http://clojure.org/data_structures#hash for full algorithms.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-ordered-coll.cljsdoc"}
 
 ```
 

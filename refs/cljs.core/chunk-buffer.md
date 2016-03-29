@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(chunk-buffer capacity)</samp><br>
+
+---
 
  <samp>
 (__chunk-buffer__ capacity)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3192-L3193):
+Source code @ [github]():
 
 ```clj
 (defn chunk-buffer [capacity]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3192-3193](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3192-L3193)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "chunk-buffer",
- :type "function",
  :signature ["[capacity]"],
+ :name-encode "chunk-buffer",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.core/chunk-buffer",
  :source {:code "(defn chunk-buffer [capacity]\n  (ChunkBuffer. (make-array capacity) 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3192 3193]},
+          :lines [3192 3193],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3192-L3193"},
+ :usage ["(chunk-buffer capacity)"],
  :full-name "cljs.core/chunk-buffer",
- :full-name-encode "cljs.core/chunk-buffer",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunk-buffer.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(.. o form)</samp><br>
+<samp>(.. o form & more)</samp><br>
+
+---
 
  <samp>
 (__..__ o form)<br>
@@ -101,7 +105,7 @@ but is easier to write, read, and understand.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1568-L1584):
+Source code @ [github]():
 
 ```clj
 (defmacro ..
@@ -113,11 +117,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1568-1584](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1568-L1584)</ins>
+
 </pre>
 
 -->
@@ -163,8 +163,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "..",
  :signature ["[o form]" "[o form & more]"],
+ :name-encode "DOTDOT",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/..",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/.."},
  :related ["special/." "cljs.core/->" "cljs.core/doto"],
  :full-name-encode "cljs.core/DOTDOT",
  :source {:code "(defmacro ..\n  ([x form] `(. ~x ~form))\n  ([x form & more] `(.. (. ~x ~form) ~@more)))",
@@ -172,12 +175,14 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1568 1584]},
+          :lines [1568 1584],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1568-L1584"},
+ :usage ["(.. o form)" "(.. o form & more)"],
  :examples [{:id "500658",
              :content "```js\n// JavaScript\n\"a b c d\".toUpperCase().replace(\"A\", \"X\")\n//=> \"X B C D\"\n```\n\n```clj\n;; ClojureScript\n(.. \"a b c d\"\n    toUpperCase\n    (replace \"A\" \"X\"))\n;;=> \"X B C D\"\n```\n\nThis is expanded to:\n\n```clj\n(. (. \"a b c d\" toUpperCase) (replace \"A\" \"X\"))\n```\n\n\nwhich is equivalent to:\n\n```clj\n(.replace (.toUpperCase \"a b c d\") \"A\" \"X\")\n;;=> \"X B C D\"\n```\n\nCompare to the equivalent form using the thread-first `->` macro:\n\n```clj\n(-> \"a b c d\"\n    .toUpperCase\n    (.replace \"A\" \"X\"))\n;;=> \"X B C D\"\n```"}],
  :full-name "cljs.core/..",
- :clj-symbol "clojure.core/..",
- :docstring "form => fieldName-symbol or (instanceMethodName-symbol args*)\n\nExpands into a member access (.) of the first member on the first\nargument, followed by the next member on the result, etc. For\ninstance:\n\n(.. System (getProperties) (get \"os.name\"))\n\nexpands to:\n\n(. (. System (getProperties)) (get \"os.name\"))\n\nbut is easier to write, read, and understand."}
+ :docstring "form => fieldName-symbol or (instanceMethodName-symbol args*)\n\nExpands into a member access (.) of the first member on the first\nargument, followed by the next member on the result, etc. For\ninstance:\n\n(.. System (getProperties) (get \"os.name\"))\n\nexpands to:\n\n(. (. System (getProperties)) (get \"os.name\"))\n\nbut is easier to write, read, and understand.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/DOTDOT.cljsdoc"}
 
 ```
 

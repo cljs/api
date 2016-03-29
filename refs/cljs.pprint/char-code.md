@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(char-code c)</samp><br>
+
+---
 
  <samp>
 (__char-code__ c)<br>
@@ -27,7 +30,7 @@ Convert char to int
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L62-L68):
+Source code @ [github]():
 
 ```clj
 (defn char-code
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:62-68](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L62-L68)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "char-code",
  :signature ["[c]"],
+ :name-encode "char-code",
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.pprint/char-code",
  :source {:code "(defn char-code\n  [c]\n  (cond\n    (number? c) c\n    (and (string? c) (== (.-length c) 1)) (.charCodeAt c 0)\n    :else (throw (js/Error. \"Argument to char must be a character or number\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [62 68]},
+          :lines [62 68],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L62-L68"},
+ :usage ["(char-code c)"],
  :full-name "cljs.pprint/char-code",
- :docstring "Convert char to int"}
+ :docstring "Convert char to int",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/char-code.cljsdoc"}
 
 ```
 

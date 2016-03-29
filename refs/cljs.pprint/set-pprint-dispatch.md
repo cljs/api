@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(set-pprint-dispatch function)</samp><br>
+
+---
 
  <samp>
 (__set-pprint-dispatch__ function)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L824-L827):
+Source code @ [github]():
 
 ```clj
 (defn set-pprint-dispatch
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:824-827](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L824-L827)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,22 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "set-pprint-dispatch",
  :signature ["[function]"],
+ :name-encode "set-pprint-dispatch",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/set-pprint-dispatch",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/set-pprint-dispatch"},
  :full-name-encode "cljs.pprint/set-pprint-dispatch",
  :source {:code "(defn set-pprint-dispatch\n  [function]\n  (set! *print-pprint-dispatch* function)\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [824 827]},
+          :lines [824 827],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L824-L827"},
+ :usage ["(set-pprint-dispatch function)"],
  :full-name "cljs.pprint/set-pprint-dispatch",
- :clj-symbol "clojure.pprint/set-pprint-dispatch"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/set-pprint-dispatch.cljsdoc"}
 
 ```
 

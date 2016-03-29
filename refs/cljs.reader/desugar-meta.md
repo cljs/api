@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(desugar-meta f)</samp><br>
+
+---
 
  <samp>
 (__desugar-meta__ f)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L368-L374):
+Source code @ [github]():
 
 ```clj
 (defn desugar-meta
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:368-374](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L368-L374)</ins>
+
 </pre>
 
 -->
@@ -84,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "desugar-meta",
- :type "function",
  :signature ["[f]"],
+ :name-encode "desugar-meta",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/desugar-meta",
  :source {:code "(defn desugar-meta\n  [f]\n  (cond\n   (symbol? f) {:tag f}\n   (string? f) {:tag f}\n   (keyword? f) {f true}\n   :else f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [368 374]},
+          :lines [368 374],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L368-L374"},
+ :usage ["(desugar-meta f)"],
  :full-name "cljs.reader/desugar-meta",
- :full-name-encode "cljs.reader/desugar-meta",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/desugar-meta.cljsdoc"}
 
 ```
 

@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10373-L10375):
+Source code @ [github]():
 
 ```clj
 (def
@@ -29,12 +29,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10373-10375](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10373-L10375)</ins>
+
 </pre>
 
 -->
@@ -75,16 +70,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "NS_CACHE",
+ :name-encode "NS_CACHE",
+ :history [["+" "1.7.10"]],
  :type "var",
+ :full-name-encode "cljs.core/NS_CACHE",
  :source {:code "(def\n  ^{:jsdoc [\"@type {*}\"]}\n  NS_CACHE nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10373 10375]},
+          :lines [10373 10375],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10373-L10375"},
  :full-name "cljs.core/NS_CACHE",
- :full-name-encode "cljs.core/NS_CACHE",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/NS_CACHE.cljsdoc"}
 
 ```
 

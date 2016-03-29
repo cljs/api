@@ -10,6 +10,11 @@
 </tr>
 </table>
 
+<samp>(unchecked-substract-int x)</samp><br>
+<samp>(unchecked-substract-int x y)</samp><br>
+<samp>(unchecked-substract-int x y & more)</samp><br>
+
+---
 
  <samp>
 (__unchecked-substract-int__ x)<br>
@@ -35,7 +40,7 @@ the ys from x and returns the result.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L1812-L1817):
+Source code @ [github]():
 
 ```clj
 (defn ^number unchecked-substract-int
@@ -48,11 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2268/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2268
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:1812-1817](https://github.com/clojure/clojurescript/blob/r2268/src/cljs/cljs/core.cljs#L1812-L1817)</ins>
+
 </pre>
 
 -->
@@ -105,6 +106,9 @@ The API data for this symbol:
           :tag "r2268",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1812 1817]},
+ :usage ["(unchecked-substract-int x)"
+         "(unchecked-substract-int x y)"
+         "(unchecked-substract-int x y & more)"],
  :full-name "cljs.core/unchecked-substract-int",
  :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result.",
  :removed {:in "0.0-2277", :last-seen "0.0-2268"}}

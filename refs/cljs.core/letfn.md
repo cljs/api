@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(letfn fnspecs & body)</samp><br>
+
+---
 
  <samp>
 (__letfn__ fnspecs & body)<br>
@@ -52,7 +55,7 @@ in all of the definitions of the functions, as well as the body.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6297-L6308):
+Source code @ [github]():
 
 ```clj
 (defmacro letfn 
@@ -66,11 +69,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:6297-6308](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6297-L6308)</ins>
+
 </pre>
 
 -->
@@ -116,8 +115,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "letfn",
  :signature ["[fnspecs & body]"],
+ :name-encode "letfn",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/letfn",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/letfn"},
  :related ["cljs.core/let"],
  :full-name-encode "cljs.core/letfn",
  :source {:code "(defmacro letfn \n  [fnspecs & body] \n  `(letfn* ~(vec (interleave (map first fnspecs) \n                             (map #(cons `fn %) fnspecs)))\n           ~@body))",
@@ -125,10 +127,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [6297 6308]},
+          :lines [6297 6308],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6297-L6308"},
+ :usage ["(letfn fnspecs & body)"],
  :full-name "cljs.core/letfn",
- :clj-symbol "clojure.core/letfn",
- :docstring "fnspec ==> (fname [params*] exprs) or (fname ([params*] exprs)+)\n\nTakes a vector of function specs and a body, and generates a set of\nbindings of functions to their names. All of the names are available\nin all of the definitions of the functions, as well as the body."}
+ :docstring "fnspec ==> (fname [params*] exprs) or (fname ([params*] exprs)+)\n\nTakes a vector of function specs and a body, and generates a set of\nbindings of functions to their names. All of the names are available\nin all of the definitions of the functions, as well as the body.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/letfn.cljsdoc"}
 
 ```
 

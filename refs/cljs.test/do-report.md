@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(do-report m)</samp><br>
+
+---
 
  <samp>
 (__do-report__ m)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L407-L412):
+Source code @ [github]():
 
 ```clj
 (defn do-report [m]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:407-412](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L407-L412)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,22 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "do-report",
  :signature ["[m]"],
+ :name-encode "do-report",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/do-report",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/do-report"},
  :full-name-encode "cljs.test/do-report",
  :source {:code "(defn do-report [m]\n  (let [m (case (:type m)\n            :fail (merge (file-and-line (js/Error.) 4) m)\n            :error (merge (file-and-line (:actual m) 0) m)\n            m)]\n    (report m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [407 412]},
+          :lines [407 412],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L407-L412"},
+ :usage ["(do-report m)"],
  :full-name "cljs.test/do-report",
- :clj-symbol "clojure.test/do-report"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/do-report.cljsdoc"}
 
 ```
 

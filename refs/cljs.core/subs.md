@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(subs s start)</samp><br>
+<samp>(subs s start end)</samp><br>
+
+---
 
  <samp>
 (__subs__ s start)<br>
@@ -42,7 +46,7 @@ at end (defaults to length of string), exclusive.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2702-L2706):
+Source code @ [github]():
 
 ```clj
 (defn subs
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2702-2706](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2702-L2706)</ins>
+
 </pre>
 
 -->
@@ -105,18 +104,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "subs",
  :signature ["[s start]" "[s start end]"],
+ :name-encode "subs",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/subs",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/subs"},
  :full-name-encode "cljs.core/subs",
  :source {:code "(defn subs\n  ([s start] (.substring s start))\n  ([s start end] (.substring s start end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2702 2706]},
+          :lines [2702 2706],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2702-L2706"},
+ :usage ["(subs s start)" "(subs s start end)"],
  :full-name "cljs.core/subs",
- :clj-symbol "clojure.core/subs",
- :docstring "Returns the substring of s beginning at start inclusive, and ending\nat end (defaults to length of string), exclusive."}
+ :docstring "Returns the substring of s beginning at start inclusive, and ending\nat end (defaults to length of string), exclusive.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/subs.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(subvec v start)</samp><br>
+<samp>(subvec v start end)</samp><br>
+
+---
 
  <samp>
 (__subvec__ v start)<br>
@@ -54,7 +58,7 @@ trimming is done.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5312-L5321):
+Source code @ [github]():
 
 ```clj
 (defn subvec
@@ -68,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5312-5321](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5312-L5321)</ins>
+
 </pre>
 
 -->
@@ -119,19 +118,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "subvec",
  :signature ["[v start]" "[v start end]"],
+ :name-encode "subvec",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/subvec",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/subvec"},
  :related ["cljs.core/vector" "cljs.core/vector?"],
  :full-name-encode "cljs.core/subvec",
  :source {:code "(defn subvec\n  ([v start]\n     (subvec v start (count v)))\n  ([v start end]\n     (build-subvec nil v start end nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5312 5321]},
+          :lines [5312 5321],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5312-L5321"},
+ :usage ["(subvec v start)" "(subvec v start end)"],
  :full-name "cljs.core/subvec",
- :clj-symbol "clojure.core/subvec",
- :docstring "Returns a persistent vector of the items in vector from\nstart (inclusive) to end (exclusive).  If end is not supplied,\ndefaults to (count vector). This operation is O(1) and very fast, as\nthe resulting vector shares structure with the original and no\ntrimming is done."}
+ :docstring "Returns a persistent vector of the items in vector from\nstart (inclusive) to end (exclusive).  If end is not supplied,\ndefaults to (count vector). This operation is O(1) and very fast, as\nthe resulting vector shares structure with the original and no\ntrimming is done.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/subvec.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(derive tag parent)</samp><br>
+<samp>(derive h tag parent)</samp><br>
+
+---
 
  <samp>
 (__derive__ tag parent)<br>
@@ -45,7 +49,7 @@ supplied defaults to, and modifies, the global hierarchy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9737-L9769):
+Source code @ [github]():
 
 ```clj
 (defn derive
@@ -82,12 +86,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9737-9769](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9737-L9769)</ins>
+
 </pre>
 
 -->
@@ -132,8 +131,11 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "derive",
  :signature ["[tag parent]" "[h tag parent]"],
+ :name-encode "derive",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/derive",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/derive"},
  :related ["cljs.core/ancestors"
            "cljs.core/descendants"
            "cljs.core/isa?"
@@ -142,12 +144,14 @@ The API data for this symbol:
  :source {:code "(defn derive\n  ([tag parent]\n   (assert (namespace parent))\n   ;; (assert (or (class? tag) (and (instance? cljs.core.Named tag) (namespace tag))))\n   (swap-global-hierarchy! derive tag parent) nil)\n  ([h tag parent]\n   (assert (not= tag parent))\n   ;; (assert (or (class? tag) (instance? clojure.lang.Named tag)))\n   ;; (assert (instance? clojure.lang.INamed tag))\n   ;; (assert (instance? clojure.lang.INamed parent))\n   (let [tp (:parents h)\n         td (:descendants h)\n         ta (:ancestors h)\n         tf (fn [m source sources target targets]\n              (reduce (fn [ret k]\n                        (assoc ret k\n                               (reduce conj (get targets k #{}) (cons target (targets target)))))\n                      m (cons source (sources source))))]\n     (or\n      (when-not (contains? (tp tag) parent)\n        (when (contains? (ta tag) parent)\n          (throw (js/Error. (str tag \"already has\" parent \"as ancestor\"))))\n        (when (contains? (ta parent) tag)\n          (throw (js/Error. (str \"Cyclic derivation:\" parent \"has\" tag \"as ancestor\"))))\n        {:parents (assoc (:parents h) tag (conj (get tp tag #{}) parent))\n         :ancestors (tf (:ancestors h) tag td parent ta)\n         :descendants (tf (:descendants h) parent ta tag td)})\n      h))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9737 9769]},
+          :lines [9737 9769],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9737-L9769"},
+ :usage ["(derive tag parent)" "(derive h tag parent)"],
  :full-name "cljs.core/derive",
- :clj-symbol "clojure.core/derive",
- :docstring "Establishes a parent/child relationship between parent and\ntag. Parent must be a namespace-qualified symbol or keyword and\nchild can be either a namespace-qualified symbol or keyword or a\nclass. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy."}
+ :docstring "Establishes a parent/child relationship between parent and\ntag. Parent must be a namespace-qualified symbol or keyword and\nchild can be either a namespace-qualified symbol or keyword or a\nclass. h must be a hierarchy obtained from make-hierarchy, if not\nsupplied defaults to, and modifies, the global hierarchy.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/derive.cljsdoc"}
 
 ```
 

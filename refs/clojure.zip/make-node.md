@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(make-node loc node children)</samp><br>
+
+---
 
  <samp>
 (__make-node__ loc node children)<br>
@@ -31,7 +34,7 @@ children. The loc is only used to supply the constructor.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L76-L80):
+Source code @ [github]():
 
 ```clj
 (defn make-node
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:76-80](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L76-L80)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "make-node",
  :signature ["[loc node children]"],
+ :name-encode "make-node",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/make-node",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/make-node"},
  :full-name-encode "clojure.zip/make-node",
  :source {:code "(defn make-node\n  [loc node children]\n    ((:zip/make-node (meta loc)) node children))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [76 80]},
+          :lines [76 80],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L76-L80"},
+ :usage ["(make-node loc node children)"],
  :full-name "clojure.zip/make-node",
- :clj-symbol "clojure.zip/make-node",
- :docstring "Returns a new branch node, given an existing node and new\nchildren. The loc is only used to supply the constructor."}
+ :docstring "Returns a new branch node, given an existing node and new\nchildren. The loc is only used to supply the constructor.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/make-node.cljsdoc"}
 
 ```
 

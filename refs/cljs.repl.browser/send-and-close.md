@@ -10,6 +10,10 @@
 </tr>
 </table>
 
+<samp>(send-and-close conn status form)</samp><br>
+<samp>(send-and-close conn status form content-type)</samp><br>
+
+---
 
  <samp>
 (__send-and-close__ conn status form)<br>
@@ -32,7 +36,7 @@ proper HTTP response.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L69-L90):
+Source code @ [github]():
 
 ```clj
 (defn send-and-close
@@ -61,12 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:69-90](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L69-L90)</ins>
+
 </pre>
 
 -->
@@ -118,6 +117,8 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [69 90]},
+ :usage ["(send-and-close conn status form)"
+         "(send-and-close conn status form content-type)"],
  :full-name "cljs.repl.browser/send-and-close",
  :docstring "Use the passed connection to send a form to the browser. Send a\nproper HTTP response.",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}

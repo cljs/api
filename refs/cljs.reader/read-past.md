@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-past pred rdr)</samp><br>
+
+---
 
  <samp>
 (__read-past__ pred rdr)<br>
@@ -28,7 +31,7 @@ char.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L216-L223):
+Source code @ [github]():
 
 ```clj
 (defn read-past
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:216-223](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L216-L223)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,21 @@ The API data for this symbol:
 {:ns "cljs.reader",
  :name "read-past",
  :signature ["[pred rdr]"],
+ :name-encode "read-past",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader/read-past",
  :source {:code "(defn read-past\n  [pred rdr]\n  (loop [ch (read-char rdr)]\n    (if (pred ch)\n      (recur (read-char rdr))\n      ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [216 223]},
+          :lines [216 223],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L216-L223"},
+ :usage ["(read-past pred rdr)"],
  :full-name "cljs.reader/read-past",
- :docstring "Read until first character that doesn't match pred, returning\nchar."}
+ :docstring "Read until first character that doesn't match pred, returning\nchar.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-past.cljsdoc"}
 
 ```
 

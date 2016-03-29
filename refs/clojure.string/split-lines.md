@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(split-lines s)</samp><br>
+
+---
 
  <samp>
 (__split-lines__ s)<br>
@@ -42,7 +45,7 @@ Splits s on
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L160-L163):
+Source code @ [github]():
 
 ```clj
 (defn split-lines
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:160-163](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L160-L163)</ins>
+
 </pre>
 
 -->
@@ -105,19 +103,24 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "split-lines",
  :signature ["[s]"],
+ :name-encode "split-lines",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/split-lines",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/split-lines"},
  :related ["clojure.string/split"],
  :full-name-encode "clojure.string/split-lines",
  :source {:code "(defn split-lines\n  [s]\n  (split s #\"\\n|\\r\\n\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [160 163]},
+          :lines [160 163],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L160-L163"},
+ :usage ["(split-lines s)"],
  :full-name "clojure.string/split-lines",
- :clj-symbol "clojure.string/split-lines",
- :docstring "Splits s on \n or \r\n."}
+ :docstring "Splits s on \n or \r\n.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/split-lines.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(obj-map & keyvals)</samp><br>
+
+---
 
  <samp>
 (__obj-map__ & keyvals)<br>
@@ -28,7 +31,7 @@ Returns a new object map with supplied mappings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7970-L7981):
+Source code @ [github]():
 
 ```clj
 (defn obj-map
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:7970-7981](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7970-L7981)</ins>
+
 </pre>
 
 -->
@@ -94,17 +92,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "obj-map",
  :signature ["[& keyvals]"],
+ :name-encode "obj-map",
  :history [["+" "0.0-1443"]],
  :type "function",
  :full-name-encode "cljs.core/obj-map",
  :source {:code "(defn obj-map\n  [& keyvals]\n  (let [ks  (array)\n        obj (js-obj)]\n    (loop [kvs (seq keyvals)]\n      (if kvs\n        (do (.push ks (first kvs))\n            (aset obj (first kvs) (second kvs))\n            (recur (nnext kvs)))\n        (.fromObject ObjMap ks obj)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7970 7981]},
+          :lines [7970 7981],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L7970-L7981"},
+ :usage ["(obj-map & keyvals)"],
  :full-name "cljs.core/obj-map",
- :docstring "keyval => key val\nReturns a new object map with supplied mappings."}
+ :docstring "keyval => key val\nReturns a new object map with supplied mappings.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/obj-map.cljsdoc"}
 
 ```
 

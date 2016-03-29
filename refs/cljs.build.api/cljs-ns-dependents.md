@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(cljs-ns-dependents ns)</samp><br>
+<samp>(cljs-ns-dependents state ns)</samp><br>
+
+---
 
  <samp>
 (__cljs-ns-dependents__ ns)<br>
@@ -32,7 +36,7 @@ transient dependents.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L73-L85):
+Source code @ [github]():
 
 ```clj
 (defn cljs-ns-dependents
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.145/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.145
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:73-85](https://github.com/clojure/clojurescript/blob/r1.7.145/src/main/clojure/cljs/build/api.clj#L73-L85)</ins>
+
 </pre>
 
 -->
@@ -108,6 +106,7 @@ The API data for this symbol:
           :tag "r1.7.145",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [73 85]},
+ :usage ["(cljs-ns-dependents ns)" "(cljs-ns-dependents state ns)"],
  :full-name "cljs.build.api/cljs-ns-dependents",
  :docstring "Given a namespace symbol return a seq of all dependent\nnamespaces sorted in dependency order. Will include\ntransient dependents.",
  :removed {:in "1.7.166", :last-seen "1.7.145"}}

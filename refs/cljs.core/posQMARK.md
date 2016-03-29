@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pos? n)</samp><br>
+
+---
 
  <samp>
 (__pos?__ n)<br>
@@ -41,7 +44,7 @@ Returns true if num is greater than zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2663-L2665):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean pos?
@@ -52,19 +55,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2663-2665](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2663-L2665)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1059-L1060):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric pos? [x]
@@ -75,12 +73,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1059-1060](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1059-L1060)</ins>
+
 </pre>
 -->
 
@@ -125,25 +118,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "pos?",
  :signature ["[n]"],
+ :name-encode "posQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/pos?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pos?"},
  :related ["cljs.core/neg?" "cljs.core/zero?"],
  :full-name-encode "cljs.core/posQMARK",
  :source {:code "(defn ^boolean pos?\n  [n] (cljs.core/pos? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2663 2665]},
+          :lines [2663 2665],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2663-L2665"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric pos? [x]\n  `(> ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1059 1060]}],
+                  :lines [1059 1060],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1059-L1060"}],
+ :usage ["(pos? n)"],
  :full-name "cljs.core/pos?",
- :clj-symbol "clojure.core/pos?",
- :docstring "Returns true if num is greater than zero, else false"}
+ :docstring "Returns true if num is greater than zero, else false",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/posQMARK.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(testing-contexts-str)</samp><br>
+
+---
 
  <samp>
 (__testing-contexts-str__)<br>
@@ -31,7 +34,7 @@ strings in *testing-contexts* with spaces.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L299-L303):
+Source code @ [github]():
 
 ```clj
 (defn testing-contexts-str
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:299-303](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L299-L303)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "testing-contexts-str",
  :signature ["[]"],
+ :name-encode "testing-contexts-str",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/testing-contexts-str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing-contexts-str"},
  :full-name-encode "cljs.test/testing-contexts-str",
  :source {:code "(defn testing-contexts-str\n  []\n  (apply str (interpose \" \" (reverse (:testing-contexts (get-current-env))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [299 303]},
+          :lines [299 303],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L299-L303"},
+ :usage ["(testing-contexts-str)"],
  :full-name "cljs.test/testing-contexts-str",
- :clj-symbol "clojure.test/testing-contexts-str",
- :docstring "Returns a string representation of the current test context. Joins\nstrings in *testing-contexts* with spaces."}
+ :docstring "Returns a string representation of the current test context. Joins\nstrings in *testing-contexts* with spaces.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/testing-contexts-str.cljsdoc"}
 
 ```
 

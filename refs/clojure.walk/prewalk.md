@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(prewalk f form)</samp><br>
+
+---
 
  <samp>
 (__prewalk__ f form)<br>
@@ -30,7 +33,7 @@ Like postwalk, but does pre-order traversal.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L60-L64):
+Source code @ [github]():
 
 ```clj
 (defn prewalk
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:60-64](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L60-L64)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "prewalk",
  :signature ["[f form]"],
+ :name-encode "prewalk",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/prewalk",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/prewalk"},
  :full-name-encode "clojure.walk/prewalk",
  :source {:code "(defn prewalk\n  [f form]\n  (walk (partial prewalk f) identity (f form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [60 64]},
+          :lines [60 64],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L60-L64"},
+ :usage ["(prewalk f form)"],
  :full-name "clojure.walk/prewalk",
- :clj-symbol "clojure.walk/prewalk",
- :docstring "Like postwalk, but does pre-order traversal."}
+ :docstring "Like postwalk, but does pre-order traversal.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/prewalk.cljsdoc"}
 
 ```
 

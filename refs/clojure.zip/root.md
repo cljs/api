@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(root loc)</samp><br>
+
+---
 
  <samp>
 (__root__ loc)<br>
@@ -31,7 +34,7 @@ changes.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L124-L133):
+Source code @ [github]():
 
 ```clj
 (defn root
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:124-133](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L124-L133)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "root",
  :signature ["[loc]"],
+ :name-encode "root",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/root",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/root"},
  :full-name-encode "clojure.zip/root",
  :source {:code "(defn root\n  [loc]\n    (if (= :end (loc 1))\n      (node loc)\n      (let [p (up loc)]\n        (if p\n          (recur p)\n          (node loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [124 133]},
+          :lines [124 133],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L124-L133"},
+ :usage ["(root loc)"],
  :full-name "clojure.zip/root",
- :clj-symbol "clojure.zip/root",
- :docstring "zips all the way up and returns the root node, reflecting any\nchanges."}
+ :docstring "zips all the way up and returns the root node, reflecting any\nchanges.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/root.cljsdoc"}
 
 ```
 

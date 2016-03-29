@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(RecordIter. i record base-count fields ext-map-iter)</samp><br>
+
+---
 
  <samp>
 (__RecordIter.__ i record base-count fields ext-map-iter)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5824-L5834):
+Source code @ [github]():
 
 ```clj
 (deftype RecordIter [^:mutable i record base-count fields ext-map-iter]
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5824-5834](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5824-L5834)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "RecordIter",
- :type "type",
  :signature ["[i record base-count fields ext-map-iter]"],
+ :name-encode "RecordIter",
+ :history [["+" "1.7.28"]],
+ :type "type",
+ :full-name-encode "cljs.core/RecordIter",
  :source {:code "(deftype RecordIter [^:mutable i record base-count fields ext-map-iter]\n  Object\n  (hasNext [_]\n    (or (< i base-count) (.hasNext ext-map-iter)))\n  (next [_]\n    (if (< i base-count)\n      (let [k (nth fields i)]\n        (set! i (inc i))\n        [k (-lookup record k)])\n      (.next ext-map-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5824 5834]},
+          :lines [5824 5834],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5824-L5834"},
+ :usage ["(RecordIter. i record base-count fields ext-map-iter)"],
  :full-name "cljs.core/RecordIter",
- :full-name-encode "cljs.core/RecordIter",
- :history [["+" "1.7.28"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/RecordIter.cljsdoc"}
 
 ```
 

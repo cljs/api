@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ex-data ex)</samp><br>
+
+---
 
  <samp>
 (__ex-data__ ex)<br>
@@ -31,7 +34,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10173-L10178):
+Source code @ [github]():
 
 ```clj
 (defn ex-data
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10173-10178](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10173-L10178)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ex-data",
  :signature ["[ex]"],
+ :name-encode "ex-data",
  :history [["+" "0.0-1576"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ex-data",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ex-data"},
  :full-name-encode "cljs.core/ex-data",
  :source {:code "(defn ex-data\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-data ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10173 10178]},
+          :lines [10173 10178],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10173-L10178"},
+ :usage ["(ex-data ex)"],
  :full-name "cljs.core/ex-data",
- :clj-symbol "clojure.core/ex-data",
- :docstring "Returns exception data (a map) if ex is an ExceptionInfo.\nOtherwise returns nil."}
+ :docstring "Returns exception data (a map) if ex is an ExceptionInfo.\nOtherwise returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ex-data.cljsdoc"}
 
 ```
 

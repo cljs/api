@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(-main)</samp><br>
+
+---
 
  <samp>
 (__-main__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L225-L226):
+Source code @ [github]():
 
 ```clj
 (defn -main []
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:225-226](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L225-L226)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "-main",
- :type "function",
  :signature ["[]"],
+ :name-encode "-main",
+ :history [["+" "0.0-3165"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/-main",
  :source {:code "(defn -main []\n  (repl/repl (repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [225 226]},
+          :lines [225 226],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L225-L226"},
+ :usage ["(-main)"],
  :full-name "cljs.repl.node/-main",
- :full-name-encode "cljs.repl.node/-main",
- :history [["+" "0.0-3165"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/-main.cljsdoc"}
 
 ```
 

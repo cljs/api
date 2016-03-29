@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(run-all-tests)</samp><br>
+<samp>(run-all-tests re)</samp><br>
+<samp>(run-all-tests re env)</samp><br>
+
+---
 
  <samp>
 (__run-all-tests__)<br>
@@ -39,7 +44,7 @@ tested.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L297-L309):
+Source code @ [github]():
 
 ```clj
 (defmacro run-all-tests
@@ -57,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:297-309](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L297-L309)</ins>
+
 </pre>
 
 -->
@@ -107,18 +107,25 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "run-all-tests",
  :signature ["[]" "[re]" "[re env]"],
+ :name-encode "run-all-tests",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/run-all-tests",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/run-all-tests"},
  :full-name-encode "cljs.test/run-all-tests",
  :source {:code "(defmacro run-all-tests\n  ([] `(cljs.test/run-all-tests nil (cljs.test/empty-env)))\n  ([re] `(cljs.test/run-all-tests ~re (cljs.test/empty-env)))\n  ([re env]\n   `(cljs.test/run-tests ~env\n      ~@(map\n          (fn [ns] `(quote ~ns))\n          (cond->> (ana-api/all-ns)\n            re (filter #(re-matches re (name %))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [297 309]},
+          :lines [297 309],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L297-L309"},
+ :usage ["(run-all-tests)"
+         "(run-all-tests re)"
+         "(run-all-tests re env)"],
  :full-name "cljs.test/run-all-tests",
- :clj-symbol "clojure.test/run-all-tests",
- :docstring "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested."}
+ :docstring "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/run-all-tests.cljsdoc"}
 
 ```
 

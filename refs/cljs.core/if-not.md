@@ -12,6 +12,10 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(if-not test then)</samp><br>
+<samp>(if-not test then else)</samp><br>
+
+---
 
  <samp>
 (__if-not__ test then)<br>
@@ -46,7 +50,7 @@ otherwise else expr, if supplied, else nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L748-L754):
+Source code @ [github]():
 
 ```clj
 (defmacro if-not
@@ -59,11 +63,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:748-754](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L748-L754)</ins>
+
 </pre>
 
 -->
@@ -109,8 +109,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "if-not",
  :signature ["[test then]" "[test then else]"],
+ :name-encode "if-not",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/if-not",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/if-not"},
  :related ["special/if" "cljs.core/when-not"],
  :full-name-encode "cljs.core/if-not",
  :source {:code "(defmacro if-not\n  ([test then] `(if-not ~test ~then nil))\n  ([test then else]\n   `(if (not ~test) ~then ~else)))",
@@ -118,10 +121,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [748 754]},
+          :lines [748 754],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L748-L754"},
+ :usage ["(if-not test then)" "(if-not test then else)"],
  :full-name "cljs.core/if-not",
- :clj-symbol "clojure.core/if-not",
- :docstring "Evaluates test. If logical false, evaluates and returns then expr, \notherwise else expr, if supplied, else nil."}
+ :docstring "Evaluates test. If logical false, evaluates and returns then expr, \notherwise else expr, if supplied, else nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/if-not.cljsdoc"}
 
 ```
 

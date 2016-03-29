@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(instance? t o)</samp><br>
+
+---
 
  <samp>
 (__instance?__ t o)<br>
@@ -41,7 +44,7 @@ c. Returns true or false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L919-L923):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean instance?
@@ -53,19 +56,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:919-923](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L919-L923)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L912-L919):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro instance? [c x]
@@ -82,12 +80,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:912-919](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L912-L919)</ins>
+
 </pre>
 -->
 
@@ -132,25 +125,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "instance?",
  :signature ["[t o]"],
+ :name-encode "instanceQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/instance?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/instance?"},
  :related ["cljs.core/type"],
  :full-name-encode "cljs.core/instanceQMARK",
  :source {:code "(defn ^boolean instance?\n  [c x]\n  (cljs.core/instance? c x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [919 923]},
+          :lines [919 923],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L919-L923"},
  :extra-sources [{:code "(core/defmacro instance? [c x]\n  ;; Google Closure warns about some references to RegExp, so\n  ;; (instance? RegExp ...) needs to be inlined, but the expansion\n  ;; should preserve the order of argument evaluation.\n  (bool-expr (if (clojure.core/symbol? c)\n               (core/list 'js* \"(~{} instanceof ~{})\" x c)\n               `(let [c# ~c x# ~x]\n                  (~'js* \"(~{} instanceof ~{})\" x# c#)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [912 919]}],
+                  :lines [912 919],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L912-L919"}],
+ :usage ["(instance? t o)"],
  :full-name "cljs.core/instance?",
- :clj-symbol "clojure.core/instance?",
- :docstring "Evaluates x and tests if it is an instance of the type\nc. Returns true or false"}
+ :docstring "Evaluates x and tests if it is an instance of the type\nc. Returns true or false",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/instanceQMARK.cljsdoc"}
 
 ```
 

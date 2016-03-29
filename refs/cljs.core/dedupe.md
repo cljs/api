@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(dedupe)</samp><br>
+<samp>(dedupe coll)</samp><br>
+
+---
 
  <samp>
 (__dedupe__)<br>
@@ -34,7 +38,7 @@ Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9475-L9490):
+Source code @ [github]():
 
 ```clj
 (defn dedupe
@@ -57,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9475-9490](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9475-L9490)</ins>
+
 </pre>
 
 -->
@@ -107,18 +106,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "dedupe",
  :signature ["[]" "[coll]"],
+ :name-encode "dedupe",
  :history [["+" "0.0-2301"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/dedupe",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dedupe"},
  :full-name-encode "cljs.core/dedupe",
  :source {:code "(defn dedupe\n  ([]\n   (fn [rf]\n     (let [pa (volatile! ::none)]\n       (fn\n         ([] (rf))\n         ([result] (rf result))\n         ([result input]\n            (let [prior @pa]\n              (vreset! pa input)\n              (if (= prior input)\n                result\n                (rf result input))))))))\n  ([coll] (sequence (dedupe) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9475 9490]},
+          :lines [9475 9490],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9475-L9490"},
+ :usage ["(dedupe)" "(dedupe coll)"],
  :full-name "cljs.core/dedupe",
- :clj-symbol "clojure.core/dedupe",
- :docstring "Returns a lazy sequence removing consecutive duplicates in coll.\nReturns a transducer when no collection is provided."}
+ :docstring "Returns a lazy sequence removing consecutive duplicates in coll.\nReturns a transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dedupe.cljsdoc"}
 
 ```
 

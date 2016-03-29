@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(loop \[& bindings\] & body-exprs)</samp><br>
+
+---
 
  <samp>
 (__loop__ \[& bindings\] & body-exprs)<br>
@@ -64,7 +67,7 @@ therein. Acts as a recur target.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L720-L742):
+Source code @ [github]():
 
 ```clj
 (core/defmacro loop
@@ -93,12 +96,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:720-742](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L720-L742)</ins>
+
 </pre>
 
 -->
@@ -144,21 +142,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "loop",
  :signature ["[[& bindings] & body-exprs]"],
+ :name-encode "loop",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/loop",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/loop"},
  :related ["special/recur"],
  :full-name-encode "cljs.core/loop",
  :source {:code "(core/defmacro loop\n  [bindings & body]\n  (assert-args loop\n    (vector? bindings) \"a vector for its binding\"\n    (even? (count bindings)) \"an even number of forms in binding vector\")\n  (core/let [db (destructure bindings)]\n    (if (= db bindings)\n      `(loop* ~bindings ~@body)\n      (core/let [vs (take-nth 2 (drop 1 bindings))\n                 bs (take-nth 2 bindings)\n                 gs (map (core/fn [b] (if (core/symbol? b) b (gensym))) bs)\n                 bfs (reduce (core/fn [ret [b v g]]\n                               (if (core/symbol? b)\n                                 (conj ret g v)\n                                 (conj ret g v b g)))\n                       [] (map core/vector bs vs gs))]\n        `(let ~bfs\n           (loop* ~(vec (interleave gs gs))\n             (let ~(vec (interleave bs gs))\n               ~@body)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [720 742]},
+          :lines [720 742],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L720-L742"},
+ :usage ["(loop [& bindings] & body-exprs)"],
  :examples [{:id "60291e",
              :content "```clj\n(loop [x 0]\n  (when (< x 10)\n    (println x)\n    (recur (+ x 2))))\n;; Prints:\n;; 0\n;; 2\n;; 4\n;; 6\n;; 8\n;;\n;;=> nil\n```"}],
  :full-name "cljs.core/loop",
- :clj-symbol "clojure.core/loop",
- :docstring "Evaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein. Acts as a recur target."}
+ :docstring "Evaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein. Acts as a recur target.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/loop.cljsdoc"}
 
 ```
 

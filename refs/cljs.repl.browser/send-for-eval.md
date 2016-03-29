@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(send-for-eval form return-value-fn)</samp><br>
+<samp>(send-for-eval conn form return-value-fn)</samp><br>
+
+---
 
  <samp>
 (__send-for-eval__ form return-value-fn)<br>
@@ -32,7 +36,7 @@ when the return value is received.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L60-L68):
+Source code @ [github]():
 
 ```clj
 (defn send-for-eval
@@ -47,13 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:60-68](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L60-L68)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,22 @@ The API data for this symbol:
 {:ns "cljs.repl.browser",
  :name "send-for-eval",
  :signature ["[form return-value-fn]" "[conn form return-value-fn]"],
+ :name-encode "send-for-eval",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.repl.browser/send-for-eval",
  :source {:code "(defn send-for-eval\n  ([form return-value-fn]\n    (send-for-eval @(server/connection) form return-value-fn))\n  ([conn form return-value-fn]\n    (set-return-value-fn return-value-fn)\n    (server/send-and-close conn 200 form \"text/javascript\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [60 68]},
+          :lines [60 68],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L60-L68"},
+ :usage ["(send-for-eval form return-value-fn)"
+         "(send-for-eval conn form return-value-fn)"],
  :full-name "cljs.repl.browser/send-for-eval",
- :docstring "Given a form and a return value function, send the form to the\nbrowser for evaluation. The return value function will be called\nwhen the return value is received."}
+ :docstring "Given a form and a return value function, send the form to the\nbrowser for evaluation. The return value function will be called\nwhen the return value is received.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/send-for-eval.cljsdoc"}
 
 ```
 

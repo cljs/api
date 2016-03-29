@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(short x)</samp><br>
+
+---
 
  <samp>
 (__short__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2437):
+Function code @ [github]():
 
 ```clj
 (defn ^number short [x] x)
@@ -35,19 +38,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2437](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2437)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L952):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro short [x] x)
@@ -57,12 +55,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:952](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L952)</ins>
+
 </pre>
 -->
 
@@ -106,23 +99,29 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "short",
  :signature ["[x]"],
+ :name-encode "short",
  :history [["+" "0.0-1798"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/short",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/short"},
  :full-name-encode "cljs.core/short",
  :source {:code "(defn ^number short [x] x)",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2437]},
+          :lines [2437],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2437"},
  :extra-sources [{:code "(core/defmacro short [x] x)",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [952]}],
+                  :lines [952],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L952"}],
+ :usage ["(short x)"],
  :full-name "cljs.core/short",
- :clj-symbol "clojure.core/short"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/short.cljsdoc"}
 
 ```
 

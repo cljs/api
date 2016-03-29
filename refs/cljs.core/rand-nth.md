@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rand-nth coll)</samp><br>
+
+---
 
  <samp>
 (__rand-nth__ coll)<br>
@@ -44,7 +47,7 @@ collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9656-L9661):
+Source code @ [github]():
 
 ```clj
 (defn rand-nth
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9656-9661](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9656-L9661)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "rand-nth",
  :signature ["[coll]"],
+ :name-encode "rand-nth",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rand-nth",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rand-nth"},
  :related ["cljs.core/rand"],
  :full-name-encode "cljs.core/rand-nth",
  :source {:code "(defn rand-nth\n  [coll]\n  (nth coll (rand-int (count coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9656 9661]},
+          :lines [9656 9661],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9656-L9661"},
+ :usage ["(rand-nth coll)"],
  :full-name "cljs.core/rand-nth",
- :clj-symbol "clojure.core/rand-nth",
- :docstring "Return a random element of the (sequential) collection. Will have\nthe same performance characteristics as nth for the given\ncollection."}
+ :docstring "Return a random element of the (sequential) collection. Will have\nthe same performance characteristics as nth for the given\ncollection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rand-nth.cljsdoc"}
 
 ```
 

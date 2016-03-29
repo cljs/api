@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(all-listeners obj type capture)</samp><br>
+
+---
 
  <samp>
 (__all-listeners__ obj type capture)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L92):
+Source code @ [github]():
 
 ```clj
 (defn all-listeners [obj type capture])
@@ -32,13 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:92](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L92)</ins>
+
 </pre>
 
 -->
@@ -79,17 +76,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "all-listeners",
- :type "function",
  :signature ["[obj type capture]"],
+ :name-encode "all-listeners",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/all-listeners",
  :source {:code "(defn all-listeners [obj type capture])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [92]},
+          :lines [92],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L92"},
+ :usage ["(all-listeners obj type capture)"],
  :full-name "clojure.browser.event/all-listeners",
- :full-name-encode "clojure.browser.event/all-listeners",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/all-listeners.cljsdoc"}
 
 ```
 

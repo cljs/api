@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(last coll)</samp><br>
+
+---
 
  <samp>
 (__last__ coll)<br>
@@ -65,7 +68,7 @@ Return the last item in coll, in linear time
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1626-L1632):
+Source code @ [github]():
 
 ```clj
 (defn last
@@ -80,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1626-1632](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1626-L1632)</ins>
+
 </pre>
 
 -->
@@ -131,8 +129,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "last",
  :signature ["[coll]"],
+ :name-encode "last",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/last",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/last"},
  :related ["cljs.core/first"
            "cljs.core/next"
            "cljs.core/rest"
@@ -142,14 +143,16 @@ The API data for this symbol:
  :source {:code "(defn last\n  [s]\n  (let [sn (next s)]\n    (if-not (nil? sn)\n      (recur sn)\n      (first s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1626 1632]},
+          :lines [1626 1632],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1626-L1632"},
+ :usage ["(last coll)"],
  :examples [{:id "eb0836",
              :content "```clj\n(last [1 2 3])\n;;=> 3\n\n(last [1 2])\n;;=> 2\n\n(last [1])\n;;=> 1\n\n(last [])\n;;=> nil\n```"}],
  :full-name "cljs.core/last",
- :clj-symbol "clojure.core/last",
- :docstring "Return the last item in coll, in linear time"}
+ :docstring "Return the last item in coll, in linear time",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/last.cljsdoc"}
 
 ```
 

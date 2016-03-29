@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(ns-resolve ns sym)</samp><br>
+<samp>(ns-resolve state ns sym)</samp><br>
+
+---
 
  <samp>
 (__ns-resolve__ ns sym)<br>
@@ -34,7 +38,7 @@ Analagous to clojure.core/ns-resolve but returns var analysis map not Var.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L193-L200):
+Source code @ [github]():
 
 ```clj
 (defn ns-resolve
@@ -49,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:193-200](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L193-L200)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "ns-resolve",
  :signature ["[ns sym]" "[state ns sym]"],
+ :name-encode "ns-resolve",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ns-resolve",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-resolve"},
  :full-name-encode "cljs.analyzer.api/ns-resolve",
  :source {:code "(defn ns-resolve\n  ([ns sym]\n   (ns-resolve env/*compiler* ns sym))\n  ([state ns sym]\n   {:pre [(symbol? ns) (symbol? sym)]}\n   (get-in @state [::ana/namespaces ns :defs sym])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [193 200]},
+          :lines [193 200],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L193-L200"},
+ :usage ["(ns-resolve ns sym)" "(ns-resolve state ns sym)"],
  :full-name "cljs.analyzer.api/ns-resolve",
- :clj-symbol "clojure.core/ns-resolve",
- :docstring "Given a namespace and a symbol return the corresponding var analysis map.\nAnalagous to clojure.core/ns-resolve but returns var analysis map not Var."}
+ :docstring "Given a namespace and a symbol return the corresponding var analysis map.\nAnalagous to clojure.core/ns-resolve but returns var analysis map not Var.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/ns-resolve.cljsdoc"}
 
 ```
 

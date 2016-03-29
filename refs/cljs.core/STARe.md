@@ -55,7 +55,7 @@ bound in a repl thread to the most recent exception caught by the repl
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L168-L170):
+Source code @ [github]():
 
 ```clj
 (def
@@ -67,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:168-170](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L168-L170)</ins>
+
 </pre>
 
 -->
@@ -117,21 +112,25 @@ The API data for this symbol:
 {:description "Only usable from a REPL.\n\nHolds the result of the last exception.",
  :ns "cljs.core",
  :name "*e",
+ :name-encode "STARe",
  :history [["+" "0.0-2814"]],
  :type "var",
+ :clj-equiv {:full-name "clojure.core/*e",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*e"},
  :related ["cljs.core/*1" "cljs.core/*2" "cljs.core/*3"],
  :full-name-encode "cljs.core/STARe",
  :source {:code "(def\n  ^{:doc \"bound in a repl thread to the most recent exception caught by the repl\"}\n  *e)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [168 170]},
+          :lines [168 170],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L168-L170"},
  :examples [{:id "bea858",
              :content "```clj\n(defn cause-error []\n  (throw \"Error: something went wrong\"))\n\n(cause-error)\n;; Error: something went wrong\n\n*e\n;;=> \"Error: something went wrong\"\n```"}],
  :full-name "cljs.core/*e",
- :clj-symbol "clojure.core/*e",
- :docstring "bound in a repl thread to the most recent exception caught by the repl"}
+ :docstring "bound in a repl thread to the most recent exception caught by the repl",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARe.cljsdoc"}
 
 ```
 

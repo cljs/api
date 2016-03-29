@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(self-require? specs)</samp><br>
+
+---
 
  <samp>
 (__self-require?__ specs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L618-L627):
+Source code @ [github]():
 
 ```clj
 (defn self-require? [specs]
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:618-627](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L618-L627)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "self-require?",
- :type "function",
  :signature ["[specs]"],
+ :name-encode "self-requireQMARK",
+ :history [["+" "0.0-2911"]],
+ :type "function",
+ :full-name-encode "cljs.repl/self-requireQMARK",
  :source {:code "(defn self-require? [specs]\n  (some\n    (fn [quoted-spec-or-kw]\n      (and (not (keyword? quoted-spec-or-kw))\n           (let [spec (second quoted-spec-or-kw)\n                 ns (if (sequential? spec)\n                      (first spec)\n                      spec)]\n             (= ns ana/*cljs-ns*))))\n    specs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [618 627]},
+          :lines [620 629],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L620-L629"},
+ :usage ["(self-require? specs)"],
  :full-name "cljs.repl/self-require?",
- :full-name-encode "cljs.repl/self-requireQMARK",
- :history [["+" "0.0-2911"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/self-requireQMARK.cljsdoc"}
 
 ```
 

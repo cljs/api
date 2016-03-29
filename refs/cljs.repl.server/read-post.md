@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-post line rdr)</samp><br>
+
+---
 
  <samp>
 (__read-post__ line rdr)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L74-L83):
+Source code @ [github]():
 
 ```clj
 (defn read-post [line rdr]
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:74-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L74-L83)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "read-post",
- :type "function",
  :signature ["[line rdr]"],
+ :name-encode "read-post",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.server/read-post",
  :source {:code "(defn read-post [line rdr]\n  (let [[_ path _] (str/split line #\" \")\n        headers (parse-headers (read-headers rdr))\n        content-length (Integer/parseInt (:content-length headers))\n        content (char-array content-length)]\n    (io! (.read rdr content 0 content-length)\n      {:method :post\n       :path path\n       :headers headers\n       :content (String. content)})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [74 83]},
+          :lines [74 83],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L74-L83"},
+ :usage ["(read-post line rdr)"],
  :full-name "cljs.repl.server/read-post",
- :full-name-encode "cljs.repl.server/read-post",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/read-post.cljsdoc"}
 
 ```
 

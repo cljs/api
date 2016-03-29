@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(constantly x)</samp><br>
+
+---
 
  <samp>
 (__constantly__ x)<br>
@@ -58,7 +61,7 @@ Returns a function that takes any number of arguments and returns x.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3926-L3928):
+Source code @ [github]():
 
 ```clj
 (defn constantly
@@ -69,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3926-3928](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3926-L3928)</ins>
+
 </pre>
 
 -->
@@ -120,21 +118,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "constantly",
  :signature ["[x]"],
+ :name-encode "constantly",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/constantly",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/constantly"},
  :related ["cljs.core/repeatedly"],
  :full-name-encode "cljs.core/constantly",
  :source {:code "(defn constantly\n  [x] (fn [& args] x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3926 3928]},
+          :lines [3926 3928],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3926-L3928"},
+ :usage ["(constantly x)"],
  :examples [{:id "9d5c25",
              :content "```clj\n(def ten (constantly 10))\n\n(ten \"hi\")\n;;=> 10\n\n(ten 123)\n;;=> 10\n\n(ten :whatever)\n;;=> 10\n```"}],
  :full-name "cljs.core/constantly",
- :clj-symbol "clojure.core/constantly",
- :docstring "Returns a function that takes any number of arguments and returns x."}
+ :docstring "Returns a function that takes any number of arguments and returns x.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/constantly.cljsdoc"}
 
 ```
 

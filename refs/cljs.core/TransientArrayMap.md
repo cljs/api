@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TransientArrayMap</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/PersistentArrayMap.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TransientArrayMap</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentArrayMap.java)
 </td>
 </tr>
 </table>
 
+<samp>(TransientArrayMap. editable? len arr)</samp><br>
+
+---
 
  <samp>
 (__TransientArrayMap.__ editable? len arr)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6204-L6270):
+Source code @ [github]():
 
 ```clj
 (deftype TransientArrayMap [^:mutable editable?
@@ -101,12 +104,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6204-6270](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6204-L6270)</ins>
+
 </pre>
 
 -->
@@ -151,17 +149,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "TransientArrayMap",
  :signature ["[editable? len arr]"],
+ :name-encode "TransientArrayMap",
  :history [["+" "0.0-1211"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/TransientArrayMap",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentArrayMap.java"},
  :full-name-encode "cljs.core/TransientArrayMap",
  :source {:code "(deftype TransientArrayMap [^:mutable editable?\n                            ^:mutable len\n                            arr]\n  ICounted\n  (-count [tcoll]\n    (if editable?\n      (quot len 2)\n      (throw (js/Error. \"count after persistent!\"))))\n\n  ILookup\n  (-lookup [tcoll k]\n    (-lookup tcoll k nil))\n\n  (-lookup [tcoll k not-found]\n    (if editable?\n      (let [idx (array-map-index-of tcoll k)]\n        (if (== idx -1)\n          not-found\n          (aget arr (inc idx))))\n      (throw (js/Error. \"lookup after persistent!\"))))\n\n  ITransientCollection\n  (-conj! [tcoll o]\n    (if editable?\n      (if (satisfies? IMapEntry o)\n        (-assoc! tcoll (key o) (val o))\n        (loop [es (seq o) tcoll tcoll]\n          (if-let [e (first es)]\n            (recur (next es)\n                   (-assoc! tcoll (key e) (val e)))\n            tcoll)))\n      (throw (js/Error. \"conj! after persistent!\"))))\n\n  (-persistent! [tcoll]\n    (if editable?\n      (do (set! editable? false)\n          (PersistentArrayMap. nil (quot len 2) arr nil))\n      (throw (js/Error. \"persistent! called twice\"))))\n\n  ITransientAssociative\n  (-assoc! [tcoll key val]\n    (if editable?\n      (let [idx (array-map-index-of tcoll key)]\n        (if (== idx -1)\n          (if (<= (+ len 2) (* 2 (.-HASHMAP-THRESHOLD PersistentArrayMap)))\n            (do (set! len (+ len 2))\n                (.push arr key)\n                (.push arr val)\n                tcoll)\n            (assoc! (array->transient-hash-map len arr) key val))\n          (if (identical? val (aget arr (inc idx)))\n            tcoll\n            (do (aset arr (inc idx) val)\n                tcoll))))\n      (throw (js/Error. \"assoc! after persistent!\"))))\n\n  ITransientMap\n  (-dissoc! [tcoll key]\n    (if editable?\n      (let [idx (array-map-index-of tcoll key)]\n        (when (>= idx 0)\n          (aset arr idx (aget arr (- len 2)))\n          (aset arr (inc idx) (aget arr (dec len)))\n          (doto arr .pop .pop)\n          (set! len (- len 2)))\n        tcoll)\n      (throw (js/Error. \"dissoc! after persistent!\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6204 6270]},
+          :lines [6204 6270],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6204-L6270"},
+ :usage ["(TransientArrayMap. editable? len arr)"],
  :full-name "cljs.core/TransientArrayMap",
- :clj-symbol "clojure.lang/TransientArrayMap"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TransientArrayMap.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Stepper. xform iter)</samp><br>
+
+---
 
  <samp>
 (__Stepper.__ xform iter)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3701-L3712):
+Source code @ [github]():
 
 ```clj
 (deftype Stepper [xform iter]
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3701-3712](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3701-L3712)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Stepper",
- :type "type",
  :signature ["[xform iter]"],
+ :name-encode "Stepper",
+ :history [["+" "0.0-2301"]],
+ :type "type",
+ :full-name-encode "cljs.core/Stepper",
  :source {:code "(deftype Stepper [xform iter]\n  Object\n  (step [this lt]\n    (loop []\n      (if (and (not (nil? (.-stepper lt)))\n               (.hasNext iter))\n        (if (reduced? (xform lt (.next iter)))\n          (when-not (nil? (.-rest lt))\n            (set! (.. lt -rest -stepper) nil))\n          (recur))))\n    (when-not (nil? (.-stepper lt))\n      (xform lt))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3701 3712]},
+          :lines [3701 3712],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3701-L3712"},
+ :usage ["(Stepper. xform iter)"],
  :full-name "cljs.core/Stepper",
- :full-name-encode "cljs.core/Stepper",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Stepper.cljsdoc"}
 
 ```
 

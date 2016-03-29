@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(/ x)</samp><br>
+<samp>(/ x y)</samp><br>
+<samp>(/ x y & more)</samp><br>
+
+---
 
  <samp>
 (__/__ x)<br>
@@ -68,7 +73,7 @@ else returns numerator divided by all of the denominators.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2354-L2359):
+Function code @ [github]():
 
 ```clj
 (defn ^number /
@@ -81,19 +86,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2354-2359](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2354-L2359)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1015-L1018):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric /
@@ -106,12 +106,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1015-1018](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1015-L1018)</ins>
+
 </pre>
 -->
 
@@ -156,27 +151,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "/",
  :signature ["[x]" "[x y]" "[x y & more]"],
+ :name-encode "SLASH",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core//",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core//"},
  :related ["cljs.core/*" "cljs.core/quot"],
  :full-name-encode "cljs.core/SLASH",
  :source {:code "(defn ^number /\n  ([x] (/ 1 x))\n  ([x y] (cljs.core/divide x y)) ;; FIXME: waiting on cljs.core//\n  ([x y & more] (reduce / (/ x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2354 2359]},
+          :lines [2354 2359],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2354-L2359"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric /\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1015 1018]}],
+                  :lines [1015 1018],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1015-L1018"}],
+ :usage ["(/ x)" "(/ x y)" "(/ x y & more)"],
  :examples [{:id "824bb7",
              :content "```clj\n(/ 6 3)\n;;=> 2\n\n(/ 6 3 2)\n;;=> 1\n\n(/ 10)\n;;=> 0.1\n\n(/ 1 3)\n;;=> 0.3333333333333333\n```"}],
  :full-name "cljs.core//",
- :clj-symbol "clojure.core//",
- :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators."}
+ :docstring "If no denominators are supplied, returns 1/numerator,\nelse returns numerator divided by all of the denominators.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/SLASH.cljsdoc"}
 
 ```
 

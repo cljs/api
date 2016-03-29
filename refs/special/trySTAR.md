@@ -18,7 +18,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L280-L312):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'try*
@@ -60,11 +60,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1913
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[analyzer.clj:280-312](https://github.com/clojure/clojurescript/blob/r1913/src/clj/cljs/analyzer.clj#L280-L312)</ins>
+
 </pre>
 
 -->

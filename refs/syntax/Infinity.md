@@ -77,7 +77,7 @@ js/-Infinity
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329):
+Reader code @ [github]():
 
 ```clj
 (defn- read-symbol
@@ -113,13 +113,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:303-329](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329)</ins>
+
 </pre>
 -->
 
@@ -152,23 +146,27 @@ The API data for this symbol:
 
 ```clj
 {:description "The IEEE 754 Floating Point representations of infinity.\n\n`Infinity` = `+Infinity` = positive infinity\n\n`-Infinity` = negative infinity",
+ :syntax-equiv {:edn-url nil, :clj-url nil},
  :ns "syntax",
  :name "Infinity",
+ :name-encode "Infinity",
  :history [["+" "0.0-1853"]],
  :type "special symbol",
  :related ["syntax/number" "syntax/NaN"],
  :full-name-encode "syntax/Infinity",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [303 329]}],
+                  :lines [303 329],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329"}),
  :usage ["Infinity" "-Infinity" "+Infinity"],
  :examples [{:id "463fd4",
              :content "```clj\nInfinity\n;;=> Infinity\n\n+Infinity\n;;=> Infinity\n\n-Infinity\n;;=> -Infinity\n```\n\nMath with infinities:\n\n```clj\n(/ 1 0)\n;;=> Infinity\n\n(Math/log 0)\n;;=> -Infinity\n\n(* 0 Infinity)\n;;=> NaN\n```\n\nThey are equivalent to the JavaScript symbols:\n\n```clj\njs/Infinity\n;;=> Infinity\n\njs/-Infinity\n;;=> -Infinity\n```"}],
  :full-name "syntax/Infinity",
- :display "Infinity"}
+ :display "Infinity",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/Infinity.cljsdoc"}
 
 ```
 

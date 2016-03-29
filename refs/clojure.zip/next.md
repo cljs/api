@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(next loc)</samp><br>
+
+---
 
  <samp>
 (__next__ loc)<br>
@@ -32,7 +35,7 @@ at the end, stays there.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L206-L219):
+Source code @ [github]():
 
 ```clj
 (defn next
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:206-219](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L206-L219)</ins>
+
 </pre>
 
 -->
@@ -102,18 +100,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "next",
  :signature ["[loc]"],
+ :name-encode "next",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/next",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/next"},
  :full-name-encode "clojure.zip/next",
  :source {:code "(defn next\n  [loc]\n    (if (= :end (loc 1))\n      loc\n      (or \n       (and (branch? loc) (down loc))\n       (right loc)\n       (loop [p loc]\n         (if (up p)\n           (or (right (up p)) (recur (up p)))\n           [(node p) :end])))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [206 219]},
+          :lines [206 219],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L206-L219"},
+ :usage ["(next loc)"],
  :full-name "clojure.zip/next",
- :clj-symbol "clojure.zip/next",
- :docstring "Moves to the next loc in the hierarchy, depth-first. When reaching\nthe end, returns a distinguished loc detectable via end?. If already\nat the end, stays there."}
+ :docstring "Moves to the next loc in the hierarchy, depth-first. When reaching\nthe end, returns a distinguished loc detectable via end?. If already\nat the end, stays there.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/next.cljsdoc"}
 
 ```
 

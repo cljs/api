@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(meta o)</samp><br>
+
+---
 
  <samp>
 (__meta__ o)<br>
@@ -30,7 +33,7 @@ Returns the metadata of obj, returns nil if there is no metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1918-L1923):
+Source code @ [github]():
 
 ```clj
 (defn meta
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1918-1923](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1918-L1923)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "meta",
  :signature ["[o]"],
+ :name-encode "meta",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/meta",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/meta"},
  :full-name-encode "cljs.core/meta",
  :source {:code "(defn meta\n  [o]\n  (when (and (not (nil? o))\n             (satisfies? IMeta o))\n    (-meta o)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1918 1923]},
+          :lines [1918 1923],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1918-L1923"},
+ :usage ["(meta o)"],
  :full-name "cljs.core/meta",
- :clj-symbol "clojure.core/meta",
- :docstring "Returns the metadata of obj, returns nil if there is no metadata."}
+ :docstring "Returns the metadata of obj, returns nil if there is no metadata.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/meta.cljsdoc"}
 
 ```
 

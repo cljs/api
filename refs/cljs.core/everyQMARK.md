@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(every? pred coll)</samp><br>
+
+---
 
  <samp>
 (__every?__ pred coll)<br>
@@ -42,7 +45,7 @@ false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3878-L3885):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean every?
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3878-3885](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3878-L3885)</ins>
+
 </pre>
 
 -->
@@ -109,19 +107,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "every?",
  :signature ["[pred coll]"],
+ :name-encode "everyQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/every?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/every?"},
  :related ["cljs.core/some" "cljs.core/not-any?"],
  :full-name-encode "cljs.core/everyQMARK",
  :source {:code "(defn ^boolean every?\n  [pred coll]\n  (cond\n   (nil? (seq coll)) true\n   (pred (first coll)) (recur pred (next coll))\n   :else false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3878 3885]},
+          :lines [3878 3885],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3878-L3885"},
+ :usage ["(every? pred coll)"],
  :full-name "cljs.core/every?",
- :clj-symbol "clojure.core/every?",
- :docstring "Returns true if (pred x) is logical true for every x in coll, else\nfalse."}
+ :docstring "Returns true if (pred x) is logical true for every x in coll, else\nfalse.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/everyQMARK.cljsdoc"}
 
 ```
 

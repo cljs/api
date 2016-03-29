@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(condp pred expr & clauses)</samp><br>
+
+---
 
  <samp>
 (__condp__ pred expr & clauses)<br>
@@ -77,7 +80,7 @@ IllegalArgumentException is thrown.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2061-L2101):
+Source code @ [github]():
 
 ```clj
 (core/defmacro condp
@@ -107,12 +110,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2061-2101](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2061-L2101)</ins>
+
 </pre>
 
 -->
@@ -158,19 +156,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "condp",
  :signature ["[pred expr & clauses]"],
+ :name-encode "condp",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/condp",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/condp"},
  :related ["cljs.core/cond" "special/if"],
  :full-name-encode "cljs.core/condp",
  :source {:code "(core/defmacro condp\n  [pred expr & clauses]\n  (core/let [gpred (gensym \"pred__\")\n             gexpr (gensym \"expr__\")\n             emit (core/fn emit [pred expr args]\n                    (core/let [[[a b c :as clause] more]\n                               (split-at (if (= :>> (second args)) 3 2) args)\n                               n (count clause)]\n                      (core/cond\n                        (= 0 n) `(throw (js/Error. (cljs.core/str \"No matching clause: \" ~expr)))\n                        (= 1 n) a\n                        (= 2 n) `(if (~pred ~a ~expr)\n                                   ~b\n                                   ~(emit pred expr more))\n                        :else `(if-let [p# (~pred ~a ~expr)]\n                                 (~c p#)\n                                 ~(emit pred expr more)))))\n             gres (gensym \"res__\")]\n    `(let [~gpred ~pred\n           ~gexpr ~expr]\n       ~(emit gpred gexpr clauses))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2061 2101]},
+          :lines [2061 2101],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2061-L2101"},
+ :usage ["(condp pred expr & clauses)"],
  :full-name "cljs.core/condp",
- :clj-symbol "clojure.core/condp",
- :docstring "Takes a binary predicate, an expression, and a set of clauses.\nEach clause can take the form of either:\n\ntest-expr result-expr\n\ntest-expr :>> result-fn\n\nNote :>> is an ordinary keyword.\n\nFor each clause, (pred test-expr expr) is evaluated. If it returns\nlogical true, the clause is a match. If a binary clause matches, the\nresult-expr is returned, if a ternary clause matches, its result-fn,\nwhich must be a unary function, is called with the result of the\npredicate as its argument, the result of that call being the return\nvalue of condp. A single default expression can follow the clauses,\nand its value will be returned if no clause matches. If no default\nexpression is provided and no clause matches, an\nIllegalArgumentException is thrown."}
+ :docstring "Takes a binary predicate, an expression, and a set of clauses.\nEach clause can take the form of either:\n\ntest-expr result-expr\n\ntest-expr :>> result-fn\n\nNote :>> is an ordinary keyword.\n\nFor each clause, (pred test-expr expr) is evaluated. If it returns\nlogical true, the clause is a match. If a binary clause matches, the\nresult-expr is returned, if a ternary clause matches, its result-fn,\nwhich must be a unary function, is called with the result of the\npredicate as its argument, the result of that call being the return\nvalue of condp. A single default expression can follow the clauses,\nand its value will be returned if no clause matches. If no default\nexpression is provided and no clause matches, an\nIllegalArgumentException is thrown.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/condp.cljsdoc"}
 
 ```
 

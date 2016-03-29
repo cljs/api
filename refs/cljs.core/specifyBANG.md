@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(specify! expr & impls)</samp><br>
+
+---
 
  <samp>
 (__specify!__ expr & impls)<br>
@@ -27,7 +30,7 @@ Identical to reify but mutates its first argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1266-L1272):
+Source code @ [github]():
 
 ```clj
 (core/defmacro specify!
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1266-1272](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1266-L1272)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "specify!",
  :signature ["[expr & impls]"],
+ :name-encode "specifyBANG",
  :history [["+" "0.0-2156"]],
  :type "macro",
  :full-name-encode "cljs.core/specifyBANG",
  :source {:code "(core/defmacro specify!\n  [expr & impls]\n  (core/let [x (with-meta (gensym \"x\") {:extend :instance})]\n    `(let [~x ~expr]\n       (extend-type ~x ~@impls)\n       ~x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1266 1272]},
+          :lines [1266 1272],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1266-L1272"},
+ :usage ["(specify! expr & impls)"],
  :full-name "cljs.core/specify!",
- :docstring "Identical to reify but mutates its first argument."}
+ :docstring "Identical to reify but mutates its first argument.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/specifyBANG.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(test-all-vars \[quote ns :as form\])</samp><br>
+
+---
 
  <samp>
 (__test-all-vars__ \[quote ns :as form\])<br>
@@ -31,7 +34,7 @@ namespace, with fixtures.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L334-L341):
+Source code @ [github]():
 
 ```clj
 (defmacro test-all-vars
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:334-341](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L334-L341)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "test-all-vars",
  :signature ["[[quote ns :as form]]"],
+ :name-encode "test-all-vars",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/test-all-vars",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-all-vars"},
  :full-name-encode "cljs.test/test-all-vars",
  :source {:code "(defmacro test-all-vars\n  [[quote ns :as form]]\n  `(cljs.test/run-block\n     (concat (test-all-vars-block ~form)\n             [(fn []\n                (report {:type :end-test-all-vars :ns ~form}))])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [334 341]},
+          :lines [334 341],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L334-L341"},
+ :usage ["(test-all-vars [quote ns :as form])"],
  :full-name "cljs.test/test-all-vars",
- :clj-symbol "clojure.test/test-all-vars",
- :docstring "Calls test-vars on every var with :test metadata interned in the\nnamespace, with fixtures."}
+ :docstring "Calls test-vars on every var with :test metadata interned in the\nnamespace, with fixtures.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-all-vars.cljsdoc"}
 
 ```
 

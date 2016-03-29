@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(keep f)</samp><br>
+<samp>(keep f coll)</samp><br>
+
+---
 
  <samp>
 (__keep__ f)<br>
@@ -52,7 +56,7 @@ side-effects.  Returns a transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4041-L4070):
+Source code @ [github]():
 
 ```clj
 (defn keep
@@ -88,12 +92,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4041-4070](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4041-L4070)</ins>
+
 </pre>
 
 -->
@@ -139,8 +138,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "keep",
  :signature ["[f]" "[f coll]"],
+ :name-encode "keep",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/keep",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/keep"},
  :related ["cljs.core/keep-indexed"
            "cljs.core/map"
            "cljs.core/filter"],
@@ -148,12 +150,14 @@ The API data for this symbol:
  :source {:code "(defn keep\n  ([f]\n   (fn [rf]\n     (fn\n       ([] (rf))\n       ([result] (rf result))\n       ([result input]\n          (let [v (f input)]\n            (if (nil? v)\n              result\n              (rf result v)))))))\n  ([f coll]\n   (lazy-seq\n    (when-let [s (seq coll)]\n      (if (chunked-seq? s)\n        (let [c (chunk-first s)\n              size (count c)\n              b (chunk-buffer size)]\n          (dotimes [i size]\n            (let [x (f (-nth c i))]\n              (when-not (nil? x)\n                (chunk-append b x))))\n          (chunk-cons (chunk b) (keep f (chunk-rest s))))\n        (let [x (f (first s))]\n          (if (nil? x)\n            (keep f (rest s))\n            (cons x (keep f (rest s))))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4041 4070]},
+          :lines [4041 4070],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4041-L4070"},
+ :usage ["(keep f)" "(keep f coll)"],
  :full-name "cljs.core/keep",
- :clj-symbol "clojure.core/keep",
- :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects.  Returns a transducer when no collection is provided."}
+ :docstring "Returns a lazy sequence of the non-nil results of (f item). Note,\nthis means false return values will be included.  f must be free of\nside-effects.  Returns a transducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/keep.cljsdoc"}
 
 ```
 

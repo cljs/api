@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9544-L9547):
+Source code @ [github]():
 
 ```clj
 (defprotocol IEncodeJS
@@ -30,12 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9544-9547](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9544-L9547)</ins>
+
 </pre>
 
 -->
@@ -76,14 +71,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IEncodeJS",
+ :name-encode "IEncodeJS",
+ :history [["+" "0.0-1552"]],
  :type "protocol",
  :full-name-encode "cljs.core/IEncodeJS",
  :source {:code "(defprotocol IEncodeJS\n  (-clj->js [x] \"Recursively transforms clj values to JavaScript\")\n  (-key->js [x] \"Transforms map keys to valid JavaScript keys. Arbitrary keys are\n  encoded to their string representation via (pr-str x)\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9544 9547]},
+          :lines [9544 9547],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9544-L9547"},
  :methods [{:name "-clj->js",
             :signature ["[x]"],
             :docstring "Recursively transforms clj values to JavaScript"}
@@ -91,7 +89,7 @@ The API data for this symbol:
             :signature ["[x]"],
             :docstring "Transforms map keys to valid JavaScript keys. Arbitrary keys are\n  encoded to their string representation via (pr-str x)"}],
  :full-name "cljs.core/IEncodeJS",
- :history [["+" "0.0-1552"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IEncodeJS.cljsdoc"}
 
 ```
 

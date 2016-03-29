@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(element tag-or-text)</samp><br>
+<samp>(element tag & children)</samp><br>
+
+---
 
  <samp>
 (__element__ tag-or-text)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L81-L90):
+Source code @ [github]():
 
 ```clj
 (defn element
@@ -44,13 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:81-90](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L81-L90)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.dom",
  :name "element",
- :type "function",
  :signature ["[tag-or-text]" "[tag & children]"],
+ :name-encode "element",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.dom/element",
  :source {:code "(defn element\n  ([tag-or-text]\n     (log \"(element \" tag-or-text \")\")\n     (-element tag-or-text))\n  ([tag & children]\n     (log \"(element \" tag \" \" children \")\")\n     (let [attrs (first children)]\n       (if (map? attrs)\n         (-element tag attrs (rest children))\n         (-element tag nil children)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [81 90]},
+          :lines [81 90],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L81-L90"},
+ :usage ["(element tag-or-text)" "(element tag & children)"],
  :full-name "clojure.browser.dom/element",
- :full-name-encode "clojure.browser.dom/element",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/element.cljsdoc"}
 
 ```
 

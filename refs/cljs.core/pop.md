@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pop coll)</samp><br>
+
+---
 
  <samp>
 (__pop__ coll)<br>
@@ -88,7 +91,7 @@ Note - not the same as next/butlast.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1932-L1938):
+Source code @ [github]():
 
 ```clj
 (defn pop
@@ -101,12 +104,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1932-1938](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1932-L1938)</ins>
+
 </pre>
 
 -->
@@ -152,23 +150,28 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "pop",
  :signature ["[coll]"],
+ :name-encode "pop",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/pop",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pop"},
  :related ["cljs.core/peek" "cljs.core/rest" "cljs.core/conj"],
  :full-name-encode "cljs.core/pop",
  :source {:code "(defn pop\n  [coll]\n  (when-not (nil? coll)\n    (-pop coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1932 1938]},
+          :lines [1932 1938],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1932-L1938"},
+ :usage ["(pop coll)"],
  :examples [{:id "6bd9f7",
              :content "With vectors:\n\n```clj\n(pop [1 2 3])\n;;=> [1 2]\n\n(pop [1 2])\n;;=> [1]\n\n(pop [1])\n;;=> []\n\n(pop [])\n;; Error: Can't pop empty vector\n```"}
             {:id "81221f",
              :content "With lists:\n\n```clj\n(pop '(1 2 3))\n;;=> (2 3)\n\n(pop '(1 2))\n;;=> (2)\n\n(pop '(1))\n;;=> ()\n\n(pop '())\n;; Error: Can't pop empty list\n```"}],
  :full-name "cljs.core/pop",
- :clj-symbol "clojure.core/pop",
- :docstring "For a list or queue, returns a new list/queue without the first\nitem, for a vector, returns a new vector without the last item.\nNote - not the same as next/butlast."}
+ :docstring "For a list or queue, returns a new list/queue without the first\nitem, for a vector, returns a new vector without the last item.\nNote - not the same as next/butlast.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pop.cljsdoc"}
 
 ```
 

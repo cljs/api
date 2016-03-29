@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reduce-kv f init coll)</samp><br>
+
+---
 
  <samp>
 (__reduce-kv__ f init coll)<br>
@@ -54,7 +57,7 @@ where the keys will be the ordinals.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2285-L2295):
+Source code @ [github]():
 
 ```clj
 (defn reduce-kv
@@ -68,12 +71,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2285-2295](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2285-L2295)</ins>
+
 </pre>
 
 -->
@@ -119,19 +117,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reduce-kv",
  :signature ["[f init coll]"],
+ :name-encode "reduce-kv",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reduce-kv",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reduce-kv"},
  :related ["cljs.core/reduce"],
  :full-name-encode "cljs.core/reduce-kv",
  :source {:code "(defn reduce-kv\n  ([f init coll]\n    (if-not (nil? coll)\n      (-kv-reduce coll f init)\n      init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2285 2295]},
+          :lines [2285 2295],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2285-L2295"},
+ :usage ["(reduce-kv f init coll)"],
  :full-name "cljs.core/reduce-kv",
- :clj-symbol "clojure.core/reduce-kv",
- :docstring "Reduces an associative collection. f should be a function of 3\narguments. Returns the result of applying f to init, the first key\nand the first value in coll, then applying f to that result and the\n2nd key and value, etc. If coll contains no entries, returns init\nand f is not called. Note that reduce-kv is supported on vectors,\nwhere the keys will be the ordinals."}
+ :docstring "Reduces an associative collection. f should be a function of 3\narguments. Returns the result of applying f to init, the first key\nand the first value in coll, then applying f to that result and the\n2nd key and value, etc. If coll contains no entries, returns init\nand f is not called. Note that reduce-kv is supported on vectors,\nwhere the keys will be the ordinals.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduce-kv.cljsdoc"}
 
 ```
 

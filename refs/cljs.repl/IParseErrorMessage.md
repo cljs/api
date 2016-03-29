@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L112-L115):
+Source code @ [github]():
 
 ```clj
 (defprotocol IParseErrorMessage
@@ -30,11 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2985/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2985
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:112-115](https://github.com/clojure/clojurescript/blob/r2985/src/clj/cljs/repl.clj#L112-L115)</ins>
+
 </pre>
 
 -->

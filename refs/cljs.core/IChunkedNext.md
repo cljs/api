@@ -22,7 +22,7 @@ Protocol for accessing the chunks of a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L728-L731):
+Source code @ [github]():
 
 ```clj
 (defprotocol IChunkedNext
@@ -35,12 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:728-731](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L728-L731)</ins>
+
 </pre>
 
 -->
@@ -81,20 +76,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IChunkedNext",
+ :name-encode "IChunkedNext",
  :history [["+" "0.0-1424"]],
  :type "protocol",
  :full-name-encode "cljs.core/IChunkedNext",
  :source {:code "(defprotocol IChunkedNext\n  \"Protocol for accessing the chunks of a collection.\"\n  (-chunked-next [coll]\n    \"Returns a new collection of coll without the first chunk.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [728 731]},
+          :lines [728 731],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L728-L731"},
  :methods [{:name "-chunked-next",
             :signature ["[coll]"],
             :docstring "Returns a new collection of coll without the first chunk."}],
  :full-name "cljs.core/IChunkedNext",
- :docstring "Protocol for accessing the chunks of a collection."}
+ :docstring "Protocol for accessing the chunks of a collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IChunkedNext.cljsdoc"}
 
 ```
 

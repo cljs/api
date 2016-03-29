@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pr-str & objs)</samp><br>
+
+---
 
  <samp>
 (__pr-str__ & objs)<br>
@@ -30,7 +33,7 @@ pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9166-L9169):
+Source code @ [github]():
 
 ```clj
 (defn pr-str
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9166-9169](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9166-L9169)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "pr-str",
  :signature ["[& objs]"],
+ :name-encode "pr-str",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/pr-str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pr-str"},
  :full-name-encode "cljs.core/pr-str",
  :source {:code "(defn pr-str\n  [& objs]\n  (pr-str-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9166 9169]},
+          :lines [9166 9169],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9166-L9169"},
+ :usage ["(pr-str & objs)"],
  :full-name "cljs.core/pr-str",
- :clj-symbol "clojure.core/pr-str",
- :docstring "pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter."}
+ :docstring "pr to a string, returning it. Fundamental entrypoint to IPrintWithWriter.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr-str.cljsdoc"}
 
 ```
 

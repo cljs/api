@@ -6,12 +6,12 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1443"><img valign="middle" alt="[+] 0.0-1443" title="Added in 0.0-1443" src="https://img.shields.io/badge/+-0.0--1443-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1885"><img valign="middle" alt="[×] 0.0-1885" title="Removed in 0.0-1885" src="https://img.shields.io/badge/×-0.0--1885-red.svg"></a> </td>
-<td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/printf</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/printf)
-</td>
 </tr>
 </table>
 
+<samp>(printf fmt & args)</samp><br>
+
+---
 
  <samp>
 (__printf__ fmt & args)<br>
@@ -30,7 +30,7 @@ Prints formatted output, as per format
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6758-L6761):
+Source code @ [github]():
 
 ```clj
 (defn printf
@@ -42,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1878
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:6758-6761](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L6758-L6761)</ins>
+
 </pre>
 
 -->
@@ -57,9 +53,6 @@ clojurescript @ r1878
 
 ###### External doc links:
 
-[`clojure.core/printf` @ clojuredocs](http://clojuredocs.org/clojure.core/printf)<br>
-[`clojure.core/printf` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/printf/)<br>
-[`clojure.core/printf` @ crossclj](http://crossclj.info/fun/clojure.core/printf.html)<br>
 [`cljs.core/printf` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/printf.html)<br>
 
 ---
@@ -100,6 +93,7 @@ The API data for this symbol:
           :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6758 6761]},
+ :usage ["(printf fmt & args)"],
  :full-name "cljs.core/printf",
  :clj-symbol "clojure.core/printf",
  :docstring "Prints formatted output, as per format",

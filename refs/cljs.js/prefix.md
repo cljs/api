@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(prefix s pre)</samp><br>
+
+---
 
  <samp>
 (__prefix__ s pre)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L128-L129):
+Source code @ [github]():
 
 ```clj
 (defn prefix [s pre]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:128-129](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L128-L129)</ins>
+
 </pre>
 
 -->
@@ -89,6 +87,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [128 129]},
+ :usage ["(prefix s pre)"],
  :full-name "cljs.js/prefix",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

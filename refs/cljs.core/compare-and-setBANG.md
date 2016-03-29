@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(compare-and-set! a oldval newval)</samp><br>
+
+---
 
  <samp>
 (__compare-and-set!__ a oldval newval)<br>
@@ -68,7 +71,7 @@ set happened, else false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4160-L4167):
+Source code @ [github]():
 
 ```clj
 (defn compare-and-set!
@@ -82,12 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4160-4167](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4160-L4167)</ins>
+
 </pre>
 
 -->
@@ -133,21 +131,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "compare-and-set!",
  :signature ["[a oldval newval]"],
+ :name-encode "compare-and-setBANG",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/compare-and-set!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/compare-and-set!"},
  :related ["cljs.core/atom" "cljs.core/reset!" "cljs.core/swap!"],
  :full-name-encode "cljs.core/compare-and-setBANG",
  :source {:code "(defn compare-and-set!\n  [^not-native a oldval newval]\n  (if (= (-deref a) oldval)\n    (do (reset! a newval) true)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4160 4167]},
+          :lines [4160 4167],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4160-L4167"},
+ :usage ["(compare-and-set! a oldval newval)"],
  :examples [{:id "1fa306",
              :content "```clj\n(def a (atom \"abc\"))\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> true\n\n@a\n;;=> \"def\"\n\n(compare-and-set! a \"abc\" \"def\")\n;;=> false\n\n@a\n;;=> \"def\"\n```"}],
  :full-name "cljs.core/compare-and-set!",
- :clj-symbol "clojure.core/compare-and-set!",
- :docstring "Atomically sets the value of atom to newval if and only if the\ncurrent value of the atom is equal to oldval. Returns true if\nset happened, else false."}
+ :docstring "Atomically sets the value of atom to newval if and only if the\ncurrent value of the atom is equal to oldval. Returns true if\nset happened, else false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/compare-and-setBANG.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(cons x coll)</samp><br>
+
+---
 
  <samp>
 (__cons__ x coll)<br>
@@ -59,7 +62,7 @@ Returns a new seq where x is the first element and seq is the rest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3002-L3008):
+Source code @ [github]():
 
 ```clj
 (defn cons
@@ -74,12 +77,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3002-3008](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3002-L3008)</ins>
+
 </pre>
 
 -->
@@ -125,21 +123,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "cons",
  :signature ["[x coll]"],
+ :name-encode "cons",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/cons",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cons"},
  :related ["cljs.core/conj"],
  :full-name-encode "cljs.core/cons",
  :source {:code "(defn cons\n  [x coll]\n  (if (or (nil? coll)\n          (implements? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3002 3008]},
+          :lines [3002 3008],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3002-L3008"},
+ :usage ["(cons x coll)"],
  :examples [{:id "68c769",
              :content "```clj\n(cons 1 (list 1 2 3))\n;;=> (1 1 2 3)\n\n(cons 1 [1 2 3])\n;;=> (1 1 2 3)\n\n(cons 1 nil)\n;;=> (1)\n\n(cons nil nil)\n;;=> (nil)\n```"}],
  :full-name "cljs.core/cons",
- :clj-symbol "clojure.core/cons",
- :docstring "Returns a new seq where x is the first element and seq is the rest."}
+ :docstring "Returns a new seq where x is the first element and seq is the rest.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cons.cljsdoc"}
 
 ```
 

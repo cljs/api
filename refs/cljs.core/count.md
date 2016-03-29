@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(count x)</samp><br>
+
+---
 
  <samp>
 (__count__ x)<br>
@@ -62,7 +65,7 @@ Returns the number of items in the collection. (count nil) returns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1665-L1684):
+Source code @ [github]():
 
 ```clj
 (defn count
@@ -89,12 +92,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1665-1684](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1665-L1684)</ins>
+
 </pre>
 
 -->
@@ -140,20 +138,25 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "count",
  :signature ["[x]"],
+ :name-encode "count",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/count",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/count"},
  :full-name-encode "cljs.core/count",
  :source {:code "(defn count\n  [coll]\n  (if-not (nil? coll)\n    (cond\n      (implements? ICounted coll)\n      (-count ^not-native coll)\n\n      (array? coll)\n      (alength coll)\n    \n      (string? coll)\n      (alength coll)\n\n      (implements? ISeqable coll)\n      (accumulating-seq-count coll)\n\n      :else (-count coll))\n    0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1665 1684]},
+          :lines [1665 1684],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1665-L1684"},
+ :usage ["(count x)"],
  :examples [{:id "96e470",
              :content "```clj\n(count [1 2 3])\n;;=> 3\n\n(count [])\n;;=> 0\n\n(count nil)\n;;=> 0\n\n(count #{:a :b})\n;;=> 2\n\n(count {:key \"value\" :key2 \"value2\"})\n;;=> 2\n```"}],
  :full-name "cljs.core/count",
- :clj-symbol "clojure.core/count",
- :docstring "Returns the number of items in the collection. (count nil) returns\n0.  Also works on strings, arrays, and Maps"}
+ :docstring "Returns the number of items in the collection. (count nil) returns\n0.  Also works on strings, arrays, and Maps",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/count.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(dump-core)</samp><br>
+
+---
 
  <samp>
 (__dump-core__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.clj#L20-L24):
+Source code @ [github]():
 
 ```clj
 (defmacro dump-core []
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.clj:20-24](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.clj#L20-L24)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "dump-core",
- :type "macro",
  :signature ["[]"],
+ :name-encode "dump-core",
+ :history [["+" "1.7.10"]],
+ :type "macro",
+ :full-name-encode "cljs.js/dump-core",
  :source {:code "(defmacro dump-core []\n  (let [state @env/*compiler*]\n    (if-not (false? (get-in state [:options :dump-core]))\n      `(quote ~(get-in state [::ana/namespaces 'cljs.core]))\n      `(hash-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.clj",
-          :lines [20 24]},
+          :lines [20 24],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.clj#L20-L24"},
+ :usage ["(dump-core)"],
  :full-name "cljs.js/dump-core",
- :full-name-encode "cljs.js/dump-core",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/dump-core.cljsdoc"}
 
 ```
 

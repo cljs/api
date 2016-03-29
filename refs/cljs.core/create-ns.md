@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(create-ns sym)</samp><br>
+<samp>(create-ns sym ns-obj)</samp><br>
+
+---
 
  <samp>
 (__create-ns__ sym)<br>
@@ -28,7 +32,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10412-L10416):
+Source code @ [github]():
 
 ```clj
 (defn create-ns
@@ -42,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10412-10416](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10412-L10416)</ins>
+
 </pre>
 
 -->
@@ -92,17 +91,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "create-ns",
  :signature ["[sym]" "[sym ns-obj]"],
+ :name-encode "create-ns",
  :history [["+" "1.7.10"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/create-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/create-ns"},
  :full-name-encode "cljs.core/create-ns",
  :source {:code "(defn create-ns\n  ([sym]\n   (create-ns sym (find-ns-obj sym)))\n  ([sym ns-obj]\n   (Namespace. ns-obj sym)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10412 10416]},
+          :lines [10412 10416],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10412-L10416"},
+ :usage ["(create-ns sym)" "(create-ns sym ns-obj)"],
  :full-name "cljs.core/create-ns",
- :clj-symbol "clojure.core/create-ns"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/create-ns.cljsdoc"}
 
 ```
 

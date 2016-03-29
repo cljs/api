@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(comparator pred)</samp><br>
+
+---
 
  <samp>
 (__comparator__ pred)<br>
@@ -30,7 +33,7 @@ Returns an JavaScript compatible comparator based upon pred.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10195-L10199):
+Source code @ [github]():
 
 ```clj
 (defn comparator
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10195-10199](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10195-L10199)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "comparator",
  :signature ["[pred]"],
+ :name-encode "comparator",
  :history [["+" "0.0-1586"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/comparator",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/comparator"},
  :full-name-encode "cljs.core/comparator",
  :source {:code "(defn comparator\n  [pred]\n  (fn [x y]\n    (cond (pred x y) -1 (pred y x) 1 :else 0)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10195 10199]},
+          :lines [10195 10199],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10195-L10199"},
+ :usage ["(comparator pred)"],
  :full-name "cljs.core/comparator",
- :clj-symbol "clojure.core/comparator",
- :docstring "Returns an JavaScript compatible comparator based upon pred."}
+ :docstring "Returns an JavaScript compatible comparator based upon pred.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/comparator.cljsdoc"}
 
 ```
 

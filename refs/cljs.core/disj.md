@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(disj coll)</samp><br>
+<samp>(disj coll k)</samp><br>
+<samp>(disj coll k & ks)</samp><br>
+
+---
 
  <samp>
 (__disj__ coll)<br>
@@ -50,7 +55,7 @@ does not contain key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1940-L1952):
+Source code @ [github]():
 
 ```clj
 (defn disj
@@ -70,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1940-1952](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1940-L1952)</ins>
+
 </pre>
 
 -->
@@ -121,8 +121,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "disj",
  :signature ["[coll]" "[coll k]" "[coll k & ks]"],
+ :name-encode "disj",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/disj",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/disj"},
  :related ["cljs.core/dissoc"
            "cljs.core/disj!"
            "clojure.set/difference"],
@@ -130,12 +133,14 @@ The API data for this symbol:
  :source {:code "(defn disj\n  ([coll] coll)\n  ([coll k]\n    (when-not (nil? coll)\n      (-disjoin coll k)))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (disj coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1940 1952]},
+          :lines [1940 1952],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1940-L1952"},
+ :usage ["(disj coll)" "(disj coll k)" "(disj coll k & ks)"],
  :full-name "cljs.core/disj",
- :clj-symbol "clojure.core/disj",
- :docstring "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}
+ :docstring "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\ndoes not contain key(s).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/disj.cljsdoc"}
 
 ```
 

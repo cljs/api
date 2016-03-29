@@ -22,7 +22,7 @@ Protocol for writing. Currently only implemented by StringBufferWriter.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L644-L649):
+Source code @ [github]():
 
 ```clj
 (defprotocol IWriter
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:644-649](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L644-L649)</ins>
+
 </pre>
 
 -->
@@ -83,15 +78,17 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IWriter",
+ :name-encode "IWriter",
  :history [["+" "0.0-1503"]],
  :type "protocol",
  :full-name-encode "cljs.core/IWriter",
  :source {:code "(defprotocol IWriter\n  \"Protocol for writing. Currently only implemented by StringBufferWriter.\"\n  (-write [writer s]\n    \"Writes s with writer and returns the result.\")\n  (-flush [writer]\n    \"Flush writer.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [644 649]},
+          :lines [644 649],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L644-L649"},
  :methods [{:name "-write",
             :signature ["[writer s]"],
             :docstring "Writes s with writer and returns the result."}
@@ -99,7 +96,8 @@ The API data for this symbol:
             :signature ["[writer]"],
             :docstring "Flush writer."}],
  :full-name "cljs.core/IWriter",
- :docstring "Protocol for writing. Currently only implemented by StringBufferWriter."}
+ :docstring "Protocol for writing. Currently only implemented by StringBufferWriter.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IWriter.cljsdoc"}
 
 ```
 

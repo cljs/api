@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(folder coll xf)</samp><br>
+
+---
 
  <samp>
 (__folder__ coll xf)<br>
@@ -33,7 +36,7 @@ reducing fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L79-L94):
+Source code @ [github]():
 
 ```clj
 (defn folder
@@ -54,13 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:79-94](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L79-L94)</ins>
+
 </pre>
 
 -->
@@ -105,18 +102,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "folder",
  :signature ["[coll xf]"],
+ :name-encode "folder",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/folder",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/folder"},
  :full-name-encode "clojure.core.reducers/folder",
  :source {:code "(defn folder\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [_ f1]\n         (-reduce coll (xf f1) (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init))\n\n       CollFold\n       (coll-fold [_ n combinef reducef]\n         (coll-fold coll n combinef (xf reducef))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [79 94]},
+          :lines [79 94],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L79-L94"},
+ :usage ["(folder coll xf)"],
  :full-name "clojure.core.reducers/folder",
- :clj-symbol "clojure.core.reducers/folder",
- :docstring "Given a foldable collection, and a transformation function xf,\nreturns a foldable collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn."}
+ :docstring "Given a foldable collection, and a transformation function xf,\nreturns a foldable collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/folder.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(eval-str\* bound-vars source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__eval-str\*__ bound-vars source name opts cb)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L623-L698):
+Source code @ [github]():
 
 ```clj
 (defn eval-str* [bound-vars source name opts cb]
@@ -107,12 +110,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:623-698](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L623-L698)</ins>
+
 </pre>
 
 -->
@@ -163,6 +161,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [623 698]},
+ :usage ["(eval-str* bound-vars source name opts cb)"],
  :full-name "cljs.js/eval-str*",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

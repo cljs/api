@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ensure-reduced x)</samp><br>
+
+---
 
  <samp>
 (__ensure-reduced__ x)<br>
@@ -30,7 +33,7 @@ If x is already reduced?, returns it, else returns (reduced x)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1297-L1300):
+Source code @ [github]():
 
 ```clj
 (defn ensure-reduced
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1297-1300](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1297-L1300)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ensure-reduced",
  :signature ["[x]"],
+ :name-encode "ensure-reduced",
  :history [["+" "0.0-2411"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ensure-reduced",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ensure-reduced"},
  :full-name-encode "cljs.core/ensure-reduced",
  :source {:code "(defn ensure-reduced\n  [x]\n  (if (reduced? x) x (reduced x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1297 1300]},
+          :lines [1297 1300],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1297-L1300"},
+ :usage ["(ensure-reduced x)"],
  :full-name "cljs.core/ensure-reduced",
- :clj-symbol "clojure.core/ensure-reduced",
- :docstring "If x is already reduced?, returns it, else returns (reduced x)"}
+ :docstring "If x is already reduced?, returns it, else returns (reduced x)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ensure-reduced.cljsdoc"}
 
 ```
 

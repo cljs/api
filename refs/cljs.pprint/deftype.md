@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(deftype type-name & fields)</samp><br>
+
+---
 
  <samp>
 (__deftype__ type-name & fields)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L39-L48):
+Source code @ [github]():
 
 ```clj
 (defmacro deftype
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:39-48](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L39-L48)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "deftype",
- :type "macro",
  :signature ["[type-name & fields]"],
+ :name-encode "deftype",
+ :history [["+" "0.0-3255"]],
+ :type "macro",
+ :full-name-encode "cljs.pprint/deftype",
  :source {:code "(defmacro deftype\n  [type-name & fields]\n  (let [name-str (name type-name)\n        fields (map (comp symbol name) fields)]\n    `(do\n       (defrecord ~type-name [~'type-tag ~@fields])\n       (defn- ~(symbol (str \"make-\" name-str))\n         ~(vec fields)\n         (~(symbol (str type-name \".\")) ~(keyword name-str) ~@fields))\n       (defn- ~(symbol (str name-str \"?\")) [x#] (= (:type-tag x#) ~(keyword name-str))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [39 48]},
+          :lines [39 48],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L39-L48"},
+ :usage ["(deftype type-name & fields)"],
  :full-name "cljs.pprint/deftype",
- :full-name-encode "cljs.pprint/deftype",
- :history [["+" "0.0-3255"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/deftype.cljsdoc"}
 
 ```
 

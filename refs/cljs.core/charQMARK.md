@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(char? x)</samp><br>
+
+---
 
  <samp>
 (__char?__ x)<br>
@@ -30,7 +33,7 @@ Returns true if x is a JavaScript char.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L227-L230):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean char?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:227-230](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L227-L230)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "char?",
  :signature ["[x]"],
+ :name-encode "charQMARK",
  :history [["+" "1.7.10"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/char?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/char?"},
  :full-name-encode "cljs.core/charQMARK",
  :source {:code "(defn ^boolean char?\n  [x]\n  (gstring/isUnicodeChar x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [227 230]},
+          :lines [227 230],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L227-L230"},
+ :usage ["(char? x)"],
  :full-name "cljs.core/char?",
- :clj-symbol "clojure.core/char?",
- :docstring "Returns true if x is a JavaScript char."}
+ :docstring "Returns true if x is a JavaScript char.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/charQMARK.cljsdoc"}
 
 ```
 

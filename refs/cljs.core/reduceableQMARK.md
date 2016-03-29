@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(reduceable? x)</samp><br>
+
+---
 
  <samp>
 (__reduceable?__ x)<br>
@@ -27,7 +30,7 @@ Returns true if coll satisfies IReduce
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1986-L1988):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean reduceable?
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1986-1988](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1986-L1988)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reduceable?",
  :signature ["[x]"],
+ :name-encode "reduceableQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/reduceableQMARK",
  :source {:code "(defn ^boolean reduceable?\n  [x] (satisfies? IReduce x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1986 1988]},
+          :lines [1986 1988],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1986-L1988"},
+ :usage ["(reduceable? x)"],
  :full-name "cljs.core/reduceable?",
- :docstring "Returns true if coll satisfies IReduce"}
+ :docstring "Returns true if coll satisfies IReduce",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reduceableQMARK.cljsdoc"}
 
 ```
 

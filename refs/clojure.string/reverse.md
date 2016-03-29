@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reverse s)</samp><br>
+
+---
 
  <samp>
 (__reverse__ s)<br>
@@ -35,7 +38,7 @@ Returns s with its characters reversed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L21-L25):
+Source code @ [github]():
 
 ```clj
 (defn reverse
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:21-25](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L21-L25)</ins>
+
 </pre>
 
 -->
@@ -99,18 +97,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "reverse",
  :signature ["[s]"],
+ :name-encode "reverse",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/reverse",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/reverse"},
  :full-name-encode "clojure.string/reverse",
  :source {:code "(defn reverse\n  [s]\n  (-> (.replace s re-surrogate-pair \"$2$1\")\n      (.. (split \"\") (reverse) (join \"\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [21 25]},
+          :lines [21 25],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L21-L25"},
+ :usage ["(reverse s)"],
  :full-name "clojure.string/reverse",
- :clj-symbol "clojure.string/reverse",
- :docstring "Returns s with its characters reversed."}
+ :docstring "Returns s with its characters reversed.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/reverse.cljsdoc"}
 
 ```
 

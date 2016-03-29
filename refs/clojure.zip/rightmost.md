@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rightmost loc)</samp><br>
+
+---
 
  <samp>
 (__rightmost__ loc)<br>
@@ -30,7 +33,7 @@ Returns the loc of the rightmost sibling of the node at this loc, or self
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L142-L148):
+Source code @ [github]():
 
 ```clj
 (defn rightmost
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:142-148](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L142-L148)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "rightmost",
  :signature ["[loc]"],
+ :name-encode "rightmost",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/rightmost",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/rightmost"},
  :full-name-encode "clojure.zip/rightmost",
  :source {:code "(defn rightmost\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (if (and path r)\n        (with-meta [(last r) (assoc path :l (apply conj l node (butlast r)) :r nil)] (meta loc))\n        loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [142 148]},
+          :lines [142 148],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L142-L148"},
+ :usage ["(rightmost loc)"],
  :full-name "clojure.zip/rightmost",
- :clj-symbol "clojure.zip/rightmost",
- :docstring "Returns the loc of the rightmost sibling of the node at this loc, or self"}
+ :docstring "Returns the loc of the rightmost sibling of the node at this loc, or self",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/rightmost.cljsdoc"}
 
 ```
 

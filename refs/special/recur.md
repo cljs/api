@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(recur exprs\*)</samp><br>
+
+---
 
  <samp>
 (__recur__ exprs\*)<br>
@@ -32,7 +35,7 @@ Execution then jumps back to the recursion point, a loop or fn method.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1531-L1544):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'recur
@@ -55,12 +58,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:1531-1544](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L1531-L1544)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
 {:ns "special",
  :name "recur",
  :signature ["[exprs*]"],
+ :name-encode "recur",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/recur",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/recur"},
  :full-name-encode "special/recur",
  :source {:code "(defmethod parse 'recur\n  [op env [_ & exprs :as form] _ _]\n  (let [context (:context env)\n        frame (first *recur-frames*)\n        exprs (disallowing-recur (vec (map #(analyze (assoc env :context :expr) %) exprs)))]\n    (when-not frame\n      (throw (error env \"Can't recur here\")))\n    (when-not (= (count exprs) (count (:params frame)))\n      (throw (error env \"recur argument count mismatch\")))\n    (reset! (:flag frame) true)\n    (assoc {:env env :op :recur :form form}\n      :frame frame\n      :exprs exprs\n      :children exprs)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1531 1544]},
+          :lines [1531 1544],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L1531-L1544"},
+ :usage ["(recur exprs*)"],
  :full-name "special/recur",
- :clj-symbol "clojure.core/recur",
- :docstring "Evaluates the exprs in order, then, in parallel, rebinds\nthe bindings of the recursion point to the values of the exprs.\nExecution then jumps back to the recursion point, a loop or fn method."}
+ :docstring "Evaluates the exprs in order, then, in parallel, rebinds\nthe bindings of the recursion point to the values of the exprs.\nExecution then jumps back to the recursion point, a loop or fn method.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/recur.cljsdoc"}
 
 ```
 

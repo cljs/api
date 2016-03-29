@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(append-source-map state name source sb sm-data {:keys \[output-dir asset-path\], :as opts})</samp><br>
+
+---
 
  <samp>
 (__append-source-map__ state name source sb sm-data {:keys \[output-dir asset-path\], :as opts})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L131-L152):
+Source code @ [github]():
 
 ```clj
 (defn append-source-map
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:131-152](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L131-L152)</ins>
+
 </pre>
 
 -->
@@ -109,6 +107,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [131 152]},
+ :usage ["(append-source-map state name source sb sm-data {:keys [output-dir asset-path], :as opts})"],
  :full-name "cljs.js/append-source-map",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

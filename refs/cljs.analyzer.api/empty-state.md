@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(empty-state)</samp><br>
+
+---
 
  <samp>
 (__empty-state__)<br>
@@ -27,7 +30,7 @@ Creates an empty compilation state Atom<Map>.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L20-L23):
+Source code @ [github]():
 
 ```clj
 (defn empty-state
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:20-23](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L20-L23)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "empty-state",
  :signature ["[]"],
+ :name-encode "empty-state",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/empty-state",
  :source {:code "(defn empty-state\n  []\n  (env/default-compiler-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [20 23]},
+          :lines [20 23],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L20-L23"},
+ :usage ["(empty-state)"],
  :full-name "cljs.analyzer.api/empty-state",
- :docstring "Creates an empty compilation state Atom<Map>."}
+ :docstring "Creates an empty compilation state Atom<Map>.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/empty-state.cljsdoc"}
 
 ```
 

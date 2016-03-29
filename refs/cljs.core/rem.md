@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rem n d)</samp><br>
+
+---
 
  <samp>
 (__rem__ n d)<br>
@@ -43,7 +46,7 @@ remainder of dividing numerator by denominator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2573-L2577):
+Source code @ [github]():
 
 ```clj
 (defn rem
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2573-2577](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2573-L2577)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "rem",
  :signature ["[n d]"],
+ :name-encode "rem",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rem",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rem"},
  :related ["cljs.core/quot" "cljs.core/mod"],
  :full-name-encode "cljs.core/rem",
  :source {:code "(defn rem\n  [n d]\n  (let [q (quot n d)]\n    (- n (* d q))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2573 2577]},
+          :lines [2573 2577],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2573-L2577"},
+ :usage ["(rem n d)"],
  :full-name "cljs.core/rem",
- :clj-symbol "clojure.core/rem",
- :docstring "remainder of dividing numerator by denominator."}
+ :docstring "remainder of dividing numerator by denominator.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rem.cljsdoc"}
 
 ```
 

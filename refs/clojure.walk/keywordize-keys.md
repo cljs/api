@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(keywordize-keys m)</samp><br>
+
+---
 
  <samp>
 (__keywordize-keys__ m)<br>
@@ -30,7 +33,7 @@ Recursively transforms all map keys from strings to keywords.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L66-L72):
+Source code @ [github]():
 
 ```clj
 (defn keywordize-keys
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:66-72](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L66-L72)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "keywordize-keys",
  :signature ["[m]"],
+ :name-encode "keywordize-keys",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/keywordize-keys",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/keywordize-keys"},
  :full-name-encode "clojure.walk/keywordize-keys",
  :source {:code "(defn keywordize-keys\n  [m]\n  (let [f (fn [[k v]] (if (string? k) [(keyword k) v] [k v]))]\n    ;; only apply to maps\n    (postwalk (fn [x] (if (map? x) (into {} (map f x)) x)) m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [66 72]},
+          :lines [66 72],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L66-L72"},
+ :usage ["(keywordize-keys m)"],
  :full-name "clojure.walk/keywordize-keys",
- :clj-symbol "clojure.walk/keywordize-keys",
- :docstring "Recursively transforms all map keys from strings to keywords."}
+ :docstring "Recursively transforms all map keys from strings to keywords.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/keywordize-keys.cljsdoc"}
 
 ```
 

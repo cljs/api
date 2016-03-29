@@ -22,7 +22,7 @@ Protocol for iterating over a collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L759-L762):
+Source code @ [github]():
 
 ```clj
 (defprotocol IIterable
@@ -35,12 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:759-762](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L759-L762)</ins>
+
 </pre>
 
 -->
@@ -81,20 +76,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IIterable",
+ :name-encode "IIterable",
  :history [["+" "0.0-2356"]],
  :type "protocol",
  :full-name-encode "cljs.core/IIterable",
  :source {:code "(defprotocol IIterable\n  \"Protocol for iterating over a collection.\"\n  (-iterator [coll]\n    \"Returns an iterator for coll.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [759 762]},
+          :lines [759 762],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L759-L762"},
  :methods [{:name "-iterator",
             :signature ["[coll]"],
             :docstring "Returns an iterator for coll."}],
  :full-name "cljs.core/IIterable",
- :docstring "Protocol for iterating over a collection."}
+ :docstring "Protocol for iterating over a collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IIterable.cljsdoc"}
 
 ```
 

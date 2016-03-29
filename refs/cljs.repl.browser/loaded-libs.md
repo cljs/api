@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L26):
+Source code @ [github]():
 
 ```clj
 (def loaded-libs (atom #{}))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3058/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3058
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:26](https://github.com/clojure/clojurescript/blob/r3058/src/clj/cljs/repl/browser.clj#L26)</ins>
+
 </pre>
 
 -->

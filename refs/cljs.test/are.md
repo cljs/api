@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(are argv expr & args)</samp><br>
+
+---
 
  <samp>
 (__are__ argv expr & args)<br>
@@ -41,7 +44,7 @@ Note: This breaks some reporting features, such as line numbers.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L167-L189):
+Source code @ [github]():
 
 ```clj
 (defmacro are
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:167-189](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L167-L189)</ins>
+
 </pre>
 
 -->
@@ -111,18 +109,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "are",
  :signature ["[argv expr & args]"],
+ :name-encode "are",
  :history [["+" "0.0-2629"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/are",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/are"},
  :full-name-encode "cljs.test/are",
  :source {:code "(defmacro are\n  [argv expr & args]\n  (if (or\n        ;; (are [] true) is meaningless but ok\n        (and (empty? argv) (empty? args))\n        ;; Catch wrong number of args\n        (and (pos? (count argv))\n          (pos? (count args))\n          (zero? (mod (count args) (count argv)))))\n    `(clojure.template/do-template ~argv (is ~expr) ~@args)\n    (throw (IllegalArgumentException. \"The number of args doesn't match are's argv.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [167 189]},
+          :lines [167 189],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L167-L189"},
+ :usage ["(are argv expr & args)"],
  :full-name "cljs.test/are",
- :clj-symbol "clojure.test/are",
- :docstring "Checks multiple assertions with a template expression.\nSee clojure.template/do-template for an explanation of\ntemplates.\n\nExample: (are [x y] (= x y)  \n              2 (+ 1 1)\n              4 (* 2 2))\nExpands to: \n         (do (is (= 2 (+ 1 1)))\n             (is (= 4 (* 2 2))))\n\nNote: This breaks some reporting features, such as line numbers."}
+ :docstring "Checks multiple assertions with a template expression.\nSee clojure.template/do-template for an explanation of\ntemplates.\n\nExample: (are [x y] (= x y)  \n              2 (+ 1 1)\n              4 (* 2 2))\nExpands to: \n         (do (is (= 2 (+ 1 1)))\n             (is (= 4 (* 2 2))))\n\nNote: This breaks some reporting features, such as line numbers.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/are.cljsdoc"}
 
 ```
 

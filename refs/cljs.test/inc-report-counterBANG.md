@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(inc-report-counter! name)</samp><br>
+
+---
 
  <samp>
 (__inc-report-counter!__ name)<br>
@@ -28,7 +31,7 @@ Does nothing if *report-counters* is nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L305-L310):
+Source code @ [github]():
 
 ```clj
 (defn inc-report-counter!
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:305-310](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L305-L310)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "inc-report-counter!",
  :signature ["[name]"],
+ :name-encode "inc-report-counterBANG",
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.test/inc-report-counterBANG",
  :source {:code "(defn inc-report-counter!\n  [name]\n  (if (:report-counters (get-current-env))\n    (update-current-env! [:report-counters name] (fnil inc 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [305 310]},
+          :lines [305 310],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L305-L310"},
+ :usage ["(inc-report-counter! name)"],
  :full-name "cljs.test/inc-report-counter!",
- :docstring "Increments the named counter in *report-counters*, a ref to a map.\nDoes nothing if *report-counters* is nil."}
+ :docstring "Increments the named counter in *report-counters*, a ref to a map.\nDoes nothing if *report-counters* is nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/inc-report-counterBANG.cljsdoc"}
 
 ```
 

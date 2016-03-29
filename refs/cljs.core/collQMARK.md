@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(coll? x)</samp><br>
+
+---
 
  <samp>
 (__coll?__ x)<br>
@@ -76,7 +79,7 @@ Returns true if x satisfies ICollection
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1960-L1965):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean coll?
@@ -90,12 +93,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1960-1965](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1960-L1965)</ins>
+
 </pre>
 
 -->
@@ -142,21 +140,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "coll?",
  :signature ["[x]"],
+ :name-encode "collQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/coll?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/coll?"},
  :related ["cljs.core/seq?" "cljs.core/list?" "cljs.core/sequential?"],
  :full-name-encode "cljs.core/collQMARK",
  :source {:code "(defn ^boolean coll?\n  [x]\n  (if (nil? x)\n    false\n    (satisfies? ICollection x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1960 1965]},
+          :lines [1960 1965],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1960-L1965"},
+ :usage ["(coll? x)"],
  :examples [{:id "d30884",
              :content "```clj\n(coll? [1 2 3])\n;;=> true\n\n(coll? '(1 2 3))\n;;=> true\n\n(coll? #{1 2 3})\n;;=> true\n\n(coll? {:foo 1 :bar 2})\n;;=> true\n```\n\nNot collections:\n\n```clj\n(coll? \"foo\")\n;;=> false\n\n(coll? 123)\n;;=> false\n\n(coll? nil)\n;;=> false\n```"}],
  :full-name "cljs.core/coll?",
- :clj-symbol "clojure.core/coll?",
- :docstring "Returns true if x satisfies ICollection"}
+ :docstring "Returns true if x satisfies ICollection",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/collQMARK.cljsdoc"}
 
 ```
 

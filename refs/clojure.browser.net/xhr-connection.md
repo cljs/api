@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(xhr-connection)</samp><br>
+
+---
 
  <samp>
 (__xhr-connection__)<br>
@@ -27,7 +30,7 @@ Returns an XhrIo connection
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L81-L84):
+Source code @ [github]():
 
 ```clj
 (defn xhr-connection
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[net.cljs:81-84](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/net.cljs#L81-L84)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "clojure.browser.net",
  :name "xhr-connection",
  :signature ["[]"],
+ :name-encode "xhr-connection",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.net/xhr-connection",
  :source {:code "(defn xhr-connection\n  []\n  (XhrIo.))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/net.cljs",
-          :lines [81 84]},
+          :lines [81 84],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/net.cljs#L81-L84"},
+ :usage ["(xhr-connection)"],
  :full-name "clojure.browser.net/xhr-connection",
- :docstring "Returns an XhrIo connection"}
+ :docstring "Returns an XhrIo connection",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/xhr-connection.cljsdoc"}
 
 ```
 

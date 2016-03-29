@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-unicode-char reader initch)</samp><br>
+
+---
 
  <samp>
 (__read-unicode-char__ reader initch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L171-L173):
+Source code @ [github]():
 
 ```clj
 (defn read-unicode-char
@@ -34,11 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[reader.cljs:171-173](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/reader.cljs#L171-L173)</ins>
+
 </pre>
 
 -->
@@ -89,6 +88,7 @@ The API data for this symbol:
           :tag "r1236",
           :filename "src/cljs/cljs/reader.cljs",
           :lines [171 173]},
+ :usage ["(read-unicode-char reader initch)"],
  :full-name "cljs.reader/read-unicode-char",
  :removed {:in "0.0-1424", :last-seen "0.0-1236"}}
 

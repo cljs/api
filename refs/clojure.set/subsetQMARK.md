@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(subset? a b)</samp><br>
+
+---
 
  <samp>
 (__subset?__ a b)<br>
@@ -44,7 +47,7 @@ Is set1 a subset of set2?
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L131-L135):
+Source code @ [github]():
 
 ```clj
 (defn subset? 
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:131-135](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L131-L135)</ins>
+
 </pre>
 
 -->
@@ -108,19 +106,24 @@ The API data for this symbol:
  :ns "clojure.set",
  :name "subset?",
  :signature ["[a b]"],
+ :name-encode "subsetQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/subset?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/subset?"},
  :related ["cljs.core/set" "cljs.core/set?" "clojure.set/superset?"],
  :full-name-encode "clojure.set/subsetQMARK",
  :source {:code "(defn subset? \n  [set1 set2]\n  (and (<= (count set1) (count set2))\n       (every? #(contains? set2 %) set1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [131 135]},
+          :lines [131 135],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L131-L135"},
+ :usage ["(subset? a b)"],
  :full-name "clojure.set/subset?",
- :clj-symbol "clojure.set/subset?",
- :docstring "Is set1 a subset of set2?"}
+ :docstring "Is set1 a subset of set2?",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/subsetQMARK.cljsdoc"}
 
 ```
 

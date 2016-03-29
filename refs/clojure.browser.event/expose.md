@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(expose e)</samp><br>
+
+---
 
  <samp>
 (__expose__ e)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L81-L82):
+Source code @ [github]():
 
 ```clj
 (defn expose [e]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:81-82](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L81-L82)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "expose",
- :type "function",
  :signature ["[e]"],
+ :name-encode "expose",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/expose",
  :source {:code "(defn expose [e]\n  (events/expose e))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [81 82]},
+          :lines [81 82],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L81-L82"},
+ :usage ["(expose e)"],
  :full-name "clojure.browser.event/expose",
- :full-name-encode "clojure.browser.event/expose",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/expose.cljsdoc"}
 
 ```
 

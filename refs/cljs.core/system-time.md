@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(system-time)</samp><br>
+
+---
 
  <samp>
 (__system-time__)<br>
@@ -27,7 +30,7 @@ Returns highest resolution time offered by host in milliseconds.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L339-L352):
+Source code @ [github]():
 
 ```clj
 (defn system-time
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:339-352](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L339-L352)</ins>
+
 </pre>
 
 -->
@@ -96,17 +94,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "system-time",
  :signature ["[]"],
+ :name-encode "system-time",
  :history [["+" "1.7.145"]],
  :type "function",
  :full-name-encode "cljs.core/system-time",
  :source {:code "(defn system-time\n  []\n  (cond\n    (and (exists? js/performance)\n         (not (nil? (. js/performance -now))))\n    (.now js/performance)\n\n    (and (exists? js/process)\n         (not (nil? (. js/process -hrtime))))\n    (let [t (.hrtime js/process)]\n      (/ (+ (* (aget t 0) 1e9) (aget t 1)) 1e6))\n\n    :else (.getTime (js/Date.))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [339 352]},
+          :lines [339 352],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L339-L352"},
+ :usage ["(system-time)"],
  :full-name "cljs.core/system-time",
- :docstring "Returns highest resolution time offered by host in milliseconds."}
+ :docstring "Returns highest resolution time offered by host in milliseconds.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/system-time.cljsdoc"}
 
 ```
 

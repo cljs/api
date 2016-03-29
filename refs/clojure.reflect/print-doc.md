@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(print-doc {:keys \[name method-params doc\]})</samp><br>
+
+---
 
  <samp>
 (__print-doc__ {:keys \[name method-params doc\]})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L39-L43):
+Source code @ [github]():
 
 ```clj
 (defn print-doc [{:keys [name method-params doc]}]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[reflect.cljs:39-43](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L39-L43)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.reflect",
  :name "print-doc",
- :type "function",
  :signature ["[{:keys [name method-params doc]}]"],
+ :name-encode "print-doc",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "clojure.reflect/print-doc",
  :source {:code "(defn print-doc [{:keys [name method-params doc]}]\n  (when-not (empty? name)\n    (println name)\n    (println method-params)\n    (println doc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/reflect.cljs",
-          :lines [39 43]},
+          :lines [39 43],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/reflect.cljs#L39-L43"},
+ :usage ["(print-doc {:keys [name method-params doc]})"],
  :full-name "clojure.reflect/print-doc",
- :full-name-encode "clojure.reflect/print-doc",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.reflect/print-doc.cljsdoc"}
 
 ```
 

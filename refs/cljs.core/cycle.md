@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(cycle coll)</samp><br>
+
+---
 
  <samp>
 (__cycle__ coll)<br>
@@ -41,7 +44,7 @@ Returns a lazy (infinite!) sequence of repetitions of the items in coll.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4458-L4462):
+Source code @ [github]():
 
 ```clj
 (defn cycle
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4458-4462](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4458-L4462)</ins>
+
 </pre>
 
 -->
@@ -105,19 +103,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "cycle",
  :signature ["[coll]"],
+ :name-encode "cycle",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/cycle",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/cycle"},
  :related ["cljs.core/lazy-seq" "cljs.core/repeatedly"],
  :full-name-encode "cljs.core/cycle",
  :source {:code "(defn cycle\n  [coll] (lazy-seq\n          (when-let [s (seq coll)]\n            (concat s (cycle s)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4458 4462]},
+          :lines [4458 4462],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4458-L4462"},
+ :usage ["(cycle coll)"],
  :full-name "cljs.core/cycle",
- :clj-symbol "clojure.core/cycle",
- :docstring "Returns a lazy (infinite!) sequence of repetitions of the items in coll."}
+ :docstring "Returns a lazy (infinite!) sequence of repetitions of the items in coll.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cycle.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(testing string & body)</samp><br>
+
+---
 
  <samp>
 (__testing__ string & body)<br>
@@ -31,7 +34,7 @@ but must occur inside a test function (deftest).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L191-L200):
+Source code @ [github]():
 
 ```clj
 (defmacro testing
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:191-200](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L191-L200)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "testing",
  :signature ["[string & body]"],
+ :name-encode "testing",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/testing",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing"},
  :full-name-encode "cljs.test/testing",
  :source {:code "(defmacro testing\n  ([string & body]\n   `(do\n      (cljs.test/update-current-env! [:testing-contexts] conj ~string)\n      (try\n        ~@body\n        (finally\n          (cljs.test/update-current-env! [:testing-contexts] rest))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [191 200]},
+          :lines [191 200],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L191-L200"},
+ :usage ["(testing string & body)"],
  :full-name "cljs.test/testing",
- :clj-symbol "clojure.test/testing",
- :docstring "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest)."}
+ :docstring "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/testing.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(stringify-keys m)</samp><br>
+
+---
 
  <samp>
 (__stringify-keys__ m)<br>
@@ -30,7 +33,7 @@ Recursively transforms all map keys from keywords to strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L74-L80):
+Source code @ [github]():
 
 ```clj
 (defn stringify-keys
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:74-80](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L74-L80)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "stringify-keys",
  :signature ["[m]"],
+ :name-encode "stringify-keys",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/stringify-keys",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/stringify-keys"},
  :full-name-encode "clojure.walk/stringify-keys",
  :source {:code "(defn stringify-keys\n  [m]\n  (let [f (fn [[k v]] (if (keyword? k) [(name k) v] [k v]))]\n    ;; only apply to maps\n    (postwalk (fn [x] (if (map? x) (into {} (map f x)) x)) m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [74 80]},
+          :lines [74 80],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L74-L80"},
+ :usage ["(stringify-keys m)"],
  :full-name "clojure.walk/stringify-keys",
- :clj-symbol "clojure.walk/stringify-keys",
- :docstring "Recursively transforms all map keys from keywords to strings."}
+ :docstring "Recursively transforms all map keys from keywords to strings.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/stringify-keys.cljsdoc"}
 
 ```
 

@@ -130,8 +130,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Dots can be used inside symbols. Its meaning depends on its position in the symbol:\n\n- `.` (by itself), `.-foo`, `.foo` all refer to the interop [`. (special form)`][doc:special/.].\n- `foo.` is constructor sugar, meaning [`(new foo)`][doc:special/new].\n- `(ns foo.bar)` and `foo.bar/baz` means that `foo.bar` is a nested namespace.\n- `foo/bar.baz` or `bar.baz` means `bar.baz` is nested JS property access (__not allowed in clojure__).",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "dot",
+ :name-encode "dot",
  :history [["+" "0.0-927"]],
  :type "special character",
  :related ["syntax/symbol" "syntax/namespace"],
@@ -140,7 +143,7 @@ The API data for this symbol:
              :content "For interop:\n\n```clj\n(def obj #js {:age 28, :greet #(str \"Hi \" %)})\n\n(. obj greet \"Bob\")\n;;=> \"Hi Bob\"\n\n(.greet obj \"Bob\")\n;;=> \"Hi Bob\"\n\n(. obj -age)\n;;=> 28\n\n(.-age obj)\n;;=> 28\n```\n\nFor constructor:\n\n```clj\n(deftype Foo [x]\n   Object\n   (toString [_] (str \"Foo:\" x)))\n\n(Foo. 1)\n;;=> #<Foo: 1>\n\n(new Foo 1)\n;;=> #<Foo: 1>\n```\n\nFor nested namespaces:\n\n```clj\n(ns example.nested.core)\n(def foo 1)\nexample.nested.core/foo\n;;=> 1\n```\n\nFor nested JS properties.  The following pairs are equivalent:\n\n```clj\n(js/console.log \"HELLO\")\n;; \"HELLO\"\n\n(.log js/console \"HELLO\")\n;; \"HELLO\"\n```\n\n```clj\ncljs.core/PersistentQueue.EMPTY\n;;=> #queue []\n\n(.-EMPTY cljs.core/PersistentQueue)\n;;=> #queue []\n```"}],
  :full-name "syntax/dot",
  :display ". dot",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/dot.cljsdoc"}
 
 ```
 

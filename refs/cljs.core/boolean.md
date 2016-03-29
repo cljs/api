@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(boolean x)</samp><br>
+
+---
 
  <samp>
 (__boolean__ x)<br>
@@ -57,7 +60,7 @@ Coerce to boolean
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2078-L2084):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean boolean
@@ -72,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2078-2084](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2078-L2084)</ins>
+
 </pre>
 
 -->
@@ -124,21 +122,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "boolean",
  :signature ["[x]"],
+ :name-encode "boolean",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/boolean",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/boolean"},
  :related ["special/if"],
  :full-name-encode "cljs.core/boolean",
  :source {:code "(defn ^boolean boolean\n  [x]\n  (cond\n    (nil? x) false\n    (false? x) false\n    :else true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2078 2084]},
+          :lines [2078 2084],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2078-L2084"},
+ :usage ["(boolean x)"],
  :examples [{:id "9edf3a",
              :content "```clj\n(boolean 1)\n;;=> true\n\n(boolean 0)\n;;=> true\n\n(boolean nil)\n;;=> false\n```"}],
  :full-name "cljs.core/boolean",
- :clj-symbol "clojure.core/boolean",
- :docstring "Coerce to boolean"}
+ :docstring "Coerce to boolean",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/boolean.cljsdoc"}
 
 ```
 

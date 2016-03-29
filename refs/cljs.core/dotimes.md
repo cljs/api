@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(dotimes \[name n\] & body)</samp><br>
+
+---
 
  <samp>
 (__dotimes__ \[name n\] & body)<br>
@@ -46,7 +49,7 @@ bound to integers from 0 through n-1.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2489-L2501):
+Source code @ [github]():
 
 ```clj
 (core/defmacro dotimes
@@ -64,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2489-2501](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2489-L2501)</ins>
+
 </pre>
 
 -->
@@ -115,19 +113,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "dotimes",
  :signature ["[[name n] & body]"],
+ :name-encode "dotimes",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/dotimes",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dotimes"},
  :related ["cljs.core/repeat" "cljs.core/for" "cljs.core/doseq"],
  :full-name-encode "cljs.core/dotimes",
  :source {:code "(core/defmacro dotimes\n  [bindings & body]\n  (core/let [i (first bindings)\n             n (second bindings)]\n    `(let [n# ~n]\n       (loop [~i 0]\n         (when (< ~i n#)\n           ~@body\n           (recur (inc ~i)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2489 2501]},
+          :lines [2489 2501],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2489-L2501"},
+ :usage ["(dotimes [name n] & body)"],
  :full-name "cljs.core/dotimes",
- :clj-symbol "clojure.core/dotimes",
- :docstring "bindings => name n\n\nRepeatedly executes body (presumably for side-effects) with name\nbound to integers from 0 through n-1."}
+ :docstring "bindings => name n\n\nRepeatedly executes body (presumably for side-effects) with name\nbound to integers from 0 through n-1.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dotimes.cljsdoc"}
 
 ```
 

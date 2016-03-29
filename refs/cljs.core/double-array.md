@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(double-array size-or-seq)</samp><br>
+<samp>(double-array size init-val-or-seq)</samp><br>
+
+---
 
  <samp>
 (__double-array__ size-or-seq)<br>
@@ -34,7 +38,7 @@ with Clojure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3388-L3408):
+Source code @ [github]():
 
 ```clj
 (defn double-array
@@ -62,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3388-3408](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3388-L3408)</ins>
+
 </pre>
 
 -->
@@ -112,18 +111,24 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "double-array",
  :signature ["[size-or-seq]" "[size init-val-or-seq]"],
+ :name-encode "double-array",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/double-array",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/double-array"},
  :full-name-encode "cljs.core/double-array",
  :source {:code "(defn double-array\n  ([size-or-seq]\n     (if (number? size-or-seq)\n       (double-array size-or-seq nil)\n       (into-array size-or-seq)))\n  ([size init-val-or-seq]\n     (let [a (make-array size)]\n       (if (seq? init-val-or-seq)\n         (let [s (seq init-val-or-seq)]\n           (loop [i 0 s s]\n             (if (and s (< i size))\n               (do\n                 (aset a i (first s))\n                 (recur (inc i) (next s)))\n               a)))\n         (do\n           (dotimes [i size]\n             (aset a i init-val-or-seq))\n           a)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3388 3408]},
+          :lines [3388 3408],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3388-L3408"},
+ :usage ["(double-array size-or-seq)"
+         "(double-array size init-val-or-seq)"],
  :full-name "cljs.core/double-array",
- :clj-symbol "clojure.core/double-array",
- :docstring "Creates an array of doubles. Does not coerce array, provided for compatibility\nwith Clojure."}
+ :docstring "Creates an array of doubles. Does not coerce array, provided for compatibility\nwith Clojure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/double-array.cljsdoc"}
 
 ```
 

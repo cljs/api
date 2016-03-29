@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(seq-zip root)</samp><br>
+
+---
 
  <samp>
 (__seq-zip__ root)<br>
@@ -30,7 +33,7 @@ Returns a zipper for nested sequences, given a root sequence
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L34-L40):
+Source code @ [github]():
 
 ```clj
 (defn seq-zip
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:34-40](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L34-L40)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "seq-zip",
  :signature ["[root]"],
+ :name-encode "seq-zip",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/seq-zip",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/seq-zip"},
  :full-name-encode "clojure.zip/seq-zip",
  :source {:code "(defn seq-zip\n  [root]\n    (zipper seq?\n            identity\n            (fn [node children] (with-meta children (meta node)))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [34 40]},
+          :lines [34 40],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L34-L40"},
+ :usage ["(seq-zip root)"],
  :full-name "clojure.zip/seq-zip",
- :clj-symbol "clojure.zip/seq-zip",
- :docstring "Returns a zipper for nested sequences, given a root sequence"}
+ :docstring "Returns a zipper for nested sequences, given a root sequence",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/seq-zip.cljsdoc"}
 
 ```
 

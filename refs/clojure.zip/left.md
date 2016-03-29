@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(left loc)</samp><br>
+
+---
 
  <samp>
 (__left__ loc)<br>
@@ -30,7 +33,7 @@ Returns the loc of the left sibling of the node at this loc, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L150-L155):
+Source code @ [github]():
 
 ```clj
 (defn left
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:150-155](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L150-L155)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "left",
  :signature ["[loc]"],
+ :name-encode "left",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/left",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/left"},
  :full-name-encode "clojure.zip/left",
  :source {:code "(defn left\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (when (and path (seq l))\n        (with-meta [(peek l) (assoc path :l (pop l) :r (cons node r))] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [150 155]},
+          :lines [150 155],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L150-L155"},
+ :usage ["(left loc)"],
  :full-name "clojure.zip/left",
- :clj-symbol "clojure.zip/left",
- :docstring "Returns the loc of the left sibling of the node at this loc, or nil"}
+ :docstring "Returns the loc of the left sibling of the node at this loc, or nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/left.cljsdoc"}
 
 ```
 

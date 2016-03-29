@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(persistent! tcoll)</samp><br>
+
+---
 
  <samp>
 (__persistent!__ tcoll)<br>
@@ -32,7 +35,7 @@ call, any such use will throw an exception.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3491-L3496):
+Source code @ [github]():
 
 ```clj
 (defn persistent!
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3491-3496](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3491-L3496)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "persistent!",
  :signature ["[tcoll]"],
+ :name-encode "persistentBANG",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/persistent!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/persistent!"},
  :full-name-encode "cljs.core/persistentBANG",
  :source {:code "(defn persistent!\n  [tcoll]\n  (-persistent! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3491 3496]},
+          :lines [3491 3496],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3491-L3496"},
+ :usage ["(persistent! tcoll)"],
  :full-name "cljs.core/persistent!",
- :clj-symbol "clojure.core/persistent!",
- :docstring "Returns a new, persistent version of the transient collection, in\nconstant time. The transient collection cannot be used after this\ncall, any such use will throw an exception."}
+ :docstring "Returns a new, persistent version of the transient collection, in\nconstant time. The transient collection cannot be used after this\ncall, any such use will throw an exception.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/persistentBANG.cljsdoc"}
 
 ```
 

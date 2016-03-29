@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reversible? coll)</samp><br>
+
+---
 
  <samp>
 (__reversible?__ coll)<br>
@@ -37,7 +40,7 @@ Returns true if coll satisfies? IReversible.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2910-L2913):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean reversible?
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2910-2913](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2910-L2913)</ins>
+
 </pre>
 
 -->
@@ -101,18 +99,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reversible?",
  :signature ["[coll]"],
+ :name-encode "reversibleQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reversible?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reversible?"},
  :full-name-encode "cljs.core/reversibleQMARK",
  :source {:code "(defn ^boolean reversible?\n  [coll]\n  (satisfies? IReversible coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2910 2913]},
+          :lines [2910 2913],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2910-L2913"},
+ :usage ["(reversible? coll)"],
  :full-name "cljs.core/reversible?",
- :clj-symbol "clojure.core/reversible?",
- :docstring "Returns true if coll satisfies? IReversible."}
+ :docstring "Returns true if coll satisfies? IReversible.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reversibleQMARK.cljsdoc"}
 
 ```
 

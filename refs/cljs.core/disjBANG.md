@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(disj! tcoll val)</samp><br>
+<samp>(disj! tcoll val & vals)</samp><br>
+
+---
 
  <samp>
 (__disj!__ tcoll val)<br>
@@ -34,7 +38,7 @@ does not contain key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3539-L3548):
+Source code @ [github]():
 
 ```clj
 (defn disj!
@@ -51,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3539-3548](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3539-L3548)</ins>
+
 </pre>
 
 -->
@@ -101,18 +100,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "disj!",
  :signature ["[tcoll val]" "[tcoll val & vals]"],
+ :name-encode "disjBANG",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/disj!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/disj!"},
  :full-name-encode "cljs.core/disjBANG",
  :source {:code "(defn disj!\n  ([tcoll val]\n    (-disjoin! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-disjoin! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3539 3548]},
+          :lines [3539 3548],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3539-L3548"},
+ :usage ["(disj! tcoll val)" "(disj! tcoll val & vals)"],
  :full-name "cljs.core/disj!",
- :clj-symbol "clojure.core/disj!",
- :docstring "disj[oin]. Returns a transient set of the same (hashed/sorted) type, that\ndoes not contain key(s)."}
+ :docstring "disj[oin]. Returns a transient set of the same (hashed/sorted) type, that\ndoes not contain key(s).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/disjBANG.cljsdoc"}
 
 ```
 

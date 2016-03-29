@@ -103,23 +103,23 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/->ArrayChunk](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EArrayChunk)</samp></td>
+<td><samp>[clojure.core/->ArrayChunk](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->ArrayChunk)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/->Eduction](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EEduction)</samp></td>
+<td><samp>[clojure.core/->Eduction](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->Eduction)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/->Vec](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EVec)</samp></td>
+<td><samp>[clojure.core/->Vec](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->Vec)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/->VecNode](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EVecNode)</samp></td>
+<td><samp>[clojure.core/->VecNode](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->VecNode)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/->VecSeq](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3EVecSeq)</samp></td>
+<td><samp>[clojure.core/->VecSeq](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->VecSeq)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -131,7 +131,7 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/Throwable->map](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/Throwable-%3Emap)</samp></td>
+<td><samp>[clojure.core/Throwable->map](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/Throwable->map)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -817,7 +817,7 @@ symbols that are not yet ported to ClojureScript:
  <table>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core.reducers/->Cat](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/-%3ECat)</samp></td>
+<td><samp>[clojure.core.reducers/->Cat](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/->Cat)</samp></td>
 </tr>
 </table>
 
@@ -1409,23 +1409,23 @@ symbols that are not yet ported to ClojureScript:
  <table>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/->AsmReflector](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/-%3EAsmReflector)</samp></td>
+<td><samp>[clojure.reflect/->AsmReflector](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/->AsmReflector)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/->Constructor](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/-%3EConstructor)</samp></td>
+<td><samp>[clojure.reflect/->Constructor](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/->Constructor)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/->Field](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/-%3EField)</samp></td>
+<td><samp>[clojure.reflect/->Field](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/->Field)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/->JavaReflector](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/-%3EJavaReflector)</samp></td>
+<td><samp>[clojure.reflect/->JavaReflector](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/->JavaReflector)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/->Method](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/-%3EMethod)</samp></td>
+<td><samp>[clojure.reflect/->Method](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/->Method)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1469,15 +1469,15 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/map->Constructor](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map-%3EConstructor)</samp></td>
+<td><samp>[clojure.reflect/map->Constructor](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map->Constructor)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/map->Field](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map-%3EField)</samp></td>
+<td><samp>[clojure.reflect/map->Field](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map->Field)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.reflect/map->Method](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map-%3EMethod)</samp></td>
+<td><samp>[clojure.reflect/map->Method](http://clojure.github.io/clojure/branch-master/clojure.reflect-api.html#clojure.reflect/map->Method)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

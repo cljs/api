@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(make-unicode-char code-str)</samp><br>
+
+---
 
  <samp>
 (__make-unicode-char__ code-str)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L189-L191):
+Source code @ [github]():
 
 ```clj
 (defn make-unicode-char [code-str]
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:189-191](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L189-L191)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "make-unicode-char",
- :type "function",
  :signature ["[code-str]"],
+ :name-encode "make-unicode-char",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.reader/make-unicode-char",
  :source {:code "(defn make-unicode-char [code-str]\n    (let [code (js/parseInt code-str 16)]\n      (.fromCharCode js/String code)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [189 191]},
+          :lines [189 191],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L189-L191"},
+ :usage ["(make-unicode-char code-str)"],
  :full-name "cljs.reader/make-unicode-char",
- :full-name-encode "cljs.reader/make-unicode-char",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/make-unicode-char.cljsdoc"}
 
 ```
 

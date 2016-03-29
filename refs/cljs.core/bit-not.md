@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(bit-not x)</samp><br>
+
+---
 
  <samp>
 (__bit-not__ x)<br>
@@ -54,7 +57,7 @@ Bitwise complement
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2613-L2615):
+Function code @ [github]():
 
 ```clj
 (defn bit-not
@@ -65,19 +68,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2613-2615](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2613-L2615)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1080-L1081):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric bit-not [x]
@@ -88,12 +86,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1080-1081](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1080-L1081)</ins>
+
 </pre>
 -->
 
@@ -137,26 +130,32 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "bit-not",
  :signature ["[x]"],
+ :name-encode "bit-not",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/bit-not",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bit-not"},
  :full-name-encode "cljs.core/bit-not",
  :source {:code "(defn bit-not\n  [x] (cljs.core/bit-not x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2613 2615]},
+          :lines [2613 2615],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2613-L2615"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric bit-not [x]\n  (core/list 'js* \"(~ ~{})\" x))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1080 1081]}],
+                  :lines [1080 1081],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1080-L1081"}],
+ :usage ["(bit-not x)"],
  :examples [{:id "d4c5e3",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-not 2r1100)\n;;=> -13\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-not 12)\n;;=> -13\n```"}],
  :full-name "cljs.core/bit-not",
- :clj-symbol "clojure.core/bit-not",
- :docstring "Bitwise complement"}
+ :docstring "Bitwise complement",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bit-not.cljsdoc"}
 
 ```
 

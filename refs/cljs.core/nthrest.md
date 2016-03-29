@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(nthrest coll n)</samp><br>
+
+---
 
  <samp>
 (__nthrest__ coll n)<br>
@@ -44,7 +47,7 @@ Returns the nth rest of coll, coll when n is 0.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1770-L1776):
+Source code @ [github]():
 
 ```clj
 (defn nthrest
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1770-1776](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1770-L1776)</ins>
+
 </pre>
 
 -->
@@ -110,19 +108,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "nthrest",
  :signature ["[coll n]"],
+ :name-encode "nthrest",
  :history [["+" "0.0-2411"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/nthrest",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/nthrest"},
  :related ["cljs.core/drop" "cljs.core/nthnext" "cljs.core/nth"],
  :full-name-encode "cljs.core/nthrest",
  :source {:code "(defn nthrest\n  [coll n]\n    (loop [n n xs coll]\n      (if (and (pos? n) (seq xs))\n        (recur (dec n) (rest xs))\n        xs)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1770 1776]},
+          :lines [1770 1776],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1770-L1776"},
+ :usage ["(nthrest coll n)"],
  :full-name "cljs.core/nthrest",
- :clj-symbol "clojure.core/nthrest",
- :docstring "Returns the nth rest of coll, coll when n is 0."}
+ :docstring "Returns the nth rest of coll, coll when n is 0.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/nthrest.cljsdoc"}
 
 ```
 

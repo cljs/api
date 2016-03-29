@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(iterable? x)</samp><br>
+
+---
 
  <samp>
 (__iterable?__ x)<br>
@@ -27,7 +30,7 @@ Return true if x implements IIterable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1070-L1073):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean iterable?
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1070-1073](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1070-L1073)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "iterable?",
  :signature ["[x]"],
+ :name-encode "iterableQMARK",
  :history [["+" "0.0-2356"]],
  :type "function",
  :full-name-encode "cljs.core/iterableQMARK",
  :source {:code "(defn ^boolean iterable?\n  [x]\n  (satisfies? IIterable x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1070 1073]},
+          :lines [1070 1073],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1070-L1073"},
+ :usage ["(iterable? x)"],
  :full-name "cljs.core/iterable?",
- :docstring "Return true if x implements IIterable protocol."}
+ :docstring "Return true if x implements IIterable protocol.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/iterableQMARK.cljsdoc"}
 
 ```
 

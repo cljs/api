@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rename xrel kmap)</samp><br>
+
+---
 
  <samp>
 (__rename__ xrel kmap)<br>
@@ -30,7 +33,7 @@ Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in k
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L82-L85):
+Source code @ [github]():
 
 ```clj
 (defn rename
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:82-85](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L82-L85)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "rename",
  :signature ["[xrel kmap]"],
+ :name-encode "rename",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/rename",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/rename"},
  :full-name-encode "clojure.set/rename",
  :source {:code "(defn rename\n  [xrel kmap]\n    (set (map #(rename-keys % kmap) xrel)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [82 85]},
+          :lines [82 85],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L82-L85"},
+ :usage ["(rename xrel kmap)"],
  :full-name "clojure.set/rename",
- :clj-symbol "clojure.set/rename",
- :docstring "Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in kmap"}
+ :docstring "Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in kmap",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/rename.cljsdoc"}
 
 ```
 

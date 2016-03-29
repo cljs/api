@@ -10,6 +10,9 @@
 </tr>
 </table>
 
+<samp>(send-404 conn path)</samp><br>
+
+---
 
  <samp>
 (__send-404__ conn path)<br>
@@ -23,7 +26,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L92-L98):
+Source code @ [github]():
 
 ```clj
 (defn send-404 [conn path]
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:92-98](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L92-L98)</ins>
+
 </pre>
 
 -->
@@ -96,6 +94,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [92 98]},
+ :usage ["(send-404 conn path)"],
  :full-name "cljs.repl.browser/send-404",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

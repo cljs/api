@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(remove loc)</samp><br>
+
+---
 
  <samp>
 (__remove__ loc)<br>
@@ -31,7 +34,7 @@ it in a depth-first walk.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L237-L251):
+Source code @ [github]():
 
 ```clj
 (defn remove
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:237-251](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L237-L251)</ins>
+
 </pre>
 
 -->
@@ -103,18 +101,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "remove",
  :signature ["[loc]"],
+ :name-encode "remove",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/remove",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/remove"},
  :full-name-encode "clojure.zip/remove",
  :source {:code "(defn remove\n  [loc]\n    (let [[node {l :l, ppath :ppath, pnodes :pnodes, rs :r, :as path}] loc]\n      (if (nil? path)\n        (throw \"Remove at top\")\n        (if (pos? (count l))\n          (loop [loc (with-meta [(peek l) (assoc path :l (pop l) :changed? true)] (meta loc))]\n            (if-let [child (and (branch? loc) (down loc))]\n              (recur (rightmost child))\n              loc))\n          (with-meta [(make-node loc (peek pnodes) rs) \n                      (and ppath (assoc ppath :changed? true))]\n                     (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [237 251]},
+          :lines [237 251],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L237-L251"},
+ :usage ["(remove loc)"],
  :full-name "clojure.zip/remove",
- :clj-symbol "clojure.zip/remove",
- :docstring "Removes the node at loc, returning the loc that would have preceded\nit in a depth-first walk."}
+ :docstring "Removes the node at loc, returning the loc that would have preceded\nit in a depth-first walk.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/remove.cljsdoc"}
 
 ```
 

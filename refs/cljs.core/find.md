@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(find coll k)</samp><br>
+
+---
 
  <samp>
 (__find__ coll k)<br>
@@ -41,7 +44,7 @@ Returns the map entry for key, or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2110-L2116):
+Source code @ [github]():
 
 ```clj
 (defn find
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2110-2116](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2110-L2116)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "find",
  :signature ["[coll k]"],
+ :name-encode "find",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/find",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/find"},
  :related ["cljs.core/get" "cljs.core/get-in"],
  :full-name-encode "cljs.core/find",
  :source {:code "(defn find\n  [coll k]\n  (when (and (not (nil? coll))\n             (associative? coll)\n             (contains? coll k))\n    [k (get coll k)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2110 2116]},
+          :lines [2110 2116],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2110-L2116"},
+ :usage ["(find coll k)"],
  :full-name "cljs.core/find",
- :clj-symbol "clojure.core/find",
- :docstring "Returns the map entry for key, or nil if key not present."}
+ :docstring "Returns the map entry for key, or nil if key not present.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find.cljsdoc"}
 
 ```
 

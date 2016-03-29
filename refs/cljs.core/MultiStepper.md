@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(MultiStepper. xform iters nexts)</samp><br>
+
+---
 
  <samp>
 (__MultiStepper.__ xform iters nexts)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3730-L3753):
+Source code @ [github]():
 
 ```clj
 (deftype MultiStepper [xform iters nexts]
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3730-3753](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3730-L3753)</ins>
+
 </pre>
 
 -->
@@ -101,17 +99,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "MultiStepper",
- :type "type",
  :signature ["[xform iters nexts]"],
+ :name-encode "MultiStepper",
+ :history [["+" "0.0-2301"]],
+ :type "type",
+ :full-name-encode "cljs.core/MultiStepper",
  :source {:code "(deftype MultiStepper [xform iters nexts]\n  Object\n  (hasNext [_]\n    (loop [iters (seq iters)]\n      (if-not (nil? iters)\n        (let [iter (first iters)]\n          (if-not (.hasNext iter)\n            false\n            (recur (next iters))))\n        true)))\n  (next [_]\n    (dotimes [i (alength iters)]\n      (aset nexts i (.next (aget iters i))))\n    (prim-seq nexts 0))\n  (step [this lt]\n    (loop []\n      (if (and (not (nil? (.-stepper lt)))\n               (.hasNext this))\n        (if (reduced? (apply xform (cons lt (.next this))))\n          (when-not (nil? (.-rest lt))\n            (set! (.. lt -rest -stepper) nil))\n          (recur))))\n    (when-not (nil? (.-stepper lt))\n      (xform lt))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3730 3753]},
+          :lines [3730 3753],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3730-L3753"},
+ :usage ["(MultiStepper. xform iters nexts)"],
  :full-name "cljs.core/MultiStepper",
- :full-name-encode "cljs.core/MultiStepper",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/MultiStepper.cljsdoc"}
 
 ```
 

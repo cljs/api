@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ns->source ns)</samp><br>
+
+---
 
  <samp>
 (__ns->source__ ns)<br>
@@ -27,7 +30,7 @@ Given a namespace as a symbol return the corresponding resource if it exists.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L125-L128):
+Source code @ [github]():
 
 ```clj
 (defn ns->source
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:125-128](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L125-L128)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "ns->source",
  :signature ["[ns]"],
+ :name-encode "ns-GTsource",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/ns-GTsource",
  :source {:code "(defn ns->source\n  [ns]\n  (util/ns->source ns))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [125 128]},
+          :lines [125 128],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L125-L128"},
+ :usage ["(ns->source ns)"],
  :full-name "cljs.build.api/ns->source",
- :docstring "Given a namespace as a symbol return the corresponding resource if it exists."}
+ :docstring "Given a namespace as a symbol return the corresponding resource if it exists.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/ns-GTsource.cljsdoc"}
 
 ```
 

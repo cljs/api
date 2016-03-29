@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(into-array aseq)</samp><br>
+
+---
 
  <samp>
 (__into-array__ aseq)<br>
@@ -42,7 +45,7 @@ argument accepted for compatibility with Clojure.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L416-L422):
+Source code @ [github]():
 
 ```clj
 (defn ^array into-array
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:416-422](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L416-L422)</ins>
+
 </pre>
 
 -->
@@ -108,19 +106,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "into-array",
  :signature ["[aseq]"],
+ :name-encode "into-array",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/into-array",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/into-array"},
  :related ["cljs.core/to-array" "cljs.core/make-array"],
  :full-name-encode "cljs.core/into-array",
  :source {:code "(defn ^array into-array\n  ([aseq]\n     (into-array nil aseq))\n  ([type aseq]\n     (reduce (fn [a x] (.push a x) a) (array) aseq)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [416 422]},
+          :lines [416 422],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L416-L422"},
+ :usage ["(into-array aseq)"],
  :full-name "cljs.core/into-array",
- :clj-symbol "clojure.core/into-array",
- :docstring "Returns an array with components set to the values in aseq. Optional type\nargument accepted for compatibility with Clojure."}
+ :docstring "Returns an array with components set to the values in aseq. Optional type\nargument accepted for compatibility with Clojure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/into-array.cljsdoc"}
 
 ```
 

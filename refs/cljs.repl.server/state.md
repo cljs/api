@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L8):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic state nil)
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:8](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L8)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "state",
+ :name-encode "state",
+ :history [["+" "0.0-1503"]],
  :type "dynamic var",
+ :full-name-encode "cljs.repl.server/state",
  :source {:code "(def ^:dynamic state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [8]},
+          :lines [8],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L8"},
  :full-name "cljs.repl.server/state",
- :full-name-encode "cljs.repl.server/state",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/state.cljsdoc"}
 
 ```
 

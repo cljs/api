@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(prewalk-replace smap form)</samp><br>
+
+---
 
  <samp>
 (__prewalk-replace__ smap form)<br>
@@ -32,7 +35,7 @@ replacement at the root of the tree first.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L82-L88):
+Source code @ [github]():
 
 ```clj
 (defn prewalk-replace
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:82-88](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L82-L88)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "prewalk-replace",
  :signature ["[smap form]"],
+ :name-encode "prewalk-replace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/prewalk-replace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/prewalk-replace"},
  :full-name-encode "clojure.walk/prewalk-replace",
  :source {:code "(defn prewalk-replace\n  [smap form]\n  (prewalk (fn [x] (if (contains? smap x) (smap x) x)) form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [82 88]},
+          :lines [82 88],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L82-L88"},
+ :usage ["(prewalk-replace smap form)"],
  :full-name "clojure.walk/prewalk-replace",
- :clj-symbol "clojure.walk/prewalk-replace",
- :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the root of the tree first."}
+ :docstring "Recursively transforms form by replacing keys in smap with their\nvalues.  Like clojure/replace but works on any data structure.  Does\nreplacement at the root of the tree first.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/prewalk-replace.cljsdoc"}
 
 ```
 

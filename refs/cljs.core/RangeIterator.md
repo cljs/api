@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(RangeIterator. i end step)</samp><br>
+
+---
 
  <samp>
 (__RangeIterator.__ i end step)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8659-L8668):
+Source code @ [github]():
 
 ```clj
 (deftype RangeIterator [^:mutable i end step]
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8659-8668](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8659-L8668)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "RangeIterator",
- :type "type",
  :signature ["[i end step]"],
+ :name-encode "RangeIterator",
+ :history [["+" "0.0-2371"]],
+ :type "type",
+ :full-name-encode "cljs.core/RangeIterator",
  :source {:code "(deftype RangeIterator [^:mutable i end step]\n  Object\n  (hasNext [_]\n    (if (pos? step)\n      (< i end)\n      (> i end)))\n  (next [_]\n    (let [ret i]\n      (set! i (+ i step))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8659 8668]},
+          :lines [8659 8668],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8659-L8668"},
+ :usage ["(RangeIterator. i end step)"],
  :full-name "cljs.core/RangeIterator",
- :full-name-encode "cljs.core/RangeIterator",
- :history [["+" "0.0-2371"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/RangeIterator.cljsdoc"}
 
 ```
 

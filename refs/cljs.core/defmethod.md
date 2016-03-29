@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(defmethod multifn dispatch-val & fn-tail)</samp><br>
+
+---
 
  <samp>
 (__defmethod__ multifn dispatch-val & fn-tail)<br>
@@ -30,7 +33,7 @@ Creates and installs a new method of multimethod associated with dispatch-value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2559-L2562):
+Source code @ [github]():
 
 ```clj
 (core/defmacro defmethod
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2559-2562](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2559-L2562)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "defmethod",
  :signature ["[multifn dispatch-val & fn-tail]"],
+ :name-encode "defmethod",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/defmethod",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defmethod"},
  :full-name-encode "cljs.core/defmethod",
  :source {:code "(core/defmacro defmethod\n  [multifn dispatch-val & fn-tail]\n  `(-add-method ~(with-meta multifn {:tag 'cljs.core/MultiFn}) ~dispatch-val (fn ~@fn-tail)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2559 2562]},
+          :lines [2559 2562],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2559-L2562"},
+ :usage ["(defmethod multifn dispatch-val & fn-tail)"],
  :full-name "cljs.core/defmethod",
- :clj-symbol "clojure.core/defmethod",
- :docstring "Creates and installs a new method of multimethod associated with dispatch-value. "}
+ :docstring "Creates and installs a new method of multimethod associated with dispatch-value. ",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/defmethod.cljsdoc"}
 
 ```
 

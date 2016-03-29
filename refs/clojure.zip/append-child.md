@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(append-child loc item)</samp><br>
+
+---
 
  <samp>
 (__append-child__ loc item)<br>
@@ -31,7 +34,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L200-L204):
+Source code @ [github]():
 
 ```clj
 (defn append-child
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:200-204](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L200-L204)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "append-child",
  :signature ["[loc item]"],
+ :name-encode "append-child",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/append-child",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/append-child"},
  :full-name-encode "clojure.zip/append-child",
  :source {:code "(defn append-child\n  [loc item]\n    (replace loc (make-node loc (node loc) (concat (children loc) [item]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [200 204]},
+          :lines [200 204],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L200-L204"},
+ :usage ["(append-child loc item)"],
  :full-name "clojure.zip/append-child",
- :clj-symbol "clojure.zip/append-child",
- :docstring "Inserts the item as the rightmost child of the node at this loc,\nwithout moving"}
+ :docstring "Inserts the item as the rightmost child of the node at this loc,\nwithout moving",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/append-child.cljsdoc"}
 
 ```
 

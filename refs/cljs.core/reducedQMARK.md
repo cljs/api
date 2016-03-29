@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reduced? r)</samp><br>
+
+---
 
  <samp>
 (__reduced?__ r)<br>
@@ -30,7 +33,7 @@ Returns true if x is the result of a call to reduced
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1292-L1295):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean reduced?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1292-1295](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1292-L1295)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reduced?",
  :signature ["[r]"],
+ :name-encode "reducedQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reduced?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reduced?"},
  :full-name-encode "cljs.core/reducedQMARK",
  :source {:code "(defn ^boolean reduced?\n  [r]\n  (instance? Reduced r))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1292 1295]},
+          :lines [1292 1295],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1292-L1295"},
+ :usage ["(reduced? r)"],
  :full-name "cljs.core/reduced?",
- :clj-symbol "clojure.core/reduced?",
- :docstring "Returns true if x is the result of a call to reduced"}
+ :docstring "Returns true if x is the result of a call to reduced",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reducedQMARK.cljsdoc"}
 
 ```
 

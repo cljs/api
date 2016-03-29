@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-text e s)</samp><br>
+
+---
 
  <samp>
 (__set-text__ e s)<br>
@@ -29,7 +32,7 @@ that id will be used and returned.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L124-L129):
+Source code @ [github]():
 
 ```clj
 (defn set-text
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:124-129](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L124-L129)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "set-text",
  :signature ["[e s]"],
+ :name-encode "set-text",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/set-text",
  :source {:code "(defn set-text\n  [e s]\n  (gdom/setTextContent (ensure-element e) s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [124 129]},
+          :lines [124 129],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L124-L129"},
+ :usage ["(set-text e s)"],
  :full-name "clojure.browser.dom/set-text",
- :docstring "Set the text content for the passed element returning the\nelement. If a keyword is passed in the place of e, the element with\nthat id will be used and returned."}
+ :docstring "Set the text content for the passed element returning the\nelement. If a keyword is passed in the place of e, the element with\nthat id will be used and returned.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/set-text.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(unchecked-inc-int x)</samp><br>
+
+---
 
  <samp>
 (__unchecked-inc-int__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2481-L2482):
+Function code @ [github]():
 
 ```clj
 (defn unchecked-inc-int [x]
@@ -36,19 +39,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2481-2482](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2481-L2482)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L980-L981):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric unchecked-inc-int
@@ -59,12 +57,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:980-981](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L980-L981)</ins>
+
 </pre>
 -->
 
@@ -107,23 +100,29 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "unchecked-inc-int",
  :signature ["[x]"],
+ :name-encode "unchecked-inc-int",
  :history [["+" "0.0-1798"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/unchecked-inc-int",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-inc-int"},
  :full-name-encode "cljs.core/unchecked-inc-int",
  :source {:code "(defn unchecked-inc-int [x]\n  (cljs.core/unchecked-inc-int x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2481 2482]},
+          :lines [2481 2482],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2481-L2482"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-inc-int\n  ([x] `(inc ~x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [980 981]}],
+                  :lines [980 981],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L980-L981"}],
+ :usage ["(unchecked-inc-int x)"],
  :full-name "cljs.core/unchecked-inc-int",
- :clj-symbol "clojure.core/unchecked-inc-int"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unchecked-inc-int.cljsdoc"}
 
 ```
 

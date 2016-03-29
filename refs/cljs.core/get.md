@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(get o k)</samp><br>
+<samp>(get o k not-found)</samp><br>
+
+---
 
  <samp>
 (__get__ o k)<br>
@@ -45,7 +49,7 @@ Returns the value mapped to key, not-found or nil if key not present.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1778-L1818):
+Source code @ [github]():
 
 ```clj
 (defn get
@@ -94,12 +98,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1778-1818](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1778-L1818)</ins>
+
 </pre>
 
 -->
@@ -145,19 +144,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "get",
  :signature ["[o k]" "[o k not-found]"],
+ :name-encode "get",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/get",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/get"},
  :related ["cljs.core/get-in"],
  :full-name-encode "cljs.core/get",
  :source {:code "(defn get\n  ([o k]\n    (when-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k)\n\n        (array? o)\n        (when (< k (.-length o))\n          (aget o (int k)))\n        \n        (string? o)\n        (when (< k (.-length o))\n          (aget o (int k)))\n\n        (native-satisfies? ILookup o)\n        (-lookup o k)\n        \n        :else nil)))\n  ([o k not-found]\n    (if-not (nil? o)\n      (cond\n        (implements? ILookup o)\n        (-lookup ^not-native o k not-found)\n\n        (array? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n        \n        (string? o)\n        (if (< k (.-length o))\n          (aget o k)\n          not-found)\n\n        (native-satisfies? ILookup o)\n        (-lookup o k not-found)\n\n        :else not-found)\n      not-found)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1778 1818]},
+          :lines [1778 1818],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1778-L1818"},
+ :usage ["(get o k)" "(get o k not-found)"],
  :full-name "cljs.core/get",
- :clj-symbol "clojure.core/get",
- :docstring "Returns the value mapped to key, not-found or nil if key not present."}
+ :docstring "Returns the value mapped to key, not-found or nil if key not present.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/get.cljsdoc"}
 
 ```
 

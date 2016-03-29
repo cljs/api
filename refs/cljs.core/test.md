@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(test v)</samp><br>
+
+---
 
  <samp>
 (__test__ v)<br>
@@ -31,7 +34,7 @@ presuming failure will throw exception
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10207-L10214):
+Source code @ [github]():
 
 ```clj
 (defn test
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10207-10214](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10207-L10214)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "test",
  :signature ["[v]"],
+ :name-encode "test",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/test",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/test"},
  :full-name-encode "cljs.core/test",
  :source {:code "(defn test\n  [v]\n  (let [f (.-cljs$lang$test v)]\n    (if f\n      (do (f) :ok)\n      :no-test)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10207 10214]},
+          :lines [10207 10214],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10207-L10214"},
+ :usage ["(test v)"],
  :full-name "cljs.core/test",
- :clj-symbol "clojure.core/test",
- :docstring "test [v] finds fn at key :test in var metadata and calls it,\npresuming failure will throw exception"}
+ :docstring "test [v] finds fn at key :test in var metadata and calls it,\npresuming failure will throw exception",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/test.cljsdoc"}
 
 ```
 

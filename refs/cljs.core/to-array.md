@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(to-array s)</samp><br>
+
+---
 
  <samp>
 (__to-array__ s)<br>
@@ -30,7 +33,7 @@ Naive impl of to-array as a start.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3323-L3331):
+Source code @ [github]():
 
 ```clj
 (defn to-array
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3323-3331](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3323-L3331)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "to-array",
  :signature ["[s]"],
+ :name-encode "to-array",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/to-array",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/to-array"},
  :full-name-encode "cljs.core/to-array",
  :source {:code "(defn to-array\n  [s]\n  (let [ary (array)]\n    (loop [s s]\n      (if (seq s)\n        (do (. ary push (first s))\n            (recur (next s)))\n        ary))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3323 3331]},
+          :lines [3323 3331],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3323-L3331"},
+ :usage ["(to-array s)"],
  :full-name "cljs.core/to-array",
- :clj-symbol "clojure.core/to-array",
- :docstring "Naive impl of to-array as a start."}
+ :docstring "Naive impl of to-array as a start.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/to-array.cljsdoc"}
 
 ```
 

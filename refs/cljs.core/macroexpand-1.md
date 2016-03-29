@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(macroexpand-1 quoted)</samp><br>
+
+---
 
  <samp>
 (__macroexpand-1__ quoted)<br>
@@ -72,7 +75,7 @@ else returns form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2679-L2686):
+Source code @ [github]():
 
 ```clj
 (core/defmacro macroexpand-1
@@ -87,12 +90,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2679-2686](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2679-L2686)</ins>
+
 </pre>
 
 -->
@@ -138,21 +136,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "macroexpand-1",
  :signature ["[quoted]"],
+ :name-encode "macroexpand-1",
  :history [["+" "0.0-3165"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/macroexpand-1",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/macroexpand-1"},
  :related ["cljs.core/macroexpand" "cljs.core/defmacro"],
  :full-name-encode "cljs.core/macroexpand-1",
  :source {:code "(core/defmacro macroexpand-1\n  [quoted]\n  (core/assert (core/= (core/first quoted) 'quote)\n    \"Argument to macroexpand-1 must be quoted\")\n  (core/let [form (second quoted)]\n    `(quote ~(ana/macroexpand-1 &env form))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2679 2686]},
+          :lines [2679 2686],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2679-L2686"},
+ :usage ["(macroexpand-1 quoted)"],
  :examples [{:id "1bc6af",
              :content "See how `(-> 2 inc)` is progressively expanded:\n\n```clj\n(macroexpand-1 '(-> 2 inc))\n;;=> (inc 2)\n\n(macroexpand-1 '(inc 2))\n;;=> (cljs.core/+ 2 1)\n\n(macroexpand-1 '(cljs.core/+ 2 1))\n;;=> (js* \"(~{} + ~{})\" 2 1)\n```\n\nNotice how the nested `inc` form is not expanded:\n\n```clj\n(macroexpand-1 '(inc (inc 2)))\n;;=> (cljs.core/+ (inc 2) 1)\n```"}],
  :full-name "cljs.core/macroexpand-1",
- :clj-symbol "clojure.core/macroexpand-1",
- :docstring "If form represents a macro form, returns its expansion,\nelse returns form."}
+ :docstring "If form represents a macro form, returns its expansion,\nelse returns form.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/macroexpand-1.cljsdoc"}
 
 ```
 

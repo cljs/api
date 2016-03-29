@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-connection conn)</samp><br>
+
+---
 
  <samp>
 (__set-connection__ conn)<br>
@@ -29,7 +32,7 @@ use.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L24-L37):
+Source code @ [github]():
 
 ```clj
 (defn set-connection
@@ -49,13 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:24-37](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L24-L37)</ins>
+
 </pre>
 
 -->
@@ -97,17 +94,21 @@ The API data for this symbol:
 {:ns "cljs.repl.server",
  :name "set-connection",
  :signature ["[conn]"],
+ :name-encode "set-connection",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/set-connection",
  :source {:code "(defn set-connection\n  [conn]\n  (if-let [promised-conn (:promised-conn @state)]\n    (do\n      (swap! state\n        (fn [old]\n          (-> old\n            (assoc :connection nil)\n            (assoc :promised-conn nil))))\n      (deliver promised-conn conn))\n    (swap! state (fn [old] (assoc old :connection conn)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [24 37]},
+          :lines [24 37],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L24-L37"},
+ :usage ["(set-connection conn)"],
  :full-name "cljs.repl.server/set-connection",
- :docstring "Given a new available connection, either use it to deliver the\nconnection which was promised or store the connection for later\nuse."}
+ :docstring "Given a new available connection, either use it to deliver the\nconnection which was promised or store the connection for later\nuse.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/set-connection.cljsdoc"}
 
 ```
 

@@ -91,8 +91,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A naming convention for impure functions (unenforced).\n\nImpure functions are those that have side-effects on some state.\n\nSome impure functions which use this convention:\n\n- [doc:special/set!]\n- [doc:cljs.core/swap!]\n- [doc:cljs.core/conj!]\n- [doc:cljs.core/specify!]",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "impure",
+ :name-encode "impure",
  :history [["+" "0.0-927"]],
  :type "convention",
  :related ["syntax/predicate"],
@@ -102,7 +105,7 @@ The API data for this symbol:
              :content "The following causes a side-effect in the state of `a`:\n\n```clj\n(def a (atom 1))\n@a\n;;=> 1\n\n(reset! a 2)\n@a\n;;=> 2\n```"}],
  :full-name "syntax/impure",
  :display "! impure",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/impure.cljsdoc"}
 
 ```
 

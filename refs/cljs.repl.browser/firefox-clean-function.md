@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(firefox-clean-function f)</samp><br>
+
+---
 
  <samp>
 (__firefox-clean-function__ f)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L392-L402):
+Source code @ [github]():
 
 ```clj
 (defn firefox-clean-function [f]
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:392-402](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L392-L402)</ins>
+
 </pre>
 
 -->
@@ -99,6 +96,7 @@ The API data for this symbol:
           :tag "r3308",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [392 402]},
+ :usage ["(firefox-clean-function f)"],
  :full-name "cljs.repl.browser/firefox-clean-function",
  :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 

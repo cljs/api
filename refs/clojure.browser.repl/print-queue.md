@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L31):
+Source code @ [github]():
 
 ```clj
 (def print-queue (array))
@@ -27,13 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:31](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L31)</ins>
+
 </pre>
 
 -->
@@ -74,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.repl",
  :name "print-queue",
+ :name-encode "print-queue",
+ :history [["+" "1.7.48"]],
  :type "var",
+ :full-name-encode "clojure.browser.repl/print-queue",
  :source {:code "(def print-queue (array))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [31]},
+          :lines [31],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L31"},
  :full-name "clojure.browser.repl/print-queue",
- :full-name-encode "clojure.browser.repl/print-queue",
- :history [["+" "1.7.48"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/print-queue.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(map-invert m)</samp><br>
+
+---
 
  <samp>
 (__map-invert__ m)<br>
@@ -30,7 +33,7 @@ Returns the map with the vals mapped to the keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L97-L99):
+Source code @ [github]():
 
 ```clj
 (defn map-invert
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:97-99](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L97-L99)</ins>
+
 </pre>
 
 -->
@@ -91,18 +89,23 @@ The API data for this symbol:
 {:ns "clojure.set",
  :name "map-invert",
  :signature ["[m]"],
+ :name-encode "map-invert",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/map-invert",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/map-invert"},
  :full-name-encode "clojure.set/map-invert",
  :source {:code "(defn map-invert\n  [m] (reduce (fn [m [k v]] (assoc m v k)) {} m))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [97 99]},
+          :lines [97 99],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L97-L99"},
+ :usage ["(map-invert m)"],
  :full-name "clojure.set/map-invert",
- :clj-symbol "clojure.set/map-invert",
- :docstring "Returns the map with the vals mapped to the keys."}
+ :docstring "Returns the map with the vals mapped to the keys.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/map-invert.cljsdoc"}
 
 ```
 

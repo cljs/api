@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(dissoc! tcoll key)</samp><br>
+<samp>(dissoc! tcoll key & ks)</samp><br>
+
+---
 
  <samp>
 (__dissoc!__ tcoll key)<br>
@@ -33,7 +37,7 @@ Returns a transient map that doesn't contain a mapping for key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3523-L3531):
+Source code @ [github]():
 
 ```clj
 (defn dissoc!
@@ -50,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3523-3531](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3523-L3531)</ins>
+
 </pre>
 
 -->
@@ -100,18 +99,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "dissoc!",
  :signature ["[tcoll key]" "[tcoll key & ks]"],
+ :name-encode "dissocBANG",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/dissoc!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dissoc!"},
  :full-name-encode "cljs.core/dissocBANG",
  :source {:code "(defn dissoc!\n  ([tcoll key]\n    (-dissoc! tcoll key))\n  ([tcoll key & ks]\n    (let [ntcoll (-dissoc! tcoll key)]\n      (if ks\n        (recur ntcoll (first ks) (next ks))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3523 3531]},
+          :lines [3523 3531],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3523-L3531"},
+ :usage ["(dissoc! tcoll key)" "(dissoc! tcoll key & ks)"],
  :full-name "cljs.core/dissoc!",
- :clj-symbol "clojure.core/dissoc!",
- :docstring "Returns a transient map that doesn't contain a mapping for key(s)."}
+ :docstring "Returns a transient map that doesn't contain a mapping for key(s).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dissocBANG.cljsdoc"}
 
 ```
 

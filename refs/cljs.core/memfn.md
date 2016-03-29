@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(memfn name & args)</samp><br>
+
+---
 
  <samp>
 (__memfn__ name & args)<br>
@@ -34,7 +37,7 @@ type in order to avoid reflective calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3741-L3752):
+Source code @ [github]():
 
 ```clj
 (defmacro memfn
@@ -49,11 +52,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:3741-3752](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3741-L3752)</ins>
+
 </pre>
 
 -->
@@ -98,18 +97,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "memfn",
  :signature ["[name & args]"],
+ :name-encode "memfn",
  :history [["+" "0.0-1443"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/memfn",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/memfn"},
  :full-name-encode "cljs.core/memfn",
  :source {:code "(defmacro memfn\n  [name & args]\n  (let [t (with-meta (gensym \"target\")\n            (meta name))]\n    `(fn [~t ~@args]\n       (. ~t (~name ~@args)))))",
           :title "Source code",
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [3741 3752]},
+          :lines [3741 3752],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L3741-L3752"},
+ :usage ["(memfn name & args)"],
  :full-name "cljs.core/memfn",
- :clj-symbol "clojure.core/memfn",
- :docstring "Expands into code that creates a fn that expects to be passed an\nobject and any args and calls the named instance method on the\nobject passing the args. Use when you want to treat a Java method as\na first-class fn. name may be type-hinted with the method receiver's\ntype in order to avoid reflective calls."}
+ :docstring "Expands into code that creates a fn that expects to be passed an\nobject and any args and calls the named instance method on the\nobject passing the args. Use when you want to treat a Java method as\na first-class fn. name may be type-hinted with the method receiver's\ntype in order to avoid reflective calls.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/memfn.cljsdoc"}
 
 ```
 

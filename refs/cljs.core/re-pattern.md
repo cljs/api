@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(re-pattern s)</samp><br>
+
+---
 
  <samp>
 (__re-pattern__ s)<br>
@@ -35,7 +38,7 @@ Returns an instance of RegExp which has compiled the provided string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8971-L8978):
+Source code @ [github]():
 
 ```clj
 (defn re-pattern
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8971-8978](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8971-L8978)</ins>
+
 </pre>
 
 -->
@@ -102,18 +100,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "re-pattern",
  :signature ["[s]"],
+ :name-encode "re-pattern",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/re-pattern",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/re-pattern"},
  :full-name-encode "cljs.core/re-pattern",
  :source {:code "(defn re-pattern\n  [s]\n  (if (instance? js/RegExp s)\n    s\n    (let [[prefix flags] (re-find #\"^\\(\\?([idmsux]*)\\)\" s)\n          pattern (subs s (count prefix))]\n      (js/RegExp. pattern (or flags \"\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8971 8978]},
+          :lines [8971 8978],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8971-L8978"},
+ :usage ["(re-pattern s)"],
  :full-name "cljs.core/re-pattern",
- :clj-symbol "clojure.core/re-pattern",
- :docstring "Returns an instance of RegExp which has compiled the provided string."}
+ :docstring "Returns an instance of RegExp which has compiled the provided string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/re-pattern.cljsdoc"}
 
 ```
 

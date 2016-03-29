@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(mark-cljs-ns-for-recompile! ns-sym)</samp><br>
+<samp>(mark-cljs-ns-for-recompile! ns-sym output-dir)</samp><br>
+
+---
 
  <samp>
 (__mark-cljs-ns-for-recompile!__ ns-sym)<br>
@@ -30,7 +34,7 @@ Backdates a cljs target file so that it the cljs compiler will recompile it.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L41-L47):
+Source code @ [github]():
 
 ```clj
 (defn mark-cljs-ns-for-recompile!
@@ -45,13 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:41-47](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L41-L47)</ins>
+
 </pre>
 
 -->
@@ -93,17 +91,22 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "mark-cljs-ns-for-recompile!",
  :signature ["[ns-sym]" "[ns-sym output-dir]"],
+ :name-encode "mark-cljs-ns-for-recompileBANG",
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.build.api/mark-cljs-ns-for-recompileBANG",
  :source {:code "(defn mark-cljs-ns-for-recompile!\n  ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))\n  ([ns-sym output-dir]\n    (let [s (target-file-for-cljs-ns ns-sym output-dir)]\n      (when (.exists s)\n        (.setLastModified s 5000)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [41 47]},
+          :lines [41 47],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L41-L47"},
+ :usage ["(mark-cljs-ns-for-recompile! ns-sym)"
+         "(mark-cljs-ns-for-recompile! ns-sym output-dir)"],
  :full-name "cljs.build.api/mark-cljs-ns-for-recompile!",
- :docstring "Backdates a cljs target file so that it the cljs compiler will recompile it."}
+ :docstring "Backdates a cljs target file so that it the cljs compiler will recompile it.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/mark-cljs-ns-for-recompileBANG.cljsdoc"}
 
 ```
 

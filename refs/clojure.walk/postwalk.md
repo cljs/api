@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(postwalk f form)</samp><br>
+
+---
 
  <samp>
 (__postwalk__ f form)<br>
@@ -32,7 +35,7 @@ Recognizes all Clojure data structures. Consumes seqs as with doall.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L52-L58):
+Source code @ [github]():
 
 ```clj
 (defn postwalk
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[walk.cljs:52-58](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/walk.cljs#L52-L58)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.walk",
  :name "postwalk",
  :signature ["[f form]"],
+ :name-encode "postwalk",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.walk/postwalk",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.walk-api.html#clojure.walk/postwalk"},
  :full-name-encode "clojure.walk/postwalk",
  :source {:code "(defn postwalk\n  [f form]\n  (walk (partial postwalk f) f form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/walk.cljs",
-          :lines [52 58]},
+          :lines [52 58],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/walk.cljs#L52-L58"},
+ :usage ["(postwalk f form)"],
  :full-name "clojure.walk/postwalk",
- :clj-symbol "clojure.walk/postwalk",
- :docstring "Performs a depth-first, post-order traversal of form.  Calls f on\neach sub-form, uses f's return value in place of the original.\nRecognizes all Clojure data structures. Consumes seqs as with doall."}
+ :docstring "Performs a depth-first, post-order traversal of form.  Calls f on\neach sub-form, uses f's return value in place of the original.\nRecognizes all Clojure data structures. Consumes seqs as with doall.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.walk/postwalk.cljsdoc"}
 
 ```
 

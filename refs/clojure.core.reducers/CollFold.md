@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L46-L47):
+Source code @ [github]():
 
 ```clj
 (defprotocol CollFold
@@ -28,13 +28,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:46-47](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L46-L47)</ins>
+
 </pre>
 
 -->
@@ -75,19 +69,22 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.core.reducers",
  :name "CollFold",
+ :name-encode "CollFold",
+ :history [["+" "0.0-2120"]],
  :type "protocol",
  :full-name-encode "clojure.core.reducers/CollFold",
  :source {:code "(defprotocol CollFold\n  (coll-fold [coll n combinef reducef]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [46 47]},
+          :lines [46 47],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L46-L47"},
  :methods [{:name "coll-fold",
             :signature ["[coll n combinef reducef]"],
             :docstring nil}],
  :full-name "clojure.core.reducers/CollFold",
- :history [["+" "0.0-2120"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/CollFold.cljsdoc"}
 
 ```
 

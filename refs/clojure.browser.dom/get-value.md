@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(get-value e)</samp><br>
+
+---
 
  <samp>
 (__get-value__ e)<br>
@@ -27,7 +30,7 @@ Get the value of an element.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L131-L134):
+Source code @ [github]():
 
 ```clj
 (defn get-value
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:131-134](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L131-L134)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "get-value",
  :signature ["[e]"],
+ :name-encode "get-value",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/get-value",
  :source {:code "(defn get-value\n  [e]\n  (.-value (ensure-element e)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [131 134]},
+          :lines [131 134],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L131-L134"},
+ :usage ["(get-value e)"],
  :full-name "clojure.browser.dom/get-value",
- :docstring "Get the value of an element."}
+ :docstring "Get the value of an element.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/get-value.cljsdoc"}
 
 ```
 

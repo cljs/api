@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(find-ns-obj ns)</samp><br>
+
+---
 
  <samp>
 (__find-ns-obj__ ns)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10383-L10400):
+Source code @ [github]():
 
 ```clj
 (defn find-ns-obj [ns]
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10383-10400](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10383-L10400)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "find-ns-obj",
- :type "function",
  :signature ["[ns]"],
+ :name-encode "find-ns-obj",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.core/find-ns-obj",
  :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  ; Under simple optimizations on nodejs, namespaces will be in module\n                  ; rather than global scope and must be accessed by a direct call to eval.\n                  ; The first segment may refer to an undefined variable, so its evaluation\n                  ; may throw ReferenceError.\n                  (find-ns-obj*\n                    (try\n                      (js/eval (first segs))\n                      (catch js/ReferenceError e\n                        nil))\n                    (next segs))\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10383 10400]},
+          :lines [10383 10400],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10383-L10400"},
+ :usage ["(find-ns-obj ns)"],
  :full-name "cljs.core/find-ns-obj",
- :full-name-encode "cljs.core/find-ns-obj",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find-ns-obj.cljsdoc"}
 
 ```
 

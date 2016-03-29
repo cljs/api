@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ArrayList. arr)</samp><br>
+
+---
 
  <samp>
 (__ArrayList.__ arr)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8562-L8568):
+Source code @ [github]():
 
 ```clj
 (deftype ArrayList [^:mutable arr]
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8562-8568](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8562-L8568)</ins>
+
 </pre>
 
 -->
@@ -84,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ArrayList",
- :type "type",
  :signature ["[arr]"],
+ :name-encode "ArrayList",
+ :history [["+" "0.0-2301"]],
+ :type "type",
+ :full-name-encode "cljs.core/ArrayList",
  :source {:code "(deftype ArrayList [^:mutable arr]\n  Object\n  (add [_ x] (.push arr x))\n  (size [_] (alength arr))\n  (clear [_] (set! arr (array)))\n  (isEmpty [_] (zero? (alength arr)))\n  (toArray [_] arr))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8562 8568]},
+          :lines [8562 8568],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8562-L8568"},
+ :usage ["(ArrayList. arr)"],
  :full-name "cljs.core/ArrayList",
- :full-name-encode "cljs.core/ArrayList",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ArrayList.cljsdoc"}
 
 ```
 

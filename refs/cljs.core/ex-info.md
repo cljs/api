@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(ex-info msg data)</samp><br>
+<samp>(ex-info msg data cause)</samp><br>
+
+---
 
  <samp>
 (__ex-info__ msg data)<br>
@@ -34,7 +38,7 @@ map of additional data.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10166-L10171):
+Source code @ [github]():
 
 ```clj
 (defn ex-info
@@ -47,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10166-10171](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10166-L10171)</ins>
+
 </pre>
 
 -->
@@ -97,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ex-info",
  :signature ["[msg data]" "[msg data cause]"],
+ :name-encode "ex-info",
  :history [["+" "0.0-1576"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ex-info",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ex-info"},
  :full-name-encode "cljs.core/ex-info",
  :source {:code "(defn ex-info\n  ([msg data] (ex-info msg data nil))\n  ([msg data cause]\n    (ExceptionInfo. msg data cause)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10166 10171]},
+          :lines [10166 10171],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10166-L10171"},
+ :usage ["(ex-info msg data)" "(ex-info msg data cause)"],
  :full-name "cljs.core/ex-info",
- :clj-symbol "clojure.core/ex-info",
- :docstring "Create an instance of ExceptionInfo, an Error type that carries a\nmap of additional data."}
+ :docstring "Create an instance of ExceptionInfo, an Error type that carries a\nmap of additional data.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ex-info.cljsdoc"}
 
 ```
 

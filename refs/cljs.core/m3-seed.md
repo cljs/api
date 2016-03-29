@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L804):
+Source code @ [github]():
 
 ```clj
 (def m3-seed 0)
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:804](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L804)</ins>
+
 </pre>
 
 -->
@@ -73,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "m3-seed",
+ :name-encode "m3-seed",
+ :history [["+" "0.0-2261"]],
  :type "var",
+ :full-name-encode "cljs.core/m3-seed",
  :source {:code "(def m3-seed 0)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [804]},
+          :lines [804],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L804"},
  :full-name "cljs.core/m3-seed",
- :full-name-encode "cljs.core/m3-seed",
- :history [["+" "0.0-2261"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/m3-seed.cljsdoc"}
 
 ```
 

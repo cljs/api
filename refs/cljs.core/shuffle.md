@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(shuffle coll)</samp><br>
+
+---
 
  <samp>
 (__shuffle__ coll)<br>
@@ -35,7 +38,7 @@ Return a random permutation of coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2235-L2240):
+Source code @ [github]():
 
 ```clj
 (defn shuffle
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2235-2240](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2235-L2240)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "shuffle",
  :signature ["[coll]"],
+ :name-encode "shuffle",
  :history [["+" "0.0-1424"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/shuffle",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/shuffle"},
  :full-name-encode "cljs.core/shuffle",
  :source {:code "(defn shuffle\n  [coll]\n  (let [a (to-array coll)]\n    (garray/shuffle a)\n    (vec a)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2235 2240]},
+          :lines [2235 2240],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2235-L2240"},
+ :usage ["(shuffle coll)"],
  :full-name "cljs.core/shuffle",
- :clj-symbol "clojure.core/shuffle",
- :docstring "Return a random permutation of coll"}
+ :docstring "Return a random permutation of coll",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/shuffle.cljsdoc"}
 
 ```
 

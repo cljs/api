@@ -13,6 +13,12 @@ _known as "conjoin"_
 </tr>
 </table>
 
+<samp>(conj)</samp><br>
+<samp>(conj coll)</samp><br>
+<samp>(conj coll x)</samp><br>
+<samp>(conj coll x & xs)</samp><br>
+
+---
 
  <samp>
 (__conj__)<br>
@@ -98,7 +104,7 @@ happen at different 'places' depending on the concrete type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1638-L1651):
+Source code @ [github]():
 
 ```clj
 (defn conj
@@ -118,12 +124,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1638-1651](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1638-L1651)</ins>
+
 </pre>
 
 -->
@@ -169,8 +170,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "conj",
  :signature ["[]" "[coll]" "[coll x]" "[coll x & xs]"],
+ :name-encode "conj",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/conj",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/conj"},
  :related ["cljs.core/cons"
            "cljs.core/into"
            "cljs.core/peek"
@@ -179,15 +183,17 @@ The API data for this symbol:
  :source {:code "(defn conj\n  ([] [])\n  ([coll] coll)\n  ([coll x]\n    (if-not (nil? coll)\n      (-conj coll x)\n      (list x)))\n  ([coll x & xs]\n    (if xs\n      (recur (conj coll x) (first xs) (next xs))\n      (conj coll x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1638 1651]},
+          :lines [1638 1651],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1638-L1651"},
+ :usage ["(conj)" "(conj coll)" "(conj coll x)" "(conj coll x & xs)"],
  :examples [{:id "8c2a84",
              :content "Append a vector:\n\n```clj\n(conj [1 2 3] 4)\n;;=> [1 2 3 4]\n```\n\nPrepend a list:\n\n```clj\n(conj (list 1 2 3) 0)\n;;=> (0 1 2 3)\n```\n\nPrepend a sequence:\n\n```clj\n(def x (range 1 4))\n;;=> (1 2 3)\n\n(conj x 0)\n;;=> (0 1 2 3)\n```\n\nAdd to set:\n\n```clj\n(conj #{\"a\" \"b\" \"c\"} \"d\")\n;;=> #{\"a\" \"b\" \"c\" \"d\"}\n```"}],
  :known-as "conjoin",
  :full-name "cljs.core/conj",
- :clj-symbol "clojure.core/conj",
- :docstring "conj[oin]. Returns a new collection with the xs\n'added'. (conj nil item) returns (item).  The 'addition' may\nhappen at different 'places' depending on the concrete type."}
+ :docstring "conj[oin]. Returns a new collection with the xs\n'added'. (conj nil item) returns (item).  The 'addition' may\nhappen at different 'places' depending on the concrete type.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/conj.cljsdoc"}
 
 ```
 

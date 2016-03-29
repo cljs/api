@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(key map-entry)</samp><br>
+
+---
 
  <samp>
 (__key__ map-entry)<br>
@@ -40,7 +43,7 @@ Returns the key of the map entry.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8073-L8076):
+Source code @ [github]():
 
 ```clj
 (defn key
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8073-8076](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8073-L8076)</ins>
+
 </pre>
 
 -->
@@ -103,19 +101,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "key",
  :signature ["[map-entry]"],
+ :name-encode "key",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/key",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/key"},
  :related ["cljs.core/keys"],
  :full-name-encode "cljs.core/key",
  :source {:code "(defn key\n  [map-entry]\n  (-key map-entry))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8073 8076]},
+          :lines [8073 8076],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8073-L8076"},
+ :usage ["(key map-entry)"],
  :full-name "cljs.core/key",
- :clj-symbol "clojure.core/key",
- :docstring "Returns the key of the map entry."}
+ :docstring "Returns the key of the map entry.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/key.cljsdoc"}
 
 ```
 

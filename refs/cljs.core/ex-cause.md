@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ex-cause ex)</samp><br>
+
+---
 
  <samp>
 (__ex-cause__ ex)<br>
@@ -29,7 +32,7 @@ Otherwise returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10187-L10193):
+Source code @ [github]():
 
 ```clj
 (defn ex-cause
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10187-10193](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10187-L10193)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ex-cause",
  :signature ["[ex]"],
+ :name-encode "ex-cause",
  :history [["+" "0.0-1576"]],
  :type "function",
  :full-name-encode "cljs.core/ex-cause",
  :source {:code "(defn ex-cause\n  [ex]\n  (when (instance? ExceptionInfo ex)\n    (.-cause ex)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10187 10193]},
+          :lines [10187 10193],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10187-L10193"},
+ :usage ["(ex-cause ex)"],
  :full-name "cljs.core/ex-cause",
- :docstring "Returns exception cause (an Error / ExceptionInfo) if ex is an\nExceptionInfo.\nOtherwise returns nil."}
+ :docstring "Returns exception cause (an Error / ExceptionInfo) if ex is an\nExceptionInfo.\nOtherwise returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ex-cause.cljsdoc"}
 
 ```
 

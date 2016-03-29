@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(tree-seq branch? children root)</samp><br>
+
+---
 
  <samp>
 (__tree-seq__ branch? children root)<br>
@@ -49,7 +52,7 @@ tree.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4587-L4600):
+Source code @ [github]():
 
 ```clj
 (defn tree-seq
@@ -66,12 +69,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4587-4600](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4587-L4600)</ins>
+
 </pre>
 
 -->
@@ -117,18 +115,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "tree-seq",
  :signature ["[branch? children root]"],
+ :name-encode "tree-seq",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/tree-seq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tree-seq"},
  :full-name-encode "cljs.core/tree-seq",
  :source {:code "(defn tree-seq\n   [branch? children root]\n   (let [walk (fn walk [node]\n                (lazy-seq\n                 (cons node\n                  (when (branch? node)\n                    (mapcat walk (children node))))))]\n     (walk root)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4587 4600]},
+          :lines [4587 4600],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4587-L4600"},
+ :usage ["(tree-seq branch? children root)"],
  :full-name "cljs.core/tree-seq",
- :clj-symbol "clojure.core/tree-seq",
- :docstring "Returns a lazy sequence of the nodes in a tree, via a depth-first walk.\n branch? must be a fn of one arg that returns true if passed a node\n that can have children (but may not).  children must be a fn of one\n arg that returns a sequence of the children. Will only be called on\n nodes for which branch? returns true. Root is the root node of the\ntree."}
+ :docstring "Returns a lazy sequence of the nodes in a tree, via a depth-first walk.\n branch? must be a fn of one arg that returns true if passed a node\n that can have children (but may not).  children must be a fn of one\n arg that returns a sequence of the children. Will only be called on\n nodes for which branch? returns true. Root is the root node of the\ntree.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/tree-seq.cljsdoc"}
 
 ```
 

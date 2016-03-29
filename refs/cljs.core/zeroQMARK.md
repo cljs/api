@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(zero? n)</samp><br>
+
+---
 
  <samp>
 (__zero?__ n)<br>
@@ -41,7 +44,7 @@ Returns true if num is zero, else false
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2667-L2670):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean zero?
@@ -53,19 +56,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2667-2670](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2667-L2670)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1056-L1057):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric zero? [x]
@@ -76,12 +74,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1056-1057](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1056-L1057)</ins>
+
 </pre>
 -->
 
@@ -126,25 +119,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "zero?",
  :signature ["[n]"],
+ :name-encode "zeroQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/zero?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/zero?"},
  :related ["cljs.core/pos?" "cljs.core/neg?"],
  :full-name-encode "cljs.core/zeroQMARK",
  :source {:code "(defn ^boolean zero?\n  [n]\n  (cljs.core/zero? n))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2667 2670]},
+          :lines [2667 2670],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2667-L2670"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric zero? [x]\n  `(== ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1056 1057]}],
+                  :lines [1056 1057],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1056-L1057"}],
+ :usage ["(zero? n)"],
  :full-name "cljs.core/zero?",
- :clj-symbol "clojure.core/zero?",
- :docstring "Returns true if num is zero, else false"}
+ :docstring "Returns true if num is zero, else false",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/zeroQMARK.cljsdoc"}
 
 ```
 

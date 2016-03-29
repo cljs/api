@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-print-fn! f)</samp><br>
+
+---
 
  <samp>
 (__set-print-fn!__ f)<br>
@@ -27,7 +30,7 @@ Set *print-fn* to f.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L59-L61):
+Source code @ [github]():
 
 ```clj
 (defn set-print-fn!
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:59-61](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L59-L61)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "set-print-fn!",
  :signature ["[f]"],
+ :name-encode "set-print-fnBANG",
  :history [["+" "0.0-1798"]],
  :type "function",
  :full-name-encode "cljs.core/set-print-fnBANG",
  :source {:code "(defn set-print-fn!\n  [f] (set! *print-fn* f))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [59 61]},
+          :lines [59 61],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L59-L61"},
+ :usage ["(set-print-fn! f)"],
  :full-name "cljs.core/set-print-fn!",
- :docstring "Set *print-fn* to f."}
+ :docstring "Set *print-fn* to f.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/set-print-fnBANG.cljsdoc"}
 
 ```
 

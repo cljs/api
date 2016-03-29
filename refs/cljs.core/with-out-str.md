@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(with-out-str & body)</samp><br>
+
+---
 
  <samp>
 (__with-out-str__ & body)<br>
@@ -32,7 +35,7 @@ printing calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2619-L2628):
+Source code @ [github]():
 
 ```clj
 (core/defmacro with-out-str
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2619-2628](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2619-L2628)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "with-out-str",
  :signature ["[& body]"],
+ :name-encode "with-out-str",
  :history [["+" "0.0-1535"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/with-out-str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/with-out-str"},
  :full-name-encode "cljs.core/with-out-str",
  :source {:code "(core/defmacro with-out-str\n  [& body]\n  `(let [sb# (js/goog.string.StringBuffer.)]\n     (binding [cljs.core/*print-newline* true\n               cljs.core/*print-fn* (fn [x#] (.append sb# x#))]\n       ~@body)\n     (cljs.core/str sb#)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2619 2628]},
+          :lines [2619 2628],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2619-L2628"},
+ :usage ["(with-out-str & body)"],
  :full-name "cljs.core/with-out-str",
- :clj-symbol "clojure.core/with-out-str",
- :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls."}
+ :docstring "Evaluates exprs in a context in which *print-fn* is bound to .append\non a fresh StringBuffer.  Returns the string created by any nested\nprinting calls.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/with-out-str.cljsdoc"}
 
 ```
 

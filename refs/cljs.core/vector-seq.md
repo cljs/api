@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(vector-seq v offset)</samp><br>
+
+---
 
  <samp>
 (__vector-seq__ v offset)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2522-L2540):
+Source code @ [github]():
 
 ```clj
 (defn vector-seq [v offset]
@@ -50,11 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1236/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1236
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:2522-2540](https://github.com/clojure/clojurescript/blob/r1236/src/cljs/cljs/core.cljs#L2522-L2540)</ins>
+
 </pre>
 
 -->
@@ -105,6 +104,7 @@ The API data for this symbol:
           :tag "r1236",
           :filename "src/cljs/cljs/core.cljs",
           :lines [2522 2540]},
+ :usage ["(vector-seq v offset)"],
  :full-name "cljs.core/vector-seq",
  :removed {:in "0.0-1424", :last-seen "0.0-1236"}}
 

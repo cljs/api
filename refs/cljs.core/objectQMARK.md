@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(object? x)</samp><br>
+
+---
 
  <samp>
 (__object?__ x)<br>
@@ -37,7 +40,7 @@ Returns true if x's constructor is Object
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L215-L220):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean object?
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:215-220](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L215-L220)</ins>
+
 </pre>
 
 -->
@@ -100,6 +98,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "object?",
  :signature ["[x]"],
+ :name-encode "objectQMARK",
  :history [["+" "0.0-2120"]],
  :type "function",
  :related ["cljs.core/array?"],
@@ -107,11 +106,14 @@ The API data for this symbol:
  :source {:code "(defn ^boolean object?\n  [x]\n  (if-not (nil? x)\n    (identical? (.-constructor x) js/Object)\n    false))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [215 220]},
+          :lines [215 220],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L215-L220"},
+ :usage ["(object? x)"],
  :full-name "cljs.core/object?",
- :docstring "Returns true if x's constructor is Object"}
+ :docstring "Returns true if x's constructor is Object",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/objectQMARK.cljsdoc"}
 
 ```
 

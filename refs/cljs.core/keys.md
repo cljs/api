@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(keys hash-map)</samp><br>
+
+---
 
  <samp>
 (__keys__ hash-map)<br>
@@ -40,7 +43,7 @@ Returns a sequence of the map's keys.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8067-L8071):
+Source code @ [github]():
 
 ```clj
 (defn keys
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8067-8071](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8067-L8071)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "keys",
  :signature ["[hash-map]"],
+ :name-encode "keys",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/keys",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/keys"},
  :related ["cljs.core/vals"],
  :full-name-encode "cljs.core/keys",
  :source {:code "(defn keys\n  [hash-map]\n  (when-let [mseq (seq hash-map)]\n    (KeySeq. mseq nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8067 8071]},
+          :lines [8067 8071],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8067-L8071"},
+ :usage ["(keys hash-map)"],
  :full-name "cljs.core/keys",
- :clj-symbol "clojure.core/keys",
- :docstring "Returns a sequence of the map's keys."}
+ :docstring "Returns a sequence of the map's keys.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/keys.cljsdoc"}
 
 ```
 

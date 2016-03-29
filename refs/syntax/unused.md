@@ -108,8 +108,11 @@ The API data for this symbol:
 
 ```clj
 {:description "`_` is a valid symbol name that indicates an unused or disregarded value.\nThis is not enforced by the compiler.\n\nFor example, create a function whose first two arguments are ignored:\n\n```clj\n(fn [_ _ a]\n  (println a))\n```\n\nIgnore the first and third value of a [destructured][doc:syntax/destructure-vector] sequence:\n\n```clj\n(let [ [_ a b _ c]\n       [1 2 3 4 5] ]\n  (println a b c))\n;; 2 3 5\n```\n\nIgnore return values of debug statements in a [doc:cljs.core/let] block:\n\n```clj\n(let [a 1\n      _ (println a)\n      b (+ a 2)\n      _ (println b)\n      c (+ b 3)]\n  ...)\n```\n\nMultiple `_`'s can be used in each of the previous examples because duplicate\nnames will shadow those previously occurring.  Thus, `_` actually holds the\nvalue of its last binding, but using it should be strictly avoided to prevent\nconfusion.  This is the only encouraged use-case for duplicating parameter\nnames.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "unused",
+ :name-encode "unused",
  :history [["+" "0.0-927"]],
  :type "convention",
  :full-name-encode "syntax/unused",
@@ -117,7 +120,7 @@ The API data for this symbol:
              :content "It is common to use `_` to ignore all but the latest value of a changing atom\ninside an [doc:cljs.core/add-watch] callback:\n\n```clj\n(def a (atom 1))\n\n(add-watch a :foo\n  (fn [_ _ _ s]\n    (println s)))\n\n(reset! a 2)\n;; 2\n```"}],
  :full-name "syntax/unused",
  :display "_ unused",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/unused.cljsdoc"}
 
 ```
 

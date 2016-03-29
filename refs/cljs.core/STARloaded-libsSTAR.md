@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L130-L133):
+Source code @ [github]():
 
 ```clj
 (defonce
@@ -30,12 +30,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:130-133](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L130-L133)</ins>
+
 </pre>
 
 -->
@@ -76,16 +71,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*loaded-libs*",
+ :name-encode "STARloaded-libsSTAR",
+ :history [["+" "0.0-2655"]],
  :type "dynamic var",
+ :full-name-encode "cljs.core/STARloaded-libsSTAR",
  :source {:code "(defonce\n  ^{:dynamic true\n    :jsdoc [\"@type {*}\"]}\n  *loaded-libs* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [130 133]},
+          :lines [130 133],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L130-L133"},
  :full-name "cljs.core/*loaded-libs*",
- :full-name-encode "cljs.core/STARloaded-libsSTAR",
- :history [["+" "0.0-2655"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARloaded-libsSTAR.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(remove pred)</samp><br>
+<samp>(remove pred coll)</samp><br>
+
+---
 
  <samp>
 (__remove__ pred)<br>
@@ -34,7 +38,7 @@ Removes values in the reduction of coll for which (pred val)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L145-L150):
+Source code @ [github]():
 
 ```clj
 (defcurried remove
@@ -49,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:145-150](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L145-L150)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "remove",
  :signature ["[pred]" "[pred coll]"],
+ :name-encode "remove",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/remove",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/remove"},
  :full-name-encode "clojure.core.reducers/remove",
  :source {:code "(defcurried remove\n  \"Removes values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.\"\n  {}\n  [pred coll]\n  (filter (complement pred) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [145 150]},
+          :lines [145 150],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L145-L150"},
+ :usage ["(remove pred)" "(remove pred coll)"],
  :full-name "clojure.core.reducers/remove",
- :clj-symbol "clojure.core.reducers/remove",
- :docstring "Removes values in the reduction of coll for which (pred val)\n  returns logical true. Foldable."}
+ :docstring "Removes values in the reduction of coll for which (pred val)\n  returns logical true. Foldable.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/remove.cljsdoc"}
 
 ```
 

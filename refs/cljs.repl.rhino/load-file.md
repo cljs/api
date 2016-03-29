@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-file repl-env opts src)</samp><br>
+
+---
 
  <samp>
 (__load-file__ repl-env opts src)<br>
@@ -29,7 +32,7 @@ used.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L89-L95):
+Source code @ [github]():
 
 ```clj
 (defn load-file
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[rhino.clj:89-95](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L89-L95)</ins>
+
 </pre>
 
 -->
@@ -90,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.repl.rhino",
  :name "load-file",
  :signature ["[repl-env opts src]"],
+ :name-encode "load-file",
  :history [["+" "0.0-2985"]],
  :type "function",
  :full-name-encode "cljs.repl.rhino/load-file",
  :source {:code "(defn load-file\n  [repl-env opts src]\n  (let [goog-path (io/file (util/output-directory opts) \"goog\" src)]\n    (rhino-eval repl-env (.getPath goog-path) 1 (io/reader goog-path))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
-          :lines [89 95]},
+          :lines [89 95],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/rhino.clj#L89-L95"},
+ :usage ["(load-file repl-env opts src)"],
  :full-name "cljs.repl.rhino/load-file",
- :docstring "Load a JavaScript. This is needed to load JavaScript files before the Rhino\nenvironment is bootstrapped. After bootstrapping load-javascript will be\nused."}
+ :docstring "Load a JavaScript. This is needed to load JavaScript files before the Rhino\nenvironment is bootstrapped. After bootstrapping load-javascript will be\nused.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/load-file.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(nil-iter)</samp><br>
+
+---
 
  <samp>
 (__nil-iter__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3632-L3637):
+Source code @ [github]():
 
 ```clj
 (defn nil-iter []
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3632-3637](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3632-L3637)</ins>
+
 </pre>
 
 -->
@@ -83,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "nil-iter",
- :type "function",
  :signature ["[]"],
+ :name-encode "nil-iter",
+ :history [["+" "0.0-2301"]],
+ :type "function",
+ :full-name-encode "cljs.core/nil-iter",
  :source {:code "(defn nil-iter []\n  (reify\n    Object\n    (hasNext [_] false)\n    (next [_] (js/Error. \"No such element\"))\n    (remove [_] (js/Error. \"Unsupported operation\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3632 3637]},
+          :lines [3632 3637],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3632-L3637"},
+ :usage ["(nil-iter)"],
  :full-name "cljs.core/nil-iter",
- :full-name-encode "cljs.core/nil-iter",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/nil-iter.cljsdoc"}
 
 ```
 

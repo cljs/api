@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(cloneable? value)</samp><br>
+
+---
 
  <samp>
 (__cloneable?__ value)<br>
@@ -27,7 +30,7 @@ Return true if x implements ICloneable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1080-L1083):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean cloneable?
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1080-1083](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1080-L1083)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "cloneable?",
  :signature ["[value]"],
+ :name-encode "cloneableQMARK",
  :history [["+" "0.0-2156"]],
  :type "function",
  :full-name-encode "cljs.core/cloneableQMARK",
  :source {:code "(defn ^boolean cloneable?\n  [value]\n  (satisfies? ICloneable value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1080 1083]},
+          :lines [1080 1083],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1080-L1083"},
+ :usage ["(cloneable? value)"],
  :full-name "cljs.core/cloneable?",
- :docstring "Return true if x implements ICloneable protocol."}
+ :docstring "Return true if x implements ICloneable protocol.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cloneableQMARK.cljsdoc"}
 
 ```
 

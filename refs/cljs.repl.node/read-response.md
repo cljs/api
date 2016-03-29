@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-response in)</samp><br>
+
+---
 
  <samp>
 (__read-response__ in)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L40-L50):
+Source code @ [github]():
 
 ```clj
 (defn read-response [^BufferedReader in]
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:40-50](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L40-L50)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "read-response",
- :type "function",
  :signature ["[in]"],
+ :name-encode "read-response",
+ :history [["+" "0.0-2629"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/read-response",
  :source {:code "(defn read-response [^BufferedReader in]\n  (let [sb (StringBuilder.)]\n    (loop [sb sb c (.read in)]\n      (cond\n       (= c 1) (let [ret (str sb)]\n                 (print ret)\n                 (recur (StringBuilder.) (.read in)))\n       (= c 0) (str sb)\n       :else (do\n               (.append sb (char c))\n               (recur sb (.read in)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [40 50]},
+          :lines [40 50],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L40-L50"},
+ :usage ["(read-response in)"],
  :full-name "cljs.repl.node/read-response",
- :full-name-encode "cljs.repl.node/read-response",
- :history [["+" "0.0-2629"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/read-response.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(println & objs)</samp><br>
+
+---
 
  <samp>
 (__println__ & objs)<br>
@@ -30,7 +33,7 @@ Same as print followed by (newline)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9196-L9201):
+Source code @ [github]():
 
 ```clj
 (defn println
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9196-9201](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9196-L9201)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "println",
  :signature ["[& objs]"],
+ :name-encode "println",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/println",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/println"},
  :full-name-encode "cljs.core/println",
  :source {:code "(defn println\n  [& objs]\n  (pr-with-opts objs (assoc (pr-opts) :readably false))\n  (when *print-newline*\n    (newline (pr-opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9196 9201]},
+          :lines [9196 9201],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9196-L9201"},
+ :usage ["(println & objs)"],
  :full-name "cljs.core/println",
- :clj-symbol "clojure.core/println",
- :docstring "Same as print followed by (newline)"}
+ :docstring "Same as print followed by (newline)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/println.cljsdoc"}
 
 ```
 

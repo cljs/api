@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(analyze-deps bound-vars ana-env lib deps cb)</samp><br>
+<samp>(analyze-deps bound-vars ana-env lib deps opts cb)</samp><br>
+
+---
 
  <samp>
 (__analyze-deps__ bound-vars ana-env lib deps cb)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L261-L298):
+Source code @ [github]():
 
 ```clj
 (defn analyze-deps
@@ -72,12 +76,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:261-298](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L261-L298)</ins>
+
 </pre>
 
 -->
@@ -129,6 +128,8 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [261 298]},
+ :usage ["(analyze-deps bound-vars ana-env lib deps cb)"
+         "(analyze-deps bound-vars ana-env lib deps opts cb)"],
  :full-name "cljs.js/analyze-deps",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

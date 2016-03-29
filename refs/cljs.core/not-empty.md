@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(not-empty coll)</samp><br>
+
+---
 
  <samp>
 (__not-empty__ coll)<br>
@@ -40,7 +43,7 @@ If coll is empty, returns nil, else coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3628-L3630):
+Source code @ [github]():
 
 ```clj
 (defn not-empty
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3628-3630](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3628-L3630)</ins>
+
 </pre>
 
 -->
@@ -102,19 +100,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "not-empty",
  :signature ["[coll]"],
+ :name-encode "not-empty",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/not-empty",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/not-empty"},
  :related ["cljs.core/empty"],
  :full-name-encode "cljs.core/not-empty",
  :source {:code "(defn not-empty\n  [coll] (when (seq coll) coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3628 3630]},
+          :lines [3628 3630],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3628-L3630"},
+ :usage ["(not-empty coll)"],
  :full-name "cljs.core/not-empty",
- :clj-symbol "clojure.core/not-empty",
- :docstring "If coll is empty, returns nil, else coll"}
+ :docstring "If coll is empty, returns nil, else coll",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/not-empty.cljsdoc"}
 
 ```
 

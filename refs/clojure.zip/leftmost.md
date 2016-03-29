@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(leftmost loc)</samp><br>
+
+---
 
  <samp>
 (__leftmost__ loc)<br>
@@ -30,7 +33,7 @@ Returns the loc of the leftmost sibling of the node at this loc, or self
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L157-L163):
+Source code @ [github]():
 
 ```clj
 (defn leftmost
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:157-163](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L157-L163)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "leftmost",
  :signature ["[loc]"],
+ :name-encode "leftmost",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/leftmost",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/leftmost"},
  :full-name-encode "clojure.zip/leftmost",
  :source {:code "(defn leftmost\n  [loc]\n    (let [[node {l :l r :r :as path}] loc]\n      (if (and path (seq l))\n        (with-meta [(first l) (assoc path :l [] :r (concat (rest l) [node] r))] (meta loc))\n        loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [157 163]},
+          :lines [157 163],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L157-L163"},
+ :usage ["(leftmost loc)"],
  :full-name "clojure.zip/leftmost",
- :clj-symbol "clojure.zip/leftmost",
- :docstring "Returns the loc of the leftmost sibling of the node at this loc, or self"}
+ :docstring "Returns the loc of the leftmost sibling of the node at this loc, or self",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/leftmost.cljsdoc"}
 
 ```
 

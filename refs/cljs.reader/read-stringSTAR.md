@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-string\* reader _)</samp><br>
+
+---
 
  <samp>
 (__read-string\*__ reader _)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L293-L302):
+Source code @ [github]():
 
 ```clj
 (defn read-string*
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:293-302](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L293-L302)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-string*",
- :type "function",
  :signature ["[reader _]"],
+ :name-encode "read-stringSTAR",
+ :history [["+" "0.0-1236"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-stringSTAR",
  :source {:code "(defn read-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [293 302]},
+          :lines [293 302],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L293-L302"},
+ :usage ["(read-string* reader _)"],
  :full-name "cljs.reader/read-string*",
- :full-name-encode "cljs.reader/read-stringSTAR",
- :history [["+" "0.0-1236"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-stringSTAR.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(valid-name? x)</samp><br>
+
+---
 
  <samp>
 (__valid-name?__ x)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L44-L45):
+Source code @ [github]():
 
 ```clj
 (defn valid-name? [x]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.28/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.28
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:44-45](https://github.com/clojure/clojurescript/blob/r1.7.28/src/main/cljs/cljs/js.cljs#L44-L45)</ins>
+
 </pre>
 
 -->
@@ -89,6 +87,7 @@ The API data for this symbol:
           :tag "r1.7.28",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [44 45]},
+ :usage ["(valid-name? x)"],
  :full-name "cljs.js/valid-name?",
  :removed {:in "1.7.48", :last-seen "1.7.28"}}
 

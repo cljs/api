@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(prefer-method multifn dispatch-val-x dispatch-val-y)</samp><br>
+
+---
 
  <samp>
 (__prefer-method__ multifn dispatch-val-x dispatch-val-y)<br>
@@ -31,7 +34,7 @@ when there is a conflict
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10055-L10059):
+Source code @ [github]():
 
 ```clj
 (defn prefer-method
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10055-10059](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10055-L10059)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "prefer-method",
  :signature ["[multifn dispatch-val-x dispatch-val-y]"],
+ :name-encode "prefer-method",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/prefer-method",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/prefer-method"},
  :full-name-encode "cljs.core/prefer-method",
  :source {:code "(defn prefer-method\n  [multifn dispatch-val-x dispatch-val-y]\n  (-prefer-method multifn dispatch-val-x dispatch-val-y))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10055 10059]},
+          :lines [10055 10059],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10055-L10059"},
+ :usage ["(prefer-method multifn dispatch-val-x dispatch-val-y)"],
  :full-name "cljs.core/prefer-method",
- :clj-symbol "clojure.core/prefer-method",
- :docstring "Causes the multimethod to prefer matches of dispatch-val-x over dispatch-val-y\nwhen there is a conflict"}
+ :docstring "Causes the multimethod to prefer matches of dispatch-val-x over dispatch-val-y\nwhen there is a conflict",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/prefer-method.cljsdoc"}
 
 ```
 

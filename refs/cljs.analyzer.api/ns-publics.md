@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(ns-publics ns)</samp><br>
+<samp>(ns-publics state ns)</samp><br>
+
+---
 
  <samp>
 (__ns-publics__ ns)<br>
@@ -34,7 +38,7 @@ clojure.core/ns-publics but returns var analysis maps not vars.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L180-L191):
+Source code @ [github]():
 
 ```clj
 (defn ns-publics
@@ -53,13 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:180-191](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L180-L191)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "ns-publics",
  :signature ["[ns]" "[state ns]"],
+ :name-encode "ns-publics",
  :history [["+" "0.0-2985"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ns-publics",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-publics"},
  :full-name-encode "cljs.analyzer.api/ns-publics",
  :source {:code "(defn ns-publics\n  ([ns]\n   (ns-publics env/*compiler* ns))\n  ([state ns]\n   {:pre [(symbol? ns)]}\n   (->> (merge\n          (get-in @state [::ana/namespaces ns :macros])\n          (get-in @state [::ana/namespaces ns :defs]))\n        (remove (fn [[k v]] (:private v)))\n        (into {}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [180 191]},
+          :lines [180 191],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L180-L191"},
+ :usage ["(ns-publics ns)" "(ns-publics state ns)"],
  :full-name "cljs.analyzer.api/ns-publics",
- :clj-symbol "clojure.core/ns-publics",
- :docstring "Given a namespace return all the public var analysis maps. Analagous to\nclojure.core/ns-publics but returns var analysis maps not vars."}
+ :docstring "Given a namespace return all the public var analysis maps. Analagous to\nclojure.core/ns-publics but returns var analysis maps not vars.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/ns-publics.cljsdoc"}
 
 ```
 

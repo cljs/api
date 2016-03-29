@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(when-let \[x test\] & body)</samp><br>
+
+---
 
  <samp>
 (__when-let__ \[x test\] & body)<br>
@@ -47,7 +50,7 @@ When test is true, evaluates body with binding-form bound to the value of test
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1769-L1782):
+Source code @ [github]():
 
 ```clj
 (defmacro when-let
@@ -66,11 +69,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1769-1782](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1769-L1782)</ins>
+
 </pre>
 
 -->
@@ -116,8 +115,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "when-let",
  :signature ["[[x test] & body]"],
+ :name-encode "when-let",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/when-let",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/when-let"},
  :related ["cljs.core/if-let"
            "cljs.core/when"
            "cljs.core/when-not"
@@ -129,10 +131,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1769 1782]},
+          :lines [1769 1782],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1769-L1782"},
+ :usage ["(when-let [x test] & body)"],
  :full-name "cljs.core/when-let",
- :clj-symbol "clojure.core/when-let",
- :docstring "bindings => binding-form test\n\nWhen test is true, evaluates body with binding-form bound to the value of test"}
+ :docstring "bindings => binding-form test\n\nWhen test is true, evaluates body with binding-form bound to the value of test",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/when-let.cljsdoc"}
 
 ```
 

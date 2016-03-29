@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(cljs-dependents-for-macro-namespaces namespaces)</samp><br>
+<samp>(cljs-dependents-for-macro-namespaces state namespaces)</samp><br>
+
+---
 
  <samp>
 (__cljs-dependents-for-macro-namespaces__ namespaces)<br>
@@ -39,7 +43,7 @@ ClojureScript namespaces that require and use the macros from
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L49-L71):
+Source code @ [github]():
 
 ```clj
 (defn cljs-dependents-for-macro-namespaces
@@ -61,13 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:49-71](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L49-L71)</ins>
+
 </pre>
 
 -->
@@ -109,17 +107,22 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "cljs-dependents-for-macro-namespaces",
  :signature ["[namespaces]" "[state namespaces]"],
+ :name-encode "cljs-dependents-for-macro-namespaces",
  :history [["+" "0.0-2496"]],
  :type "function",
  :full-name-encode "cljs.build.api/cljs-dependents-for-macro-namespaces",
  :source {:code "(defn cljs-dependents-for-macro-namespaces\n  ([namespaces]\n   (cljs-dependents-for-macro-namespaces\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     namespaces))\n  ([state namespaces]\n   (map :name\n     (let [namespaces-set (set namespaces)]\n       (filter (fn [x] (not-empty\n                         (intersection namespaces-set (-> x :require-macros vals set))))\n         (vals (:cljs.analyzer/namespaces @state)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [49 71]},
+          :lines [49 71],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L49-L71"},
+ :usage ["(cljs-dependents-for-macro-namespaces namespaces)"
+         "(cljs-dependents-for-macro-namespaces state namespaces)"],
  :full-name "cljs.build.api/cljs-dependents-for-macro-namespaces",
- :docstring "Takes a list of Clojure (.clj) namespaces that define macros and\nreturns a list ClojureScript (.cljs) namespaces that depend on those macro\nnamespaces.\n\nFor example where example.macros is defined in the clojure file\n\"example/macros.clj\" and both 'example.core and 'example.util are\nClojureScript namespaces that require and use the macros from\n'example.macros :\n(cljs-dependents-for-macro-namespaces 'example.macros) ->\n('example.core 'example.util)"}
+ :docstring "Takes a list of Clojure (.clj) namespaces that define macros and\nreturns a list ClojureScript (.cljs) namespaces that depend on those macro\nnamespaces.\n\nFor example where example.macros is defined in the clojure file\n\"example/macros.clj\" and both 'example.core and 'example.util are\nClojureScript namespaces that require and use the macros from\n'example.macros :\n(cljs-dependents-for-macro-namespaces 'example.macros) ->\n('example.core 'example.util)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/cljs-dependents-for-macro-namespaces.cljsdoc"}
 
 ```
 

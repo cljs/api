@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(forms-seq rdr)</samp><br>
+<samp>(forms-seq rdr filename)</samp><br>
+
+---
 
  <samp>
 (__forms-seq__ rdr)<br>
@@ -31,7 +35,7 @@ accepts a filename argument which will be used in any emitted errors.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L88-L92):
+Source code @ [github]():
 
 ```clj
 (defn forms-seq
@@ -43,13 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:88-92](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L88-L92)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "forms-seq",
  :signature ["[rdr]" "[rdr filename]"],
+ :name-encode "forms-seq",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/forms-seq",
  :source {:code "(defn forms-seq\n  ([rdr] (ana/forms-seq* rdr nil))\n  ([rdr filename] (ana/forms-seq* rdr filename)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [88 92]},
+          :lines [88 92],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L88-L92"},
+ :usage ["(forms-seq rdr)" "(forms-seq rdr filename)"],
  :full-name "cljs.analyzer.api/forms-seq",
- :docstring "Seq of Clojure/ClojureScript forms from rdr, a java.io.Reader. Optionally\naccepts a filename argument which will be used in any emitted errors."}
+ :docstring "Seq of Clojure/ClojureScript forms from rdr, a java.io.Reader. Optionally\naccepts a filename argument which will be used in any emitted errors.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/forms-seq.cljsdoc"}
 
 ```
 

@@ -50,7 +50,7 @@ Access the metadata of a var:
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -72,13 +72,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -111,8 +105,11 @@ The API data for this symbol:
 
 ```clj
 {:description "`#'foo` is sugar for [`(var foo)`][doc:special/var].\n\nAccesses the var attached to the given symbol.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc2"},
  :ns "syntax",
  :name "var",
+ :name-encode "var",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["special/var"],
@@ -122,13 +119,14 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#'foo" "#'foo/bar"],
  :examples [{:id "673ef6",
              :content "Access the metadata of a var:\n\n```clj\n(def x 123)\n(meta #'x)\n;;=> {:arglists (), :test nil, :name x, :column 1, :line 1, :file \"<cljs repl>\", :doc nil, :ns cljs.user}\n```"}],
  :full-name "syntax/var",
  :display "#' var",
- :clj-doc "http://clojure.org/reader#toc2"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/var.cljsdoc"}
 
 ```
 

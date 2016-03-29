@@ -85,7 +85,7 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 
 
 
-Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L36-L43):
+Reader code @ [github]():
 
 ```clj
    (defn read-inst
@@ -102,17 +102,12 @@ Reader code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:36-43](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L36-L43)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83):
+Reader table @ [github]():
 
 ```clj
 (def ^:dynamic *cljs-data-readers*
@@ -126,12 +121,7 @@ Reader table @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/sr
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[tagged_literals.cljc:79-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/tagged_literals.cljc#L79-L83)</ins>
+
 </pre>
 -->
 
@@ -164,8 +154,11 @@ The API data for this symbol:
 
 ```clj
 {:description "An instant in time, using a [RFC-3339] formatted string. Creates a JavaScript [Date] object.\n\nThe format is `#inst \"yyyy-mm-ddThh:mm:ss\"`, where:\n\n- `yyyy-mm-dd` = date\n- `hh:mm:ss` = time (optional)\n\nAppend `Z` to denote UTC, or `-hh:mm` to denote exact UTC offset.\n\n[Date]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date\n[RFC-3339]:http://www.ietf.org/rfc/rfc3339.txt",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#inst-rfc-3339-format",
+                :clj-url "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947"},
  :ns "syntax",
  :name "inst-literal",
+ :name-encode "inst-literal",
  :history [["+" "0.0-1211"]],
  :type "tagged literal",
  :related ["cljs.core/time" "syntax/tagged-literal"],
@@ -173,25 +166,26 @@ The API data for this symbol:
  :extra-sources ({:code "   (defn read-inst\n     [form]\n     (when-not (string? form)\n       (throw (RuntimeException. \"Instance literal expects a string for its timestamp.\")))\n     (try\n       (inst/read-instant-date form)\n       (catch Throwable e\n         (throw (RuntimeException. (.getMessage e)))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [36 43]}
+                  :lines [36 43],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L36-L43"}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
-                  :lines [79 83]}),
+                  :lines [79 83],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/tagged_literals.cljc#L79-L83"}),
  :usage ["#inst \"yyyy-mm-dd\""
          "#inst \"yyyy-mm-ddThh:mm:ss\""
          "#inst \"yyyy-mm-ddThh:mm:ssZ\""
          "#inst \"yyyy-mm-ddThh:mm:ss-hh:mm\""],
  :examples [{:id "47d8ee",
              :content "```clj\n#inst \"1985-04-12\"\n;;=> #inst \"1985-04-12T00:00:00.000-00:00\"\n\n#inst \"1985-04-12T23:20:50.52Z\"\n;;=> #inst \"1985-04-12T23:20:50.520-00:00\"\n```\n\nDates can be tested for order, as native JavaScript Dates can:\n\n```clj\n(def a #inst \"2005-01-20\")\n(def b #inst \"2005-01-21\")\n\n(< a b)\n;;=> true\n```\n\nDates can be tested for equality, unlike JavaScript Dates.  (ClojureScript\nextends `js/Date` type with `IEquiv` protocol to allow this.)\n\n```clj\n(def a #inst \"2012-06-13\")\n(def b #inst \"2012-06-13\")\n\n(= a b)\n;;=> true\n```"}],
- :edn-doc "https://github.com/edn-format/edn#inst-rfc-3339-format",
  :full-name "syntax/inst-literal",
  :display "#inst literal",
- :clj-doc "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/inst-literal.cljsdoc"}
 
 ```
 

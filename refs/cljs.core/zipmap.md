@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(zipmap keys vals)</samp><br>
+
+---
 
  <samp>
 (__zipmap__ keys vals)<br>
@@ -43,7 +46,7 @@ Returns a map with the keys mapped to the corresponding vals.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8536-L8546):
+Source code @ [github]():
 
 ```clj
 (defn zipmap
@@ -62,12 +65,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8536-8546](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8536-L8546)</ins>
+
 </pre>
 
 -->
@@ -113,19 +111,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "zipmap",
  :signature ["[keys vals]"],
+ :name-encode "zipmap",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/zipmap",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/zipmap"},
  :related ["cljs.core/interleave"],
  :full-name-encode "cljs.core/zipmap",
  :source {:code "(defn zipmap\n  [keys vals]\n    (loop [map (transient {})\n           ks (seq keys)\n           vs (seq vals)]\n      (if (and ks vs)\n        (recur (assoc! map (first ks) (first vs))\n               (next ks)\n               (next vs))\n        (persistent! map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8536 8546]},
+          :lines [8536 8546],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8536-L8546"},
+ :usage ["(zipmap keys vals)"],
  :full-name "cljs.core/zipmap",
- :clj-symbol "clojure.core/zipmap",
- :docstring "Returns a map with the keys mapped to the corresponding vals."}
+ :docstring "Returns a map with the keys mapped to the corresponding vals.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/zipmap.cljsdoc"}
 
 ```
 

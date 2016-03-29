@@ -56,7 +56,7 @@ false
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329):
+Reader code @ [github]():
 
 ```clj
 (defn- read-symbol
@@ -92,13 +92,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:303-329](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329)</ins>
+
 </pre>
 -->
 
@@ -131,8 +125,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Special symbols representing the boolean literals `true` and `false`.\nBoth evaluate to themselves.",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#booleans",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "boolean",
+ :name-encode "boolean",
  :history [["+" "0.0-927"]],
  :type "special symbol",
  :related ["cljs.core/boolean"
@@ -141,19 +138,19 @@ The API data for this symbol:
            "cljs.core/true?"
            "cljs.core/false?"],
  :full-name-encode "syntax/boolean",
- :extra-sources [{:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+ :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
                   :title "Reader code",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [303 329]}],
+                  :lines [303 329],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L303-L329"}),
  :usage ["true" "false"],
  :examples [{:id "1afc59",
              :content "```clj\ntrue\n;;=> true\n\nfalse\n;;=> false\n```"}],
- :edn-doc "https://github.com/edn-format/edn#booleans",
  :full-name "syntax/boolean",
  :display "boolean literal",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/boolean.cljsdoc"}
 
 ```
 

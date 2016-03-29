@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(methods multifn)</samp><br>
+
+---
 
  <samp>
 (__methods__ multifn)<br>
@@ -30,7 +33,7 @@ Given a multimethod, returns a map of dispatch values -> dispatch fns
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10061-L10063):
+Source code @ [github]():
 
 ```clj
 (defn methods
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10061-10063](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10061-L10063)</ins>
+
 </pre>
 
 -->
@@ -91,18 +89,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "methods",
  :signature ["[multifn]"],
+ :name-encode "methods",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/methods",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/methods"},
  :full-name-encode "cljs.core/methods",
  :source {:code "(defn methods\n  [multifn] (-methods multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10061 10063]},
+          :lines [10061 10063],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10061-L10063"},
+ :usage ["(methods multifn)"],
  :full-name "cljs.core/methods",
- :clj-symbol "clojure.core/methods",
- :docstring "Given a multimethod, returns a map of dispatch values -> dispatch fns"}
+ :docstring "Given a multimethod, returns a map of dispatch values -> dispatch fns",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/methods.cljsdoc"}
 
 ```
 

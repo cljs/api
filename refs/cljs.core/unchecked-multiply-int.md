@@ -12,6 +12,12 @@
 </tr>
 </table>
 
+<samp>(unchecked-multiply-int)</samp><br>
+<samp>(unchecked-multiply-int x)</samp><br>
+<samp>(unchecked-multiply-int x y)</samp><br>
+<samp>(unchecked-multiply-int x y & more)</samp><br>
+
+---
 
  <samp>
 (__unchecked-multiply-int__)<br>
@@ -39,7 +45,7 @@ Returns the product of nums. (*) returns 1.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2491-L2496):
+Function code @ [github]():
 
 ```clj
 (defn ^number unchecked-multiply-int
@@ -53,19 +59,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2491-2496](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2491-L2496)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L986-L987):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric unchecked-multiply-int
@@ -76,12 +77,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:986-987](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L986-L987)</ins>
+
 </pre>
 -->
 
@@ -125,24 +121,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "unchecked-multiply-int",
  :signature ["[]" "[x]" "[x y]" "[x y & more]"],
+ :name-encode "unchecked-multiply-int",
  :history [["+" "0.0-1798"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/unchecked-multiply-int",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-multiply-int"},
  :full-name-encode "cljs.core/unchecked-multiply-int",
  :source {:code "(defn ^number unchecked-multiply-int\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-multiply-int x y))\n  ([x y & more] (reduce unchecked-multiply-int (cljs.core/unchecked-multiply-int x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2491 2496]},
+          :lines [2491 2496],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2491-L2496"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-multiply-int\n  ([& xs] `(* ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [986 987]}],
+                  :lines [986 987],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L986-L987"}],
+ :usage ["(unchecked-multiply-int)"
+         "(unchecked-multiply-int x)"
+         "(unchecked-multiply-int x y)"
+         "(unchecked-multiply-int x y & more)"],
  :full-name "cljs.core/unchecked-multiply-int",
- :clj-symbol "clojure.core/unchecked-multiply-int",
- :docstring "Returns the product of nums. (*) returns 1."}
+ :docstring "Returns the product of nums. (*) returns 1.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unchecked-multiply-int.cljsdoc"}
 
 ```
 

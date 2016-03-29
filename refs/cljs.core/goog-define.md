@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(goog-define sym default)</samp><br>
+
+---
 
  <samp>
 (__goog-define__ sym default)<br>
@@ -39,7 +42,7 @@ Example:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L678-L706):
+Source code @ [github]():
 
 ```clj
 (core/defmacro goog-define
@@ -64,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:678-706](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L678-L706)</ins>
+
 </pre>
 
 -->
@@ -111,17 +109,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "goog-define",
  :signature ["[sym default]"],
+ :name-encode "goog-define",
  :history [["+" "1.7.48"]],
  :type "macro",
  :full-name-encode "cljs.core/goog-define",
  :source {:code "(core/defmacro goog-define\n  [sym default]\n  (assert-args goog-define\n   (core/or (core/string? default)\n            (core/number? default)\n            (core/true? default)\n            (core/false? default)) \"a string, number or boolean as default value\")\n  (core/let [defname (comp/munge (core/str *ns* \"/\" sym))\n             type    (core/cond\n                       (core/string? default) \"string\"\n                       (core/number? default) \"number\"\n                       (core/or (core/true? default) (core/false? default)) \"boolean\")]\n    `(do\n       (declare ~(symbol sym))\n       (~'js* ~(core/str \"/** @define {\" type \"} */\"))\n       (goog/define ~defname ~default))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [678 706]},
+          :lines [678 706],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L678-L706"},
+ :usage ["(goog-define sym default)"],
  :full-name "cljs.core/goog-define",
- :docstring "Defines a var using `goog.define`. Passed default value must be\nstring, number or boolean.\n\nDefault value can be overridden at compile time using the\ncompiler option `:closure-defines`.\n\nExample:\n  (ns your-app.core)\n  (goog-define DEBUG! false)\n  ;; can be overridden with\n  :closure-defines {\"your_app.core.DEBUG_BANG_\" true}\n  or\n  :closure-defines {'your-app.core/DEBUG! true}"}
+ :docstring "Defines a var using `goog.define`. Passed default value must be\nstring, number or boolean.\n\nDefault value can be overridden at compile time using the\ncompiler option `:closure-defines`.\n\nExample:\n  (ns your-app.core)\n  (goog-define DEBUG! false)\n  ;; can be overridden with\n  :closure-defines {\"your_app.core.DEBUG_BANG_\" true}\n  or\n  :closure-defines {'your-app.core/DEBUG! true}",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/goog-define.cljsdoc"}
 
 ```
 

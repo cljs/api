@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L23-L30):
+Source code @ [github]():
 
 ```clj
 (def ^String bootjs
@@ -34,13 +34,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[rhino.clj:23-30](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L23-L30)</ins>
+
 </pre>
 
 -->
@@ -79,19 +73,22 @@ commented here since it is helpful to:
 The API data for this symbol:
 
 ```clj
-{:ns "cljs.repl.rhino",
+{:return-type String,
+ :ns "cljs.repl.rhino",
  :name "bootjs",
+ :name-encode "bootjs",
+ :history [["+" "0.0-927"]],
  :type "var",
- :return-type String,
+ :full-name-encode "cljs.repl.rhino/bootjs",
  :source {:code "(def ^String bootjs\n  (str \"var global = this;\\n\"\n       \"var CLOSURE_IMPORT_SCRIPT = function(src) {\\n\"\n       \"    var ns = \\\"cljs.repl.rhino\\\",\"\n       \"        name = \\\"load-file\\\",\"\n       \"        loadFile = Packages.clojure.lang.RT[\\\"var\\\"](ns,name);\\n\"\n       \"    if(src) loadFile.invoke(___repl_env, __repl_opts, src);\\n\"\n       \"};\\n\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
-          :lines [23 30]},
+          :lines [23 30],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/rhino.clj#L23-L30"},
  :full-name "cljs.repl.rhino/bootjs",
- :full-name-encode "cljs.repl.rhino/bootjs",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/bootjs.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(unreduced x)</samp><br>
+
+---
 
  <samp>
 (__unreduced__ x)<br>
@@ -30,7 +33,7 @@ If x is reduced?, returns (deref x), else returns x
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1302-L1305):
+Source code @ [github]():
 
 ```clj
 (defn unreduced
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1302-1305](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1302-L1305)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "unreduced",
  :signature ["[x]"],
+ :name-encode "unreduced",
  :history [["+" "0.0-2411"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/unreduced",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unreduced"},
  :full-name-encode "cljs.core/unreduced",
  :source {:code "(defn unreduced\n  [x]\n  (if (reduced? x) (deref x) x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1302 1305]},
+          :lines [1302 1305],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1302-L1305"},
+ :usage ["(unreduced x)"],
  :full-name "cljs.core/unreduced",
- :clj-symbol "clojure.core/unreduced",
- :docstring "If x is reduced?, returns (deref x), else returns x"}
+ :docstring "If x is reduced?, returns (deref x), else returns x",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unreduced.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(rhino-eval {:keys \[scope\], :as repl-env} filename line js)</samp><br>
+
+---
 
  <samp>
 (__rhino-eval__ {:keys \[scope\], :as repl-env} filename line js)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L72-L87):
+Source code @ [github]():
 
 ```clj
 (defn rhino-eval
@@ -47,13 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[rhino.clj:72-87](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/rhino.clj#L72-L87)</ins>
+
 </pre>
 
 -->
@@ -94,17 +91,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.rhino",
  :name "rhino-eval",
- :type "function",
  :signature ["[{:keys [scope], :as repl-env} filename line js]"],
+ :name-encode "rhino-eval",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.repl.rhino/rhino-eval",
  :source {:code "(defn rhino-eval\n  [{:keys [scope] :as repl-env} filename line js]\n  (try\n    (let [linenum (or line Integer/MIN_VALUE)]\n      {:status :success\n       :value (eval-result (-eval js repl-env filename linenum))})\n    (catch Throwable ex\n      ;; manually set *e\n      (let [top-level (-> scope\n                        (ScriptableObject/getProperty \"cljs\")\n                        (ScriptableObject/getProperty \"core\"))]\n        (ScriptableObject/putProperty top-level \"_STAR_e\"\n          (Context/javaToJS ex scope))\n        {:status :exception\n         :value (.toString ex)\n         :stacktrace (stacktrace ex)}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
-          :lines [72 87]},
+          :lines [72 87],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/rhino.clj#L72-L87"},
+ :usage ["(rhino-eval {:keys [scope], :as repl-env} filename line js)"],
  :full-name "cljs.repl.rhino/rhino-eval",
- :full-name-encode "cljs.repl.rhino/rhino-eval",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/rhino-eval.cljsdoc"}
 
 ```
 

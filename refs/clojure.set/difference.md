@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(difference s1)</samp><br>
+<samp>(difference s1 s2)</samp><br>
+<samp>(difference s1 s2 & sets)</samp><br>
+
+---
 
  <samp>
 (__difference__ s1)<br>
@@ -49,7 +54,7 @@ Return a set that is the first set without elements of the remaining sets
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L46-L58):
+Source code @ [github]():
 
 ```clj
 (defn difference
@@ -70,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:46-58](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L46-L58)</ins>
+
 </pre>
 
 -->
@@ -121,8 +121,11 @@ The API data for this symbol:
  :ns "clojure.set",
  :name "difference",
  :signature ["[s1]" "[s1 s2]" "[s1 s2 & sets]"],
+ :name-encode "difference",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/difference",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/difference"},
  :related ["clojure.set/union"
            "clojure.set/intersection"
            "clojure.set/superset?"
@@ -131,12 +134,16 @@ The API data for this symbol:
  :source {:code "(defn difference\n  ([s1] s1)\n  ([s1 s2] \n     (if (< (count s1) (count s2))\n       (reduce (fn [result item] \n                   (if (contains? s2 item) \n                     (disj result item) \n                     result))\n               s1 s1)\n       (reduce disj s1 s2)))\n  ([s1 s2 & sets] \n     (reduce difference s1 (conj sets s2))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [46 58]},
+          :lines [46 58],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L46-L58"},
+ :usage ["(difference s1)"
+         "(difference s1 s2)"
+         "(difference s1 s2 & sets)"],
  :full-name "clojure.set/difference",
- :clj-symbol "clojure.set/difference",
- :docstring "Return a set that is the first set without elements of the remaining sets"}
+ :docstring "Return a set that is the first set without elements of the remaining sets",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/difference.cljsdoc"}
 
 ```
 

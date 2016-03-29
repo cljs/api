@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(if test then else?)</samp><br>
+
+---
 
  <samp>
 (__if__ test then else?)<br>
@@ -67,7 +70,7 @@ else is not supplied it defaults to nil.
 ```
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L973-L985):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'if
@@ -89,12 +92,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:973-985](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L973-L985)</ins>
+
 </pre>
 
 -->
@@ -139,8 +137,11 @@ The API data for this symbol:
  :ns "special",
  :name "if",
  :signature ["[test then else?]"],
+ :name-encode "if",
  :history [["+" "0.0-927"]],
  :type "special form",
+ :clj-equiv {:full-name "clojure.core/if",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/if"},
  :related ["cljs.core/cond"
            "cljs.core/when"
            "cljs.core/if-let"
@@ -149,14 +150,16 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'if\n  [op env [_ test then else :as form] name _]\n  (when (< (count form) 3)\n    (throw (error env \"Too few arguments to if\")))\n  (when (> (count form) 4)\n   (throw (error env \"Too many arguments to if\")))\n  (let [test-expr (disallowing-recur (analyze (assoc env :context :expr) test))\n        then-expr (allowing-redef (analyze env then))\n        else-expr (allowing-redef (analyze env else))]\n    {:env env :op :if :form form\n     :test test-expr :then then-expr :else else-expr\n     :unchecked *unchecked-if*\n     :children [test-expr then-expr else-expr]}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [973 985]},
+          :lines [973 985],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L973-L985"},
+ :usage ["(if test then else?)"],
  :examples [{:id "e591ff",
              :content "```clj\n(def v [1 2])\n\n(if (empty? v) \"empty!\" \"filled!\")\n;;=> \"filled!\"\n\n(str \"This vector is \"\n  (if (empty? v) \"empty!\" \"filled!\"))\n;;=> \"This vector is filled!\"\n```"}],
  :full-name "special/if",
- :clj-symbol "clojure.core/if",
- :docstring "Evaluates test. If not the singular values nil or false,\nevaluates and yields then, otherwise, evaluates and yields else. If\nelse is not supplied it defaults to nil."}
+ :docstring "Evaluates test. If not the singular values nil or false,\nevaluates and yields then, otherwise, evaluates and yields else. If\nelse is not supplied it defaults to nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/if.cljsdoc"}
 
 ```
 

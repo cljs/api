@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(down loc)</samp><br>
+
+---
 
  <samp>
 (__down__ loc)<br>
@@ -31,7 +34,7 @@ nil if no children
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L98-L109):
+Source code @ [github]():
 
 ```clj
 (defn down
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:98-109](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L98-L109)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "down",
  :signature ["[loc]"],
+ :name-encode "down",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/down",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/down"},
  :full-name-encode "clojure.zip/down",
  :source {:code "(defn down\n  [loc]\n    (when (branch? loc)\n      (let [[node path] loc\n            [c & cnext :as cs] (children loc)]\n        (when cs\n          (with-meta [c {:l [] \n                         :pnodes (if path (conj (:pnodes path) node) [node]) \n                         :ppath path \n                         :r cnext}] (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [98 109]},
+          :lines [98 109],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L98-L109"},
+ :usage ["(down loc)"],
  :full-name "clojure.zip/down",
- :clj-symbol "clojure.zip/down",
- :docstring "Returns the loc of the leftmost child of the node at this loc, or\nnil if no children"}
+ :docstring "Returns the loc of the leftmost child of the node at this loc, or\nnil if no children",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/down.cljsdoc"}
 
 ```
 

@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1576"><img valign="middle" alt="[+] 0.0-1576" title="Added in 0.0-1576" src="https://img.shields.io/badge/+-0.0--1576-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ExceptionInfo</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ExceptionInfo.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ExceptionInfo</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ExceptionInfo.java)
 </td>
 </tr>
 </table>
 
+<samp>(ExceptionInfo. message data cause)</samp><br>
+
+---
 
  <samp>
 (__ExceptionInfo.__ message data cause)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10137-L10153):
+Source code @ [github]():
 
 ```clj
 (defn ^{:jsdoc ["@constructor"]}
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10137-10153](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10137-L10153)</ins>
+
 </pre>
 
 -->
@@ -101,17 +99,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ExceptionInfo",
  :signature ["[message data cause]"],
+ :name-encode "ExceptionInfo",
  :history [["+" "0.0-1576"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/ExceptionInfo",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ExceptionInfo.java"},
  :full-name-encode "cljs.core/ExceptionInfo",
  :source {:code "(defn ^{:jsdoc [\"@constructor\"]}\n  ExceptionInfo [message data cause]\n  (let [e (js/Error. message)]\n    (this-as this\n      (set! (.-message this) message)\n      (set! (.-data this) data)\n      (set! (.-cause this) cause)\n      (do\n        (set! (.-name this) (.-name e))\n        ;; non-standard\n        (set! (.-description this) (.-description e))\n        (set! (.-number this) (.-number e))\n        (set! (.-fileName this) (.-fileName e))\n        (set! (.-lineNumber this) (.-lineNumber e))\n        (set! (.-columnNumber this) (.-columnNumber e))\n        (set! (.-stack this) (.-stack e)))\n      this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10137 10153]},
+          :lines [10137 10153],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10137-L10153"},
+ :usage ["(ExceptionInfo. message data cause)"],
  :full-name "cljs.core/ExceptionInfo",
- :clj-symbol "clojure.lang/ExceptionInfo"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ExceptionInfo.cljsdoc"}
 
 ```
 

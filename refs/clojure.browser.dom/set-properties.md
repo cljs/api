@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-properties e m)</samp><br>
+
+---
 
  <samp>
 (__set-properties__ e m)<br>
@@ -27,7 +30,7 @@ Set properties on an element
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L136-L140):
+Source code @ [github]():
 
 ```clj
 (defn set-properties
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:136-140](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L136-L140)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "set-properties",
  :signature ["[e m]"],
+ :name-encode "set-properties",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/set-properties",
  :source {:code "(defn set-properties\n  [e m]\n  (gdom/setProperties (ensure-element e)\n                      (apply gobject/create (interleave (keys m) (vals m)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [136 140]},
+          :lines [136 140],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L136-L140"},
+ :usage ["(set-properties e m)"],
  :full-name "clojure.browser.dom/set-properties",
- :docstring "Set properties on an element"}
+ :docstring "Set properties on an element",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/set-properties.cljsdoc"}
 
 ```
 

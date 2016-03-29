@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(and)</samp><br>
+<samp>(and x)</samp><br>
+<samp>(and x & next)</samp><br>
+
+---
 
  <samp>
 (__and__)<br>
@@ -103,7 +108,7 @@ the value of the last expr. (and) returns true.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L783-L799):
+Source code @ [github]():
 
 ```clj
 (core/defmacro and
@@ -125,12 +130,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:783-799](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L783-L799)</ins>
+
 </pre>
 
 -->
@@ -176,23 +176,28 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "and",
  :signature ["[]" "[x]" "[x & next]"],
+ :name-encode "and",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/and",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/and"},
  :related ["cljs.core/or" "special/if"],
  :full-name-encode "cljs.core/and",
  :source {:code "(core/defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n   (core/let [forms (concat [x] next)]\n     (if (every? #(simple-test-expr? &env %)\n           (map #(cljs.analyzer/analyze &env %) forms))\n       (core/let [and-str (core/->> (repeat (count forms) \"(~{})\")\n                            (interpose \" && \")\n                            (apply core/str))]\n         (bool-expr `(~'js* ~and-str ~@forms)))\n       `(let [and# ~x]\n          (if and# (and ~@next) and#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [783 799]},
+          :lines [783 799],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L783-L799"},
+ :usage ["(and)" "(and x)" "(and x & next)"],
  :examples [{:id "a39a73",
              :content "```clj\n(and)\n;;=> true\n\n(and false)\n;;=> false\n\n(and true)\n;;=> true\n\n(and true true)\n;;=> true\n\n(and true false)\n;;=> false\n\n(and false false)\n;;=> false\n```"}
             {:id "766638",
              :content "`nil` and `false` are the only falsy values and everything else is truthy:\n\n```clj\n(and \"foo\" \"bar\")\n;;=> \"bar\"\n\n(and \"foo\" nil)\n;;=> nil\n\n(and \"foo\" false)\n;;=> false\n\n(and nil \"foo\")\n;;=> nil\n\n(and false \"foo\")\n;;=> false\n```"}],
  :full-name "cljs.core/and",
- :clj-symbol "clojure.core/and",
- :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns logical false (nil or false), and returns that value and\ndoesn't evaluate any of the other expressions, otherwise it returns\nthe value of the last expr. (and) returns true."}
+ :docstring "Evaluates exprs one at a time, from left to right. If a form\nreturns logical false (nil or false), and returns that value and\ndoesn't evaluate any of the other expressions, otherwise it returns\nthe value of the last expr. (and) returns true.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/and.cljsdoc"}
 
 ```
 

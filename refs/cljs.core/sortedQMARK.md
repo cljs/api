@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(sorted? coll)</samp><br>
+
+---
 
  <samp>
 (__sorted?__ coll)<br>
@@ -43,7 +46,7 @@ Returns true if coll satisfies ISorted
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1982-L1984):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean sorted?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1982-1984](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1982-L1984)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sorted?",
  :signature ["[coll]"],
+ :name-encode "sortedQMARK",
  :history [["+" "0.0-2120"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sorted?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted?"},
  :related ["cljs.core/sorted-map" "cljs.core/sorted-set"],
  :full-name-encode "cljs.core/sortedQMARK",
  :source {:code "(defn ^boolean sorted?\n  [x] (satisfies? ISorted x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1982 1984]},
+          :lines [1982 1984],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1982-L1984"},
+ :usage ["(sorted? coll)"],
  :full-name "cljs.core/sorted?",
- :clj-symbol "clojure.core/sorted?",
- :docstring "Returns true if coll satisfies ISorted"}
+ :docstring "Returns true if coll satisfies ISorted",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sortedQMARK.cljsdoc"}
 
 ```
 

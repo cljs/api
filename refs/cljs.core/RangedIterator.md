@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(RangedIterator. i base arr v start end)</samp><br>
+
+---
 
  <samp>
 (__RangedIterator.__ i base arr v start end)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4843-L4853):
+Source code @ [github]():
 
 ```clj
 (deftype RangedIterator [^:mutable i ^:mutable base ^:mutable arr v start end]
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4843-4853](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4843-L4853)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "RangedIterator",
- :type "type",
  :signature ["[i base arr v start end]"],
+ :name-encode "RangedIterator",
+ :history [["+" "0.0-2371"]],
+ :type "type",
+ :full-name-encode "cljs.core/RangedIterator",
  :source {:code "(deftype RangedIterator [^:mutable i ^:mutable base ^:mutable arr v start end]\n  Object\n  (hasNext [this]\n    (< i end))\n  (next [this]\n    (when (== (- i base) 32)\n      (set! arr (unchecked-array-for v i))\n      (set! base (+ base 32)))\n    (let [ret (aget arr (bit-and i 0x01f))]\n      (set! i (inc i))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4843 4853]},
+          :lines [4843 4853],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4843-L4853"},
+ :usage ["(RangedIterator. i base arr v start end)"],
  :full-name "cljs.core/RangedIterator",
- :full-name-encode "cljs.core/RangedIterator",
- :history [["+" "0.0-2371"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/RangedIterator.cljsdoc"}
 
 ```
 

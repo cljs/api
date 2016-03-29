@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(when-not test & body)</samp><br>
+
+---
 
  <samp>
 (__when-not__ test & body)<br>
@@ -42,7 +45,7 @@ Evaluates test. If logical false, evaluates body in an implicit do.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L499-L503):
+Source code @ [github]():
 
 ```clj
 (defmacro when-not
@@ -54,11 +57,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:499-503](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L499-L503)</ins>
+
 </pre>
 
 -->
@@ -104,8 +103,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "when-not",
  :signature ["[test & body]"],
+ :name-encode "when-not",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/when-not",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/when-not"},
  :related ["cljs.core/when" "cljs.core/when-let" "special/if"],
  :full-name-encode "cljs.core/when-not",
  :source {:code "(defmacro when-not\n  [test & body]\n    (list 'if test nil (cons 'do body)))",
@@ -113,10 +115,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [499 503]},
+          :lines [499 503],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L499-L503"},
+ :usage ["(when-not test & body)"],
  :full-name "cljs.core/when-not",
- :clj-symbol "clojure.core/when-not",
- :docstring "Evaluates test. If logical false, evaluates body in an implicit do."}
+ :docstring "Evaluates test. If logical false, evaluates body in an implicit do.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/when-not.cljsdoc"}
 
 ```
 

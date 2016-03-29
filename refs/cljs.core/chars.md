@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(chars x)</samp><br>
+
+---
 
  <samp>
 (__chars__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2550):
+Source code @ [github]():
 
 ```clj
 (defn chars [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2550](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2550)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "chars",
  :signature ["[x]"],
+ :name-encode "chars",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/chars",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/chars"},
  :full-name-encode "cljs.core/chars",
  :source {:code "(defn chars [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2550]},
+          :lines [2550],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2550"},
+ :usage ["(chars x)"],
  :full-name "cljs.core/chars",
- :clj-symbol "clojure.core/chars"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chars.cljsdoc"}
 
 ```
 

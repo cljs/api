@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(use-fixtures type & fns)</samp><br>
+
+---
 
  <samp>
 (__use-fixtures__ type & fns)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L377-L387):
+Source code @ [github]():
 
 ```clj
 (defmacro use-fixtures [type & fns]
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:377-387](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L377-L387)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,22 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "use-fixtures",
  :signature ["[type & fns]"],
+ :name-encode "use-fixtures",
  :history [["+" "0.0-2498"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/use-fixtures",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/use-fixtures"},
  :full-name-encode "cljs.test/use-fixtures",
  :source {:code "(defmacro use-fixtures [type & fns]\n  (condp = type\n    :once\n    `(def ~'cljs-test-once-fixtures\n       [~@fns])\n    :each\n    `(def ~'cljs-test-each-fixtures\n       [~@fns])\n    :else\n    (throw\n      (Exception. \"First argument to cljs.test/use-fixtures must be :once or :each\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [377 387]},
+          :lines [377 387],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L377-L387"},
+ :usage ["(use-fixtures type & fns)"],
  :full-name "cljs.test/use-fixtures",
- :clj-symbol "clojure.test/use-fixtures"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/use-fixtures.cljsdoc"}
 
 ```
 

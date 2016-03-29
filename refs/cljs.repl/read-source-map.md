@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-source-map f)</samp><br>
+
+---
 
  <samp>
 (__read-source-map__ f)<br>
@@ -27,7 +30,7 @@ Return the source map for the JavaScript source file.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L231-L249):
+Source code @ [github]():
 
 ```clj
 (defn read-source-map
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:231-249](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L231-L249)</ins>
+
 </pre>
 
 -->
@@ -101,17 +99,21 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "read-source-map",
  :signature ["[f]"],
+ :name-encode "read-source-map",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl/read-source-map",
  :source {:code "(defn read-source-map\n  [f]\n  (when-let [smf (util/file-or-resource (str f \".map\"))]\n    (let [ns (if (= f \"cljs/core.aot.js\")\n               'cljs.core\n               (some-> (js-src->cljs-src f) ana/parse-ns :ns))]\n      (when ns\n        (as-> @env/*compiler* compiler-env\n          (let [t (util/last-modified smf)]\n            (if (or (and (= ns 'cljs.core)\n                         (nil? (get-in compiler-env [::source-maps ns])))\n                    (and (not= ns 'cljs.core)\n                         (> t (get-in compiler-env [::source-maps ns :last-modified] 0))))\n              (swap! env/*compiler* assoc-in [::source-maps ns]\n                {:last-modified t\n                 :source-map (sm/decode (json/read-str (slurp smf) :key-fn keyword))})\n              compiler-env))\n          (get-in compiler-env [::source-maps ns :source-map]))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [231 249]},
+          :lines [233 251],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L233-L251"},
+ :usage ["(read-source-map f)"],
  :full-name "cljs.repl/read-source-map",
- :docstring "Return the source map for the JavaScript source file."}
+ :docstring "Return the source map for the JavaScript source file.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/read-source-map.cljsdoc"}
 
 ```
 

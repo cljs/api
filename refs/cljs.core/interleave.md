@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(interleave c1 c2)</samp><br>
+<samp>(interleave c1 c2 & colls)</samp><br>
+
+---
 
  <samp>
 (__interleave__ c1 c2)<br>
@@ -45,7 +49,7 @@ Returns a lazy seq of the first item in each coll, then the second etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4490-L4502):
+Source code @ [github]():
 
 ```clj
 (defn interleave
@@ -66,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4490-4502](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4490-L4502)</ins>
+
 </pre>
 
 -->
@@ -117,19 +116,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "interleave",
  :signature ["[c1 c2]" "[c1 c2 & colls]"],
+ :name-encode "interleave",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/interleave",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/interleave"},
  :related ["cljs.core/interpose" "cljs.core/zipmap"],
  :full-name-encode "cljs.core/interleave",
  :source {:code "(defn interleave\n  ([c1 c2]\n     (lazy-seq\n      (let [s1 (seq c1) s2 (seq c2)]\n        (when (and s1 s2)\n          (cons (first s1) (cons (first s2)\n                                 (interleave (rest s1) (rest s2))))))))\n  ([c1 c2 & colls]\n     (lazy-seq\n      (let [ss (map seq (conj colls c2 c1))]\n        (when (every? identity ss)\n          (concat (map first ss) (apply interleave (map rest ss))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4490 4502]},
+          :lines [4490 4502],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4490-L4502"},
+ :usage ["(interleave c1 c2)" "(interleave c1 c2 & colls)"],
  :full-name "cljs.core/interleave",
- :clj-symbol "clojure.core/interleave",
- :docstring "Returns a lazy seq of the first item in each coll, then the second etc."}
+ :docstring "Returns a lazy seq of the first item in each coll, then the second etc.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/interleave.cljsdoc"}
 
 ```
 

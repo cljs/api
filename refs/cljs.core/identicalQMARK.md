@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(identical? x y)</samp><br>
+
+---
 
  <samp>
 (__identical?__ x y)<br>
@@ -41,7 +44,7 @@ Tests if 2 arguments are the same object
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L181-L184):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean identical?
@@ -53,19 +56,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:181-184](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L181-L184)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L909-L910):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro identical? [a b]
@@ -76,12 +74,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:909-910](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L909-L910)</ins>
+
 </pre>
 -->
 
@@ -126,25 +119,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "identical?",
  :signature ["[x y]"],
+ :name-encode "identicalQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/identical?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/identical?"},
  :related ["cljs.core/=" "cljs.core/=="],
  :full-name-encode "cljs.core/identicalQMARK",
  :source {:code "(defn ^boolean identical?\n  [x y]\n  (cljs.core/identical? x y))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [181 184]},
+          :lines [181 184],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L181-L184"},
  :extra-sources [{:code "(core/defmacro identical? [a b]\n  (bool-expr (core/list 'js* \"(~{} === ~{})\" a b)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [909 910]}],
+                  :lines [909 910],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L909-L910"}],
+ :usage ["(identical? x y)"],
  :full-name "cljs.core/identical?",
- :clj-symbol "clojure.core/identical?",
- :docstring "Tests if 2 arguments are the same object"}
+ :docstring "Tests if 2 arguments are the same object",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/identicalQMARK.cljsdoc"}
 
 ```
 

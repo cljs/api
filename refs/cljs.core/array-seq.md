@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(array-seq array)</samp><br>
+<samp>(array-seq array i)</samp><br>
+
+---
 
  <samp>
 (__array-seq__ array)<br>
@@ -48,7 +52,7 @@ Create a seq from a JavaScript array.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1529-L1534):
+Source code @ [github]():
 
 ```clj
 (defn array-seq
@@ -62,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1529-1534](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1529-L1534)</ins>
+
 </pre>
 
 -->
@@ -110,19 +109,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "array-seq",
  :signature ["[array]" "[array i]"],
+ :name-encode "array-seq",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/array-seq",
  :source {:code "(defn array-seq\n  ([array]\n     (prim-seq array 0))\n  ([array i]\n     (prim-seq array i)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1529 1534]},
+          :lines [1529 1534],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1529-L1534"},
+ :usage ["(array-seq array)" "(array-seq array i)"],
  :examples [{:id "9ef6de",
              :content "```clj\n(array-seq #js [1 2 3])\n;;=> (1 2 3)\n\n(array-seq #js [1 2 3] 1)\n;;=> (2 3)\n```"}],
  :full-name "cljs.core/array-seq",
- :docstring "Create a seq from a JavaScript array."}
+ :docstring "Create a seq from a JavaScript array.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array-seq.cljsdoc"}
 
 ```
 

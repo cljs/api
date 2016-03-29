@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(macroexpand form)</samp><br>
+
+---
 
  <samp>
 (__macroexpand__ form)<br>
@@ -28,7 +31,7 @@ callback function with the macroexpanded form, as a string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L33-L37):
+Source code @ [github]():
 
 ```clj
 (defn macroexpand
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[reflect.cljs:33-37](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/reflect.cljs#L33-L37)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 {:ns "clojure.reflect",
  :name "macroexpand",
  :signature ["[form]"],
+ :name-encode "macroexpand",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "clojure.reflect/macroexpand",
  :source {:code "(defn macroexpand\n  [form]\n  (query-reflection (str \"macroform=\" (js/encodeURIComponent (str form))) println))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/reflect.cljs",
-          :lines [33 37]},
+          :lines [33 37],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/reflect.cljs#L33-L37"},
+ :usage ["(macroexpand form)"],
  :full-name "clojure.reflect/macroexpand",
- :docstring "Queries the reflection api with a quoted macro form, then calls the\ncallback function with the macroexpanded form, as a string."}
+ :docstring "Queries the reflection api with a quoted macro form, then calls the\ncallback function with the macroexpanded form, as a string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.reflect/macroexpand.cljsdoc"}
 
 ```
 

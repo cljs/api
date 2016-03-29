@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(max-key k x)</samp><br>
+<samp>(max-key k x y)</samp><br>
+<samp>(max-key k x y & more)</samp><br>
+
+---
 
  <samp>
 (__max-key__ k x)<br>
@@ -49,7 +54,7 @@ Returns the x for which (k x), a number, is greatest.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8548-L8553):
+Source code @ [github]():
 
 ```clj
 (defn max-key
@@ -63,12 +68,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8548-8553](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8548-L8553)</ins>
+
 </pre>
 
 -->
@@ -114,19 +114,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "max-key",
  :signature ["[k x]" "[k x y]" "[k x y & more]"],
+ :name-encode "max-key",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/max-key",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/max-key"},
  :related ["cljs.core/max" "cljs.core/min-key"],
  :full-name-encode "cljs.core/max-key",
  :source {:code "(defn max-key\n  ([k x] x)\n  ([k x y] (if (> (k x) (k y)) x y))\n  ([k x y & more]\n   (reduce #(max-key k %1 %2) (max-key k x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8548 8553]},
+          :lines [8548 8553],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8548-L8553"},
+ :usage ["(max-key k x)" "(max-key k x y)" "(max-key k x y & more)"],
  :full-name "cljs.core/max-key",
- :clj-symbol "clojure.core/max-key",
- :docstring "Returns the x for which (k x), a number, is greatest."}
+ :docstring "Returns the x for which (k x), a number, is greatest.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/max-key.cljsdoc"}
 
 ```
 

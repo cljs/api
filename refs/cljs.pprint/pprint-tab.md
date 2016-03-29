@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pprint-tab kind colnum colinc)</samp><br>
+
+---
 
  <samp>
 (__pprint-tab__ kind colnum colinc)<br>
@@ -40,7 +43,7 @@ THIS FUNCTION IS NOT YET IMPLEMENTED.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L866-L881):
+Source code @ [github]():
 
 ```clj
 (defn pprint-tab
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:866-881](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L866-L881)</ins>
+
 </pre>
 
 -->
@@ -103,18 +101,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pprint-tab",
  :signature ["[kind colnum colinc]"],
+ :name-encode "pprint-tab",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/pprint-tab",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pprint-tab"},
  :full-name-encode "cljs.pprint/pprint-tab",
  :source {:code "(defn pprint-tab\n  [kind colnum colinc]\n  (check-enumerated-arg kind #{:line :section :line-relative :section-relative})\n  (throw (js/Error. \"pprint-tab is not yet implemented\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [866 881]},
+          :lines [866 881],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L866-L881"},
+ :usage ["(pprint-tab kind colnum colinc)"],
  :full-name "cljs.pprint/pprint-tab",
- :clj-symbol "clojure.pprint/pprint-tab",
- :docstring "Tab at this point in the pretty printing stream. kind specifies whether the tab\nis :line, :section, :line-relative, or :section-relative.\n\nColnum and colinc specify the target column and the increment to move the target\nforward if the output is already past the original target.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.\n\nTHIS FUNCTION IS NOT YET IMPLEMENTED."}
+ :docstring "Tab at this point in the pretty printing stream. kind specifies whether the tab\nis :line, :section, :line-relative, or :section-relative.\n\nColnum and colinc specify the target column and the increment to move the target\nforward if the output is already past the original target.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.\n\nTHIS FUNCTION IS NOT YET IMPLEMENTED.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint-tab.cljsdoc"}
 
 ```
 

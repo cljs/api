@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-get line rdr)</samp><br>
+
+---
 
  <samp>
 (__read-get__ line rdr)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L85-L90):
+Source code @ [github]():
 
 ```clj
 (defn read-get [line rdr]
@@ -37,13 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:85-90](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L85-L90)</ins>
+
 </pre>
 
 -->
@@ -84,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "read-get",
- :type "function",
  :signature ["[line rdr]"],
+ :name-encode "read-get",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.server/read-get",
  :source {:code "(defn read-get [line rdr]\n  (let [[_ path _] (str/split line #\" \")\n        headers (parse-headers (read-headers rdr))]\n    {:method :get\n     :path path\n     :headers headers}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [85 90]},
+          :lines [85 90],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L85-L90"},
+ :usage ["(read-get line rdr)"],
  :full-name "cljs.repl.server/read-get",
- :full-name-encode "cljs.repl.server/read-get",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/read-get.cljsdoc"}
 
 ```
 

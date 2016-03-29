@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ensure-element e)</samp><br>
+
+---
 
  <samp>
 (__ensure-element__ e)<br>
@@ -27,7 +30,7 @@ Coerce the argument to a dom element if possible.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L107-L112):
+Source code @ [github]():
 
 ```clj
 (defn ensure-element
@@ -41,13 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:107-112](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L107-L112)</ins>
+
 </pre>
 
 -->
@@ -89,17 +86,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "ensure-element",
  :signature ["[e]"],
+ :name-encode "ensure-element",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/ensure-element",
  :source {:code "(defn ensure-element\n  [e]\n  (cond (keyword? e) (get-element e)\n        (string? e) (html->dom e)\n        :else e))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [107 112]},
+          :lines [107 112],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L107-L112"},
+ :usage ["(ensure-element e)"],
  :full-name "clojure.browser.dom/ensure-element",
- :docstring "Coerce the argument to a dom element if possible."}
+ :docstring "Coerce the argument to a dom element if possible.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/ensure-element.cljsdoc"}
 
 ```
 

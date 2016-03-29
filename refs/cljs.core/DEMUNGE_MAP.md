@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L310-L335):
+Source code @ [github]():
 
 ```clj
 (def ^{:jsdoc ["@enum {string}"]}
@@ -52,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:310-335](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L310-L335)</ins>
+
 </pre>
 
 -->
@@ -98,16 +93,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "DEMUNGE_MAP",
+ :name-encode "DEMUNGE_MAP",
+ :history [["+" "1.7.10"]],
  :type "var",
+ :full-name-encode "cljs.core/DEMUNGE_MAP",
  :source {:code "(def ^{:jsdoc [\"@enum {string}\"]}\n  DEMUNGE_MAP\n  #js {\"_\"             \"-\"\n       \"_COLON_\"       \":\"\n       \"_PLUS_\"        \"+\"\n       \"_GT_\"          \">\"\n       \"_LT_\"          \"<\"\n       \"_EQ_\"          \"=\"\n       \"_TILDE_\"       \"~\"\n       \"_BANG_\"        \"!\"\n       \"_CIRCA_\"       \"@\"\n       \"_SHARP_\"       \"#\"\n       \"_SINGLEQUOTE_\" \"'\"\n       \"_DOUBLEQUOTE_\" \"\\\\\\\"\"\n       \"_PERCENT_\"     \"%\"\n       \"_CARET_\"       \"^\"\n       \"_AMPERSAND_\"   \"&\"\n       \"_STAR_\"        \"*\"\n       \"_BAR_\"         \"|\"\n       \"_LBRACE_\"      \"{\"\n       \"_RBRACE_\"      \"}\"\n       \"_LBRACK_\"      \"[\"\n       \"_RBRACK_\"      \"]\"\n       \"_SLASH_\"       \"/\"\n       \"_BSLASH_\"      \"\\\\\\\\\"\n       \"_QMARK_\"       \"?\"})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [310 335]},
+          :lines [310 335],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L310-L335"},
  :full-name "cljs.core/DEMUNGE_MAP",
- :full-name-encode "cljs.core/DEMUNGE_MAP",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/DEMUNGE_MAP.cljsdoc"}
 
 ```
 

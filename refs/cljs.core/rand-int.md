@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(rand-int n)</samp><br>
+
+---
 
  <samp>
 (__rand-int__ n)<br>
@@ -40,7 +43,7 @@ Returns a random integer between 0 (inclusive) and n (exclusive).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9652-L9654):
+Source code @ [github]():
 
 ```clj
 (defn rand-int
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9652-9654](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9652-L9654)</ins>
+
 </pre>
 
 -->
@@ -102,19 +100,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "rand-int",
  :signature ["[n]"],
+ :name-encode "rand-int",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/rand-int",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/rand-int"},
  :related ["cljs.core/rand"],
  :full-name-encode "cljs.core/rand-int",
  :source {:code "(defn rand-int\n  [n] (Math/floor (* (Math/random) n)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9652 9654]},
+          :lines [9652 9654],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9652-L9654"},
+ :usage ["(rand-int n)"],
  :full-name "cljs.core/rand-int",
- :clj-symbol "clojure.core/rand-int",
- :docstring "Returns a random integer between 0 (inclusive) and n (exclusive)."}
+ :docstring "Returns a random integer between 0 (inclusive) and n (exclusive).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/rand-int.cljsdoc"}
 
 ```
 

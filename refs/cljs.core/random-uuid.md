@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(random-uuid)</samp><br>
+
+---
 
  <samp>
 (__random-uuid__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10111-L10122):
+Source code @ [github]():
 
 ```clj
 (defn random-uuid []
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10111-10122](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10111-L10122)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "random-uuid",
- :type "function",
  :signature ["[]"],
+ :name-encode "random-uuid",
+ :history [["+" "0.0-3308"]],
+ :type "function",
+ :full-name-encode "cljs.core/random-uuid",
  :source {:code "(defn random-uuid []\n  (letfn [(hex [] (.toString (rand-int 16) 16))]\n    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 16))) 16)]\n      (uuid\n        (str (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex) \"-\"\n             \"4\"   (hex) (hex) (hex) \"-\"\n             rhex  (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10111 10122]},
+          :lines [10111 10122],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10111-L10122"},
+ :usage ["(random-uuid)"],
  :full-name "cljs.core/random-uuid",
- :full-name-encode "cljs.core/random-uuid",
- :history [["+" "0.0-3308"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/random-uuid.cljsdoc"}
 
 ```
 

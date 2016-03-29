@@ -18,7 +18,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L17-L18):
+Source code @ [github]():
 
 ```clj
 (defprotocol EventType
@@ -29,12 +29,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
-└── src
-    └── cljs
-        └── clojure
-            └── browser
-                └── <ins>[event.cljs:17-18](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/clojure/browser/event.cljs#L17-L18)</ins>
+
 </pre>
 
 -->

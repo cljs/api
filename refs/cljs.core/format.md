@@ -6,12 +6,12 @@
 <tr>
 <td>function</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1443"><img valign="middle" alt="[+] 0.0-1443" title="Added in 0.0-1443" src="https://img.shields.io/badge/+-0.0--1443-lightgrey.svg"></a> <a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1885"><img valign="middle" alt="[×] 0.0-1885" title="Removed in 0.0-1885" src="https://img.shields.io/badge/×-0.0--1885-red.svg"></a> </td>
-<td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/format</samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/format)
-</td>
 </tr>
 </table>
 
+<samp>(format fmt & args)</samp><br>
+
+---
 
  <samp>
 (__format__ fmt & args)<br>
@@ -30,7 +30,7 @@ Formats a string using goog.string.format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1771-L1774):
+Source code @ [github]():
 
 ```clj
 (defn format
@@ -42,11 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1878/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1878
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:1771-1774](https://github.com/clojure/clojurescript/blob/r1878/src/cljs/cljs/core.cljs#L1771-L1774)</ins>
+
 </pre>
 
 -->
@@ -57,9 +53,6 @@ clojurescript @ r1878
 
 ###### External doc links:
 
-[`clojure.core/format` @ clojuredocs](http://clojuredocs.org/clojure.core/format)<br>
-[`clojure.core/format` @ grimoire](http://conj.io/store/v1/org.clojure/clojure/1.7.0-beta3/clj/clojure.core/format/)<br>
-[`clojure.core/format` @ crossclj](http://crossclj.info/fun/clojure.core/format.html)<br>
 [`cljs.core/format` @ crossclj](http://crossclj.info/fun/cljs.core.cljs/format.html)<br>
 
 ---
@@ -100,6 +93,7 @@ The API data for this symbol:
           :tag "r1878",
           :filename "src/cljs/cljs/core.cljs",
           :lines [1771 1774]},
+ :usage ["(format fmt & args)"],
  :full-name "cljs.core/format",
  :clj-symbol "clojure.core/format",
  :docstring "Formats a string using goog.string.format.",

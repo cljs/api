@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(filterv pred coll)</samp><br>
+
+---
 
  <samp>
 (__filterv__ pred coll)<br>
@@ -38,7 +41,7 @@ Returns a vector of the items in coll for which
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4640-L4647):
+Source code @ [github]():
 
 ```clj
 (defn filterv
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4640-4647](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4640-L4647)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "filterv",
  :signature ["[pred coll]"],
+ :name-encode "filterv",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/filterv",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/filterv"},
  :full-name-encode "cljs.core/filterv",
  :source {:code "(defn filterv\n  [pred coll]\n  (-> (reduce (fn [v o] (if (pred o) (conj! v o) v))\n              (transient [])\n              coll)\n      persistent!))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4640 4647]},
+          :lines [4640 4647],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4640-L4647"},
+ :usage ["(filterv pred coll)"],
  :full-name "cljs.core/filterv",
- :clj-symbol "clojure.core/filterv",
- :docstring "Returns a vector of the items in coll for which\n(pred item) returns true. pred must be free of side-effects."}
+ :docstring "Returns a vector of the items in coll for which\n(pred item) returns true. pred must be free of side-effects.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/filterv.cljsdoc"}
 
 ```
 

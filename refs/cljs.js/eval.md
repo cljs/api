@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(eval state form cb)</samp><br>
+<samp>(eval state form opts cb)</samp><br>
+
+---
 
  <samp>
 (__eval__ state form cb)<br>
@@ -48,7 +52,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L571-L601):
+Source code @ [github]():
 
 ```clj
 (defn eval
@@ -69,12 +73,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:571-601](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L571-L601)</ins>
+
 </pre>
 
 -->
@@ -116,17 +115,21 @@ The API data for this symbol:
 {:ns "cljs.js",
  :name "eval",
  :signature ["[state form cb]" "[state form opts cb]"],
+ :name-encode "eval",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.js/eval",
  :source {:code "(defn eval\n  ([state form cb]\n   (eval state form nil cb))\n  ([state form opts cb]\n   (eval*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (:analyze-deps opts true)\n      :*load-macros*  (:load-macros opts true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     form opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [571 601]},
+          :lines [571 601],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L571-L601"},
+ :usage ["(eval state form cb)" "(eval state form opts cb)"],
  :full-name "cljs.js/eval",
- :docstring "Evaluate a single ClojureScript form. The parameters:\n\nstate (atom)\n  the compiler state\n\nform (s-expr)\n  the ClojureScript source\n\nopts (map)\n  compilation options.\n\n  :eval - the eval function to invoke, see *eval-fn*\n  :load - library resolution function, see *load-fn*\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value with the result of evalution. If unsuccessful the map will\n  contain a key :error with an ex-info instance describing the cause of\n  failure."}
+ :docstring "Evaluate a single ClojureScript form. The parameters:\n\nstate (atom)\n  the compiler state\n\nform (s-expr)\n  the ClojureScript source\n\nopts (map)\n  compilation options.\n\n  :eval - the eval function to invoke, see *eval-fn*\n  :load - library resolution function, see *load-fn*\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value with the result of evalution. If unsuccessful the map will\n  contain a key :error with an ex-info instance describing the cause of\n  failure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/eval.cljsdoc"}
 
 ```
 

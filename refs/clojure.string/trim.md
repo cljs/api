@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(trim s)</samp><br>
+
+---
 
  <samp>
 (__trim__ s)<br>
@@ -35,7 +38,7 @@ Removes whitespace from both ends of string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L165-L168):
+Source code @ [github]():
 
 ```clj
 (defn trim
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:165-168](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L165-L168)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "trim",
  :signature ["[s]"],
+ :name-encode "trim",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/trim",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/trim"},
  :full-name-encode "clojure.string/trim",
  :source {:code "(defn trim\n  [s]\n  (gstring/trim s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [165 168]},
+          :lines [165 168],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L165-L168"},
+ :usage ["(trim s)"],
  :full-name "clojure.string/trim",
- :clj-symbol "clojure.string/trim",
- :docstring "Removes whitespace from both ends of string."}
+ :docstring "Removes whitespace from both ends of string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/trim.cljsdoc"}
 
 ```
 

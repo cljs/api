@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(write-out object)</samp><br>
+
+---
 
  <samp>
 (__write-out__ object)<br>
@@ -39,7 +42,7 @@ Normal library clients should use the standard "write" interface.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L724-L746):
+Source code @ [github]():
 
 ```clj
 (defn write-out
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:724-746](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L724-L746)</ins>
+
 </pre>
 
 -->
@@ -111,18 +109,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "write-out",
  :signature ["[object]"],
+ :name-encode "write-out",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/write-out",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/write-out"},
  :full-name-encode "cljs.pprint/write-out",
  :source {:code "(defn write-out\n  [object]\n  (let [length-reached (and *current-length*\n                            *print-length*\n                            (>= *current-length* *print-length*))]\n    (if-not *print-pretty*\n      (pr object)\n      (if length-reached\n        (-write *out* \"...\") ;;TODO could this (incorrectly) print ... on the next line?\n        (do\n          (if *current-length* (set! *current-length* (inc *current-length*)))\n          (*print-pprint-dispatch* object))))\n    length-reached))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [724 746]},
+          :lines [724 746],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L724-L746"},
+ :usage ["(write-out object)"],
  :full-name "cljs.pprint/write-out",
- :clj-symbol "clojure.pprint/write-out",
- :docstring "Write an object to *out* subject to the current bindings of the printer control\nvariables. Use the kw-args argument to override individual variables for this call (and\nany recursive calls).\n\n*out* must be a PrettyWriter if pretty printing is enabled. This is the responsibility\nof the caller.\n\nThis method is primarily intended for use by pretty print dispatch functions that\nalready know that the pretty printer will have set up their environment appropriately.\nNormal library clients should use the standard \"write\" interface. "}
+ :docstring "Write an object to *out* subject to the current bindings of the printer control\nvariables. Use the kw-args argument to override individual variables for this call (and\nany recursive calls).\n\n*out* must be a PrettyWriter if pretty printing is enabled. This is the responsibility\nof the caller.\n\nThis method is primarily intended for use by pretty print dispatch functions that\nalready know that the pretty printer will have set up their environment appropriately.\nNormal library clients should use the standard \"write\" interface. ",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/write-out.cljsdoc"}
 
 ```
 

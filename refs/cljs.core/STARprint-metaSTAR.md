@@ -28,7 +28,7 @@ Defaults to false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L89-L95):
+Source code @ [github]():
 
 ```clj
 (def
@@ -44,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:89-95](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L89-L95)</ins>
+
 </pre>
 
 -->
@@ -93,18 +88,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "*print-meta*",
+ :name-encode "STARprint-metaSTAR",
  :history [["+" "0.0-927"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.core/*print-meta*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/*print-meta*"},
  :full-name-encode "cljs.core/STARprint-metaSTAR",
  :source {:code "(def\n  ^{:dynamic true\n    :doc \"If set to logical true, when printing an object, its metadata will also\n  be printed in a form that can be read back by the reader.\n\n  Defaults to false.\"}\n  *print-meta* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [89 95]},
+          :lines [89 95],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L89-L95"},
  :full-name "cljs.core/*print-meta*",
- :clj-symbol "clojure.core/*print-meta*",
- :docstring "If set to logical true, when printing an object, its metadata will also\nbe printed in a form that can be read back by the reader.\n\nDefaults to false."}
+ :docstring "If set to logical true, when printing an object, its metadata will also\nbe printed in a form that can be read back by the reader.\n\nDefaults to false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-metaSTAR.cljsdoc"}
 
 ```
 

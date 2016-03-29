@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(binding bindings & body)</samp><br>
+
+---
 
  <samp>
 (__binding__ bindings & body)<br>
@@ -72,7 +75,7 @@ before the vars are bound to their new values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2048-L2059):
+Source code @ [github]():
 
 ```clj
 (core/defmacro binding
@@ -86,12 +89,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2048-2059](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2048-L2059)</ins>
+
 </pre>
 
 -->
@@ -137,21 +135,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "binding",
  :signature ["[bindings & body]"],
+ :name-encode "binding",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/binding",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/binding"},
  :related ["cljs.core/let"],
  :full-name-encode "cljs.core/binding",
  :source {:code "(core/defmacro binding\n  [bindings & body]\n  (core/let [names (take-nth 2 bindings)]\n    (cljs.analyzer/confirm-bindings &env names)\n    `(with-redefs ~bindings ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2048 2059]},
+          :lines [2048 2059],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2048-L2059"},
+ :usage ["(binding bindings & body)"],
  :examples [{:id "7dd17f",
              :content "```clj\n(def ^:dynamic *foo* 1)\n\n(defn do-something []\n  (println *foo*))\n\n(binding [*foo* 2]\n  (do-something))\n;;=> prints 2\n\n*foo*\n;;=> 1\n```"}],
  :full-name "cljs.core/binding",
- :clj-symbol "clojure.core/binding",
- :docstring "binding => var-symbol init-expr\n\nCreates new bindings for the (already-existing) vars, with the\nsupplied initial values, executes the exprs in an implicit do, then\nre-establishes the bindings that existed before.  The new bindings\nare made in parallel (unlike let); all init-exprs are evaluated\nbefore the vars are bound to their new values."}
+ :docstring "binding => var-symbol init-expr\n\nCreates new bindings for the (already-existing) vars, with the\nsupplied initial values, executes the exprs in an implicit do, then\nre-establishes the bindings that existed before.  The new bindings\nare made in parallel (unlike let); all init-exprs are evaluated\nbefore the vars are bound to their new values.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/binding.cljsdoc"}
 
 ```
 

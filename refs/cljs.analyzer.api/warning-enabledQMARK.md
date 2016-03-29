@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(warning-enabled? warning-type)</samp><br>
+
+---
 
  <samp>
 (__warning-enabled?__ warning-type)<br>
@@ -27,7 +30,7 @@ Test if the given warning-type is enabled.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L43-L46):
+Source code @ [github]():
 
 ```clj
 (defn warning-enabled?
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:43-46](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L43-L46)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "warning-enabled?",
  :signature ["[warning-type]"],
+ :name-encode "warning-enabledQMARK",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/warning-enabledQMARK",
  :source {:code "(defn warning-enabled?\n  [warning-type]\n  (ana/*cljs-warnings* warning-type))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [43 46]},
+          :lines [43 46],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L43-L46"},
+ :usage ["(warning-enabled? warning-type)"],
  :full-name "cljs.analyzer.api/warning-enabled?",
- :docstring "Test if the given warning-type is enabled."}
+ :docstring "Test if the given warning-type is enabled.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/warning-enabledQMARK.cljsdoc"}
 
 ```
 

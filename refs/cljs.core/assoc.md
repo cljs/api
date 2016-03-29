@@ -13,6 +13,10 @@ _known as "associate"_
 </tr>
 </table>
 
+<samp>(assoc coll k v)</samp><br>
+<samp>(assoc coll k v & kvs)</samp><br>
+
+---
 
  <samp>
 (__assoc__ coll k v)<br>
@@ -94,7 +98,7 @@ contains val at index.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1822-L1835):
+Source code @ [github]():
 
 ```clj
 (defn assoc
@@ -113,12 +117,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1822-1835](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1822-L1835)</ins>
+
 </pre>
 
 -->
@@ -164,24 +163,29 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "assoc",
  :signature ["[coll k v]" "[coll k v & kvs]"],
+ :name-encode "assoc",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/assoc",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/assoc"},
  :related ["cljs.core/assoc-in" "cljs.core/dissoc" "cljs.core/merge"],
  :full-name-encode "cljs.core/assoc",
  :source {:code "(defn assoc\n  ([coll k v]\n    (if-not (nil? coll)\n      (-assoc coll k v)\n      (hash-map k v)))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1822 1835]},
+          :lines [1822 1835],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1822-L1835"},
+ :usage ["(assoc coll k v)" "(assoc coll k v & kvs)"],
  :examples [{:id "2fa7e0",
              :content "```clj\n(def my-map {:foo 1})\n\n(assoc my-map :foo 2)\n;;=> {:foo 2}\n\n(assoc my-map :bar 2)\n;;=> {:foo 1 :bar 2}\n\n(assoc my-map :a 3 :b 4 :c 5 :d 6)\n;;=> {:foo 1 :a 3 :b 4 :c 5 :d 6}\n\n;; you must pass a value for every key\n(assoc my-map :foo)\n;;=> WARNING: Wrong number of args (2) passed to cljs.core/assoc\n```"}
             {:id "c06eac",
              :content "```clj\n(def my-vec [1 2 3])\n\n(assoc my-vec 0 \"foo\")\n;;=> [\"foo\" 2 3]\n\n(assoc my-vec 3 \"foo\")\n;;=> Error: Index 3 out of bounds  [0,0]\n```"}],
  :known-as "associate",
  :full-name "cljs.core/assoc",
- :clj-symbol "clojure.core/assoc",
- :docstring "assoc[iate]. When applied to a map, returns a new map of the\nsame (hashed/sorted) type, that contains the mapping of key(s) to\nval(s). When applied to a vector, returns a new vector that\ncontains val at index."}
+ :docstring "assoc[iate]. When applied to a map, returns a new map of the\nsame (hashed/sorted) type, that contains the mapping of key(s) to\nval(s). When applied to a vector, returns a new vector that\ncontains val at index.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/assoc.cljsdoc"}
 
 ```
 

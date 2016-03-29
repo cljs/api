@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(lefts loc)</samp><br>
+
+---
 
  <samp>
 (__lefts__ loc)<br>
@@ -30,7 +33,7 @@ Returns a seq of the left siblings of this loc
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L87-L90):
+Source code @ [github]():
 
 ```clj
 (defn lefts
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:87-90](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L87-L90)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "lefts",
  :signature ["[loc]"],
+ :name-encode "lefts",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/lefts",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/lefts"},
  :full-name-encode "clojure.zip/lefts",
  :source {:code "(defn lefts\n  [loc]\n    (seq (:l (loc 1))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [87 90]},
+          :lines [87 90],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L87-L90"},
+ :usage ["(lefts loc)"],
  :full-name "clojure.zip/lefts",
- :clj-symbol "clojure.zip/lefts",
- :docstring "Returns a seq of the left siblings of this loc"}
+ :docstring "Returns a seq of the left siblings of this loc",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/lefts.cljsdoc"}
 
 ```
 

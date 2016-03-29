@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(Eduction. xform coll)</samp><br>
+
+---
 
  <samp>
 (__Eduction.__ xform coll)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9502-L9524):
+Source code @ [github]():
 
 ```clj
 (deftype Eduction [xform coll]
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9502-9524](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9502-L9524)</ins>
+
 </pre>
 
 -->
@@ -100,17 +98,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "Eduction",
- :type "type",
  :signature ["[xform coll]"],
+ :name-encode "Eduction",
+ :history [["+" "0.0-2371"]],
+ :type "type",
+ :full-name-encode "cljs.core/Eduction",
  :source {:code "(deftype Eduction [xform coll]\n  Object\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  ISequential\n\n  ISeqable\n  (-seq [_] (seq (sequence xform coll)))\n\n  IReduce\n  (-reduce [_ f] (transduce xform (completing f) coll))\n  (-reduce [_ f init] (transduce xform (completing f) init coll))\n\n  IPrintWithWriter\n  (-pr-writer [coll writer opts]\n    (pr-sequential-writer writer pr-writer \"(\" \" \" \")\" opts coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9502 9524]},
+          :lines [9502 9524],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9502-L9524"},
+ :usage ["(Eduction. xform coll)"],
  :full-name "cljs.core/Eduction",
- :full-name-encode "cljs.core/Eduction",
- :history [["+" "0.0-2371"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Eduction.cljsdoc"}
 
 ```
 

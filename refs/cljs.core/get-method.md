@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(get-method multifn dispatch-val)</samp><br>
+
+---
 
  <samp>
 (__get-method__ multifn dispatch-val)<br>
@@ -31,7 +34,7 @@ that would apply to that value, or nil if none apply and no default
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10065-L10068):
+Source code @ [github]():
 
 ```clj
 (defn get-method
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10065-10068](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10065-L10068)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "get-method",
  :signature ["[multifn dispatch-val]"],
+ :name-encode "get-method",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/get-method",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/get-method"},
  :full-name-encode "cljs.core/get-method",
  :source {:code "(defn get-method\n  [multifn dispatch-val] (-get-method multifn dispatch-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10065 10068]},
+          :lines [10065 10068],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10065-L10068"},
+ :usage ["(get-method multifn dispatch-val)"],
  :full-name "cljs.core/get-method",
- :clj-symbol "clojure.core/get-method",
- :docstring "Given a multimethod and a dispatch value, returns the dispatch fn\nthat would apply to that value, or nil if none apply and no default"}
+ :docstring "Given a multimethod and a dispatch value, returns the dispatch fn\nthat would apply to that value, or nil if none apply and no default",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/get-method.cljsdoc"}
 
 ```
 

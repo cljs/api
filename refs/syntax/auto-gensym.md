@@ -108,8 +108,11 @@ The API data for this symbol:
 
 ```clj
 {:description "(Only intended for use in a [doc:syntax/syntax-quote].)\n\n``foo#` => `foo__135__auto__`\n\nAuto-generates a unique symbol with the given prefix, particularly one that\nwill not shadow any existing symbol in its resulting scope.  This is intended\nas a convenience for creating hygienic macros without calling\n[doc:cljs.core/gensym] directly.\n\nEvery symbol matching a unique `foo#` symbol within a syntax quoted form will\nbe replaced with the same generated symbol.\n\n``(foo# foo#)` => `(foo__138__auto__ foo__138__auto__)`\n\nNamespace-qualified symbols `foo/bar#` are not replaced.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#syntax-quote"},
  :ns "syntax",
  :name "auto-gensym",
+ :name-encode "auto-gensym",
  :history [["+" "0.0-927"]],
  :type "special character",
  :related ["cljs.core/gensym" "syntax/syntax-quote"],
@@ -121,7 +124,7 @@ The API data for this symbol:
              :content "Create safe local bindings:\n\n```clj\n`(let [x# 1]\n   (+ x# 2))\n;;=> (cljs.user/let [x__146__auto__ 1] (cljs.user/+ x__146__auto__ 2))\n```"}],
  :full-name "syntax/auto-gensym",
  :display "# auto-gensym",
- :clj-doc "http://clojure.org/reader#syntax-quote"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/auto-gensym.cljsdoc"}
 
 ```
 

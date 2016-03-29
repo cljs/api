@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(macros c)</samp><br>
+
+---
 
  <samp>
 (__macros__ c)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L409-L427):
+Source code @ [github]():
 
 ```clj
 (defn macros [c]
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:409-427](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L409-L427)</ins>
+
 </pre>
 
 -->
@@ -96,17 +94,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "macros",
- :type "function",
  :signature ["[c]"],
+ :name-encode "macros",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/macros",
  :source {:code "(defn macros [c]\n  (cond\n   (identical? c \\\") read-string*\n   (identical? c \\:) read-keyword\n   (identical? c \\;) read-comment\n   (identical? c \\') (wrapping-reader 'quote)\n   (identical? c \\@) (wrapping-reader 'deref)\n   (identical? c \\^) read-meta\n   (identical? c \\`) not-implemented\n   (identical? c \\~) not-implemented\n   (identical? c \\() read-list\n   (identical? c \\)) read-unmatched-delimiter\n   (identical? c \\[) read-vector\n   (identical? c \\]) read-unmatched-delimiter\n   (identical? c \\{) read-map\n   (identical? c \\}) read-unmatched-delimiter\n   (identical? c \\\\) read-literal\n   (identical? c \\#) read-dispatch\n   :else nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [409 427]},
+          :lines [409 427],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L409-L427"},
+ :usage ["(macros c)"],
  :full-name "cljs.reader/macros",
- :full-name-encode "cljs.reader/macros",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/macros.cljsdoc"}
 
 ```
 

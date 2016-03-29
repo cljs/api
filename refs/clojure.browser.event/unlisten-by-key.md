@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(unlisten-by-key key)</samp><br>
+
+---
 
  <samp>
 (__unlisten-by-key__ key)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L73-L75):
+Source code @ [github]():
 
 ```clj
 (defn unlisten-by-key
@@ -34,13 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:73-75](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L73-L75)</ins>
+
 </pre>
 
 -->
@@ -81,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "unlisten-by-key",
- :type "function",
  :signature ["[key]"],
+ :name-encode "unlisten-by-key",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/unlisten-by-key",
  :source {:code "(defn unlisten-by-key\n  [key]\n  (events/unlistenByKey key))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [73 75]},
+          :lines [73 75],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L73-L75"},
+ :usage ["(unlisten-by-key key)"],
  :full-name "clojure.browser.event/unlisten-by-key",
- :full-name-encode "clojure.browser.event/unlisten-by-key",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/unlisten-by-key.cljsdoc"}
 
 ```
 

@@ -97,7 +97,7 @@ Destructure vectors can be nested:
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L607-L676):
+Parser code @ [github]():
 
 ```clj
 (core/defn destructure [bindings]
@@ -176,12 +176,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:607-676](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L607-L676)</ins>
+
 </pre>
 
 -->
@@ -216,8 +211,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A helpful shorthand for destructuring a sequence into multiple names.\n\n```clj\n(let [ [a b c]   ;; <-- destructure vector\n       [1 2 3] ]\n  (println a b c))\n;; 1 2 3\n```\n\nUse `& foo` to name the rest of the items in the sequence:\n\n```clj\n(let [ [a b c & d]\n       [1 2 3 4 5] ]\n  (println a b c d))\n;; 1 2 3 (4 5)\n```\n\nUse `:as foo` to name the original value:\n\n```clj\n(let [ [a b c & d :as whole]\n       [1 2 3 4 5] ]\n  whole)\n;;=> [1 2 3 4 5]\n```\n\nUse the special destructure vector in place of any local name binding in the\nfollowing forms:\n\n- `(let [...])`\n- `(fn [...])`\n- `(loop [...])`\n\nDestructure vectors can be nested, even in place of names in [destructure\nmaps][doc:syntax/destructure-map].",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/special_forms#toc18"},
  :ns "syntax",
  :name "destructure-vector",
+ :name-encode "destructure-vector",
  :history [["+" "0.0-927"]],
  :type "binding",
  :related ["syntax/destructure-map"],
@@ -225,9 +223,10 @@ The API data for this symbol:
  :source {:code "(core/defn destructure [bindings]\n  (core/let [bents (partition 2 bindings)\n             pb (core/fn pb [bvec b v]\n                  (core/let [pvec\n                             (core/fn [bvec b val]\n                               (core/let [gvec (gensym \"vec__\")]\n                                 (core/loop [ret (core/-> bvec (conj gvec) (conj val))\n                                             n 0\n                                             bs b\n                                             seen-rest? false]\n                                   (if (seq bs)\n                                     (core/let [firstb (first bs)]\n                                       (core/cond\n                                         (= firstb '&) (recur (pb ret (second bs) (core/list `nthnext gvec n))\n                                                         n\n                                                         (nnext bs)\n                                                         true)\n                                         (= firstb :as) (pb ret (second bs) gvec)\n                                         :else (if seen-rest?\n                                                 (throw\n                                                   #?(:clj (new Exception \"Unsupported binding form, only :as can follow & parameter\")\n                                                      :cljs (new js/Error \"Unsupported binding form, only :as can follow & parameter\")))\n                                                 (recur (pb ret firstb (core/list `nth gvec n nil))\n                                                   (core/inc n)\n                                                   (next bs)\n                                                   seen-rest?))))\n                                     ret))))\n                             pmap\n                             (core/fn [bvec b v]\n                               (core/let [gmap (gensym \"map__\")\n                                          defaults (:or b)]\n                                 (core/loop [ret (core/-> bvec (conj gmap) (conj v)\n                                                   (conj gmap) (conj `(if (implements? ISeq ~gmap) (apply hash-map ~gmap) ~gmap))\n                                                   ((core/fn [ret]\n                                                      (if (:as b)\n                                                        (conj ret (:as b) gmap)\n                                                        ret))))\n                                             bes (reduce\n                                                   (core/fn [bes entry]\n                                                     (reduce #(assoc %1 %2 ((val entry) %2))\n                                                       (dissoc bes (key entry))\n                                                       ((key entry) bes)))\n                                                   (dissoc b :as :or)\n                                                   {:keys #(if (core/keyword? %) % (keyword (core/str %))),\n                                                    :strs core/str, :syms #(core/list `quote %)})]\n                                   (if (seq bes)\n                                     (core/let [bb (key (first bes))\n                                                bk (val (first bes))\n                                                has-default (contains? defaults bb)]\n                                       (recur (pb ret bb (if has-default\n                                                           (core/list `get gmap bk (defaults bb))\n                                                           (core/list `get gmap bk)))\n                                         (next bes)))\n                                     ret))))]\n                    (core/cond\n                      (core/symbol? b) (core/-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))\n                      (core/keyword? b) (core/-> bvec (conj (symbol (name b))) (conj v))\n                      (vector? b) (pvec bvec b v)\n                      (map? b) (pmap bvec b v)\n                      :else (throw\n                              #?(:clj (new Exception (core/str \"Unsupported binding form: \" b))\n                                 :cljs (new js/Error (core/str \"Unsupported binding form: \" b)))))))\n             process-entry (core/fn [bvec b] (pb bvec (first b) (second b)))]\n    (if (every? core/symbol? (map first bents))\n      bindings\n      (core/if-let [kwbs (seq (filter #(core/keyword? (first %)) bents))]\n        (throw\n          #?(:clj (new Exception (core/str \"Unsupported binding key: \" (ffirst kwbs)))\n             :cljs (new js/Error (core/str \"Unsupported binding key: \" (ffirst kwbs)))))\n        (reduce process-entry [] bents)))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [607 676]},
+          :lines [607 676],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L607-L676"},
  :usage ["[arg1 arg2 & args :as name]"],
  :examples [{:id "acab87",
              :content "Use destructure vectors in function parameters:\n\n```clj\n(defn foo [[a b] c]\n  (+ a b c))\n\n(foo [1 2] 3)\n;;=> 6\n```"}
@@ -235,7 +234,7 @@ The API data for this symbol:
              :content "Destructure vectors can be nested:\n\n```clj\n(let [ [[a b] c]\n       [[1 2] 3] ]\n  (println a b c))\n;; 1 2 3\n```"}],
  :full-name "syntax/destructure-vector",
  :display "destructure []",
- :clj-doc "http://clojure.org/special_forms#toc18"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/destructure-vector.cljsdoc"}
 
 ```
 

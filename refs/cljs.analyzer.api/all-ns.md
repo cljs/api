@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(all-ns)</samp><br>
+<samp>(all-ns state)</samp><br>
+
+---
 
  <samp>
 (__all-ns__)<br>
@@ -34,7 +38,7 @@ returns symbols identifying namespaces not Namespace instances.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L152-L158):
+Source code @ [github]():
 
 ```clj
 (defn all-ns
@@ -48,13 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:152-158](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L152-L158)</ins>
+
 </pre>
 
 -->
@@ -99,18 +97,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "all-ns",
  :signature ["[]" "[state]"],
+ :name-encode "all-ns",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/all-ns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/all-ns"},
  :full-name-encode "cljs.analyzer.api/all-ns",
  :source {:code "(defn all-ns\n  ([]\n   (all-ns env/*compiler*))\n  ([state]\n   (keys (get @state ::ana/namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [152 158]},
+          :lines [152 158],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L152-L158"},
+ :usage ["(all-ns)" "(all-ns state)"],
  :full-name "cljs.analyzer.api/all-ns",
- :clj-symbol "clojure.core/all-ns",
- :docstring "Return all namespaces. Analagous to clojure.core/all-ns but\nreturns symbols identifying namespaces not Namespace instances."}
+ :docstring "Return all namespaces. Analagous to clojure.core/all-ns but\nreturns symbols identifying namespaces not Namespace instances.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/all-ns.cljsdoc"}
 
 ```
 

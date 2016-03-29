@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(wrap-error ex)</samp><br>
+
+---
 
  <samp>
 (__wrap-error__ ex)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L100-L101):
+Source code @ [github]():
 
 ```clj
 (defn wrap-error [ex]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:100-101](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L100-L101)</ins>
+
 </pre>
 
 -->
@@ -89,6 +87,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [100 101]},
+ :usage ["(wrap-error ex)"],
  :full-name "cljs.js/wrap-error",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

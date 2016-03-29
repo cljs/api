@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(stop)</samp><br>
+
+---
 
  <samp>
 (__stop__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L180-L181):
+Source code @ [github]():
 
 ```clj
 (defn stop []
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:180-181](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L180-L181)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "stop",
- :type "function",
  :signature ["[]"],
+ :name-encode "stop",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.server/stop",
  :source {:code "(defn stop []\n  (.close (:socket @state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [180 181]},
+          :lines [180 181],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L180-L181"},
+ :usage ["(stop)"],
  :full-name "cljs.repl.server/stop",
- :full-name-encode "cljs.repl.server/stop",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/stop.cljsdoc"}
 
 ```
 

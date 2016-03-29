@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(lazy-cat & colls)</samp><br>
+
+---
 
  <samp>
 (__lazy-cat__ & colls)<br>
@@ -60,7 +63,7 @@ needed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2630-L2637):
+Source code @ [github]():
 
 ```clj
 (core/defmacro lazy-cat
@@ -72,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2630-2637](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2630-L2637)</ins>
+
 </pre>
 
 -->
@@ -123,19 +121,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "lazy-cat",
  :signature ["[& colls]"],
+ :name-encode "lazy-cat",
  :history [["+" "0.0-1803"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/lazy-cat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/lazy-cat"},
  :related ["cljs.core/lazy-seq" "cljs.core/concat"],
  :full-name-encode "cljs.core/lazy-cat",
  :source {:code "(core/defmacro lazy-cat\n  [& colls]\n  `(concat ~@(map #(core/list `lazy-seq %) colls)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2630 2637]},
+          :lines [2630 2637],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2630-L2637"},
+ :usage ["(lazy-cat & colls)"],
  :full-name "cljs.core/lazy-cat",
- :clj-symbol "clojure.core/lazy-cat",
- :docstring "Expands to code which yields a lazy sequence of the concatenation\nof the supplied colls.  Each coll expr is not evaluated until it is\nneeded.\n\n(lazy-cat xs ys zs) === (concat (lazy-seq xs) (lazy-seq ys) (lazy-seq zs))"}
+ :docstring "Expands to code which yields a lazy sequence of the concatenation\nof the supplied colls.  Each coll expr is not evaluated until it is\nneeded.\n\n(lazy-cat xs ys zs) === (concat (lazy-seq xs) (lazy-seq ys) (lazy-seq zs))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/lazy-cat.cljsdoc"}
 
 ```
 

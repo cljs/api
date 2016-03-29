@@ -22,7 +22,7 @@ Protocol for cloning a value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L463-L466):
+Source code @ [github]():
 
 ```clj
 (defprotocol ICloneable
@@ -35,12 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:463-466](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L463-L466)</ins>
+
 </pre>
 
 -->
@@ -81,20 +76,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ICloneable",
+ :name-encode "ICloneable",
  :history [["+" "0.0-2134"]],
  :type "protocol",
  :full-name-encode "cljs.core/ICloneable",
  :source {:code "(defprotocol ICloneable\n  \"Protocol for cloning a value.\"\n  (^clj -clone [value]\n    \"Creates a clone of value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [463 466]},
+          :lines [463 466],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L463-L466"},
  :methods [{:name "-clone",
             :signature ["[value]"],
             :docstring "Creates a clone of value."}],
  :full-name "cljs.core/ICloneable",
- :docstring "Protocol for cloning a value."}
+ :docstring "Protocol for cloning a value.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ICloneable.cljsdoc"}
 
 ```
 

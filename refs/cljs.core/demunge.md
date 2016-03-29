@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(demunge name)</samp><br>
+
+---
 
  <samp>
 (__demunge__ name)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10343-L10348):
+Source code @ [github]():
 
 ```clj
 (defn demunge [name]
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10343-10348](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10343-L10348)</ins>
+
 </pre>
 
 -->
@@ -83,17 +81,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "demunge",
- :type "function",
  :signature ["[name]"],
+ :name-encode "demunge",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.core/demunge",
  :source {:code "(defn demunge [name]\n  ((if (symbol? name) symbol str)\n    (let [name' (str name)]\n      (if (identical? name' \"_DOT__DOT_\")\n        \"..\"\n        (demunge-str (str name))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10343 10348]},
+          :lines [10343 10348],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10343-L10348"},
+ :usage ["(demunge name)"],
  :full-name "cljs.core/demunge",
- :full-name-encode "cljs.core/demunge",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/demunge.cljsdoc"}
 
 ```
 

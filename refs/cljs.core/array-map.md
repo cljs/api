@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(array-map & keyvals)</samp><br>
+
+---
 
  <samp>
 (__array-map__ & keyvals)<br>
@@ -58,7 +61,7 @@ Returns a new array map with supplied mappings.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7961-L7968):
+Function code @ [github]():
 
 ```clj
 (defn array-map
@@ -73,19 +76,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:7961-7968](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7961-L7968)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2395-L2403):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro array-map
@@ -103,12 +101,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2395-2403](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2395-L2403)</ins>
+
 </pre>
 -->
 
@@ -152,8 +145,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "array-map",
  :signature ["[& keyvals]"],
+ :name-encode "array-map",
  :history [["+" "0.0-1211"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/array-map",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/array-map"},
  :related ["cljs.core/assoc"
            "cljs.core/hash-map"
            "cljs.core/sorted-map"],
@@ -161,20 +157,23 @@ The API data for this symbol:
  :source {:code "(defn array-map\n  [& keyvals]\n  (let [arr (if (and (instance? IndexedSeq keyvals) (zero? (.-i keyvals)))\n              (.-arr keyvals)\n              (into-array keyvals))]\n    (.fromArray cljs.core/PersistentArrayMap arr true false)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7961 7968]},
+          :lines [7961 7968],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L7961-L7968"},
  :extra-sources [{:code "(core/defmacro array-map\n  ([] '(.-EMPTY cljs.core/PersistentArrayMap))\n  ([& kvs]\n   (core/let [keys (map first (partition 2 kvs))]\n     (if (core/and (every? #(= (:op %) :constant)\n                     (map #(cljs.analyzer/analyze &env %) keys))\n           (= (count (into #{} keys)) (count keys)))\n       `(cljs.core/PersistentArrayMap. nil ~(clojure.core// (count kvs) 2) (array ~@kvs) nil)\n       `(.fromArray cljs.core/PersistentArrayMap (array ~@kvs) true false)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2395 2403]}],
+                  :lines [2395 2403],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2395-L2403"}],
+ :usage ["(array-map & keyvals)"],
  :examples [{:id "198026",
              :content "```clj\n(array-map :a 10)\n;;=> {:a 10}\n\n(array-map :a 10 :b 20)\n;;=> {:a 10 :b 20}\n```"}],
  :full-name "cljs.core/array-map",
- :clj-symbol "clojure.core/array-map",
- :docstring "keyval => key val\nReturns a new array map with supplied mappings."}
+ :docstring "keyval => key val\nReturns a new array map with supplied mappings.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array-map.cljsdoc"}
 
 ```
 

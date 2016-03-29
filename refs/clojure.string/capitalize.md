@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(capitalize s)</samp><br>
+
+---
 
  <samp>
 (__capitalize__ s)<br>
@@ -37,7 +40,7 @@ characters to lower-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L95-L102):
+Source code @ [github]():
 
 ```clj
 (defn capitalize
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:95-102](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L95-L102)</ins>
+
 </pre>
 
 -->
@@ -103,18 +101,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "capitalize",
  :signature ["[s]"],
+ :name-encode "capitalize",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/capitalize",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/capitalize"},
  :full-name-encode "clojure.string/capitalize",
  :source {:code "(defn capitalize\n  [s]\n  (if (< (count s) 2)\n    (upper-case s)\n    (str (upper-case (subs s 0 1))\n         (lower-case (subs s 1)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [95 102]},
+          :lines [95 102],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L95-L102"},
+ :usage ["(capitalize s)"],
  :full-name "clojure.string/capitalize",
- :clj-symbol "clojure.string/capitalize",
- :docstring "Converts first character of the string to upper-case, all other\ncharacters to lower-case."}
+ :docstring "Converts first character of the string to upper-case, all other\ncharacters to lower-case.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/capitalize.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(reader-error rdr & msg)</samp><br>
+
+---
 
  <samp>
 (__reader-error__ rdr & msg)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L69-L71):
+Source code @ [github]():
 
 ```clj
 (defn reader-error
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:69-71](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L69-L71)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "reader-error",
- :type "function",
  :signature ["[rdr & msg]"],
+ :name-encode "reader-error",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/reader-error",
  :source {:code "(defn reader-error\n  [rdr & msg]\n  (throw (js/Error. (apply str msg))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [69 71]},
+          :lines [69 71],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L69-L71"},
+ :usage ["(reader-error rdr & msg)"],
  :full-name "cljs.reader/reader-error",
- :full-name-encode "cljs.reader/reader-error",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/reader-error.cljsdoc"}
 
 ```
 

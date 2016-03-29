@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(flatmap f)</samp><br>
+<samp>(flatmap f coll)</samp><br>
+
+---
 
  <samp>
 (__flatmap__ f)<br>
@@ -32,7 +36,7 @@ is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8139-L8150):
+Source code @ [github]():
 
 ```clj
 (defn flatmap
@@ -50,11 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2322/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2322
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:8139-8150](https://github.com/clojure/clojurescript/blob/r2322/src/cljs/cljs/core.cljs#L8139-L8150)</ins>
+
 </pre>
 
 -->
@@ -105,6 +105,7 @@ The API data for this symbol:
           :tag "r2322",
           :filename "src/cljs/cljs/core.cljs",
           :lines [8139 8150]},
+ :usage ["(flatmap f)" "(flatmap f coll)"],
  :full-name "cljs.core/flatmap",
  :docstring "maps f over coll and concatenates the results.  Thus function f\nshould return a collection.  Returns a transducer when no collection\nis provided.",
  :removed {:in "0.0-2341", :last-seen "0.0-2322"}}

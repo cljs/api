@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(branch? loc)</samp><br>
+
+---
 
  <samp>
 (__branch?__ loc)<br>
@@ -30,7 +33,7 @@ Returns true if the node at loc is a branch
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L64-L67):
+Source code @ [github]():
 
 ```clj
 (defn branch?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:64-67](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L64-L67)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "branch?",
  :signature ["[loc]"],
+ :name-encode "branchQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/branch?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/branch?"},
  :full-name-encode "clojure.zip/branchQMARK",
  :source {:code "(defn branch?\n  [loc]\n    ((:zip/branch? (meta loc)) (node loc)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [64 67]},
+          :lines [64 67],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L64-L67"},
+ :usage ["(branch? loc)"],
  :full-name "clojure.zip/branch?",
- :clj-symbol "clojure.zip/branch?",
- :docstring "Returns true if the node at loc is a branch"}
+ :docstring "Returns true if the node at loc is a branch",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/branchQMARK.cljsdoc"}
 
 ```
 

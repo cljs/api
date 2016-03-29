@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(test-var-block v)</samp><br>
+
+---
 
  <samp>
 (__test-var-block__ v)<br>
@@ -28,7 +31,7 @@ later execution.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L476-L481):
+Source code @ [github]():
 
 ```clj
 (defn test-var-block
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:476-481](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L476-L481)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "test-var-block",
  :signature ["[v]"],
+ :name-encode "test-var-block",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.test/test-var-block",
  :source {:code "(defn test-var-block\n  [v]\n  (if-let [t (:test (meta v))]\n    (test-var-block* v t)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [476 481]},
+          :lines [476 481],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L476-L481"},
+ :usage ["(test-var-block v)"],
  :full-name "cljs.test/test-var-block",
- :docstring "Like test-var, but returns a block for further composition and\nlater execution."}
+ :docstring "Like test-var, but returns a block for further composition and\nlater execution.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-var-block.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(trimr s)</samp><br>
+
+---
 
  <samp>
 (__trimr__ s)<br>
@@ -35,7 +38,7 @@ Removes whitespace from the right side of string.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L175-L178):
+Source code @ [github]():
 
 ```clj
 (defn trimr
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:175-178](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L175-L178)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "trimr",
  :signature ["[s]"],
+ :name-encode "trimr",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/trimr",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/trimr"},
  :full-name-encode "clojure.string/trimr",
  :source {:code "(defn trimr\n  [s]\n  (gstring/trimRight s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [175 178]},
+          :lines [175 178],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L175-L178"},
+ :usage ["(trimr s)"],
  :full-name "clojure.string/trimr",
- :clj-symbol "clojure.string/trimr",
- :docstring "Removes whitespace from the right side of string."}
+ :docstring "Removes whitespace from the right side of string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/trimr.cljsdoc"}
 
 ```
 

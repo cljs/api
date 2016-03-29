@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(re-matches re s)</samp><br>
+
+---
 
  <samp>
 (__re-matches__ re s)<br>
@@ -35,7 +38,7 @@ Returns the result of (re-find re s) if re fully matches s.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8936-L8945):
+Source code @ [github]():
 
 ```clj
 (defn re-matches
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8936-8945](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8936-L8945)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "re-matches",
  :signature ["[re s]"],
+ :name-encode "re-matches",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/re-matches",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/re-matches"},
  :full-name-encode "cljs.core/re-matches",
  :source {:code "(defn re-matches\n  [re s]\n  (if (string? s)\n    (let [matches (.exec re s)]\n      (when (= (first matches) s)\n        (if (== (count matches) 1)\n          (first matches)\n          (vec matches))))\n    (throw (js/TypeError. \"re-matches must match against a string.\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8936 8945]},
+          :lines [8936 8945],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8936-L8945"},
+ :usage ["(re-matches re s)"],
  :full-name "cljs.core/re-matches",
- :clj-symbol "clojure.core/re-matches",
- :docstring "Returns the result of (re-find re s) if re fully matches s."}
+ :docstring "Returns the result of (re-find re s) if re fully matches s.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/re-matches.cljsdoc"}
 
 ```
 

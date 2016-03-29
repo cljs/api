@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(min-key k x)</samp><br>
+<samp>(min-key k x y)</samp><br>
+<samp>(min-key k x y & more)</samp><br>
+
+---
 
  <samp>
 (__min-key__ k x)<br>
@@ -49,7 +54,7 @@ Returns the x for which (k x), a number, is least.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8555-L8560):
+Source code @ [github]():
 
 ```clj
 (defn min-key
@@ -63,12 +68,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8555-8560](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8555-L8560)</ins>
+
 </pre>
 
 -->
@@ -114,19 +114,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "min-key",
  :signature ["[k x]" "[k x y]" "[k x y & more]"],
+ :name-encode "min-key",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/min-key",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/min-key"},
  :related ["cljs.core/min" "cljs.core/max-key"],
  :full-name-encode "cljs.core/min-key",
  :source {:code "(defn min-key\n  ([k x] x)\n  ([k x y] (if (< (k x) (k y)) x y))\n  ([k x y & more]\n     (reduce #(min-key k %1 %2) (min-key k x y) more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8555 8560]},
+          :lines [8555 8560],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8555-L8560"},
+ :usage ["(min-key k x)" "(min-key k x y)" "(min-key k x y & more)"],
  :full-name "cljs.core/min-key",
- :clj-symbol "clojure.core/min-key",
- :docstring "Returns the x for which (k x), a number, is least."}
+ :docstring "Returns the x for which (k x), a number, is least.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/min-key.cljsdoc"}
 
 ```
 

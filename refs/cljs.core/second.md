@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(second coll)</samp><br>
+
+---
 
  <samp>
 (__second__ coll)<br>
@@ -45,7 +48,7 @@ Same as (first (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1601-L1604):
+Source code @ [github]():
 
 ```clj
 (defn second
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1601-1604](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1601-L1604)</ins>
+
 </pre>
 
 -->
@@ -108,8 +106,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "second",
  :signature ["[coll]"],
+ :name-encode "second",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/second",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/second"},
  :related ["cljs.core/first"
            "cljs.core/nth"
            "cljs.core/fnext"
@@ -118,12 +119,14 @@ The API data for this symbol:
  :source {:code "(defn second\n  [coll]\n  (first (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1601 1604]},
+          :lines [1601 1604],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1601-L1604"},
+ :usage ["(second coll)"],
  :full-name "cljs.core/second",
- :clj-symbol "clojure.core/second",
- :docstring "Same as (first (next x))"}
+ :docstring "Same as (first (next x))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/second.cljsdoc"}
 
 ```
 

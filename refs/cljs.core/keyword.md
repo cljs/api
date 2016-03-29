@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(keyword name)</samp><br>
+<samp>(keyword ns name)</samp><br>
+
+---
 
  <samp>
 (__keyword__ name)<br>
@@ -34,7 +38,7 @@ in the keyword strings, it will be added automatically.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3083-L3095):
+Source code @ [github]():
 
 ```clj
 (defn keyword
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3083-3095](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3083-L3095)</ins>
+
 </pre>
 
 -->
@@ -104,18 +103,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "keyword",
  :signature ["[name]" "[ns name]"],
+ :name-encode "keyword",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/keyword",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/keyword"},
  :full-name-encode "cljs.core/keyword",
  :source {:code "(defn keyword\n  ([name] (cond\n            (keyword? name) name\n            (symbol? name) (Keyword.\n                             (cljs.core/namespace name)\n                             (cljs.core/name name) (.-str name) nil)\n            (string? name) (let [parts (.split name \"/\")]\n                             (if (== (alength parts) 2)\n                               (Keyword. (aget parts 0) (aget parts 1) name nil)\n                               (Keyword. nil (aget parts 0) name nil)))))\n  ([ns name] (Keyword. ns name (str (when ns (str ns \"/\")) name) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3083 3095]},
+          :lines [3083 3095],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3083-L3095"},
+ :usage ["(keyword name)" "(keyword ns name)"],
  :full-name "cljs.core/keyword",
- :clj-symbol "clojure.core/keyword",
- :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically."}
+ :docstring "Returns a Keyword with the given namespace and name.  Do not use :\nin the keyword strings, it will be added automatically.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/keyword.cljsdoc"}
 
 ```
 

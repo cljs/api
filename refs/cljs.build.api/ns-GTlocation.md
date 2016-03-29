@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(ns->location ns)</samp><br>
+<samp>(ns->location ns compiler-env)</samp><br>
+
+---
 
  <samp>
 (__ns->location__ ns)<br>
@@ -33,7 +37,7 @@ uri of the corresponding source regardless of the source language extension:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L130-L141):
+Source code @ [github]():
 
 ```clj
 (defn ns->location
@@ -50,13 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:130-141](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L130-L141)</ins>
+
 </pre>
 
 -->
@@ -98,17 +96,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "ns->location",
  :signature ["[ns]" "[ns compiler-env]"],
+ :name-encode "ns-GTlocation",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/ns-GTlocation",
  :source {:code "(defn ns->location\n  ([ns]\n   (ns->location ns\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))))\n  ([ns compiler-env]\n   (closure/source-for-namespace ns compiler-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [130 141]},
+          :lines [130 141],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L130-L141"},
+ :usage ["(ns->location ns)" "(ns->location ns compiler-env)"],
  :full-name "cljs.build.api/ns->location",
- :docstring "Given a namespace and compilation environment return the relative path and\nuri of the corresponding source regardless of the source language extension:\n.cljs, .cljc, .js. Returns a map containing :relative-path a string, and\n:uri a URL."}
+ :docstring "Given a namespace and compilation environment return the relative path and\nuri of the corresponding source regardless of the source language extension:\n.cljs, .cljc, .js. Returns a map containing :relative-path a string, and\n:uri a URL.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/ns-GTlocation.cljsdoc"}
 
 ```
 

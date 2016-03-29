@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(create-client-js-file opts file-path)</samp><br>
+
+---
 
  <samp>
 (__create-client-js-file__ opts file-path)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L232-L236):
+Source code @ [github]():
 
 ```clj
 (defn create-client-js-file [opts file-path]
@@ -36,13 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:232-236](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L232-L236)</ins>
+
 </pre>
 
 -->
@@ -83,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "create-client-js-file",
- :type "function",
  :signature ["[opts file-path]"],
+ :name-encode "create-client-js-file",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/create-client-js-file",
  :source {:code "(defn create-client-js-file [opts file-path]\n  (let [file (io/file file-path)]\n    (when (not (.exists file))\n      (spit file (compile-client-js opts)))\n    file))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [232 236]},
+          :lines [232 236],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L232-L236"},
+ :usage ["(create-client-js-file opts file-path)"],
  :full-name "cljs.repl.browser/create-client-js-file",
- :full-name-encode "cljs.repl.browser/create-client-js-file",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/create-client-js-file.cljsdoc"}
 
 ```
 

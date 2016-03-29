@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(seq coll)</samp><br>
+
+---
 
  <samp>
 (__seq__ coll)<br>
@@ -47,7 +50,7 @@ Strings.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1085-L1106):
+Source code @ [github]():
 
 ```clj
 (defn ^seq seq
@@ -75,12 +78,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1085-1106](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1085-L1106)</ins>
+
 </pre>
 
 -->
@@ -127,19 +125,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "seq",
  :signature ["[coll]"],
+ :name-encode "seq",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/seq",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/seq"},
  :related ["cljs.core/seq?" "cljs.core/empty?"],
  :full-name-encode "cljs.core/seq",
  :source {:code "(defn ^seq seq\n  [coll]\n  (when-not (nil? coll)\n    (cond\n      (implements? ISeqable coll)\n      (-seq ^not-native coll)\n\n      (array? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0 nil))\n\n      (string? coll)\n      (when-not (zero? (alength coll))\n        (IndexedSeq. coll 0 nil))\n\n      (native-satisfies? ISeqable coll)\n      (-seq coll)\n\n      :else (throw (js/Error. (str coll \" is not ISeqable\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1085 1106]},
+          :lines [1085 1106],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1085-L1106"},
+ :usage ["(seq coll)"],
  :full-name "cljs.core/seq",
- :clj-symbol "clojure.core/seq",
- :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings."}
+ :docstring "Returns a seq on the collection. If the collection is\nempty, returns nil.  (seq nil) returns nil. seq also works on\nStrings.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/seq.cljsdoc"}
 
 ```
 

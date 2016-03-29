@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ArrayNodeIterator. arr i next-iter)</samp><br>
+
+---
 
  <samp>
 (__ArrayNodeIterator.__ arr i next-iter)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6599-L6617):
+Source code @ [github]():
 
 ```clj
 (deftype ArrayNodeIterator [arr ^:mutable i ^:mutable next-iter]
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6599-6617](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6599-L6617)</ins>
+
 </pre>
 
 -->
@@ -96,17 +94,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ArrayNodeIterator",
- :type "type",
  :signature ["[arr i next-iter]"],
+ :name-encode "ArrayNodeIterator",
+ :history [["+" "1.7.28"]],
+ :type "type",
+ :full-name-encode "cljs.core/ArrayNodeIterator",
  :source {:code "(deftype ArrayNodeIterator [arr ^:mutable i ^:mutable next-iter]\n  Object\n  (hasNext [this]\n    (let [len (alength arr)]\n      (loop []\n        (if-not (and  (some? next-iter) ^boolean (.hasNext next-iter))\n          (if (< i len)\n            (let [node (aget arr i)]\n              (set! i (inc i))\n              (when (some? node)\n                (set! next-iter (-iterator node)))\n              (recur))\n            false)\n          true))))\n  (next [this]\n    (if ^boolean (.hasNext this)\n      (.next next-iter)\n      (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6599 6617]},
+          :lines [6599 6617],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6599-L6617"},
+ :usage ["(ArrayNodeIterator. arr i next-iter)"],
  :full-name "cljs.core/ArrayNodeIterator",
- :full-name-encode "cljs.core/ArrayNodeIterator",
- :history [["+" "1.7.28"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ArrayNodeIterator.cljsdoc"}
 
 ```
 

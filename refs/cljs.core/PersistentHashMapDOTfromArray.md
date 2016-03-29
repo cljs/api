@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentHashMap.fromArray arr no-clone)</samp><br>
+
+---
 
  <samp>
 (__PersistentHashMap.fromArray__ arr no-clone)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7131-L7139):
+Source code @ [github]():
 
 ```clj
 (set! (.-fromArray PersistentHashMap)
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:7131-7139](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L7131-L7139)</ins>
+
 </pre>
 
 -->
@@ -87,6 +85,7 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "PersistentHashMap.fromArray",
  :signature ["[arr no-clone]"],
+ :name-encode "PersistentHashMapDOTfromArray",
  :history [["+" "0.0-2719"]],
  :parent-type "PersistentHashMap",
  :type "function",
@@ -94,10 +93,13 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentHashMap)\n  (fn [arr ^boolean no-clone]\n    (let [arr (if no-clone arr (aclone arr))\n          len (alength arr)]\n      (loop [i 0 ret (transient (.-EMPTY PersistentHashMap))]\n        (if (< i len)\n          (recur (+ i 2)\n            (-assoc! ret (aget arr i) (aget arr (inc i))))\n          (-persistent! ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [7131 7139]},
- :full-name "cljs.core/PersistentHashMap.fromArray"}
+          :lines [7131 7139],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L7131-L7139"},
+ :usage ["(PersistentHashMap.fromArray arr no-clone)"],
+ :full-name "cljs.core/PersistentHashMap.fromArray",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTfromArray.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(transduce xform f coll)</samp><br>
+<samp>(transduce xform f init coll)</samp><br>
+
+---
 
  <samp>
 (__transduce__ xform f coll)<br>
@@ -40,7 +44,7 @@ certain transforms may inject or skip items.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2312-L2325):
+Source code @ [github]():
 
 ```clj
 (defn transduce
@@ -55,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2312-2325](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2312-L2325)</ins>
+
 </pre>
 
 -->
@@ -105,18 +104,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "transduce",
  :signature ["[xform f coll]" "[xform f init coll]"],
+ :name-encode "transduce",
  :history [["+" "0.0-2301"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/transduce",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/transduce"},
  :full-name-encode "cljs.core/transduce",
  :source {:code "(defn transduce\n  ([xform f coll] (transduce xform f (f) coll))\n  ([xform f init coll]\n     (let [f (xform f)\n           ret (reduce f init coll)]\n       (f ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2312 2325]},
+          :lines [2312 2325],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2312-L2325"},
+ :usage ["(transduce xform f coll)" "(transduce xform f init coll)"],
  :full-name "cljs.core/transduce",
- :clj-symbol "clojure.core/transduce",
- :docstring "reduce with a transformation of f (xf). If init is not\nsupplied, (f) will be called to produce it. f should be a reducing\nstep function that accepts both 1 and 2 arguments, if it accepts\nonly 2 you can add the arity-1 with 'completing'. Returns the result\nof applying (the transformed) xf to init and the first item in coll,\nthen applying xf to that result and the 2nd item, etc. If coll\ncontains no items, returns init and f is not called. Note that\ncertain transforms may inject or skip items."}
+ :docstring "reduce with a transformation of f (xf). If init is not\nsupplied, (f) will be called to produce it. f should be a reducing\nstep function that accepts both 1 and 2 arguments, if it accepts\nonly 2 you can add the arity-1 with 'completing'. Returns the result\nof applying (the transformed) xf to init and the first item in coll,\nthen applying xf to that result and the 2nd item, etc. If coll\ncontains no items, returns init and f is not called. Note that\ncertain transforms may inject or skip items.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/transduce.cljsdoc"}
 
 ```
 

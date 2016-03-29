@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ES6IteratorSeq. value iter _rest)</samp><br>
+
+---
 
  <samp>
 (__ES6IteratorSeq.__ value iter _rest)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1176-L1184):
+Source code @ [github]():
 
 ```clj
 (deftype ES6IteratorSeq [value iter ^:mutable _rest]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1176-1184](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1176-L1184)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ES6IteratorSeq",
- :type "type",
  :signature ["[value iter _rest]"],
+ :name-encode "ES6IteratorSeq",
+ :history [["+" "0.0-2411"]],
+ :type "type",
+ :full-name-encode "cljs.core/ES6IteratorSeq",
  :source {:code "(deftype ES6IteratorSeq [value iter ^:mutable _rest]\n  ISeqable\n  (-seq [this] this)\n  ISeq\n  (-first [_] value)\n  (-rest [_]\n    (when (nil? _rest)\n      (set! _rest (es6-iterator-seq iter)))\n    _rest))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1176 1184]},
+          :lines [1176 1184],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1176-L1184"},
+ :usage ["(ES6IteratorSeq. value iter _rest)"],
  :full-name "cljs.core/ES6IteratorSeq",
- :full-name-encode "cljs.core/ES6IteratorSeq",
- :history [["+" "0.0-2411"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ES6IteratorSeq.cljsdoc"}
 
 ```
 

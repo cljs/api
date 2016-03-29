@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(dispatch-fn multifn)</samp><br>
+
+---
 
  <samp>
 (__dispatch-fn__ multifn)<br>
@@ -27,7 +30,7 @@ Given a multimethod, return it's dispatch-fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10078-L10080):
+Source code @ [github]():
 
 ```clj
 (defn dispatch-fn
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10078-10080](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10078-L10080)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "dispatch-fn",
  :signature ["[multifn]"],
+ :name-encode "dispatch-fn",
  :history [["+" "0.0-3165"]],
  :type "function",
  :full-name-encode "cljs.core/dispatch-fn",
  :source {:code "(defn dispatch-fn\n  [multifn] (-dispatch-fn multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10078 10080]},
+          :lines [10078 10080],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10078-L10080"},
+ :usage ["(dispatch-fn multifn)"],
  :full-name "cljs.core/dispatch-fn",
- :docstring "Given a multimethod, return it's dispatch-fn."}
+ :docstring "Given a multimethod, return it's dispatch-fn.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dispatch-fn.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(HashMap.fromArrays ks vs)</samp><br>
+
+---
 
  <samp>
 (__HashMap.fromArrays__ ks vs)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3832-L3837):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.HashMap/fromArrays (fn [ks vs]
@@ -37,11 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:3832-3837](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L3832-L3837)</ins>
+
 </pre>
 
 -->
@@ -93,6 +92,7 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [3832 3837]},
+ :usage ["(HashMap.fromArrays ks vs)"],
  :full-name "cljs.core/HashMap.fromArrays",
  :removed {:in "0.0-1798", :last-seen "0.0-1586"}}
 

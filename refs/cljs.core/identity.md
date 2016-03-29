@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(identity x)</samp><br>
+
+---
 
  <samp>
 (__identity__ x)<br>
@@ -40,7 +43,7 @@ Returns its argument.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2297-L2299):
+Source code @ [github]():
 
 ```clj
 (defn identity
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2297-2299](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2297-L2299)</ins>
+
 </pre>
 
 -->
@@ -102,19 +100,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "identity",
  :signature ["[x]"],
+ :name-encode "identity",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/identity",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/identity"},
  :related ["cljs.core/nil?"],
  :full-name-encode "cljs.core/identity",
  :source {:code "(defn identity\n  [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2297 2299]},
+          :lines [2297 2299],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2297-L2299"},
+ :usage ["(identity x)"],
  :full-name "cljs.core/identity",
- :clj-symbol "clojure.core/identity",
- :docstring "Returns its argument."}
+ :docstring "Returns its argument.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/identity.cljsdoc"}
 
 ```
 

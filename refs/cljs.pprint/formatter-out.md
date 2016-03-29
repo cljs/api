@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(formatter-out format-in)</samp><br>
+
+---
 
  <samp>
 (__formatter-out__ format-in)<br>
@@ -35,7 +38,7 @@ format-in can be either a control string or a previously compiled format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L133-L145):
+Source code @ [github]():
 
 ```clj
 (defmacro formatter-out
@@ -51,12 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:133-145](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L133-L145)</ins>
+
 </pre>
 
 -->
@@ -101,18 +99,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "formatter-out",
  :signature ["[format-in]"],
+ :name-encode "formatter-out",
  :history [["+" "0.0-3255"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.pprint/formatter-out",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/formatter-out"},
  :full-name-encode "cljs.pprint/formatter-out",
  :source {:code "(defmacro formatter-out\n  [format-in]\n  `(let [format-in# ~format-in\n         cf# (if (string? format-in#) (cljs.pprint/cached-compile format-in#) format-in#)]\n     (fn [& args#]\n       (let [navigator# (cljs.pprint/init-navigator args#)]\n         (cljs.pprint/execute-format cf# navigator#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [133 145]},
+          :lines [133 145],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L133-L145"},
+ :usage ["(formatter-out format-in)"],
  :full-name "cljs.pprint/formatter-out",
- :clj-symbol "clojure.pprint/formatter-out",
- :docstring "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format."}
+ :docstring "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/formatter-out.cljsdoc"}
 
 ```
 

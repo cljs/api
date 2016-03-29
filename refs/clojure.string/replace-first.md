@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(replace-first s match replacement)</samp><br>
+
+---
 
  <samp>
 (__replace-first__ s match replacement)<br>
@@ -47,7 +50,7 @@ pattern / (string or function of match).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L57-L64):
+Source code @ [github]():
 
 ```clj
 (defn replace-first
@@ -59,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:57-64](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L57-L64)</ins>
+
 </pre>
 
 -->
@@ -110,18 +108,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "replace-first",
  :signature ["[s match replacement]"],
+ :name-encode "replace-first",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/replace-first",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/replace-first"},
  :full-name-encode "clojure.string/replace-first",
  :source {:code "(defn replace-first\n  [s match replacement]\n  (.replace s match replacement))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [57 64]},
+          :lines [57 64],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L57-L64"},
+ :usage ["(replace-first s match replacement)"],
  :full-name "clojure.string/replace-first",
- :clj-symbol "clojure.string/replace-first",
- :docstring "Replaces the first instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match)."}
+ :docstring "Replaces the first instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/replace-first.cljsdoc"}
 
 ```
 

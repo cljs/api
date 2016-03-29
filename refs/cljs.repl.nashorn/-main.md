@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(-main)</samp><br>
+
+---
 
  <samp>
 (__-main__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L182-L183):
+Source code @ [github]():
 
 ```clj
 (defn -main []
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[nashorn.clj:182-183](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L182-L183)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.nashorn",
  :name "-main",
- :type "function",
  :signature ["[]"],
+ :name-encode "-main",
+ :history [["+" "0.0-3165"]],
+ :type "function",
+ :full-name-encode "cljs.repl.nashorn/-main",
  :source {:code "(defn -main []\n      (repl/repl (repl-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
-          :lines [182 183]},
+          :lines [182 183],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L182-L183"},
+ :usage ["(-main)"],
  :full-name "cljs.repl.nashorn/-main",
- :full-name-encode "cljs.repl.nashorn/-main",
- :history [["+" "0.0-3165"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/-main.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(getf sym)</samp><br>
+
+---
 
  <samp>
 (__getf__ sym)<br>
@@ -27,7 +30,7 @@ Get the value of the field a named by the argument (which should be a keyword).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L27-L30):
+Source code @ [github]():
 
 ```clj
 (defmacro getf
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:27-30](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L27-L30)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "getf",
  :signature ["[sym]"],
+ :name-encode "getf",
  :history [["+" "0.0-3255"]],
  :type "macro",
  :full-name-encode "cljs.pprint/getf",
  :source {:code "(defmacro getf\n  [sym]\n  `(~sym @@~'this))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [27 30]},
+          :lines [27 30],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L27-L30"},
+ :usage ["(getf sym)"],
  :full-name "cljs.pprint/getf",
- :docstring "Get the value of the field a named by the argument (which should be a keyword)."}
+ :docstring "Get the value of the field a named by the argument (which should be a keyword).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/getf.cljsdoc"}
 
 ```
 

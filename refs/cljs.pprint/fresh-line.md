@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(fresh-line)</samp><br>
+
+---
 
  <samp>
 (__fresh-line__)<br>
@@ -31,7 +34,7 @@ not a pretty writer (which keeps track of columns), this function always outputs
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L2093-L2100):
+Source code @ [github]():
 
 ```clj
 (defn fresh-line
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:2093-2100](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L2093-L2100)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "fresh-line",
  :signature ["[]"],
+ :name-encode "fresh-line",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/fresh-line",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/fresh-line"},
  :full-name-encode "cljs.pprint/fresh-line",
  :source {:code "(defn fresh-line\n  []\n  (if (satisfies? IDeref *out*)\n    (if (not (= 0 (get-column (:base @@*out*))))\n      (prn))\n    (prn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [2093 2100]},
+          :lines [2093 2100],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L2093-L2100"},
+ :usage ["(fresh-line)"],
  :full-name "cljs.pprint/fresh-line",
- :clj-symbol "clojure.pprint/fresh-line",
- :docstring "Make a newline if *out* is not already at the beginning of the line. If *out* is\nnot a pretty writer (which keeps track of columns), this function always outputs a newline."}
+ :docstring "Make a newline if *out* is not already at the beginning of the line. If *out* is\nnot a pretty writer (which keeps track of columns), this function always outputs a newline.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/fresh-line.cljsdoc"}
 
 ```
 

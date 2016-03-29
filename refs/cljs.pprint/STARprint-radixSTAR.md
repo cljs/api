@@ -27,7 +27,7 @@ radix specifier is in the form #XXr where XX is the decimal value of *print-base
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L665-L670):
+Source code @ [github]():
 
 ```clj
 (def ^:dynamic
@@ -42,12 +42,7 @@ radix specifier is in the form #XXr where XX is the decimal value of *print-base
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:665-670](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L665-L670)</ins>
+
 </pre>
 
 -->
@@ -91,18 +86,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "*print-radix*",
+ :name-encode "STARprint-radixSTAR",
  :history [["+" "0.0-3255"]],
  :type "dynamic var",
+ :clj-equiv {:full-name "clojure.pprint/*print-radix*",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/*print-radix*"},
  :full-name-encode "cljs.pprint/STARprint-radixSTAR",
  :source {:code "(def ^:dynamic\n^{:doc \"Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8,\nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the\nradix specifier is in the form #XXr where XX is the decimal value of *print-base* \"\n  :added \"1.2\"}\n*print-radix* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [665 670]},
+          :lines [665 670],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L665-L670"},
  :full-name "cljs.pprint/*print-radix*",
- :clj-symbol "clojure.pprint/*print-radix*",
- :docstring "Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8,\nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the\nradix specifier is in the form #XXr where XX is the decimal value of *print-base* "}
+ :docstring "Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8,\nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the\nradix specifier is in the form #XXr where XX is the decimal value of *print-base* ",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-radixSTAR.cljsdoc"}
 
 ```
 

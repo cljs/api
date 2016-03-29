@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(children loc)</samp><br>
+
+---
 
  <samp>
 (__children__ loc)<br>
@@ -30,7 +33,7 @@ Returns a seq of the children of node at loc, which must be a branch
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L69-L74):
+Source code @ [github]():
 
 ```clj
 (defn children
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:69-74](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L69-L74)</ins>
+
 </pre>
 
 -->
@@ -94,18 +92,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "children",
  :signature ["[loc]"],
+ :name-encode "children",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/children",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/children"},
  :full-name-encode "clojure.zip/children",
  :source {:code "(defn children\n  [loc]\n    (if (branch? loc)\n      ((:zip/children (meta loc)) (node loc))\n      (throw \"called children on a leaf node\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [69 74]},
+          :lines [69 74],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L69-L74"},
+ :usage ["(children loc)"],
  :full-name "clojure.zip/children",
- :clj-symbol "clojure.zip/children",
- :docstring "Returns a seq of the children of node at loc, which must be a branch"}
+ :docstring "Returns a seq of the children of node at loc, which must be a branch",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/children.cljsdoc"}
 
 ```
 

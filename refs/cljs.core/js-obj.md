@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-obj & keyvals)</samp><br>
+
+---
 
  <samp>
 (__js-obj__ & keyvals)<br>
@@ -52,7 +55,7 @@ interleaved keys and values.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2013-L2019):
+Function code @ [github]():
 
 ```clj
 (defn js-obj
@@ -66,19 +69,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2013-2019](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2013-L2019)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2438-L2456):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro js-obj [& rest]
@@ -106,12 +104,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2438-2456](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2438-L2456)</ins>
+
 </pre>
 -->
 
@@ -152,6 +145,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-obj",
  :signature ["[& keyvals]"],
+ :name-encode "js-obj",
  :history [["+" "0.0-927"]],
  :type "function/macro",
  :related ["syntax/js-literal" "cljs.core/array" "cljs.core/clj->js"],
@@ -159,19 +153,23 @@ The API data for this symbol:
  :source {:code "(defn js-obj\n  ([]\n     (cljs.core/js-obj))\n  ([& keyvals]\n     (apply gobject/create keyvals)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2013 2019]},
+          :lines [2013 2019],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2013-L2019"},
  :extra-sources [{:code "(core/defmacro js-obj [& rest]\n  (core/let [sym-or-str? (core/fn [x] (core/or (core/symbol? x) (core/string? x)))\n             filter-on-keys (core/fn [f coll]\n                              (core/->> coll\n                                (filter (core/fn [[k _]] (f k)))\n                                (into {})))\n             kvs (into {} (map vec (partition 2 rest)))\n             sym-pairs (filter-on-keys core/symbol? kvs)\n             expr->local (zipmap\n                           (filter (complement sym-or-str?) (keys kvs))\n                           (repeatedly gensym))\n             obj (gensym \"obj\")]\n    (if (empty? rest)\n      (js-obj* '())\n      `(let [~@(apply concat (clojure.set/map-invert expr->local))\n            ~obj ~(js-obj* (filter-on-keys core/string? kvs))]\n        ~@(map (core/fn [[k v]] `(aset ~obj ~k ~v)) sym-pairs)\n        ~@(map (core/fn [[k v]] `(aset ~obj ~v ~(core/get kvs k))) expr->local)\n        ~obj))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2438 2456]}],
+                  :lines [2438 2456],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2438-L2456"}],
+ :usage ["(js-obj & keyvals)"],
  :examples [{:id "657cd7",
              :content "```clj\n(js-obj \"foo\" 1 \"bar\" 2)\n;;=> #js {:foo 1, :bar 2}\n```"}],
  :full-name "cljs.core/js-obj",
- :docstring "Create JavaSript object from an even number arguments representing\ninterleaved keys and values."}
+ :docstring "Create JavaSript object from an even number arguments representing\ninterleaved keys and values.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-obj.cljsdoc"}
 
 ```
 

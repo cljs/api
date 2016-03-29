@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(HashSetIter. iter)</samp><br>
+
+---
 
  <samp>
 (__HashSetIter.__ iter)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8196-L8204):
+Source code @ [github]():
 
 ```clj
 (deftype HashSetIter [iter]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8196-8204](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8196-L8204)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "HashSetIter",
- :type "type",
  :signature ["[iter]"],
+ :name-encode "HashSetIter",
+ :history [["+" "1.7.28"]],
+ :type "type",
+ :full-name-encode "cljs.core/HashSetIter",
  :source {:code "(deftype HashSetIter [iter]\n  Object\n  (hasNext [_]\n    (.hasNext iter))\n  (next [_]\n    (if ^boolean (.hasNext iter)\n      (aget (.-tail (.next iter)) 0)\n      (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8196 8204]},
+          :lines [8196 8204],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8196-L8204"},
+ :usage ["(HashSetIter. iter)"],
  :full-name "cljs.core/HashSetIter",
- :full-name-encode "cljs.core/HashSetIter",
- :history [["+" "1.7.28"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/HashSetIter.cljsdoc"}
 
 ```
 

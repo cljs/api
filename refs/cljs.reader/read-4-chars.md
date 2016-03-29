@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-4-chars reader)</samp><br>
+
+---
 
  <samp>
 (__read-4-chars__ reader)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L173-L179):
+Source code @ [github]():
 
 ```clj
 (defn read-4-chars [reader]
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:173-179](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L173-L179)</ins>
+
 </pre>
 
 -->
@@ -84,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-4-chars",
- :type "function",
  :signature ["[reader]"],
+ :name-encode "read-4-chars",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-4-chars",
  :source {:code "(defn read-4-chars [reader]\n  (.toString\n    (StringBuffer.\n      (read-char reader)\n      (read-char reader)\n      (read-char reader)\n      (read-char reader))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [173 179]},
+          :lines [173 179],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L173-L179"},
+ :usage ["(read-4-chars reader)"],
  :full-name "cljs.reader/read-4-chars",
- :full-name-encode "cljs.reader/read-4-chars",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-4-chars.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(default-dispatch-val multifn)</samp><br>
+
+---
 
  <samp>
 (__default-dispatch-val__ multifn)<br>
@@ -27,7 +30,7 @@ Given a multimethod, return it's default-dispatch-val.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10074-L10076):
+Source code @ [github]():
 
 ```clj
 (defn default-dispatch-val
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10074-10076](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10074-L10076)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "default-dispatch-val",
  :signature ["[multifn]"],
+ :name-encode "default-dispatch-val",
  :history [["+" "0.0-3165"]],
  :type "function",
  :full-name-encode "cljs.core/default-dispatch-val",
  :source {:code "(defn default-dispatch-val\n  [multifn] (-default-dispatch-val multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10074 10076]},
+          :lines [10074 10076],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10074-L10076"},
+ :usage ["(default-dispatch-val multifn)"],
  :full-name "cljs.core/default-dispatch-val",
- :docstring "Given a multimethod, return it's default-dispatch-val."}
+ :docstring "Given a multimethod, return it's default-dispatch-val.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/default-dispatch-val.cljsdoc"}
 
 ```
 

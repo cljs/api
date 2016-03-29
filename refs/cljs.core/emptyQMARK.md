@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(empty? coll)</samp><br>
+
+---
 
  <samp>
 (__empty?__ coll)<br>
@@ -43,7 +46,7 @@ Please use the idiom (seq x) rather than (not (empty? x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1954-L1958):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean empty?
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1954-1958](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1954-L1958)</ins>
+
 </pre>
 
 -->
@@ -107,19 +105,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "empty?",
  :signature ["[coll]"],
+ :name-encode "emptyQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/empty?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/empty?"},
  :related ["cljs.core/seq"],
  :full-name-encode "cljs.core/emptyQMARK",
  :source {:code "(defn ^boolean empty?\n  [coll] (or (nil? coll)\n             (not (seq coll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1954 1958]},
+          :lines [1954 1958],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1954-L1958"},
+ :usage ["(empty? coll)"],
  :full-name "cljs.core/empty?",
- :clj-symbol "clojure.core/empty?",
- :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))"}
+ :docstring "Returns true if coll has no items - same as (not (seq coll)).\nPlease use the idiom (seq x) rather than (not (empty? x))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/emptyQMARK.cljsdoc"}
 
 ```
 

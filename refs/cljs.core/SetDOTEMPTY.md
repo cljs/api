@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2708):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.Set/EMPTY (Set. nil (hash-map)))
@@ -27,11 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1011/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1011
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:2708](https://github.com/clojure/clojurescript/blob/r1011/src/cljs/cljs/core.cljs#L2708)</ins>
+
 </pre>
 
 -->

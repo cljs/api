@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(split-with pred coll)</samp><br>
+
+---
 
  <samp>
 (__split-with__ pred coll)<br>
@@ -43,7 +46,7 @@ Returns a vector of [(take-while pred coll) (drop-while pred coll)]
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8797-L8800):
+Source code @ [github]():
 
 ```clj
 (defn split-with
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8797-8800](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8797-L8800)</ins>
+
 </pre>
 
 -->
@@ -106,8 +104,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "split-with",
  :signature ["[pred coll]"],
+ :name-encode "split-with",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/split-with",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/split-with"},
  :related ["cljs.core/split-at"
            "clojure.string/split"
            "cljs.core/take-while"
@@ -116,12 +117,14 @@ The API data for this symbol:
  :source {:code "(defn split-with\n  [pred coll]\n  [(take-while pred coll) (drop-while pred coll)])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8797 8800]},
+          :lines [8797 8800],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8797-L8800"},
+ :usage ["(split-with pred coll)"],
  :full-name "cljs.core/split-with",
- :clj-symbol "clojure.core/split-with",
- :docstring "Returns a vector of [(take-while pred coll) (drop-while pred coll)]"}
+ :docstring "Returns a vector of [(take-while pred coll) (drop-while pred coll)]",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/split-with.cljsdoc"}
 
 ```
 

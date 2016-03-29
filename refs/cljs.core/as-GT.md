@@ -7,11 +7,14 @@
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" title="Added in 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> </td>
 <td>
-imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/as-></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/as-%3E)
+imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/as-></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/as->)
 </td>
 </tr>
 </table>
 
+<samp>(as-> expr name & forms)</samp><br>
+
+---
 
  <samp>
 (__as->__ expr name & forms)<br>
@@ -64,7 +67,7 @@ successive form, returning the result of the last form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7274-L7284):
+Source code @ [github]():
 
 ```clj
 (defmacro as->
@@ -80,11 +83,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:7274-7284](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7274-L7284)</ins>
+
 </pre>
 
 -->
@@ -130,8 +129,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "as->",
  :signature ["[expr name & forms]"],
+ :name-encode "as-GT",
  :history [["+" "0.0-1798"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/as->",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/as->"},
  :related ["cljs.core/->"
            "cljs.core/->>"
            "cljs.core/cond->"
@@ -144,12 +146,14 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [7274 7284]},
+          :lines [7274 7284],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L7274-L7284"},
+ :usage ["(as-> expr name & forms)"],
  :examples [{:id "5e7eef",
              :content "```clj\n(as-> [1 2 3 4] x\n  (reduce + x)\n  (/ x 2))\n;;=> 5\n```"}],
  :full-name "cljs.core/as->",
- :clj-symbol "clojure.core/as->",
- :docstring "Binds name to expr, evaluates the first form in the lexical context\nof that binding, then binds name to that result, repeating for each\nsuccessive form, returning the result of the last form."}
+ :docstring "Binds name to expr, evaluates the first form in the lexical context\nof that binding, then binds name to that result, repeating for each\nsuccessive form, returning the result of the last form.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/as-GT.cljsdoc"}
 
 ```
 

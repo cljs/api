@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(skip-if-eol s)</samp><br>
+
+---
 
  <samp>
 (__skip-if-eol__ s)<br>
@@ -32,7 +35,7 @@ CRLF to a single \newline.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L52-L64):
+Source code @ [github]():
 
 ```clj
 (defn skip-if-eol
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:52-64](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L52-L64)</ins>
+
 </pre>
 
 -->
@@ -95,17 +93,21 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "skip-if-eol",
  :signature ["[s]"],
+ :name-encode "skip-if-eol",
  :history [["+" "0.0-2719"]],
  :type "function",
  :full-name-encode "cljs.repl/skip-if-eol",
  :source {:code "(defn skip-if-eol\n  [s]\n  (let [c (readers/read-char s)]\n    (case c\n      \\newline :line-start\n      nil :stream-end\n      (do (readers/unread s c) :body))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [52 64]},
+          :lines [54 66],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L54-L66"},
+ :usage ["(skip-if-eol s)"],
  :full-name "cljs.repl/skip-if-eol",
- :docstring "If the next character on stream s is a newline, skips it, otherwise\nleaves the stream untouched. Returns :line-start, :stream-end, or :body\nto indicate the relative location of the next character on s. The stream\nmust either be an instance of LineNumberingPushbackReader or duplicate\nits behavior of both supporting .unread and collapsing all of CR, LF, and\nCRLF to a single \\newline."}
+ :docstring "If the next character on stream s is a newline, skips it, otherwise\nleaves the stream untouched. Returns :line-start, :stream-end, or :body\nto indicate the relative location of the next character on s. The stream\nmust either be an instance of LineNumberingPushbackReader or duplicate\nits behavior of both supporting .unread and collapsing all of CR, LF, and\nCRLF to a single \\newline.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/skip-if-eol.cljsdoc"}
 
 ```
 

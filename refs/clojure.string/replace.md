@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(replace s match replacement)</samp><br>
+
+---
 
  <samp>
 (__replace__ s match replacement)<br>
@@ -54,7 +57,7 @@ pattern / (string or function of match).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L39-L55):
+Source code @ [github]():
 
 ```clj
 (defn replace
@@ -75,12 +78,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:39-55](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L39-L55)</ins>
+
 </pre>
 
 -->
@@ -126,8 +124,11 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "replace",
  :signature ["[s match replacement]"],
+ :name-encode "replace",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/replace",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/replace"},
  :related ["cljs.core/subs"
            "clojure.string/split"
            "clojure.string/replace-first"],
@@ -135,12 +136,14 @@ The API data for this symbol:
  :source {:code "(defn replace\n  [s match replacement]\n  (cond\n    (string? match)\n    (.replace s (js/RegExp. (gstring/regExpEscape match) \"g\") replacement)\n\n    (instance? js/RegExp match)\n    (if (string? replacement)\n      (replace-all s match replacement)\n      (replace-all s match (replace-with replacement)))\n\n    :else (throw (str \"Invalid match arg: \" match))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [39 55]},
+          :lines [39 55],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L39-L55"},
+ :usage ["(replace s match replacement)"],
  :full-name "clojure.string/replace",
- :clj-symbol "clojure.string/replace",
- :docstring "Replaces all instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match)."}
+ :docstring "Replaces all instance of match with replacement in s.\nmatch/replacement can be:\n\nstring / string\npattern / (string or function of match).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/replace.cljsdoc"}
 
 ```
 

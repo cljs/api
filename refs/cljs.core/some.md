@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(some pred coll)</samp><br>
+
+---
 
  <samp>
 (__some__ pred coll)<br>
@@ -51,7 +54,7 @@ this will return :fred if :fred is in the sequence, otherwise nil:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3892-L3899):
+Source code @ [github]():
 
 ```clj
 (defn some
@@ -64,12 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3892-3899](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3892-L3899)</ins>
+
 </pre>
 
 -->
@@ -115,8 +113,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "some",
  :signature ["[pred coll]"],
+ :name-encode "some",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/some",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/some"},
  :related ["cljs.core/every?"
            "cljs.core/not-any?"
            "cljs.core/keep"
@@ -126,12 +127,14 @@ The API data for this symbol:
  :source {:code "(defn some\n  [pred coll]\n    (when (seq coll)\n      (or (pred (first coll)) (recur pred (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3892 3899]},
+          :lines [3892 3899],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3892-L3899"},
+ :usage ["(some pred coll)"],
  :full-name "cljs.core/some",
- :clj-symbol "clojure.core/some",
- :docstring "Returns the first logical true value of (pred x) for any x in coll,\nelse nil.  One common idiom is to use a set as pred, for example\nthis will return :fred if :fred is in the sequence, otherwise nil:\n(some #{:fred} coll)"}
+ :docstring "Returns the first logical true value of (pred x) for any x in coll,\nelse nil.  One common idiom is to use a set as pred, for example\nthis will return :fred if :fred is in the sequence, otherwise nil:\n(some #{:fred} coll)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/some.cljsdoc"}
 
 ```
 

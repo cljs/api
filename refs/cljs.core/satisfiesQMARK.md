@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(satisfies? psym x)</samp><br>
+
+---
 
  <samp>
 (__satisfies?__ psym x)<br>
@@ -30,7 +33,7 @@ Returns true if x satisfies the protocol
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1980-L2008):
+Source code @ [github]():
 
 ```clj
 (core/defmacro satisfies?
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1980-2008](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1980-L2008)</ins>
+
 </pre>
 
 -->
@@ -117,18 +115,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "satisfies?",
  :signature ["[psym x]"],
+ :name-encode "satisfiesQMARK",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/satisfies?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/satisfies?"},
  :full-name-encode "cljs.core/satisfiesQMARK",
  :source {:code "(core/defmacro satisfies?\n  [psym x]\n  (core/let [p          (:name\n                          (cljs.analyzer/resolve-var\n                            (dissoc &env :locals) psym))\n             prefix     (protocol-prefix p)\n             xsym       (bool-expr (gensym))\n             [part bit] (fast-path-protocols p)\n             msym       (symbol\n                          (core/str \"-cljs$lang$protocol_mask$partition\" part \"$\"))]\n    (core/if-not (core/symbol? x)\n      `(let [~xsym ~x]\n         (if-not (nil? ~xsym)\n           (if (or ~(if bit `(unsafe-bit-and (. ~xsym ~msym) ~bit) false)\n                   ~(bool-expr `(. ~xsym ~(symbol (core/str \"-\" prefix)))))\n             true\n             (if (coercive-not (. ~xsym ~msym))\n               (cljs.core/native-satisfies? ~psym ~xsym)\n               false))\n           (cljs.core/native-satisfies? ~psym ~xsym)))\n      `(if-not (nil? ~x)\n         (if (or ~(if bit `(unsafe-bit-and (. ~x ~msym) ~bit) false)\n                 ~(bool-expr `(. ~x ~(symbol (core/str \"-\" prefix)))))\n           true\n           (if (coercive-not (. ~x ~msym))\n             (cljs.core/native-satisfies? ~psym ~x)\n             false))\n         (cljs.core/native-satisfies? ~psym ~x)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1980 2008]},
+          :lines [1980 2008],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1980-L2008"},
+ :usage ["(satisfies? psym x)"],
  :full-name "cljs.core/satisfies?",
- :clj-symbol "clojure.core/satisfies?",
- :docstring "Returns true if x satisfies the protocol"}
+ :docstring "Returns true if x satisfies the protocol",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/satisfiesQMARK.cljsdoc"}
 
 ```
 

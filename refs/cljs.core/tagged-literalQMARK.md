@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(tagged-literal? value)</samp><br>
+
+---
 
  <samp>
 (__tagged-literal?__ value)<br>
@@ -30,7 +33,7 @@ Return true if the value is the data representation of a tagged literal
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10247-L10250):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean tagged-literal?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10247-10250](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10247-L10250)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "tagged-literal?",
  :signature ["[value]"],
+ :name-encode "tagged-literalQMARK",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/tagged-literal?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tagged-literal?"},
  :full-name-encode "cljs.core/tagged-literalQMARK",
  :source {:code "(defn ^boolean tagged-literal?\n  [value]\n  (instance? TaggedLiteral value))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10247 10250]},
+          :lines [10247 10250],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10247-L10250"},
+ :usage ["(tagged-literal? value)"],
  :full-name "cljs.core/tagged-literal?",
- :clj-symbol "clojure.core/tagged-literal?",
- :docstring "Return true if the value is the data representation of a tagged literal"}
+ :docstring "Return true if the value is the data representation of a tagged literal",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/tagged-literalQMARK.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(up loc)</samp><br>
+
+---
 
  <samp>
 (__up__ loc)<br>
@@ -31,7 +34,7 @@ the top
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L111-L122):
+Source code @ [github]():
 
 ```clj
 (defn up
@@ -50,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:111-122](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L111-L122)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "up",
  :signature ["[loc]"],
+ :name-encode "up",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/up",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/up"},
  :full-name-encode "clojure.zip/up",
  :source {:code "(defn up\n  [loc]\n    (let [[node {l :l, ppath :ppath, pnodes :pnodes r :r, changed? :changed?, :as path}] loc]\n      (when pnodes\n        (let [pnode (peek pnodes)]\n          (with-meta (if changed?\n                       [(make-node loc pnode (concat l (cons node r))) \n                        (and ppath (assoc ppath :changed? true))]\n                       [pnode ppath])\n                     (meta loc))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [111 122]},
+          :lines [111 122],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L111-L122"},
+ :usage ["(up loc)"],
  :full-name "clojure.zip/up",
- :clj-symbol "clojure.zip/up",
- :docstring "Returns the loc of the parent of the node at this loc, or nil if at\nthe top"}
+ :docstring "Returns the loc of the parent of the node at this loc, or nil if at\nthe top",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/up.cljsdoc"}
 
 ```
 

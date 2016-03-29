@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(read reader eof-is-error sentinel is-recursive)</samp><br>
+
+---
 
  <samp>
 (__read__ reader eof-is-error sentinel is-recursive)<br>
@@ -33,7 +36,7 @@ Only supports edn (similar to clojure.edn/read)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L439-L458):
+Source code @ [github]():
 
 ```clj
 (defn read
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:439-458](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L439-L458)</ins>
+
 </pre>
 
 -->
@@ -108,18 +106,23 @@ The API data for this symbol:
 {:ns "cljs.reader",
  :name "read",
  :signature ["[reader eof-is-error sentinel is-recursive]"],
+ :name-encode "read",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/read",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/read"},
  :full-name-encode "cljs.reader/read",
  :source {:code "(defn read\n  [reader eof-is-error sentinel is-recursive]\n  (let [ch (read-char reader)]\n    (cond\n     (nil? ch) (if eof-is-error (reader-error reader \"EOF while reading\") sentinel)\n     (whitespace? ch) (recur reader eof-is-error sentinel is-recursive)\n     (comment-prefix? ch) (recur (read-comment reader ch) eof-is-error sentinel is-recursive)\n     :else (let [f (macros ch)\n                 res\n                 (cond\n                  f (f reader ch)\n                  (number-literal? reader ch) (read-number reader ch)\n                  :else (read-symbol reader ch))]\n     (if (identical? res reader)\n       (recur reader eof-is-error sentinel is-recursive)\n       res)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [439 458]},
+          :lines [439 458],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L439-L458"},
+ :usage ["(read reader eof-is-error sentinel is-recursive)"],
  :full-name "cljs.reader/read",
- :clj-symbol "clojure.core/read",
- :docstring "Reads the first object from a PushbackReader. Returns the object read.\nIf EOF, throws if eof-is-error is true. Otherwise returns sentinel.\n\nOnly supports edn (similar to clojure.edn/read)"}
+ :docstring "Reads the first object from a PushbackReader. Returns the object read.\nIf EOF, throws if eof-is-error is true. Otherwise returns sentinel.\n\nOnly supports edn (similar to clojure.edn/read)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read.cljsdoc"}
 
 ```
 

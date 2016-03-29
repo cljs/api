@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(source-on-disk opts ijs)</samp><br>
+
+---
 
  <samp>
 (__source-on-disk__ opts ijs)<br>
@@ -28,7 +31,7 @@ Return updated IJavaScript with the new location if necessary.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L119-L123):
+Source code @ [github]():
 
 ```clj
 (defn source-on-disk
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:119-123](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L119-L123)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "source-on-disk",
  :signature ["[opts ijs]"],
+ :name-encode "source-on-disk",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/source-on-disk",
  :source {:code "(defn source-on-disk\n  [opts ijs]\n  (closure/source-on-disk opts ijs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [119 123]},
+          :lines [119 123],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L119-L123"},
+ :usage ["(source-on-disk opts ijs)"],
  :full-name "cljs.build.api/source-on-disk",
- :docstring "Ensure that the given IJavaScript exists on disk in the output directory.\nReturn updated IJavaScript with the new location if necessary."}
+ :docstring "Ensure that the given IJavaScript exists on disk in the output directory.\nReturn updated IJavaScript with the new location if necessary.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/source-on-disk.cljsdoc"}
 
 ```
 

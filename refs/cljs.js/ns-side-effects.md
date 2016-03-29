@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(ns-side-effects bound-vars ana-env ast opts cb)</samp><br>
+<samp>(ns-side-effects load bound-vars ana-env {:keys \[op\], :as ast} opts cb)</samp><br>
+
+---
 
  <samp>
 (__ns-side-effects__ bound-vars ana-env ast opts cb)<br>
@@ -25,7 +29,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L317-L377):
+Source code @ [github]():
 
 ```clj
 (defn ns-side-effects
@@ -95,12 +99,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:317-377](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L317-L377)</ins>
+
 </pre>
 
 -->
@@ -152,6 +151,8 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [317 377]},
+ :usage ["(ns-side-effects bound-vars ana-env ast opts cb)"
+         "(ns-side-effects load bound-vars ana-env {:keys [op], :as ast} opts cb)"],
  :full-name "cljs.js/ns-side-effects",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

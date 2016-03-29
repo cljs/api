@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(eduction xform\* coll)</samp><br>
+
+---
 
  <samp>
 (__eduction__ xform\* coll)<br>
@@ -33,7 +36,7 @@ performed every time reduce/iterator is called.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9528-L9535):
+Source code @ [github]():
 
 ```clj
 (defn eduction
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9528-9535](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9528-L9535)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "eduction",
  :signature ["[xform* coll]"],
+ :name-encode "eduction",
  :history [["+" "0.0-2371"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/eduction",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/eduction"},
  :full-name-encode "cljs.core/eduction",
  :source {:code "(defn eduction\n  [& xforms]\n  (Eduction. (apply comp (butlast xforms)) (last xforms)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9528 9535]},
+          :lines [9528 9535],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9528-L9535"},
+ :usage ["(eduction xform* coll)"],
  :full-name "cljs.core/eduction",
- :clj-symbol "clojure.core/eduction",
- :docstring "Returns a reducible/iterable application of the transducers\nto the items in coll. Transducers are applied in order as if\ncombined with comp. Note that these applications will be\nperformed every time reduce/iterator is called."}
+ :docstring "Returns a reducible/iterable application of the transducers\nto the items in coll. Transducers are applied in order as if\ncombined with comp. Note that these applications will be\nperformed every time reduce/iterator is called.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/eduction.cljsdoc"}
 
 ```
 

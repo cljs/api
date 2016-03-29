@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(drop-last s)</samp><br>
+<samp>(drop-last n s)</samp><br>
+
+---
 
  <samp>
 (__drop-last__ s)<br>
@@ -46,7 +50,7 @@ Return a lazy sequence of all but the last n (default 1) items in coll
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4419-L4422):
+Source code @ [github]():
 
 ```clj
 (defn drop-last
@@ -58,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4419-4422](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4419-L4422)</ins>
+
 </pre>
 
 -->
@@ -109,19 +108,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "drop-last",
  :signature ["[s]" "[n s]"],
+ :name-encode "drop-last",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/drop-last",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/drop-last"},
  :related ["cljs.core/drop" "cljs.core/drop-while"],
  :full-name-encode "cljs.core/drop-last",
  :source {:code "(defn drop-last\n  ([s] (drop-last 1 s))\n  ([n s] (map (fn [x _] x) s (drop n s))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4419 4422]},
+          :lines [4419 4422],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4419-L4422"},
+ :usage ["(drop-last s)" "(drop-last n s)"],
  :full-name "cljs.core/drop-last",
- :clj-symbol "clojure.core/drop-last",
- :docstring "Return a lazy sequence of all but the last n (default 1) items in coll"}
+ :docstring "Return a lazy sequence of all but the last n (default 1) items in coll",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/drop-last.cljsdoc"}
 
 ```
 

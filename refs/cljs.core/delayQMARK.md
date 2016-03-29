@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(delay? x)</samp><br>
+
+---
 
  <samp>
 (__delay?__ x)<br>
@@ -30,7 +33,7 @@ returns true if x is a Delay created with delay
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9440-L9442):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean delay?
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9440-9442](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9440-L9442)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "delay?",
  :signature ["[x]"],
+ :name-encode "delayQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/delay?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/delay?"},
  :full-name-encode "cljs.core/delayQMARK",
  :source {:code "(defn ^boolean delay?\n  [x] (instance? Delay x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9440 9442]},
+          :lines [9440 9442],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9440-L9442"},
+ :usage ["(delay? x)"],
  :full-name "cljs.core/delay?",
- :clj-symbol "clojure.core/delay?",
- :docstring "returns true if x is a Delay created with delay"}
+ :docstring "returns true if x is a Delay created with delay",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/delayQMARK.cljsdoc"}
 
 ```
 

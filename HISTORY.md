@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.8.40](https://github.com/cljsinfo/cljs-api-docs/tree/1.8.40)__</td>
+<td>2016-03-28</td>
+<td><kbd>1.8.0</kbd></td>
+<td><kbd>1.0.0-alpha3</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-1840syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1840library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1840compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.8.34](https://github.com/cljsinfo/cljs-api-docs/tree/1.8.34)__</td>
 <td>2016-03-18</td>
 <td><kbd>1.8.0</kbd></td>
@@ -3120,6 +3143,23 @@
 </td>
 </tr>
 
+</table>
+
+### 1.8.40
+
+<a name="1840syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1840library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="1840compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.8.34

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(pprint object)</samp><br>
+<samp>(pprint object writer)</samp><br>
+
+---
 
  <samp>
 (__pprint__ object)<br>
@@ -28,7 +32,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L811-L822):
+Source code @ [github]():
 
 ```clj
 (defn pprint
@@ -49,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:811-822](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L811-L822)</ins>
+
 </pre>
 
 -->
@@ -99,17 +98,22 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pprint",
  :signature ["[object]" "[object writer]"],
+ :name-encode "pprint",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.pprint/pprint",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pprint"},
  :full-name-encode "cljs.pprint/pprint",
  :source {:code "(defn pprint\n  ([object]\n   (let [sb (StringBuffer.)]\n     (binding [*out* (StringBufferWriter. sb)]\n       (pprint object *out*)\n       (*print-fn* (str sb)))))\n  ([object writer]\n   (with-pretty-writer writer\n                       (binding [*print-pretty* true]\n                         (write-out object))\n                       (if (not (= 0 (get-column *out*)))\n                         (-write *out* \\newline)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [811 822]},
+          :lines [811 822],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L811-L822"},
+ :usage ["(pprint object)" "(pprint object writer)"],
  :full-name "cljs.pprint/pprint",
- :clj-symbol "clojure.pprint/pprint"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint.cljsdoc"}
 
 ```
 

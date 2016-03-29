@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IRecord</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IRecord.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IRecord</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IRecord.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Marker interface indicating a record object
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L619-L620):
+Source code @ [github]():
 
 ```clj
 (defprotocol IRecord
@@ -36,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:619-620](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L619-L620)</ins>
+
 </pre>
 
 -->
@@ -85,18 +80,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IRecord",
+ :name-encode "IRecord",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IRecord",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IRecord.java"},
  :full-name-encode "cljs.core/IRecord",
  :source {:code "(defprotocol IRecord\n  \"Marker interface indicating a record object\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [619 620]},
+          :lines [619 620],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L619-L620"},
  :full-name "cljs.core/IRecord",
- :clj-symbol "clojure.lang/IRecord",
- :docstring "Marker interface indicating a record object"}
+ :docstring "Marker interface indicating a record object",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IRecord.cljsdoc"}
 
 ```
 

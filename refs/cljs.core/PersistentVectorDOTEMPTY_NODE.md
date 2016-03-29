@@ -18,7 +18,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3667):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.PersistentVector.EMPTY_NODE (VectorNode. nil (make-array 32)))
@@ -28,11 +28,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2280/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2280
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:3667](https://github.com/clojure/clojurescript/blob/r2280/src/cljs/cljs/core.cljs#L3667)</ins>
+
 </pre>
 
 -->

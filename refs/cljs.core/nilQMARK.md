@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(nil? x)</samp><br>
+
+---
 
  <samp>
 (__nil?__ x)<br>
@@ -42,7 +45,7 @@ Returns true if x is nil, false otherwise.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L186-L189):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean nil?
@@ -54,19 +57,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:186-189](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L186-L189)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L819-L820):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro nil? [x]
@@ -77,12 +75,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:819-820](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L819-L820)</ins>
+
 </pre>
 -->
 
@@ -127,25 +120,31 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "nil?",
  :signature ["[x]"],
+ :name-encode "nilQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/nil?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/nil?"},
  :related ["cljs.core/true?" "cljs.core/false?" "cljs.core/identity"],
  :full-name-encode "cljs.core/nilQMARK",
  :source {:code "(defn ^boolean nil?\n  [x]\n  (coercive-= x nil))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [186 189]},
+          :lines [186 189],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L186-L189"},
  :extra-sources [{:code "(core/defmacro nil? [x]\n  `(coercive-= ~x nil))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [819 820]}],
+                  :lines [819 820],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L819-L820"}],
+ :usage ["(nil? x)"],
  :full-name "cljs.core/nil?",
- :clj-symbol "clojure.core/nil?",
- :docstring "Returns true if x is nil, false otherwise."}
+ :docstring "Returns true if x is nil, false otherwise.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/nilQMARK.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(Cat. cnt left right)</samp><br>
+
+---
 
  <samp>
 (__Cat.__ cnt left right)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L193-L211):
+Source code @ [github]():
 
 ```clj
 (deftype Cat [cnt left right]
@@ -53,13 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:193-211](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L193-L211)</ins>
+
 </pre>
 
 -->
@@ -104,17 +101,22 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "Cat",
  :signature ["[cnt left right]"],
+ :name-encode "Cat",
  :history [["+" "0.0-1236"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.core.reducers/Cat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/Cat"},
  :full-name-encode "clojure.core.reducers/Cat",
  :source {:code "(deftype Cat [cnt left right]\n  cljs.core/ICounted\n  (-count [_] cnt)\n\n  cljs.core/ISeqable\n  (-seq [_] (concat (seq left) (seq right)))\n\n  cljs.core/IReduce\n  (-reduce [this f1] (-reduce this f1 (f1)))\n  (-reduce\n    [_  f1 init]\n    (-reduce\n     right f1\n     (-reduce left f1 init)))\n\n  CollFold\n  (coll-fold\n    [this n combinef reducef]\n    (-reduce this reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [193 211]},
+          :lines [193 211],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L193-L211"},
+ :usage ["(Cat. cnt left right)"],
  :full-name "clojure.core.reducers/Cat",
- :clj-symbol "clojure.core.reducers/Cat"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/Cat.cljsdoc"}
 
 ```
 

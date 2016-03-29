@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(key->js k)</samp><br>
+
+---
 
  <samp>
 (__key->js__ k)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9551-L9559):
+Source code @ [github]():
 
 ```clj
 (defn key->js [k]
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9551-9559](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9551-L9559)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "key->js",
- :type "function",
  :signature ["[k]"],
+ :name-encode "key-GTjs",
+ :history [["+" "0.0-1798"]],
+ :type "function",
+ :full-name-encode "cljs.core/key-GTjs",
  :source {:code "(defn key->js [k]\n  (if (satisfies? IEncodeJS k)\n    (-clj->js k)\n    (if (or (string? k)\n            (number? k)\n            (keyword? k)\n            (symbol? k))\n      (clj->js k)\n      (pr-str k))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9551 9559]},
+          :lines [9551 9559],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9551-L9559"},
+ :usage ["(key->js k)"],
  :full-name "cljs.core/key->js",
- :full-name-encode "cljs.core/key-GTjs",
- :history [["+" "0.0-1798"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/key-GTjs.cljsdoc"}
 
 ```
 

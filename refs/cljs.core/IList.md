@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentList</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IPersistentList.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentList</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentList.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Marker interface indicating a persistent list
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L616-L617):
+Source code @ [github]():
 
 ```clj
 (defprotocol IList
@@ -36,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:616-617](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L616-L617)</ins>
+
 </pre>
 
 -->
@@ -85,18 +80,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IList",
+ :name-encode "IList",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IPersistentList",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentList.java"},
  :full-name-encode "cljs.core/IList",
  :source {:code "(defprotocol IList\n  \"Marker interface indicating a persistent list\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [616 617]},
+          :lines [616 617],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L616-L617"},
  :full-name "cljs.core/IList",
- :clj-symbol "clojure.lang/IPersistentList",
- :docstring "Marker interface indicating a persistent list"}
+ :docstring "Marker interface indicating a persistent list",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IList.cljsdoc"}
 
 ```
 

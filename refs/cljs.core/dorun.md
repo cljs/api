@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(dorun coll)</samp><br>
+<samp>(dorun n coll)</samp><br>
+
+---
 
  <samp>
 (__dorun__ coll)<br>
@@ -50,7 +54,7 @@ the seq, does not retain the head and returns nil.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8902-L8913):
+Source code @ [github]():
 
 ```clj
 (defn dorun
@@ -66,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8902-8913](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8902-L8913)</ins>
+
 </pre>
 
 -->
@@ -117,19 +116,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "dorun",
  :signature ["[coll]" "[n coll]"],
+ :name-encode "dorun",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/dorun",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dorun"},
  :related ["cljs.core/doall"],
  :full-name-encode "cljs.core/dorun",
  :source {:code "(defn dorun\n  ([coll]\n   (when (seq coll)\n     (recur (next coll))))\n  ([n coll]\n   (when (and (seq coll) (pos? n))\n     (recur (dec n) (next coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8902 8913]},
+          :lines [8902 8913],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8902-L8913"},
+ :usage ["(dorun coll)" "(dorun n coll)"],
  :full-name "cljs.core/dorun",
- :clj-symbol "clojure.core/dorun",
- :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. dorun can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, does not retain the head and returns nil."}
+ :docstring "When lazy sequences are produced via functions that have side\neffects, any effects other than those needed to produce the first\nelement in the seq do not occur until the seq is consumed. dorun can\nbe used to force any effects. Walks through the successive nexts of\nthe seq, does not retain the head and returns nil.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dorun.cljsdoc"}
 
 ```
 

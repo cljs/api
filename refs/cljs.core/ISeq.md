@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ISeq</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ISeq.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ISeq</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ISeq.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for collections to provide access to their items as sequences.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L499-L507):
+Source code @ [github]():
 
 ```clj
 (defprotocol ISeq
@@ -43,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:499-507](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L499-L507)</ins>
+
 </pre>
 
 -->
@@ -92,15 +87,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ISeq",
+ :name-encode "ISeq",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/ISeq",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ISeq.java"},
  :full-name-encode "cljs.core/ISeq",
  :source {:code "(defprotocol ISeq\n  \"Protocol for collections to provide access to their items as sequences.\"\n  (-first [coll]\n    \"Returns the first item in the collection coll. Used by cljs.core/first.\")\n  (^clj -rest [coll]\n    \"Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [499 507]},
+          :lines [499 507],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L499-L507"},
  :methods [{:name "-first",
             :signature ["[coll]"],
             :docstring "Returns the first item in the collection coll. Used by cljs.core/first."}
@@ -108,8 +107,8 @@ The API data for this symbol:
             :signature ["[coll]"],
             :docstring "Returns a new collection of coll without the first item. It should\n     always return a seq, e.g.\n     (rest []) => ()\n     (rest nil) => ()"}],
  :full-name "cljs.core/ISeq",
- :clj-symbol "clojure.lang/ISeq",
- :docstring "Protocol for collections to provide access to their items as sequences."}
+ :docstring "Protocol for collections to provide access to their items as sequences.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISeq.cljsdoc"}
 
 ```
 

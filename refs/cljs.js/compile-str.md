@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(compile-str state source cb)</samp><br>
+<samp>(compile-str state source name cb)</samp><br>
+<samp>(compile-str state source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__compile-str__ state source cb)<br>
@@ -54,7 +59,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L660-L698):
+Source code @ [github]():
 
 ```clj
 (defn compile-str
@@ -80,12 +85,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:660-698](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L660-L698)</ins>
+
 </pre>
 
 -->
@@ -129,17 +129,23 @@ The API data for this symbol:
  :signature ["[state source cb]"
              "[state source name cb]"
              "[state source name opts cb]"],
+ :name-encode "compile-str",
  :history [["+" "1.7.28"]],
  :type "function",
  :full-name-encode "cljs.js/compile-str",
  :source {:code "(defn compile-str\n  ([state source cb]\n   (compile-str state source nil cb))\n  ([state source name cb]\n   (compile-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (compile-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (:analyze-deps opts true)\n      :*load-macros*  (:load-macros opts true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)\n      :*sm-data*      (when (:source-map opts) (sm-data))}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [660 698]},
+          :lines [660 698],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L660-L698"},
+ :usage ["(compile-str state source cb)"
+         "(compile-str state source name cb)"
+         "(compile-str state source name opts cb)"],
  :full-name "cljs.js/compile-str",
- :docstring "Compile ClojureScript source into JavaScript. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :load       - library resolution function, see *load-fn*\n  :source-map - set to true to generate inline source map information\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value with the compilation result (string). If unsuccessful the map\n  will contain a key :error with an ex-info instance describing the cause\n  of failure."}
+ :docstring "Compile ClojureScript source into JavaScript. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n  :load       - library resolution function, see *load-fn*\n  :source-map - set to true to generate inline source map information\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value with the compilation result (string). If unsuccessful the map\n  will contain a key :error with an ex-info instance describing the cause\n  of failure.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/compile-str.cljsdoc"}
 
 ```
 

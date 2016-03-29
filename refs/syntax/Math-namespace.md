@@ -103,8 +103,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A special namespace for direct access to the native JavaScript [Math library].\n\n`Math/foo` => `js/Math.foo`\n\n[Math library]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/java_interop#toc6"},
  :ns "syntax",
  :name "Math-namespace",
+ :name-encode "Math-namespace",
  :history [["+" "0.0-927"]],
  :type "special namespace",
  :related ["syntax/js-namespace"],
@@ -114,7 +117,7 @@ The API data for this symbol:
              :content "Math constants:\n\n```clj\nMath/E\n;;=> 2.718281828459045\n\nMath/PI\n;;=> 3.141592653589793\n\nMath/SQRT2\n;;=> 1.4142135623730951\n```\n\nMath functions:\n\n```clj\n(Math/cos 0)\n;;=> 1\n\n(Math/atan2 1 0)\n;;=> 1.5707963267948966\n\n(Math/log Math/E)\n;;=> 1\n\n(Math/pow 2 5)\n;;=> 32\n\n(Math/pow Math/E (Math/log 1))\n;;=> 1\n```"}],
  :full-name "syntax/Math-namespace",
  :display "Math/ namespace",
- :clj-doc "http://clojure.org/java_interop#toc6"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/Math-namespace.cljsdoc"}
 
 ```
 

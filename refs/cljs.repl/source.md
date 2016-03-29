@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(source name)</samp><br>
+
+---
 
  <samp>
 (__source__ name)<br>
@@ -62,7 +65,7 @@ Example: (source filter)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1253-L1260):
+Source code @ [github]():
 
 ```clj
 (defmacro source
@@ -74,12 +77,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:1253-1260](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L1253-L1260)</ins>
+
 </pre>
 
 -->
@@ -125,21 +123,26 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "source",
  :signature ["[name]"],
+ :name-encode "source",
  :history [["+" "0.0-2985"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.repl/source",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/source"},
  :related ["cljs.repl/doc"],
  :full-name-encode "cljs.repl/source",
  :source {:code "(defmacro source\n  [n]\n  `(println ~(or (source-fn &env n) (str \"Source not found\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [1253 1260]},
+          :lines [1255 1262],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L1255-L1262"},
+ :usage ["(source name)"],
  :examples [{:id "94c94c",
              :content "```clj\n(source comment)\n;; Prints:\n;; (defmacro comment\n;;   \"Ignores body, yields nil\"\n;;   {:added \"1.0\"}\n;;   [& body])\n;;\n;;=> nil\n```"}],
  :full-name "cljs.repl/source",
- :clj-symbol "clojure.repl/source",
- :docstring "Prints the source code for the given symbol, if it can find it.\nThis requires that the symbol resolve to a Var defined in a\nnamespace for which the .cljs is in the classpath.\n\nExample: (source filter)"}
+ :docstring "Prints the source code for the given symbol, if it can find it.\nThis requires that the symbol resolve to a Var defined in a\nnamespace for which the .cljs is in the classpath.\n\nExample: (source filter)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/source.cljsdoc"}
 
 ```
 

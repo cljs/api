@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(load-macros bound-vars k macros reload reloads opts cb)</samp><br>
+
+---
 
  <samp>
 (__load-macros__ bound-vars k macros reload reloads opts cb)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L300-L315):
+Source code @ [github]():
 
 ```clj
 (defn load-macros [bound-vars k macros reload reloads opts cb]
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:300-315](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L300-L315)</ins>
+
 </pre>
 
 -->
@@ -103,6 +101,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [300 315]},
+ :usage ["(load-macros bound-vars k macros reload reloads opts cb)"],
  :full-name "cljs.js/load-macros",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

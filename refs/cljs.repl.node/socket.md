@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(socket host port)</samp><br>
+
+---
 
  <samp>
 (__socket__ host port)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L24-L28):
+Source code @ [github]():
 
 ```clj
 (defn socket [host port]
@@ -36,13 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:24-28](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L24-L28)</ins>
+
 </pre>
 
 -->
@@ -83,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "socket",
- :type "function",
  :signature ["[host port]"],
+ :name-encode "socket",
+ :history [["+" "0.0-2629"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/socket",
  :source {:code "(defn socket [host port]\n  (let [socket (Socket. host port)\n        in     (io/reader socket)\n        out    (io/writer socket)]\n    {:socket socket :in in :out out}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [24 28]},
+          :lines [24 28],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L24-L28"},
+ :usage ["(socket host port)"],
  :full-name "cljs.repl.node/socket",
- :full-name-encode "cljs.repl.node/socket",
- :history [["+" "0.0-2629"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/socket.cljsdoc"}
 
 ```
 

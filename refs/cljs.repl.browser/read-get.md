@@ -10,6 +10,9 @@
 </tr>
 </table>
 
+<samp>(read-get line rdr)</samp><br>
+
+---
 
  <samp>
 (__read-get__ line rdr)<br>
@@ -23,7 +26,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L154-L159):
+Source code @ [github]():
 
 ```clj
 (defn read-get [line rdr]
@@ -38,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:154-159](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L154-L159)</ins>
+
 </pre>
 
 -->
@@ -95,6 +93,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [154 159]},
+ :usage ["(read-get line rdr)"],
  :full-name "cljs.repl.browser/read-get",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

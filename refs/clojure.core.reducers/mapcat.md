@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(mapcat f)</samp><br>
+<samp>(mapcat f coll)</samp><br>
+
+---
 
  <samp>
 (__mapcat__ f)<br>
@@ -34,7 +38,7 @@ Applies f to every value in the reduction of coll, concatenating the result
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L106-L115):
+Source code @ [github]():
 
 ```clj
 (defcurried mapcat
@@ -53,13 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:106-115](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L106-L115)</ins>
+
 </pre>
 
 -->
@@ -104,18 +102,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "mapcat",
  :signature ["[f]" "[f coll]"],
+ :name-encode "mapcat",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/mapcat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/mapcat"},
  :full-name-encode "clojure.core.reducers/mapcat",
  :source {:code "(defcurried mapcat\n  \"Applies f to every value in the reduction of coll, concatenating the result\n  colls of (f val). Foldable.\"\n  {}\n  [f coll]\n  (folder coll\n   (fn [f1]\n     (rfn [f1 k]\n          ([ret k v]\n             (reduce f1 ret (f k v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [106 115]},
+          :lines [106 115],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L106-L115"},
+ :usage ["(mapcat f)" "(mapcat f coll)"],
  :full-name "clojure.core.reducers/mapcat",
- :clj-symbol "clojure.core.reducers/mapcat",
- :docstring "Applies f to every value in the reduction of coll, concatenating the result\n  colls of (f val). Foldable."}
+ :docstring "Applies f to every value in the reduction of coll, concatenating the result\n  colls of (f val). Foldable.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/mapcat.cljsdoc"}
 
 ```
 

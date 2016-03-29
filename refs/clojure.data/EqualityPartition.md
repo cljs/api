@@ -25,7 +25,7 @@ Implementation detail. Subject to change.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L75-L77):
+Source code @ [github]():
 
 ```clj
 (defprotocol EqualityPartition
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[data.cljs:75-77](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/data.cljs#L75-L77)</ins>
+
 </pre>
 
 -->
@@ -86,21 +81,25 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.data",
  :name "EqualityPartition",
+ :name-encode "EqualityPartition",
  :history [["+" "0.0-1503"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.data/EqualityPartition",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.data-api.html#clojure.data/EqualityPartition"},
  :full-name-encode "clojure.data/EqualityPartition",
  :source {:code "(defprotocol EqualityPartition\n  \"Implementation detail. Subject to change.\"\n  (equality-partition [x] \"Implementation detail. Subject to change.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/data.cljs",
-          :lines [75 77]},
+          :lines [75 77],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/data.cljs#L75-L77"},
  :methods [{:name "equality-partition",
             :signature ["[x]"],
             :docstring "Implementation detail. Subject to change."}],
  :full-name "clojure.data/EqualityPartition",
- :clj-symbol "clojure.data/EqualityPartition",
- :docstring "Implementation detail. Subject to change."}
+ :docstring "Implementation detail. Subject to change.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.data/EqualityPartition.cljsdoc"}
 
 ```
 

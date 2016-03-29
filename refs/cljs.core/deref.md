@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(deref x)</samp><br>
+
+---
 
  <samp>
 (__deref__ x)<br>
@@ -46,7 +49,7 @@ it if not already forced. See also - realized?.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1309-L1315):
+Source code @ [github]():
 
 ```clj
 (defn deref
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1309-1315](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1309-L1315)</ins>
+
 </pre>
 
 -->
@@ -109,19 +107,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "deref",
  :signature ["[x]"],
+ :name-encode "deref",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/deref",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/deref"},
  :related ["cljs.core/atom"],
  :full-name-encode "cljs.core/deref",
  :source {:code "(defn deref\n  [o]\n  (-deref o))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1309 1315]},
+          :lines [1309 1315],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1309-L1315"},
+ :usage ["(deref x)"],
  :full-name "cljs.core/deref",
- :clj-symbol "clojure.core/deref",
- :docstring "Also reader macro: @var/@atom/@delay. Returns the\nmost-recently-committed value of ref. When applied to a var\nor atom, returns its current state. When applied to a delay, forces\nit if not already forced. See also - realized?."}
+ :docstring "Also reader macro: @var/@atom/@delay. Returns the\nmost-recently-committed value of ref. When applied to a var\nor atom, returns its current state. When applied to a delay, forces\nit if not already forced. See also - realized?.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/deref.cljsdoc"}
 
 ```
 

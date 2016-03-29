@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(tagged-literal tag form)</samp><br>
+
+---
 
  <samp>
 (__tagged-literal__ tag form)<br>
@@ -36,7 +39,7 @@ tag symbol and a form.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10252-L10257):
+Source code @ [github]():
 
 ```clj
 (defn tagged-literal
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10252-10257](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10252-L10257)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "tagged-literal",
  :signature ["[tag form]"],
+ :name-encode "tagged-literal",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/tagged-literal",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/tagged-literal"},
  :full-name-encode "cljs.core/tagged-literal",
  :source {:code "(defn tagged-literal\n  [tag form]\n  {:pre [(symbol? tag)]}\n  (TaggedLiteral. tag form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10252 10257]},
+          :lines [10252 10257],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10252-L10257"},
+ :usage ["(tagged-literal tag form)"],
  :full-name "cljs.core/tagged-literal",
- :clj-symbol "clojure.core/tagged-literal",
- :docstring "Construct a data representation of a tagged literal from a\ntag symbol and a form."}
+ :docstring "Construct a data representation of a tagged literal from a\ntag symbol and a form.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/tagged-literal.cljsdoc"}
 
 ```
 

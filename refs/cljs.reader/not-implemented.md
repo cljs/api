@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(not-implemented rdr ch)</samp><br>
+
+---
 
  <samp>
 (__not-implemented__ rdr ch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L244-L246):
+Source code @ [github]():
 
 ```clj
 (defn not-implemented
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:244-246](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L244-L246)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "not-implemented",
- :type "function",
  :signature ["[rdr ch]"],
+ :name-encode "not-implemented",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/not-implemented",
  :source {:code "(defn not-implemented\n  [rdr ch]\n  (reader-error rdr \"Reader for \" ch \" not implemented yet\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [244 246]},
+          :lines [244 246],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L244-L246"},
+ :usage ["(not-implemented rdr ch)"],
  :full-name "cljs.reader/not-implemented",
- :full-name-encode "cljs.reader/not-implemented",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/not-implemented.cljsdoc"}
 
 ```
 

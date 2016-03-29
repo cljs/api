@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reverse coll)</samp><br>
+
+---
 
  <samp>
 (__reverse__ coll)<br>
@@ -40,7 +43,7 @@ Returns a seq of the items in coll in reverse order. Not lazy.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2921-L2926):
+Source code @ [github]():
 
 ```clj
 (defn reverse
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2921-2926](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2921-L2926)</ins>
+
 </pre>
 
 -->
@@ -105,19 +103,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "reverse",
  :signature ["[coll]"],
+ :name-encode "reverse",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/reverse",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reverse"},
  :related ["cljs.core/rseq"],
  :full-name-encode "cljs.core/reverse",
  :source {:code "(defn reverse\n  [coll]\n  (if (reversible? coll)\n    (rseq coll)\n    (reduce conj () coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2921 2926]},
+          :lines [2921 2926],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2921-L2926"},
+ :usage ["(reverse coll)"],
  :full-name "cljs.core/reverse",
- :clj-symbol "clojure.core/reverse",
- :docstring "Returns a seq of the items in coll in reverse order. Not lazy."}
+ :docstring "Returns a seq of the items in coll in reverse order. Not lazy.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/reverse.cljsdoc"}
 
 ```
 

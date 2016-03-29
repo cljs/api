@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(repeat x)</samp><br>
+<samp>(repeat n x)</samp><br>
+
+---
 
  <samp>
 (__repeat__ x)<br>
@@ -48,7 +52,7 @@ Returns a lazy (infinite!, or length n if supplied) sequence of xs.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4469-L4472):
+Source code @ [github]():
 
 ```clj
 (defn repeat
@@ -60,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4469-4472](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4469-L4472)</ins>
+
 </pre>
 
 -->
@@ -111,8 +110,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "repeat",
  :signature ["[x]" "[n x]"],
+ :name-encode "repeat",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/repeat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/repeat"},
  :related ["cljs.core/repeatedly"
            "cljs.core/cycle"
            "cljs.core/constantly"
@@ -121,12 +123,14 @@ The API data for this symbol:
  :source {:code "(defn repeat\n  ([x] (lazy-seq (cons x (repeat x))))\n  ([n x] (take n (repeat x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4469 4472]},
+          :lines [4469 4472],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4469-L4472"},
+ :usage ["(repeat x)" "(repeat n x)"],
  :full-name "cljs.core/repeat",
- :clj-symbol "clojure.core/repeat",
- :docstring "Returns a lazy (infinite!, or length n if supplied) sequence of xs."}
+ :docstring "Returns a lazy (infinite!, or length n if supplied) sequence of xs.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/repeat.cljsdoc"}
 
 ```
 

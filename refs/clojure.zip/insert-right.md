@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(insert-right loc item)</samp><br>
+
+---
 
  <samp>
 (__insert-right__ loc item)<br>
@@ -31,7 +34,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L174-L181):
+Source code @ [github]():
 
 ```clj
 (defn insert-right
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:174-181](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L174-L181)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "insert-right",
  :signature ["[loc item]"],
+ :name-encode "insert-right",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/insert-right",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/insert-right"},
  :full-name-encode "clojure.zip/insert-right",
  :source {:code "(defn insert-right\n  [loc item]\n    (let [[node {r :r :as path}] loc]\n      (if (nil? path)\n        (throw \"Insert at top\")\n        (with-meta [node (assoc path :r (cons item r) :changed? true)] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [174 181]},
+          :lines [174 181],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L174-L181"},
+ :usage ["(insert-right loc item)"],
  :full-name "clojure.zip/insert-right",
- :clj-symbol "clojure.zip/insert-right",
- :docstring "Inserts the item as the right sibling of the node at this loc,\nwithout moving"}
+ :docstring "Inserts the item as the right sibling of the node at this loc,\nwithout moving",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/insert-right.cljsdoc"}
 
 ```
 

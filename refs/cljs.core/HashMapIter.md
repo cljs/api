@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(HashMapIter. nil-val root-iter seen)</samp><br>
+
+---
 
  <samp>
 (__HashMapIter.__ nil-val root-iter seen)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6983-L6993):
+Source code @ [github]():
 
 ```clj
 (deftype HashMapIter [nil-val root-iter ^:mutable seen]
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6983-6993](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6983-L6993)</ins>
+
 </pre>
 
 -->
@@ -88,17 +86,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "HashMapIter",
- :type "type",
  :signature ["[nil-val root-iter seen]"],
+ :name-encode "HashMapIter",
+ :history [["+" "1.7.28"]],
+ :type "type",
+ :full-name-encode "cljs.core/HashMapIter",
  :source {:code "(deftype HashMapIter [nil-val root-iter ^:mutable seen]\n  Object\n  (hasNext [_]\n    (and ^boolean seen ^boolean (.hasNext root-iter)))\n  (next [_]\n    (if-not ^boolean seen\n      (do\n        (set! seen true)\n        nil-val)\n      (.next root-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6983 6993]},
+          :lines [6983 6993],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6983-L6993"},
+ :usage ["(HashMapIter. nil-val root-iter seen)"],
  :full-name "cljs.core/HashMapIter",
- :full-name-encode "cljs.core/HashMapIter",
- :history [["+" "1.7.28"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/HashMapIter.cljsdoc"}
 
 ```
 

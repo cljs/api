@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IDeref</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IDeref.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IDeref</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IDeref.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding dereference functionality to a reference.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L565-L568):
+Source code @ [github]():
 
 ```clj
 (defprotocol IDeref
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:565-568](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L565-L568)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IDeref",
+ :name-encode "IDeref",
  :history [["+" "0.0-927"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IDeref",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IDeref.java"},
  :full-name-encode "cljs.core/IDeref",
  :source {:code "(defprotocol IDeref\n  \"Protocol for adding dereference functionality to a reference.\"\n  (-deref [o]\n    \"Returns the value of the reference o.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [565 568]},
+          :lines [565 568],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L565-L568"},
  :methods [{:name "-deref",
             :signature ["[o]"],
             :docstring "Returns the value of the reference o."}],
  :full-name "cljs.core/IDeref",
- :clj-symbol "clojure.lang/IDeref",
- :docstring "Protocol for adding dereference functionality to a reference."}
+ :docstring "Protocol for adding dereference functionality to a reference.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IDeref.cljsdoc"}
 
 ```
 

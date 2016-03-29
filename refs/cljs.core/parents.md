@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(parents tag)</samp><br>
+<samp>(parents h tag)</samp><br>
+
+---
 
  <samp>
 (__parents__ tag)<br>
@@ -36,7 +40,7 @@ defaults to the global hierarchy
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9712-L9718):
+Source code @ [github]():
 
 ```clj
 (defn parents
@@ -48,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9712-9718](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9712-L9718)</ins>
+
 </pre>
 
 -->
@@ -98,18 +97,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "parents",
  :signature ["[tag]" "[h tag]"],
+ :name-encode "parents",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/parents",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/parents"},
  :full-name-encode "cljs.core/parents",
  :source {:code "(defn parents\n  ([tag] (parents @(get-global-hierarchy) tag))\n  ([h tag] (not-empty (get (:parents h) tag))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9712 9718]},
+          :lines [9712 9718],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9712-L9718"},
+ :usage ["(parents tag)" "(parents h tag)"],
  :full-name "cljs.core/parents",
- :clj-symbol "clojure.core/parents",
- :docstring "Returns the immediate parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy"}
+ :docstring "Returns the immediate parents of tag, either via a JavaScript type\ninheritance relationship or a relationship established via derive. h\nmust be a hierarchy obtained from make-hierarchy, if not supplied\ndefaults to the global hierarchy",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/parents.cljsdoc"}
 
 ```
 

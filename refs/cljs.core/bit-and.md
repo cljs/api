@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(bit-and x y)</samp><br>
+<samp>(bit-and x y & more)</samp><br>
+
+---
 
  <samp>
 (__bit-and__ x y)<br>
@@ -63,7 +67,7 @@ Bitwise and
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2585-L2589):
+Function code @ [github]():
 
 ```clj
 (defn bit-and
@@ -76,19 +80,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2585-2589](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2585-L2589)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1083-L1085):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric bit-and
@@ -100,12 +99,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1083-1085](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1083-L1085)</ins>
+
 </pre>
 -->
 
@@ -149,27 +143,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "bit-and",
  :signature ["[x y]" "[x y & more]"],
+ :name-encode "bit-and",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/bit-and",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bit-and"},
  :related ["cljs.core/bit-or"],
  :full-name-encode "cljs.core/bit-and",
  :source {:code "(defn bit-and\n  ([x y] (cljs.core/bit-and x y))\n  ([x y & more]\n     (reduce bit-and (cljs.core/bit-and x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2585 2589]},
+          :lines [2585 2589],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2585-L2589"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric bit-and\n  ([x y] (core/list 'js* \"(~{} & ~{})\" x y))\n  ([x y & more] `(bit-and (bit-and ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1083 1085]}],
+                  :lines [1083 1085],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1083-L1085"}],
+ :usage ["(bit-and x y)" "(bit-and x y & more)"],
  :examples [{:id "3c0470",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-and 2r1100 2r1010)\n;;=> 8\n;; 8 = 2r1000\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-and 12 10)\n;;=> 8\n```"}],
  :full-name "cljs.core/bit-and",
- :clj-symbol "clojure.core/bit-and",
- :docstring "Bitwise and"}
+ :docstring "Bitwise and",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bit-and.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(floats x)</samp><br>
+
+---
 
  <samp>
 (__floats__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2553):
+Source code @ [github]():
 
 ```clj
 (defn floats [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2553](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2553)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "floats",
  :signature ["[x]"],
+ :name-encode "floats",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/floats",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/floats"},
  :full-name-encode "cljs.core/floats",
  :source {:code "(defn floats [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2553]},
+          :lines [2553],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2553"},
+ :usage ["(floats x)"],
  :full-name "cljs.core/floats",
- :clj-symbol "clojure.core/floats"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/floats.cljsdoc"}
 
 ```
 

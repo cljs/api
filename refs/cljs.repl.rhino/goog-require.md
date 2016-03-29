@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(goog-require repl-env opts rule)</samp><br>
+
+---
 
  <samp>
 (__goog-require__ repl-env opts rule)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L78-L109):
+Source code @ [github]():
 
 ```clj
 (defn goog-require [repl-env opts rule]
@@ -63,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2913/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2913
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[rhino.clj:78-109](https://github.com/clojure/clojurescript/blob/r2913/src/clj/cljs/repl/rhino.clj#L78-L109)</ins>
+
 </pre>
 
 -->
@@ -119,6 +117,7 @@ The API data for this symbol:
           :tag "r2913",
           :filename "src/clj/cljs/repl/rhino.clj",
           :lines [78 109]},
+ :usage ["(goog-require repl-env opts rule)"],
  :full-name "cljs.repl.rhino/goog-require",
  :removed {:in "0.0-2985", :last-seen "0.0-2913"}}
 

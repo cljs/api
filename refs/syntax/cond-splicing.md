@@ -53,7 +53,7 @@ Like [`cond`][doc:syntax/cond], except:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514):
+Reader code @ [github]():
 
 ```clj
 (defn- read-cond
@@ -81,18 +81,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:496-514](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -114,13 +108,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -153,8 +141,11 @@ The API data for this symbol:
 
 ```clj
 {:description "(Only allowed in `.cljc` files or the REPL)\n\nLike [doc:syntax/cond], except:\n\n- each conditional value must be a sequence,\n- the selected sequence is spliced into the parent form,\n- and it must have a parent form to be spliced into (not top level).\n\n`(def #?@(:cljs [foo 1])` is read as `(def foo 1)`.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc5"},
  :ns "syntax",
  :name "cond-splicing",
+ :name-encode "cond-splicing",
  :history [["+" "0.0-3190"]],
  :type "syntax",
  :related ["syntax/cond"],
@@ -164,19 +155,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [496 514]}
+                  :lines [496 514],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L496-L514"}
                  {:code "(defn- dispatch-macros [ch]\n  (case ch\n    \\^ read-meta                ;deprecated\n    \\' (wrapping-reader 'var)\n    \\( read-fn\n    \\= read-eval\n    \\{ read-set\n    \\< (throwing-reader \"Unreadable form\")\n    \\\" read-regex\n    \\! read-comment\n    \\_ read-discard\n    \\? read-cond\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#?@(...)"],
  :examples [{:id "9d0020",
              :content "```clj\n'(def #?@(:cljs [a 1]\n          :clj  [b 2]))\n;;=> (def a 1)\n```"}],
  :full-name "syntax/cond-splicing",
  :display "#?@ reader conditional splicing",
- :clj-doc "http://clojure.org/reader#toc5"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/cond-splicing.cljsdoc"}
 
 ```
 

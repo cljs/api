@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientVector</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientVector.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientVector</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientVector.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding vector functionality to transient collections.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L698-L703):
+Source code @ [github]():
 
 ```clj
 (defprotocol ITransientVector
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:698-703](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L698-L703)</ins>
+
 </pre>
 
 -->
@@ -89,15 +84,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ITransientVector",
+ :name-encode "ITransientVector",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/ITransientVector",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientVector.java"},
  :full-name-encode "cljs.core/ITransientVector",
  :source {:code "(defprotocol ITransientVector\n  \"Protocol for adding vector functionality to transient collections.\"\n  (^clj -assoc-n! [tcoll n val]\n    \"Returns tcoll with value val added at position n.\")\n  (^clj -pop! [tcoll]\n    \"Returns tcoll with the last item removed from it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [698 703]},
+          :lines [698 703],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L698-L703"},
  :methods [{:name "-assoc-n!",
             :signature ["[tcoll n val]"],
             :docstring "Returns tcoll with value val added at position n."}
@@ -105,8 +104,8 @@ The API data for this symbol:
             :signature ["[tcoll]"],
             :docstring "Returns tcoll with the last item removed from it."}],
  :full-name "cljs.core/ITransientVector",
- :clj-symbol "clojure.lang/ITransientVector",
- :docstring "Protocol for adding vector functionality to transient collections."}
+ :docstring "Protocol for adding vector functionality to transient collections.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientVector.cljsdoc"}
 
 ```
 

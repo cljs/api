@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(fnext coll)</samp><br>
+
+---
 
  <samp>
 (__fnext__ coll)<br>
@@ -60,7 +63,7 @@ Same as (first (next x))
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1616-L1619):
+Source code @ [github]():
 
 ```clj
 (defn fnext
@@ -72,12 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1616-1619](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1616-L1619)</ins>
+
 </pre>
 
 -->
@@ -123,21 +121,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "fnext",
  :signature ["[coll]"],
+ :name-encode "fnext",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/fnext",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/fnext"},
  :related ["cljs.core/ffirst" "cljs.core/second"],
  :full-name-encode "cljs.core/fnext",
  :source {:code "(defn fnext\n  [coll]\n  (first (next coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1616 1619]},
+          :lines [1616 1619],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1616-L1619"},
+ :usage ["(fnext coll)"],
  :examples [{:id "92383f",
              :content "```clj\n(fnext [1 2 3])\n;;=> 2\n\n(fnext [1 2])\n;;=> 2\n\n(fnext [1])\n;;=> nil\n\n(fnext [])\n;;=> nil\n```"}],
  :full-name "cljs.core/fnext",
- :clj-symbol "clojure.core/fnext",
- :docstring "Same as (first (next x))"}
+ :docstring "Same as (first (next x))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/fnext.cljsdoc"}
 
 ```
 

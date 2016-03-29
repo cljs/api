@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(unsafe-cast t x)</samp><br>
+
+---
 
  <samp>
 (__unsafe-cast__ t x)<br>
@@ -27,7 +30,7 @@ EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L875-L879):
+Source code @ [github]():
 
 ```clj
 (core/defmacro unsafe-cast
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:875-879](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L875-L879)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "unsafe-cast",
  :signature ["[t x]"],
+ :name-encode "unsafe-cast",
  :history [["+" "1.7.107"]],
  :type "macro",
  :full-name-encode "cljs.core/unsafe-cast",
  :source {:code "(core/defmacro unsafe-cast\n  [t x]\n  (core/let [cast-expr (core/str \"~{} = /** @type {\" t \"} */ (~{})\")]\n    (core/list 'js* cast-expr x x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [875 879]},
+          :lines [875 879],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L875-L879"},
+ :usage ["(unsafe-cast t x)"],
  :full-name "cljs.core/unsafe-cast",
- :docstring "EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type."}
+ :docstring "EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unsafe-cast.cljsdoc"}
 
 ```
 

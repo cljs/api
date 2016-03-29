@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(take-last n coll)</samp><br>
+
+---
 
  <samp>
 (__take-last__ n coll)<br>
@@ -46,7 +49,7 @@ of coll may be no better than linear time.  For vectors, see also subvec.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4424-L4431):
+Source code @ [github]():
 
 ```clj
 (defn take-last
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4424-4431](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4424-L4431)</ins>
+
 </pre>
 
 -->
@@ -112,19 +110,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "take-last",
  :signature ["[n coll]"],
+ :name-encode "take-last",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/take-last",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/take-last"},
  :related ["cljs.core/last" "cljs.core/butlast" "cljs.core/drop-last"],
  :full-name-encode "cljs.core/take-last",
  :source {:code "(defn take-last\n  [n coll]\n  (loop [s (seq coll), lead (seq (drop n coll))]\n    (if lead\n      (recur (next s) (next lead))\n      s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4424 4431]},
+          :lines [4424 4431],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4424-L4431"},
+ :usage ["(take-last n coll)"],
  :full-name "cljs.core/take-last",
- :clj-symbol "clojure.core/take-last",
- :docstring "Returns a seq of the last n items in coll.  Depending on the type\nof coll may be no better than linear time.  For vectors, see also subvec."}
+ :docstring "Returns a seq of the last n items in coll.  Depending on the type\nof coll may be no better than linear time.  For vectors, see also subvec.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/take-last.cljsdoc"}
 
 ```
 

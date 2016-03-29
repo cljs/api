@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(set-validator! a fn)</samp><br>
+
+---
 
  <samp>
 (__set-validator!__ a fn)<br>
@@ -55,7 +58,7 @@ validator will not be changed.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4169-L4177):
+Source code @ [github]():
 
 ```clj
 (defn set-validator!
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4169-4177](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4169-L4177)</ins>
+
 </pre>
 
 -->
@@ -118,19 +116,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "set-validator!",
  :signature ["[a fn]"],
+ :name-encode "set-validatorBANG",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/set-validator!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/set-validator!"},
  :related ["cljs.core/atom" "cljs.core/get-validator"],
  :full-name-encode "cljs.core/set-validatorBANG",
  :source {:code "(defn set-validator!\n  [iref val]\n  (set! (.-validator iref) val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4169 4177]},
+          :lines [4169 4177],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4169-L4177"},
+ :usage ["(set-validator! a fn)"],
  :full-name "cljs.core/set-validator!",
- :clj-symbol "clojure.core/set-validator!",
- :docstring "Sets the validator-fn for an atom. validator-fn must be nil or a\nside-effect-free fn of one argument, which will be passed the intended\nnew state on any state change. If the new state is unacceptable, the\nvalidator-fn should return false or throw an Error. If the current state\nis not acceptable to the new validator, an Error will be thrown and the\nvalidator will not be changed."}
+ :docstring "Sets the validator-fn for an atom. validator-fn must be nil or a\nside-effect-free fn of one argument, which will be passed the intended\nnew state on any state change. If the new state is unacceptable, the\nvalidator-fn should return false or throw an Error. If the current state\nis not acceptable to the new validator, an Error will be thrown and the\nvalidator will not be changed.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/set-validatorBANG.cljsdoc"}
 
 ```
 

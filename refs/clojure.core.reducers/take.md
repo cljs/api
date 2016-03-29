@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(take n)</samp><br>
+<samp>(take n coll)</samp><br>
+
+---
 
  <samp>
 (__take__ n)<br>
@@ -33,7 +37,7 @@ Ends the reduction of coll after consuming n values.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L164-L176):
+Source code @ [github]():
 
 ```clj
 (defcurried take
@@ -55,13 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:164-176](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L164-L176)</ins>
+
 </pre>
 
 -->
@@ -106,18 +104,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "take",
  :signature ["[n]" "[n coll]"],
+ :name-encode "take",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/take",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/take"},
  :full-name-encode "clojure.core.reducers/take",
  :source {:code "(defcurried take\n  \"Ends the reduction of coll after consuming n values.\"\n  {}\n  [n coll]\n  (reducer coll\n   (fn [f1]\n     (let [cnt (atom n)]\n       (rfn [f1 k]\n         ([ret k v]\n            (swap! cnt dec)\n            (if (neg? @cnt)\n              (reduced ret)\n              (f1 ret k v))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [164 176]},
+          :lines [164 176],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L164-L176"},
+ :usage ["(take n)" "(take n coll)"],
  :full-name "clojure.core.reducers/take",
- :clj-symbol "clojure.core.reducers/take",
- :docstring "Ends the reduction of coll after consuming n values."}
+ :docstring "Ends the reduction of coll after consuming n values.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/take.cljsdoc"}
 
 ```
 

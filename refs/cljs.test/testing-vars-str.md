@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(testing-vars-str m)</samp><br>
+
+---
 
  <samp>
 (__testing-vars-str__ m)<br>
@@ -32,7 +35,7 @@ current assertion.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L289-L297):
+Source code @ [github]():
 
 ```clj
 (defn testing-vars-str
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:289-297](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L289-L297)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "testing-vars-str",
  :signature ["[m]"],
+ :name-encode "testing-vars-str",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/testing-vars-str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/testing-vars-str"},
  :full-name-encode "cljs.test/testing-vars-str",
  :source {:code "(defn testing-vars-str\n  [m]\n  (let [{:keys [file line column]} m]\n    (str\n      (reverse (map #(:name (meta %)) (:testing-vars (get-current-env))))\n      \" (\" file \":\" line (when column (str \":\" column)) \")\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [289 297]},
+          :lines [289 297],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L289-L297"},
+ :usage ["(testing-vars-str m)"],
  :full-name "cljs.test/testing-vars-str",
- :clj-symbol "clojure.test/testing-vars-str",
- :docstring "Returns a string representation of the current test.  Renders names\nin *testing-vars* as a list, then the source file and line of\ncurrent assertion."}
+ :docstring "Returns a string representation of the current test.  Renders names\nin *testing-vars* as a list, then the source file and line of\ncurrent assertion.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/testing-vars-str.cljsdoc"}
 
 ```
 

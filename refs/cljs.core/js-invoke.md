@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-invoke obj s & args)</samp><br>
+
+---
 
  <samp>
 (__js-invoke__ obj s & args)<br>
@@ -55,7 +58,7 @@ string is not a valid unquoted property name.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L424-L428):
+Source code @ [github]():
 
 ```clj
 (defn js-invoke
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:424-428](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L424-L428)</ins>
+
 </pre>
 
 -->
@@ -115,19 +113,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-invoke",
  :signature ["[obj s & args]"],
+ :name-encode "js-invoke",
  :history [["+" "0.0-2411"]],
  :type "function",
  :full-name-encode "cljs.core/js-invoke",
  :source {:code "(defn js-invoke\n  [obj s & args]\n  (.apply (aget obj s) obj (into-array args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [424 428]},
+          :lines [424 428],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L424-L428"},
+ :usage ["(js-invoke obj s & args)"],
  :examples [{:id "373cce",
              :content "If we have a JavaScript object with an unusual property name:\n\n```js\n// JavaScript\nvar obj = {\n  \"my sum\": function(a,b) { return a+b; }\n};\n```\n\nWe can invoke it from ClojureScript:\n\n```clj\n(js-invoke js/obj \"my sum\" 1 2)\n;=> 3\n```"}],
  :full-name "cljs.core/js-invoke",
- :docstring "Invoke JavaScript object method via string. Needed when the\nstring is not a valid unquoted property name."}
+ :docstring "Invoke JavaScript object method via string. Needed when the\nstring is not a valid unquoted property name.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-invoke.cljsdoc"}
 
 ```
 

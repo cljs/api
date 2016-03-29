@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(symbol name)</samp><br>
+<samp>(symbol ns name)</samp><br>
+
+---
 
  <samp>
 (__symbol__ name)<br>
@@ -28,7 +32,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L983-L996):
+Source code @ [github]():
 
 ```clj
 (defn symbol
@@ -51,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:983-996](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L983-L996)</ins>
+
 </pre>
 
 -->
@@ -101,17 +100,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "symbol",
  :signature ["[name]" "[ns name]"],
+ :name-encode "symbol",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/symbol",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/symbol"},
  :full-name-encode "cljs.core/symbol",
  :source {:code "(defn symbol\n  ([name]\n   (if (symbol? name)\n     name\n     (let [idx (.indexOf name \"/\")]\n       (if (< idx 1)\n         (symbol nil name)\n         (symbol (.substring name 0 idx)\n                 (.substring name (inc idx) (. name -length)))))))\n  ([ns name]\n   (let [sym-str (if-not (nil? ns)\n                   (str ns \"/\" name)\n                   name)]\n     (Symbol. ns name sym-str nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [983 996]},
+          :lines [983 996],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L983-L996"},
+ :usage ["(symbol name)" "(symbol ns name)"],
  :full-name "cljs.core/symbol",
- :clj-symbol "clojure.core/symbol"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/symbol.cljsdoc"}
 
 ```
 

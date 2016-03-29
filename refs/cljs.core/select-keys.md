@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(select-keys map keys)</samp><br>
+
+---
 
  <samp>
 (__select-keys__ map keys)<br>
@@ -35,7 +38,7 @@ Returns a map containing only those entries in map whose key is in keys
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8178-L8190):
+Source code @ [github]():
 
 ```clj
 (defn select-keys
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8178-8190](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8178-L8190)</ins>
+
 </pre>
 
 -->
@@ -107,18 +105,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "select-keys",
  :signature ["[map keys]"],
+ :name-encode "select-keys",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/select-keys",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/select-keys"},
  :full-name-encode "cljs.core/select-keys",
  :source {:code "(defn select-keys\n  [map keyseq]\n    (loop [ret {} keys (seq keyseq)]\n      (if keys\n        (let [key   (first keys)\n              entry (get map key ::not-found)]\n          (recur\n           (if (not= entry ::not-found)\n             (assoc ret key entry)\n             ret)\n           (next keys)))\n        (with-meta ret (meta map)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8178 8190]},
+          :lines [8178 8190],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8178-L8190"},
+ :usage ["(select-keys map keys)"],
  :full-name "cljs.core/select-keys",
- :clj-symbol "clojure.core/select-keys",
- :docstring "Returns a map containing only those entries in map whose key is in keys"}
+ :docstring "Returns a map containing only those entries in map whose key is in keys",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/select-keys.cljsdoc"}
 
 ```
 

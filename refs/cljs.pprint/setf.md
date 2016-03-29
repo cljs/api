@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(setf sym new-val)</samp><br>
+
+---
 
  <samp>
 (__setf__ sym new-val)<br>
@@ -27,7 +30,7 @@ Set the value of the field SYM to NEW-VAL
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L34-L37):
+Source code @ [github]():
 
 ```clj
 (defmacro setf
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:34-37](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L34-L37)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "setf",
  :signature ["[sym new-val]"],
+ :name-encode "setf",
  :history [["+" "0.0-3255"]],
  :type "macro",
  :full-name-encode "cljs.pprint/setf",
  :source {:code "(defmacro setf\n  [sym new-val]\n  `(swap! @~'this assoc ~sym ~new-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [34 37]},
+          :lines [34 37],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L34-L37"},
+ :usage ["(setf sym new-val)"],
  :full-name "cljs.pprint/setf",
- :docstring "Set the value of the field SYM to NEW-VAL"}
+ :docstring "Set the value of the field SYM to NEW-VAL",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/setf.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(ifn? f)</samp><br>
+
+---
 
  <samp>
 (__ifn?__ f)<br>
@@ -42,7 +45,7 @@ Returns true if f returns true for fn? or satisfies IFn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2086-L2089):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean ifn?
@@ -54,12 +57,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2086-2089](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2086-L2089)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "ifn?",
  :signature ["[f]"],
+ :name-encode "ifnQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ifn?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ifn?"},
  :related ["cljs.core/fn?"],
  :full-name-encode "cljs.core/ifnQMARK",
  :source {:code "(defn ^boolean ifn?\n  [f]\n  (or (fn? f) (satisfies? IFn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2086 2089]},
+          :lines [2086 2089],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2086-L2089"},
+ :usage ["(ifn? f)"],
  :full-name "cljs.core/ifn?",
- :clj-symbol "clojure.core/ifn?",
- :docstring "Returns true if f returns true for fn? or satisfies IFn."}
+ :docstring "Returns true if f returns true for fn? or satisfies IFn.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ifnQMARK.cljsdoc"}
 
 ```
 

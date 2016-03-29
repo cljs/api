@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-mod n d)</samp><br>
+
+---
 
  <samp>
 (__js-mod__ n d)<br>
@@ -58,7 +61,7 @@ Modulus of num and div with original javascript behavior. i.e. bug for negative 
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2557-L2560):
+Function code @ [github]():
 
 ```clj
 (defn js-mod
@@ -70,19 +73,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2557-2560](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2557-L2560)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1077-L1078):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric js-mod [num div]
@@ -93,12 +91,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1077-1078](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1077-L1078)</ins>
+
 </pre>
 -->
 
@@ -139,6 +132,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-mod",
  :signature ["[n d]"],
+ :name-encode "js-mod",
  :history [["+" "0.0-1552"]],
  :type "function/macro",
  :related ["cljs.core/mod"],
@@ -146,19 +140,23 @@ The API data for this symbol:
  :source {:code "(defn js-mod\n  [n d]\n  (cljs.core/js-mod n d))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2557 2560]},
+          :lines [2557 2560],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2557-L2560"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric js-mod [num div]\n  (core/list 'js* \"(~{} % ~{})\" num div))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1077 1078]}],
+                  :lines [1077 1078],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1077-L1078"}],
+ :usage ["(js-mod n d)"],
  :examples [{:id "75fa6d",
              :content "```clj\n(js-mod -5 3)\n;;=> -2\n\n(js-mod 5 3)\n;;=> 2\n\n(js-mod 5 0)\n;;=> NaN\n```"}],
  :full-name "cljs.core/js-mod",
- :docstring "Modulus of num and div with original javascript behavior. i.e. bug for negative numbers"}
+ :docstring "Modulus of num and div with original javascript behavior. i.e. bug for negative numbers",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-mod.cljsdoc"}
 
 ```
 

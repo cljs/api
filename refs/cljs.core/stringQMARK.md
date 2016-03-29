@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(string? x)</samp><br>
+
+---
 
  <samp>
 (__string?__ x)<br>
@@ -35,7 +38,7 @@ Returns true if x is a JavaScript string.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L222-L225):
+Function code @ [github]():
 
 ```clj
 (defn ^boolean string?
@@ -47,19 +50,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:222-225](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L222-L225)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L892-L893):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro string? [x]
@@ -70,12 +68,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:892-893](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L892-L893)</ins>
+
 </pre>
 -->
 
@@ -120,24 +113,30 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "string?",
  :signature ["[x]"],
+ :name-encode "stringQMARK",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/string?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/string?"},
  :full-name-encode "cljs.core/stringQMARK",
  :source {:code "(defn ^boolean string?\n  [x]\n  (goog/isString x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [222 225]},
+          :lines [222 225],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L222-L225"},
  :extra-sources [{:code "(core/defmacro string? [x]\n  (bool-expr (core/list 'js* \"typeof ~{} === 'string'\" x)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [892 893]}],
+                  :lines [892 893],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L892-L893"}],
+ :usage ["(string? x)"],
  :full-name "cljs.core/string?",
- :clj-symbol "clojure.core/string?",
- :docstring "Returns true if x is a JavaScript string."}
+ :docstring "Returns true if x is a JavaScript string.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/stringQMARK.cljsdoc"}
 
 ```
 

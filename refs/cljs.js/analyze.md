@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(analyze state source cb)</samp><br>
+<samp>(analyze state source name cb)</samp><br>
+<samp>(analyze state source name opts cb)</samp><br>
+
+---
 
  <samp>
 (__analyze__ state source cb)<br>
@@ -55,7 +60,7 @@ cb (function)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L423-L459):
+Source code @ [github]():
 
 ```clj
 (defn analyze
@@ -78,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:423-459](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L423-L459)</ins>
+
 </pre>
 
 -->
@@ -136,6 +136,9 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [423 459]},
+ :usage ["(analyze state source cb)"
+         "(analyze state source name cb)"
+         "(analyze state source name opts cb)"],
  :full-name "cljs.js/analyze",
  :docstring "Analyze ClojureScript source. The compiler state will be populated with\nthe results of analyzes. The parameters:\n\nstate (atom)\n  the compiler state\n\nsource (string)\n  the ClojureScript source\n\nname (symbol)\n  optional, the name of the source\n\nopts (map)\n  compilation options.\n\n:eval - the eval function to invoke, see *eval-fn*\n:load - library resolution function, see *load-fn*\n\ncb (function)\n  callback, will be invoked with a map. If successful the map will contain\n  a key :value, the actual value is not meaningful. If unsuccessful the\n  map will contain a key :error with an ex-info instance describing the cause\n  of failure.",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}

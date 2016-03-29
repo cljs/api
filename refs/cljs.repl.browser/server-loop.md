@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(server-loop opts server-socket)</samp><br>
+
+---
 
  <samp>
 (__server-loop__ opts server-socket)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L258-L263):
+Source code @ [github]():
 
 ```clj
 (defn server-loop
@@ -37,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:258-263](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L258-L263)</ins>
+
 </pre>
 
 -->
@@ -93,6 +91,7 @@ The API data for this symbol:
           :tag "r1450",
           :filename "src/clj/cljs/repl/browser.clj",
           :lines [258 263]},
+ :usage ["(server-loop opts server-socket)"],
  :full-name "cljs.repl.browser/server-loop",
  :removed {:in "0.0-1503", :last-seen "0.0-1450"}}
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(assoc-in m \[k & ks\] v)</samp><br>
+
+---
 
  <samp>
 (__assoc-in__ m \[k & ks\] v)<br>
@@ -73,7 +76,7 @@ If any levels do not exist, hash-maps will be created.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4692-L4699):
+Source code @ [github]():
 
 ```clj
 (defn assoc-in
@@ -87,12 +90,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4692-4699](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4692-L4699)</ins>
+
 </pre>
 
 -->
@@ -138,21 +136,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "assoc-in",
  :signature ["[m [k & ks] v]"],
+ :name-encode "assoc-in",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/assoc-in",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/assoc-in"},
  :related ["cljs.core/assoc" "cljs.core/update-in" "cljs.core/get-in"],
  :full-name-encode "cljs.core/assoc-in",
  :source {:code "(defn assoc-in\n  [m [k & ks] v]\n  (if ks\n    (assoc m k (assoc-in (get m k) ks v))\n    (assoc m k v)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4692 4699]},
+          :lines [4692 4699],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4692-L4699"},
+ :usage ["(assoc-in m [k & ks] v)"],
  :examples [{:id "e76f20",
              :content "```clj\n(def users [{:name \"James\" :age 26}\n            {:name \"John\" :age 43}])\n```\n\nUpdate the age of the second (index 1) user:\n\n```clj\n(assoc-in users [1 :age] 44)\n;;=> [{:name \"James\", :age 26}\n;;    {:name \"John\", :age 44}]\n```\n\nInsert the password of the second (index 1) user:\n\n```clj\n(assoc-in users [1 :password] \"nhoJ\")\n;;=> [{:name \"James\", :age 26}\n;;    {:password \"nhoJ\", :name \"John\", :age 43}]\n```"}],
  :full-name "cljs.core/assoc-in",
- :clj-symbol "clojure.core/assoc-in",
- :docstring "Associates a value in a nested associative structure, where ks is a\nsequence of keys and v is the new value and returns a new nested structure.\nIf any levels do not exist, hash-maps will be created."}
+ :docstring "Associates a value in a nested associative structure, where ks is a\nsequence of keys and v is the new value and returns a new nested structure.\nIf any levels do not exist, hash-maps will be created.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/assoc-in.cljsdoc"}
 
 ```
 

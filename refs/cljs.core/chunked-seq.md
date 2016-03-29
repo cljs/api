@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(chunked-seq vec i off)</samp><br>
+<samp>(chunked-seq vec node i off)</samp><br>
+<samp>(chunked-seq vec node i off meta)</samp><br>
+
+---
 
  <samp>
 (__chunked-seq__ vec i off)<br>
@@ -28,7 +33,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5179-L5183):
+Source code @ [github]():
 
 ```clj
 (defn chunked-seq
@@ -42,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5179-5183](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5179-L5183)</ins>
+
 </pre>
 
 -->
@@ -88,17 +88,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "chunked-seq",
- :type "function",
  :signature ["[vec i off]" "[vec node i off]" "[vec node i off meta]"],
+ :name-encode "chunked-seq",
+ :history [["+" "0.0-1424"]],
+ :type "function",
+ :full-name-encode "cljs.core/chunked-seq",
  :source {:code "(defn chunked-seq\n  ([vec i off] (ChunkedSeq. vec (array-for vec i) i off nil nil))\n  ([vec node i off] (ChunkedSeq. vec node i off nil nil))\n  ([vec node i off meta]\n     (ChunkedSeq. vec node i off meta nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5179 5183]},
+          :lines [5179 5183],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5179-L5183"},
+ :usage ["(chunked-seq vec i off)"
+         "(chunked-seq vec node i off)"
+         "(chunked-seq vec node i off meta)"],
  :full-name "cljs.core/chunked-seq",
- :full-name-encode "cljs.core/chunked-seq",
- :history [["+" "0.0-1424"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunked-seq.cljsdoc"}
 
 ```
 

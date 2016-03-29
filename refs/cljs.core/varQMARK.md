@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(var? v)</samp><br>
+
+---
 
  <samp>
 (__var?__ v)<br>
@@ -30,7 +33,7 @@ Returns true if v is of type cljs.core.Var
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1061-L1064):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean var?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1061-1064](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1061-L1064)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "var?",
  :signature ["[v]"],
+ :name-encode "varQMARK",
  :history [["+" "0.0-3255"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/var?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/var?"},
  :full-name-encode "cljs.core/varQMARK",
  :source {:code "(defn ^boolean var?\n  [v]\n  (instance? cljs.core.Var v))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1061 1064]},
+          :lines [1061 1064],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1061-L1064"},
+ :usage ["(var? v)"],
  :full-name "cljs.core/var?",
- :clj-symbol "clojure.core/var?",
- :docstring "Returns true if v is of type cljs.core.Var"}
+ :docstring "Returns true if v is of type cljs.core.Var",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/varQMARK.cljsdoc"}
 
 ```
 

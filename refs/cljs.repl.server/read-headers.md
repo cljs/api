@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-headers rdr)</samp><br>
+
+---
 
  <samp>
 (__read-headers__ rdr)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L66-L72):
+Source code @ [github]():
 
 ```clj
 (defn read-headers [rdr]
@@ -38,13 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:66-72](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L66-L72)</ins>
+
 </pre>
 
 -->
@@ -85,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.server",
  :name "read-headers",
- :type "function",
  :signature ["[rdr]"],
+ :name-encode "read-headers",
+ :history [["+" "0.0-1503"]],
+ :type "function",
+ :full-name-encode "cljs.repl.server/read-headers",
  :source {:code "(defn read-headers [rdr]\n  (loop [next-line (.readLine rdr) header-lines []]\n    (if (= \"\" next-line)\n      header-lines ;; we're done reading headers\n      (recur\n        (.readLine rdr)\n        (conj header-lines next-line)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [66 72]},
+          :lines [66 72],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L66-L72"},
+ :usage ["(read-headers rdr)"],
  :full-name "cljs.repl.server/read-headers",
- :full-name-encode "cljs.repl.server/read-headers",
- :history [["+" "0.0-1503"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/read-headers.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(repl-env\* {:keys \[debug\], :as opts})</samp><br>
+
+---
 
  <samp>
 (__repl-env\*__ {:keys \[debug\], :as opts})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L171-L175):
+Source code @ [github]():
 
 ```clj
 (defn repl-env* [{:keys [debug] :as opts}]
@@ -36,13 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[nashorn.clj:171-175](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/nashorn.clj#L171-L175)</ins>
+
 </pre>
 
 -->
@@ -83,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.nashorn",
  :name "repl-env*",
- :type "function",
  :signature ["[{:keys [debug], :as opts}]"],
+ :name-encode "repl-envSTAR",
+ :history [["+" "0.0-3030"]],
+ :type "function",
+ :full-name-encode "cljs.repl.nashorn/repl-envSTAR",
  :source {:code "(defn repl-env* [{:keys [debug] :as opts}]\n      (let [engine (create-engine opts)]\n        (merge\n          (NashornEnv. engine debug)\n          opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
-          :lines [171 175]},
+          :lines [171 175],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L171-L175"},
+ :usage ["(repl-env* {:keys [debug], :as opts})"],
  :full-name "cljs.repl.nashorn/repl-env*",
- :full-name-encode "cljs.repl.nashorn/repl-envSTAR",
- :history [["+" "0.0-3030"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/repl-envSTAR.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(parse-file {:keys \[host host-port port\], :as repl-env} file {:keys \[asset-path\], :as opts})</samp><br>
+
+---
 
  <samp>
 (__parse-file__ {:keys \[host host-port port\], :as repl-env} file {:keys \[asset-path\], :as opts})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L230-L243):
+Source code @ [github]():
 
 ```clj
 (defn parse-file [{:keys [host host-port port] :as repl-env} file {:keys [asset-path] :as opts}]
@@ -45,13 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:230-243](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L230-L243)</ins>
+
 </pre>
 
 -->
@@ -102,6 +99,7 @@ The API data for this symbol:
           :tag "r3308",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [230 243]},
+ :usage ["(parse-file {:keys [host host-port port], :as repl-env} file {:keys [asset-path], :as opts})"],
  :full-name "cljs.repl.browser/parse-file",
  :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 

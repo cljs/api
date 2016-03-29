@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pr & objs)</samp><br>
+
+---
 
  <samp>
 (__pr__ & objs)<br>
@@ -33,7 +36,7 @@ read by the reader
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9176-L9182):
+Source code @ [github]():
 
 ```clj
 (defn pr
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9176-9182](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9176-L9182)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "pr",
  :signature ["[& objs]"],
+ :name-encode "pr",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/pr",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pr"},
  :full-name-encode "cljs.core/pr",
  :source {:code "(defn pr\n  [& objs]\n  (pr-with-opts objs (pr-opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9176 9182]},
+          :lines [9176 9182],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9176-L9182"},
+ :usage ["(pr & objs)"],
  :full-name "cljs.core/pr",
- :clj-symbol "clojure.core/pr",
- :docstring "Prints the object(s) using string-print.  Prints the\nobject(s), separated by spaces if there is more than one.\nBy default, pr and prn print in a way that objects can be\nread by the reader"}
+ :docstring "Prints the object(s) using string-print.  Prints the\nobject(s), separated by spaces if there is more than one.\nBy default, pr and prn print in a way that objects can be\nread by the reader",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr.cljsdoc"}
 
 ```
 

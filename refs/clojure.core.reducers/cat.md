@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(cat)</samp><br>
+<samp>(cat ctor)</samp><br>
+<samp>(cat left right)</samp><br>
+
+---
 
  <samp>
 (__cat__)<br>
@@ -41,7 +46,7 @@ with (zero? (count x)). See also foldcat.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L213-L230):
+Source code @ [github]():
 
 ```clj
 (defn cat
@@ -62,13 +67,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:213-230](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L213-L230)</ins>
+
 </pre>
 
 -->
@@ -113,18 +112,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "cat",
  :signature ["[]" "[ctor]" "[left right]"],
+ :name-encode "cat",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/cat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/cat"},
  :full-name-encode "clojure.core.reducers/cat",
  :source {:code "(defn cat\n  ([] (array))\n  ([ctor]\n     (fn\n       ([] (ctor))\n       ([left right] (cat left right))))\n  ([left right]\n     (cond\n       (zero? (count left)) right\n       (zero? (count right)) left\n       :else\n       (Cat. (+ (count left) (count right)) left right))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [213 230]},
+          :lines [213 230],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L213-L230"},
+ :usage ["(cat)" "(cat ctor)" "(cat left right)"],
  :full-name "clojure.core.reducers/cat",
- :clj-symbol "clojure.core.reducers/cat",
- :docstring "A high-performance combining fn that yields the catenation of the\nreduced values. The result is reducible, foldable, seqable and\ncounted, providing the identity collections are reducible, seqable\nand counted. The single argument version will build a combining fn\nwith the supplied identity constructor. Tests for identity\nwith (zero? (count x)). See also foldcat."}
+ :docstring "A high-performance combining fn that yields the catenation of the\nreduced values. The result is reducible, foldable, seqable and\ncounted, providing the identity collections are reducible, seqable\nand counted. The single argument version will build a combining fn\nwith the supplied identity constructor. Tests for identity\nwith (zero? (count x)). See also foldcat.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/cat.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(VectorNode. edit arr)</samp><br>
+
+---
 
  <samp>
 (__VectorNode.__ edit arr)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4746):
+Source code @ [github]():
 
 ```clj
 (deftype VectorNode [edit arr])
@@ -32,12 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4746](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4746)</ins>
+
 </pre>
 
 -->
@@ -78,17 +76,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "VectorNode",
- :type "type",
  :signature ["[edit arr]"],
+ :name-encode "VectorNode",
+ :history [["+" "0.0-1211"]],
+ :type "type",
+ :full-name-encode "cljs.core/VectorNode",
  :source {:code "(deftype VectorNode [edit arr])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4746]},
+          :lines [4746],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4746"},
+ :usage ["(VectorNode. edit arr)"],
  :full-name "cljs.core/VectorNode",
- :full-name-encode "cljs.core/VectorNode",
- :history [["+" "0.0-1211"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/VectorNode.cljsdoc"}
 
 ```
 

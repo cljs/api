@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(send-print url data)</samp><br>
+<samp>(send-print url data n)</samp><br>
+
+---
 
  <samp>
 (__send-print__ url data)<br>
@@ -31,7 +35,7 @@ up to 10 times.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L74-L86):
+Source code @ [github]():
 
 ```clj
 (defn send-print
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:74-86](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L74-L86)</ins>
+
 </pre>
 
 -->
@@ -99,17 +97,21 @@ The API data for this symbol:
 {:ns "clojure.browser.repl",
  :name "send-print",
  :signature ["[url data]" "[url data n]"],
+ :name-encode "send-print",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.repl/send-print",
  :source {:code "(defn send-print\n  ([url data]\n   (send-print url data 0))\n  ([url data n]\n   (let [conn (net/xhr-connection)]\n     (event/listen conn :error\n       (fn [_]\n         (if (< n 10)\n           (send-print url data (inc n))\n           (.log js/console (str \"Could not send \" data \" after \" n \" attempts.\")))))\n     (net/transmit conn url \"POST\" data nil 0))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [74 86]},
+          :lines [74 86],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L74-L86"},
+ :usage ["(send-print url data)" "(send-print url data n)"],
  :full-name "clojure.browser.repl/send-print",
- :docstring "Send data to be printed in the REPL. If there is an error, try again\nup to 10 times."}
+ :docstring "Send data to be printed in the REPL. If there is an error, try again\nup to 10 times.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/send-print.cljsdoc"}
 
 ```
 

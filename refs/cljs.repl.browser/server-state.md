@@ -18,7 +18,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L24-L28):
+Source code @ [github]():
 
 ```clj
 (defonce server-state (atom {:socket nil
@@ -32,12 +32,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1450/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1450
-└── src
-    └── clj
-        └── cljs
-            └── repl
-                └── <ins>[browser.clj:24-28](https://github.com/clojure/clojurescript/blob/r1450/src/clj/cljs/repl/browser.clj#L24-L28)</ins>
+
 </pre>
 
 -->

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(key-test key other)</samp><br>
+
+---
 
  <samp>
 (__key-test__ key other)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6287-L6291):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean key-test [key other]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:6287-6291](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L6287-L6291)</ins>
+
 </pre>
 
 -->
@@ -84,16 +82,20 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "key-test",
  :signature ["[key other]"],
+ :name-encode "key-test",
  :history [["+" "0.0-1424"]],
  :type "function",
  :full-name-encode "cljs.core/key-test",
  :source {:code "(defn ^boolean key-test [key other]\n  (cond\n    (identical? key other) true\n    (keyword-identical? key other) true\n    :else (= key other)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6287 6291]},
- :full-name "cljs.core/key-test"}
+          :lines [6287 6291],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6287-L6291"},
+ :usage ["(key-test key other)"],
+ :full-name "cljs.core/key-test",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/key-test.cljsdoc"}
 
 ```
 

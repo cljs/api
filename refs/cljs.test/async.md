@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(async done & body)</samp><br>
+
+---
 
  <samp>
 (__async__ done & body)<br>
@@ -37,7 +40,7 @@ invoked once and from an async context after any assertions.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L223-L240):
+Source code @ [github]():
 
 ```clj
 (defmacro async
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:223-240](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L223-L240)</ins>
+
 </pre>
 
 -->
@@ -100,17 +98,21 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "async",
  :signature ["[done & body]"],
+ :name-encode "async",
  :history [["+" "0.0-2814"]],
  :type "macro",
  :full-name-encode "cljs.test/async",
  :source {:code "(defmacro async\n  [done & body]\n  `(reify\n     cljs.test/IAsyncTest\n     cljs.core/IFn\n     (~'-invoke [_# ~done]\n       ~@body)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [223 240]},
+          :lines [223 240],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L223-L240"},
+ :usage ["(async done & body)"],
  :full-name "cljs.test/async",
- :docstring "Wraps body as a CPS function that can be returned from a test to\ncontinue asynchronously.  Binds done to a function that must be\ninvoked once and from an async context after any assertions.\n\n(deftest example-with-timeout\n  (async done\n    (js/setTimeout (fn []\n                     ;; make assertions in async context...\n                     (done) ;; ...then call done\n                     )\n                   0)))"}
+ :docstring "Wraps body as a CPS function that can be returned from a test to\ncontinue asynchronously.  Binds done to a function that must be\ninvoked once and from an async context after any assertions.\n\n(deftest example-with-timeout\n  (async done\n    (js/setTimeout (fn []\n                     ;; make assertions in async context...\n                     (done) ;; ...then call done\n                     )\n                   0)))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/async.cljsdoc"}
 
 ```
 

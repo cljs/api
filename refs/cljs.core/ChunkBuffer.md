@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkBuffer</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ChunkBuffer.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ChunkBuffer</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ChunkBuffer.java)
 </td>
 </tr>
 </table>
 
+<samp>(ChunkBuffer. buf end)</samp><br>
+
+---
 
  <samp>
 (__ChunkBuffer.__ buf end)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3178-L3190):
+Source code @ [github]():
 
 ```clj
 (deftype ChunkBuffer [^:mutable buf ^:mutable end]
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3178-3190](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3178-L3190)</ins>
+
 </pre>
 
 -->
@@ -97,17 +95,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "ChunkBuffer",
  :signature ["[buf end]"],
+ :name-encode "ChunkBuffer",
  :history [["+" "0.0-1424"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/ChunkBuffer",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ChunkBuffer.java"},
  :full-name-encode "cljs.core/ChunkBuffer",
  :source {:code "(deftype ChunkBuffer [^:mutable buf ^:mutable end]\n  Object\n  (add [_ o]\n    (aset buf end o)\n    (set! end (inc end)))\n\n  (chunk [_ o]\n    (let [ret (ArrayChunk. buf 0 end)]\n      (set! buf nil)\n      ret))\n\n  ICounted\n  (-count [_] end))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3178 3190]},
+          :lines [3178 3190],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3178-L3190"},
+ :usage ["(ChunkBuffer. buf end)"],
  :full-name "cljs.core/ChunkBuffer",
- :clj-symbol "clojure.lang/ChunkBuffer"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ChunkBuffer.cljsdoc"}
 
 ```
 

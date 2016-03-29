@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(print-mapped-stacktrace stacktrace)</samp><br>
+<samp>(print-mapped-stacktrace stacktrace opts)</samp><br>
+
+---
 
  <samp>
 (__print-mapped-stacktrace__ stacktrace)<br>
@@ -31,7 +35,7 @@ print the ClojureScript stacktrace. See mapped-stacktrace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L350-L360):
+Source code @ [github]():
 
 ```clj
 (defn print-mapped-stacktrace
@@ -49,12 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:350-360](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L350-L360)</ins>
+
 </pre>
 
 -->
@@ -96,17 +95,22 @@ The API data for this symbol:
 {:ns "cljs.repl",
  :name "print-mapped-stacktrace",
  :signature ["[stacktrace]" "[stacktrace opts]"],
+ :name-encode "print-mapped-stacktrace",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl/print-mapped-stacktrace",
  :source {:code "(defn print-mapped-stacktrace\n  ([stacktrace] (print-mapped-stacktrace stacktrace *repl-opts*))\n  ([stacktrace opts]\n   (doseq [{:keys [function file line column]}\n           (mapped-stacktrace stacktrace opts)]\n     (err-out\n       (println \"\\t\"\n         (str (when function (str function \" \"))\n           \"(\" file (when line (str \":\" line)) (when column (str \":\" column)) \")\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [350 360]},
+          :lines [352 362],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L352-L362"},
+ :usage ["(print-mapped-stacktrace stacktrace)"
+         "(print-mapped-stacktrace stacktrace opts)"],
  :full-name "cljs.repl/print-mapped-stacktrace",
- :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nprint the ClojureScript stacktrace. See mapped-stacktrace."}
+ :docstring "Given a vector representing the canonicalized JavaScript stacktrace\nprint the ClojureScript stacktrace. See mapped-stacktrace.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/print-mapped-stacktrace.cljsdoc"}
 
 ```
 

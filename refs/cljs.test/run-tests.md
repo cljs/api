@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(run-tests)</samp><br>
+<samp>(run-tests env-or-ns)</samp><br>
+<samp>(run-tests env-or-ns & namespaces)</samp><br>
+
+---
 
  <samp>
 (__run-tests__)<br>
@@ -40,7 +45,7 @@ multimethod.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L283-L295):
+Source code @ [github]():
 
 ```clj
 (defmacro run-tests
@@ -57,12 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.clj:283-295](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.clj#L283-L295)</ins>
+
 </pre>
 
 -->
@@ -107,18 +107,25 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "run-tests",
  :signature ["[]" "[env-or-ns]" "[env-or-ns & namespaces]"],
+ :name-encode "run-tests",
  :history [["+" "0.0-2496"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.test/run-tests",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/run-tests"},
  :full-name-encode "cljs.test/run-tests",
  :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.clj",
-          :lines [283 295]},
+          :lines [283 295],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L283-L295"},
+ :usage ["(run-tests)"
+         "(run-tests env-or-ns)"
+         "(run-tests env-or-ns & namespaces)"],
  :full-name "cljs.test/run-tests",
- :clj-symbol "clojure.test/run-tests",
- :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given. Does not return a meaningful\nvalue due to the possiblity of asynchronous execution. To detect test\ncompletion add a :end-run-tests method case to the cljs.test/report\nmultimethod."}
+ :docstring "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given. Does not return a meaningful\nvalue due to the possiblity of asynchronous execution. To detect test\ncompletion add a :end-run-tests method case to the cljs.test/report\nmultimethod.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/run-tests.cljsdoc"}
 
 ```
 

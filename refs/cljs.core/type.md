@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(type x)</samp><br>
+
+---
 
  <samp>
 (__type__ x)<br>
@@ -30,7 +33,7 @@ Return x's constructor.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L253-L257):
+Source code @ [github]():
 
 ```clj
 (defn type
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:253-257](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L253-L257)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "type",
  :signature ["[x]"],
+ :name-encode "type",
  :history [["+" "0.0-971"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/type",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/type"},
  :full-name-encode "cljs.core/type",
  :source {:code "(defn type\n  [x]\n  (when-not (nil? x)\n    (.-constructor x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [253 257]},
+          :lines [253 257],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L253-L257"},
+ :usage ["(type x)"],
  :full-name "cljs.core/type",
- :clj-symbol "clojure.core/type",
- :docstring "Return x's constructor."}
+ :docstring "Return x's constructor.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/type.cljsdoc"}
 
 ```
 

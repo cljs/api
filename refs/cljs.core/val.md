@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(val map-entry)</samp><br>
+
+---
 
  <samp>
 (__val__ map-entry)<br>
@@ -40,7 +43,7 @@ Returns the value in the map entry.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8149-L8152):
+Source code @ [github]():
 
 ```clj
 (defn val
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8149-8152](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8149-L8152)</ins>
+
 </pre>
 
 -->
@@ -103,19 +101,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "val",
  :signature ["[map-entry]"],
+ :name-encode "val",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/val",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/val"},
  :related ["cljs.core/vals"],
  :full-name-encode "cljs.core/val",
  :source {:code "(defn val\n  [map-entry]\n  (-val map-entry))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8149 8152]},
+          :lines [8149 8152],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8149-L8152"},
+ :usage ["(val map-entry)"],
  :full-name "cljs.core/val",
- :clj-symbol "clojure.core/val",
- :docstring "Returns the value in the map entry."}
+ :docstring "Returns the value in the map entry.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/val.cljsdoc"}
 
 ```
 

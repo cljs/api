@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(let bindings & body)</samp><br>
+
+---
 
  <samp>
 (__let__ bindings & body)<br>
@@ -65,7 +68,7 @@ therein.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L708-L718):
+Source code @ [github]():
 
 ```clj
 (core/defmacro let
@@ -80,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:708-718](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L708-L718)</ins>
+
 </pre>
 
 -->
@@ -131,19 +129,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "let",
  :signature ["[bindings & body]"],
+ :name-encode "let",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/let",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/let"},
  :related ["cljs.core/letfn" "cljs.core/if-let"],
  :full-name-encode "cljs.core/let",
  :source {:code "(core/defmacro let\n  [bindings & body]\n  (assert-args let\n     (vector? bindings) \"a vector for its binding\"\n     (even? (count bindings)) \"an even number of forms in binding vector\")\n  `(let* ~(destructure bindings) ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [708 718]},
+          :lines [708 718],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L708-L718"},
+ :usage ["(let bindings & body)"],
  :full-name "cljs.core/let",
- :clj-symbol "clojure.core/let",
- :docstring "binding => binding-form init-expr\n\nEvaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein."}
+ :docstring "binding => binding-form init-expr\n\nEvaluates the exprs in a lexical context in which the symbols in\nthe binding-forms are bound to their respective init-exprs or parts\ntherein.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/let.cljsdoc"}
 
 ```
 

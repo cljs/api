@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(get-options)</samp><br>
+<samp>(get-options state)</samp><br>
+
+---
 
  <samp>
 (__get-options__)<br>
@@ -30,7 +34,7 @@ Return the compiler options from compiler state.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L55-L59):
+Source code @ [github]():
 
 ```clj
 (defn get-options
@@ -43,13 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:55-59](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L55-L59)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "get-options",
  :signature ["[]" "[state]"],
+ :name-encode "get-options",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/get-options",
  :source {:code "(defn get-options\n  ([] (get-options env/*compiler*))\n  ([state]\n   (get @state :options)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [55 59]},
+          :lines [55 59],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L55-L59"},
+ :usage ["(get-options)" "(get-options state)"],
  :full-name "cljs.analyzer.api/get-options",
- :docstring "Return the compiler options from compiler state."}
+ :docstring "Return the compiler options from compiler state.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/get-options.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(close-socket s)</samp><br>
+
+---
 
  <samp>
 (__close-socket__ s)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L30-L33):
+Source code @ [github]():
 
 ```clj
 (defn close-socket [s]
@@ -35,13 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:30-33](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L30-L33)</ins>
+
 </pre>
 
 -->
@@ -82,17 +79,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.node",
  :name "close-socket",
- :type "function",
  :signature ["[s]"],
+ :name-encode "close-socket",
+ :history [["+" "0.0-2629"]],
+ :type "function",
+ :full-name-encode "cljs.repl.node/close-socket",
  :source {:code "(defn close-socket [s]\n  (.close (:in s))\n  (.close (:out s))\n  (.close (:socket s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [30 33]},
+          :lines [30 33],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L30-L33"},
+ :usage ["(close-socket s)"],
  :full-name "cljs.repl.node/close-socket",
- :full-name-encode "cljs.repl.node/close-socket",
- :history [["+" "0.0-2629"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/close-socket.cljsdoc"}
 
 ```
 

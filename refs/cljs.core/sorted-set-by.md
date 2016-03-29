@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(sorted-set-by comparator & keys)</samp><br>
+
+---
 
  <samp>
 (__sorted-set-by__ comparator & keys)<br>
@@ -42,7 +45,7 @@ Returns a new sorted set with supplied keys, using the supplied comparator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8469-L8474):
+Source code @ [github]():
 
 ```clj
 (defn sorted-set-by
@@ -56,12 +59,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8469-8474](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8469-L8474)</ins>
+
 </pre>
 
 -->
@@ -107,8 +105,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sorted-set-by",
  :signature ["[comparator & keys]"],
+ :name-encode "sorted-set-by",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sorted-set-by",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sorted-set-by"},
  :related ["cljs.core/sorted-set"
            "cljs.core/sorted-map-by"
            "cljs.core/compare"],
@@ -116,12 +117,14 @@ The API data for this symbol:
  :source {:code "(defn sorted-set-by\n  ([comparator & keys]\n   (reduce -conj\n           (PersistentTreeSet. nil (sorted-map-by comparator) 0)\n           keys)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8469 8474]},
+          :lines [8469 8474],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8469-L8474"},
+ :usage ["(sorted-set-by comparator & keys)"],
  :full-name "cljs.core/sorted-set-by",
- :clj-symbol "clojure.core/sorted-set-by",
- :docstring "Returns a new sorted set with supplied keys, using the supplied comparator."}
+ :docstring "Returns a new sorted set with supplied keys, using the supplied comparator.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sorted-set-by.cljsdoc"}
 
 ```
 

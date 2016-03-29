@@ -95,8 +95,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A naming convention for dynamic vars (unenforced).\n\n`(def ^:dynamic *foo* 1)`\n\nDynamic vars are global vars that you intend to temporarily rebind with\n[doc:cljs.core/binding].\n\nNOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic\nspecial global vars (e.g. [doc:cljs.core/*clojurescript-version*],\n[doc:cljs.core/*main-cli-fn*]).",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "earmuffs",
+ :name-encode "earmuffs",
  :history [["+" "0.0-927"]],
  :type "convention",
  :related ["cljs.core/binding"],
@@ -106,7 +109,7 @@ The API data for this symbol:
              :content "```clj\n(def ^:dynamic *foo* 1)\n\n(def print-foo []\n  (println *foo*))\n\n(print-foo)\n;; 1\n\n(binding [*foo* 2]\n  (print-foo))\n;; 2\n\n(print-foo)\n;; 1\n```"}],
  :full-name "syntax/earmuffs",
  :display "*earmuffs*",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/earmuffs.cljsdoc"}
 
 ```
 

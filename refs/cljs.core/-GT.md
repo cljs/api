@@ -8,11 +8,14 @@ _known as "thread first"_
 <td>macro</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/-></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/-%3E)
+imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.core/-></samp>](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->)
 </td>
 </tr>
 </table>
 
+<samp>(-> x & forms)</samp><br>
+
+---
 
  <samp>
 (__->__ x & forms)<br>
@@ -135,7 +138,7 @@ second item in second form, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1586-L1600):
+Source code @ [github]():
 
 ```clj
 (defmacro ->
@@ -154,11 +157,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:1586-1600](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1586-L1600)</ins>
+
 </pre>
 
 -->
@@ -204,8 +203,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "->",
  :signature ["[x & forms]"],
+ :name-encode "-GT",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/->",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/->"},
  :related ["cljs.core/->>"],
  :full-name-encode "cljs.core/-GT",
  :source {:code "(defmacro ->\n  [x & forms]\n  (loop [x x, forms forms]\n    (if forms\n      (let [form (first forms)\n            threaded (if (seq? form)\n                       (with-meta `(~(first form) ~x ~@(next form)) (meta form))\n                       (list form x))]\n        (recur threaded (next forms)))\n      x)))",
@@ -213,7 +215,9 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [1586 1600]},
+          :lines [1586 1600],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1586-L1600"},
+ :usage ["(-> x & forms)"],
  :examples [{:id "19b460",
              :content "The first is arguably a bit more cumbersome to read than the second:\n\n```clj\n(first (.split (.replace (.toUpperCase \"a b c d\") \"A\" \"X\") \" \"))\n;;=> \"X\"\n\n(-> \"a b c d\"\n    .toUpperCase\n    (.replace \"A\" \"X\")\n    (.split \" \")\n    first)\n;;=> \"X\"\n```"}
             {:id "78ad8f",
@@ -222,8 +226,8 @@ The API data for this symbol:
              :content "It can also help with arithmetic:\n\n```clj\n(def c 5)\n(-> c (+ 3) (/ 2) (- 1))\n;;=> 3\n```\n\nSame as above, but with more nesting:\n\n```clj\n(- (/ (+ c 3) 2) 1)\n;;=> 3\n```"}],
  :known-as "thread first",
  :full-name "cljs.core/->",
- :clj-symbol "clojure.core/->",
- :docstring "Threads the expr through the forms. Inserts x as the\nsecond item in the first form, making a list of it if it is not a\nlist already. If there are more forms, inserts the first form as the\nsecond item in second form, etc."}
+ :docstring "Threads the expr through the forms. Inserts x as the\nsecond item in the first form, making a list of it if it is not a\nlist already. If there are more forms, inserts the first form as the\nsecond item in second form, etc.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/-GT.cljsdoc"}
 
 ```
 

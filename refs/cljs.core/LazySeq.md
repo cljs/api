@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/LazySeq</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/LazySeq.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/LazySeq</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/LazySeq.java)
 </td>
 </tr>
 </table>
 
+<samp>(LazySeq. meta fn s __hash)</samp><br>
+
+---
 
  <samp>
 (__LazySeq.__ meta fn s __hash)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3098-L3172):
+Source code @ [github]():
 
 ```clj
 (deftype LazySeq [meta ^:mutable fn ^:mutable s ^:mutable __hash]
@@ -109,12 +112,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3098-3172](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3098-L3172)</ins>
+
 </pre>
 
 -->
@@ -159,17 +157,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "LazySeq",
  :signature ["[meta fn s __hash]"],
+ :name-encode "LazySeq",
  :history [["+" "0.0-927"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/LazySeq",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/LazySeq.java"},
  :full-name-encode "cljs.core/LazySeq",
  :source {:code "(deftype LazySeq [meta ^:mutable fn ^:mutable s ^:mutable __hash]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n  (equiv [this other]\n    (-equiv this other))\n  (sval [coll]\n    (if (nil? fn)\n      s\n      (do\n        (set! s (fn))\n        (set! fn nil)\n        s)))\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  IPending\n  (-realized? [x]\n    (not fn))\n\n  IWithMeta\n  (-with-meta [coll meta] (LazySeq. meta fn s __hash))\n\n  IMeta\n  (-meta [coll] meta)\n\n  ISeq\n  (-first [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (first s)))\n  (-rest [coll]\n    (-seq coll)\n    (if-not (nil? s)\n      (rest s)\n      ()))\n\n  INext\n  (-next [coll]\n    (-seq coll)\n    (when-not (nil? s)\n      (next s)))\n\n  ICollection\n  (-conj [coll o] (cons o coll))\n\n  IEmptyableCollection\n  (-empty [coll] (with-meta (.-EMPTY List) meta))\n\n  ISequential\n  IEquiv\n  (-equiv [coll other] (equiv-sequential coll other))\n\n  IHash\n  (-hash [coll] (caching-hash coll hash-ordered-coll __hash))\n\n  ISeqable\n  (-seq [coll]\n    (.sval coll)\n    (when-not (nil? s)\n      (loop [ls s]\n        (if (instance? LazySeq ls)\n          (recur (.sval ls))\n          (do (set! s ls)\n            (seq s))))))\n\n  IReduce\n  (-reduce [coll f] (seq-reduce f coll))\n  (-reduce [coll f start] (seq-reduce f start coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3098 3172]},
+          :lines [3098 3172],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3098-L3172"},
+ :usage ["(LazySeq. meta fn s __hash)"],
  :full-name "cljs.core/LazySeq",
- :clj-symbol "clojure.lang/LazySeq"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/LazySeq.cljsdoc"}
 
 ```
 

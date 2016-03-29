@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(import-macros ns \[& vars\])</samp><br>
+
+---
 
  <samp>
 (__import-macros__ ns \[& vars\])<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L60-L86):
+Source code @ [github]():
 
 ```clj
    (core/defmacro import-macros [ns [& vars]]
@@ -58,12 +61,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:60-86](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L60-L86)</ins>
+
 </pre>
 
 -->
@@ -104,17 +102,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "import-macros",
- :type "macro",
  :signature ["[ns [& vars]]"],
+ :name-encode "import-macros",
+ :history [["+" "0.0-927"]],
+ :type "macro",
+ :full-name-encode "cljs.core/import-macros",
  :source {:code "   (core/defmacro import-macros [ns [& vars]]\n     (core/let [ns (find-ns ns)\n                vars (map #(ns-resolve ns %) vars)\n                syms (map\n                       (core/fn [^clojure.lang.Var v]\n                         (core/-> v .sym\n                           (with-meta\n                             (merge\n                               {:macro true}\n                               (update-in (select-keys (meta v) [:arglists :doc :file :line])\n                                 [:arglists] (core/fn [arglists] `(quote ~arglists)))))))\n                       vars)\n                defs (map\n                       (core/fn [sym var]\n                         (core/let [{:keys [arglists doc file line]} (meta sym)]\n                           `(do\n                              (def ~sym (deref ~var))\n                              ;for AOT compilation\n                              (alter-meta! (var ~sym) assoc\n                                :macro true\n                                :arglists ~arglists\n                                :doc ~doc\n                                :file ~file\n                                :line ~line))))\n                       syms vars)]\n       `(do ~@defs\n            :imported))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [60 86]},
+          :lines [60 86],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L60-L86"},
+ :usage ["(import-macros ns [& vars])"],
  :full-name "cljs.core/import-macros",
- :full-name-encode "cljs.core/import-macros",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/import-macros.cljsdoc"}
 
 ```
 

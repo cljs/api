@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(merge-spec \[lib & {:as aindex}\] \[_ & {:as bindex}\])</samp><br>
+
+---
 
  <samp>
 (__merge-spec__ \[lib & {:as aindex}\] \[_ & {:as bindex}\])<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L196-L209):
+Source code @ [github]():
 
 ```clj
 (defn merge-spec [[lib & {:as aindex}] [_ & {:as bindex}]]
@@ -45,11 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2644/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2644
-└── src
-    └── clj
-        └── cljs
-            └── <ins>[repl.clj:196-209](https://github.com/clojure/clojurescript/blob/r2644/src/clj/cljs/repl.clj#L196-L209)</ins>
+
 </pre>
 
 -->
@@ -100,6 +99,7 @@ The API data for this symbol:
           :tag "r2644",
           :filename "src/clj/cljs/repl.clj",
           :lines [196 209]},
+ :usage ["(merge-spec [lib & {:as aindex}] [_ & {:as bindex}])"],
  :full-name "cljs.repl/merge-spec",
  :removed {:in "0.0-2655", :last-seen "0.0-2644"}}
 

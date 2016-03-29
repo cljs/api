@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(set-value e v)</samp><br>
+
+---
 
  <samp>
 (__set-value__ e v)<br>
@@ -27,7 +30,7 @@ Set the value property for an element.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L142-L145):
+Source code @ [github]():
 
 ```clj
 (defn set-value
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[dom.cljs:142-145](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/dom.cljs#L142-L145)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "clojure.browser.dom",
  :name "set-value",
  :signature ["[e v]"],
+ :name-encode "set-value",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "clojure.browser.dom/set-value",
  :source {:code "(defn set-value\n  [e v]\n  (set-properties e {\"value\" v}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
-          :lines [142 145]},
+          :lines [142 145],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L142-L145"},
+ :usage ["(set-value e v)"],
  :full-name "clojure.browser.dom/set-value",
- :docstring "Set the value property for an element."}
+ :docstring "Set the value property for an element.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/set-value.cljsdoc"}
 
 ```
 

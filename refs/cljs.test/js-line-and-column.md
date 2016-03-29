@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-line-and-column stack-element)</samp><br>
+
+---
 
  <samp>
 (__js-line-and-column__ stack-element)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L366-L370):
+Source code @ [github]():
 
 ```clj
 (defn js-line-and-column [stack-element]
@@ -36,12 +39,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:366-370](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L366-L370)</ins>
+
 </pre>
 
 -->
@@ -82,17 +80,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "js-line-and-column",
- :type "function",
  :signature ["[stack-element]"],
+ :name-encode "js-line-and-column",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/js-line-and-column",
  :source {:code "(defn js-line-and-column [stack-element]\n  (let [parts (.split stack-element \":\")\n        cnt   (count parts)]\n    [(js/parseInt (nth parts (- cnt 2)) 10)\n     (js/parseInt (nth parts (dec cnt)) 10)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [366 370]},
+          :lines [366 370],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L366-L370"},
+ :usage ["(js-line-and-column stack-element)"],
  :full-name "cljs.test/js-line-and-column",
- :full-name-encode "cljs.test/js-line-and-column",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/js-line-and-column.cljsdoc"}
 
 ```
 

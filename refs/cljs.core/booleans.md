@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(booleans x)</samp><br>
+
+---
 
  <samp>
 (__booleans__ x)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2548):
+Source code @ [github]():
 
 ```clj
 (defn booleans [x] x)
@@ -35,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2548](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2548)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "booleans",
  :signature ["[x]"],
+ :name-encode "booleans",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/booleans",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/booleans"},
  :full-name-encode "cljs.core/booleans",
  :source {:code "(defn booleans [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2548]},
+          :lines [2548],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2548"},
+ :usage ["(booleans x)"],
  :full-name "cljs.core/booleans",
- :clj-symbol "clojure.core/booleans"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/booleans.cljsdoc"}
 
 ```
 

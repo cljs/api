@@ -77,7 +77,7 @@ js/console
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776):
+Reader table @ [github]():
 
 ```clj
 (defn- dispatch-macros [ch]
@@ -99,13 +99,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:764-776](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776)</ins>
+
 </pre>
 -->
 
@@ -138,8 +132,11 @@ The API data for this symbol:
 
 ```clj
 {:description "A proper definition for something that cannot be read.\n\nWhen certain values cannot be printed to a REPL using some literal syntax form,\nit wraps a description of its value in a form defined as unreadable, `#<>`.  A\nreader error will be thrown if this value is fed back into the REPL.\n\nFor example, `(atom 42)` will print `#<Atom: 42>` when evaluated in a REPL.\nThis communicates a human-readable form that is not intended to be reproduce\nits value.\n\nOftentimes, evaluating JavaScript objects in a REPL will print the result\nof its `.toString` method inside the unreadable form `#<>`.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L115"},
  :ns "syntax",
  :name "unreadable",
+ :name-encode "unreadable",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :full-name-encode "syntax/unreadable",
@@ -148,13 +145,14 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [764 776]}),
+                  :lines [764 776],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L764-L776"}),
  :usage ["#<...>"],
  :examples [{:id "e0a6cd",
              :content "Unreadable forms will throw an exception when read:\n\n```clj\n#<foo>\n;; clojure.lang.ExceptionInfo: Unreadable form\n```\n\nYou can create an unreadable form for a custom type:\n\n```clj\n(deftype Foo [])\n(Foo.)\n;;=> #<[object Object]>\n\n(deftype Foo [x]\n  Object\n  (toString [_]\n    (str \"Foo: \" x)))\n(Foo. 1)\n;;=> #<Foo: 1>\n```\n\nSome examples of unreadable JavaScript values:\n\n```clj\nMath/sin\n;;=> #<function sin() { [native code] }>\n\njs/console\n;;=> #<[object Object]>\n```"}],
  :full-name "syntax/unreadable",
  :display "#<> unreadable",
- :clj-doc "https://github.com/clojure/clojure/blob/clojure-1.7.0-RC1/src/jvm/clojure/lang/LispReader.java#L115"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/unreadable.cljsdoc"}
 
 ```
 

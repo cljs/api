@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pp)</samp><br>
+
+---
 
  <samp>
 (__pp__)<br>
@@ -31,7 +34,7 @@ exactly equivalent to (pprint *1).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L153-L157):
+Source code @ [github]():
 
 ```clj
 (defmacro pp
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:153-157](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L153-L157)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pp",
  :signature ["[]"],
+ :name-encode "pp",
  :history [["+" "0.0-3255"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.pprint/pp",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pp"},
  :full-name-encode "cljs.pprint/pp",
  :source {:code "(defmacro pp\n  [] `(cljs.pprint/pprint *1))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [153 157]},
+          :lines [153 157],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L153-L157"},
+ :usage ["(pp)"],
  :full-name "cljs.pprint/pp",
- :clj-symbol "clojure.pprint/pp",
- :docstring "A convenience macro that pretty prints the last thing output. This is\nexactly equivalent to (pprint *1)."}
+ :docstring "A convenience macro that pretty prints the last thing output. This is\nexactly equivalent to (pprint *1).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pp.cljsdoc"}
 
 ```
 

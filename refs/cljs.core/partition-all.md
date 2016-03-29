@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(partition-all n)</samp><br>
+<samp>(partition-all n coll)</samp><br>
+<samp>(partition-all n step coll)</samp><br>
+
+---
 
  <samp>
 (__partition-all__ n)<br>
@@ -52,7 +57,7 @@ transducer when no collection is provided.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8573-L8602):
+Source code @ [github]():
 
 ```clj
 (defn partition-all
@@ -88,12 +93,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8573-8602](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8573-L8602)</ins>
+
 </pre>
 
 -->
@@ -139,19 +139,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "partition-all",
  :signature ["[n]" "[n coll]" "[n step coll]"],
+ :name-encode "partition-all",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/partition-all",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/partition-all"},
  :related ["cljs.core/partition" "cljs.core/partition-by"],
  :full-name-encode "cljs.core/partition-all",
  :source {:code "(defn partition-all\n  ([n]\n   (fn [rf]\n     (let [a (array-list)]\n       (fn\n         ([] (rf))\n         ([result]\n            (let [result (if (.isEmpty a)\n                           result\n                           (let [v (vec (.toArray a))]\n                             ;;clear first!\n                             (.clear a)\n                             (unreduced (rf result v))))]\n              (rf result)))\n         ([result input]\n            (.add a input)\n            (if (== n (.size a))\n              (let [v (vec (.toArray a))]\n                (.clear a)\n                (rf result v))\n              result))))))\n  ([n coll]\n     (partition-all n n coll))\n  ([n step coll]\n     (lazy-seq\n      (when-let [s (seq coll)]\n        (cons (take n s) (partition-all n step (drop step s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8573 8602]},
+          :lines [8573 8602],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8573-L8602"},
+ :usage ["(partition-all n)"
+         "(partition-all n coll)"
+         "(partition-all n step coll)"],
  :full-name "cljs.core/partition-all",
- :clj-symbol "clojure.core/partition-all",
- :docstring "Returns a lazy sequence of lists like partition, but may include\npartitions with fewer than n items at the end.  Returns a stateful\ntransducer when no collection is provided."}
+ :docstring "Returns a lazy sequence of lists like partition, but may include\npartitions with fewer than n items at the end.  Returns a stateful\ntransducer when no collection is provided.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/partition-all.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(alength a)</samp><br>
+
+---
 
  <samp>
 (__alength__ a)<br>
@@ -61,7 +64,7 @@ Returns the length of the array. Works on arrays of all types.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L409-L412):
+Function code @ [github]():
 
 ```clj
 (defn ^number alength
@@ -73,19 +76,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:409-412](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L409-L412)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2458-L2461):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro alength [a]
@@ -98,12 +96,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2458-2461](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2458-L2461)</ins>
+
 </pre>
 -->
 
@@ -148,27 +141,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "alength",
  :signature ["[a]"],
+ :name-encode "alength",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/alength",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/alength"},
  :related ["cljs.core/count"],
  :full-name-encode "cljs.core/alength",
  :source {:code "(defn ^number alength\n  [array]\n  (cljs.core/alength array))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [409 412]},
+          :lines [409 412],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L409-L412"},
  :extra-sources [{:code "(core/defmacro alength [a]\n  (vary-meta\n    (core/list 'js* \"~{}.length\" a)\n    assoc :tag 'number))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2458 2461]}],
+                  :lines [2458 2461],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2458-L2461"}],
+ :usage ["(alength a)"],
  :examples [{:id "26f79f",
              :content "```clj\n(def a #js [1 2 3])\n\n(alength a)\n;;=> 3\n\n(.-length a)\n;;=> 3\n\n(aget a \"length\")\n;;=> 3\n\n(count a)\n;;=> 3\n```"}],
  :full-name "cljs.core/alength",
- :clj-symbol "clojure.core/alength",
- :docstring "Returns the length of the array. Works on arrays of all types."}
+ :docstring "Returns the length of the array. Works on arrays of all types.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/alength.cljsdoc"}
 
 ```
 

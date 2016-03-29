@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-keys obj)</samp><br>
+
+---
 
  <samp>
 (__js-keys__ obj)<br>
@@ -47,7 +50,7 @@ Return the JavaScript keys for an object.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2021-L2026):
+Source code @ [github]():
 
 ```clj
 (defn js-keys
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2021-2026](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2021-L2026)</ins>
+
 </pre>
 
 -->
@@ -109,6 +107,7 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "js-keys",
  :signature ["[obj]"],
+ :name-encode "js-keys",
  :history [["+" "0.0-927"]],
  :type "function",
  :related ["cljs.core/keys"],
@@ -116,13 +115,16 @@ The API data for this symbol:
  :source {:code "(defn js-keys\n  [obj]\n  (let [keys (array)]\n    (gobject/forEach obj (fn [val key obj] (.push keys key)))\n    keys))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2021 2026]},
+          :lines [2021 2026],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2021-L2026"},
+ :usage ["(js-keys obj)"],
  :examples [{:id "5dd933",
              :content "```clj\n(js-keys #js {:foo 1 :bar 2})\n;;=> #js [\"foo\" \"bar\"]\n```"}],
  :full-name "cljs.core/js-keys",
- :docstring "Return the JavaScript keys for an object."}
+ :docstring "Return the JavaScript keys for an object.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-keys.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(append! acc x)</samp><br>
+
+---
 
  <samp>
 (__append!__ acc x)<br>
@@ -30,7 +33,7 @@ Source docstring:
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L232-L235):
+Source code @ [github]():
 
 ```clj
 (defn append!
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:232-235](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L232-L235)</ins>
+
 </pre>
 
 -->
@@ -93,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "append!",
  :signature ["[acc x]"],
+ :name-encode "appendBANG",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/append!",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/append!"},
  :full-name-encode "clojure.core.reducers/appendBANG",
  :source {:code "(defn append!\n  [acc x]\n  (doto acc (.push x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [232 235]},
+          :lines [232 235],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L232-L235"},
+ :usage ["(append! acc x)"],
  :full-name "clojure.core.reducers/append!",
- :clj-symbol "clojure.core.reducers/append!",
- :docstring ".adds x to acc and returns acc"}
+ :docstring ".adds x to acc and returns acc",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/appendBANG.cljsdoc"}
 
 ```
 

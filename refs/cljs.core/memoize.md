@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(memoize f)</samp><br>
+
+---
 
  <samp>
 (__memoize__ f)<br>
@@ -42,7 +45,7 @@ higher performance at the expense of higher memory use.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9615-L9628):
+Source code @ [github]():
 
 ```clj
 (defn memoize
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9615-9628](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9615-L9628)</ins>
+
 </pre>
 
 -->
@@ -112,18 +110,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "memoize",
  :signature ["[f]"],
+ :name-encode "memoize",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/memoize",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/memoize"},
  :full-name-encode "cljs.core/memoize",
  :source {:code "(defn memoize\n  [f]\n  (let [mem (atom {})]\n    (fn [& args]\n      (let [v (get @mem args lookup-sentinel)]\n        (if (identical? v lookup-sentinel)\n          (let [ret (apply f args)]\n            (swap! mem assoc args ret)\n            ret)\n          v)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9615 9628]},
+          :lines [9615 9628],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9615-L9628"},
+ :usage ["(memoize f)"],
  :full-name "cljs.core/memoize",
- :clj-symbol "clojure.core/memoize",
- :docstring "Returns a memoized version of a referentially transparent function. The\nmemoized version of the function keeps a cache of the mapping from arguments\nto results and, when calls with the same arguments are repeated often, has\nhigher performance at the expense of higher memory use."}
+ :docstring "Returns a memoized version of a referentially transparent function. The\nmemoized version of the function keeps a cache of the mapping from arguments\nto results and, when calls with the same arguments are repeated often, has\nhigher performance at the expense of higher memory use.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/memoize.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(iterator coll)</samp><br>
+
+---
 
  <samp>
 (__iterator__ coll)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4870-L4871):
+Source code @ [github]():
 
 ```clj
 (defn iterator [coll]
@@ -33,11 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r2356/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r2356
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:4870-4871](https://github.com/clojure/clojurescript/blob/r2356/src/cljs/cljs/core.cljs#L4870-L4871)</ins>
+
 </pre>
 
 -->
@@ -88,6 +87,7 @@ The API data for this symbol:
           :tag "r2356",
           :filename "src/cljs/cljs/core.cljs",
           :lines [4870 4871]},
+ :usage ["(iterator coll)"],
  :full-name "cljs.core/iterator",
  :removed {:in "0.0-2371", :last-seen "0.0-2356"}}
 

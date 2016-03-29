@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(goog-dep-string opts ijs)</samp><br>
+
+---
 
  <samp>
 (__goog-dep-string__ opts ijs)<br>
@@ -28,7 +31,7 @@ goog.addDependency string
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L113-L117):
+Source code @ [github]():
 
 ```clj
 (defn goog-dep-string
@@ -40,13 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:113-117](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L113-L117)</ins>
+
 </pre>
 
 -->
@@ -88,17 +85,21 @@ The API data for this symbol:
 {:ns "cljs.build.api",
  :name "goog-dep-string",
  :signature ["[opts ijs]"],
+ :name-encode "goog-dep-string",
  :history [["+" "0.0-3291"]],
  :type "function",
  :full-name-encode "cljs.build.api/goog-dep-string",
  :source {:code "(defn goog-dep-string\n  [opts ijs]\n  (closure/add-dep-string opts ijs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [113 117]},
+          :lines [113 117],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L113-L117"},
+ :usage ["(goog-dep-string opts ijs)"],
  :full-name "cljs.build.api/goog-dep-string",
- :docstring "Given compiler options and a IJavaScript instance return the corresponding\ngoog.addDependency string"}
+ :docstring "Given compiler options and a IJavaScript instance return the corresponding\ngoog.addDependency string",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/goog-dep-string.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-filename stack-element)</samp><br>
+
+---
 
  <samp>
 (__js-filename__ stack-element)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L372-L373):
+Source code @ [github]():
 
 ```clj
 (defn js-filename [stack-element]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:372-373](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L372-L373)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "js-filename",
- :type "function",
  :signature ["[stack-element]"],
+ :name-encode "js-filename",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/js-filename",
  :source {:code "(defn js-filename [stack-element]\n  (first (.split (last (.split stack-element \"/out/\")) \":\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [372 373]},
+          :lines [372 373],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L372-L373"},
+ :usage ["(js-filename stack-element)"],
  :full-name "cljs.test/js-filename",
- :full-name-encode "cljs.test/js-filename",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/js-filename.cljsdoc"}
 
 ```
 

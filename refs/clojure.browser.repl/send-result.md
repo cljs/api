@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(send-result connection url data)</samp><br>
+
+---
 
  <samp>
 (__send-result__ connection url data)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L71-L72):
+Source code @ [github]():
 
 ```clj
 (defn send-result [connection url data]
@@ -33,13 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[repl.cljs:71-72](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/repl.cljs#L71-L72)</ins>
+
 </pre>
 
 -->
@@ -80,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.repl",
  :name "send-result",
- :type "function",
  :signature ["[connection url data]"],
+ :name-encode "send-result",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.repl/send-result",
  :source {:code "(defn send-result [connection url data]\n  (net/transmit connection url \"POST\" data nil 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
-          :lines [71 72]},
+          :lines [71 72],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L71-L72"},
+ :usage ["(send-result connection url data)"],
  :full-name "clojure.browser.repl/send-result",
- :full-name-encode "clojure.browser.repl/send-result",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/send-result.cljsdoc"}
 
 ```
 

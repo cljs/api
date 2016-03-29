@@ -99,8 +99,10 @@ The API data for this symbol:
 
 ```clj
 {:description "A special namespace used for accessing any symbol defined\nin JavaScript's global scope.",
+ :syntax-equiv {:edn-url nil, :clj-url nil},
  :ns "syntax",
  :name "js-namespace",
+ :name-encode "js-namespace",
  :history [["+" "0.0-927"]],
  :type "special namespace",
  :related ["syntax/Math-namespace"
@@ -112,7 +114,8 @@ The API data for this symbol:
  :examples [{:id "06f234",
              :content "The following examples are run from a browser REPL.\n\nGet the JavaScript global `document` object:\n\n```clj\njs/document\n;;=> #<[object HTMLDocument]>\n```\n\nDisplay an alert:\n\n```clj\n(js/alert \"Hello World\")\n;; displays alert popup\n```\n\nLog to console:\n\n```clj\n(js/console.log \"Hello World\")\n;; displays in developer console\n```\n\nCreate a JavaScript date object:\n\n```clj\n(js/Date.)\n;;=> #inst \"2015-07-14T00:25:33.881-00:00\"\n```"}],
  :full-name "syntax/js-namespace",
- :display "js/ namespace"}
+ :display "js/ namespace",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/js-namespace.cljsdoc"}
 
 ```
 

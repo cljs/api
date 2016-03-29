@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(delay & body)</samp><br>
+
+---
 
  <samp>
 (__delay__ & body)<br>
@@ -33,7 +36,7 @@ calls.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2018-L2024):
+Source code @ [github]():
 
 ```clj
 (core/defmacro delay
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2018-2024](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2018-L2024)</ins>
+
 </pre>
 
 -->
@@ -95,18 +93,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "delay",
  :signature ["[& body]"],
+ :name-encode "delay",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/delay",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/delay"},
  :full-name-encode "cljs.core/delay",
  :source {:code "(core/defmacro delay\n  [& body]\n  `(new cljs.core/Delay (fn [] ~@body) nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2018 2024]},
+          :lines [2018 2024],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2018-L2024"},
+ :usage ["(delay & body)"],
  :full-name "cljs.core/delay",
- :clj-symbol "clojure.core/delay",
- :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls."}
+ :docstring "Takes a body of expressions and yields a Delay object that will\ninvoke the body only the first time it is forced (with force or deref/@), and\nwill cache the result and return it on all subsequent force\ncalls.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/delay.cljsdoc"}
 
 ```
 

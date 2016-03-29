@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(blank? s)</samp><br>
+
+---
 
  <samp>
 (__blank?__ s)<br>
@@ -35,7 +38,7 @@ True is s is nil, empty, or contains only whitespace.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L193-L196):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean blank?
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:193-196](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L193-L196)</ins>
+
 </pre>
 
 -->
@@ -99,18 +97,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "blank?",
  :signature ["[s]"],
+ :name-encode "blankQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/blank?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/blank?"},
  :full-name-encode "clojure.string/blankQMARK",
  :source {:code "(defn ^boolean blank?\n  [s]\n  (gstring/isEmptySafe s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [193 196]},
+          :lines [193 196],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L193-L196"},
+ :usage ["(blank? s)"],
  :full-name "clojure.string/blank?",
- :clj-symbol "clojure.string/blank?",
- :docstring "True is s is nil, empty, or contains only whitespace."}
+ :docstring "True is s is nil, empty, or contains only whitespace.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/blankQMARK.cljsdoc"}
 
 ```
 

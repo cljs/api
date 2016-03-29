@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/nodejs.cljs#L16):
+Source code @ [github]():
 
 ```clj
 (def process (js* "process"))
@@ -27,12 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[nodejs.cljs:16](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/nodejs.cljs#L16)</ins>
+
 </pre>
 
 -->
@@ -73,16 +68,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.nodejs",
  :name "process",
+ :name-encode "process",
+ :history [["+" "0.0-927"]],
  :type "var",
+ :full-name-encode "cljs.nodejs/process",
  :source {:code "(def process (js* \"process\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/nodejs.cljs",
-          :lines [16]},
+          :lines [16],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/nodejs.cljs#L16"},
  :full-name "cljs.nodejs/process",
- :full-name-encode "cljs.nodejs/process",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/process.cljsdoc"}
 
 ```
 

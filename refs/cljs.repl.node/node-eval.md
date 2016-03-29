@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(node-eval repl-env js)</samp><br>
+
+---
 
  <samp>
 (__node-eval__ repl-env js)<br>
@@ -27,7 +30,7 @@ Evaluate a JavaScript string in the Node REPL process.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L52-L67):
+Source code @ [github]():
 
 ```clj
 (defn node-eval
@@ -51,13 +54,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[node.clj:52-67](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/node.clj#L52-L67)</ins>
+
 </pre>
 
 -->
@@ -99,17 +96,21 @@ The API data for this symbol:
 {:ns "cljs.repl.node",
  :name "node-eval",
  :signature ["[repl-env js]"],
+ :name-encode "node-eval",
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.repl.node/node-eval",
  :source {:code "(defn node-eval\n  [repl-env js]\n  (let [{:keys [in out]} @(:socket repl-env)]\n    ;; escape backslash for Node.js under Windows\n    (write out js)\n    (let [result (json/read-str\n                   (read-response in) :key-fn keyword)]\n      (condp = (:status result)\n        \"success\"\n        {:status :success\n         :value (:value result)}\n\n        \"exception\"\n        {:status :exception\n         :value (:value result)}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/node.clj",
-          :lines [52 67]},
+          :lines [52 67],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/node.clj#L52-L67"},
+ :usage ["(node-eval repl-env js)"],
  :full-name "cljs.repl.node/node-eval",
- :docstring "Evaluate a JavaScript string in the Node REPL process."}
+ :docstring "Evaluate a JavaScript string in the Node REPL process.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/node-eval.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(foldcat coll)</samp><br>
+
+---
 
  <samp>
 (__foldcat__ coll)<br>
@@ -30,7 +33,7 @@ Equivalent to (fold cat append! coll)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L237-L240):
+Source code @ [github]():
 
 ```clj
 (defn foldcat
@@ -42,13 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:237-240](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L237-L240)</ins>
+
 </pre>
 
 -->
@@ -93,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "foldcat",
  :signature ["[coll]"],
+ :name-encode "foldcat",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/foldcat",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/foldcat"},
  :full-name-encode "clojure.core.reducers/foldcat",
  :source {:code "(defn foldcat\n  [coll]\n  (fold cat append! coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [237 240]},
+          :lines [237 240],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L237-L240"},
+ :usage ["(foldcat coll)"],
  :full-name "clojure.core.reducers/foldcat",
- :clj-symbol "clojure.core.reducers/foldcat",
- :docstring "Equivalent to (fold cat append! coll)"}
+ :docstring "Equivalent to (fold cat append! coll)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/foldcat.cljsdoc"}
 
 ```
 

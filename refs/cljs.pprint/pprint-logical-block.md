@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(pprint-logical-block & args)</samp><br>
+
+---
 
  <samp>
 (__pprint-logical-block__ & args)<br>
@@ -37,7 +40,7 @@ and :suffix.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L57-L79):
+Source code @ [github]():
 
 ```clj
 (defmacro pprint-logical-block
@@ -61,12 +64,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.clj:57-79](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.clj#L57-L79)</ins>
+
 </pre>
 
 -->
@@ -111,18 +109,23 @@ The API data for this symbol:
 {:ns "cljs.pprint",
  :name "pprint-logical-block",
  :signature ["[& args]"],
+ :name-encode "pprint-logical-block",
  :history [["+" "0.0-3255"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.pprint/pprint-logical-block",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/pprint-logical-block"},
  :full-name-encode "cljs.pprint/pprint-logical-block",
  :source {:code "(defmacro pprint-logical-block\n  [& args]\n  (let [[options body] (parse-lb-options #{:prefix :per-line-prefix :suffix} args)]\n    `(do (if (cljs.pprint/level-exceeded)\n           (~'-write cljs.core/*out* \"#\")\n           (do\n             (cljs.core/binding [cljs.pprint/*current-level* (inc cljs.pprint/*current-level*)\n                       cljs.pprint/*current-length* 0]\n               (cljs.pprint/start-block cljs.core/*out*\n                                        ~(:prefix options)\n                                        ~(:per-line-prefix options)\n                                        ~(:suffix options))\n               ~@body\n               (cljs.pprint/end-block cljs.core/*out*))))\n         nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.clj",
-          :lines [57 79]},
+          :lines [57 79],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.clj#L57-L79"},
+ :usage ["(pprint-logical-block & args)"],
  :full-name "cljs.pprint/pprint-logical-block",
- :clj-symbol "clojure.pprint/pprint-logical-block",
- :docstring "Execute the body as a pretty printing logical block with output to *out* which\nmust be a pretty printing writer. When used from pprint or cl-format, this can be\nassumed.\n\nThis function is intended for use when writing custom dispatch functions.\n\nBefore the body, the caller can optionally specify options: :prefix, :per-line-prefix\nand :suffix."}
+ :docstring "Execute the body as a pretty printing logical block with output to *out* which\nmust be a pretty printing writer. When used from pprint or cl-format, this can be\nassumed.\n\nThis function is intended for use when writing custom dispatch functions.\n\nBefore the body, the caller can optionally specify options: :prefix, :per-line-prefix\nand :suffix.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint-logical-block.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(sort-by keyfn coll)</samp><br>
+<samp>(sort-by keyfn comp coll)</samp><br>
+
+---
 
  <samp>
 (__sort-by__ keyfn coll)<br>
@@ -52,7 +56,7 @@ Comp defaults to compare.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2208-L2216):
+Source code @ [github]():
 
 ```clj
 (defn sort-by
@@ -66,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2208-2216](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2208-L2216)</ins>
+
 </pre>
 
 -->
@@ -117,19 +116,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sort-by",
  :signature ["[keyfn coll]" "[keyfn comp coll]"],
+ :name-encode "sort-by",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sort-by",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sort-by"},
  :related ["cljs.core/sort" "cljs.core/compare"],
  :full-name-encode "cljs.core/sort-by",
  :source {:code "(defn sort-by\n  ([keyfn coll]\n   (sort-by keyfn compare coll))\n  ([keyfn comp coll]\n     (sort (fn [x y] ((fn->comparator comp) (keyfn x) (keyfn y))) coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2208 2216]},
+          :lines [2208 2216],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2208-L2216"},
+ :usage ["(sort-by keyfn coll)" "(sort-by keyfn comp coll)"],
  :full-name "cljs.core/sort-by",
- :clj-symbol "clojure.core/sort-by",
- :docstring "Returns a sorted sequence of the items in coll, where the sort\norder is determined by comparing (keyfn item).  Comp can be\nboolean-valued comparison funcion, or a -/0/+ valued comparator.\nComp defaults to compare."}
+ :docstring "Returns a sorted sequence of the items in coll, where the sort\norder is determined by comparing (keyfn item).  Comp can be\nboolean-valued comparison funcion, or a -/0/+ valued comparator.\nComp defaults to compare.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sort-by.cljsdoc"}
 
 ```
 

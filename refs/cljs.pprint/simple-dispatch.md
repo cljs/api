@@ -25,7 +25,7 @@ The pretty print dispatch function for simple data structure format.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L2898-L2900):
+Source code @ [github]():
 
 ```clj
 (defmulti simple-dispatch
@@ -37,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:2898-2900](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L2898-L2900)</ins>
+
 </pre>
 
 -->
@@ -86,18 +81,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.pprint",
  :name "simple-dispatch",
+ :name-encode "simple-dispatch",
  :history [["+" "0.0-3255"]],
  :type "multimethod",
+ :clj-equiv {:full-name "clojure.pprint/simple-dispatch",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.pprint-api.html#clojure.pprint/simple-dispatch"},
  :full-name-encode "cljs.pprint/simple-dispatch",
  :source {:code "(defmulti simple-dispatch\n  \"The pretty print dispatch function for simple data structure format.\"\n  type-dispatcher)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [2898 2900]},
+          :lines [2898 2900],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L2898-L2900"},
  :full-name "cljs.pprint/simple-dispatch",
- :clj-symbol "clojure.pprint/simple-dispatch",
- :docstring "The pretty print dispatch function for simple data structure format."}
+ :docstring "The pretty print dispatch function for simple data structure format.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/simple-dispatch.cljsdoc"}
 
 ```
 

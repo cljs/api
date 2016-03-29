@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(ns->relpath ns-sym)</samp><br>
+
+---
 
  <samp>
 (__ns->relpath__ ns-sym)<br>
@@ -27,7 +30,7 @@ Given a namespace as a symbol return the relative path sans extension
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L30-L33):
+Source code @ [github]():
 
 ```clj
 (defn ns->relpath
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:30-33](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L30-L33)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.js",
  :name "ns->relpath",
  :signature ["[ns-sym]"],
+ :name-encode "ns-GTrelpath",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.js/ns-GTrelpath",
  :source {:code "(defn ns->relpath\n  [ns-sym]\n  (string/replace (ana/munge-path ns-sym) \\. \\/))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [30 33]},
+          :lines [30 33],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L30-L33"},
+ :usage ["(ns->relpath ns-sym)"],
  :full-name "cljs.js/ns->relpath",
- :docstring "Given a namespace as a symbol return the relative path sans extension"}
+ :docstring "Given a namespace as a symbol return the relative path sans extension",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/ns-GTrelpath.cljsdoc"}
 
 ```
 

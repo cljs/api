@@ -9,6 +9,12 @@
 </tr>
 </table>
 
+<samp>(compile-file src)</samp><br>
+<samp>(compile-file src dest)</samp><br>
+<samp>(compile-file src dest opts)</samp><br>
+<samp>(compile-file state src dest opts)</samp><br>
+
+---
 
  <samp>
 (__compile-file__ src)<br>
@@ -47,7 +53,7 @@ If the file was not compiled returns only {:file ...}
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/compiler/api.clj#L62-L86):
+Source code @ [github]():
 
 ```clj
 (defn compile-file
@@ -69,13 +75,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── compiler
-                    └── <ins>[api.clj:62-86](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/compiler/api.clj#L62-L86)</ins>
+
 </pre>
 
 -->
@@ -120,17 +120,24 @@ The API data for this symbol:
              "[src dest]"
              "[src dest opts]"
              "[state src dest opts]"],
+ :name-encode "compile-file",
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.compiler.api/compile-file",
  :source {:code "(defn compile-file\n  ([src] (compile-file src))\n  ([src dest] (compile-file src dest))\n  ([src dest opts]\n   (compile-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/compile-file src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/compiler/api.clj",
-          :lines [62 86]},
+          :lines [62 86],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/compiler/api.clj#L62-L86"},
+ :usage ["(compile-file src)"
+         "(compile-file src dest)"
+         "(compile-file src dest opts)"
+         "(compile-file state src dest opts)"],
  :full-name "cljs.compiler.api/compile-file",
- :docstring "Compiles src to a file of the same name, but with a .js extension,\nin the src file's directory.\n\nWith dest argument, write file to provided location. If the dest\nargument is a file outside the source tree, missing parent\ndirectories will be created. The src file will only be compiled if\nthe dest file has an older modification time.\n\nBoth src and dest may be either a String or a File.\n\nReturns a map containing {:ns .. :provides .. :requires .. :file ..}.\nIf the file was not compiled returns only {:file ...}"}
+ :docstring "Compiles src to a file of the same name, but with a .js extension,\nin the src file's directory.\n\nWith dest argument, write file to provided location. If the dest\nargument is a file outside the source tree, missing parent\ndirectories will be created. The src file will only be compiled if\nthe dest file has an older modification time.\n\nBoth src and dest may be either a String or a File.\n\nReturns a map containing {:ns .. :provides .. :requires .. :file ..}.\nIf the file was not compiled returns only {:file ...}",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.compiler.api/compile-file.cljsdoc"}
 
 ```
 

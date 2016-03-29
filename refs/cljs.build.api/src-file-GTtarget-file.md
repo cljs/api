@@ -9,6 +9,11 @@
 </tr>
 </table>
 
+<samp>(src-file->target-file src)</samp><br>
+<samp>(src-file->target-file src opts)</samp><br>
+<samp>(src-file->target-file state src opts)</samp><br>
+
+---
 
  <samp>
 (__src-file->target-file__ src)<br>
@@ -34,7 +39,7 @@ provide build options with :output-dir specified.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L80-L93):
+Source code @ [github]():
 
 ```clj
 (defn ^File src-file->target-file
@@ -55,13 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── build
-                    └── <ins>[api.clj:80-93](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/build/api.clj#L80-L93)</ins>
+
 </pre>
 
 -->
@@ -104,17 +103,23 @@ The API data for this symbol:
  :ns "cljs.build.api",
  :name "src-file->target-file",
  :signature ["[src]" "[src opts]" "[state src opts]"],
+ :name-encode "src-file-GTtarget-file",
  :history [["+" "0.0-2629"]],
  :type "function",
  :full-name-encode "cljs.build.api/src-file-GTtarget-file",
  :source {:code "(defn ^File src-file->target-file\n  ([src] (src-file->target-file src nil))\n  ([src opts]\n   (src-file->target-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src opts))\n  ([state src opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (closure/src-file->target-file src opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/build/api.clj",
-          :lines [80 93]},
+          :lines [80 93],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L80-L93"},
+ :usage ["(src-file->target-file src)"
+         "(src-file->target-file src opts)"
+         "(src-file->target-file state src opts)"],
  :full-name "cljs.build.api/src-file->target-file",
- :docstring "Given a ClojureScript source file return the target file. May optionally\nprovide build options with :output-dir specified."}
+ :docstring "Given a ClojureScript source file return the target file. May optionally\nprovide build options with :output-dir specified.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.build.api/src-file-GTtarget-file.cljsdoc"}
 
 ```
 

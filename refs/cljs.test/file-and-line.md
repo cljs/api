@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(file-and-line exception depth)</samp><br>
+
+---
 
  <samp>
 (__file-and-line__ exception depth)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L393-L405):
+Source code @ [github]():
 
 ```clj
 (defn file-and-line [exception depth]
@@ -44,12 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:393-405](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L393-L405)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "file-and-line",
- :type "function",
  :signature ["[exception depth]"],
+ :name-encode "file-and-line",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/file-and-line",
  :source {:code "(defn file-and-line [exception depth]\n  ;; TODO: flesh out\n  (if-let [stack-element (and (string? (.-stack exception))\n                              (some-> (.-stack exception)\n                                      string/split-lines\n                                      (get depth)\n                                      string/trim))]\n    (let [fname (js-filename stack-element)\n          [line column] (js-line-and-column stack-element)\n          [fname line column] (mapped-line-and-column fname line column)]\n      {:file fname :line line :column column})\n    {:file (.-fileName exception)\n     :line (.-lineNumber exception)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [393 405]},
+          :lines [393 405],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L393-L405"},
+ :usage ["(file-and-line exception depth)"],
  :full-name "cljs.test/file-and-line",
- :full-name-encode "cljs.test/file-and-line",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/file-and-line.cljsdoc"}
 
 ```
 

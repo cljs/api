@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(chrome-st-el->frame repl-env st-el opts)</samp><br>
+
+---
 
  <samp>
 (__chrome-st-el->frame__ repl-env st-el opts)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L248-L266):
+Source code @ [github]():
 
 ```clj
 (defn chrome-st-el->frame
@@ -50,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r3308/src/m
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r3308
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:248-266](https://github.com/clojure/clojurescript/blob/r3308/src/main/clojure/cljs/repl/browser.clj#L248-L266)</ins>
+
 </pre>
 
 -->
@@ -107,6 +104,7 @@ The API data for this symbol:
           :tag "r3308",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [248 266]},
+ :usage ["(chrome-st-el->frame repl-env st-el opts)"],
  :full-name "cljs.repl.browser/chrome-st-el->frame",
  :removed {:in "1.7.10", :last-seen "0.0-3308"}}
 

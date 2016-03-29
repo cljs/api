@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(str)</samp><br>
+<samp>(str x)</samp><br>
+<samp>(str x & ys)</samp><br>
+
+---
 
  <samp>
 (__str__)<br>
@@ -48,7 +53,7 @@ one arg, returns the concatenation of the str values of the args.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2688-L2700):
+Function code @ [github]():
 
 ```clj
 (defn str
@@ -67,19 +72,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2688-2700](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2688-L2700)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L769-L773):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro str [& xs]
@@ -93,12 +93,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:769-773](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L769-L773)</ins>
+
 </pre>
 -->
 
@@ -142,24 +137,30 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "str",
  :signature ["[]" "[x]" "[x & ys]"],
+ :name-encode "str",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/str",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/str"},
  :full-name-encode "cljs.core/str",
  :source {:code "(defn str\n  ([] \"\")\n  ([x] (if (nil? x)\n         \"\"\n         (.join #js [x] \"\")))\n  ([x & ys]\n    (loop [sb (StringBuffer. (str x)) more ys]\n      (if more\n        (recur (. sb  (append (str (first more)))) (next more))\n        (.toString sb)))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2688 2700]},
+          :lines [2688 2700],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2688-L2700"},
  :extra-sources [{:code "(core/defmacro str [& xs]\n  (core/let [strs (core/->> (repeat (count xs) \"cljs.core.str(~{})\")\n                    (interpose \",\")\n                    (apply core/str))]\n    (list* 'js* (core/str \"[\" strs \"].join('')\") xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [769 773]}],
+                  :lines [769 773],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L769-L773"}],
+ :usage ["(str)" "(str x)" "(str x & ys)"],
  :full-name "cljs.core/str",
- :clj-symbol "clojure.core/str",
- :docstring "With no args, returns the empty string. With one arg x, returns\nx.toString().  (str nil) returns the empty string. With more than\none arg, returns the concatenation of the str values of the args."}
+ :docstring "With no args, returns the empty string. With one arg x, returns\nx.toString().  (str nil) returns the empty string. With more than\none arg, returns the concatenation of the str values of the args.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/str.cljsdoc"}
 
 ```
 

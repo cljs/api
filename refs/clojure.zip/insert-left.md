@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(insert-left loc item)</samp><br>
+
+---
 
  <samp>
 (__insert-left__ loc item)<br>
@@ -31,7 +34,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L165-L172):
+Source code @ [github]():
 
 ```clj
 (defn insert-left
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:165-172](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L165-L172)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "insert-left",
  :signature ["[loc item]"],
+ :name-encode "insert-left",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/insert-left",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/insert-left"},
  :full-name-encode "clojure.zip/insert-left",
  :source {:code "(defn insert-left\n  [loc item]\n    (let [[node {l :l :as path}] loc]\n      (if (nil? path)\n        (throw \"Insert at top\")\n        (with-meta [node (assoc path :l (conj l item) :changed? true)] (meta loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [165 172]},
+          :lines [165 172],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L165-L172"},
+ :usage ["(insert-left loc item)"],
  :full-name "clojure.zip/insert-left",
- :clj-symbol "clojure.zip/insert-left",
- :docstring "Inserts the item as the left sibling of the node at this loc,\nwithout moving"}
+ :docstring "Inserts the item as the left sibling of the node at this loc,\nwithout moving",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/insert-left.cljsdoc"}
 
 ```
 

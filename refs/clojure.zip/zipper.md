@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(zipper branch? children make-node root)</samp><br>
+
+---
 
  <samp>
 (__zipper__ branch? children make-node root)<br>
@@ -40,7 +43,7 @@ root is the root node.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L18-L32):
+Source code @ [github]():
 
 ```clj
 (defn zipper
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:18-32](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L18-L32)</ins>
+
 </pre>
 
 -->
@@ -103,18 +101,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "zipper",
  :signature ["[branch? children make-node root]"],
+ :name-encode "zipper",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/zipper",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/zipper"},
  :full-name-encode "clojure.zip/zipper",
  :source {:code "(defn zipper\n  [branch? children make-node root]\n    ^{:zip/branch? branch? :zip/children children :zip/make-node make-node}\n    [root nil])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [18 32]},
+          :lines [18 32],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L18-L32"},
+ :usage ["(zipper branch? children make-node root)"],
  :full-name "clojure.zip/zipper",
- :clj-symbol "clojure.zip/zipper",
- :docstring "Creates a new zipper structure. \n\nbranch? is a fn that, given a node, returns true if can have\nchildren, even if it currently doesn't.\n\nchildren is a fn that, given a branch node, returns a seq of its\nchildren.\n\nmake-node is a fn that, given an existing node and a seq of\nchildren, returns a new branch node with the supplied children.\nroot is the root node."}
+ :docstring "Creates a new zipper structure. \n\nbranch? is a fn that, given a node, returns true if can have\nchildren, even if it currently doesn't.\n\nchildren is a fn that, given a branch node, returns a seq of its\nchildren.\n\nmake-node is a fn that, given an existing node and a seq of\nchildren, returns a new branch node with the supplied children.\nroot is the root node.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/zipper.cljsdoc"}
 
 ```
 

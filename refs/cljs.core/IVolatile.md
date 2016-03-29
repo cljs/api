@@ -22,7 +22,7 @@ Protocol for adding volatile functionality.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L753-L757):
+Source code @ [github]():
 
 ```clj
 (defprotocol IVolatile
@@ -36,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:753-757](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L753-L757)</ins>
+
 </pre>
 
 -->
@@ -82,20 +77,23 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IVolatile",
+ :name-encode "IVolatile",
  :history [["+" "0.0-2496"]],
  :type "protocol",
  :full-name-encode "cljs.core/IVolatile",
  :source {:code "(defprotocol IVolatile\n  \"Protocol for adding volatile functionality.\"\n  (-vreset! [o new-value]\n    \"Sets the value of volatile o to new-value without regard for the\n     current value. Returns new-value.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [753 757]},
+          :lines [753 757],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L753-L757"},
  :methods [{:name "-vreset!",
             :signature ["[o new-value]"],
             :docstring "Sets the value of volatile o to new-value without regard for the\n     current value. Returns new-value."}],
  :full-name "cljs.core/IVolatile",
- :docstring "Protocol for adding volatile functionality."}
+ :docstring "Protocol for adding volatile functionality.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IVolatile.cljsdoc"}
 
 ```
 

@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(hash-keyword k)</samp><br>
+
+---
 
  <samp>
 (__hash-keyword__ k)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3010-L3011):
+Source code @ [github]():
 
 ```clj
 (defn hash-keyword [k]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3010-3011](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3010-L3011)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "hash-keyword",
- :type "function",
  :signature ["[k]"],
+ :name-encode "hash-keyword",
+ :history [["+" "0.0-2261"]],
+ :type "function",
+ :full-name-encode "cljs.core/hash-keyword",
  :source {:code "(defn hash-keyword [k]\n  (int (+ (hash-symbol k) 0x9e3779b9)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3010 3011]},
+          :lines [3010 3011],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3010-L3011"},
+ :usage ["(hash-keyword k)"],
  :full-name "cljs.core/hash-keyword",
- :full-name-encode "cljs.core/hash-keyword",
- :history [["+" "0.0-2261"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-keyword.cljsdoc"}
 
 ```
 

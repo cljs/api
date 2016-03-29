@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(unchecked-int x)</samp><br>
+
+---
 
  <samp>
 (__unchecked-int__ x)<br>
@@ -30,7 +33,7 @@ Coerce to int by stripping decimal places.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2533-L2536):
+Source code @ [github]():
 
 ```clj
 (defn unchecked-int
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2533-2536](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2533-L2536)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "unchecked-int",
  :signature ["[x]"],
+ :name-encode "unchecked-int",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/unchecked-int",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/unchecked-int"},
  :full-name-encode "cljs.core/unchecked-int",
  :source {:code "(defn unchecked-int\n  [x]\n  (fix x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2533 2536]},
+          :lines [2533 2536],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2533-L2536"},
+ :usage ["(unchecked-int x)"],
  :full-name "cljs.core/unchecked-int",
- :clj-symbol "clojure.core/unchecked-int",
- :docstring "Coerce to int by stripping decimal places."}
+ :docstring "Coerce to int by stripping decimal places.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/unchecked-int.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(insert-child loc item)</samp><br>
+
+---
 
  <samp>
 (__insert-child__ loc item)<br>
@@ -31,7 +34,7 @@ without moving
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L194-L198):
+Source code @ [github]():
 
 ```clj
 (defn insert-child
@@ -43,12 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:194-198](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L194-L198)</ins>
+
 </pre>
 
 -->
@@ -93,18 +91,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "insert-child",
  :signature ["[loc item]"],
+ :name-encode "insert-child",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/insert-child",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/insert-child"},
  :full-name-encode "clojure.zip/insert-child",
  :source {:code "(defn insert-child\n  [loc item]\n    (replace loc (make-node loc (node loc) (cons item (children loc)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [194 198]},
+          :lines [194 198],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L194-L198"},
+ :usage ["(insert-child loc item)"],
  :full-name "clojure.zip/insert-child",
- :clj-symbol "clojure.zip/insert-child",
- :docstring "Inserts the item as the leftmost child of the node at this loc,\nwithout moving"}
+ :docstring "Inserts the item as the leftmost child of the node at this loc,\nwithout moving",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/insert-child.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(remove-all-methods multifn)</samp><br>
+
+---
 
  <samp>
 (__remove-all-methods__ multifn)<br>
@@ -30,7 +33,7 @@ Removes all of the methods of multimethod.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10045-L10048):
+Source code @ [github]():
 
 ```clj
 (defn remove-all-methods
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10045-10048](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10045-L10048)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "remove-all-methods",
  :signature ["[multifn]"],
+ :name-encode "remove-all-methods",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/remove-all-methods",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove-all-methods"},
  :full-name-encode "cljs.core/remove-all-methods",
  :source {:code "(defn remove-all-methods\n [multifn]\n (-reset multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10045 10048]},
+          :lines [10045 10048],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10045-L10048"},
+ :usage ["(remove-all-methods multifn)"],
  :full-name "cljs.core/remove-all-methods",
- :clj-symbol "clojure.core/remove-all-methods",
- :docstring "Removes all of the methods of multimethod."}
+ :docstring "Removes all of the methods of multimethod.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/remove-all-methods.cljsdoc"}
 
 ```
 

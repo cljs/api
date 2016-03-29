@@ -55,7 +55,7 @@ Retrieve the underlying value of a reference.  References can be created by
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -84,13 +84,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -123,8 +117,11 @@ The API data for this symbol:
 
 ```clj
 {:description "`@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].\n\nRetrieve the underlying value of a reference.  References can be created by\n[doc:cljs.core/atom] or [doc:cljs.core/delay].",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc2"},
  :ns "syntax",
  :name "deref",
+ :name-encode "deref",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["cljs.core/deref" "cljs.core/atom" "cljs.core/delay"],
@@ -134,13 +131,14 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage ["@foo"],
  :examples [{:id "08f886",
              :content "```clj\n(def a (atom 1))\n@a\n;;=> 1\n\n(deref a)\n;;=> 1\n```"}],
  :full-name "syntax/deref",
  :display "@ deref",
- :clj-doc "http://clojure.org/reader#toc2"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/deref.cljsdoc"}
 
 ```
 

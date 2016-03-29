@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(associative? coll)</samp><br>
+
+---
 
  <samp>
 (__associative?__ coll)<br>
@@ -56,7 +59,7 @@ Returns true if coll implements Associative
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1974-L1976):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean associative?
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1974-1976](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1974-L1976)</ins>
+
 </pre>
 
 -->
@@ -119,20 +117,25 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "associative?",
  :signature ["[coll]"],
+ :name-encode "associativeQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/associative?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/associative?"},
  :full-name-encode "cljs.core/associativeQMARK",
  :source {:code "(defn ^boolean associative?\n  [x] (satisfies? IAssociative x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1974 1976]},
+          :lines [1974 1976],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1974-L1976"},
+ :usage ["(associative? coll)"],
  :examples [{:id "29a37f",
              :content "```clj\n(associative? [1 2 3])\n;;=> true\n\n(associative? {:a 1 :b 2})\n;;=> true\n\n(associative? #{1 2 3})\n;;=> false\n\n(associative? '(1 2 3))\n;;=> false\n```"}],
  :full-name "cljs.core/associative?",
- :clj-symbol "clojure.core/associative?",
- :docstring "Returns true if coll implements Associative"}
+ :docstring "Returns true if coll implements Associative",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/associativeQMARK.cljsdoc"}
 
 ```
 

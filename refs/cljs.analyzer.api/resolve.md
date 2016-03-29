@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(resolve env sym)</samp><br>
+
+---
 
  <samp>
 (__resolve__ env sym)<br>
@@ -31,7 +34,7 @@ clojure.core/resolve
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L141-L150):
+Source code @ [github]():
 
 ```clj
 (defn resolve
@@ -48,13 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:141-150](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L141-L150)</ins>
+
 </pre>
 
 -->
@@ -99,18 +96,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "resolve",
  :signature ["[env sym]"],
+ :name-encode "resolve",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/resolve",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/resolve"},
  :full-name-encode "cljs.analyzer.api/resolve",
  :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (try\n    (ana/resolve-var env sym\n      (ana/confirm-var-exists-throw))\n    (catch Exception e\n      (ana/resolve-macro-var env sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [141 150]},
+          :lines [141 150],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L141-L150"},
+ :usage ["(resolve env sym)"],
  :full-name "cljs.analyzer.api/resolve",
- :clj-symbol "clojure.core/resolve",
- :docstring "Given an analysis environment resolve a var. Analogous to\nclojure.core/resolve"}
+ :docstring "Given an analysis environment resolve a var. Analogous to\nclojure.core/resolve",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/resolve.cljsdoc"}
 
 ```
 

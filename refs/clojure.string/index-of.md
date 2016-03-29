@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(index-of s value)</samp><br>
+<samp>(index-of s value from-index)</samp><br>
+
+---
 
  <samp>
 (__index-of__ s value)<br>
@@ -34,7 +38,7 @@ forward from from-index or nil if not found.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L217-L229):
+Source code @ [github]():
 
 ```clj
 (defn index-of
@@ -54,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:217-229](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L217-L229)</ins>
+
 </pre>
 
 -->
@@ -104,18 +103,23 @@ The API data for this symbol:
 {:ns "clojure.string",
  :name "index-of",
  :signature ["[s value]" "[s value from-index]"],
+ :name-encode "index-of",
  :history [["+" "1.7.145"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/index-of",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/index-of"},
  :full-name-encode "clojure.string/index-of",
  :source {:code "(defn index-of\n  ([s value]\n   (let [result (.indexOf s value)]\n     (if (neg? result)\n       nil\n       result)))\n  ([s value from-index]\n   (let [result (.indexOf s value from-index)]\n     (if (neg? result)\n       nil\n       result))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [217 229]},
+          :lines [217 229],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L217-L229"},
+ :usage ["(index-of s value)" "(index-of s value from-index)"],
  :full-name "clojure.string/index-of",
- :clj-symbol "clojure.string/index-of",
- :docstring "Return index of value (string or char) in s, optionally searching\nforward from from-index or nil if not found."}
+ :docstring "Return index of value (string or char) in s, optionally searching\nforward from from-index or nil if not found.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/index-of.cljsdoc"}
 
 ```
 

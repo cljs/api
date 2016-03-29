@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(PersistentQueueIter. fseq riter)</samp><br>
+
+---
 
  <samp>
 (__PersistentQueueIter.__ fseq riter)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5511-L5524):
+Source code @ [github]():
 
 ```clj
 (deftype PersistentQueueIter [^:mutable fseq riter]
@@ -45,12 +48,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5511-5524](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5511-L5524)</ins>
+
 </pre>
 
 -->
@@ -91,17 +89,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "PersistentQueueIter",
- :type "type",
  :signature ["[fseq riter]"],
+ :name-encode "PersistentQueueIter",
+ :history [["+" "1.7.28"]],
+ :type "type",
+ :full-name-encode "cljs.core/PersistentQueueIter",
  :source {:code "(deftype PersistentQueueIter [^:mutable fseq riter]\n  Object\n  (hasNext [_]\n    (or (and (some? fseq) (seq fseq)) (and (some? riter) (.hasNext riter))))\n  (next [_]\n    (cond\n      (some? fseq)\n      (let [ret (first fseq)]\n        (set! fseq (next fseq))\n        ret)\n      (and (some? riter) ^boolean (.hasNext riter))\n      (.next riter)\n      :else (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5511 5524]},
+          :lines [5511 5524],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5511-L5524"},
+ :usage ["(PersistentQueueIter. fseq riter)"],
  :full-name "cljs.core/PersistentQueueIter",
- :full-name-encode "cljs.core/PersistentQueueIter",
- :history [["+" "1.7.28"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentQueueIter.cljsdoc"}
 
 ```
 

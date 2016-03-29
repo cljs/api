@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(prefers multifn)</samp><br>
+
+---
 
  <samp>
 (__prefers__ multifn)<br>
@@ -30,7 +33,7 @@ Given a multimethod, returns a map of preferred value -> set of other values
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10070-L10072):
+Source code @ [github]():
 
 ```clj
 (defn prefers
@@ -41,12 +44,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10070-10072](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10070-L10072)</ins>
+
 </pre>
 
 -->
@@ -91,18 +89,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "prefers",
  :signature ["[multifn]"],
+ :name-encode "prefers",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/prefers",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/prefers"},
  :full-name-encode "cljs.core/prefers",
  :source {:code "(defn prefers\n  [multifn] (-prefers multifn))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10070 10072]},
+          :lines [10070 10072],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10070-L10072"},
+ :usage ["(prefers multifn)"],
  :full-name "cljs.core/prefers",
- :clj-symbol "clojure.core/prefers",
- :docstring "Given a multimethod, returns a map of preferred value -> set of other values"}
+ :docstring "Given a multimethod, returns a map of preferred value -> set of other values",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/prefers.cljsdoc"}
 
 ```
 

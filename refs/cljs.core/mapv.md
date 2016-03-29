@@ -12,6 +12,12 @@
 </tr>
 </table>
 
+<samp>(mapv f coll)</samp><br>
+<samp>(mapv f c1 c2)</samp><br>
+<samp>(mapv f c1 c2 c3)</samp><br>
+<samp>(mapv f c1 c2 c3 & colls)</samp><br>
+
+---
 
  <samp>
 (__mapv__ f coll)<br>
@@ -58,7 +64,7 @@ f should accept number-of-colls arguments.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4624-L4638):
+Source code @ [github]():
 
 ```clj
 (defn mapv
@@ -77,12 +83,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4624-4638](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4624-L4638)</ins>
+
 </pre>
 
 -->
@@ -131,19 +132,27 @@ The API data for this symbol:
              "[f c1 c2]"
              "[f c1 c2 c3]"
              "[f c1 c2 c3 & colls]"],
+ :name-encode "mapv",
  :history [["+" "0.0-1211"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/mapv",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/mapv"},
  :related ["cljs.core/map"],
  :full-name-encode "cljs.core/mapv",
  :source {:code "(defn mapv\n  ([f coll]\n     (-> (reduce (fn [v o] (conj! v (f o))) (transient []) coll)\n         persistent!))\n  ([f c1 c2]\n     (into [] (map f c1 c2)))\n  ([f c1 c2 c3]\n     (into [] (map f c1 c2 c3)))\n  ([f c1 c2 c3 & colls]\n     (into [] (apply map f c1 c2 c3 colls))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4624 4638]},
+          :lines [4624 4638],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4624-L4638"},
+ :usage ["(mapv f coll)"
+         "(mapv f c1 c2)"
+         "(mapv f c1 c2 c3)"
+         "(mapv f c1 c2 c3 & colls)"],
  :full-name "cljs.core/mapv",
- :clj-symbol "clojure.core/mapv",
- :docstring "Returns a vector consisting of the result of applying f to the\nset of first items of each coll, followed by applying f to the set\nof second items in each coll, until any one of the colls is\nexhausted.  Any remaining items in other colls are ignored. Function\nf should accept number-of-colls arguments."}
+ :docstring "Returns a vector consisting of the result of applying f to the\nset of first items of each coll, followed by applying f to the set\nof second items in each coll, until any one of the colls is\nexhausted.  Any remaining items in other colls are ignored. Function\nf should accept number-of-colls arguments.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/mapv.cljsdoc"}
 
 ```
 

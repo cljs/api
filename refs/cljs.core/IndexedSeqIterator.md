@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(IndexedSeqIterator. arr i)</samp><br>
+
+---
 
  <samp>
 (__IndexedSeqIterator.__ arr i)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1425-L1432):
+Source code @ [github]():
 
 ```clj
 (deftype IndexedSeqIterator [arr ^:mutable i]
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1425-1432](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1425-L1432)</ins>
+
 </pre>
 
 -->
@@ -85,17 +83,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IndexedSeqIterator",
- :type "type",
  :signature ["[arr i]"],
+ :name-encode "IndexedSeqIterator",
+ :history [["+" "0.0-2371"]],
+ :type "type",
+ :full-name-encode "cljs.core/IndexedSeqIterator",
  :source {:code "(deftype IndexedSeqIterator [arr ^:mutable i]\n  Object\n  (hasNext [_]\n    (< i (alength arr)))\n  (next [_]\n    (let [ret (aget arr i)]\n      (set! i (inc i))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1425 1432]},
+          :lines [1425 1432],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1425-L1432"},
+ :usage ["(IndexedSeqIterator. arr i)"],
  :full-name "cljs.core/IndexedSeqIterator",
- :full-name-encode "cljs.core/IndexedSeqIterator",
- :history [["+" "0.0-2371"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IndexedSeqIterator.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(with-meta obj m)</samp><br>
+
+---
 
  <samp>
 (__with-meta__ obj m)<br>
@@ -62,7 +65,7 @@ map m as its metadata.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1909-L1916):
+Source code @ [github]():
 
 ```clj
 (defn with-meta
@@ -77,12 +80,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1909-1916](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1909-L1916)</ins>
+
 </pre>
 
 -->
@@ -128,21 +126,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "with-meta",
  :signature ["[obj m]"],
+ :name-encode "with-meta",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/with-meta",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/with-meta"},
  :related ["cljs.core/alter-meta!" "cljs.core/vary-meta"],
  :full-name-encode "cljs.core/with-meta",
  :source {:code "(defn with-meta\n  [o meta]\n  (if ^boolean (goog/isFunction o)\n    (MetaFn. o meta)\n    (when-not (nil? o)\n      (-with-meta o meta))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1909 1916]},
+          :lines [1909 1916],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1909-L1916"},
+ :usage ["(with-meta obj m)"],
  :examples [{:id "f189d4",
              :content "```clj\n(def a ^:foo [1 2 3])\n(def b (with-meta a {:bar true}))\n\n(= a b)\n;;=> true\n\n(meta a)\n;;=> {:foo true}\n\n(meta b)\n;;=> {:bar true}\n```"}],
  :full-name "cljs.core/with-meta",
- :clj-symbol "clojure.core/with-meta",
- :docstring "Returns an object of the same type and value as obj, with\nmap m as its metadata."}
+ :docstring "Returns an object of the same type and value as obj, with\nmap m as its metadata.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/with-meta.cljsdoc"}
 
 ```
 

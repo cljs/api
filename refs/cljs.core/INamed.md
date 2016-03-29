@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1798"><img valign="middle" alt="[+] 0.0-1798" title="Added in 0.0-1798" src="https://img.shields.io/badge/+-0.0--1798-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Named</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Named.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Named</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Named.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding a name.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L733-L738):
+Source code @ [github]():
 
 ```clj
 (defprotocol INamed
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:733-738](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L733-L738)</ins>
+
 </pre>
 
 -->
@@ -89,15 +84,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "INamed",
+ :name-encode "INamed",
  :history [["+" "0.0-1798"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/Named",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Named.java"},
  :full-name-encode "cljs.core/INamed",
  :source {:code "(defprotocol INamed\n  \"Protocol for adding a name.\"\n  (^string -name [x]\n    \"Returns the name String of x.\")\n  (^string -namespace [x]\n    \"Returns the namespace String of x.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [733 738]},
+          :lines [733 738],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L733-L738"},
  :methods [{:name "-name",
             :signature ["[x]"],
             :docstring "Returns the name String of x."}
@@ -105,8 +104,8 @@ The API data for this symbol:
             :signature ["[x]"],
             :docstring "Returns the namespace String of x."}],
  :full-name "cljs.core/INamed",
- :clj-symbol "clojure.lang/Named",
- :docstring "Protocol for adding a name."}
+ :docstring "Protocol for adding a name.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/INamed.cljsdoc"}
 
 ```
 

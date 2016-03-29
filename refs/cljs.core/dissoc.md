@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(dissoc coll)</samp><br>
+<samp>(dissoc coll k)</samp><br>
+<samp>(dissoc coll k & ks)</samp><br>
+
+---
 
  <samp>
 (__dissoc__ coll)<br>
@@ -63,7 +68,7 @@ that does not contain a mapping for key(s).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1837-L1849):
+Source code @ [github]():
 
 ```clj
 (defn dissoc
@@ -83,12 +88,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1837-1849](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1837-L1849)</ins>
+
 </pre>
 
 -->
@@ -134,21 +134,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "dissoc",
  :signature ["[coll]" "[coll k]" "[coll k & ks]"],
+ :name-encode "dissoc",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/dissoc",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/dissoc"},
  :related ["cljs.core/assoc" "cljs.core/disj" "cljs.core/select-keys"],
  :full-name-encode "cljs.core/dissoc",
  :source {:code "(defn dissoc\n  ([coll] coll)\n  ([coll k]\n    (when-not (nil? coll)\n      (-dissoc coll k)))\n  ([coll k & ks]\n    (when-not (nil? coll)\n      (let [ret (dissoc coll k)]\n        (if ks\n          (recur ret (first ks) (next ks))\n          ret)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1837 1849]},
+          :lines [1837 1849],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1837-L1849"},
+ :usage ["(dissoc coll)" "(dissoc coll k)" "(dissoc coll k & ks)"],
  :examples [{:id "fd6ae9",
              :content "```clj\n(dissoc {:key \"value\" :key2 \"value2\"} :key)\n;;=> {:key2 \"value2\"}\n```"}],
  :full-name "cljs.core/dissoc",
- :clj-symbol "clojure.core/dissoc",
- :docstring "dissoc[iate]. Returns a new map of the same (hashed/sorted) type,\nthat does not contain a mapping for key(s)."}
+ :docstring "dissoc[iate]. Returns a new map of the same (hashed/sorted) type,\nthat does not contain a mapping for key(s).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/dissoc.cljsdoc"}
 
 ```
 

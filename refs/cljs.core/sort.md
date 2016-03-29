@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(sort coll)</samp><br>
+<samp>(sort comp coll)</samp><br>
+
+---
 
  <samp>
 (__sort__ coll)<br>
@@ -49,7 +53,7 @@ Comp defaults to compare.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2194-L2206):
+Source code @ [github]():
 
 ```clj
 (defn sort
@@ -68,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2194-2206](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2194-L2206)</ins>
+
 </pre>
 
 -->
@@ -119,19 +118,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "sort",
  :signature ["[coll]" "[comp coll]"],
+ :name-encode "sort",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/sort",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/sort"},
  :related ["cljs.core/sort-by"],
  :full-name-encode "cljs.core/sort",
  :source {:code "(defn sort\n  ([coll]\n   (sort compare coll))\n  ([comp coll]\n   (if (seq coll)\n     (let [a (to-array coll)]\n       ;; matching Clojure's stable sort, though docs don't promise it\n       (garray/stableSort a (fn->comparator comp))\n       (seq a))\n     ())))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2194 2206]},
+          :lines [2194 2206],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2194-L2206"},
+ :usage ["(sort coll)" "(sort comp coll)"],
  :full-name "cljs.core/sort",
- :clj-symbol "clojure.core/sort",
- :docstring "Returns a sorted sequence of the items in coll. Comp can be\nboolean-valued comparison function, or a -/0/+ valued comparator.\nComp defaults to compare."}
+ :docstring "Returns a sorted sequence of the items in coll. Comp can be\nboolean-valued comparison function, or a -/0/+ valued comparator.\nComp defaults to compare.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/sort.cljsdoc"}
 
 ```
 

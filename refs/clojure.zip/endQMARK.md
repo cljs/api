@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(end? loc)</samp><br>
+
+---
 
  <samp>
 (__end?__ loc)<br>
@@ -30,7 +33,7 @@ Returns true if loc represents the end of a depth-first walk
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L232-L235):
+Source code @ [github]():
 
 ```clj
 (defn end?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:232-235](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L232-L235)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "end?",
  :signature ["[loc]"],
+ :name-encode "endQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/end?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/end?"},
  :full-name-encode "clojure.zip/endQMARK",
  :source {:code "(defn end?\n  [loc]\n    (= :end (loc 1)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [232 235]},
+          :lines [232 235],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L232-L235"},
+ :usage ["(end? loc)"],
  :full-name "clojure.zip/end?",
- :clj-symbol "clojure.zip/end?",
- :docstring "Returns true if loc represents the end of a depth-first walk"}
+ :docstring "Returns true if loc represents the end of a depth-first walk",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/endQMARK.cljsdoc"}
 
 ```
 

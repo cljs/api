@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(name x)</samp><br>
+
+---
 
  <samp>
 (__name__ x)<br>
@@ -77,7 +80,7 @@ Returns the name String of a string, symbol or keyword.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8527-L8534):
+Source code @ [github]():
 
 ```clj
 (defn name
@@ -93,12 +96,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:8527-8534](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L8527-L8534)</ins>
+
 </pre>
 
 -->
@@ -144,21 +142,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "name",
  :signature ["[x]"],
+ :name-encode "name",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/name",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/name"},
  :related ["cljs.core/namespace"],
  :full-name-encode "cljs.core/name",
  :source {:code "(defn name\n  [x]\n  (if (implements? INamed x)\n    (-name ^not-native x)\n    (if (string? x)\n      x\n      (throw (js/Error. (str \"Doesn't support name: \" x))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8527 8534]},
+          :lines [8527 8534],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8527-L8534"},
+ :usage ["(name x)"],
  :examples [{:id "363fb7",
              :content "With namespaces:\n\n```clj\n(name :foo/bar)\n;;=> \"bar\"\n\n(name 'foo/bar)\n;;=> \"bar\"\n```\n\nWithout namespaces:\n\n```clj\n(name :foo)\n;;=> \"foo\"\n\n(name 'foo)\n;;=> \"foo\"\n```\n\nStrings have no concept of a namespace:\n\n```clj\n(name \"foo/bar\")\n;;=> \"foo/bar\"\n\n(name \"foo\")\n;;=> \"foo\"\n```"}],
  :full-name "cljs.core/name",
- :clj-symbol "clojure.core/name",
- :docstring "Returns the name String of a string, symbol or keyword."}
+ :docstring "Returns the name String of a string, symbol or keyword.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/name.cljsdoc"}
 
 ```
 

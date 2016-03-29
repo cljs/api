@@ -17,7 +17,7 @@
 
 
 
-Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L987-L1005):
+Parser code @ [github]():
 
 ```clj
 (defmethod parse 'case*
@@ -45,12 +45,7 @@ Parser code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[analyzer.cljc:987-1005](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer.cljc#L987-L1005)</ins>
+
 </pre>
 
 -->
@@ -86,16 +81,19 @@ The API data for this symbol:
 ```clj
 {:ns "special",
  :name "case*",
+ :name-encode "caseSTAR",
+ :history [["+" "0.0-2227"]],
  :type "special form",
+ :full-name-encode "special/caseSTAR",
  :source {:code "(defmethod parse 'case*\n  [op env [_ sym tests thens default :as form] name _]\n  (assert (symbol? sym) \"case* must switch on symbol\")\n  (assert (every? vector? tests) \"case* tests must be grouped in vectors\")\n  (let [expr-env (assoc env :context :expr)\n        v        (disallowing-recur (analyze expr-env sym))\n        tests    (mapv #(mapv (fn [t] (analyze expr-env t)) %) tests)\n        thens    (mapv #(analyze env %) thens)\n        default  (analyze env default)]\n    (assert (every? (fn [t]\n                      (or\n                        (-> t :info :const)\n                        (and (= :constant (:op t))\n                             ((some-fn number? string? char?) (:form t)))))\n              (apply concat tests))\n      \"case* tests must be numbers, strings, or constants\")\n    {:env env :op :case* :form form\n     :v v :tests tests :thens thens :default default\n     :children (vec (concat [v] tests thens (if default [default])))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [987 1005]},
+          :lines [987 1005],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer.cljc#L987-L1005"},
  :full-name "special/case*",
- :full-name-encode "special/caseSTAR",
- :history [["+" "0.0-2227"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/caseSTAR.cljsdoc"}
 
 ```
 

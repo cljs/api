@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(err-out & body)</samp><br>
+
+---
 
  <samp>
 (__err-out__ & body)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L45-L47):
+Source code @ [github]():
 
 ```clj
 (defmacro err-out [& body]
@@ -34,12 +37,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:45-47](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L45-L47)</ins>
+
 </pre>
 
 -->
@@ -80,17 +78,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl",
  :name "err-out",
- :type "macro",
  :signature ["[& body]"],
+ :name-encode "err-out",
+ :history [["+" "0.0-3148"]],
+ :type "macro",
+ :full-name-encode "cljs.repl/err-out",
  :source {:code "(defmacro err-out [& body]\n  `(binding [*out* *err*]\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [45 47]},
+          :lines [47 49],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L47-L49"},
+ :usage ["(err-out & body)"],
  :full-name "cljs.repl/err-out",
- :full-name-encode "cljs.repl/err-out",
- :history [["+" "0.0-3148"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/err-out.cljsdoc"}
 
 ```
 

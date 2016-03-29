@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(test-vars vars)</samp><br>
+
+---
 
  <samp>
 (__test-vars__ vars)<br>
@@ -32,7 +35,7 @@ testing environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L576-L583):
+Source code @ [github]():
 
 ```clj
 (defn test-vars
@@ -46,12 +49,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:576-583](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L576-L583)</ins>
+
 </pre>
 
 -->
@@ -96,18 +94,23 @@ The API data for this symbol:
 {:ns "cljs.test",
  :name "test-vars",
  :signature ["[vars]"],
+ :name-encode "test-vars",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.test/test-vars",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/test-vars"},
  :full-name-encode "cljs.test/test-vars",
  :source {:code "(defn test-vars\n  [vars]\n  (run-block (concat (test-vars-block vars)\n                     [(fn []\n                        (report {:type :end-test-vars :vars vars}))])))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [576 583]},
+          :lines [576 583],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L576-L583"},
+ :usage ["(test-vars vars)"],
  :full-name "cljs.test/test-vars",
- :clj-symbol "clojure.test/test-vars",
- :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures assuming they are present in the current\ntesting environment."}
+ :docstring "Groups vars by their namespace and runs test-vars on them with\nappropriate fixtures assuming they are present in the current\ntesting environment.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-vars.cljsdoc"}
 
 ```
 

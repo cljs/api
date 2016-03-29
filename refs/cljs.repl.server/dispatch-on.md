@@ -9,6 +9,10 @@
 </tr>
 </table>
 
+<samp>(dispatch-on method pred handler)</samp><br>
+<samp>(dispatch-on method {:as m})</samp><br>
+
+---
 
  <samp>
 (__dispatch-on__ method pred handler)<br>
@@ -35,7 +39,7 @@ that request should be dispatched to the related handler.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L41-L53):
+Source code @ [github]():
 
 ```clj
 (defn dispatch-on
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:41-53](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L41-L53)</ins>
+
 </pre>
 
 -->
@@ -99,17 +97,22 @@ The API data for this symbol:
 {:ns "cljs.repl.server",
  :name "dispatch-on",
  :signature ["[method pred handler]" "[method {:as m}]"],
+ :name-encode "dispatch-on",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/dispatch-on",
  :source {:code "(defn dispatch-on\n  ([method pred handler]\n    (dispatch-on method {:pred pred :handler handler}))\n  ([method {:as m}]\n    (swap! handlers\n      (fn [old]\n        (update-in old [method] #(conj (vec %) m))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [41 53]},
+          :lines [41 53],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L41-L53"},
+ :usage ["(dispatch-on method pred handler)"
+         "(dispatch-on method {:as m})"],
  :full-name "cljs.repl.server/dispatch-on",
- :docstring "Registers a handler to be dispatched based on a request method and a\npredicate.\n\npred should be a function that accepts an options map, a connection,\nand a request map and returns a boolean value based on whether or not\nthat request should be dispatched to the related handler."}
+ :docstring "Registers a handler to be dispatched based on a request method and a\npredicate.\n\npred should be a function that accepts an options map, a connection,\nand a request map and returns a boolean value based on whether or not\nthat request should be dispatched to the related handler.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/dispatch-on.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(ns-interns ns)</samp><br>
+<samp>(ns-interns state ns)</samp><br>
+
+---
 
  <samp>
 (__ns-interns__ ns)<br>
@@ -34,7 +38,7 @@ clojure.core/ns-interns but returns var analysis maps not vars.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L169-L178):
+Source code @ [github]():
 
 ```clj
 (defn ns-interns
@@ -51,13 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:169-178](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L169-L178)</ins>
+
 </pre>
 
 -->
@@ -102,18 +100,23 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "ns-interns",
  :signature ["[ns]" "[state ns]"],
+ :name-encode "ns-interns",
  :history [["+" "0.0-2496"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/ns-interns",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/ns-interns"},
  :full-name-encode "cljs.analyzer.api/ns-interns",
  :source {:code "(defn ns-interns\n  ([ns]\n   (ns-interns env/*compiler* ns))\n  ([state ns]\n   {:pre [(symbol? ns)]}\n   (merge\n     (get-in @state [::ana/namespaces ns :macros])\n     (get-in @state [::ana/namespaces ns :defs]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [169 178]},
+          :lines [169 178],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L169-L178"},
+ :usage ["(ns-interns ns)" "(ns-interns state ns)"],
  :full-name "cljs.analyzer.api/ns-interns",
- :clj-symbol "clojure.core/ns-interns",
- :docstring "Given a namespace return all the var analysis maps. Analagous to\nclojure.core/ns-interns but returns var analysis maps not vars."}
+ :docstring "Given a namespace return all the var analysis maps. Analagous to\nclojure.core/ns-interns but returns var analysis maps not vars.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/ns-interns.cljsdoc"}
 
 ```
 

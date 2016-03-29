@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(string-iter x)</samp><br>
+
+---
 
  <samp>
 (__string-iter__ x)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3648-L3649):
+Source code @ [github]():
 
 ```clj
 (defn string-iter [x]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3648-3649](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3648-L3649)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "string-iter",
- :type "function",
  :signature ["[x]"],
+ :name-encode "string-iter",
+ :history [["+" "0.0-2301"]],
+ :type "function",
+ :full-name-encode "cljs.core/string-iter",
  :source {:code "(defn string-iter [x]\n  (StringIter. x 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3648 3649]},
+          :lines [3648 3649],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3648-L3649"},
+ :usage ["(string-iter x)"],
  :full-name "cljs.core/string-iter",
- :full-name-encode "cljs.core/string-iter",
- :history [["+" "0.0-2301"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/string-iter.cljsdoc"}
 
 ```
 

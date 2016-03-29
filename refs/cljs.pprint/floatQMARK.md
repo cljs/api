@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(float? n)</samp><br>
+
+---
 
  <samp>
 (__float?__ n)<br>
@@ -27,7 +30,7 @@ Returns true if n is an float.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L54-L60):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean float?
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[pprint.cljs:54-60](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/pprint.cljs#L54-L60)</ins>
+
 </pre>
 
 -->
@@ -90,17 +88,21 @@ The API data for this symbol:
  :ns "cljs.pprint",
  :name "float?",
  :signature ["[n]"],
+ :name-encode "floatQMARK",
  :history [["+" "0.0-3255"]],
  :type "function",
  :full-name-encode "cljs.pprint/floatQMARK",
  :source {:code "(defn ^boolean float?\n  [n]\n  (and (number? n)\n       (not ^boolean (js/isNaN n))\n       (not (identical? n js/Infinity))\n       (not (== (js/parseFloat n) (js/parseInt n 10)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/pprint.cljs",
-          :lines [54 60]},
+          :lines [54 60],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L54-L60"},
+ :usage ["(float? n)"],
  :full-name "cljs.pprint/float?",
- :docstring "Returns true if n is an float."}
+ :docstring "Returns true if n is an float.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/floatQMARK.cljsdoc"}
 
 ```
 

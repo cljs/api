@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(when test & body)</samp><br>
+
+---
 
  <samp>
 (__when__ test & body)<br>
@@ -44,7 +47,7 @@ Evaluates test. If logical true, evaluates body in an implicit do.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L493-L497):
+Source code @ [github]():
 
 ```clj
 (defmacro when
@@ -56,11 +59,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:493-497](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L493-L497)</ins>
+
 </pre>
 
 -->
@@ -106,8 +105,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "when",
  :signature ["[test & body]"],
+ :name-encode "when",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/when",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/when"},
  :related ["cljs.core/when-not" "cljs.core/when-let" "special/if"],
  :full-name-encode "cljs.core/when",
  :source {:code "(defmacro when\n  [test & body]\n  (list 'if test (cons 'do body)))",
@@ -115,10 +117,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [493 497]},
+          :lines [493 497],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L493-L497"},
+ :usage ["(when test & body)"],
  :full-name "cljs.core/when",
- :clj-symbol "clojure.core/when",
- :docstring "Evaluates test. If logical true, evaluates body in an implicit do."}
+ :docstring "Evaluates test. If logical true, evaluates body in an implicit do.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/when.cljsdoc"}
 
 ```
 

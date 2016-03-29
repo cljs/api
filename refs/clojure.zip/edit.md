@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(edit loc f & args)</samp><br>
+
+---
 
  <samp>
 (__edit__ loc f & args)<br>
@@ -30,7 +33,7 @@ Replaces the node at this loc with the value of (f node args)
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L189-L192):
+Source code @ [github]():
 
 ```clj
 (defn edit
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:189-192](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L189-L192)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "edit",
  :signature ["[loc f & args]"],
+ :name-encode "edit",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/edit",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/edit"},
  :full-name-encode "clojure.zip/edit",
  :source {:code "(defn edit\n  [loc f & args]\n    (replace loc (apply f (node loc) args)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [189 192]},
+          :lines [189 192],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L189-L192"},
+ :usage ["(edit loc f & args)"],
  :full-name "clojure.zip/edit",
- :clj-symbol "clojure.zip/edit",
- :docstring "Replaces the node at this loc with the value of (f node args)"}
+ :docstring "Replaces the node at this loc with the value of (f node args)",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/edit.cljsdoc"}
 
 ```
 

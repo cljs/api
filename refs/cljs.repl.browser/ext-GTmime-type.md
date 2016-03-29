@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L28-L42):
+Source code @ [github]():
 
 ```clj
 (def ext->mime-type
@@ -41,13 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:28-42](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L28-L42)</ins>
+
 </pre>
 
 -->
@@ -88,16 +82,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "ext->mime-type",
+ :name-encode "ext-GTmime-type",
+ :history [["+" "0.0-3291"]],
  :type "var",
+ :full-name-encode "cljs.repl.browser/ext-GTmime-type",
  :source {:code "(def ext->mime-type\n  {\".html\" \"text/html\"\n   \".css\" \"text/css\"\n\n   \".jpg\" \"image/jpeg\"\n   \".png\" \"image/png\"\n   \".gif\" \"image/gif\"\n\n   \".js\" \"text/javascript\"\n   \".json\" \"application/json\"\n   \".clj\" \"text/x-clojure\"\n   \".cljs\" \"text/x-clojure\"\n   \".cljc\" \"text/x-clojure\"\n   \".edn\" \"text/x-clojure\"\n   \".map\" \"application/json\"})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [28 42]},
+          :lines [28 42],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L28-L42"},
  :full-name "cljs.repl.browser/ext->mime-type",
- :full-name-encode "cljs.repl.browser/ext-GTmime-type",
- :history [["+" "0.0-3291"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/ext-GTmime-type.cljsdoc"}
 
 ```
 

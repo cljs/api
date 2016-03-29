@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(pr-str-with-opts objs opts)</samp><br>
+
+---
 
  <samp>
 (__pr-str-with-opts__ objs opts)<br>
@@ -28,7 +31,7 @@ options given in opts
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9136-L9142):
+Source code @ [github]():
 
 ```clj
 (defn pr-str-with-opts
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9136-9142](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9136-L9142)</ins>
+
 </pre>
 
 -->
@@ -89,17 +87,21 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "pr-str-with-opts",
  :signature ["[objs opts]"],
+ :name-encode "pr-str-with-opts",
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.core/pr-str-with-opts",
  :source {:code "(defn pr-str-with-opts\n  [objs opts]\n  (if (empty? objs)\n    \"\"\n    (str (pr-sb-with-opts objs opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9136 9142]},
+          :lines [9136 9142],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9136-L9142"},
+ :usage ["(pr-str-with-opts objs opts)"],
  :full-name "cljs.core/pr-str-with-opts",
- :docstring "Prints a sequence of objects to a string, observing all the\noptions given in opts"}
+ :docstring "Prints a sequence of objects to a string, observing all the\noptions given in opts",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr-str-with-opts.cljsdoc"}
 
 ```
 

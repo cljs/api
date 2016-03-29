@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(xml-zip root)</samp><br>
+
+---
 
  <samp>
 (__xml-zip__ root)<br>
@@ -31,7 +34,7 @@ given a root element
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L50-L58):
+Source code @ [github]():
 
 ```clj
 (defn xml-zip
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[zip.cljs:50-58](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/zip.cljs#L50-L58)</ins>
+
 </pre>
 
 -->
@@ -97,18 +95,23 @@ The API data for this symbol:
 {:ns "clojure.zip",
  :name "xml-zip",
  :signature ["[root]"],
+ :name-encode "xml-zip",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.zip/xml-zip",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.zip-api.html#clojure.zip/xml-zip"},
  :full-name-encode "clojure.zip/xml-zip",
  :source {:code "(defn xml-zip\n  [root]\n    (zipper (complement string?) \n            (comp seq :content)\n            (fn [node children]\n              (assoc node :content (and children (apply vector children))))\n            root))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/zip.cljs",
-          :lines [50 58]},
+          :lines [50 58],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/zip.cljs#L50-L58"},
+ :usage ["(xml-zip root)"],
  :full-name "clojure.zip/xml-zip",
- :clj-symbol "clojure.zip/xml-zip",
- :docstring "Returns a zipper for xml elements (as from xml/parse),\ngiven a root element"}
+ :docstring "Returns a zipper for xml elements (as from xml/parse),\ngiven a root element",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.zip/xml-zip.cljsdoc"}
 
 ```
 

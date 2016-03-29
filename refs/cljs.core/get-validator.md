@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(get-validator a)</samp><br>
+
+---
 
  <samp>
 (__get-validator__ a)<br>
@@ -41,7 +44,7 @@ Gets the validator-fn for a var/ref/agent/atom.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4179-L4182):
+Source code @ [github]():
 
 ```clj
 (defn get-validator
@@ -53,12 +56,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4179-4182](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4179-L4182)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "get-validator",
  :signature ["[a]"],
+ :name-encode "get-validator",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/get-validator",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/get-validator"},
  :related ["cljs.core/atom" "cljs.core/set-validator!"],
  :full-name-encode "cljs.core/get-validator",
  :source {:code "(defn get-validator\n  [iref]\n  (.-validator iref))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4179 4182]},
+          :lines [4179 4182],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4179-L4182"},
+ :usage ["(get-validator a)"],
  :full-name "cljs.core/get-validator",
- :clj-symbol "clojure.core/get-validator",
- :docstring "Gets the validator-fn for a var/ref/agent/atom."}
+ :docstring "Gets the validator-fn for a var/ref/agent/atom.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/get-validator.cljsdoc"}
 
 ```
 

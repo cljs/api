@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientSet</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/ITransientSet.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientSet</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientSet.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for adding set functionality to a transient collection.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L705-L708):
+Source code @ [github]():
 
 ```clj
 (defprotocol ITransientSet
@@ -38,12 +38,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:705-708](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L705-L708)</ins>
+
 </pre>
 
 -->
@@ -87,21 +82,25 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "ITransientSet",
+ :name-encode "ITransientSet",
  :history [["+" "0.0-1211"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/ITransientSet",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientSet.java"},
  :full-name-encode "cljs.core/ITransientSet",
  :source {:code "(defprotocol ITransientSet\n  \"Protocol for adding set functionality to a transient collection.\"\n  (^clj -disjoin! [tcoll v]\n    \"Returns tcoll without v.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [705 708]},
+          :lines [705 708],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L705-L708"},
  :methods [{:name "-disjoin!",
             :signature ["[tcoll v]"],
             :docstring "Returns tcoll without v."}],
  :full-name "cljs.core/ITransientSet",
- :clj-symbol "clojure.lang/ITransientSet",
- :docstring "Protocol for adding set functionality to a transient collection."}
+ :docstring "Protocol for adding set functionality to a transient collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ITransientSet.cljsdoc"}
 
 ```
 

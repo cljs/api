@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(es6-set-entries-iterator coll)</samp><br>
+
+---
 
  <samp>
 (__es6-set-entries-iterator__ coll)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5859-L5860):
+Source code @ [github]():
 
 ```clj
 (defn es6-set-entries-iterator [coll]
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:5859-5860](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L5859-L5860)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "es6-set-entries-iterator",
- :type "function",
  :signature ["[coll]"],
+ :name-encode "es6-set-entries-iterator",
+ :history [["+" "0.0-2371"]],
+ :type "function",
+ :full-name-encode "cljs.core/es6-set-entries-iterator",
  :source {:code "(defn es6-set-entries-iterator [coll]\n  (ES6SetEntriesIterator. (seq coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5859 5860]},
+          :lines [5859 5860],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L5859-L5860"},
+ :usage ["(es6-set-entries-iterator coll)"],
  :full-name "cljs.core/es6-set-entries-iterator",
- :full-name-encode "cljs.core/es6-set-entries-iterator",
- :history [["+" "0.0-2371"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/es6-set-entries-iterator.cljsdoc"}
 
 ```
 

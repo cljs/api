@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(eval\* bound-vars form opts cb)</samp><br>
+
+---
 
  <samp>
 (__eval\*__ bound-vars form opts cb)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L464-L495):
+Source code @ [github]():
 
 ```clj
 (defn eval* [bound-vars form opts cb]
@@ -63,12 +66,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.7.10/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.7.10
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:464-495](https://github.com/clojure/clojurescript/blob/r1.7.10/src/main/cljs/cljs/js.cljs#L464-L495)</ins>
+
 </pre>
 
 -->
@@ -119,6 +117,7 @@ The API data for this symbol:
           :tag "r1.7.10",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [464 495]},
+ :usage ["(eval* bound-vars form opts cb)"],
  :full-name "cljs.js/eval*",
  :removed {:in "1.7.28", :last-seen "1.7.10"}}
 

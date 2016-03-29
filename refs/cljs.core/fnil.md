@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(fnil f x)</samp><br>
+<samp>(fnil f x y)</samp><br>
+<samp>(fnil f x y z)</samp><br>
+
+---
 
  <samp>
 (__fnil__ f x)<br>
@@ -50,7 +55,7 @@ arguments, not just the one(s) being nil-patched.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3988-L4009):
+Source code @ [github]():
 
 ```clj
 (defn fnil
@@ -76,12 +81,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3988-4009](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3988-L4009)</ins>
+
 </pre>
 
 -->
@@ -127,18 +127,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "fnil",
  :signature ["[f x]" "[f x y]" "[f x y z]"],
+ :name-encode "fnil",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/fnil",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/fnil"},
  :full-name-encode "cljs.core/fnil",
  :source {:code "(defn fnil\n  ([f x]\n   (fn\n     ([a] (f (if (nil? a) x a)))\n     ([a b] (f (if (nil? a) x a) b))\n     ([a b c] (f (if (nil? a) x a) b c))\n     ([a b c & ds] (apply f (if (nil? a) x a) b c ds))))\n  ([f x y]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) c))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) c ds))))\n  ([f x y z]\n   (fn\n     ([a b] (f (if (nil? a) x a) (if (nil? b) y b)))\n     ([a b c] (f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c)))\n     ([a b c & ds] (apply f (if (nil? a) x a) (if (nil? b) y b) (if (nil? c) z c) ds)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3988 4009]},
+          :lines [3988 4009],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3988-L4009"},
+ :usage ["(fnil f x)" "(fnil f x y)" "(fnil f x y z)"],
  :full-name "cljs.core/fnil",
- :clj-symbol "clojure.core/fnil",
- :docstring "Takes a function f, and returns a function that calls f, replacing\na nil first argument to f with the supplied value x. Higher arity\nversions can replace arguments in the second and third\npositions (y, z). Note that the function f can take any number of\narguments, not just the one(s) being nil-patched."}
+ :docstring "Takes a function f, and returns a function that calls f, replacing\na nil first argument to f with the supplied value x. Higher arity\nversions can replace arguments in the second and third\npositions (y, z). Note that the function f can take any number of\narguments, not just the one(s) being nil-patched.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/fnil.cljsdoc"}
 
 ```
 

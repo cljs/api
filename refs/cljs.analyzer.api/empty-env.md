@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(empty-env)</samp><br>
+
+---
 
  <samp>
 (__empty-env__)<br>
@@ -27,7 +30,7 @@ Creates an empty analysis environment.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L31-L34):
+Source code @ [github]():
 
 ```clj
 (defn empty-env
@@ -39,13 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:31-34](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L31-L34)</ins>
+
 </pre>
 
 -->
@@ -87,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.analyzer.api",
  :name "empty-env",
  :signature ["[]"],
+ :name-encode "empty-env",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/empty-env",
  :source {:code "(defn empty-env\n  []\n  (ana/empty-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [31 34]},
+          :lines [31 34],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L31-L34"},
+ :usage ["(empty-env)"],
  :full-name "cljs.analyzer.api/empty-env",
- :docstring "Creates an empty analysis environment."}
+ :docstring "Creates an empty analysis environment.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/empty-env.cljsdoc"}
 
 ```
 

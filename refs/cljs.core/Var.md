@@ -7,11 +7,14 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Var</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/Var.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Var</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Var.java)
 </td>
 </tr>
 </table>
 
+<samp>(Var. val sym _meta)</samp><br>
+
+---
 
  <samp>
 (__Var.__ val sym _meta)<br>
@@ -25,7 +28,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L998-L1059):
+Source code @ [github]():
 
 ```clj
 (deftype Var [val sym _meta]
@@ -96,12 +99,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:998-1059](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L998-L1059)</ins>
+
 </pre>
 
 -->
@@ -146,17 +144,22 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "Var",
  :signature ["[val sym _meta]"],
+ :name-encode "Var",
  :history [["+" "0.0-2496"]],
  :type "type",
+ :clj-equiv {:full-name "clojure.lang/Var",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Var.java"},
  :full-name-encode "cljs.core/Var",
  :source {:code "(deftype Var [val sym _meta]\n  Object\n  (isMacro [_]\n    (. (val) -cljs$lang$macro))\n  IDeref\n  (-deref [_] (val))\n  IMeta\n  (-meta [_] _meta)\n  IWithMeta\n  (-with-meta [_ new-meta]\n    (Var. val sym new-meta))\n  IEquiv\n  (-equiv [this other]\n    (if (instance? Var other)\n      (= (.-sym this) (.-sym other))\n      false))\n  Fn\n  IFn\n  (-invoke [_]\n    ((val)))\n  (-invoke [_ a]\n    ((val) a))\n  (-invoke [_ a b]\n    ((val) a b))\n  (-invoke [_ a b c]\n    ((val) a b c))\n  (-invoke [_ a b c d]\n    ((val) a b c d))\n  (-invoke [_ a b c d e]\n    ((val) a b c d e))\n  (-invoke [_ a b c d e f]\n    ((val) a b c d e f))\n  (-invoke [_ a b c d e f g]\n    ((val) a b c d e f g))\n  (-invoke [_ a b c d e f g h]\n    ((val) a b c d e f g h))\n  (-invoke [_ a b c d e f g h i]\n    ((val) a b c d e f g h i))\n  (-invoke [_ a b c d e f g h i j]\n    ((val) a b c d e f g h i j))\n  (-invoke [_ a b c d e f g h i j k]\n    ((val) a b c d e f g h i j k))\n  (-invoke [_ a b c d e f g h i j k l]\n    ((val) a b c d e f g h i j k l))\n  (-invoke [_ a b c d e f g h i j k l m]\n    ((val) a b c d e f g h i j k l m))\n  (-invoke [_ a b c d e f g h i j k l m n]\n    ((val) a b c d e f g h i j k l m n))\n  (-invoke [_ a b c d e f g h i j k l m n o]\n    ((val) a b c d e f g h i j k l m n o))\n  (-invoke [_ a b c d e f g h i j k l m n o p]\n    ((val) a b c d e f g h i j k l m n o p))\n  (-invoke [_ a b c d e f g h i j k l m n o p q]\n    ((val) a b c d e f g h i j k l m n o p q))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r]\n    ((val) a b c d e f g h i j k l m n o p q r))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s]\n    ((val) a b c d e f g h i j k l m n o p q r s))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t]\n    ((val) a b c d e f g h i j k l m n o p q r s t))\n  (-invoke [_ a b c d e f g h i j k l m n o p q r s t rest]\n    (apply (val) a b c d e f g h i j k l m n o p q r s t rest)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [998 1059]},
+          :lines [998 1059],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L998-L1059"},
+ :usage ["(Var. val sym _meta)"],
  :full-name "cljs.core/Var",
- :clj-symbol "clojure.lang/Var"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Var.cljsdoc"}
 
 ```
 

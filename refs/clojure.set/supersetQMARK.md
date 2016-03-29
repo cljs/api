@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(superset? a b)</samp><br>
+
+---
 
  <samp>
 (__superset?__ a b)<br>
@@ -44,7 +47,7 @@ Is set1 a superset of set2?
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L137-L141):
+Source code @ [github]():
 
 ```clj
 (defn superset? 
@@ -57,12 +60,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:137-141](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L137-L141)</ins>
+
 </pre>
 
 -->
@@ -108,19 +106,24 @@ The API data for this symbol:
  :ns "clojure.set",
  :name "superset?",
  :signature ["[a b]"],
+ :name-encode "supersetQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/superset?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/superset?"},
  :related ["cljs.core/set" "cljs.core/set?" "clojure.set/subset?"],
  :full-name-encode "clojure.set/supersetQMARK",
  :source {:code "(defn superset? \n  [set1 set2]\n  (and (>= (count set1) (count set2))\n       (every? #(contains? set1 %) set2)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [137 141]},
+          :lines [137 141],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L137-L141"},
+ :usage ["(superset? a b)"],
  :full-name "clojure.set/superset?",
- :clj-symbol "clojure.set/superset?",
- :docstring "Is set1 a superset of set2?"}
+ :docstring "Is set1 a superset of set2?",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/supersetQMARK.cljsdoc"}
 
 ```
 

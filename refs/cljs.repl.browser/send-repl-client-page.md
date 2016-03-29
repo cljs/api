@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(send-repl-client-page request conn opts)</samp><br>
+
+---
 
  <samp>
 (__send-repl-client-page__ request conn opts)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L79-L90):
+Source code @ [github]():
 
 ```clj
 (defn send-repl-client-page
@@ -43,13 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:79-90](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L79-L90)</ins>
+
 </pre>
 
 -->
@@ -90,17 +87,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "send-repl-client-page",
- :type "function",
  :signature ["[request conn opts]"],
+ :name-encode "send-repl-client-page",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/send-repl-client-page",
  :source {:code "(defn send-repl-client-page\n  [request conn opts]\n  (server/send-and-close conn 200\n    (str \"<html><head><meta charset=\\\"UTF-8\\\"></head><body>\n          <script type=\\\"text/javascript\\\">\"\n         (repl-client-js)\n         \"</script>\"\n         \"<script type=\\\"text/javascript\\\">\n          clojure.browser.repl.client.start(\\\"http://\" (-> request :headers :host) \"\\\");\n          </script>\"\n         \"</body></html>\")\n    \"text/html\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [79 90]},
+          :lines [79 90],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L79-L90"},
+ :usage ["(send-repl-client-page request conn opts)"],
  :full-name "cljs.repl.browser/send-repl-client-page",
- :full-name-encode "cljs.repl.browser/send-repl-client-page",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/send-repl-client-page.cljsdoc"}
 
 ```
 

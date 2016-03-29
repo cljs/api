@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(seqable? s)</samp><br>
+
+---
 
  <samp>
 (__seqable?__ s)<br>
@@ -27,7 +30,7 @@ Return true if s satisfies ISeqable
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2073-L2076):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean seqable?
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2073-2076](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2073-L2076)</ins>
+
 </pre>
 
 -->
@@ -87,17 +85,21 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "seqable?",
  :signature ["[s]"],
+ :name-encode "seqableQMARK",
  :history [["+" "0.0-1211"]],
  :type "function",
  :full-name-encode "cljs.core/seqableQMARK",
  :source {:code "(defn ^boolean seqable?\n  [s]\n  (satisfies? ISeqable s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2073 2076]},
+          :lines [2073 2076],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2073-L2076"},
+ :usage ["(seqable? s)"],
  :full-name "cljs.core/seqable?",
- :docstring "Return true if s satisfies ISeqable"}
+ :docstring "Return true if s satisfies ISeqable",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/seqableQMARK.cljsdoc"}
 
 ```
 

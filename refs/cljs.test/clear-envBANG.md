@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(clear-env!)</samp><br>
+
+---
 
  <samp>
 (__clear-env!__)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L280-L281):
+Source code @ [github]():
 
 ```clj
 (defn clear-env! []
@@ -33,12 +36,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[test.cljs:280-281](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/test.cljs#L280-L281)</ins>
+
 </pre>
 
 -->
@@ -79,17 +77,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.test",
  :name "clear-env!",
- :type "function",
  :signature ["[]"],
+ :name-encode "clear-envBANG",
+ :history [["+" "0.0-2496"]],
+ :type "function",
+ :full-name-encode "cljs.test/clear-envBANG",
  :source {:code "(defn clear-env! []\n  (set! *current-env* nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/test.cljs",
-          :lines [280 281]},
+          :lines [280 281],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L280-L281"},
+ :usage ["(clear-env!)"],
  :full-name "cljs.test/clear-env!",
- :full-name-encode "cljs.test/clear-envBANG",
- :history [["+" "0.0-2496"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/clear-envBANG.cljsdoc"}
 
 ```
 

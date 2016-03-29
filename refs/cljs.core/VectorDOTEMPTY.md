@@ -17,7 +17,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2859):
+Source code @ [github]():
 
 ```clj
 (set! cljs.core.Vector/EMPTY (Vector. nil (array) 0))
@@ -27,11 +27,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:2859](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L2859)</ins>
+
 </pre>
 
 -->

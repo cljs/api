@@ -52,7 +52,7 @@ Prevent the evaluation of the following form.
 
 
 
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -81,13 +81,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -120,8 +114,11 @@ The API data for this symbol:
 
 ```clj
 {:description "`'foo` is sugar for [`(quote foo)`][doc:special/quote].\n\nPrevent the evaluation of the following form.",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc2"},
  :ns "syntax",
  :name "quote",
+ :name-encode "quote",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["special/quote"],
@@ -131,12 +128,13 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :examples [{:id "0d2c26",
              :content "```clj\n'foo\n;;=> foo\n\n'(a b c)\n;;=> (a b c)\n\n'[a b c]\n;;=> [a b c]\n\n'(a b (c d))\n;;=> (a b (c d))\n```"}],
  :full-name "syntax/quote",
  :display "' quote",
- :clj-doc "http://clojure.org/reader#toc2"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/quote.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(fn? f)</samp><br>
+
+---
 
  <samp>
 (__fn?__ f)<br>
@@ -40,7 +43,7 @@ Return true if f is a JavaScript function or satisfies the Fn protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1851-L1854):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean fn?
@@ -52,12 +55,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1851-1854](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1851-L1854)</ins>
+
 </pre>
 
 -->
@@ -104,19 +102,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "fn?",
  :signature ["[f]"],
+ :name-encode "fnQMARK",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/fn?",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/fn?"},
  :related ["cljs.core/ifn?"],
  :full-name-encode "cljs.core/fnQMARK",
  :source {:code "(defn ^boolean fn?\n  [f]\n  (or ^boolean (goog/isFunction f) (satisfies? Fn f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1851 1854]},
+          :lines [1851 1854],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1851-L1854"},
+ :usage ["(fn? f)"],
  :full-name "cljs.core/fn?",
- :clj-symbol "clojure.core/fn?",
- :docstring "Return true if f is a JavaScript function or satisfies the Fn protocol."}
+ :docstring "Return true if f is a JavaScript function or satisfies the Fn protocol.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/fnQMARK.cljsdoc"}
 
 ```
 

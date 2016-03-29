@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(extend-type type-sym & impls)</samp><br>
+
+---
 
  <samp>
 (__extend-type__ type-sym & impls)<br>
@@ -83,7 +86,7 @@ type-sym may be
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1501-L1541):
+Source code @ [github]():
 
 ```clj
 (core/defmacro extend-type
@@ -109,12 +112,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1501-1541](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1501-L1541)</ins>
+
 </pre>
 
 -->
@@ -160,19 +158,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "extend-type",
  :signature ["[type-sym & impls]"],
+ :name-encode "extend-type",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/extend-type",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/extend-type"},
  :related ["cljs.core/extend-protocol"],
  :full-name-encode "cljs.core/extend-type",
  :source {:code "(core/defmacro extend-type\n  [type-sym & impls]\n  (core/let [env &env\n             _ (validate-impls env impls)\n             resolve (partial resolve-var env)\n             impl-map (->impl-map impls)\n             impl-map (if ('#{boolean number} type-sym)\n                        (type-hint-impl-map type-sym impl-map)\n                        impl-map)\n             [type assign-impls] (core/if-let [type (base-type type-sym)]\n                                   [type base-assign-impls]\n                                   [(resolve type-sym) proto-assign-impls])]\n    (core/when (core/and (:extending-base-js-type cljs.analyzer/*cljs-warnings*)\n            (js-base-type type-sym))\n      (cljs.analyzer/warning :extending-base-js-type env\n        {:current-symbol type-sym :suggested-symbol (js-base-type type-sym)}))\n    `(do ~@(mapcat #(assign-impls env resolve type-sym type %) impl-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1501 1541]},
+          :lines [1501 1541],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1501-L1541"},
+ :usage ["(extend-type type-sym & impls)"],
  :full-name "cljs.core/extend-type",
- :clj-symbol "clojure.core/extend-type",
- :docstring "Extend a type to a series of protocols. Useful when you are\nsupplying the definitions explicitly inline. Propagates the\ntype as a type hint on the first argument of all fns.\n\ntype-sym may be\n\n * default, meaning the definitions will apply for any value,\n   unless an extend-type exists for one of the more specific\n   cases below.\n * nil, meaning the definitions will apply for the nil value.\n * any of object, boolean, number, string, array, or function,\n   indicating the definitions will apply for values of the\n   associated base JavaScript types. Note that, for example,\n   string should be used instead of js/String.\n * a JavaScript type not covered by the previous list, such\n   as js/RegExp.\n * a type defined by deftype or defrecord.\n\n(extend-type MyType\n  ICounted\n  (-count [c] ...)\n  Foo\n  (bar [x y] ...)\n  (baz ([x] ...) ([x y & zs] ...))"}
+ :docstring "Extend a type to a series of protocols. Useful when you are\nsupplying the definitions explicitly inline. Propagates the\ntype as a type hint on the first argument of all fns.\n\ntype-sym may be\n\n * default, meaning the definitions will apply for any value,\n   unless an extend-type exists for one of the more specific\n   cases below.\n * nil, meaning the definitions will apply for the nil value.\n * any of object, boolean, number, string, array, or function,\n   indicating the definitions will apply for values of the\n   associated base JavaScript types. Note that, for example,\n   string should be used instead of js/String.\n * a JavaScript type not covered by the previous list, such\n   as js/RegExp.\n * a type defined by deftype or defrecord.\n\n(extend-type MyType\n  ICounted\n  (-count [c] ...)\n  Foo\n  (bar [x y] ...)\n  (baz ([x] ...) ([x y & zs] ...))",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/extend-type.cljsdoc"}
 
 ```
 

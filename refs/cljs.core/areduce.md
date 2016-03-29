@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(areduce a idx ret init expr)</samp><br>
+
+---
 
  <samp>
 (__areduce__ a idx ret init expr)<br>
@@ -55,7 +58,7 @@ evaluation of expr at each step, returning ret.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2478-L2487):
+Source code @ [github]():
 
 ```clj
 (core/defmacro areduce
@@ -71,12 +74,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:2478-2487](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L2478-L2487)</ins>
+
 </pre>
 
 -->
@@ -122,21 +120,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "areduce",
  :signature ["[a idx ret init expr]"],
+ :name-encode "areduce",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/areduce",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/areduce"},
  :related ["cljs.core/reduce"],
  :full-name-encode "cljs.core/areduce",
  :source {:code "(core/defmacro areduce\n  [a idx ret init expr]\n  `(let [a# ~a]\n     (loop  [~idx 0 ~ret ~init]\n       (if (< ~idx  (alength a#))\n         (recur (inc ~idx) ~expr)\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2478 2487]},
+          :lines [2478 2487],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2478-L2487"},
+ :usage ["(areduce a idx ret init expr)"],
  :examples [{:id "20a389",
              :content "```clj\n(def a #js [1 2 3])\n(areduce a i ret 0 (+ ret (aget a i)))\n;;=> 6\n```"}],
  :full-name "cljs.core/areduce",
- :clj-symbol "clojure.core/areduce",
- :docstring "Reduces an expression across an array a, using an index named idx,\nand return value named ret, initialized to init, setting ret to the\nevaluation of expr at each step, returning ret."}
+ :docstring "Reduces an expression across an array a, using an index named idx,\nand return value named ret, initialized to init, setting ret to the\nevaluation of expr at each step, returning ret.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/areduce.cljsdoc"}
 
 ```
 

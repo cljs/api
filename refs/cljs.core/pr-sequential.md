@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(pr-sequential print-one begin sep end opts coll)</samp><br>
+
+---
 
  <samp>
 (__pr-sequential__ print-one begin sep end opts coll)<br>
@@ -28,7 +31,7 @@ old IPrintable protocol.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6210-L6217):
+Source code @ [github]():
 
 ```clj
 (defn ^:deprecated pr-sequential
@@ -43,11 +46,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1586/src/c
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1586
-└── src
-    └── cljs
-        └── cljs
-            └── <ins>[core.cljs:6210-6217](https://github.com/clojure/clojurescript/blob/r1586/src/cljs/cljs/core.cljs#L6210-L6217)</ins>
+
 </pre>
 
 -->
@@ -98,6 +97,7 @@ The API data for this symbol:
           :tag "r1586",
           :filename "src/cljs/cljs/core.cljs",
           :lines [6210 6217]},
+ :usage ["(pr-sequential print-one begin sep end opts coll)"],
  :full-name "cljs.core/pr-sequential",
  :docstring "Do not use this.  It is kept for backwards compatibility with the\nold IPrintable protocol.",
  :removed {:in "0.0-1798", :last-seen "0.0-1586"}}

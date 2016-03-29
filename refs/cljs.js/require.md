@@ -9,6 +9,12 @@
 </tr>
 </table>
 
+<samp>(require name cb)</samp><br>
+<samp>(require name opts cb)</samp><br>
+<samp>(require bound-vars name opts cb)</samp><br>
+<samp>(require bound-vars name reload opts cb)</samp><br>
+
+---
 
  <samp>
 (__require__ name cb)<br>
@@ -31,7 +37,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L214-L295):
+Source code @ [github]():
 
 ```clj
 (defn require
@@ -122,12 +128,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:214-295](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L214-L295)</ins>
+
 </pre>
 
 -->
@@ -168,20 +169,27 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.js",
  :name "require",
- :type "function",
  :signature ["[name cb]"
              "[name opts cb]"
              "[bound-vars name opts cb]"
              "[bound-vars name reload opts cb]"],
+ :name-encode "require",
+ :history [["+" "1.7.10"]],
+ :type "function",
+ :full-name-encode "cljs.js/require",
  :source {:code "(defn require\n  ([name cb]\n    (require name nil cb))\n  ([name opts cb]\n    (require nil name opts cb))\n  ([bound-vars name opts cb]\n   (require bound-vars name nil opts cb))\n  ([bound-vars name reload opts cb]\n   (let [bound-vars (merge\n                      {:*compiler*     (env/default-compiler-env)\n                       :*data-readers* tags/*cljs-data-readers*\n                       :*load-macros*  (:load-macros opts true)\n                       :*analyze-deps* (:analyze-deps opts true)\n                       :*load-fn*      (or (:load opts) *load-fn*)\n                       :*eval-fn*      (or (:eval opts) *eval-fn*)}\n                      bound-vars)\n         aname (cond-> name (:macros-ns opts) ana/macro-ns-name)]\n     (when (= :reload reload)\n       (swap! *loaded* disj aname))\n     (when (= :reload-all reload)\n       (reset! *loaded* #{}))\n     (when (:verbose opts)\n       (debug-prn (str \"Loading \" name (when (:macros-ns opts) \" macros\") \" namespace\")))\n     (if-not (contains? @*loaded* aname)\n       (let [env (:*env* bound-vars)]\n         (try\n           ((:*load-fn* bound-vars)\n             {:name name\n              :macros (:macros-ns opts)\n              :path (ns->relpath name)}\n             (fn [resource]\n               (assert (or (map? resource) (nil? resource))\n                 \"*load-fn* may only return a map or nil\")\n               (if resource\n                 (let [{:keys [lang source cache source-map]} resource]\n                   (condp = lang\n                     :clj (eval-str* bound-vars source name opts\n                            (fn [res]\n                              (if (:error res)\n                                (cb res)\n                                (do\n                                  (swap! *loaded* conj aname)\n                                  (cb {:value true})))))\n                     :js (process-macros-deps bound-vars cache opts\n                           (fn [res]\n                             (if (:error res)\n                               (cb res)\n                               (process-libs-deps bound-vars cache opts\n                                 (fn [res]\n                                   (if (:error res)\n                                     (cb res)\n                                     (let [res (try\n                                                 ((:*eval-fn* bound-vars) resource)\n                                                 (when cache\n                                                   (load-analysis-cache!\n                                                     (:*compiler* bound-vars) aname cache))\n                                                 (when source-map\n                                                   (load-source-map!\n                                                     (:*compiler* bound-vars) aname source-map))\n                                                 (catch :default cause\n                                                   (wrap-error\n                                                     (ana/error env\n                                                       (str \"Could not require \" name) cause))))]\n                                       (if (:error res)\n                                         (cb res)\n                                         (do\n                                           (swap! *loaded* conj aname)\n                                           (cb {:value true}))))))))))\n                     (cb (wrap-error\n                           (ana/error env\n                             (str \"Invalid :lang specified \" lang \", only :clj or :js allowed\"))))))\n                 (cb (wrap-error\n                       (ana/error env\n                         (ana/error-message (if (:macros-ns opts)\n                                              :undeclared-macros-ns\n                                              :undeclared-ns)\n                           {:ns-sym name :js-provide (cljs.core/name name)})))))))\n           (catch :default cause\n             (cb (wrap-error\n                   (ana/error env\n                     (str \"Could not require \" name) cause))))))\n       (cb {:value true})))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [214 295]},
+          :lines [214 295],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L214-L295"},
+ :usage ["(require name cb)"
+         "(require name opts cb)"
+         "(require bound-vars name opts cb)"
+         "(require bound-vars name reload opts cb)"],
  :full-name "cljs.js/require",
- :full-name-encode "cljs.js/require",
- :history [["+" "1.7.10"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/require.cljsdoc"}
 
 ```
 

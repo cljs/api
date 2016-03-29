@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(aget array i)</samp><br>
+<samp>(aget array i & idxs)</samp><br>
+
+---
 
  <samp>
 (__aget__ array i)<br>
@@ -76,7 +80,7 @@ Returns the value at the index.
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L395-L400):
+Function code @ [github]():
 
 ```clj
 (defn aget
@@ -90,19 +94,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:395-400](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L395-L400)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L930-L935):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro aget
@@ -117,12 +116,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:930-935](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L930-L935)</ins>
+
 </pre>
 -->
 
@@ -166,8 +160,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "aget",
  :signature ["[array i]" "[array i & idxs]"],
+ :name-encode "aget",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/aget",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/aget"},
  :related ["cljs.core/.."
            "cljs.core/aset"
            "cljs.core/get"
@@ -176,18 +173,21 @@ The API data for this symbol:
  :source {:code "(defn aget\n  ([array i]\n     (cljs.core/aget array i))\n  ([array i & idxs]\n     (apply aget (aget array i) idxs)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [395 400]},
+          :lines [395 400],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L395-L400"},
  :extra-sources [{:code "(core/defmacro aget\n  ([a i]\n   (core/list 'js* \"(~{}[~{}])\" a i))\n  ([a i & idxs]\n   (core/let [astr (apply core/str (repeat (count idxs) \"[~{}]\"))]\n     `(~'js* ~(core/str \"(~{}[~{}]\" astr \")\") ~a ~i ~@idxs))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [930 935]}],
+                  :lines [930 935],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L930-L935"}],
+ :usage ["(aget array i)" "(aget array i & idxs)"],
  :full-name "cljs.core/aget",
- :clj-symbol "clojure.core/aget",
- :docstring "Returns the value at the index."}
+ :docstring "Returns the value at the index.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/aget.cljsdoc"}
 
 ```
 

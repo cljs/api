@@ -26,7 +26,7 @@ print and println produce output for human consumption.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9184-L9189):
+Source code @ [github]():
 
 ```clj
 (def ^{:doc
@@ -41,12 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:9184-9189](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L9184-L9189)</ins>
+
 </pre>
 
 -->
@@ -90,18 +85,22 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "print",
+ :name-encode "print",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/print",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/print"},
  :full-name-encode "cljs.core/print",
  :source {:code "(def ^{:doc\n  \"Prints the object(s) using string-print.\n  print and println produce output for human consumption.\"}\n  print\n  (fn cljs-core-print [& objs]\n    (pr-with-opts objs (assoc (pr-opts) :readably false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9184 9189]},
+          :lines [9184 9189],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L9184-L9189"},
  :full-name "cljs.core/print",
- :clj-symbol "clojure.core/print",
- :docstring "Prints the object(s) using string-print.\nprint and println produce output for human consumption."}
+ :docstring "Prints the object(s) using string-print.\nprint and println produce output for human consumption.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/print.cljsdoc"}
 
 ```
 

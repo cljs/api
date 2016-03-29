@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(get-in m ks)</samp><br>
+<samp>(get-in m ks not-found)</samp><br>
+
+---
 
  <samp>
 (__get-in__ m ks)<br>
@@ -51,7 +55,7 @@ or the not-found value if supplied.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4671-L4690):
+Source code @ [github]():
 
 ```clj
 (defn get-in
@@ -75,12 +79,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:4671-4690](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L4671-L4690)</ins>
+
 </pre>
 
 -->
@@ -126,8 +125,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "get-in",
  :signature ["[m ks]" "[m ks not-found]"],
+ :name-encode "get-in",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/get-in",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/get-in"},
  :related ["cljs.core/assoc-in"
            "cljs.core/update-in"
            "cljs.core/find"
@@ -136,12 +138,14 @@ The API data for this symbol:
  :source {:code "(defn get-in\n  ([m ks]\n     (reduce get m ks))\n  ([m ks not-found]\n     (loop [sentinel lookup-sentinel\n            m m\n            ks (seq ks)]\n       (if ks\n         (if (not (satisfies? ILookup m))\n           not-found\n           (let [m (get m (first ks) sentinel)]\n             (if (identical? sentinel m)\n               not-found\n               (recur sentinel m (next ks)))))\n         m))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4671 4690]},
+          :lines [4671 4690],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4671-L4690"},
+ :usage ["(get-in m ks)" "(get-in m ks not-found)"],
  :full-name "cljs.core/get-in",
- :clj-symbol "clojure.core/get-in",
- :docstring "Returns the value in a nested associative structure,\nwhere ks is a sequence of keys. Returns nil if the key is not present,\nor the not-found value if supplied."}
+ :docstring "Returns the value in a nested associative structure,\nwhere ks is a sequence of keys. Returns nil if the key is not present,\nor the not-found value if supplied.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/get-in.cljsdoc"}
 
 ```
 

@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(bit-xor x y)</samp><br>
+<samp>(bit-xor x y & more)</samp><br>
+
+---
 
  <samp>
 (__bit-xor__ x y)<br>
@@ -64,7 +68,7 @@ Bitwise exclusive or
 ```
 
 
-Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2579-L2583):
+Function code @ [github]():
 
 ```clj
 (defn bit-xor
@@ -77,19 +81,14 @@ Function code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/s
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2579-2583](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2579-L2583)</ins>
+
 </pre>
 
 -->
 
 ---
 
-Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1099-L1101):
+Macro code @ [github]():
 
 ```clj
 (core/defmacro ^::ana/numeric bit-xor
@@ -101,12 +100,7 @@ Macro code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[core.cljc:1099-1101](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/core.cljc#L1099-L1101)</ins>
+
 </pre>
 -->
 
@@ -150,27 +144,33 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "bit-xor",
  :signature ["[x y]" "[x y & more]"],
+ :name-encode "bit-xor",
  :history [["+" "0.0-927"]],
  :type "function/macro",
+ :clj-equiv {:full-name "clojure.core/bit-xor",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bit-xor"},
  :related ["cljs.core/bit-and" "cljs.core/bit-or"],
  :full-name-encode "cljs.core/bit-xor",
  :source {:code "(defn bit-xor\n  ([x y] (cljs.core/bit-xor x y))\n  ([x y & more]\n     (reduce bit-xor (cljs.core/bit-xor x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2579 2583]},
+          :lines [2579 2583],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2579-L2583"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric bit-xor\n  ([x y] (core/list 'js* \"(~{} ^ ~{})\" x y))\n  ([x y & more] `(bit-xor (bit-xor ~x ~y) ~@more)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.34",
+                  :tag "r1.8.40",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1099 1101]}],
+                  :lines [1099 1101],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1099-L1101"}],
+ :usage ["(bit-xor x y)" "(bit-xor x y & more)"],
  :examples [{:id "3ccd99",
              :content "Bits can be entered using radix notation:\n\n```clj\n(bit-xor 2r1100 2r1010)\n;;=> 6\n;; 6 = 2r0110\n```\n\nSame numbers in decimal:\n\n```clj\n(bit-xor 12 10)\n;;=> 6\n```"}],
  :full-name "cljs.core/bit-xor",
- :clj-symbol "clojure.core/bit-xor",
- :docstring "Bitwise exclusive or"}
+ :docstring "Bitwise exclusive or",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/bit-xor.cljsdoc"}
 
 ```
 

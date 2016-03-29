@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(complement f)</samp><br>
+
+---
 
  <samp>
 (__complement__ f)<br>
@@ -53,7 +56,7 @@ has the same effects, if any, and returns the opposite truth value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3916-L3924):
+Source code @ [github]():
 
 ```clj
 (defn ^boolean complement
@@ -69,12 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3916-3924](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3916-L3924)</ins>
+
 </pre>
 
 -->
@@ -121,21 +119,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "complement",
  :signature ["[f]"],
+ :name-encode "complement",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/complement",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/complement"},
  :related ["cljs.core/not"],
  :full-name-encode "cljs.core/complement",
  :source {:code "(defn ^boolean complement\n  [f]\n  (fn\n    ([] (not (f)))\n    ([x] (not (f x)))\n    ([x y] (not (f x y)))\n    ([x y & zs] (not (apply f x y zs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3916 3924]},
+          :lines [3916 3924],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3916-L3924"},
+ :usage ["(complement f)"],
  :examples [{:id "69e359",
              :content "```clj\n(def a 10)\n((complement #(= a %)) 12)\n;;=> true\n```"}],
  :full-name "cljs.core/complement",
- :clj-symbol "clojure.core/complement",
- :docstring "Takes a fn f and returns a fn that takes the same arguments as f,\nhas the same effects, if any, and returns the opposite truth value."}
+ :docstring "Takes a fn f and returns a fn that takes the same arguments as f,\nhas the same effects, if any, and returns the opposite truth value.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/complement.cljsdoc"}
 
 ```
 

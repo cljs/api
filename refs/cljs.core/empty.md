@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(empty coll)</samp><br>
+
+---
 
  <samp>
 (__empty__ coll)<br>
@@ -42,7 +45,7 @@ Returns an empty collection of the same category as coll, or nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1653-L1657):
+Source code @ [github]():
 
 ```clj
 (defn empty
@@ -55,12 +58,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1653-1657](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1653-L1657)</ins>
+
 </pre>
 
 -->
@@ -106,19 +104,24 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "empty",
  :signature ["[coll]"],
+ :name-encode "empty",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/empty",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/empty"},
  :related ["cljs.core/not-empty"],
  :full-name-encode "cljs.core/empty",
  :source {:code "(defn empty\n  [coll]\n  (when-not (nil? coll)\n    (-empty coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1653 1657]},
+          :lines [1653 1657],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1653-L1657"},
+ :usage ["(empty coll)"],
  :full-name "cljs.core/empty",
- :clj-symbol "clojure.core/empty",
- :docstring "Returns an empty collection of the same category as coll, or nil"}
+ :docstring "Returns an empty collection of the same category as coll, or nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/empty.cljsdoc"}
 
 ```
 

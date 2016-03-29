@@ -68,7 +68,7 @@ See [`PersistentVector`][doc:cljs.core/PersistentVector] for data structure deta
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L222-L236):
+Reader code @ [github]():
 
 ```clj
 (defn- read-vector
@@ -91,18 +91,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:222-236](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L222-L236)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -131,13 +125,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -170,8 +158,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Creates a vector.  A vector is the most commonly used form for creating literal\nsequences, and supports random-access and inserting at the end via [doc:cljs.core/conj]:\n\n```clj\n(def a [1 2 3 4 5])\n```\n\nVectors also serve an important language role as the convention for signaling a\n_binding form_, that is, when local names are created and bound to values.\nExamples:\n\n- `[a b]` as function arg bindings in [`(fn [a b] ...)`][doc:cljs.core/fn]\n- `[a 1 b 2]` as let bindings in [`(let [a 1 b 2] ...)`][doc:cljs.core/let]\n\nThis helps differentiate binding forms from the parentheses of [callable forms][doc:syntax/list].\n\nSee [doc:cljs.core/PersistentVector] for data structure details.",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#vectors",
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "vector",
+ :name-encode "vector",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["cljs.core/vector" "cljs.core/vec"],
@@ -181,20 +172,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [222 236]}
+                  :lines [222 236],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L222-L236"}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage ["[...]"],
  :examples [{:id "18e143",
              :content "```clj\n[1 2 3]\n;;=> [1 2 3]\n```"}],
- :edn-doc "https://github.com/edn-format/edn#vectors",
  :full-name "syntax/vector",
  :display "[] vector",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/vector.cljsdoc"}
 
 ```
 

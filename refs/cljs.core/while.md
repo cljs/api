@@ -12,6 +12,9 @@ imported [<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png
 </tr>
 </table>
 
+<samp>(while test & body)</samp><br>
+
+---
 
  <samp>
 (__while__ test & body)<br>
@@ -44,7 +47,7 @@ some side-effect will cause test to become false/nil. Returns nil
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6087-L6095):
+Source code @ [github]():
 
 ```clj
 (defmacro while
@@ -59,11 +62,7 @@ Source code @ [github](https://github.com/clojure/clojure/blob/clojure-1.8.0/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojure @ clojure-1.8.0
-└── src
-    └── clj
-        └── clojure
-            └── <ins>[core.clj:6087-6095](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6087-L6095)</ins>
+
 </pre>
 
 -->
@@ -109,8 +108,11 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "while",
  :signature ["[test & body]"],
+ :name-encode "while",
  :history [["+" "0.0-927"]],
  :type "macro",
+ :clj-equiv {:full-name "clojure.core/while",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/while"},
  :related ["cljs.core/loop"],
  :full-name-encode "cljs.core/while",
  :source {:code "(defmacro while\n  [test & body]\n  `(loop []\n     (when ~test\n       ~@body\n       (recur))))",
@@ -118,10 +120,12 @@ The API data for this symbol:
           :repo "clojure",
           :tag "clojure-1.8.0",
           :filename "src/clj/clojure/core.clj",
-          :lines [6087 6095]},
+          :lines [6087 6095],
+          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L6087-L6095"},
+ :usage ["(while test & body)"],
  :full-name "cljs.core/while",
- :clj-symbol "clojure.core/while",
- :docstring "Repeatedly executes body while test expression is true. Presumes\nsome side-effect will cause test to become false/nil. Returns nil"}
+ :docstring "Repeatedly executes body while test expression is true. Presumes\nsome side-effect will cause test to become false/nil. Returns nil",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/while.cljsdoc"}
 
 ```
 

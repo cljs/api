@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-eval {:keys \[source\], :as resource})</samp><br>
+
+---
 
  <samp>
 (__js-eval__ {:keys \[source\], :as resource})<br>
@@ -27,7 +30,7 @@ A default JavaScript evaluation function.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L101-L104):
+Source code @ [github]():
 
 ```clj
 (defn js-eval
@@ -39,12 +42,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[js.cljs:101-104](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/js.cljs#L101-L104)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 {:ns "cljs.js",
  :name "js-eval",
  :signature ["[{:keys [source], :as resource}]"],
+ :name-encode "js-eval",
  :history [["+" "1.7.10"]],
  :type "function",
  :full-name-encode "cljs.js/js-eval",
  :source {:code "(defn js-eval\n  [{:keys [source] :as resource}]\n  (js/eval source))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/js.cljs",
-          :lines [101 104]},
+          :lines [101 104],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L101-L104"},
+ :usage ["(js-eval {:keys [source], :as resource})"],
  :full-name "cljs.js/js-eval",
- :docstring "A default JavaScript evaluation function."}
+ :docstring "A default JavaScript evaluation function.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/js-eval.cljsdoc"}
 
 ```
 

@@ -9,6 +9,12 @@
 </tr>
 </table>
 
+<samp>(parse-ns src)</samp><br>
+<samp>(parse-ns src opts)</samp><br>
+<samp>(parse-ns src dest opts)</samp><br>
+<samp>(parse-ns state src dest opts)</samp><br>
+
+---
 
  <samp>
 (__parse-ns__ src)<br>
@@ -44,7 +50,7 @@ requested via opts where :restore is false.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L94-L115):
+Source code @ [github]():
 
 ```clj
 (defn parse-ns
@@ -66,13 +72,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── analyzer
-                    └── <ins>[api.clj:94-115](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/analyzer/api.clj#L94-L115)</ins>
+
 </pre>
 
 -->
@@ -117,17 +117,24 @@ The API data for this symbol:
              "[src opts]"
              "[src dest opts]"
              "[state src dest opts]"],
+ :name-encode "parse-ns",
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/parse-ns",
  :source {:code "(defn parse-ns\n  ([src] (parse-ns src nil nil))\n  ([src opts] (parse-ns src nil opts))\n  ([src dest opts]\n   (parse-ns\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (ana/parse-ns src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [94 115]},
+          :lines [94 115],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L94-L115"},
+ :usage ["(parse-ns src)"
+         "(parse-ns src opts)"
+         "(parse-ns src dest opts)"
+         "(parse-ns state src dest opts)"],
  :full-name "cljs.analyzer.api/parse-ns",
- :docstring "Helper for parsing only the essential namespace information from a\nClojureScript source file and returning a cljs.closure/IJavaScript compatible\nmap _not_ a namespace AST node.\n\nBy default does not load macros or perform any analysis of dependencies. If\nopts parameter provided :analyze-deps and :load-macros keys their values will\nbe used for *analyze-deps* and *load-macros* bindings respectively. This\nfunction does _not_ side-effect the ambient compilation environment unless\nrequested via opts where :restore is false."}
+ :docstring "Helper for parsing only the essential namespace information from a\nClojureScript source file and returning a cljs.closure/IJavaScript compatible\nmap _not_ a namespace AST node.\n\nBy default does not load macros or perform any analysis of dependencies. If\nopts parameter provided :analyze-deps and :load-macros keys their values will\nbe used for *analyze-deps* and *load-macros* bindings respectively. This\nfunction does _not_ side-effect the ambient compilation environment unless\nrequested via opts where :restore is false.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/parse-ns.cljsdoc"}
 
 ```
 

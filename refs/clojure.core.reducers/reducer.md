@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(reducer coll xf)</samp><br>
+
+---
 
  <samp>
 (__reducer__ coll xf)<br>
@@ -33,7 +36,7 @@ reducing fn.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L66-L77):
+Source code @ [github]():
 
 ```clj
 (defn reducer
@@ -50,13 +53,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:66-77](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L66-L77)</ins>
+
 </pre>
 
 -->
@@ -101,18 +98,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "reducer",
  :signature ["[coll xf]"],
+ :name-encode "reducer",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/reducer",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/reducer"},
  :full-name-encode "clojure.core.reducers/reducer",
  :source {:code "(defn reducer\n  ([coll xf]\n     (reify\n       cljs.core/IReduce\n       (-reduce [this f1]\n         (-reduce this f1 (f1)))\n       (-reduce [_ f1 init]\n         (-reduce coll (xf f1) init)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [66 77]},
+          :lines [66 77],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L66-L77"},
+ :usage ["(reducer coll xf)"],
  :full-name "clojure.core.reducers/reducer",
- :clj-symbol "clojure.core.reducers/reducer",
- :docstring "Given a reducible collection, and a transformation function xf,\nreturns a reducible collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn."}
+ :docstring "Given a reducible collection, and a transformation function xf,\nreturns a reducible collection, where any supplied reducing\nfn will be transformed by xf. xf is a function of reducing fn to\nreducing fn.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/reducer.cljsdoc"}
 
 ```
 

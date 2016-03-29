@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(parse-headers header-lines)</samp><br>
+
+---
 
  <samp>
 (__parse-headers__ header-lines)<br>
@@ -27,7 +30,7 @@ Parse the headers of an HTTP POST request.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L56-L64):
+Source code @ [github]():
 
 ```clj
 (defn parse-headers
@@ -44,13 +47,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[server.clj:56-64](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/server.clj#L56-L64)</ins>
+
 </pre>
 
 -->
@@ -92,17 +89,21 @@ The API data for this symbol:
 {:ns "cljs.repl.server",
  :name "parse-headers",
  :signature ["[header-lines]"],
+ :name-encode "parse-headers",
  :history [["+" "0.0-1503"]],
  :type "function",
  :full-name-encode "cljs.repl.server/parse-headers",
  :source {:code "(defn parse-headers\n  [header-lines]\n  (apply hash-map\n    (mapcat\n      (fn [line]\n        (let [[k v] (str/split line #\":\" 2)]\n          [(keyword (str/lower-case k)) (str/triml v)]))\n      header-lines)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/server.clj",
-          :lines [56 64]},
+          :lines [56 64],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/server.clj#L56-L64"},
+ :usage ["(parse-headers header-lines)"],
  :full-name "cljs.repl.server/parse-headers",
- :docstring "Parse the headers of an HTTP POST request."}
+ :docstring "Parse the headers of an HTTP POST request.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/parse-headers.cljsdoc"}
 
 ```
 

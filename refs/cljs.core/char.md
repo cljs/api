@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(char x)</samp><br>
+
+---
 
  <samp>
 (__char__ x)<br>
@@ -52,7 +55,7 @@ Coerce to char
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2429-L2435):
+Source code @ [github]():
 
 ```clj
 (defn char
@@ -67,12 +70,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:2429-2435](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L2429-L2435)</ins>
+
 </pre>
 
 -->
@@ -118,20 +116,25 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "char",
  :signature ["[x]"],
+ :name-encode "char",
  :history [["+" "0.0-1798"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/char",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/char"},
  :full-name-encode "cljs.core/char",
  :source {:code "(defn char\n  [x]\n  (cond\n    (number? x) (.fromCharCode js/String x)\n    (and (string? x) (== (.-length x) 1)) x\n    :else (throw (js/Error. \"Argument to char must be a character or number\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2429 2435]},
+          :lines [2429 2435],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2429-L2435"},
+ :usage ["(char x)"],
  :examples [{:id "4e1a56",
              :content "```clj\n(char 81)\n;;=> \"Q\"\n\n(char \"Q\")\n;;=> \"Q\"\n\n(char \"foo\")\n;; Error: Argument to char must be a character or number\n```"}],
  :full-name "cljs.core/char",
- :clj-symbol "clojure.core/char",
- :docstring "Coerce to char"}
+ :docstring "Coerce to char",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/char.cljsdoc"}
 
 ```
 

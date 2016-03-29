@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(hash-unordered-coll coll)</samp><br>
+
+---
 
  <samp>
 (__hash-unordered-coll__ coll)<br>
@@ -34,7 +37,7 @@ See http://clojure.org/data_structures#hash for full algorithms.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1222-L1232):
+Source code @ [github]():
 
 ```clj
 (defn ^number hash-unordered-coll
@@ -49,12 +52,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:1222-1232](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L1222-L1232)</ins>
+
 </pre>
 
 -->
@@ -100,18 +98,23 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "hash-unordered-coll",
  :signature ["[coll]"],
+ :name-encode "hash-unordered-coll",
  :history [["+" "0.0-2261"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/hash-unordered-coll",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/hash-unordered-coll"},
  :full-name-encode "cljs.core/hash-unordered-coll",
  :source {:code "(defn ^number hash-unordered-coll\n  [coll]\n  (loop [n 0 hash-code 0 coll (seq coll)]\n    (if-not (nil? coll)\n      (recur (inc n) (bit-or (+ hash-code (hash (first coll))) 0) (next coll))\n      (mix-collection-hash hash-code n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1222 1232]},
+          :lines [1222 1232],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L1222-L1232"},
+ :usage ["(hash-unordered-coll coll)"],
  :full-name "cljs.core/hash-unordered-coll",
- :clj-symbol "clojure.core/hash-unordered-coll",
- :docstring "Returns the hash code, consistent with =, for an external unordered\ncollection implementing Iterable. For maps, the iterator should\nreturn map entries whose hash is computed as\n  (hash-ordered-coll [k v]).\nSee http://clojure.org/data_structures#hash for full algorithms."}
+ :docstring "Returns the hash code, consistent with =, for an external unordered\ncollection implementing Iterable. For maps, the iterator should\nreturn map entries whose hash is computed as\n  (hash-ordered-coll [k v]).\nSee http://clojure.org/data_structures#hash for full algorithms.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-unordered-coll.cljsdoc"}
 
 ```
 

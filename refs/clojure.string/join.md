@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(join coll)</samp><br>
+<samp>(join separator coll)</samp><br>
+
+---
 
  <samp>
 (__join__ coll)<br>
@@ -40,7 +44,7 @@ separated by an optional separator.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L66-L83):
+Source code @ [github]():
 
 ```clj
 (defn join
@@ -65,12 +69,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:66-83](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L66-L83)</ins>
+
 </pre>
 
 -->
@@ -116,18 +115,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "join",
  :signature ["[coll]" "[separator coll]"],
+ :name-encode "join",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/join",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/join"},
  :full-name-encode "clojure.string/join",
  :source {:code "(defn join\n  ([coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (recur (. sb (append (str (first coll)))) (next coll))\n       (.toString sb))))\n  ([separator coll]\n   (loop [sb (StringBuffer.) coll (seq coll)]\n     (if-not (nil? coll)\n       (do\n         (. sb (append (str (first coll))))\n         (let [coll (next coll)]\n           (when-not (nil? coll)\n             (. sb (append separator)))\n           (recur sb coll)))\n       (.toString sb)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [66 83]},
+          :lines [66 83],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L66-L83"},
+ :usage ["(join coll)" "(join separator coll)"],
  :full-name "clojure.string/join",
- :clj-symbol "clojure.string/join",
- :docstring "Returns a string of all elements in coll, as returned by (seq coll),\nseparated by an optional separator."}
+ :docstring "Returns a string of all elements in coll, as returned by (seq coll),\nseparated by an optional separator.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/join.cljsdoc"}
 
 ```
 

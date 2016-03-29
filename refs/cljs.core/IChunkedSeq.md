@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1424"><img valign="middle" alt="[+] 0.0-1424" title="Added in 0.0-1424" src="https://img.shields.io/badge/+-0.0--1424-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IChunkedSeq</samp>](https://github.com/clojure/clojure/blob//src/jvm/clojure/lang/IChunkedSeq.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IChunkedSeq</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IChunkedSeq.java)
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@ Protocol for accessing a collection as sequential chunks.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L721-L726):
+Source code @ [github]():
 
 ```clj
 (defprotocol IChunkedSeq
@@ -40,12 +40,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:721-726](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L721-L726)</ins>
+
 </pre>
 
 -->
@@ -89,15 +84,19 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "IChunkedSeq",
+ :name-encode "IChunkedSeq",
  :history [["+" "0.0-1424"]],
  :type "protocol",
+ :clj-equiv {:full-name "clojure.lang/IChunkedSeq",
+             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IChunkedSeq.java"},
  :full-name-encode "cljs.core/IChunkedSeq",
  :source {:code "(defprotocol IChunkedSeq\n  \"Protocol for accessing a collection as sequential chunks.\"\n  (-chunked-first [coll]\n    \"Returns the first chunk in coll.\")\n  (-chunked-rest [coll]\n    \"Return a new collection of coll with the first chunk removed.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [721 726]},
+          :lines [721 726],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L721-L726"},
  :methods [{:name "-chunked-first",
             :signature ["[coll]"],
             :docstring "Returns the first chunk in coll."}
@@ -105,8 +104,8 @@ The API data for this symbol:
             :signature ["[coll]"],
             :docstring "Return a new collection of coll with the first chunk removed."}],
  :full-name "cljs.core/IChunkedSeq",
- :clj-symbol "clojure.lang/IChunkedSeq",
- :docstring "Protocol for accessing a collection as sequential chunks."}
+ :docstring "Protocol for accessing a collection as sequential chunks.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IChunkedSeq.cljsdoc"}
 
 ```
 

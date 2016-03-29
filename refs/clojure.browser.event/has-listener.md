@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(has-listener obj opt_type opt_capture)</samp><br>
+
+---
 
  <samp>
 (__has-listener__ obj opt_type opt_capture)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L96):
+Source code @ [github]():
 
 ```clj
 (defn has-listener [obj opt_type opt_capture])
@@ -32,13 +35,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── browser
-                    └── <ins>[event.cljs:96](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/browser/event.cljs#L96)</ins>
+
 </pre>
 
 -->
@@ -79,17 +76,21 @@ The API data for this symbol:
 ```clj
 {:ns "clojure.browser.event",
  :name "has-listener",
- :type "function",
  :signature ["[obj opt_type opt_capture]"],
+ :name-encode "has-listener",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "clojure.browser.event/has-listener",
  :source {:code "(defn has-listener [obj opt_type opt_capture])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/browser/event.cljs",
-          :lines [96]},
+          :lines [96],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L96"},
+ :usage ["(has-listener obj opt_type opt_capture)"],
  :full-name "clojure.browser.event/has-listener",
- :full-name-encode "clojure.browser.event/has-listener",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/has-listener.cljsdoc"}
 
 ```
 

@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(remove-method multifn dispatch-val)</samp><br>
+
+---
 
  <samp>
 (__remove-method__ multifn dispatch-val)<br>
@@ -30,7 +33,7 @@ Removes the method of multimethod associated with dispatch-value.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10050-L10053):
+Source code @ [github]():
 
 ```clj
 (defn remove-method
@@ -42,12 +45,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:10050-10053](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L10050-L10053)</ins>
+
 </pre>
 
 -->
@@ -92,18 +90,23 @@ The API data for this symbol:
 {:ns "cljs.core",
  :name "remove-method",
  :signature ["[multifn dispatch-val]"],
+ :name-encode "remove-method",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/remove-method",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/remove-method"},
  :full-name-encode "cljs.core/remove-method",
  :source {:code "(defn remove-method\n [multifn dispatch-val]\n (-remove-method multifn dispatch-val))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10050 10053]},
+          :lines [10050 10053],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10050-L10053"},
+ :usage ["(remove-method multifn dispatch-val)"],
  :full-name "cljs.core/remove-method",
- :clj-symbol "clojure.core/remove-method",
- :docstring "Removes the method of multimethod associated with dispatch-value."}
+ :docstring "Removes the method of multimethod associated with dispatch-value.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/remove-method.cljsdoc"}
 
 ```
 

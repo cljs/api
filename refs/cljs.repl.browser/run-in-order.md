@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(run-in-order {:keys \[expecting fns\]})</samp><br>
+
+---
 
  <samp>
 (__run-in-order__ {:keys \[expecting fns\]})<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L156-L162):
+Source code @ [github]():
 
 ```clj
 (defn run-in-order [{:keys [expecting fns]}]
@@ -38,13 +41,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── repl
-                    └── <ins>[browser.clj:156-162](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl/browser.clj#L156-L162)</ins>
+
 </pre>
 
 -->
@@ -85,17 +82,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.repl.browser",
  :name "run-in-order",
- :type "function",
  :signature ["[{:keys [expecting fns]}]"],
+ :name-encode "run-in-order",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.repl.browser/run-in-order",
  :source {:code "(defn run-in-order [{:keys [expecting fns]}]\n  (loop [order expecting fns fns]\n    (if-let [f (get fns order)]\n      (do\n        (f)\n        (recur (inc order) (dissoc fns order)))\n      {:expecting order :fns fns})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl/browser.clj",
-          :lines [156 162]},
+          :lines [156 162],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L156-L162"},
+ :usage ["(run-in-order {:keys [expecting fns]})"],
  :full-name "cljs.repl.browser/run-in-order",
- :full-name-encode "cljs.repl.browser/run-in-order",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/run-in-order.cljsdoc"}
 
 ```
 

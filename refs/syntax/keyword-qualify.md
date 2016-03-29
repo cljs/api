@@ -78,7 +78,7 @@ Non-existing namespaces will throw a reader exception:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361):
+Reader code @ [github]():
 
 ```clj
 (defn- read-keyword
@@ -106,18 +106,12 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:343-361](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361)</ins>
+
 </pre>
 -->
 
 ---
-Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762):
+Reader table @ [github]():
 
 ```clj
 (defn- macros [ch]
@@ -146,13 +140,7 @@ Reader table @ [github](https://github.com/clojure/tools.reader/blob/tools.reade
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:743-762](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762)</ins>
+
 </pre>
 -->
 
@@ -185,8 +173,11 @@ The API data for this symbol:
 
 ```clj
 {:description "Keywords starting with `::` will evaluate to regular keywords with a namespace qualification.\nThe namespace will resolve to either of the following:\n\n- current namespace if none is specified\n- given namespace if it exists\n- full namespace if the given one is an alias\n- reader error if given namespace doesn't exist",
+ :syntax-equiv {:edn-url nil,
+                :clj-url "http://clojure.org/reader#toc1"},
  :ns "syntax",
  :name "keyword-qualify",
+ :name-encode "keyword-qualify",
  :history [["+" "0.0-927"]],
  :type "syntax",
  :related ["syntax/keyword" "cljs.core/keyword" "cljs.core/keyword?"],
@@ -196,19 +187,21 @@ The API data for this symbol:
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [343 361]}
+                  :lines [343 361],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L343-L361"}
                  {:code "(defn- macros [ch]\n  (case ch\n    \\\" read-string*\n    \\: read-keyword\n    \\; read-comment\n    \\' (wrapping-reader 'quote)\n    \\@ (wrapping-reader 'clojure.core/deref)\n    \\^ read-meta\n    \\` read-syntax-quote ;;(wrapping-reader 'syntax-quote)\n    \\~ read-unquote\n    \\( read-list\n    \\) read-unmatched-delimiter\n    \\[ read-vector\n    \\] read-unmatched-delimiter\n    \\{ read-map\n    \\} read-unmatched-delimiter\n    \\\\ read-char*\n    \\% read-arg\n    \\# read-dispatch\n    nil))",
                   :title "Reader table",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [743 762]}),
+                  :lines [743 762],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L743-L762"}),
  :usage ["::foo" "::foo/bar"],
  :examples [{:id "b0a135",
              :content "If we are in the `user` namespace:\n\n```clj\n::foo\n;;=> :user/foo\n```\n\nWe can use namespace aliases:\n\n```clj\n(require '[example.util :as util])\n\n::util/foo\n;;=> :example.util/foo\n```\n\nExisting namespaces will resolve normally:\n\n```clj\n::cljs.core/foo\n;;=> :cljs.core/foo\n```\n\nNon-existing namespaces will throw a reader exception:\n\n```clj\n::foo/bar\n;; clojure.lang.ExceptionInfo: Invalid token: ::foo/bar {:type :reader-exception, ...\n```"}],
  :full-name "syntax/keyword-qualify",
  :display ":: keyword",
- :clj-doc "http://clojure.org/reader#toc1"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/keyword-qualify.cljsdoc"}
 
 ```
 

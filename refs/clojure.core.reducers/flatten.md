@@ -12,6 +12,10 @@
 </tr>
 </table>
 
+<samp>(flatten)</samp><br>
+<samp>(flatten coll)</samp><br>
+
+---
 
  <samp>
 (__flatten__)<br>
@@ -35,7 +39,7 @@ Takes any nested combination of sequential things (lists, vectors,
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L130-L143):
+Source code @ [github]():
 
 ```clj
 (defcurried flatten
@@ -58,13 +62,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── core
-                    └── <ins>[reducers.cljs:130-143](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/core/reducers.cljs#L130-L143)</ins>
+
 </pre>
 
 -->
@@ -109,18 +107,23 @@ The API data for this symbol:
 {:ns "clojure.core.reducers",
  :name "flatten",
  :signature ["[]" "[coll]"],
+ :name-encode "flatten",
  :history [["+" "0.0-1236"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core.reducers/flatten",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core.reducers/flatten"},
  :full-name-encode "clojure.core.reducers/flatten",
  :source {:code "(defcurried flatten\n  \"Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection.\"\n  {}\n  [coll]\n  (folder coll\n   (fn [f1]\n     (fn\n       ([] (f1))\n       ([ret v]\n          (if (sequential? v)\n            (-reduce (flatten v) f1 ret)\n            (f1 ret v)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
-          :lines [130 143]},
+          :lines [130 143],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/core/reducers.cljs#L130-L143"},
+ :usage ["(flatten)" "(flatten coll)"],
  :full-name "clojure.core.reducers/flatten",
- :clj-symbol "clojure.core.reducers/flatten",
- :docstring "Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection."}
+ :docstring "Takes any nested combination of sequential things (lists, vectors,\n  etc.) and returns their contents as a single, flat foldable\n  collection.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.core.reducers/flatten.cljsdoc"}
 
 ```
 

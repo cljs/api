@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(read-symbol reader initch)</samp><br>
+
+---
 
  <samp>
 (__read-symbol__ reader initch)<br>
@@ -22,7 +25,7 @@
 
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L327-L335):
+Source code @ [github]():
 
 ```clj
 (defn read-symbol
@@ -40,12 +43,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[reader.cljs:327-335](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/reader.cljs#L327-L335)</ins>
+
 </pre>
 
 -->
@@ -86,17 +84,21 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.reader",
  :name "read-symbol",
- :type "function",
  :signature ["[reader initch]"],
+ :name-encode "read-symbol",
+ :history [["+" "0.0-927"]],
+ :type "function",
+ :full-name-encode "cljs.reader/read-symbol",
  :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (and (gstring/contains token \"/\")\n             (not (== (.-length token) 1)))\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\"))\n                (.-length token)))\n      (special-symbols token (symbol token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [327 335]},
+          :lines [327 335],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L327-L335"},
+ :usage ["(read-symbol reader initch)"],
  :full-name "cljs.reader/read-symbol",
- :full-name-encode "cljs.reader/read-symbol",
- :history [["+" "0.0-927"]]}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-symbol.cljsdoc"}
 
 ```
 

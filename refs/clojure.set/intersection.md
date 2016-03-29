@@ -12,6 +12,11 @@
 </tr>
 </table>
 
+<samp>(intersection s1)</samp><br>
+<samp>(intersection s1 s2)</samp><br>
+<samp>(intersection s1 s2 & sets)</samp><br>
+
+---
 
  <samp>
 (__intersection__ s1)<br>
@@ -49,7 +54,7 @@ Return a set that is the intersection of the input sets
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L31-L44):
+Source code @ [github]():
 
 ```clj
 (defn intersection
@@ -71,12 +76,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[set.cljs:31-44](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/set.cljs#L31-L44)</ins>
+
 </pre>
 
 -->
@@ -122,8 +122,11 @@ The API data for this symbol:
  :ns "clojure.set",
  :name "intersection",
  :signature ["[s1]" "[s1 s2]" "[s1 s2 & sets]"],
+ :name-encode "intersection",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.set/intersection",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.set-api.html#clojure.set/intersection"},
  :related ["clojure.set/union"
            "clojure.set/difference"
            "clojure.set/superset?"
@@ -132,12 +135,16 @@ The API data for this symbol:
  :source {:code "(defn intersection\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s2) (count s1))\n       (recur s2 s1)\n       (reduce (fn [result item]\n                   (if (contains? s2 item)\n\t\t     result\n                     (disj result item)))\n\t       s1 s1)))\n  ([s1 s2 & sets] \n     (let [bubbled-sets (bubble-max-key #(- (count %)) (conj sets s2 s1))]\n       (reduce intersection (first bubbled-sets) (rest bubbled-sets)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/set.cljs",
-          :lines [31 44]},
+          :lines [31 44],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/set.cljs#L31-L44"},
+ :usage ["(intersection s1)"
+         "(intersection s1 s2)"
+         "(intersection s1 s2 & sets)"],
  :full-name "clojure.set/intersection",
- :clj-symbol "clojure.set/intersection",
- :docstring "Return a set that is the intersection of the input sets"}
+ :docstring "Return a set that is the intersection of the input sets",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.set/intersection.cljsdoc"}
 
 ```
 

@@ -113,7 +113,7 @@ literal UUID:
 
 
 
-Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L811-L824):
+Reader code @ [github]():
 
 ```clj
 (defn- read-tagged [rdr initch opts pending-forms]
@@ -136,13 +136,7 @@ Reader code @ [github](https://github.com/clojure/tools.reader/blob/tools.reader
 Repo - tag - source tree - lines:
 
  <pre>
-tools.reader @ tools.reader-1.0.0-alpha3
-└── src
-    └── main
-        └── clojure
-            └── clojure
-                └── tools
-                    └── <ins>[reader.clj:811-824](https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L811-L824)</ins>
+
 </pre>
 -->
 
@@ -175,25 +169,28 @@ The API data for this symbol:
 
 ```clj
 {:description "A tagged literal is a way to tag another core syntax literal to represent a\nsingle, new literal.\n\n- `#foo []`\n- `#foo {}`\n- `#foo \"bar\"`\n- `#foo 123`\n- ...\n\nIf a [symbol][doc:syntax/symbol] is prefixed by `#`, that symbol is considered a\n__tag__ for the following form.  Together they represent a new value.  Real\nexamples:\n\n- `#js {:foo 1}`, map -> JavaScript object\n- `#inst \"2015-01-12\"` string -> Date\n\nIn these examples, the values `{:foo 1}` and `\"2015-01-12\"` are read normally,\nbut are further interpretted by their registered tag handlers to produce new\nvalues: a JavaScript object and Date, respectively.\n\nThese tagged literals are the \"extensible\" part of extensible data notation\n([edn]), with ClojureScript being a superset of edn.\n\n[edn]:https://github.com/edn-format/edn#tagged-elements\n\nClojureScript supports the following tagged literals:\n\n- [doc:syntax/inst-literal]\n- [doc:syntax/uuid-literal]\n- [doc:syntax/js-literal]\n- [doc:syntax/queue-literal]",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#tagged-elements",
+                :clj-url "http://clojure.org/reader#toc4"},
  :ns "syntax",
  :name "tagged-literal",
+ :name-encode "tagged-literal",
  :history [["+" "0.0-1211"]],
  :type "syntax",
  :related ["syntax/dispatch"],
  :full-name-encode "syntax/tagged-literal",
- :extra-sources [{:code "(defn- read-tagged [rdr initch opts pending-forms]\n  (let [tag (read* rdr true nil opts pending-forms)]\n    (if-not (symbol? tag)\n      (reader-error rdr \"Reader tag must be a symbol\"))\n    (if *suppress-read*\n      (tagged-literal tag (read* rdr true nil opts pending-forms))\n      (if-let [f (or (*data-readers* tag)\n                     (default-data-readers tag))]\n        (f (read* rdr true nil opts pending-forms))\n        (if (.contains (name tag) \".\")\n          (read-ctor rdr tag opts pending-forms)\n          (if-let [f *default-data-reader-fn*]\n            (f tag (read* rdr true nil opts pending-forms))\n            (reader-error rdr \"No reader function for tag \" (name tag))))))))",
+ :extra-sources ({:code "(defn- read-tagged [rdr initch opts pending-forms]\n  (let [tag (read* rdr true nil opts pending-forms)]\n    (if-not (symbol? tag)\n      (reader-error rdr \"Reader tag must be a symbol\"))\n    (if *suppress-read*\n      (tagged-literal tag (read* rdr true nil opts pending-forms))\n      (if-let [f (or (*data-readers* tag)\n                     (default-data-readers tag))]\n        (f (read* rdr true nil opts pending-forms))\n        (if (.contains (name tag) \".\")\n          (read-ctor rdr tag opts pending-forms)\n          (if-let [f *default-data-reader-fn*]\n            (f tag (read* rdr true nil opts pending-forms))\n            (reader-error rdr \"No reader function for tag \" (name tag))))))))",
                   :title "Reader code",
                   :repo "tools.reader",
                   :tag "tools.reader-1.0.0-alpha3",
                   :filename "src/main/clojure/clojure/tools/reader.clj",
-                  :lines [811 824]}],
+                  :lines [811 824],
+                  :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-alpha3/src/main/clojure/clojure/tools/reader.clj#L811-L824"}),
  :usage ["#foo ..."],
  :examples [{:id "e84f6a",
              :content "(Tagged literals are printed as themselves, just like core syntax literals.)\n\nliteral JavaScript object:\n\n```clj\n#js {:foo 1}\n;;=> #js {:foo 1}\n\n(def foo 1)\n#js {:foo foo}\n;;=> #js {:foo 1}\n```\n\nliteral queue:\n\n```clj\n#queue [1 2 3]\n;;=> #queue [1 2 3]\n\n(conj #queue [1 2 3] 4)\n;;=> #queue [1 2 3 4]\n```\n\nliteral instant of time (date):\n\n```clj\n#inst \"2014-10-13\"\n;;=> #inst \"2014-10-13T00:00:00.000-00:00\"\n```\n\nliteral UUID:\n\n```clj\n#uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n;;=> #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n```"}],
- :edn-doc "https://github.com/edn-format/edn#tagged-elements",
  :full-name "syntax/tagged-literal",
  :display "# tagged literal",
- :clj-doc "http://clojure.org/reader#toc4"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/tagged-literal.cljsdoc"}
 
 ```
 

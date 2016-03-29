@@ -9,6 +9,9 @@
 </tr>
 </table>
 
+<samp>(js-src->cljs-src f)</samp><br>
+
+---
 
  <samp>
 (__js-src->cljs-src__ f)<br>
@@ -28,7 +31,7 @@ file (.cljs or .cljc).
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L217-L229):
+Source code @ [github]():
 
 ```clj
 (defn ^File js-src->cljs-src
@@ -48,12 +51,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── clojure
-            └── cljs
-                └── <ins>[repl.cljc:217-229](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/clojure/cljs/repl.cljc#L217-L229)</ins>
+
 </pre>
 
 -->
@@ -96,17 +94,21 @@ The API data for this symbol:
  :ns "cljs.repl",
  :name "js-src->cljs-src",
  :signature ["[f]"],
+ :name-encode "js-src-GTcljs-src",
  :history [["+" "0.0-2814"]],
  :type "function",
  :full-name-encode "cljs.repl/js-src-GTcljs-src",
  :source {:code "(defn ^File js-src->cljs-src\n  [f]\n  (let [f (io/file f)\n        dir (.getParentFile f)\n        base-name (string/replace (.getName f) \".js\" \"\")\n        cljsf (io/file dir (str base-name \".cljs\"))]\n    (if (.exists cljsf)\n      cljsf\n      (let [cljcf (io/file dir (str base-name \".cljc\"))]\n        (if (.exists cljcf)\n          cljcf)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/clojure/cljs/repl.cljc",
-          :lines [217 229]},
+          :lines [219 231],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L219-L231"},
+ :usage ["(js-src->cljs-src f)"],
  :full-name "cljs.repl/js-src->cljs-src",
- :docstring "Map a JavaScript output file back to the original ClojureScript source\nfile (.cljs or .cljc)."}
+ :docstring "Map a JavaScript output file back to the original ClojureScript source\nfile (.cljs or .cljc).",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/js-src-GTcljs-src.cljsdoc"}
 
 ```
 

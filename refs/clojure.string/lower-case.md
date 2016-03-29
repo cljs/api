@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(lower-case s)</samp><br>
+
+---
 
  <samp>
 (__lower-case__ s)<br>
@@ -35,7 +38,7 @@ Converts string to all lower-case.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L90-L93):
+Source code @ [github]():
 
 ```clj
 (defn lower-case
@@ -47,12 +50,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── clojure
-                └── <ins>[string.cljs:90-93](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/clojure/string.cljs#L90-L93)</ins>
+
 </pre>
 
 -->
@@ -98,18 +96,23 @@ The API data for this symbol:
  :ns "clojure.string",
  :name "lower-case",
  :signature ["[s]"],
+ :name-encode "lower-case",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.string/lower-case",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.string-api.html#clojure.string/lower-case"},
  :full-name-encode "clojure.string/lower-case",
  :source {:code "(defn lower-case\n  [s]\n  (.toLowerCase s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/clojure/string.cljs",
-          :lines [90 93]},
+          :lines [90 93],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/string.cljs#L90-L93"},
+ :usage ["(lower-case s)"],
  :full-name "clojure.string/lower-case",
- :clj-symbol "clojure.string/lower-case",
- :docstring "Converts string to all lower-case."}
+ :docstring "Converts string to all lower-case.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.string/lower-case.cljsdoc"}
 
 ```
 

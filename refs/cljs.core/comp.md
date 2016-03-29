@@ -12,6 +12,9 @@
 </tr>
 </table>
 
+<samp>(comp & fns)</samp><br>
+
+---
 
  <samp>
 (__comp__ & fns)<br>
@@ -62,7 +65,7 @@ fn (right-to-left) to the result, etc.
 ```
 
 
-Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3930-L3957):
+Source code @ [github]():
 
 ```clj
 (defn comp
@@ -95,12 +98,7 @@ Source code @ [github](https://github.com/clojure/clojurescript/blob/r1.8.34/src
 Repo - tag - source tree - lines:
 
  <pre>
-clojurescript @ r1.8.34
-└── src
-    └── main
-        └── cljs
-            └── cljs
-                └── <ins>[core.cljs:3930-3957](https://github.com/clojure/clojurescript/blob/r1.8.34/src/main/cljs/cljs/core.cljs#L3930-L3957)</ins>
+
 </pre>
 
 -->
@@ -146,21 +144,26 @@ The API data for this symbol:
  :ns "cljs.core",
  :name "comp",
  :signature ["[& fns]"],
+ :name-encode "comp",
  :history [["+" "0.0-927"]],
  :type "function",
+ :clj-equiv {:full-name "clojure.core/comp",
+             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/comp"},
  :related ["cljs.core/partial" "cljs.core/juxt"],
  :full-name-encode "cljs.core/comp",
  :source {:code "(defn comp\n  ([] identity)\n  ([f] f)\n  ([f g]\n     (fn\n       ([] (f (g)))\n       ([x] (f (g x)))\n       ([x y] (f (g x y)))\n       ([x y z] (f (g x y z)))\n       ([x y z & args] (f (apply g x y z args)))))\n  ([f g h]\n     (fn\n       ([] (f (g (h))))\n       ([x] (f (g (h x))))\n       ([x y] (f (g (h x y))))\n       ([x y z] (f (g (h x y z))))\n       ([x y z & args] (f (g (apply h x y z args))))))\n  ([f1 f2 f3 & fs]\n    (let [fs (reverse (list* f1 f2 f3 fs))]\n      (fn [& args]\n        (loop [ret (apply (first fs) args) fs (next fs)]\n          (if fs\n            (recur ((first fs) ret) (next fs))\n            ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.34",
+          :tag "r1.8.40",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3930 3957]},
+          :lines [3930 3957],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3930-L3957"},
+ :usage ["(comp & fns)"],
  :examples [{:id "5d3250",
              :content "```clj\n(def f (comp str inc +))\n(f 1 2 3)\n;;=> \"7\"\n```"}],
  :full-name "cljs.core/comp",
- :clj-symbol "clojure.core/comp",
- :docstring "Takes a set of functions and returns a fn that is the composition\nof those fns.  The returned fn takes a variable number of args,\napplies the rightmost of fns to the args, the next\nfn (right-to-left) to the result, etc."}
+ :docstring "Takes a set of functions and returns a fn that is the composition\nof those fns.  The returned fn takes a variable number of args,\napplies the rightmost of fns to the args, the next\nfn (right-to-left) to the result, etc.",
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/comp.cljsdoc"}
 
 ```
 

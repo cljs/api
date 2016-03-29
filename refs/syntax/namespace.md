@@ -78,17 +78,19 @@ The API data for this symbol:
 
 ```clj
 {:description "`/` can appear once inside a symbol. The left side of `/` must always be a namespace.\nThe right side completes the reference to the symbol.\n\nIt should be noted that this __differs from Clojure__.  For example,\nnotice `/` appearing before `PersistentVector` in Clojure:\n\n- Clojure: `clojure.lang.PersistentVector/EMPTY`\n- ClojureScript: `cljs.core/PersistentVector.EMPTY`\n\n[doc:cljs.core//] is the division function if it is by itself.\n\nSee [doc:syntax/dot] for usage of dots on either side of `/`",
+ :syntax-equiv {:edn-url "https://github.com/edn-format/edn#symbols",
+                :clj-url "http://clojure.org/cheatsheet"},
  :ns "syntax",
  :name "namespace",
+ :name-encode "namespace",
  :history [["+" "0.0-927"]],
  :type "special character",
  :related ["syntax/dot"],
  :full-name-encode "syntax/namespace",
  :usage ["foo/baz" "foo.bar/baz"],
- :edn-doc "https://github.com/edn-format/edn#symbols",
  :full-name "syntax/namespace",
  :display "/ namespace slash",
- :clj-doc "http://clojure.org/cheatsheet"}
+ :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/syntax/namespace.cljsdoc"}
 
 ```
 
