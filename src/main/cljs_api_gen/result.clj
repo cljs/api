@@ -2,7 +2,8 @@
   (:require
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
-    [cljs-api-gen.encode :refer [encode-fullname]]
+    [cljs-api-gen.encode :refer [encode-fullname
+                                 encode-name]]
     [cljs-api-gen.util :refer [mapmap filtermap]]
     [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
@@ -48,10 +49,13 @@
   (let [ns? (= "namespace" (:type item))
         fullname (cond-> (:ns item)
                    (not ns?) (str "/" (:name item)))
-        full-encoded (encode-fullname fullname)]
+        full-encoded (encode-fullname fullname)
+        name-encoded (cond-> (:name item)
+                       (not ns?) encode-name)]
     (assoc item
       :full-name fullname
-      :full-name-encode full-encoded)))
+      :full-name-encode full-encoded
+      :name-encode name-encoded)))
 
 (defn attach-clojure-name
   [item]

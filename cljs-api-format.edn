@@ -29,6 +29,7 @@
               :full-name-encode  "cljs.core/-GT", ;; used for filenames
               :ns                "cljs.core",
               :name              "->",
+              :name-encode       "-GT",
 
               ;; example data here taken from cljs.core/keys
               :type              "function",
