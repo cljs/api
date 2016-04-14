@@ -37,10 +37,18 @@
               :signature         ["[hash-map]"],
               :history           [["+" "0.0-927"]],
               :source {:code     "... full source code ...",
+                       :title    "Source code"
                        :repo     "clojurescript"
                        :tag      "r3297"
                        :filename "src/main/cljs/cljs/core.cljs",
                        :lines    [7559 7563]},
+
+              ;; Same structure as `:source` for extra sources.
+              ;; (For example, some symbols have both function and macro
+              ;;  implementations, so the main `:source` will have a `:title`
+              ;;  set to "Function Code", and there will be an extra source
+              ;;  with the `:title` attributes set to "Macro Code".)
+              :extra-sources [{...}]
 
               ;; equivalent symbol in Clojure (if applicable)
               :clj-symbol        "clojure.core/keys",
