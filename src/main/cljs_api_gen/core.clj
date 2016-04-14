@@ -13,8 +13,8 @@
                                     new-maven-release]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
-    [cljs-api-gen.docset :as docset]
-    ))
+    [cljs-api-gen.docset :as docset]))
+
 
 ;;--------------------------------------------------------------------------------
 ;; Runners
@@ -61,4 +61,3 @@
 (defn -main
   [& args]
   (main (edn/read-string (first args))))
-

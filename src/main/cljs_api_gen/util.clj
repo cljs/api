@@ -1,8 +1,8 @@
 (ns cljs-api-gen.util
   (:refer-clojure :exclude [replace])
   (:require
-    [clojure.string :refer [replace]]
-    ))
+    [clojure.string :refer [replace]]))
+
 
 (defn mapmap
   "Apply a map function over the values of a map, returning a map."
@@ -19,4 +19,3 @@
 (defn split-ns-and-name
   [s]
   ((juxt namespace name) (symbol s)))
-

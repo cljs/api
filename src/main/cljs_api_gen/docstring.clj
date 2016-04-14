@@ -2,8 +2,8 @@
   (:refer-clojure :exclude [replace])
   (:require
     [clojure.string :refer [split-lines join replace trim]]
-    [cljs-api-gen.read :refer [read-forms-from-str]]
-    ))
+    [cljs-api-gen.read :refer [read-forms-from-str]]))
+
 
 (defn get-docstring-indent
   [docstring]
@@ -68,4 +68,3 @@
         {:start-line (-> before-line inc (- first-line))
          :end-line (-> after-line dec (- first-line))
          :forms doc}))))
-

@@ -4,8 +4,8 @@
     [clojure.set :refer [difference]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
-    [me.raynes.fs :refer [exists? base-name]]
-    ))
+    [me.raynes.fs :refer [exists? base-name]]))
+
 
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
@@ -74,8 +74,8 @@
    "PersistentQueue.EMPTY"    "PersistentQueue"
    "PersistentTreeMap.EMPTY"  "PersistentTreeMap"
    "PersistentTreeSet.EMPTY"  "PersistentTreeSet"
-   "PersistentVector.EMPTY"   "PersistentVector"
-   })
+   "PersistentVector.EMPTY"   "PersistentVector"})
+
 
 (def lang-symbols (atom {}))
 (def lang-path "src/jvm/clojure/lang/")
@@ -101,8 +101,8 @@
    "cljs.test"   "clojure.test"
    "cljs.repl"   "clojure.repl"
    "special"     "clojure.core"
-   "specialrepl" "clojure.core"
-   })
+   "specialrepl" "clojure.core"})
+
 
 (def cljs-full-name->clj
   "cljs symbols that map to different clj names."
@@ -140,8 +140,8 @@
    "cljs.core/SeqIter"                  "clojure.lang/SeqIterator"
 
    ;; member attributes
-   "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"
-   })
+   "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"})
+
 
 (defn clj-lookup-name
   "Map a parsed ClojureScript item to a related Clojure name to be looked up for resolution."
@@ -190,4 +190,3 @@
                           (get @lang-symbols *clj-tag*))
         cljs-symbols (set (map clj-lookup-name items))]
     (difference clj-symbols cljs-symbols)))
-

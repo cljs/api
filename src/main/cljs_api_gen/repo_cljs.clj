@@ -9,8 +9,8 @@
     [cljs-api-gen.config :refer [repos-dir]]
     [clj-time.core :as time]
     [clj-time.coerce :as tc]
-    [clj-time.format :as tf]
-    ))
+    [clj-time.format :as tf]))
+
 
 (defn epoch-now []
   (tc/to-long (time/now)))
@@ -242,8 +242,8 @@
       (json/read-str :key-fn keyword)
       (:response)
       (:docs)
-      (reverse) ;; properly sorted by version
-      ))
+      (reverse))) ;; properly sorted by version
+
 
 (def new-maven-release
   "a maven release that is not yet visible from their API (slow to update sometimes)"
@@ -314,9 +314,9 @@
         (cond
           (cljs-cmp >= cljs-tag "0.0-1859") (second (re-find #"(?m)^TREADER_RELEASE=\"(.*)\"" bootstrap))
           (cljs-cmp >= cljs-tag "0.0-1853") (second (re-find #"tools\.reader-(.*).jar" bootstrap))
-          :else                             nil ;; `clojure.lang/LispReader` used instead of tools.reader
-          )
-        ]
+          :else                             nil)] ;; `clojure.lang/LispReader` used instead of tools.reader
+
+
     {:clj-version clojure
      :clj-tag (str "clojure-" clojure)
      :treader-version treader
@@ -375,7 +375,4 @@
 
   (checkout-repo! "clojurescript" "r927")
   (checkout-repo! "clojurescript" "r1885")
-  (checkout-repo! "clojurescript" "r3211")
-
-  )
-
+  (checkout-repo! "clojurescript" "r3211"))

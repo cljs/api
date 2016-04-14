@@ -9,8 +9,8 @@
                                  md-header-link]]
     [cljs-api-gen.util :refer [split-ns-and-name]]
     [clojure.java.jdbc :as j]
-    [me.raynes.fs :refer [delete-dir copy copy-dir list-dir base-name mkdirs directory?]]
-    ))
+    [me.raynes.fs :refer [delete-dir copy copy-dir list-dir base-name mkdirs directory?]]))
+
 
 ;; NOTE: you have to run docset/run-all.sh first to download/process the
 ;;       rendered html pages of our markdown docs from github.
@@ -31,7 +31,7 @@
 (def db-path (str docset-path "/Contents/Resources/docSet.dsidx"))
 
 (def sqlite-db {:classname "org.sqlite.JDBC"
-			          :subprotocol "sqlite"
+                :subprotocol "sqlite"
                 :subname db-path})
 
 (defn resolve-path
@@ -56,8 +56,8 @@
    "binding"             "Builtin"
    "convention"          "Builtin"
    "special character"   "Builtin"
-   "multimethod"         "Method"
-   })
+   "multimethod"         "Method"})
+
 
 (defn dash-name
   [item]
@@ -142,8 +142,8 @@
        ;; insert sections
        {:name "Overview"                :type "Section" :path (resolve-path "INDEX.html")}
        {:name "History"                 :type "Section" :path (resolve-path "HISTORY.html")}
-       #_{:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")}
-       )
+       #_{:name "Not Ported From Clojure" :type "Section" :path (resolve-path "UNPORTED.html")})
+
 
     ;; insert namespaces
     (println "Adding namespaces to index database...")
@@ -178,7 +178,7 @@
           ;;
           ;; Luckily, httrack adds an html comment stamp containing the
           ;; original filename, which we can parse:
-          ;;    <!-- Mirrored from <url-here> by HTTrack Website Copier ... --> 
+          ;;    <!-- Mirrored from <url-here> by HTTrack Website Copier ... -->
           symbol-file->entry
           (fn [ref-file]
             (let [encoded-name
@@ -186,7 +186,7 @@
                     (re-find #"github\.com/cljsinfo/cljs-api-docs/blob/catalog/refs/(.*)\.md "
                              (slurp ref-file)))
                   full-name (decode-fullname encoded-name)
-                  item (get syms full-name)] 
+                  item (get syms full-name)]
               {:name (dash-name item)
                :type (type->dash (:type item))
                :path (resolve-path "refs/" (:ns item) "/" (base-name ref-file))}))

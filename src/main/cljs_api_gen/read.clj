@@ -8,8 +8,8 @@
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [exists?]]
     [cljs-api-gen.config :refer [repos-dir]]
-    [cljs-api-gen.repo-cljs :refer [cljs-cmp]]
-    ))
+    [cljs-api-gen.repo-cljs :refer [cljs-cmp]]))
+
 
 ;;--------------------------------------------------------------------------------
 ;; Read forms
@@ -61,10 +61,10 @@
 (defn get-ns-files
   [ns- src-type]
   (doall (filter exists?
-    (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))
-          src (src-path src-type)]
-      (for [ext  ["clj" "cljs" "cljc"]]
-        (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
+          (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))
+                src (src-path src-type)]
+            (for [ext  ["clj" "cljs" "cljc"]]
+              (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
 
 (defn read-ns-forms
   "Get all forms from given namespace into a filename -> forms map (possibly a .cljs .clj(c) pairing)"
@@ -99,6 +99,4 @@
   (require '[cljs-api-gen.repo-cljs :refer [with-checkout!]])
 
   (with-checkout! "r927"
-    (get-ns-files "cljs.core" :library))
-
-)
+    (get-ns-files "cljs.core" :library)))

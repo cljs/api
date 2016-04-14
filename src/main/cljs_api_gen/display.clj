@@ -3,8 +3,8 @@
   (:require
     [clojure.string :refer [join replace split trim]]
     [cljs-api-gen.syntax :refer [syntax-order]]
-    [cljs-api-gen.encode :refer [fullname->ns-name]]
-    ))
+    [cljs-api-gen.encode :refer [fullname->ns-name]]))
+
 
 ;;;  A 'pseudo-namespace' (e.g. special, specialrepl, syntax) shouldn't be
 ;;;  displayed to the reader since its only purpose is to help consistent
@@ -23,8 +23,8 @@
   (let [item (cond-> item (string? item) full-name->item)]
     (or (:display item)
         (:name item)
-        (:ns item) ;; <-- for standalone namespace names
-        )))
+        (:ns item)))) ;; <-- for standalone namespace names
+
 
 (defn get-full-display-name
   "Create a full display name for the given item if it has a pseudo-namespace."
@@ -87,4 +87,3 @@
      #(sym-sort-key (key-fn %))
      sym-compare
      coll)))
-

@@ -121,9 +121,9 @@
    {:id "auto-gensym"   :type "special character" :clj-doc doc-syntax-quote}
    {:id "dot"           :type "special character" :clj-doc doc1}
    {:id "rest"          :type "special character" :clj-doc doc-ampersand}
-   {:id "whitespace"    :type "special character" :clj-doc doc-whitespace :edn-doc doc-whitespace}
+   {:id "whitespace"    :type "special character" :clj-doc doc-whitespace :edn-doc doc-whitespace}])
 
-   ])
+
 
 (def syntax-order
   "name -> ordered index"
@@ -161,5 +161,4 @@
                    "binding"
                    "special namespace"
                    "convention"
-                   "special character"} (:type %)))
-       ))
+                   "special character"} (:type %)))))

@@ -23,8 +23,8 @@
                                  char-map
                                  dchar-map
                                  syntax-map
-                                 clj-syntax]]
-    ))
+                                 clj-syntax]]))
+
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
 ;; which is used by cljs.core. (the ana namespace has to exist)
@@ -76,8 +76,8 @@
     "cljs.test"             :custom
     "cljs.repl"             :custom
     "special"               :custom ;; <-- pseudo-namespace for special forms
-    "specialrepl"           :custom ;; <-- pseudo-namespace for REPL special forms
-    }
+    "specialrepl"           :custom} ;; <-- pseudo-namespace for REPL special forms
+
 
    :compiler
    {"cljs.analyzer.api"     :normal
@@ -90,8 +90,8 @@
     "cljs.repl.rhino"       :normal
     "cljs.repl.server"      :normal
 
-    "cljs.repl.nashorn"     :custom
-    }})
+    "cljs.repl.nashorn"     :custom}})
+
 
 ;;--------------------------------------------------------------------------------
 ;; Functions marked as macros
@@ -286,8 +286,8 @@
         author (:author meta-)]
     {:type "namespace"
      :docstring doc
-     :author author
-     }))
+     :author author}))
+
 
 (defmulti parse-form*
   (fn [form]
@@ -307,8 +307,8 @@
       goog-define   "var"
 
       (def defonce) (if (and (list? (nth form 2 nil))
-                               (= 'fn (first (nth form 2 nil)))
-                               (not (:dynamic (meta (second form)))))
+                             (= 'fn (first (nth form 2 nil)))
+                             (not (:dynamic (meta (second form)))))
                         "def fn"
                         "var")
       nil)))
@@ -541,8 +541,8 @@
                        value)]
         (->> (keys form-map)
              (map second) ;; (quote x) => x
-             (remove namespace)) ;; we'll ignore namespace-qualified special forms
-        ))))
+             (remove namespace)))))) ;; we'll ignore namespace-qualified special forms
+
 
 (defn parse-repl-specials
   [form doc-map]
@@ -585,8 +585,8 @@
         make-items
         (fn [map-def info-lookup]
           (let [[_defn- _macros _args [_case _ch & args]] (:form (meta map-def))
-                {:as reader-map} (drop-last args) ;; (case ch :a 1 :b 2 :c 3 nil) => {:a 1 :b 2 :c 3}
-                ]
+                {:as reader-map} (drop-last args)] ;; (case ch :a 1 :b 2 :c 3 nil) => {:a 1 :b 2 :c 3}
+
             (for [[ch func] reader-map]
               (when-let [info (info-lookup ch)]
                 (let [base (base-syntax-item info)
@@ -760,17 +760,17 @@
         macro-names (->> ns-form (drop 2) (keep get-excludes) first (map str) set)]
     (remove #(macro-names (:name %)) macro-api)))
 
- (defn parse-extra-macros-from-clj
-  "cljs.core uses some macros from clojure.core, so find those here"
-  []
-  (let [clj-api (->> (parse-clj-core)
-                     (filter #(= "macro" (:type %))))
-        cljs-forms   (read-all-ns-forms "cljs.core" :compiler)
-        imports      (get-imported-macro-api     cljs-forms clj-api)
-        non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
-    (println "   " (count imports) "macros imported from clojure.core")
-    (println "   " (count non-excludes) "macros non-excluded clojure.core")
-    (concat imports non-excludes)))
+(defn parse-extra-macros-from-clj
+ "cljs.core uses some macros from clojure.core, so find those here"
+ []
+ (let [clj-api (->> (parse-clj-core)
+                    (filter #(= "macro" (:type %))))
+       cljs-forms   (read-all-ns-forms "cljs.core" :compiler)
+       imports      (get-imported-macro-api     cljs-forms clj-api)
+       non-excludes (get-non-excluded-macro-api cljs-forms clj-api)]
+   (println "   " (count imports) "macros imported from clojure.core")
+   (println "   " (count non-excludes) "macros non-excluded clojure.core")
+   (concat imports non-excludes)))
 
 ;;------------------------------------------------------------
 ;; Type member parsing
@@ -827,9 +827,9 @@
                         :type type-
                         :signature sig
                         :parent-type (name parent-type)}]
-            result
-            ))))
-    ))
+            result))))))
+
+
 
 (defn parse-core-type-member
   [form type-names]
@@ -992,4 +992,3 @@
   {:syntax   (parse-all* :syntax)
    :library  (add-catch-finally (parse-all* :library))
    :compiler (parse-all* :compiler)})
-

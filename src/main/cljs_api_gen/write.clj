@@ -33,8 +33,8 @@
     [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [exists? mkdir mkdirs parent]]
-    [stencil.core :as stencil]
-    ))
+    [stencil.core :as stencil]))
+
 
 (def ^:dynamic *result*
   "The current result that we are writing."
@@ -374,7 +374,7 @@
   (let [path (encode/encode-fullname (:full-name item))
         gh-filename (str *output-dir* "/" refs-dir "/" path ".md")
         site-filename (str *output-dir* "/" site-dir "/" path ".md")
-        data (binding [*doclink-prefix* "../" ;; assuming we are in a symbol's parent dir <ns> 
+        data (binding [*doclink-prefix* "../" ;; assuming we are in a symbol's parent dir <ns>
                        *doclink-ext* ".md"]
                (var-file-data item))]
 
@@ -546,15 +546,15 @@
                                (let [ns-item (get-in result [:namespaces ns-])
                                      display (or (:display ns-item) ns-)
                                      caption (or (:caption ns-item)
-                                                    (case api-type
-                                                      :library (:caption-library ns-item)
-                                                      :compiler (:caption-compiler ns-item)
-                                                      nil))
+                                                 (case api-type
+                                                   :library (:caption-library ns-item)
+                                                   :compiler (:caption-compiler ns-item)
+                                                   nil))
                                      description (or (:description ns-item)
-                                                        (case api-type
-                                                          :library (:description-library ns-item)
-                                                          :compiler (:description-compiler ns-item)
-                                                          nil))
+                                                     (case api-type
+                                                       :library (:description-library ns-item)
+                                                       :compiler (:description-compiler ns-item)
+                                                       nil))
                                      description (when description
                                                    (binding [*doclink-prefix* "../"]
                                                      (process-doclinks description)))
@@ -562,9 +562,9 @@
                                                (sort-symbols :full-name syms)
                                                syms)
                                      public-symbols (remove :removed symbols)
-                                     removed-symbols (filter :removed symbols)
+                                     removed-symbols (filter :removed symbols)]
 
-                                     ]
+
                                  {:ns ns-
                                   :pseudo (:pseudo-ns? ns-item)
                                   :clj-ns (make-clj-ref ns-item)
@@ -642,9 +642,9 @@
 (defn dump-readme! [result]
   (spit (str *output-dir* "/README.md")
         (fix-emoji (stencil/render-string
-          (slurp "templates/readme.md")
-          result
-          ))))
+                    (slurp "templates/readme.md")
+                    result))))
+
 
 ;;--------------------------------------------------------------------------------
 ;; unfinished file
@@ -676,8 +676,8 @@
 (defn dump-unfinished! [result]
   (spit (str *output-dir* "/UNFINISHED.md")
         (fix-emoji (stencil/render-string
-          (slurp "templates/unfinished.md")
-          (unfinished-file-data result)))))
+                    (slurp "templates/unfinished.md")
+                    (unfinished-file-data result)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Main
@@ -711,6 +711,4 @@
     (dump-unported! result)
 
     (println "writing unfinished...")
-    (dump-unfinished! result))
-  )
-
+    (dump-unfinished! result)))

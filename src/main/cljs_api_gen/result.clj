@@ -16,9 +16,9 @@
                                     *treader-version*
                                     *treader-tag*
                                     *gclosure-lib*
-                                    cljs-cmp
-                                    ]]
-    ))
+                                    cljs-cmp]]))
+
+
 
 (defn removable? [v]
   (or (nil? v) (= "" v) (and (coll? v) (empty? v))))
@@ -48,10 +48,10 @@
   (let [ns? (= "namespace" (:type item))
         fullname (cond-> (:ns item)
                    (not ns?) (str "/" (:name item)))
-        encoded (encode-fullname fullname)]
+        full-encoded (encode-fullname fullname)]
     (assoc item
       :full-name fullname
-      :full-name-encode encoded)))
+      :full-name-encode full-encoded)))
 
 (defn attach-clojure-name
   [item]
@@ -76,8 +76,8 @@
                     :edn-doc
                     :clj-doc
                     :source
-                    :extra-sources
-                    ])
+                    :extra-sources])
+
       (update-in [:signature] #(mapv str %))
       (update-in [:name] str)
       (fix-source-lines)
@@ -145,8 +145,8 @@
        (mapmap resolve-duplicates)
 
        ;; dangling defmethods probably means its defmulti is private
-       (filtermap #(not= "method" (:type %)))
-       ))
+       (filtermap #(not= "method" (:type %)))))
+
 
 (defn mark-removed
   [prev-item prev-hist prev-version]
@@ -274,8 +274,8 @@
 
          syntax-api   (strip-data syntax-api)
          library-api  (strip-data library-api)
-         compiler-api (strip-data compiler-api)
-         ]
+         compiler-api (strip-data compiler-api)]
+
 
      {:release {:cljs-version *cljs-version*
                 :cljs-tag *cljs-tag*
@@ -287,8 +287,8 @@
                 :treader-version *treader-version*
                 :treader-tag *treader-tag*
 
-                :gclosure-lib *gclosure-lib*
-                }
+                :gclosure-lib *gclosure-lib*}
+
 
       ;; clojure symbols unavailable in clojurescript
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
@@ -298,9 +298,9 @@
 
       :api {:syntax syntax-api
             :library library-api
-            :compiler compiler-api
-            }
-      })))
+            :compiler compiler-api}})))
+
+
 
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
@@ -312,21 +312,21 @@
                                    (:versions cljsdoc)))
          doc (get-in cljsdoc [:docs doc-version])
          data (prune-map (select-keys doc
-                [:examples
-                 :known-as
-                 :display
-                 :caption
-                 :caption-library
-                 :caption-compiler
-                 :description
-                 :description-library
-                 :description-compiler
-                 :signature
-                 :usage
-                 :related
-                 :moved
-                 :tags
-                 ]))]
+                          [:examples
+                           :known-as
+                           :display
+                           :caption
+                           :caption-library
+                           :caption-compiler
+                           :description
+                           :description-library
+                           :description-compiler
+                           :signature
+                           :usage
+                           :related
+                           :moved
+                           :tags]))]
+
      (merge item data))))
 
 (defn add-cljsdoc-to-result

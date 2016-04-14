@@ -17,9 +17,9 @@
 
  ;; symbols not ported from clojure
  :clj-not-cljs #{"clojure.core/the-ns"
-                 "clojure.core/create-struct"
+                 "clojure.core/create-struct"}
                  ;; ...
-                 }
+
 
  ;; map full symbol names to their API data
  :symbols {"cljs.core/->"
@@ -70,13 +70,13 @@
                 :display "if" ;; (another example, from special/if)
 
               ;; what it's usually called
-              :known-as "thread first" ;; (from cljs.core/->)
-              }
+              :known-as "thread first"}} ;; (from cljs.core/->)
+
 
            ;; ...
-           }
 
- :namespaces { ... }
+
+ :namespaces { ...}
 
  ;; API categories (i.e. syntax, library, compiler)
  :api {
@@ -85,9 +85,9 @@
                  ;; set of full symbol names present in this API
                  :symbol-names #{"cljs.core/*1"
                                  "cljs.core/reduce"
-                                 "cljs.core/map"
+                                 "cljs.core/map"}
                                  ;; ...
-                                 }
+
 
                  ;; history of changes (from oldest to newest)
                  :changes
@@ -102,9 +102,9 @@
                    ;; symbols added/removed in this version
                    :added   #{"clojure.browser.repl/bootstrap"
                               "clojure.browser.repl/load-queue"},
-                   :removed #{"cljs.core/load-file*"}}
+                   :removed #{"cljs.core/load-file*"}}]}
                   ;; ...
-                  ]}
+
 
        ;; Syntax API (same format)
        :syntax {:symbol-names {}
@@ -112,6 +112,4 @@
 
        ;; Compiler API (same format)
        :compiler {:symbol-names {}
-                  :changes []}
- }
-}
+                  :changes []}}}

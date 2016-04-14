@@ -16,8 +16,8 @@
    "*"  "STAR"
    "+"  "PLUS"
    "="  "EQ"
-   "/"  "SLASH"
-   })
+   "/"  "SLASH"})
+
 
 (defn fullname->ns-name
   "fullname has a special meaning:
@@ -96,8 +96,8 @@
 (defn shield-escape
   [s]
   (-> s
-      (replace "-" "--")
-      ))
+      (replace "-" "--")))
+
 
 (def emoji-url
   "emoji table here: http://apps.timwhitlock.info/emoji/tables/unicode"
@@ -112,4 +112,3 @@
       (replace s emoji
         (str "<img width=\"20px\" height=\"20px\" valign=\"middle\" src=\"" (emoji-url emoji) "\">")))
     s (keys emoji-url)))
-

@@ -37,8 +37,8 @@
                                  add-cljsdoc-to-result]]
     [cljs-api-gen.write :refer [dump-result!
                                 dump-var-file!] :as write]
-    [clojure-watch.core :refer [start-watch]]
-    ))
+    [clojure-watch.core :refer [start-watch]]))
+
 
 ;;----------------------------------------------------------------------
 ;; Catalog Repo Operations
@@ -170,8 +170,8 @@
       (let [out-folder (str cache "/" tag)
             parsed-file (str out-folder "/" edn-parsed-file)
             skip? (and skip-parse?           ;; do we want to skip?
-                       (exists? parsed-file) ;; can we skip?
-                       )]
+                       (exists? parsed-file))] ;; can we skip?
+
 
         ;; make output folder for this tag
         (when-not (exists? out-folder)
@@ -309,8 +309,4 @@
                     (binding [write/*result* @full-result]
                       (dump-var-file! new-item)))
 
-                  (println "Done.")))))
-          }])
-
-      )))
-
+                  (println "Done.")))))}]))))

@@ -11,8 +11,8 @@
                                  fullname->ns-name]]
     [cljs-api-gen.repo-cljs :refer [published-cljs-tag?
                                     published-cljs-tags
-                                    cljs-version->tag
-                                    ]]
+                                    cljs-version->tag]]
+
     [me.raynes.fs :refer [exists?]]
     [clojure.string :refer [split split-lines join]]
     [clansi.core :refer [style]]
@@ -194,8 +194,8 @@
            "Try '" (unused-example-id) "'.")
       (do
         (swap! example-id-files assoc id filename)
-        nil)
-      )))
+        nil))))
+
 
 (defn examples-error-msg!
   [{:keys [examples filename] :as doc}]
@@ -256,11 +256,11 @@
   (when-not (doclink-check-pass? full-name)
     (let [[ns- name-] (fullname->ns-name full-name)
           ns-only? (nil? name-)]
-    (cond-> (str "Unknown doclink reference: " full-name)
-      ns-only?  (str "\n"
-                     "     when linking namespaces, please prefix it with the API.  examples:\n"
-                     "      - library/cljs.repl\n"
-                     "      - compiler/cljs.repl")))))
+     (cond-> (str "Unknown doclink reference: " full-name)
+       ns-only?  (str "\n"
+                      "     when linking namespaces, please prefix it with the API.  examples:\n"
+                      "      - library/cljs.repl\n"
+                      "      - compiler/cljs.repl")))))
 
 (defn doclink-missing-error-msg*
   "Gather missing doclinks from given markdown body text."
@@ -311,13 +311,13 @@
    (make-multi-version doclink-missing-error-msg)
    ;; (make-multi-version duplicate-sections-error-msg)
    filename-error-msg
-   unrecognized-versions-error-msg
-   ])
+   unrecognized-versions-error-msg])
+
 
 (def warning-detectors
   "All warning detectors, each produce warning messages if potential problem found."
-  [
-   ])
+  [])
+
 
 (defn valid-doc? [doc]
   (let [
@@ -335,6 +335,6 @@
         (when warnings
           (println (style "  WARNINGS" :yellow))
           (doseq [msg warnings]
-            (println "    " msg)))
-        ))
+            (println "    " msg)))))
+
     valid?))
