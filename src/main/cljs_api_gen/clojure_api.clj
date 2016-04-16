@@ -2,10 +2,10 @@
   (:require
     [clansi.core :refer [style]]
     [clojure.set :refer [difference]]
+    [cljs-api-gen.encode :refer [fullname->ns-name]]
     [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [exists? base-name]]))
-
 
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
@@ -142,6 +142,11 @@
    ;; member attributes
    "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"})
 
+(def clj-ns->page-ns
+  {"clojure.core.reducers" "clojure.core"})
+
+(defn ns-url [ns-]
+  (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html"))
 
 (defn clj-lookup-name
   "Map a parsed ClojureScript item to a related Clojure name to be looked up for resolution."
@@ -162,27 +167,62 @@
       ;; default to use full name unmodified
       (:full-name item)))
 
-(defn attach-clj-symbol
-  "For the given API entry item, attach a :clj-symbol (full-name) for the related Clojure symbol."
+(defn get-clj-symbol-url
+  [ns- name-]
+  (let [full-name (str ns- "/" name-)]
+    (or ;; get syntax doc link
+        (-> full-name syntax-map :clj-doc)
+
+        ;; get clojure.lang link
+        (when (= "clojure.lang" ns-)
+          (let [name- (or (lang-symbols->parent name-) name-)]
+            (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
+
+        ;; get official clojure api link
+        (let [ns- (or (clj-ns->page-ns ns-) ns-)]
+          (str (ns-url ns-) "#" full-name)))))
+
+(defn get-clj-ns-url
+  [ns-]
+  (if-let [page-ns (clj-ns->page-ns ns-)]
+    (str (ns-url page-ns) "#" ns-)
+    (ns-url ns-)))
+
+(defn get-clj-url
+  [full-name]
+  (let [[ns- name-] (fullname->ns-name full-name)]
+    (if (nil? name-)
+      (get-clj-ns-url ns-)
+      (get-clj-symbol-url ns- name-))))
+
+(defn get-clj-symbol-equiv
   [item]
   (let [clj-version (clj-tag->api-key *clj-tag*)
         clj-symbol? (get @api-symbols clj-version)
         lang-symbol? (get-lang-symbols! *clj-tag*)
-        lookup-name (clj-lookup-name item)]
-    (if (or (lang-symbol? lookup-name)
-            (clj-symbol? lookup-name))
-      (assoc item :clj-symbol lookup-name)
-      item)))
+        clj-sym (clj-lookup-name item)
+        exists? (or (lang-symbol? clj-sym)
+                    (clj-symbol? clj-sym))]
+    (when exists?
+      clj-sym)))
 
-(defn attach-clj-ns
+(defn get-clj-ns-equiv
   [item]
   (let [clj-version (clj-tag->api-key *clj-tag*)
         clj-ns? (get @api-namespaces clj-version)
         ns- (:ns item)
-        lookup-name (or (cljs-ns->clj ns-) ns-)]
-    (if (clj-ns? lookup-name)
-      (assoc item :clj-ns lookup-name)
-      item)))
+        clj-ns (or (cljs-ns->clj ns-) ns-)
+        exists? (clj-ns? clj-ns)]
+    (when exists?
+      clj-ns)))
+
+(defn clj-equiv
+  [item]
+  (when-let [equiv-name (if (= "namespace" (:type item))
+                          (get-clj-ns-equiv item)
+                          (get-clj-symbol-equiv item))]
+    {:full-name equiv-name
+     :url (get-clj-url equiv-name)}))
 
 (defn get-clojure-symbols-not-in-items
   [items]

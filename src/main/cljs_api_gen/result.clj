@@ -7,8 +7,7 @@
     [cljs-api-gen.util :refer [mapmap filtermap]]
     [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
-                                      attach-clj-symbol
-                                      attach-clj-ns]]
+                                      clj-equiv]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
                                     *cljs-tag*
                                     *cljs-date*
@@ -57,11 +56,11 @@
       :full-name-encode full-encoded
       :name-encode name-encoded)))
 
-(defn attach-clojure-name
+(defn attach-clj-equiv
   [item]
-  (if (= "namespace" (:type item))
-    (attach-clj-ns item)
-    (attach-clj-symbol item)))
+  (if-let [equiv (clj-equiv item)]
+    (assoc item :clj-equiv equiv)
+    item))
 
 (defn transform-item
   [x]
@@ -88,7 +87,7 @@
       (handle-ns-item)
       (assign-full-names)
       (prune-map)
-      (attach-clojure-name)))
+      (attach-clj-equiv)))
 
 (defn shadow-duplicates-by-order
   [items]

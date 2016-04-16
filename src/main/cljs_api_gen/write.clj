@@ -30,7 +30,8 @@
                                   compare-ns]]
     [cljs-api-gen.util :refer [mapmap
                                split-ns-and-name]]
-    [cljs-api-gen.clojure-api :refer [lang-symbols->parent]]
+    [cljs-api-gen.clojure-api :refer [lang-symbols->parent
+                                      get-clj-url]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [exists? mkdir mkdirs parent]]
     [stencil.core :as stencil]))
@@ -177,40 +178,13 @@
 ;; Common
 ;;--------------------------------------------------------------------------------
 
-(def clj-ns->page-ns
-  {"clojure.core.reducers" "clojure.core"})
-
-(defn get-clj-link
-  [full-name]
-  (let [ns-url #(str "http://clojure.github.io/clojure/branch-master/" % "-api.html")
-        [ns- name-] (fullname->ns-name full-name)]
-    (if (nil? name-)
-
-      ;; namespace
-      (if-let [page-ns (clj-ns->page-ns ns-)]
-        (str (ns-url page-ns) "#" ns-)
-        (ns-url ns-))
-
-      ;; symbol
-      (or ;; get syntax doc link
-          (-> full-name syntax-map :clj-doc)
-
-          ;; get clojure.lang link
-          (when (= "clojure.lang" ns-)
-            (let [name- (or (lang-symbols->parent name-) name-)]
-              (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
-
-          ;; get official clojure api link
-          (let [ns- (or (clj-ns->page-ns ns-) ns-)]
-            (str (ns-url ns-) "#" (md-link-escape full-name)))))))
-
 (defn make-clj-ref
   [item]
-  (when-let [full-name (or (:clj-symbol item) (:clj-ns item))]
+  (when-let [{:keys [full-name url]} (:clj-equiv item)]
     {:full-name full-name
      :display-name (md-escape full-name)
      :import (= "clojure" (-> item :source :repo))
-     :link (get-clj-link full-name)}))
+     :link url}))
 
 (defn history-change
   [[change version]]
@@ -465,7 +439,7 @@
                   :name name-
                   :full-name full-name
                   :text (md-escape full-name)
-                  :link (get-clj-link full-name)}))
+                  :link (get-clj-url full-name)}))
         ns-symbols (->> syms
                         (map make)
                         (group-by :ns)
