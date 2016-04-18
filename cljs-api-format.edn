@@ -58,6 +58,9 @@
               :clj-doc "... external URL for clojure syntax doc ..."
               :edn-doc "... external URL for edn syntax doc ..."
 
+              ;; the cljsdoc file which the rest of the attributes are deduced from
+              :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/-GT.cljsdoc"
+
               ;; manually added docs from cljsdoc/ files
 
               :description "... description in markdown ..."
