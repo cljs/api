@@ -81,6 +81,13 @@
     (assoc item :clj-equiv equiv)
     item))
 
+(defn add-cljsdoc-url
+  [item]
+  (assoc item :cljsdoc-url
+    (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/"
+         (:full-name-encode item)
+         ".cljsdoc")))
+
 (defn transform-item
   [x]
   (-> x
@@ -106,6 +113,7 @@
       (add-github-links)
       (handle-ns-item)
       (assign-full-names)
+      (add-cljsdoc-url)
       (prune-map)
       (attach-clj-equiv)))
 
