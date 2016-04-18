@@ -269,23 +269,6 @@
                    crumb)))
           crumbs)))))
 
-(defn add-source-extras
-  [item]
-  (let [add-extras #(when %
-                      (-> %
-                          (assoc :path-tree (source-path %)
-                                 :github-link (github-src-href %))))]
-    (-> item
-        (update-in [:source] add-extras)
-        (update-in [:extra-sources] #(map add-extras %)))))
-
-(defn add-source-links
-  [item]
-  (let [add-link #(when % (assoc % :github-link (github-src-href %)))]
-    (-> item
-        (update-in [:source] add-link)
-        (update-in [:extra-sources] #(map add-link %)))))
-
 (defn unprefixed-doclink
   "Process a doclink from Related or Moved section.
   (no `doc:` prefix like when they appear in markdown sections)"
@@ -338,7 +321,6 @@
       (add-external-doc-links)
       (add-syntax-usage)
       (add-related-links)
-      (add-source-extras)
       (process-all-doclinks)))
 
 (defn dump-var-file!

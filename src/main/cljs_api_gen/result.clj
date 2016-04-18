@@ -1,5 +1,6 @@
 (ns cljs-api-gen.result
   (:require
+    [clojure.string :as string]
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
     [cljs-api-gen.encode :refer [encode-fullname
@@ -28,12 +29,30 @@
        (remove (comp removable? second))
        (into {})))
 
-(defn fix-source-lines
+(defn fix-source-lines*
   "Turn the line range into a single line if the end line is the same as the first."
+  [source]
+  (if source
+    (update source :lines (fn [[a b]] (if (= a b) [a] [a b])))
+    source))
+
+(defn fix-source-lines
   [item]
-  (if (:source item)
-    (update-in item [:source :lines] (fn [[a b]] (if (= a b) [a] [a b])))
-    item))
+  (-> item
+      (update :source fix-source-lines*)
+      (update :extra-sources #(map fix-source-lines* %))))
+
+(defn add-github-link
+  [{:keys [lines repo tag filename] :as source}]
+  (let [url (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
+              "#" (string/join "-" (map #(str "L" %) lines)))]
+    (assoc source :url url)))
+
+(defn add-github-links
+  [item]
+  (-> item
+      (update :source add-github-link)
+      (update :extra-sources #(map add-github-link %))))
 
 (defn handle-ns-item
   "a namespace item does not have a :name, only a :ns"
@@ -84,6 +103,7 @@
       (update-in [:signature] #(mapv str %))
       (update-in [:name] str)
       (fix-source-lines)
+      (add-github-links)
       (handle-ns-item)
       (assign-full-names)
       (prune-map)
