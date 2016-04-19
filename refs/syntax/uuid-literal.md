@@ -80,11 +80,11 @@ Reader code @ [github]():
    (defn read-uuid
      [form]
      (when-not (string? form)
-       (throw (RuntimeException. "UUID literal expects a string as its representation.")))
+       (throw (js/Error. "UUID literal expects a string as its representation.")))
      (try
-       (java.util.UUID/fromString form)
-       (catch Throwable e
-         (throw (RuntimeException. (.getMessage e)))))))
+       (uuid form)
+       (catch :default e
+         (throw (js/Error. (. e -message))))))
 ```
 
 <!--
