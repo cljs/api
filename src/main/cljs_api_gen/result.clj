@@ -88,6 +88,25 @@
          (:full-name-encode item)
          ".cljsdoc")))
 
+(defn signature->usage
+  [sig item]
+  (let [name (:name item)
+        type? (= "type" (:type item))
+        cmd (cond-> name
+              type? (str "."))
+        args (second (re-find #"^\[(.*)\]$" sig))
+        all-args (if (string/blank? args)
+                   cmd
+                   (string/join " " [cmd args]))]
+    (str "(" all-args ")")))
+
+(defn add-usage
+  [{:keys [signature usage name] :as item}]
+  (if (and signature (not usage))
+    (assoc item :usage
+      (mapv #(signature->usage % item) signature))
+    item))
+
 (defn transform-item
   [x]
   (-> x
@@ -331,8 +350,6 @@
             :library library-api
             :compiler compiler-api}})))
 
-
-
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
   ([item curr-tag]
@@ -358,7 +375,9 @@
                            :moved
                            :tags]))]
 
-     (merge item data))))
+     (-> item
+         (merge data)
+         (add-usage)))))
 
 (defn add-cljsdoc-to-result
   [result]

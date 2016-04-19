@@ -34,7 +34,7 @@
               ;; example data here taken from cljs.core/keys
               :type              "function"
               :docstring         "Returns a sequence of the map's keys."
-              :signature         ["[hash-map]"]
+              :signature         ["[x & forms]"]
               :history           [["+" "0.0-927"]]
               :source {:code     "... full source code ..."
                        :title    "Source code"
@@ -71,8 +71,17 @@
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
               :moved "cljs.core/another-name"
 
-              ;; syntax usage strings (like a signature, but for syntax)
-              ;; (from syntax/inst-literal)
+              ;; Usage forms.
+              ;; Can be specified explicitly, but if missing, it will be built
+              ;; from the :signature.
+
+              ;; For example, given the :signature ["[foo]" "[foo bar]"],
+              ;; and the :name "my-func", the following :usage will be generated.
+              :usage ["(my-func foo)"
+                      "(my-func foo bar)"]
+
+              ;; Syntax entries do not have :signature because they are not functions.
+              ;; Thus, we explicitly specify :usage (from syntax/inst-literal)
               :usage ["#inst \"yyyy-mm-dd\""
                       "#inst \"yyyy-mm-ddThh:mm:ss\""
                       "#inst \"yyyy-mm-ddThh:mm:ssZ\""
