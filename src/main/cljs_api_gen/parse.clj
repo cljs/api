@@ -567,8 +567,8 @@
   {:name id
    :ns *cur-ns*
    :type (or (:type info) "syntax")
-   :edn-doc edn-doc
-   :clj-doc clj-doc})
+   :syntax-equiv {:edn-url edn-doc
+                  :clj-url clj-doc}})
 
 (defn parse-syntax-treader
   "Parse syntax forms from tools.reader"

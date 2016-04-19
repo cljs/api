@@ -170,9 +170,7 @@
 (defn get-clj-symbol-url
   [ns- name-]
   (let [full-name (str ns- "/" name-)]
-    (or ;; get syntax doc link
-        (-> full-name syntax-map :clj-doc)
-
+    (or
         ;; get clojure.lang link
         (when (= "clojure.lang" ns-)
           (let [name- (or (lang-symbols->parent name-) name-)]

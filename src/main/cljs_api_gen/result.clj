@@ -75,7 +75,7 @@
       :full-name-encode full-encoded
       :name-encode name-encoded)))
 
-(defn attach-clj-equiv
+(defn add-clj-equiv
   [item]
   (if-let [equiv (clj-equiv item)]
     (assoc item :clj-equiv equiv)
@@ -121,8 +121,7 @@
                     :methods
                     :history
                     :return-type
-                    :edn-doc
-                    :clj-doc
+                    :syntax-equiv
                     :source
                     :extra-sources])
 
@@ -134,7 +133,7 @@
       (assign-full-names)
       (add-cljsdoc-url)
       (prune-map)
-      (attach-clj-equiv)))
+      (add-clj-equiv)))
 
 (defn shadow-duplicates-by-order
   [items]

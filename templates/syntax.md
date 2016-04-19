@@ -31,8 +31,10 @@ available in [edn]
 </tr></thead>
 {{#symbols}}
 <tr valign=top>
-<td>{{#clj-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&.}}){{/clj-doc}}</td>
-<td>{{#edn-doc}}[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">]({{&.}}){{/edn-doc}}</td>
+{{#syntax-equiv}}
+<td>{{#clj-url}}[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">]({{&.}}){{/clj-url}}</td>
+<td>{{#edn-url}}[<img width="18px" valign="middle" src="http://i.imgur.com/I8uNXHv.png">]({{&.}}){{/edn-url}}</td>
+{{/syntax-equiv}}
 <td><samp>[{{&display-name}}]({{&link}})</samp></td>
 <td>{{#history}}{{&shield}} {{/history}}</td>
 </tr>
