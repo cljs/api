@@ -44,9 +44,10 @@
 
 (defn add-github-link
   [{:keys [lines repo tag filename] :as source}]
-  (let [url (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
-              "#" (string/join "-" (map #(str "L" %) lines)))]
-    (assoc source :url url)))
+  (when source
+    (let [url (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
+                "#" (string/join "-" (map #(str "L" %) lines)))]
+      (assoc source :url url))))
 
 (defn add-github-links
   [item]
