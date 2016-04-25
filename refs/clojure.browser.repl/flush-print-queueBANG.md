@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn flush-print-queue! [conn]\n  (doseq [str print-queue]\n    (net/transmit conn :print str))\n  (garray/clear print-queue))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [33 36],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L33-L36"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/repl.cljs#L33-L36"},
  :usage ["(flush-print-queue! conn)"],
  :full-name "clojure.browser.repl/flush-print-queue!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/flush-print-queueBANG.cljsdoc"}

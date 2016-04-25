@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n^{:doc \"The base to use for printing integers and rationals.\"\n  :added \"1.2\"}\n*print-base* 10)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [672 675],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/pprint.cljs#L672-L675"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L672-L675"},
  :full-name "cljs.pprint/*print-base*",
  :docstring "The base to use for printing integers and rationals.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-baseSTAR.cljsdoc"}

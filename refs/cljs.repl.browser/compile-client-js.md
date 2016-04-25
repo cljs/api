@@ -99,10 +99,10 @@ The API data for this symbol:
  :source {:code "(defn compile-client-js [opts]\n  (let [copts {:optimizations (:optimizations opts)\n               :output-dir (:working-dir opts)}]\n    ;; we're inside the REPL process where cljs.env/*compiler* is already\n    ;; established, need to construct a new one to avoid mutating the one\n    ;; the REPL uses\n    (cljsc/build\n      '[(ns clojure.browser.repl.client\n          (:require [goog.events :as event]\n                    [clojure.browser.repl :as repl]))\n        (defn start [url]\n          (event/listen js/window\n            \"load\"\n            (fn []\n              (repl/start-evaluator url))))]\n      copts (env/default-compiler-env copts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [215 230],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/browser.clj#L215-L230"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/browser.clj#L215-L230"},
  :usage ["(compile-client-js opts)"],
  :full-name "cljs.repl.browser/compile-client-js",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/compile-client-js.cljsdoc"}

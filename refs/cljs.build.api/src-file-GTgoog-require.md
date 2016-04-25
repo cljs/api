@@ -110,10 +110,10 @@ The API data for this symbol:
  :source {:code "(defn ^String src-file->goog-require\n  ([src] (src-file->goog-require src nil))\n  ([src options]\n   (src-file->goog-require\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     src options))\n  ([state src options]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers options ana/*cljs-warning-handlers*)]\n       (closure/src-file->goog-require src options)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [95 108],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L95-L108"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/build/api.clj#L95-L108"},
  :usage ["(src-file->goog-require src)"
          "(src-file->goog-require src options)"
          "(src-file->goog-require state src options)"],

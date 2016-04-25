@@ -78,10 +78,10 @@ The API data for this symbol:
  :source {:code "(defprotocol PushbackReader\n  (read-char [reader] \"Returns the next char from the Reader,\nnil if the end of stream has been reached\")\n  (unread [reader ch] \"Push back a single character on to the stream\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [13 16],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/reader.cljs#L13-L16"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L13-L16"},
  :methods [{:name "read-char",
             :signature ["[reader]"],
             :docstring "Returns the next char from the Reader,\nnil if the end of stream has been reached"}

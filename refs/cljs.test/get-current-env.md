@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn get-current-env []\n  (or *current-env* (empty-env)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [271 272],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.cljs#L271-L272"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljs#L271-L272"},
  :usage ["(get-current-env)"],
  :full-name "cljs.test/get-current-env",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/get-current-env.cljsdoc"}

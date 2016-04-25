@@ -48,7 +48,7 @@ Function code @ [github]():
 
 ```clj
 (defn ^boolean pos?
-  [n] (cljs.core/pos? n))
+  [x] (cljs.core/pos? x))
 ```
 
 <!--
@@ -125,20 +125,20 @@ The API data for this symbol:
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pos?"},
  :related ["cljs.core/neg?" "cljs.core/zero?"],
  :full-name-encode "cljs.core/posQMARK",
- :source {:code "(defn ^boolean pos?\n  [n] (cljs.core/pos? n))",
+ :source {:code "(defn ^boolean pos?\n  [x] (cljs.core/pos? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2663 2665],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2663-L2665"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L2663-L2665"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric pos? [x]\n  `(> ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.40",
+                  :tag "r1.8.51",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1059 1060],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1059-L1060"}],
+                  :lines [1060 1061],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L1060-L1061"}],
  :usage ["(pos? n)"],
  :full-name "cljs.core/pos?",
  :docstring "Returns true if num is greater than zero, else false",

@@ -186,10 +186,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro and\n  ([] true)\n  ([x] x)\n  ([x & next]\n   (core/let [forms (concat [x] next)]\n     (if (every? #(simple-test-expr? &env %)\n           (map #(cljs.analyzer/analyze &env %) forms))\n       (core/let [and-str (core/->> (repeat (count forms) \"(~{})\")\n                            (interpose \" && \")\n                            (apply core/str))]\n         (bool-expr `(~'js* ~and-str ~@forms)))\n       `(let [and# ~x]\n          (if and# (and ~@next) and#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [783 799],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L783-L799"},
+          :lines [784 800],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L784-L800"},
  :usage ["(and)" "(and x)" "(and x & next)"],
  :examples [{:id "a39a73",
              :content "```clj\n(and)\n;;=> true\n\n(and false)\n;;=> false\n\n(and true)\n;;=> true\n\n(and true true)\n;;=> true\n\n(and true false)\n;;=> false\n\n(and false false)\n;;=> false\n```"}

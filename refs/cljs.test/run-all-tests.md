@@ -116,10 +116,10 @@ The API data for this symbol:
  :source {:code "(defmacro run-all-tests\n  ([] `(cljs.test/run-all-tests nil (cljs.test/empty-env)))\n  ([re] `(cljs.test/run-all-tests ~re (cljs.test/empty-env)))\n  ([re env]\n   `(cljs.test/run-tests ~env\n      ~@(map\n          (fn [ns] `(quote ~ns))\n          (cond->> (ana-api/all-ns)\n            re (filter #(re-matches re (name %))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/cljs/cljs/test.clj",
-          :lines [297 309],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L297-L309"},
+          :tag "r1.8.51",
+          :filename "src/main/cljs/cljs/test.cljc",
+          :lines [298 310],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L298-L310"},
  :usage ["(run-all-tests)"
          "(run-all-tests re)"
          "(run-all-tests re env)"],

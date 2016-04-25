@@ -116,10 +116,10 @@ The API data for this symbol:
  :source {:code "(defmacro run-tests\n  ([] `(run-tests (cljs.test/empty-env) '~ana/*cljs-ns*))\n  ([env-or-ns]\n   (if (ns? env-or-ns)\n     `(run-tests (cljs.test/empty-env) ~env-or-ns)\n     `(run-tests ~env-or-ns '~ana/*cljs-ns*)))\n  ([env-or-ns & namespaces]\n   `(cljs.test/run-block (run-tests-block ~env-or-ns ~@namespaces))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/cljs/cljs/test.clj",
-          :lines [283 295],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L283-L295"},
+          :tag "r1.8.51",
+          :filename "src/main/cljs/cljs/test.cljc",
+          :lines [284 296],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L284-L296"},
  :usage ["(run-tests)"
          "(run-tests env-or-ns)"
          "(run-tests env-or-ns & namespaces)"],

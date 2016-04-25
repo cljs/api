@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn load-ns [engine ns]\n      (eval-str engine\n        (format \"goog.require(\\\"%s\\\");\" (comp/munge (first ns)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [96 98],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L96-L98"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/nashorn.clj#L96-L98"},
  :usage ["(load-ns engine ns)"],
  :full-name "cljs.repl.nashorn/load-ns",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/load-ns.cljsdoc"}

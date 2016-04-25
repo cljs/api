@@ -97,10 +97,10 @@ The API data for this symbol:
  :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try catch finally\n       recur new set! ns deftype* defrecord* . js* & quote var}\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10201 10205],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10201-L10205"},
+          :lines [10202 10206],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10202-L10206"},
  :usage ["(special-symbol? x)"],
  :full-name "cljs.core/special-symbol?",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/special-symbolQMARK.cljsdoc"}

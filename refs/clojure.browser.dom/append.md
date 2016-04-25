@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn append [parent & children]\n  (apply gdom/append parent children)\n  parent)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [13 15],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/dom.cljs#L13-L15"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/dom.cljs#L13-L15"},
  :usage ["(append parent & children)"],
  :full-name "clojure.browser.dom/append",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/append.cljsdoc"}

@@ -29,6 +29,7 @@
 Source docstring:
 
 ```
+DEPRECATED: Use 'repeat' instead.
 Returns a lazy seq of n xs.
 ```
 
@@ -98,13 +99,13 @@ The API data for this symbol:
  :source {:code "(defn replicate\n  [n x] (take n (repeat x)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4474 4476],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L4474-L4476"},
+          :lines [4474 4477],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L4474-L4477"},
  :usage ["(replicate n x)"],
  :full-name "cljs.core/replicate",
- :docstring "Returns a lazy seq of n xs.",
+ :docstring "DEPRECATED: Use 'repeat' instead.\nReturns a lazy seq of n xs.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/replicate.cljsdoc"}
 
 ```

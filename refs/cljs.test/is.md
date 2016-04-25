@@ -55,7 +55,7 @@ Source code @ [github]():
 (defmacro is
   ([form] `(cljs.test/is ~form nil))
   ([form msg]
-   `(cljs.test/try-expr ~msg ~form)))
+   `(try-expr ~msg ~form)))
 ```
 
 <!--
@@ -113,13 +113,13 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.test/is",
              :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/is"},
  :full-name-encode "cljs.test/is",
- :source {:code "(defmacro is\n  ([form] `(cljs.test/is ~form nil))\n  ([form msg]\n   `(cljs.test/try-expr ~msg ~form)))",
+ :source {:code "(defmacro is\n  ([form] `(cljs.test/is ~form nil))\n  ([form msg]\n   `(try-expr ~msg ~form)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/cljs/cljs/test.clj",
-          :lines [149 165],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L149-L165"},
+          :tag "r1.8.51",
+          :filename "src/main/cljs/cljs/test.cljc",
+          :lines [150 166],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L150-L166"},
  :usage ["(is form)" "(is form msg)"],
  :full-name "cljs.test/is",
  :docstring "Generic assertion macro.  'form' is any predicate test.\n'msg' is an optional message to attach to the assertion.\n\nExample: (is (= 4 (+ 2 2)) \"Two plus two should be 4\")\n\nSpecial forms:\n\n(is (thrown? c body)) checks that an instance of c is thrown from\nbody, fails if not; then returns the thing thrown.\n\n(is (thrown-with-msg? c re body)) checks that an instance of c is\nthrown AND that the message on the exception matches (with\nre-find) the regular expression re.",

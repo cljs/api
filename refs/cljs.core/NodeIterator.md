@@ -120,10 +120,10 @@ The API data for this symbol:
  :source {:code "(deftype NodeIterator [arr ^:mutable i ^:mutable next-entry ^:mutable next-iter]\n  Object\n  (advance [this]\n    (let [len (alength arr)]\n      (loop []\n        (if (< i len)\n          (let [key (aget arr i)\n                node-or-val (aget arr (inc i))\n                ^boolean found\n                (cond (some? key)\n                      (set! next-entry [key node-or-val])\n                      (some? node-or-val)\n                      (let [new-iter (-iterator node-or-val)]\n                        (if ^boolean (.hasNext new-iter)\n                          (set! next-iter new-iter)\n                          false))\n                      :else false)]\n            (set! i (+ i 2))\n            (if found true (recur)))\n          false))))\n  (hasNext [this]\n    (or (some? next-entry) (some? next-iter) (.advance this)))\n  (next [this]\n    (cond\n      (some? next-entry)\n      (let [ret next-entry]\n        (set! next-entry nil)\n        ret)\n      (some? next-iter)\n      (let [ret (.next next-iter)]\n        (when-not ^boolean (.hasNext next-iter)\n          (set! next-iter nil))\n        ret)\n      ^boolean (.advance this)\n      (.next this)\n      :else (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6346 6382],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L6346-L6382"},
+          :lines [6347 6383],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L6347-L6383"},
  :usage ["(NodeIterator. arr i next-entry next-iter)"],
  :full-name "cljs.core/NodeIterator",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/NodeIterator.cljsdoc"}

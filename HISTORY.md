@@ -16,6 +16,29 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.8.51](https://github.com/cljsinfo/cljs-api-docs/tree/1.8.51)__</td>
+<td>2016-04-25</td>
+<td><kbd>1.8.0</kbd></td>
+<td><kbd>1.0.0-beta1</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-1851syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1851library">
++5 
+</a>
+</td>
+<td>
+<a href="#user-content-1851compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.8.40](https://github.com/cljsinfo/cljs-api-docs/tree/1.8.40)__</td>
 <td>2016-03-28</td>
 <td><kbd>1.8.0</kbd></td>
@@ -3143,6 +3166,53 @@
 </td>
 </tr>
 
+</table>
+
+### 1.8.51
+
+<a name="1851syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1851library"></a> __Library API Changes__
+ <table>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-any](refs/cljs.test/assert-any.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-multimethod-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-expr](refs/cljs.test/assert-expr.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-predicate](refs/cljs.test/assert-predicate.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/function?](refs/cljs.test/functionQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/ns?](refs/cljs.test/nsQMARK.md)</samp></td>
+</tr>
+</table>
+
+<a name="1851compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.8.40

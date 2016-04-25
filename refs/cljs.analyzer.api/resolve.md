@@ -43,7 +43,7 @@ Source code @ [github]():
   (try
     (ana/resolve-var env sym
       (ana/confirm-var-exists-throw))
-    (catch Exception e
+    (catch #?(:clj Exception :cljs :default) e
       (ana/resolve-macro-var env sym))))
 ```
 
@@ -102,13 +102,13 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.core/resolve",
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/resolve"},
  :full-name-encode "cljs.analyzer.api/resolve",
- :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (try\n    (ana/resolve-var env sym\n      (ana/confirm-var-exists-throw))\n    (catch Exception e\n      (ana/resolve-macro-var env sym))))",
+ :source {:code "(defn resolve\n  [env sym]\n  {:pre [(map? env) (symbol? sym)]}\n  (try\n    (ana/resolve-var env sym\n      (ana/confirm-var-exists-throw))\n    (catch #?(:clj Exception :cljs :default) e\n      (ana/resolve-macro-var env sym))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [141 150],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L141-L150"},
+          :tag "r1.8.51",
+          :filename "src/main/clojure/cljs/analyzer/api.cljc",
+          :lines [144 153],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/analyzer/api.cljc#L144-L153"},
  :usage ["(resolve env sym)"],
  :full-name "cljs.analyzer.api/resolve",
  :docstring "Given an analysis environment resolve a var. Analogous to\nclojure.core/resolve",

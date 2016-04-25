@@ -35,31 +35,31 @@ Source docstring:
 
 ```
 Given a java.io.File, java.net.URL or a string identifying a resource on the
-classpath attempt to analyze it.
+   classpath attempt to analyze it.
 
-This function side-effects the ambient compilation environment
-`cljs.env/*compiler*` to aggregate analysis information. opts argument is
-compiler options, if :cache-analysis true will cache analysis to
-":output-dir/some/ns/foo.cljs.cache.edn". This function does not return a
-meaningful value.
+   This function side-effects the ambient compilation environment
+   `cljs.env/*compiler*` to aggregate analysis information. opts argument is
+   compiler options, if :cache-analysis true will cache analysis to
+   ":output-dir/some/ns/foo.cljs.cache.edn". This function does not return a
+   meaningful value.
 ```
 
 
 Source code @ [github]():
 
 ```clj
-(defn analyze-file
-  ([f] (analyze-file f nil))
-  ([f opts]
-   (analyze-file
-     (if-not (nil? env/*compiler*)
-       env/*compiler*
-       (env/default-compiler-env opts))
-     f opts))
-  ([state f opts]
-   (env/with-compiler-env state
-     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
-       (ana/analyze-file f opts)))))
+   (defn analyze-file
+     ([f] (analyze-file f nil))
+     ([f opts]
+      (analyze-file
+        (if-not (nil? env/*compiler*)
+          env/*compiler*
+          (env/default-compiler-env opts))
+        f opts))
+     ([state f opts]
+      (env/with-compiler-env state
+        (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]
+          (ana/analyze-file f opts))))))
 ```
 
 <!--
@@ -112,18 +112,18 @@ The API data for this symbol:
  :history [["+" "0.0-3208"]],
  :type "function",
  :full-name-encode "cljs.analyzer.api/analyze-file",
- :source {:code "(defn analyze-file\n  ([f] (analyze-file f nil))\n  ([f opts]\n   (analyze-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     f opts))\n  ([state f opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (ana/analyze-file f opts)))))",
+ :source {:code "   (defn analyze-file\n     ([f] (analyze-file f nil))\n     ([f opts]\n      (analyze-file\n        (if-not (nil? env/*compiler*)\n          env/*compiler*\n          (env/default-compiler-env opts))\n        f opts))\n     ([state f opts]\n      (env/with-compiler-env state\n        (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n          (ana/analyze-file f opts))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/clojure/cljs/analyzer/api.clj",
-          :lines [117 136],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/analyzer/api.clj#L117-L136"},
+          :tag "r1.8.51",
+          :filename "src/main/clojure/cljs/analyzer/api.cljc",
+          :lines [120 139],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/analyzer/api.cljc#L120-L139"},
  :usage ["(analyze-file f)"
          "(analyze-file f opts)"
          "(analyze-file state f opts)"],
  :full-name "cljs.analyzer.api/analyze-file",
- :docstring "Given a java.io.File, java.net.URL or a string identifying a resource on the\nclasspath attempt to analyze it.\n\nThis function side-effects the ambient compilation environment\n`cljs.env/*compiler*` to aggregate analysis information. opts argument is\ncompiler options, if :cache-analysis true will cache analysis to\n\":output-dir/some/ns/foo.cljs.cache.edn\". This function does not return a\nmeaningful value.",
+ :docstring "Given a java.io.File, java.net.URL or a string identifying a resource on the\n   classpath attempt to analyze it.\n\n   This function side-effects the ambient compilation environment\n   `cljs.env/*compiler*` to aggregate analysis information. opts argument is\n   compiler options, if :cache-analysis true will cache analysis to\n   \":output-dir/some/ns/foo.cljs.cache.edn\". This function does not return a\n   meaningful value.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.analyzer.api/analyze-file.cljsdoc"}
 
 ```

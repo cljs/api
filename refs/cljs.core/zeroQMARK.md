@@ -48,8 +48,8 @@ Function code @ [github]():
 
 ```clj
 (defn ^boolean zero?
-  [n]
-  (cljs.core/zero? n))
+  [x]
+  (cljs.core/zero? x))
 ```
 
 <!--
@@ -126,20 +126,20 @@ The API data for this symbol:
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/zero?"},
  :related ["cljs.core/pos?" "cljs.core/neg?"],
  :full-name-encode "cljs.core/zeroQMARK",
- :source {:code "(defn ^boolean zero?\n  [n]\n  (cljs.core/zero? n))",
+ :source {:code "(defn ^boolean zero?\n  [x]\n  (cljs.core/zero? x))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2667 2670],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2667-L2670"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L2667-L2670"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric zero? [x]\n  `(== ~x 0))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.40",
+                  :tag "r1.8.51",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [1056 1057],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L1056-L1057"}],
+                  :lines [1057 1058],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L1057-L1058"}],
  :usage ["(zero? n)"],
  :full-name "cljs.core/zero?",
  :docstring "Returns true if num is zero, else false",

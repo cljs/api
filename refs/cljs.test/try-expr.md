@@ -40,7 +40,7 @@ Source code @ [github]():
 (defmacro try-expr
   [msg form]
   `(try
-     ~(cljs.test/assert-expr &env msg form)
+     ~(assert-expr &env msg form)
      (catch :default t#
        (cljs.test/do-report 
          {:type :error, :message ~msg,
@@ -102,13 +102,13 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.test/try-expr",
              :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/try-expr"},
  :full-name-encode "cljs.test/try-expr",
- :source {:code "(defmacro try-expr\n  [msg form]\n  `(try\n     ~(cljs.test/assert-expr &env msg form)\n     (catch :default t#\n       (cljs.test/do-report \n         {:type :error, :message ~msg,\n          :expected '~form, :actual t#}))))",
+ :source {:code "(defmacro try-expr\n  [msg form]\n  `(try\n     ~(assert-expr &env msg form)\n     (catch :default t#\n       (cljs.test/do-report \n         {:type :error, :message ~msg,\n          :expected '~form, :actual t#}))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/cljs/cljs/test.clj",
-          :lines [135 144],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L135-L144"},
+          :tag "r1.8.51",
+          :filename "src/main/cljs/cljs/test.cljc",
+          :lines [136 145],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L136-L145"},
  :usage ["(try-expr msg form)"],
  :full-name "cljs.test/try-expr",
  :docstring "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this.",

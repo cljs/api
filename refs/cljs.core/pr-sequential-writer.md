@@ -105,10 +105,10 @@ The API data for this symbol:
  :source {:code "(defn pr-sequential-writer [writer print-one begin sep end opts coll]\n  (binding [*print-level* (when-not (nil? *print-level*) (dec *print-level*))]\n    (if (and (not (nil? *print-level*)) (neg? *print-level*))\n      (-write writer \"#\")\n      (do\n        (-write writer begin)\n        (if (zero? (:print-length opts))\n          (when (seq coll)\n            (-write writer (or (:more-marker opts) \"...\")))\n          (do\n            (when (seq coll)\n              (print-one (first coll) writer opts))\n            (loop [coll (next coll) n (dec (:print-length opts))]\n              (if (and coll (or (nil? n) (not (zero? n))))\n                (do\n                  (-write writer sep)\n                  (print-one (first coll) writer opts)\n                  (recur (next coll) (dec n)))\n                (when (and (seq coll) (zero? n))\n                  (-write writer sep)\n                  (-write writer (or (:more-marker opts) \"...\")))))))\n        (-write writer end)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8982 9003],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L8982-L9003"},
+          :lines [8983 9004],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8983-L9004"},
  :usage ["(pr-sequential-writer writer print-one begin sep end opts coll)"],
  :full-name "cljs.core/pr-sequential-writer",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/pr-sequential-writer.cljsdoc"}

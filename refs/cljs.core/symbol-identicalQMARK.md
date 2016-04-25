@@ -26,7 +26,7 @@
 Source docstring:
 
 ```
-Efficient test to determine that two symbol are identical.
+Efficient test to determine that two symbols are identical.
 ```
 
 
@@ -96,13 +96,13 @@ The API data for this symbol:
  :source {:code "(defn ^boolean symbol-identical?\n  [x y]\n  (if (identical? x y)\n    true\n    (if (and (symbol? x) (symbol? y))\n      (identical? (.-str x) (.-str y))\n      false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3067 3074],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3067-L3074"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3067-L3074"},
  :usage ["(symbol-identical? x y)"],
  :full-name "cljs.core/symbol-identical?",
- :docstring "Efficient test to determine that two symbol are identical.",
+ :docstring "Efficient test to determine that two symbols are identical.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/symbol-identicalQMARK.cljsdoc"}
 
 ```

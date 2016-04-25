@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn listen\n  ([src type fn]\n     (listen src type fn false))\n  ([src type fn capture?]\n     (events/listen src\n                    (get (event-types src) type type)\n                    fn\n                    capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [46 53],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L46-L53"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/event.cljs#L46-L53"},
  :usage ["(listen src type fn)" "(listen src type fn capture?)"],
  :full-name "clojure.browser.event/listen",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/listen.cljsdoc"}

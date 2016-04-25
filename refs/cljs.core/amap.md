@@ -83,7 +83,7 @@ Source code @ [github]():
 (core/defmacro amap
   [a idx ret expr]
   `(let [a# ~a
-         ~ret (aclone a#)]
+         ~ret (cljs.core/aclone a#)]
      (loop  [~idx 0]
        (if (< ~idx  (alength a#))
          (do
@@ -149,13 +149,13 @@ The API data for this symbol:
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/amap"},
  :related ["cljs.core/map"],
  :full-name-encode "cljs.core/amap",
- :source {:code "(core/defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
+ :source {:code "(core/defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (cljs.core/aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2463 2476],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2463-L2476"},
+          :lines [2468 2481],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L2468-L2481"},
  :usage ["(amap a idx ret expr)"],
  :examples [{:id "3a7471",
              :content "```clj\n(def a #js [1 2 3])\n(amap a i ret (* 10 (aget a i)))\n;;=> #js [10 20 30]\n```"}

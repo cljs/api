@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def process (js* \"process\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/nodejs.cljs",
           :lines [16],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/nodejs.cljs#L16"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/nodejs.cljs#L16"},
  :full-name "cljs.nodejs/process",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/process.cljsdoc"}
 

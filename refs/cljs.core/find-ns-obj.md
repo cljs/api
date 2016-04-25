@@ -101,10 +101,10 @@ The API data for this symbol:
  :source {:code "(defn find-ns-obj [ns]\n  (let [munged-ns (munge (str ns))\n        segs (.split munged-ns \".\")]\n    (case *target*\n      \"nodejs\"  (if ^boolean js/COMPILED\n                  ; Under simple optimizations on nodejs, namespaces will be in module\n                  ; rather than global scope and must be accessed by a direct call to eval.\n                  ; The first segment may refer to an undefined variable, so its evaluation\n                  ; may throw ReferenceError.\n                  (find-ns-obj*\n                    (try\n                      (js/eval (first segs))\n                      (catch js/ReferenceError e\n                        nil))\n                    (next segs))\n                  (find-ns-obj* js/global segs))\n      \"default\" (find-ns-obj* goog/global segs)\n      (throw (js/Error. (str \"find-ns-obj not supported for target \" *target*))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10383 10400],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L10383-L10400"},
+          :lines [10384 10401],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10384-L10401"},
  :usage ["(find-ns-obj ns)"],
  :full-name "cljs.core/find-ns-obj",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find-ns-obj.cljsdoc"}

@@ -2,8 +2,8 @@
 
  <table border="1">
 <tr>
-<td>__1.8.40__ [all](HISTORY.md)</td>
-<td>2016-03-28</td>
+<td>__1.8.51__ [all](HISTORY.md)</td>
+<td>2016-04-25</td>
 <td>[<img valign="middle" width="24px" src="http://i.imgur.com/1GjPKvB.png">
 <kbd>Clojure 1.8.0</kbd>](http://clojure.github.io/clojure/branch-master/index.html)</td>
 <td>[<img valign="middle" width="18px" src="http://i.imgur.com/yGyeE7k.png">
@@ -23,7 +23,7 @@ __[Offline version available here](https://github.com/cljsinfo/cljs-api-docs#off
 
 ## Latest Changes
 
-Changes from __1.8.40__ ([See Full History](HISTORY.md)):
+Changes from __1.8.51__ ([See Full History](HISTORY.md)):
 
 __Syntax Changes__
 
@@ -34,7 +34,37 @@ __Syntax Changes__
 __Library API Changes__
 
  <table>
-<tr><td>_no symbols were added or removed in this version_</td></tr>
+
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-any](refs/cljs.test/assert-any.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-multimethod-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-expr](refs/cljs.test/assert-expr.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/assert-predicate](refs/cljs.test/assert-predicate.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/function?](refs/cljs.test/functionQMARK.md)</samp></td>
+</tr>
+<tr>
+<td>
+<img valign="middle" src="https://img.shields.io/badge/+-function-brightgreen.svg">
+</td>
+<td><samp>[cljs.test/ns?](refs/cljs.test/nsQMARK.md)</samp></td>
+</tr>
 </table>
 
 __Compiler API Changes__

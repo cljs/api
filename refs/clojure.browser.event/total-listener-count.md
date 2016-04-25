@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn total-listener-count []\n  (events/getTotalListenerCount))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [87 88],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/event.cljs#L87-L88"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/event.cljs#L87-L88"},
  :usage ["(total-listener-count)"],
  :full-name "clojure.browser.event/total-listener-count",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/total-listener-count.cljsdoc"}

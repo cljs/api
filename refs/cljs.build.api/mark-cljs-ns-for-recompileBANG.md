@@ -98,10 +98,10 @@ The API data for this symbol:
  :source {:code "(defn mark-cljs-ns-for-recompile!\n  ([ns-sym] (mark-cljs-ns-for-recompile! ns-sym nil))\n  ([ns-sym output-dir]\n    (let [s (target-file-for-cljs-ns ns-sym output-dir)]\n      (when (.exists s)\n        (.setLastModified s 5000)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [41 47],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/build/api.clj#L41-L47"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/build/api.clj#L41-L47"},
  :usage ["(mark-cljs-ns-for-recompile! ns-sym)"
          "(mark-cljs-ns-for-recompile! ns-sym output-dir)"],
  :full-name "cljs.build.api/mark-cljs-ns-for-recompile!",

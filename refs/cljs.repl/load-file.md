@@ -117,10 +117,10 @@ The API data for this symbol:
  :source {:code "(defn load-file\n  ([repl-env f] (load-file repl-env f *repl-opts*))\n  ([repl-env f opts]\n    (if (:output-dir opts)\n      (let [src (cond\n                  (util/url? f) f\n                  (.exists (io/file f)) (io/file f)\n                  :else (io/resource f))\n            compiled (binding [ana/*reload-macros* true]\n                       (cljsc/compile src\n                         (assoc opts\n                           :output-file (cljsc/src-file->target-file src)\n                           :force true\n                           :mode :interactive)))]\n        ;; copy over the original source file if source maps enabled\n        (when-let [ns (and (:source-map opts) (first (:provides compiled)))]\n          (spit\n            (io/file (io/file (util/output-directory opts))\n              (util/ns->relpath ns (util/ext (:source-url compiled))))\n            (slurp src)))\n        ;; need to load dependencies first\n        (load-dependencies repl-env (:requires compiled) opts)\n        (-evaluate repl-env f 1 (cljsc/add-dep-string opts compiled))\n        (-evaluate repl-env f 1\n          (cljsc/src-file->goog-require src\n            {:wrap true :reload true :macros-ns (:macros-ns compiled)})))\n      (binding [ana/*cljs-ns* ana/*cljs-ns*]\n        (let [res (if (= File/separatorChar (first f)) f (io/resource f))]\n          (assert res (str \"Can't find \" f \" in classpath\"))\n          (load-stream repl-env f res))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [515 544],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl.cljc#L515-L544"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl.cljc#L515-L544"},
  :usage ["(load-file repl-env f)" "(load-file repl-env f opts)"],
  :full-name "cljs.repl/load-file",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/load-file.cljsdoc"}

@@ -102,10 +102,10 @@ The API data for this symbol:
  :source {:code "(defn init-engine [engine output-dir debug]\n      (eval-resource engine \"goog/base.js\" debug)\n      (eval-resource engine \"goog/deps.js\" debug)\n      (eval-str engine \"var global = this\") ; required by React\n      (eval-str engine\n        (format\n          (str \"var nashorn_load = function(path) {\"\n            \"  var outputPath = \\\"%s\\\" + \\\"/\\\" + path;\"\n            (when debug \"  print(\\\"loading: \\\" + outputPath) ; \")\n            \"  load(outputPath);\"\n            \"};\")\n          output-dir))\n      (eval-str engine\n        (str \"goog.global.CLOSURE_IMPORT_SCRIPT = function(path) {\"\n          \" nashorn_load(\\\"goog/\\\" + path);\"\n          \" return true;\"\n          \"};\"))\n      (eval-str engine \"goog.global.isProvided_ = function(name) { return false; };\")\n      engine)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [55 73],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/nashorn.clj#L55-L73"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/nashorn.clj#L55-L73"},
  :usage ["(init-engine engine output-dir debug)"],
  :full-name "cljs.repl.nashorn/init-engine",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/init-engine.cljsdoc"}

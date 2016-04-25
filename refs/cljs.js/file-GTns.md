@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn file->ns\n  [file]\n  (let [lib-name (subs (string/replace file \"/\" \".\")\n                   0 (- (count file) 5))]\n    (symbol (demunge lib-name))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [35 39],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L35-L39"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/js.cljs#L35-L39"},
  :usage ["(file->ns file)"],
  :full-name "cljs.js/file->ns",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/file-GTns.cljsdoc"}

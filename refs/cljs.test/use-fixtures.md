@@ -41,7 +41,7 @@ Source code @ [github]():
        [~@fns])
     :else
     (throw
-      (Exception. "First argument to cljs.test/use-fixtures must be :once or :each"))))
+      (#?(:clj Exception. :cljs js/Error.) "First argument to cljs.test/use-fixtures must be :once or :each"))))
 ```
 
 <!--
@@ -99,13 +99,13 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.test/use-fixtures",
              :url "http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/use-fixtures"},
  :full-name-encode "cljs.test/use-fixtures",
- :source {:code "(defmacro use-fixtures [type & fns]\n  (condp = type\n    :once\n    `(def ~'cljs-test-once-fixtures\n       [~@fns])\n    :each\n    `(def ~'cljs-test-each-fixtures\n       [~@fns])\n    :else\n    (throw\n      (Exception. \"First argument to cljs.test/use-fixtures must be :once or :each\"))))",
+ :source {:code "(defmacro use-fixtures [type & fns]\n  (condp = type\n    :once\n    `(def ~'cljs-test-once-fixtures\n       [~@fns])\n    :each\n    `(def ~'cljs-test-each-fixtures\n       [~@fns])\n    :else\n    (throw\n      (#?(:clj Exception. :cljs js/Error.) \"First argument to cljs.test/use-fixtures must be :once or :each\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
-          :filename "src/main/cljs/cljs/test.clj",
-          :lines [377 387],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/test.clj#L377-L387"},
+          :tag "r1.8.51",
+          :filename "src/main/cljs/cljs/test.cljc",
+          :lines [378 388],
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L378-L388"},
  :usage ["(use-fixtures type & fns)"],
  :full-name "cljs.test/use-fixtures",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/use-fixtures.cljsdoc"}

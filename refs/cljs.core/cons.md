@@ -58,7 +58,7 @@ Returns a new sequence where `x` is the first element and `coll` is the rest.
 Source docstring:
 
 ```
-Returns a new seq where x is the first element and seq is the rest.
+Returns a new seq where x is the first element and coll is the rest.
 ```
 
 
@@ -133,15 +133,15 @@ The API data for this symbol:
  :source {:code "(defn cons\n  [x coll]\n  (if (or (nil? coll)\n          (implements? ISeq coll))\n    (Cons. nil x coll nil)\n    (Cons. nil x (seq coll) nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3002 3008],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3002-L3008"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3002-L3008"},
  :usage ["(cons x coll)"],
  :examples [{:id "68c769",
              :content "```clj\n(cons 1 (list 1 2 3))\n;;=> (1 1 2 3)\n\n(cons 1 [1 2 3])\n;;=> (1 1 2 3)\n\n(cons 1 nil)\n;;=> (1)\n\n(cons nil nil)\n;;=> (nil)\n```"}],
  :full-name "cljs.core/cons",
- :docstring "Returns a new seq where x is the first element and seq is the rest.",
+ :docstring "Returns a new seq where x is the first element and coll is the rest.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/cons.cljsdoc"}
 
 ```

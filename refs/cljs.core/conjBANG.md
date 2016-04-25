@@ -13,7 +13,7 @@
 </table>
 
 <samp>(conj!)</samp><br>
-<samp>(conj! coll)</samp><br>
+<samp>(conj! tcoll)</samp><br>
 <samp>(conj! tcoll val)</samp><br>
 <samp>(conj! tcoll val & vals)</samp><br>
 
@@ -23,7 +23,7 @@
 (__conj!__)<br>
 </samp>
  <samp>
-(__conj!__ coll)<br>
+(__conj!__ tcoll)<br>
 </samp>
  <samp>
 (__conj!__ tcoll val)<br>
@@ -41,7 +41,7 @@
 Source docstring:
 
 ```
-Adds x to the transient collection, and return coll. The 'addition'
+Adds val to the transient collection, and return tcoll. The 'addition'
 may happen at different 'places' depending on the concrete type.
 ```
 
@@ -51,7 +51,7 @@ Source code @ [github]():
 ```clj
 (defn conj!
   ([] (transient []))
-  ([coll] coll)
+  ([tcoll] tcoll)
   ([tcoll val]
     (-conj! tcoll val))
   ([tcoll val & vals]
@@ -109,26 +109,26 @@ The API data for this symbol:
 ```clj
 {:ns "cljs.core",
  :name "conj!",
- :signature ["[]" "[coll]" "[tcoll val]" "[tcoll val & vals]"],
+ :signature ["[]" "[tcoll]" "[tcoll val]" "[tcoll val & vals]"],
  :name-encode "conjBANG",
  :history [["+" "0.0-1211"]],
  :type "function",
  :clj-equiv {:full-name "clojure.core/conj!",
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/conj!"},
  :full-name-encode "cljs.core/conjBANG",
- :source {:code "(defn conj!\n  ([] (transient []))\n  ([coll] coll)\n  ([tcoll val]\n    (-conj! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-conj! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
+ :source {:code "(defn conj!\n  ([] (transient []))\n  ([tcoll] tcoll)\n  ([tcoll val]\n    (-conj! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-conj! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3498 3509],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3498-L3509"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3498-L3509"},
  :usage ["(conj!)"
-         "(conj! coll)"
+         "(conj! tcoll)"
          "(conj! tcoll val)"
          "(conj! tcoll val & vals)"],
  :full-name "cljs.core/conj!",
- :docstring "Adds x to the transient collection, and return coll. The 'addition'\nmay happen at different 'places' depending on the concrete type.",
+ :docstring "Adds val to the transient collection, and return tcoll. The 'addition'\nmay happen at different 'places' depending on the concrete type.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/conjBANG.cljsdoc"}
 
 ```

@@ -19,7 +19,7 @@ Source docstring:
 
 ```
 Each runtime environment provides a different way to print error output.
-Whatever function *print-fn* is bound to will be passed any
+Whatever function *print-err-fn* is bound to will be passed any
 Strings which should be printed.
 ```
 
@@ -29,7 +29,7 @@ Source code @ [github]():
 ```clj
 (defonce
   ^{:doc "Each runtime environment provides a different way to print error output.
-  Whatever function *print-fn* is bound to will be passed any
+  Whatever function *print-err-fn* is bound to will be passed any
   Strings which should be printed." :dynamic true}
   *print-err-fn*
   (fn [_]
@@ -85,15 +85,15 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "dynamic var",
  :full-name-encode "cljs.core/STARprint-err-fnSTAR",
- :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to print error output.\n  Whatever function *print-fn* is bound to will be passed any\n  Strings which should be printed.\" :dynamic true}\n  *print-err-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-err-fn* fn set for evaluation environment\"))))",
+ :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to print error output.\n  Whatever function *print-err-fn* is bound to will be passed any\n  Strings which should be printed.\" :dynamic true}\n  *print-err-fn*\n  (fn [_]\n    (throw (js/Error. \"No *print-err-fn* fn set for evaluation environment\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [51 57],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L51-L57"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L51-L57"},
  :full-name "cljs.core/*print-err-fn*",
- :docstring "Each runtime environment provides a different way to print error output.\nWhatever function *print-fn* is bound to will be passed any\nStrings which should be printed.",
+ :docstring "Each runtime environment provides a different way to print error output.\nWhatever function *print-err-fn* is bound to will be passed any\nStrings which should be printed.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/STARprint-err-fnSTAR.cljsdoc"}
 
 ```

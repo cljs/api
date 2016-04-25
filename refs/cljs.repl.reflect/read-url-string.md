@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def read-url-string (comp read-string url-decode))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/clojure/cljs/repl/reflect.clj",
           :lines [42],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/repl/reflect.clj#L42"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/reflect.clj#L42"},
  :full-name "cljs.repl.reflect/read-url-string",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.reflect/read-url-string.cljsdoc"}
 

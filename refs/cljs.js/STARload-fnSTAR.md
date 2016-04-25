@@ -73,7 +73,7 @@ Source code @ [github]():
   nil."
     :dynamic true}
   *load-fn*
-  (fn [name cb]
+  (fn [m cb]
     (throw (js/Error. "No *load-fn* set"))))
 ```
 
@@ -126,13 +126,13 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "dynamic var",
  :full-name-encode "cljs.js/STARload-fnSTAR",
- :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to load a library.\n  Whatever function *load-fn* is bound to will be passed two arguments - a\n  map and a callback function: The map will have the following keys:\n\n  :name   - the name of the library (a symbol)\n  :macros - modifier signaling a macros namespace load\n  :path   - munged relative library path (a string)\n\n  It is up to the implementor to correctly resolve the corresponding .cljs,\n  .cljc, or .js resource (the order must be respected). If :macros is true\n  resolution should only consider .clj or .cljc resources (the order must be\n  respected). Upon resolution the callback should be invoked with a map\n  containing the following keys:\n\n  :lang       - the language, :clj or :js\n  :source     - the source of the library (a string)\n  :cache      - optional, if a :clj namespace has been precompiled to :js, can\n                give an analysis cache for faster loads.\n  :source-map - optional, if a :clj namespace has been precompiled to :js, can\n                give a V3 source map JSON\n\n  If the resource could not be resolved, the callback should be invoked with\n  nil.\"\n    :dynamic true}\n  *load-fn*\n  (fn [name cb]\n    (throw (js/Error. \"No *load-fn* set\"))))",
+ :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides a different way to load a library.\n  Whatever function *load-fn* is bound to will be passed two arguments - a\n  map and a callback function: The map will have the following keys:\n\n  :name   - the name of the library (a symbol)\n  :macros - modifier signaling a macros namespace load\n  :path   - munged relative library path (a string)\n\n  It is up to the implementor to correctly resolve the corresponding .cljs,\n  .cljc, or .js resource (the order must be respected). If :macros is true\n  resolution should only consider .clj or .cljc resources (the order must be\n  respected). Upon resolution the callback should be invoked with a map\n  containing the following keys:\n\n  :lang       - the language, :clj or :js\n  :source     - the source of the library (a string)\n  :cache      - optional, if a :clj namespace has been precompiled to :js, can\n                give an analysis cache for faster loads.\n  :source-map - optional, if a :clj namespace has been precompiled to :js, can\n                give a V3 source map JSON\n\n  If the resource could not be resolved, the callback should be invoked with\n  nil.\"\n    :dynamic true}\n  *load-fn*\n  (fn [m cb]\n    (throw (js/Error. \"No *load-fn* set\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [56 83],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L56-L83"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/js.cljs#L56-L83"},
  :full-name "cljs.js/*load-fn*",
  :docstring "Each runtime environment provides a different way to load a library.\nWhatever function *load-fn* is bound to will be passed two arguments - a\nmap and a callback function: The map will have the following keys:\n\n:name   - the name of the library (a symbol)\n:macros - modifier signaling a macros namespace load\n:path   - munged relative library path (a string)\n\nIt is up to the implementor to correctly resolve the corresponding .cljs,\n.cljc, or .js resource (the order must be respected). If :macros is true\nresolution should only consider .clj or .cljc resources (the order must be\nrespected). Upon resolution the callback should be invoked with a map\ncontaining the following keys:\n\n:lang       - the language, :clj or :js\n:source     - the source of the library (a string)\n:cache      - optional, if a :clj namespace has been precompiled to :js, can\n              give an analysis cache for faster loads.\n:source-map - optional, if a :clj namespace has been precompiled to :js, can\n              give a V3 source map JSON\n\nIf the resource could not be resolved, the callback should be invoked with\nnil.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/STARload-fnSTAR.cljsdoc"}

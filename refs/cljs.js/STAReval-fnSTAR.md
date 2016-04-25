@@ -47,7 +47,7 @@ Source code @ [github]():
   The result of evaluation should be the return value."
     :dynamic true}
   *eval-fn*
-  (fn [js-source]
+  (fn [m]
     (throw (js/Error. "No *eval-fn* set"))))
 ```
 
@@ -100,13 +100,13 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "dynamic var",
  :full-name-encode "cljs.js/STAReval-fnSTAR",
- :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides various ways to eval JavaScript\n  source. Whatever function *eval-fn* is bound to will be passed a map\n  containing the following keys:\n\n  :source - the source of the library (string)\n  :name   - used to unique identify the script (symbol)\n  :cache  - if the source was originally ClojureScript, will be given the\n            analysis cache.\n\n  The result of evaluation should be the return value.\"\n    :dynamic true}\n  *eval-fn*\n  (fn [js-source]\n    (throw (js/Error. \"No *eval-fn* set\"))))",
+ :source {:code "(defonce\n  ^{:doc \"Each runtime environment provides various ways to eval JavaScript\n  source. Whatever function *eval-fn* is bound to will be passed a map\n  containing the following keys:\n\n  :source - the source of the library (string)\n  :name   - used to unique identify the script (symbol)\n  :cache  - if the source was originally ClojureScript, will be given the\n            analysis cache.\n\n  The result of evaluation should be the return value.\"\n    :dynamic true}\n  *eval-fn*\n  (fn [m]\n    (throw (js/Error. \"No *eval-fn* set\"))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [85 99],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/js.cljs#L85-L99"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/js.cljs#L85-L99"},
  :full-name "cljs.js/*eval-fn*",
  :docstring "Each runtime environment provides various ways to eval JavaScript\nsource. Whatever function *eval-fn* is bound to will be passed a map\ncontaining the following keys:\n\n:source - the source of the library (string)\n:name   - used to unique identify the script (symbol)\n:cache  - if the source was originally ClojureScript, will be given the\n          analysis cache.\n\nThe result of evaluation should be the return value.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/STAReval-fnSTAR.cljsdoc"}

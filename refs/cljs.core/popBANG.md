@@ -30,7 +30,7 @@ Source docstring:
 
 ```
 Removes the last item from a transient vector. If
-the collection is empty, throws an exception. Returns coll
+the collection is empty, throws an exception. Returns tcoll
 ```
 
 
@@ -100,13 +100,13 @@ The API data for this symbol:
  :source {:code "(defn pop!\n  [tcoll]\n  (-pop! tcoll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3533 3537],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L3533-L3537"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3533-L3537"},
  :usage ["(pop! tcoll)"],
  :full-name "cljs.core/pop!",
- :docstring "Removes the last item from a transient vector. If\nthe collection is empty, throws an exception. Returns coll",
+ :docstring "Removes the last item from a transient vector. If\nthe collection is empty, throws an exception. Returns tcoll",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/popBANG.cljsdoc"}
 
 ```

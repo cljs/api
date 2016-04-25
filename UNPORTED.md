@@ -1594,23 +1594,11 @@ symbols that are not yet ported to ClojureScript:
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/assert-any](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/assert-any)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/assert-predicate](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/assert-predicate)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/deftest-](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/deftest-)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.test/file-position](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/file-position)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.test/function?](http://clojure.github.io/clojure/branch-master/clojure.test-api.html#clojure.test/function?)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>

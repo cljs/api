@@ -79,9 +79,13 @@ Macro code @ [github]():
 
 ```clj
 (core/defmacro list
-  ([] '(.-EMPTY cljs.core/List))
+  ([]
+   '(.-EMPTY cljs.core/List))
   ([x & xs]
-    `(-conj (list ~@xs) ~x)))
+   (if (= :constant (:op (cljs.analyzer/analyze &env x)))
+     `(-conj (list ~@xs) ~x)
+     `(let [x# ~x]
+        (-conj (list ~@xs) x#)))))
 ```
 
 <!--
@@ -142,17 +146,17 @@ The API data for this symbol:
  :source {:code "(defn list\n  [& xs]\n  (let [arr (if (and (instance? IndexedSeq xs) (zero? (.-i xs)))\n              (.-arr xs)\n              (let [arr (array)]\n                (loop [^not-native xs xs]\n                  (if-not (nil? xs)\n                    (do\n                      (.push arr (-first xs))\n                      (recur (-next xs)))\n                    arr))))]\n    (loop [i (alength arr) ^not-native r ()]\n      (if (> i 0)\n        (recur (dec i) (-conj r (aget arr (dec i))))\n        r))))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2928 2943],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/cljs/core.cljs#L2928-L2943"},
- :extra-sources [{:code "(core/defmacro list\n  ([] '(.-EMPTY cljs.core/List))\n  ([x & xs]\n    `(-conj (list ~@xs) ~x)))",
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L2928-L2943"},
+ :extra-sources [{:code "(core/defmacro list\n  ([]\n   '(.-EMPTY cljs.core/List))\n  ([x & xs]\n   (if (= :constant (:op (cljs.analyzer/analyze &env x)))\n     `(-conj (list ~@xs) ~x)\n     `(let [x# ~x]\n        (-conj (list ~@xs) x#)))))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.40",
+                  :tag "r1.8.51",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [2379 2382],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/clojure/cljs/core.cljc#L2379-L2382"}],
+                  :lines [2380 2387],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L2380-L2387"}],
  :usage ["(list & items)"],
  :full-name "cljs.core/list",
  :docstring "Creates a new list containing the items.",

@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn repl-print [data]\n  (.push print-queue (pr-str data))\n  (when-let [conn @xpc-connection]\n    (flush-print-queue! conn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.40",
+          :tag "r1.8.51",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [38 41],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.40/src/main/cljs/clojure/browser/repl.cljs#L38-L41"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/repl.cljs#L38-L41"},
  :usage ["(repl-print data)"],
  :full-name "clojure.browser.repl/repl-print",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/repl-print.cljsdoc"}
