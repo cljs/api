@@ -64,7 +64,8 @@
           before-line (or (get-line (second head))
                           (get-line (first head)))
           after-line (get-line (first sig-body))]
-      (when (< before-line after-line)
+      (when (and before-line after-line
+              (< before-line after-line))
         {:start-line (-> before-line inc (- first-line))
          :end-line (-> after-line dec (- first-line))
          :forms doc}))))
