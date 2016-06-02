@@ -77,6 +77,7 @@
     "cljs.js"               :normal
     "cljs.spec"             :normal
     "cljs.spec.test"        :normal
+    "cljs.spec.impl.gen"    :normal
 
     "cljs.core"             :custom
     "cljs.test"             :custom

@@ -112,6 +112,7 @@
    "cljs.repl"   "clojure.repl"
    "cljs.spec"   "clojure.spec"
    "cljs.spec.test" "clojure.spec.test"
+   "cljs.spec.impl.gen" "clojure.spec.gen"
    "special"     "clojure.core"
    "specialrepl" "clojure.core"})
 
@@ -156,7 +157,8 @@
 
 (def clj-ns->page-ns
   {"clojure.core.reducers" "clojure.core"
-   "clojure.spec.test" "clojure.spec"})
+   "clojure.spec.test" "clojure.spec"
+   "clojure.spec.gen" "clojure.spec"})
 
 (defn ns-url [ns-]
   (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html"))
