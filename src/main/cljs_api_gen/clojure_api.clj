@@ -3,15 +3,25 @@
     [clansi.core :refer [style]]
     [clojure.set :refer [difference]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
-    [cljs-api-gen.repo-cljs :refer [*clj-tag* ls-files clj-tag->api-key]]
+    [cljs-api-gen.repo-cljs :refer [*cljs-tag* *clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [exists? base-name]]))
+
+(defn get-equiv-clj-tag
+  "At ClojureScript 1.9.14, the bundled Clojure version was still 1.8, but
+  cljs.spec was ported from clojure.spec in Clojure 1.9 alpha.  Thus, we must
+  consider that the equivalent (clj-equiv) Clojure API version may be different
+  from *clj-tag*."
+  []
+  (let [tags {"r1.9.14" "clojure-1.9.0-alpha4"}]
+    (or (tags *cljs-tag*)
+        *clj-tag*)))
 
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
 ;;--------------------------------------------------------------------------------
 
-(def versions ["1.3" "1.4" "1.5" "1.6" "1.7" "1.8"])
+(def versions ["1.3" "1.4" "1.5" "1.6" "1.7" "1.8" "1.9"])
 (def api-namespaces (atom {}))
 (def api-symbols (atom {}))
 
@@ -100,6 +110,8 @@
    "cljs.pprint" "clojure.pprint"
    "cljs.test"   "clojure.test"
    "cljs.repl"   "clojure.repl"
+   "cljs.spec"   "clojure.spec"
+   "cljs.spec.test" "clojure.spec.test"
    "special"     "clojure.core"
    "specialrepl" "clojure.core"})
 
@@ -143,7 +155,8 @@
    "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"})
 
 (def clj-ns->page-ns
-  {"clojure.core.reducers" "clojure.core"})
+  {"clojure.core.reducers" "clojure.core"
+   "clojure.spec.test" "clojure.spec"})
 
 (defn ns-url [ns-]
   (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html"))
@@ -174,7 +187,7 @@
         ;; get clojure.lang link
         (when (= "clojure.lang" ns-)
           (let [name- (or (lang-symbols->parent name-) name-)]
-            (str "https://github.com/clojure/clojure/blob/" *clj-tag* "/src/jvm/clojure/lang/" name- ".java")))
+            (str "https://github.com/clojure/clojure/blob/" (get-equiv-clj-tag) "/src/jvm/clojure/lang/" name- ".java")))
 
         ;; get official clojure api link
         (let [ns- (or (clj-ns->page-ns ns-) ns-)]
@@ -195,9 +208,10 @@
 
 (defn get-clj-symbol-equiv
   [item]
-  (let [clj-version (clj-tag->api-key *clj-tag*)
+  (let [clj-tag (get-equiv-clj-tag)
+        clj-version (clj-tag->api-key clj-tag)
         clj-symbol? (get @api-symbols clj-version)
-        lang-symbol? (get-lang-symbols! *clj-tag*)
+        lang-symbol? (get-lang-symbols! clj-tag)
         clj-sym (clj-lookup-name item)
         exists? (or (lang-symbol? clj-sym)
                     (clj-symbol? clj-sym))]
@@ -206,7 +220,8 @@
 
 (defn get-clj-ns-equiv
   [item]
-  (let [clj-version (clj-tag->api-key *clj-tag*)
+  (let [clj-tag (get-equiv-clj-tag)
+        clj-version (clj-tag->api-key clj-tag)
         clj-ns? (get @api-namespaces clj-version)
         ns- (:ns item)
         clj-ns (or (cljs-ns->clj ns-) ns-)
@@ -224,7 +239,8 @@
 
 (defn get-clojure-symbols-not-in-items
   [items]
-  (let [clj-symbols (into (get @api-symbols (clj-tag->api-key *clj-tag*))
-                          (get @lang-symbols *clj-tag*))
+  (let [clj-tag (get-equiv-clj-tag)
+        clj-symbols (into (get @api-symbols (clj-tag->api-key clj-tag))
+                          (get @lang-symbols clj-tag))
         cljs-symbols (set (map clj-lookup-name items))]
     (difference clj-symbols cljs-symbols)))

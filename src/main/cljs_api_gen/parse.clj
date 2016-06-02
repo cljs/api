@@ -34,6 +34,10 @@
 ;; which is used by cljs.repl. (the env namespace has to exist)
 (create-ns 'env)
 
+;; HACK: We need to create this so 'tools.reader' doesn't crash on `::spec/...`
+;; which is used by cljs.repl. (the env namespace has to exist)
+(create-ns 'spec)
+
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
@@ -71,6 +75,8 @@
     "clojure.reflect"       :normal
     "cljs.nodejs"           :normal
     "cljs.js"               :normal
+    "cljs.spec"             :normal
+    "cljs.spec.test"        :normal
 
     "cljs.core"             :custom
     "cljs.test"             :custom
@@ -135,7 +141,9 @@
         macro? (:macro attr-map)
         private? (or (#{'core/defn- 'defn-} (first form))
                      (:private meta-)
-                     (:private attr-map))
+                     (:private attr-map)
+                     (:skip-wiki meta-)
+                     (:skip-wiki attr-map))
         doc-forms (cond-> []
                     docstring (conj docstring)
                     attr-map (conj attr-map))
