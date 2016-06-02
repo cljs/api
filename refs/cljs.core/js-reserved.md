@@ -77,10 +77,10 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:jsdoc [\"@type {null|Object}\"]}\n  js-reserved nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10278 10280],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10278-L10280"},
+          :lines [10289 10291],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10289-L10291"},
  :full-name "cljs.core/js-reserved",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/js-reserved.cljsdoc"}
 

@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-mix-H1 [h1 k1]\n  (int (-> (int h1) (bit-xor (int k1)) (int-rotate-left 13) (imul 5) (+ (int 0xe6546b64)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [811 812],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L811-L812"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L811-L812"},
  :usage ["(m3-mix-H1 h1 k1)"],
  :full-name "cljs.core/m3-mix-H1",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/m3-mix-H1.cljsdoc"}

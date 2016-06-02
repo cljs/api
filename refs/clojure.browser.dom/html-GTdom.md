@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn html->dom [s]\n  (gdom/htmlToDocumentFragment s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [101 102],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/dom.cljs#L101-L102"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/dom.cljs#L101-L102"},
  :usage ["(html->dom s)"],
  :full-name "clojure.browser.dom/html->dom",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/html-GTdom.cljsdoc"}

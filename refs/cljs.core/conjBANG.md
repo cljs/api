@@ -119,10 +119,10 @@ The API data for this symbol:
  :source {:code "(defn conj!\n  ([] (transient []))\n  ([tcoll] tcoll)\n  ([tcoll val]\n    (-conj! tcoll val))\n  ([tcoll val & vals]\n    (let [ntcoll (-conj! tcoll val)]\n      (if vals\n        (recur ntcoll (first vals) (next vals))\n        ntcoll))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3498 3509],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3498-L3509"},
+          :lines [3504 3515],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3504-L3515"},
  :usage ["(conj!)"
          "(conj! tcoll)"
          "(conj! tcoll val)"

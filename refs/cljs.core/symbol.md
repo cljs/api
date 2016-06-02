@@ -30,6 +30,11 @@
 
 
 
+Source docstring:
+
+```
+Returns a Symbol with the given namespace and name.
+```
 
 
 Source code @ [github]():
@@ -109,12 +114,13 @@ The API data for this symbol:
  :source {:code "(defn symbol\n  ([name]\n   (if (symbol? name)\n     name\n     (let [idx (.indexOf name \"/\")]\n       (if (< idx 1)\n         (symbol nil name)\n         (symbol (.substring name 0 idx)\n                 (.substring name (inc idx) (. name -length)))))))\n  ([ns name]\n   (let [sym-str (if-not (nil? ns)\n                   (str ns \"/\" name)\n                   name)]\n     (Symbol. ns name sym-str nil nil))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [983 996],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L983-L996"},
+          :lines [985 999],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L985-L999"},
  :usage ["(symbol name)" "(symbol ns name)"],
  :full-name "cljs.core/symbol",
+ :docstring "Returns a Symbol with the given namespace and name.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/symbol.cljsdoc"}
 
 ```

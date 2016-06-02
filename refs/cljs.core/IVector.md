@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentVector</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentVector.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentVector</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IPersistentVector.java)
 </td>
 </tr>
 </table>
@@ -86,15 +86,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/IPersistentVector",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentVector.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IPersistentVector.java"},
  :full-name-encode "cljs.core/IVector",
  :source {:code "(defprotocol IVector\n  \"Protocol for adding vector functionality to collections.\"\n  (^clj -assoc-n [coll n val]\n    \"Returns a new vector with value val added at position n.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [560 563],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L560-L563"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L560-L563"},
  :methods [{:name "-assoc-n",
             :signature ["[coll n val]"],
             :docstring "Returns a new vector with value val added at position n."}],

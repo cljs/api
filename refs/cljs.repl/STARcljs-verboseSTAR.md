@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *cljs-verbose* false)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [37],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl.cljc#L37"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L37"},
  :full-name "cljs.repl/*cljs-verbose*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/STARcljs-verboseSTAR.cljsdoc"}
 

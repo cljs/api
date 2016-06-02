@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn array-list []\n  (ArrayList. (array)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8571 8572],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8571-L8572"},
+          :lines [8577 8578],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8577-L8578"},
  :usage ["(array-list)"],
  :full-name "cljs.core/array-list",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/array-list.cljsdoc"}

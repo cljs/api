@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2614 2622],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L2614-L2622"},
+          :lines [2617 2625],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L2617-L2625"},
  :usage ["(gen-apply-to)"],
  :full-name "cljs.core/gen-apply-to",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/gen-apply-to.cljsdoc"}

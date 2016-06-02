@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientAssociative</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientAssociative.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ITransientAssociative</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/ITransientAssociative.java)
 </td>
 </tr>
 </table>
@@ -87,15 +87,15 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/ITransientAssociative",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ITransientAssociative.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/ITransientAssociative.java"},
  :full-name-encode "cljs.core/ITransientAssociative",
  :source {:code "(defprotocol ITransientAssociative\n  \"Protocol for adding associativity to transient collections.\"\n  (^clj -assoc! [tcoll key val]\n    \"Returns a new transient collection of tcoll with a mapping from key to\n     val added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [687 691],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L687-L691"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L687-L691"},
  :methods [{:name "-assoc!",
             :signature ["[tcoll key val]"],
             :docstring "Returns a new transient collection of tcoll with a mapping from key to\n     val added to it."}],

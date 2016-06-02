@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(defn all-listeners [obj type capture])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [92],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/event.cljs#L92"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L92"},
  :usage ["(all-listeners obj type capture)"],
  :full-name "clojure.browser.event/all-listeners",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/all-listeners.cljsdoc"}

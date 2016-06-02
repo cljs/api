@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn unlisten\n  ([src type fn]\n     (unlisten src type fn false))\n  ([src type fn capture?]\n     (events/unlisten src\n                      (get (event-types src) type type)\n                      fn\n                      capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [64 71],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/event.cljs#L64-L71"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L64-L71"},
  :usage ["(unlisten src type fn)" "(unlisten src type fn capture?)"],
  :full-name "clojure.browser.event/unlisten",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/unlisten.cljsdoc"}

@@ -46,6 +46,21 @@ The rest of the symbols are in the following namespaces:
 <td>macros auto-imported into a ClojureScript REPL</td>
 </tr>
 <tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.spec-api.html)</td>
+<td>[cljs.spec](library/cljs.spec.md)</td>
+<td></td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.gen)</td>
+<td>[cljs.spec.impl.gen](library/cljs.spec.impl.gen.md)</td>
+<td></td>
+</tr>
+<tr>
+<td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test)</td>
+<td>[cljs.spec.test](library/cljs.spec.test.md)</td>
+<td></td>
+</tr>
+<tr>
 <td>[<img width="18px" valign="middle" src="http://i.imgur.com/1GjPKvB.png">](http://clojure.github.io/clojure/branch-master/clojure.test-api.html)</td>
 <td>[cljs.test](library/cljs.test.md)</td>
 <td>a unit-testing framework</td>

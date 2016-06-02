@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IWatchable\n  \"Protocol for types that can be watched. Currently only implemented by Atom.\"\n  (-notify-watches [this oldval newval]\n    \"Calls all watchers with this, oldval and newval.\")\n  (-add-watch [this key f]\n    \"Adds a watcher function f to this. Keys must be unique per reference,\n     and can be used to remove the watch with -remove-watch.\")\n  (-remove-watch [this key]\n    \"Removes watcher that corresponds to key from this.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [665 673],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L665-L673"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L665-L673"},
  :methods [{:name "-notify-watches",
             :signature ["[this oldval newval]"],
             :docstring "Calls all watchers with this, oldval and newval."}

@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro es6-iterable [ty]\n  `(aset (.-prototype ~ty) cljs.core/ITER_SYMBOL\n     (fn []\n       (this-as this#\n         (cljs.core/es6-iterator this#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2647 2651],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L2647-L2651"},
+          :lines [2650 2654],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L2650-L2654"},
  :usage ["(es6-iterable ty)"],
  :full-name "cljs.core/es6-iterable",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/es6-iterable.cljsdoc"}

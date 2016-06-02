@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn log-obj [obj]\n  (.log js/console obj))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [23 24],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/dom.cljs#L23-L24"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/dom.cljs#L23-L24"},
  :usage ["(log-obj obj)"],
  :full-name "clojure.browser.dom/log-obj",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/log-obj.cljsdoc"}

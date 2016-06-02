@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn chunk-rest [s]\n  (-chunked-rest s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3313 3314],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3313-L3314"},
+          :lines [3319 3320],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3319-L3320"},
  :usage ["(chunk-rest s)"],
  :full-name "cljs.core/chunk-rest",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunk-rest.cljsdoc"}

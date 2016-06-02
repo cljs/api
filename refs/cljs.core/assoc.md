@@ -173,10 +173,10 @@ The API data for this symbol:
  :source {:code "(defn assoc\n  ([coll k v]\n    (if-not (nil? coll)\n      (-assoc coll k v)\n      (hash-map k v)))\n  ([coll k v & kvs]\n     (let [ret (assoc coll k v)]\n       (if kvs\n         (recur ret (first kvs) (second kvs) (nnext kvs))\n         ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [1822 1835],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L1822-L1835"},
+          :lines [1828 1841],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L1828-L1841"},
  :usage ["(assoc coll k v)" "(assoc coll k v & kvs)"],
  :examples [{:id "2fa7e0",
              :content "```clj\n(def my-map {:foo 1})\n\n(assoc my-map :foo 2)\n;;=> {:foo 2}\n\n(assoc my-map :bar 2)\n;;=> {:foo 1 :bar 2}\n\n(assoc my-map :a 3 :b 4 :c 5 :d 6)\n;;=> {:foo 1 :a 3 :b 4 :c 5 :d 6}\n\n;; you must pass a value for every key\n(assoc my-map :foo)\n;;=> WARNING: Wrong number of args (2) passed to cljs.core/assoc\n```"}

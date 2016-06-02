@@ -99,10 +99,10 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentHashSet)\n  (fn [items ^boolean no-clone]\n    (let [len (alength items)]\n      (if (<= len (.-HASHMAP-THRESHOLD PersistentArrayMap))\n        (let [arr (if no-clone items (aclone items))]\n          (loop [i 0\n                 out (transient (.-EMPTY PersistentArrayMap))]\n            (if (< i len)\n              (recur (inc i) (-assoc! out (aget items i) nil))\n              (PersistentHashSet. nil (-persistent! out) nil))))\n       (loop [i 0\n              out (transient (.-EMPTY PersistentHashSet))]\n         (if (< i len)\n           (recur (inc i) (-conj! out (aget items i)))\n           (-persistent! out)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8288 8302],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8288-L8302"},
+          :lines [8294 8308],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8294-L8308"},
  :usage ["(PersistentHashSet.fromArray items no-clone)"],
  :full-name "cljs.core/PersistentHashSet.fromArray",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashSetDOTfromArray.cljsdoc"}

@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defn ns-name [ns-obj]\n  (.-name ns-obj))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10447 10448],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10447-L10448"},
+          :lines [10458 10459],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10458-L10459"},
  :usage ["(ns-name ns-obj)"],
  :full-name "cljs.core/ns-name",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ns-name.cljsdoc"}

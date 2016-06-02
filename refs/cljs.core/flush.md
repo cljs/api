@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defn flush [] ;stub\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9014 9015],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L9014-L9015"},
+          :lines [9022 9023],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9022-L9023"},
  :usage ["(flush)"],
  :full-name "cljs.core/flush",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/flush.cljsdoc"}

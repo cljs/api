@@ -7,7 +7,7 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2496"><img valign="middle" alt="[+] 0.0-2496" title="Added in 0.0-2496" src="https://img.shields.io/badge/+-0.0--2496-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Volatile</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Volatile.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Volatile</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Volatile.java)
 </td>
 </tr>
 </table>
@@ -99,16 +99,16 @@ The API data for this symbol:
  :history [["+" "0.0-2496"]],
  :type "type",
  :clj-equiv {:full-name "clojure.lang/Volatile",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Volatile.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Volatile.java"},
  :related ["cljs.core/volatile!" "cljs.core/volatile?"],
  :full-name-encode "cljs.core/Volatile",
  :source {:code "(deftype Volatile [^:mutable state]\n  IVolatile\n  (-vreset! [_ new-state]\n    (set! state new-state))\n\n  IDeref\n  (-deref [_] state))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4184 4190],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L4184-L4190"},
+          :lines [4190 4196],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L4190-L4196"},
  :usage ["(Volatile. state)"],
  :full-name "cljs.core/Volatile",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Volatile.cljsdoc"}

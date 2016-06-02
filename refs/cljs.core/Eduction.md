@@ -106,10 +106,10 @@ The API data for this symbol:
  :source {:code "(deftype Eduction [xform coll]\n  Object\n  (indexOf [coll x]\n    (-indexOf coll x 0))\n  (indexOf [coll x start]\n    (-indexOf coll x start))\n  (lastIndexOf [coll x]\n    (-lastIndexOf coll x (count coll)))\n  (lastIndexOf [coll x start]\n    (-lastIndexOf coll x start))\n\n  ISequential\n\n  ISeqable\n  (-seq [_] (seq (sequence xform coll)))\n\n  IReduce\n  (-reduce [_ f] (transduce xform (completing f) coll))\n  (-reduce [_ f init] (transduce xform (completing f) init coll))\n\n  IPrintWithWriter\n  (-pr-writer [coll writer opts]\n    (pr-sequential-writer writer pr-writer \"(\" \" \" \")\" opts coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9503 9525],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L9503-L9525"},
+          :lines [9512 9534],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9512-L9534"},
  :usage ["(Eduction. xform coll)"],
  :full-name "cljs.core/Eduction",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Eduction.cljsdoc"}

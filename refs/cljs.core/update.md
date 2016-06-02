@@ -130,10 +130,10 @@ The API data for this symbol:
  :source {:code "(defn update\n  ([m k f]\n   (assoc m k (f (get m k))))\n  ([m k f x]\n   (assoc m k (f (get m k) x)))\n  ([m k f x y]\n   (assoc m k (f (get m k) x y)))\n  ([m k f x y z]\n   (assoc m k (f (get m k) x y z)))\n  ([m k f x y z & more]\n   (assoc m k (apply f (get m k) x y z more))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4729 4743],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L4729-L4743"},
+          :lines [4735 4749],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L4735-L4749"},
  :usage ["(update m k f)"
          "(update m k f x)"
          "(update m k f x y)"

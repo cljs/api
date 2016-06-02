@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(set! (.-HASHMAP-THRESHOLD PersistentArrayMap) 8)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [6180],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L6180"},
+          :lines [6186],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L6186"},
  :full-name "cljs.core/PersistentArrayMap.HASHMAP-THRESHOLD",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentArrayMapDOTHASHMAP-THRESHOLD.cljsdoc"}
 

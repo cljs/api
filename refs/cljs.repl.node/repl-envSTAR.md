@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(defn repl-env* [options]\n  (let [{:keys [host port debug-port]}\n        (merge\n          {:host \"localhost\"\n           :port (+ 49000 (rand-int 10000))}\n          options)]\n    (assoc (NodeEnv. host port (atom nil) (atom nil))\n      :debug-port debug-port)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [211 218],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/node.clj#L211-L218"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/node.clj#L211-L218"},
  :usage ["(repl-env* options)"],
  :full-name "cljs.repl.node/repl-env*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/repl-envSTAR.cljsdoc"}

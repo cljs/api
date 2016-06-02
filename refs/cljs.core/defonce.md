@@ -26,12 +26,19 @@
 
 
 
+Source docstring:
+
+```
+defs name to have the root value of init iff the named var has no root value,
+else init is unevaluated
+```
 
 
 Source code @ [github]():
 
 ```clj
-(core/defmacro defonce [x init]
+(core/defmacro defonce
+  [x init]
   `(when-not (exists? ~x)
      (def ~x ~init)))
 ```
@@ -91,15 +98,16 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.core/defonce",
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/defonce"},
  :full-name-encode "cljs.core/defonce",
- :source {:code "(core/defmacro defonce [x init]\n  `(when-not (exists? ~x)\n     (def ~x ~init)))",
+ :source {:code "(core/defmacro defonce\n  [x init]\n  `(when-not (exists? ~x)\n     (def ~x ~init)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [603 605],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L603-L605"},
+          :lines [603 608],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L603-L608"},
  :usage ["(defonce x init)"],
  :full-name "cljs.core/defonce",
+ :docstring "defs name to have the root value of init iff the named var has no root value,\nelse init is unevaluated",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/defonce.cljsdoc"}
 
 ```

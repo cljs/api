@@ -83,10 +83,10 @@ The API data for this symbol:
  :source {:code "(def ^String bootjs\n  (str \"var global = this;\\n\"\n       \"var CLOSURE_IMPORT_SCRIPT = function(src) {\\n\"\n       \"    var ns = \\\"cljs.repl.rhino\\\",\"\n       \"        name = \\\"load-file\\\",\"\n       \"        loadFile = Packages.clojure.lang.RT[\\\"var\\\"](ns,name);\\n\"\n       \"    if(src) loadFile.invoke(___repl_env, __repl_opts, src);\\n\"\n       \"};\\n\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [23 30],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/rhino.clj#L23-L30"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/rhino.clj#L23-L30"},
  :full-name "cljs.repl.rhino/bootjs",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/bootjs.cljsdoc"}
 

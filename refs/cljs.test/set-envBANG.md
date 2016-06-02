@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn set-env! [new-env]\n  (set! *current-env* new-env))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [277 278],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljs#L277-L278"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljs#L277-L278"},
  :usage ["(set-env! new-env)"],
  :full-name "cljs.test/set-env!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/set-envBANG.cljsdoc"}

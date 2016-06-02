@@ -32,10 +32,12 @@ Source code @ [github]():
   (when (> string-hash-cache-count 255)
     (set! string-hash-cache (js-obj))
     (set! string-hash-cache-count 0))
-  (let [h (aget string-hash-cache k)]
-    (if (number? h)
-      h
-      (add-to-string-hash-cache k))))
+  (if (nil? k)
+    0
+    (let [h (aget string-hash-cache k)]
+      (if (number? h)
+        h
+        (add-to-string-hash-cache k)))))
 ```
 
 <!--
@@ -88,13 +90,13 @@ The API data for this symbol:
  :history [["+" "0.0-2261"]],
  :type "function",
  :full-name-encode "cljs.core/hash-string",
- :source {:code "(defn hash-string [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (let [h (aget string-hash-cache k)]\n    (if (number? h)\n      h\n      (add-to-string-hash-cache k))))",
+ :source {:code "(defn hash-string [k]\n  (when (> string-hash-cache-count 255)\n    (set! string-hash-cache (js-obj))\n    (set! string-hash-cache-count 0))\n  (if (nil? k)\n    0\n    (let [h (aget string-hash-cache k)]\n      (if (number? h)\n        h\n        (add-to-string-hash-cache k)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [870 877],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L870-L877"},
+          :lines [870 879],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L870-L879"},
  :usage ["(hash-string k)"],
  :full-name "cljs.core/hash-string",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-string.cljsdoc"}

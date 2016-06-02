@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IPrettyFlush\n  (-ppflush [pp]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [144 145],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L144-L145"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L144-L145"},
  :methods [{:name "-ppflush", :signature ["[pp]"], :docstring nil}],
  :full-name "cljs.pprint/IPrettyFlush",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/IPrettyFlush.cljsdoc"}

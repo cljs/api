@@ -83,10 +83,10 @@ The API data for this symbol:
  :source {:code "(def mime-type->encoding\n  {\"text/html\" \"UTF-8\"\n   \"text/css\" \"UTF-8\"\n   \"image/jpeg\" \"ISO-8859-1\"\n   \"image/png\" \"ISO-8859-1\"\n   \"image/gif\" \"ISO-8859-1\"\n   \"text/javascript\" \"UTF-8\"\n   \"text/x-clojure\" \"UTF-8\"\n   \"application/json\" \"UTF-8\"})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [44 52],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/browser.clj#L44-L52"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/browser.clj#L44-L52"},
  :full-name "cljs.repl.browser/mime-type->encoding",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/mime-type-GTencoding.cljsdoc"}
 

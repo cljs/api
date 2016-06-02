@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn set-pprint-dispatch\n  [function]\n  (set! *print-pprint-dispatch* function)\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [824 827],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L824-L827"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L824-L827"},
  :usage ["(set-pprint-dispatch function)"],
  :full-name "cljs.pprint/set-pprint-dispatch",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/set-pprint-dispatch.cljsdoc"}

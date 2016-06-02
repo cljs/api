@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ILookup</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ILookup.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/ILookup</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/ILookup.java)
 </td>
 </tr>
 </table>
@@ -87,15 +87,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/ILookup",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/ILookup.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/ILookup.java"},
  :full-name-encode "cljs.core/ILookup",
  :source {:code "(defprotocol ILookup\n  \"Protocol for looking up a value in a data structure.\"\n  (-lookup [o k] [o k not-found]\n    \"Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [517 521],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L517-L521"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L517-L521"},
  :methods [{:name "-lookup",
             :signature ["[o k]" "[o k not-found]"],
             :docstring "Use k to look up a value in o. If not-found is supplied and k is not\n     a valid value that can be used for look up, not-found is returned."}],

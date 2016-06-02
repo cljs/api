@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn ^boolean macro-terminating? [ch]\n  (and (not (identical? ch \"#\"))\n       (not (identical? ch \\'))\n       (not (identical? ch \":\"))\n       (macros ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [73 77],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L73-L77"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L73-L77"},
  :usage ["(macro-terminating? ch)"],
  :full-name "cljs.reader/macro-terminating?",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/macro-terminatingQMARK.cljsdoc"}

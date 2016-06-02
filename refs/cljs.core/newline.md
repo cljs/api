@@ -30,6 +30,11 @@
 
 
 
+Source docstring:
+
+```
+Prints a newline using *print-fn*
+```
 
 
 Source code @ [github]():
@@ -101,12 +106,13 @@ The API data for this symbol:
  :source {:code "(defn newline\n  ([] (newline nil))\n  ([opts]\n   (string-print \"\\n\")\n   (when (get opts :flush-on-newline)\n     (flush))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9160 9165],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L9160-L9165"},
+          :lines [9168 9174],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9168-L9174"},
  :usage ["(newline)" "(newline opts)"],
  :full-name "cljs.core/newline",
+ :docstring "Prints a newline using *print-fn*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/newline.cljsdoc"}
 
 ```

@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def order (atom 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/repl.cljs",
           :lines [88],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/repl.cljs#L88"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/repl.cljs#L88"},
  :full-name "clojure.browser.repl/order",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.repl/order.cljsdoc"}
 

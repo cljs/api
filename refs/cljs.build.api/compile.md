@@ -102,10 +102,10 @@ The API data for this symbol:
  :source {:code "(defn compile\n  ([opts compilable]\n   (compile\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     opts compilable))\n  ([state opts compilable]\n   (env/with-compiler-env state\n     (closure/compile compilable opts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [176 186],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/build/api.clj#L176-L186"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/build/api.clj#L176-L186"},
  :usage ["(compile opts compilable)"
          "(compile state opts compilable)"],
  :full-name "cljs.build.api/compile",

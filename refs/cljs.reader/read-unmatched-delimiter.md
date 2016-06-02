@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn read-unmatched-delimiter\n  [rdr ch]\n  (reader-error rdr \"Unmatched delimiter \" ch))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [260 262],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L260-L262"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L260-L262"},
  :usage ["(read-unmatched-delimiter rdr ch)"],
  :full-name "cljs.reader/read-unmatched-delimiter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-unmatched-delimiter.cljsdoc"}

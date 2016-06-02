@@ -148,10 +148,10 @@ The API data for this symbol:
  :source {:code "(defn partition\n  ([n coll]\n     (partition n n coll))\n  ([n step coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (when (== n (count p))\n             (cons p (partition n step (drop step s))))))))\n  ([n step pad coll]\n     (lazy-seq\n       (when-let [s (seq coll)]\n         (let [p (take n s)]\n           (if (== n (count p))\n             (cons p (partition n step pad (drop step s)))\n             (list (take n (concat p pad)))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [4650 4670],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L4650-L4670"},
+          :lines [4656 4676],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L4656-L4676"},
  :usage ["(partition n coll)"
          "(partition n step coll)"
          "(partition n step pad coll)"],

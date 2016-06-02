@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn shorts [x] x)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2551],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L2551"},
+          :lines [2557],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L2557"},
  :usage ["(shorts x)"],
  :full-name "cljs.core/shorts",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/shorts.cljsdoc"}

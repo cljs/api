@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn string-iter [x]\n  (StringIter. x 0))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3648 3649],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3648-L3649"},
+          :lines [3654 3655],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3654-L3655"},
  :usage ["(string-iter x)"],
  :full-name "cljs.core/string-iter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/string-iter.cljsdoc"}

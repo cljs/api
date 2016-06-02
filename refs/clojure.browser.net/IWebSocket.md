@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IWebSocket\n  (open? [this]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [143 144],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/net.cljs#L143-L144"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/net.cljs#L143-L144"},
  :methods [{:name "open?", :signature ["[this]"], :docstring nil}],
  :full-name "clojure.browser.net/IWebSocket",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/IWebSocket.cljsdoc"}

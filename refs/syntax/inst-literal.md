@@ -166,17 +166,17 @@ The API data for this symbol:
  :extra-sources ({:code "   (defn read-inst\n     [form]\n     (when-not (string? form)\n       (throw (RuntimeException. \"Instance literal expects a string for its timestamp.\")))\n     (try\n       (inst/read-instant-date form)\n       (catch Throwable e\n         (throw (RuntimeException. (.getMessage e)))))))",
                   :title "Reader code",
                   :repo "clojurescript",
-                  :tag "r1.8.51",
+                  :tag "r1.9.14",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
                   :lines [36 43],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/tagged_literals.cljc#L36-L43"}
+                  :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/tagged_literals.cljc#L36-L43"}
                  {:code "(def ^:dynamic *cljs-data-readers*\n  {'queue read-queue\n   'uuid  read-uuid\n   'inst  read-inst\n   'js    read-js})",
                   :title "Reader table",
                   :repo "clojurescript",
-                  :tag "r1.8.51",
+                  :tag "r1.9.14",
                   :filename "src/main/clojure/cljs/tagged_literals.cljc",
                   :lines [79 83],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/tagged_literals.cljc#L79-L83"}),
+                  :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/tagged_literals.cljc#L79-L83"}),
  :usage ["#inst \"yyyy-mm-dd\""
          "#inst \"yyyy-mm-ddThh:mm:ss\""
          "#inst \"yyyy-mm-ddThh:mm:ssZ\""

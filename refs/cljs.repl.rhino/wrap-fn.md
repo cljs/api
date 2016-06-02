@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn wrap-fn [form]\n  (cond\n    (and (seq? form) (= 'ns (first form))) identity\n    ('#{*1 *2 *3 *e} form) (fn [x] `(cljs.core.pr-str ~x))\n    :else\n    (fn [x]\n      `(cljs.core.pr-str\n         (let [ret# ~x]\n           (set! *3 *2)\n           (set! *2 *1)\n           (set! *1 ret#)\n           ret#)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [160 171],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/rhino.clj#L160-L171"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/rhino.clj#L160-L171"},
  :usage ["(wrap-fn form)"],
  :full-name "cljs.repl.rhino/wrap-fn",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/wrap-fn.cljsdoc"}

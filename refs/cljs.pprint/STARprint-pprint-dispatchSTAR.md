@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defonce ^:dynamic\n ^{:doc \"The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.\"\n   :added \"1.2\"}\n *print-pprint-dispatch* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [619 623],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L619-L623"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L619-L623"},
  :full-name "cljs.pprint/*print-pprint-dispatch*",
  :docstring "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-pprint-dispatchSTAR.cljsdoc"}

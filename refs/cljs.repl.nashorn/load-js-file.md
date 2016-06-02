@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn load-js-file [engine file]\n      (eval-str engine (format \"nashorn_load(\\\"%s\\\");\" file)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [75 76],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/nashorn.clj#L75-L76"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/nashorn.clj#L75-L76"},
  :usage ["(load-js-file engine file)"],
  :full-name "cljs.repl.nashorn/load-js-file",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/load-js-file.cljsdoc"}

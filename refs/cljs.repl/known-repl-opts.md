@@ -80,10 +80,10 @@ The API data for this symbol:
  :source {:code "(def known-repl-opts\n  \"Set of all known REPL options.\"\n  #{:analyze-path :bind-err :caught :compiler-env :def-emits-var :eval :flush\n    :init :need-prompt :print :print-no-newline :prompt :quit-prompt :read\n    :reader :repl-requires :repl-verbose :source-map-inline :watch :watch-fn\n    :wrap})",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [40 45],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl.cljc#L40-L45"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L40-L45"},
  :full-name "cljs.repl/known-repl-opts",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/known-repl-opts.cljsdoc"}
 

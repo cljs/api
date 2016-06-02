@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn eval-str [^ScriptEngine engine ^String s]\n      (.eval engine s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [45 46],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/nashorn.clj#L45-L46"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/nashorn.clj#L45-L46"},
  :usage ["(eval-str engine s)"],
  :full-name "cljs.repl.nashorn/eval-str",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/eval-str.cljsdoc"}

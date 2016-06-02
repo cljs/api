@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def DEMUNGE_PATTERN nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [337],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L337"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L337"},
  :full-name "cljs.core/DEMUNGE_PATTERN",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/DEMUNGE_PATTERN.cljsdoc"}
 

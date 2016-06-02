@@ -121,10 +121,10 @@ The API data for this symbol:
  :source {:code "   (defn analyze\n     ([env form] (analyze env form nil))\n     ([env form name] (analyze env form name nil))\n     ([env form name opts]\n      (analyze\n        (if-not (nil? env/*compiler*)\n          env/*compiler*\n          (env/default-compiler-env opts))\n        env form name opts))\n     ([state env form name opts]\n      (env/with-compiler-env state\n        (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n          (ana/analyze env form name opts))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/analyzer/api.cljc",
           :lines [69 87],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/analyzer/api.cljc#L69-L87"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer/api.cljc#L69-L87"},
  :usage ["(analyze env form)"
          "(analyze env form name)"
          "(analyze env form name opts)"

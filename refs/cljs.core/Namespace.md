@@ -7,7 +7,7 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/1.7.10"><img valign="middle" alt="[+] 1.7.10" title="Added in 1.7.10" src="https://img.shields.io/badge/+-1.7.10-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Namespace</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Namespace.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Namespace</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Namespace.java)
 </td>
 </tr>
 </table>
@@ -105,15 +105,15 @@ The API data for this symbol:
  :history [["+" "1.7.10"]],
  :type "type",
  :clj-equiv {:full-name "clojure.lang/Namespace",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Namespace.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Namespace.java"},
  :full-name-encode "cljs.core/Namespace",
  :source {:code "(deftype Namespace [obj name]\n  Object\n  (findInternedVar [this sym]\n    (let [k (munge (str sym))]\n      (when ^boolean (gobject/containsKey obj k)\n        (let [var-sym (symbol (str name) (str sym))\n              var-meta {:ns this}]\n          (Var. (ns-lookup obj k) var-sym var-meta)))))\n  (getName [_] name)\n  (toString [_]\n    (str name))\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Namespace other)\n      (= name (.-name other))\n      false))\n  IHash\n  (-hash [_]\n    (hash name)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10354 10372],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10354-L10372"},
+          :lines [10365 10383],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10365-L10383"},
  :usage ["(Namespace. obj name)"],
  :full-name "cljs.core/Namespace",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Namespace.cljsdoc"}

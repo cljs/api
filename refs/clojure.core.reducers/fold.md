@@ -121,10 +121,10 @@ The API data for this symbol:
  :source {:code "(defn fold\n  ([reducef coll] (fold reducef reducef coll))\n  ([combinef reducef coll] (fold 512 combinef reducef coll))\n  ([n combinef reducef coll]\n     (coll-fold coll n combinef reducef)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/core/reducers.cljs",
           :lines [49 64],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/core/reducers.cljs#L49-L64"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/core/reducers.cljs#L49-L64"},
  :usage ["(fold reducef coll)"
          "(fold combinef reducef coll)"
          "(fold n combinef reducef coll)"],

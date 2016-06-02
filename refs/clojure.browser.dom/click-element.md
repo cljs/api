@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn click-element\n  [e]\n  (.click (ensure-element e) ()))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [147 149],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/dom.cljs#L147-L149"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/dom.cljs#L147-L149"},
  :usage ["(click-element e)"],
  :full-name "clojure.browser.dom/click-element",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/click-element.cljsdoc"}

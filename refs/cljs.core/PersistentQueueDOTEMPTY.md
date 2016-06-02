@@ -7,7 +7,7 @@
 <td>var</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentQueue.EMPTY</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentQueue.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/PersistentQueue.EMPTY</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/PersistentQueue.java)
 </td>
 </tr>
 </table>
@@ -79,15 +79,15 @@ The API data for this symbol:
  :parent-type "PersistentQueue",
  :type "var",
  :clj-equiv {:full-name "clojure.lang/PersistentQueue.EMPTY",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/PersistentQueue.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/PersistentQueue.java"},
  :full-name-encode "cljs.core/PersistentQueueDOTEMPTY",
  :source {:code "(set! (.-EMPTY PersistentQueue) (PersistentQueue. nil 0 nil [] empty-ordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5641],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L5641"},
+          :lines [5647],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L5647"},
  :full-name "cljs.core/PersistentQueue.EMPTY",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentQueueDOTEMPTY.cljsdoc"}
 

@@ -94,10 +94,10 @@ The API data for this symbol:
  :source {:code "(def ^{:doc\n  \"Prints the object(s) using string-print.\n  print and println produce output for human consumption.\"}\n  print\n  (fn cljs-core-print [& objs]\n    (pr-with-opts objs (assoc (pr-opts) :readably false))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [9185 9190],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L9185-L9190"},
+          :lines [9194 9199],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9194-L9199"},
  :full-name "cljs.core/print",
  :docstring "Prints the object(s) using string-print.\nprint and println produce output for human consumption.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/print.cljsdoc"}

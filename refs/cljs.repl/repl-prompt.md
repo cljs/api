@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn repl-prompt []\n  (print (str ana/*cljs-ns* \"=> \")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [742 743],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl.cljc#L742-L743"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L742-L743"},
  :usage ["(repl-prompt)"],
  :full-name "cljs.repl/repl-prompt",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/repl-prompt.cljsdoc"}

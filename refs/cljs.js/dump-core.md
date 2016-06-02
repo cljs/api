@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defmacro dump-core []\n  (let [state @env/*compiler*]\n    (if-not (false? (get-in state [:options :dump-core]))\n      `(quote ~(get-in state [::ana/namespaces 'cljs.core]))\n      `(hash-map))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/js.clj",
           :lines [20 24],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/js.clj#L20-L24"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/js.clj#L20-L24"},
  :usage ["(dump-core)"],
  :full-name "cljs.js/dump-core",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/dump-core.cljsdoc"}

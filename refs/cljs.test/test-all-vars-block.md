@@ -105,10 +105,10 @@ The API data for this symbol:
  :source {:code "(defmacro test-all-vars-block\n  ([[quote ns]]\n   `(let [env# (cljs.test/get-current-env)]\n      (concat\n       [(fn []\n          (when (nil? env#)\n            (cljs.test/set-env! (cljs.test/empty-env)))\n          ~(when (ana-api/ns-resolve ns 'cljs-test-once-fixtures)\n             `(cljs.test/update-current-env! [:once-fixtures] assoc '~ns\n                                             ~(symbol (name ns) \"cljs-test-once-fixtures\")))\n          ~(when (ana-api/ns-resolve ns 'cljs-test-each-fixtures)\n             `(cljs.test/update-current-env! [:each-fixtures] assoc '~ns\n                                             ~(symbol (name ns) \"cljs-test-each-fixtures\"))))]\n       (cljs.test/test-vars-block\n        [~@(->> (ana-api/ns-interns ns)\n                (filter (fn [[_ v]] (:test v)))\n                (sort-by (fn [[_ v]] (:line v)))\n                (map (fn [[k _]]\n                       `(var ~(symbol (name ns) (name k))))))])\n       [(fn []\n          (when (nil? env#)\n            (cljs.test/clear-env!)))]))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/test.cljc",
           :lines [312 333],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L312-L333"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljc#L312-L333"},
  :usage ["(test-all-vars-block [quote ns])"],
  :full-name "cljs.test/test-all-vars-block",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/test-all-vars-block.cljsdoc"}

@@ -110,10 +110,10 @@ The API data for this symbol:
  :source {:code "   (core/defmacro import-macros [ns [& vars]]\n     (core/let [ns (find-ns ns)\n                vars (map #(ns-resolve ns %) vars)\n                syms (map\n                       (core/fn [^clojure.lang.Var v]\n                         (core/-> v .sym\n                           (with-meta\n                             (merge\n                               {:macro true}\n                               (update-in (select-keys (meta v) [:arglists :doc :file :line])\n                                 [:arglists] (core/fn [arglists] `(quote ~arglists)))))))\n                       vars)\n                defs (map\n                       (core/fn [sym var]\n                         (core/let [{:keys [arglists doc file line]} (meta sym)]\n                           `(do\n                              (def ~sym (deref ~var))\n                              ;for AOT compilation\n                              (alter-meta! (var ~sym) assoc\n                                :macro true\n                                :arglists ~arglists\n                                :doc ~doc\n                                :file ~file\n                                :line ~line))))\n                       syms vars)]\n       `(do ~@defs\n            :imported))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/core.cljc",
           :lines [60 86],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L60-L86"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L60-L86"},
  :usage ["(import-macros ns [& vars])"],
  :full-name "cljs.core/import-macros",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/import-macros.cljsdoc"}

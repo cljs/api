@@ -79,10 +79,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *tag-table*\n  (atom {\"inst\"  read-date\n         \"uuid\"  read-uuid\n         \"queue\" read-queue\n         \"js\"    read-js}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [585 589],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L585-L589"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L585-L589"},
  :full-name "cljs.reader/*tag-table*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/STARtag-tableSTAR.cljsdoc"}
 

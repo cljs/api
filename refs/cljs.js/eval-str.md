@@ -142,10 +142,10 @@ The API data for this symbol:
  :source {:code "(defn eval-str\n  ([state source cb]\n   (eval-str state source nil cb))\n  ([state source name cb]\n   (eval-str state source name nil cb))\n  ([state source name opts cb]\n   {:pre [(atom? state) (string? source)\n          (valid-name? name) (valid-opts? opts) (fn? cb)]}\n   (eval-str*\n     {:*compiler*     state\n      :*data-readers* tags/*cljs-data-readers*\n      :*analyze-deps* (:analyze-deps opts true)\n      :*load-macros*  (:load-macros opts true)\n      :*load-fn*      (or (:load opts) *load-fn*)\n      :*eval-fn*      (or (:eval opts) *eval-fn*)}\n     source name opts cb)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [784 828],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/js.cljs#L784-L828"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/js.cljs#L784-L828"},
  :usage ["(eval-str state source cb)"
          "(eval-str state source name cb)"
          "(eval-str state source name opts cb)"],

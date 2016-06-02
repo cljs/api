@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn hash-combine [seed hash]\n  ; a la boost\n  (bit-xor seed\n    (+ hash 0x9e3779b9\n      (bit-shift-left seed 6)\n      (bit-shift-right seed 2))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [912 917],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L912-L917"},
+          :lines [914 919],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L914-L919"},
  :usage ["(hash-combine seed hash)"],
  :full-name "cljs.core/hash-combine",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/hash-combine.cljsdoc"}

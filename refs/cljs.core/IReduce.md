@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IReduce</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IReduce.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IReduce</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IReduce.java)
 </td>
 </tr>
 </table>
@@ -90,15 +90,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/IReduce",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IReduce.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IReduce.java"},
  :full-name-encode "cljs.core/IReduce",
  :source {:code "(defprotocol IReduce\n  \"Protocol for seq types that can reduce themselves.\n  Called by cljs.core/reduce.\"\n  (-reduce [coll f] [coll f start]\n    \"f should be a function of 2 arguments. If start is not supplied,\n     returns the result of applying f to the first 2 items in coll, then\n     applying f to that result and the 3rd item, etc.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [583 589],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L583-L589"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L583-L589"},
  :methods [{:name "-reduce",
             :signature ["[coll f]" "[coll f start]"],
             :docstring "f should be a function of 2 arguments. If start is not supplied,\n     returns the result of applying f to the first 2 items in coll, then\n     applying f to that result and the 3rd item, etc."}],

@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn enable-util-print! []\n  (set! *print-newline* false)\n  (set! *print-fn*\n    (fn [& args]\n      (.apply (.-log js/console) js/console (into-array args))))\n  (set! *print-err-fn*\n    (fn [& args]\n      (.apply (.-error js/console) js/console (into-array args))))\n  nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/nodejs.cljs",
           :lines [18 26],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/nodejs.cljs#L18-L26"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/nodejs.cljs#L18-L26"},
  :usage ["(enable-util-print!)"],
  :full-name "cljs.nodejs/enable-util-print!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/enable-util-printBANG.cljsdoc"}

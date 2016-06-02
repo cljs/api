@@ -90,10 +90,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n ^{:doc \"Bind to true if you want write to use pretty printing\"}\n *print-pretty* true)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [615 617],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L615-L617"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L615-L617"},
  :full-name "cljs.pprint/*print-pretty*",
  :docstring "Bind to true if you want write to use pretty printing",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-prettySTAR.cljsdoc"}

@@ -7,7 +7,7 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-3255"><img valign="middle" alt="[+] 0.0-3255" title="Added in 0.0-3255" src="https://img.shields.io/badge/+-0.0--3255-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TaggedLiteral</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/TaggedLiteral.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/TaggedLiteral</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/TaggedLiteral.java)
 </td>
 </tr>
 </table>
@@ -115,15 +115,15 @@ The API data for this symbol:
  :history [["+" "0.0-3255"]],
  :type "type",
  :clj-equiv {:full-name "clojure.lang/TaggedLiteral",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/TaggedLiteral.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/TaggedLiteral.java"},
  :full-name-encode "cljs.core/TaggedLiteral",
  :source {:code "(deftype TaggedLiteral [tag form]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IEquiv\n  (-equiv [this other]\n    (and (instance? TaggedLiteral other)\n         (= tag (.-tag other))\n         (= form (.-form other))))\n\n  IHash\n  (-hash [this]\n    (+ (* 31 (hash tag))\n       (hash form)))\n\n  ILookup\n  (-lookup [this v]\n    (-lookup this v nil))\n  (-lookup [this v not-found]\n    (case v\n      :tag tag\n      :form form\n      not-found))\n\n  IPrintWithWriter\n  (-pr-writer [o writer opts]\n    (-write writer (str \"#\" tag \" \"))\n    (pr-writer form writer opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10218 10246],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10218-L10246"},
+          :lines [10229 10257],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10229-L10257"},
  :usage ["(TaggedLiteral. tag form)"],
  :full-name "cljs.core/TaggedLiteral",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TaggedLiteral.cljsdoc"}

@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn read-meta\n  [rdr _]\n  (let [m (desugar-meta (read rdr true nil true))]\n    (when-not (map? m)\n      (reader-error rdr \"Metadata must be Symbol,Keyword,String or Map\"))\n    (let [o (read rdr true nil true)]\n      (if (satisfies? IWithMeta o)\n        (with-meta o (merge (meta o) m))\n        (reader-error rdr \"Metadata can only be applied to IWithMetas\")))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [386 394],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L386-L394"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L386-L394"},
  :usage ["(read-meta rdr _)"],
  :full-name "cljs.reader/read-meta",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-meta.cljsdoc"}

@@ -21,6 +21,7 @@ symbols that are not yet ported to ClojureScript:
 - [clojure.main](#clojuremain)
 - [clojure.reflect](#clojurereflect)
 - [clojure.repl](#clojurerepl)
+- [clojure.spec.gen](#clojurespecgen)
 - [clojure.stacktrace](#clojurestacktrace)
 - [clojure.string](#clojurestring)
 - [clojure.template](#clojuretemplate)
@@ -480,10 +481,6 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.core/loaded-libs](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/loaded-libs)</samp></td>
-</tr>
-<tr>
-<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
-<td><samp>[clojure.core/locking](http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/locking)</samp></td>
 </tr>
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
@@ -1527,6 +1524,15 @@ symbols that are not yet ported to ClojureScript:
 <tr>
 <td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
 <td><samp>[clojure.repl/thread-stopper](http://clojure.github.io/clojure/branch-master/clojure.repl-api.html#clojure.repl/thread-stopper)</samp></td>
+</tr>
+</table>
+
+## clojure.spec.gen
+
+ <table>
+<tr>
+<td><img width="20px" height="20px" valign="middle" src="http://i.imgur.com/sWBgjc6.png"></td>
+<td><samp>[clojure.spec.gen/gen-for-name](http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.gen/gen-for-name)</samp></td>
 </tr>
 </table>
 

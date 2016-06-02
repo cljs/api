@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn js-filename [stack-element]\n  (first (.split (last (.split stack-element \"/out/\")) \":\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [372 373],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljs#L372-L373"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljs#L372-L373"},
  :usage ["(js-filename stack-element)"],
  :full-name "cljs.test/js-filename",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/js-filename.cljsdoc"}

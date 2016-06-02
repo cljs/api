@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn read-vector\n  [rdr _]\n  (read-delimited-list \"]\" rdr true))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [270 272],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L270-L272"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L270-L272"},
  :usage ["(read-vector rdr _)"],
  :full-name "cljs.reader/read-vector",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-vector.cljsdoc"}

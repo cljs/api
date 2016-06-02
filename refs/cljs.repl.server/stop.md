@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn stop []\n  (.close (:socket @state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [180 181],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/server.clj#L180-L181"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/server.clj#L180-L181"},
  :usage ["(stop)"],
  :full-name "cljs.repl.server/stop",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/stop.cljsdoc"}

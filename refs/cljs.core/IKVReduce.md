@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-1211"><img valign="middle" alt="[+] 0.0-1211" title="Added in 0.0-1211" src="https://img.shields.io/badge/+-0.0--1211-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IKVReduce</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IKVReduce.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IKVReduce</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IKVReduce.java)
 </td>
 </tr>
 </table>
@@ -89,15 +89,15 @@ The API data for this symbol:
  :history [["+" "0.0-1211"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/IKVReduce",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IKVReduce.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IKVReduce.java"},
  :full-name-encode "cljs.core/IKVReduce",
  :source {:code "(defprotocol IKVReduce\n  \"Protocol for associative types that can reduce themselves\n  via a function of key and val. Called by cljs.core/reduce-kv.\"\n  (-kv-reduce [coll f init]\n    \"Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [591 596],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L591-L596"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L591-L596"},
  :methods [{:name "-kv-reduce",
             :signature ["[coll f init]"],
             :docstring "Reduces an associative collection and returns the result. f should be\n     a function that takes three arguments."}],

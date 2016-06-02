@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn write [^BufferedWriter out ^String js]\n  (.write out js)\n  (.write out (int 0)) ;; terminator\n  (.flush out))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [35 38],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/node.clj#L35-L38"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/node.clj#L35-L38"},
  :usage ["(write out js)"],
  :full-name "cljs.repl.node/write",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/write.cljsdoc"}

@@ -130,17 +130,17 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-multiply\n  ([] 1)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-multiply x y))\n  ([x y & more] (reduce unchecked-multiply (cljs.core/unchecked-multiply x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [2484 2489],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L2484-L2489"},
+          :lines [2490 2495],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L2490-L2495"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-multiply\n  ([& xs] `(* ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.8.51",
+                  :tag "r1.9.14",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [984 985],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/core.cljc#L984-L985"}],
+                  :lines [987 988],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L987-L988"}],
  :usage ["(unchecked-multiply)"
          "(unchecked-multiply x)"
          "(unchecked-multiply x y)"

@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn ns? [x]\n  (and (seq? x) (= (first x) 'quote)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/test.cljc",
           :lines [246 247],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/test.cljc#L246-L247"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljc#L246-L247"},
  :usage ["(ns? x)"],
  :full-name "cljs.test/ns?",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/nsQMARK.cljsdoc"}

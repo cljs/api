@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn munge [name]\n  (let [name' (munge-str (str name))\n        name' (cond\n                (identical? name' \"..\") \"_DOT__DOT_\"\n                (js-reserved? name') (str name' \"$\")\n                :else name')]\n    (if (symbol? name)\n      (symbol name')\n      (str name'))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10317 10325],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10317-L10325"},
+          :lines [10328 10336],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10328-L10336"},
  :usage ["(munge name)"],
  :full-name "cljs.core/munge",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/munge.cljsdoc"}

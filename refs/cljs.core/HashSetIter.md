@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(deftype HashSetIter [iter]\n  Object\n  (hasNext [_]\n    (.hasNext iter))\n  (next [_]\n    (if ^boolean (.hasNext iter)\n      (aget (.-tail (.next iter)) 0)\n      (throw (js/Error. \"No such element\"))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8197 8205],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8197-L8205"},
+          :lines [8203 8211],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8203-L8211"},
  :usage ["(HashSetIter. iter)"],
  :full-name "cljs.core/HashSetIter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/HashSetIter.cljsdoc"}

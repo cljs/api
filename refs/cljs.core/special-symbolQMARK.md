@@ -26,12 +26,18 @@
 
 
 
+Source docstring:
+
+```
+Returns true if x names a special form
+```
 
 
 Source code @ [github]():
 
 ```clj
-(defn ^boolean special-symbol? [x]
+(defn ^boolean special-symbol?
+  [x]
   (contains?
     '#{if def fn* do let* loop* letfn* throw try catch finally
        recur new set! ns deftype* defrecord* . js* & quote var}
@@ -94,15 +100,16 @@ The API data for this symbol:
  :clj-equiv {:full-name "clojure.core/special-symbol?",
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/special-symbol?"},
  :full-name-encode "cljs.core/special-symbolQMARK",
- :source {:code "(defn ^boolean special-symbol? [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try catch finally\n       recur new set! ns deftype* defrecord* . js* & quote var}\n    x))",
+ :source {:code "(defn ^boolean special-symbol?\n  [x]\n  (contains?\n    '#{if def fn* do let* loop* letfn* throw try catch finally\n       recur new set! ns deftype* defrecord* . js* & quote var}\n    x))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10202 10206],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10202-L10206"},
+          :lines [10211 10217],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10211-L10217"},
  :usage ["(special-symbol? x)"],
  :full-name "cljs.core/special-symbol?",
+ :docstring "Returns true if x names a special form",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/special-symbolQMARK.cljsdoc"}
 
 ```

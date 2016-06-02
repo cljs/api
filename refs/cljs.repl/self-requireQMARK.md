@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defn self-require? [specs]\n  (some\n    (fn [quoted-spec-or-kw]\n      (and (not (keyword? quoted-spec-or-kw))\n           (let [spec (second quoted-spec-or-kw)\n                 ns (if (sequential? spec)\n                      (first spec)\n                      spec)]\n             (= ns ana/*cljs-ns*))))\n    specs))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [620 629],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl.cljc#L620-L629"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L620-L629"},
  :usage ["(self-require? specs)"],
  :full-name "cljs.repl/self-require?",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/self-requireQMARK.cljsdoc"}

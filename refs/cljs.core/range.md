@@ -128,10 +128,10 @@ The API data for this symbol:
  :source {:code "(defn range\n  ([] (range 0 (.-MAX-VALUE js/Number) 1))\n  ([end] (range 0 end 1))\n  ([start end] (range start end 1))\n  ([start end step] (Range. nil start end step nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8768 8775],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8768-L8775"},
+          :lines [8774 8781],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8774-L8781"},
  :usage ["(range)"
          "(range end)"
          "(range start end)"

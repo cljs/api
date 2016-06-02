@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn ^number int-rotate-left [x n]\n  (bit-or\n    (bit-shift-left x n)\n    (unsigned-bit-shift-right x (- n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [784 787],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L784-L787"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L784-L787"},
  :usage ["(int-rotate-left x n)"],
  :full-name "cljs.core/int-rotate-left",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/int-rotate-left.cljsdoc"}

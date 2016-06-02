@@ -7,7 +7,7 @@
 <td>type</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-2301"><img valign="middle" alt="[+] 0.0-2301" title="Added in 0.0-2301" src="https://img.shields.io/badge/+-0.0--2301-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/SeqIterator</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/SeqIterator.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/SeqIterator</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/SeqIterator.java)
 </td>
 </tr>
 </table>
@@ -103,15 +103,15 @@ The API data for this symbol:
  :history [["+" "0.0-2301"]],
  :type "type",
  :clj-equiv {:full-name "clojure.lang/SeqIterator",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/SeqIterator.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/SeqIterator.java"},
  :full-name-encode "cljs.core/SeqIter",
  :source {:code "(deftype SeqIter [^:mutable _seq ^:mutable _next]\n  Object\n  (hasNext [_]\n    (if (identical? _seq INIT)\n      (do\n        (set! _seq START)\n        (set! _next (seq _next)))\n      (if (identical? _seq _next)\n        (set! _next (next _seq))))\n    (not (nil? _next)))\n  (next [this]\n    (if-not (.hasNext this)\n      (throw (js/Error. \"No such element\"))\n      (do\n        (set! _seq _next)\n        (first _next))))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3666 3682],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3666-L3682"},
+          :lines [3672 3688],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3672-L3688"},
  :usage ["(SeqIter. _seq _next)"],
  :full-name "cljs.core/SeqIter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/SeqIter.cljsdoc"}

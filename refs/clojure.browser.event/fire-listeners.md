@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn fire-listeners\n  [obj type capture event])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [84 85],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/event.cljs#L84-L85"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L84-L85"},
  :usage ["(fire-listeners obj type capture event)"],
  :full-name "clojure.browser.event/fire-listeners",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/fire-listeners.cljsdoc"}

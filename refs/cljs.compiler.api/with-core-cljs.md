@@ -113,10 +113,10 @@ The API data for this symbol:
  :source {:code "(defn with-core-cljs\n  ([] (comp/with-core-cljs nil))\n  ([opts] (with-core-cljs opts (fn [])))\n  ([opts body]\n   (with-core-cljs\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     opts body))\n  ([state opts body]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/with-core-cljs opts body)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [33 46],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/compiler/api.clj#L33-L46"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/compiler/api.clj#L33-L46"},
  :usage ["(with-core-cljs)"
          "(with-core-cljs opts)"
          "(with-core-cljs opts body)"

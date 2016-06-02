@@ -54,15 +54,17 @@ Source code @ [github]():
 ```clj
 (defn reductions
   ([f coll]
-     (lazy-seq
-      (if-let [s (seq coll)]
-        (reductions f (first s) (rest s))
-        (list (f)))))
+   (lazy-seq
+     (if-let [s (seq coll)]
+       (reductions f (first s) (rest s))
+       (list (f)))))
   ([f init coll]
+   (if (reduced? init)
+     (list @init)
      (cons init
-           (lazy-seq
-            (when-let [s (seq coll)]
-              (reductions f (f init (first s)) (rest s)))))))
+       (lazy-seq
+         (when-let [s (seq coll)]
+           (reductions f (f init (first s)) (rest s))))))))
 ```
 
 <!--
@@ -122,13 +124,13 @@ The API data for this symbol:
              :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/reductions"},
  :related ["cljs.core/reduce"],
  :full-name-encode "cljs.core/reductions",
- :source {:code "(defn reductions\n  ([f coll]\n     (lazy-seq\n      (if-let [s (seq coll)]\n        (reductions f (first s) (rest s))\n        (list (f)))))\n  ([f init coll]\n     (cons init\n           (lazy-seq\n            (when-let [s (seq coll)]\n              (reductions f (f init (first s)) (rest s)))))))",
+ :source {:code "(defn reductions\n  ([f coll]\n   (lazy-seq\n     (if-let [s (seq coll)]\n       (reductions f (first s) (rest s))\n       (list (f)))))\n  ([f init coll]\n   (if (reduced? init)\n     (list @init)\n     (cons init\n       (lazy-seq\n         (when-let [s (seq coll)]\n           (reductions f (f init (first s)) (rest s))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [8853 8865],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L8853-L8865"},
+          :lines [8859 8873],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8859-L8873"},
  :usage ["(reductions f coll)" "(reductions f init coll)"],
  :full-name "cljs.core/reductions",
  :docstring "Returns a lazy seq of the intermediate values of the reduction (as\nper reduce) of coll by f, starting with init.",

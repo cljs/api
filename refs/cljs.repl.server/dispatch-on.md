@@ -104,10 +104,10 @@ The API data for this symbol:
  :source {:code "(defn dispatch-on\n  ([method pred handler]\n    (dispatch-on method {:pred pred :handler handler}))\n  ([method {:as m}]\n    (swap! handlers\n      (fn [old]\n        (update-in old [method] #(conj (vec %) m))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [41 53],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/server.clj#L41-L53"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/server.clj#L41-L53"},
  :usage ["(dispatch-on method pred handler)"
          "(dispatch-on method {:as m})"],
  :full-name "cljs.repl.server/dispatch-on",

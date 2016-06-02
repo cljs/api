@@ -82,10 +82,10 @@ The API data for this symbol:
  :source {:code "(def event-types\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (merge\n          (js->clj EventType)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [21 28],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/net.cljs#L21-L28"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/net.cljs#L21-L28"},
  :full-name "clojure.browser.net/event-types",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/event-types.cljsdoc"}
 

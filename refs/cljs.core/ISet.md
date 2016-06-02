@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentSet</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentSet.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/IPersistentSet</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IPersistentSet.java)
 </td>
 </tr>
 </table>
@@ -86,15 +86,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/IPersistentSet",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IPersistentSet.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/IPersistentSet.java"},
  :full-name-encode "cljs.core/ISet",
  :source {:code "(defprotocol ISet\n  \"Protocol for adding set functionality to a collection.\"\n  (^clj -disjoin [coll v]\n    \"Returns a new collection of coll that does not contain v.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [545 548],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L545-L548"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L545-L548"},
  :methods [{:name "-disjoin",
             :signature ["[coll v]"],
             :docstring "Returns a new collection of coll that does not contain v."}],

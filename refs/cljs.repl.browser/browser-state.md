@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic browser-state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [24],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/browser.clj#L24"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/browser.clj#L24"},
  :full-name "cljs.repl.browser/browser-state",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/browser-state.cljsdoc"}
 

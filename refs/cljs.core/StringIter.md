@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(deftype StringIter [s ^:mutable i]\n  Object\n  (hasNext [_] (< i (alength s)))\n  (next [_]\n    (let [ret (.charAt s i)]\n      (set! i (inc i))\n      ret))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3639 3646],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3639-L3646"},
+          :lines [3645 3652],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3645-L3652"},
  :usage ["(StringIter. s i)"],
  :full-name "cljs.core/StringIter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/StringIter.cljsdoc"}

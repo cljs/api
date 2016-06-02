@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defn create-ns\n  ([sym]\n   (create-ns sym (find-ns-obj sym)))\n  ([sym ns-obj]\n   (Namespace. ns-obj sym)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [10413 10417],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L10413-L10417"},
+          :lines [10424 10428],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10424-L10428"},
  :usage ["(create-ns sym)" "(create-ns sym ns-obj)"],
  :full-name "cljs.core/create-ns",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/create-ns.cljsdoc"}

@@ -7,7 +7,7 @@
 <td>protocol</td>
 <td><a href="https://github.com/cljsinfo/cljs-api-docs/tree/0.0-927"><img valign="middle" alt="[+] 0.0-927" title="Added in 0.0-927" src="https://img.shields.io/badge/+-0.0--927-lightgrey.svg"></a> </td>
 <td>
-[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Indexed</samp>](https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Indexed.java)
+[<img height="24px" valign="middle" src="http://i.imgur.com/1GjPKvB.png"> <samp>clojure.lang/Indexed</samp>](https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Indexed.java)
 </td>
 </tr>
 </table>
@@ -87,15 +87,15 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "protocol",
  :clj-equiv {:full-name "clojure.lang/Indexed",
-             :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/Indexed.java"},
+             :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/jvm/clojure/lang/Indexed.java"},
  :full-name-encode "cljs.core/IIndexed",
  :source {:code "(defprotocol IIndexed\n  \"Protocol for collections to provide indexed-based access to their items.\"\n  (-nth [coll n] [coll n not-found]\n    \"Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [490 494],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L490-L494"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L490-L494"},
  :methods [{:name "-nth",
             :signature ["[coll n]" "[coll n not-found]"],
             :docstring "Returns the value at the index n in the collection coll.\n     Returns not-found if index n is out of bounds and not-found is supplied."}],

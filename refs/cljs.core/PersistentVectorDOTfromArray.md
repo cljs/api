@@ -96,10 +96,10 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentVector)\n  (fn [xs ^boolean no-clone]\n    (let [l (alength xs)\n          xs (if no-clone xs (aclone xs))]\n      (if (< l 32)\n        (PersistentVector. nil l 5 (.-EMPTY-NODE PersistentVector) xs nil)\n        (let [node (.slice xs 0 32)\n              v (PersistentVector. nil 32 5 (.-EMPTY-NODE PersistentVector) node nil)]\n          (loop [i 32 out (-as-transient v)]\n            (if (< i l)\n              (recur (inc i) (conj! out (aget xs i)))\n              (persistent! out))))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [5061 5072],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L5061-L5072"},
+          :lines [5067 5078],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L5067-L5078"},
  :usage ["(PersistentVector.fromArray xs no-clone)"],
  :full-name "cljs.core/PersistentVector.fromArray",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentVectorDOTfromArray.cljsdoc"}

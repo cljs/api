@@ -72,10 +72,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'deftype*\n  [_ env form _ _]\n  (parse-type :deftype* env form))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [2019 2021],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/analyzer.cljc#L2019-L2021"},
+          :lines [2021 2023],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L2021-L2023"},
  :full-name "special/deftype*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/deftypeSTAR.cljsdoc"}
 

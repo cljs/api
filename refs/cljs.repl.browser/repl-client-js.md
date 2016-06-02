@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn repl-client-js []\n  (slurp (:client-js @browser-state)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [76 77],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/browser.clj#L76-L77"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/browser.clj#L76-L77"},
  :usage ["(repl-client-js)"],
  :full-name "cljs.repl.browser/repl-client-js",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/repl-client-js.cljsdoc"}

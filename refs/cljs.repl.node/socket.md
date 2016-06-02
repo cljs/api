@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn socket [host port]\n  (let [socket (Socket. host port)\n        in     (io/reader socket)\n        out    (io/writer socket)]\n    {:socket socket :in in :out out}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [24 28],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/clojure/cljs/repl/node.clj#L24-L28"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/node.clj#L24-L28"},
  :usage ["(socket host port)"],
  :full-name "cljs.repl.node/socket",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/socket.cljsdoc"}

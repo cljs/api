@@ -107,10 +107,10 @@ The API data for this symbol:
  :source {:code "(defn pprint\n  ([object]\n   (let [sb (StringBuffer.)]\n     (binding [*out* (StringBufferWriter. sb)]\n       (pprint object *out*)\n       (*print-fn* (str sb)))))\n  ([object writer]\n   (with-pretty-writer writer\n                       (binding [*print-pretty* true]\n                         (write-out object))\n                       (if (not (= 0 (get-column *out*)))\n                         (-write *out* \\newline)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [811 822],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/pprint.cljs#L811-L822"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L811-L822"},
  :usage ["(pprint object)" "(pprint object writer)"],
  :full-name "cljs.pprint/pprint",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/pprint.cljsdoc"}

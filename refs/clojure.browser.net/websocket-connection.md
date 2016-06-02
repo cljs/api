@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defn websocket-connection\n  ([]\n     (websocket-connection nil nil))\n  ([auto-reconnect?]\n     (websocket-connection auto-reconnect? nil))\n  ([auto-reconnect? next-reconnect-fn]\n     (WebSocket. auto-reconnect? next-reconnect-fn)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [174 180],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/clojure/browser/net.cljs#L174-L180"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/net.cljs#L174-L180"},
  :usage ["(websocket-connection)"
          "(websocket-connection auto-reconnect?)"
          "(websocket-connection auto-reconnect? next-reconnect-fn)"],

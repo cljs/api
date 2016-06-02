@@ -120,10 +120,10 @@ The API data for this symbol:
  :source {:code "(defn sequence\n  ([coll]\n     (if (seq? coll)\n       coll\n       (or (seq coll) ())))\n  ([xform coll]\n     (.create LazyTransformer xform coll))\n  ([xform coll & colls]\n     (.createMulti LazyTransformer xform (to-array (cons coll colls)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/core.cljs",
-          :lines [3860 3876],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/core.cljs#L3860-L3876"},
+          :lines [3866 3882],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3866-L3882"},
  :usage ["(sequence coll)"
          "(sequence xform coll)"
          "(sequence xform coll & colls)"],

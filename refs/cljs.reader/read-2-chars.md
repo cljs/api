@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn read-2-chars [reader]\n  (.toString\n    (StringBuffer.\n      (read-char reader)\n      (read-char reader))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.8.51",
+          :tag "r1.9.14",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [167 171],
-          :url "https://github.com/clojure/clojurescript/blob/r1.8.51/src/main/cljs/cljs/reader.cljs#L167-L171"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L167-L171"},
  :usage ["(read-2-chars reader)"],
  :full-name "cljs.reader/read-2-chars",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-2-chars.cljsdoc"}
