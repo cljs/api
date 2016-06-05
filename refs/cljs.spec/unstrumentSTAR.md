@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn unstrument*\n  [v]\n  (locking instrumented-vars\n           (when-let [{:keys [raw wrapped]} (get @instrumented-vars v)]\n             (let [current @v]\n               (when (= wrapped current)\n                 raw))\n             (swap! instrumented-vars dissoc v))\n           v))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [334 342],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L334-L342"},
+          :lines [339 347],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L339-L347"},
  :usage ["(unstrument* v)"],
  :full-name "cljs.spec/unstrument*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/unstrumentSTAR.cljsdoc"}

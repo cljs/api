@@ -114,10 +114,10 @@ The API data for this symbol:
  :source {:code "(defn cljs-dependents-for-macro-namespaces\n  ([namespaces]\n   (cljs-dependents-for-macro-namespaces\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env))\n     namespaces))\n  ([state namespaces]\n   (map :name\n     (let [namespaces-set (set namespaces)]\n       (filter (fn [x] (not-empty\n                         (intersection namespaces-set (-> x :require-macros vals set))))\n         (vals (:cljs.analyzer/namespaces @state)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [49 71],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/build/api.clj#L49-L71"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/build/api.clj#L49-L71"},
  :usage ["(cljs-dependents-for-macro-namespaces namespaces)"
          "(cljs-dependents-for-macro-namespaces state namespaces)"],
  :full-name "cljs.build.api/cljs-dependents-for-macro-namespaces",

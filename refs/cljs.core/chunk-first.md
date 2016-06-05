@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn chunk-first [s]\n  (-chunked-first s))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3316 3317],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3316-L3317"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3316-L3317"},
  :usage ["(chunk-first s)"],
  :full-name "cljs.core/chunk-first",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/chunk-first.cljsdoc"}

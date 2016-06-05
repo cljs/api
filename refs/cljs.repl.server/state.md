@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic state nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [8],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/server.clj#L8"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/server.clj#L8"},
  :full-name "cljs.repl.server/state",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/state.cljsdoc"}
 

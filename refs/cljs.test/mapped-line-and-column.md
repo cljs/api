@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defn mapped-line-and-column [filename line column]\n  (let [default [filename line column]]\n    (if-let [source-map (:source-map (get-current-env))]\n      ;; source maps are 0 indexed for lines\n      (if-let [columns (get-in source-map [filename (dec line)])]\n        (vec\n          (map\n            ;; source maps are 0 indexed for columns\n            ;; multiple segments may exist at column\n            ;; just take first\n            (first\n              (if-let [mapping (get columns (dec column))]\n                mapping\n                (second (first columns))))\n            [:source :line :col]))\n        default)\n      default)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [375 391],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljs#L375-L391"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/test.cljs#L375-L391"},
  :usage ["(mapped-line-and-column filename line column)"],
  :full-name "cljs.test/mapped-line-and-column",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/mapped-line-and-column.cljsdoc"}

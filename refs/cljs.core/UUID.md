@@ -127,10 +127,10 @@ The API data for this symbol:
  :source {:code "(deftype UUID [uuid ^:mutable __hash]\n  Object\n  (toString [_] uuid)\n  (equiv [this other]\n    (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (and (instance? UUID other) (identical? uuid (.-uuid other))))\n\n  IPrintWithWriter\n  (-pr-writer [_ writer _]\n    (-write writer (str \"#uuid \\\"\" uuid \"\\\"\")))\n\n  IHash\n  (-hash [this]\n    (when (nil? __hash)\n      (set! __hash (hash uuid)))\n    __hash)\n\n  IComparable\n  (-compare [_ other]\n    (garray/defaultCompare uuid (.-uuid other))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10094 10116],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10094-L10116"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10094-L10116"},
  :usage ["(UUID. uuid __hash)"],
  :full-name "cljs.core/UUID",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/UUID.cljsdoc"}

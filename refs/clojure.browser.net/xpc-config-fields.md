@@ -81,10 +81,10 @@ The API data for this symbol:
  :source {:code "(def xpc-config-fields\n  (into {}\n        (map\n         (fn [[k v]]\n           [(keyword (.toLowerCase k))\n            v])\n         (js->clj CfgFields))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [73 79],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/net.cljs#L73-L79"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/net.cljs#L73-L79"},
  :full-name "clojure.browser.net/xpc-config-fields",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.net/xpc-config-fields.cljsdoc"}
 

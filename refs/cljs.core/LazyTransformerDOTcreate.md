@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(set! (.-create LazyTransformer)\n  (fn [xform coll]\n    (LazyTransformer. (stepper xform (iter coll)) nil nil nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3853 3855],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3853-L3855"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3853-L3855"},
  :usage ["(LazyTransformer.create xform coll)"],
  :full-name "cljs.core/LazyTransformer.create",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/LazyTransformerDOTcreate.cljsdoc"}

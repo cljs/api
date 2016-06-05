@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defn read-string*\n  [reader _]\n  (loop [buffer (gstring/StringBuffer.)\n         ch (read-char reader)]\n    (cond\n     (nil? ch) (reader-error reader \"EOF while reading\")\n     (identical? \"\\\\\" ch) (recur (do (.append buffer (escape-char buffer reader)) buffer)\n                        (read-char reader))\n     (identical? \\\" ch) (. buffer (toString))\n     :default (recur (do (.append buffer ch) buffer) (read-char reader)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [293 302],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L293-L302"},
+          :lines [296 305],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L296-L305"},
  :usage ["(read-string* reader _)"],
  :full-name "cljs.reader/read-string*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-stringSTAR.cljsdoc"}

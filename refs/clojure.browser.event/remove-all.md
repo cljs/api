@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(defn remove-all [opt_obj opt_type opt_capt])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [100],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L100"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/event.cljs#L100"},
  :usage ["(remove-all opt_obj opt_type opt_capt)"],
  :full-name "clojure.browser.event/remove-all",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/remove-all.cljsdoc"}

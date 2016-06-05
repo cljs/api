@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defn send-for-eval\n  ([form return-value-fn]\n    (send-for-eval @(server/connection) form return-value-fn))\n  ([conn form return-value-fn]\n    (set-return-value-fn return-value-fn)\n    (server/send-and-close conn 200 form \"text/javascript\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [60 68],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/browser.clj#L60-L68"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/browser.clj#L60-L68"},
  :usage ["(send-for-eval form return-value-fn)"
          "(send-for-eval conn form return-value-fn)"],
  :full-name "cljs.repl.browser/send-for-eval",

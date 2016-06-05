@@ -135,10 +135,10 @@ The API data for this symbol:
  :source {:code "(defn intersection\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s2) (count s1))\n       (recur s2 s1)\n       (reduce (fn [result item]\n                   (if (contains? s2 item)\n\t\t     result\n                     (disj result item)))\n\t       s1 s1)))\n  ([s1 s2 & sets] \n     (let [bubbled-sets (bubble-max-key #(- (count %)) (conj sets s2 s1))]\n       (reduce intersection (first bubbled-sets) (rest bubbled-sets)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/set.cljs",
           :lines [31 44],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/set.cljs#L31-L44"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/set.cljs#L31-L44"},
  :usage ["(intersection s1)"
          "(intersection s1 s2)"
          "(intersection s1 s2 & sets)"],

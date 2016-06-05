@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defn speced-vars*\n  ([]\n    (speced-vars* nil))\n  ([ns-syms]\n   (let [ns-match? (if (seq ns-syms)\n                     (set (map second ns-syms))\n                     (constantly true))]\n     (reduce\n       (fn [ret sym]\n         (if (ns-match? (symbol (namespace sym)))\n           (conj ret (list 'var sym))\n           ret))\n       #{} @_speced_vars))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljc",
           :lines [275 287],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljc#L275-L287"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljc#L275-L287"},
  :usage ["(speced-vars*)" "(speced-vars* ns-syms)"],
  :full-name "cljs.spec/speced-vars*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/speced-varsSTAR.cljsdoc"}

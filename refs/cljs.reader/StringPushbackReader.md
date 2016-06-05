@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(deftype StringPushbackReader [s buffer ^:mutable idx]\n  PushbackReader\n  (read-char [reader]\n    (if (zero? (alength buffer))\n      (do\n        (set! idx (inc idx))\n        (aget s idx))\n      (.pop buffer)))\n  (unread [reader ch]\n    (.push buffer ch)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [18 27],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L18-L27"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L18-L27"},
  :usage ["(StringPushbackReader. s buffer idx)"],
  :full-name "cljs.reader/StringPushbackReader",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/StringPushbackReader.cljsdoc"}

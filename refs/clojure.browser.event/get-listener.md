@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(defn get-listener [src type listener opt_capt opt_handler])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [91],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L91"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/event.cljs#L91"},
  :usage ["(get-listener src type listener opt_capt opt_handler)"],
  :full-name "clojure.browser.event/get-listener",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/get-listener.cljsdoc"}

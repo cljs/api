@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY PersistentVector)\n  (PersistentVector. nil 0 5 (.-EMPTY-NODE PersistentVector) (array) empty-ordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [5064 5065],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L5064-L5065"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L5064-L5065"},
  :full-name "cljs.core/PersistentVector.EMPTY",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentVectorDOTEMPTY.cljsdoc"}
 

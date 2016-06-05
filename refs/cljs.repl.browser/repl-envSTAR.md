@@ -105,10 +105,10 @@ The API data for this symbol:
  :source {:code "(defn repl-env*\n  [{:keys [output-dir] :as opts}]\n  (merge (BrowserEnv.)\n    {:host \"localhost\"\n     :port 9000\n     :working-dir (->> [\".repl\" (util/clojurescript-version)]\n                       (remove empty?) (string/join \"-\"))\n     :serve-static true\n     :static-dir (cond-> [\".\" \"out/\"] output-dir (conj output-dir))\n     :preloaded-libs []\n     :optimizations :simple\n     :src \"src/\"\n     :browser-state (atom {:return-value-fn nil\n                          :client-js nil})\n     :ordering (agent {:expecting nil :fns {}})\n     :es (Executors/newFixedThreadPool 16)\n     :server-state\n     (atom\n       {:socket nil\n        :connection nil\n        :promised-conn nil})}\n    opts))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/browser.clj",
           :lines [286 307],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/browser.clj#L286-L307"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/browser.clj#L286-L307"},
  :usage ["(repl-env* {:keys [output-dir], :as opts})"],
  :full-name "cljs.repl.browser/repl-env*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.browser/repl-envSTAR.cljsdoc"}

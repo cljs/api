@@ -101,10 +101,10 @@ The API data for this symbol:
  :source {:code "(defn abbrev [form]\n  (cond\n    (seq? form)\n    (walk/postwalk (fn [form]\n                     (cond\n                       (c/and (symbol? form) (namespace form))\n                       (-> form name symbol)\n\n                       (c/and (seq? form) (= 'fn (first form)) (= '[%] (second form)))\n                       (last form)\n\n                       :else form))\n                   form)\n\n    (c/and (symbol? form) (namespace form))\n    (-> form name symbol)\n\n    :else form))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [112 129],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L112-L129"},
+          :lines [116 133],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L116-L133"},
  :usage ["(abbrev form)"],
  :full-name "cljs.spec/abbrev",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/abbrev.cljsdoc"}

@@ -96,10 +96,10 @@ The API data for this symbol:
  :source {:code "(defn file-and-line [exception depth]\n  ;; TODO: flesh out\n  (if-let [stack-element (and (string? (.-stack exception))\n                              (some-> (.-stack exception)\n                                      string/split-lines\n                                      (get depth)\n                                      string/trim))]\n    (let [fname (js-filename stack-element)\n          [line column] (js-line-and-column stack-element)\n          [fname line column] (mapped-line-and-column fname line column)]\n      {:file fname :line line :column column})\n    {:file (.-fileName exception)\n     :line (.-lineNumber exception)}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [393 405],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljs#L393-L405"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/test.cljs#L393-L405"},
  :usage ["(file-and-line exception depth)"],
  :full-name "cljs.test/file-and-line",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/file-and-line.cljsdoc"}

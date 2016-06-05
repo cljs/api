@@ -98,10 +98,10 @@ The API data for this symbol:
  :source {:code "(defn read-keyword\n  [reader initch]\n  (let [token (read-token reader (read-char reader))\n        a (re-matches* symbol-pattern token)\n        token (aget a 0)\n        ns (aget a 1)\n        name (aget a 2)]\n    (if (or (and (not (undefined? ns))\n                 (identical? (. ns (substring (- (.-length ns) 2) (.-length ns))) \":/\"))\n            (identical? (aget name (dec (.-length name))) \":\")\n            (not (== (.indexOf token \"::\" 1) -1)))\n      (reader-error reader \"Invalid token: \" token)\n      (if (and (not (nil? ns)) (> (.-length ns) 0))\n        (keyword (.substring ns 0 (.indexOf ns \"/\")) name)\n        (keyword token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [352 366],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L352-L366"},
+          :lines [355 369],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L355-L369"},
  :usage ["(read-keyword reader initch)"],
  :full-name "cljs.reader/read-keyword",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-keyword.cljsdoc"}

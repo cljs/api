@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(deftype ES6IteratorSeq [value iter ^:mutable _rest]\n  ISeqable\n  (-seq [this] this)\n  ISeq\n  (-first [_] value)\n  (-rest [_]\n    (when (nil? _rest)\n      (set! _rest (es6-iterator-seq iter)))\n    _rest))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1182 1190],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L1182-L1190"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L1182-L1190"},
  :usage ["(ES6IteratorSeq. value iter _rest)"],
  :full-name "cljs.core/ES6IteratorSeq",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ES6IteratorSeq.cljsdoc"}

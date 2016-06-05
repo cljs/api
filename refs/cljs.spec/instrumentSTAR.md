@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn instrument*\n  [v]\n  (let [specs (fn-specs v)]\n    (if (fn-specs? specs)\n      (locking instrumented-vars\n               (let [{:keys [raw wrapped]} (get @instrumented-vars v)\n                     current @v]\n                 (when-not (= wrapped current)\n                   (let [checked (spec-checking-fn v current)]\n                     (swap! instrumented-vars assoc v {:raw current :wrapped checked})\n                     checked))))\n      (throw (no-fn-specs v specs)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [321 332],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L321-L332"},
+          :lines [326 337],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L326-L337"},
  :usage ["(instrument* v)"],
  :full-name "cljs.spec/instrument*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/instrumentSTAR.cljsdoc"}

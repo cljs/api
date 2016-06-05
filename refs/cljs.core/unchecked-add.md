@@ -130,17 +130,17 @@ The API data for this symbol:
  :source {:code "(defn ^number unchecked-add\n  ([] 0)\n  ([x] x)\n  ([x y] (cljs.core/unchecked-add x y))\n  ([x y & more] (reduce unchecked-add (cljs.core/unchecked-add x y) more)))",
           :title "Function code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [2453 2458],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L2453-L2458"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L2453-L2458"},
  :extra-sources [{:code "(core/defmacro ^::ana/numeric unchecked-add\n  ([& xs] `(+ ~@xs)))",
                   :title "Macro code",
                   :repo "clojurescript",
-                  :tag "r1.9.14",
+                  :tag "r1.9.36",
                   :filename "src/main/clojure/cljs/core.cljc",
-                  :lines [966 967],
-                  :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L966-L967"}],
+                  :lines [982 983],
+                  :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L982-L983"}],
  :usage ["(unchecked-add)"
          "(unchecked-add x)"
          "(unchecked-add x y)"

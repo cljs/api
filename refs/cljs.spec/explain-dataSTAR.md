@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn explain-data* [spec path via in x]\n  (when-let [probs (explain* (specize spec) path via in x)]\n    {::problems probs}))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [141 143],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L141-L143"},
+          :lines [145 147],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L145-L147"},
  :usage ["(explain-data* spec path via in x)"],
  :full-name "cljs.spec/explain-data*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/explain-dataSTAR.cljsdoc"}

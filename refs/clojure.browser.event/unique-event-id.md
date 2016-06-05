@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(defn unique-event-id [event-type])",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [94],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L94"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/event.cljs#L94"},
  :usage ["(unique-event-id event-type)"],
  :full-name "clojure.browser.event/unique-event-id",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.event/unique-event-id.cljsdoc"}

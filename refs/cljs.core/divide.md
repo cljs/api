@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro ^::ana/numeric divide\n  ([x] `(/ 1 ~x))\n  ([x y] (core/list 'js* \"(~{} / ~{})\" x y))\n  ([x y & more] `(/ (/ ~x ~y) ~@more)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [1024 1027],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L1024-L1027"},
+          :lines [1040 1043],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L1040-L1043"},
  :usage ["(divide x)" "(divide x y)" "(divide x y & more)"],
  :full-name "cljs.core/divide",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/divide.cljsdoc"}

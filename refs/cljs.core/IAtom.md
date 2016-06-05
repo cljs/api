@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IAtom\n  \"Marker protocol indicating an atom.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [740 741],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L740-L741"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L740-L741"},
  :full-name "cljs.core/IAtom",
  :docstring "Marker protocol indicating an atom.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IAtom.cljsdoc"}

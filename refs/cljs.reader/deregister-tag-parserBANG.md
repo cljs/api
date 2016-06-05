@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn deregister-tag-parser!\n  [tag]\n  (let [tag (str tag)\n        old-parser (get @*tag-table* tag)]\n    (swap! *tag-table* dissoc tag)\n    old-parser))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [613 618],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L613-L618"},
+          :lines [616 621],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L616-L621"},
  :usage ["(deregister-tag-parser! tag)"],
  :full-name "cljs.reader/deregister-tag-parser!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/deregister-tag-parserBANG.cljsdoc"}

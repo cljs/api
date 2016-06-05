@@ -164,10 +164,10 @@ The API data for this symbol:
  :source {:code "(defn some-fn\n  ([p]\n     (fn sp1\n       ([] nil)\n       ([x] (p x))\n       ([x y] (or (p x) (p y)))\n       ([x y z] (or (p x) (p y) (p z)))\n       ([x y z & args] (or (sp1 x y z)\n                           (some p args)))))\n  ([p1 p2]\n     (fn sp2\n       ([] nil)\n       ([x] (or (p1 x) (p2 x)))\n       ([x y] (or (p1 x) (p1 y) (p2 x) (p2 y)))\n       ([x y z] (or (p1 x) (p1 y) (p1 z) (p2 x) (p2 y) (p2 z)))\n       ([x y z & args] (or (sp2 x y z)\n                           (some #(or (p1 %) (p2 %)) args)))))\n  ([p1 p2 p3]\n     (fn sp3\n       ([] nil)\n       ([x] (or (p1 x) (p2 x) (p3 x)))\n       ([x y] (or (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y)))\n       ([x y z] (or (p1 x) (p2 x) (p3 x) (p1 y) (p2 y) (p3 y) (p1 z) (p2 z) (p3 z)))\n       ([x y z & args] (or (sp3 x y z)\n                           (some #(or (p1 %) (p2 %) (p3 %)) args)))))\n  ([p1 p2 p3 & ps]\n     (let [ps (list* p1 p2 p3 ps)]\n       (fn spn\n         ([] nil)\n         ([x] (some #(% x) ps))\n         ([x y] (some #(or (% x) (% y)) ps))\n         ([x y z] (some #(or (% x) (% y) (% z)) ps))\n         ([x y z & args] (or (spn x y z)\n                             (some #(some % args) ps)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [4287 4324],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L4287-L4324"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L4287-L4324"},
  :usage ["(some-fn p)"
          "(some-fn p1 p2)"
          "(some-fn p1 p2 p3)"

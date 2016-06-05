@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def unicode-4-pattern (re-pattern \"^[0-9A-Fa-f]{4}$\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [182],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L182"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L182"},
  :full-name "cljs.reader/unicode-4-pattern",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/unicode-4-pattern.cljsdoc"}
 

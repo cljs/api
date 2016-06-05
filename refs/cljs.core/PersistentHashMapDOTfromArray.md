@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArray PersistentHashMap)\n  (fn [arr ^boolean no-clone]\n    (let [arr (if no-clone arr (aclone arr))\n          len (alength arr)]\n      (loop [i 0 ret (transient (.-EMPTY PersistentHashMap))]\n        (if (< i len)\n          (recur (+ i 2)\n            (-assoc! ret (aget arr i) (aget arr (inc i))))\n          (-persistent! ret))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [7138 7146],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L7138-L7146"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L7138-L7146"},
  :usage ["(PersistentHashMap.fromArray arr no-clone)"],
  :full-name "cljs.core/PersistentHashMap.fromArray",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTfromArray.cljsdoc"}

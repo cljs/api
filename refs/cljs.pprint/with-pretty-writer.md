@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(defmacro with-pretty-writer [base-writer & body]\n  `(let [base-writer# ~base-writer\n         new-writer# (not (pretty-writer? base-writer#))]\n     (cljs.core/binding [cljs.core/*out* (if new-writer#\n                         (make-pretty-writer base-writer# *print-right-margin* *print-miser-width*)\n                         base-writer#)]\n       ~@body\n       (-ppflush cljs.core/*out*))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [17 24],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.clj#L17-L24"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/pprint.clj#L17-L24"},
  :usage ["(with-pretty-writer base-writer & body)"],
  :full-name "cljs.pprint/with-pretty-writer",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/with-pretty-writer.cljsdoc"}

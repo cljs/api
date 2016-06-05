@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(defmacro deftype\n  [type-name & fields]\n  (let [name-str (name type-name)\n        fields (map (comp symbol name) fields)]\n    `(do\n       (defrecord ~type-name [~'type-tag ~@fields])\n       (defn- ~(symbol (str \"make-\" name-str))\n         ~(vec fields)\n         (~(symbol (str type-name \".\")) ~(keyword name-str) ~@fields))\n       (defn- ~(symbol (str name-str \"?\")) [x#] (= (:type-tag x#) ~(keyword name-str))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/pprint.clj",
           :lines [39 48],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.clj#L39-L48"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/pprint.clj#L39-L48"},
  :usage ["(deftype type-name & fields)"],
  :full-name "cljs.pprint/deftype",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/deftype.cljsdoc"}

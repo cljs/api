@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defprotocol ASeq\n  \"Marker protocol indicating an array sequence.\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [496 497],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L496-L497"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L496-L497"},
  :full-name "cljs.core/ASeq",
  :docstring "Marker protocol indicating an array sequence.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ASeq.cljsdoc"}

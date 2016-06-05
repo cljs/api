@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(defprotocol ICrossPageChannel\n  (register-service [this service-name fn] [this service-name fn encode-json?]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/net.cljs",
           :lines [86 87],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/net.cljs#L86-L87"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/net.cljs#L86-L87"},
  :methods [{:name "register-service",
             :signature ["[this service-name fn]"
                         "[this service-name fn encode-json?]"],

@@ -120,10 +120,10 @@ The API data for this symbol:
  :source {:code "(defn mapped-stacktrace\n  ([stacktrace] (mapped-stacktrace stacktrace nil))\n  ([stacktrace opts]\n   (vec\n     (let [mapped-frames (map (memoize #(mapped-frame % opts)) stacktrace)]\n       ;; take each non-nil :call and optionally merge it into :function one-level up\n       ;; to avoid replacing with local symbols, we only replace munged name if we can munge call symbol back to it\n       (map #(merge-with (fn [munged-fn-name unmunged-call-name]\n                           (if (= munged-fn-name (string/replace (cljs.compiler/munge unmunged-call-name) \".\" \"$\"))\n                             unmunged-call-name\n                             munged-fn-name)) %1 %2)\n         (map #(dissoc % :call) mapped-frames)\n         (concat (rest (map #(if (:call %)\n                              (hash-map :function (:call %))\n                              {})\n                         mapped-frames)) [{}]))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [322 350],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L322-L350"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl.cljc#L322-L350"},
  :usage ["(mapped-stacktrace stacktrace)"
          "(mapped-stacktrace stacktrace opts)"],
  :full-name "cljs.repl/mapped-stacktrace",

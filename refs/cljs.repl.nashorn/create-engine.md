@@ -102,10 +102,10 @@ The API data for this symbol:
  :source {:code "    (defn create-engine\n      ([] (create-engine nil))\n      ([{:keys [code-cache] :or {code-cache true}}]\n       (let [args (when code-cache [\"-pcc\"])\n             factories (.getEngineFactories (ScriptEngineManager.))\n             factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n         (if-let [engine (if-not (empty? args)\n                           (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                           (.getScriptEngine ^ScriptEngineFactory factory))]\n           (let [context (.getContext engine)]\n             (.setWriter context *out*)\n             (.setErrorWriter context *err*)\n             engine)\n           (throw (IllegalArgumentException.\n                    \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [29 43],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/nashorn.clj#L29-L43"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/nashorn.clj#L29-L43"},
  :usage ["(create-engine)"
          "(create-engine {:keys [code-cache], :or {code-cache true}})"],
  :full-name "cljs.repl.nashorn/create-engine",

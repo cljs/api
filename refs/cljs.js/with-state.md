@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defmacro with-state\n  [state & body]\n  `(menv/with-compiler-env ~state\n     ~@body))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/js.clj",
           :lines [15 18],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/js.clj#L15-L18"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/js.clj#L15-L18"},
  :usage ["(with-state state & body)"],
  :full-name "cljs.js/with-state",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/with-state.cljsdoc"}

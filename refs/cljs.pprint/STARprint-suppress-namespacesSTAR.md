@@ -93,10 +93,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n^{:doc \"Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions\"\n  :added \"1.2\"}\n*print-suppress-namespaces* nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [657 661],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L657-L661"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/pprint.cljs#L657-L661"},
  :full-name "cljs.pprint/*print-suppress-namespaces*",
  :docstring "Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-suppress-namespacesSTAR.cljsdoc"}

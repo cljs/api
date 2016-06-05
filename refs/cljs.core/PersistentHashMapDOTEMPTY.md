@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY PersistentHashMap) (PersistentHashMap. nil 0 nil false nil empty-unordered-hash))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [7136],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L7136"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L7136"},
  :full-name "cljs.core/PersistentHashMap.EMPTY",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTEMPTY.cljsdoc"}
 

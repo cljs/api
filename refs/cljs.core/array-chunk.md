@@ -98,10 +98,10 @@ The API data for this symbol:
  :source {:code "(defn array-chunk\n  ([arr]\n     (ArrayChunk. arr 0 (alength arr)))\n  ([arr off]\n     (ArrayChunk. arr off (alength arr)))\n  ([arr off end]\n     (ArrayChunk. arr off end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3225 3231],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3225-L3231"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3225-L3231"},
  :usage ["(array-chunk arr)"
          "(array-chunk arr off)"
          "(array-chunk arr off end)"],

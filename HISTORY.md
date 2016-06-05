@@ -16,6 +16,52 @@
 <th>comp</th>
 </tr>
 <tr>
+<td>__[1.9.36](https://github.com/cljsinfo/cljs-api-docs/tree/1.9.36)__</td>
+<td>2016-06-03</td>
+<td><kbd>1.9.0-alpha4</kbd></td>
+<td><kbd>1.0.0-beta1</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-1936syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1936library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1936compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
+<td>__[1.9.35](https://github.com/cljsinfo/cljs-api-docs/tree/1.9.35)__</td>
+<td>2016-06-03</td>
+<td><kbd>1.9.0-alpha4</kbd></td>
+<td><kbd>1.0.0-beta1</kbd></td>
+<td><kbd>0.0-20151016</kbd></td>
+<td>
+<a href="#user-content-1935syntax">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1935library">
+ 
+</a>
+</td>
+<td>
+<a href="#user-content-1935compiler">
+ 
+</a>
+</td>
+</tr>
+
+<tr>
 <td>__[1.9.14](https://github.com/cljsinfo/cljs-api-docs/tree/1.9.14)__</td>
 <td>2016-06-01</td>
 <td><kbd>1.8.0</kbd></td>
@@ -3189,6 +3235,40 @@
 </td>
 </tr>
 
+</table>
+
+### 1.9.36
+
+<a name="1936syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1936library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="1936compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+### 1.9.35
+
+<a name="1935syntax"></a> __Syntax Changes__
+ <table>
+<tr><td>_no syntax forms were added or removed in this version_</td></tr>
+</table>
+
+<a name="1935library"></a> __Library API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
+</table>
+
+<a name="1935compiler"></a> __Compiler API Changes__
+ <table>
+<tr><td>_no symbols were added or removed in this version_</td></tr>
 </table>
 
 ### 1.9.14

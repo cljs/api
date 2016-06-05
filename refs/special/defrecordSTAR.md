@@ -72,10 +72,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'defrecord*\n  [_ env form _ _]\n  (parse-type :defrecord* env form) )",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [2025 2027],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L2025-L2027"},
+          :lines [2039 2041],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer.cljc#L2039-L2041"},
  :full-name "special/defrecord*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/defrecordSTAR.cljsdoc"}
 

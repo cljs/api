@@ -80,10 +80,10 @@ The API data for this symbol:
  :source {:code "(defprotocol Spec\n  (conform* [spec x])\n  (explain* [spec path via in x])\n  (gen* [spec overrides path rmap])\n  (with-gen* [spec gfn])\n  (describe* [spec]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [36 41],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L36-L41"},
+          :lines [37 42],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L37-L42"},
  :methods [{:name "conform*", :signature ["[spec x]"], :docstring nil}
            {:name "explain*",
             :signature ["[spec path via in x]"],

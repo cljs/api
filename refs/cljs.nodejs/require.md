@@ -75,10 +75,10 @@ The API data for this symbol:
  :source {:code "(def require (js* \"require\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/nodejs.cljs",
           :lines [15],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/nodejs.cljs#L15"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/nodejs.cljs#L15"},
  :full-name "cljs.nodejs/require",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.nodejs/require.cljsdoc"}
 

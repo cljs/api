@@ -114,10 +114,10 @@ The API data for this symbol:
  :source {:code "(defn repl-read\n  ([request-prompt request-exit]\n   (repl-read request-prompt request-exit *repl-opts*))\n  ([request-prompt request-exit opts]\n   (binding [*in* (if (true? (:source-map-inline opts))\n                    ((:reader opts))\n                    *in*)]\n     (or ({:line-start request-prompt :stream-end request-exit}\n          (skip-whitespace *in*))\n        (let [input (reader/read {:read-cond :allow :features #{:cljs}} *in*)]\n          (skip-if-eol *in*)\n          input)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [87 108],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L87-L108"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl.cljc#L87-L108"},
  :usage ["(repl-read request-prompt request-exit)"
          "(repl-read request-prompt request-exit opts)"],
  :full-name "cljs.repl/repl-read",

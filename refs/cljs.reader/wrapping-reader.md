@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn wrapping-reader\n  [sym]\n  (fn [rdr _]\n    (list sym (read rdr true nil true))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [376 379],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L376-L379"},
+          :lines [379 382],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L379-L382"},
  :usage ["(wrapping-reader sym)"],
  :full-name "cljs.reader/wrapping-reader",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/wrapping-reader.cljsdoc"}

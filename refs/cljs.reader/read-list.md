@@ -86,10 +86,10 @@ The API data for this symbol:
  :source {:code "(defn read-list\n  [rdr _]\n  (apply list (read-delimited-list \")\" rdr true)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [264 266],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L264-L266"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L264-L266"},
  :usage ["(read-list rdr _)"],
  :full-name "cljs.reader/read-list",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-list.cljsdoc"}

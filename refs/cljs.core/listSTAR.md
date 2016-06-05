@@ -137,10 +137,10 @@ The API data for this symbol:
  :source {:code "(defn list*\n  ([args] (seq args))\n  ([a args] (cons a args))\n  ([a b args] (cons a (cons b args)))\n  ([a b c args] (cons a (cons b (cons c args))))\n  ([a b c d & more]\n     (cons a (cons b (cons c (cons d (spread more)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3479 3487],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3479-L3487"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3479-L3487"},
  :usage ["(list* args)"
          "(list* a args)"
          "(list* a b args)"

@@ -77,10 +77,10 @@ The API data for this symbol:
  :source {:code "(def\n  ^{:jsdoc [\"@type {*}\"]}\n  NS_CACHE nil)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10385 10387],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10385-L10387"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10385-L10387"},
  :full-name "cljs.core/NS_CACHE",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/NS_CACHE.cljsdoc"}
 

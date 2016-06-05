@@ -98,10 +98,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IStack\n  \"Protocol for collections to provide access to their items as stacks. The top\n  of the stack should be accessed in the most efficient way for the different\n  data structures.\"\n  (-peek [coll]\n    \"Returns the item from the top of the stack. Is used by cljs.core/peek.\")\n  (^clj -pop [coll]\n    \"Returns a new stack without the item on top of the stack. Is used\n     by cljs.core/pop.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [550 558],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L550-L558"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L550-L558"},
  :methods [{:name "-peek",
             :signature ["[coll]"],
             :docstring "Returns the item from the top of the stack. Is used by cljs.core/peek."}

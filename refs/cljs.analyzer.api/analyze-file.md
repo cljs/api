@@ -115,10 +115,10 @@ The API data for this symbol:
  :source {:code "   (defn analyze-file\n     ([f] (analyze-file f nil))\n     ([f opts]\n      (analyze-file\n        (if-not (nil? env/*compiler*)\n          env/*compiler*\n          (env/default-compiler-env opts))\n        f opts))\n     ([state f opts]\n      (env/with-compiler-env state\n        (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n          (ana/analyze-file f opts))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer/api.cljc",
           :lines [120 139],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer/api.cljc#L120-L139"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer/api.cljc#L120-L139"},
  :usage ["(analyze-file f)"
          "(analyze-file f opts)"
          "(analyze-file state f opts)"],

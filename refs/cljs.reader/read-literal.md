@@ -97,10 +97,10 @@ The API data for this symbol:
  :source {:code "(defn read-literal\n  [rdr ch]\n  (let [token (read-token rdr ch)\n        chars (subs token 1)]\n    (cond (identical? (.-length chars) 1) chars\n          (identical? chars \"tab\")       \"\\t\"\n          (identical? chars \"return\")    \"\\r\"\n          (identical? chars \"newline\")   \"\\n\"\n          (identical? chars \"space\")     \" \"\n          (identical? chars \"backspace\") \"\\b\"\n          (identical? chars \"formfeed\")  \"\\f\"\n          (identical? (.charAt chars 0) \"u\") (make-unicode-char (subs chars 1))\n          (identical? (.charAt chars 0) \"o\") (not-implemented rdr token)\n          :else (reader-error rdr \"Unknown character literal: \" token))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [337 350],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L337-L350"},
+          :lines [340 353],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L340-L353"},
  :usage ["(read-literal rdr ch)"],
  :full-name "cljs.reader/read-literal",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-literal.cljsdoc"}

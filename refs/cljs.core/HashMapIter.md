@@ -94,10 +94,10 @@ The API data for this symbol:
  :source {:code "(deftype HashMapIter [nil-val root-iter ^:mutable seen]\n  Object\n  (hasNext [_]\n    (and ^boolean seen ^boolean (.hasNext root-iter)))\n  (next [_]\n    (if-not ^boolean seen\n      (do\n        (set! seen true)\n        nil-val)\n      (.next root-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [6990 7000],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L6990-L7000"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L6990-L7000"},
  :usage ["(HashMapIter. nil-val root-iter seen)"],
  :full-name "cljs.core/HashMapIter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/HashMapIter.cljsdoc"}

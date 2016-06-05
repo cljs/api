@@ -72,10 +72,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'let*\n  [op encl-env form _ _]\n  (analyze-let encl-env form false))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1525 1527],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L1525-L1527"},
+          :lines [1539 1541],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer.cljc#L1539-L1541"},
  :full-name "special/let*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/letSTAR.cljsdoc"}
 

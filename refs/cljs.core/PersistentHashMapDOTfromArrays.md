@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(set! (.-fromArrays PersistentHashMap)\n  (fn [ks vs]\n    (let [len (alength ks)]\n      (loop [i 0 ^not-native out (transient (.-EMPTY PersistentHashMap))]\n        (if (< i len)\n          (recur (inc i) (-assoc! out (aget ks i) (aget vs i)))\n          (persistent! out))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [7148 7154],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L7148-L7154"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L7148-L7154"},
  :usage ["(PersistentHashMap.fromArrays ks vs)"],
  :full-name "cljs.core/PersistentHashMap.fromArrays",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/PersistentHashMapDOTfromArrays.cljsdoc"}

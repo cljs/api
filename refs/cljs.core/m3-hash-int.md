@@ -90,10 +90,10 @@ The API data for this symbol:
  :source {:code "(defn ^number m3-hash-int [in]\n  (if (zero? in)\n    in\n    (let [k1 (m3-mix-K1 in)\n          h1 (m3-mix-H1 m3-seed k1)]\n      (m3-fmix h1 4))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [823 828],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L823-L828"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L823-L828"},
  :usage ["(m3-hash-int in)"],
  :full-name "cljs.core/m3-hash-int",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/m3-hash-int.cljsdoc"}

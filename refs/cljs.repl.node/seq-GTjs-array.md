@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn seq->js-array [v]\n  (str \"[\" (apply str (interpose \", \" (map pr-str v))) \"]\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [75 76],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/node.clj#L75-L76"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/node.clj#L75-L76"},
  :usage ["(seq->js-array v)"],
  :full-name "cljs.repl.node/seq->js-array",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/seq-GTjs-array.cljsdoc"}

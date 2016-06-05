@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(defn iter [coll]\n  (cond\n    (nil? coll) (nil-iter)\n    (string? coll) (string-iter coll)\n    (array? coll) (array-iter coll)\n    (iterable? coll) (-iterator coll)\n    (seqable? coll) (seq-iter coll)\n    :else (throw (js/Error. (str \"Cannot create iterator from \" coll)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3693 3700],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3693-L3700"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3693-L3700"},
  :usage ["(iter coll)"],
  :full-name "cljs.core/iter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/iter.cljsdoc"}

@@ -110,10 +110,10 @@ The API data for this symbol:
  :source {:code "(defn ^File src-file->target-file\n  ([src] (src-file->target-file src nil))\n  ([src opts]\n   (src-file->target-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src opts))\n  ([state src opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (closure/src-file->target-file src opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [80 93],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/build/api.clj#L80-L93"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/build/api.clj#L80-L93"},
  :usage ["(src-file->target-file src)"
          "(src-file->target-file src opts)"
          "(src-file->target-file state src opts)"],

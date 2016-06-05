@@ -111,10 +111,10 @@ The API data for this symbol:
  :source {:code "(defn exercise\n  ([spec] (exercise spec 10))\n  ([spec n] (exercise spec n nil))\n  ([spec n overrides]\n   (map #(vector % (conform spec %)) (gen/sample (gen spec overrides) n))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [1021 1028],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L1021-L1028"},
+          :lines [1026 1033],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L1026-L1033"},
  :usage ["(exercise spec)"
          "(exercise spec n)"
          "(exercise spec n overrides)"],

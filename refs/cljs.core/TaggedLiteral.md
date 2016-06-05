@@ -120,10 +120,10 @@ The API data for this symbol:
  :source {:code "(deftype TaggedLiteral [tag form]\n  Object\n  (toString [coll]\n    (pr-str* coll))\n\n  IEquiv\n  (-equiv [this other]\n    (and (instance? TaggedLiteral other)\n         (= tag (.-tag other))\n         (= form (.-form other))))\n\n  IHash\n  (-hash [this]\n    (+ (* 31 (hash tag))\n       (hash form)))\n\n  ILookup\n  (-lookup [this v]\n    (-lookup this v nil))\n  (-lookup [this v not-found]\n    (case v\n      :tag tag\n      :form form\n      not-found))\n\n  IPrintWithWriter\n  (-pr-writer [o writer opts]\n    (-write writer (str \"#\" tag \" \"))\n    (pr-writer form writer opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10229 10257],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10229-L10257"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10229-L10257"},
  :usage ["(TaggedLiteral. tag form)"],
  :full-name "cljs.core/TaggedLiteral",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/TaggedLiteral.cljsdoc"}

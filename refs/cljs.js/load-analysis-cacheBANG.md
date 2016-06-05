@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn load-analysis-cache! [state ns cache]\n  (swap! state assoc-in [::ana/namespaces ns] cache))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/js.cljs",
           :lines [121 122],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/js.cljs#L121-L122"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/js.cljs#L121-L122"},
  :usage ["(load-analysis-cache! state ns cache)"],
  :full-name "cljs.js/load-analysis-cache!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.js/load-analysis-cacheBANG.cljsdoc"}

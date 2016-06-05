@@ -152,10 +152,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro amap\n  [a idx ret expr]\n  `(let [a# ~a\n         ~ret (cljs.core/aclone a#)]\n     (loop  [~idx 0]\n       (if (< ~idx  (alength a#))\n         (do\n           (aset ~ret ~idx ~expr)\n           (recur (inc ~idx)))\n         ~ret))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2471 2484],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L2471-L2484"},
+          :lines [2487 2500],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L2487-L2500"},
  :usage ["(amap a idx ret expr)"],
  :examples [{:id "3a7471",
              :content "```clj\n(def a #js [1 2 3])\n(amap a i ret (* 10 (aget a i)))\n;;=> #js [10 20 30]\n```"}

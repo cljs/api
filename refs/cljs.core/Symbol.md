@@ -124,10 +124,10 @@ The API data for this symbol:
  :source {:code "(deftype Symbol [ns name str ^:mutable _hash _meta]\n  Object\n  (toString [_] str)\n  (equiv [this other] (-equiv this other))\n\n  IEquiv\n  (-equiv [_ other]\n    (if (instance? Symbol other)\n      (identical? str (.-str other))\n      false))\n\n  IFn\n  (-invoke [sym coll]\n    (get coll sym))\n  (-invoke [sym coll not-found]\n    (get coll sym not-found))\n\n  IMeta\n  (-meta [_] _meta)\n\n  IWithMeta\n  (-with-meta [_ new-meta] (Symbol. ns name str _hash new-meta))\n\n  IHash\n  (-hash [sym]\n    (caching-hash sym hash-symbol _hash))\n\n  INamed\n  (-name [_] name)\n  (-namespace [_] ns)\n\n  IPrintWithWriter\n  (-pr-writer [o writer _] (-write writer str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [951 983],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L951-L983"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L951-L983"},
  :usage ["(Symbol. ns name str _hash _meta)"],
  :full-name "cljs.core/Symbol",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Symbol.cljsdoc"}

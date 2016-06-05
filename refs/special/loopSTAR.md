@@ -72,10 +72,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'loop*\n  [op encl-env form _ _]\n  (analyze-let encl-env form true))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [1529 1531],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L1529-L1531"},
+          :lines [1543 1545],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer.cljc#L1543-L1545"},
  :full-name "special/loop*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/loopSTAR.cljsdoc"}
 

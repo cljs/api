@@ -100,10 +100,10 @@ The API data for this symbol:
  :source {:code "(defmacro dynaload [[quote s]]\n  (let [xs     (string/split (namespace s) #\"\\.\")\n        cnt    (count xs)\n        checks (map\n                 (fn [n xs]\n                   `(c/exists? ~(symbol (string/join \".\" (take n xs)))))\n                 (range 2 cnt)\n                 (repeat xs))]\n    `(cljs.spec.impl.gen/LazyVar.\n       (fn []\n         (if (and ~@checks (c/exists? ~s))\n           ~(vary-meta s assoc :cljs.analyzer/no-resolve true)\n           (throw\n             (js/Error.\n               (str \"Var \" '~s \" does not exist, \"\n                    (namespace '~s) \" never required\")))))\n       nil)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec/impl/gen.cljc",
           :lines [14 30],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec/impl/gen.cljc#L14-L30"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec/impl/gen.cljc#L14-L30"},
  :usage ["(dynaload [quote s])"],
  :full-name "cljs.spec.impl.gen/dynaload",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec.impl.gen/dynaload.cljsdoc"}

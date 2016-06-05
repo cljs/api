@@ -132,54 +132,70 @@ Parser code @ [github]():
              pb (core/fn pb [bvec b v]
                   (core/let [pvec
                              (core/fn [bvec b val]
-                               (core/let [gvec (gensym "vec__")]
-                                 (core/loop [ret (core/-> bvec (conj gvec) (conj val))
+                               (core/let [gvec (gensym "vec__")
+                                          gseq (gensym "seq__")
+                                          gfirst (gensym "first__")
+                                          has-rest (some #{'&} b)]
+                                 (core/loop [ret (core/let [ret (conj bvec gvec val)]
+                                                   (if has-rest
+                                                     (conj ret gseq (core/list `seq gvec))
+                                                     ret))
                                              n 0
                                              bs b
                                              seen-rest? false]
                                    (if (seq bs)
                                      (core/let [firstb (first bs)]
                                        (core/cond
-                                         (= firstb '&) (recur (pb ret (second bs) (core/list `nthnext gvec n))
-                                                         n
-                                                         (nnext bs)
-                                                         true)
+                                         (= firstb '&) (recur (pb ret (second bs) gseq)
+                                                              n
+                                                              (nnext bs)
+                                                              true)
                                          (= firstb :as) (pb ret (second bs) gvec)
                                          :else (if seen-rest?
-                                                 (throw
-                                                   #?(:clj (new Exception "Unsupported binding form, only :as can follow & parameter")
-                                                      :cljs (new js/Error "Unsupported binding form, only :as can follow & parameter")))
-                                                 (recur (pb ret firstb (core/list `nth gvec n nil))
-                                                   (core/inc n)
-                                                   (next bs)
-                                                   seen-rest?))))
+                                                 (throw #?(:clj (new Exception "Unsupported binding form, only :as can follow & parameter")
+                                                           :cljs (new js/Error "Unsupported binding form, only :as can follow & parameter")))
+                                                 (recur (pb (if has-rest
+                                                              (conj ret
+                                                                    gfirst `(first ~gseq)
+                                                                    gseq `(next ~gseq))
+                                                              ret)
+                                                            firstb
+                                                            (if has-rest
+                                                              gfirst
+                                                              (core/list `nth gvec n nil)))
+                                                        (core/inc n)
+                                                        (next bs)
+                                                        seen-rest?))))
                                      ret))))
                              pmap
                              (core/fn [bvec b v]
                                (core/let [gmap (gensym "map__")
                                           defaults (:or b)]
                                  (core/loop [ret (core/-> bvec (conj gmap) (conj v)
-                                                   (conj gmap) (conj `(if (implements? ISeq ~gmap) (apply cljs.core/hash-map ~gmap) ~gmap))
-                                                   ((core/fn [ret]
-                                                      (if (:as b)
-                                                        (conj ret (:as b) gmap)
-                                                        ret))))
+                                                          (conj gmap) (conj `(if (implements? ISeq ~gmap) (apply cljs.core/hash-map ~gmap) ~gmap))
+                                                     ((core/fn [ret]
+                                                        (if (:as b)
+                                                          (conj ret (:as b) gmap)
+                                                          ret))))
                                              bes (reduce
-                                                   (core/fn [bes entry]
-                                                     (reduce #(assoc %1 %2 ((val entry) %2))
-                                                       (dissoc bes (key entry))
-                                                       ((key entry) bes)))
-                                                   (dissoc b :as :or)
-                                                   {:keys #(if (core/keyword? %) % (keyword (core/str %))),
-                                                    :strs core/str, :syms #(core/list `quote %)})]
+                                                  (core/fn [bes entry]
+                                                    (reduce #(assoc %1 %2 ((val entry) %2))
+                                                            (dissoc bes (key entry))
+                                                            ((key entry) bes)))
+                                                  (dissoc b :as :or)
+                                                  {:keys #(if (core/keyword? %) % (keyword (core/str %))),
+                                                   :strs core/str, :syms #(core/list `quote %)})]
                                    (if (seq bes)
                                      (core/let [bb (key (first bes))
                                                 bk (val (first bes))
-                                                has-default (contains? defaults bb)]
-                                       (recur (pb ret bb (if has-default
-                                                           (core/list 'cljs.core/get gmap bk (defaults bb))
-                                                           (core/list 'cljs.core/get gmap bk)))
-                                         (next bes)))
+                                                bv (if (contains? defaults bb)
+                                                     (core/list 'cljs.core/get gmap bk (defaults bb))
+                                                     (core/list 'cljs.core/get gmap bk))]
+                                       (recur (core/cond
+                                                (core/symbol? bb) (core/-> ret (conj (if (namespace bb) (symbol (name bb)) bb)) (conj bv))
+                                                (core/keyword? bb) (core/-> ret (conj (symbol (name bb)) bv))
+                                                :else (pb ret bb bv))
+                                              (next bes)))
                                      ret))))]
                     (core/cond
                       (core/symbol? b) (core/-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))
@@ -187,8 +203,8 @@ Parser code @ [github]():
                       (vector? b) (pvec bvec b v)
                       (map? b) (pmap bvec b v)
                       :else (throw
-                              #?(:clj (new Exception (core/str "Unsupported binding form: " b))
-                                 :cljs (new js/Error (core/str "Unsupported binding form: " b)))))))
+                             #?(:clj (new Exception (core/str "Unsupported binding form: " b))
+                                :cljs (new js/Error (core/str "Unsupported binding form: " b)))))))
              process-entry (core/fn [bvec b] (pb bvec (first b) (second b)))]
     (if (every? core/symbol? (map first bents))
       bindings
@@ -247,13 +263,13 @@ The API data for this symbol:
  :type "binding",
  :related ["syntax/destructure-vector"],
  :full-name-encode "syntax/destructure-map",
- :source {:code "(core/defn destructure [bindings]\n  (core/let [bents (partition 2 bindings)\n             pb (core/fn pb [bvec b v]\n                  (core/let [pvec\n                             (core/fn [bvec b val]\n                               (core/let [gvec (gensym \"vec__\")]\n                                 (core/loop [ret (core/-> bvec (conj gvec) (conj val))\n                                             n 0\n                                             bs b\n                                             seen-rest? false]\n                                   (if (seq bs)\n                                     (core/let [firstb (first bs)]\n                                       (core/cond\n                                         (= firstb '&) (recur (pb ret (second bs) (core/list `nthnext gvec n))\n                                                         n\n                                                         (nnext bs)\n                                                         true)\n                                         (= firstb :as) (pb ret (second bs) gvec)\n                                         :else (if seen-rest?\n                                                 (throw\n                                                   #?(:clj (new Exception \"Unsupported binding form, only :as can follow & parameter\")\n                                                      :cljs (new js/Error \"Unsupported binding form, only :as can follow & parameter\")))\n                                                 (recur (pb ret firstb (core/list `nth gvec n nil))\n                                                   (core/inc n)\n                                                   (next bs)\n                                                   seen-rest?))))\n                                     ret))))\n                             pmap\n                             (core/fn [bvec b v]\n                               (core/let [gmap (gensym \"map__\")\n                                          defaults (:or b)]\n                                 (core/loop [ret (core/-> bvec (conj gmap) (conj v)\n                                                   (conj gmap) (conj `(if (implements? ISeq ~gmap) (apply cljs.core/hash-map ~gmap) ~gmap))\n                                                   ((core/fn [ret]\n                                                      (if (:as b)\n                                                        (conj ret (:as b) gmap)\n                                                        ret))))\n                                             bes (reduce\n                                                   (core/fn [bes entry]\n                                                     (reduce #(assoc %1 %2 ((val entry) %2))\n                                                       (dissoc bes (key entry))\n                                                       ((key entry) bes)))\n                                                   (dissoc b :as :or)\n                                                   {:keys #(if (core/keyword? %) % (keyword (core/str %))),\n                                                    :strs core/str, :syms #(core/list `quote %)})]\n                                   (if (seq bes)\n                                     (core/let [bb (key (first bes))\n                                                bk (val (first bes))\n                                                has-default (contains? defaults bb)]\n                                       (recur (pb ret bb (if has-default\n                                                           (core/list 'cljs.core/get gmap bk (defaults bb))\n                                                           (core/list 'cljs.core/get gmap bk)))\n                                         (next bes)))\n                                     ret))))]\n                    (core/cond\n                      (core/symbol? b) (core/-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))\n                      (core/keyword? b) (core/-> bvec (conj (symbol (name b))) (conj v))\n                      (vector? b) (pvec bvec b v)\n                      (map? b) (pmap bvec b v)\n                      :else (throw\n                              #?(:clj (new Exception (core/str \"Unsupported binding form: \" b))\n                                 :cljs (new js/Error (core/str \"Unsupported binding form: \" b)))))))\n             process-entry (core/fn [bvec b] (pb bvec (first b) (second b)))]\n    (if (every? core/symbol? (map first bents))\n      bindings\n      (core/if-let [kwbs (seq (filter #(core/keyword? (first %)) bents))]\n        (throw\n          #?(:clj (new Exception (core/str \"Unsupported binding key: \" (ffirst kwbs)))\n             :cljs (new js/Error (core/str \"Unsupported binding key: \" (ffirst kwbs)))))\n        (reduce process-entry [] bents)))))",
+ :source {:code "(core/defn destructure [bindings]\n  (core/let [bents (partition 2 bindings)\n             pb (core/fn pb [bvec b v]\n                  (core/let [pvec\n                             (core/fn [bvec b val]\n                               (core/let [gvec (gensym \"vec__\")\n                                          gseq (gensym \"seq__\")\n                                          gfirst (gensym \"first__\")\n                                          has-rest (some #{'&} b)]\n                                 (core/loop [ret (core/let [ret (conj bvec gvec val)]\n                                                   (if has-rest\n                                                     (conj ret gseq (core/list `seq gvec))\n                                                     ret))\n                                             n 0\n                                             bs b\n                                             seen-rest? false]\n                                   (if (seq bs)\n                                     (core/let [firstb (first bs)]\n                                       (core/cond\n                                         (= firstb '&) (recur (pb ret (second bs) gseq)\n                                                              n\n                                                              (nnext bs)\n                                                              true)\n                                         (= firstb :as) (pb ret (second bs) gvec)\n                                         :else (if seen-rest?\n                                                 (throw #?(:clj (new Exception \"Unsupported binding form, only :as can follow & parameter\")\n                                                           :cljs (new js/Error \"Unsupported binding form, only :as can follow & parameter\")))\n                                                 (recur (pb (if has-rest\n                                                              (conj ret\n                                                                    gfirst `(first ~gseq)\n                                                                    gseq `(next ~gseq))\n                                                              ret)\n                                                            firstb\n                                                            (if has-rest\n                                                              gfirst\n                                                              (core/list `nth gvec n nil)))\n                                                        (core/inc n)\n                                                        (next bs)\n                                                        seen-rest?))))\n                                     ret))))\n                             pmap\n                             (core/fn [bvec b v]\n                               (core/let [gmap (gensym \"map__\")\n                                          defaults (:or b)]\n                                 (core/loop [ret (core/-> bvec (conj gmap) (conj v)\n                                                          (conj gmap) (conj `(if (implements? ISeq ~gmap) (apply cljs.core/hash-map ~gmap) ~gmap))\n                                                     ((core/fn [ret]\n                                                        (if (:as b)\n                                                          (conj ret (:as b) gmap)\n                                                          ret))))\n                                             bes (reduce\n                                                  (core/fn [bes entry]\n                                                    (reduce #(assoc %1 %2 ((val entry) %2))\n                                                            (dissoc bes (key entry))\n                                                            ((key entry) bes)))\n                                                  (dissoc b :as :or)\n                                                  {:keys #(if (core/keyword? %) % (keyword (core/str %))),\n                                                   :strs core/str, :syms #(core/list `quote %)})]\n                                   (if (seq bes)\n                                     (core/let [bb (key (first bes))\n                                                bk (val (first bes))\n                                                bv (if (contains? defaults bb)\n                                                     (core/list 'cljs.core/get gmap bk (defaults bb))\n                                                     (core/list 'cljs.core/get gmap bk))]\n                                       (recur (core/cond\n                                                (core/symbol? bb) (core/-> ret (conj (if (namespace bb) (symbol (name bb)) bb)) (conj bv))\n                                                (core/keyword? bb) (core/-> ret (conj (symbol (name bb)) bv))\n                                                :else (pb ret bb bv))\n                                              (next bes)))\n                                     ret))))]\n                    (core/cond\n                      (core/symbol? b) (core/-> bvec (conj (if (namespace b) (symbol (name b)) b)) (conj v))\n                      (core/keyword? b) (core/-> bvec (conj (symbol (name b))) (conj v))\n                      (vector? b) (pvec bvec b v)\n                      (map? b) (pmap bvec b v)\n                      :else (throw\n                             #?(:clj (new Exception (core/str \"Unsupported binding form: \" b))\n                                :cljs (new js/Error (core/str \"Unsupported binding form: \" b)))))))\n             process-entry (core/fn [bvec b] (pb bvec (first b) (second b)))]\n    (if (every? core/symbol? (map first bents))\n      bindings\n      (core/if-let [kwbs (seq (filter #(core/keyword? (first %)) bents))]\n        (throw\n          #?(:clj (new Exception (core/str \"Unsupported binding key: \" (ffirst kwbs)))\n             :cljs (new js/Error (core/str \"Unsupported binding key: \" (ffirst kwbs)))))\n        (reduce process-entry [] bents)))))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [610 679],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L610-L679"},
+          :lines [610 695],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L610-L695"},
  :usage ["{:keys [] :strs [] :syms [] :or {} :as name}"],
  :examples [{:id "0d56ee",
              :content "Use in place of function arguments:\n\n```clj\n(defn print-point\n  [{:keys [x y z]}]\n  (println x y z))\n\n(print-point {:x 1, :y 2, :z 3})\n;; 1 2 3\n```"}

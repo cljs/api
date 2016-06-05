@@ -102,10 +102,10 @@ The API data for this symbol:
  :source {:code "(defn print-mapped-stacktrace\n  ([stacktrace] (print-mapped-stacktrace stacktrace *repl-opts*))\n  ([stacktrace opts]\n   (doseq [{:keys [function file line column]}\n           (mapped-stacktrace stacktrace opts)]\n     (err-out\n       (println \"\\t\"\n         (str (when function (str function \" \"))\n           \"(\" file (when line (str \":\" line)) (when column (str \":\" column)) \")\"))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [352 362],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L352-L362"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl.cljc#L352-L362"},
  :usage ["(print-mapped-stacktrace stacktrace)"
          "(print-mapped-stacktrace stacktrace opts)"],
  :full-name "cljs.repl/print-mapped-stacktrace",

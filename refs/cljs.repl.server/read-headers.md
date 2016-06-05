@@ -90,10 +90,10 @@ The API data for this symbol:
  :source {:code "(defn read-headers [rdr]\n  (loop [next-line (.readLine rdr) header-lines []]\n    (if (= \"\" next-line)\n      header-lines ;; we're done reading headers\n      (recur\n        (.readLine rdr)\n        (conj header-lines next-line)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/server.clj",
           :lines [66 72],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/server.clj#L66-L72"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/server.clj#L66-L72"},
  :usage ["(read-headers rdr)"],
  :full-name "cljs.repl.server/read-headers",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.server/read-headers.cljsdoc"}

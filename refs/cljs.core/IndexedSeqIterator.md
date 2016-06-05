@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(deftype IndexedSeqIterator [arr ^:mutable i]\n  Object\n  (hasNext [_]\n    (< i (alength arr)))\n  (next [_]\n    (let [ret (aget arr i)]\n      (set! i (inc i))\n      ret)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1431 1438],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L1431-L1438"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L1431-L1438"},
  :usage ["(IndexedSeqIterator. arr i)"],
  :full-name "cljs.core/IndexedSeqIterator",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/IndexedSeqIterator.cljsdoc"}

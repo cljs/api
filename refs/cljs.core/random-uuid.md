@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn random-uuid []\n  (letfn [(hex [] (.toString (rand-int 16) 16))]\n    (let [rhex (.toString (bit-or 0x8 (bit-and 0x3 (rand-int 16))) 16)]\n      (uuid\n        (str (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex) \"-\"\n             \"4\"   (hex) (hex) (hex) \"-\"\n             rhex  (hex) (hex) (hex) \"-\"\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex)\n             (hex) (hex) (hex) (hex))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10121 10132],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10121-L10132"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10121-L10132"},
  :usage ["(random-uuid)"],
  :full-name "cljs.core/random-uuid",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/random-uuid.cljsdoc"}

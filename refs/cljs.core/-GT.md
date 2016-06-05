@@ -213,10 +213,10 @@ The API data for this symbol:
  :source {:code "(defmacro ->\n  [x & forms]\n  (loop [x x, forms forms]\n    (if forms\n      (let [form (first forms)\n            threaded (if (seq? form)\n                       (with-meta `(~(first form) ~x ~@(next form)) (meta form))\n                       (list form x))]\n        (recur threaded (next forms)))\n      x)))",
           :title "Source code",
           :repo "clojure",
-          :tag "clojure-1.8.0",
+          :tag "clojure-1.9.0-alpha4",
           :filename "src/clj/clojure/core.clj",
           :lines [1586 1600],
-          :url "https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L1586-L1600"},
+          :url "https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha4/src/clj/clojure/core.clj#L1586-L1600"},
  :usage ["(-> x & forms)"],
  :examples [{:id "19b460",
              :content "The first is arguably a bit more cumbersome to read than the second:\n\n```clj\n(first (.split (.replace (.toUpperCase \"a b c d\") \"A\" \"X\") \" \"))\n;;=> \"X\"\n\n(-> \"a b c d\"\n    .toUpperCase\n    (.replace \"A\" \"X\")\n    (.split \" \")\n    first)\n;;=> \"X\"\n```"}

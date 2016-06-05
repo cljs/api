@@ -112,10 +112,10 @@ The API data for this symbol:
  :source {:code "(defn last-index-of\n  ([s value]\n   (let [result (.lastIndexOf s value)]\n     (if (neg? result)\n       nil\n       result)))\n  ([s value from-index]\n   (let [result (.lastIndexOf s value from-index)]\n     (if (neg? result)\n       nil\n       result))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/string.cljs",
           :lines [231 243],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/string.cljs#L231-L243"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/string.cljs#L231-L243"},
  :usage ["(last-index-of s value)"
          "(last-index-of s value from-index)"],
  :full-name "clojure.string/last-index-of",

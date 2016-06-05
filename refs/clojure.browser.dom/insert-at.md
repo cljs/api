@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn insert-at [parent child index]\n  (gdom/insertChildAt parent child index))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [104 105],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/dom.cljs#L104-L105"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/dom.cljs#L104-L105"},
  :usage ["(insert-at parent child index)"],
  :full-name "clojure.browser.dom/insert-at",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/clojure.browser.dom/insert-at.cljsdoc"}

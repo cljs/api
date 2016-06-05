@@ -220,10 +220,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse '.\n  [_ env [_ target & [field & member+] :as form] _ _]\n  (disallowing-recur (analyze-dot env target field member+ form)))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [2122 2124],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L2122-L2124"},
+          :lines [2136 2138],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer.cljc#L2136-L2138"},
  :usage ["(.-foo obj)" "(.foo obj)"],
  :examples [{:id "22ccbb",
              :content "We can access the JavaScript properties of a string:\n\n```js\n// JavaScript\nvar m = \"Hello World\";\nm.length;\n//=> 11\n```\n\n```clj\n;; ClojureScript\n(def m \"Hello World\")\n(.-length m)\n;;=> 11\n```\n\nWe can also call member functions on the string:\n\n```js\n// JavaScript\nm.toUpperCase();\n//=> \"HELLO WORLD\"\n\nm.replace(\"H\", \"\");\n//=> \"ello World\";\n```\n\n```clj\n;; ClojureScript\n(.toUpperCase m)\n;;=> \"HELLO WORLD\"\n\n(.replace m \"H\" \"\")\n;;=> \"ello World\"\n```"}

@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn seq-iter [coll]\n  (SeqIter. INIT coll))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3690 3691],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3690-L3691"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3690-L3691"},
  :usage ["(seq-iter coll)"],
  :full-name "cljs.core/seq-iter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/seq-iter.cljsdoc"}

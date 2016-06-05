@@ -98,10 +98,10 @@ The API data for this symbol:
  :source {:code "(defn find-macros-ns [ns]\n  (when (nil? NS_CACHE)\n    (set! NS_CACHE (atom {})))\n  (let [the-ns (get @NS_CACHE ns)]\n    (if-not (nil? the-ns)\n      the-ns\n      (let [ns-str (str ns)\n           ns (if (not ^boolean (gstring/contains ns-str \"$macros\"))\n                (symbol (str ns-str \"$macros\"))\n                ns)\n           ns-obj (find-ns-obj ns)]\n       (when-not (nil? ns-obj)\n         (let [new-ns (create-ns ns ns-obj)]\n           (swap! NS_CACHE assoc ns new-ns)\n           new-ns))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10442 10456],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10442-L10456"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10442-L10456"},
  :usage ["(find-macros-ns ns)"],
  :full-name "cljs.core/find-macros-ns",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/find-macros-ns.cljsdoc"}

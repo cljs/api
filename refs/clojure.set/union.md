@@ -134,10 +134,10 @@ The API data for this symbol:
  :source {:code "(defn union\n  ([] #{})\n  ([s1] s1)\n  ([s1 s2]\n     (if (< (count s1) (count s2))\n       (reduce conj s2 s1)\n       (reduce conj s1 s2)))\n  ([s1 s2 & sets]\n     (let [bubbled-sets (bubble-max-key count (conj sets s2 s1))]\n       (reduce into (first bubbled-sets) (rest bubbled-sets)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/set.cljs",
           :lines [19 29],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/set.cljs#L19-L29"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/set.cljs#L19-L29"},
  :usage ["(union)"
          "(union s1)"
          "(union s1 s2)"

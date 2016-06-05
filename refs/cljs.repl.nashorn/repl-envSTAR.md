@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn repl-env* [{:keys [debug] :as opts}]\n      (let [engine (create-engine opts)]\n        (merge\n          (NashornEnv. engine debug)\n          opts)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/nashorn.clj",
           :lines [171 175],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/nashorn.clj#L171-L175"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/nashorn.clj#L171-L175"},
  :usage ["(repl-env* {:keys [debug], :as opts})"],
  :full-name "cljs.repl.nashorn/repl-env*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.nashorn/repl-envSTAR.cljsdoc"}

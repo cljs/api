@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn close-socket [s]\n  (.close (:in s))\n  (.close (:out s))\n  (.close (:socket s)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/node.clj",
           :lines [30 33],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/node.clj#L30-L33"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/node.clj#L30-L33"},
  :usage ["(close-socket s)"],
  :full-name "cljs.repl.node/close-socket",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.node/close-socket.cljsdoc"}

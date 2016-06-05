@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn read-symbol\n  [reader initch]\n  (let [token (read-token reader initch)]\n    (if (and (gstring/contains token \"/\")\n             (not (== (.-length token) 1)))\n      (symbol (subs token 0 (.indexOf token \"/\"))\n              (subs token (inc (.indexOf token \"/\"))\n                (.-length token)))\n      (special-symbols token (symbol token)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [327 335],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L327-L335"},
+          :lines [330 338],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L330-L338"},
  :usage ["(read-symbol reader initch)"],
  :full-name "cljs.reader/read-symbol",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-symbol.cljsdoc"}

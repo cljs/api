@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defmethod parse 'case*\n  [op env [_ sym tests thens default :as form] name _]\n  (assert (symbol? sym) \"case* must switch on symbol\")\n  (assert (every? vector? tests) \"case* tests must be grouped in vectors\")\n  (let [expr-env (assoc env :context :expr)\n        v        (disallowing-recur (analyze expr-env sym))\n        tests    (mapv #(mapv (fn [t] (analyze expr-env t)) %) tests)\n        thens    (mapv #(analyze env %) thens)\n        default  (analyze env default)]\n    (assert (every? (fn [t]\n                      (or\n                        (-> t :info :const)\n                        (and (= :constant (:op t))\n                             ((some-fn number? string? char?) (:form t)))))\n              (apply concat tests))\n      \"case* tests must be numbers, strings, or constants\")\n    {:env env :op :case* :form form\n     :v v :tests tests :thens thens :default default\n     :children (vec (concat [v] tests thens (if default [default])))}))",
           :title "Parser code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer.cljc",
-          :lines [987 1005],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer.cljc#L987-L1005"},
+          :lines [1001 1019],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer.cljc#L1001-L1019"},
  :full-name "special/case*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/special/caseSTAR.cljsdoc"}
 

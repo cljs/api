@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn js-line-and-column [stack-element]\n  (let [parts (.split stack-element \":\")\n        cnt   (count parts)]\n    [(js/parseInt (nth parts (- cnt 2)) 10)\n     (js/parseInt (nth parts (dec cnt)) 10)]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/test.cljs",
           :lines [366 370],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/test.cljs#L366-L370"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/test.cljs#L366-L370"},
  :usage ["(js-line-and-column stack-element)"],
  :full-name "cljs.test/js-line-and-column",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.test/js-line-and-column.cljsdoc"}

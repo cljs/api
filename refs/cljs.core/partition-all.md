@@ -149,10 +149,10 @@ The API data for this symbol:
  :source {:code "(defn partition-all\n  ([n]\n   (fn [rf]\n     (let [a (array-list)]\n       (fn\n         ([] (rf))\n         ([result]\n            (let [result (if (.isEmpty a)\n                           result\n                           (let [v (vec (.toArray a))]\n                             ;;clear first!\n                             (.clear a)\n                             (unreduced (rf result v))))]\n              (rf result)))\n         ([result input]\n            (.add a input)\n            (if (== n (.size a))\n              (let [v (vec (.toArray a))]\n                (.clear a)\n                (rf result v))\n              result))))))\n  ([n coll]\n     (partition-all n n coll))\n  ([n step coll]\n     (lazy-seq\n      (when-let [s (seq coll)]\n        (cons (take n s) (partition-all n step (drop step s)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [8580 8609],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L8580-L8609"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L8580-L8609"},
  :usage ["(partition-all n)"
          "(partition-all n coll)"
          "(partition-all n step coll)"],

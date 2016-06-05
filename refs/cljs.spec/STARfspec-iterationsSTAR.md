@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *fspec-iterations*\n  \"The number of times an anonymous fn specified by fspec will be (generatively) tested during conform\"\n  21)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [24 26],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L24-L26"},
+          :lines [25 27],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L25-L27"},
  :full-name "cljs.spec/*fspec-iterations*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/STARfspec-iterationsSTAR.cljsdoc"}
 

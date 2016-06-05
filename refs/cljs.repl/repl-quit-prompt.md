@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn repl-quit-prompt []\n  (println \"To quit, type:\" :cljs/quit))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [739 740],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L739-L740"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl.cljc#L739-L740"},
  :usage ["(repl-quit-prompt)"],
  :full-name "cljs.repl/repl-quit-prompt",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/repl-quit-prompt.cljsdoc"}

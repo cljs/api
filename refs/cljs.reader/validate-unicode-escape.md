@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn validate-unicode-escape [unicode-pattern reader escape-char unicode-str]\n  (if (re-matches unicode-pattern unicode-str)\n    unicode-str\n    (reader-error reader \"Unexpected unicode escape \\\\\" escape-char unicode-str)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
           :lines [184 187],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L184-L187"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L184-L187"},
  :usage ["(validate-unicode-escape unicode-pattern reader escape-char unicode-str)"],
  :full-name "cljs.reader/validate-unicode-escape",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/validate-unicode-escape.cljsdoc"}

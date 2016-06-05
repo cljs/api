@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(defprotocol DOMBuilder\n  (-element [this] [this attrs-or-children] [this attrs children]))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/dom.cljs",
           :lines [17 18],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/dom.cljs#L17-L18"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/dom.cljs#L17-L18"},
  :methods [{:name "-element",
             :signature ["[this]"
                         "[this attrs-or-children]"

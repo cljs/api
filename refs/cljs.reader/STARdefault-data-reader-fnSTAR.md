@@ -76,10 +76,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *default-data-reader-fn*\n  (atom nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [591 592],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L591-L592"},
+          :lines [594 595],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L594-L595"},
  :full-name "cljs.reader/*default-data-reader-fn*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/STARdefault-data-reader-fnSTAR.cljsdoc"}
 

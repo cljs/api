@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn type->str [ty]\n  (if-let [s (.-cljs$lang$ctorStr ty)]\n    s\n    (str ty)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [268 271],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L268-L271"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L268-L271"},
  :usage ["(type->str ty)"],
  :full-name "cljs.core/type->str",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/type-GTstr.cljsdoc"}

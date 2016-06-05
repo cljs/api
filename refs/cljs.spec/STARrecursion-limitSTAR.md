@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *recursion-limit*\n  \"A soft limit on how many times a branching spec (or/alt/*/opt-keys/multi-spec)\n  can be recursed through during generation. After this a\n  non-recursive branch will be chosen.\"\n  4)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [18 22],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L18-L22"},
+          :lines [19 23],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L19-L23"},
  :full-name "cljs.spec/*recursion-limit*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/STARrecursion-limitSTAR.cljsdoc"}
 

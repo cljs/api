@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defn listen-once\n  ([src type fn]\n     (listen-once src type fn false))\n  ([src type fn capture?]\n     (events/listenOnce src\n                        (get (event-types src) type type)\n                        fn\n                        capture?)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/clojure/browser/event.cljs",
           :lines [55 62],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/clojure/browser/event.cljs#L55-L62"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/clojure/browser/event.cljs#L55-L62"},
  :usage ["(listen-once src type fn)"
          "(listen-once src type fn capture?)"],
  :full-name "clojure.browser.event/listen-once",

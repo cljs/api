@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defprotocol ISequential\n  \"Marker interface indicating a persistent collection of sequential items\")",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [613 614],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L613-L614"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L613-L614"},
  :full-name "cljs.core/ISequential",
  :docstring "Marker interface indicating a persistent collection of sequential items",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ISequential.cljsdoc"}

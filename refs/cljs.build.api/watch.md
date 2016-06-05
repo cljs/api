@@ -109,10 +109,10 @@ The API data for this symbol:
  :source {:code "(defn watch\n  ([source opts]\n   (watch source opts\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))))\n  ([source opts compiler-env]\n   (watch source opts compiler-env nil))\n  ([source opts compiler-env stop]\n   (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n     (closure/watch source opts compiler-env stop))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/build/api.clj",
           :lines [212 223],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/build/api.clj#L212-L223"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/build/api.clj#L212-L223"},
  :usage ["(watch source opts)"
          "(watch source opts compiler-env)"
          "(watch source opts compiler-env stop)"],

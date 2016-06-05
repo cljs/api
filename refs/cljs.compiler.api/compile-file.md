@@ -127,10 +127,10 @@ The API data for this symbol:
  :source {:code "(defn compile-file\n  ([src] (compile-file src))\n  ([src dest] (compile-file src dest))\n  ([src dest opts]\n   (compile-file\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/compile-file src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [62 86],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/compiler/api.clj#L62-L86"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/compiler/api.clj#L62-L86"},
  :usage ["(compile-file src)"
          "(compile-file src dest)"
          "(compile-file src dest opts)"

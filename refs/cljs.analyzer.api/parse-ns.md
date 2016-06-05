@@ -124,10 +124,10 @@ The API data for this symbol:
  :source {:code "   (defn parse-ns\n     ([src] (parse-ns src nil nil))\n     ([src opts] (parse-ns src nil opts))\n     ([src dest opts]\n      (parse-ns\n        (if-not (nil? env/*compiler*)\n          env/*compiler*\n          (env/default-compiler-env opts))\n        src dest opts))\n     ([state src dest opts]\n      (env/with-compiler-env state\n        (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n          (ana/parse-ns src dest opts))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/analyzer/api.cljc",
           :lines [97 118],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/analyzer/api.cljc#L97-L118"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/analyzer/api.cljc#L97-L118"},
  :usage ["(parse-ns src)"
          "(parse-ns src opts)"
          "(parse-ns src dest opts)"

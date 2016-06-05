@@ -108,10 +108,10 @@ The API data for this symbol:
  :source {:code "(defn ^{:jsdoc [\"@constructor\"]}\n  ExceptionInfo [message data cause]\n  (let [e (js/Error. message)]\n    (this-as this\n      (set! (.-message this) message)\n      (set! (.-data this) data)\n      (set! (.-cause this) cause)\n      (do\n        (set! (.-name this) (.-name e))\n        ;; non-standard\n        (set! (.-description this) (.-description e))\n        (set! (.-number this) (.-number e))\n        (set! (.-fileName this) (.-fileName e))\n        (set! (.-lineNumber this) (.-lineNumber e))\n        (set! (.-columnNumber this) (.-columnNumber e))\n        (set! (.-stack this) (.-stack e)))\n      this)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10147 10163],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10147-L10163"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10147-L10163"},
  :usage ["(ExceptionInfo. message data cause)"],
  :full-name "cljs.core/ExceptionInfo",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ExceptionInfo.cljsdoc"}

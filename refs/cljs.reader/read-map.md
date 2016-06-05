@@ -30,10 +30,13 @@ Source code @ [github]():
 ```clj
 (defn read-map
   [rdr _]
-  (let [l (read-delimited-list "}" rdr true)]
-    (when (odd? (count l))
+  (let [l (read-delimited-list "}" rdr true)
+        c (count l)]
+    (when (odd? c)
       (reader-error rdr "Map literal must contain an even number of forms"))
-    (apply hash-map l)))
+    (if (<= c (* 2 (.-HASHMAP-THRESHOLD PersistentArrayMap)))
+      (apply array-map l)
+      (apply hash-map l))))
 ```
 
 <!--
@@ -86,13 +89,13 @@ The API data for this symbol:
  :history [["+" "0.0-927"]],
  :type "function",
  :full-name-encode "cljs.reader/read-map",
- :source {:code "(defn read-map\n  [rdr _]\n  (let [l (read-delimited-list \"}\" rdr true)]\n    (when (odd? (count l))\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (apply hash-map l)))",
+ :source {:code "(defn read-map\n  [rdr _]\n  (let [l (read-delimited-list \"}\" rdr true)\n        c (count l)]\n    (when (odd? c)\n      (reader-error rdr \"Map literal must contain an even number of forms\"))\n    (if (<= c (* 2 (.-HASHMAP-THRESHOLD PersistentArrayMap)))\n      (apply array-map l)\n      (apply hash-map l))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [274 279],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L274-L279"},
+          :lines [274 282],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L274-L282"},
  :usage ["(read-map rdr _)"],
  :full-name "cljs.reader/read-map",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-map.cljsdoc"}

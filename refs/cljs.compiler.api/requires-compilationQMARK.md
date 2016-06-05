@@ -108,10 +108,10 @@ The API data for this symbol:
  :source {:code "(defn requires-compilation?\n  ([src dest] (requires-compilation? src dest nil))\n  ([src dest opts]\n   (requires-compilation?\n     (if-not (nil? env/*compiler*)\n       env/*compiler*\n       (env/default-compiler-env opts))\n     src dest opts))\n  ([state src dest opts]\n   (env/with-compiler-env state\n     (binding [ana/*cljs-warning-handlers* (:warning-handlers opts ana/*cljs-warning-handlers*)]\n       (comp/requires-compilation? src dest opts)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/compiler/api.clj",
           :lines [48 60],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/compiler/api.clj#L48-L60"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/compiler/api.clj#L48-L60"},
  :usage ["(requires-compilation? src dest)"
          "(requires-compilation? src dest opts)"
          "(requires-compilation? state src dest opts)"],

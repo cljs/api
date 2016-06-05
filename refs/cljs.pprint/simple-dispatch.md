@@ -90,10 +90,10 @@ The API data for this symbol:
  :source {:code "(defmulti simple-dispatch\n  \"The pretty print dispatch function for simple data structure format.\"\n  type-dispatcher)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [2898 2900],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L2898-L2900"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/pprint.cljs#L2898-L2900"},
  :full-name "cljs.pprint/simple-dispatch",
  :docstring "The pretty print dispatch function for simple data structure format.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/simple-dispatch.cljsdoc"}

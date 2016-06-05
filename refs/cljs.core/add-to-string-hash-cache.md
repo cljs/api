@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn add-to-string-hash-cache [k]\n  (let [h (hash-string* k)]\n    (aset string-hash-cache k h)\n    (set! string-hash-cache-count (inc string-hash-cache-count))\n    h))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [864 868],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L864-L868"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L864-L868"},
  :usage ["(add-to-string-hash-cache k)"],
  :full-name "cljs.core/add-to-string-hash-cache",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/add-to-string-hash-cache.cljsdoc"}

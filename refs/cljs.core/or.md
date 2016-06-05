@@ -186,10 +186,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro or\n  ([] nil)\n  ([x] x)\n  ([x & next]\n   (core/let [forms (concat [x] next)]\n     (if (every? #(simple-test-expr? &env %)\n           (map #(cljs.analyzer/analyze &env %) forms))\n       (core/let [or-str (core/->> (repeat (count forms) \"(~{})\")\n                           (interpose \" || \")\n                           (apply core/str))]\n         (bool-expr `(~'js* ~or-str ~@forms)))\n       `(let [or# ~x]\n          (if or# or# (or ~@next)))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [805 821],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L805-L821"},
+          :lines [821 837],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L821-L837"},
  :usage ["(or)" "(or x)" "(or x & next)"],
  :examples [{:id "d50433",
              :content "```clj\n(or)\n;;=> nil\n\n(or false)\n;;=> false\n\n(or true)\n;;=> true\n\n(or true true)\n;;=> true\n\n(or true false)\n;;=> true\n\n(or false false)\n;;=> false\n```"}

@@ -94,10 +94,10 @@ The API data for this symbol:
  :source {:code "(deftype RecordIter [^:mutable i record base-count fields ext-map-iter]\n  Object\n  (hasNext [_]\n    (or (< i base-count) (.hasNext ext-map-iter)))\n  (next [_]\n    (if (< i base-count)\n      (let [k (nth fields i)]\n        (set! i (inc i))\n        [k (-lookup record k)])\n      (.next ext-map-iter)))\n  (remove [_] (js/Error. \"Unsupported operation\")))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [5831 5841],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L5831-L5841"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L5831-L5841"},
  :usage ["(RecordIter. i record base-count fields ext-map-iter)"],
  :full-name "cljs.core/RecordIter",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/RecordIter.cljsdoc"}

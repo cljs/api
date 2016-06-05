@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn load-javascript [repl-env ns url]\n  (try\n    (with-open [reader (io/reader url)]\n      (-eval reader repl-env (.toString url) 1))\n    ;; TODO: don't show errors for goog/base.js line number 105\n    (catch Throwable ex (println (.getMessage ex)))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl/rhino.clj",
           :lines [97 102],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl/rhino.clj#L97-L102"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl/rhino.clj#L97-L102"},
  :usage ["(load-javascript repl-env ns url)"],
  :full-name "cljs.repl.rhino/load-javascript",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl.rhino/load-javascript.cljsdoc"}

@@ -84,10 +84,10 @@ The API data for this symbol:
  :source {:code "(set! (.-EMPTY BitmapIndexedNode) (BitmapIndexedNode. nil 0 (make-array 0)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [6591],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L6591"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L6591"},
  :full-name "cljs.core/BitmapIndexedNode.EMPTY",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/BitmapIndexedNodeDOTEMPTY.cljsdoc"}
 

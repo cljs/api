@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic\n ^{:doc \"Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.\",\n   :added \"1.2\"}\n *print-right-margin* 72)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/pprint.cljs",
           :lines [625 630],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/pprint.cljs#L625-L630"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/pprint.cljs#L625-L630"},
  :full-name "cljs.pprint/*print-right-margin*",
  :docstring "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.pprint/STARprint-right-marginSTAR.cljsdoc"}

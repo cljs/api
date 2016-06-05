@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(deftype LazyVar [f ^:mutable cached]\n  IDeref\n  (-deref [this]\n    (if-not (nil? cached)\n      cached\n      (let [x (f)]\n        (when-not (nil? x)\n          (set! cached x))\n        x))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec/impl/gen.cljs",
           :lines [16 24],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec/impl/gen.cljs#L16-L24"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec/impl/gen.cljs#L16-L24"},
  :usage ["(LazyVar. f cached)"],
  :full-name "cljs.spec.impl.gen/LazyVar",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec.impl.gen/LazyVar.cljsdoc"}

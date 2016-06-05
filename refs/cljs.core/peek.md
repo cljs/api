@@ -161,10 +161,10 @@ The API data for this symbol:
  :source {:code "(defn peek\n  [coll]\n  (when-not (nil? coll)\n    (-peek coll)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1931 1936],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L1931-L1936"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L1931-L1936"},
  :usage ["(peek coll)"],
  :examples [{:id "4abc4c",
              :content "With vectors:\n\n```clj\n(peek [1 2 3])\n;;=> 3\n\n(peek [1 2])\n;;=> 2\n\n(peek [1])\n;;=> 1\n\n(peek [])\n;;=> nil\n```"}

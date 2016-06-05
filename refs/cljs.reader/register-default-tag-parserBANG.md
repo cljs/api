@@ -88,10 +88,10 @@ The API data for this symbol:
  :source {:code "(defn register-default-tag-parser!\n  [f]\n  (let [old-parser @*default-data-reader-fn*]\n    (swap! *default-data-reader-fn* (fn [_] f))\n    old-parser))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [620 624],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L620-L624"},
+          :lines [623 627],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L623-L627"},
  :usage ["(register-default-tag-parser! f)"],
  :full-name "cljs.reader/register-default-tag-parser!",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/register-default-tag-parserBANG.cljsdoc"}

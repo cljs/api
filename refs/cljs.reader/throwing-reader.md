@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn throwing-reader\n  [msg]\n  (fn [rdr _]\n    (reader-error rdr msg)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [381 384],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L381-L384"},
+          :lines [384 387],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L384-L387"},
  :usage ["(throwing-reader msg)"],
  :full-name "cljs.reader/throwing-reader",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/throwing-reader.cljsdoc"}

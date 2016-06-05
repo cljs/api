@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro copy-arguments [dest]\n  `(let [len# (alength (js-arguments))]\n     (loop [i# 0]\n       (when (< i# len#)\n         (.push ~dest (aget (js-arguments) i#))\n         (recur (inc i#))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2753 2758],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L2753-L2758"},
+          :lines [2769 2774],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L2769-L2774"},
  :usage ["(copy-arguments dest)"],
  :full-name "cljs.core/copy-arguments",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/copy-arguments.cljsdoc"}

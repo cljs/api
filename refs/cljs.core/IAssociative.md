@@ -95,10 +95,10 @@ The API data for this symbol:
  :source {:code "(defprotocol IAssociative\n  \"Protocol for adding associativity to collections.\"\n  (^boolean -contains-key? [coll k]\n    \"Returns true if k is a key in coll.\")\n  #_(-entry-at [coll k])\n  (^clj -assoc [coll k v]\n    \"Returns a new collection of coll with a mapping from key k to\n     value v added to it.\"))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [523 530],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L523-L530"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L523-L530"},
  :methods [{:name "-contains-key?",
             :signature ["[coll k]"],
             :docstring "Returns true if k is a key in coll."}

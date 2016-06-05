@@ -91,10 +91,10 @@ The API data for this symbol:
  :source {:code "(deftype ES6SetEntriesIterator [^:mutable s]\n  Object\n  (next [_]\n    (if-not (nil? s)\n      (let [x (first s)]\n        (set! s (next s))\n        #js {:value #js [x x] :done false})\n      #js {:value nil :done true})))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [5857 5864],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L5857-L5864"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L5857-L5864"},
  :usage ["(ES6SetEntriesIterator. s)"],
  :full-name "cljs.core/ES6SetEntriesIterator",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ES6SetEntriesIterator.cljsdoc"}

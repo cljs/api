@@ -217,10 +217,10 @@ The API data for this symbol:
  :source {:code "(defn ^boolean =\n  ([x] true)\n  ([x y]\n    (if (nil? x)\n      (nil? y)\n      (or (identical? x y)\n        ^boolean (-equiv x y))))\n  ([x y & more]\n     (if (= x y)\n       (if (next more)\n         (recur y (first more) (next more))\n         (= y (first more)))\n       false)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [1147 1163],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L1147-L1163"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L1147-L1163"},
  :usage ["(= x)" "(= x y)" "(= x y & more)"],
  :examples [{:id "edffb6",
              :content "```clj\n(= 1)\n;;=> true\n\n(= 1 1)\n;;=> true\n\n(= 1 2)\n;;=> false\n\n(= 1 1 1)\n;;=> true\n\n(= 1 1 2)\n;;=> false\n```"}

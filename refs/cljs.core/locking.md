@@ -94,10 +94,10 @@ The API data for this symbol:
  :source {:code "(core/defmacro locking\n  [x & forms]\n  `(do ~@forms))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/core.cljc",
-          :lines [2683 2685],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/core.cljc#L2683-L2685"},
+          :lines [2699 2701],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/core.cljc#L2699-L2701"},
  :usage ["(locking x & forms)"],
  :full-name "cljs.core/locking",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/locking.cljsdoc"}

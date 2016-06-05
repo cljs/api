@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn ranged-iterator [v start end]\n  (let [i start]\n    (RangedIterator. i (- i (js-mod i 32))\n      (when (< start (count v))\n        (unchecked-array-for v i))\n      v start end)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [4862 4867],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L4862-L4867"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L4862-L4867"},
  :usage ["(ranged-iterator v start end)"],
  :full-name "cljs.core/ranged-iterator",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/ranged-iterator.cljsdoc"}

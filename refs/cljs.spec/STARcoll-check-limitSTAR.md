@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(def ^:dynamic *coll-check-limit*\n  \"The number of items validated in a collection spec'ed with 'coll'\"\n  100)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/spec.cljs",
-          :lines [28 30],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/spec.cljs#L28-L30"},
+          :lines [29 31],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/spec.cljs#L29-L31"},
  :full-name "cljs.spec/*coll-check-limit*",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.spec/STARcoll-check-limitSTAR.cljsdoc"}
 

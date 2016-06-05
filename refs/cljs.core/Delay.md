@@ -102,10 +102,10 @@ The API data for this symbol:
  :source {:code "(deftype Delay [^:mutable f ^:mutable value]\n  IDeref\n  (-deref [_]\n    (when f\n      (set! value (f))\n      (set! f nil))\n    value)\n\n  IPending\n  (-realized? [x]\n    (not f)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [9438 9448],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9438-L9448"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L9438-L9448"},
  :usage ["(Delay. f value)"],
  :full-name "cljs.core/Delay",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/Delay.cljsdoc"}

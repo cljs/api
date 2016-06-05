@@ -92,10 +92,10 @@ The API data for this symbol:
  :source {:code "(defn print-map [m print-one writer opts]\n  (pr-sequential-writer\n    writer\n    (fn [e w opts]\n      (do (print-one (key e) w opts)\n          (-write w \\space)\n          (print-one (val e) w opts)))\n    \"{\" \", \" \"}\"\n    opts (seq m)))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [9225 9233],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L9225-L9233"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L9225-L9233"},
  :usage ["(print-map m print-one writer opts)"],
  :full-name "cljs.core/print-map",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/print-map.cljsdoc"}

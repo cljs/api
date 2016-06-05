@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn demunge [name]\n  ((if (symbol? name) symbol str)\n    (let [name' (str name)]\n      (if (identical? name' \"_DOT__DOT_\")\n        \"..\"\n        (demunge-str (str name))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [10355 10360],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L10355-L10360"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L10355-L10360"},
  :usage ["(demunge name)"],
  :full-name "cljs.core/demunge",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/demunge.cljsdoc"}

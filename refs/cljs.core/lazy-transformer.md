@@ -85,10 +85,10 @@ The API data for this symbol:
  :source {:code "(defn lazy-transformer [stepper]\n  (LazyTransformer. stepper nil nil nil))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3704 3705],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3704-L3705"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3704-L3705"},
  :usage ["(lazy-transformer stepper)"],
  :full-name "cljs.core/lazy-transformer",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/lazy-transformer.cljsdoc"}

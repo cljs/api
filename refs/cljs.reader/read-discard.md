@@ -87,10 +87,10 @@ The API data for this symbol:
  :source {:code "(defn read-discard\n  [rdr _]\n  (read rdr true nil true)\n  rdr)",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/reader.cljs",
-          :lines [404 407],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/reader.cljs#L404-L407"},
+          :lines [407 410],
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/reader.cljs#L407-L410"},
  :usage ["(read-discard rdr _)"],
  :full-name "cljs.reader/read-discard",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.reader/read-discard.cljsdoc"}

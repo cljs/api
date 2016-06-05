@@ -89,10 +89,10 @@ The API data for this symbol:
  :source {:code "(defn load-stream [repl-env filename res]\n  (let [env (ana/empty-env)]\n    (with-open [rdr (io/reader res)]\n      (doseq [form (ana/forms-seq* rdr filename)]\n        (let [env (assoc env :ns (ana/get-namespace ana/*cljs-ns*))]\n          (evaluate-form repl-env env filename form))))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/clojure/cljs/repl.cljc",
           :lines [508 513],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/clojure/cljs/repl.cljc#L508-L513"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/clojure/cljs/repl.cljc#L508-L513"},
  :usage ["(load-stream repl-env filename res)"],
  :full-name "cljs.repl/load-stream",
  :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.repl/load-stream.cljsdoc"}

@@ -106,10 +106,10 @@ The API data for this symbol:
  :source {:code "(defn multi-stepper\n  ([xform iters]\n     (multi-stepper xform iters\n       (make-array (alength iters))))\n  ([xform iters nexts]\n     (letfn [(stepfn\n               ([result]\n                  (let [lt (if (reduced? result)\n                             @result\n                             result)]\n                    (set! (.-stepper lt) nil)\n                    lt))\n               ([result input]\n                  (let [lt result]\n                    (set! (.-first lt) input)\n                    (set! (.-rest lt) (lazy-transformer (.-stepper lt)))\n                    (set! (.-stepper lt) nil)\n                    (.-rest lt))))]\n       (MultiStepper. (xform stepfn) iters nexts))))",
           :title "Source code",
           :repo "clojurescript",
-          :tag "r1.9.14",
+          :tag "r1.9.36",
           :filename "src/main/cljs/cljs/core.cljs",
           :lines [3761 3779],
-          :url "https://github.com/clojure/clojurescript/blob/r1.9.14/src/main/cljs/cljs/core.cljs#L3761-L3779"},
+          :url "https://github.com/clojure/clojurescript/blob/r1.9.36/src/main/cljs/cljs/core.cljs#L3761-L3779"},
  :usage ["(multi-stepper xform iters)"
          "(multi-stepper xform iters nexts)"],
  :full-name "cljs.core/multi-stepper",
