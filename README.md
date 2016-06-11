@@ -63,7 +63,6 @@ To help categorization of special case symbols that do not have a namespace, we
 just invent some "psuedo-namespaces":
 
 - `special` - special forms
-- `specialrepl` - REPL special forms
 - `syntax` - syntax forms (we think these deserve API docs too)
 
 ---
