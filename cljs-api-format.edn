@@ -109,6 +109,10 @@
                                  "cljs.core/map"}
                                  ;; ...
 
+                 ;; set of full namespace names present in this API
+                 :namespace-names #{"cljs.core"
+                                    "cljs.js"}
+                                    ;; ...
 
                  ;; history of changes (from oldest to newest)
                  :changes
@@ -128,9 +132,11 @@
 
 
        ;; Syntax API (same format)
-       :syntax {:symbol-names {}
+       :syntax {:symbol-names #{}
+                :namespace-names #{}
                 :changes []}
 
        ;; Compiler API (same format)
-       :compiler {:symbol-names {}
+       :compiler {:symbol-names #{}
+                  :namespace-names #{}
                   :changes []}}}
