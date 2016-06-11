@@ -82,8 +82,7 @@
     "cljs.test"             :custom
     "cljs.repl"             :custom
     "cljs.spec.impl.gen"    :custom
-    "special"               :custom ;; <-- pseudo-namespace for special forms
-    "specialrepl"           :custom} ;; <-- pseudo-namespace for REPL special forms
+    "special"               :custom} ;; <-- pseudo-namespace for special forms
 
    :compiler
    {"cljs.analyzer.api"     :normal
@@ -565,12 +564,40 @@
     (let [location (parse-location form)
           make-map (fn [name-]
                      (let [base {:name (str name-)
+                                 :repl-only? true
                                  :type "special form (repl)"}
                            docs (get doc-map name-)]
                        (-> base
                            (merge location docs)
                            (assoc-in [:source :title] "repl specials table"))))]
      (doall (map make-map specials)))))
+
+;;--------------------------------------------------------------------------------
+;; Parse Special Forms (main)
+;;--------------------------------------------------------------------------------
+
+(defn parse-special-items [ns-]
+  (let [docs (->> (read-all-ns-forms "cljs.repl" :compiler)
+                  (keep #(parse-special-docs %))
+                  first)
+        ns-with-specials (cond
+                           (cljs-cmp >= "0.0-1424") "cljs.analyzer"
+                           :else                    "cljs.compiler")
+        specials (binding [*cur-ns* ns-
+                           *cur-repo* "clojurescript"]
+                   (->> (read-all-ns-forms ns-with-specials :compiler)
+                        (keep #(parse-special % docs))
+                        doall))]
+    specials))
+
+;; pseudo-namespace since repl special forms don't have a namespace
+(defn parse-repl-special-items [ns-]
+  (let [forms (read-all-ns-forms "cljs.repl" :compiler)
+        docs (first (keep parse-repl-special-docs forms))
+        specials (binding [*cur-ns* ns-
+                           *cur-repo* "clojurescript"]
+                   (first (keep #(parse-repl-specials % docs) forms)))]
+    specials))
 
 ;;--------------------------------------------------------------------------------
 ;; Parse syntax readers
@@ -912,29 +939,9 @@
 
 ;; pseudo-namespace since special forms don't have a namespace
 (defmethod parse-ns ["special" :library] [ns- api]
-  (let [docs (->> (read-all-ns-forms "cljs.repl" :compiler)
-                  (keep #(parse-special-docs %))
-                  first)
-        ns-with-specials (cond
-                           (cljs-cmp >= "0.0-1424") "cljs.analyzer"
-                           :else                    "cljs.compiler")
-        specials (binding [*cur-ns* ns-
-                           *cur-repo* "clojurescript"]
-                   (->> (read-all-ns-forms ns-with-specials :compiler)
-                        (keep #(parse-special % docs))
-                        doall))
-        all (cons (pseudo-ns-item ns-) specials)]
-    all))
-
-;; pseudo-namespace since repl special forms don't have a namespace
-(defmethod parse-ns ["specialrepl" :library] [ns- api]
-  (let [forms (read-all-ns-forms "cljs.repl" :compiler)
-        docs (first (keep parse-repl-special-docs forms))
-        specials (binding [*cur-ns* ns-
-                           *cur-repo* "clojurescript"]
-                   (first (keep #(parse-repl-specials % docs) forms)))
-        all (cons (pseudo-ns-item ns-) specials)]
-    all))
+  (concat [(pseudo-ns-item ns-)]
+          (parse-special-items ns-)
+          (parse-repl-special-items ns-)))
 
 (defmethod parse-ns ["syntax" :syntax] [ns- api]
   (let [syntaxes (binding [*cur-ns* ns-]

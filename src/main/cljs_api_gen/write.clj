@@ -87,7 +87,7 @@
 (defn crossclj-has-cljs?
   [full-name]
   (let [[ns- name-] (split-ns-and-name full-name)]
-    (not (#{"syntax" "special" "specialrepl"} ns-))))
+    (not (#{"syntax" "special"} ns-))))
 
 (defn add-external-doc-links
   [{:keys [clj-symbol] :as item}]

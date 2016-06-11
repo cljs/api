@@ -91,8 +91,10 @@
                 :display "if" ;; (another example, from special/if)
 
               ;; what it's usually called
-              :known-as "thread first"}} ;; (from cljs.core/->)
+              :known-as "thread first" ;; (from cljs.core/->)
 
+              ;; some special forms are only available in the REPL
+              :repl-only? false}}
 
            ;; ...
 

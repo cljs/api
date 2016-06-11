@@ -23,7 +23,6 @@
 ;;; even though there aren't compiler API versions for them:
 ;;;
 ;;;   library/special       <--- special forms ns
-;;;   library/specialrepl   <--- special forms REPL ns
 ;;;
 ;;; Vars such as `cljs.core/foo` don't require an API type prefix like
 ;;; `library/cljs.core/foo` because we are (safely I hope) assuming that symbols

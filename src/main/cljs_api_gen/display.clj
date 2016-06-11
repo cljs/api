@@ -6,7 +6,7 @@
     [cljs-api-gen.encode :refer [fullname->ns-name]]))
 
 
-;;;  A 'pseudo-namespace' (e.g. special, specialrepl, syntax) shouldn't be
+;;;  A 'pseudo-namespace' (e.g. special, syntax) shouldn't be
 ;;;  displayed to the reader since its only purpose is to help consistent
 ;;;  categorization of symbols for the generator.
 
@@ -33,7 +33,6 @@
     (or (:display item)
         (cond
           (= "special" (:ns item)) (:name item)
-          (= "specialrepl" (:ns item)) (str (:name item) " (repl)")
           :else (:full-name item)))))
 
 ;;----------------------------------------------------------------------
@@ -50,7 +49,6 @@
 (def ns-order
   {"syntax" 0
    "special" 1
-   "specialrepl" 2
    "cljs.core" 3
    "cljs.js" 4})
 
