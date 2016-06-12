@@ -2,6 +2,7 @@
   (:require
     [clansi.core :refer [style]]
     [clojure.set :refer [difference]]
+    [cljs-api-gen.config :refer [cache-dir]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
     [cljs-api-gen.repo-cljs :refer [*cljs-tag* *clj-tag* ls-files clj-tag->api-key]]
     [cljs-api-gen.syntax :refer [syntax-map]]
@@ -26,7 +27,7 @@
 (def api-symbols (atom {}))
 
 (defn api-cache [v]
-  (str "clj-api-" v ".clj"))
+  (str cache-dir "/clj-api-" v ".clj"))
 
 (defn version-api-url [v]
   (str "https://raw.githubusercontent.com/clojure/clojure/gh-pages/index-v" v ".clj"))

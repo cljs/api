@@ -4,35 +4,20 @@
     [clojure.edn :as edn]
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
-    [clojure.java.shell :refer [sh]]
-    [me.raynes.fs :refer [mkdir
-                          exists?
-                          file?
-                          delete-dir
-                          list-dir
-                          base-name
-                          copy
-                          copy-dir]]
-    [cljs-api-gen.encode :refer [decode-fullname]]
-    [cljs-api-gen.cljsdoc :refer [build-doc
-                                  build-cljsdoc!
+    [me.raynes.fs :refer [exists?]]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!
                                   create-cljsdoc-stubs!]]
-    [cljs-api-gen.config :refer [*output-dir*
+    [cljs-api-gen.config :refer [cache-dir
                                  edn-parsed-file
                                  edn-result-file]]
     [cljs-api-gen.parse :refer [parse-all]]
-    [cljs-api-gen.repo-cljs :refer [get-cljs-tags-to-parse
-                                    cljs-version->tag
+    [cljs-api-gen.repo-cljs :refer [cljs-version->tag
                                     published-cljs-tags
                                     with-checkout!
-                                    cljs-tag->version
                                     *cljs-tag*
                                     *cljs-date*
-                                    *clj-tag*
-                                    *cljs-version*
-                                    *clj-version*]]
-    [cljs-api-gen.result :refer [add-cljsdoc
-                                 get-result
+                                    *clj-tag*]]
+    [cljs-api-gen.result :refer [get-result
                                  add-cljsdoc-to-result]]))
 
 
@@ -65,10 +50,6 @@
     :keys [version skip-parse?]
     :or {version :latest, skip-parse? true}}]
 
-  ;; create output directory
-  (when-not (exists? *output-dir*)
-    (mkdir *output-dir*))
-
   (println (style "\nCreating api catalog...\n" :cyan))
 
   (let [
@@ -99,7 +80,7 @@
         skipped-previous? (atom false)
         last-tag (last tags)]
 
-    (println "Outputting to " (style *output-dir* :cyan))
+    (println "Outputting to " (style cache-dir :cyan))
 
     ;; parse symbol history
     (println (style "\nParsing symbol history...\n" :magenta))
@@ -107,7 +88,7 @@
     (doseq [tag tags]
 
       ;; check if skip-parse? and if this tag's edn-parsed-file already exists
-      (let [parsed-file (str *output-dir* "/" (edn-parsed-file tag))
+      (let [parsed-file (str cache-dir "/" (edn-parsed-file tag))
             skip? (and skip-parse?           ;; do we want to skip?
                        (exists? parsed-file))] ;; can we skip?
 

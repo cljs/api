@@ -5,15 +5,8 @@
 *.swp
 .lein-repl-history
 .lein-failures
-symbol-history
-/api-docs-generated
 
 .DS_Store
 
-/docs-*
-/docset/ClojureScript.*
-/docset/Dash-User-Contributions
-/docset/offline
-/catalog
+/cache
 
-clj-api-*.clj
