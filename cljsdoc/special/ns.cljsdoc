@@ -57,11 +57,11 @@ and libraries into the current namespace.
 ```
 
 ===== Related
-specialrepl/in-ns
-specialrepl/load-namespace
-specialrepl/import
-specialrepl/require
-specialrepl/require-macros
+special/in-ns
+special/load-namespace
+special/import
+special/require
+special/require-macros
 
 ===== TODO
 we need to write a comprehensive namespace tutorial and link to it here

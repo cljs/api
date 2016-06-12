@@ -1,5 +1,5 @@
 ===== Name
-specialrepl/require
+special/require
 
 ===== Type
 special form (repl)
@@ -40,7 +40,7 @@ A flag is a keyword. Recognized flags:
 - `:verbose` triggers printing information about each load, alias, and refer
 
 ===== Related
-specialrepl/require-macros
+special/require-macros
 
 ===== Example#ab0355
 

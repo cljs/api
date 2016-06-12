@@ -1,5 +1,5 @@
 ===== Name
-specialrepl/require-macros
+special/require-macros
 
 ===== Type
 special form (repl)
@@ -17,7 +17,7 @@ case, you can just use the `:include-macros` or `:refer-macros` flag of the
 `require` form.
 
 ===== Related
-specialrepl/require
+special/require
 
 ===== Example#e34cf4
 
