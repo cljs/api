@@ -4,6 +4,9 @@ special
 ===== Display
 Special Forms
 
+===== Caption
+The core constructs of ClojureScript.
+
 ===== Description
 
 Special Forms are a small collection of symbols which comprise the core
