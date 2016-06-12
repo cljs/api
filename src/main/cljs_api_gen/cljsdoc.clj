@@ -51,10 +51,7 @@
         (encode/assert-lossless full-name)
         (mkdir (parent filename))
         (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
-        (spit filename
-              (stencil/render-string
-                (slurp "templates/stub.cljsdoc")
-                {:full-name full-name}))))))
+        (spit filename (str "===== Name\n" full-name))))))
 
 (defn build-cljsdoc!
   ([] (build-cljsdoc! nil))
@@ -80,4 +77,3 @@
      (println (format-status parsed skipped))
 
      skipped)))
-
