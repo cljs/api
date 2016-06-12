@@ -157,6 +157,6 @@
       (println (style "\nMerging manual docs into final result...\n" :magenta))
       (let [final-result (add-cljsdoc-to-result result)
             final-file (edn-result-file last-tag)]
-          (spit final-file (with-out-str (pprint final-result)))))
-
-    (println (style " Success! " :bg-green))))
+          (spit final-file (with-out-str (pprint final-result)))
+          (println (style " Success! " :bg-green))
+          (println "Wrote to" final-file)))))

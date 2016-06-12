@@ -7,7 +7,7 @@
 
 ;; cache directory
 (defn edn-parsed-file [v] (str v ".edn"))
-(defn edn-result-file [v] (str "cljs-api-" v ".edn"))
+(defn edn-result-file [v] (str "cljs-api.edn"))
 
 ;; location of the clojure & clojurescript repos to parse
 (def repos-dir "repos")
