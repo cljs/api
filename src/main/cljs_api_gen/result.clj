@@ -225,8 +225,8 @@
         prev-all-nss (:namespaces prev-result)
         prev-nss (select-keys prev-all-nss (:namespace-names prev-api))
 
-        prev-changes (or (:changes prev-api) [])
-        prev-version (get-in prev-result [:release :cljs-version])
+        prev-changes (:changes prev-api)
+        prev-version (:version prev-result)
 
         get-diff
         (fn [prevs curr-names]
@@ -273,17 +273,11 @@
         new-ns-items (map #(make-item % prev-nss nss-diff) (:all-names nss-diff))
         new-nss (zipmap (map :full-name new-ns-items) new-ns-items)
 
-        change (prune-map {:cljs-version *cljs-version*
-                           :cljs-date *cljs-date*
-                           :clj-version *clj-version*
-                           :gclosure-lib *gclosure-lib*
-                           :treader-version *treader-version*
-
-                           ;; FIXME: add namespace changes once we decide we want it
+        change (prune-map {;; FIXME: add namespace changes once we decide we want it
                            ;; (will have to fix write.clj to not assume all changes are symbol changes)
                            :added (:added? syms-diff)
                            :removed (:removed? syms-diff)})
-        new-changes (conj prev-changes change)]
+        new-changes (assoc prev-changes *cljs-version* change)]
     {:symbols new-syms
      :namespaces new-nss
      :changes new-changes}))
@@ -324,21 +318,22 @@
 
          syntax-api   (strip-data syntax-api)
          library-api  (strip-data library-api)
-         compiler-api (strip-data compiler-api)]
+         compiler-api (strip-data compiler-api)
 
+         prev-versions (get-in prev-result [:history :versions])
+         prev-details (get-in prev-result [:history :details])
 
-     {:release {:cljs-version *cljs-version*
-                :cljs-tag *cljs-tag*
-                :cljs-date *cljs-date*
+         version-details {:tag *cljs-tag*
+                          :date *cljs-date*
+                          :clj-version *clj-version*
+                          :clj-tag *clj-tag*
+                          :treader-version *treader-version*
+                          :treader-tag *treader-tag*
+                          :gclosure-lib *gclosure-lib*}]
 
-                :clj-version *clj-version*
-                :clj-tag *clj-tag*
-
-                :treader-version *treader-version*
-                :treader-tag *treader-tag*
-
-                :gclosure-lib *gclosure-lib*}
-
+     {:version *cljs-version*
+      :history {:versions (conj prev-versions *cljs-version*)
+                :details (assoc prev-details *cljs-version* version-details)}
 
       ;; clojure symbols unavailable in clojurescript
       :clj-not-cljs (get-clojure-symbols-not-in-items (vals lib-items))
@@ -352,11 +347,11 @@
 
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  ([item curr-tag]
+  ([item curr-version]
    (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
-     (add-cljsdoc item curr-tag cljsdoc)))
-  ([item curr-tag cljsdoc]
-   (let [doc-version (last (filter #(or (nil? %) (cljs-cmp <= % curr-tag))
+     (add-cljsdoc item curr-version cljsdoc)))
+  ([item curr-version cljsdoc]
+   (let [doc-version (last (filter #(or (nil? %) (cljs-cmp <= % curr-version))
                                    (:versions cljsdoc)))
          doc (get-in cljsdoc [:docs doc-version])
          data (prune-map (select-keys doc
@@ -381,8 +376,8 @@
 
 (defn add-cljsdoc-to-result
   [result]
-  (let [tag (-> result :release :cljs-tag)
-        update (fn [symbols] (mapmap #(add-cljsdoc % tag) symbols))]
+  (let [version (:version result)
+        update (fn [symbols] (mapmap #(add-cljsdoc % version) symbols))]
     (-> result
         (update-in [:symbols] update)
         (update-in [:namespaces] update))))
