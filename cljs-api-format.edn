@@ -15,7 +15,8 @@
                                  :treader-version  "0.9.2"
                                  :treader-tag      "tools.reader-0.9.2"
 
-                                 ;; google closure library
+                                 ;; google closure library/compiler
+                                 :gclosure-com     "20140625"
                                  :gclosure-lib     "0.0-20150505-021ed5b3"}
                       ...}}
 

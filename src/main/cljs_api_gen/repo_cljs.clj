@@ -23,7 +23,8 @@
 (def ^:dynamic *cljs-date*       "ClojureScript version date     (e.g. \"2015-03-09\")" nil)
 (def ^:dynamic *clj-version*     "Clojure version string         (e.g. \"1.7.0-beta1\")" nil)
 (def ^:dynamic *clj-tag*         "Clojure version git tag        (e.g. \"clojure-1.7.0-beta1\"" nil)
-(def ^:dynamic *gclosure-lib*    "Google Closure release         (e.g. \"0.0-20150505-021ed5b3\"" nil)
+(def ^:dynamic *gclosure-lib*    "Google Closure library         (e.g. \"0.0-20150505-021ed5b3\"" nil)
+(def ^:dynamic *gclosure-com*    "Google Closure compiler        (e.g. \"20140625\"" nil)
 
 (def ^:dynamic *treader-version* "tools.reader version string    (e.g. \"0.9.2\"" nil)
 (def ^:dynamic *treader-tag*     "tools.reader git tag           (e.g. \"tools.reader-0.9.2\"" nil)
@@ -304,6 +305,11 @@
           (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
           :else                             (second (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap)))
 
+        gclosure-com
+        (cond
+          (cljs-cmp >= cljs-tag "0.0-2629") (second (re-find #"(?m)^CLOSURE_RELEASE=\"(.*)\"" bootstrap))
+          :else                             nil)
+
         gclosure-lib
         (cond
           (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^GCLOSURE_LIB_RELEASE=\"(.*)\"" bootstrap))
@@ -321,7 +327,8 @@
      :clj-tag (str "clojure-" clojure)
      :treader-version treader
      :treader-tag (treader-version->tag treader)
-     :gclosure-lib gclosure-lib}))
+     :gclosure-lib gclosure-lib
+     :gclosure-com gclosure-com}))
 
 (defn checkout-repo!
   [repo tag]
@@ -333,7 +340,8 @@
           clj-version#      :clj-version
           treader-tag#      :treader-tag
           treader-version#  :treader-version
-          gclosure-lib#     :gclosure-lib}    (cljs-tag->dep-releases ~cljs-tag)]
+          gclosure-lib#     :gclosure-lib
+          gclosure-com#     :gclosure-com} (cljs-tag->dep-releases ~cljs-tag)]
 
      (checkout-repo! "clojurescript" ~cljs-tag)
      (checkout-repo! "clojure" clj-tag#)
@@ -350,7 +358,8 @@
                *treader-tag*     treader-tag#
                *treader-version* treader-version#
 
-               *gclosure-lib* gclosure-lib#]
+               *gclosure-lib* gclosure-lib#
+               *gclosure-com* gclosure-com#]
        ~@body)))
 
 (comment

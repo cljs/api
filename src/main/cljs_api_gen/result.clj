@@ -17,6 +17,7 @@
                                     *treader-version*
                                     *treader-tag*
                                     *gclosure-lib*
+                                    *gclosure-com*
                                     cljs-cmp]]))
 
 
@@ -329,7 +330,8 @@
                           :clj-tag *clj-tag*
                           :treader-version *treader-version*
                           :treader-tag *treader-tag*
-                          :gclosure-lib *gclosure-lib*}]
+                          :gclosure-lib *gclosure-lib*
+                          :gclosure-com *gclosure-com*}]
 
      {:version *cljs-version*
       :history {:versions (conj prev-versions *cljs-version*)
