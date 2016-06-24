@@ -1,25 +1,20 @@
-# ClojureScript API Docs Builder
+# ClojureScript API Docs
 
-Hello! We are building a ClojureScript website. A section of this website will
-be devoted to providing beautiful and informative documentation for the core
-syntax, library and compiler.  This repo provides the means to generate this
-documentation.
+This repo holds the API builder (run with `lein run`) and the latest API docs
+file [cljs-api.edn], whose format is documented by [cljs-api-format.edn].  The
+[site](https://github.com/cljs/site) repo reads this resulting data to build
+the API pages seen here:
 
-:seedling: [How to contribute docs](https://github.com/cljsinfo/cljs-api-docs/wiki/cljsdoc-files)
+<http://cljs.github.io/api/>
 
-![overview](http://i.imgur.com/y8t80rb.png)
+We parse every version of ClojureScript to build a versioned catalog for the
+syntax, library, and compiler.  It also supplements this data with curated
+descriptions, examples, cross-refs found in the [cljsdoc] directory.
+We also associate each ClojureScript form with an equivalent Clojure form.
 
----
-
-## Running
-
-```
-lein run
-```
-
-This will generate a `cljs-api.edn` file.  Its format is described in [`cljs-api-format.edn`].
-
-[`cljs-api-format.edn`]:cljs-api-format.edn
+[cljs-api.edn]:cljs-api.edn
+[cljs-api-format.edn]:cljs-api-format.edn
+[cljsdoc]:cljsdoc
 
 ## License
 
