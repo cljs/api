@@ -36,6 +36,9 @@
               :name              "->"
               :name-encode       "-GT"
 
+              ;; if this symbol is a member of a type (e.g. cljs.core/PersistentArrayMap.fromArrays)
+              :parent-type "PersistentArrayMap"
+
               ;; example data here taken from cljs.core/keys
               :type              "function"
               :docstring         "Returns a sequence of the map's keys."
