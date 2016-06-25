@@ -87,6 +87,8 @@
    {:id "shebang"            :dchar \!     :clj-doc doc-shebang}
    {:id "cond"               :dchar \?     :clj-doc doc5 :clj-added "1.7.0-beta1"}
    {:id "cond-splicing"   :parent "cond"  :clj-doc doc5 :clj-added "1.7.0-beta1"}
+   {:id "ns-map"             :dchar \:}
+   {:id "ns-map-alias"       :parent "ns-map"}
 
    ;; special symbols
    {:id "boolean"  :type "special symbol" :clj-doc doc1     :edn-doc (edn-doc "booleans")}

@@ -1,0 +1,13 @@
+===== Name
+syntax/ns-map
+
+===== Display
+#: namespaced map
+
+===== Usage
+#:foo{...}
+
+===== Description
+
+===== Related
+syntax/ns-map
