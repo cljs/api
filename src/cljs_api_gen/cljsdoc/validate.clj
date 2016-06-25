@@ -2,9 +2,7 @@
   (:import
     [java.util.regex Pattern])
   (:require
-    [cljs-api-gen.cljsdoc.doclink :refer [doclink-pattern
-                                          unnamed-doclink-pattern
-                                          valid-doclink?]]
+    [cljs-api-gen.cljsdoc.doclink :refer [docname?]]
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname
@@ -12,15 +10,12 @@
     [cljs-api-gen.repo-cljs :refer [published-cljs-tag?
                                     published-cljs-tags
                                     cljs-version->tag]]
+    [cljs-api-gen.state :refer [*result*]]
 
     [me.raynes.fs :refer [exists?]]
     [clojure.string :refer [split split-lines join]]
     [clansi.core :refer [style]]
     [fuzzy-matcher.core :as fuzzy]))
-
-(def ^:dynamic *result*
-  "Parsed result containing full history API"
-  nil)
 
 ;;--------------------------------------------------------------------------------
 ;; Required Sections
@@ -199,16 +194,10 @@
 ;; Validate Symbol
 ;;--------------------------------------------------------------------------------
 
-(defn using-latest-result? []
-  (let [version (:version *result*)]
-    (= (get-in *result* [:history :details version :tag])
-       (last @published-cljs-tags))))
-
 (defn symbol-check-pass?
   "Determines if we should pass the symbol check."
   [full-name]
   (or (nil? *result*)               ;; ignore if no known symbols supplied
-      (not (using-latest-result?))  ;; possible for symbols to exist later, so ignore if not latest
       (get-in *result* [:symbols full-name])
       (get-in *result* [:namespaces full-name])))
 
@@ -217,8 +206,7 @@
   (very similar to `symbol-check-pass?`, please see `cljs-api-gen.cljsdoc.doclink` for details)"
   [full-name]
   (or (nil? *result*)               ;; ignore if no known symbols supplied
-      (not (using-latest-result?))  ;; possible for symbols to exist later, so ignore if not latest
-      (valid-doclink? *result* full-name)))
+      (docname? full-name)))
 
 (defn symbol-unknown-error-msg
   [{:keys [full-name] :as doc}]
@@ -245,21 +233,14 @@
 ;;--------------------------------------------------------------------------------
 
 (defn doclink-error
-  [[whole-match full-name]]
-  (when-not (doclink-check-pass? full-name)
-    (let [[ns- name-] (fullname->ns-name full-name)
-          ns-only? (nil? name-)]
-     (cond-> (str "Unknown doclink reference: " full-name)
-       ns-only?  (str "\n"
-                      "     when linking namespaces, please prefix it with the API.  examples:\n"
-                      "      - library/cljs.repl\n"
-                      "      - compiler/cljs.repl")))))
+  [docname]
+  (when-not (doclink-check-pass? docname)
+    (str "Unknown doclink reference: " docname)))
 
 (defn doclink-missing-error-msg*
   "Gather missing doclinks from given markdown body text."
-  [md-body]
-  (let [doclinks (re-seq doclink-pattern md-body)
-        msgs (keep doclink-error doclinks)]
+  [{:keys [body biblio]}]
+  (let [msgs (keep doclink-error biblio)]
     (when (seq msgs)
       (join "\n" msgs))))
 
@@ -287,27 +268,14 @@
    doclink-missing-error-msg
    filename-error-msg])
 
-
-(def warning-detectors
-  "All warning detectors, each produce warning messages if potential problem found."
-  [])
-
-
 (defn valid-doc? [doc]
-  (let [errors   (seq (keep #(% doc) error-detectors))
-        warnings (seq (keep #(% doc) warning-detectors))
+  (let [errors (seq (keep #(% doc) error-detectors))
         valid? (not errors)]
-    (when (or warnings errors)
+    (when-not valid?
       (binding [*out* *err*]
         (println)
         (println (style (:filename doc) :cyan))
-        (when errors
-          (println (style "  ERRORS" :red))
-          (doseq [msg errors]
-            (println "    " msg)))
-        (when warnings
-          (println (style "  WARNINGS" :yellow))
-          (doseq [msg warnings]
-            (println "    " msg)))))
-
+        (println (style "  ERRORS" :red))
+        (doseq [msg errors]
+          (println "    " msg))))
     valid?))

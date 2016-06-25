@@ -20,8 +20,6 @@
                                     *gclosure-com*
                                     cljs-cmp]]))
 
-
-
 (defn removable? [v]
   (or (nil? v) (= "" v) (and (coll? v) (empty? v))))
 

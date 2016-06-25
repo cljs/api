@@ -3,9 +3,10 @@
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.display :refer [sort-symbols]]
-    [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
+    [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
+    [cljs-api-gen.state :refer [*result*]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [stencil.core :as stencil]
     [clansi.core :refer [style]]))
@@ -52,27 +53,23 @@
         (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
         (spit filename (str "===== Name\n" full-name))))))
 
-(defn build-cljsdoc!
-  ([] (build-cljsdoc! nil))
-  ([result]
+(defn build-cljsdoc! []
+  (println (cond-> (style "\nCompiling cljsdoc/ files" :cyan)
+             (nil? *result*) (str " (without parsed API info)"))
+           "...")
 
-   (println (cond-> (style "\nCompiling cljsdoc/ files" :cyan)
-              (nil? result) (str " (without parsed API info)"))
-            "...")
+  (let [files (cljsdoc-files cljsdoc-dir)
+        mandocs (doall (keep build-doc files))
+        mandoc-map (zipmap (map :full-name mandocs)
+                           (map #(dissoc % :empty-sections) mandocs))
+        skipped (- (count files) (count mandocs))
+        parsed (- (count files) skipped)]
 
-   (let [files (cljsdoc-files cljsdoc-dir)
-         mandocs (binding [*result* result]
-                   (doall (keep build-doc files)))
-         mandoc-map (zipmap (map :full-name mandocs)
-                            (map #(dissoc % :empty-sections) mandocs))
-         skipped (- (count files) (count mandocs))
-         parsed (- (count files) skipped)]
+    (reset! cljsdoc-map mandoc-map)
 
-     (reset! cljsdoc-map mandoc-map)
+    (if (zero? skipped)
+      (println (style "Done with no errors." :green))
+      (println (style "\nDone with some errors." :red)))
+    (println (format-status parsed skipped))
 
-     (if (zero? skipped)
-       (println (style "Done with no errors." :green))
-       (println (style "\nDone with some errors." :red)))
-     (println (format-status parsed skipped))
-
-     skipped)))
+    skipped))

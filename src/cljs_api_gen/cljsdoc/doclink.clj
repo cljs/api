@@ -1,33 +1,7 @@
 (ns cljs-api-gen.cljsdoc.doclink
   (:require
-    [cljs-api-gen.encode :refer [fullname->ns-name]]))
-
-;;; ================ NAMING CONVENTION ==================
-;;;
-;;; Whenever we want to reference another doc page in markdown, we use the
-;;; following nomenclature:
-;;;
-;;;   cljs.core/foo         <--- var
-;;;
-;;; Referencing namespaces is a little trickier, because we have a page for
-;;; each API type (compiler or library), since they have different APIs.
-;;;
-;;;   library/cljs.core     <--- ns in the library API
-;;;   compiler/cljs.repl    <--- ns in the compiler API
-;;;
-;;; The syntax page is its own thing:
-;;;
-;;;   syntax                <--- syntax forms
-;;;
-;;; The special forms namespaces are also in the library API for consistency
-;;; even though there aren't compiler API versions for them:
-;;;
-;;;   library/special       <--- special forms ns
-;;;
-;;; Vars such as `cljs.core/foo` don't require an API type prefix like
-;;; `library/cljs.core/foo` because we are (safely I hope) assuming that symbols
-;;; of the same name between APIs have the same usages.
-
+    [cljs-api-gen.state :refer [*result*]]
+    [clojure.string :as string]))
 
 ;;; ================ MARKDOWN SYNTAX ==================
 ;;;
@@ -69,11 +43,45 @@
   ;;    |   |                |
   #"(?<!])\[doc:([^\]]+)\](?![\(\[])")
 
-(defn valid-doclink?
-  [result full-name]
-  (let [[a b] (fullname->ns-name full-name)]
-    (if (nil? b)
-      (= "syntax" a)
-      (if (#{"library" "compiler"} a)
-        (get-in result [:api (keyword a) :namespace-names b])
-        (get-in result [:symbols full-name])))))
+(defn parse-docname
+  "foo/bar      <-- normal symbol
+   foo          <-- namespace `foo`
+   compiler/foo <-- compiler namespace `foo`"
+  [docname]
+  (let [[a b] ((juxt namespace name) (symbol docname))]
+    (cond
+      (= a "compiler") {:compiler? true, :ns a}
+      (nil? a)         {:ns b}
+      :else            {:ns a, :name b})))
+
+(defn docname?
+  [docname]
+  (let [{:keys [ns name compiler?]} (parse-docname docname)]
+    (if name
+      (get-in *result* [:symbols docname])
+      (get-in *result* [:namespaces ns]))))
+
+(defn get-short-display-name
+  [docname]
+  (let [{:keys [ns name compiler?]} (parse-docname docname)
+        display (if name
+                  (get-in *result* [:symbols docname :display])
+                  (get-in *result* [:namespaces ns :display]))]
+    (or display name ns)))
+
+(defn insert-doclink-name
+  [[whole-match docname]]
+  (let [name- (get-short-display-name docname)]
+    (str "[`" name- "`]" whole-match)))
+
+(defn process-doclinks
+  "Process doclinks in given markdown body."
+  [md-body]
+  (when md-body
+    {:body (string/replace md-body
+                           unnamed-doclink-pattern
+                           insert-doclink-name)
+     :biblio (->> md-body
+                  (re-seq doclink-pattern)
+                  (map second)
+                  (set))}))

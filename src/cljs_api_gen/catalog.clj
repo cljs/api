@@ -18,7 +18,8 @@
                                     *cljs-date*
                                     *clj-tag*]]
     [cljs-api-gen.result :refer [get-result
-                                 add-cljsdoc-to-result]]))
+                                 add-cljsdoc-to-result]]
+    [cljs-api-gen.state :refer [*result*]]))
 
 
 (defn print-summary*
@@ -122,21 +123,21 @@
             (println "\nDone.")))))
 
     (println)
-    (let [result (get-prev-result)]
+    (binding [*result* (get-prev-result)]
 
       ;; create cljsdoc stubs for symbols that don't have them
       ;; (allowing easier PRs for those wanting to populate them)
-      (create-cljsdoc-stubs! (-> result :symbols keys set))
-      (create-cljsdoc-stubs! (-> result :namespaces keys set))
+      (create-cljsdoc-stubs! (-> *result* :symbols keys set))
+      (create-cljsdoc-stubs! (-> *result* :namespaces keys set))
 
       ;; compile cljsdoc files (manual docs)
-      (let [num-skipped (build-cljsdoc! result)]
+      (let [num-skipped (build-cljsdoc!)]
         (when-not (zero? num-skipped)
           (System/exit 1)))
 
       ;; create final result
       (println (style "\nMerging manual docs into final result...\n" :magenta))
-      (let [final-result (add-cljsdoc-to-result result)
+      (let [final-result (add-cljsdoc-to-result *result*)
             final-file (edn-result-file last-tag)]
           (spit final-file (with-out-str (pprint final-result)))
           (println (style " Success! " :bg-green))

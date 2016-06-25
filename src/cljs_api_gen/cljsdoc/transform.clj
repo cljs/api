@@ -3,6 +3,8 @@
   (:require
     [cljs-api-gen.util :refer [mapmap]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
+    [cljs-api-gen.state :refer [*result*]]
+    [cljs-api-gen.cljsdoc.doclink :refer [process-doclinks]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [split-lines trim lower-case replace]]))
 
@@ -50,6 +52,15 @@
         (apply dissoc d example-names))
       doc)))
 
+(defn transform-doclinks [doc]
+  (if (nil? *result*)
+    doc
+    (-> doc
+      (update-in [:description] process-doclinks)
+      (update-in [:examples]
+        (fn [examples]
+          (doall (map #(update-in % [:content] process-doclinks) examples)))))))
+
 (defn transform-doc [doc]
   (-> doc
       transform-name
@@ -67,4 +78,5 @@
       (transform-key "type" :type lower-case)
       (transform-key "related" :related section-as-list)
       (transform-key "moved" :moved)
-      (transform-key "tags" :tags section-as-list)))
+      (transform-key "tags" :tags section-as-list)
+      transform-doclinks))
