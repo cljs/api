@@ -14,8 +14,4 @@
                  [clj-time "0.9.0"]
                  [clojure-watch "0.1.11"]]
 
-
-  :source-paths ["src/main"]
-  :test-paths ["src/test"]
-
   :main cljs-api-gen.core)
