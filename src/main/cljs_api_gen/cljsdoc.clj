@@ -3,10 +3,9 @@
     [cljs-api-gen.config :refer [cljsdoc-dir]]
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.display :refer [sort-symbols]]
-    [cljs-api-gen.cljsdoc.transform :refer [transform-versioned-doc]]
-    [cljs-api-gen.cljsdoc.versioned :refer [versioned-doc]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc? *result*]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
+    [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [stencil.core :as stencil]
     [clansi.core :refer [style]]))
@@ -19,9 +18,9 @@
   [file]
   (let [filename (base-name file)
         parentdir (base-name (parent file))
-        doc (-> (parse-doc (slurp file) filename parentdir)
-                versioned-doc
-                transform-versioned-doc)]
+        doc (-> (slurp file)
+                (parse-doc filename parentdir)
+                (transform-doc))]
     (when (valid-doc? doc)
       doc)))
 

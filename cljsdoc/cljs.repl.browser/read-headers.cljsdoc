@@ -1,5 +1,5 @@
 ===== Name
 cljs.repl.browser/read-headers
 
-===== Moved (0.0-1503)
+===== Moved
 cljs.repl.server/read-headers

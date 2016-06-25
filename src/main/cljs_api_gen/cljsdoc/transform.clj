@@ -68,13 +68,3 @@
       (transform-key "related" :related section-as-list)
       (transform-key "moved" :moved)
       (transform-key "tags" :tags section-as-list)))
-
-(defn transform-versioned-doc [doc]
-  (let [docs (mapmap transform-doc (:docs doc))
-        {:keys [ns name full-name]} (get docs nil)]
-    (assoc doc
-      :docs docs
-      :ns ns
-      :name name
-      :full-name full-name)))
-

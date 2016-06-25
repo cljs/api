@@ -349,37 +349,30 @@
 
 (defn add-cljsdoc
   "Merge the given item with its compiled cljsdoc, containing extra doc info."
-  ([item curr-version]
-   (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))]
-     (add-cljsdoc item curr-version cljsdoc)))
-  ([item curr-version cljsdoc]
-   (let [doc-version (last (filter #(or (nil? %) (cljs-cmp <= % curr-version))
-                                   (:versions cljsdoc)))
-         doc (get-in cljsdoc [:docs doc-version])
-         data (prune-map (select-keys doc
-                          [:examples
-                           :known-as
-                           :display
-                           :caption
-                           :caption-library
-                           :caption-compiler
-                           :description
-                           :description-library
-                           :description-compiler
-                           :signature
-                           :usage
-                           :related
-                           :moved
-                           :tags]))]
-
+  [item]
+  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))
+        data (prune-map (select-keys cljsdoc
+                         [:examples
+                          :known-as
+                          :display
+                          :caption
+                          :caption-library
+                          :caption-compiler
+                          :description
+                          :description-library
+                          :description-compiler
+                          :signature
+                          :usage
+                          :related
+                          :moved
+                          :tags]))]
      (-> item
          (merge data)
-         (add-usage)))))
+         (add-usage))))
 
 (defn add-cljsdoc-to-result
   [result]
-  (let [version (:version result)
-        update (fn [symbols] (mapmap #(add-cljsdoc % version) symbols))]
+  (let [update #(mapmap add-cljsdoc %)]
     (-> result
         (update-in [:symbols] update)
         (update-in [:namespaces] update))))

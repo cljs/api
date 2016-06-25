@@ -22,14 +22,6 @@
   "Parsed result containing full history API"
   nil)
 
-(defn make-multi-version
-  "Make fn to combine the messages created by the msg-fn for each doc version."
-  [msg-fn]
-  (fn [doc]
-    (let [msgs (keep msg-fn (-> doc :docs vals))]
-      (when (seq msgs)
-        (join "\n" msgs)))))
-
 ;;--------------------------------------------------------------------------------
 ;; Required Sections
 ;;--------------------------------------------------------------------------------
@@ -280,39 +272,20 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Versions
-;;--------------------------------------------------------------------------------
-
-(defn unrecognized-version-error-msg
-  [version]
-  (let [pass? (or (nil? version) ;; nil means apply to all versions
-                  (@published-cljs-tag? (cljs-version->tag version)))]
-    (when-not pass?
-      (str "Version '" version "' is not a recognized published version."))))
-
-(defn unrecognized-versions-error-msg
-  [doc]
-  (let [msgs (keep unrecognized-version-error-msg (keys (:docs doc)))]
-    (when (seq msgs)
-      (join "\n" msgs))))
-
-;;--------------------------------------------------------------------------------
 ;; Validate All
 ;;--------------------------------------------------------------------------------
 
 (def error-detectors
   "All error detectors, each producing error messages if problem found."
-  [(make-multi-version required-sections-error-msg)
-   (make-multi-version unrecognized-sections-error-msg)
-   (make-multi-version signatures-error-msg)
-   (make-multi-version type-error-msg)
-   (make-multi-version examples-error-msg!)
-   (make-multi-version symbol-unknown-error-msg)
-   (make-multi-version related-missing-error-msg)
-   (make-multi-version doclink-missing-error-msg)
-   ;; (make-multi-version duplicate-sections-error-msg)
-   filename-error-msg
-   unrecognized-versions-error-msg])
+  [required-sections-error-msg
+   unrecognized-sections-error-msg
+   signatures-error-msg
+   type-error-msg
+   examples-error-msg!
+   symbol-unknown-error-msg
+   related-missing-error-msg
+   doclink-missing-error-msg
+   filename-error-msg])
 
 
 (def warning-detectors
@@ -321,8 +294,7 @@
 
 
 (defn valid-doc? [doc]
-  (let [
-        errors   (seq (keep #(% doc) error-detectors))
+  (let [errors   (seq (keep #(% doc) error-detectors))
         warnings (seq (keep #(% doc) warning-detectors))
         valid? (not errors)]
     (when (or warnings errors)

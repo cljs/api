@@ -1,5 +1,5 @@
 ===== Name
 cljs.repl.browser/send-404
 
-===== Moved (0.0-1503)
+===== Moved
 cljs.repl.server/send-404

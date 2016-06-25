@@ -1,5 +1,5 @@
 ===== Name
 cljs.repl.browser/server-state
 
-===== Moved (0.0-1503)
+===== Moved
 cljs.repl.server/state
