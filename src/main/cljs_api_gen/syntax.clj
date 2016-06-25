@@ -9,14 +9,14 @@
 ;;   - syntax (from `clojure.lang/LispReader`)
 ;;--------------------------------------------------------------------------------
 
-(def doc-url "http://clojure.org/reader")
+(def doc-url "http://clojure.org/reference/reader")
 
-(def doc1 (str doc-url "#toc1")) ;; Reader forms
-(def doc2 (str doc-url "#toc2")) ;; Macro characters
-(def doc4 (str doc-url "#toc4")) ;; Tagged literals
-(def doc5 (str doc-url "#toc5")) ;; Reader conditionals
+(def doc1 (str doc-url "#_reader_forms")) ;; Reader forms
+(def doc2 (str doc-url "#macrochars")) ;; Macro characters
+(def doc4 (str doc-url "#_tagged_literals")) ;; Tagged literals
+(def doc5 (str doc-url "#_reader_conditionals")) ;; Reader conditionals
 
-(def doc-destruct (str "http://clojure.org/special_forms#toc18")) ;; Destructuring
+(def doc-destruct (str "http://clojure.org/reference/special_forms#binding-forms")) ;; Destructuring
 
 (def undoc (str doc-url "#undocumented")) ;; not real url, just a note
 
@@ -25,7 +25,7 @@
 (def doc-shebang  (str doc-lispreader "#L114"))
 (def doc-unread   (str doc-lispreader "#L115"))
 
-(def doc-interop "http://clojure.org/java_interop#toc6")
+(def doc-interop "http://clojure.org/reference/java_interop#_the_dot_special_form")
 
 (def doc-clj-tags
   "https://github.com/clojure/clojure/blob/clojure-1.6.0/src/clj/clojure/core.clj#L6947")
@@ -34,8 +34,8 @@
   [name-]
   (str "https://github.com/edn-format/edn#" name-))
 
-(def doc-cheatsheet "http://clojure.org/cheatsheet")
-(def doc-syntax-quote "http://clojure.org/reader#syntax-quote")
+(def doc-cheatsheet "http://clojure.org/api/cheatsheet")
+(def doc-syntax-quote "http://clojure.org/reference/reader#syntax-quote")
 (def doc-ampersand "http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/&")
 
 ;; an edn doc (there is no clojure doc on whitespace)
