@@ -208,8 +208,9 @@
 ;;--------------------------------------------------------------------------------
 
 (defn using-latest-result? []
-  (= (-> *result* :release :cljs-tag)
-     (last @published-cljs-tags)))
+  (let [version (:version *result*)]
+    (= (get-in *result* [:history :details version :tag])
+       (last @published-cljs-tags))))
 
 (defn symbol-check-pass?
   "Determines if we should pass the symbol check."
