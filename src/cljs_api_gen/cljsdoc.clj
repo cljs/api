@@ -5,15 +5,12 @@
     [cljs-api-gen.display :refer [sort-symbols]]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
-    [cljs-api-gen.cljsdoc.transform :refer [transform-doc]]
-    [cljs-api-gen.state :refer [*result*]]
+    [cljs-api-gen.cljsdoc.transform :refer [transform-doc post-transform-doc]]
+    [cljs-api-gen.state :refer [*result* cljsdoc-map]]
+    [cljs-api-gen.util :refer [mapmap]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [stencil.core :as stencil]
     [clansi.core :refer [style]]))
-
-(def cljsdoc-map
-  "Holds the result of the cljsdoc compiler."
-  (atom nil))
 
 (defn build-doc
   [file]
@@ -59,13 +56,14 @@
            "...")
 
   (let [files (cljsdoc-files cljsdoc-dir)
-        mandocs (doall (keep build-doc files))
+        mandocs (keep build-doc files)
         mandoc-map (zipmap (map :full-name mandocs)
                            (map #(dissoc % :empty-sections) mandocs))
         skipped (- (count files) (count mandocs))
         parsed (- (count files) skipped)]
 
     (reset! cljsdoc-map mandoc-map)
+    (reset! cljsdoc-map (mapmap post-transform-doc @cljsdoc-map))
 
     (if (zero? skipped)
       (println (style "Done with no errors." :green))

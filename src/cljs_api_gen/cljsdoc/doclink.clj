@@ -1,6 +1,6 @@
 (ns cljs-api-gen.cljsdoc.doclink
   (:require
-    [cljs-api-gen.state :refer [*result*]]
+    [cljs-api-gen.state :refer [*result* cljsdoc-map]]
     [clojure.string :as string]))
 
 ;;; ================ MARKDOWN SYNTAX ==================
@@ -23,25 +23,14 @@
 ;;;     [doc:cljs.core/foo]:<full path to actual page for 'cljs.core/foo'>
 ;;;
 
+
+;;----------------------------------------------------------------------
+;; Create the set of doclinks to be resolved for a given markdown body.
+;;----------------------------------------------------------------------
+
 (def doclink-pattern
   "Pattern for potential doclinks in markdown."
   #"\[doc:([^\]]+)\]")
-
-(def unnamed-doclink-pattern
-  "Pattern for unnamed potential doclinks in markdown (i.e. not followed by () or [].)
-  Example: [doc:cljs.core/foo], not:
-    - [doc:cljs.core/foo](example.com)
-    - [doc:cljs.core/foo][link-alias]
-    - [name][doc:cljs.core/foo]
-  "
-  ;;    do not allow a preceding "]" char (see #2 above)
-  ;;    |
-  ;;    |   same as doclink-pattern
-  ;;    |   |
-  ;;    |   |                do not allow a trailing "[" or "(" chars (see #3 and #4 above)
-  ;;    |   |                |
-  ;;    |   |                |
-  #"(?<!])\[doc:([^\]]+)\](?![\(\[])")
 
 (defn parse-docname
   "foo/bar      <-- normal symbol
@@ -61,12 +50,40 @@
       (get-in *result* [:symbols docname])
       (get-in *result* [:namespaces ns]))))
 
+(defn add-biblio
+  "Process doclinks in given markdown body."
+  [md-body]
+  (when md-body
+    {:body md-body
+     :biblio (->> md-body
+                  (re-seq doclink-pattern)
+                  (map second)
+                  (set))}))
+
+;;----------------------------------------------------------------------
+;; Insert names for unnamed doclinks in a given markdown body.
+;;----------------------------------------------------------------------
+
+(def unnamed-doclink-pattern
+  "Pattern for unnamed potential doclinks in markdown (i.e. not followed by () or [].)
+  Example: [doc:cljs.core/foo], not:
+    - [doc:cljs.core/foo](example.com)
+    - [doc:cljs.core/foo][link-alias]
+    - [name][doc:cljs.core/foo]
+  "
+  ;;    do not allow a preceding "]" char (see #2 above)
+  ;;    |
+  ;;    |   same as doclink-pattern
+  ;;    |   |
+  ;;    |   |                do not allow a trailing "[" or "(" chars (see #3 and #4 above)
+  ;;    |   |                |
+  ;;    |   |                |
+  #"(?<!])\[doc:([^\]]+)\](?![\(\[])")
+
 (defn get-short-display-name
   [docname]
   (let [{:keys [ns name compiler?]} (parse-docname docname)
-        display (if name
-                  (get-in *result* [:symbols docname :display])
-                  (get-in *result* [:namespaces ns :display]))]
+        display (get-in @cljsdoc-map [docname :display])]
     (or display name ns)))
 
 (defn insert-doclink-name
@@ -74,14 +91,10 @@
   (let [name- (get-short-display-name docname)]
     (str "[`" name- "`]" whole-match)))
 
-(defn process-doclinks
+(defn resolve-unnamed-doclinks
   "Process doclinks in given markdown body."
-  [md-body]
-  (when md-body
-    {:body (string/replace md-body
-                           unnamed-doclink-pattern
-                           insert-doclink-name)
-     :biblio (->> md-body
-                  (re-seq doclink-pattern)
-                  (map second)
-                  (set))}))
+  [data]
+  (when data
+    (update data :body string/replace
+                       unnamed-doclink-pattern
+                       insert-doclink-name)))

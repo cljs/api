@@ -6,7 +6,7 @@
     [cljs-api-gen.encode :refer [encode-fullname
                                  encode-name]]
     [cljs-api-gen.util :refer [mapmap filtermap]]
-    [cljs-api-gen.cljsdoc :refer [cljsdoc-map]]
+    [cljs-api-gen.state :refer [cljsdoc-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       clj-equiv]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
