@@ -89,7 +89,9 @@
 (defn insert-doclink-name
   [[whole-match docname]]
   (let [name- (get-short-display-name docname)]
-    (str "[`" name- "`]" whole-match)))
+    (if (string/includes? name- "`")
+      (str "[``" name- "``]" whole-match)
+      (str "[`" name- "`]" whole-match))))
 
 (defn resolve-unnamed-doclinks
   "Process doclinks in given markdown body."
