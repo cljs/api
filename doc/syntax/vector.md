@@ -1,0 +1,39 @@
+## Name
+syntax/vector
+
+## Display
+[] vector
+
+## Usage
+[...]
+
+## Description
+
+Creates a vector.  A vector is the most commonly used form for creating literal
+sequences, and supports random-access and inserting at the end via [doc:cljs.core/conj]:
+
+```clj
+(def a [1 2 3 4 5])
+```
+
+Vectors also serve an important language role as the convention for signaling a
+_binding form_, that is, when local names are created and bound to values.
+Examples:
+
+- `[a b]` as function arg bindings in [`(fn [a b] ...)`][doc:cljs.core/fn]
+- `[a 1 b 2]` as let bindings in [`(let [a 1 b 2] ...)`][doc:cljs.core/let]
+
+This helps differentiate binding forms from the parentheses of [callable forms][doc:syntax/list].
+
+See [doc:cljs.core/PersistentVector] for data structure details.
+
+## Related
+cljs.core/vector
+cljs.core/vec
+
+## Example#18e143
+
+```clj
+[1 2 3]
+;;=> [1 2 3]
+```

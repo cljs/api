@@ -31,7 +31,7 @@
   (let [all (list-dir dir)
         files (->> all
                 (remove directory?)
-                (filter #(.endsWith (.getName %) ".cljsdoc")))
+                (filter #(.endsWith (.getName %) ".md")))
         subfiles (->> all
                       (filter directory?)
                       (map cljsdoc-files)
@@ -42,12 +42,12 @@
 (defn create-cljsdoc-stubs!
   [known-symbols]
   (doseq [full-name (sort known-symbols)]
-    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".cljsdoc")]
+    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".md")]
       (when-not (exists? filename)
         (encode/assert-lossless full-name)
         (mkdir (parent filename))
         (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
-        (spit filename (str "===== Name\n" full-name))))))
+        (spit filename (str "## Name\n" full-name))))))
 
 (defn build-cljsdoc! []
   (println (cond-> (style "\nCompiling cljsdoc/ files" :cyan)

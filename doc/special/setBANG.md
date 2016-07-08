@@ -1,0 +1,13 @@
+## Name
+special/set!
+
+## Signature
+[js-var val]
+
+## Description
+
+Sets `js-var` to `val` using the JavaScript `=` operator.
+
+## Related
+cljs.core/aset
+cljs.core/reset!

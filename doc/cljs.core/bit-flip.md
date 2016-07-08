@@ -1,0 +1,30 @@
+## Name
+cljs.core/bit-flip
+
+## Signature
+[x n]
+
+## Description
+
+Flip bit at index `n`.  Same as `x ^ (1 << y)` in JavaScript.
+
+## Related
+cljs.core/bit-set
+cljs.core/bit-clear
+
+## Example#5d7ee0
+
+Bits can be entered using radix notation:
+
+```clj
+(bit-flip 2r1111 2)
+;;=> 11
+;; 11 = 2r1011
+```
+
+Same numbers in decimal:
+
+```clj
+(bit-flip 15 2)
+;;=> 11
+```

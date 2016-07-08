@@ -1,0 +1,13 @@
+## Name
+cljs.core/vec
+
+## Signature
+[coll]
+
+## Description
+
+Creates a new vector containing the contents of `coll`
+
+## Related
+cljs.core/vector
+cljs.core/vector?

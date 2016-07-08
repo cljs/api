@@ -105,7 +105,7 @@
     (let [[ns- name-] (fullname->ns-name full-name)
           actual (cond->> filename
                      name- (str parentdir "/"))
-          expected (str (encode-fullname full-name) ".cljsdoc")]
+          expected (str (encode-fullname full-name) ".md")]
       (when (not= actual expected)
         (str full-name " should be in " expected ", not " actual)))))
 

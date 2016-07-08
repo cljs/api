@@ -1,0 +1,25 @@
+## Name
+cljs.core/bit-count
+
+## Signature
+[x]
+
+## Description
+
+Counts the number of bits set in `x`.
+
+## Example#35c78c
+
+Bits can be entered using radix notation:
+
+```clj
+(bit-count 2r1011)
+;;=> 3
+```
+
+Same number in decimal:
+
+```clj
+(bit-count 11)
+;;=> 3
+```

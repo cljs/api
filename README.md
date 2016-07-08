@@ -9,12 +9,12 @@ the API pages seen here:
 
 We parse every version of ClojureScript to build a versioned catalog for the
 syntax, library, and compiler.  It also supplements this data with curated
-descriptions, examples, cross-refs found in the [cljsdoc] directory.
+descriptions, examples, cross-refs found in the [doc] directory.
 We also associate each ClojureScript form with an equivalent Clojure form.
 
 [cljs-api.edn]:cljs-api.edn
 [cljs-api-format.edn]:cljs-api-format.edn
-[cljsdoc]:cljsdoc
+[doc]:doc
 
 ## License
 

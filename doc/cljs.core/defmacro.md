@@ -1,0 +1,71 @@
+## Name
+cljs.core/defmacro
+
+## Description
+
+Defines a macro, which is essentially a function that runs at compile time.
+Macros can be used to define syntactic constructs which would require
+primitives or built-in support in other languages.
+
+Using macros is as easy as using functions, but writing them is a little more
+difficult.  Also, creating macros is generally discouraged if you can
+accomplish the same goal with a function.
+
+### Rules and Details
+
+There is a strict rule for when you can use `defmacro` -- you can only use it
+in what we call a _macro namespace_, effectively forcing you to separate your
+compile time and runtime code.
+
+A side effect of this is that you cannot use `defmacro` from a REPL.  Sorry!
+
+This strict rule is due to the nature of differing compile time environments
+for the optimized "ClojureScript JVM" compiler and the newer bootstrapped
+"ClojureScript JS" compiler.
+
+In order to create macros that are portable between either compiler version,
+you must place macros in a `.cljc` file, but a `.clj` file is sufficient if no
+[reader conditionals][doc:syntax/cond] are needed.  Why would they be needed?
+Because ClojureScript macro namespaces may be handed off to Clojure for
+evaluation, depending on the compiler version:
+
+| compiler version  | macro namespaces evaluated by |
+|-------------------|-------------------------------|
+| ClojureScript JVM | Clojure                       |
+| ClojureScript JS  | ClojureScript                 |
+
+Please see the examples section below for a more concrete look.
+
+## Example#8040c8
+
+Here is a `str->int` macro that works for either ClojureScript compiler
+version.  It simply expands to a `js/parseInt` call:
+
+```clj
+;; in macros.clj
+(ns foo.macros)
+
+;; expands to a runtime call
+(defmacro str->int [s]
+  `(js/parseInt s))
+```
+
+If we want to evaluate the conversion at _compile time_ instead of expanding it
+to a runtime call, we must use reader conditionals (in a `.cljc` file) to
+choose the function appropriate for each compiler's evaluation environment.
+
+```clj
+;; in macros.cljc
+(ns foo.macros)
+
+;; expands to the result of the conversion
+(defmacro str->int [s]
+  #?(:clj  (Integer/parseInt s)
+     :cljs (js/parseInt s)))
+```
+
+## Related
+syntax/syntax-quote
+syntax/unquote
+cljs.core/macroexpand
+cljs.core/macroexpand-1

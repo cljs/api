@@ -1,0 +1,37 @@
+## Name
+syntax/syntax-quote
+
+## Display
+` syntax quote
+
+## Description
+
+(Only intended for use in Clojure macros, which can be used from but not
+written in ClojureScript.)
+
+Prevent evaluation of the following form.
+
+Adds namespace-qualification to any symbols inside the following form by
+resolving them in the current context.
+
+Any non-namespaced symbols ending with `#` are replaced with unique symbols.
+See [doc:syntax/auto-gensym].
+
+## Related
+syntax/auto-gensym
+syntax/quote
+syntax/unquote
+syntax/unquote-splicing
+
+## Example#bffbdf
+
+```clj
+`foo
+;;=> cljs.user/foo
+
+`foo#
+;;=> foo__20418__auto__
+
+`(def foo 1)
+;;=> (def cljs.user/foo 1)
+```

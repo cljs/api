@@ -3,11 +3,13 @@
     [clojure.set :refer [difference]]
     [clojure.string :refer [split-lines join lower-case trim]]))
 
+(def section-start "## ")
+
 (defn section-line? [line]
-  (.startsWith line "====="))
+  (.startsWith line section-start))
 
 (defn format-title [title]
-  (-> title (subs 5) lower-case trim))
+  (-> title (subs (count section-start)) lower-case trim))
 
 (defn format-section
   "Given title lines and body lines, create a formatted title and body pair.
@@ -48,4 +50,3 @@
                           :sections titles
                           :empty-sections empty-titles))]
     result))
-

@@ -1,6 +1,0 @@
-===== Name
-cljs.core/Volatile
-
-===== Related
-cljs.core/volatile!
-cljs.core/volatile?

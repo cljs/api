@@ -1,0 +1,2 @@
+## Name
+clojure.string/last-index-of

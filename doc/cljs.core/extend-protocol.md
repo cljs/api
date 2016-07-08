@@ -1,0 +1,5 @@
+## Name
+cljs.core/extend-protocol
+
+## Related
+cljs.core/extend-type

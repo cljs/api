@@ -1,0 +1,27 @@
+## Name
+syntax/unquote-splicing
+
+## Display
+~@ unquote splicing
+
+## Description
+
+(Only intended for use in Clojure macros, which can be used from but not
+written in ClojureScript.)
+
+Intended for use inside a [doc:syntax/syntax-quote].
+
+Forces evaluation of the following form and expands its children into the
+parent form.
+
+## Related
+syntax/syntax-quote
+syntax/unquote
+
+## Example#e6f73d
+
+```clj
+(def foo '[a b c])
+`(~@foo)
+;;=> (a b c)
+```

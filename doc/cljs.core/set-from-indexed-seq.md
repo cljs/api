@@ -1,0 +1,2 @@
+## Name
+cljs.core/set-from-indexed-seq

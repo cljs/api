@@ -1,0 +1,43 @@
+## Name
+syntax/js-literal
+
+## Display
+#js literal
+
+## Usage
+#js [...]
+#js {...}
+
+## Description
+
+Create a literal JavaScript object or array.  Data in the form of a map `{}` or
+vector `[]` must follow the `#js` tag, which will be converted at compile-time
+to a JavaScript object or array, respectively.
+
+This will not implicitly convert nested data into JavaScript objects or arrays.
+
+## Related
+cljs.core/js-obj
+cljs.core/array
+cljs.core/clj->js
+
+## Example#05e121
+
+```clj
+#js {:foo 1 bar 2}
+;;=> #js {:foo 1, :bar 2}
+
+#js [1 2 3]
+;;=> #js [1 2 3]
+```
+
+For readability, it is sometimes preferable to use `clj->js` rather than nested
+`#js` tags.
+
+```clj
+#js {:foo #js {:bar 1}}
+;;=> #js {:foo #js {:bar 1}}
+
+(clj->js {:foo {:bar 1}})
+;;=> #js {:foo #js {:bar 1}}
+```

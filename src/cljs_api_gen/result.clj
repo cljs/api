@@ -86,7 +86,7 @@
   (assoc item :cljsdoc-url
     (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/"
          (:full-name-encode item)
-         ".cljsdoc")))
+         ".md")))
 
 (defn signature->usage
   [sig item]

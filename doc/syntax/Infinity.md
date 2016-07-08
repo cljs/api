@@ -1,0 +1,58 @@
+## Name
+syntax/Infinity
+
+## Display
+Infinity
+
+## Usage
+Infinity
+-Infinity
++Infinity
+
+## Description
+
+The IEEE 754 Floating Point representations of infinity.
+
+`Infinity` = `+Infinity` = positive infinity
+
+`-Infinity` = negative infinity
+
+## Related
+syntax/number
+syntax/NaN
+
+## Example#463fd4
+
+```clj
+Infinity
+;;=> Infinity
+
++Infinity
+;;=> Infinity
+
+-Infinity
+;;=> -Infinity
+```
+
+Math with infinities:
+
+```clj
+(/ 1 0)
+;;=> Infinity
+
+(Math/log 0)
+;;=> -Infinity
+
+(* 0 Infinity)
+;;=> NaN
+```
+
+They are equivalent to the JavaScript symbols:
+
+```clj
+js/Infinity
+;;=> Infinity
+
+js/-Infinity
+;;=> -Infinity
+```

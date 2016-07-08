@@ -1,0 +1,35 @@
+## Name
+syntax/nil
+
+## Display
+nil
+
+## Description
+
+`nil` is a representation of nothing.
+
+It is common for operations to safely handle `nil` without
+causing exceptions.
+
+Expressions evaluate to `nil` if there is no value to return.
+
+## Example#17b92a
+
+```clj
+nil
+;;=> nil
+```
+
+`nil` can sometimes mean "not found":
+
+```clj
+(:foo {})
+;;=> nil
+```
+
+`nil` can also mean that the operation didn't make sense:
+
+```clj
+(:foo nil)
+;;=> nil
+```

@@ -1,7 +1,7 @@
 (ns cljs-api-gen.config)
 
 (def cache-dir "cache")
-(def cljsdoc-dir "cljsdoc")
+(def cljsdoc-dir "doc")
 (def repos-dir "repos")
 
 (defn edn-parsed-file [v] (str v ".edn"))

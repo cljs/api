@@ -1,0 +1,29 @@
+## Name
+cljs.core/min
+
+## Signature
+[x]
+[x y]
+[x y & more]
+
+## Description
+
+Returns the least number argument.
+
+## Example#ab2de5
+
+```clj
+(min 1 2 3 4)
+;; => 1
+```
+
+Apply it to a collection:
+
+```clj
+(apply min [1 2 3 4])
+;; => 1
+```
+
+## Related
+cljs.core/max
+cljs.core/min-key

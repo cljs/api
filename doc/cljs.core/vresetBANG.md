@@ -1,0 +1,6 @@
+## Name
+cljs.core/vreset!
+
+## Related
+cljs.core/vswap!
+cljs.core/volatile!

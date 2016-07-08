@@ -1,0 +1,35 @@
+## Name
+cljs.core/compare-and-set!
+
+## Signature
+[a oldval newval]
+
+## Description
+
+Atomically sets the value of atom `a` to `newval` if and only if the current
+value of the atom is identical to `oldval`.
+
+Returns true if set happened, false otherwise.
+
+## Example#1fa306
+
+```clj
+(def a (atom "abc"))
+
+(compare-and-set! a "abc" "def")
+;;=> true
+
+@a
+;;=> "def"
+
+(compare-and-set! a "abc" "def")
+;;=> false
+
+@a
+;;=> "def"
+```
+
+## Related
+cljs.core/atom
+cljs.core/reset!
+cljs.core/swap!

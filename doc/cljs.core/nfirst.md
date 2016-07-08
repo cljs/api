@@ -1,0 +1,28 @@
+## Name
+cljs.core/nfirst
+
+## Signature
+[coll]
+
+## Description
+
+Same as `(next (first coll))`.
+
+## Related
+cljs.core/next
+
+## Example#60b8a4
+
+```clj
+(nfirst [[1 2 3] [4 5]])
+;;=> (2 3)
+
+(nfirst [[1 2] [3 4]])
+;;=> (2)
+
+(nfirst [[1] [2 3]])
+;;=> nil
+
+(nfirst [[] [1 2]])
+;;=> nil
+```

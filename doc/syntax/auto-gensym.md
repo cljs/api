@@ -1,0 +1,54 @@
+## Name
+syntax/auto-gensym
+
+## Display
+# auto-gensym
+
+## Usage
+foo#
+
+## Description
+
+(Only intended for use in a [doc:syntax/syntax-quote].)
+
+``foo#` => `foo__135__auto__`
+
+Auto-generates a unique symbol with the given prefix, particularly one that
+will not shadow any existing symbol in its resulting scope.  This is intended
+as a convenience for creating hygienic macros without calling
+[doc:cljs.core/gensym] directly.
+
+Every symbol matching a unique `foo#` symbol within a syntax quoted form will
+be replaced with the same generated symbol.
+
+``(foo# foo#)` => `(foo__138__auto__ foo__138__auto__)`
+
+Namespace-qualified symbols `foo/bar#` are not replaced.
+
+## Related
+cljs.core/gensym
+syntax/syntax-quote
+
+## Example#432cda
+
+```clj
+`foo#
+;;=> foo__142__auto__
+```
+
+Namespace-qualified symbols are left alone.
+
+```clj
+`foo/bar#
+;;=> foo/bar#
+```
+
+## Example#cd51e7
+
+Create safe local bindings:
+
+```clj
+`(let [x# 1]
+   (+ x# 2))
+;;=> (cljs.user/let [x__146__auto__ 1] (cljs.user/+ x__146__auto__ 2))
+```
