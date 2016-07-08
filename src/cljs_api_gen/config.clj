@@ -2,6 +2,7 @@
 
 (def cache-dir "cache")
 (def cljsdoc-dir "doc")
+(def cljsdoc-ext ".md")
 (def repos-dir "repos")
 
 (defn edn-parsed-file [v] (str v ".edn"))

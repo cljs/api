@@ -3,7 +3,7 @@
     [java.util.regex Pattern])
   (:require
     [cljs-api-gen.cljsdoc.doclink :refer [docname?]]
-    [cljs-api-gen.config :refer [cljsdoc-dir]]
+    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname
                                  fullname->ns-name]]
@@ -105,7 +105,7 @@
     (let [[ns- name-] (fullname->ns-name full-name)
           actual (cond->> filename
                      name- (str parentdir "/"))
-          expected (str (encode-fullname full-name) ".md")]
+          expected (str (encode-fullname full-name) cljsdoc-ext)]
       (when (not= actual expected)
         (str full-name " should be in " expected ", not " actual)))))
 

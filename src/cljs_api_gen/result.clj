@@ -3,6 +3,7 @@
     [clojure.string :as string]
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
+    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
     [cljs-api-gen.encode :refer [encode-fullname
                                  encode-name]]
     [cljs-api-gen.util :refer [mapmap filtermap]]
@@ -84,9 +85,9 @@
 (defn add-cljsdoc-url
   [item]
   (assoc item :cljsdoc-url
-    (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/"
+    (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" cljsdoc-dir "/"
          (:full-name-encode item)
-         ".md")))
+         cljsdoc-ext)))
 
 (defn signature->usage
   [sig item]

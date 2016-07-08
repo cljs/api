@@ -1,6 +1,6 @@
 (ns cljs-api-gen.cljsdoc
   (:require
-    [cljs-api-gen.config :refer [cljsdoc-dir]]
+    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
@@ -31,7 +31,7 @@
   (let [all (list-dir dir)
         files (->> all
                 (remove directory?)
-                (filter #(.endsWith (.getName %) ".md")))
+                (filter #(.endsWith (.getName %) cljsdoc-ext)))
         subfiles (->> all
                       (filter directory?)
                       (map cljsdoc-files)
@@ -42,7 +42,7 @@
 (defn create-cljsdoc-stubs!
   [known-symbols]
   (doseq [full-name (sort known-symbols)]
-    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) ".md")]
+    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) cljsdoc-ext)]
       (when-not (exists? filename)
         (encode/assert-lossless full-name)
         (mkdir (parent filename))
@@ -50,7 +50,7 @@
         (spit filename (str "## Name\n" full-name))))))
 
 (defn build-cljsdoc! []
-  (println (cond-> (style "\nCompiling cljsdoc/ files" :cyan)
+  (println (cond-> (style "\nCompiling " cljsdoc-dir "/ files" :cyan)
              (nil? *result*) (str " (without parsed API info)"))
            "...")
 

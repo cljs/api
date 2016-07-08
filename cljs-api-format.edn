@@ -66,9 +66,9 @@
                              :edn-url "..."}
 
               ;; the cljsdoc file which the rest of the attributes are deduced from
-              :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/cljsdoc/cljs.core/-GT.cljsdoc"
+              :cljsdoc-url "https://github.com/cljsinfo/cljs-api-docs/blob/master/doc/cljs.core/-GT.md"
 
-              ;; manually added docs from cljsdoc/ files
+              ;; manually added docs from doc/ files
 
               :description "... description in markdown ..."
               :examples [{:id "a34fe2"
