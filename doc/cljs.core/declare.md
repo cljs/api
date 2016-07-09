@@ -1,9 +1,6 @@
 ## Name
 cljs.core/declare
 
-## Type
-macro
-
 ## Signature
 [& names]
 

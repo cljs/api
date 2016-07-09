@@ -1,9 +1,6 @@
 ## Name
 cljs.core/*2
 
-## Type
-var
-
 ## Description
 
 Only usable from a REPL.
@@ -53,4 +50,3 @@ remembered history:
 *1
 ;;=> :third
 ```
-

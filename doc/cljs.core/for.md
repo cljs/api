@@ -1,9 +1,6 @@
 ## Name
 cljs.core/for
 
-## Type
-macro
-
 ## Signature
 [seq-exprs body-expr]
 

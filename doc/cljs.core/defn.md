@@ -1,9 +1,6 @@
 ## Name
 cljs.core/defn
 
-## Type
-macro
-
 ## Signature
 [name doc-string? attr-map? [params*] prepost-map? body]
 [name doc-string? attr-map? ([params*] prepost-map? body) + attr-map?]

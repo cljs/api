@@ -1,9 +1,6 @@
 ## Name
 cljs.core/condp
 
-## Type
-macro
-
 ## Signature
 [pred expr & clauses]
 

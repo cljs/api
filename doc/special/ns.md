@@ -1,9 +1,6 @@
 ## Name
 special/ns
 
-## Type
-special form
-
 ## Signature
 [name & references]
 

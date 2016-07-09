@@ -4,9 +4,6 @@ cljs.core/not
 ## Signature
 [x]
 
-## Return Type
-boolean
-
 ## Description
 
 Returns true if `x` is logical false, false otherwise.

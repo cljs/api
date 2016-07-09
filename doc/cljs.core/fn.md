@@ -1,9 +1,6 @@
 ## Name
 cljs.core/fn
 
-## Type
-macro
-
 ## Signature
 [name? [params*] prepost-map? body]
 [name? ([params*] prepost-map? body)+]

@@ -1,9 +1,6 @@
 ## Name
 special/require-macros
 
-## Type
-special form (repl)
-
 ## Description
 
 Only usable from a REPL.

@@ -1,9 +1,6 @@
 ## Name
 special/try
 
-## Type
-special form
-
 ## Signature
 [expr* catch-clause* finally-clause?]
 

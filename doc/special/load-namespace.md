@@ -1,9 +1,6 @@
 ## Name
 special/load-namespace
 
-## Type
-special form (repl)
-
 ## Signature
 [name]
 

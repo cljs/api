@@ -1,9 +1,6 @@
 ## Name
 cljs.core/as->
 
-## Type
-macro
-
 ## Signature
 [expr name & forms]
 

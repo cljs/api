@@ -1,9 +1,6 @@
 ## Name
 special/catch
 
-## Type
-special form
-
 ## Signature
 [exception-type name expr*]
 

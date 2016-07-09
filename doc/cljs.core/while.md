@@ -1,9 +1,6 @@
 ## Name
 cljs.core/while
 
-## Type
-macro
-
 ## Signature
 [test & body]
 

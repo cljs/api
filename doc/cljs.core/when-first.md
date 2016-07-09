@@ -1,9 +1,6 @@
 ## Name
 cljs.core/when-first
 
-## Type
-macro
-
 ## Signature
 [bindings & body]
 

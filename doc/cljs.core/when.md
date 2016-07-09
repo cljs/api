@@ -1,9 +1,6 @@
 ## Name
 cljs.core/when
 
-## Type
-macro
-
 ## Signature
 [test & body]
 

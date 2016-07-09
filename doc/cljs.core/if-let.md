@@ -1,9 +1,6 @@
 ## Name
 cljs.core/if-let
 
-## Type
-macro
-
 ## Signature
 [[x test] then]
 [[x test] then else]

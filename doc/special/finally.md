@@ -1,9 +1,6 @@
 ## Name
 special/finally
 
-## Type
-special form
-
 ## Signature
 [expr*]
 

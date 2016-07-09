@@ -1,9 +1,6 @@
 ## Name
 special/if
 
-## Type
-special form
-
 ## Signature
 [test then else?]
 

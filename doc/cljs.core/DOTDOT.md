@@ -1,9 +1,6 @@
 ## Name
 cljs.core/..
 
-## Type
-macro
-
 ## Signature
 [o form]
 [o form & more]
@@ -57,4 +54,3 @@ Compare to the equivalent form using the thread-first `->` macro:
     (.replace "A" "X"))
 ;;=> "X B C D"
 ```
-

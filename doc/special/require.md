@@ -1,9 +1,6 @@
 ## Name
 special/require
 
-## Type
-special form (repl)
-
 ## Notes
 
 description below taken from `repl-special-doc-map`

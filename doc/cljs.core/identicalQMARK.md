@@ -4,9 +4,6 @@ cljs.core/identical?
 ## Signature
 [x y]
 
-## Return Type
-boolean
-
 ## Description
 
 Returns true if `x` and `y` are the same object, false otherwise.

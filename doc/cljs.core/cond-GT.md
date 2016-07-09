@@ -1,9 +1,6 @@
 ## Name
 cljs.core/cond->
 
-## Type
-macro
-
 ## Signature
 [expr & clauses]
 
@@ -30,4 +27,3 @@ cljs.core/cond
   (< a 20) (str " and less than 20"))
 ;;=> "12 is greater than 10 and less than 20"
 ```
-

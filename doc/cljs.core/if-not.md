@@ -1,9 +1,6 @@
 ## Name
 cljs.core/if-not
 
-## Type
-macro
-
 ## Signature
 [test then]
 [test then else]

@@ -1,9 +1,6 @@
 ## Name
 cljs.core/letfn
 
-## Type
-macro
-
 ## Signature
 [fnspecs & body]
 

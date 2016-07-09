@@ -5,9 +5,6 @@ special/.
 (.-foo obj)
 (.foo obj)
 
-## Type
-special form
-
 ## Signature
 [o -p]
 [o m]
@@ -111,4 +108,3 @@ You can get the value at property `"foo"` with any of the following:
 (aget o "foo")
 ;;=> "bar"
 ```
-

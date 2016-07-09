@@ -1,9 +1,6 @@
 ## Name
 cljs.core/defn-
 
-## Type
-macro
-
 ## Signature
 [name & decls]
 

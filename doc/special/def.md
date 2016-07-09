@@ -4,9 +4,6 @@ special/def
 ## Known As
 define
 
-## Type
-special form
-
 ## Signature
 [symbol]
 [symbol init]

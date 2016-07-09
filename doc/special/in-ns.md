@@ -1,9 +1,6 @@
 ## Name
 special/in-ns
 
-## Type
-special form (repl)
-
 ## Signature
 [name]
 

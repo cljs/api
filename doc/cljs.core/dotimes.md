@@ -1,9 +1,6 @@
 ## Name
 cljs.core/dotimes
 
-## Type
-macro
-
 ## Signature
 [[name n] & body]
 

@@ -1,9 +1,6 @@
 ## Name
 cljs.core/and
 
-## Type
-macro
-
 ## Signature
 []
 [x]

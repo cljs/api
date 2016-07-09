@@ -1,9 +1,6 @@
 ## Name
 cljs.core/when-some
 
-## Type
-macro
-
 ## Signature
 [[x test] & body]
 

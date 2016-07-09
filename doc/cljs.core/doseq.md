@@ -1,9 +1,6 @@
 ## Name
 cljs.core/doseq
 
-## Type
-macro
-
 ## Signature
 [seq-exprs & body]
 

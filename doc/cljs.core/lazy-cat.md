@@ -1,9 +1,6 @@
 ## Name
 cljs.core/lazy-cat
 
-## Type
-macro
-
 ## Signature
 [& colls]
 

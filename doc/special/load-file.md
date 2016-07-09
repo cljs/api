@@ -1,9 +1,6 @@
 ## Name
 special/load-file
 
-## Type
-special form (repl)
-
 ## Signature
 [filename]
 

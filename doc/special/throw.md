@@ -1,9 +1,6 @@
 ## Name
 special/throw
 
-## Type
-special form
-
 ## Signature
 [expr]
 

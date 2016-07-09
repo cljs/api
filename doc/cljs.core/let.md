@@ -1,9 +1,6 @@
 ## Name
 cljs.core/let
 
-## Type
-macro
-
 ## Signature
 [bindings & body]
 

@@ -1,9 +1,6 @@
 ## Name
 cljs.core/cond
 
-## Type
-macro
-
 ## Signature
 [& clauses]
 

@@ -1,9 +1,6 @@
 ## Name
 cljs.core/case
 
-## Type
-macro
-
 ## Signature
 [e & clauses]
 

@@ -4,9 +4,6 @@ cljs.core/->
 ## Known As
 thread first
 
-## Type
-macro
-
 ## Signature
 [x & forms]
 

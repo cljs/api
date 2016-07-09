@@ -1,9 +1,6 @@
 ## Name
 cljs.core/when-not
 
-## Type
-macro
-
 ## Signature
 [test & body]
 

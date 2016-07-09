@@ -4,9 +4,6 @@ cljs.core/->>
 ## Known As
 thread last
 
-## Type
-macro
-
 ## Signature
 [x & forms]
 
@@ -65,4 +62,3 @@ This expands to:
         (range)))))
 ;;=> 1140
 ```
-

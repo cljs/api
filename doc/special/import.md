@@ -1,9 +1,6 @@
 ## Name
 special/import
 
-## Type
-special form (repl)
-
 ## Signature
 [& import-symbols-or-lists]
 
