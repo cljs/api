@@ -8,7 +8,6 @@
     [cljs-api-gen.state :refer [*result* cljsdoc-map]]
     [cljs-api-gen.util :refer [mapmap]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
-    [stencil.core :as stencil]
     [clansi.core :refer [style]]))
 
 (defn build-doc
