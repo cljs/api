@@ -8,6 +8,7 @@
                  [narkisr/clansi "1.2.0"]
                  [fipp "0.6.1"]
                  [ccfontes/fuzzy-matcher "0.0.1"]
-                 [clj-time "0.9.0"]]
+                 [clj-time "0.9.0"]
+                 [frontmatter "0.0.1"]]
 
   :main cljs-api-gen.core)

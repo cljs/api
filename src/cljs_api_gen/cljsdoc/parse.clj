@@ -1,7 +1,8 @@
 (ns cljs-api-gen.cljsdoc.parse
   (:require
     [clojure.set :refer [difference]]
-    [clojure.string :refer [split-lines join lower-case trim]]))
+    [clojure.string :refer [split-lines join lower-case trim]]
+    [frontmatter.core :as fm]))
 
 (def section-start "## ")
 
@@ -19,10 +20,28 @@
         body (trim (join "\n" body-lines))]
     [title body]))
 
+(defn frontmatter-to-section [[key val]]
+  (str section-start (name key) "\n"
+    (if (sequential? val)
+      (join "\n" val)
+      val)))
+
+(defn expand-front-matter
+  "Front matter helps make our docs more readable on github since they format
+   it into a nice table.
+   For parsing convenience, we parse it by expanding it to the format we used
+   prior to using front matter (i.e. markdown sections with headers)."
+  [file]
+  (let [{:keys [frontmatter body]} (fm/parse file)
+        preamble (->> frontmatter
+                      (map frontmatter-to-section)
+                      (join "\n"))]
+    (str preamble "\n" body)))
+
 (defn parse-doc
   "Convert cljsdoc content to a map of section title => section body text."
-  [content filename parentdir]
-  (let [lines (split-lines content)
+  [file filename parentdir]
+  (let [lines (split-lines (expand-front-matter file))
 
         ;; parse content as a list of section title/body pairs
         pairs (->> lines

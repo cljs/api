@@ -14,9 +14,7 @@
   [file]
   (let [filename (base-name file)
         parentdir (base-name (parent file))
-        doc (-> (slurp file)
-                (parse-doc filename parentdir)
-                (transform-doc))]
+        doc (transform-doc (parse-doc file filename parentdir))]
     (when (valid-doc? doc)
       doc)))
 
