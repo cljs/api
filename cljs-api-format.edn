@@ -70,9 +70,10 @@
 
               ;; manually added docs from doc/ files
 
-              :description "... description in markdown ..."
-              :examples [{:id "a34fe2"
-                          :content "... example in markdown ..."}]
+              :description {:body "... description in markdown ..."
+                            :biblio #{"cljs.core/foo"}}
+              :examples {:body "... example in markdown ..."
+                         :biblio #{}}
               :related ["cljs.core/foo" "cljs.core/bar"]
 
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
