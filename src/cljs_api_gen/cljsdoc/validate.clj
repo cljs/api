@@ -45,9 +45,7 @@
   ["name"
    "known as"
    "display"
-   "type"
    "tags"
-   "return type"
    "caption"
    "caption for library"
    "caption for compiler"
@@ -129,29 +127,6 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Type
-;;--------------------------------------------------------------------------------
-
-(def valid-type?
-  #{"function"
-    "macro"
-    "special form"
-    "special form (repl)"
-    "macro character"
-    "syntax"
-    "tagged literal"
-    "var"
-    "special var"
-    "namespace"})
-
-(defn type-error-msg
-  "If type is not valid, return error message."
-  [doc]
-  (when-let [type- (:type doc)]
-    (when-not (valid-type? type-)
-      (str "'" type- "' is not a valid type."))))
-
-;;--------------------------------------------------------------------------------
 ;; Validate Symbol
 ;;--------------------------------------------------------------------------------
 
@@ -222,7 +197,6 @@
   [required-sections-error-msg
    unrecognized-sections-error-msg
    signatures-error-msg
-   type-error-msg
    symbol-unknown-error-msg
    related-missing-error-msg
    doclink-missing-error-msg

@@ -59,7 +59,6 @@
       (transform-key "description for compiler" :description-compiler)
       (transform-key "signature" :signature section-as-list)
       (transform-key "usage" :usage section-as-list)
-      (transform-key "type" :type lower-case)
       (transform-key "related" :related section-as-list)
       (transform-key "moved" :moved)
       (transform-key "tags" :tags section-as-list)
