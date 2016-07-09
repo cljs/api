@@ -38,34 +38,17 @@
           (dissoc "name")))
     doc))
 
-(defn make-example
-  [name- doc]
-  {:id (replace name- #"example#?" "")
-   :content (get doc name-)})
-
-(defn transform-examples [doc]
-  (let [example? #(re-find #"^example(#[a-z0-9]+)?$" %)
-        example-names (filter example? (:sections doc))
-        examples (mapv #(make-example % doc) example-names)]
-    (if (seq examples)
-      (as-> doc d
-        (assoc d :examples examples)
-        (apply dissoc d example-names))
-      doc)))
-
 (defn transform-doclinks [doc f]
   (if (nil? *result*)
     doc
     (-> doc
       (update-in [:description] f)
-      (update-in [:examples]
-        (fn [examples]
-          (doall (map #(update-in % [:content] f) examples)))))))
+      (update-in [:examples] f))))
 
 (defn transform-doc [doc]
   (-> doc
       transform-name
-      transform-examples
+      (transform-key "examples" :examples)
       (transform-key "known as" :known-as)
       (transform-key "display" :display)
       (transform-key "caption" :caption)

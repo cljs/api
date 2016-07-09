@@ -58,8 +58,7 @@
    "signature"
    "todo"
    "notes"
-   "example"
-   #"^example#[a-z0-9]+$"
+   "examples"
    "related"
    "docstring"
    "history"
@@ -153,44 +152,6 @@
       (str "'" type- "' is not a valid type."))))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Examples
-;;--------------------------------------------------------------------------------
-
-(def example-id-files
-  "Track used example ids and the first file that uses them."
-  (atom {}))
-
-(defn example-hash
-  "Generate a unique hash used for example-linking."
-  []
-  (-> (java.util.UUID/randomUUID) str (subs 0 6)))
-
-(defn unused-example-id
-  "Generate an unused (so far) example id."
-  []
-  (let [id (example-hash)]
-    (if-not (contains? @example-id-files id) id (recur))))
-
-(defn example-error-msg!
-  [i {:keys [id] :as example} filename]
-  (if (= "" id)
-    (str "Example " (inc i) " has no ID. "
-         "Try '" (unused-example-id) "'.")
-    (if-let [used-filename (get @example-id-files id)]
-      (str "Example " (inc i) " uses an ID '" id "' already used by " used-filename ". "
-           "Try '" (unused-example-id) "'.")
-      (do
-        (swap! example-id-files assoc id filename)
-        nil))))
-
-
-(defn examples-error-msg!
-  [{:keys [examples filename] :as doc}]
-  (let [msgs (keep identity (map-indexed #(example-error-msg! %1 %2 filename) examples))]
-    (when (seq msgs)
-      (join "\n" msgs))))
-
-;;--------------------------------------------------------------------------------
 ;; Validate Symbol
 ;;--------------------------------------------------------------------------------
 
@@ -247,7 +208,7 @@
 (defn doclink-missing-error-msg
   "Gather missing doclinks from markdown description and examples."
   [{:keys [description examples] :as doc}]
-  (let [md-bodies (keep identity (cons description (map :content examples)))
+  (let [md-bodies (keep identity [cons description examples])
         msgs (keep doclink-missing-error-msg* md-bodies)]
     (when (seq msgs)
       (join "\n" msgs))))
@@ -262,7 +223,6 @@
    unrecognized-sections-error-msg
    signatures-error-msg
    type-error-msg
-   examples-error-msg!
    symbol-unknown-error-msg
    related-missing-error-msg
    doclink-missing-error-msg
